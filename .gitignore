@@ -1,0 +1,24 @@
+# Local operator material — never commit secrets or raw runtime logs
+.env
+.env.*
+*.env
+*.pass
+*.key
+*.pem
+secrets/
+wallets/
+keystores/
+
+# Local logs / databases / telemetry captures
+*.log
+logs/
+telemetry/
+*.sqlite
+*.sqlite3
+*.db
+
+# OS/editor/cache noise
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc

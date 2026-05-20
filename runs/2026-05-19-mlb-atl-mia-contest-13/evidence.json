@@ -1,0 +1,260 @@
+{
+  "accounting": {
+    "knownAccountingCaveat": "MM local pnl.realizedUsdcWei6 did not reflect the claimed profit at post-game check; indexed state and wallet balances did.",
+    "marketMakerGrossPnlUsdc": "0.195",
+    "marketMakerSettlePlusClaimGasPOL": "0.049697559038"
+  },
+  "artifactId": "2026-05-19-mlb-atl-mia-contest-13",
+  "capturedAt": "2026-05-20T02:10:45.860517+00:00",
+  "commitment": {
+    "commitmentHash": "0x1ea627807fd38e6fdea74974ab1fb0ed6cf14bc1ae52fd385ce53fa43b1107a3",
+    "createdAt": "2026-05-19T18:57:53.503375+00:00",
+    "expiry": "2026-05-19T18:59:51+00:00",
+    "filledRiskUsdc": "0.25",
+    "filledRiskWei6": "250000",
+    "makerAddress": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+    "makerSide": "upper/away/Braves",
+    "marketType": "moneyline",
+    "oddsTick": 178,
+    "positionType": "upper",
+    "riskUsdc": "0.25",
+    "riskWei6": "250000",
+    "signatureOmitted": true,
+    "status": "filled",
+    "takerSide": "lower/home/Marlins"
+  },
+  "contest": {
+    "awayTeam": "Atlanta Braves",
+    "contestId": 13,
+    "contestStatus": "scored",
+    "finalScore": {
+      "away": 8,
+      "home": 4
+    },
+    "homeTeam": "Miami Marlins",
+    "scoredAt": "2026-05-19T23:39:53+00:00",
+    "settledAt": "2026-05-19T23:39:56+00:00",
+    "speculationId": 6,
+    "sport": "mlb",
+    "startTime": "2026-05-19T20:10:00+00:00",
+    "winner": {
+      "protocolWinSide": "away",
+      "team": "Atlanta Braves"
+    }
+  },
+  "externalScoreSources": [
+    {
+      "away": "Atlanta Braves",
+      "awayScore": 8,
+      "gameDate": "2026-05-19T20:10:00Z",
+      "gamePk": 823865,
+      "home": "Miami Marlins",
+      "homeScore": 4,
+      "source": "MLB Stats API",
+      "status": "Final",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=05/19/2026&hydrate=team,linescore"
+    },
+    {
+      "observedFinal": "Atlanta Braves 8, Miami Marlins 4",
+      "source": "ESPN game page",
+      "url": "https://www.espn.com/mlb/game/_/gameId/401815404/braves-marlins"
+    }
+  ],
+  "fills": {
+    "controlledMarketMakerFill": {
+      "commitmentHash": "0x1ea627807fd38e6fdea74974ab1fb0ed6cf14bc1ae52fd385ce53fa43b1107a3",
+      "explorer": "https://polygonscan.com/tx/0x4af9a8c39e1c125775db50ea08665ad9a5d8781299b820eee32e5a964f2f1ff9",
+      "filledAt": "2026-05-19T18:59:09+00:00",
+      "makerRiskUsdc": "0.25",
+      "makerRiskWei6": "250000",
+      "makerSide": "upper",
+      "oddsTick": 178,
+      "takerRiskUsdc": "0.195",
+      "takerRiskWei6": "195000",
+      "takerSide": "lower",
+      "txHash": "0x4af9a8c39e1c125775db50ea08665ad9a5d8781299b820eee32e5a964f2f1ff9"
+    },
+    "seedFill": {
+      "commitmentHash": "0x3bef4ab6b725f45bb24b3b01441b44ded71e51466c45072e80f535f3af6c04ff",
+      "explorer": "https://polygonscan.com/tx/0x105c4066500155f7a7ce837bf56e9373cee2a1432b1da82b854bd16ca41729aa",
+      "filledAt": "2026-05-19T04:43:31+00:00",
+      "makerRiskUsdc": "0.05",
+      "makerRiskWei6": "50000",
+      "makerSide": "upper",
+      "purpose": "Created/seeded speculation before controlled MM fill.",
+      "takerRiskUsdc": "0.037",
+      "takerRiskWei6": "37000",
+      "takerSide": "lower",
+      "txHash": "0x105c4066500155f7a7ce837bf56e9373cee2a1432b1da82b854bd16ca41729aa"
+    }
+  },
+  "knownCaveats": [
+    "Supabase commitments retained expired rows with status=open; live-active checks must also require non-expired/non-cancelled/fillable semantics.",
+    "Supabase games.status for the source game was observed stale/upcoming after protocol contest was scored.",
+    "UnexpectedFillStatus telemetry before first pitch matched known expired-open classification noise and did not indicate extra fills.",
+    "Raw MM telemetry and private operator env files are intentionally not included in this public artifact."
+  ],
+  "lifecycleChecks": {
+    "contestScored": true,
+    "controlledFillMatched": true,
+    "losingFlowPositionUnclaimedAsExpected": true,
+    "quotePulledBeforeFirstPitch": true,
+    "remainingClaimableEntriesAfterSweep": 0,
+    "speculationSettled": true,
+    "visibleLiveCommitmentsAfterStart": 0,
+    "winningPositionsClaimed": true
+  },
+  "network": "polygon-mainnet",
+  "participants": {
+    "contestCreatorAndSeedMaker": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "explorer": "https://polygonscan.com/address/0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "label": "stage-maker-b"
+    },
+    "flowTaker": {
+      "address": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+      "explorer": "https://polygonscan.com/address/0x1de13292256fddca9eea1ae53a79a83243cfd494",
+      "label": "mm-shakeout-flow-a"
+    },
+    "marketMaker": {
+      "address": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "explorer": "https://polygonscan.com/address/0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "label": "mm-shakeout-maker-a"
+    }
+  },
+  "positions": {
+    "flowLoser": {
+      "address": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+      "claimed": false,
+      "claimedUsdc": null,
+      "claimedWei6": null,
+      "outcome": "lost",
+      "profitFieldMeaning": "potential profit if this side had won; not realized PnL",
+      "profitUsdc": "0.3",
+      "profitWei6": "300000",
+      "realizedPnlUsdc": "-0.232",
+      "realizedPnlWei6": "-232000",
+      "riskUsdc": "0.232",
+      "riskWei6": "232000",
+      "side": "lower/home/Marlins"
+    },
+    "marketMakerWinner": {
+      "address": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "claimed": true,
+      "claimedUsdc": "0.445",
+      "claimedWei6": "445000",
+      "outcome": "won",
+      "profitFieldMeaning": "realized profit for winning position",
+      "profitUsdc": "0.195",
+      "profitWei6": "195000",
+      "realizedPnlUsdc": "0.195",
+      "realizedPnlWei6": "195000",
+      "riskUsdc": "0.25",
+      "riskWei6": "250000",
+      "side": "upper/away/Braves"
+    },
+    "stageSeedWinner": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "claimed": true,
+      "claimedUsdc": "0.087",
+      "claimedWei6": "87000",
+      "outcome": "won",
+      "profitFieldMeaning": "realized profit for winning position",
+      "profitUsdc": "0.037",
+      "profitWei6": "37000",
+      "realizedPnlUsdc": "0.037",
+      "realizedPnlWei6": "37000",
+      "riskUsdc": "0.05",
+      "riskWei6": "50000",
+      "side": "upper/away/Braves"
+    }
+  },
+  "quoteCutoffEvidence": {
+    "finalExpire": "2026-05-19T20:08:44Z",
+    "firstPitch": "2026-05-19T20:10:00Z",
+    "lastReplace": "2026-05-19T20:06:42Z",
+    "lastSubmit": "2026-05-19T20:02:03Z",
+    "postStartBehavior": "candidate skips only; no new submits/replaces",
+    "softCancel": "2026-05-19T20:08:14Z",
+    "source": "Summarized market-maker telemetry and post-game verification; raw local logs intentionally excluded."
+  },
+  "schemaVersion": 1,
+  "scope": {
+    "marketType": "moneyline",
+    "notes": [
+      "Includes one earlier seed fill used to create/open the speculation and one controlled MM fill.",
+      "Private keys, passwords, RPC URLs, signatures, and env values are intentionally excluded."
+    ],
+    "purpose": "First low-value market-maker end-to-end lifecycle evidence artifact."
+  },
+  "status": "complete_verified",
+  "title": "Ospex MM Shakeout Evidence: Atlanta Braves @ Miami Marlins, 2026-05-19",
+  "transactions": {
+    "fill": {
+      "blockNumber": 87129966,
+      "effectiveGasPriceWei": "287275153298",
+      "explorer": "https://polygonscan.com/tx/0x4af9a8c39e1c125775db50ea08665ad9a5d8781299b820eee32e5a964f2f1ff9",
+      "from": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+      "gasCostPOL": "0.075607085771",
+      "gasUsed": 263187,
+      "status": "0x1",
+      "to": "0x1b93579b044f0ee3c4c8a9f479a323def7770712",
+      "transactionHash": "0x4af9a8c39e1c125775db50ea08665ad9a5d8781299b820eee32e5a964f2f1ff9"
+    },
+    "mm_claim": {
+      "blockNumber": 87139612,
+      "effectiveGasPriceWei": "278277734751",
+      "explorer": "https://polygonscan.com/tx/0x61d83f967ca0fd9052a3290c7d7aa7350259ebe9ec013579be233abfd42e13b8",
+      "from": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "gasCostPOL": "0.023004942054",
+      "gasUsed": 82669,
+      "status": "0x1",
+      "to": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+      "transactionHash": "0x61d83f967ca0fd9052a3290c7d7aa7350259ebe9ec013579be233abfd42e13b8"
+    },
+    "score_request": {
+      "blockNumber": 87139585,
+      "effectiveGasPriceWei": "279326944134",
+      "explorer": "https://polygonscan.com/tx/0x3c57443af490685fa6cf30c08dbf75bd548afbf89dd65b46ed00dadbf9dfbe37",
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "gasCostPOL": "0.143330755517",
+      "gasUsed": 513129,
+      "status": "0x1",
+      "to": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+      "transactionHash": "0x3c57443af490685fa6cf30c08dbf75bd548afbf89dd65b46ed00dadbf9dfbe37"
+    },
+    "settle": {
+      "blockNumber": 87139593,
+      "effectiveGasPriceWei": "278155299270",
+      "explorer": "https://polygonscan.com/tx/0x3a120a1ccdbe16dc2d7421d997d54b166f445a03bed093c0752575c7ea3b25b5",
+      "from": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "gasCostPOL": "0.026692616984",
+      "gasUsed": 95963,
+      "status": "0x1",
+      "to": "0xd757387893e779ac35451cea639a408a537b9a1b",
+      "transactionHash": "0x3a120a1ccdbe16dc2d7421d997d54b166f445a03bed093c0752575c7ea3b25b5"
+    },
+    "stage_claim": {
+      "blockNumber": 87139624,
+      "effectiveGasPriceWei": "282913327239",
+      "explorer": "https://polygonscan.com/tx/0x516a806690665d6745a2c962d1964ebb870ecfe45a6ef56ed4e75c9237ae26b8",
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "gasCostPOL": "0.022030177879",
+      "gasUsed": 77869,
+      "status": "0x1",
+      "to": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+      "transactionHash": "0x516a806690665d6745a2c962d1964ebb870ecfe45a6ef56ed4e75c9237ae26b8"
+    },
+    "stage_seed_fill": {
+      "blockNumber": 87100630,
+      "effectiveGasPriceWei": "276238467983",
+      "explorer": "https://polygonscan.com/tx/0x105c4066500155f7a7ce837bf56e9373cee2a1432b1da82b854bd16ca41729aa",
+      "from": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+      "gasCostPOL": "0.14347660284",
+      "gasUsed": 519394,
+      "status": "0x1",
+      "to": "0x1b93579b044f0ee3c4c8a9f479a323def7770712",
+      "transactionHash": "0x105c4066500155f7a7ce837bf56e9373cee2a1432b1da82b854bd16ca41729aa"
+    }
+  }
+}
