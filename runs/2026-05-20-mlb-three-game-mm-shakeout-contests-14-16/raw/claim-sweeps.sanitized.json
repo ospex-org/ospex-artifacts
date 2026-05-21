@@ -1,0 +1,983 @@
+{
+  "afterPartialDryRuns": {
+    "flow": {
+      "action": "claim-all",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.2.1",
+      "commitment": null,
+      "contest": null,
+      "effects": [],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-05-21T08:09:42.827Z",
+      "network": "polygon",
+      "nextCommands": [
+        {
+          "argv": [
+            "claim-all",
+            "--address",
+            "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+            "--json"
+          ],
+          "command": "ospex claim-all --address 0x1de13292256fddca9eea1ae53a79a83243cfd494 --json",
+          "description": "Execute the planned claim sweep.",
+          "id": "complete-claim-all",
+          "safeToAutoRun": false,
+          "suggestedFor": "complete"
+        }
+      ],
+      "ok": true,
+      "payload": {
+        "address": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+        "dryRun": true,
+        "entries": [
+          {
+            "bucket": "claimable",
+            "description": "Toronto Blue Jays moneyline \u2014 Won (\u2248 $0.02)",
+            "payoutUSDC": 0.0191,
+            "payoutWei6": "19100",
+            "positionId": "9_0x1de13292256fddca9eea1ae53a79a83243cfd494_0",
+            "speculationId": "9",
+            "success": true,
+            "txHashes": []
+          },
+          {
+            "bucket": "claimable",
+            "description": "Texas Rangers moneyline \u2014 Won (\u2248 $0.02)",
+            "payoutUSDC": 0.0191,
+            "payoutWei6": "19100",
+            "positionId": "8_0x1de13292256fddca9eea1ae53a79a83243cfd494_0",
+            "speculationId": "8",
+            "success": true,
+            "txHashes": []
+          }
+        ],
+        "success": false,
+        "totals": {
+          "claimed": 2,
+          "failed": 0,
+          "totalPayoutUSDC": 0.0382,
+          "totalPayoutWei6": "38200"
+        }
+      },
+      "payout": {
+        "profit": {
+          "usdc": "0.038200",
+          "wei6": "38200"
+        },
+        "totalReturn": {
+          "usdc": "0.038200",
+          "wei6": "38200"
+        }
+      },
+      "requiresSignature": true,
+      "requiresTransaction": true,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.2.1",
+      "sideSummary": null,
+      "signer": null,
+      "speculation": null,
+      "stage": "dry-run",
+      "wallet": null,
+      "walletRole": "none",
+      "warnings": []
+    },
+    "maker": {
+      "action": "claim-all",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.2.1",
+      "commitment": null,
+      "contest": null,
+      "effects": [],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-05-21T08:09:41.306Z",
+      "network": "polygon",
+      "nextCommands": [
+        {
+          "argv": [
+            "claim-all",
+            "--address",
+            "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+            "--json"
+          ],
+          "command": "ospex claim-all --address 0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2 --json",
+          "description": "Execute the planned claim sweep.",
+          "id": "complete-claim-all",
+          "safeToAutoRun": false,
+          "suggestedFor": "complete"
+        }
+      ],
+      "ok": true,
+      "payload": {
+        "address": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+        "dryRun": true,
+        "entries": [
+          {
+            "bucket": "claimable",
+            "description": "Texas Rangers moneyline \u2014 Won (\u2248 $0.11)",
+            "payoutUSDC": 0.106029,
+            "payoutWei6": "106029",
+            "positionId": "8_0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2_0",
+            "speculationId": "8",
+            "success": true,
+            "txHashes": []
+          }
+        ],
+        "success": false,
+        "totals": {
+          "claimed": 1,
+          "failed": 0,
+          "totalPayoutUSDC": 0.106029,
+          "totalPayoutWei6": "106029"
+        }
+      },
+      "payout": {
+        "profit": {
+          "usdc": "0.106029",
+          "wei6": "106029"
+        },
+        "totalReturn": {
+          "usdc": "0.106029",
+          "wei6": "106029"
+        }
+      },
+      "requiresSignature": true,
+      "requiresTransaction": true,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.2.1",
+      "sideSummary": null,
+      "signer": null,
+      "speculation": null,
+      "stage": "dry-run",
+      "wallet": null,
+      "walletRole": "none",
+      "warnings": []
+    }
+  },
+  "finalDryRuns": {
+    "flow": {
+      "action": "claim-all",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.2.1",
+      "commitment": null,
+      "contest": null,
+      "effects": [],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-05-21T08:10:43.358Z",
+      "network": "polygon",
+      "nextCommands": [
+        {
+          "argv": [
+            "claim-all",
+            "--address",
+            "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+            "--json"
+          ],
+          "command": "ospex claim-all --address 0x1de13292256fddca9eea1ae53a79a83243cfd494 --json",
+          "description": "Execute the planned claim sweep.",
+          "id": "complete-claim-all",
+          "safeToAutoRun": false,
+          "suggestedFor": "complete"
+        }
+      ],
+      "ok": true,
+      "payload": {
+        "address": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+        "dryRun": true,
+        "entries": [],
+        "success": false,
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "totalPayoutUSDC": 0,
+          "totalPayoutWei6": "0"
+        }
+      },
+      "payout": null,
+      "requiresSignature": true,
+      "requiresTransaction": true,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.2.1",
+      "sideSummary": null,
+      "signer": null,
+      "speculation": null,
+      "stage": "dry-run",
+      "wallet": null,
+      "walletRole": "none",
+      "warnings": []
+    },
+    "maker": {
+      "action": "claim-all",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.2.1",
+      "commitment": null,
+      "contest": null,
+      "effects": [],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-05-21T08:10:41.873Z",
+      "network": "polygon",
+      "nextCommands": [
+        {
+          "argv": [
+            "claim-all",
+            "--address",
+            "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+            "--json"
+          ],
+          "command": "ospex claim-all --address 0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2 --json",
+          "description": "Execute the planned claim sweep.",
+          "id": "complete-claim-all",
+          "safeToAutoRun": false,
+          "suggestedFor": "complete"
+        }
+      ],
+      "ok": true,
+      "payload": {
+        "address": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+        "dryRun": true,
+        "entries": [],
+        "success": false,
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "totalPayoutUSDC": 0,
+          "totalPayoutWei6": "0"
+        }
+      },
+      "payout": null,
+      "requiresSignature": true,
+      "requiresTransaction": true,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.2.1",
+      "sideSummary": null,
+      "signer": null,
+      "speculation": null,
+      "stage": "dry-run",
+      "wallet": null,
+      "walletRole": "none",
+      "warnings": []
+    },
+    "stage": {
+      "action": "claim-all",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.2.1",
+      "commitment": null,
+      "contest": null,
+      "effects": [],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-05-21T08:10:44.838Z",
+      "network": "polygon",
+      "nextCommands": [
+        {
+          "argv": [
+            "claim-all",
+            "--address",
+            "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+            "--json"
+          ],
+          "command": "ospex claim-all --address 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482 --json",
+          "description": "Execute the planned claim sweep.",
+          "id": "complete-claim-all",
+          "safeToAutoRun": false,
+          "suggestedFor": "complete"
+        }
+      ],
+      "ok": true,
+      "payload": {
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "dryRun": true,
+        "entries": [],
+        "success": false,
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "totalPayoutUSDC": 0,
+          "totalPayoutWei6": "0"
+        }
+      },
+      "payout": null,
+      "requiresSignature": true,
+      "requiresTransaction": true,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.2.1",
+      "sideSummary": null,
+      "signer": null,
+      "speculation": null,
+      "stage": "dry-run",
+      "wallet": null,
+      "walletRole": "none",
+      "warnings": []
+    }
+  },
+  "finalExecuteAttempt": {
+    "flow": {
+      "action": "claim-all",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.2.1",
+      "commitment": null,
+      "contest": null,
+      "effects": [
+        {
+          "ok": true,
+          "purpose": "claim-position",
+          "status": "confirmed",
+          "txHash": "0x5d0e69bf9e6899a42aa44193500e2b9d7132b2816c5eca1dee6e8f68174f7116",
+          "type": "transaction"
+        },
+        {
+          "ok": true,
+          "purpose": "claim-position",
+          "status": "confirmed",
+          "txHash": "0xc1365f4e4c7d54782213bc51b2f1f92091333cfd32dd4258f9cb12435f765906",
+          "type": "transaction"
+        }
+      ],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-05-21T08:10:11.901Z",
+      "network": "polygon",
+      "nextCommands": [
+        {
+          "argv": [
+            "positions",
+            "status",
+            "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+            "--json"
+          ],
+          "command": "ospex positions status 0x1de13292256fddca9eea1ae53a79a83243cfd494 --json",
+          "description": "Verify position status after the claim / settle.",
+          "id": "verify-position-status",
+          "safeToAutoRun": true,
+          "suggestedFor": "verify"
+        }
+      ],
+      "ok": true,
+      "payload": {
+        "address": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+        "dryRun": false,
+        "entries": [
+          {
+            "bucket": "claimable",
+            "description": "Toronto Blue Jays moneyline \u2014 Won (\u2248 $0.02)",
+            "payoutUSDC": 0.0191,
+            "payoutWei6": "19100",
+            "positionId": "9_0x1de13292256fddca9eea1ae53a79a83243cfd494_0",
+            "speculationId": "9",
+            "success": true,
+            "txHashes": [
+              "0x5d0e69bf9e6899a42aa44193500e2b9d7132b2816c5eca1dee6e8f68174f7116"
+            ]
+          },
+          {
+            "bucket": "claimable",
+            "description": "Texas Rangers moneyline \u2014 Won (\u2248 $0.02)",
+            "payoutUSDC": 0.0191,
+            "payoutWei6": "19100",
+            "positionId": "8_0x1de13292256fddca9eea1ae53a79a83243cfd494_0",
+            "speculationId": "8",
+            "success": true,
+            "txHashes": [
+              "0xc1365f4e4c7d54782213bc51b2f1f92091333cfd32dd4258f9cb12435f765906"
+            ]
+          }
+        ],
+        "success": true,
+        "totals": {
+          "claimed": 2,
+          "failed": 0,
+          "totalPayoutUSDC": 0.0382,
+          "totalPayoutWei6": "38200"
+        }
+      },
+      "payout": {
+        "profit": {
+          "usdc": "0.038200",
+          "wei6": "38200"
+        },
+        "totalReturn": {
+          "usdc": "0.038200",
+          "wei6": "38200"
+        }
+      },
+      "requiresSignature": false,
+      "requiresTransaction": false,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.2.1",
+      "sideSummary": null,
+      "signer": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+      "speculation": null,
+      "stage": "execute",
+      "wallet": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+      "walletRole": "signer",
+      "warnings": []
+    },
+    "maker": {
+      "action": "claim-all",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.2.1",
+      "commitment": null,
+      "contest": null,
+      "effects": [
+        {
+          "ok": true,
+          "purpose": "claim-position",
+          "status": "confirmed",
+          "txHash": "0xb31ae20df78ae92c024a03959fdd3d00d0887abc5a8b105ac0ee3a1c2099cf62",
+          "type": "transaction"
+        }
+      ],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-05-21T08:10:04.656Z",
+      "network": "polygon",
+      "nextCommands": [
+        {
+          "argv": [
+            "positions",
+            "status",
+            "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+            "--json"
+          ],
+          "command": "ospex positions status 0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2 --json",
+          "description": "Verify position status after the claim / settle.",
+          "id": "verify-position-status",
+          "safeToAutoRun": true,
+          "suggestedFor": "verify"
+        }
+      ],
+      "ok": true,
+      "payload": {
+        "address": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+        "dryRun": false,
+        "entries": [
+          {
+            "bucket": "claimable",
+            "description": "Texas Rangers moneyline \u2014 Won (\u2248 $0.11)",
+            "payoutUSDC": 0.106029,
+            "payoutWei6": "106029",
+            "positionId": "8_0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2_0",
+            "speculationId": "8",
+            "success": true,
+            "txHashes": [
+              "0xb31ae20df78ae92c024a03959fdd3d00d0887abc5a8b105ac0ee3a1c2099cf62"
+            ]
+          }
+        ],
+        "success": true,
+        "totals": {
+          "claimed": 1,
+          "failed": 0,
+          "totalPayoutUSDC": 0.106029,
+          "totalPayoutWei6": "106029"
+        }
+      },
+      "payout": {
+        "profit": {
+          "usdc": "0.106029",
+          "wei6": "106029"
+        },
+        "totalReturn": {
+          "usdc": "0.106029",
+          "wei6": "106029"
+        }
+      },
+      "requiresSignature": false,
+      "requiresTransaction": false,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.2.1",
+      "sideSummary": null,
+      "signer": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "speculation": null,
+      "stage": "execute",
+      "wallet": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "walletRole": "signer",
+      "warnings": []
+    }
+  },
+  "firstExecuteAttempt": {
+    "flow": {
+      "action": "claim-all",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.2.1",
+      "commitment": null,
+      "contest": null,
+      "effects": [
+        {
+          "ok": true,
+          "purpose": "claim-position",
+          "status": "confirmed",
+          "txHash": "0x9fd4b1dd70242e8ef316081b24b7b83352b96779285fb3c7fdcf8fe01245d85a",
+          "type": "transaction"
+        },
+        {
+          "errorCode": "CHAIN_ERROR",
+          "ok": false,
+          "purpose": "settle-speculation",
+          "type": "transaction"
+        },
+        {
+          "errorCode": "CHAIN_ERROR",
+          "ok": false,
+          "purpose": "settle-speculation",
+          "type": "transaction"
+        }
+      ],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-05-21T08:08:40.482Z",
+      "network": "polygon",
+      "nextCommands": [
+        {
+          "argv": [
+            "positions",
+            "status",
+            "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+            "--json"
+          ],
+          "command": "ospex positions status 0x1de13292256fddca9eea1ae53a79a83243cfd494 --json",
+          "description": "Verify position status after the claim / settle.",
+          "id": "verify-position-status",
+          "safeToAutoRun": true,
+          "suggestedFor": "verify"
+        }
+      ],
+      "ok": false,
+      "payload": {
+        "address": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+        "dryRun": false,
+        "entries": [
+          {
+            "bucket": "claimable",
+            "description": "Cincinnati Reds moneyline \u2014 Won (\u2248 $0.02)",
+            "payoutUSDC": 0.0191,
+            "payoutWei6": "19100",
+            "positionId": "7_0x1de13292256fddca9eea1ae53a79a83243cfd494_0",
+            "speculationId": "7",
+            "success": true,
+            "txHashes": [
+              "0x9fd4b1dd70242e8ef316081b24b7b83352b96779285fb3c7fdcf8fe01245d85a"
+            ]
+          },
+          {
+            "bucket": "pendingSettle",
+            "description": "Toronto Blue Jays moneyline \u2014 Won (\u2248 $0.02, needs settle)",
+            "error": "Pre-send chain reads failed (estimateGas): Execution reverted for an unknown reason. / Estimate Gas Arguments: /   from:  0x1De13292256fddCA9EeA1Ae53a79a83243CFD494\n  to:    0xd757387893E779AC35451CeA639a408A537b9a1B\n  data:  [CALLDATA_OMITTED]",
+            "positionId": "9_0x1de13292256fddca9eea1ae53a79a83243cfd494_0",
+            "speculationId": "9",
+            "success": false,
+            "txHashes": []
+          },
+          {
+            "bucket": "pendingSettle",
+            "description": "Texas Rangers moneyline \u2014 Won (\u2248 $0.02, needs settle)",
+            "error": "Pre-send chain reads failed (estimateGas): Execution reverted for an unknown reason. / Estimate Gas Arguments: /   from:  0x1De13292256fddCA9EeA1Ae53a79a83243CFD494\n  to:    0xd757387893E779AC35451CeA639a408A537b9a1B\n  data:  [CALLDATA_OMITTED]",
+            "positionId": "8_0x1de13292256fddca9eea1ae53a79a83243cfd494_0",
+            "speculationId": "8",
+            "success": false,
+            "txHashes": []
+          }
+        ],
+        "success": false,
+        "totals": {
+          "claimed": 1,
+          "failed": 2,
+          "totalPayoutUSDC": 0.0191,
+          "totalPayoutWei6": "19100"
+        }
+      },
+      "payout": {
+        "profit": {
+          "usdc": "0.019100",
+          "wei6": "19100"
+        },
+        "totalReturn": {
+          "usdc": "0.019100",
+          "wei6": "19100"
+        }
+      },
+      "requiresSignature": false,
+      "requiresTransaction": false,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.2.1",
+      "sideSummary": null,
+      "signer": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+      "speculation": null,
+      "stage": "execute",
+      "wallet": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+      "walletRole": "signer",
+      "warnings": []
+    },
+    "maker": {
+      "action": "claim-all",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.2.1",
+      "commitment": null,
+      "contest": null,
+      "effects": [
+        {
+          "ok": true,
+          "purpose": "settle-speculation",
+          "status": "confirmed",
+          "txHash": "0xb24239ec8b052be1795cfd12ad7dafa481acb9122ad77ca0e1029983d6a74f07",
+          "type": "transaction"
+        },
+        {
+          "ok": true,
+          "purpose": "claim-position",
+          "status": "confirmed",
+          "txHash": "0x27c1c2d755f8f888eb7c581fb9c76d71a4fee0676667526afdbbe35c84cc427a",
+          "type": "transaction"
+        },
+        {
+          "ok": true,
+          "purpose": "settle-speculation",
+          "status": "confirmed",
+          "txHash": "0x5e376781bf4fc4ca3871e1363c6fe2153af98af2e2e68cad9f83c299f51b9c9f",
+          "type": "transaction"
+        },
+        {
+          "errorCode": "CHAIN_ERROR",
+          "ok": false,
+          "purpose": "claim-position",
+          "type": "transaction"
+        }
+      ],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-05-21T08:08:33.113Z",
+      "network": "polygon",
+      "nextCommands": [
+        {
+          "argv": [
+            "positions",
+            "status",
+            "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+            "--json"
+          ],
+          "command": "ospex positions status 0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2 --json",
+          "description": "Verify position status after the claim / settle.",
+          "id": "verify-position-status",
+          "safeToAutoRun": true,
+          "suggestedFor": "verify"
+        }
+      ],
+      "ok": false,
+      "payload": {
+        "address": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+        "dryRun": false,
+        "entries": [
+          {
+            "bucket": "pendingSettle",
+            "description": "Toronto Blue Jays moneyline \u2014 Won (\u2248 $0.08, needs settle)",
+            "payoutUSDC": 0.08192,
+            "payoutWei6": "81920",
+            "positionId": "9_0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2_0",
+            "speculationId": "9",
+            "success": true,
+            "txHashes": [
+              "0xb24239ec8b052be1795cfd12ad7dafa481acb9122ad77ca0e1029983d6a74f07",
+              "0x27c1c2d755f8f888eb7c581fb9c76d71a4fee0676667526afdbbe35c84cc427a"
+            ],
+            "winSide": "away"
+          },
+          {
+            "bucket": "pendingSettle",
+            "description": "Texas Rangers moneyline \u2014 Won (\u2248 $0.11, needs settle)",
+            "error": "Pre-send chain reads failed (estimateGas): Execution reverted for an unknown reason. / Estimate Gas Arguments: /   from:  0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2\n  to:    0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c\n  data:  [CALLDATA_OMITTED]",
+            "positionId": "8_0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2_0",
+            "speculationId": "8",
+            "success": false,
+            "txHashes": [
+              "0x5e376781bf4fc4ca3871e1363c6fe2153af98af2e2e68cad9f83c299f51b9c9f"
+            ],
+            "winSide": "away"
+          }
+        ],
+        "success": false,
+        "totals": {
+          "claimed": 1,
+          "failed": 1,
+          "totalPayoutUSDC": 0.08192,
+          "totalPayoutWei6": "81920"
+        }
+      },
+      "payout": {
+        "profit": {
+          "usdc": "0.081920",
+          "wei6": "81920"
+        },
+        "totalReturn": {
+          "usdc": "0.081920",
+          "wei6": "81920"
+        }
+      },
+      "requiresSignature": false,
+      "requiresTransaction": false,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.2.1",
+      "sideSummary": null,
+      "signer": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "speculation": null,
+      "stage": "execute",
+      "wallet": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "walletRole": "signer",
+      "warnings": []
+    }
+  },
+  "initialDryRuns": {
+    "flow": {
+      "action": "claim-all",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.2.1",
+      "commitment": null,
+      "contest": null,
+      "effects": [],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-05-21T08:07:02.191Z",
+      "network": "polygon",
+      "nextCommands": [
+        {
+          "argv": [
+            "claim-all",
+            "--address",
+            "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+            "--json"
+          ],
+          "command": "ospex claim-all --address 0x1de13292256fddca9eea1ae53a79a83243cfd494 --json",
+          "description": "Execute the planned claim sweep.",
+          "id": "complete-claim-all",
+          "safeToAutoRun": false,
+          "suggestedFor": "complete"
+        }
+      ],
+      "ok": true,
+      "payload": {
+        "address": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+        "dryRun": true,
+        "entries": [
+          {
+            "bucket": "claimable",
+            "description": "Cincinnati Reds moneyline \u2014 Won (\u2248 $0.02)",
+            "payoutUSDC": 0.0191,
+            "payoutWei6": "19100",
+            "positionId": "7_0x1de13292256fddca9eea1ae53a79a83243cfd494_0",
+            "speculationId": "7",
+            "success": true,
+            "txHashes": []
+          },
+          {
+            "bucket": "pendingSettle",
+            "description": "Toronto Blue Jays moneyline \u2014 Won (\u2248 $0.02, needs settle)",
+            "payoutUSDC": 0.0191,
+            "payoutWei6": "19100",
+            "positionId": "9_0x1de13292256fddca9eea1ae53a79a83243cfd494_0",
+            "speculationId": "9",
+            "success": true,
+            "txHashes": []
+          },
+          {
+            "bucket": "pendingSettle",
+            "description": "Texas Rangers moneyline \u2014 Won (\u2248 $0.02, needs settle)",
+            "payoutUSDC": 0.0191,
+            "payoutWei6": "19100",
+            "positionId": "8_0x1de13292256fddca9eea1ae53a79a83243cfd494_0",
+            "speculationId": "8",
+            "success": true,
+            "txHashes": []
+          }
+        ],
+        "success": false,
+        "totals": {
+          "claimed": 3,
+          "failed": 0,
+          "totalPayoutUSDC": 0.0573,
+          "totalPayoutWei6": "57300"
+        }
+      },
+      "payout": {
+        "profit": {
+          "usdc": "0.057300",
+          "wei6": "57300"
+        },
+        "totalReturn": {
+          "usdc": "0.057300",
+          "wei6": "57300"
+        }
+      },
+      "requiresSignature": true,
+      "requiresTransaction": true,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.2.1",
+      "sideSummary": null,
+      "signer": null,
+      "speculation": null,
+      "stage": "dry-run",
+      "wallet": null,
+      "walletRole": "none",
+      "warnings": []
+    },
+    "maker": {
+      "action": "claim-all",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.2.1",
+      "commitment": null,
+      "contest": null,
+      "effects": [],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-05-21T08:07:00.680Z",
+      "network": "polygon",
+      "nextCommands": [
+        {
+          "argv": [
+            "claim-all",
+            "--address",
+            "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+            "--json"
+          ],
+          "command": "ospex claim-all --address 0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2 --json",
+          "description": "Execute the planned claim sweep.",
+          "id": "complete-claim-all",
+          "safeToAutoRun": false,
+          "suggestedFor": "complete"
+        }
+      ],
+      "ok": true,
+      "payload": {
+        "address": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+        "dryRun": true,
+        "entries": [
+          {
+            "bucket": "pendingSettle",
+            "description": "Toronto Blue Jays moneyline \u2014 Won (\u2248 $0.08, needs settle)",
+            "payoutUSDC": 0.08192,
+            "payoutWei6": "81920",
+            "positionId": "9_0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2_0",
+            "speculationId": "9",
+            "success": true,
+            "txHashes": []
+          },
+          {
+            "bucket": "pendingSettle",
+            "description": "Texas Rangers moneyline \u2014 Won (\u2248 $0.11, needs settle)",
+            "payoutUSDC": 0.106029,
+            "payoutWei6": "106029",
+            "positionId": "8_0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2_0",
+            "speculationId": "8",
+            "success": true,
+            "txHashes": []
+          }
+        ],
+        "success": false,
+        "totals": {
+          "claimed": 2,
+          "failed": 0,
+          "totalPayoutUSDC": 0.187949,
+          "totalPayoutWei6": "187949"
+        }
+      },
+      "payout": {
+        "profit": {
+          "usdc": "0.187949",
+          "wei6": "187949"
+        },
+        "totalReturn": {
+          "usdc": "0.187949",
+          "wei6": "187949"
+        }
+      },
+      "requiresSignature": true,
+      "requiresTransaction": true,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.2.1",
+      "sideSummary": null,
+      "signer": null,
+      "speculation": null,
+      "stage": "dry-run",
+      "wallet": null,
+      "walletRole": "none",
+      "warnings": []
+    },
+    "stage": {
+      "action": "claim-all",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.2.1",
+      "commitment": null,
+      "contest": null,
+      "effects": [],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-05-21T08:07:03.641Z",
+      "network": "polygon",
+      "nextCommands": [
+        {
+          "argv": [
+            "claim-all",
+            "--address",
+            "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+            "--json"
+          ],
+          "command": "ospex claim-all --address 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482 --json",
+          "description": "Execute the planned claim sweep.",
+          "id": "complete-claim-all",
+          "safeToAutoRun": false,
+          "suggestedFor": "complete"
+        }
+      ],
+      "ok": true,
+      "payload": {
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "dryRun": true,
+        "entries": [],
+        "success": false,
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "totalPayoutUSDC": 0,
+          "totalPayoutWei6": "0"
+        }
+      },
+      "payout": null,
+      "requiresSignature": true,
+      "requiresTransaction": true,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.2.1",
+      "sideSummary": null,
+      "signer": null,
+      "speculation": null,
+      "stage": "dry-run",
+      "wallet": null,
+      "walletRole": "none",
+      "warnings": []
+    }
+  }
+}

@@ -37,6 +37,11 @@ Exclude:
 - raw environment files
 - noisy unredacted logs
 
+## Published runs
+
+- `runs/2026-05-19-mlb-atl-mia-contest-13/` — single-game Braves @ Marlins MM lifecycle artifact.
+- `runs/2026-05-20-mlb-three-game-mm-shakeout-contests-14-16/` — three-game MLB MM shakeout across contests 14, 15, and 16.
+
 ## Directory convention
 
 ```text
@@ -48,5 +53,7 @@ runs/YYYY-MM-DD-sport-away-home-contest-<id>/
     tx-receipts.summary.json
     final-score-source.json
 ```
+
+Multi-contest artifacts may use a descriptive slug such as `YYYY-MM-DD-sport-three-game-mm-shakeout-contests-<start>-<end>` and include extra sanitized raw summaries.
 
 Each artifact should be reproducible from public chain data plus sanitized indexer/API snapshots.

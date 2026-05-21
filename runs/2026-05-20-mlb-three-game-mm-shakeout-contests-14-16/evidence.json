@@ -1,0 +1,2288 @@
+{
+  "accounting": {
+    "contestCreatorAndSeedMaker": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "claimedPayoutUSDC": "0",
+      "claimedPayoutWei6": "0",
+      "losingRiskWei6": "30000",
+      "realizedPnlUSDC": "-0.03",
+      "realizedPnlWei6": "-30000",
+      "winningProfitWei6": "0",
+      "winningRiskWei6": "0"
+    },
+    "flowTaker": {
+      "address": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+      "claimedPayoutUSDC": "0.0573",
+      "claimedPayoutWei6": "57300",
+      "losingRiskWei6": "149750",
+      "realizedPnlUSDC": "-0.11975",
+      "realizedPnlWei6": "-119750",
+      "winningProfitWei6": "30000",
+      "winningRiskWei6": "27300"
+    },
+    "marketMaker": {
+      "address": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "claimedPayoutUSDC": "0.27375",
+      "claimedPayoutWei6": "273750",
+      "losingRiskWei6": "0",
+      "realizedPnlUSDC": "0.14975",
+      "realizedPnlWei6": "149750",
+      "winningProfitWei6": "149750",
+      "winningRiskWei6": "124000"
+    }
+  },
+  "artifactId": "2026-05-20-mlb-three-game-mm-shakeout-contests-14-16",
+  "capturedAt": "2026-05-21T08:22:21.792010+00:00",
+  "knownCaveats": [
+    "Postgame cron scripts timed out at 120s; indexed state showed score/settle progress, and manual claim-all wrap-up completed remaining settlements/claims.",
+    "The first manual claim-all pass partially failed after settling pending markets because immediate follow-on claim/settle estimates saw stale or already-updated chain/API state; a repeat sweep completed successfully and final dry-runs were empty.",
+    "Telemetry reported PositionWithoutCommitment while polling wallet positions from earlier markets that were not in the current MM local commitment state; this did not hold quoting or leave live exposure.",
+    "Telemetry also reported UnexpectedFillStatus for disappeared commitments whose DB rows still showed status=open after expiry/cancel/fill classification; live-active checks still showed zero visible unfilled commitments at wrap-up.",
+    "The run used frozen SDK/CLI 0.2.1 and the then-current deployment. Phase 1.5 API fixes were merged during/after wrap-up, but package rebuild, tarball refresh, Heroku deployment, and MM re-pull remain separate next steps before more tests."
+  ],
+  "lifecycleChecks": {
+    "allContestsScored": true,
+    "allSpeculationsSettledClosed": true,
+    "allWinningUpperPositionsClaimed": true,
+    "controlledMarketMakerFillsMatched": true,
+    "finalClaimAllDryRunsEmpty": true,
+    "testWatchdogsPausedAtWrapup": true,
+    "visibleLiveCommitmentsAtWrapup": 0
+  },
+  "markets": [
+    {
+      "claimEvents": [
+        {
+          "block_number": 87198989,
+          "block_time": "2026-05-21T04:32:19+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 7,
+          "entity_type": "position",
+          "event_name": "POSITION_CLAIMED",
+          "ingested_at": "2026-05-21T04:32:31.719606+00:00",
+          "log_index": 1530,
+          "payload": {
+            "payout": "85801",
+            "positionType": "0",
+            "speculationId": "7",
+            "user": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2"
+          },
+          "tx_hash": "0x8b414b9530c594c3ee1a145cf51dbfb09158004daf1348d1181fd4983d170d88",
+          "tx_index": 154
+        },
+        {
+          "block_number": 87206406,
+          "block_time": "2026-05-21T08:08:39+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 7,
+          "entity_type": "position",
+          "event_name": "POSITION_CLAIMED",
+          "ingested_at": "2026-05-21T08:08:54.136861+00:00",
+          "log_index": 1588,
+          "payload": {
+            "payout": "19100",
+            "positionType": "0",
+            "speculationId": "7",
+            "user": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494"
+          },
+          "tx_hash": "0x9fd4b1dd70242e8ef316081b24b7b83352b96779285fb3c7fdcf8fe01245d85a",
+          "tx_index": 175
+        }
+      ],
+      "config": "ospex-mm.2026-05-20-early-cin-phi.yaml",
+      "contestId": 14,
+      "contestState": {
+        "away_score": 9,
+        "away_team": "Cincinnati Reds",
+        "contest_created_at": "2026-05-20T03:14:48+00:00",
+        "contest_creator": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "contest_id": 14,
+        "contest_status": "scored",
+        "home_score": 4,
+        "home_team": "Philadelphia Phillies",
+        "jsonodds_id": "5fab840c-595c-4210-8580-66ad2cb6e10c",
+        "league_id": "mlb",
+        "network": "polygon",
+        "row_created_at": "2026-05-20T03:15:00.970647+00:00",
+        "row_updated_at": "2026-05-21T04:31:00.312951+00:00",
+        "rundown_id": "33ee49f3a7e50b817f3fa3b54b146ac8",
+        "scored_at": "2026-05-21T04:30:45+00:00",
+        "source_block": 87146960,
+        "sport_slug": "mlb",
+        "sportspage_id": "336719",
+        "start_time": "2026-05-20T17:05:00+00:00",
+        "verified_at": "2026-05-20T03:15:01+00:00",
+        "voided_at": null
+      },
+      "controlledMarketMakerFill": {
+        "commitment_hash": "0x5ff2d8dd45231fd4e517a5f4edf62dc09e4ff467d1185a6e45e801a0c563a1a0",
+        "contest_id": 14,
+        "contest_started": false,
+        "filled_at": "2026-05-20T16:10:28+00:00",
+        "id": 51,
+        "log_index": 1420,
+        "maker_address": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+        "maker_position_type": "upper",
+        "maker_risk_amount": 35900,
+        "network": "polygon",
+        "odds_tick": 239,
+        "row_created_at": "2026-05-20T16:10:36.37479+00:00",
+        "row_updated_at": "2026-05-20T16:10:36.37479+00:00",
+        "source_block": 87173554,
+        "speculation_id": 7,
+        "taker_address": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+        "taker_position_type": "lower",
+        "taker_risk_amount": 49901,
+        "tx_hash": "0xbf16a7f619c7125d5cdd6880717c3de386a0df9202cfdce0f12dab09f52adbe8"
+      },
+      "controlledMatchPreview": {
+        "commitmentHash": "0x5ff2d8dd45231fd4e517a5f4edf62dc09e4ff467d1185a6e45e801a0c563a1a0",
+        "economics": {
+          "fillMakerRiskUSDC": "0.035900",
+          "fillMakerRiskWei6": "35900",
+          "oddsTick": 239,
+          "remainingMakerRiskUSDC": "0.250000",
+          "remainingMakerRiskWei6": "250000",
+          "takerDesiredRiskUSDC": "0.050000",
+          "takerDesiredRiskWei6": "50000",
+          "takerProfitOnWinUSDC": "0.035900",
+          "takerReturnOnWinUSDC": "0.085801",
+          "takerRiskUSDC": "0.049901",
+          "takerRiskWei6": "49901"
+        },
+        "makerSide": {
+          "positionType": 0,
+          "resolvedLabel": "Cincinnati Reds",
+          "role": "away"
+        },
+        "odds": {
+          "makerAmerican": "+139",
+          "makerDecimal": "2.39",
+          "oddsTick": 239,
+          "takerAmerican": "-139",
+          "takerDecimal": "1.72",
+          "takerOddsTick": 172
+        },
+        "takerSide": {
+          "positionType": 1,
+          "resolvedLabel": "Philadelphia Phillies",
+          "role": "home"
+        },
+        "txHash": "0xbf16a7f619c7125d5cdd6880717c3de386a0df9202cfdce0f12dab09f52adbe8",
+        "warnings": [
+          {
+            "code": "expires-soon",
+            "message": "Commitment expires soon (within the 5-minute window).",
+            "severity": "warning"
+          },
+          {
+            "code": "partial-fill",
+            "message": "Taker risk is less than the maker remaining capacity \u2014 this will be a partial fill.",
+            "severity": "info"
+          }
+        ]
+      },
+      "events": [
+        {
+          "block_number": 87146960,
+          "block_time": "2026-05-20T03:14:48+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 14,
+          "entity_type": "contest",
+          "event_name": "CONTEST_CREATED",
+          "ingested_at": "2026-05-20T03:15:00.882791+00:00",
+          "log_index": 3135,
+          "payload": {
+            "approvedLeagueId": "0",
+            "contestCreator": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+            "contestId": "14",
+            "jsonoddsId": "5fab840c-595c-4210-8580-66ad2cb6e10c",
+            "marketUpdateSourceHash": "0x7f5ce70565133fedb2e0f1aeb925f38a3b26924917cff852e7de40a9297119b4",
+            "rundownId": "33ee49f3a7e50b817f3fa3b54b146ac8",
+            "scoreContestSourceHash": "0xcb2a11db3190c322239b52afb3caefccfccd850566834819b012c5520f8d31cd",
+            "sportspageId": "336719",
+            "verifySourceHash": "0x01c48e15068b68b7d5986d5013edd83a243ac31a761567e9db0e57b513c26c01"
+          },
+          "tx_hash": "0x06697080f7d3126abc486f7968498a317551d22c4f98077717c084a98a13009b",
+          "tx_index": 222
+        },
+        {
+          "block_number": 87146960,
+          "block_time": "2026-05-20T03:14:48+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 14,
+          "entity_type": "contest",
+          "event_name": "SCRIPT_APPROVAL_VERIFIED",
+          "ingested_at": "2026-05-20T03:15:01.047396+00:00",
+          "log_index": 3137,
+          "payload": {
+            "contestId": "14",
+            "leagueId": "0",
+            "purpose": "0",
+            "scriptHash": "0x01c48e15068b68b7d5986d5013edd83a243ac31a761567e9db0e57b513c26c01",
+            "version": "1"
+          },
+          "tx_hash": "0x06697080f7d3126abc486f7968498a317551d22c4f98077717c084a98a13009b",
+          "tx_index": 222
+        },
+        {
+          "block_number": 87146960,
+          "block_time": "2026-05-20T03:14:48+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 14,
+          "entity_type": "contest",
+          "event_name": "SCRIPT_APPROVAL_VERIFIED",
+          "ingested_at": "2026-05-20T03:15:01.074969+00:00",
+          "log_index": 3139,
+          "payload": {
+            "contestId": "14",
+            "leagueId": "0",
+            "purpose": "1",
+            "scriptHash": "0x7f5ce70565133fedb2e0f1aeb925f38a3b26924917cff852e7de40a9297119b4",
+            "version": "1"
+          },
+          "tx_hash": "0x06697080f7d3126abc486f7968498a317551d22c4f98077717c084a98a13009b",
+          "tx_index": 222
+        },
+        {
+          "block_number": 87146960,
+          "block_time": "2026-05-20T03:14:48+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 14,
+          "entity_type": "contest",
+          "event_name": "SCRIPT_APPROVAL_VERIFIED",
+          "ingested_at": "2026-05-20T03:15:01.102188+00:00",
+          "log_index": 3141,
+          "payload": {
+            "contestId": "14",
+            "leagueId": "0",
+            "purpose": "2",
+            "scriptHash": "0xcb2a11db3190c322239b52afb3caefccfccd850566834819b012c5520f8d31cd",
+            "version": "1"
+          },
+          "tx_hash": "0x06697080f7d3126abc486f7968498a317551d22c4f98077717c084a98a13009b",
+          "tx_index": 222
+        },
+        {
+          "block_number": 87146967,
+          "block_time": "2026-05-20T03:15:01+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 14,
+          "entity_type": "contest",
+          "event_name": "CONTEST_VERIFIED",
+          "ingested_at": "2026-05-20T03:15:16.37804+00:00",
+          "log_index": 5281,
+          "payload": {
+            "contestId": "14",
+            "leagueId": "3",
+            "startTime": "1779296700"
+          },
+          "tx_hash": "0xb29fcd742e6bcf04744be1a353be9bf7a0dafc0fb54332d949714c49f00d86a2",
+          "tx_index": 303
+        },
+        {
+          "block_number": 87198935,
+          "block_time": "2026-05-21T04:30:45+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 14,
+          "entity_type": "contest",
+          "event_name": "CONTEST_SCORES_SET",
+          "ingested_at": "2026-05-21T04:31:00.284678+00:00",
+          "log_index": 254,
+          "payload": {
+            "awayScore": "9",
+            "contestId": "14",
+            "homeScore": "4"
+          },
+          "tx_hash": "0x65bc39c82174f36de8e7fecfd5c2715a2a5e60e6f365ea0ca9b2a25dcf7425c1",
+          "tx_index": 27
+        },
+        {
+          "block_number": 87147111,
+          "block_time": "2026-05-20T03:19:13+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 7,
+          "entity_type": "speculation",
+          "event_name": "SPECULATION_CREATED",
+          "ingested_at": "2026-05-20T03:19:19.725004+00:00",
+          "log_index": 1350,
+          "payload": {
+            "contestId": "14",
+            "lineTicks": "0",
+            "maker": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+            "scorer": "0xd846B7FdbD8C9F67d1580B2C6a8Bd7Fdcb15390b",
+            "speculationId": "7",
+            "taker": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494"
+          },
+          "tx_hash": "0x28f45ca18d7ea0040c6951b61c1c4317ef2c56d328a6307a48f175165ad7807c",
+          "tx_index": 137
+        },
+        {
+          "block_number": 87198969,
+          "block_time": "2026-05-21T04:31:44+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 7,
+          "entity_type": "speculation",
+          "event_name": "SPECULATION_SETTLED",
+          "ingested_at": "2026-05-21T04:32:01.38354+00:00",
+          "log_index": 1019,
+          "payload": {
+            "scorer": "0xd846B7FdbD8C9F67d1580B2C6a8Bd7Fdcb15390b",
+            "speculationId": "7",
+            "winSideValue": "1"
+          },
+          "tx_hash": "0xd84f1d27649b8d8a9e79fbfd50d36aeec3e5e8c211ead2daceed495bd96377df",
+          "tx_index": 100
+        },
+        {
+          "block_number": 87198989,
+          "block_time": "2026-05-21T04:32:19+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 7,
+          "entity_type": "position",
+          "event_name": "POSITION_CLAIMED",
+          "ingested_at": "2026-05-21T04:32:31.719606+00:00",
+          "log_index": 1530,
+          "payload": {
+            "payout": "85801",
+            "positionType": "0",
+            "speculationId": "7",
+            "user": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2"
+          },
+          "tx_hash": "0x8b414b9530c594c3ee1a145cf51dbfb09158004daf1348d1181fd4983d170d88",
+          "tx_index": 154
+        },
+        {
+          "block_number": 87206406,
+          "block_time": "2026-05-21T08:08:39+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 7,
+          "entity_type": "position",
+          "event_name": "POSITION_CLAIMED",
+          "ingested_at": "2026-05-21T08:08:54.136861+00:00",
+          "log_index": 1588,
+          "payload": {
+            "payout": "19100",
+            "positionType": "0",
+            "speculationId": "7",
+            "user": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494"
+          },
+          "tx_hash": "0x9fd4b1dd70242e8ef316081b24b7b83352b96779285fb3c7fdcf8fe01245d85a",
+          "tx_index": 175
+        }
+      ],
+      "finalMarketMakerSummary": {
+        "candidates": {
+          "skipReasons": {},
+          "total": 1,
+          "tracked": 1
+        },
+        "degradedByReason": {},
+        "errors": {
+          "byPhase": {
+            "fill-detection": 8,
+            "position-poll": 40
+          },
+          "total": 48
+        },
+        "eventCounts": {
+          "approval": 0,
+          "candidate": 1,
+          "claim": 1,
+          "competitiveness-unavailable": 0,
+          "degraded": 0,
+          "error": 48,
+          "expire": 74,
+          "fair-value": 0,
+          "fill": 1,
+          "kill": 3,
+          "nonce-floor-raise": 0,
+          "onchain-cancel": 0,
+          "position-transition": 2,
+          "quote-competitiveness": 82,
+          "quote-intent": 41,
+          "replace": 64,
+          "risk-verdict": 41,
+          "settle": 1,
+          "soft-cancel": 2,
+          "submit": 10,
+          "tick-start": 136,
+          "would-replace": 0,
+          "would-soft-cancel": 0,
+          "would-submit": 0
+        },
+        "expired": 74,
+        "firstEventAt": "2026-05-20T15:55:19.477Z",
+        "generatedAt": "2026-05-21T08:11:11.752Z",
+        "kill": {
+          "reason": "signal",
+          "ticks": 10
+        },
+        "lastEventAt": "2026-05-21T06:06:42.080Z",
+        "latentExposurePeakWei6": "0",
+        "lines": 507,
+        "liveMetrics": {
+          "fills": {
+            "fillRate": 0.0019405405405405406,
+            "filledUsdcWei6": "35900",
+            "quotedUsdcWei6": "18500000"
+          },
+          "gas": {
+            "byKind": {
+              "approval": "0",
+              "claim": "22860739757443185",
+              "onchainCancel": "0",
+              "settle": "26528356533100044"
+            },
+            "totalPolWei": "49389096290543229",
+            "totalUsdcEquivWei6": "12347"
+          },
+          "realizedPnl": {
+            "claimedProfitUsdcWei6": "49901",
+            "lostCount": 0,
+            "netUsdcWei6": "49901",
+            "pushCount": 0,
+            "realizedLossUsdcWei6": "0",
+            "unsettledCount": 0,
+            "wonCount": 1,
+            "wonUnclaimedCount": 0
+          },
+          "settlements": {
+            "claimCount": 1,
+            "settleCount": 1,
+            "totalClaimedPayoutWei6": "85801"
+          },
+          "totalFeeUsdcWei6": "0"
+        },
+        "malformedLines": 0,
+        "quoteAgeSeconds": null,
+        "quoteCompetitiveness": {
+          "atOrInsideBookCount": 82,
+          "atOrInsideBookRate": 1,
+          "samples": 82,
+          "unavailable": 0,
+          "vsReferenceTicks": {
+            "max": 7,
+            "mean": 5.829268292682927,
+            "min": 4,
+            "p50": 5
+          }
+        },
+        "quoteIntents": {
+          "canQuote": 41,
+          "refused": 0,
+          "total": 41
+        },
+        "runIds": [
+          "2026-05-20T15-55-19-475Z-6rdfx9",
+          "2026-05-21T04-31-40-650Z-fljrh3",
+          "2026-05-21T06-01-43-473Z-34b9ry"
+        ],
+        "schemaVersion": 1,
+        "sources": [
+          "telemetry-2026-05-20-early-cin-phi/run-2026-05-20T15-55-19-475Z-6rdfx9.ndjson",
+          "telemetry-2026-05-20-early-cin-phi/run-2026-05-21T04-31-40-650Z-fljrh3.ndjson",
+          "telemetry-2026-05-20-early-cin-phi/run-2026-05-21T06-01-43-473Z-34b9ry.ndjson"
+        ],
+        "staleQuoteIncidents": 0,
+        "ticks": 136,
+        "wouldReplace": {
+          "byReason": {},
+          "total": 0
+        },
+        "wouldSoftCancel": {
+          "byReason": {},
+          "total": 0
+        },
+        "wouldSubmit": 0
+      },
+      "finalScore": {
+        "away": 9,
+        "gamePk": 823462,
+        "home": 4,
+        "sourceStatus": "Final"
+      },
+      "finalStatus": {
+        "commitments": {
+          "byLifecycle": {
+            "authoritativelyInvalidated": 0,
+            "expired": 0,
+            "filled": 0,
+            "partiallyFilled": 0,
+            "softCancelled": 0,
+            "visibleOpen": 0
+          },
+          "distinctContestsNonTerminal": 0,
+          "total": 0
+        },
+        "configPath": "ospex-mm.2026-05-20-early-cin-phi.yaml",
+        "dailyCounters": {
+          "lifetimeFeeUsdcWei6": "0",
+          "lifetimeGasPolWei": "49389096290543229",
+          "today": "2026-05-21",
+          "todayFeeUsdcWei6": "0",
+          "todayGasPolWei": "49389096290543229"
+        },
+        "lastFlushedAt": "2026-05-21T06:06:42.081Z",
+        "lastRunId": null,
+        "livePositionTotals": {
+          "activeCount": 0,
+          "claimableCount": 0,
+          "claimablePayoutWei6": "0",
+          "pendingSettleCount": 0,
+          "pendingSettlePayoutWei6": "0"
+        },
+        "livePositionsSkipReason": null,
+        "makerAddress": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+        "makerAddressSource": "flag",
+        "pnl": {
+          "asOfUnixSec": 0,
+          "realizedUsdcWei6": "0",
+          "unrealizedUsdcWei6": "0"
+        },
+        "positions": {
+          "byStatus": {
+            "active": {
+              "count": 0,
+              "ownRiskWei6": "0"
+            },
+            "claimable": {
+              "count": 0,
+              "ownRiskWei6": "0"
+            },
+            "claimed": {
+              "count": 1,
+              "ownRiskWei6": "35900"
+            },
+            "pendingSettle": {
+              "count": 0,
+              "ownRiskWei6": "0"
+            }
+          },
+          "total": 1
+        },
+        "schemaVersion": 1,
+        "stateIntegrity": "loaded",
+        "stateLossAssessment": {
+          "holdQuoting": false,
+          "reason": "state loaded cleanly"
+        },
+        "statePath": "state-2026-05-20-early-cin-phi/maker-state.json"
+      },
+      "label": "Cincinnati Reds @ Philadelphia Phillies",
+      "liveWindow": "10:55-11:55 America/Chicago",
+      "market": "moneyline",
+      "openCommitmentCountsAtWrapup": {
+        "cancelled_rows": 66,
+        "contest_id": 14,
+        "filled_rows": 1,
+        "open_rows": 7,
+        "total_rows": 75,
+        "visible_live_unfilled": 0
+      },
+      "polygonscan": {
+        "CONTEST_CREATED": "https://polygonscan.com/tx/0x06697080f7d3126abc486f7968498a317551d22c4f98077717c084a98a13009b",
+        "CONTEST_SCORES_SET": "https://polygonscan.com/tx/0x65bc39c82174f36de8e7fecfd5c2715a2a5e60e6f365ea0ca9b2a25dcf7425c1",
+        "CONTEST_VERIFIED": "https://polygonscan.com/tx/0xb29fcd742e6bcf04744be1a353be9bf7a0dafc0fb54332d949714c49f00d86a2",
+        "POSITION_CLAIMED": "https://polygonscan.com/tx/0x9fd4b1dd70242e8ef316081b24b7b83352b96779285fb3c7fdcf8fe01245d85a",
+        "SCRIPT_APPROVAL_VERIFIED": "https://polygonscan.com/tx/0x06697080f7d3126abc486f7968498a317551d22c4f98077717c084a98a13009b",
+        "SPECULATION_CREATED": "https://polygonscan.com/tx/0x28f45ca18d7ea0040c6951b61c1c4317ef2c56d328a6307a48f175165ad7807c",
+        "SPECULATION_SETTLED": "https://polygonscan.com/tx/0xd84f1d27649b8d8a9e79fbfd50d36aeec3e5e8c211ead2daceed495bd96377df"
+      },
+      "positions": [
+        {
+          "acquired_via_secondary_market": false,
+          "claimed": true,
+          "claimed_amount": 19100,
+          "claimed_at": "2026-05-21T08:08:39+00:00",
+          "first_fill_timestamp": "2026-05-20T03:19:13+00:00",
+          "network": "polygon",
+          "position_created_at": "2026-05-20T03:19:13+00:00",
+          "position_type": "upper",
+          "profit_amount": 10000,
+          "risk_amount": 9100,
+          "row_created_at": "2026-05-20T03:19:19.82694+00:00",
+          "row_updated_at": "2026-05-21T08:08:54.165824+00:00",
+          "source_block": 87147111,
+          "speculation_id": 7,
+          "user_address": "0x1de13292256fddca9eea1ae53a79a83243cfd494"
+        },
+        {
+          "acquired_via_secondary_market": false,
+          "claimed": false,
+          "claimed_amount": null,
+          "claimed_at": null,
+          "first_fill_timestamp": "2026-05-20T16:10:28+00:00",
+          "network": "polygon",
+          "position_created_at": "2026-05-20T16:10:28+00:00",
+          "position_type": "lower",
+          "profit_amount": 35900,
+          "risk_amount": 49901,
+          "row_created_at": "2026-05-20T16:10:36.294593+00:00",
+          "row_updated_at": "2026-05-20T16:10:36.294593+00:00",
+          "source_block": 87173554,
+          "speculation_id": 7,
+          "user_address": "0x1de13292256fddca9eea1ae53a79a83243cfd494"
+        },
+        {
+          "acquired_via_secondary_market": false,
+          "claimed": true,
+          "claimed_amount": 85801,
+          "claimed_at": "2026-05-21T04:32:19+00:00",
+          "first_fill_timestamp": "2026-05-20T16:10:28+00:00",
+          "network": "polygon",
+          "position_created_at": "2026-05-20T16:10:28+00:00",
+          "position_type": "upper",
+          "profit_amount": 49901,
+          "risk_amount": 35900,
+          "row_created_at": "2026-05-20T16:10:36.294593+00:00",
+          "row_updated_at": "2026-05-21T04:32:31.754847+00:00",
+          "source_block": 87173554,
+          "speculation_id": 7,
+          "user_address": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2"
+        },
+        {
+          "acquired_via_secondary_market": false,
+          "claimed": false,
+          "claimed_amount": null,
+          "claimed_at": null,
+          "first_fill_timestamp": "2026-05-20T03:19:13+00:00",
+          "network": "polygon",
+          "position_created_at": "2026-05-20T03:19:13+00:00",
+          "position_type": "lower",
+          "profit_amount": 9100,
+          "risk_amount": 10000,
+          "row_created_at": "2026-05-20T03:19:19.82694+00:00",
+          "row_updated_at": "2026-05-20T03:19:19.82694+00:00",
+          "source_block": 87147111,
+          "speculation_id": 7,
+          "user_address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+        }
+      ],
+      "protocolSideMapping": {
+        "lower": "home",
+        "upper": "away"
+      },
+      "quoteWindowTelemetry": {
+        "errors": 8,
+        "fills": 1,
+        "fillsMetric": {
+          "fillRate": 0.0019405405405405406,
+          "filledUsdcWei6": "35900",
+          "quotedUsdcWei6": "18500000"
+        },
+        "holdQuotingAtWindowEnd": false,
+        "quoteCompetitiveness": {
+          "atOrInsideBookRate": 1,
+          "samples": 82,
+          "vsReferenceTicks": {
+            "max": 7,
+            "mean": 5.829268292682927,
+            "min": 4,
+            "p50": 5
+          }
+        },
+        "replaces": 64,
+        "softCancels": 2,
+        "submits": 10,
+        "ticks": 116,
+        "visibleOpenAtWindowEnd": 0
+      },
+      "seedFill": {
+        "commitment_hash": "0xd2a2ad3e795dad9608886cd09a48a8c6ad51776ed1b3629e9513e7869318cf12",
+        "contest_id": 14,
+        "contest_started": false,
+        "filled_at": "2026-05-20T03:19:13+00:00",
+        "id": 48,
+        "log_index": 1356,
+        "maker_address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "maker_position_type": "lower",
+        "maker_risk_amount": 10000,
+        "network": "polygon",
+        "odds_tick": 191,
+        "row_created_at": "2026-05-20T03:19:19.886069+00:00",
+        "row_updated_at": "2026-05-20T03:19:19.886069+00:00",
+        "source_block": 87147111,
+        "speculation_id": 7,
+        "taker_address": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+        "taker_position_type": "upper",
+        "taker_risk_amount": 9100,
+        "tx_hash": "0x28f45ca18d7ea0040c6951b61c1c4317ef2c56d328a6307a48f175165ad7807c"
+      },
+      "slug": "early-cin-phi",
+      "speculationId": 7,
+      "speculationState": {
+        "contest_id": 14,
+        "line_ticks": 0,
+        "market_type": "moneyline",
+        "network": "polygon",
+        "row_created_at": "2026-05-20T03:19:19.760464+00:00",
+        "row_updated_at": "2026-05-21T04:32:01.412412+00:00",
+        "scored_at": "2026-05-21T04:30:45+00:00",
+        "settled_at": "2026-05-21T04:31:44+00:00",
+        "source_block": 87147111,
+        "speculation_created_at": "2026-05-20T03:19:13+00:00",
+        "speculation_creator": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "speculation_id": 7,
+        "speculation_scorer": "0xd846b7fdbd8c9f67d1580b2c6a8bd7fdcb15390b",
+        "speculation_status": "closed",
+        "speculation_taker": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+        "voided": false,
+        "win_side": "away"
+      },
+      "startTime": "2026-05-20T17:05:00+00:00",
+      "teams": {
+        "away": "Cincinnati Reds",
+        "home": "Philadelphia Phillies"
+      },
+      "winner": {
+        "positionType": "upper",
+        "protocolWinSide": "away",
+        "team": "Cincinnati Reds"
+      }
+    },
+    {
+      "claimEvents": [
+        {
+          "block_number": 87206455,
+          "block_time": "2026-05-21T08:10:05+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 8,
+          "entity_type": "position",
+          "event_name": "POSITION_CLAIMED",
+          "ingested_at": "2026-05-21T08:10:09.906326+00:00",
+          "log_index": 1666,
+          "payload": {
+            "payout": "106029",
+            "positionType": "0",
+            "speculationId": "8",
+            "user": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2"
+          },
+          "tx_hash": "0xb31ae20df78ae92c024a03959fdd3d00d0887abc5a8b105ac0ee3a1c2099cf62",
+          "tx_index": 169
+        },
+        {
+          "block_number": 87206459,
+          "block_time": "2026-05-21T08:10:12+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 8,
+          "entity_type": "position",
+          "event_name": "POSITION_CLAIMED",
+          "ingested_at": "2026-05-21T08:10:25.209761+00:00",
+          "log_index": 1823,
+          "payload": {
+            "payout": "19100",
+            "positionType": "0",
+            "speculationId": "8",
+            "user": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494"
+          },
+          "tx_hash": "0xc1365f4e4c7d54782213bc51b2f1f92091333cfd32dd4258f9cb12435f765906",
+          "tx_index": 183
+        }
+      ],
+      "config": "ospex-mm.2026-05-20-afternoon-tex-col.yaml",
+      "contestId": 15,
+      "contestState": {
+        "away_score": 5,
+        "away_team": "Texas Rangers",
+        "contest_created_at": "2026-05-20T03:15:08+00:00",
+        "contest_creator": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "contest_id": 15,
+        "contest_status": "scored",
+        "home_score": 4,
+        "home_team": "Colorado Rockies",
+        "jsonodds_id": "b3ffa839-b8f0-4332-bccc-59909c75eff7",
+        "league_id": "mlb",
+        "network": "polygon",
+        "row_created_at": "2026-05-20T03:15:16.582715+00:00",
+        "row_updated_at": "2026-05-21T04:31:15.662774+00:00",
+        "rundown_id": "317c636baea6b5720f58d0a12bba2da4",
+        "scored_at": "2026-05-21T04:31:06+00:00",
+        "source_block": 87146971,
+        "sport_slug": "mlb",
+        "sportspage_id": "336722",
+        "start_time": "2026-05-20T19:10:00+00:00",
+        "verified_at": "2026-05-20T03:15:16+00:00",
+        "voided_at": null
+      },
+      "controlledMarketMakerFill": {
+        "commitment_hash": "0xe6839b23f450421da870934b32045399702d3b01e7958f5a811d9ae2fdf3c15b",
+        "contest_id": 15,
+        "contest_started": false,
+        "filled_at": "2026-05-20T18:15:09+00:00",
+        "id": 52,
+        "log_index": 2354,
+        "maker_address": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+        "maker_position_type": "upper",
+        "maker_risk_amount": 56100,
+        "network": "polygon",
+        "odds_tick": 189,
+        "row_created_at": "2026-05-20T18:15:15.246301+00:00",
+        "row_updated_at": "2026-05-20T18:15:15.246301+00:00",
+        "source_block": 87177829,
+        "speculation_id": 8,
+        "taker_address": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+        "taker_position_type": "lower",
+        "taker_risk_amount": 49929,
+        "tx_hash": "0x2f0da9d6a0b9706bbc27b94dab3d6aab6c42b2325b4f1cd7835c9ce73a35f540"
+      },
+      "controlledMatchPreview": {
+        "commitmentHash": "0xe6839b23f450421da870934b32045399702d3b01e7958f5a811d9ae2fdf3c15b",
+        "economics": {
+          "fillMakerRiskUSDC": "0.056100",
+          "fillMakerRiskWei6": "56100",
+          "oddsTick": 189,
+          "remainingMakerRiskUSDC": "0.250000",
+          "remainingMakerRiskWei6": "250000",
+          "takerDesiredRiskUSDC": "0.050000",
+          "takerDesiredRiskWei6": "50000",
+          "takerProfitOnWinUSDC": "0.056100",
+          "takerReturnOnWinUSDC": "0.106029",
+          "takerRiskUSDC": "0.049929",
+          "takerRiskWei6": "49929"
+        },
+        "makerSide": {
+          "positionType": 0,
+          "resolvedLabel": "Texas Rangers",
+          "role": "away"
+        },
+        "odds": {
+          "makerAmerican": "-112",
+          "makerDecimal": "1.89",
+          "oddsTick": 189,
+          "takerAmerican": "+112",
+          "takerDecimal": "2.12",
+          "takerOddsTick": 212
+        },
+        "takerSide": {
+          "positionType": 1,
+          "resolvedLabel": "Colorado Rockies",
+          "role": "home"
+        },
+        "txHash": "0x2f0da9d6a0b9706bbc27b94dab3d6aab6c42b2325b4f1cd7835c9ce73a35f540",
+        "warnings": [
+          {
+            "code": "expires-soon",
+            "message": "Commitment expires soon (within the 5-minute window).",
+            "severity": "warning"
+          },
+          {
+            "code": "partial-fill",
+            "message": "Taker risk is less than the maker remaining capacity \u2014 this will be a partial fill.",
+            "severity": "info"
+          }
+        ]
+      },
+      "events": [
+        {
+          "block_number": 87146971,
+          "block_time": "2026-05-20T03:15:08+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 15,
+          "entity_type": "contest",
+          "event_name": "CONTEST_CREATED",
+          "ingested_at": "2026-05-20T03:15:16.492417+00:00",
+          "log_index": 2162,
+          "payload": {
+            "approvedLeagueId": "0",
+            "contestCreator": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+            "contestId": "15",
+            "jsonoddsId": "b3ffa839-b8f0-4332-bccc-59909c75eff7",
+            "marketUpdateSourceHash": "0x7f5ce70565133fedb2e0f1aeb925f38a3b26924917cff852e7de40a9297119b4",
+            "rundownId": "317c636baea6b5720f58d0a12bba2da4",
+            "scoreContestSourceHash": "0xcb2a11db3190c322239b52afb3caefccfccd850566834819b012c5520f8d31cd",
+            "sportspageId": "336722",
+            "verifySourceHash": "0x01c48e15068b68b7d5986d5013edd83a243ac31a761567e9db0e57b513c26c01"
+          },
+          "tx_hash": "0x5d4aea620336fb1bf95b76797f1f71a21cef0bf116dd882ca593e76cb4f65b40",
+          "tx_index": 194
+        },
+        {
+          "block_number": 87146971,
+          "block_time": "2026-05-20T03:15:08+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 15,
+          "entity_type": "contest",
+          "event_name": "SCRIPT_APPROVAL_VERIFIED",
+          "ingested_at": "2026-05-20T03:15:16.662274+00:00",
+          "log_index": 2164,
+          "payload": {
+            "contestId": "15",
+            "leagueId": "0",
+            "purpose": "0",
+            "scriptHash": "0x01c48e15068b68b7d5986d5013edd83a243ac31a761567e9db0e57b513c26c01",
+            "version": "1"
+          },
+          "tx_hash": "0x5d4aea620336fb1bf95b76797f1f71a21cef0bf116dd882ca593e76cb4f65b40",
+          "tx_index": 194
+        },
+        {
+          "block_number": 87146971,
+          "block_time": "2026-05-20T03:15:08+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 15,
+          "entity_type": "contest",
+          "event_name": "SCRIPT_APPROVAL_VERIFIED",
+          "ingested_at": "2026-05-20T03:15:16.691726+00:00",
+          "log_index": 2166,
+          "payload": {
+            "contestId": "15",
+            "leagueId": "0",
+            "purpose": "1",
+            "scriptHash": "0x7f5ce70565133fedb2e0f1aeb925f38a3b26924917cff852e7de40a9297119b4",
+            "version": "1"
+          },
+          "tx_hash": "0x5d4aea620336fb1bf95b76797f1f71a21cef0bf116dd882ca593e76cb4f65b40",
+          "tx_index": 194
+        },
+        {
+          "block_number": 87146971,
+          "block_time": "2026-05-20T03:15:08+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 15,
+          "entity_type": "contest",
+          "event_name": "SCRIPT_APPROVAL_VERIFIED",
+          "ingested_at": "2026-05-20T03:15:16.71965+00:00",
+          "log_index": 2168,
+          "payload": {
+            "contestId": "15",
+            "leagueId": "0",
+            "purpose": "2",
+            "scriptHash": "0xcb2a11db3190c322239b52afb3caefccfccd850566834819b012c5520f8d31cd",
+            "version": "1"
+          },
+          "tx_hash": "0x5d4aea620336fb1bf95b76797f1f71a21cef0bf116dd882ca593e76cb4f65b40",
+          "tx_index": 194
+        },
+        {
+          "block_number": 87146976,
+          "block_time": "2026-05-20T03:15:16+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 15,
+          "entity_type": "contest",
+          "event_name": "CONTEST_VERIFIED",
+          "ingested_at": "2026-05-20T03:15:31.999177+00:00",
+          "log_index": 319,
+          "payload": {
+            "contestId": "15",
+            "leagueId": "3",
+            "startTime": "1779304200"
+          },
+          "tx_hash": "0x8e2213ac8f1ca855da13d10edc8ab784b762e8da9136a6aca5be2a4f4aa0524d",
+          "tx_index": 41
+        },
+        {
+          "block_number": 87198947,
+          "block_time": "2026-05-21T04:31:06+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 15,
+          "entity_type": "contest",
+          "event_name": "CONTEST_SCORES_SET",
+          "ingested_at": "2026-05-21T04:31:15.632797+00:00",
+          "log_index": 306,
+          "payload": {
+            "awayScore": "5",
+            "contestId": "15",
+            "homeScore": "4"
+          },
+          "tx_hash": "0xb0b18bad55e1cf20d8b51e638f96c5093a702046ed5ee5351b6ac525d81e927e",
+          "tx_index": 35
+        },
+        {
+          "block_number": 87147116,
+          "block_time": "2026-05-20T03:19:21+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 8,
+          "entity_type": "speculation",
+          "event_name": "SPECULATION_CREATED",
+          "ingested_at": "2026-05-20T03:19:35.140904+00:00",
+          "log_index": 2833,
+          "payload": {
+            "contestId": "15",
+            "lineTicks": "0",
+            "maker": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+            "scorer": "0xd846B7FdbD8C9F67d1580B2C6a8Bd7Fdcb15390b",
+            "speculationId": "8",
+            "taker": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494"
+          },
+          "tx_hash": "0x7c5b551a1d9910a6338e920f175fb55bb0cc711896454b405008f9ca3915940a",
+          "tx_index": 183
+        },
+        {
+          "block_number": 87206403,
+          "block_time": "2026-05-21T08:08:34+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 8,
+          "entity_type": "speculation",
+          "event_name": "SPECULATION_SETTLED",
+          "ingested_at": "2026-05-21T08:08:38.507427+00:00",
+          "log_index": 2197,
+          "payload": {
+            "scorer": "0xd846B7FdbD8C9F67d1580B2C6a8Bd7Fdcb15390b",
+            "speculationId": "8",
+            "winSideValue": "1"
+          },
+          "tx_hash": "0x5e376781bf4fc4ca3871e1363c6fe2153af98af2e2e68cad9f83c299f51b9c9f",
+          "tx_index": 186
+        },
+        {
+          "block_number": 87206455,
+          "block_time": "2026-05-21T08:10:05+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 8,
+          "entity_type": "position",
+          "event_name": "POSITION_CLAIMED",
+          "ingested_at": "2026-05-21T08:10:09.906326+00:00",
+          "log_index": 1666,
+          "payload": {
+            "payout": "106029",
+            "positionType": "0",
+            "speculationId": "8",
+            "user": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2"
+          },
+          "tx_hash": "0xb31ae20df78ae92c024a03959fdd3d00d0887abc5a8b105ac0ee3a1c2099cf62",
+          "tx_index": 169
+        },
+        {
+          "block_number": 87206459,
+          "block_time": "2026-05-21T08:10:12+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 8,
+          "entity_type": "position",
+          "event_name": "POSITION_CLAIMED",
+          "ingested_at": "2026-05-21T08:10:25.209761+00:00",
+          "log_index": 1823,
+          "payload": {
+            "payout": "19100",
+            "positionType": "0",
+            "speculationId": "8",
+            "user": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494"
+          },
+          "tx_hash": "0xc1365f4e4c7d54782213bc51b2f1f92091333cfd32dd4258f9cb12435f765906",
+          "tx_index": 183
+        }
+      ],
+      "finalMarketMakerSummary": {
+        "candidates": {
+          "skipReasons": {},
+          "total": 1,
+          "tracked": 1
+        },
+        "degradedByReason": {},
+        "errors": {
+          "byPhase": {
+            "fill-detection": 6,
+            "position-poll": 116
+          },
+          "total": 122
+        },
+        "eventCounts": {
+          "approval": 0,
+          "candidate": 1,
+          "claim": 0,
+          "competitiveness-unavailable": 0,
+          "degraded": 0,
+          "error": 122,
+          "expire": 72,
+          "fair-value": 0,
+          "fill": 1,
+          "kill": 1,
+          "nonce-floor-raise": 0,
+          "onchain-cancel": 0,
+          "position-transition": 0,
+          "quote-competitiveness": 80,
+          "quote-intent": 40,
+          "replace": 66,
+          "risk-verdict": 40,
+          "settle": 0,
+          "soft-cancel": 2,
+          "submit": 8,
+          "tick-start": 116,
+          "would-replace": 0,
+          "would-soft-cancel": 0,
+          "would-submit": 0
+        },
+        "expired": 72,
+        "firstEventAt": "2026-05-20T18:00:59.984Z",
+        "generatedAt": "2026-05-21T08:11:14.632Z",
+        "kill": {
+          "reason": "signal",
+          "ticks": 116
+        },
+        "lastEventAt": "2026-05-20T19:00:59.143Z",
+        "latentExposurePeakWei6": "0",
+        "lines": 549,
+        "liveMetrics": {
+          "fills": {
+            "fillRate": 0.0030324324324324326,
+            "filledUsdcWei6": "56100",
+            "quotedUsdcWei6": "18500000"
+          },
+          "gas": {
+            "byKind": {
+              "approval": "0",
+              "claim": "0",
+              "onchainCancel": "0",
+              "settle": "0"
+            },
+            "totalPolWei": "0",
+            "totalUsdcEquivWei6": "0"
+          },
+          "realizedPnl": {
+            "claimedProfitUsdcWei6": "0",
+            "lostCount": 0,
+            "netUsdcWei6": "0",
+            "pushCount": 0,
+            "realizedLossUsdcWei6": "0",
+            "unsettledCount": 1,
+            "wonCount": 0,
+            "wonUnclaimedCount": 0
+          },
+          "settlements": {
+            "claimCount": 0,
+            "settleCount": 0,
+            "totalClaimedPayoutWei6": "0"
+          },
+          "totalFeeUsdcWei6": "0"
+        },
+        "malformedLines": 0,
+        "quoteAgeSeconds": null,
+        "quoteCompetitiveness": {
+          "atOrInsideBookCount": 80,
+          "atOrInsideBookRate": 1,
+          "samples": 80,
+          "unavailable": 0,
+          "vsReferenceTicks": {
+            "max": 6,
+            "mean": 5.7625,
+            "min": 4,
+            "p50": 6
+          }
+        },
+        "quoteIntents": {
+          "canQuote": 40,
+          "refused": 0,
+          "total": 40
+        },
+        "runIds": [
+          "2026-05-20T18-00-59-981Z-esizjr"
+        ],
+        "schemaVersion": 1,
+        "sources": [
+          "telemetry-2026-05-20-afternoon-tex-col/run-2026-05-20T18-00-59-981Z-esizjr.ndjson"
+        ],
+        "staleQuoteIncidents": 0,
+        "ticks": 116,
+        "wouldReplace": {
+          "byReason": {},
+          "total": 0
+        },
+        "wouldSoftCancel": {
+          "byReason": {},
+          "total": 0
+        },
+        "wouldSubmit": 0
+      },
+      "finalScore": {
+        "away": 5,
+        "gamePk": 824355,
+        "home": 4,
+        "sourceStatus": "Final"
+      },
+      "finalStatus": {
+        "commitments": {
+          "byLifecycle": {
+            "authoritativelyInvalidated": 0,
+            "expired": 72,
+            "filled": 0,
+            "partiallyFilled": 0,
+            "softCancelled": 2,
+            "visibleOpen": 0
+          },
+          "distinctContestsNonTerminal": 1,
+          "total": 74
+        },
+        "configPath": "ospex-mm.2026-05-20-afternoon-tex-col.yaml",
+        "dailyCounters": {
+          "lifetimeFeeUsdcWei6": "0",
+          "lifetimeGasPolWei": "0",
+          "today": "2026-05-21",
+          "todayFeeUsdcWei6": "0",
+          "todayGasPolWei": "0"
+        },
+        "lastFlushedAt": "2026-05-20T19:06:35.734Z",
+        "lastRunId": null,
+        "livePositionTotals": {
+          "activeCount": 0,
+          "claimableCount": 0,
+          "claimablePayoutWei6": "0",
+          "pendingSettleCount": 0,
+          "pendingSettlePayoutWei6": "0"
+        },
+        "livePositionsSkipReason": null,
+        "makerAddress": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+        "makerAddressSource": "flag",
+        "pnl": {
+          "asOfUnixSec": 0,
+          "realizedUsdcWei6": "0",
+          "unrealizedUsdcWei6": "0"
+        },
+        "positions": {
+          "byStatus": {
+            "active": {
+              "count": 1,
+              "ownRiskWei6": "56100"
+            },
+            "claimable": {
+              "count": 0,
+              "ownRiskWei6": "0"
+            },
+            "claimed": {
+              "count": 0,
+              "ownRiskWei6": "0"
+            },
+            "pendingSettle": {
+              "count": 0,
+              "ownRiskWei6": "0"
+            }
+          },
+          "total": 1
+        },
+        "schemaVersion": 1,
+        "stateIntegrity": "loaded",
+        "stateLossAssessment": {
+          "holdQuoting": false,
+          "reason": "state loaded cleanly"
+        },
+        "statePath": "state-2026-05-20-afternoon-tex-col/maker-state.json"
+      },
+      "label": "Texas Rangers @ Colorado Rockies",
+      "liveWindow": "13:00-14:00 America/Chicago",
+      "market": "moneyline",
+      "openCommitmentCountsAtWrapup": {
+        "cancelled_rows": 68,
+        "contest_id": 15,
+        "filled_rows": 1,
+        "open_rows": 6,
+        "total_rows": 75,
+        "visible_live_unfilled": 0
+      },
+      "polygonscan": {
+        "CONTEST_CREATED": "https://polygonscan.com/tx/0x5d4aea620336fb1bf95b76797f1f71a21cef0bf116dd882ca593e76cb4f65b40",
+        "CONTEST_SCORES_SET": "https://polygonscan.com/tx/0xb0b18bad55e1cf20d8b51e638f96c5093a702046ed5ee5351b6ac525d81e927e",
+        "CONTEST_VERIFIED": "https://polygonscan.com/tx/0x8e2213ac8f1ca855da13d10edc8ab784b762e8da9136a6aca5be2a4f4aa0524d",
+        "POSITION_CLAIMED": "https://polygonscan.com/tx/0xc1365f4e4c7d54782213bc51b2f1f92091333cfd32dd4258f9cb12435f765906",
+        "SCRIPT_APPROVAL_VERIFIED": "https://polygonscan.com/tx/0x5d4aea620336fb1bf95b76797f1f71a21cef0bf116dd882ca593e76cb4f65b40",
+        "SPECULATION_CREATED": "https://polygonscan.com/tx/0x7c5b551a1d9910a6338e920f175fb55bb0cc711896454b405008f9ca3915940a",
+        "SPECULATION_SETTLED": "https://polygonscan.com/tx/0x5e376781bf4fc4ca3871e1363c6fe2153af98af2e2e68cad9f83c299f51b9c9f"
+      },
+      "positions": [
+        {
+          "acquired_via_secondary_market": false,
+          "claimed": true,
+          "claimed_amount": 19100,
+          "claimed_at": "2026-05-21T08:10:12+00:00",
+          "first_fill_timestamp": "2026-05-20T03:19:21+00:00",
+          "network": "polygon",
+          "position_created_at": "2026-05-20T03:19:21+00:00",
+          "position_type": "upper",
+          "profit_amount": 10000,
+          "risk_amount": 9100,
+          "row_created_at": "2026-05-20T03:19:35.229212+00:00",
+          "row_updated_at": "2026-05-21T08:10:25.236967+00:00",
+          "source_block": 87147116,
+          "speculation_id": 8,
+          "user_address": "0x1de13292256fddca9eea1ae53a79a83243cfd494"
+        },
+        {
+          "acquired_via_secondary_market": false,
+          "claimed": false,
+          "claimed_amount": null,
+          "claimed_at": null,
+          "first_fill_timestamp": "2026-05-20T18:15:09+00:00",
+          "network": "polygon",
+          "position_created_at": "2026-05-20T18:15:09+00:00",
+          "position_type": "lower",
+          "profit_amount": 56100,
+          "risk_amount": 49929,
+          "row_created_at": "2026-05-20T18:15:15.165016+00:00",
+          "row_updated_at": "2026-05-20T18:15:15.165016+00:00",
+          "source_block": 87177829,
+          "speculation_id": 8,
+          "user_address": "0x1de13292256fddca9eea1ae53a79a83243cfd494"
+        },
+        {
+          "acquired_via_secondary_market": false,
+          "claimed": true,
+          "claimed_amount": 106029,
+          "claimed_at": "2026-05-21T08:10:05+00:00",
+          "first_fill_timestamp": "2026-05-20T18:15:09+00:00",
+          "network": "polygon",
+          "position_created_at": "2026-05-20T18:15:09+00:00",
+          "position_type": "upper",
+          "profit_amount": 49929,
+          "risk_amount": 56100,
+          "row_created_at": "2026-05-20T18:15:15.165016+00:00",
+          "row_updated_at": "2026-05-21T08:10:09.946334+00:00",
+          "source_block": 87177829,
+          "speculation_id": 8,
+          "user_address": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2"
+        },
+        {
+          "acquired_via_secondary_market": false,
+          "claimed": false,
+          "claimed_amount": null,
+          "claimed_at": null,
+          "first_fill_timestamp": "2026-05-20T03:19:21+00:00",
+          "network": "polygon",
+          "position_created_at": "2026-05-20T03:19:21+00:00",
+          "position_type": "lower",
+          "profit_amount": 9100,
+          "risk_amount": 10000,
+          "row_created_at": "2026-05-20T03:19:35.229212+00:00",
+          "row_updated_at": "2026-05-20T03:19:35.229212+00:00",
+          "source_block": 87147116,
+          "speculation_id": 8,
+          "user_address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+        }
+      ],
+      "protocolSideMapping": {
+        "lower": "home",
+        "upper": "away"
+      },
+      "quoteWindowTelemetry": {
+        "errors": 122,
+        "fills": 1,
+        "fillsMetric": {
+          "fillRate": 0.0030324324324324326,
+          "filledUsdcWei6": "56100",
+          "quotedUsdcWei6": "18500000"
+        },
+        "holdQuotingAtWindowEnd": false,
+        "quoteCompetitiveness": {
+          "atOrInsideBookRate": 1,
+          "samples": 80,
+          "vsReferenceTicks": {
+            "max": 6,
+            "mean": 5.7625,
+            "min": 4,
+            "p50": 6
+          }
+        },
+        "replaces": 66,
+        "softCancels": 2,
+        "submits": 8,
+        "ticks": 116,
+        "visibleOpenAtWindowEnd": 0
+      },
+      "seedFill": {
+        "commitment_hash": "0x5970a954c77cf611c1540a10302552ce59db63133bb5dd6eebe50fa859618141",
+        "contest_id": 15,
+        "contest_started": false,
+        "filled_at": "2026-05-20T03:19:21+00:00",
+        "id": 49,
+        "log_index": 2839,
+        "maker_address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "maker_position_type": "lower",
+        "maker_risk_amount": 10000,
+        "network": "polygon",
+        "odds_tick": 191,
+        "row_created_at": "2026-05-20T03:19:35.283143+00:00",
+        "row_updated_at": "2026-05-20T03:19:35.283143+00:00",
+        "source_block": 87147116,
+        "speculation_id": 8,
+        "taker_address": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+        "taker_position_type": "upper",
+        "taker_risk_amount": 9100,
+        "tx_hash": "0x7c5b551a1d9910a6338e920f175fb55bb0cc711896454b405008f9ca3915940a"
+      },
+      "slug": "afternoon-tex-col",
+      "speculationId": 8,
+      "speculationState": {
+        "contest_id": 15,
+        "line_ticks": 0,
+        "market_type": "moneyline",
+        "network": "polygon",
+        "row_created_at": "2026-05-20T03:19:35.170089+00:00",
+        "row_updated_at": "2026-05-21T08:08:38.533015+00:00",
+        "scored_at": "2026-05-21T04:31:06+00:00",
+        "settled_at": "2026-05-21T08:08:34+00:00",
+        "source_block": 87147116,
+        "speculation_created_at": "2026-05-20T03:19:21+00:00",
+        "speculation_creator": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "speculation_id": 8,
+        "speculation_scorer": "0xd846b7fdbd8c9f67d1580b2c6a8bd7fdcb15390b",
+        "speculation_status": "closed",
+        "speculation_taker": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+        "voided": false,
+        "win_side": "away"
+      },
+      "startTime": "2026-05-20T19:10:00+00:00",
+      "teams": {
+        "away": "Texas Rangers",
+        "home": "Colorado Rockies"
+      },
+      "winner": {
+        "positionType": "upper",
+        "protocolWinSide": "away",
+        "team": "Texas Rangers"
+      }
+    },
+    {
+      "claimEvents": [
+        {
+          "block_number": 87206401,
+          "block_time": "2026-05-21T08:08:30+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 9,
+          "entity_type": "position",
+          "event_name": "POSITION_CLAIMED",
+          "ingested_at": "2026-05-21T08:08:38.451759+00:00",
+          "log_index": 3855,
+          "payload": {
+            "payout": "81920",
+            "positionType": "0",
+            "speculationId": "9",
+            "user": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2"
+          },
+          "tx_hash": "0x27c1c2d755f8f888eb7c581fb9c76d71a4fee0676667526afdbbe35c84cc427a",
+          "tx_index": 258
+        },
+        {
+          "block_number": 87206458,
+          "block_time": "2026-05-21T08:10:10+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 9,
+          "entity_type": "position",
+          "event_name": "POSITION_CLAIMED",
+          "ingested_at": "2026-05-21T08:10:25.149732+00:00",
+          "log_index": 2077,
+          "payload": {
+            "payout": "19100",
+            "positionType": "0",
+            "speculationId": "9",
+            "user": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494"
+          },
+          "tx_hash": "0x5d0e69bf9e6899a42aa44193500e2b9d7132b2816c5eca1dee6e8f68174f7116",
+          "tx_index": 166
+        }
+      ],
+      "config": "ospex-mm.2026-05-20-late-tor-nyy.yaml",
+      "contestId": 16,
+      "contestState": {
+        "away_score": 2,
+        "away_team": "Toronto Blue Jays",
+        "contest_created_at": "2026-05-20T03:15:23+00:00",
+        "contest_creator": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "contest_id": 16,
+        "contest_status": "scored",
+        "home_score": 1,
+        "home_team": "New York Yankees",
+        "jsonodds_id": "920d7f9e-9208-4e00-9a85-cbf668edb807",
+        "league_id": "mlb",
+        "network": "polygon",
+        "row_created_at": "2026-05-20T03:15:32.235707+00:00",
+        "row_updated_at": "2026-05-21T04:31:46.14677+00:00",
+        "rundown_id": "a29fc5f1d358cf3fbe08a72a9e9c87f7",
+        "scored_at": "2026-05-21T04:31:30+00:00",
+        "source_block": 87146980,
+        "sport_slug": "mlb",
+        "sportspage_id": "336730",
+        "start_time": "2026-05-20T23:05:00+00:00",
+        "verified_at": "2026-05-20T03:15:32+00:00",
+        "voided_at": null
+      },
+      "controlledMarketMakerFill": {
+        "commitment_hash": "0xf305b6f8be5a57265add77abaf710424a6943bf852b1d434bbb070e28addd73e",
+        "contest_id": 16,
+        "contest_started": false,
+        "filled_at": "2026-05-20T22:10:44+00:00",
+        "id": 53,
+        "log_index": 1274,
+        "maker_address": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+        "maker_position_type": "upper",
+        "maker_risk_amount": 32000,
+        "network": "polygon",
+        "odds_tick": 256,
+        "row_created_at": "2026-05-20T22:10:54.946743+00:00",
+        "row_updated_at": "2026-05-20T22:10:54.946743+00:00",
+        "source_block": 87185906,
+        "speculation_id": 9,
+        "taker_address": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+        "taker_position_type": "lower",
+        "taker_risk_amount": 49920,
+        "tx_hash": "0x3c8e16a5406afe7dd9bdef5891bdf2640b877a0b69157c4324a8ba7670816664"
+      },
+      "controlledMatchPreview": {
+        "commitmentHash": "0xf305b6f8be5a57265add77abaf710424a6943bf852b1d434bbb070e28addd73e",
+        "economics": {
+          "fillMakerRiskUSDC": "0.032000",
+          "fillMakerRiskWei6": "32000",
+          "oddsTick": 256,
+          "remainingMakerRiskUSDC": "0.250000",
+          "remainingMakerRiskWei6": "250000",
+          "takerDesiredRiskUSDC": "0.050000",
+          "takerDesiredRiskWei6": "50000",
+          "takerProfitOnWinUSDC": "0.032000",
+          "takerReturnOnWinUSDC": "0.081920",
+          "takerRiskUSDC": "0.049920",
+          "takerRiskWei6": "49920"
+        },
+        "makerSide": {
+          "positionType": 0,
+          "resolvedLabel": "Toronto Blue Jays",
+          "role": "away"
+        },
+        "odds": {
+          "makerAmerican": "+156",
+          "makerDecimal": "2.56",
+          "oddsTick": 256,
+          "takerAmerican": "-156",
+          "takerDecimal": "1.64",
+          "takerOddsTick": 164
+        },
+        "takerSide": {
+          "positionType": 1,
+          "resolvedLabel": "New York Yankees",
+          "role": "home"
+        },
+        "txHash": "0x3c8e16a5406afe7dd9bdef5891bdf2640b877a0b69157c4324a8ba7670816664",
+        "warnings": [
+          {
+            "code": "expires-soon",
+            "message": "Commitment expires soon (within the 5-minute window).",
+            "severity": "warning"
+          },
+          {
+            "code": "partial-fill",
+            "message": "Taker risk is less than the maker remaining capacity \u2014 this will be a partial fill.",
+            "severity": "info"
+          }
+        ]
+      },
+      "events": [
+        {
+          "block_number": 87146980,
+          "block_time": "2026-05-20T03:15:23+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 16,
+          "entity_type": "contest",
+          "event_name": "CONTEST_CREATED",
+          "ingested_at": "2026-05-20T03:15:32.142305+00:00",
+          "log_index": 1858,
+          "payload": {
+            "approvedLeagueId": "0",
+            "contestCreator": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+            "contestId": "16",
+            "jsonoddsId": "920d7f9e-9208-4e00-9a85-cbf668edb807",
+            "marketUpdateSourceHash": "0x7f5ce70565133fedb2e0f1aeb925f38a3b26924917cff852e7de40a9297119b4",
+            "rundownId": "a29fc5f1d358cf3fbe08a72a9e9c87f7",
+            "scoreContestSourceHash": "0xcb2a11db3190c322239b52afb3caefccfccd850566834819b012c5520f8d31cd",
+            "sportspageId": "336730",
+            "verifySourceHash": "0x01c48e15068b68b7d5986d5013edd83a243ac31a761567e9db0e57b513c26c01"
+          },
+          "tx_hash": "0x3c393d73502e257a72aaba8c8c1a5dea43881bf5f796f4353fb37bcb62905d95",
+          "tx_index": 158
+        },
+        {
+          "block_number": 87146980,
+          "block_time": "2026-05-20T03:15:23+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 16,
+          "entity_type": "contest",
+          "event_name": "SCRIPT_APPROVAL_VERIFIED",
+          "ingested_at": "2026-05-20T03:15:32.305491+00:00",
+          "log_index": 1860,
+          "payload": {
+            "contestId": "16",
+            "leagueId": "0",
+            "purpose": "0",
+            "scriptHash": "0x01c48e15068b68b7d5986d5013edd83a243ac31a761567e9db0e57b513c26c01",
+            "version": "1"
+          },
+          "tx_hash": "0x3c393d73502e257a72aaba8c8c1a5dea43881bf5f796f4353fb37bcb62905d95",
+          "tx_index": 158
+        },
+        {
+          "block_number": 87146980,
+          "block_time": "2026-05-20T03:15:23+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 16,
+          "entity_type": "contest",
+          "event_name": "SCRIPT_APPROVAL_VERIFIED",
+          "ingested_at": "2026-05-20T03:15:32.336975+00:00",
+          "log_index": 1862,
+          "payload": {
+            "contestId": "16",
+            "leagueId": "0",
+            "purpose": "1",
+            "scriptHash": "0x7f5ce70565133fedb2e0f1aeb925f38a3b26924917cff852e7de40a9297119b4",
+            "version": "1"
+          },
+          "tx_hash": "0x3c393d73502e257a72aaba8c8c1a5dea43881bf5f796f4353fb37bcb62905d95",
+          "tx_index": 158
+        },
+        {
+          "block_number": 87146980,
+          "block_time": "2026-05-20T03:15:23+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 16,
+          "entity_type": "contest",
+          "event_name": "SCRIPT_APPROVAL_VERIFIED",
+          "ingested_at": "2026-05-20T03:15:32.370093+00:00",
+          "log_index": 1864,
+          "payload": {
+            "contestId": "16",
+            "leagueId": "0",
+            "purpose": "2",
+            "scriptHash": "0xcb2a11db3190c322239b52afb3caefccfccd850566834819b012c5520f8d31cd",
+            "version": "1"
+          },
+          "tx_hash": "0x3c393d73502e257a72aaba8c8c1a5dea43881bf5f796f4353fb37bcb62905d95",
+          "tx_index": 158
+        },
+        {
+          "block_number": 87146985,
+          "block_time": "2026-05-20T03:15:32+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 16,
+          "entity_type": "contest",
+          "event_name": "CONTEST_VERIFIED",
+          "ingested_at": "2026-05-20T03:15:47.622633+00:00",
+          "log_index": 533,
+          "payload": {
+            "contestId": "16",
+            "leagueId": "3",
+            "startTime": "1779318300"
+          },
+          "tx_hash": "0x282aaa447f43b67330b123cc0c0c0ecb36c47f00ed063d091e0295801ed31658",
+          "tx_index": 73
+        },
+        {
+          "block_number": 87198961,
+          "block_time": "2026-05-21T04:31:30+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 16,
+          "entity_type": "contest",
+          "event_name": "CONTEST_SCORES_SET",
+          "ingested_at": "2026-05-21T04:31:46.112089+00:00",
+          "log_index": 60,
+          "payload": {
+            "awayScore": "2",
+            "contestId": "16",
+            "homeScore": "1"
+          },
+          "tx_hash": "0x6e60e998c1ddd43a4b76e43eba0335a7b9c35c75b7e1ba1ab5aab630ad47b829",
+          "tx_index": 7
+        },
+        {
+          "block_number": 87147121,
+          "block_time": "2026-05-20T03:19:30+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 9,
+          "entity_type": "speculation",
+          "event_name": "SPECULATION_CREATED",
+          "ingested_at": "2026-05-20T03:19:35.401721+00:00",
+          "log_index": 1827,
+          "payload": {
+            "contestId": "16",
+            "lineTicks": "0",
+            "maker": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+            "scorer": "0xd846B7FdbD8C9F67d1580B2C6a8Bd7Fdcb15390b",
+            "speculationId": "9",
+            "taker": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494"
+          },
+          "tx_hash": "0xe4a035a0e486ae7209282334340c6e1c9b8cc4c4d2c9d72aa7830c539bf2fcbd",
+          "tx_index": 155
+        },
+        {
+          "block_number": 87206399,
+          "block_time": "2026-05-21T08:08:27+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 9,
+          "entity_type": "speculation",
+          "event_name": "SPECULATION_SETTLED",
+          "ingested_at": "2026-05-21T08:08:38.381072+00:00",
+          "log_index": 2243,
+          "payload": {
+            "scorer": "0xd846B7FdbD8C9F67d1580B2C6a8Bd7Fdcb15390b",
+            "speculationId": "9",
+            "winSideValue": "1"
+          },
+          "tx_hash": "0xb24239ec8b052be1795cfd12ad7dafa481acb9122ad77ca0e1029983d6a74f07",
+          "tx_index": 250
+        },
+        {
+          "block_number": 87206401,
+          "block_time": "2026-05-21T08:08:30+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 9,
+          "entity_type": "position",
+          "event_name": "POSITION_CLAIMED",
+          "ingested_at": "2026-05-21T08:08:38.451759+00:00",
+          "log_index": 3855,
+          "payload": {
+            "payout": "81920",
+            "positionType": "0",
+            "speculationId": "9",
+            "user": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2"
+          },
+          "tx_hash": "0x27c1c2d755f8f888eb7c581fb9c76d71a4fee0676667526afdbbe35c84cc427a",
+          "tx_index": 258
+        },
+        {
+          "block_number": 87206458,
+          "block_time": "2026-05-21T08:10:10+00:00",
+          "emitter_address": "0xecd12af197fbf4c9f706b5eb11a19c40cfd643db",
+          "entity_id": 9,
+          "entity_type": "position",
+          "event_name": "POSITION_CLAIMED",
+          "ingested_at": "2026-05-21T08:10:25.149732+00:00",
+          "log_index": 2077,
+          "payload": {
+            "payout": "19100",
+            "positionType": "0",
+            "speculationId": "9",
+            "user": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494"
+          },
+          "tx_hash": "0x5d0e69bf9e6899a42aa44193500e2b9d7132b2816c5eca1dee6e8f68174f7116",
+          "tx_index": 166
+        }
+      ],
+      "finalMarketMakerSummary": {
+        "candidates": {
+          "skipReasons": {},
+          "total": 1,
+          "tracked": 1
+        },
+        "degradedByReason": {},
+        "errors": {
+          "byPhase": {
+            "fill-detection": 6,
+            "position-poll": 228
+          },
+          "total": 234
+        },
+        "eventCounts": {
+          "approval": 0,
+          "candidate": 1,
+          "claim": 0,
+          "competitiveness-unavailable": 0,
+          "degraded": 0,
+          "error": 234,
+          "expire": 70,
+          "fair-value": 0,
+          "fill": 1,
+          "kill": 1,
+          "nonce-floor-raise": 0,
+          "onchain-cancel": 0,
+          "position-transition": 0,
+          "quote-competitiveness": 80,
+          "quote-intent": 40,
+          "replace": 64,
+          "risk-verdict": 40,
+          "settle": 0,
+          "soft-cancel": 2,
+          "submit": 8,
+          "tick-start": 114,
+          "would-replace": 0,
+          "would-soft-cancel": 0,
+          "would-submit": 0
+        },
+        "expired": 70,
+        "firstEventAt": "2026-05-20T21:55:33.268Z",
+        "generatedAt": "2026-05-21T08:11:17.529Z",
+        "kill": {
+          "reason": "signal",
+          "ticks": 114
+        },
+        "lastEventAt": "2026-05-20T22:55:32.945Z",
+        "latentExposurePeakWei6": "0",
+        "lines": 655,
+        "liveMetrics": {
+          "fills": {
+            "fillRate": 0.0017777777777777779,
+            "filledUsdcWei6": "32000",
+            "quotedUsdcWei6": "18000000"
+          },
+          "gas": {
+            "byKind": {
+              "approval": "0",
+              "claim": "0",
+              "onchainCancel": "0",
+              "settle": "0"
+            },
+            "totalPolWei": "0",
+            "totalUsdcEquivWei6": "0"
+          },
+          "realizedPnl": {
+            "claimedProfitUsdcWei6": "0",
+            "lostCount": 0,
+            "netUsdcWei6": "0",
+            "pushCount": 0,
+            "realizedLossUsdcWei6": "0",
+            "unsettledCount": 1,
+            "wonCount": 0,
+            "wonUnclaimedCount": 0
+          },
+          "settlements": {
+            "claimCount": 0,
+            "settleCount": 0,
+            "totalClaimedPayoutWei6": "0"
+          },
+          "totalFeeUsdcWei6": "0"
+        },
+        "malformedLines": 0,
+        "quoteAgeSeconds": null,
+        "quoteCompetitiveness": {
+          "atOrInsideBookCount": 80,
+          "atOrInsideBookRate": 1,
+          "samples": 80,
+          "unavailable": 0,
+          "vsReferenceTicks": {
+            "max": 7,
+            "mean": 5.3125,
+            "min": 4,
+            "p50": 5
+          }
+        },
+        "quoteIntents": {
+          "canQuote": 40,
+          "refused": 0,
+          "total": 40
+        },
+        "runIds": [
+          "2026-05-20T21-55-33-266Z-t1d2es"
+        ],
+        "schemaVersion": 1,
+        "sources": [
+          "telemetry-2026-05-20-late-tor-nyy/run-2026-05-20T21-55-33-266Z-t1d2es.ndjson"
+        ],
+        "staleQuoteIncidents": 0,
+        "ticks": 114,
+        "wouldReplace": {
+          "byReason": {},
+          "total": 0
+        },
+        "wouldSoftCancel": {
+          "byReason": {},
+          "total": 0
+        },
+        "wouldSubmit": 0
+      },
+      "finalScore": {
+        "away": 2,
+        "gamePk": 823547,
+        "home": 1,
+        "sourceStatus": "Final"
+      },
+      "finalStatus": {
+        "commitments": {
+          "byLifecycle": {
+            "authoritativelyInvalidated": 0,
+            "expired": 70,
+            "filled": 0,
+            "partiallyFilled": 0,
+            "softCancelled": 2,
+            "visibleOpen": 0
+          },
+          "distinctContestsNonTerminal": 1,
+          "total": 72
+        },
+        "configPath": "ospex-mm.2026-05-20-late-tor-nyy.yaml",
+        "dailyCounters": {
+          "lifetimeFeeUsdcWei6": "0",
+          "lifetimeGasPolWei": "0",
+          "today": "2026-05-21",
+          "todayFeeUsdcWei6": "0",
+          "todayGasPolWei": "0"
+        },
+        "lastFlushedAt": "2026-05-20T23:06:11.573Z",
+        "lastRunId": null,
+        "livePositionTotals": {
+          "activeCount": 0,
+          "claimableCount": 0,
+          "claimablePayoutWei6": "0",
+          "pendingSettleCount": 0,
+          "pendingSettlePayoutWei6": "0"
+        },
+        "livePositionsSkipReason": null,
+        "makerAddress": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+        "makerAddressSource": "flag",
+        "pnl": {
+          "asOfUnixSec": 0,
+          "realizedUsdcWei6": "0",
+          "unrealizedUsdcWei6": "0"
+        },
+        "positions": {
+          "byStatus": {
+            "active": {
+              "count": 1,
+              "ownRiskWei6": "32000"
+            },
+            "claimable": {
+              "count": 0,
+              "ownRiskWei6": "0"
+            },
+            "claimed": {
+              "count": 0,
+              "ownRiskWei6": "0"
+            },
+            "pendingSettle": {
+              "count": 0,
+              "ownRiskWei6": "0"
+            }
+          },
+          "total": 1
+        },
+        "schemaVersion": 1,
+        "stateIntegrity": "loaded",
+        "stateLossAssessment": {
+          "holdQuoting": false,
+          "reason": "state loaded cleanly"
+        },
+        "statePath": "state-2026-05-20-late-tor-nyy/maker-state.json"
+      },
+      "label": "Toronto Blue Jays @ New York Yankees",
+      "liveWindow": "16:55-17:55 America/Chicago",
+      "market": "moneyline",
+      "openCommitmentCountsAtWrapup": {
+        "cancelled_rows": 66,
+        "contest_id": 16,
+        "filled_rows": 1,
+        "open_rows": 5,
+        "total_rows": 73,
+        "visible_live_unfilled": 0
+      },
+      "polygonscan": {
+        "CONTEST_CREATED": "https://polygonscan.com/tx/0x3c393d73502e257a72aaba8c8c1a5dea43881bf5f796f4353fb37bcb62905d95",
+        "CONTEST_SCORES_SET": "https://polygonscan.com/tx/0x6e60e998c1ddd43a4b76e43eba0335a7b9c35c75b7e1ba1ab5aab630ad47b829",
+        "CONTEST_VERIFIED": "https://polygonscan.com/tx/0x282aaa447f43b67330b123cc0c0c0ecb36c47f00ed063d091e0295801ed31658",
+        "POSITION_CLAIMED": "https://polygonscan.com/tx/0x5d0e69bf9e6899a42aa44193500e2b9d7132b2816c5eca1dee6e8f68174f7116",
+        "SCRIPT_APPROVAL_VERIFIED": "https://polygonscan.com/tx/0x3c393d73502e257a72aaba8c8c1a5dea43881bf5f796f4353fb37bcb62905d95",
+        "SPECULATION_CREATED": "https://polygonscan.com/tx/0xe4a035a0e486ae7209282334340c6e1c9b8cc4c4d2c9d72aa7830c539bf2fcbd",
+        "SPECULATION_SETTLED": "https://polygonscan.com/tx/0xb24239ec8b052be1795cfd12ad7dafa481acb9122ad77ca0e1029983d6a74f07"
+      },
+      "positions": [
+        {
+          "acquired_via_secondary_market": false,
+          "claimed": true,
+          "claimed_amount": 19100,
+          "claimed_at": "2026-05-21T08:10:10+00:00",
+          "first_fill_timestamp": "2026-05-20T03:19:30+00:00",
+          "network": "polygon",
+          "position_created_at": "2026-05-20T03:19:30+00:00",
+          "position_type": "upper",
+          "profit_amount": 10000,
+          "risk_amount": 9100,
+          "row_created_at": "2026-05-20T03:19:35.480899+00:00",
+          "row_updated_at": "2026-05-21T08:10:25.17943+00:00",
+          "source_block": 87147121,
+          "speculation_id": 9,
+          "user_address": "0x1de13292256fddca9eea1ae53a79a83243cfd494"
+        },
+        {
+          "acquired_via_secondary_market": false,
+          "claimed": false,
+          "claimed_amount": null,
+          "claimed_at": null,
+          "first_fill_timestamp": "2026-05-20T22:10:44+00:00",
+          "network": "polygon",
+          "position_created_at": "2026-05-20T22:10:44+00:00",
+          "position_type": "lower",
+          "profit_amount": 32000,
+          "risk_amount": 49920,
+          "row_created_at": "2026-05-20T22:10:54.873823+00:00",
+          "row_updated_at": "2026-05-20T22:10:54.873823+00:00",
+          "source_block": 87185906,
+          "speculation_id": 9,
+          "user_address": "0x1de13292256fddca9eea1ae53a79a83243cfd494"
+        },
+        {
+          "acquired_via_secondary_market": false,
+          "claimed": true,
+          "claimed_amount": 81920,
+          "claimed_at": "2026-05-21T08:08:30+00:00",
+          "first_fill_timestamp": "2026-05-20T22:10:44+00:00",
+          "network": "polygon",
+          "position_created_at": "2026-05-20T22:10:44+00:00",
+          "position_type": "upper",
+          "profit_amount": 49920,
+          "risk_amount": 32000,
+          "row_created_at": "2026-05-20T22:10:54.873823+00:00",
+          "row_updated_at": "2026-05-21T08:08:38.481162+00:00",
+          "source_block": 87185906,
+          "speculation_id": 9,
+          "user_address": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2"
+        },
+        {
+          "acquired_via_secondary_market": false,
+          "claimed": false,
+          "claimed_amount": null,
+          "claimed_at": null,
+          "first_fill_timestamp": "2026-05-20T03:19:30+00:00",
+          "network": "polygon",
+          "position_created_at": "2026-05-20T03:19:30+00:00",
+          "position_type": "lower",
+          "profit_amount": 9100,
+          "risk_amount": 10000,
+          "row_created_at": "2026-05-20T03:19:35.480899+00:00",
+          "row_updated_at": "2026-05-20T03:19:35.480899+00:00",
+          "source_block": 87147121,
+          "speculation_id": 9,
+          "user_address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+        }
+      ],
+      "protocolSideMapping": {
+        "lower": "home",
+        "upper": "away"
+      },
+      "quoteWindowTelemetry": {
+        "errors": 234,
+        "fills": 1,
+        "fillsMetric": {
+          "fillRate": 0.0017777777777777779,
+          "filledUsdcWei6": "32000",
+          "quotedUsdcWei6": "18000000"
+        },
+        "holdQuotingAtWindowEnd": false,
+        "quoteCompetitiveness": {
+          "atOrInsideBookRate": 1,
+          "samples": 80,
+          "vsReferenceTicks": {
+            "max": 7,
+            "mean": 5.3125,
+            "min": 4,
+            "p50": 5
+          }
+        },
+        "replaces": 64,
+        "softCancels": 2,
+        "submits": 8,
+        "ticks": 114,
+        "visibleOpenAtWindowEnd": 0
+      },
+      "seedFill": {
+        "commitment_hash": "0xf45ee247e45f051bf30fa79c1e49a58aebd61d66991a187ce114ec91232619f2",
+        "contest_id": 16,
+        "contest_started": false,
+        "filled_at": "2026-05-20T03:19:30+00:00",
+        "id": 50,
+        "log_index": 1833,
+        "maker_address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "maker_position_type": "lower",
+        "maker_risk_amount": 10000,
+        "network": "polygon",
+        "odds_tick": 191,
+        "row_created_at": "2026-05-20T03:19:35.535622+00:00",
+        "row_updated_at": "2026-05-20T03:19:35.535622+00:00",
+        "source_block": 87147121,
+        "speculation_id": 9,
+        "taker_address": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+        "taker_position_type": "upper",
+        "taker_risk_amount": 9100,
+        "tx_hash": "0xe4a035a0e486ae7209282334340c6e1c9b8cc4c4d2c9d72aa7830c539bf2fcbd"
+      },
+      "slug": "late-tor-nyy",
+      "speculationId": 9,
+      "speculationState": {
+        "contest_id": 16,
+        "line_ticks": 0,
+        "market_type": "moneyline",
+        "network": "polygon",
+        "row_created_at": "2026-05-20T03:19:35.429381+00:00",
+        "row_updated_at": "2026-05-21T08:08:38.424473+00:00",
+        "scored_at": "2026-05-21T04:31:30+00:00",
+        "settled_at": "2026-05-21T08:08:27+00:00",
+        "source_block": 87147121,
+        "speculation_created_at": "2026-05-20T03:19:30+00:00",
+        "speculation_creator": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "speculation_id": 9,
+        "speculation_scorer": "0xd846b7fdbd8c9f67d1580b2c6a8bd7fdcb15390b",
+        "speculation_status": "closed",
+        "speculation_taker": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+        "voided": false,
+        "win_side": "away"
+      },
+      "startTime": "2026-05-20T23:05:00+00:00",
+      "teams": {
+        "away": "Toronto Blue Jays",
+        "home": "New York Yankees"
+      },
+      "winner": {
+        "positionType": "upper",
+        "protocolWinSide": "away",
+        "team": "Toronto Blue Jays"
+      }
+    }
+  ],
+  "network": "polygon-mainnet",
+  "participants": {
+    "contestCreatorAndSeedMaker": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "explorer": "https://polygonscan.com/address/0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "label": "stage-maker-b"
+    },
+    "flowTaker": {
+      "address": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+      "explorer": "https://polygonscan.com/address/0x1de13292256fddca9eea1ae53a79a83243cfd494",
+      "label": "mm-shakeout-flow-a"
+    },
+    "marketMaker": {
+      "address": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "explorer": "https://polygonscan.com/address/0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "label": "mm-shakeout-maker-a"
+    }
+  },
+  "rawFiles": {
+    "claimSweeps": "raw/claim-sweeps.sanitized.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "indexerSnapshot": "raw/indexer-snapshot.sanitized.json",
+    "mmRunSummaries": "raw/mm-run-summaries.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json"
+  },
+  "schemaVersion": 1,
+  "scope": {
+    "contestIds": [
+      14,
+      15,
+      16
+    ],
+    "marketCount": 3,
+    "notes": [
+      "Live quoting windows stopped before first pitch; no new market tests were started during wrap-up.",
+      "Private keys, password files, RPC URLs, raw signatures, and raw env files are intentionally excluded."
+    ],
+    "purpose": "Phase 1.5 evidence-driven market-maker shakeout across three MLB moneyline contests.",
+    "runtimeSdkCli": "0.2.1 frozen test install",
+    "speculationIds": [
+      7,
+      8,
+      9
+    ]
+  },
+  "sourceFiles": {
+    "localCronOutput": "[LOCAL_OPERATOR_PATH_OMITTED]",
+    "manifest": "[LOCAL_OPERATOR_PATH_OMITTED]",
+    "marketMakerRuntime": "[LOCAL_OPERATOR_PATH_OMITTED]",
+    "preRunSummary": "[LOCAL_OPERATOR_PATH_OMITTED]"
+  },
+  "status": "complete_verified_with_caveats",
+  "telemetryErrorSummary": {
+    "afternoon-tex-col": {
+      "errorsByClass": {
+        "PositionWithoutCommitment": 116,
+        "UnexpectedFillStatus": 6
+      },
+      "errorsByPhaseAndClass": {
+        "fill-detection::UnexpectedFillStatus": 6,
+        "position-poll::PositionWithoutCommitment": 116
+      },
+      "eventCounts": {
+        "candidate": 1,
+        "error": 122,
+        "expire": 72,
+        "fill": 1,
+        "kill": 1,
+        "quote-competitiveness": 80,
+        "quote-intent": 40,
+        "replace": 66,
+        "risk-verdict": 40,
+        "soft-cancel": 2,
+        "submit": 8,
+        "tick-start": 116
+      },
+      "examples": {
+        "PositionWithoutCommitment": "getPositionStatus reports a position on (7, away) but no local commitment with that (speculationId, makerSide) is present \u2014 refusing to create an incomplete MakerPositionRecord",
+        "UnexpectedFillStatus": "disappeared commitment 0x8594fa4d64cd4a8a47ab224a2d8214e93c671656bca17663df2e41aea796b029 has status \"open\""
+      }
+    },
+    "early-cin-phi": {
+      "errorsByClass": {
+        "PositionWithoutCommitment": 40,
+        "UnexpectedFillStatus": 8
+      },
+      "errorsByPhaseAndClass": {
+        "fill-detection::UnexpectedFillStatus": 8,
+        "position-poll::PositionWithoutCommitment": 40
+      },
+      "eventCounts": {
+        "candidate": 1,
+        "claim": 1,
+        "error": 48,
+        "expire": 74,
+        "fill": 1,
+        "kill": 3,
+        "position-transition": 2,
+        "quote-competitiveness": 82,
+        "quote-intent": 41,
+        "replace": 64,
+        "risk-verdict": 41,
+        "settle": 1,
+        "soft-cancel": 2,
+        "submit": 10,
+        "tick-start": 136
+      },
+      "examples": {
+        "PositionWithoutCommitment": "getPositionStatus reports a position on (9, away) but no local commitment with that (speculationId, makerSide) is present \u2014 refusing to create an incomplete MakerPositionRecord",
+        "UnexpectedFillStatus": "disappeared commitment 0x3050fc9055e288c12a0b3761386a7703ee15dd82b66cc877b2ee38f71a0d4de1 has status \"open\""
+      }
+    },
+    "late-tor-nyy": {
+      "errorsByClass": {
+        "PositionWithoutCommitment": 228,
+        "UnexpectedFillStatus": 6
+      },
+      "errorsByPhaseAndClass": {
+        "fill-detection::UnexpectedFillStatus": 6,
+        "position-poll::PositionWithoutCommitment": 228
+      },
+      "eventCounts": {
+        "candidate": 1,
+        "error": 234,
+        "expire": 70,
+        "fill": 1,
+        "kill": 1,
+        "quote-competitiveness": 80,
+        "quote-intent": 40,
+        "replace": 64,
+        "risk-verdict": 40,
+        "soft-cancel": 2,
+        "submit": 8,
+        "tick-start": 114
+      },
+      "examples": {
+        "PositionWithoutCommitment": "getPositionStatus reports a position on (8, away) but no local commitment with that (speculationId, makerSide) is present \u2014 refusing to create an incomplete MakerPositionRecord",
+        "UnexpectedFillStatus": "disappeared commitment 0x5624333ee4cd9d7d6f73834d3be83a6134290c833bc56d2a2fd87aed7d2ee674 has status \"open\""
+      }
+    }
+  },
+  "title": "Ospex MM Shakeout Evidence: three MLB moneyline markets, 2026-05-20",
+  "versionAndDeploymentContext": {
+    "coreApiPrsMergedAfterRun": [
+      {
+        "mergeCommit": "31cdc6d45131ad7533cf4d33d7be4b26177dfbfd",
+        "mergedAt": "2026-05-21T03:36:21Z",
+        "number": 20,
+        "title": "feat(v1): cursor recovery reads + /v1/fills (Phase 1.5 A1)",
+        "url": "https://github.com/ospex-org/ospex-core-api/pull/20"
+      },
+      {
+        "mergeCommit": "7fa54f68f193bb49f057a4fb173a98c2f17a3b3b",
+        "mergedAt": "2026-05-21T07:52:46Z",
+        "number": 21,
+        "title": "feat(v1): SSE streams \u2014 poller fan-out + catch-up + resync (Phase 1.5 A2)",
+        "url": "https://github.com/ospex-org/ospex-core-api/pull/21"
+      }
+    ],
+    "localSdkPackageVersionAtWrapup": "0.2.2",
+    "notYetCoveredByThisEvidence": [
+      "SDK package version bump / rebuilt tarballs",
+      "Heroku redeploy of API/indexer/MM-facing services",
+      "fresh re-pull/reinstall of market-maker runtime against the new package/deployment"
+    ],
+    "recommendedNextVersion": "0.3.0",
+    "testRuntimeCliVersion": "0.2.1",
+    "testRuntimeSdkVersion": "0.2.1"
+  }
+}

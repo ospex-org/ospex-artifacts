@@ -1,0 +1,41 @@
+{
+  "capturedAt": "2026-05-21T08:22:26.331246+00:00",
+  "games": [
+    {
+      "abstractGameState": "Final",
+      "away": "Cincinnati Reds",
+      "awayScore": 9,
+      "gameDate": "2026-05-20T17:05:00Z",
+      "gamePk": 823462,
+      "home": "Philadelphia Phillies",
+      "homeScore": 4,
+      "source": "MLB Stats API",
+      "sourceUrl": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-20&hydrate=team,linescore",
+      "status": "Final"
+    },
+    {
+      "abstractGameState": "Final",
+      "away": "Texas Rangers",
+      "awayScore": 5,
+      "gameDate": "2026-05-20T19:10:00Z",
+      "gamePk": 824355,
+      "home": "Colorado Rockies",
+      "homeScore": 4,
+      "source": "MLB Stats API",
+      "sourceUrl": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-20&hydrate=team,linescore",
+      "status": "Final"
+    },
+    {
+      "abstractGameState": "Final",
+      "away": "Toronto Blue Jays",
+      "awayScore": 2,
+      "gameDate": "2026-05-20T23:05:00Z",
+      "gamePk": 823547,
+      "home": "New York Yankees",
+      "homeScore": 1,
+      "source": "MLB Stats API",
+      "sourceUrl": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-20&hydrate=team,linescore",
+      "status": "Final"
+    }
+  ]
+}
