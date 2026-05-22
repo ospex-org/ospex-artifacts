@@ -17,6 +17,7 @@ Public artifacts should be factual, reproducible, and safe to consume directly. 
 - JSON artifacts are canonical.
 - Markdown summaries must be derived from JSON facts and sanitized raw inputs.
 - Summaries may explain context, but they should not add new factual claims absent from the machine-readable artifact.
+- Keep summaries evidence-grade and technical. Audience-friendly headlines and simplified narrative belong in a frontend/dashboard layer derived from the artifact, not in the artifact itself.
 - Raw files under `raw/` should be sanitized snapshots or summaries, not unfiltered runtime captures.
 
 ## Include
@@ -53,12 +54,13 @@ Never publish:
 
 Before committing an artifact:
 
-1. Run `python3 scripts/validate-artifacts.py`; it validates JSON/NDJSON parseability, schema-backed `$schema` pointers, artifact-level status vocabulary, referenced path existence, and conservative public-safety patterns.
-2. Confirm Markdown summaries only contain facts from JSON or sanitized raw inputs.
-3. Check that optional/skipped gates are explicit.
-4. Check that public wallet labels are role labels or intentionally public identities.
-5. Review any occurrence of words such as `password`, `secret`, `signature`, `token`, `RPC`, `Supabase`, `Postgres`, or `/home/` before publishing.
-6. Verify artifact paths are referenced from `README.md` or `index.json` when they are intended to be discoverable.
+1. Run `python3 scripts/generate-indexes.py` after adding, removing, or editing an artifact. It rewrites `index.json` and archive shards from artifacts on disk, preserving existing `publishedAt` values and assigning a current UTC `publishedAt` to newly discovered artifacts.
+2. Run `python3 scripts/validate-artifacts.py`; it validates JSON/NDJSON parseability, schema-backed `$schema` pointers, artifact-level status vocabulary, generated index/archive consistency, referenced path existence, and conservative public-safety patterns.
+3. Confirm Markdown summaries only contain facts from JSON or sanitized raw inputs.
+4. Check that optional/skipped gates are explicit.
+5. Check that public wallet labels are role labels or intentionally public identities.
+6. Review any occurrence of words such as `password`, `secret`, `signature`, `token`, `RPC`, `Supabase`, `Postgres`, or `/home/` before publishing.
+7. Verify artifact paths are referenced from `README.md` or `index.json` when they are intended to be discoverable.
 
 Allowed findings include checklist text in this document and sanitized explanatory notes. Actual credentials, paths to secret files, and raw sensitive material are not allowed.
 
@@ -68,4 +70,4 @@ Each artifact should make its reproducibility boundary clear:
 
 - A lifecycle run should identify the public chain data, external final-score source, and sanitized indexer/API rows needed to check the lifecycle.
 - A release acceptance should identify the public release assets, hashes, setup gates, live gates, and resulting on-chain transactions.
-- A daily digest should identify the UTC date, block range, sanitized snapshot hash, and linked run artifacts used to compute the rollup.
+- A daily digest should identify the UTC date, block range, sanitized snapshot hash, and linked run artifacts used to compute the rollup. Publish one digest for every UTC calendar day; zero-activity days should record zero counts and coverage/provenance rather than being skipped.

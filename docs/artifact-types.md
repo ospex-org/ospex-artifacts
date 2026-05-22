@@ -7,20 +7,21 @@ This repository publishes public-safe Ospex artifacts in a small number of stabl
 Every artifact class should follow these rules:
 
 1. JSON is the source of truth.
-2. Markdown is a human-readable rendering of JSON facts.
+2. Markdown is an evidence-grade rendering of JSON facts. It should stay complete, technical, and faithful rather than becoming dashboard or marketing copy.
 3. Raw inputs are sanitized before publication.
 4. Artifact-level `status` values use the controlled vocabulary below. Gate-level statuses such as `pass`, `fail`, `not_run`, and `not_available` remain local to the gate object.
 5. Observations and caveats are factual and test-scoped. They should not contain internal planning language.
 6. Wallet labels are role labels unless a public identity is intentionally part of the artifact.
 7. Schema-backed JSON files include a top-level `$schema` pointer to the matching file under `schemas/` and are validated by `python3 scripts/validate-artifacts.py`.
+8. Frontend/dashboard prose can translate artifact facts into friendlier headlines, but that translation belongs outside the artifact and should link back to the source JSON/Markdown.
 
 ## Status vocabulary
 
 Dashboards and agents may switch on artifact-level `status`, so it is intentionally constrained.
 
-- `runs/`: `complete_verified`, `complete_verified_with_caveats`, `partial`, `superseded`
-- `releases/`: `stage0_green`, `stage0_green_with_caveats`, `stage0_partial`, `stage0_failed`, `superseded`
-- `daily/`: `complete`, `complete_with_caveats`, `partial`, `superseded`
+- `run` (`runs/`): `complete_verified`, `complete_verified_with_caveats`, `partial`, `superseded`
+- `release-acceptance` (`releases/`): `stage0_green`, `stage0_green_with_caveats`, `stage0_partial`, `stage0_failed`, `superseded`
+- `daily-digest` (`daily/`): `complete`, `complete_with_caveats`, `partial`, `superseded`
 
 These are artifact-level statuses only. Individual check/gate fields can use their own local values, for example `pass`, `fail`, `not_run`, or a version string when the gate records an observed value.
 
@@ -99,7 +100,8 @@ daily/YYYY-MM-DD/
 
 Recommended daily digest properties:
 
-- summarize a UTC calendar day
+- summarize every UTC calendar day, including zero-activity days
+- represent zero-activity days explicitly with zero counts, empty artifact references, and verified coverage/provenance rather than omitting the day
 - record block range and snapshot provenance
 - report protocol metrics with prior-calendar-day deltas
 - link to the per-contest run artifacts instead of duplicating their evidence
@@ -111,6 +113,14 @@ The first daily schema should be based on repeated MVE data rather than speculat
 
 ## `index.json` — repository index
 
-`index.json` is a lightweight entry point for agents, dashboards, and humans. It lists published artifacts and their canonical JSON/Markdown paths.
+`index.json` is a lightweight entry point for agents, dashboards, and humans. It contains a bounded recent feed window, latest pointers, and archive pointers, not the full unbounded artifact history.
+
+Index conventions:
+
+- `latestByArtifactType` keys exactly mirror `artifactType` values: `run`, `release-acceptance`, and `daily-digest`. Consumers do not need a pluralization or directory-name lookup table.
+- `recentArtifacts` is the recent-N feed window and is sorted by `publishedAt` descending.
+- Every index/archive entry has `publishedAt` for feed ordering. The `date` field remains the subject calendar date and must not be used as the primary sort key.
+- `archiveIndexes` points to full-history archives such as `archive/2026/index.json`. Consumers fetch those only when they need older entries.
+- Run `python3 scripts/generate-indexes.py` after artifact changes. The generator discovers canonical artifact JSON files, preserves existing entry `publishedAt` values, assigns current UTC publication time to newly discovered artifacts, and keeps `recentArtifacts`, archive shards, and `archiveIndexes` summaries synchronized.
 
 The index is not a replacement for artifact contents. It should contain enough metadata to discover artifacts and decide whether to fetch them.

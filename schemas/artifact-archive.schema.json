@@ -1,26 +1,18 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
-  "title": "Ospex Artifact Index",
+  "$id": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json",
+  "title": "Ospex Artifact Archive Index",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "$schema",
-    "schemaVersion",
-    "generatedAt",
-    "repository",
-    "latestByArtifactType",
-    "recentArtifacts",
-    "archiveIndexes"
-  ],
+  "required": ["$schema", "schemaVersion", "generatedAt", "repository", "archive", "artifacts"],
   "properties": {
     "$schema": {
       "type": "string",
-      "const": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json"
+      "const": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json"
     },
     "schemaVersion": {
       "type": "integer",
-      "const": 2
+      "minimum": 1
     },
     "generatedAt": {
       "type": "string",
@@ -30,43 +22,10 @@
       "type": "string",
       "const": "ospex-org/ospex-artifacts"
     },
-    "latestByArtifactType": {
+    "archive": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["run", "release-acceptance", "daily-digest"],
-      "description": "Latest artifact data paths bucketed by exact artifactType value. No pluralization or directory-name mapping is required.",
-      "properties": {
-        "run": {
-          "type": "array",
-          "items": { "type": "string" }
-        },
-        "release-acceptance": {
-          "type": "array",
-          "items": { "type": "string" }
-        },
-        "daily-digest": {
-          "type": "array",
-          "items": { "type": "string" }
-        }
-      }
-    },
-    "recentArtifacts": {
-      "type": "array",
-      "description": "Bounded recent-N feed window, sorted by publishedAt descending. Full history lives in archiveIndexes.",
-      "maxItems": 100,
-      "items": { "$ref": "#/$defs/artifactEntry" }
-    },
-    "archiveIndexes": {
-      "type": "array",
-      "description": "Pointers to full-history archive indexes fetched only when a consumer needs older entries.",
-      "items": { "$ref": "#/$defs/archiveIndex" }
-    }
-  },
-  "$defs": {
-    "archiveIndex": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": ["scope", "year", "path", "artifactCount", "oldestPublishedAt", "newestPublishedAt"],
+      "required": ["scope", "year"],
       "properties": {
         "scope": {
           "type": "string",
@@ -76,24 +35,16 @@
           "type": "integer",
           "minimum": 2000,
           "maximum": 3000
-        },
-        "path": {
-          "type": "string"
-        },
-        "artifactCount": {
-          "type": "integer",
-          "minimum": 0
-        },
-        "oldestPublishedAt": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "newestPublishedAt": {
-          "type": "string",
-          "format": "date-time"
         }
       }
     },
+    "artifacts": {
+      "type": "array",
+      "description": "Full archive entries for this archive scope, sorted by publishedAt descending.",
+      "items": { "$ref": "#/$defs/artifactEntry" }
+    }
+  },
+  "$defs": {
     "artifactEntry": {
       "type": "object",
       "additionalProperties": true,

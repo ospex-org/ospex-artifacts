@@ -1,19 +1,13 @@
 {
-  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
-  "schemaVersion": 2,
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json",
+  "schemaVersion": 1,
   "generatedAt": "2026-05-22T18:40:20Z",
   "repository": "ospex-org/ospex-artifacts",
-  "latestByArtifactType": {
-    "run": [
-      "runs/2026-05-20-mlb-three-game-mm-shakeout-contests-14-16/evidence.json",
-      "runs/2026-05-19-mlb-atl-mia-contest-13/evidence.json"
-    ],
-    "release-acceptance": [
-      "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.json"
-    ],
-    "daily-digest": []
+  "archive": {
+    "scope": "year",
+    "year": 2026
   },
-  "recentArtifacts": [
+  "artifacts": [
     {
       "artifactId": "2026-05-22-mlb-hou-chc-release-acceptance",
       "artifactType": "release-acceptance",
@@ -47,16 +41,6 @@
       "status": "complete_verified",
       "summaryPath": "runs/2026-05-19-mlb-atl-mia-contest-13/summary.md",
       "publishedAt": "2026-05-20T02:48:35Z"
-    }
-  ],
-  "archiveIndexes": [
-    {
-      "scope": "year",
-      "year": 2026,
-      "path": "archive/2026/index.json",
-      "artifactCount": 3,
-      "oldestPublishedAt": "2026-05-20T02:48:35Z",
-      "newestPublishedAt": "2026-05-22T18:18:26Z"
     }
   ]
 }
