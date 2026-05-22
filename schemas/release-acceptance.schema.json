@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ospex-org/ospex-artifacts/schemas/release-acceptance.schema.json",
+  "title": "Ospex Release Acceptance Artifact",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "$schema",
+    "artifactType",
+    "schemaVersion",
+    "status",
+    "release",
+    "setupGates",
+    "liveGates",
+    "artifactFiles"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "const": "https://github.com/ospex-org/ospex-artifacts/schemas/release-acceptance.schema.json"
+    },
+    "artifactType": {
+      "type": "string",
+      "const": "release-acceptance"
+    },
+    "schemaVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "type": "string",
+      "description": "Release-acceptance artifact-level status. Gate-level statuses such as pass/not_run remain local to setupGates/liveGates.",
+      "enum": ["stage0_green", "stage0_green_with_caveats", "stage0_partial", "stage0_failed", "superseded"]
+    },
+    "release": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["repo", "tag", "url", "assets"],
+      "properties": {
+        "repo": { "type": "string" },
+        "tag": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "publishedAt": { "type": ["string", "null"], "format": "date-time" },
+        "assets": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": true,
+            "required": ["name", "sha256"],
+            "properties": {
+              "name": { "type": "string" },
+              "sha256": { "type": "string", "pattern": "^[a-fA-F0-9]{64}$" }
+            }
+          }
+        }
+      }
+    },
+    "setupGates": {
+      "type": "object",
+      "additionalProperties": {
+        "type": ["string", "number", "boolean", "null"]
+      }
+    },
+    "liveGates": {
+      "type": "object",
+      "additionalProperties": {
+        "type": ["string", "number", "boolean", "null"]
+      }
+    },
+    "knownObservations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["severity", "summary"],
+        "properties": {
+          "severity": { "type": "string" },
+          "summary": { "type": "string" }
+        }
+      }
+    },
+    "txs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["purpose", "transactionHash", "success"],
+        "properties": {
+          "purpose": { "type": "string" },
+          "transactionHash": { "type": "string", "pattern": "^0x[a-fA-F0-9]{64}$" },
+          "success": { "type": "boolean" },
+          "blockNumber": { "type": ["integer", "null"] }
+        }
+      }
+    },
+    "artifactFiles": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    }
+  }
+}

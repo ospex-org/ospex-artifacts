@@ -1,0 +1,250 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/release-acceptance.schema.json",
+  "artifactFiles": {
+    "rawContestCreateLive": "raw/contest-create-live.sanitized.json",
+    "rawContestShow": "raw/contest-show-17.sanitized.json",
+    "rawDoctorAfterApprovals": "raw/doctor-after-approvals.sanitized.json",
+    "rawDoctorAfterCreate": "raw/doctor-after-create.sanitized.json",
+    "rawGamesTargetFinal": "raw/games-target-final.sanitized.json",
+    "rawLiveGates": "raw/live-gates.json",
+    "rawOddsStreamSmokeMarkdown": "raw/odds-stream-smoke.summary.md",
+    "rawOddsStreamSmokeReceived": "raw/odds-stream-smoke.received.ndjson",
+    "rawOddsStreamSmokeSummary": "raw/odds-stream-smoke.summary.json",
+    "rawReleaseAssets": "raw/release-assets.json",
+    "rawSetupGates": "raw/setup-gates.json",
+    "rawTargetGame": "raw/target-game.json",
+    "rawTxReceiptsSummary": "raw/tx-receipts.summary.json",
+    "summary": "acceptance.md"
+  },
+  "artifactType": "release-acceptance",
+  "contest": {
+    "awayTeam": "Houston Astros",
+    "contestCreatedAt": "2026-05-22T16:57:05+00:00",
+    "contestCreator": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+    "contestId": "17",
+    "contestStatus": "verified",
+    "homeTeam": "Chicago Cubs",
+    "marketUpdateSourceHash": "0x7f5ce70565133fedb2e0f1aeb925f38a3b26924917cff852e7de40a9297119b4",
+    "matchTime": "2026-05-22T18:20:00+00:00",
+    "scoreContestSourceHash": "0xcb2a11db3190c322239b52afb3caefccfccd850566834819b012c5520f8d31cd",
+    "speculationsCount": 0,
+    "status": "pass",
+    "verifiedAt": "2026-05-22T16:57:17+00:00",
+    "verifySourceHash": "0x01c48e15068b68b7d5986d5013edd83a243ac31a761567e9db0e57b513c26c01"
+  },
+  "knownObservations": [
+    {
+      "severity": "non_blocking",
+      "summary": "npm audit reports 3 moderate ws advisories via ethers; no high/critical findings and no available fix in current dependency tree."
+    },
+    {
+      "severity": "non_blocking",
+      "summary": "The games list captured immediately after create still showed contestCreated=false/contestId=null, but the verified contest detail was already available and the later readiness games list showed contestCreated=true with contestId=17. Treat as transient API/indexer/list projection lag, not a contest-create failure."
+    },
+    {
+      "severity": "expected_after_one_contest_create",
+      "summary": "Final doctor after contest creation has matchCommitments and submitCommitments ready, but createContests is red because the exact 0.005 LINK OracleModule allowance was consumed by this contest creation. This is an allowance state for future contest creation, not a LINK balance warning; ospex-fresh-user still had 0.295 LINK afterward, and LINK low-balance warnings should only fire below roughly 0.02 LINK."
+    }
+  ],
+  "liveGates": {
+    "boundedApprovals": "pass",
+    "chainlinkVerification": "pass",
+    "contestCreateTx": "pass",
+    "contestShowVerified": "pass",
+    "doctorGreenAfterApprovals": "pass",
+    "gamesListFinalShowsContestCreated": "pass",
+    "optionalTinyCommitmentSubmitMatch": "not_run"
+  },
+  "release": {
+    "assets": [
+      {
+        "name": "ospex-sdk-0.3.0.tgz",
+        "sha256": "10a35b0e4b0806476a4709a4a81b60b5c58e16fc1cff45e08aa54fbfadb9d5c1"
+      },
+      {
+        "name": "ospex-cli-0.3.0.tgz",
+        "sha256": "62fdbf2328c65079b8784a802b81dfe6f70e89616103f1f6db01c9f4ee8a85a6"
+      }
+    ],
+    "publishedAt": "2026-05-22T15:25:19Z",
+    "repo": "ospex-org/ospex-sdk",
+    "tag": "v0.3.0",
+    "url": "https://github.com/ospex-org/ospex-sdk/releases/tag/v0.3.0"
+  },
+  "schemaVersion": 1,
+  "setupGates": {
+    "authCheck": "pass",
+    "cliHelp": "pass",
+    "cliVersion": "0.3.0",
+    "freshDockerInstallFromReleaseTarballs": "pass",
+    "gamesListTargetDiscovery": "pass",
+    "npmAuditHighCritical": "pass",
+    "npmAuditSignatures": "pass",
+    "oddsStreamMonitorSmoke": "pass"
+  },
+  "status": "stage0_green",
+  "streamMonitoring": {
+    "command": [
+      "ospex",
+      "odds",
+      "watch",
+      "17",
+      "--json",
+      "--include-refreshes"
+    ],
+    "contestId": "17",
+    "durationSecondsObserved": 90.031,
+    "eventCounts": {
+      "refresh": 6,
+      "snapshot": 3,
+      "status": 3
+    },
+    "expectedMarkets": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "failures": [],
+    "implementationScope": "testing harness only; no ospex-sdk, ospex-cli, core-api, contracts, or market-maker repository code changes required to run this monitor",
+    "markets": {
+      "moneyline": {
+        "changedAtDistinctCount": 1,
+        "eventCounts": {
+          "refresh": 2,
+          "snapshot": 1,
+          "status": 1
+        },
+        "firstChangeAt": null,
+        "firstConnectedAt": "2026-05-22T17:46:43.330871Z",
+        "firstRefreshAt": "2026-05-22T17:46:46.608271Z",
+        "firstSnapshotAt": "2026-05-22T17:46:43.330122Z",
+        "maxEventGapSeconds": 59.972,
+        "maxPollAgeAtReceiveSeconds": 57.589,
+        "priceSignatureDistinctCount": 1,
+        "statusCounts": {
+          "connected": 1
+        }
+      },
+      "spread": {
+        "changedAtDistinctCount": 1,
+        "eventCounts": {
+          "refresh": 2,
+          "snapshot": 1,
+          "status": 1
+        },
+        "firstChangeAt": null,
+        "firstConnectedAt": "2026-05-22T17:46:43.306090Z",
+        "firstRefreshAt": "2026-05-22T17:46:46.607174Z",
+        "firstSnapshotAt": "2026-05-22T17:46:43.305685Z",
+        "maxEventGapSeconds": 59.957,
+        "maxPollAgeAtReceiveSeconds": 57.499,
+        "priceSignatureDistinctCount": 1,
+        "statusCounts": {
+          "connected": 1
+        }
+      },
+      "total": {
+        "changedAtDistinctCount": 1,
+        "eventCounts": {
+          "refresh": 2,
+          "snapshot": 1,
+          "status": 1
+        },
+        "firstChangeAt": null,
+        "firstConnectedAt": "2026-05-22T17:46:43.313232Z",
+        "firstRefreshAt": "2026-05-22T17:46:46.605625Z",
+        "firstSnapshotAt": "2026-05-22T17:46:43.312624Z",
+        "maxEventGapSeconds": 59.974,
+        "maxPollAgeAtReceiveSeconds": 57.436,
+        "priceSignatureDistinctCount": 1,
+        "statusCounts": {
+          "connected": 1
+        }
+      }
+    },
+    "publicSafety": {
+      "nonJsonLineCount": 0,
+      "providerLeakTerms": {},
+      "stderrLineCount": 0
+    },
+    "status": "pass",
+    "warnings": []
+  },
+  "targetGame": {
+    "awayTeam": "Houston Astros",
+    "finalState": {
+      "canCreateContest": false,
+      "contestCreated": true,
+      "contestId": "17",
+      "status": "upcoming"
+    },
+    "gameId": "ccfee4a7-10b8-4c14-a565-49abda5c50db",
+    "homeTeam": "Chicago Cubs",
+    "matchTimeUtc": "2026-05-22T18:20:00Z",
+    "setupState": {
+      "canCreateContest": true,
+      "contestCreated": false,
+      "hasOdds": true
+    },
+    "slug": "hou-chc-2026-05-22",
+    "sport": "mlb"
+  },
+  "txs": [
+    {
+      "blockNumber": 87273876,
+      "blockNumberHex": "0x533b194",
+      "from": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "gasUsed": 66357,
+      "gasUsedHex": "0x10335",
+      "purpose": "approve-usdc-position-module",
+      "status": "0x1",
+      "success": true,
+      "to": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+      "transactionHash": "0x6f91eb48ebb0a34dee26c9d086a71404af3a220fd4a02e46eeef6c3b8f902c1c"
+    },
+    {
+      "blockNumber": 87273878,
+      "blockNumberHex": "0x533b196",
+      "from": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "gasUsed": 66357,
+      "gasUsedHex": "0x10335",
+      "purpose": "approve-usdc-treasury-module",
+      "status": "0x1",
+      "success": true,
+      "to": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+      "transactionHash": "0x08e067ec813dd5f43db6d5f92068db56be8824a09802015600d847d1ba59050a"
+    },
+    {
+      "blockNumber": 87273880,
+      "blockNumberHex": "0x533b198",
+      "from": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "gasUsed": 47267,
+      "gasUsedHex": "0xb8a3",
+      "purpose": "approve-link-oracle-module",
+      "status": "0x1",
+      "success": true,
+      "to": "0xb0897686c545045afc77cf20ec7a532e3120e0f1",
+      "transactionHash": "0x48c8f6e2f66132bb1024e37c134f5e854d042023c3366bcf5c186069927d9959"
+    },
+    {
+      "blockNumber": 87273895,
+      "blockNumberHex": "0x533b1a7",
+      "from": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "gasUsed": 1375948,
+      "gasUsedHex": "0x14fecc",
+      "purpose": "create-contest",
+      "status": "0x1",
+      "success": true,
+      "to": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+      "transactionHash": "0x7873e5136aadee555aee3411a4dbf1d67e1e65c874ef8cdbe71cb8ea283e5792"
+    }
+  ],
+  "wallet": {
+    "address": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+    "alias": "ospex-fresh-user",
+    "linkBalanceStatus": "healthy",
+    "linkLowBalanceWarningThreshold": "0.02",
+    "note": "Post-create doctor createContests red was LINK allowance exhaustion for another contest, not low LINK balance. Do not warn for LINK balances above roughly 0.02 LINK.",
+    "postCreateLinkBalance": "0.295"
+  }
+}

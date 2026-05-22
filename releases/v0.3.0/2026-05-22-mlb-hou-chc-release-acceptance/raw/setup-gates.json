@@ -1,0 +1,42 @@
+{
+  "harness": {
+    "containerImage": "node:22-bookworm",
+    "node": "v22.22.3",
+    "npm": "10.9.8",
+    "localOspexReposMountedForInstall": false
+  },
+  "install": {
+    "source": "GitHub release tarballs",
+    "packages": ["@ospex/sdk@0.3.0", "@ospex/cli@0.3.0"],
+    "scriptsIgnoredDuringInstall": true,
+    "status": "pass"
+  },
+  "cli": {
+    "version": "0.3.0",
+    "helpRendered": true,
+    "gamesListTargetFound": true
+  },
+  "supplyChain": {
+    "npmAuditHighCritical": "pass",
+    "npmAuditSignatures": {
+      "status": "pass",
+      "registrySignaturesVerified": 37,
+      "attestationsVerified": 16
+    },
+    "nonBlockingFindings": [
+      "npm audit reports 3 moderate ws advisories via ethers; no high/critical findings and no available fix in current dependency tree."
+    ]
+  },
+  "auth": {
+    "lowValueSignerConfiguredInHarness": true,
+    "authCheckStrictSignChallenge": "pass"
+  },
+  "doctorBeforeApprovals": {
+    "status": "fail_expected",
+    "failingChecks": [
+      "allowances.usdc_position",
+      "allowances.usdc_treasury",
+      "allowances.link_oracle"
+    ]
+  }
+}

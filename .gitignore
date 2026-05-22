@@ -17,6 +17,13 @@ telemetry/
 *.sqlite3
 *.db
 
+# Local-only scratch/planning material
+scratch/
+tmp/
+internal/
+*.local.json
+*.local.md
+
 # OS/editor/cache noise
 .DS_Store
 Thumbs.db

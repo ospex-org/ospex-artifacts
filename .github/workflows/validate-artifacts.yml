@@ -1,0 +1,28 @@
+name: Validate artifacts
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: JSON, schema, path, and public-safety checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout without third-party actions
+        shell: bash
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY"
+          git fetch --depth=1 origin "$GITHUB_REF"
+          git checkout --force FETCH_HEAD
+
+      - name: Validate artifact repository
+        shell: bash
+        run: python3 scripts/validate-artifacts.py
