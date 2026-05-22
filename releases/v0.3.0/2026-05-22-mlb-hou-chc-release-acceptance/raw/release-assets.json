@@ -1,0 +1,21 @@
+{
+  "repo": "ospex-org/ospex-sdk",
+  "tag": "v0.3.0",
+  "name": "v0.3.0",
+  "isDraft": false,
+  "isPrerelease": false,
+  "publishedAt": "2026-05-22T15:25:19Z",
+  "url": "https://github.com/ospex-org/ospex-sdk/releases/tag/v0.3.0",
+  "assets": [
+    {
+      "name": "ospex-cli-0.3.0.tgz",
+      "size": 234260,
+      "sha256": "62fdbf2328c65079b8784a802b81dfe6f70e89616103f1f6db01c9f4ee8a85a6"
+    },
+    {
+      "name": "ospex-sdk-0.3.0.tgz",
+      "size": 338968,
+      "sha256": "10a35b0e4b0806476a4709a4a81b60b5c58e16fc1cff45e08aa54fbfadb9d5c1"
+    }
+  ]
+}

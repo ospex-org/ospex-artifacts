@@ -1,0 +1,51 @@
+{
+  "action": "doctor",
+  "chainId": 137,
+  "cliVersion": "0.3.0",
+  "generatedAt": "2026-05-22T16:56:41.725Z",
+  "network": "polygon",
+  "ok": true,
+  "ready": {
+    "createContests": {
+      "ok": true,
+      "reasons": []
+    },
+    "matchCommitments": {
+      "ok": true,
+      "reasons": []
+    },
+    "submitCommitments": {
+      "ok": true,
+      "reasons": []
+    }
+  },
+  "sdkVersion": "0.3.0",
+  "summary": {
+    "byCapability": {
+      "createContests": {
+        "blockingChecks": [],
+        "ok": true,
+        "worstStatus": "ok"
+      },
+      "matchCommitments": {
+        "blockingChecks": [],
+        "ok": true,
+        "worstStatus": "ok"
+      },
+      "submitCommitments": {
+        "blockingChecks": [],
+        "ok": true,
+        "worstStatus": "ok"
+      }
+    },
+    "counts": {
+      "fail": 0,
+      "ok": 17,
+      "skip": 0,
+      "warn": 0
+    },
+    "ok": true,
+    "worstStatus": "ok"
+  },
+  "wallet": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d"
+}

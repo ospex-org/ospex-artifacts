@@ -1,0 +1,22 @@
+{
+  "contestId": "17",
+  "effects": [
+    {
+      "blockNumber": "87273895",
+      "ok": true,
+      "purpose": "create-contest",
+      "status": "confirmed",
+      "txHash": "0x7873e5136aadee555aee3411a4dbf1d67e1e65c874ef8cdbe71cb8ea283e5792",
+      "type": "transaction"
+    }
+  ],
+  "executionStatus": "success",
+  "requestId": "0xcae5ff511fdc2c4204e7cd7b6f722f48ac70c782a4c0ac5bcfaa9162802454cd",
+  "status": "pass",
+  "txHash": "0x7873e5136aadee555aee3411a4dbf1d67e1e65c874ef8cdbe71cb8ea283e5792",
+  "verification": {
+    "contestId": "17",
+    "status": "verified"
+  },
+  "wallet": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d"
+}

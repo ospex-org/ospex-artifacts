@@ -1,0 +1,50 @@
+{
+  "finalReadiness": {
+    "awayTeam": {
+      "abbreviation": "HOU",
+      "name": "Houston Astros"
+    },
+    "canCreateContest": false,
+    "contestCreated": true,
+    "contestId": "17",
+    "externalIds": {
+      "jsonodds": "ccfee4a7-10b8-4c14-a565-49abda5c50db",
+      "rundown": "acc0096ab8836bd9118e78d2c98b8659",
+      "sportspage": "336737"
+    },
+    "gameId": "ccfee4a7-10b8-4c14-a565-49abda5c50db",
+    "hasOdds": true,
+    "homeTeam": {
+      "abbreviation": "CHC",
+      "name": "Chicago Cubs"
+    },
+    "matchTime": "2026-05-22T18:20:00+00:00",
+    "slug": "hou-chc-2026-05-22",
+    "sport": "mlb",
+    "status": "upcoming"
+  },
+  "immediateAfterCreate": {
+    "awayTeam": {
+      "abbreviation": "HOU",
+      "name": "Houston Astros"
+    },
+    "canCreateContest": true,
+    "contestCreated": false,
+    "contestId": null,
+    "externalIds": {
+      "jsonodds": "ccfee4a7-10b8-4c14-a565-49abda5c50db",
+      "rundown": "acc0096ab8836bd9118e78d2c98b8659",
+      "sportspage": "336737"
+    },
+    "gameId": "ccfee4a7-10b8-4c14-a565-49abda5c50db",
+    "hasOdds": true,
+    "homeTeam": {
+      "abbreviation": "CHC",
+      "name": "Chicago Cubs"
+    },
+    "matchTime": "2026-05-22T18:20:00+00:00",
+    "slug": "hou-chc-2026-05-22",
+    "sport": "mlb",
+    "status": "upcoming"
+  }
+}

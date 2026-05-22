@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
+  "title": "Ospex Artifact Index",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "generatedAt", "repository", "artifacts", "latest"],
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "repository": {
+      "type": "string"
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["artifactType", "artifactId", "status", "summaryPath", "dataPath"],
+        "properties": {
+          "artifactType": {
+            "type": "string",
+            "enum": ["run", "release-acceptance", "daily-digest"]
+          },
+          "artifactId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "network": {
+            "type": ["string", "null"]
+          },
+          "date": {
+            "type": ["string", "null"],
+            "format": "date"
+          },
+          "summaryPath": {
+            "type": "string"
+          },
+          "dataPath": {
+            "type": "string"
+          },
+          "rawPath": {
+            "type": ["string", "null"]
+          }
+        }
+      }
+    },
+    "latest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["runs", "releases", "daily"],
+      "properties": {
+        "runs": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "releases": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "daily": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

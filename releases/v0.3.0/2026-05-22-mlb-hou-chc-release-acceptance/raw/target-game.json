@@ -1,0 +1,24 @@
+{
+  "gameId": "ccfee4a7-10b8-4c14-a565-49abda5c50db",
+  "slug": "hou-chc-2026-05-22",
+  "sport": "mlb",
+  "matchTime": "2026-05-22T18:20:00+00:00",
+  "status": "upcoming",
+  "homeTeam": {
+    "name": "Chicago Cubs",
+    "abbreviation": "CHC"
+  },
+  "awayTeam": {
+    "name": "Houston Astros",
+    "abbreviation": "HOU"
+  },
+  "hasOdds": true,
+  "contestCreated": false,
+  "contestId": null,
+  "canCreateContest": true,
+  "externalIds": {
+    "jsonodds": "ccfee4a7-10b8-4c14-a565-49abda5c50db",
+    "sportspage": "336737",
+    "rundown": "acc0096ab8836bd9118e78d2c98b8659"
+  }
+}

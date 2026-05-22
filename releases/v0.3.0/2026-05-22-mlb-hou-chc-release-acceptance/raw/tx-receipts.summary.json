@@ -1,0 +1,54 @@
+{
+  "chainId": 137,
+  "network": "polygon",
+  "receipts": [
+    {
+      "blockNumber": 87273876,
+      "blockNumberHex": "0x533b194",
+      "from": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "gasUsed": 66357,
+      "gasUsedHex": "0x10335",
+      "purpose": "approve-usdc-position-module",
+      "status": "0x1",
+      "success": true,
+      "to": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+      "transactionHash": "0x6f91eb48ebb0a34dee26c9d086a71404af3a220fd4a02e46eeef6c3b8f902c1c"
+    },
+    {
+      "blockNumber": 87273878,
+      "blockNumberHex": "0x533b196",
+      "from": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "gasUsed": 66357,
+      "gasUsedHex": "0x10335",
+      "purpose": "approve-usdc-treasury-module",
+      "status": "0x1",
+      "success": true,
+      "to": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+      "transactionHash": "0x08e067ec813dd5f43db6d5f92068db56be8824a09802015600d847d1ba59050a"
+    },
+    {
+      "blockNumber": 87273880,
+      "blockNumberHex": "0x533b198",
+      "from": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "gasUsed": 47267,
+      "gasUsedHex": "0xb8a3",
+      "purpose": "approve-link-oracle-module",
+      "status": "0x1",
+      "success": true,
+      "to": "0xb0897686c545045afc77cf20ec7a532e3120e0f1",
+      "transactionHash": "0x48c8f6e2f66132bb1024e37c134f5e854d042023c3366bcf5c186069927d9959"
+    },
+    {
+      "blockNumber": 87273895,
+      "blockNumberHex": "0x533b1a7",
+      "from": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "gasUsed": 1375948,
+      "gasUsedHex": "0x14fecc",
+      "purpose": "create-contest",
+      "status": "0x1",
+      "success": true,
+      "to": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+      "transactionHash": "0x7873e5136aadee555aee3411a4dbf1d67e1e65c874ef8cdbe71cb8ea283e5792"
+    }
+  ]
+}
