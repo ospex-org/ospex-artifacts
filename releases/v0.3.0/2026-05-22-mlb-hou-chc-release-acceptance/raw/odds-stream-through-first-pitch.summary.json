@@ -1,0 +1,217 @@
+{
+  "apiUrl": "https://api.ospex.org",
+  "artifactType": "odds-stream-monitor",
+  "command": [
+    "ospex",
+    "odds",
+    "watch",
+    "17",
+    "--json",
+    "--include-refreshes"
+  ],
+  "contestId": "17",
+  "durationSecondsObserved": 3000.03,
+  "durationSecondsRequested": 3000,
+  "eventCounts": {
+    "change": 7,
+    "refresh": 74,
+    "snapshot": 3,
+    "status": 3
+  },
+  "expectedMarkets": [
+    "moneyline",
+    "spread",
+    "total"
+  ],
+  "failures": [],
+  "files": {
+    "receivedNdjson": "odds-stream-through-first-pitch.received.ndjson",
+    "stderr": "odds-stream-through-first-pitch.stderr.txt",
+    "summaryJson": "odds-stream-through-first-pitch.summary.json",
+    "summaryMarkdown": "odds-stream-through-first-pitch.summary.md"
+  },
+  "finishedAt": "2026-05-22T18:43:07.688607Z",
+  "label": "contest-17-through-first-pitch",
+  "markets": {
+    "moneyline": {
+      "changedAtValues": [
+        "2026-05-22T17:49:45.557+00:00",
+        "2026-05-22T17:54:46.336+00:00",
+        "2026-05-22T17:59:46.146+00:00",
+        "2026-05-22T18:04:47.21+00:00",
+        "2026-05-22T18:09:47.57+00:00",
+        "2026-05-22T18:19:46.976+00:00"
+      ],
+      "eventCounts": {
+        "change": 5,
+        "refresh": 22,
+        "snapshot": 1,
+        "status": 1
+      },
+      "firstChangeAt": "2026-05-22T17:54:46.465344Z",
+      "firstConnectedAt": "2026-05-22T17:53:09.547351Z",
+      "firstEventAt": "2026-05-22T17:53:09.546818Z",
+      "firstPollCapturedAt": "2026-05-22T17:52:46.344000Z",
+      "firstRefreshAt": "2026-05-22T17:53:46.645815Z",
+      "firstSnapshotAt": "2026-05-22T17:53:09.546818Z",
+      "lastEventAt": "2026-05-22T18:19:47.204654Z",
+      "lastPollCapturedAt": "2026-05-22T18:19:46.976000Z",
+      "maxEventGapSeconds": 61.164,
+      "maxPollAgeAtReceiveSeconds": 23.203,
+      "priceSignatures": [
+        "{\"awayOddsAmerican\":126,\"changedAt\":\"2026-05-22T18:09:47.57+00:00\",\"homeOddsAmerican\":-145,\"market\":\"moneyline\",\"upstreamLastUpdated\":\"2026-05-22T18:08:20+00:00\"}",
+        "{\"awayOddsAmerican\":126,\"changedAt\":\"2026-05-22T18:09:47.57+00:00\",\"homeOddsAmerican\":-145,\"market\":\"moneyline\",\"upstreamLastUpdated\":\"2026-05-22T18:11:19+00:00\"}",
+        "{\"awayOddsAmerican\":126,\"changedAt\":\"2026-05-22T18:19:46.976+00:00\",\"homeOddsAmerican\":-143,\"market\":\"moneyline\",\"upstreamLastUpdated\":\"2026-05-22T18:17:17+00:00\"}",
+        "{\"awayOddsAmerican\":127,\"changedAt\":\"2026-05-22T17:54:46.336+00:00\",\"homeOddsAmerican\":-147,\"market\":\"moneyline\",\"upstreamLastUpdated\":\"2026-05-22T17:53:22+00:00\"}",
+        "{\"awayOddsAmerican\":128,\"changedAt\":\"2026-05-22T17:49:45.557+00:00\",\"homeOddsAmerican\":-145,\"market\":\"moneyline\",\"upstreamLastUpdated\":\"2026-05-22T17:47:21+00:00\"}",
+        "{\"awayOddsAmerican\":128,\"changedAt\":\"2026-05-22T17:59:46.146+00:00\",\"homeOddsAmerican\":-145,\"market\":\"moneyline\",\"upstreamLastUpdated\":\"2026-05-22T17:56:21+00:00\"}",
+        "{\"awayOddsAmerican\":128,\"changedAt\":\"2026-05-22T18:04:47.21+00:00\",\"homeOddsAmerican\":-146,\"market\":\"moneyline\",\"upstreamLastUpdated\":\"2026-05-22T18:02:21+00:00\"}"
+      ],
+      "sampleOdds": {
+        "awayOddsAmerican": 128,
+        "changedAt": "2026-05-22T17:49:45.557+00:00",
+        "homeOddsAmerican": -145,
+        "market": "moneyline",
+        "pollCapturedAt": "2026-05-22T17:52:46.344+00:00",
+        "upstreamLastUpdated": "2026-05-22T17:47:21+00:00"
+      },
+      "statusCounts": {
+        "connected": 1
+      },
+      "terminalQuietSeconds": 1400.484
+    },
+    "spread": {
+      "changedAtValues": [
+        "2026-05-22T17:39:46.291+00:00",
+        "2026-05-22T18:19:47.073+00:00"
+      ],
+      "eventCounts": {
+        "change": 1,
+        "refresh": 26,
+        "snapshot": 1,
+        "status": 1
+      },
+      "firstChangeAt": "2026-05-22T18:19:47.205364Z",
+      "firstConnectedAt": "2026-05-22T17:53:09.548427Z",
+      "firstEventAt": "2026-05-22T17:53:09.548116Z",
+      "firstPollCapturedAt": "2026-05-22T17:52:46.407000Z",
+      "firstRefreshAt": "2026-05-22T17:53:46.650994Z",
+      "firstSnapshotAt": "2026-05-22T17:53:09.548116Z",
+      "lastEventAt": "2026-05-22T18:19:47.205364Z",
+      "lastPollCapturedAt": "2026-05-22T18:19:47.073000Z",
+      "maxEventGapSeconds": 61.164,
+      "maxPollAgeAtReceiveSeconds": 23.141,
+      "priceSignatures": [
+        "{\"awayLine\":1.5,\"awayOddsAmerican\":-181,\"changedAt\":\"2026-05-22T18:19:47.073+00:00\",\"homeLine\":-1.5,\"homeOddsAmerican\":156,\"market\":\"spread\",\"upstreamLastUpdated\":\"2026-05-22T18:17:17+00:00\"}",
+        "{\"awayLine\":1.5,\"awayOddsAmerican\":-185,\"changedAt\":\"2026-05-22T17:39:46.291+00:00\",\"homeLine\":-1.5,\"homeOddsAmerican\":155,\"market\":\"spread\",\"upstreamLastUpdated\":\"2026-05-22T17:47:21+00:00\"}",
+        "{\"awayLine\":1.5,\"awayOddsAmerican\":-185,\"changedAt\":\"2026-05-22T17:39:46.291+00:00\",\"homeLine\":-1.5,\"homeOddsAmerican\":155,\"market\":\"spread\",\"upstreamLastUpdated\":\"2026-05-22T17:53:22+00:00\"}",
+        "{\"awayLine\":1.5,\"awayOddsAmerican\":-185,\"changedAt\":\"2026-05-22T17:39:46.291+00:00\",\"homeLine\":-1.5,\"homeOddsAmerican\":155,\"market\":\"spread\",\"upstreamLastUpdated\":\"2026-05-22T17:56:21+00:00\"}",
+        "{\"awayLine\":1.5,\"awayOddsAmerican\":-185,\"changedAt\":\"2026-05-22T17:39:46.291+00:00\",\"homeLine\":-1.5,\"homeOddsAmerican\":155,\"market\":\"spread\",\"upstreamLastUpdated\":\"2026-05-22T18:02:21+00:00\"}",
+        "{\"awayLine\":1.5,\"awayOddsAmerican\":-185,\"changedAt\":\"2026-05-22T17:39:46.291+00:00\",\"homeLine\":-1.5,\"homeOddsAmerican\":155,\"market\":\"spread\",\"upstreamLastUpdated\":\"2026-05-22T18:08:20+00:00\"}",
+        "{\"awayLine\":1.5,\"awayOddsAmerican\":-185,\"changedAt\":\"2026-05-22T17:39:46.291+00:00\",\"homeLine\":-1.5,\"homeOddsAmerican\":155,\"market\":\"spread\",\"upstreamLastUpdated\":\"2026-05-22T18:11:19+00:00\"}"
+      ],
+      "sampleOdds": {
+        "awayLine": 1.5,
+        "awayOddsAmerican": -185,
+        "changedAt": "2026-05-22T17:39:46.291+00:00",
+        "homeLine": -1.5,
+        "homeOddsAmerican": 155,
+        "market": "spread",
+        "pollCapturedAt": "2026-05-22T17:52:46.407+00:00",
+        "upstreamLastUpdated": "2026-05-22T17:47:21+00:00"
+      },
+      "statusCounts": {
+        "connected": 1
+      },
+      "terminalQuietSeconds": 1400.483
+    },
+    "total": {
+      "changedAtValues": [
+        "2026-05-22T17:49:45.696+00:00",
+        "2026-05-22T18:09:47.75+00:00"
+      ],
+      "eventCounts": {
+        "change": 1,
+        "refresh": 26,
+        "snapshot": 1,
+        "status": 1
+      },
+      "firstChangeAt": "2026-05-22T18:09:48.049209Z",
+      "firstConnectedAt": "2026-05-22T17:53:09.556225Z",
+      "firstEventAt": "2026-05-22T17:53:09.555410Z",
+      "firstPollCapturedAt": "2026-05-22T17:52:46.464000Z",
+      "firstRefreshAt": "2026-05-22T17:53:46.657154Z",
+      "firstSnapshotAt": "2026-05-22T17:53:09.555410Z",
+      "lastEventAt": "2026-05-22T18:19:47.231200Z",
+      "lastPollCapturedAt": "2026-05-22T18:19:47.134000Z",
+      "maxEventGapSeconds": 61.139,
+      "maxPollAgeAtReceiveSeconds": 23.091,
+      "priceSignatures": [
+        "{\"changedAt\":\"2026-05-22T17:49:45.696+00:00\",\"line\":7,\"market\":\"total\",\"overOddsAmerican\":105,\"underOddsAmerican\":-125,\"upstreamLastUpdated\":\"2026-05-22T17:47:21+00:00\"}",
+        "{\"changedAt\":\"2026-05-22T17:49:45.696+00:00\",\"line\":7,\"market\":\"total\",\"overOddsAmerican\":105,\"underOddsAmerican\":-125,\"upstreamLastUpdated\":\"2026-05-22T17:53:22+00:00\"}",
+        "{\"changedAt\":\"2026-05-22T17:49:45.696+00:00\",\"line\":7,\"market\":\"total\",\"overOddsAmerican\":105,\"underOddsAmerican\":-125,\"upstreamLastUpdated\":\"2026-05-22T17:56:21+00:00\"}",
+        "{\"changedAt\":\"2026-05-22T17:49:45.696+00:00\",\"line\":7,\"market\":\"total\",\"overOddsAmerican\":105,\"underOddsAmerican\":-125,\"upstreamLastUpdated\":\"2026-05-22T18:02:21+00:00\"}",
+        "{\"changedAt\":\"2026-05-22T18:09:47.75+00:00\",\"line\":7,\"market\":\"total\",\"overOddsAmerican\":-100,\"underOddsAmerican\":-120,\"upstreamLastUpdated\":\"2026-05-22T18:08:20+00:00\"}",
+        "{\"changedAt\":\"2026-05-22T18:09:47.75+00:00\",\"line\":7,\"market\":\"total\",\"overOddsAmerican\":-100,\"underOddsAmerican\":-120,\"upstreamLastUpdated\":\"2026-05-22T18:11:19+00:00\"}",
+        "{\"changedAt\":\"2026-05-22T18:09:47.75+00:00\",\"line\":7,\"market\":\"total\",\"overOddsAmerican\":-100,\"underOddsAmerican\":-120,\"upstreamLastUpdated\":\"2026-05-22T18:17:17+00:00\"}"
+      ],
+      "sampleOdds": {
+        "changedAt": "2026-05-22T17:49:45.696+00:00",
+        "line": 7,
+        "market": "total",
+        "overOddsAmerican": 105,
+        "pollCapturedAt": "2026-05-22T17:52:46.464+00:00",
+        "underOddsAmerican": -125,
+        "upstreamLastUpdated": "2026-05-22T17:47:21+00:00"
+      },
+      "statusCounts": {
+        "connected": 1
+      },
+      "terminalQuietSeconds": 1400.457
+    }
+  },
+  "nonJsonLineCount": 0,
+  "nonJsonSamples": [],
+  "notes": [
+    "Read-only monitor: uses public core-api/CLI odds stream only; no wallet or signing material required.",
+    "pollCapturedAt freshness and changedAt/price signatures are distinct: refresh can advance pollCapturedAt without price movement."
+  ],
+  "postFirstPitchObservation": {
+    "eventsAfterScheduledFirstPitch": 0,
+    "interpretation": "No events were observed after scheduled first pitch. For this pre-game odds acceptance run, that is treated as expected/neutral rather than a stream failure; the stream delivered snapshots, connected statuses, refreshes, and price changes up to first pitch.",
+    "lastMarketEventAtUtc": "2026-05-22T18:19:47.231200Z",
+    "matchTimeUtc": "2026-05-22T18:20:00Z",
+    "terminalQuietSecondsByMarket": {
+      "moneyline": 1400.484,
+      "spread": 1400.483,
+      "total": 1400.457
+    }
+  },
+  "processReturnCode": 0,
+  "providerLeakTerms": {},
+  "schemaVersion": 1,
+  "startedAt": "2026-05-22T17:53:07.658599Z",
+  "statusSequence": [
+    {
+      "market": "moneyline",
+      "receivedAt": "2026-05-22T17:53:09.547351Z",
+      "status": "connected"
+    },
+    {
+      "market": "spread",
+      "receivedAt": "2026-05-22T17:53:09.548427Z",
+      "status": "connected"
+    },
+    {
+      "market": "total",
+      "receivedAt": "2026-05-22T17:53:09.556225Z",
+      "status": "connected"
+    }
+  ],
+  "statusSequenceTruncated": false,
+  "stderrLineCount": 0,
+  "stderrSamples": [],
+  "terminatedForDuration": true,
+  "verdict": "pass",
+  "warnings": []
+}

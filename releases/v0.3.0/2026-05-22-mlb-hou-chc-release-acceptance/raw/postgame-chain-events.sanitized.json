@@ -1,0 +1,86 @@
+[
+    {
+        "tx_hash": "0x7873e5136aadee555aee3411a4dbf1d67e1e65c874ef8cdbe71cb8ea283e5792",
+        "entity_id": 17,
+        "log_index": 1723,
+        "event_name": "CONTEST_CREATED",
+        "entity_type": "contest",
+        "block_number": 87273895,
+        "public_payload": {
+            "contestId": "17",
+            "jsonoddsId": "ccfee4a7-10b8-4c14-a565-49abda5c50db",
+            "contestCreator": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D"
+        }
+    },
+    {
+        "tx_hash": "0x7873e5136aadee555aee3411a4dbf1d67e1e65c874ef8cdbe71cb8ea283e5792",
+        "entity_id": 17,
+        "log_index": 1725,
+        "event_name": "SCRIPT_APPROVAL_VERIFIED",
+        "entity_type": "contest",
+        "block_number": 87273895,
+        "public_payload": {
+            "purpose": "0",
+            "version": "1",
+            "leagueId": "0",
+            "contestId": "17",
+            "scriptHash": "0x01c48e15068b68b7d5986d5013edd83a243ac31a761567e9db0e57b513c26c01"
+        }
+    },
+    {
+        "tx_hash": "0x7873e5136aadee555aee3411a4dbf1d67e1e65c874ef8cdbe71cb8ea283e5792",
+        "entity_id": 17,
+        "log_index": 1727,
+        "event_name": "SCRIPT_APPROVAL_VERIFIED",
+        "entity_type": "contest",
+        "block_number": 87273895,
+        "public_payload": {
+            "purpose": "1",
+            "version": "1",
+            "leagueId": "0",
+            "contestId": "17",
+            "scriptHash": "0x7f5ce70565133fedb2e0f1aeb925f38a3b26924917cff852e7de40a9297119b4"
+        }
+    },
+    {
+        "tx_hash": "0x7873e5136aadee555aee3411a4dbf1d67e1e65c874ef8cdbe71cb8ea283e5792",
+        "entity_id": 17,
+        "log_index": 1729,
+        "event_name": "SCRIPT_APPROVAL_VERIFIED",
+        "entity_type": "contest",
+        "block_number": 87273895,
+        "public_payload": {
+            "purpose": "2",
+            "version": "1",
+            "leagueId": "0",
+            "contestId": "17",
+            "scriptHash": "0xcb2a11db3190c322239b52afb3caefccfccd850566834819b012c5520f8d31cd"
+        }
+    },
+    {
+        "tx_hash": "0xca63180513c33eb84f2cb5ff6f4b1b0de1cd7e64df417fec7d38960a17bc21ef",
+        "entity_id": 17,
+        "log_index": 1471,
+        "event_name": "CONTEST_VERIFIED",
+        "entity_type": "contest",
+        "block_number": 87273902,
+        "public_payload": {
+            "leagueId": "3",
+            "contestId": "17",
+            "startTime": "1779474000"
+        }
+    },
+    {
+        "tx_hash": "0x72a35646cc3727c096f0309375432a4e17b04ff7267bf22154b15e4412d90783",
+        "entity_id": 17,
+        "log_index": 197,
+        "event_name": "CONTEST_SCORES_SET",
+        "entity_type": "contest",
+        "block_number": 87283984,
+        "public_payload": {
+            "awayScore": "4",
+            "contestId": "17",
+            "homeScore": "2"
+        }
+    }
+]
