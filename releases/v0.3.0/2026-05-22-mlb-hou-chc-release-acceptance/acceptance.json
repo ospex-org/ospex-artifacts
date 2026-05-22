@@ -3,6 +3,7 @@
   "artifactFiles": {
     "rawContestCreateLive": "raw/contest-create-live.sanitized.json",
     "rawContestShow": "raw/contest-show-17.sanitized.json",
+    "rawContestShowPostgameFinal": "raw/contest-show-17-postgame-final.sanitized.json",
     "rawDoctorAfterApprovals": "raw/doctor-after-approvals.sanitized.json",
     "rawDoctorAfterCreate": "raw/doctor-after-create.sanitized.json",
     "rawGamesTargetFinal": "raw/games-target-final.sanitized.json",
@@ -10,6 +11,15 @@
     "rawOddsStreamSmokeMarkdown": "raw/odds-stream-smoke.summary.md",
     "rawOddsStreamSmokeReceived": "raw/odds-stream-smoke.received.ndjson",
     "rawOddsStreamSmokeSummary": "raw/odds-stream-smoke.summary.json",
+    "rawOddsStreamThroughFirstPitchMarkdown": "raw/odds-stream-through-first-pitch.summary.md",
+    "rawOddsStreamThroughFirstPitchReceived": "raw/odds-stream-through-first-pitch.received.ndjson",
+    "rawOddsStreamThroughFirstPitchSummary": "raw/odds-stream-through-first-pitch.summary.json",
+    "rawPostgameChainEvents": "raw/postgame-chain-events.sanitized.json",
+    "rawPostgameClaimAllDryRun": "raw/postgame-claim-all-dry-run.sanitized.json",
+    "rawPostgameFinalScoreSource": "raw/postgame-final-score-source.json",
+    "rawPostgameScoreLive": "raw/postgame-score-live.sanitized.json",
+    "rawPostgameSupabaseState": "raw/postgame-supabase-state.sanitized.json",
+    "rawPostgameTxReceiptsSummary": "raw/postgame-tx-receipts.summary.json",
     "rawReleaseAssets": "raw/release-assets.json",
     "rawSetupGates": "raw/setup-gates.json",
     "rawTargetGame": "raw/target-game.json",
@@ -18,15 +28,18 @@
   },
   "artifactType": "release-acceptance",
   "contest": {
+    "awayScore": 4,
     "awayTeam": "Houston Astros",
     "contestCreatedAt": "2026-05-22T16:57:05+00:00",
     "contestCreator": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
     "contestId": "17",
-    "contestStatus": "verified",
+    "contestStatus": "scored",
+    "homeScore": 2,
     "homeTeam": "Chicago Cubs",
     "marketUpdateSourceHash": "0x7f5ce70565133fedb2e0f1aeb925f38a3b26924917cff852e7de40a9297119b4",
     "matchTime": "2026-05-22T18:20:00+00:00",
     "scoreContestSourceHash": "0xcb2a11db3190c322239b52afb3caefccfccd850566834819b012c5520f8d31cd",
+    "scoredAt": "2026-05-22T21:51:20+00:00",
     "speculationsCount": 0,
     "status": "pass",
     "verifiedAt": "2026-05-22T16:57:17+00:00",
@@ -44,6 +57,18 @@
     {
       "severity": "expected_after_one_contest_create",
       "summary": "Final doctor after contest creation has matchCommitments and submitCommitments ready, but createContests is red because the exact 0.005 LINK OracleModule allowance was consumed by this contest creation. This is an allowance state for future contest creation, not a LINK balance warning; ospex-fresh-user still had 0.295 LINK afterward, and LINK low-balance warnings should only fire below roughly 0.02 LINK."
+    },
+    {
+      "severity": "non_blocking_scope",
+      "summary": "No optional tiny commitment submit/match was run, so this release-acceptance artifact proves install/auth/approval/create/verify/odds-stream/score for an empty contest, not a full fill/settle/claim market lifecycle."
+    },
+    {
+      "severity": "follow_up_non_blocking",
+      "summary": "The games projection row for hou-chc-2026-05-22 still had status=upcoming after the contest was scored; contest state is canonical and correctly shows scored, but games.status appears stale for postgame display/filtering."
+    },
+    {
+      "severity": "agent_ux_follow_up_non_blocking",
+      "summary": "A claim-all dry-run with no entries returned ok=true and an empty entries array, but payload.success=false. This did not affect the run because there were no positions to claim; consider clarifying no-op success semantics in a future CLI patch."
     }
   ],
   "liveGates": {
@@ -53,7 +78,43 @@
     "contestShowVerified": "pass",
     "doctorGreenAfterApprovals": "pass",
     "gamesListFinalShowsContestCreated": "pass",
-    "optionalTinyCommitmentSubmitMatch": "not_run"
+    "oddsStreamThroughFirstPitch": "pass",
+    "optionalTinyCommitmentSubmitMatch": "not_run",
+    "postgameChainlinkScoreCallback": "pass",
+    "postgameClaimSweepDryRun": "no_positions_noop",
+    "postgameContestScored": "pass",
+    "postgameFinalScoreCrossCheck": "pass",
+    "postgameLinkApprovalForScore": "pass",
+    "postgameScoreSubmit": "pass"
+  },
+  "postgameLifecycle": {
+    "claimSweep": "not_required_no_positions",
+    "contestScoresSetBlock": 87283984,
+    "contestStatus": "scored",
+    "fillsCount": 0,
+    "finalScore": {
+      "awayScore": 4,
+      "awayTeam": "Houston Astros",
+      "homeScore": 2,
+      "homeTeam": "Chicago Cubs"
+    },
+    "positionsCount": 0,
+    "postgameAllowances": {
+      "linkOracleModule": "0",
+      "usdcPositionModule": "2",
+      "usdcTreasuryModule": "0.5"
+    },
+    "postgameBalances": {
+      "link": "0.29",
+      "pol": "2.363093",
+      "usdc": "9"
+    },
+    "scoreCallbackTx": "0x72a35646cc3727c096f0309375432a4e17b04ff7267bf22154b15e4412d90783",
+    "scoreRequestId": "0xa7495fe7954443325cdb59b1bc21ba9dae10f1b250bf751c6439c74fc5cf5623",
+    "scoreSubmitTx": "0xc5dbac41d5beea2bd7b32b698e7cd485a57d1a184a1183623e9a0a63b1c42621",
+    "scoredAt": "2026-05-22T21:51:20+00:00",
+    "speculationsCount": 0,
+    "status": "pass"
   },
   "release": {
     "assets": [
@@ -84,91 +145,215 @@
   },
   "status": "stage0_green",
   "streamMonitoring": {
-    "command": [
-      "ospex",
-      "odds",
-      "watch",
-      "17",
-      "--json",
-      "--include-refreshes"
-    ],
-    "contestId": "17",
-    "durationSecondsObserved": 90.031,
-    "eventCounts": {
-      "refresh": 6,
-      "snapshot": 3,
-      "status": 3
-    },
-    "expectedMarkets": [
-      "moneyline",
-      "spread",
-      "total"
-    ],
-    "failures": [],
     "implementationScope": "testing harness only; no ospex-sdk, ospex-cli, core-api, contracts, or market-maker repository code changes required to run this monitor",
-    "markets": {
-      "moneyline": {
-        "changedAtDistinctCount": 1,
-        "eventCounts": {
-          "refresh": 2,
-          "snapshot": 1,
-          "status": 1
+    "releaseDecisionSignal": "No v0.3.1 blocker indicated by stream monitoring: all expected markets emitted snapshot and connected status, refreshes and price changes were observed up to scheduled first pitch, JSON was well-formed, and no warning/failure signals were emitted. Post-first-pitch quiet is recorded as expected/neutral for this pre-game odds acceptance run.",
+    "smoke": {
+      "command": [
+        "ospex",
+        "odds",
+        "watch",
+        "17",
+        "--json",
+        "--include-refreshes"
+      ],
+      "contestId": "17",
+      "durationSecondsObserved": 90.031,
+      "eventCounts": {
+        "refresh": 6,
+        "snapshot": 3,
+        "status": 3
+      },
+      "expectedMarkets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "failures": [],
+      "finishedAt": "2026-05-22T17:48:11.525795Z",
+      "markets": {
+        "moneyline": {
+          "changedAtDistinctCount": 1,
+          "eventCounts": {
+            "refresh": 2,
+            "snapshot": 1,
+            "status": 1
+          },
+          "firstChangeAt": null,
+          "firstConnectedAt": "2026-05-22T17:46:43.330871Z",
+          "firstRefreshAt": "2026-05-22T17:46:46.608271Z",
+          "firstSnapshotAt": "2026-05-22T17:46:43.330122Z",
+          "lastEventAt": "2026-05-22T17:47:46.579869Z",
+          "lastPollCapturedAt": "2026-05-22T17:47:46.031000Z",
+          "maxEventGapSeconds": 59.972,
+          "maxPollAgeAtReceiveSeconds": 57.589,
+          "priceSignatureDistinctCount": 1,
+          "statusCounts": {
+            "connected": 1
+          }
         },
-        "firstChangeAt": null,
-        "firstConnectedAt": "2026-05-22T17:46:43.330871Z",
-        "firstRefreshAt": "2026-05-22T17:46:46.608271Z",
-        "firstSnapshotAt": "2026-05-22T17:46:43.330122Z",
-        "maxEventGapSeconds": 59.972,
-        "maxPollAgeAtReceiveSeconds": 57.589,
-        "priceSignatureDistinctCount": 1,
-        "statusCounts": {
-          "connected": 1
+        "spread": {
+          "changedAtDistinctCount": 1,
+          "eventCounts": {
+            "refresh": 2,
+            "snapshot": 1,
+            "status": 1
+          },
+          "firstChangeAt": null,
+          "firstConnectedAt": "2026-05-22T17:46:43.306090Z",
+          "firstRefreshAt": "2026-05-22T17:46:46.607174Z",
+          "firstSnapshotAt": "2026-05-22T17:46:43.305685Z",
+          "lastEventAt": "2026-05-22T17:47:46.564404Z",
+          "lastPollCapturedAt": "2026-05-22T17:47:46.099000Z",
+          "maxEventGapSeconds": 59.957,
+          "maxPollAgeAtReceiveSeconds": 57.499,
+          "priceSignatureDistinctCount": 1,
+          "statusCounts": {
+            "connected": 1
+          }
+        },
+        "total": {
+          "changedAtDistinctCount": 1,
+          "eventCounts": {
+            "refresh": 2,
+            "snapshot": 1,
+            "status": 1
+          },
+          "firstChangeAt": null,
+          "firstConnectedAt": "2026-05-22T17:46:43.313232Z",
+          "firstRefreshAt": "2026-05-22T17:46:46.605625Z",
+          "firstSnapshotAt": "2026-05-22T17:46:43.312624Z",
+          "lastEventAt": "2026-05-22T17:47:46.579177Z",
+          "lastPollCapturedAt": "2026-05-22T17:47:46.152000Z",
+          "maxEventGapSeconds": 59.974,
+          "maxPollAgeAtReceiveSeconds": 57.436,
+          "priceSignatureDistinctCount": 1,
+          "statusCounts": {
+            "connected": 1
+          }
         }
       },
-      "spread": {
-        "changedAtDistinctCount": 1,
-        "eventCounts": {
-          "refresh": 2,
-          "snapshot": 1,
-          "status": 1
-        },
-        "firstChangeAt": null,
-        "firstConnectedAt": "2026-05-22T17:46:43.306090Z",
-        "firstRefreshAt": "2026-05-22T17:46:46.607174Z",
-        "firstSnapshotAt": "2026-05-22T17:46:43.305685Z",
-        "maxEventGapSeconds": 59.957,
-        "maxPollAgeAtReceiveSeconds": 57.499,
-        "priceSignatureDistinctCount": 1,
-        "statusCounts": {
-          "connected": 1
-        }
+      "publicSafety": {
+        "nonJsonLineCount": 0,
+        "providerLeakTerms": {},
+        "stderrLineCount": 0
       },
-      "total": {
-        "changedAtDistinctCount": 1,
-        "eventCounts": {
-          "refresh": 2,
-          "snapshot": 1,
-          "status": 1
-        },
-        "firstChangeAt": null,
-        "firstConnectedAt": "2026-05-22T17:46:43.313232Z",
-        "firstRefreshAt": "2026-05-22T17:46:46.605625Z",
-        "firstSnapshotAt": "2026-05-22T17:46:43.312624Z",
-        "maxEventGapSeconds": 59.974,
-        "maxPollAgeAtReceiveSeconds": 57.436,
-        "priceSignatureDistinctCount": 1,
-        "statusCounts": {
-          "connected": 1
-        }
-      }
-    },
-    "publicSafety": {
-      "nonJsonLineCount": 0,
-      "providerLeakTerms": {},
-      "stderrLineCount": 0
+      "startedAt": "2026-05-22T17:46:41.494923Z",
+      "status": "pass",
+      "warnings": []
     },
     "status": "pass",
-    "warnings": []
+    "throughFirstPitch": {
+      "command": [
+        "ospex",
+        "odds",
+        "watch",
+        "17",
+        "--json",
+        "--include-refreshes"
+      ],
+      "contestId": "17",
+      "durationSecondsObserved": 3000.03,
+      "eventCounts": {
+        "change": 7,
+        "refresh": 74,
+        "snapshot": 3,
+        "status": 3
+      },
+      "expectedMarkets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "failures": [],
+      "finishedAt": "2026-05-22T18:43:07.688607Z",
+      "markets": {
+        "moneyline": {
+          "changedAtDistinctCount": 6,
+          "eventCounts": {
+            "change": 5,
+            "refresh": 22,
+            "snapshot": 1,
+            "status": 1
+          },
+          "firstChangeAt": "2026-05-22T17:54:46.465344Z",
+          "firstConnectedAt": "2026-05-22T17:53:09.547351Z",
+          "firstRefreshAt": "2026-05-22T17:53:46.645815Z",
+          "firstSnapshotAt": "2026-05-22T17:53:09.546818Z",
+          "lastEventAt": "2026-05-22T18:19:47.204654Z",
+          "lastPollCapturedAt": "2026-05-22T18:19:46.976000Z",
+          "maxEventGapSeconds": 61.164,
+          "maxPollAgeAtReceiveSeconds": 23.203,
+          "priceSignatureDistinctCount": 7,
+          "statusCounts": {
+            "connected": 1
+          },
+          "terminalQuietSeconds": 1400.484
+        },
+        "spread": {
+          "changedAtDistinctCount": 2,
+          "eventCounts": {
+            "change": 1,
+            "refresh": 26,
+            "snapshot": 1,
+            "status": 1
+          },
+          "firstChangeAt": "2026-05-22T18:19:47.205364Z",
+          "firstConnectedAt": "2026-05-22T17:53:09.548427Z",
+          "firstRefreshAt": "2026-05-22T17:53:46.650994Z",
+          "firstSnapshotAt": "2026-05-22T17:53:09.548116Z",
+          "lastEventAt": "2026-05-22T18:19:47.205364Z",
+          "lastPollCapturedAt": "2026-05-22T18:19:47.073000Z",
+          "maxEventGapSeconds": 61.164,
+          "maxPollAgeAtReceiveSeconds": 23.141,
+          "priceSignatureDistinctCount": 7,
+          "statusCounts": {
+            "connected": 1
+          },
+          "terminalQuietSeconds": 1400.483
+        },
+        "total": {
+          "changedAtDistinctCount": 2,
+          "eventCounts": {
+            "change": 1,
+            "refresh": 26,
+            "snapshot": 1,
+            "status": 1
+          },
+          "firstChangeAt": "2026-05-22T18:09:48.049209Z",
+          "firstConnectedAt": "2026-05-22T17:53:09.556225Z",
+          "firstRefreshAt": "2026-05-22T17:53:46.657154Z",
+          "firstSnapshotAt": "2026-05-22T17:53:09.555410Z",
+          "lastEventAt": "2026-05-22T18:19:47.231200Z",
+          "lastPollCapturedAt": "2026-05-22T18:19:47.134000Z",
+          "maxEventGapSeconds": 61.139,
+          "maxPollAgeAtReceiveSeconds": 23.091,
+          "priceSignatureDistinctCount": 7,
+          "statusCounts": {
+            "connected": 1
+          },
+          "terminalQuietSeconds": 1400.457
+        }
+      },
+      "postFirstPitchObservation": {
+        "eventsAfterScheduledFirstPitch": 0,
+        "interpretation": "No events were observed after scheduled first pitch. For this pre-game odds acceptance run, that is treated as expected/neutral rather than a stream failure; the stream delivered snapshots, connected statuses, refreshes, and price changes up to first pitch.",
+        "lastMarketEventAtUtc": "2026-05-22T18:19:47.231200Z",
+        "matchTimeUtc": "2026-05-22T18:20:00Z",
+        "terminalQuietSecondsByMarket": {
+          "moneyline": 1400.484,
+          "spread": 1400.483,
+          "total": 1400.457
+        }
+      },
+      "publicSafety": {
+        "nonJsonLineCount": 0,
+        "providerLeakTerms": {},
+        "stderrLineCount": 0
+      },
+      "startedAt": "2026-05-22T17:53:07.658599Z",
+      "status": "pass",
+      "warnings": []
+    }
   },
   "targetGame": {
     "awayTeam": "Houston Astros",
@@ -181,6 +366,16 @@
     "gameId": "ccfee4a7-10b8-4c14-a565-49abda5c50db",
     "homeTeam": "Chicago Cubs",
     "matchTimeUtc": "2026-05-22T18:20:00Z",
+    "postgameState": {
+      "contestScoredAt": "2026-05-22T21:51:20+00:00",
+      "contestStatus": "scored",
+      "externalFinalScore": {
+        "awayScore": 4,
+        "homeScore": 2,
+        "winner": "Houston Astros"
+      },
+      "gameProjectionStatus": "upcoming"
+    },
     "setupState": {
       "canCreateContest": true,
       "contestCreated": false,
@@ -237,6 +432,36 @@
       "success": true,
       "to": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
       "transactionHash": "0x7873e5136aadee555aee3411a4dbf1d67e1e65c874ef8cdbe71cb8ea283e5792"
+    },
+    {
+      "blockNumber": 87283973,
+      "from": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "gasUsed": 47267,
+      "purpose": "approve-link-for-score",
+      "status": "0x1",
+      "success": true,
+      "to": "0xb0897686c545045afc77cf20ec7a532e3120e0f1",
+      "transactionHash": "0xbf18073f5f70731d125a1048c7041086b6ee16183aafd10d69b8fb1d13671878"
+    },
+    {
+      "blockNumber": 87283977,
+      "from": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "gasUsed": 660369,
+      "purpose": "score-contest-request",
+      "status": "0x1",
+      "success": true,
+      "to": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+      "transactionHash": "0xc5dbac41d5beea2bd7b32b698e7cd485a57d1a184a1183623e9a0a63b1c42621"
+    },
+    {
+      "blockNumber": 87283984,
+      "from": "0xb6153ddb5b91dc4320812faad5bc321e06383408",
+      "gasUsed": 315910,
+      "purpose": "chainlink-score-callback-contest-scores-set",
+      "status": "0x1",
+      "success": true,
+      "to": "0x71f707344a3fe10223c22d5929add95b3dfa007c",
+      "transactionHash": "0x72a35646cc3727c096f0309375432a4e17b04ff7267bf22154b15e4412d90783"
     }
   ],
   "wallet": {
@@ -245,6 +470,9 @@
     "linkBalanceStatus": "healthy",
     "linkLowBalanceWarningThreshold": "0.02",
     "note": "Post-create doctor createContests red was LINK allowance exhaustion for another contest, not low LINK balance. Do not warn for LINK balances above roughly 0.02 LINK.",
-    "postCreateLinkBalance": "0.295"
+    "postCreateLinkBalance": "0.295",
+    "postgameLinkBalance": "0.29",
+    "postgamePolBalance": "2.363093",
+    "postgameUsdcBalance": "9"
   }
 }

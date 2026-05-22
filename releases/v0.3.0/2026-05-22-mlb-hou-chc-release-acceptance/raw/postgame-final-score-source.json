@@ -1,0 +1,25 @@
+{
+  "crossCheck": "pass",
+  "expected": {
+    "awayScore": 4,
+    "awayTeam": "Houston Astros",
+    "homeScore": 2,
+    "homeTeam": "Chicago Cubs",
+    "winner": "Houston Astros"
+  },
+  "fetchedAt": "2026-05-22T22:06:36.770451Z",
+  "sources": [
+    {
+      "name": "ESPN game summary",
+      "result": "Final: Astros 4, Cubs 2",
+      "url": "https://www.espn.com/mlb/game/_/gameId/401815449/astros-cubs"
+    },
+    {
+      "name": "MLB Gameday / MLB Stories",
+      "result": "Final Score: Astros 4, Cubs 2",
+      "storyUrl": "https://www.mlb.com/stories/game/824679",
+      "url": "https://www.mlb.com/gameday/astros-vs-cubs/2026/05/22/824679"
+    }
+  ],
+  "status": "pass"
+}

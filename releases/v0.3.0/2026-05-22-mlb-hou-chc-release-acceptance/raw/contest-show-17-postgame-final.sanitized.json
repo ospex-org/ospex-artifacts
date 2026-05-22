@@ -1,0 +1,20 @@
+{
+  "awayScore": 4,
+  "awayTeam": "Houston Astros",
+  "contestCreatedAt": "2026-05-22T16:57:05+00:00",
+  "contestCreator": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+  "contestId": "17",
+  "contestStatus": "scored",
+  "homeScore": 2,
+  "homeTeam": "Chicago Cubs",
+  "jsonoddsId": "ccfee4a7-10b8-4c14-a565-49abda5c50db",
+  "matchTime": "2026-05-22T18:20:00+00:00",
+  "rundownId": "acc0096ab8836bd9118e78d2c98b8659",
+  "scoredAt": "2026-05-22T21:51:20+00:00",
+  "speculationsCount": 0,
+  "sport": "mlb",
+  "sportspageId": "336737",
+  "status": "pass",
+  "verifiedAt": "2026-05-22T16:57:17+00:00",
+  "voidedAt": null
+}

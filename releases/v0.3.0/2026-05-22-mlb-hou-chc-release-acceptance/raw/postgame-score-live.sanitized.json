@@ -1,0 +1,23 @@
+{
+  "approval": {
+    "action": "approvals.setup",
+    "amountLink": "0.005",
+    "blockNumber": "87283973",
+    "ok": true,
+    "purpose": "approve-link",
+    "status": "confirmed",
+    "txHash": "0xbf18073f5f70731d125a1048c7041086b6ee16183aafd10d69b8fb1d13671878",
+    "wallet": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d"
+  },
+  "scoreSubmit": {
+    "action": "contests.score",
+    "blockNumber": "87283977",
+    "contestId": "17",
+    "ok": true,
+    "requestId": "0xa7495fe7954443325cdb59b1bc21ba9dae10f1b250bf751c6439c74fc5cf5623",
+    "status": "success",
+    "txHash": "0xc5dbac41d5beea2bd7b32b698e7cd485a57d1a184a1183623e9a0a63b1c42621",
+    "wallet": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d"
+  },
+  "status": "pass"
+}

@@ -25,6 +25,7 @@
   "failures": [],
   "files": {
     "receivedNdjson": "odds-stream-smoke.received.ndjson",
+    "stderr": "odds-stream-smoke.stderr.txt",
     "summaryJson": "odds-stream-smoke.summary.json",
     "summaryMarkdown": "odds-stream-smoke.summary.md"
   },

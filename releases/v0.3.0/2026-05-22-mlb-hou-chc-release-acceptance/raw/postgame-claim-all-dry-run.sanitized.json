@@ -1,0 +1,19 @@
+{
+  "action": "claim-all",
+  "interpretation": "No speculations, positions, or fills existed for contest 17, so there was nothing to settle or claim. The CLI command succeeded (ok=true) and returned an empty entries array.",
+  "ok": true,
+  "payload": {
+    "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+    "dryRun": true,
+    "entries": [],
+    "success": false,
+    "totals": {
+      "claimed": 0,
+      "failed": 0,
+      "totalPayoutUSDC": 0,
+      "totalPayoutWei6": "0"
+    }
+  },
+  "stage": "dry-run",
+  "status": "no_positions_noop"
+}

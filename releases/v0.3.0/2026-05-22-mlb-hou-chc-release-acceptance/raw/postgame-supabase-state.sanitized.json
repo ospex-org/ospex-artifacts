@@ -1,0 +1,29 @@
+{
+    "game": {
+        "slug": "hou-chc-2026-05-22",
+        "status": "upcoming",
+        "contest_id": 17,
+        "jsonodds_id": "ccfee4a7-10b8-4c14-a565-49abda5c50db",
+        "row_updated_at": "2026-05-22T16:57:19.036114+00:00",
+        "contest_created": true
+    },
+    "counts": {
+        "fills_count": 0,
+        "positions_count": 0,
+        "speculations_count": 0
+    },
+    "contest": {
+        "away_team": "Houston Astros",
+        "home_team": "Chicago Cubs",
+        "scored_at": "2026-05-22T21:51:20+00:00",
+        "voided_at": null,
+        "away_score": 4,
+        "contest_id": 17,
+        "home_score": 2,
+        "start_time": "2026-05-22T18:20:00+00:00",
+        "verified_at": "2026-05-22T16:57:17+00:00",
+        "contest_status": "scored",
+        "row_updated_at": "2026-05-22T21:51:34.081748+00:00",
+        "contest_creator": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d"
+    }
+}
