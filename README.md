@@ -23,6 +23,8 @@ For each artifact, the canonical facts live in JSON:
 - `acceptance.json` for `releases/`
 - `digest.json` for future `daily/` artifacts
 
+Schema-backed JSON files include a top-level `$schema` pointer into `schemas/`. Run `python3 scripts/validate-artifacts.py` locally before publishing; GitHub Actions runs the same JSON-parse, schema/status, path-existence, and public-safety checks on every PR and `main` push.
+
 Markdown summaries are presentation files. They should not introduce facts that are absent from the corresponding JSON or raw sanitized inputs.
 
 ## Public artifact rules

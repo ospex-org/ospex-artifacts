@@ -4,8 +4,12 @@
   "title": "Ospex Artifact Index",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schemaVersion", "generatedAt", "repository", "artifacts", "latest"],
+  "required": ["$schema", "schemaVersion", "generatedAt", "repository", "artifacts", "latest"],
   "properties": {
+    "$schema": {
+      "type": "string",
+      "const": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json"
+    },
     "schemaVersion": {
       "type": "integer",
       "minimum": 1
@@ -32,7 +36,8 @@
             "type": "string"
           },
           "status": {
-            "type": "string"
+            "type": "string",
+            "description": "Artifact-level controlled vocabulary; see docs/artifact-types.md. Gate-level statuses such as pass/not_run are separate."
           },
           "network": {
             "type": ["string", "null"]
@@ -50,7 +55,48 @@
           "rawPath": {
             "type": ["string", "null"]
           }
-        }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": { "artifactType": { "const": "run" } },
+              "required": ["artifactType"]
+            },
+            "then": {
+              "properties": {
+                "status": {
+                  "enum": ["complete_verified", "complete_verified_with_caveats", "partial", "superseded"]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": { "artifactType": { "const": "release-acceptance" } },
+              "required": ["artifactType"]
+            },
+            "then": {
+              "properties": {
+                "status": {
+                  "enum": ["stage0_green", "stage0_green_with_caveats", "stage0_partial", "stage0_failed", "superseded"]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": { "artifactType": { "const": "daily-digest" } },
+              "required": ["artifactType"]
+            },
+            "then": {
+              "properties": {
+                "status": {
+                  "enum": ["complete", "complete_with_caveats", "partial", "superseded"]
+                }
+              }
+            }
+          }
+        ]
       }
     },
     "latest": {

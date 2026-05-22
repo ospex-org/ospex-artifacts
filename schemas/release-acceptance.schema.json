@@ -5,6 +5,7 @@
   "type": "object",
   "additionalProperties": true,
   "required": [
+    "$schema",
     "artifactType",
     "schemaVersion",
     "status",
@@ -14,6 +15,10 @@
     "artifactFiles"
   ],
   "properties": {
+    "$schema": {
+      "type": "string",
+      "const": "https://github.com/ospex-org/ospex-artifacts/schemas/release-acceptance.schema.json"
+    },
     "artifactType": {
       "type": "string",
       "const": "release-acceptance"
@@ -23,7 +28,9 @@
       "minimum": 1
     },
     "status": {
-      "type": "string"
+      "type": "string",
+      "description": "Release-acceptance artifact-level status. Gate-level statuses such as pass/not_run remain local to setupGates/liveGates.",
+      "enum": ["stage0_green", "stage0_green_with_caveats", "stage0_partial", "stage0_failed", "superseded"]
     },
     "release": {
       "type": "object",

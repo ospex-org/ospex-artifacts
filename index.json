@@ -1,48 +1,49 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-05-22T17:23:27Z",
-  "repository": "ospex-org/ospex-artifacts",
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "artifacts": [
     {
-      "artifactType": "run",
       "artifactId": "2026-05-19-mlb-atl-mia-contest-13",
-      "status": "complete_verified",
-      "network": "polygon",
-      "date": "2026-05-19",
-      "summaryPath": "runs/2026-05-19-mlb-atl-mia-contest-13/summary.md",
-      "dataPath": "runs/2026-05-19-mlb-atl-mia-contest-13/evidence.json",
-      "rawPath": "runs/2026-05-19-mlb-atl-mia-contest-13/raw/"
-    },
-    {
       "artifactType": "run",
-      "artifactId": "2026-05-20-mlb-three-game-mm-shakeout-contests-14-16",
-      "status": "complete_verified_with_caveats",
+      "dataPath": "runs/2026-05-19-mlb-atl-mia-contest-13/evidence.json",
+      "date": "2026-05-19",
       "network": "polygon",
-      "date": "2026-05-20",
-      "summaryPath": "runs/2026-05-20-mlb-three-game-mm-shakeout-contests-14-16/summary.md",
-      "dataPath": "runs/2026-05-20-mlb-three-game-mm-shakeout-contests-14-16/evidence.json",
-      "rawPath": "runs/2026-05-20-mlb-three-game-mm-shakeout-contests-14-16/raw/"
+      "rawPath": "runs/2026-05-19-mlb-atl-mia-contest-13/raw/",
+      "status": "complete_verified",
+      "summaryPath": "runs/2026-05-19-mlb-atl-mia-contest-13/summary.md"
     },
     {
-      "artifactType": "release-acceptance",
-      "artifactId": "2026-05-22-mlb-hou-chc-release-acceptance",
-      "status": "stage0_green",
+      "artifactId": "2026-05-20-mlb-three-game-mm-shakeout-contests-14-16",
+      "artifactType": "run",
+      "dataPath": "runs/2026-05-20-mlb-three-game-mm-shakeout-contests-14-16/evidence.json",
+      "date": "2026-05-20",
       "network": "polygon",
-      "date": "2026-05-22",
-      "release": "ospex-org/ospex-sdk v0.3.0",
-      "summaryPath": "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.md",
+      "rawPath": "runs/2026-05-20-mlb-three-game-mm-shakeout-contests-14-16/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-05-20-mlb-three-game-mm-shakeout-contests-14-16/summary.md"
+    },
+    {
+      "artifactId": "2026-05-22-mlb-hou-chc-release-acceptance",
+      "artifactType": "release-acceptance",
       "dataPath": "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.json",
-      "rawPath": "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/raw/"
+      "date": "2026-05-22",
+      "network": "polygon",
+      "rawPath": "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/raw/",
+      "release": "ospex-org/ospex-sdk v0.3.0",
+      "status": "stage0_green",
+      "summaryPath": "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.md"
     }
   ],
+  "generatedAt": "2026-05-22T18:05:11Z",
   "latest": {
-    "runs": [
-      "runs/2026-05-20-mlb-three-game-mm-shakeout-contests-14-16/evidence.json",
-      "runs/2026-05-19-mlb-atl-mia-contest-13/evidence.json"
-    ],
+    "daily": [],
     "releases": [
       "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.json"
     ],
-    "daily": []
-  }
+    "runs": [
+      "runs/2026-05-20-mlb-three-game-mm-shakeout-contests-14-16/evidence.json",
+      "runs/2026-05-19-mlb-atl-mia-contest-13/evidence.json"
+    ]
+  },
+  "repository": "ospex-org/ospex-artifacts",
+  "schemaVersion": 1
 }

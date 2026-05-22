@@ -52,6 +52,17 @@ Validate that the public `v0.3.0` SDK/CLI release assets can be installed and us
 - Contest verification result: `verified`.
 - Final games-list readiness shows `contestCreated=true` and `contestId=17`.
 
+
+## Stream-specific monitoring add-on
+
+- Monitor command shape: `ospex odds watch 17 --json --include-refreshes`.
+- Smoke duration: `90s`.
+- Verdict: `pass` — snapshots and connected statuses were received for `moneyline`, `spread`, and `total`; refreshes were received for all three markets.
+- Aggregate event counts: `snapshot=3`, `status=3`, `refresh=6`, `change=0` during the 90s smoke. No change event during a short sample is acceptable because refreshes prove the stream is live even when prices do not move.
+- Public-safety checks: no provider/source-name leak terms, no secret/config leak terms, no non-JSON stdout lines, and no stderr lines in the smoke summary.
+- Artifacts: `raw/odds-stream-smoke.summary.json`, `raw/odds-stream-smoke.summary.md`, `raw/odds-stream-smoke.received.ndjson`.
+- Implementation scope: testing harness only; no product repo code change was required to run this monitor. If this monitor later reports missing events, stale `pollCapturedAt`, malformed JSON, degraded/reconnect loops, or provider/source leakage, that result would be evidence for a v0.3.1 investigation.
+
 ## Observations
 
 - `npm audit` reports a moderate `ws` advisory via `ethers`; no high/critical findings and no available fix in the current dependency tree. Track as non-blocking unless project policy changes.
@@ -69,3 +80,6 @@ Validate that the public `v0.3.0` SDK/CLI release assets can be installed and us
 - `raw/doctor-after-approvals.sanitized.json`
 - `raw/doctor-after-create.sanitized.json`
 - `raw/games-target-final.sanitized.json`
+- `raw/odds-stream-smoke.summary.json`
+- `raw/odds-stream-smoke.summary.md`
+- `raw/odds-stream-smoke.received.ndjson`

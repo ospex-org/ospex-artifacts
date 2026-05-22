@@ -1,4 +1,5 @@
 {
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/release-acceptance.schema.json",
   "artifactFiles": {
     "rawContestCreateLive": "raw/contest-create-live.sanitized.json",
     "rawContestShow": "raw/contest-show-17.sanitized.json",
@@ -6,6 +7,9 @@
     "rawDoctorAfterCreate": "raw/doctor-after-create.sanitized.json",
     "rawGamesTargetFinal": "raw/games-target-final.sanitized.json",
     "rawLiveGates": "raw/live-gates.json",
+    "rawOddsStreamSmokeMarkdown": "raw/odds-stream-smoke.summary.md",
+    "rawOddsStreamSmokeReceived": "raw/odds-stream-smoke.received.ndjson",
+    "rawOddsStreamSmokeSummary": "raw/odds-stream-smoke.summary.json",
     "rawReleaseAssets": "raw/release-assets.json",
     "rawSetupGates": "raw/setup-gates.json",
     "rawTargetGame": "raw/target-game.json",
@@ -75,9 +79,97 @@
     "freshDockerInstallFromReleaseTarballs": "pass",
     "gamesListTargetDiscovery": "pass",
     "npmAuditHighCritical": "pass",
-    "npmAuditSignatures": "pass"
+    "npmAuditSignatures": "pass",
+    "oddsStreamMonitorSmoke": "pass"
   },
   "status": "stage0_green",
+  "streamMonitoring": {
+    "command": [
+      "ospex",
+      "odds",
+      "watch",
+      "17",
+      "--json",
+      "--include-refreshes"
+    ],
+    "contestId": "17",
+    "durationSecondsObserved": 90.031,
+    "eventCounts": {
+      "refresh": 6,
+      "snapshot": 3,
+      "status": 3
+    },
+    "expectedMarkets": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "failures": [],
+    "implementationScope": "testing harness only; no ospex-sdk, ospex-cli, core-api, contracts, or market-maker repository code changes required to run this monitor",
+    "markets": {
+      "moneyline": {
+        "changedAtDistinctCount": 1,
+        "eventCounts": {
+          "refresh": 2,
+          "snapshot": 1,
+          "status": 1
+        },
+        "firstChangeAt": null,
+        "firstConnectedAt": "2026-05-22T17:46:43.330871Z",
+        "firstRefreshAt": "2026-05-22T17:46:46.608271Z",
+        "firstSnapshotAt": "2026-05-22T17:46:43.330122Z",
+        "maxEventGapSeconds": 59.972,
+        "maxPollAgeAtReceiveSeconds": 57.589,
+        "priceSignatureDistinctCount": 1,
+        "statusCounts": {
+          "connected": 1
+        }
+      },
+      "spread": {
+        "changedAtDistinctCount": 1,
+        "eventCounts": {
+          "refresh": 2,
+          "snapshot": 1,
+          "status": 1
+        },
+        "firstChangeAt": null,
+        "firstConnectedAt": "2026-05-22T17:46:43.306090Z",
+        "firstRefreshAt": "2026-05-22T17:46:46.607174Z",
+        "firstSnapshotAt": "2026-05-22T17:46:43.305685Z",
+        "maxEventGapSeconds": 59.957,
+        "maxPollAgeAtReceiveSeconds": 57.499,
+        "priceSignatureDistinctCount": 1,
+        "statusCounts": {
+          "connected": 1
+        }
+      },
+      "total": {
+        "changedAtDistinctCount": 1,
+        "eventCounts": {
+          "refresh": 2,
+          "snapshot": 1,
+          "status": 1
+        },
+        "firstChangeAt": null,
+        "firstConnectedAt": "2026-05-22T17:46:43.313232Z",
+        "firstRefreshAt": "2026-05-22T17:46:46.605625Z",
+        "firstSnapshotAt": "2026-05-22T17:46:43.312624Z",
+        "maxEventGapSeconds": 59.974,
+        "maxPollAgeAtReceiveSeconds": 57.436,
+        "priceSignatureDistinctCount": 1,
+        "statusCounts": {
+          "connected": 1
+        }
+      }
+    },
+    "publicSafety": {
+      "nonJsonLineCount": 0,
+      "providerLeakTerms": {},
+      "stderrLineCount": 0
+    },
+    "status": "pass",
+    "warnings": []
+  },
   "targetGame": {
     "awayTeam": "Houston Astros",
     "finalState": {

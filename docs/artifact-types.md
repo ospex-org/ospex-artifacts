@@ -9,9 +9,20 @@ Every artifact class should follow these rules:
 1. JSON is the source of truth.
 2. Markdown is a human-readable rendering of JSON facts.
 3. Raw inputs are sanitized before publication.
-4. Optional or skipped gates are recorded explicitly as `not_run`, `not_available`, or a comparable status value.
+4. Artifact-level `status` values use the controlled vocabulary below. Gate-level statuses such as `pass`, `fail`, `not_run`, and `not_available` remain local to the gate object.
 5. Observations and caveats are factual and test-scoped. They should not contain internal planning language.
 6. Wallet labels are role labels unless a public identity is intentionally part of the artifact.
+7. Schema-backed JSON files include a top-level `$schema` pointer to the matching file under `schemas/` and are validated by `python3 scripts/validate-artifacts.py`.
+
+## Status vocabulary
+
+Dashboards and agents may switch on artifact-level `status`, so it is intentionally constrained.
+
+- `runs/`: `complete_verified`, `complete_verified_with_caveats`, `partial`, `superseded`
+- `releases/`: `stage0_green`, `stage0_green_with_caveats`, `stage0_partial`, `stage0_failed`, `superseded`
+- `daily/`: `complete`, `complete_with_caveats`, `partial`, `superseded`
+
+These are artifact-level statuses only. Individual check/gate fields can use their own local values, for example `pass`, `fail`, `not_run`, or a version string when the gate records an observed value.
 
 ## `runs/` — lifecycle evidence
 
@@ -40,7 +51,7 @@ Typical facts:
 - final claim/dry-run checks
 - known caveats observed during the run
 
-A run artifact may be `complete`, `complete_with_caveats`, or another explicit status. Caveats are part of the record; they do not make an artifact invalid by default.
+A run artifact may be `complete_verified`, `complete_verified_with_caveats`, `partial`, or `superseded`. Caveats are part of the record; they do not make an artifact invalid by default.
 
 ## `releases/` — release acceptance evidence
 

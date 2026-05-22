@@ -53,13 +53,12 @@ Never publish:
 
 Before committing an artifact:
 
-1. Validate JSON files with `python3 -m json.tool`.
+1. Run `python3 scripts/validate-artifacts.py`; it validates JSON/NDJSON parseability, schema-backed `$schema` pointers, artifact-level status vocabulary, referenced path existence, and conservative public-safety patterns.
 2. Confirm Markdown summaries only contain facts from JSON or sanitized raw inputs.
 3. Check that optional/skipped gates are explicit.
 4. Check that public wallet labels are role labels or intentionally public identities.
-5. Search for obvious secret surfaces and local-only paths.
-6. Review any occurrence of words such as `password`, `secret`, `signature`, `token`, `RPC`, `Supabase`, `Postgres`, or `/home/` before publishing.
-7. Verify artifact paths are referenced from `README.md` or `index.json` when they are intended to be discoverable.
+5. Review any occurrence of words such as `password`, `secret`, `signature`, `token`, `RPC`, `Supabase`, `Postgres`, or `/home/` before publishing.
+6. Verify artifact paths are referenced from `README.md` or `index.json` when they are intended to be discoverable.
 
 Allowed findings include checklist text in this document and sanitized explanatory notes. Actual credentials, paths to secret files, and raw sensitive material are not allowed.
 

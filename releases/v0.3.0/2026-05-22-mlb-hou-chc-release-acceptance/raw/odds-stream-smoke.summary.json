@@ -1,0 +1,173 @@
+{
+  "apiUrl": "https://api.ospex.org",
+  "artifactType": "odds-stream-monitor",
+  "command": [
+    "ospex",
+    "odds",
+    "watch",
+    "17",
+    "--json",
+    "--include-refreshes"
+  ],
+  "contestId": "17",
+  "durationSecondsObserved": 90.031,
+  "durationSecondsRequested": 90,
+  "eventCounts": {
+    "refresh": 6,
+    "snapshot": 3,
+    "status": 3
+  },
+  "expectedMarkets": [
+    "moneyline",
+    "spread",
+    "total"
+  ],
+  "failures": [],
+  "files": {
+    "receivedNdjson": "odds-stream-smoke.received.ndjson",
+    "summaryJson": "odds-stream-smoke.summary.json",
+    "summaryMarkdown": "odds-stream-smoke.summary.md"
+  },
+  "finishedAt": "2026-05-22T17:48:11.525795Z",
+  "label": "contest-17-smoke-publicsafe",
+  "markets": {
+    "moneyline": {
+      "changedAtValues": [
+        "2026-05-22T17:44:45.561+00:00"
+      ],
+      "eventCounts": {
+        "refresh": 2,
+        "snapshot": 1,
+        "status": 1
+      },
+      "firstChangeAt": null,
+      "firstConnectedAt": "2026-05-22T17:46:43.330871Z",
+      "firstEventAt": "2026-05-22T17:46:43.330122Z",
+      "firstPollCapturedAt": "2026-05-22T17:45:45.741000Z",
+      "firstRefreshAt": "2026-05-22T17:46:46.608271Z",
+      "firstSnapshotAt": "2026-05-22T17:46:43.330122Z",
+      "lastEventAt": "2026-05-22T17:47:46.579869Z",
+      "lastPollCapturedAt": "2026-05-22T17:47:46.031000Z",
+      "maxEventGapSeconds": 59.972,
+      "maxPollAgeAtReceiveSeconds": 57.589,
+      "priceSignatures": [
+        "{\"awayOddsAmerican\":127,\"changedAt\":\"2026-05-22T17:44:45.561+00:00\",\"homeOddsAmerican\":-147,\"market\":\"moneyline\",\"upstreamLastUpdated\":\"2026-05-22T17:41:20+00:00\"}"
+      ],
+      "sampleOdds": {
+        "awayOddsAmerican": 127,
+        "changedAt": "2026-05-22T17:44:45.561+00:00",
+        "homeOddsAmerican": -147,
+        "market": "moneyline",
+        "pollCapturedAt": "2026-05-22T17:45:45.741+00:00",
+        "upstreamLastUpdated": "2026-05-22T17:41:20+00:00"
+      },
+      "statusCounts": {
+        "connected": 1
+      }
+    },
+    "spread": {
+      "changedAtValues": [
+        "2026-05-22T17:39:46.291+00:00"
+      ],
+      "eventCounts": {
+        "refresh": 2,
+        "snapshot": 1,
+        "status": 1
+      },
+      "firstChangeAt": null,
+      "firstConnectedAt": "2026-05-22T17:46:43.306090Z",
+      "firstEventAt": "2026-05-22T17:46:43.305685Z",
+      "firstPollCapturedAt": "2026-05-22T17:45:45.807000Z",
+      "firstRefreshAt": "2026-05-22T17:46:46.607174Z",
+      "firstSnapshotAt": "2026-05-22T17:46:43.305685Z",
+      "lastEventAt": "2026-05-22T17:47:46.564404Z",
+      "lastPollCapturedAt": "2026-05-22T17:47:46.099000Z",
+      "maxEventGapSeconds": 59.957,
+      "maxPollAgeAtReceiveSeconds": 57.499,
+      "priceSignatures": [
+        "{\"awayLine\":1.5,\"awayOddsAmerican\":-185,\"changedAt\":\"2026-05-22T17:39:46.291+00:00\",\"homeLine\":-1.5,\"homeOddsAmerican\":155,\"market\":\"spread\",\"upstreamLastUpdated\":\"2026-05-22T17:41:20+00:00\"}"
+      ],
+      "sampleOdds": {
+        "awayLine": 1.5,
+        "awayOddsAmerican": -185,
+        "changedAt": "2026-05-22T17:39:46.291+00:00",
+        "homeLine": -1.5,
+        "homeOddsAmerican": 155,
+        "market": "spread",
+        "pollCapturedAt": "2026-05-22T17:45:45.807+00:00",
+        "upstreamLastUpdated": "2026-05-22T17:41:20+00:00"
+      },
+      "statusCounts": {
+        "connected": 1
+      }
+    },
+    "total": {
+      "changedAtValues": [
+        "2026-05-22T17:44:45.701+00:00"
+      ],
+      "eventCounts": {
+        "refresh": 2,
+        "snapshot": 1,
+        "status": 1
+      },
+      "firstChangeAt": null,
+      "firstConnectedAt": "2026-05-22T17:46:43.313232Z",
+      "firstEventAt": "2026-05-22T17:46:43.312624Z",
+      "firstPollCapturedAt": "2026-05-22T17:45:45.877000Z",
+      "firstRefreshAt": "2026-05-22T17:46:46.605625Z",
+      "firstSnapshotAt": "2026-05-22T17:46:43.312624Z",
+      "lastEventAt": "2026-05-22T17:47:46.579177Z",
+      "lastPollCapturedAt": "2026-05-22T17:47:46.152000Z",
+      "maxEventGapSeconds": 59.974,
+      "maxPollAgeAtReceiveSeconds": 57.436,
+      "priceSignatures": [
+        "{\"changedAt\":\"2026-05-22T17:44:45.701+00:00\",\"line\":7,\"market\":\"total\",\"overOddsAmerican\":100,\"underOddsAmerican\":-120,\"upstreamLastUpdated\":\"2026-05-22T17:41:20+00:00\"}"
+      ],
+      "sampleOdds": {
+        "changedAt": "2026-05-22T17:44:45.701+00:00",
+        "line": 7,
+        "market": "total",
+        "overOddsAmerican": 100,
+        "pollCapturedAt": "2026-05-22T17:45:45.877+00:00",
+        "underOddsAmerican": -120,
+        "upstreamLastUpdated": "2026-05-22T17:41:20+00:00"
+      },
+      "statusCounts": {
+        "connected": 1
+      }
+    }
+  },
+  "nonJsonLineCount": 0,
+  "nonJsonSamples": [],
+  "notes": [
+    "Read-only monitor: uses public core-api/CLI odds stream only; no wallet or signing material required.",
+    "pollCapturedAt freshness and changedAt/price signatures are distinct: refresh can advance pollCapturedAt without price movement."
+  ],
+  "processReturnCode": 0,
+  "providerLeakTerms": {},
+  "schemaVersion": 1,
+  "startedAt": "2026-05-22T17:46:41.494923Z",
+  "statusSequence": [
+    {
+      "market": "spread",
+      "receivedAt": "2026-05-22T17:46:43.306090Z",
+      "status": "connected"
+    },
+    {
+      "market": "total",
+      "receivedAt": "2026-05-22T17:46:43.313232Z",
+      "status": "connected"
+    },
+    {
+      "market": "moneyline",
+      "receivedAt": "2026-05-22T17:46:43.330871Z",
+      "status": "connected"
+    }
+  ],
+  "statusSequenceTruncated": false,
+  "stderrLineCount": 0,
+  "stderrSamples": [],
+  "terminatedForDuration": true,
+  "verdict": "pass",
+  "warnings": []
+}
