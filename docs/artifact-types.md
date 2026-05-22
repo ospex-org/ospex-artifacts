@@ -121,5 +121,6 @@ Index conventions:
 - `recentArtifacts` is the recent-N feed window and is sorted by `publishedAt` descending.
 - Every index/archive entry has `publishedAt` for feed ordering. The `date` field remains the subject calendar date and must not be used as the primary sort key.
 - `archiveIndexes` points to full-history archives such as `archive/2026/index.json`. Consumers fetch those only when they need older entries.
+- Run `python3 scripts/generate-indexes.py` after artifact changes. The generator discovers canonical artifact JSON files, preserves existing entry `publishedAt` values, assigns current UTC publication time to newly discovered artifacts, and keeps `recentArtifacts`, archive shards, and `archiveIndexes` summaries synchronized.
 
 The index is not a replacement for artifact contents. It should contain enough metadata to discover artifacts and decide whether to fetch them.

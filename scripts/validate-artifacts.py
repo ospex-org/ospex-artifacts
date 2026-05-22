@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import json
 import re
+import subprocess
 import sys
 from datetime import date, datetime
 from pathlib import Path, PurePosixPath
@@ -518,6 +519,28 @@ def validate_schema_pointers(docs: dict[Path, Any], errors: list[str]) -> None:
             errors.append(f"{rel(path)}: unknown $schema pointer {schema_pointer!r}")
 
 
+def validate_generated_indexes(errors: list[str]) -> None:
+    script = ROOT / "scripts" / "generate-indexes.py"
+    if not script.is_file():
+        errors.append("scripts/generate-indexes.py: missing index generator")
+        return
+    result = subprocess.run(
+        [sys.executable, str(script), "--check"],
+        cwd=ROOT,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        check=False,
+    )
+    if result.returncode != 0:
+        output = result.stdout.strip()
+        if output:
+            for line in output.splitlines():
+                errors.append(f"generated indexes: {line}")
+        else:
+            errors.append("generated indexes: scripts/generate-indexes.py --check failed without output")
+
+
 def safety_scan(files: list[Path], errors: list[str]) -> int:
     scanned = 0
     for path in sorted(files):
@@ -556,6 +579,7 @@ def main() -> int:
             validate_release_acceptance(path, doc, errors)
         validate_raw_file_maps(path, doc, errors)
 
+    validate_generated_indexes(errors)
     scanned_text_files = safety_scan(files, errors)
 
     if errors:

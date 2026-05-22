@@ -24,7 +24,7 @@ For each artifact, the canonical facts live in JSON:
 - `acceptance.json` for `releases/`
 - `digest.json` for future `daily/` artifacts
 
-Schema-backed JSON files include a top-level `$schema` pointer into `schemas/`. Run `python3 scripts/validate-artifacts.py` locally before publishing; GitHub Actions runs the same JSON-parse, schema/status, path-existence, index/archive, and public-safety checks on every PR and `main` push.
+Schema-backed JSON files include a top-level `$schema` pointer into `schemas/`. After adding, removing, or editing an artifact, run `python3 scripts/generate-indexes.py` to refresh `index.json` and `archive/YYYY/index.json` shards, then run `python3 scripts/validate-artifacts.py` locally before publishing. GitHub Actions runs the same JSON-parse, schema/status, path-existence, generated-index, archive, and public-safety checks on every PR and `main` push.
 
 Markdown summaries are presentation files only in the sense that they render canonical JSON facts. They should stay evidence-grade: complete, technical, and faithful to JSON/raw sanitized inputs. Friendly headlines, audience-specific framing, and scrollable gloss belong in the frontend/dashboard translation layer, not in the artifact itself.
 
@@ -76,7 +76,13 @@ index.json
 archive/YYYY/index.json
 ```
 
-`index.json` contains `latestByArtifactType`, a bounded `recentArtifacts` feed window sorted by `publishedAt`, and pointers to archive shards. Full history lives in `archive/`, so consumers do not need to fetch an unbounded top-level array to find the newest artifact.
+`index.json` contains `latestByArtifactType`, a bounded `recentArtifacts` feed window sorted by `publishedAt`, and pointers to archive shards. Full history lives in `archive/`, so consumers do not need to fetch an unbounded top-level array to find the newest artifact. Generate the index files with:
+
+```bash
+python3 scripts/generate-indexes.py
+```
+
+The generator discovers canonical artifact JSON files under `runs/`, `releases/`, and `daily/`, preserves existing entry `publishedAt` values, assigns the current UTC time to newly discovered artifacts, and keeps archive shard counts plus oldest/newest summaries in sync.
 
 Run artifacts:
 
