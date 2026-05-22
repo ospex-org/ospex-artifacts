@@ -2,7 +2,7 @@
 
 Ospex Artifacts is a public repository of sanitized protocol evidence and derived activity records.
 
-Artifacts are generated from public chain data, approved external facts, and sanitized indexer/API snapshots. JSON files are the machine-readable source for agents, dashboards, and other consumers. Markdown files are human-readable renderings of the same facts.
+Artifacts are generated from public chain data, approved external facts, and sanitized indexer/API snapshots. JSON files are the machine-readable source for agents, dashboards, and other consumers. Markdown files are evidence-grade renderings of the same facts.
 
 This repository intentionally avoids internal planning notes, brainstorming text, private operator material, and promotional language. It should read like an evidence/data product: boring, durable, precise.
 
@@ -10,8 +10,9 @@ This repository intentionally avoids internal planning notes, brainstorming text
 
 - `runs/` — per-contest, per-market, or multi-contest lifecycle evidence bundles.
 - `releases/` — release acceptance evidence for SDK/CLI or service versions, including fresh-install gates and bounded live gates where applicable.
-- `daily/` — daily protocol activity digests. This class is reserved for future rollups generated from run/release evidence, chain data, and sanitized snapshots.
+- `daily/` — daily protocol activity digests. This class is reserved for future rollups generated from run/release evidence, chain data, and sanitized snapshots. Track every UTC calendar day, including zero-activity days.
 - `index.json` — a lightweight artifact index for agents, dashboards, and humans that need a stable entry point.
+- `archive/` — full-history index shards such as `archive/2026/index.json`; consumers fetch these only when they need older entries.
 
 See `docs/artifact-types.md` for the current conventions.
 
@@ -23,9 +24,9 @@ For each artifact, the canonical facts live in JSON:
 - `acceptance.json` for `releases/`
 - `digest.json` for future `daily/` artifacts
 
-Schema-backed JSON files include a top-level `$schema` pointer into `schemas/`. Run `python3 scripts/validate-artifacts.py` locally before publishing; GitHub Actions runs the same JSON-parse, schema/status, path-existence, and public-safety checks on every PR and `main` push.
+Schema-backed JSON files include a top-level `$schema` pointer into `schemas/`. Run `python3 scripts/validate-artifacts.py` locally before publishing; GitHub Actions runs the same JSON-parse, schema/status, path-existence, index/archive, and public-safety checks on every PR and `main` push.
 
-Markdown summaries are presentation files. They should not introduce facts that are absent from the corresponding JSON or raw sanitized inputs.
+Markdown summaries are presentation files only in the sense that they render canonical JSON facts. They should stay evidence-grade: complete, technical, and faithful to JSON/raw sanitized inputs. Friendly headlines, audience-specific framing, and scrollable gloss belong in the frontend/dashboard translation layer, not in the artifact itself.
 
 ## Public artifact rules
 
@@ -67,6 +68,15 @@ Daily digests:
 - none published yet.
 
 ## Directory conventions
+
+Top-level index and archive shards:
+
+```text
+index.json
+archive/YYYY/index.json
+```
+
+`index.json` contains `latestByArtifactType`, a bounded `recentArtifacts` feed window sorted by `publishedAt`, and pointers to archive shards. Full history lives in `archive/`, so consumers do not need to fetch an unbounded top-level array to find the newest artifact.
 
 Run artifacts:
 

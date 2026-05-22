@@ -17,6 +17,7 @@ Public artifacts should be factual, reproducible, and safe to consume directly. 
 - JSON artifacts are canonical.
 - Markdown summaries must be derived from JSON facts and sanitized raw inputs.
 - Summaries may explain context, but they should not add new factual claims absent from the machine-readable artifact.
+- Keep summaries evidence-grade and technical. Audience-friendly headlines and simplified narrative belong in a frontend/dashboard layer derived from the artifact, not in the artifact itself.
 - Raw files under `raw/` should be sanitized snapshots or summaries, not unfiltered runtime captures.
 
 ## Include
@@ -53,7 +54,7 @@ Never publish:
 
 Before committing an artifact:
 
-1. Run `python3 scripts/validate-artifacts.py`; it validates JSON/NDJSON parseability, schema-backed `$schema` pointers, artifact-level status vocabulary, referenced path existence, and conservative public-safety patterns.
+1. Run `python3 scripts/validate-artifacts.py`; it validates JSON/NDJSON parseability, schema-backed `$schema` pointers, artifact-level status vocabulary, index/archive consistency, referenced path existence, and conservative public-safety patterns.
 2. Confirm Markdown summaries only contain facts from JSON or sanitized raw inputs.
 3. Check that optional/skipped gates are explicit.
 4. Check that public wallet labels are role labels or intentionally public identities.
@@ -68,4 +69,4 @@ Each artifact should make its reproducibility boundary clear:
 
 - A lifecycle run should identify the public chain data, external final-score source, and sanitized indexer/API rows needed to check the lifecycle.
 - A release acceptance should identify the public release assets, hashes, setup gates, live gates, and resulting on-chain transactions.
-- A daily digest should identify the UTC date, block range, sanitized snapshot hash, and linked run artifacts used to compute the rollup.
+- A daily digest should identify the UTC date, block range, sanitized snapshot hash, and linked run artifacts used to compute the rollup. Publish one digest for every UTC calendar day; zero-activity days should record zero counts and coverage/provenance rather than being skipped.

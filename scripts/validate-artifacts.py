@@ -19,8 +19,11 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 
 INDEX_SCHEMA_ID = "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json"
+ARCHIVE_SCHEMA_ID = "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json"
 RELEASE_ACCEPTANCE_SCHEMA_ID = "https://github.com/ospex-org/ospex-artifacts/schemas/release-acceptance.schema.json"
 
+RECENT_ARTIFACT_LIMIT = 100
+ARTIFACT_TYPES = ("run", "release-acceptance", "daily-digest")
 STATUS_BY_ARTIFACT_TYPE = {
     "run": {"complete_verified", "complete_verified_with_caveats", "partial", "superseded"},
     "release-acceptance": {
@@ -81,14 +84,18 @@ def iter_repo_files() -> list[Path]:
     return files
 
 
-def parse_datetime(value: Any) -> bool:
+def parse_datetime_value(value: Any) -> datetime | None:
     if not isinstance(value, str):
-        return False
+        return None
     try:
-        datetime.fromisoformat(value.replace("Z", "+00:00"))
-        return True
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
     except ValueError:
-        return False
+        return None
+    return parsed
+
+
+def parse_datetime(value: Any) -> bool:
+    return parse_datetime_value(value) is not None
 
 
 def parse_date(value: Any) -> bool:
@@ -169,91 +176,233 @@ def validate_schema_files(docs: dict[Path, Any], errors: list[str]) -> None:
             schema_ids[schema_id] = path
 
 
+def validate_artifact_entry(
+    artifact: Any,
+    *,
+    context: str,
+    docs: dict[Path, Any],
+    errors: list[str],
+    seen_ids: set[str] | None = None,
+) -> str | None:
+    if not isinstance(artifact, dict):
+        errors.append(f"{context}: must be an object")
+        return None
+    for key in ["artifactType", "artifactId", "status", "publishedAt", "summaryPath", "dataPath"]:
+        if key not in artifact:
+            errors.append(f"{context}: missing required key {key!r}")
+    artifact_type = artifact.get("artifactType")
+    artifact_id = artifact.get("artifactId")
+    status = artifact.get("status")
+    published_at = artifact.get("publishedAt")
+
+    if artifact_type not in STATUS_BY_ARTIFACT_TYPE:
+        errors.append(f"{context}: unsupported artifactType {artifact_type!r}")
+    elif status not in STATUS_BY_ARTIFACT_TYPE[artifact_type]:
+        allowed = ", ".join(sorted(STATUS_BY_ARTIFACT_TYPE[artifact_type]))
+        errors.append(f"{context}: status {status!r} is not allowed for {artifact_type}; expected one of: {allowed}")
+    if not isinstance(artifact_id, str) or not artifact_id:
+        errors.append(f"{context}: artifactId must be a non-empty string")
+    elif seen_ids is not None:
+        if artifact_id in seen_ids:
+            errors.append(f"{context}: duplicate artifactId {artifact_id}")
+        else:
+            seen_ids.add(artifact_id)
+    if not parse_datetime(published_at):
+        errors.append(f"{context}: publishedAt must be an ISO date-time")
+    if not parse_date(artifact.get("date")):
+        errors.append(f"{context}: date must be YYYY-MM-DD or null")
+
+    check_relative_path(artifact.get("summaryPath"), base=ROOT, errors=errors, context=f"{context}.summaryPath")
+    check_relative_path(artifact.get("dataPath"), base=ROOT, errors=errors, context=f"{context}.dataPath")
+    check_relative_path(artifact.get("rawPath"), base=ROOT, errors=errors, context=f"{context}.rawPath", expect_dir=True)
+
+    data_path_value = artifact.get("dataPath")
+    if isinstance(data_path_value, str):
+        data_path = (ROOT / data_path_value).resolve()
+        data_doc = docs.get(data_path)
+        if isinstance(data_doc, dict):
+            if "artifactType" in data_doc and data_doc["artifactType"] != artifact_type:
+                errors.append(
+                    f"{context}: artifactType {artifact_type!r} disagrees with {data_path_value} value {data_doc['artifactType']!r}"
+                )
+            if "status" in data_doc and data_doc["status"] != status:
+                errors.append(f"{context}: status {status!r} disagrees with {data_path_value} value {data_doc['status']!r}")
+    return data_path_value if isinstance(data_path_value, str) else None
+
+
+def validate_published_order(entries: list[Any], *, context: str, errors: list[str]) -> None:
+    previous: datetime | None = None
+    for idx, entry in enumerate(entries):
+        if not isinstance(entry, dict):
+            continue
+        parsed = parse_datetime_value(entry.get("publishedAt"))
+        if parsed is None:
+            continue
+        if previous is not None and parsed > previous:
+            errors.append(f"{context}: entries must be sorted by publishedAt descending; item {idx} is newer than item {idx - 1}")
+        previous = parsed
+
+
 def validate_index(index_path: Path, docs: dict[Path, Any], errors: list[str]) -> None:
     doc = docs.get(index_path)
     if not isinstance(doc, dict):
         errors.append("index.json: must be a JSON object")
         return
 
-    allowed_top = {"$schema", "schemaVersion", "generatedAt", "repository", "artifacts", "latest"}
+    allowed_top = {"$schema", "schemaVersion", "generatedAt", "repository", "latestByArtifactType", "recentArtifacts", "archiveIndexes"}
     for key in doc:
         if key not in allowed_top:
             errors.append(f"index.json: unexpected top-level key {key!r}")
 
-    required = ["$schema", "schemaVersion", "generatedAt", "repository", "artifacts", "latest"]
+    required = ["$schema", "schemaVersion", "generatedAt", "repository", "latestByArtifactType", "recentArtifacts", "archiveIndexes"]
     for key in required:
         if key not in doc:
             errors.append(f"index.json: missing required key {key!r}")
 
     if doc.get("$schema") != INDEX_SCHEMA_ID:
         errors.append(f"index.json: $schema must be {INDEX_SCHEMA_ID}")
-    if not is_plain_int(doc.get("schemaVersion")) or doc.get("schemaVersion", 0) < 1:
-        errors.append("index.json: schemaVersion must be an integer >= 1")
+    if doc.get("schemaVersion") != 2:
+        errors.append("index.json: schemaVersion must be 2")
     if not parse_datetime(doc.get("generatedAt")):
         errors.append("index.json: generatedAt must be an ISO date-time")
     if doc.get("repository") != "ospex-org/ospex-artifacts":
         errors.append("index.json: repository must be ospex-org/ospex-artifacts")
 
-    artifacts = doc.get("artifacts")
-    if not isinstance(artifacts, list):
-        errors.append("index.json: artifacts must be an array")
-        artifacts = []
+    recent = doc.get("recentArtifacts")
+    if not isinstance(recent, list):
+        errors.append("index.json: recentArtifacts must be an array")
+        recent = []
+    elif len(recent) > RECENT_ARTIFACT_LIMIT:
+        errors.append(f"index.json: recentArtifacts must stay within the recent-N cap of {RECENT_ARTIFACT_LIMIT}")
+    validate_published_order(recent, context="index.json recentArtifacts", errors=errors)
 
-    seen_ids: set[str] = set()
-    for idx, artifact in enumerate(artifacts):
-        context = f"index.json artifacts[{idx}]"
-        if not isinstance(artifact, dict):
+    seen_recent_ids: set[str] = set()
+    recent_by_path: dict[str, dict[str, Any]] = {}
+    for idx, artifact in enumerate(recent):
+        data_path = validate_artifact_entry(
+            artifact,
+            context=f"index.json recentArtifacts[{idx}]",
+            docs=docs,
+            errors=errors,
+            seen_ids=seen_recent_ids,
+        )
+        if data_path and isinstance(artifact, dict):
+            recent_by_path[data_path] = artifact
+
+    latest = doc.get("latestByArtifactType")
+    if not isinstance(latest, dict):
+        errors.append("index.json: latestByArtifactType must be an object")
+    else:
+        if set(latest) != set(ARTIFACT_TYPES):
+            errors.append("index.json: latestByArtifactType keys must exactly match artifactType values: run, release-acceptance, daily-digest")
+        for artifact_type in ARTIFACT_TYPES:
+            values = latest.get(artifact_type)
+            if not isinstance(values, list):
+                errors.append(f"index.json latestByArtifactType.{artifact_type}: must be an array")
+                continue
+            for item_idx, value in enumerate(values):
+                context = f"index.json latestByArtifactType.{artifact_type}[{item_idx}]"
+                check_relative_path(value, base=ROOT, errors=errors, context=context)
+                entry = recent_by_path.get(value) if isinstance(value, str) else None
+                if entry is None:
+                    errors.append(f"{context}: latest pointer must also appear in recentArtifacts")
+                elif entry.get("artifactType") != artifact_type:
+                    errors.append(f"{context}: points to {entry.get('artifactType')!r}, expected {artifact_type!r}")
+
+    archives = doc.get("archiveIndexes")
+    archive_paths: set[str] = set()
+    if not isinstance(archives, list):
+        errors.append("index.json: archiveIndexes must be an array")
+        archives = []
+    for idx, archive in enumerate(archives):
+        context = f"index.json archiveIndexes[{idx}]"
+        if not isinstance(archive, dict):
             errors.append(f"{context}: must be an object")
             continue
-        for key in ["artifactType", "artifactId", "status", "summaryPath", "dataPath"]:
-            if key not in artifact:
+        for key in ["scope", "year", "path", "artifactCount", "oldestPublishedAt", "newestPublishedAt"]:
+            if key not in archive:
                 errors.append(f"{context}: missing required key {key!r}")
-        artifact_type = artifact.get("artifactType")
-        artifact_id = artifact.get("artifactId")
-        status = artifact.get("status")
-        if artifact_type not in STATUS_BY_ARTIFACT_TYPE:
-            errors.append(f"{context}: unsupported artifactType {artifact_type!r}")
-        elif status not in STATUS_BY_ARTIFACT_TYPE[artifact_type]:
-            allowed = ", ".join(sorted(STATUS_BY_ARTIFACT_TYPE[artifact_type]))
-            errors.append(f"{context}: status {status!r} is not allowed for {artifact_type}; expected one of: {allowed}")
-        if not isinstance(artifact_id, str) or not artifact_id:
-            errors.append(f"{context}: artifactId must be a non-empty string")
-        elif artifact_id in seen_ids:
-            errors.append(f"{context}: duplicate artifactId {artifact_id}")
-        else:
-            seen_ids.add(artifact_id)
-        if not parse_date(artifact.get("date")):
-            errors.append(f"{context}: date must be YYYY-MM-DD or null")
+        if archive.get("scope") != "year":
+            errors.append(f"{context}: scope must be 'year'")
+        if not is_plain_int(archive.get("year")):
+            errors.append(f"{context}: year must be an integer")
+        if not is_plain_int(archive.get("artifactCount")) or archive.get("artifactCount", -1) < 0:
+            errors.append(f"{context}: artifactCount must be an integer >= 0")
+        for key in ["oldestPublishedAt", "newestPublishedAt"]:
+            if not parse_datetime(archive.get(key)):
+                errors.append(f"{context}: {key} must be an ISO date-time")
+        path_value = archive.get("path")
+        check_relative_path(path_value, base=ROOT, errors=errors, context=f"{context}.path")
+        if isinstance(path_value, str):
+            archive_paths.add(path_value)
+            archive_doc = docs.get((ROOT / path_value).resolve())
+            if isinstance(archive_doc, dict):
+                archive_entries = archive_doc.get("artifacts")
+                if isinstance(archive_entries, list):
+                    if archive.get("artifactCount") != len(archive_entries):
+                        errors.append(f"{context}: artifactCount {archive.get('artifactCount')} disagrees with {path_value} count {len(archive_entries)}")
+                    published = [parse_datetime_value(e.get("publishedAt")) for e in archive_entries if isinstance(e, dict)]
+                    published = [p for p in published if p is not None]
+                    if published:
+                        first = min(published).isoformat().replace("+00:00", "Z")
+                        last = max(published).isoformat().replace("+00:00", "Z")
+                        if archive.get("oldestPublishedAt") != first:
+                            errors.append(f"{context}: oldestPublishedAt must match oldest artifact publishedAt in {path_value}")
+                        if archive.get("newestPublishedAt") != last:
+                            errors.append(f"{context}: newestPublishedAt must match newest artifact publishedAt in {path_value}")
 
-        check_relative_path(artifact.get("summaryPath"), base=ROOT, errors=errors, context=f"{context}.summaryPath")
-        check_relative_path(artifact.get("dataPath"), base=ROOT, errors=errors, context=f"{context}.dataPath")
-        check_relative_path(artifact.get("rawPath"), base=ROOT, errors=errors, context=f"{context}.rawPath", expect_dir=True)
+    archive_data_paths: set[str] = set()
+    for path, archive_doc in docs.items():
+        if rel(path) in archive_paths and isinstance(archive_doc, dict):
+            for entry in archive_doc.get("artifacts", []):
+                if isinstance(entry, dict) and isinstance(entry.get("dataPath"), str):
+                    archive_data_paths.add(entry["dataPath"])
+    for data_path in recent_by_path:
+        if data_path not in archive_data_paths:
+            errors.append(f"index.json: recent artifact {data_path} is missing from archiveIndexes")
 
-        data_path_value = artifact.get("dataPath")
-        if isinstance(data_path_value, str):
-            data_path = (ROOT / data_path_value).resolve()
-            data_doc = docs.get(data_path)
-            if isinstance(data_doc, dict):
-                if "artifactType" in data_doc and data_doc["artifactType"] != artifact_type:
-                    errors.append(
-                        f"{context}: artifactType {artifact_type!r} disagrees with {data_path_value} value {data_doc['artifactType']!r}"
-                    )
-                if "status" in data_doc and data_doc["status"] != status:
-                    errors.append(f"{context}: status {status!r} disagrees with {data_path_value} value {data_doc['status']!r}")
 
-    latest = doc.get("latest")
-    if not isinstance(latest, dict):
-        errors.append("index.json: latest must be an object")
+def validate_archive_index(path: Path, doc: Any, docs: dict[Path, Any], errors: list[str]) -> None:
+    context = rel(path)
+    if not isinstance(doc, dict):
+        errors.append(f"{context}: must be a JSON object")
         return
-    if set(latest) != {"runs", "releases", "daily"}:
-        errors.append("index.json: latest must contain exactly runs, releases, and daily arrays")
-    for key in ["runs", "releases", "daily"]:
-        values = latest.get(key)
-        if not isinstance(values, list):
-            errors.append(f"index.json latest.{key}: must be an array")
-            continue
-        for item_idx, value in enumerate(values):
-            check_relative_path(value, base=ROOT, errors=errors, context=f"index.json latest.{key}[{item_idx}]")
+    allowed_top = {"$schema", "schemaVersion", "generatedAt", "repository", "archive", "artifacts"}
+    for key in doc:
+        if key not in allowed_top:
+            errors.append(f"{context}: unexpected top-level key {key!r}")
+    for key in ["$schema", "schemaVersion", "generatedAt", "repository", "archive", "artifacts"]:
+        if key not in doc:
+            errors.append(f"{context}: missing required key {key!r}")
+    if doc.get("$schema") != ARCHIVE_SCHEMA_ID:
+        errors.append(f"{context}: $schema must be {ARCHIVE_SCHEMA_ID}")
+    if not is_plain_int(doc.get("schemaVersion")) or doc.get("schemaVersion", 0) < 1:
+        errors.append(f"{context}: schemaVersion must be an integer >= 1")
+    if not parse_datetime(doc.get("generatedAt")):
+        errors.append(f"{context}: generatedAt must be an ISO date-time")
+    if doc.get("repository") != "ospex-org/ospex-artifacts":
+        errors.append(f"{context}: repository must be ospex-org/ospex-artifacts")
+
+    archive = doc.get("archive")
+    if not isinstance(archive, dict):
+        errors.append(f"{context}: archive must be an object")
+    else:
+        if archive.get("scope") != "year":
+            errors.append(f"{context}: archive.scope must be 'year'")
+        if not is_plain_int(archive.get("year")):
+            errors.append(f"{context}: archive.year must be an integer")
+        expected_path = f"archive/{archive.get('year')}/index.json"
+        if is_plain_int(archive.get("year")) and rel(path) != expected_path:
+            errors.append(f"{context}: year archive must live at {expected_path}")
+
+    artifacts = doc.get("artifacts")
+    if not isinstance(artifacts, list):
+        errors.append(f"{context}: artifacts must be an array")
+        return
+    validate_published_order(artifacts, context=f"{context} artifacts", errors=errors)
+    seen_ids: set[str] = set()
+    for idx, artifact in enumerate(artifacts):
+        validate_artifact_entry(artifact, context=f"{context} artifacts[{idx}]", docs=docs, errors=errors, seen_ids=seen_ids)
 
 
 def validate_release_acceptance(path: Path, doc: Any, errors: list[str]) -> None:
@@ -346,6 +495,7 @@ def validate_raw_file_maps(path: Path, doc: Any, errors: list[str]) -> None:
 
 
 def validate_schema_pointers(docs: dict[Path, Any], errors: list[str]) -> None:
+    known_schema_ids = {INDEX_SCHEMA_ID, ARCHIVE_SCHEMA_ID, RELEASE_ACCEPTANCE_SCHEMA_ID}
     for path, doc in docs.items():
         if not isinstance(doc, dict):
             continue
@@ -355,12 +505,16 @@ def validate_schema_pointers(docs: dict[Path, Any], errors: list[str]) -> None:
             if doc.get("$schema") != INDEX_SCHEMA_ID:
                 errors.append(f"{rel(path)}: missing or incorrect $schema pointer")
             continue
+        if path.name == "index.json" and "archive" in path.parts:
+            if doc.get("$schema") != ARCHIVE_SCHEMA_ID:
+                errors.append(f"{rel(path)}: missing or incorrect $schema pointer")
+            continue
         if path.name == "acceptance.json" and "releases" in path.parts:
             if doc.get("$schema") != RELEASE_ACCEPTANCE_SCHEMA_ID:
                 errors.append(f"{rel(path)}: missing or incorrect $schema pointer")
             continue
         schema_pointer = doc.get("$schema")
-        if schema_pointer is not None and schema_pointer not in {INDEX_SCHEMA_ID, RELEASE_ACCEPTANCE_SCHEMA_ID}:
+        if schema_pointer is not None and schema_pointer not in known_schema_ids:
             errors.append(f"{rel(path)}: unknown $schema pointer {schema_pointer!r}")
 
 
@@ -396,6 +550,8 @@ def main() -> int:
     validate_index(ROOT / "index.json", docs, errors)
 
     for path, doc in sorted(docs.items()):
+        if path.name == "index.json" and "archive" in path.parts:
+            validate_archive_index(path, doc, docs, errors)
         if path.name == "acceptance.json" and "releases" in path.parts:
             validate_release_acceptance(path, doc, errors)
         validate_raw_file_maps(path, doc, errors)
