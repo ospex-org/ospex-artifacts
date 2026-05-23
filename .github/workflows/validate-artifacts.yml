@@ -23,6 +23,10 @@ jobs:
           git fetch --depth=1 origin "$GITHUB_REF"
           git checkout --force FETCH_HEAD
 
+      - name: Run validator unit tests
+        shell: bash
+        run: python3 -m unittest discover -s tests -v
+
       - name: Validate artifact repository
         shell: bash
         run: python3 scripts/validate-artifacts.py
