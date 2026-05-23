@@ -38,6 +38,7 @@ This run demonstrates a complete low-value Ospex v0.3.0 public-release lifecycle
 11. speculation was settled with `winSide=home`
 12. winning position was claimed
 13. final claim dry-runs were empty for both controlled wallets
+14. post-write projection convergence gates passed for fill, score, settle, and claim
 
 ## Controlled fill
 
@@ -83,6 +84,10 @@ Winner claim:
 
 - `ospex-stage-maker-b`: Dodgers/upper, risk `0.25 USDC`, lost, no claim expected
 - `ospex-stage-maker-a`: Brewers/lower, risk `0.25 USDC`, claimed `0.5 USDC`, realized profit `0.25 USDC`
+
+## Projection convergence gates
+
+The harness treats tx receipt success and API/indexer projection convergence as separate gates. For this run, fill, score, settle, and claim writes all had successful tx receipts and converged projection reads before final assertions. The post-claim gate recorded the observed short lag: an immediate `positions status` read still showed a claimable entry, while `claim-all --dry-run` was already empty; a refresh converged to `claimableCount=0` and `claimed=true`.
 
 ## Caveats / product debt observed
 

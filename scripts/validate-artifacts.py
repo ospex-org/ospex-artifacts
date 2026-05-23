@@ -479,6 +479,68 @@ def validate_release_acceptance(path: Path, doc: Any, errors: list[str]) -> None
             check_relative_path(value, base=path.parent, errors=errors, context=f"{context} artifactFiles.{key}")
 
 
+def validate_projection_convergence(path: Path, doc: Any, errors: list[str]) -> None:
+    if not isinstance(doc, dict):
+        return
+    projection = doc.get("projectionConvergence")
+    if projection is None:
+        return
+
+    try:
+        context = rel(path)
+    except ValueError:
+        context = path.as_posix()
+
+    if not isinstance(projection, dict):
+        errors.append(f"{context}: projectionConvergence must be an object")
+        return
+
+    expectation = projection.get("expectation")
+    if not isinstance(expectation, str) or not expectation.strip():
+        errors.append(f"{context}: projectionConvergence.expectation must be a non-empty string")
+
+    gates = projection.get("gates")
+    if not isinstance(gates, list) or not gates:
+        errors.append(f"{context}: projectionConvergence.gates must be a non-empty array")
+        return
+
+    required_gate_keys = [
+        "name",
+        "afterWrite",
+        "txConfirmed",
+        "waitTarget",
+        "expectedFinalState",
+        "observedFinalState",
+        "converged",
+    ]
+    for idx, gate in enumerate(gates):
+        gate_context = f"{context}: projectionConvergence.gates[{idx}]"
+        if not isinstance(gate, dict):
+            errors.append(f"{gate_context} must be an object")
+            continue
+        for key in required_gate_keys:
+            if key not in gate:
+                errors.append(f"{gate_context} missing required key {key!r}")
+        for key in ["name", "afterWrite", "waitTarget"]:
+            if key in gate and (not isinstance(gate[key], str) or not gate[key].strip()):
+                errors.append(f"{gate_context}.{key} must be a non-empty string")
+        for key in ["txConfirmed", "converged"]:
+            if key in gate and not isinstance(gate[key], bool):
+                errors.append(f"{gate_context}.{key} must be boolean")
+        if "staleReadObserved" in gate and not isinstance(gate["staleReadObserved"], bool):
+            errors.append(f"{gate_context}.staleReadObserved must be boolean when present")
+        for key in ["expectedFinalState", "observedFinalState"]:
+            if key not in gate:
+                continue
+            value = gate[key]
+            if not isinstance(value, list) or not value:
+                errors.append(f"{gate_context}.{key} must be a non-empty array")
+                continue
+            for item_idx, item in enumerate(value):
+                if not isinstance(item, str) or not item.strip():
+                    errors.append(f"{gate_context}.{key}[{item_idx}] must be a non-empty string")
+
+
 def validate_raw_file_maps(path: Path, doc: Any, errors: list[str]) -> None:
     if not isinstance(doc, dict):
         return
@@ -577,6 +639,7 @@ def main() -> int:
             validate_archive_index(path, doc, docs, errors)
         if path.name == "acceptance.json" and "releases" in path.parts:
             validate_release_acceptance(path, doc, errors)
+        validate_projection_convergence(path, doc, errors)
         validate_raw_file_maps(path, doc, errors)
 
     validate_generated_indexes(errors)

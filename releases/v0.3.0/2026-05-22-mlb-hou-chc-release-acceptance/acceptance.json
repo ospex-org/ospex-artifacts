@@ -87,6 +87,47 @@
     "postgameLinkApprovalForScore": "pass",
     "postgameScoreSubmit": "pass"
   },
+  "projectionConvergence": {
+    "expectation": "After each successful live write tx, the harness waits for the relevant API/indexer projection before final release-acceptance assertions. One stale immediate list read is projection lag, not a final failure, when the contest detail or later list projection converges.",
+    "gates": [
+      {
+        "name": "postContestCreate",
+        "afterWrite": "contestCreateTx",
+        "txConfirmed": true,
+        "waitTarget": "contest detail resolves verified and games list eventually shows contestCreated=true/contestId=17",
+        "expectedFinalState": [
+          "liveGates.contestShowVerified=pass",
+          "liveGates.gamesListFinalShowsContestCreated=pass",
+          "contest.contestId=17"
+        ],
+        "observedFinalState": [
+          "contest.verifiedAt=2026-05-22T16:57:17+00:00",
+          "liveGates.contestShowVerified=pass",
+          "liveGates.gamesListFinalShowsContestCreated=pass"
+        ],
+        "converged": true,
+        "staleReadObserved": true
+      },
+      {
+        "name": "postScore",
+        "afterWrite": "postgameScoreSubmit/Chainlink callback",
+        "txConfirmed": true,
+        "waitTarget": "contest projection shows scored status and final score",
+        "expectedFinalState": [
+          "contest.contestStatus=scored",
+          "contest.awayScore=4",
+          "contest.homeScore=2"
+        ],
+        "observedFinalState": [
+          "liveGates.postgameContestScored=pass",
+          "postgameLifecycle.contestStatus=scored",
+          "postgameLifecycle.status=pass"
+        ],
+        "converged": true,
+        "staleReadObserved": true
+      }
+    ]
+  },
   "postgameLifecycle": {
     "claimSweep": "not_required_no_positions",
     "contestScoresSetBlock": 87283984,

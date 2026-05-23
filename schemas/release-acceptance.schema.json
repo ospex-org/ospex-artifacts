@@ -93,6 +93,50 @@
         }
       }
     },
+    "projectionConvergence": {
+      "type": "object",
+      "description": "Post-write harness evidence proving that tx receipt success is followed by API/indexer projection convergence before final assertions.",
+      "additionalProperties": true,
+      "required": ["expectation", "gates"],
+      "properties": {
+        "expectation": { "type": "string", "minLength": 1 },
+        "gates": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": true,
+            "required": [
+              "name",
+              "afterWrite",
+              "txConfirmed",
+              "waitTarget",
+              "expectedFinalState",
+              "observedFinalState",
+              "converged"
+            ],
+            "properties": {
+              "name": { "type": "string", "minLength": 1 },
+              "afterWrite": { "type": "string", "minLength": 1 },
+              "txConfirmed": { "type": "boolean" },
+              "waitTarget": { "type": "string", "minLength": 1 },
+              "expectedFinalState": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "type": "string", "minLength": 1 }
+              },
+              "observedFinalState": {
+                "type": "array",
+                "minItems": 1,
+                "items": { "type": "string", "minLength": 1 }
+              },
+              "converged": { "type": "boolean" },
+              "staleReadObserved": { "type": "boolean" }
+            }
+          }
+        }
+      }
+    },
     "artifactFiles": {
       "type": "object",
       "additionalProperties": { "type": "string" }

@@ -54,6 +54,7 @@ Validate that the public `v0.3.0` SDK/CLI release assets can be installed and us
 - Chainlink request ID: `0xcae5ff511fdc2c4204e7cd7b6f722f48ac70c782a4c0ac5bcfaa9162802454cd`
 - Contest verification result: `verified`.
 - Final games-list readiness shows `contestCreated=true` and `contestId=17`.
+- Post-create projection convergence passed: the immediate games list was stale, but contest detail resolved verified and a later games-list read converged to `contestCreated=true` / `contestId=17` before the gate was declared green.
 
 ## Stream-specific monitoring add-on
 
@@ -80,6 +81,7 @@ Validate that the public `v0.3.0` SDK/CLI release assets can be installed and us
 - Score request ID: `0xa7495fe7954443325cdb59b1bc21ba9dae10f1b250bf751c6439c74fc5cf5623`.
 - Chainlink score callback / `CONTEST_SCORES_SET` tx: `0x72a35646cc3727c096f0309375432a4e17b04ff7267bf22154b15e4412d90783`.
 - Contest final state: `scored`, away score `4`, home score `2`, scored at `2026-05-22T21:51:20+00:00`.
+- Post-score projection convergence passed: the score request and callback txs succeeded, and the contest projection converged to `scored` with final score Astros `4`, Cubs `2` before postgame assertions.
 - Speculations: `0`; positions: `0`; fills: `0`.
 - Claim/settlement status: no settlement or claim txs were required because no commitment submit/match was run and no positions existed. `claim-all --dry-run --json` returned an empty entries array.
 - Postgame wallet balances observed by doctor: POL `2.363093`, USDC `9`, LINK `0.29`.

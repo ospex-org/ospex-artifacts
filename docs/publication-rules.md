@@ -32,6 +32,7 @@ Include public and reproducible evidence such as:
 - sanitized indexer/API snapshots
 - package asset names and hashes for release acceptance
 - setup/live/lifecycle gate results
+- post-write projection convergence evidence for live chain writes, including the expected final API/indexer state and observed converged state
 - non-blocking observations and known caveats
 
 ## Exclude
@@ -58,9 +59,10 @@ Before committing an artifact:
 2. Run `python3 scripts/validate-artifacts.py`; it validates JSON/NDJSON parseability, schema-backed `$schema` pointers, artifact-level status vocabulary, generated index/archive consistency, referenced path existence, and conservative public-safety patterns.
 3. Confirm Markdown summaries only contain facts from JSON or sanitized raw inputs.
 4. Check that optional/skipped gates are explicit.
-5. Check that public wallet labels are role labels or intentionally public identities.
-6. Review any occurrence of words such as `password`, `secret`, `signature`, `token`, `RPC`, `Supabase`, `Postgres`, or `/home/` before publishing.
-7. Verify artifact paths are referenced from `README.md` or `index.json` when they are intended to be discoverable.
+5. For each in-scope live chain write, confirm the artifact separates tx receipt success from projection convergence. If an immediate API/indexer read was stale, record it as a lag observation and require a later converged read before declaring the gate green.
+6. Check that public wallet labels are role labels or intentionally public identities.
+7. Review any occurrence of words such as `password`, `secret`, `signature`, `token`, `RPC`, `Supabase`, `Postgres`, or `/home/` before publishing.
+8. Verify artifact paths are referenced from `README.md` or `index.json` when they are intended to be discoverable.
 
 Allowed findings include checklist text in this document and sanitized explanatory notes. Actual credentials, paths to secret files, and raw sensitive material are not allowed.
 

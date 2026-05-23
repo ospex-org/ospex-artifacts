@@ -14,7 +14,7 @@ This repository intentionally avoids internal planning notes, brainstorming text
 - `index.json` — a lightweight artifact index for agents, dashboards, and humans that need a stable entry point.
 - `archive/` — full-history index shards such as `archive/2026/index.json`; consumers fetch these only when they need older entries.
 
-See `docs/artifact-types.md` for the current conventions.
+See `docs/artifact-types.md` for the current conventions and `docs/test-harness-expectations.md` for live-write harness expectations.
 
 ## Source-of-truth rule
 
@@ -38,7 +38,7 @@ Include:
 - tx hashes, receipt summaries, and explorer links
 - final-score or external fact source references
 - sanitized API/indexer snapshots
-- test gates, lifecycle checks, observations, and caveats
+- test gates, lifecycle checks, post-write projection convergence checks, observations, and caveats
 
 Exclude:
 

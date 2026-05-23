@@ -234,6 +234,83 @@
     "takerFinalClaimableCount": 0,
     "visibleLiveCommitmentsAfterFill": 0
   },
+  "projectionConvergence": {
+    "expectation": "After each successful write tx, the harness waits for the API/indexer projection to reach the expected post-write state before final assertions. A confirmed receipt plus one stale immediate read is recorded as projection lag, not a final failure, when the projection converges inside the observed wait window.",
+    "gates": [
+      {
+        "name": "postFill",
+        "afterWrite": "fill",
+        "txConfirmed": true,
+        "waitTarget": "commitment/fill projection shows the commitment filled, positions created, and no visible live commitment remains",
+        "expectedFinalState": [
+          "commitment.status=filled",
+          "positionsCreated=true",
+          "visibleLiveCommitmentsAfterFill=0"
+        ],
+        "observedFinalState": [
+          "lifecycleChecks.commitmentMatched=true",
+          "lifecycleChecks.positionsCreated=true",
+          "lifecycleChecks.visibleLiveCommitmentsAfterFill=0"
+        ],
+        "converged": true,
+        "staleReadObserved": false
+      },
+      {
+        "name": "postScore",
+        "afterWrite": "scoreRequest/Chainlink callback",
+        "txConfirmed": true,
+        "waitTarget": "contest projection shows scored status and final score",
+        "expectedFinalState": [
+          "contest.contestStatus=scored",
+          "contest.finalScore.away=1",
+          "contest.finalScore.home=5"
+        ],
+        "observedFinalState": [
+          "lifecycleChecks.postgameScore=true",
+          "contest.scoredAt=2026-05-23T02:51:45+00:00",
+          "raw/indexer-snapshot.sanitized.json contest.status=scored"
+        ],
+        "converged": true,
+        "staleReadObserved": false
+      },
+      {
+        "name": "postSettle",
+        "afterWrite": "settle",
+        "txConfirmed": true,
+        "waitTarget": "speculation projection leaves pendingSettle and exposes the winning claimable position",
+        "expectedFinalState": [
+          "speculation.status=filled/settled for the filled market",
+          "winning wallet pendingSettleCount=0",
+          "winning wallet claimableCount=1 before claim"
+        ],
+        "observedFinalState": [
+          "lifecycleChecks.speculationSettled=true",
+          "raw/indexer-snapshot.sanitized.json taker pendingSettleCount=0",
+          "raw/indexer-snapshot.sanitized.json taker claimableCount=1 before claim"
+        ],
+        "converged": true,
+        "staleReadObserved": false
+      },
+      {
+        "name": "postClaim",
+        "afterWrite": "claim",
+        "txConfirmed": true,
+        "waitTarget": "claim-all dry-run has no actionable entries and positions projection shows no remaining claimable winner",
+        "expectedFinalState": [
+          "finalClaimDryRunsEmpty=true",
+          "takerFinalClaimableCount=0",
+          "winner position claimed=true"
+        ],
+        "observedFinalState": [
+          "finalDryRuns.takerClaimAllEntries=0",
+          "finalDryRuns.takerPositionStatusClaimableCountAfterRefresh=0",
+          "positions.takerWinner.claimed=true"
+        ],
+        "converged": true,
+        "staleReadObserved": true
+      }
+    ]
+  },
   "finalDryRuns": {
     "makerClaimAllEntries": 0,
     "takerClaimAllEntries": 0,

@@ -13,7 +13,8 @@ Every artifact class should follow these rules:
 5. Observations and caveats are factual and test-scoped. They should not contain internal planning language.
 6. Wallet labels are role labels unless a public identity is intentionally part of the artifact.
 7. Schema-backed JSON files include a top-level `$schema` pointer to the matching file under `schemas/` and are validated by `python3 scripts/validate-artifacts.py`.
-8. Frontend/dashboard prose can translate artifact facts into friendlier headlines, but that translation belongs outside the artifact and should link back to the source JSON/Markdown.
+8. Live-write artifacts distinguish transaction receipt success from API/indexer projection convergence. The harness should wait for the projection target before final assertions; one stale immediate read is a projection-lag observation, not a final failure, if convergence passes inside the documented window.
+9. Frontend/dashboard prose can translate artifact facts into friendlier headlines, but that translation belongs outside the artifact and should link back to the source JSON/Markdown.
 
 ## Status vocabulary
 
@@ -50,6 +51,7 @@ Typical facts:
 - position outcomes and realized PnL where applicable
 - quote-window or market-maker telemetry summaries
 - final claim/dry-run checks
+- post-write projection convergence gates for fill, score, settle, and claim writes when those steps are in scope
 - known caveats observed during the run
 
 A run artifact may be `complete_verified`, `complete_verified_with_caveats`, `partial`, or `superseded`. Caveats are part of the record; they do not make an artifact invalid by default.
@@ -80,7 +82,7 @@ Recommended release acceptance facts:
 - signer/auth/doctor readiness gates
 - bounded approvals and live transaction gates when applicable
 - tx receipt summaries for live gates
-- post-action state checks
+- post-action state checks, including post-write API/indexer projection convergence when live write gates are in scope
 - explicit `not_run` status for optional tests that were not part of the acceptance scope
 
 For example, the `v0.3.0` acceptance path records a fresh install from GitHub release tarballs, read-only CLI smoke checks, signer readiness, bounded LINK/USDC approvals, contest creation, Chainlink verification, and post-create readiness observations. It does not claim to prove a full market lifecycle unless a fill, score, settlement, and claim path are also present.
