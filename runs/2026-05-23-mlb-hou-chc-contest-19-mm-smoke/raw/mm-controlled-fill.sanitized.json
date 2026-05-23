@@ -1,0 +1,284 @@
+{
+  "schemaVersion": 2,
+  "ok": true,
+  "action": "commitments.match",
+  "stage": "execute",
+  "network": "polygon",
+  "chainId": 137,
+  "generatedAt": "2026-05-23T16:39:15.933Z",
+  "cliVersion": "0.3.0",
+  "sdkVersion": "0.3.0",
+  "wallet": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+  "risk": {
+    "wei6": "249922",
+    "usdc": "0.249922"
+  },
+  "payout": {
+    "profit": {
+      "wei6": "179800",
+      "usdc": "0.179800"
+    },
+    "totalReturn": {
+      "wei6": "429722",
+      "usdc": "0.429722"
+    }
+  },
+  "contest": {
+    "contestId": "19",
+    "label": "Houston Astros @ Chicago Cubs, 2026-05-23 — MLB",
+    "awayTeam": "Houston Astros",
+    "homeTeam": "Chicago Cubs",
+    "awayTeamId": "84718555-3735-403f-92ad-702a8636ec2d",
+    "homeTeamId": "0e70b859-7c72-44b5-9359-ca6ec48a664a",
+    "sport": "mlb",
+    "matchTime": "2026-05-23T18:20:00+00:00"
+  },
+  "speculation": {
+    "mode": "existing",
+    "speculationId": "11",
+    "creationFee": {
+      "applies": false,
+      "condition": "never",
+      "totalFeeWei6": "0",
+      "totalFeeUSDC": "0.000000",
+      "takerShareWei6": "0",
+      "takerShareUSDC": "0.000000",
+      "makerShareWei6": "0",
+      "makerShareUSDC": "0.000000",
+      "viewerShareWei6": "0",
+      "viewerShareUSDC": "0.000000",
+      "spender": null,
+      "spenderLabel": null,
+      "approvalPurpose": null,
+      "approvalNeeded": false,
+      "note": "Speculation #11 already exists — no creation fee on this match."
+    }
+  },
+  "commitment": {
+    "commitmentHash": "0xbe49b5a6cfe9df96609268c02305cfabdd4f2321f1f20484e316c42d2acf49d4",
+    "maker": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+    "contestId": "19",
+    "scorer": "0xd846b7fdbd8c9f67d1580b2c6a8bd7fdcb15390b",
+    "lineTicks": 0,
+    "positionType": 0,
+    "oddsTick": 239,
+    "marketType": "moneyline",
+    "riskAmount": "250000",
+    "filledRiskAmount": "0",
+    "remainingRiskAmount": "250000",
+    "nonce": "1779554270",
+    "expiry": "2026-05-23T16:39:48+00:00",
+    "speculationKey": "0x987e85d077b5200b1ba73f74ebf24ff049e4fa006d012b3a68e1d9487494fd8a",
+    "signatureOmitted": true,
+    "status": "open",
+    "storedStatus": "open",
+    "source": "agent",
+    "network": "polygon",
+    "nonceInvalidated": false,
+    "createdAt": "2026-05-23T16:37:49.893521+00:00",
+    "isLive": true
+  },
+  "sideSummary": "Chicago Cubs",
+  "warnings": [
+    {
+      "code": "expires-soon",
+      "message": "Commitment expires soon (within the 5-minute window).",
+      "severity": "warning"
+    },
+    {
+      "code": "partial-fill",
+      "message": "Taker risk is less than the maker remaining capacity — this will be a partial fill.",
+      "severity": "info"
+    }
+  ],
+  "errors": [],
+  "effects": [
+    {
+      "type": "transaction",
+      "purpose": "match-commitment",
+      "ok": true,
+      "txHash": "0x678b85a6c76f8b7c9ba4932df4f69eb1e7192b1b6c34e381c7bdf5ecc82ec3cb",
+      "blockNumber": "87322656",
+      "status": "confirmed"
+    }
+  ],
+  "preview": {
+    "commitment": {
+      "commitmentHash": "0xbe49b5a6cfe9df96609268c02305cfabdd4f2321f1f20484e316c42d2acf49d4",
+      "maker": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "contestId": "19",
+      "scorer": "0xd846b7fdbd8c9f67d1580b2c6a8bd7fdcb15390b",
+      "lineTicks": 0,
+      "positionType": 0,
+      "oddsTick": 239,
+      "marketType": "moneyline",
+      "riskAmount": "250000",
+      "filledRiskAmount": "0",
+      "remainingRiskAmount": "250000",
+      "nonce": "1779554270",
+      "expiry": "2026-05-23T16:39:48+00:00",
+      "speculationKey": "0x987e85d077b5200b1ba73f74ebf24ff049e4fa006d012b3a68e1d9487494fd8a",
+      "signatureOmitted": true,
+      "status": "open",
+      "storedStatus": "open",
+      "source": "agent",
+      "network": "polygon",
+      "nonceInvalidated": false,
+      "createdAt": "2026-05-23T16:37:49.893521+00:00",
+      "isLive": true
+    },
+    "chainId": 137,
+    "verifyingContract": "0x1B93579B044f0eE3c4C8a9F479A323DeF7770712",
+    "maker": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+    "taker": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+    "selfMatch": false,
+    "contest": {
+      "contestId": "19",
+      "label": "Houston Astros @ Chicago Cubs, 2026-05-23 — MLB",
+      "awayTeam": "Houston Astros",
+      "homeTeam": "Chicago Cubs",
+      "awayTeamId": "84718555-3735-403f-92ad-702a8636ec2d",
+      "homeTeamId": "0e70b859-7c72-44b5-9359-ca6ec48a664a",
+      "sport": "mlb",
+      "matchTime": "2026-05-23T18:20:00+00:00"
+    },
+    "market": {
+      "type": "moneyline",
+      "lineTicks": 0,
+      "makerLineDisplay": null,
+      "takerLineDisplay": null
+    },
+    "makerSide": {
+      "positionType": 0,
+      "resolvedLabel": "Houston Astros",
+      "role": "away"
+    },
+    "takerSide": {
+      "positionType": 1,
+      "resolvedLabel": "Chicago Cubs",
+      "role": "home"
+    },
+    "odds": {
+      "oddsTick": 239,
+      "makerDecimal": "2.39",
+      "makerAmerican": "+139",
+      "takerOddsTick": 172,
+      "takerDecimal": "1.72",
+      "takerAmerican": "-139"
+    },
+    "economics": {
+      "oddsTick": 239,
+      "remainingMakerRiskWei6": "250000",
+      "remainingMakerRiskUSDC": "0.250000",
+      "takerDesiredRiskWei6": "250000",
+      "takerDesiredRiskUSDC": "0.250000",
+      "fillMakerRiskWei6": "179800",
+      "fillMakerRiskUSDC": "0.179800",
+      "takerRiskWei6": "249922",
+      "takerRiskUSDC": "0.249922",
+      "takerProfitOnWinUSDC": "0.179800",
+      "takerReturnOnWinUSDC": "0.429722"
+    },
+    "expiry": {
+      "unixSec": "1779554388",
+      "iso": "2026-05-23T16:39:48.000Z",
+      "expired": false,
+      "expiresSoonMinutes": 0
+    },
+    "speculation": {
+      "mode": "existing",
+      "speculationId": "11",
+      "speculationKey": "0x987e85d077b5200b1ba73f74ebf24ff049e4fa006d012b3a68e1d9487494fd8a",
+      "creationFee": {
+        "applies": false,
+        "condition": "never",
+        "totalFeeWei6": "0",
+        "totalFeeUSDC": "0.000000",
+        "takerShareWei6": "0",
+        "takerShareUSDC": "0.000000",
+        "makerShareWei6": "0",
+        "makerShareUSDC": "0.000000",
+        "viewerShareWei6": "0",
+        "viewerShareUSDC": "0.000000",
+        "spender": null,
+        "spenderLabel": null,
+        "approvalPurpose": null,
+        "approvalNeeded": false,
+        "note": "Speculation #11 already exists — no creation fee on this match."
+      }
+    },
+    "approvals": [
+      {
+        "token": "USDC",
+        "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c",
+        "required": "249922",
+        "current": "24340950",
+        "needsApproval": false,
+        "purpose": "commitment-risk"
+      }
+    ],
+    "nonceInvalidated": false,
+    "isLive": true,
+    "warnings": [
+      "expires-soon",
+      "partial-fill"
+    ],
+    "you": {
+      "role": "taker",
+      "address": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+      "backing": "Chicago Cubs",
+      "odds": {
+        "decimal": "1.72",
+        "american": "-139",
+        "oddsTick": 172
+      },
+      "risk": {
+        "wei6": "249922",
+        "usdc": "0.249922"
+      },
+      "profit": {
+        "wei6": "179800",
+        "usdc": "0.179800"
+      },
+      "totalReturn": {
+        "wei6": "429722",
+        "usdc": "0.429722"
+      }
+    },
+    "counterparty": {
+      "role": "maker",
+      "address": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "backing": "Houston Astros",
+      "odds": {
+        "decimal": "2.39",
+        "american": "+139",
+        "oddsTick": 239
+      },
+      "risk": {
+        "wei6": "179800",
+        "usdc": "0.179800"
+      },
+      "profit": {
+        "wei6": "249922",
+        "usdc": "0.249922"
+      },
+      "totalReturn": {
+        "wei6": "429722",
+        "usdc": "0.429722"
+      }
+    },
+    "outcomes": [
+      {
+        "condition": "Chicago Cubs wins",
+        "result": "win",
+        "payoutUSDC": "0.179800"
+      },
+      {
+        "condition": "Houston Astros wins",
+        "result": "lose",
+        "payoutUSDC": "-0.249922"
+      }
+    ],
+    "tradeAction": "trade-only"
+  }
+}
