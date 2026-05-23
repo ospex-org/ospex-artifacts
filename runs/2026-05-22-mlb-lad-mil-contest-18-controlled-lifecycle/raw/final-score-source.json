@@ -1,0 +1,27 @@
+{
+  "capturedAt": "2026-05-23T02:51:27.091163+00:00",
+  "source": "MLB Stats API",
+  "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=05/22/2026&hydrate=team,linescore",
+  "gamePk": 823788,
+  "gameDate": "2026-05-22T23:40:00Z",
+  "status": "Final",
+  "abstractGameState": "Final",
+  "away": "Los Angeles Dodgers",
+  "home": "Milwaukee Brewers",
+  "awayScore": 1,
+  "homeScore": 5,
+  "lineScoreTotals": {
+    "home": {
+      "runs": 5,
+      "hits": 9,
+      "errors": 1,
+      "leftOnBase": 5
+    },
+    "away": {
+      "runs": 1,
+      "hits": 3,
+      "errors": 0,
+      "leftOnBase": 9
+    }
+  }
+}
