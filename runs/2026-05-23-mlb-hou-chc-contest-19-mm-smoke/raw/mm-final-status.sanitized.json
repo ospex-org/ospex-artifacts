@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "stateIntegrity": "loaded",
+  "stateLossAssessment": {
+    "holdQuoting": false,
+    "reason": "state loaded cleanly"
+  },
+  "lastFlushedAt": "2026-05-23T16:43:52.379Z",
+  "commitments": {
+    "total": 6,
+    "byLifecycle": {
+      "visibleOpen": 0,
+      "softCancelled": 2,
+      "partiallyFilled": 0,
+      "filled": 0,
+      "expired": 4,
+      "authoritativelyInvalidated": 0
+    },
+    "distinctContestsNonTerminal": 1
+  },
+  "positions": {
+    "total": 1,
+    "byStatus": {
+      "active": {
+        "count": 1,
+        "ownRiskWei6": "179800"
+      },
+      "pendingSettle": {
+        "count": 0,
+        "ownRiskWei6": "0"
+      },
+      "claimable": {
+        "count": 0,
+        "ownRiskWei6": "0"
+      },
+      "claimed": {
+        "count": 0,
+        "ownRiskWei6": "0"
+      }
+    }
+  },
+  "dailyCounters": {
+    "today": "2026-05-23",
+    "todayGasPolWei": "0",
+    "todayFeeUsdcWei6": "0",
+    "lifetimeGasPolWei": "0",
+    "lifetimeFeeUsdcWei6": "0"
+  },
+  "pnl": {
+    "realizedUsdcWei6": "0",
+    "unrealizedUsdcWei6": "0",
+    "asOfUnixSec": 0
+  },
+  "makerAddress": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+  "makerAddressSource": "flag",
+  "livePositionTotals": {
+    "activeCount": 1,
+    "pendingSettleCount": 0,
+    "claimableCount": 0,
+    "claimablePayoutWei6": "0",
+    "pendingSettlePayoutWei6": "0"
+  },
+  "livePositionsSkipReason": null
+}

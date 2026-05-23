@@ -1,0 +1,549 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-05-23T22:09:42Z",
+  "beforeScore": {
+    "contestStatus": "verified"
+  },
+  "afterScorePositionStatus": {
+    "ospex-stage-maker-a": {
+      "schemaVersion": 2,
+      "ok": true,
+      "action": "positions.status",
+      "stage": "read",
+      "network": "polygon",
+      "chainId": 137,
+      "generatedAt": "2026-05-23T21:54:29.499Z",
+      "cliVersion": "0.3.0",
+      "sdkVersion": "0.3.0",
+      "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "walletRole": "subject",
+      "signer": null,
+      "requiresSignature": false,
+      "requiresTransaction": false,
+      "approvalRequirements": [],
+      "estimatedCosts": null,
+      "risk": null,
+      "payout": null,
+      "contest": null,
+      "speculation": null,
+      "commitment": null,
+      "sideSummary": null,
+      "warnings": [],
+      "errors": [],
+      "effects": [],
+      "nextCommands": [],
+      "payload": {
+        "active": [],
+        "pendingSettle": [
+          {
+            "positionId": "11_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_0",
+            "speculationId": "11",
+            "positionType": 0,
+            "team": "Houston Astros",
+            "opponent": "Chicago Cubs",
+            "market": "moneyline",
+            "oddsDecimal": 2,
+            "riskAmountUSDC": 0.25,
+            "profitAmountUSDC": 0.25,
+            "result": "won",
+            "predictedWinSide": "away",
+            "estimatedPayoutUSDC": 0.5,
+            "estimatedPayoutWei6": "500000"
+          }
+        ],
+        "claimable": [],
+        "totals": {
+          "activeCount": 0,
+          "pendingSettleCount": 1,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0.5,
+          "pendingSettlePayoutWei6": "500000"
+        }
+      }
+    },
+    "mm-shakeout-maker-a": {
+      "schemaVersion": 2,
+      "ok": true,
+      "action": "positions.status",
+      "stage": "read",
+      "network": "polygon",
+      "chainId": 137,
+      "generatedAt": "2026-05-23T21:54:35.255Z",
+      "cliVersion": "0.3.0",
+      "sdkVersion": "0.3.0",
+      "wallet": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "walletRole": "subject",
+      "signer": null,
+      "requiresSignature": false,
+      "requiresTransaction": false,
+      "approvalRequirements": [],
+      "estimatedCosts": null,
+      "risk": null,
+      "payout": null,
+      "contest": null,
+      "speculation": null,
+      "commitment": null,
+      "sideSummary": null,
+      "warnings": [],
+      "errors": [],
+      "effects": [],
+      "nextCommands": [],
+      "payload": {
+        "active": [],
+        "pendingSettle": [
+          {
+            "positionId": "11_0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2_0",
+            "speculationId": "11",
+            "positionType": 0,
+            "team": "Houston Astros",
+            "opponent": "Chicago Cubs",
+            "market": "moneyline",
+            "oddsDecimal": 2.3899999999999997,
+            "riskAmountUSDC": 0.1798,
+            "profitAmountUSDC": 0.249922,
+            "result": "won",
+            "predictedWinSide": "away",
+            "estimatedPayoutUSDC": 0.429722,
+            "estimatedPayoutWei6": "429722"
+          }
+        ],
+        "claimable": [],
+        "totals": {
+          "activeCount": 0,
+          "pendingSettleCount": 1,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0.429722,
+          "pendingSettlePayoutWei6": "429722"
+        }
+      }
+    },
+    "mm-shakeout-flow-a": {
+      "schemaVersion": 2,
+      "ok": true,
+      "action": "positions.status",
+      "stage": "read",
+      "network": "polygon",
+      "chainId": 137,
+      "generatedAt": "2026-05-23T21:54:38.131Z",
+      "cliVersion": "0.3.0",
+      "sdkVersion": "0.3.0",
+      "wallet": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+      "walletRole": "subject",
+      "signer": null,
+      "requiresSignature": false,
+      "requiresTransaction": false,
+      "approvalRequirements": [],
+      "estimatedCosts": null,
+      "risk": null,
+      "payout": null,
+      "contest": null,
+      "speculation": null,
+      "commitment": null,
+      "sideSummary": null,
+      "warnings": [],
+      "errors": [],
+      "effects": [],
+      "nextCommands": [],
+      "payload": {
+        "active": [],
+        "pendingSettle": [],
+        "claimable": [],
+        "totals": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      }
+    }
+  },
+  "stageMakerAClaimAll": {
+    "schemaVersion": 2,
+    "ok": true,
+    "action": "claim-all",
+    "stage": "execute",
+    "network": "polygon",
+    "chainId": 137,
+    "generatedAt": "2026-05-23T21:55:02.525Z",
+    "cliVersion": "0.3.0",
+    "sdkVersion": "0.3.0",
+    "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "walletRole": "signer",
+    "signer": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "requiresSignature": false,
+    "requiresTransaction": false,
+    "approvalRequirements": [],
+    "estimatedCosts": null,
+    "risk": null,
+    "payout": {
+      "profit": {
+        "wei6": "500000",
+        "usdc": "0.500000"
+      },
+      "totalReturn": {
+        "wei6": "500000",
+        "usdc": "0.500000"
+      }
+    },
+    "contest": null,
+    "speculation": null,
+    "commitment": null,
+    "sideSummary": null,
+    "warnings": [],
+    "errors": [],
+    "effects": [
+      {
+        "type": "transaction",
+        "purpose": "settle-speculation",
+        "ok": true,
+        "txHash": "0xfd324a2fc82ab531f2dba7fae513204da92c8d16fb4ba9fde20ae038d8f32cab",
+        "status": "confirmed"
+      },
+      {
+        "type": "transaction",
+        "purpose": "claim-position",
+        "ok": true,
+        "txHash": "0xa84a002e57cec4b3dff478d1e5317ff16e22c3bd57ea2bb02ba216b9736995db",
+        "status": "confirmed"
+      }
+    ],
+    "nextCommands": [
+      {
+        "id": "verify-position-status",
+        "description": "Verify position status after the claim / settle.",
+        "suggestedFor": "verify",
+        "command": "ospex positions status 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b --json",
+        "argv": [
+          "positions",
+          "status",
+          "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "--json"
+        ],
+        "safeToAutoRun": true
+      }
+    ],
+    "payload": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "dryRun": false,
+      "success": true,
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "totalPayoutWei6": "500000",
+        "totalPayoutUSDC": 0.5
+      },
+      "entries": [
+        {
+          "positionId": "11_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_0",
+          "speculationId": "11",
+          "bucket": "pendingSettle",
+          "description": "Houston Astros moneyline — Won (≈ $0.50, needs settle)",
+          "success": true,
+          "txHashes": [
+            "0xfd324a2fc82ab531f2dba7fae513204da92c8d16fb4ba9fde20ae038d8f32cab",
+            "0xa84a002e57cec4b3dff478d1e5317ff16e22c3bd57ea2bb02ba216b9736995db"
+          ],
+          "payoutUSDC": 0.5,
+          "payoutWei6": "500000",
+          "winSide": "away"
+        }
+      ]
+    }
+  },
+  "mmMakerAFirstClaimAttempt": {
+    "schemaVersion": 2,
+    "ok": false,
+    "action": "claim-all",
+    "stage": "execute",
+    "network": "polygon",
+    "chainId": 137,
+    "generatedAt": "2026-05-23T21:55:05.613Z",
+    "cliVersion": "0.3.0",
+    "sdkVersion": "0.3.0",
+    "wallet": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+    "walletRole": "signer",
+    "signer": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+    "requiresSignature": false,
+    "requiresTransaction": false,
+    "approvalRequirements": [],
+    "estimatedCosts": null,
+    "risk": null,
+    "payout": {
+      "profit": {
+        "wei6": "0",
+        "usdc": "0.000000"
+      },
+      "totalReturn": {
+        "wei6": "0",
+        "usdc": "0.000000"
+      }
+    },
+    "contest": null,
+    "speculation": null,
+    "commitment": null,
+    "sideSummary": null,
+    "warnings": [],
+    "errors": [],
+    "effects": [
+      {
+        "type": "transaction",
+        "purpose": "settle-speculation",
+        "ok": false,
+        "errorCode": "CHAIN_ERROR"
+      }
+    ],
+    "nextCommands": [
+      {
+        "id": "verify-position-status",
+        "description": "Verify position status after the claim / settle.",
+        "suggestedFor": "verify",
+        "command": "ospex positions status 0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2 --json",
+        "argv": [
+          "positions",
+          "status",
+          "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+          "--json"
+        ],
+        "safeToAutoRun": true
+      }
+    ],
+    "payload": {
+      "address": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "dryRun": false,
+      "success": false,
+      "totals": {
+        "claimed": 0,
+        "failed": 1,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      },
+      "entries": [
+        {
+          "positionId": "11_0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2_0",
+          "speculationId": "11",
+          "bucket": "pendingSettle",
+          "description": "Houston Astros moneyline — Won (≈ $0.43, needs settle)",
+          "success": false,
+          "txHashes": [],
+          "error": "Pre-send chain reads failed (estimateGas): Execution reverted for an unknown reason. / Estimate Gas Arguments: /   from:  0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2\n  to:    0xd757387893E779AC35451CeA639a408A537b9a1B\n  data:  0x887109f7000000000000000000000000000000000000000000000000000000000000000b"
+        }
+      ]
+    }
+  },
+  "mmMakerAClaimableAfterRefresh": {
+    "schemaVersion": 2,
+    "ok": true,
+    "action": "positions.status",
+    "stage": "read",
+    "network": "polygon",
+    "chainId": 137,
+    "generatedAt": "2026-05-23T21:55:24.776Z",
+    "cliVersion": "0.3.0",
+    "sdkVersion": "0.3.0",
+    "wallet": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+    "walletRole": "subject",
+    "signer": null,
+    "requiresSignature": false,
+    "requiresTransaction": false,
+    "approvalRequirements": [],
+    "estimatedCosts": null,
+    "risk": null,
+    "payout": null,
+    "contest": null,
+    "speculation": null,
+    "commitment": null,
+    "sideSummary": null,
+    "warnings": [],
+    "errors": [],
+    "effects": [],
+    "nextCommands": [],
+    "payload": {
+      "active": [],
+      "pendingSettle": [],
+      "claimable": [
+        {
+          "positionId": "11_0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2_0",
+          "speculationId": "11",
+          "positionType": 0,
+          "team": "Houston Astros",
+          "opponent": "Chicago Cubs",
+          "market": "moneyline",
+          "oddsDecimal": 2.3899999999999997,
+          "riskAmountUSDC": 0.1798,
+          "profitAmountUSDC": 0.249922,
+          "result": "won",
+          "estimatedPayoutUSDC": 0.429722,
+          "estimatedPayoutWei6": "429722"
+        }
+      ],
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 1,
+        "estimatedPayoutUSDC": 0.429722,
+        "estimatedPayoutWei6": "429722",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      }
+    }
+  },
+  "mmMakerARetryClaimAll": {
+    "schemaVersion": 2,
+    "ok": true,
+    "action": "claim-all",
+    "stage": "execute",
+    "network": "polygon",
+    "chainId": 137,
+    "generatedAt": "2026-05-23T21:55:42.189Z",
+    "cliVersion": "0.3.0",
+    "sdkVersion": "0.3.0",
+    "wallet": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+    "walletRole": "signer",
+    "signer": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+    "requiresSignature": false,
+    "requiresTransaction": false,
+    "approvalRequirements": [],
+    "estimatedCosts": null,
+    "risk": null,
+    "payout": {
+      "profit": {
+        "wei6": "429722",
+        "usdc": "0.429722"
+      },
+      "totalReturn": {
+        "wei6": "429722",
+        "usdc": "0.429722"
+      }
+    },
+    "contest": null,
+    "speculation": null,
+    "commitment": null,
+    "sideSummary": null,
+    "warnings": [],
+    "errors": [],
+    "effects": [
+      {
+        "type": "transaction",
+        "purpose": "claim-position",
+        "ok": true,
+        "txHash": "0xb046ba21f307aba9fe6487fae167213f19c56b68694e682259e09e6365fff245",
+        "status": "confirmed"
+      }
+    ],
+    "nextCommands": [
+      {
+        "id": "verify-position-status",
+        "description": "Verify position status after the claim / settle.",
+        "suggestedFor": "verify",
+        "command": "ospex positions status 0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2 --json",
+        "argv": [
+          "positions",
+          "status",
+          "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+          "--json"
+        ],
+        "safeToAutoRun": true
+      }
+    ],
+    "payload": {
+      "address": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "dryRun": false,
+      "success": true,
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "totalPayoutWei6": "429722",
+        "totalPayoutUSDC": 0.429722
+      },
+      "entries": [
+        {
+          "positionId": "11_0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2_0",
+          "speculationId": "11",
+          "bucket": "claimable",
+          "description": "Houston Astros moneyline — Won (≈ $0.43)",
+          "success": true,
+          "txHashes": [
+            "0xb046ba21f307aba9fe6487fae167213f19c56b68694e682259e09e6365fff245"
+          ],
+          "payoutUSDC": 0.429722,
+          "payoutWei6": "429722"
+        }
+      ]
+    }
+  },
+  "finalPositionStatus": {
+    "ospex-stage-maker-a": {
+      "totals": {},
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0
+    },
+    "ospex-stage-maker-b": {
+      "totals": {},
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0
+    },
+    "mm-shakeout-maker-a": {
+      "totals": {},
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0
+    },
+    "mm-shakeout-flow-a": {
+      "totals": {},
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0
+    }
+  },
+  "finalClaimDryRuns": {
+    "ospex-stage-maker-a": {
+      "ok": true,
+      "entries": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      }
+    },
+    "ospex-stage-maker-b": {
+      "ok": true,
+      "entries": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      }
+    },
+    "mm-shakeout-maker-a": {
+      "ok": true,
+      "entries": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      }
+    },
+    "mm-shakeout-flow-a": {
+      "ok": true,
+      "entries": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      }
+    }
+  }
+}

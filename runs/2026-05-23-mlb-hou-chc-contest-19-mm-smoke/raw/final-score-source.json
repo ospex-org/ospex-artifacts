@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-05-23T22:09:42Z",
+  "source": "MLB Stats API",
+  "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-23&hydrate=team,linescore",
+  "gamePk": 824674,
+  "gameGuid": "8574d811-d8a5-4ad0-893d-18626cd5f27d",
+  "gameDate": "2026-05-23T18:20:00Z",
+  "status": "Final",
+  "abstractGameState": "Final",
+  "away": "Houston Astros",
+  "home": "Chicago Cubs",
+  "awayScore": 3,
+  "homeScore": 0,
+  "lineScoreTotals": {
+    "home": {
+      "runs": 0,
+      "hits": 3,
+      "errors": 0,
+      "leftOnBase": 3
+    },
+    "away": {
+      "runs": 3,
+      "hits": 6,
+      "errors": 0,
+      "leftOnBase": 5
+    }
+  }
+}
