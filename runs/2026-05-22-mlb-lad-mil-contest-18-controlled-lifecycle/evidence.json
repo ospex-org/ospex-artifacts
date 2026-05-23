@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-05-22-mlb-lad-mil-contest-18-controlled-lifecycle",
+  "artifactType": "run",
+  "status": "complete_verified_with_caveats",
+  "title": "Ospex controlled tiny lifecycle: Los Angeles Dodgers @ Milwaukee Brewers, 2026-05-22",
+  "capturedAt": "2026-05-23T02:55:42.862001+00:00",
+  "network": "polygon-mainnet",
+  "scope": {
+    "purpose": "Evening Phase 2 controlled tiny real market lifecycle from public ospex-sdk/ospex-cli v0.3.0 release artifacts.",
+    "marketType": "moneyline",
+    "notes": [
+      "Fresh public v0.3.0 install path, contest create/verify, commitment submit, match/fill, scoring, settlement, claim, and empty post-claim dry-runs were all verified.",
+      "Sensitive operator material, RPC URLs, raw signatures, raw env values, and raw runtime transcripts are intentionally excluded."
+    ]
+  },
+  "releaseUnderTest": {
+    "version": "0.3.0",
+    "artifacts": {
+      "ospex-sdk-0.3.0.tgz": {
+        "sha256": "10a35b0e4b0806476a4709a4a81b60b5c58e16fc1cff45e08aa54fbfadb9d5c1"
+      },
+      "ospex-cli-0.3.0.tgz": {
+        "sha256": "62fdbf2328c65079b8784a802b81dfe6f70e89616103f1f6db01c9f4ee8a85a6"
+      }
+    },
+    "freshInstall": {
+      "environment": "node:22-bookworm clean HOME/OSPEX_HOME harness",
+      "cliVersion": "0.3.0",
+      "npmAuditHighOmitDev": "no high/critical findings; moderate ws/ethers advisory remains non-blocking",
+      "npmAuditSignatures": "37 registry signatures and 16 attestations verified"
+    }
+  },
+  "contest": {
+    "contestId": 18,
+    "gameId": "ab96d499-12de-451d-b547-bddfe12e9a54",
+    "slug": "lad-mil-2026-05-22",
+    "sport": "mlb",
+    "awayTeam": "Los Angeles Dodgers",
+    "homeTeam": "Milwaukee Brewers",
+    "startTime": "2026-05-22T23:40:00+00:00",
+    "contestStatus": "scored",
+    "contestCreatedAt": "2026-05-22T22:32:56+00:00",
+    "verifiedAt": "2026-05-22T22:33:08+00:00",
+    "scoredAt": "2026-05-23T02:51:45+00:00",
+    "speculationId": 10,
+    "finalScore": {
+      "away": 1,
+      "home": 5
+    },
+    "winner": {
+      "team": "Milwaukee Brewers",
+      "protocolWinSide": "home/lower"
+    }
+  },
+  "externalScoreSources": [
+    {
+      "capturedAt": "2026-05-23T02:51:27.091163+00:00",
+      "source": "MLB Stats API",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=05/22/2026&hydrate=team,linescore",
+      "gamePk": 823788,
+      "gameDate": "2026-05-22T23:40:00Z",
+      "status": "Final",
+      "abstractGameState": "Final",
+      "away": "Los Angeles Dodgers",
+      "home": "Milwaukee Brewers",
+      "awayScore": 1,
+      "homeScore": 5,
+      "lineScoreTotals": {
+        "home": {
+          "runs": 5,
+          "hits": 9,
+          "errors": 1,
+          "leftOnBase": 5
+        },
+        "away": {
+          "runs": 1,
+          "hits": 3,
+          "errors": 0,
+          "leftOnBase": 9
+        }
+      }
+    }
+  ],
+  "participants": {
+    "contestCreatorAndMaker": {
+      "label": "ospex-stage-maker-b",
+      "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "explorer": "https://polygonscan.com/address/0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482"
+    },
+    "takerAndWinner": {
+      "label": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+      "explorer": "https://polygonscan.com/address/0x5316fa54c170D1927F30d1a497aC9E85E3826A9B"
+    }
+  },
+  "commitment": {
+    "commitmentHash": "0xd97bc10a8dd2e4f04e226f4b2ad51881203e8b949ff8ca755a6d8da6a9d7df51",
+    "makerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "makerSide": "upper/away/Los Angeles Dodgers",
+    "takerSide": "lower/home/Milwaukee Brewers",
+    "marketType": "moneyline",
+    "positionType": "upper",
+    "oddsTick": 200,
+    "oddsDecimal": "2.00",
+    "riskWei6": "250000",
+    "riskUsdc": "0.25",
+    "filledRiskWei6": "250000",
+    "filledRiskUsdc": "0.25",
+    "remainingRiskWei6": "0",
+    "status": "filled",
+    "expiry": "2026-05-22T23:40:00+00:00",
+    "createdAt": "2026-05-22T22:33:58.960665+00:00",
+    "signatureOmitted": true
+  },
+  "fills": {
+    "controlledFill": {
+      "commitmentHash": "0xd97bc10a8dd2e4f04e226f4b2ad51881203e8b949ff8ca755a6d8da6a9d7df51",
+      "txHash": "0x86ed1b315de3ae764e75f4df987968336b149c4fcbec3b956031ac2c414edbdb",
+      "explorer": "https://polygonscan.com/tx/0x86ed1b315de3ae764e75f4df987968336b149c4fcbec3b956031ac2c414edbdb",
+      "blockNumber": 87285465,
+      "makerRiskWei6": "250000",
+      "makerRiskUsdc": "0.25",
+      "takerRiskWei6": "250000",
+      "takerRiskUsdc": "0.25",
+      "makerSide": "upper/away/Dodgers",
+      "takerSide": "lower/home/Brewers",
+      "oddsTick": 200
+    }
+  },
+  "positions": {
+    "makerLoser": {
+      "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "side": "upper/away/Dodgers",
+      "riskUsdc": "0.25",
+      "profitFieldMeaning": "potential profit if this side had won; not realized PnL",
+      "profitUsdc": "0.25",
+      "claimed": false,
+      "claimedUsdc": null,
+      "outcome": "lost",
+      "realizedPnlUsdc": "-0.25"
+    },
+    "takerWinner": {
+      "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+      "side": "lower/home/Brewers",
+      "riskUsdc": "0.25",
+      "profitUsdc": "0.25",
+      "claimed": true,
+      "claimedUsdc": "0.5",
+      "claimedWei6": "500000",
+      "outcome": "won",
+      "realizedPnlUsdc": "0.25"
+    }
+  },
+  "transactions": {
+    "contestCreate": {
+      "txHash": "0x0e6fbc08883579f136cafed64ca22e03637c4bf8a12714bb5306d0f9c97ead92",
+      "transactionHash": "0x0e6fbc08883579f136cafed64ca22e03637c4bf8a12714bb5306d0f9c97ead92",
+      "status": "0x1",
+      "blockNumber": 87285410,
+      "gasUsed": 1379908,
+      "effectiveGasPriceWei": "280091419157",
+      "gasCostPOL": "0.38650039002609754",
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "to": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+      "explorerUrl": "https://polygonscan.com/tx/0x0e6fbc08883579f136cafed64ca22e03637c4bf8a12714bb5306d0f9c97ead92",
+      "explorer": "https://polygonscan.com/tx/0x0e6fbc08883579f136cafed64ca22e03637c4bf8a12714bb5306d0f9c97ead92"
+    },
+    "fill": {
+      "txHash": "0x86ed1b315de3ae764e75f4df987968336b149c4fcbec3b956031ac2c414edbdb",
+      "transactionHash": "0x86ed1b315de3ae764e75f4df987968336b149c4fcbec3b956031ac2c414edbdb",
+      "status": "0x1",
+      "blockNumber": 87285465,
+      "gasUsed": 677578,
+      "effectiveGasPriceWei": "284564420562",
+      "gasCostPOL": "0.192814590955558834",
+      "from": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "to": "0x1b93579b044f0ee3c4c8a9f479a323def7770712",
+      "explorerUrl": "https://polygonscan.com/tx/0x86ed1b315de3ae764e75f4df987968336b149c4fcbec3b956031ac2c414edbdb",
+      "explorer": "https://polygonscan.com/tx/0x86ed1b315de3ae764e75f4df987968336b149c4fcbec3b956031ac2c414edbdb"
+    },
+    "scoreRequest": {
+      "txHash": "0x4190320ea7b3b0887a3b4a3f5e5bf0fa0805beefd5e4b83f1eb41266a8a2fd8c",
+      "transactionHash": "0x4190320ea7b3b0887a3b4a3f5e5bf0fa0805beefd5e4b83f1eb41266a8a2fd8c",
+      "status": "0x1",
+      "blockNumber": 87294277,
+      "gasUsed": 664329,
+      "effectiveGasPriceWei": "284218950602",
+      "gasCostPOL": "0.188814891234476062",
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "to": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+      "explorerUrl": "https://polygonscan.com/tx/0x4190320ea7b3b0887a3b4a3f5e5bf0fa0805beefd5e4b83f1eb41266a8a2fd8c",
+      "explorer": "https://polygonscan.com/tx/0x4190320ea7b3b0887a3b4a3f5e5bf0fa0805beefd5e4b83f1eb41266a8a2fd8c"
+    },
+    "settle": {
+      "txHash": "0xbbb07d86b500ba5acc1dea492688cec99b3d091f4c240ebc5779bc03a0a40561",
+      "transactionHash": "0xbbb07d86b500ba5acc1dea492688cec99b3d091f4c240ebc5779bc03a0a40561",
+      "status": "0x1",
+      "blockNumber": 87294294,
+      "gasUsed": 155619,
+      "effectiveGasPriceWei": "282054877210",
+      "gasCostPOL": "0.043893097936542988",
+      "from": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "to": "0xd757387893e779ac35451cea639a408a537b9a1b",
+      "explorerUrl": "https://polygonscan.com/tx/0xbbb07d86b500ba5acc1dea492688cec99b3d091f4c240ebc5779bc03a0a40561",
+      "explorer": "https://polygonscan.com/tx/0xbbb07d86b500ba5acc1dea492688cec99b3d091f4c240ebc5779bc03a0a40561"
+    },
+    "claim": {
+      "txHash": "0x2977ba27898ec01070693452b3ef1a81ece2792e54c93172fe872e4d83442b5f",
+      "transactionHash": "0x2977ba27898ec01070693452b3ef1a81ece2792e54c93172fe872e4d83442b5f",
+      "status": "0x1",
+      "blockNumber": 87294316,
+      "gasUsed": 123415,
+      "effectiveGasPriceWei": "285587239293",
+      "gasCostPOL": "0.035245749137345593",
+      "from": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "to": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+      "explorerUrl": "https://polygonscan.com/tx/0x2977ba27898ec01070693452b3ef1a81ece2792e54c93172fe872e4d83442b5f",
+      "explorer": "https://polygonscan.com/tx/0x2977ba27898ec01070693452b3ef1a81ece2792e54c93172fe872e4d83442b5f"
+    }
+  },
+  "lifecycleChecks": {
+    "freshPublicV030Install": true,
+    "contestCreated": true,
+    "contestVerified": true,
+    "commitmentSubmitted": true,
+    "commitmentMatched": true,
+    "positionsCreated": true,
+    "postgameScore": true,
+    "speculationSettled": true,
+    "winningPositionsClaimed": true,
+    "finalClaimDryRunsEmpty": true,
+    "makerFinalClaimableCount": 0,
+    "takerFinalClaimableCount": 0,
+    "visibleLiveCommitmentsAfterFill": 0
+  },
+  "finalDryRuns": {
+    "makerClaimAllEntries": 0,
+    "takerClaimAllEntries": 0,
+    "makerPositionStatusClaimableCount": 0,
+    "takerPositionStatusClaimableCountAfterRefresh": 0
+  },
+  "knownCaveats": [
+    "Initial contest-create attempt with ospex-stage-maker-a returned CHAIN_ERROR before a tx hash; no contest was created. This matched low POL headroom and was resolved by role-swapping to ospex-stage-maker-b for contest creation/maker duties; Vince later topped up ospex-stage-maker-a and doctor rechecked green.",
+    "Immediately after claim, positions status briefly still showed the winning claimable entry while claim-all dry-run was already empty; a refresh showed claimableCount=0 and positions list showed speculation 10 claimed=true. Treat as short API/indexer projection lag, not a claim failure.",
+    "The public artifact intentionally excludes raw signatures, wallet password files, RPC URLs, and private runtime transcripts."
+  ],
+  "postPregameReadinessChecks": {
+    "stageMakerAAfterPolTopup": {
+      "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+      "doctorOk": true,
+      "ready": {
+        "matchCommitments": true,
+        "submitCommitments": true,
+        "createContests": true
+      },
+      "balances": {
+        "POL": "15.20519",
+        "USDC": "8.9442",
+        "LINK": "0.26"
+      },
+      "allowances": {
+        "PositionModuleUSDC": "12.3971",
+        "TreasuryModuleUSDC": "1.25",
+        "OracleModuleLINK": "0.26"
+      }
+    }
+  },
+  "rawFiles": [
+    "raw/indexer-snapshot.sanitized.json",
+    "raw/tx-receipts.summary.json",
+    "raw/final-score-source.json"
+  ]
+}

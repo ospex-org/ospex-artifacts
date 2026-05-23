@@ -1,10 +1,11 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-05-22T18:40:20Z",
+  "generatedAt": "2026-05-23T02:56:42Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
+      "runs/2026-05-22-mlb-lad-mil-contest-18-controlled-lifecycle/evidence.json",
       "runs/2026-05-20-mlb-three-game-mm-shakeout-contests-14-16/evidence.json",
       "runs/2026-05-19-mlb-atl-mia-contest-13/evidence.json"
     ],
@@ -14,6 +15,17 @@
     "daily-digest": []
   },
   "recentArtifacts": [
+    {
+      "artifactId": "2026-05-22-mlb-lad-mil-contest-18-controlled-lifecycle",
+      "artifactType": "run",
+      "dataPath": "runs/2026-05-22-mlb-lad-mil-contest-18-controlled-lifecycle/evidence.json",
+      "date": "2026-05-22",
+      "network": "polygon",
+      "rawPath": "runs/2026-05-22-mlb-lad-mil-contest-18-controlled-lifecycle/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-05-22-mlb-lad-mil-contest-18-controlled-lifecycle/summary.md",
+      "publishedAt": "2026-05-23T02:56:42Z"
+    },
     {
       "artifactId": "2026-05-22-mlb-hou-chc-release-acceptance",
       "artifactType": "release-acceptance",
@@ -54,9 +66,9 @@
       "scope": "year",
       "year": 2026,
       "path": "archive/2026/index.json",
-      "artifactCount": 3,
+      "artifactCount": 4,
       "oldestPublishedAt": "2026-05-20T02:48:35Z",
-      "newestPublishedAt": "2026-05-22T18:18:26Z"
+      "newestPublishedAt": "2026-05-23T02:56:42Z"
     }
   ]
 }
