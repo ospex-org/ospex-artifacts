@@ -1,0 +1,456 @@
+{
+  "acceptanceChecks": {
+    "cleanGreenAcceptanceEvidence": false,
+    "contestCreated": true,
+    "contestVerified": true,
+    "controlledPartialFillExecuted": true,
+    "externalFinalScoreObserved": true,
+    "mmQuotedLive": true,
+    "onchainCancelTelemetryCount": 0,
+    "partialRemainderRetainedTelemetryCount": 0,
+    "protocolContestScoredAtCapture": false,
+    "seedCommitmentMatched": true,
+    "speculationSettledAtCapture": false,
+    "winnerClaimedAtCapture": false
+  },
+  "artifactId": "2026-05-24-mlb-tex-laa-contest-21-mm-partial-smoke",
+  "artifactType": "run",
+  "capturedAt": "2026-05-24T06:04:49Z",
+  "chainId": 137,
+  "commitments": {
+    "controlledMmPartialFillTarget": {
+      "bookVisible": false,
+      "commitmentHash": "0x05879daacb266b498028c511ba51b71644337081f9c32e84049f16328df2373d",
+      "indexedFilledRiskWei6": "37500",
+      "indexedRemainingRiskWei6": "212500",
+      "makerAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "makerSide": "upper/away/Texas Rangers",
+      "marketType": "moneyline",
+      "mismatchNote": "position_fills records a 37,500-wei6 maker fill, while commitments.show / commitments table report cancelled/open-style state with filledRiskAmount=0.",
+      "oddsTick": 180,
+      "riskUsdc": "0.25",
+      "riskWei6": "250000",
+      "signatureOmitted": true,
+      "storedStatus": "partially_filled",
+      "takerSide": "lower/home/Los Angeles Angels"
+    },
+    "seedCommitment": {
+      "bookVisible": true,
+      "commitmentHash": "0x1a79ac4d2b28b49b9efba9df91c0c8eff0ac32faf0923aa2af4c0f72eca23b52",
+      "filledRiskWei6": "20000",
+      "makerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "makerSide": "upper/away/Texas Rangers",
+      "marketType": "moneyline",
+      "oddsTick": 200,
+      "riskUsdc": "0.02",
+      "riskWei6": "20000",
+      "signatureOmitted": true,
+      "status": "filled",
+      "takerSide": "lower/home/Los Angeles Angels"
+    }
+  },
+  "contest": {
+    "awayTeam": "Texas Rangers",
+    "contestCreatedAt": "2026-05-23T23:09:26+00:00",
+    "contestId": 21,
+    "contestStatus": "verified",
+    "externalFinalScore": {
+      "away": 2,
+      "home": 5
+    },
+    "externalWinner": {
+      "protocolWinSide": "home/lower",
+      "team": "Los Angeles Angels"
+    },
+    "gameId": "347490c7-7f19-4d24-b570-b85ff16ae4a5",
+    "homeTeam": "Los Angeles Angels",
+    "protocolScoreAtCapture": {
+      "away": null,
+      "home": null
+    },
+    "scoredAt": null,
+    "slug": "tex-laa-2026-05-24",
+    "speculationId": 12,
+    "sport": "mlb",
+    "startTime": "2026-05-24T02:05:00+00:00",
+    "verifiedAt": "2026-05-23T23:09:38+00:00"
+  },
+  "date": "2026-05-24",
+  "externalScoreSources": [
+    {
+      "abstractGameState": "Final",
+      "away": "Texas Rangers",
+      "awayScore": 2,
+      "capturedAt": "2026-05-24T06:00:03Z",
+      "gameDate": "2026-05-24T02:05:00Z",
+      "gameGuid": "547e618a-eee2-45ab-9940-81d14a997da6",
+      "gamePk": 824030,
+      "home": "Los Angeles Angels",
+      "homeScore": 5,
+      "lineScoreTotals": {
+        "away": {
+          "errors": 1,
+          "hits": 8,
+          "leftOnBase": 11,
+          "runs": 2
+        },
+        "home": {
+          "errors": 0,
+          "hits": 8,
+          "leftOnBase": 7,
+          "runs": 5
+        }
+      },
+      "schemaVersion": 1,
+      "source": "MLB Stats API",
+      "status": "Final",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-23&hydrate=team,linescore"
+    }
+  ],
+  "fills": {
+    "controlledMmPartialFill": {
+      "commitmentHash": "0x05879daacb266b498028c511ba51b71644337081f9c32e84049f16328df2373d",
+      "explorer": "https://polygonscan.com/tx/0x4a48490762ce8599beb23cfadbc69b6ca066202577c3ca3ef62a585648d26614",
+      "makerRiskUsdc": "0.0375",
+      "makerRiskWei6": "37500",
+      "makerSide": "upper/away/Rangers",
+      "oddsTick": 180,
+      "takerRiskUsdc": "0.03",
+      "takerRiskWei6": "30000",
+      "takerSide": "lower/home/Angels",
+      "txHash": "0x4a48490762ce8599beb23cfadbc69b6ca066202577c3ca3ef62a585648d26614"
+    },
+    "seedFill": {
+      "commitmentHash": "0x1a79ac4d2b28b49b9efba9df91c0c8eff0ac32faf0923aa2af4c0f72eca23b52",
+      "explorer": "https://polygonscan.com/tx/0x793dd7f35538427fd0547ad0eeef5b2678914651be4fac4decc56a2f01cb9640",
+      "makerRiskUsdc": "0.02",
+      "makerRiskWei6": "20000",
+      "makerSide": "upper/away/Rangers",
+      "oddsTick": 200,
+      "takerRiskUsdc": "0.02",
+      "takerRiskWei6": "20000",
+      "takerSide": "lower/home/Angels",
+      "txHash": "0x793dd7f35538427fd0547ad0eeef5b2678914651be4fac4decc56a2f01cb9640"
+    }
+  },
+  "marketMaker": {
+    "apiOrderbookExposureFinal": {
+      "contestOrderbookRows": 0,
+      "makerCommitmentsListRows": 0,
+      "visibleOpenFromMmStatus": 0
+    },
+    "eventCounts": {
+      "approval": 0,
+      "candidate": 2,
+      "claim": 0,
+      "competitiveness-unavailable": 0,
+      "degraded": 0,
+      "error": 0,
+      "expire": 0,
+      "fair-value": 0,
+      "fill": 1,
+      "kill": 2,
+      "nonce-floor-raise": 0,
+      "onchain-cancel": 0,
+      "position-transition": 0,
+      "quote-competitiveness": 8,
+      "quote-intent": 6,
+      "replace": 2,
+      "risk-verdict": 6,
+      "settle": 0,
+      "soft-cancel": 2,
+      "submit": 2,
+      "tick-start": 9,
+      "would-replace": 0,
+      "would-soft-cancel": 0,
+      "would-submit": 2
+    },
+    "finalStatus": {
+      "commitments": {
+        "byLifecycle": {
+          "authoritativelyInvalidated": 0,
+          "expired": 0,
+          "filled": 0,
+          "partiallyFilled": 0,
+          "softCancelled": 4,
+          "visibleOpen": 0
+        },
+        "distinctContestsNonTerminal": 1,
+        "total": 4
+      },
+      "dailyCounters": {
+        "lifetimeFeeUsdcWei6": "0",
+        "lifetimeGasPolWei": "0",
+        "today": "2026-05-23",
+        "todayFeeUsdcWei6": "0",
+        "todayGasPolWei": "0"
+      },
+      "lastFlushedAt": "2026-05-23T23:22:36.311Z",
+      "lastRunId": null,
+      "livePositionTotals": {
+        "activeCount": 1,
+        "claimableCount": 0,
+        "claimablePayoutWei6": "0",
+        "pendingSettleCount": 0,
+        "pendingSettlePayoutWei6": "0"
+      },
+      "livePositionsSkipReason": null,
+      "makerAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "makerAddressSource": "flag",
+      "pnl": {
+        "asOfUnixSec": 0,
+        "realizedUsdcWei6": "0",
+        "unrealizedUsdcWei6": "0"
+      },
+      "positions": {
+        "byStatus": {
+          "active": {
+            "count": 1,
+            "ownRiskWei6": "37500"
+          },
+          "claimable": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "claimed": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "pendingSettle": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          }
+        },
+        "total": 1
+      },
+      "schemaVersion": 1,
+      "stateIntegrity": "loaded",
+      "stateLossAssessment": {
+        "holdQuoting": false,
+        "reason": "state loaded cleanly"
+      }
+    },
+    "liveMetrics": {
+      "fills": {
+        "fillRate": 0.0375,
+        "filledUsdcWei6": "37500",
+        "quotedUsdcWei6": "1000000"
+      },
+      "gas": {
+        "byKind": {
+          "approval": "0",
+          "claim": "0",
+          "onchainCancel": "0",
+          "settle": "0"
+        },
+        "totalPolWei": "0",
+        "totalUsdcEquivWei6": "0"
+      },
+      "realizedPnl": {
+        "claimedProfitUsdcWei6": "0",
+        "lostCount": 0,
+        "netUsdcWei6": "0",
+        "pushCount": 0,
+        "realizedLossUsdcWei6": "0",
+        "unsettledCount": 1,
+        "wonCount": 0,
+        "wonUnclaimedCount": 0
+      },
+      "settlements": {
+        "claimCount": 0,
+        "settleCount": 0,
+        "totalClaimedPayoutWei6": "0"
+      },
+      "totalFeeUsdcWei6": "0"
+    },
+    "liveWindow": {
+      "firstEventAt": "2026-05-23T23:17:09.895Z",
+      "lastEventAt": "2026-05-23T23:22:36.311Z"
+    },
+    "quoteCompetitiveness": {
+      "atOrInsideBookCount": 8,
+      "atOrInsideBookRate": 1,
+      "samples": 8,
+      "unavailable": 0,
+      "vsReferenceTicks": {
+        "max": 1,
+        "mean": 0,
+        "min": -1,
+        "p50": -1
+      }
+    },
+    "runIds": [
+      "2026-05-23T23-17-09-893Z-s0rjux",
+      "2026-05-23T23-19-28-312Z-5lebzc"
+    ],
+    "ticks": 9
+  },
+  "network": "polygon-mainnet",
+  "participants": {
+    "contestCreatorAndSeedMaker": {
+      "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "explorer": "https://polygonscan.com/address/0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "label": "ospex-stage-maker-b"
+    },
+    "controlledTakerAndFinalWinner": {
+      "address": "0x16dC5d67d080A5521ef2C79680DBFc2aBf724d30",
+      "explorer": "https://polygonscan.com/address/0x16dC5d67d080A5521ef2C79680DBFc2aBf724d30",
+      "label": "ospex-flow-a"
+    },
+    "mmMaker": {
+      "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+      "explorer": "https://polygonscan.com/address/0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+      "label": "ospex-stage-maker-a"
+    }
+  },
+  "positions": {
+    "byIndexedPosition": [
+      {
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "claimed": false,
+        "claimedAmountWei6": null,
+        "externalScoreOutcome": "won",
+        "profitFieldMeaning": "potential profit if this side wins; not realized PnL until protocol settlement/claim",
+        "profitFieldPotentialWei6": "57500",
+        "riskUsdc": "0.05",
+        "riskWei6": "50000",
+        "side": "lower"
+      },
+      {
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "claimed": false,
+        "claimedAmountWei6": null,
+        "externalScoreOutcome": "lost",
+        "profitFieldMeaning": "potential profit if this side wins; not realized PnL until protocol settlement/claim",
+        "profitFieldPotentialWei6": "20000",
+        "riskUsdc": "0.02",
+        "riskWei6": "20000",
+        "side": "upper"
+      },
+      {
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "claimed": false,
+        "claimedAmountWei6": null,
+        "externalScoreOutcome": "lost",
+        "profitFieldMeaning": "potential profit if this side wins; not realized PnL until protocol settlement/claim",
+        "profitFieldPotentialWei6": "30000",
+        "riskUsdc": "0.0375",
+        "riskWei6": "37500",
+        "side": "upper"
+      }
+    ],
+    "externalScoreInterpretation": "Lower/home/Angels positions are winners; upper/away/Rangers positions are losers. Protocol state was still unscored/unsettled at capture."
+  },
+  "publishedAt": "2026-05-24T06:04:49Z",
+  "rawFiles": [
+    "raw/indexer-snapshot.sanitized.json",
+    "raw/tx-receipts.summary.json",
+    "raw/final-score-source.json",
+    "raw/mm-telemetry-summary.sanitized.json",
+    "raw/mm-final-status.sanitized.json",
+    "raw/mm-controlled-partial-fill.sanitized.json",
+    "raw/mm-filled-commitment-final.sanitized.json",
+    "raw/mm-maker-commitments-final.sanitized.json",
+    "raw/seed-match.sanitized.json",
+    "raw/seed-commitment.sanitized.json",
+    "raw/contest-current.sanitized.json",
+    "raw/investigation-report.sanitized.md"
+  ],
+  "safetyChecks": {
+    "contestOrderbookRowsFinal": 0,
+    "liveRunnerProcessesAfterWrapup": 0,
+    "mmVisibleOpenFinal": 0,
+    "noPostFillWriteLikeTelemetryEvents": true,
+    "telemetryErrors": 0,
+    "visibleMakerCommitmentsFinal": 0
+  },
+  "schemaVersion": 1,
+  "scope": {
+    "classification": "amber/red investigation artifact; not green acceptance evidence",
+    "marketType": "moneyline",
+    "notes": [
+      "Live run executed on Polygon mainnet and produced a controlled low-value partial fill.",
+      "Operational safety/closure checks were clean: no tracked runner process, no visible maker commitments, no target orderbook rows, and no telemetry errors.",
+      "The intended retained-partial/on-chain-cancel path was not exercised because the fill was discovered after the commitment had already been off-chain soft-cancelled.",
+      "Post-game final score is recorded from MLB Stats API, but this wrap-up did not send additional manual score, settle, or claim transactions.",
+      "Sensitive operator material, raw signatures, local paths, RPC URLs, credentials, and raw telemetry transcripts are intentionally excluded."
+    ],
+    "purpose": "Low-value live MLB moneyline market-maker smoke targeting post-D1/D2 partial-fill behavior with cancelMode:onchain semantics."
+  },
+  "status": "partial",
+  "title": "Ospex TEX @ LAA post-D1/D2 cancel-mode partial-fill investigation smoke, contest 21",
+  "toolingUnderTest": {
+    "cancelMode": "onchain",
+    "marketMakerSource": "clean main worktree at e0346b6c per local run directory naming",
+    "sdkCliVersion": "0.3.0",
+    "telemetryRunIds": [
+      "2026-05-23T23-17-09-893Z-s0rjux",
+      "2026-05-23T23-19-28-312Z-5lebzc"
+    ]
+  },
+  "transactions": {
+    "contestCreateInitialMaybeDuplicate": {
+      "blockNumber": 87335695,
+      "effectiveGasPriceWei": "283161126059",
+      "explorer": "https://polygonscan.com/tx/0xfe96165778b8748b6319a529cdb5f0928fb4b2c78015241e3d42f5502d23fae2",
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "gasCostPOL": "0.390736303137822594",
+      "gasUsed": 1379908,
+      "label": "contestCreateInitialMaybeDuplicate",
+      "status": "0x1",
+      "success": true,
+      "to": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+      "transactionHash": "0xfe96165778b8748b6319a529cdb5f0928fb4b2c78015241e3d42f5502d23fae2",
+      "txHash": "0xfe96165778b8748b6319a529cdb5f0928fb4b2c78015241e3d42f5502d23fae2"
+    },
+    "contestCreateTexLaa": {
+      "blockNumber": 87336033,
+      "effectiveGasPriceWei": "285244914735",
+      "explorer": "https://polygonscan.com/tx/0x5b84bfa070bc801b2223d76fa9daa2aefd0f18c99f7f8622bd56132945529668",
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "gasCostPOL": "0.393611739802144367",
+      "gasUsed": 1379908,
+      "label": "contestCreateTexLaa",
+      "status": "0x1",
+      "success": true,
+      "to": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+      "transactionHash": "0x5b84bfa070bc801b2223d76fa9daa2aefd0f18c99f7f8622bd56132945529668",
+      "txHash": "0x5b84bfa070bc801b2223d76fa9daa2aefd0f18c99f7f8622bd56132945529668"
+    },
+    "controlledPartialFill": {
+      "blockNumber": 87336449,
+      "effectiveGasPriceWei": "278279469631",
+      "explorer": "https://polygonscan.com/tx/0x4a48490762ce8599beb23cfadbc69b6ca066202577c3ca3ef62a585648d26614",
+      "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "gasCostPOL": "0.099650486677512945",
+      "gasUsed": 358095,
+      "label": "controlledPartialFill",
+      "status": "0x1",
+      "success": true,
+      "to": "0x1b93579b044f0ee3c4c8a9f479a323def7770712",
+      "transactionHash": "0x4a48490762ce8599beb23cfadbc69b6ca066202577c3ca3ef62a585648d26614",
+      "txHash": "0x4a48490762ce8599beb23cfadbc69b6ca066202577c3ca3ef62a585648d26614"
+    },
+    "seedSpeculationCreationMatch": {
+      "blockNumber": 87336227,
+      "effectiveGasPriceWei": "287687222148",
+      "explorer": "https://polygonscan.com/tx/0x793dd7f35538427fd0547ad0eeef5b2678914651be4fac4decc56a2f01cb9640",
+      "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "gasCostPOL": "0.194920175868600221",
+      "gasUsed": 677542,
+      "label": "seedSpeculationCreationMatch",
+      "status": "0x1",
+      "success": true,
+      "to": "0x1b93579b044f0ee3c4c8a9f479a323def7770712",
+      "transactionHash": "0x793dd7f35538427fd0547ad0eeef5b2678914651be4fac4decc56a2f01cb9640",
+      "txHash": "0x793dd7f35538427fd0547ad0eeef5b2678914651be4fac4decc56a2f01cb9640"
+    }
+  },
+  "unexpectedFindings": [
+    "First controlled fill attempt raced a stale replacement; the target hash was already cancelled before taker match execution.",
+    "Second controlled fill confirmed on-chain, but the MM had already off-chain soft-cancelled that same commitment before position polling observed the fill.",
+    "Because fill discovery happened after soft-cancel, retained-partial / cancelMode:onchain behavior was not proven in this run.",
+    "commitments.show for the filled hash reported cancelled, filledRiskAmount=0, remainingRiskAmount=250000, isLive=false despite confirmed match tx and indexed maker/taker positions.",
+    "MM local status retained four softCancelled records after shutdown/expiry; public/API exposure was clean."
+  ]
+}

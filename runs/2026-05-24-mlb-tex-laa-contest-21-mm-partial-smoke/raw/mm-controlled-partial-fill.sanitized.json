@@ -1,0 +1,312 @@
+{
+  "action": "commitments.match",
+  "approvalRequirements": [],
+  "chainId": 137,
+  "cliVersion": "0.3.0",
+  "commitment": {
+    "commitmentHash": "0x05879daacb266b498028c511ba51b71644337081f9c32e84049f16328df2373d",
+    "contestId": "21",
+    "createdAt": "2026-05-23T23:20:33.582499+00:00",
+    "expiry": "2026-05-23T23:23:31+00:00",
+    "filledRiskAmount": "0",
+    "isLive": true,
+    "lineTicks": 0,
+    "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "marketType": "moneyline",
+    "network": "polygon",
+    "nonce": "1779578433",
+    "nonceInvalidated": false,
+    "oddsTick": 180,
+    "positionType": 0,
+    "remainingRiskAmount": "250000",
+    "riskAmount": "250000",
+    "scorer": "0xd846b7fdbd8c9f67d1580b2c6a8bd7fdcb15390b",
+    "source": "agent",
+    "speculationKey": "0x4555db0fdd10bb1f4864a1e42948ae19fb61d3823575f7fd04b865a6a3a744dc",
+    "status": "open",
+    "storedStatus": "open"
+  },
+  "contest": {
+    "awayTeam": "Texas Rangers",
+    "awayTeamId": "94c7e09f-2851-46cc-acf9-f0f922728e91",
+    "contestId": "21",
+    "homeTeam": "Los Angeles Angels",
+    "homeTeamId": "5f69b6e1-b63f-41bd-8e90-ca6695dd8772",
+    "label": "Texas Rangers @ Los Angeles Angels, 2026-05-24 \u2014 MLB",
+    "matchTime": "2026-05-24T02:05:00+00:00",
+    "sport": "mlb"
+  },
+  "effects": [
+    {
+      "blockNumber": "87336449",
+      "ok": true,
+      "purpose": "match-commitment",
+      "status": "confirmed",
+      "txHash": "0x4a48490762ce8599beb23cfadbc69b6ca066202577c3ca3ef62a585648d26614",
+      "type": "transaction"
+    }
+  ],
+  "errors": [],
+  "estimatedCosts": null,
+  "generatedAt": "2026-05-23T23:21:33.448Z",
+  "network": "polygon",
+  "nextCommands": [
+    {
+      "argv": [
+        "commitments",
+        "show",
+        "0x05879daacb266b498028c511ba51b71644337081f9c32e84049f16328df2373d",
+        "--json"
+      ],
+      "command": "ospex commitments show 0x05879daacb266b498028c511ba51b71644337081f9c32e84049f16328df2373d --json",
+      "description": "Verify the commitment on-chain by looking up the hash.",
+      "id": "verify-commitment",
+      "safeToAutoRun": true,
+      "suggestedFor": "verify"
+    }
+  ],
+  "ok": true,
+  "payload": {
+    "preview": {
+      "approvals": [
+        {
+          "current": "980000",
+          "needsApproval": false,
+          "purpose": "commitment-risk",
+          "required": "30000",
+          "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c",
+          "token": "USDC"
+        }
+      ],
+      "chainId": 137,
+      "commitment": {
+        "commitmentHash": "0x05879daacb266b498028c511ba51b71644337081f9c32e84049f16328df2373d",
+        "contestId": "21",
+        "createdAt": "2026-05-23T23:20:33.582499+00:00",
+        "expiry": "2026-05-23T23:23:31+00:00",
+        "filledRiskAmount": "0",
+        "isLive": true,
+        "lineTicks": 0,
+        "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "marketType": "moneyline",
+        "network": "polygon",
+        "nonce": "1779578433",
+        "nonceInvalidated": false,
+        "oddsTick": 180,
+        "positionType": 0,
+        "remainingRiskAmount": "250000",
+        "riskAmount": "250000",
+        "scorer": "0xd846b7fdbd8c9f67d1580b2c6a8bd7fdcb15390b",
+        "source": "agent",
+        "speculationKey": "0x4555db0fdd10bb1f4864a1e42948ae19fb61d3823575f7fd04b865a6a3a744dc",
+        "status": "open",
+        "storedStatus": "open"
+      },
+      "contest": {
+        "awayTeam": "Texas Rangers",
+        "awayTeamId": "94c7e09f-2851-46cc-acf9-f0f922728e91",
+        "contestId": "21",
+        "homeTeam": "Los Angeles Angels",
+        "homeTeamId": "5f69b6e1-b63f-41bd-8e90-ca6695dd8772",
+        "label": "Texas Rangers @ Los Angeles Angels, 2026-05-24 \u2014 MLB",
+        "matchTime": "2026-05-24T02:05:00+00:00",
+        "sport": "mlb"
+      },
+      "counterparty": {
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "backing": "Texas Rangers",
+        "odds": {
+          "american": "-125",
+          "decimal": "1.80",
+          "oddsTick": 180
+        },
+        "profit": {
+          "usdc": "0.030000",
+          "wei6": "30000"
+        },
+        "risk": {
+          "usdc": "0.037500",
+          "wei6": "37500"
+        },
+        "role": "maker",
+        "totalReturn": {
+          "usdc": "0.067500",
+          "wei6": "67500"
+        }
+      },
+      "economics": {
+        "fillMakerRiskUSDC": "0.037500",
+        "fillMakerRiskWei6": "37500",
+        "oddsTick": 180,
+        "remainingMakerRiskUSDC": "0.250000",
+        "remainingMakerRiskWei6": "250000",
+        "takerDesiredRiskUSDC": "0.030000",
+        "takerDesiredRiskWei6": "30000",
+        "takerProfitOnWinUSDC": "0.037500",
+        "takerReturnOnWinUSDC": "0.067500",
+        "takerRiskUSDC": "0.030000",
+        "takerRiskWei6": "30000"
+      },
+      "expiry": {
+        "expired": false,
+        "expiresSoonMinutes": 2,
+        "iso": "2026-05-23T23:23:31.000Z",
+        "unixSec": "1779578611"
+      },
+      "isLive": true,
+      "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "makerSide": {
+        "positionType": 0,
+        "resolvedLabel": "Texas Rangers",
+        "role": "away"
+      },
+      "market": {
+        "lineTicks": 0,
+        "makerLineDisplay": null,
+        "takerLineDisplay": null,
+        "type": "moneyline"
+      },
+      "nonceInvalidated": false,
+      "odds": {
+        "makerAmerican": "-125",
+        "makerDecimal": "1.80",
+        "oddsTick": 180,
+        "takerAmerican": "+125",
+        "takerDecimal": "2.25",
+        "takerOddsTick": 225
+      },
+      "outcomes": [
+        {
+          "condition": "Los Angeles Angels wins",
+          "payoutUSDC": "0.037500",
+          "result": "win"
+        },
+        {
+          "condition": "Texas Rangers wins",
+          "payoutUSDC": "-0.030000",
+          "result": "lose"
+        }
+      ],
+      "selfMatch": false,
+      "speculation": {
+        "creationFee": {
+          "applies": false,
+          "approvalNeeded": false,
+          "approvalPurpose": null,
+          "condition": "never",
+          "makerShareUSDC": "0.000000",
+          "makerShareWei6": "0",
+          "note": "Speculation #12 already exists \u2014 no creation fee on this match.",
+          "spender": null,
+          "spenderLabel": null,
+          "takerShareUSDC": "0.000000",
+          "takerShareWei6": "0",
+          "totalFeeUSDC": "0.000000",
+          "totalFeeWei6": "0",
+          "viewerShareUSDC": "0.000000",
+          "viewerShareWei6": "0"
+        },
+        "mode": "existing",
+        "speculationId": "12",
+        "speculationKey": "0x4555db0fdd10bb1f4864a1e42948ae19fb61d3823575f7fd04b865a6a3a744dc"
+      },
+      "taker": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "takerSide": {
+        "positionType": 1,
+        "resolvedLabel": "Los Angeles Angels",
+        "role": "home"
+      },
+      "tradeAction": "trade-only",
+      "verifyingContract": "0x1B93579B044f0eE3c4C8a9F479A323DeF7770712",
+      "warnings": [
+        "expires-soon",
+        "partial-fill"
+      ],
+      "you": {
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "backing": "Los Angeles Angels",
+        "odds": {
+          "american": "+125",
+          "decimal": "2.25",
+          "oddsTick": 225
+        },
+        "profit": {
+          "usdc": "0.037500",
+          "wei6": "37500"
+        },
+        "risk": {
+          "usdc": "0.030000",
+          "wei6": "30000"
+        },
+        "role": "taker",
+        "totalReturn": {
+          "usdc": "0.067500",
+          "wei6": "67500"
+        }
+      }
+    },
+    "result": {
+      "blockNumber": "87336449",
+      "fillMakerRiskWei6": "37500",
+      "status": "success",
+      "takerRiskWei6": "30000",
+      "txHash": "0x4a48490762ce8599beb23cfadbc69b6ca066202577c3ca3ef62a585648d26614"
+    }
+  },
+  "payout": {
+    "profit": {
+      "usdc": "0.037500",
+      "wei6": "37500"
+    },
+    "totalReturn": {
+      "usdc": "0.067500",
+      "wei6": "67500"
+    }
+  },
+  "requiresSignature": false,
+  "requiresTransaction": false,
+  "risk": {
+    "usdc": "0.030000",
+    "wei6": "30000"
+  },
+  "schemaVersion": 2,
+  "sdkVersion": "0.3.0",
+  "sideSummary": "Los Angeles Angels",
+  "signer": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+  "speculation": {
+    "creationFee": {
+      "applies": false,
+      "approvalNeeded": false,
+      "approvalPurpose": null,
+      "condition": "never",
+      "makerShareUSDC": "0.000000",
+      "makerShareWei6": "0",
+      "note": "Speculation #12 already exists \u2014 no creation fee on this match.",
+      "spender": null,
+      "spenderLabel": null,
+      "takerShareUSDC": "0.000000",
+      "takerShareWei6": "0",
+      "totalFeeUSDC": "0.000000",
+      "totalFeeWei6": "0",
+      "viewerShareUSDC": "0.000000",
+      "viewerShareWei6": "0"
+    },
+    "mode": "existing",
+    "speculationId": "12"
+  },
+  "stage": "execute",
+  "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+  "walletRole": "signer",
+  "warnings": [
+    {
+      "code": "expires-soon",
+      "message": "Commitment expires soon (within the 5-minute window).",
+      "severity": "warning"
+    },
+    {
+      "code": "partial-fill",
+      "message": "Taker risk is less than the maker remaining capacity \u2014 this will be a partial fill.",
+      "severity": "info"
+    }
+  ]
+}

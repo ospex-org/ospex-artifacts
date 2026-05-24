@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "summary": {
+    "candidates": {
+      "skipReasons": {},
+      "total": 2,
+      "tracked": 2
+    },
+    "degradedByReason": {},
+    "errors": {
+      "byPhase": {},
+      "total": 0
+    },
+    "eventCounts": {
+      "approval": 0,
+      "candidate": 2,
+      "claim": 0,
+      "competitiveness-unavailable": 0,
+      "degraded": 0,
+      "error": 0,
+      "expire": 0,
+      "fair-value": 0,
+      "fill": 1,
+      "kill": 2,
+      "nonce-floor-raise": 0,
+      "onchain-cancel": 0,
+      "position-transition": 0,
+      "quote-competitiveness": 8,
+      "quote-intent": 6,
+      "replace": 2,
+      "risk-verdict": 6,
+      "settle": 0,
+      "soft-cancel": 2,
+      "submit": 2,
+      "tick-start": 9,
+      "would-replace": 0,
+      "would-soft-cancel": 0,
+      "would-submit": 2
+    },
+    "expired": 0,
+    "firstEventAt": "2026-05-23T23:17:09.895Z",
+    "generatedAt": "2026-05-23T23:28:48.032Z",
+    "kill": {
+      "reason": "kill-file",
+      "ticks": 6
+    },
+    "lastEventAt": "2026-05-23T23:22:36.311Z",
+    "latentExposurePeakWei6": "500000",
+    "lines": 42,
+    "liveMetrics": {
+      "fills": {
+        "fillRate": 0.0375,
+        "filledUsdcWei6": "37500",
+        "quotedUsdcWei6": "1000000"
+      },
+      "gas": {
+        "byKind": {
+          "approval": "0",
+          "claim": "0",
+          "onchainCancel": "0",
+          "settle": "0"
+        },
+        "totalPolWei": "0",
+        "totalUsdcEquivWei6": "0"
+      },
+      "realizedPnl": {
+        "claimedProfitUsdcWei6": "0",
+        "lostCount": 0,
+        "netUsdcWei6": "0",
+        "pushCount": 0,
+        "realizedLossUsdcWei6": "0",
+        "unsettledCount": 1,
+        "wonCount": 0,
+        "wonUnclaimedCount": 0
+      },
+      "settlements": {
+        "claimCount": 0,
+        "settleCount": 0,
+        "totalClaimedPayoutWei6": "0"
+      },
+      "totalFeeUsdcWei6": "0"
+    },
+    "malformedLines": 0,
+    "quoteAgeSeconds": null,
+    "quoteCompetitiveness": {
+      "atOrInsideBookCount": 8,
+      "atOrInsideBookRate": 1,
+      "samples": 8,
+      "unavailable": 0,
+      "vsReferenceTicks": {
+        "max": 1,
+        "mean": 0,
+        "min": -1,
+        "p50": -1
+      }
+    },
+    "quoteIntents": {
+      "canQuote": 4,
+      "refused": 2,
+      "total": 6
+    },
+    "runIds": [
+      "2026-05-23T23-17-09-893Z-s0rjux",
+      "2026-05-23T23-19-28-312Z-5lebzc"
+    ],
+    "schemaVersion": 1,
+    "sources": [
+      "[REDACTED_LOCAL_PATH]",
+      "[REDACTED_LOCAL_PATH]"
+    ],
+    "staleQuoteIncidents": 0,
+    "ticks": 9,
+    "wouldReplace": {
+      "byReason": {},
+      "total": 0
+    },
+    "wouldSoftCancel": {
+      "byReason": {},
+      "total": 0
+    },
+    "wouldSubmit": 2
+  }
+}
