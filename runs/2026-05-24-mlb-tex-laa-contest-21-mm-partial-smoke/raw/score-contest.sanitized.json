@@ -1,0 +1,57 @@
+{
+  "action": "contests.score",
+  "approvalRequirements": [],
+  "chainId": 137,
+  "cliVersion": "0.3.0",
+  "commitment": null,
+  "contest": null,
+  "effects": [
+    {
+      "blockNumber": "87350576",
+      "ok": true,
+      "purpose": "score-contest",
+      "status": "confirmed",
+      "txHash": "0xb97616642ba440c51e8faa8e7d5d399aa7a03ff10e046a25c3f3c73ab3332943",
+      "type": "transaction"
+    }
+  ],
+  "errors": [],
+  "estimatedCosts": null,
+  "generatedAt": "2026-05-24T06:13:36.831Z",
+  "network": "polygon",
+  "nextCommands": [
+    {
+      "argv": [
+        "contests",
+        "show",
+        "21",
+        "--json"
+      ],
+      "command": "ospex contests show 21 --json",
+      "description": "Verify the contest detail (status, speculations, orderbook).",
+      "id": "verify-contest",
+      "safeToAutoRun": true,
+      "suggestedFor": "verify"
+    }
+  ],
+  "ok": true,
+  "payload": {
+    "contestId": "21",
+    "requestId": "0xe164c338de23661ca47244b2a68e4444f807d39e616b8e45231c0a899cb68a2a",
+    "status": "success",
+    "txHash": "0xb97616642ba440c51e8faa8e7d5d399aa7a03ff10e046a25c3f3c73ab3332943"
+  },
+  "payout": null,
+  "requiresSignature": false,
+  "requiresTransaction": false,
+  "risk": null,
+  "schemaVersion": 2,
+  "sdkVersion": "0.3.0",
+  "sideSummary": null,
+  "signer": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+  "speculation": null,
+  "stage": "execute",
+  "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+  "walletRole": "signer",
+  "warnings": []
+}

@@ -8,14 +8,14 @@
     "mmQuotedLive": true,
     "onchainCancelTelemetryCount": 0,
     "partialRemainderRetainedTelemetryCount": 0,
-    "protocolContestScoredAtCapture": false,
+    "protocolContestScoredAtCapture": true,
     "seedCommitmentMatched": true,
-    "speculationSettledAtCapture": false,
-    "winnerClaimedAtCapture": false
+    "speculationSettledAtCapture": true,
+    "winnerClaimedAtCapture": true
   },
   "artifactId": "2026-05-24-mlb-tex-laa-contest-21-mm-partial-smoke",
   "artifactType": "run",
-  "capturedAt": "2026-05-24T06:04:49Z",
+  "capturedAt": "2026-05-24T06:19:41Z",
   "chainId": 137,
   "commitments": {
     "controlledMmPartialFillTarget": {
@@ -49,11 +49,13 @@
       "takerSide": "lower/home/Los Angeles Angels"
     }
   },
+  "completedAt": "2026-05-24T06:19:41Z",
   "contest": {
+    "awayScore": 2,
     "awayTeam": "Texas Rangers",
     "contestCreatedAt": "2026-05-23T23:09:26+00:00",
     "contestId": 21,
-    "contestStatus": "verified",
+    "contestStatus": "scored",
     "externalFinalScore": {
       "away": 2,
       "home": 5
@@ -63,17 +65,22 @@
       "team": "Los Angeles Angels"
     },
     "gameId": "347490c7-7f19-4d24-b570-b85ff16ae4a5",
+    "homeScore": 5,
     "homeTeam": "Los Angeles Angels",
     "protocolScoreAtCapture": {
-      "away": null,
-      "home": null
+      "away": 2,
+      "home": 5
     },
-    "scoredAt": null,
+    "scoredAt": "2026-05-24T06:13:47+00:00",
     "slug": "tex-laa-2026-05-24",
     "speculationId": 12,
     "sport": "mlb",
     "startTime": "2026-05-24T02:05:00+00:00",
-    "verifiedAt": "2026-05-23T23:09:38+00:00"
+    "verifiedAt": "2026-05-23T23:09:38+00:00",
+    "winner": {
+      "protocolWinSide": "home/lower",
+      "team": "Los Angeles Angels"
+    }
   },
   "date": "2026-05-24",
   "externalScoreSources": [
@@ -132,6 +139,61 @@
       "takerSide": "lower/home/Angels",
       "txHash": "0x793dd7f35538427fd0547ad0eeef5b2678914651be4fac4decc56a2f01cb9640"
     }
+  },
+  "finalDryRuns": {
+    "ospex-flow-a": {
+      "entries": 0,
+      "ok": true,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "totalPayoutUSDC": 0,
+        "totalPayoutWei6": "0"
+      }
+    },
+    "ospex-stage-maker-a": {
+      "entries": 0,
+      "ok": true,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "totalPayoutUSDC": 0,
+        "totalPayoutWei6": "0"
+      }
+    },
+    "ospex-stage-maker-b": {
+      "entries": 0,
+      "ok": true,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "totalPayoutUSDC": 0,
+        "totalPayoutWei6": "0"
+      }
+    }
+  },
+  "knownCaveats": [
+    "The D1/D2 retained-partial / cancelMode:onchain acceptance path was not exercised: the filled hash had already been off-chain soft-cancelled before position polling observed the fill. Keep this artifact as investigation evidence, not green D1/D2 acceptance.",
+    "commitments.show for the filled hash reported cancelled with filledRiskAmount=0 and remainingRiskAmount=250000 despite a confirmed match tx and indexed position_fills row. This remains an API/local-bookkeeping mismatch to investigate.",
+    "The first controlled fill attempt raced a stale replacement and failed before a live fill; the second controlled fill confirmed.",
+    "MM local status retained four softCancelled records after shutdown/expiry while public/API exposure was clean.",
+    "Post-game score, settlement, and winner claim were completed after the initial partial artifact. Score projection required one observed stale read before CONTEST_SCORES_SET converged.",
+    "The public artifact intentionally excludes raw signatures, private operator material, RPC URLs, Supabase/API credentials, password files, keystore paths, local run paths, and raw telemetry transcripts."
+  ],
+  "lifecycleChecks": {
+    "cleanGreenD1D2AcceptanceEvidence": false,
+    "contestCreated": true,
+    "contestVerified": true,
+    "controlledPartialFillExecuted": true,
+    "finalClaimDryRunsEmpty": true,
+    "finalPositionActivePendingClaimableCountsZero": true,
+    "mmQuotedLive": true,
+    "mmRunnerProcessesAfterWrapup": 0,
+    "postgameScore": true,
+    "seedCommitmentMatched": true,
+    "speculationSettled": true,
+    "visibleLiveCommitmentsFinal": 0,
+    "winningPositionClaimed": true
   },
   "marketMaker": {
     "apiOrderbookExposureFinal": {
@@ -307,11 +369,14 @@
     "byIndexedPosition": [
       {
         "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
-        "claimed": false,
-        "claimedAmountWei6": null,
-        "externalScoreOutcome": "won",
-        "profitFieldMeaning": "potential profit if this side wins; not realized PnL until protocol settlement/claim",
-        "profitFieldPotentialWei6": "57500",
+        "claimed": true,
+        "claimedAt": "2026-05-24T06:14:57+00:00",
+        "claimedUsdc": "0.1075",
+        "claimedWei6": "107500",
+        "grossRealizedPnlUsdc": "0.0575",
+        "outcome": "won",
+        "profitUsdc": "0.0575",
+        "profitWei6": "57500",
         "riskUsdc": "0.05",
         "riskWei6": "50000",
         "side": "lower"
@@ -319,10 +384,13 @@
       {
         "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
         "claimed": false,
-        "claimedAmountWei6": null,
-        "externalScoreOutcome": "lost",
-        "profitFieldMeaning": "potential profit if this side wins; not realized PnL until protocol settlement/claim",
-        "profitFieldPotentialWei6": "20000",
+        "claimedAt": null,
+        "claimedUsdc": null,
+        "claimedWei6": null,
+        "grossRealizedPnlUsdc": "-0.02",
+        "outcome": "lost",
+        "profitUsdc": "0.02",
+        "profitWei6": "20000",
         "riskUsdc": "0.02",
         "riskWei6": "20000",
         "side": "upper"
@@ -330,31 +398,112 @@
       {
         "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
         "claimed": false,
-        "claimedAmountWei6": null,
-        "externalScoreOutcome": "lost",
-        "profitFieldMeaning": "potential profit if this side wins; not realized PnL until protocol settlement/claim",
-        "profitFieldPotentialWei6": "30000",
+        "claimedAt": null,
+        "claimedUsdc": null,
+        "claimedWei6": null,
+        "grossRealizedPnlUsdc": "-0.0375",
+        "outcome": "lost",
+        "profitUsdc": "0.03",
+        "profitWei6": "30000",
         "riskUsdc": "0.0375",
         "riskWei6": "37500",
         "side": "upper"
       }
     ],
-    "externalScoreInterpretation": "Lower/home/Angels positions are winners; upper/away/Rangers positions are losers. Protocol state was still unscored/unsettled at capture."
+    "winnerClaim": {
+      "address": "0x16dC5d67d080A5521ef2C79680DBFc2aBf724d30",
+      "claimedUsdc": "0.1075",
+      "claimedWei6": "107500",
+      "explorer": "https://polygonscan.com/tx/0x9499f7233bb568635b86e0afdffe21393aa1abbc4b6af763238d89a2ce4374f6",
+      "grossRealizedPnlUsdc": "0.0575",
+      "side": "lower/home/Los Angeles Angels",
+      "txHash": "0x9499f7233bb568635b86e0afdffe21393aa1abbc4b6af763238d89a2ce4374f6"
+    }
+  },
+  "projectionConvergence": {
+    "expectation": "After each successful write, receipts and API/indexer projection reads are separate gates. A stale read is a caveat only when later refreshes converge to the expected state.",
+    "gates": [
+      {
+        "afterWrite": "score request and Chainlink callback",
+        "converged": true,
+        "expectedFinalState": [
+          "contest.status=scored",
+          "awayScore=2",
+          "homeScore=5"
+        ],
+        "name": "postScore",
+        "observedFinalState": [
+          "contest #21 scoredAt=2026-05-24T06:13:47+00:00",
+          "CONTEST_SCORES_SET chain event tx 0xd897...ec28",
+          "MLB Stats API status Final, TEX 2 LAA 5"
+        ],
+        "staleReadObserved": true,
+        "txConfirmed": true,
+        "waitTarget": "contest projection shows scored status and final score 2-5"
+      },
+      {
+        "afterWrite": "settle speculation #12",
+        "converged": true,
+        "expectedFinalState": [
+          "speculation #12 status=closed",
+          "win_side=home",
+          "flow-a lower position claimable before claim"
+        ],
+        "name": "postSettle",
+        "observedFinalState": [
+          "SPECULATION_SETTLED tx 0x9434...5c68",
+          "post-settle flow-a position status claimableCount=1, estimatedPayoutWei6=107500"
+        ],
+        "staleReadObserved": false,
+        "txConfirmed": true,
+        "waitTarget": "speculation projection closes with win_side=home and winner becomes claimable"
+      },
+      {
+        "afterWrite": "claim-all for ospex-flow-a lower/home winner",
+        "converged": true,
+        "expectedFinalState": [
+          "flow-a lower position claimed_amount=107500",
+          "final claim-all dry-runs have zero entries for flow-a, stage-maker-a, and stage-maker-b",
+          "positions status active/pending/claimable counts are zero for all three wallets"
+        ],
+        "name": "postClaimAndDryRuns",
+        "observedFinalState": [
+          "POSITION_CLAIMED tx 0x9499...74f6",
+          "final positions status active/pending/claimable counts all zero",
+          "final claim dry-run entries all zero"
+        ],
+        "staleReadObserved": false,
+        "txConfirmed": true,
+        "waitTarget": "winner claimed and all final claim dry-runs are empty"
+      }
+    ]
   },
   "publishedAt": "2026-05-24T06:04:49Z",
   "rawFiles": [
-    "raw/indexer-snapshot.sanitized.json",
-    "raw/tx-receipts.summary.json",
+    "raw/claimall-flow-a.sanitized.json",
+    "raw/contest-current.sanitized.json",
+    "raw/final-claimall-flow-a-dry-run.sanitized.json",
+    "raw/final-claimall-stage-maker-a-dry-run.sanitized.json",
+    "raw/final-claimall-stage-maker-b-dry-run.sanitized.json",
+    "raw/final-contest-show.sanitized.json",
+    "raw/final-positions-status-flow-a.sanitized.json",
+    "raw/final-positions-status-stage-maker-a.sanitized.json",
+    "raw/final-positions-status-stage-maker-b.sanitized.json",
     "raw/final-score-source.json",
-    "raw/mm-telemetry-summary.sanitized.json",
-    "raw/mm-final-status.sanitized.json",
+    "raw/final-supabase-state.sanitized.json",
+    "raw/indexer-snapshot.sanitized.json",
+    "raw/investigation-report.sanitized.md",
     "raw/mm-controlled-partial-fill.sanitized.json",
     "raw/mm-filled-commitment-final.sanitized.json",
+    "raw/mm-final-status.sanitized.json",
     "raw/mm-maker-commitments-final.sanitized.json",
-    "raw/seed-match.sanitized.json",
+    "raw/mm-telemetry-summary.sanitized.json",
+    "raw/postgame-tx-receipts.summary.json",
+    "raw/score-contest.sanitized.json",
     "raw/seed-commitment.sanitized.json",
-    "raw/contest-current.sanitized.json",
-    "raw/investigation-report.sanitized.md"
+    "raw/seed-match.sanitized.json",
+    "raw/settle-speculation.sanitized.json",
+    "raw/tx-receipts.summary.json"
   ],
   "safetyChecks": {
     "contestOrderbookRowsFinal": 0,
@@ -366,19 +515,27 @@
   },
   "schemaVersion": 1,
   "scope": {
-    "classification": "amber/red investigation artifact; not green acceptance evidence",
+    "classification": "complete lifecycle artifact with caveats; not green D1/D2 acceptance evidence",
     "marketType": "moneyline",
     "notes": [
       "Live run executed on Polygon mainnet and produced a controlled low-value partial fill.",
       "Operational safety/closure checks were clean: no tracked runner process, no visible maker commitments, no target orderbook rows, and no telemetry errors.",
       "The intended retained-partial/on-chain-cancel path was not exercised because the fill was discovered after the commitment had already been off-chain soft-cancelled.",
-      "Post-game final score is recorded from MLB Stats API, but this wrap-up did not send additional manual score, settle, or claim transactions.",
+      "Post-game lifecycle was completed after the investigation artifact: score request, Chainlink scores-set callback, speculation settlement, and winning lower/home position claim all confirmed.",
+      "Final claim dry-runs for the winner and both losing test wallets returned zero entries.",
       "Sensitive operator material, raw signatures, local paths, RPC URLs, credentials, and raw telemetry transcripts are intentionally excluded."
     ],
     "purpose": "Low-value live MLB moneyline market-maker smoke targeting post-D1/D2 partial-fill behavior with cancelMode:onchain semantics."
   },
-  "status": "partial",
-  "title": "Ospex TEX @ LAA post-D1/D2 cancel-mode partial-fill investigation smoke, contest 21",
+  "speculationLifecycle": {
+    "scoredAt": "2026-05-24T06:13:47+00:00",
+    "settledAt": "2026-05-24T06:14:20+00:00",
+    "speculationId": 12,
+    "status": "closed",
+    "winSide": "home"
+  },
+  "status": "complete_verified_with_caveats",
+  "title": "Ospex TEX @ LAA post-D1/D2 partial-fill investigation and post-game lifecycle, contest 21",
   "toolingUnderTest": {
     "cancelMode": "onchain",
     "marketMakerSource": "clean main worktree at e0346b6c per local run directory naming",
@@ -431,6 +588,34 @@
       "transactionHash": "0x4a48490762ce8599beb23cfadbc69b6ca066202577c3ca3ef62a585648d26614",
       "txHash": "0x4a48490762ce8599beb23cfadbc69b6ca066202577c3ca3ef62a585648d26614"
     },
+    "scoreCallbackScoresSet": {
+      "blockNumber": 87350582,
+      "effectiveGasPriceWei": "423734799286",
+      "explorer": "https://polygonscan.com/tx/0xd89768c82a530adb0a60355f27398d01b75de01d25d814ef561bce0f7525ec28",
+      "from": "0x7744a72832956b2ee041426441002cb7d8d4890c",
+      "gasCostPOL": "0.133856975624848828",
+      "gasUsed": 315898,
+      "label": "scoreCallbackScoresSet",
+      "status": "0x1",
+      "success": true,
+      "to": "0x71f707344a3fe10223c22d5929add95b3dfa007c",
+      "transactionHash": "0xd89768c82a530adb0a60355f27398d01b75de01d25d814ef561bce0f7525ec28",
+      "txHash": "0xd89768c82a530adb0a60355f27398d01b75de01d25d814ef561bce0f7525ec28"
+    },
+    "scoreRequest": {
+      "blockNumber": 87350576,
+      "effectiveGasPriceWei": "281276400718",
+      "explorer": "https://polygonscan.com/tx/0xb97616642ba440c51e8faa8e7d5d399aa7a03ff10e046a25c3f3c73ab3332943",
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "gasCostPOL": "0.186860070012588225",
+      "gasUsed": 664329,
+      "label": "scoreRequest",
+      "status": "0x1",
+      "success": true,
+      "to": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+      "transactionHash": "0xb97616642ba440c51e8faa8e7d5d399aa7a03ff10e046a25c3f3c73ab3332943",
+      "txHash": "0xb97616642ba440c51e8faa8e7d5d399aa7a03ff10e046a25c3f3c73ab3332943"
+    },
     "seedSpeculationCreationMatch": {
       "blockNumber": 87336227,
       "effectiveGasPriceWei": "287687222148",
@@ -444,6 +629,34 @@
       "to": "0x1b93579b044f0ee3c4c8a9f479a323def7770712",
       "transactionHash": "0x793dd7f35538427fd0547ad0eeef5b2678914651be4fac4decc56a2f01cb9640",
       "txHash": "0x793dd7f35538427fd0547ad0eeef5b2678914651be4fac4decc56a2f01cb9640"
+    },
+    "settle": {
+      "blockNumber": 87350601,
+      "effectiveGasPriceWei": "282438925162",
+      "explorer": "https://polygonscan.com/tx/0x943438400ee24fbb3c06d35ed7326ceb9d9ca4964e560ff5c4f6175831205c68",
+      "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "gasCostPOL": "0.043952863094785279",
+      "gasUsed": 155619,
+      "label": "settle",
+      "status": "0x1",
+      "success": true,
+      "to": "0xd757387893e779ac35451cea639a408a537b9a1b",
+      "transactionHash": "0x943438400ee24fbb3c06d35ed7326ceb9d9ca4964e560ff5c4f6175831205c68",
+      "txHash": "0x943438400ee24fbb3c06d35ed7326ceb9d9ca4964e560ff5c4f6175831205c68"
+    },
+    "winnerClaim": {
+      "blockNumber": 87350622,
+      "effectiveGasPriceWei": "285282893211",
+      "explorer": "https://polygonscan.com/tx/0x9499f7233bb568635b86e0afdffe21393aa1abbc4b6af763238d89a2ce4374f6",
+      "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "gasCostPOL": "0.035208188265635564",
+      "gasUsed": 123415,
+      "label": "winnerClaim",
+      "status": "0x1",
+      "success": true,
+      "to": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+      "transactionHash": "0x9499f7233bb568635b86e0afdffe21393aa1abbc4b6af763238d89a2ce4374f6",
+      "txHash": "0x9499f7233bb568635b86e0afdffe21393aa1abbc4b6af763238d89a2ce4374f6"
     }
   },
   "unexpectedFindings": [

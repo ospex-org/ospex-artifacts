@@ -1,0 +1,84 @@
+{
+  "action": "claim-all",
+  "approvalRequirements": [],
+  "chainId": 137,
+  "cliVersion": "0.3.0",
+  "commitment": null,
+  "contest": null,
+  "effects": [
+    {
+      "ok": true,
+      "purpose": "claim-position",
+      "status": "confirmed",
+      "txHash": "0x9499f7233bb568635b86e0afdffe21393aa1abbc4b6af763238d89a2ce4374f6",
+      "type": "transaction"
+    }
+  ],
+  "errors": [],
+  "estimatedCosts": null,
+  "generatedAt": "2026-05-24T06:14:57.540Z",
+  "network": "polygon",
+  "nextCommands": [
+    {
+      "argv": [
+        "positions",
+        "status",
+        "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "--json"
+      ],
+      "command": "ospex positions status 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json",
+      "description": "Verify position status after the claim / settle.",
+      "id": "verify-position-status",
+      "safeToAutoRun": true,
+      "suggestedFor": "verify"
+    }
+  ],
+  "ok": true,
+  "payload": {
+    "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+    "dryRun": false,
+    "entries": [
+      {
+        "bucket": "claimable",
+        "description": "Los Angeles Angels moneyline \u2014 Won (\u2248 $0.11)",
+        "payoutUSDC": 0.1075,
+        "payoutWei6": "107500",
+        "positionId": "12_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+        "speculationId": "12",
+        "success": true,
+        "txHashes": [
+          "0x9499f7233bb568635b86e0afdffe21393aa1abbc4b6af763238d89a2ce4374f6"
+        ]
+      }
+    ],
+    "success": true,
+    "totals": {
+      "claimed": 1,
+      "failed": 0,
+      "totalPayoutUSDC": 0.1075,
+      "totalPayoutWei6": "107500"
+    }
+  },
+  "payout": {
+    "profit": {
+      "usdc": "0.107500",
+      "wei6": "107500"
+    },
+    "totalReturn": {
+      "usdc": "0.107500",
+      "wei6": "107500"
+    }
+  },
+  "requiresSignature": false,
+  "requiresTransaction": false,
+  "risk": null,
+  "schemaVersion": 2,
+  "sdkVersion": "0.3.0",
+  "sideSummary": null,
+  "signer": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+  "speculation": null,
+  "stage": "execute",
+  "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+  "walletRole": "signer",
+  "warnings": []
+}

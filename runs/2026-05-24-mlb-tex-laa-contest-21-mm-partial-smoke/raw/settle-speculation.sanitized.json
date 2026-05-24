@@ -1,0 +1,57 @@
+{
+  "action": "settle",
+  "approvalRequirements": [],
+  "chainId": 137,
+  "cliVersion": "0.3.0",
+  "commitment": null,
+  "contest": null,
+  "effects": [
+    {
+      "blockNumber": "87350601",
+      "ok": true,
+      "purpose": "settle-speculation",
+      "status": "confirmed",
+      "txHash": "0x943438400ee24fbb3c06d35ed7326ceb9d9ca4964e560ff5c4f6175831205c68",
+      "type": "transaction"
+    }
+  ],
+  "errors": [],
+  "estimatedCosts": null,
+  "generatedAt": "2026-05-24T06:14:19.699Z",
+  "network": "polygon",
+  "nextCommands": [
+    {
+      "argv": [
+        "positions",
+        "status",
+        "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "--json"
+      ],
+      "command": "ospex positions status 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json",
+      "description": "Verify position status after the claim / settle.",
+      "id": "verify-position-status",
+      "safeToAutoRun": true,
+      "suggestedFor": "verify"
+    }
+  ],
+  "ok": true,
+  "payload": {
+    "blockNumber": "87350601",
+    "speculationId": "12",
+    "txHash": "0x943438400ee24fbb3c06d35ed7326ceb9d9ca4964e560ff5c4f6175831205c68",
+    "winSide": "home"
+  },
+  "payout": null,
+  "requiresSignature": false,
+  "requiresTransaction": false,
+  "risk": null,
+  "schemaVersion": 2,
+  "sdkVersion": "0.3.0",
+  "sideSummary": null,
+  "signer": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+  "speculation": null,
+  "stage": "execute",
+  "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+  "walletRole": "signer",
+  "warnings": []
+}

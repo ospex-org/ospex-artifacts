@@ -1,7 +1,7 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-05-24T06:04:58Z",
+  "generatedAt": "2026-05-24T06:19:49Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
@@ -24,7 +24,7 @@
       "date": "2026-05-24",
       "network": "polygon",
       "rawPath": "runs/2026-05-24-mlb-tex-laa-contest-21-mm-partial-smoke/raw/",
-      "status": "partial",
+      "status": "complete_verified_with_caveats",
       "summaryPath": "runs/2026-05-24-mlb-tex-laa-contest-21-mm-partial-smoke/summary.md",
       "publishedAt": "2026-05-24T06:04:49Z"
     },
