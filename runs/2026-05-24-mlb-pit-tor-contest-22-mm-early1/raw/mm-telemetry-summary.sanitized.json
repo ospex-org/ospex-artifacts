@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    "run-2026-05-24T15-50-47-649Z-gkkwe4.ndjson"
+  ],
+  "runIds": [
+    "2026-05-24T15-50-47-649Z-gkkwe4"
+  ],
+  "firstEventAt": "2026-05-24T15:50:47.652Z",
+  "lastEventAt": "2026-05-24T15:53:56.280Z",
+  "eventCounts": {
+    "candidate": 2,
+    "expire": 2,
+    "fill": 1,
+    "kill": 1,
+    "quote-competitiveness": 4,
+    "quote-intent": 3,
+    "risk-verdict": 3,
+    "soft-cancel": 3,
+    "submit": 4,
+    "tick-start": 6
+  },
+  "notableEvents": [
+    {
+      "ts": "2026-05-24T15:51:51.341Z",
+      "runId": "2026-05-24T15-50-47-649Z-gkkwe4",
+      "kind": "fill",
+      "source": "commitment-diff",
+      "commitmentHash": "0x59a0d50b0269b296c00c0603248a47f09930ecabb9820d6873e121e572f7f5a9",
+      "speculationId": "13",
+      "contestId": "22",
+      "sport": "mlb",
+      "awayTeam": "Pittsburgh Pirates",
+      "homeTeam": "Toronto Blue Jays",
+      "makerSide": "away",
+      "takerSide": "home",
+      "positionType": 0,
+      "newFillWei6": "18600",
+      "filledRiskWei6": "18600"
+    },
+    {
+      "ts": "2026-05-24T15:51:51.855Z",
+      "runId": "2026-05-24T15-50-47-649Z-gkkwe4",
+      "kind": "soft-cancel",
+      "commitmentHash": "0xa8c9a0b590bb25fcdd05f9c7260d55808acaae7bc10a7624e45e626ec7aae0ce",
+      "speculationId": "13",
+      "contestId": "22",
+      "sport": "mlb",
+      "awayTeam": "Pittsburgh Pirates",
+      "homeTeam": "Toronto Blue Jays",
+      "makerSide": "home",
+      "takerSide": "away",
+      "positionType": 1,
+      "reason": "side-not-quoted"
+    },
+    {
+      "ts": "2026-05-24T15:52:53.554Z",
+      "runId": "2026-05-24T15-50-47-649Z-gkkwe4",
+      "kind": "expire",
+      "commitmentHash": "0x59a0d50b0269b296c00c0603248a47f09930ecabb9820d6873e121e572f7f5a9",
+      "speculationId": "13",
+      "contestId": "22",
+      "makerSide": "away"
+    },
+    {
+      "ts": "2026-05-24T15:52:53.807Z",
+      "runId": "2026-05-24T15-50-47-649Z-gkkwe4",
+      "kind": "expire",
+      "commitmentHash": "0xa8c9a0b590bb25fcdd05f9c7260d55808acaae7bc10a7624e45e626ec7aae0ce",
+      "speculationId": "13",
+      "contestId": "22",
+      "makerSide": "home"
+    },
+    {
+      "ts": "2026-05-24T15:53:55.999Z",
+      "runId": "2026-05-24T15-50-47-649Z-gkkwe4",
+      "kind": "soft-cancel",
+      "commitmentHash": "0x061401a8de5cac921f11a426c7bd69c1ca7c0c3627347944f1604704a318cef9",
+      "speculationId": "13",
+      "contestId": "22",
+      "sport": "mlb",
+      "awayTeam": "Pittsburgh Pirates",
+      "homeTeam": "Toronto Blue Jays",
+      "makerSide": "home",
+      "takerSide": "away",
+      "positionType": 1,
+      "reason": "shutdown"
+    },
+    {
+      "ts": "2026-05-24T15:53:56.280Z",
+      "runId": "2026-05-24T15-50-47-649Z-gkkwe4",
+      "kind": "soft-cancel",
+      "commitmentHash": "0x143bcab74e59816a4b3744c556bafd8a05ef4502082e8b882ebcd66e203b94aa",
+      "speculationId": "13",
+      "contestId": "22",
+      "sport": "mlb",
+      "awayTeam": "Pittsburgh Pirates",
+      "homeTeam": "Toronto Blue Jays",
+      "makerSide": "away",
+      "takerSide": "home",
+      "positionType": 0,
+      "reason": "shutdown"
+    },
+    {
+      "ts": "2026-05-24T15:53:56.280Z",
+      "runId": "2026-05-24T15-50-47-649Z-gkkwe4",
+      "kind": "kill",
+      "reason": "kill-file",
+      "ticks": 6
+    }
+  ]
+}

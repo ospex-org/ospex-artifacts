@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "commands": [
+    {
+      "file": "score-contest-22.json",
+      "ok": true,
+      "action": "contests.score",
+      "generatedAt": "2026-05-24T21:37:50.430Z",
+      "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "effects": [
+        {
+          "type": "transaction",
+          "purpose": "score-contest",
+          "ok": true,
+          "txHash": "0xe951a85c1376b96d439cb73977a7f36dc86cd9a0c545660bdf1b16a2ef0bd6c6",
+          "blockNumber": "87382264",
+          "status": "confirmed"
+        }
+      ],
+      "payload": {
+        "contestId": "22",
+        "txHash": "0xe951a85c1376b96d439cb73977a7f36dc86cd9a0c545660bdf1b16a2ef0bd6c6",
+        "requestId": "0x02516384a6aaf899ed7bf484de6b67352bf42883e4a7a9c5f2e12c794e2d7860",
+        "status": "success"
+      },
+      "entryCount": 0,
+      "entries": [],
+      "errors": []
+    },
+    {
+      "file": "preclaim-dryrun-stage-maker-a.json",
+      "ok": true,
+      "action": "claim-all",
+      "generatedAt": "2026-05-24T21:39:39.824Z",
+      "wallet": null,
+      "effects": [],
+      "payload": {
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "dryRun": true,
+        "success": false,
+        "totals": {
+          "claimed": 1,
+          "failed": 0,
+          "totalPayoutWei6": "48546",
+          "totalPayoutUSDC": 0.048546
+        }
+      },
+      "entryCount": 1,
+      "entries": [
+        {
+          "positionId": "13_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_0",
+          "speculationId": "13",
+          "bucket": "pendingSettle",
+          "description": "Pittsburgh Pirates moneyline \u2014 Won (\u2248 $0.05, needs settle)",
+          "success": true,
+          "txHashes": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "file": "preclaim-dryrun-stage-maker-b.json",
+      "ok": true,
+      "action": "claim-all",
+      "generatedAt": "2026-05-24T21:39:41.341Z",
+      "wallet": null,
+      "effects": [],
+      "payload": {
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "dryRun": true,
+        "success": false,
+        "totals": {
+          "claimed": 1,
+          "failed": 0,
+          "totalPayoutWei6": "40000",
+          "totalPayoutUSDC": 0.04
+        }
+      },
+      "entryCount": 1,
+      "entries": [
+        {
+          "positionId": "13_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_0",
+          "speculationId": "13",
+          "bucket": "pendingSettle",
+          "description": "Pittsburgh Pirates moneyline \u2014 Won (\u2248 $0.04, needs settle)",
+          "success": true,
+          "txHashes": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "file": "claimall-stage-maker-a.json",
+      "ok": true,
+      "action": "claim-all",
+      "generatedAt": "2026-05-24T21:40:09.159Z",
+      "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "effects": [
+        {
+          "type": "transaction",
+          "purpose": "settle-speculation",
+          "ok": true,
+          "txHash": "0xf28473e07826e8137114fcba6c4a0c664d074e351e431d22d01ed0b47837991a",
+          "status": "confirmed"
+        },
+        {
+          "type": "transaction",
+          "purpose": "claim-position",
+          "ok": true,
+          "txHash": "0x752c85420d49b1840868b77393be3cdae72da5b9fdae65e2d886bbf39f24b191",
+          "status": "confirmed"
+        }
+      ],
+      "payload": {
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "dryRun": false,
+        "success": true,
+        "totals": {
+          "claimed": 1,
+          "failed": 0,
+          "totalPayoutWei6": "48546",
+          "totalPayoutUSDC": 0.048546
+        }
+      },
+      "entryCount": 1,
+      "entries": [
+        {
+          "positionId": "13_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_0",
+          "speculationId": "13",
+          "bucket": "pendingSettle",
+          "description": "Pittsburgh Pirates moneyline \u2014 Won (\u2248 $0.05, needs settle)",
+          "success": true,
+          "txHashes": [
+            "0xf28473e07826e8137114fcba6c4a0c664d074e351e431d22d01ed0b47837991a",
+            "0x752c85420d49b1840868b77393be3cdae72da5b9fdae65e2d886bbf39f24b191"
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "file": "claimall-stage-maker-b.json",
+      "ok": false,
+      "action": "claim-all",
+      "generatedAt": "2026-05-24T21:40:12.260Z",
+      "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "effects": [
+        {
+          "type": "transaction",
+          "purpose": "settle-speculation",
+          "ok": false,
+          "errorCode": "CHAIN_ERROR"
+        }
+      ],
+      "payload": {
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "dryRun": false,
+        "success": false,
+        "totals": {
+          "claimed": 0,
+          "failed": 1,
+          "totalPayoutWei6": "0",
+          "totalPayoutUSDC": 0
+        }
+      },
+      "entryCount": 1,
+      "entries": [
+        {
+          "positionId": "13_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_0",
+          "speculationId": "13",
+          "bucket": "pendingSettle",
+          "description": "Pittsburgh Pirates moneyline \u2014 Won (\u2248 $0.04, needs settle)",
+          "success": false,
+          "txHashes": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "file": "claimall-stage-maker-b-retry.json",
+      "ok": true,
+      "action": "claim-all",
+      "generatedAt": "2026-05-24T21:40:57.375Z",
+      "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "effects": [
+        {
+          "type": "transaction",
+          "purpose": "claim-position",
+          "ok": true,
+          "txHash": "0xa4b2168898c7e09beec9dd5fa4ed1d0dc1a64c7d0a8390f77312bbc3a5f90464",
+          "status": "confirmed"
+        }
+      ],
+      "payload": {
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "dryRun": false,
+        "success": true,
+        "totals": {
+          "claimed": 1,
+          "failed": 0,
+          "totalPayoutWei6": "40000",
+          "totalPayoutUSDC": 0.04
+        }
+      },
+      "entryCount": 1,
+      "entries": [
+        {
+          "positionId": "13_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_0",
+          "speculationId": "13",
+          "bucket": "claimable",
+          "description": "Pittsburgh Pirates moneyline \u2014 Won (\u2248 $0.04)",
+          "success": true,
+          "txHashes": [
+            "0xa4b2168898c7e09beec9dd5fa4ed1d0dc1a64c7d0a8390f77312bbc3a5f90464"
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "file": "final-dryrun-stage-maker-a.json",
+      "ok": true,
+      "action": "claim-all",
+      "generatedAt": "2026-05-24T21:41:37.930Z",
+      "wallet": null,
+      "effects": [],
+      "payload": {
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "dryRun": true,
+        "success": false,
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "totalPayoutWei6": "0",
+          "totalPayoutUSDC": 0
+        }
+      },
+      "entryCount": 0,
+      "entries": [],
+      "errors": []
+    },
+    {
+      "file": "final-dryrun-stage-maker-b.json",
+      "ok": true,
+      "action": "claim-all",
+      "generatedAt": "2026-05-24T21:41:39.428Z",
+      "wallet": null,
+      "effects": [],
+      "payload": {
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "dryRun": true,
+        "success": false,
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "totalPayoutWei6": "0",
+          "totalPayoutUSDC": 0
+        }
+      },
+      "entryCount": 0,
+      "entries": [],
+      "errors": []
+    },
+    {
+      "file": "final-position-status-stage-maker-a.json",
+      "ok": true,
+      "action": "positions.status",
+      "generatedAt": "2026-05-24T21:41:56.733Z",
+      "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "effects": [],
+      "payload": {
+        "totals": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      },
+      "entryCount": 0,
+      "entries": [],
+      "errors": []
+    },
+    {
+      "file": "final-position-status-stage-maker-b.json",
+      "ok": true,
+      "action": "positions.status",
+      "generatedAt": "2026-05-24T21:41:58.280Z",
+      "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "effects": [],
+      "payload": {
+        "totals": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      },
+      "entryCount": 0,
+      "entries": [],
+      "errors": []
+    }
+  ]
+}

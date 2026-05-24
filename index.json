@@ -1,10 +1,12 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-05-24T06:19:49Z",
+  "generatedAt": "2026-05-24T21:53:47Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
+      "runs/2026-05-24-mlb-pit-tor-contest-22-mm-early1/evidence.json",
+      "runs/2026-05-24-mlb-min-bos-contest-23-mm-early2-softcancel-recovery/evidence.json",
       "runs/2026-05-24-mlb-tex-laa-contest-21-mm-partial-smoke/evidence.json",
       "runs/2026-05-23-mlb-hou-chc-contest-19-mm-smoke/evidence.json",
       "runs/2026-05-22-mlb-lad-mil-contest-18-controlled-lifecycle/evidence.json",
@@ -17,6 +19,28 @@
     "daily-digest": []
   },
   "recentArtifacts": [
+    {
+      "artifactId": "2026-05-24-mlb-pit-tor-contest-22-mm-early1",
+      "artifactType": "run",
+      "dataPath": "runs/2026-05-24-mlb-pit-tor-contest-22-mm-early1/evidence.json",
+      "date": "2026-05-24",
+      "network": "polygon",
+      "rawPath": "runs/2026-05-24-mlb-pit-tor-contest-22-mm-early1/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-05-24-mlb-pit-tor-contest-22-mm-early1/summary.md",
+      "publishedAt": "2026-05-24T21:53:35Z"
+    },
+    {
+      "artifactId": "2026-05-24-mlb-min-bos-contest-23-mm-early2-softcancel-recovery",
+      "artifactType": "run",
+      "dataPath": "runs/2026-05-24-mlb-min-bos-contest-23-mm-early2-softcancel-recovery/evidence.json",
+      "date": "2026-05-24",
+      "network": "polygon",
+      "rawPath": "runs/2026-05-24-mlb-min-bos-contest-23-mm-early2-softcancel-recovery/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-05-24-mlb-min-bos-contest-23-mm-early2-softcancel-recovery/summary.md",
+      "publishedAt": "2026-05-24T21:53:35Z"
+    },
     {
       "artifactId": "2026-05-24-mlb-tex-laa-contest-21-mm-partial-smoke",
       "artifactType": "run",
@@ -90,9 +114,9 @@
       "scope": "year",
       "year": 2026,
       "path": "archive/2026/index.json",
-      "artifactCount": 6,
+      "artifactCount": 8,
       "oldestPublishedAt": "2026-05-20T02:48:35Z",
-      "newestPublishedAt": "2026-05-24T06:04:49Z"
+      "newestPublishedAt": "2026-05-24T21:53:35Z"
     }
   ]
 }

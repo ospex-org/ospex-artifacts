@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-05-24T21:53:35Z",
+  "source": "MLB Stats API",
+  "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-24&hydrate=team,linescore",
+  "gamePk": 824759,
+  "gameGuid": "0f313b0a-26f6-4ceb-bc48-bf6a1a9c9f11",
+  "gameDate": "2026-05-24T17:35:00Z",
+  "away": "Minnesota Twins",
+  "home": "Boston Red Sox",
+  "status": "Final",
+  "abstractGameState": "Final",
+  "awayScore": 6,
+  "homeScore": 5,
+  "lineScoreTotals": {
+    "away": {
+      "runs": 6,
+      "hits": 12,
+      "errors": 1,
+      "leftOnBase": 10
+    },
+    "home": {
+      "runs": 5,
+      "hits": 11,
+      "errors": 1,
+      "leftOnBase": 6
+    }
+  }
+}
