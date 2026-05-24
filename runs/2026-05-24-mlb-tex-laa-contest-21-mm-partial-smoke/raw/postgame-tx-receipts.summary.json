@@ -1,0 +1,64 @@
+{
+  "chainId": 137,
+  "detectedScoreCallbackTx": "0xd89768c82a530adb0a60355f27398d01b75de01d25d814ef561bce0f7525ec28",
+  "network": "polygon-mainnet",
+  "receipts": {
+    "scoreCallbackScoresSet": {
+      "blockNumber": 87350582,
+      "effectiveGasPriceWei": "423734799286",
+      "explorer": "https://polygonscan.com/tx/0xd89768c82a530adb0a60355f27398d01b75de01d25d814ef561bce0f7525ec28",
+      "from": "0x7744a72832956b2ee041426441002cb7d8d4890c",
+      "gasCostPOL": "0.133856975624848828",
+      "gasUsed": 315898,
+      "label": "scoreCallbackScoresSet",
+      "status": "0x1",
+      "success": true,
+      "to": "0x71f707344a3fe10223c22d5929add95b3dfa007c",
+      "transactionHash": "0xd89768c82a530adb0a60355f27398d01b75de01d25d814ef561bce0f7525ec28",
+      "txHash": "0xd89768c82a530adb0a60355f27398d01b75de01d25d814ef561bce0f7525ec28"
+    },
+    "scoreRequest": {
+      "blockNumber": 87350576,
+      "effectiveGasPriceWei": "281276400718",
+      "explorer": "https://polygonscan.com/tx/0xb97616642ba440c51e8faa8e7d5d399aa7a03ff10e046a25c3f3c73ab3332943",
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "gasCostPOL": "0.186860070012588225",
+      "gasUsed": 664329,
+      "label": "scoreRequest",
+      "status": "0x1",
+      "success": true,
+      "to": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+      "transactionHash": "0xb97616642ba440c51e8faa8e7d5d399aa7a03ff10e046a25c3f3c73ab3332943",
+      "txHash": "0xb97616642ba440c51e8faa8e7d5d399aa7a03ff10e046a25c3f3c73ab3332943"
+    },
+    "settle": {
+      "blockNumber": 87350601,
+      "effectiveGasPriceWei": "282438925162",
+      "explorer": "https://polygonscan.com/tx/0x943438400ee24fbb3c06d35ed7326ceb9d9ca4964e560ff5c4f6175831205c68",
+      "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "gasCostPOL": "0.043952863094785279",
+      "gasUsed": 155619,
+      "label": "settle",
+      "status": "0x1",
+      "success": true,
+      "to": "0xd757387893e779ac35451cea639a408a537b9a1b",
+      "transactionHash": "0x943438400ee24fbb3c06d35ed7326ceb9d9ca4964e560ff5c4f6175831205c68",
+      "txHash": "0x943438400ee24fbb3c06d35ed7326ceb9d9ca4964e560ff5c4f6175831205c68"
+    },
+    "winnerClaim": {
+      "blockNumber": 87350622,
+      "effectiveGasPriceWei": "285282893211",
+      "explorer": "https://polygonscan.com/tx/0x9499f7233bb568635b86e0afdffe21393aa1abbc4b6af763238d89a2ce4374f6",
+      "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "gasCostPOL": "0.035208188265635564",
+      "gasUsed": 123415,
+      "label": "winnerClaim",
+      "status": "0x1",
+      "success": true,
+      "to": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+      "transactionHash": "0x9499f7233bb568635b86e0afdffe21393aa1abbc4b6af763238d89a2ce4374f6",
+      "txHash": "0x9499f7233bb568635b86e0afdffe21393aa1abbc4b6af763238d89a2ce4374f6"
+    }
+  },
+  "schemaVersion": 1
+}
