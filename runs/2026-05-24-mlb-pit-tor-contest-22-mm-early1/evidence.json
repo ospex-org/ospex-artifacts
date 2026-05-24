@@ -312,7 +312,8 @@
     "partialRemainderRetainedTelemetryCount": 0,
     "postgameScore": true,
     "speculationSettled": true,
-    "winnerClaimedAtCapture": true
+    "winnerClaimedAtCapture": true,
+    "partialRemainderRetainedTelemetryNote": "Counts retained-partial/on-chain-cancel acceptance telemetry events only; distinct from mm-final-status.summary.candidates.skipReasons[\"partial-remainder-retained\"], which is a quote-candidate skip reason."
   },
   "marketMaker": {
     "runIds": [
@@ -484,7 +485,7 @@
     }
   ],
   "knownCaveats": [
-    "This is complete lifecycle evidence for early1, but it is not clean green D1/D2 on-chain-cancel acceptance evidence: on-chain cancel and retained-partial telemetry counts were zero.",
+    "This is complete lifecycle evidence for early1, but it is not clean green D1/D2 on-chain-cancel acceptance evidence: on-chain cancel and retained-partial acceptance telemetry counts were zero. The separate mm-final-status candidate skip reason partial-remainder-retained=1 is a routine quoting candidate-skip metric, not a retained-partial acceptance/on-chain-cancel telemetry event.",
     "The MM recorded the controlled fill, then the filled commitment expired; final public/API exposure was zero, while local status retained expired/soft-cancelled nonterminal bookkeeping rows.",
     "Projection lag after the first settlement caused one duplicate-settle estimateGas failure for the second winner; retry after convergence succeeded and final dry-runs were empty.",
     "The games projection still reported status upcoming at capture even though contest/speculation protocol state and MLB Stats API were final/scored/settled.",

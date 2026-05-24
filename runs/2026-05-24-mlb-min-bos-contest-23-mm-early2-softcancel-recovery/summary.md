@@ -92,12 +92,14 @@ Losing positions:
 - Telemetry errors: `2`
 - Final Supabase visible-live commitments: `0`
 - Live MM runner processes after wrap-up: `0`
+- Scope note: counts above are the canonical two post-restart final-status view from `raw/mm-final-status.sanitized.json`. `raw/mm-telemetry-summary.sanitized.json` intentionally aggregates all three early2 lifecycle logs, including the earlier 16:37 setup/aborted quoting attempt; its top-line counts are ticks `5`, submits `4`, soft-cancels `4`, errors `5`.
+- PositionWithoutCommitment scope: all five raw errors (two in the canonical final-status view) are for older speculation `13`; target speculation `14` has target-relevant PositionWithoutCommitment count `0`.
 
 ## Caveats / product or ops debt observed
 
 - This is complete lifecycle evidence for early2 and does exercise soft-cancelled hidden-hash fill recovery, but it is not clean green D1/D2 on-chain-cancel acceptance evidence.
 - The first early2 score attempt failed before sending a tx because the fresh-user contest creator had zero LINK allowance for OracleModule; approving 0.005 LINK and retrying scored cleanly.
-- The MM telemetry included two position-poll PositionWithoutCommitment errors for an older speculation on the shared maker wallet; the target soft-cancel recovery fill still recorded via source=softcancel-recovery, and final protocol state is complete.
+- The canonical marketMaker block is scoped to the two post-restart final-status runs and has two PositionWithoutCommitment errors; `raw/mm-telemetry-summary.sanitized.json` intentionally aggregates all three early2 lifecycle runs, including the earlier 16:37 setup/aborted quoting attempt, and has five such errors. All five were for older speculation `13` on the shared maker wallet; target speculation `14` target-relevant count is zero, the target soft-cancel recovery fill still recorded via source=softcancel-recovery, and final protocol state is complete.
 - Projection lag after the first settlement caused one duplicate-settle estimateGas failure for the second winner; retry after convergence succeeded and final dry-runs were empty.
 - The games projection still reported status upcoming at capture even though contest/speculation protocol state and MLB Stats API were final/scored/settled.
 - The public artifact intentionally excludes raw signatures, private operator material, credential material, keystore paths, local run paths, raw provider IDs, and raw telemetry transcripts.

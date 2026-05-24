@@ -91,10 +91,11 @@ Losing positions:
 - Telemetry errors: `0`
 - Final Supabase visible-live commitments: `0`
 - Live MM runner processes after wrap-up: `0`
+- Retained-partial metric note: `partialRemainderRetainedTelemetryCount: 0` is the retained-partial/on-chain-cancel acceptance-event count. `raw/mm-final-status.sanitized.json` also has `candidates.skipReasons.partial-remainder-retained: 1`, which is a separate quote-candidate skip reason.
 
 ## Caveats / product or ops debt observed
 
-- This is complete lifecycle evidence for early1, but it is not clean green D1/D2 on-chain-cancel acceptance evidence: on-chain cancel and retained-partial telemetry counts were zero.
+- This is complete lifecycle evidence for early1, but it is not clean green D1/D2 on-chain-cancel acceptance evidence: on-chain cancel and retained-partial acceptance telemetry counts were zero. The separate `partial-remainder-retained: 1` in final-status candidate skip reasons is a routine quoting metric, not a retained-partial acceptance/on-chain-cancel telemetry event.
 - The MM recorded the controlled fill, then the filled commitment expired; final public/API exposure was zero, while local status retained expired/soft-cancelled nonterminal bookkeeping rows.
 - Projection lag after the first settlement caused one duplicate-settle estimateGas failure for the second winner; retry after convergence succeeded and final dry-runs were empty.
 - The games projection still reported status upcoming at capture even though contest/speculation protocol state and MLB Stats API were final/scored/settled.

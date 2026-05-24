@@ -10,20 +10,20 @@
   "chainId": 137,
   "title": "Twins @ Red Sox MM early2 soft-cancel recovery lifecycle wrap",
   "codeTargets": {
-    "capturedAt": null,
+    "capturedAt": "2026-05-24T21:53:35Z",
     "marketMaker": {
       "repo": "ospex-org/ospex-market-maker",
-      "sha": "a933d93338ce",
+      "sha": "a933d93338cecfe69a37b508a5f082c50f4cdcdb",
       "packageVersion": "0.0.0"
     },
     "sdkCli": {
       "repo": "ospex-org/ospex-sdk",
-      "sha": "625f7e1a907c",
+      "sha": "625f7e1a907cc03a7c23e01c9761641cae94d31d",
       "cliVersion": "0.3.1",
       "packageVersion": "0.3.1"
     },
-    "node": null,
-    "yarn": null
+    "node": "v22.22.0",
+    "yarn": "1.22.22"
   },
   "contest": {
     "contestId": 23,
@@ -455,7 +455,42 @@
       }
     },
     "telemetrySummaryPath": "raw/mm-telemetry-summary.sanitized.json",
-    "finalStatusPath": "raw/mm-final-status.sanitized.json"
+    "finalStatusPath": "raw/mm-final-status.sanitized.json",
+    "telemetryScope": {
+      "canonicalCountsSource": "raw/mm-final-status.sanitized.json",
+      "canonicalCountsScope": "two post-restart live runs used for final status and evidence.json eventCounts",
+      "canonicalRunIds": [
+        "2026-05-24T16-45-39-251Z-tlpty8",
+        "2026-05-24T16-47-30-805Z-j4g818"
+      ],
+      "rawTelemetrySummaryPath": "raw/mm-telemetry-summary.sanitized.json",
+      "rawTelemetryScope": "all three early2 lifecycle run logs, including the earlier 16:37 setup/aborted quoting attempt",
+      "rawRunIds": [
+        "2026-05-24T16-37-34-585Z-a48pxo",
+        "2026-05-24T16-45-39-251Z-tlpty8",
+        "2026-05-24T16-47-30-805Z-j4g818"
+      ],
+      "rawEventCounts": {
+        "candidate": 3,
+        "error": 5,
+        "fill": 2,
+        "kill": 3,
+        "quote-competitiveness": 4,
+        "quote-intent": 3,
+        "risk-verdict": 3,
+        "soft-cancel": 4,
+        "submit": 4,
+        "tick-start": 5
+      },
+      "positionWithoutCommitment": {
+        "rawTotal": 5,
+        "canonicalFinalStatusTotal": 2,
+        "targetRelevantTotal": 0,
+        "targetSpeculationId": "14",
+        "unrelatedSpeculationId": "13",
+        "note": "All PositionWithoutCommitment errors were position-poll noise for older speculation 13 on the shared maker wallet, not target speculation 14."
+      }
+    }
   },
   "txs": {
     "contest-create": "0x5a7d5807ce2203c8bdc2a4285df144e640ea2dc76fd3465f1f589bc11bde2c94",
@@ -503,7 +538,7 @@
   "knownCaveats": [
     "This is complete lifecycle evidence for early2 and does exercise soft-cancelled hidden-hash fill recovery, but it is not clean green D1/D2 on-chain-cancel acceptance evidence.",
     "The first early2 score attempt failed before sending a tx because the fresh-user contest creator had zero LINK allowance for OracleModule; approving 0.005 LINK and retrying scored cleanly.",
-    "The MM telemetry included two position-poll PositionWithoutCommitment errors for an older speculation on the shared maker wallet; the target soft-cancel recovery fill still recorded via source=softcancel-recovery, and final protocol state is complete.",
+    "The canonical marketMaker block is scoped to the two post-restart final-status runs and has two PositionWithoutCommitment errors; raw/mm-telemetry-summary.sanitized.json intentionally aggregates all three early2 lifecycle runs, including the earlier 16:37 setup/aborted quoting attempt, and has five such errors. All five were for older speculation 13 on the shared maker wallet; target speculation 14 target-relevant PositionWithoutCommitment count is zero, the soft-cancel recovery fill recorded via source=softcancel-recovery, and final protocol state is complete.",
     "Projection lag after the first settlement caused one duplicate-settle estimateGas failure for the second winner; retry after convergence succeeded and final dry-runs were empty.",
     "The games projection still reported status upcoming at capture even though contest/speculation protocol state and MLB Stats API were final/scored/settled.",
     "The public artifact intentionally excludes raw signatures, private operator material, credential material, keystore paths, local run paths, raw provider IDs, and raw telemetry transcripts."

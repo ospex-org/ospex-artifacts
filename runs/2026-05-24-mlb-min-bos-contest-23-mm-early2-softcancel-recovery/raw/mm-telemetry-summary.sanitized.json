@@ -1,5 +1,23 @@
 {
   "schemaVersion": 1,
+  "scopeNote": "This raw telemetry rollup intentionally aggregates all three early2 lifecycle run logs, including the earlier 16:37 setup/aborted quoting attempt. The canonical evidence.json marketMaker counts are scoped to the two post-restart final-status runs in raw/mm-final-status.sanitized.json.",
+  "targetRelevance": {
+    "targetContestId": "23",
+    "targetSpeculationId": "14",
+    "setupOrAbortedRunIds": [
+      "2026-05-24T16-37-34-585Z-a48pxo"
+    ],
+    "canonicalFinalStatusRunIds": [
+      "2026-05-24T16-45-39-251Z-tlpty8",
+      "2026-05-24T16-47-30-805Z-j4g818"
+    ],
+    "positionWithoutCommitment": {
+      "rawTotal": 5,
+      "canonicalFinalStatusTotal": 2,
+      "targetRelevantTotal": 0,
+      "unrelatedSpeculationId": "13"
+    }
+  },
   "files": [
     "run-2026-05-24T16-37-34-585Z-a48pxo.ndjson",
     "run-2026-05-24T16-45-39-251Z-tlpty8.ndjson",
