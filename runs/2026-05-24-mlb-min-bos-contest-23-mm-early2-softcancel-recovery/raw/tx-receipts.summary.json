@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "network": "polygon-mainnet",
+  "chainId": 137,
+  "capturedAt": "2026-05-24T21:53:35Z",
+  "receipts": [
+    {
+      "label": "contest-create",
+      "txHash": "0x5a7d5807ce2203c8bdc2a4285df144e640ea2dc76fd3465f1f589bc11bde2c94",
+      "explorer": "https://polygonscan.com/tx/0x5a7d5807ce2203c8bdc2a4285df144e640ea2dc76fd3465f1f589bc11bde2c94",
+      "status": 1,
+      "blockNumber": 87371885,
+      "from": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "to": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+      "gasUsed": 1375948,
+      "effectiveGasPrice": 281443888162
+    },
+    {
+      "label": "contest-verified",
+      "txHash": "0x98a7c922c00fc55cfe2fc49c72d8733c2a7a29fd9214be4b53750da8dd7c6177",
+      "explorer": "https://polygonscan.com/tx/0x98a7c922c00fc55cfe2fc49c72d8733c2a7a29fd9214be4b53750da8dd7c6177",
+      "status": 1,
+      "blockNumber": 87371892,
+      "from": "0x7744a72832956b2ee041426441002cb7d8d4890c",
+      "to": "0x71f707344a3fe10223c22d5929add95b3dfa007c",
+      "gasUsed": 343397,
+      "effectiveGasPrice": 419377942736
+    },
+    {
+      "label": "seed-match",
+      "txHash": "0x9c3a79cc772835f7bc9b691f288b7e4c5ac9b56d253ac58d18951df086b77212",
+      "explorer": "https://polygonscan.com/tx/0x9c3a79cc772835f7bc9b691f288b7e4c5ac9b56d253ac58d18951df086b77212",
+      "status": 1,
+      "blockNumber": 87371913,
+      "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "to": "0x1b93579b044f0ee3c4c8a9f479a323def7770712",
+      "gasUsed": 663574,
+      "effectiveGasPrice": 287115001377
+    },
+    {
+      "label": "controlled-fill",
+      "txHash": "0xa8b4422a502e870a70ea7c371a8e05d197bb31162dc06aba77c65d43fda97202",
+      "explorer": "https://polygonscan.com/tx/0xa8b4422a502e870a70ea7c371a8e05d197bb31162dc06aba77c65d43fda97202",
+      "status": 1,
+      "blockNumber": 87372286,
+      "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "to": "0x1b93579b044f0ee3c4c8a9f479a323def7770712",
+      "gasUsed": 419833,
+      "effectiveGasPrice": 281421233336
+    },
+    {
+      "label": "fresh-user-link-approval",
+      "txHash": "0x9a54038961d6e36441fc8fff2855f8e41572ee64b7b6c2ba326cfcc76941c0a6",
+      "explorer": "https://polygonscan.com/tx/0x9a54038961d6e36441fc8fff2855f8e41572ee64b7b6c2ba326cfcc76941c0a6",
+      "status": 1,
+      "blockNumber": 87382289,
+      "from": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "to": "0xb0897686c545045afc77cf20ec7a532e3120e0f1",
+      "gasUsed": 47267,
+      "effectiveGasPrice": 277427569855
+    },
+    {
+      "label": "score-request",
+      "txHash": "0x376e31715650fdb94b52f5f09884555e5518d6023155c6020b41b37bed61edd3",
+      "explorer": "https://polygonscan.com/tx/0x376e31715650fdb94b52f5f09884555e5518d6023155c6020b41b37bed61edd3",
+      "status": 1,
+      "blockNumber": 87382293,
+      "from": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "to": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+      "gasUsed": 660369,
+      "effectiveGasPrice": 279661135341
+    },
+    {
+      "label": "score-callback",
+      "txHash": "0x2c4d7df6dacb8a0db74659c3aee3686a5bc53df8786c5631a846f88c14633dfa",
+      "explorer": "https://polygonscan.com/tx/0x2c4d7df6dacb8a0db74659c3aee3686a5bc53df8786c5631a846f88c14633dfa",
+      "status": 1,
+      "blockNumber": 87382298,
+      "from": "0x7744a72832956b2ee041426441002cb7d8d4890c",
+      "to": "0x71f707344a3fe10223c22d5929add95b3dfa007c",
+      "gasUsed": 315898,
+      "effectiveGasPrice": 388404235957
+    },
+    {
+      "label": "settle",
+      "txHash": "0x197043a852f096519d56b2cc9e3b01cfdc04acb5a6a61f4303ec8892bb6b21d4",
+      "explorer": "https://polygonscan.com/tx/0x197043a852f096519d56b2cc9e3b01cfdc04acb5a6a61f4303ec8892bb6b21d4",
+      "status": 1,
+      "blockNumber": 87382348,
+      "from": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "to": "0xd757387893e779ac35451cea639a408a537b9a1b",
+      "gasUsed": 155603,
+      "effectiveGasPrice": 280903069856
+    },
+    {
+      "label": "ospex-fresh-user",
+      "txHash": "0xbedca3232659f2eed0e3a968f5c307698da82f06f068d65efa080c1450a9c2f9",
+      "explorer": "https://polygonscan.com/tx/0xbedca3232659f2eed0e3a968f5c307698da82f06f068d65efa080c1450a9c2f9",
+      "status": 1,
+      "blockNumber": 87382350,
+      "from": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "to": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+      "gasUsed": 127189,
+      "effectiveGasPrice": 283642039825
+    },
+    {
+      "label": "ospex-flow-a",
+      "txHash": "0x8d400ef611dacac5f141ce7f6b1f057dea4fd0f5fc09af4d6ba4e22eacb7ffad",
+      "explorer": "https://polygonscan.com/tx/0x8d400ef611dacac5f141ce7f6b1f057dea4fd0f5fc09af4d6ba4e22eacb7ffad",
+      "status": 1,
+      "blockNumber": 87382374,
+      "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "to": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+      "gasUsed": 123229,
+      "effectiveGasPrice": 282867807426
+    }
+  ]
+}

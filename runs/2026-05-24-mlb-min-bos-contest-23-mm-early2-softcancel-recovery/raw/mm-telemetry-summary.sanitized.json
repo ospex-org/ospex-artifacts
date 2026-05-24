@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "scopeNote": "This raw telemetry rollup intentionally aggregates all three early2 lifecycle run logs, including the earlier 16:37 setup/aborted quoting attempt. The canonical evidence.json marketMaker counts are scoped to the two post-restart final-status runs in raw/mm-final-status.sanitized.json.",
+  "targetRelevance": {
+    "targetContestId": "23",
+    "targetSpeculationId": "14",
+    "setupOrAbortedRunIds": [
+      "2026-05-24T16-37-34-585Z-a48pxo"
+    ],
+    "canonicalFinalStatusRunIds": [
+      "2026-05-24T16-45-39-251Z-tlpty8",
+      "2026-05-24T16-47-30-805Z-j4g818"
+    ],
+    "positionWithoutCommitment": {
+      "rawTotal": 5,
+      "canonicalFinalStatusTotal": 2,
+      "targetRelevantTotal": 0,
+      "unrelatedSpeculationId": "13"
+    }
+  },
+  "files": [
+    "run-2026-05-24T16-37-34-585Z-a48pxo.ndjson",
+    "run-2026-05-24T16-45-39-251Z-tlpty8.ndjson",
+    "run-2026-05-24T16-47-30-805Z-j4g818.ndjson"
+  ],
+  "runIds": [
+    "2026-05-24T16-37-34-585Z-a48pxo",
+    "2026-05-24T16-45-39-251Z-tlpty8",
+    "2026-05-24T16-47-30-805Z-j4g818"
+  ],
+  "firstEventAt": "2026-05-24T16:37:34.588Z",
+  "lastEventAt": "2026-05-24T16:48:02.170Z",
+  "eventCounts": {
+    "candidate": 3,
+    "error": 5,
+    "fill": 2,
+    "kill": 3,
+    "quote-competitiveness": 4,
+    "quote-intent": 3,
+    "risk-verdict": 3,
+    "soft-cancel": 4,
+    "submit": 4,
+    "tick-start": 5
+  },
+  "notableEvents": [
+    {
+      "ts": "2026-05-24T16:37:35.530Z",
+      "runId": "2026-05-24T16-37-34-585Z-a48pxo",
+      "kind": "error",
+      "class": "PositionWithoutCommitment",
+      "phase": "position-poll",
+      "detail": "getPositionStatus reports a position on (13, away) but no local commitment with that (speculationId, makerSide) is present \u2014 refusing to create an incomplete MakerPositionRecord",
+      "speculationId": "13"
+    },
+    {
+      "ts": "2026-05-24T16:38:07.525Z",
+      "runId": "2026-05-24T16-37-34-585Z-a48pxo",
+      "kind": "error",
+      "class": "PositionWithoutCommitment",
+      "phase": "position-poll",
+      "detail": "getPositionStatus reports a position on (13, away) but no local commitment with that (speculationId, makerSide) is present \u2014 refusing to create an incomplete MakerPositionRecord",
+      "speculationId": "13"
+    },
+    {
+      "ts": "2026-05-24T16:38:38.325Z",
+      "runId": "2026-05-24T16-37-34-585Z-a48pxo",
+      "kind": "error",
+      "class": "PositionWithoutCommitment",
+      "phase": "position-poll",
+      "detail": "getPositionStatus reports a position on (13, away) but no local commitment with that (speculationId, makerSide) is present \u2014 refusing to create an incomplete MakerPositionRecord",
+      "speculationId": "13"
+    },
+    {
+      "ts": "2026-05-24T16:39:08.657Z",
+      "runId": "2026-05-24T16-37-34-585Z-a48pxo",
+      "kind": "soft-cancel",
+      "commitmentHash": "0x679e4f33699d52ced963c2852bed1cc5b7b6f669a9efb3c27a21e24471dfe516",
+      "speculationId": "14",
+      "contestId": "23",
+      "sport": "mlb",
+      "awayTeam": "Minnesota Twins",
+      "homeTeam": "Boston Red Sox",
+      "makerSide": "home",
+      "takerSide": "away",
+      "positionType": 1,
+      "reason": "shutdown"
+    },
+    {
+      "ts": "2026-05-24T16:39:08.933Z",
+      "runId": "2026-05-24T16-37-34-585Z-a48pxo",
+      "kind": "soft-cancel",
+      "commitmentHash": "0xf1440eb56a59f58a77b440cafd9f00dd152be0a09b7fa7474961689064c10fac",
+      "speculationId": "14",
+      "contestId": "23",
+      "sport": "mlb",
+      "awayTeam": "Minnesota Twins",
+      "homeTeam": "Boston Red Sox",
+      "makerSide": "away",
+      "takerSide": "home",
+      "positionType": 0,
+      "reason": "shutdown"
+    },
+    {
+      "ts": "2026-05-24T16:39:08.934Z",
+      "runId": "2026-05-24T16-37-34-585Z-a48pxo",
+      "kind": "kill",
+      "reason": "kill-file",
+      "ticks": 3
+    },
+    {
+      "ts": "2026-05-24T16:45:40.167Z",
+      "runId": "2026-05-24T16-45-39-251Z-tlpty8",
+      "kind": "error",
+      "class": "PositionWithoutCommitment",
+      "phase": "position-poll",
+      "detail": "getPositionStatus reports a position on (13, away) but no local commitment with that (speculationId, makerSide) is present \u2014 refusing to create an incomplete MakerPositionRecord",
+      "speculationId": "13"
+    },
+    {
+      "ts": "2026-05-24T16:46:11.588Z",
+      "runId": "2026-05-24T16-45-39-251Z-tlpty8",
+      "kind": "soft-cancel",
+      "commitmentHash": "0xe9b243ee5b3a333e76d67fcea76fc3fe7c44a7e26bf6bfe01fa0e051dcf8c0a3",
+      "speculationId": "14",
+      "contestId": "23",
+      "sport": "mlb",
+      "awayTeam": "Minnesota Twins",
+      "homeTeam": "Boston Red Sox",
+      "makerSide": "home",
+      "takerSide": "away",
+      "positionType": 1,
+      "reason": "shutdown"
+    },
+    {
+      "ts": "2026-05-24T16:46:11.850Z",
+      "runId": "2026-05-24T16-45-39-251Z-tlpty8",
+      "kind": "soft-cancel",
+      "commitmentHash": "0x09c20d43491f258a5a50b53acce4b2160dd6cd7096710c735e40c790991bdbaf",
+      "speculationId": "14",
+      "contestId": "23",
+      "sport": "mlb",
+      "awayTeam": "Minnesota Twins",
+      "homeTeam": "Boston Red Sox",
+      "makerSide": "away",
+      "takerSide": "home",
+      "positionType": 0,
+      "reason": "shutdown"
+    },
+    {
+      "ts": "2026-05-24T16:46:11.851Z",
+      "runId": "2026-05-24T16-45-39-251Z-tlpty8",
+      "kind": "kill",
+      "reason": "kill-file",
+      "ticks": 1
+    },
+    {
+      "ts": "2026-05-24T16:47:31.771Z",
+      "runId": "2026-05-24T16-47-30-805Z-j4g818",
+      "kind": "fill",
+      "source": "position-poll",
+      "speculationId": "14",
+      "contestId": "23",
+      "sport": "mlb",
+      "awayTeam": "Minnesota Twins",
+      "homeTeam": "Boston Red Sox",
+      "makerSide": "home",
+      "positionType": 1,
+      "newFillWei6": "31200",
+      "cumulativeRiskWei6": "31200"
+    },
+    {
+      "ts": "2026-05-24T16:47:31.771Z",
+      "runId": "2026-05-24T16-47-30-805Z-j4g818",
+      "kind": "error",
+      "class": "PositionWithoutCommitment",
+      "phase": "position-poll",
+      "detail": "getPositionStatus reports a position on (13, away) but no local commitment with that (speculationId, makerSide) is present \u2014 refusing to create an incomplete MakerPositionRecord",
+      "speculationId": "13"
+    },
+    {
+      "ts": "2026-05-24T16:47:31.884Z",
+      "runId": "2026-05-24T16-47-30-805Z-j4g818",
+      "kind": "fill",
+      "source": "softcancel-recovery",
+      "commitmentHash": "0xe9b243ee5b3a333e76d67fcea76fc3fe7c44a7e26bf6bfe01fa0e051dcf8c0a3",
+      "speculationId": "14",
+      "contestId": "23",
+      "sport": "mlb",
+      "awayTeam": "Minnesota Twins",
+      "homeTeam": "Boston Red Sox",
+      "makerSide": "home",
+      "takerSide": "away",
+      "positionType": 1,
+      "newFillWei6": "31200",
+      "filledRiskWei6": "31200"
+    },
+    {
+      "ts": "2026-05-24T16:48:02.170Z",
+      "runId": "2026-05-24T16-47-30-805Z-j4g818",
+      "kind": "kill",
+      "reason": "kill-file",
+      "ticks": 1
+    }
+  ]
+}

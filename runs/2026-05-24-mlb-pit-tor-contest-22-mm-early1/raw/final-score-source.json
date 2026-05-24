@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-05-24T21:53:35Z",
+  "source": "MLB Stats API",
+  "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-24&hydrate=team,linescore",
+  "gamePk": 822813,
+  "gameGuid": "0616d196-9a2b-4395-b204-8b8935eea7c6",
+  "gameDate": "2026-05-24T16:15:00Z",
+  "away": "Pittsburgh Pirates",
+  "home": "Toronto Blue Jays",
+  "status": "Final",
+  "abstractGameState": "Final",
+  "awayScore": 4,
+  "homeScore": 1,
+  "lineScoreTotals": {
+    "away": {
+      "runs": 4,
+      "hits": 6,
+      "errors": 0,
+      "leftOnBase": 6
+    },
+    "home": {
+      "runs": 1,
+      "hits": 5,
+      "errors": 0,
+      "leftOnBase": 10
+    }
+  }
+}

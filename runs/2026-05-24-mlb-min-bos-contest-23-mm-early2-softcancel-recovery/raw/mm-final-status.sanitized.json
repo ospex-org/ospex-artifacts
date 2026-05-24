@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "status": {
+    "schemaVersion": 1,
+    "stateIntegrity": "loaded",
+    "stateLossAssessment": {
+      "holdQuoting": false,
+      "reason": "state loaded cleanly"
+    },
+    "lastFlushedAt": "2026-05-24T16:48:02.171Z",
+    "lastRunId": null,
+    "commitments": {
+      "total": 2,
+      "byLifecycle": {
+        "visibleOpen": 0,
+        "softCancelled": 2,
+        "partiallyFilled": 0,
+        "filled": 0,
+        "expired": 0,
+        "authoritativelyInvalidated": 0
+      },
+      "distinctContestsNonTerminal": 1
+    },
+    "positions": {
+      "total": 1,
+      "byStatus": {
+        "active": {
+          "count": 1,
+          "ownRiskWei6": "31200"
+        },
+        "pendingSettle": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "claimable": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "claimed": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        }
+      }
+    },
+    "dailyCounters": {
+      "today": "2026-05-24",
+      "todayGasPolWei": "0",
+      "todayFeeUsdcWei6": "0",
+      "lifetimeGasPolWei": "0",
+      "lifetimeFeeUsdcWei6": "0"
+    },
+    "pnl": {
+      "realizedUsdcWei6": "0",
+      "unrealizedUsdcWei6": "0",
+      "asOfUnixSec": 0
+    },
+    "makerAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "makerAddressSource": "flag",
+    "livePositionTotals": {
+      "activeCount": 2,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "claimablePayoutWei6": "0",
+      "pendingSettlePayoutWei6": "0"
+    },
+    "livePositionsSkipReason": null
+  },
+  "summary": {
+    "schemaVersion": 1,
+    "generatedAt": "2026-05-24T16:52:07.266Z",
+    "sources": [
+      "run-2026-05-24T16-45-39-251Z-tlpty8.ndjson",
+      "run-2026-05-24T16-47-30-805Z-j4g818.ndjson"
+    ],
+    "lines": 20,
+    "malformedLines": 0,
+    "runIds": [
+      "2026-05-24T16-45-39-251Z-tlpty8",
+      "2026-05-24T16-47-30-805Z-j4g818"
+    ],
+    "firstEventAt": "2026-05-24T16:45:39.254Z",
+    "lastEventAt": "2026-05-24T16:48:02.170Z",
+    "ticks": 2,
+    "eventCounts": {
+      "tick-start": 2,
+      "candidate": 2,
+      "fair-value": 0,
+      "risk-verdict": 2,
+      "quote-intent": 2,
+      "quote-competitiveness": 2,
+      "competitiveness-unavailable": 0,
+      "submit": 2,
+      "would-submit": 0,
+      "soft-cancel": 2,
+      "would-soft-cancel": 0,
+      "replace": 0,
+      "would-replace": 0,
+      "onchain-cancel": 0,
+      "nonce-floor-raise": 0,
+      "expire": 0,
+      "approval": 0,
+      "fill": 2,
+      "position-transition": 0,
+      "settle": 0,
+      "claim": 0,
+      "degraded": 0,
+      "error": 2,
+      "kill": 2
+    },
+    "candidates": {
+      "total": 2,
+      "tracked": 2,
+      "skipReasons": {}
+    },
+    "quoteIntents": {
+      "total": 2,
+      "canQuote": 1,
+      "refused": 1
+    },
+    "wouldSubmit": 0,
+    "wouldReplace": {
+      "total": 0,
+      "byReason": {}
+    },
+    "wouldSoftCancel": {
+      "total": 0,
+      "byReason": {}
+    },
+    "expired": 0,
+    "quoteCompetitiveness": {
+      "samples": 2,
+      "atOrInsideBookCount": 2,
+      "atOrInsideBookRate": 1,
+      "vsReferenceTicks": {
+        "min": 4,
+        "p50": 4,
+        "mean": 4.5,
+        "max": 5
+      },
+      "unavailable": 0
+    },
+    "quoteAgeSeconds": null,
+    "latentExposurePeakWei6": "0",
+    "staleQuoteIncidents": 0,
+    "degradedByReason": {},
+    "errors": {
+      "total": 2,
+      "byPhase": {
+        "position-poll": 2
+      }
+    },
+    "kill": {
+      "reason": "kill-file",
+      "ticks": 1
+    },
+    "liveMetrics": {
+      "fills": {
+        "quotedUsdcWei6": "240000",
+        "filledUsdcWei6": "62400",
+        "fillRate": 0.26
+      },
+      "gas": {
+        "totalPolWei": "0",
+        "byKind": {
+          "approval": "0",
+          "onchainCancel": "0",
+          "settle": "0",
+          "claim": "0"
+        },
+        "totalUsdcEquivWei6": "0"
+      },
+      "settlements": {
+        "settleCount": 0,
+        "claimCount": 0,
+        "totalClaimedPayoutWei6": "0"
+      },
+      "realizedPnl": {
+        "netUsdcWei6": "0",
+        "claimedProfitUsdcWei6": "0",
+        "realizedLossUsdcWei6": "0",
+        "wonCount": 0,
+        "lostCount": 0,
+        "pushCount": 0,
+        "wonUnclaimedCount": 0,
+        "unsettledCount": 1
+      },
+      "totalFeeUsdcWei6": "0"
+    }
+  }
+}

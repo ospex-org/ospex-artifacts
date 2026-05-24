@@ -1,0 +1,494 @@
+{
+  "artifactId": "2026-05-24-mlb-pit-tor-contest-22-mm-early1",
+  "artifactType": "run",
+  "status": "complete_verified_with_caveats",
+  "date": "2026-05-24",
+  "publishedAt": "2026-05-24T21:53:35Z",
+  "capturedAt": "2026-05-24T21:53:35Z",
+  "completedAt": "2026-05-24T21:53:35Z",
+  "network": "polygon-mainnet",
+  "chainId": 137,
+  "title": "Pirates @ Blue Jays MM early1 lifecycle wrap",
+  "codeTargets": {
+    "capturedAt": "2026-05-24T15:37:59.513021Z",
+    "marketMaker": {
+      "repo": "ospex-org/ospex-market-maker",
+      "sha": "a933d93338cecfe69a37b508a5f082c50f4cdcdb",
+      "packageVersion": null
+    },
+    "sdkCli": {
+      "repo": "ospex-org/ospex-sdk",
+      "sha": "625f7e1a907cc03a7c23e01c9761641cae94d31d",
+      "cliVersion": null,
+      "packageVersion": null
+    },
+    "node": "v22.22.0",
+    "yarn": "1.22.22"
+  },
+  "contest": {
+    "contestId": 22,
+    "speculationId": 13,
+    "sport": "mlb",
+    "marketType": "moneyline",
+    "slug": "pit-tor-2026-05-24",
+    "awayTeam": "Pittsburgh Pirates",
+    "homeTeam": "Toronto Blue Jays",
+    "startTime": "2026-05-24T16:15:00+00:00",
+    "contestCreator": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "contestStatus": "scored",
+    "protocolScoreAtCapture": {
+      "away": 4,
+      "home": 1
+    },
+    "scoredAt": "2026-05-24T21:38:03+00:00",
+    "verifiedAt": "2026-05-24T15:40:47+00:00",
+    "externalFinalScore": {
+      "away": 4,
+      "home": 1
+    },
+    "winner": {
+      "team": "Pittsburgh Pirates",
+      "protocolWinSide": "away/upper"
+    },
+    "gameStatusProjectionCaveat": "games.status remained 'upcoming' in the projection at capture"
+  },
+  "marketSemantics": {
+    "upper": "away/Pittsburgh Pirates",
+    "lower": "home/Toronto Blue Jays",
+    "winningPositionType": "upper"
+  },
+  "participants": {
+    "ospex-stage-maker-a": {
+      "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+      "explorer": "https://polygonscan.com/address/0x5316fa54c170D1927F30d1a497aC9E85E3826A9B"
+    },
+    "ospex-stage-maker-b": {
+      "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "explorer": "https://polygonscan.com/address/0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482"
+    },
+    "ospex-flow-a": {
+      "address": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+      "explorer": "https://polygonscan.com/address/0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30"
+    }
+  },
+  "commitments": {
+    "seedCommitmentHash": "0x533476552e51ec87a3d114c4048a03044da237828fee55c76d74b772e15b0af5",
+    "controlledMmCommitmentHash": "0x59a0d50b0269b296c00c0603248a47f09930ecabb9820d6873e121e572f7f5a9",
+    "byCommitment": [
+      {
+        "commitmentHash": "0x061401a8de5cac921f11a426c7bd69c1ca7c0c3627347944f1604704a318cef9",
+        "makerLabel": "ospex-stage-maker-a",
+        "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "positionType": "lower",
+        "sideLabel": "lower/home/Toronto Blue Jays",
+        "oddsTick": 165,
+        "riskWei6": "120000",
+        "riskUsdc": "0.120000",
+        "filledRiskWei6": "0",
+        "filledRiskUsdc": "0.000000",
+        "storedStatus": "open",
+        "bookVisible": false,
+        "expiry": "2026-05-24T15:55:24+00:00"
+      },
+      {
+        "commitmentHash": "0x143bcab74e59816a4b3744c556bafd8a05ef4502082e8b882ebcd66e203b94aa",
+        "makerLabel": "ospex-stage-maker-a",
+        "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "positionType": "upper",
+        "sideLabel": "upper/away/Pittsburgh Pirates",
+        "oddsTick": 261,
+        "riskWei6": "120000",
+        "riskUsdc": "0.120000",
+        "filledRiskWei6": "0",
+        "filledRiskUsdc": "0.000000",
+        "storedStatus": "open",
+        "bookVisible": false,
+        "expiry": "2026-05-24T15:55:24+00:00"
+      },
+      {
+        "commitmentHash": "0x533476552e51ec87a3d114c4048a03044da237828fee55c76d74b772e15b0af5",
+        "makerLabel": "ospex-stage-maker-b",
+        "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "positionType": "upper",
+        "sideLabel": "upper/away/Pittsburgh Pirates",
+        "oddsTick": 200,
+        "riskWei6": "20000",
+        "riskUsdc": "0.020000",
+        "filledRiskWei6": "20000",
+        "filledRiskUsdc": "0.020000",
+        "storedStatus": "filled",
+        "bookVisible": true,
+        "expiry": "2026-05-24T16:15:00+00:00"
+      },
+      {
+        "commitmentHash": "0x59a0d50b0269b296c00c0603248a47f09930ecabb9820d6873e121e572f7f5a9",
+        "makerLabel": "ospex-stage-maker-a",
+        "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "positionType": "upper",
+        "sideLabel": "upper/away/Pittsburgh Pirates",
+        "oddsTick": 261,
+        "riskWei6": "120000",
+        "riskUsdc": "0.120000",
+        "filledRiskWei6": "18600",
+        "filledRiskUsdc": "0.018600",
+        "storedStatus": "partially_filled",
+        "bookVisible": true,
+        "expiry": "2026-05-24T15:52:48+00:00"
+      },
+      {
+        "commitmentHash": "0xa8c9a0b590bb25fcdd05f9c7260d55808acaae7bc10a7624e45e626ec7aae0ce",
+        "makerLabel": "ospex-stage-maker-a",
+        "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "positionType": "lower",
+        "sideLabel": "lower/home/Toronto Blue Jays",
+        "oddsTick": 165,
+        "riskWei6": "120000",
+        "riskUsdc": "0.120000",
+        "filledRiskWei6": "0",
+        "filledRiskUsdc": "0.000000",
+        "storedStatus": "open",
+        "bookVisible": false,
+        "expiry": "2026-05-24T15:52:48+00:00"
+      }
+    ]
+  },
+  "fills": [
+    {
+      "commitmentHash": "0x533476552e51ec87a3d114c4048a03044da237828fee55c76d74b772e15b0af5",
+      "txHash": "0x2638c739f6dfb95171dfc7c8f60fd9c65e0a68ea4755c46c496c96d097225c6c",
+      "explorer": "https://polygonscan.com/tx/0x2638c739f6dfb95171dfc7c8f60fd9c65e0a68ea4755c46c496c96d097225c6c",
+      "filledAt": "2026-05-24T15:42:35+00:00",
+      "makerLabel": "ospex-stage-maker-b",
+      "makerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "takerLabel": "ospex-flow-a",
+      "takerAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "makerPositionType": "upper",
+      "makerSideLabel": "upper/away/Pittsburgh Pirates",
+      "takerPositionType": "lower",
+      "takerSideLabel": "lower/home/Toronto Blue Jays",
+      "makerRiskWei6": "20000",
+      "makerRiskUsdc": "0.020000",
+      "takerRiskWei6": "20000",
+      "takerRiskUsdc": "0.020000",
+      "oddsTick": 200
+    },
+    {
+      "commitmentHash": "0x59a0d50b0269b296c00c0603248a47f09930ecabb9820d6873e121e572f7f5a9",
+      "txHash": "0x02e30de29d26630328c0fd150b2f25a1e17c6f3ac63f0adbad8521cce56193a0",
+      "explorer": "https://polygonscan.com/tx/0x02e30de29d26630328c0fd150b2f25a1e17c6f3ac63f0adbad8521cce56193a0",
+      "filledAt": "2026-05-24T15:51:43+00:00",
+      "makerLabel": "ospex-stage-maker-a",
+      "makerAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "takerLabel": "ospex-flow-a",
+      "takerAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "makerPositionType": "upper",
+      "makerSideLabel": "upper/away/Pittsburgh Pirates",
+      "takerPositionType": "lower",
+      "takerSideLabel": "lower/home/Toronto Blue Jays",
+      "makerRiskWei6": "18600",
+      "makerRiskUsdc": "0.018600",
+      "takerRiskWei6": "29946",
+      "takerRiskUsdc": "0.029946",
+      "oddsTick": 261
+    }
+  ],
+  "positions": {
+    "byIndexedPosition": [
+      {
+        "label": "ospex-flow-a",
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "positionType": "lower",
+        "sideLabel": "lower/home/Toronto Blue Jays",
+        "riskWei6": "49946",
+        "riskUsdc": "0.049946",
+        "profitWei6": "38600",
+        "profitUsdc": "0.038600",
+        "outcome": "lost",
+        "claimed": false,
+        "claimedWei6": null,
+        "claimedUsdc": null,
+        "claimedAt": null
+      },
+      {
+        "label": "ospex-stage-maker-b",
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "positionType": "upper",
+        "sideLabel": "upper/away/Pittsburgh Pirates",
+        "riskWei6": "20000",
+        "riskUsdc": "0.020000",
+        "profitWei6": "20000",
+        "profitUsdc": "0.020000",
+        "outcome": "won",
+        "claimed": true,
+        "claimedWei6": "40000",
+        "claimedUsdc": "0.040000",
+        "claimedAt": "2026-05-24T21:40:58+00:00"
+      },
+      {
+        "label": "ospex-stage-maker-a",
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "positionType": "upper",
+        "sideLabel": "upper/away/Pittsburgh Pirates",
+        "riskWei6": "18600",
+        "riskUsdc": "0.018600",
+        "profitWei6": "29946",
+        "profitUsdc": "0.029946",
+        "outcome": "won",
+        "claimed": true,
+        "claimedWei6": "48546",
+        "claimedUsdc": "0.048546",
+        "claimedAt": "2026-05-24T21:40:09+00:00"
+      }
+    ]
+  },
+  "postgame": {
+    "scoreRequestTx": "0xe951a85c1376b96d439cb73977a7f36dc86cd9a0c545660bdf1b16a2ef0bd6c6",
+    "scoreCallbackTx": "0x63c5e996018464177e8dbbd4181835bc3da0347750f0f1365805517243ba0350",
+    "settleTx": "0xf28473e07826e8137114fcba6c4a0c664d074e351e431d22d01ed0b47837991a",
+    "claimTxs": {
+      "ospex-stage-maker-a": "0x752c85420d49b1840868b77393be3cdae72da5b9fdae65e2d886bbf39f24b191",
+      "ospex-stage-maker-b": "0xa4b2168898c7e09beec9dd5fa4ed1d0dc1a64c7d0a8390f77312bbc3a5f90464"
+    },
+    "finalDryRuns": {
+      "ospex-stage-maker-a": {
+        "ok": true,
+        "entries": 0,
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "totalPayoutWei6": "0",
+          "totalPayoutUSDC": 0
+        }
+      },
+      "ospex-stage-maker-b": {
+        "ok": true,
+        "entries": 0,
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "totalPayoutWei6": "0",
+          "totalPayoutUSDC": 0
+        }
+      }
+    },
+    "finalPositionStatusTotals": {
+      "ospex-stage-maker-a": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutWei6": "0"
+      },
+      "ospex-stage-maker-b": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutWei6": "0"
+      }
+    },
+    "projectionLagObserved": [
+      "The second early1 winner initially attempted claim-all while the projection still exposed the position as pendingSettle after stage-maker-a had already settled speculation 13; estimateGas for a duplicate settle reverted, and a retry after projection convergence succeeded as claim-only."
+    ]
+  },
+  "lifecycleChecks": {
+    "contestCreated": true,
+    "contestVerified": true,
+    "mmQuotedLive": true,
+    "controlledFillExecuted": true,
+    "postgameScore": true,
+    "speculationSettled": true,
+    "winningPositionsClaimed": true,
+    "finalClaimDryRunsEmpty": true,
+    "finalPositionActivePendingClaimableCountsZero": true,
+    "visibleLiveCommitmentsFinal": 0,
+    "mmRunnerProcessesAfterWrapup": 0
+  },
+  "acceptanceChecks": {
+    "cleanGreenD1D2AcceptanceEvidence": false,
+    "softCancelledFillRecoveryExercised": false,
+    "visiblePartialFillDetected": true,
+    "onchainCancelTelemetryCount": 0,
+    "partialRemainderRetainedTelemetryCount": 0,
+    "postgameScore": true,
+    "speculationSettled": true,
+    "winnerClaimedAtCapture": true,
+    "partialRemainderRetainedTelemetryNote": "Counts retained-partial/on-chain-cancel acceptance telemetry events only; distinct from mm-final-status.summary.candidates.skipReasons[\"partial-remainder-retained\"], which is a quote-candidate skip reason."
+  },
+  "marketMaker": {
+    "runIds": [
+      "2026-05-24T15-50-47-649Z-gkkwe4"
+    ],
+    "eventCounts": {
+      "tick-start": 6,
+      "candidate": 2,
+      "fair-value": 0,
+      "risk-verdict": 3,
+      "quote-intent": 3,
+      "quote-competitiveness": 4,
+      "competitiveness-unavailable": 0,
+      "submit": 4,
+      "would-submit": 0,
+      "soft-cancel": 3,
+      "would-soft-cancel": 0,
+      "replace": 0,
+      "would-replace": 0,
+      "onchain-cancel": 0,
+      "nonce-floor-raise": 0,
+      "expire": 2,
+      "approval": 0,
+      "fill": 1,
+      "position-transition": 0,
+      "settle": 0,
+      "claim": 0,
+      "degraded": 0,
+      "error": 0,
+      "kill": 1
+    },
+    "liveMetrics": {
+      "fills": {
+        "quotedUsdcWei6": "480000",
+        "filledUsdcWei6": "18600",
+        "fillRate": 0.03875
+      },
+      "gas": {
+        "totalPolWei": "0",
+        "byKind": {
+          "approval": "0",
+          "onchainCancel": "0",
+          "settle": "0",
+          "claim": "0"
+        },
+        "totalUsdcEquivWei6": "0"
+      },
+      "settlements": {
+        "settleCount": 0,
+        "claimCount": 0,
+        "totalClaimedPayoutWei6": "0"
+      },
+      "realizedPnl": {
+        "netUsdcWei6": "0",
+        "claimedProfitUsdcWei6": "0",
+        "realizedLossUsdcWei6": "0",
+        "wonCount": 0,
+        "lostCount": 0,
+        "pushCount": 0,
+        "wonUnclaimedCount": 0,
+        "unsettledCount": 1
+      },
+      "totalFeeUsdcWei6": "0"
+    },
+    "quoteCompetitiveness": {
+      "samples": 4,
+      "atOrInsideBookCount": 4,
+      "atOrInsideBookRate": 1,
+      "vsReferenceTicks": {
+        "min": 4,
+        "p50": 4,
+        "mean": 4.5,
+        "max": 5
+      },
+      "unavailable": 0
+    },
+    "finalStatus": {
+      "makerAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "stateIntegrity": "loaded",
+      "commitments": {
+        "total": 4,
+        "byLifecycle": {
+          "visibleOpen": 0,
+          "softCancelled": 2,
+          "partiallyFilled": 0,
+          "filled": 0,
+          "expired": 2,
+          "authoritativelyInvalidated": 0
+        },
+        "distinctContestsNonTerminal": 1
+      },
+      "positions": {
+        "total": 1,
+        "byStatus": {
+          "active": {
+            "count": 1,
+            "ownRiskWei6": "18600"
+          },
+          "pendingSettle": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "claimable": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "claimed": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          }
+        }
+      },
+      "livePositionTotals": {
+        "activeCount": 1,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "claimablePayoutWei6": "0",
+        "pendingSettlePayoutWei6": "0"
+      },
+      "pnl": {
+        "realizedUsdcWei6": "0",
+        "unrealizedUsdcWei6": "0",
+        "asOfUnixSec": 0
+      }
+    },
+    "telemetrySummaryPath": "raw/mm-telemetry-summary.sanitized.json",
+    "finalStatusPath": "raw/mm-final-status.sanitized.json"
+  },
+  "txs": {
+    "contest-create": "0x8f9fa4c09661e73d3a194fe2efa3a6440068caa55a6f5df996cbcb9be0e78a56",
+    "contest-verified": "0xa689e7d67606a6a2bc14cfa0e6e66cd105d578f6f65c3693ed8345489d43b2c9",
+    "seed-match": "0x2638c739f6dfb95171dfc7c8f60fd9c65e0a68ea4755c46c496c96d097225c6c",
+    "controlled-fill": "0x02e30de29d26630328c0fd150b2f25a1e17c6f3ac63f0adbad8521cce56193a0",
+    "score-request": "0xe951a85c1376b96d439cb73977a7f36dc86cd9a0c545660bdf1b16a2ef0bd6c6",
+    "score-callback": "0x63c5e996018464177e8dbbd4181835bc3da0347750f0f1365805517243ba0350",
+    "settle": "0xf28473e07826e8137114fcba6c4a0c664d074e351e431d22d01ed0b47837991a",
+    "ospex-stage-maker-a": "0x752c85420d49b1840868b77393be3cdae72da5b9fdae65e2d886bbf39f24b191",
+    "ospex-stage-maker-b": "0xa4b2168898c7e09beec9dd5fa4ed1d0dc1a64c7d0a8390f77312bbc3a5f90464"
+  },
+  "externalScoreSources": [
+    {
+      "schemaVersion": 1,
+      "capturedAt": "2026-05-24T21:53:35Z",
+      "source": "MLB Stats API",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-24&hydrate=team,linescore",
+      "gamePk": 822813,
+      "gameGuid": "0616d196-9a2b-4395-b204-8b8935eea7c6",
+      "gameDate": "2026-05-24T16:15:00Z",
+      "away": "Pittsburgh Pirates",
+      "home": "Toronto Blue Jays",
+      "status": "Final",
+      "abstractGameState": "Final",
+      "awayScore": 4,
+      "homeScore": 1,
+      "lineScoreTotals": {
+        "away": {
+          "runs": 4,
+          "hits": 6,
+          "errors": 0,
+          "leftOnBase": 6
+        },
+        "home": {
+          "runs": 1,
+          "hits": 5,
+          "errors": 0,
+          "leftOnBase": 10
+        }
+      }
+    }
+  ],
+  "knownCaveats": [
+    "This is complete lifecycle evidence for early1, but it is not clean green D1/D2 on-chain-cancel acceptance evidence: on-chain cancel and retained-partial acceptance telemetry counts were zero. The separate mm-final-status candidate skip reason partial-remainder-retained=1 is a routine quoting candidate-skip metric, not a retained-partial acceptance/on-chain-cancel telemetry event.",
+    "The MM recorded the controlled fill, then the filled commitment expired; final public/API exposure was zero, while local status retained expired/soft-cancelled nonterminal bookkeeping rows.",
+    "Projection lag after the first settlement caused one duplicate-settle estimateGas failure for the second winner; retry after convergence succeeded and final dry-runs were empty.",
+    "The games projection still reported status upcoming at capture even though contest/speculation protocol state and MLB Stats API were final/scored/settled.",
+    "The public artifact intentionally excludes raw signatures, private operator material, credential material, keystore paths, local run paths, raw provider IDs, and raw telemetry transcripts."
+  ]
+}

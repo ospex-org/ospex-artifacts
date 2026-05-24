@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 1,
+  "commands": [
+    {
+      "file": "score-contest-23.json",
+      "ok": false,
+      "action": "contests.score",
+      "generatedAt": "2026-05-24T21:37:53.432Z",
+      "wallet": null,
+      "effects": [],
+      "payload": {},
+      "entryCount": 0,
+      "entries": [],
+      "errors": [
+        {
+          "code": "ALLOWANCE_INSUFFICIENT",
+          "message": "Insufficient LINK allowance. Required 5000000000000000, current 0. Approve OracleModule (0x7e1397eD5b4c9f606DCF2EB0281485B2296E29Bb) for LINK."
+        }
+      ]
+    },
+    {
+      "file": "approval-fresh-user-link-0.005.json",
+      "ok": true,
+      "action": "approvals.setup",
+      "generatedAt": "2026-05-24T21:38:35.007Z",
+      "wallet": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "effects": [
+        {
+          "type": "transaction",
+          "purpose": "approve-link",
+          "ok": true,
+          "txHash": "0x9a54038961d6e36441fc8fff2855f8e41572ee64b7b6c2ba326cfcc76941c0a6",
+          "blockNumber": "87382289",
+          "status": "confirmed"
+        }
+      ],
+      "payload": {},
+      "entryCount": 0,
+      "entries": [],
+      "errors": []
+    },
+    {
+      "file": "score-contest-23-retry.json",
+      "ok": true,
+      "action": "contests.score",
+      "generatedAt": "2026-05-24T21:38:40.929Z",
+      "wallet": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "effects": [
+        {
+          "type": "transaction",
+          "purpose": "score-contest",
+          "ok": true,
+          "txHash": "0x376e31715650fdb94b52f5f09884555e5518d6023155c6020b41b37bed61edd3",
+          "blockNumber": "87382293",
+          "status": "confirmed"
+        }
+      ],
+      "payload": {
+        "contestId": "23",
+        "txHash": "0x376e31715650fdb94b52f5f09884555e5518d6023155c6020b41b37bed61edd3",
+        "requestId": "0xaee284c03eb9dc63d23056575386fc15d6c01286144928c9235b190010c5c574",
+        "status": "success"
+      },
+      "entryCount": 0,
+      "entries": [],
+      "errors": []
+    },
+    {
+      "file": "preclaim-dryrun-fresh-user.json",
+      "ok": true,
+      "action": "claim-all",
+      "generatedAt": "2026-05-24T21:39:42.822Z",
+      "wallet": null,
+      "effects": [],
+      "payload": {
+        "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "dryRun": true,
+        "success": false,
+        "totals": {
+          "claimed": 1,
+          "failed": 0,
+          "totalPayoutWei6": "40000",
+          "totalPayoutUSDC": 0.04
+        }
+      },
+      "entryCount": 1,
+      "entries": [
+        {
+          "positionId": "14_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_0",
+          "speculationId": "14",
+          "bucket": "pendingSettle",
+          "description": "Minnesota Twins moneyline \u2014 Won (\u2248 $0.04, needs settle)",
+          "success": true,
+          "txHashes": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "file": "preclaim-dryrun-flow-a.json",
+      "ok": true,
+      "action": "claim-all",
+      "generatedAt": "2026-05-24T21:39:44.362Z",
+      "wallet": null,
+      "effects": [],
+      "payload": {
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "dryRun": true,
+        "success": false,
+        "totals": {
+          "claimed": 1,
+          "failed": 0,
+          "totalPayoutWei6": "51168",
+          "totalPayoutUSDC": 0.051168
+        }
+      },
+      "entryCount": 1,
+      "entries": [
+        {
+          "positionId": "14_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+          "speculationId": "14",
+          "bucket": "pendingSettle",
+          "description": "Minnesota Twins moneyline \u2014 Won (\u2248 $0.05, needs settle)",
+          "success": true,
+          "txHashes": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "file": "claimall-fresh-user.json",
+      "ok": true,
+      "action": "claim-all",
+      "generatedAt": "2026-05-24T21:40:20.776Z",
+      "wallet": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "effects": [
+        {
+          "type": "transaction",
+          "purpose": "settle-speculation",
+          "ok": true,
+          "txHash": "0x197043a852f096519d56b2cc9e3b01cfdc04acb5a6a61f4303ec8892bb6b21d4",
+          "status": "confirmed"
+        },
+        {
+          "type": "transaction",
+          "purpose": "claim-position",
+          "ok": true,
+          "txHash": "0xbedca3232659f2eed0e3a968f5c307698da82f06f068d65efa080c1450a9c2f9",
+          "status": "confirmed"
+        }
+      ],
+      "payload": {
+        "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "dryRun": false,
+        "success": true,
+        "totals": {
+          "claimed": 1,
+          "failed": 0,
+          "totalPayoutWei6": "40000",
+          "totalPayoutUSDC": 0.04
+        }
+      },
+      "entryCount": 1,
+      "entries": [
+        {
+          "positionId": "14_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_0",
+          "speculationId": "14",
+          "bucket": "pendingSettle",
+          "description": "Minnesota Twins moneyline \u2014 Won (\u2248 $0.04, needs settle)",
+          "success": true,
+          "txHashes": [
+            "0x197043a852f096519d56b2cc9e3b01cfdc04acb5a6a61f4303ec8892bb6b21d4",
+            "0xbedca3232659f2eed0e3a968f5c307698da82f06f068d65efa080c1450a9c2f9"
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "file": "claimall-flow-a.json",
+      "ok": false,
+      "action": "claim-all",
+      "generatedAt": "2026-05-24T21:40:23.954Z",
+      "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "effects": [
+        {
+          "type": "transaction",
+          "purpose": "settle-speculation",
+          "ok": false,
+          "errorCode": "CHAIN_ERROR"
+        }
+      ],
+      "payload": {
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "dryRun": false,
+        "success": false,
+        "totals": {
+          "claimed": 0,
+          "failed": 1,
+          "totalPayoutWei6": "0",
+          "totalPayoutUSDC": 0
+        }
+      },
+      "entryCount": 1,
+      "entries": [
+        {
+          "positionId": "14_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+          "speculationId": "14",
+          "bucket": "pendingSettle",
+          "description": "Minnesota Twins moneyline \u2014 Won (\u2248 $0.05, needs settle)",
+          "success": false,
+          "txHashes": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "file": "claimall-flow-a-retry.json",
+      "ok": true,
+      "action": "claim-all",
+      "generatedAt": "2026-05-24T21:41:02.981Z",
+      "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "effects": [
+        {
+          "type": "transaction",
+          "purpose": "claim-position",
+          "ok": true,
+          "txHash": "0x8d400ef611dacac5f141ce7f6b1f057dea4fd0f5fc09af4d6ba4e22eacb7ffad",
+          "status": "confirmed"
+        }
+      ],
+      "payload": {
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "dryRun": false,
+        "success": true,
+        "totals": {
+          "claimed": 1,
+          "failed": 0,
+          "totalPayoutWei6": "51168",
+          "totalPayoutUSDC": 0.051168
+        }
+      },
+      "entryCount": 1,
+      "entries": [
+        {
+          "positionId": "14_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+          "speculationId": "14",
+          "bucket": "claimable",
+          "description": "Minnesota Twins moneyline \u2014 Won (\u2248 $0.05)",
+          "success": true,
+          "txHashes": [
+            "0x8d400ef611dacac5f141ce7f6b1f057dea4fd0f5fc09af4d6ba4e22eacb7ffad"
+          ]
+        }
+      ],
+      "errors": []
+    },
+    {
+      "file": "final-dryrun-fresh-user.json",
+      "ok": true,
+      "action": "claim-all",
+      "generatedAt": "2026-05-24T21:41:40.859Z",
+      "wallet": null,
+      "effects": [],
+      "payload": {
+        "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "dryRun": true,
+        "success": false,
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "totalPayoutWei6": "0",
+          "totalPayoutUSDC": 0
+        }
+      },
+      "entryCount": 0,
+      "entries": [],
+      "errors": []
+    },
+    {
+      "file": "final-dryrun-flow-a.json",
+      "ok": true,
+      "action": "claim-all",
+      "generatedAt": "2026-05-24T21:41:42.373Z",
+      "wallet": null,
+      "effects": [],
+      "payload": {
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "dryRun": true,
+        "success": false,
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "totalPayoutWei6": "0",
+          "totalPayoutUSDC": 0
+        }
+      },
+      "entryCount": 0,
+      "entries": [],
+      "errors": []
+    },
+    {
+      "file": "final-position-status-fresh-user.json",
+      "ok": true,
+      "action": "positions.status",
+      "generatedAt": "2026-05-24T21:41:59.763Z",
+      "wallet": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "effects": [],
+      "payload": {
+        "totals": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      },
+      "entryCount": 0,
+      "entries": [],
+      "errors": []
+    },
+    {
+      "file": "final-position-status-flow-a.json",
+      "ok": true,
+      "action": "positions.status",
+      "generatedAt": "2026-05-24T21:42:01.298Z",
+      "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "effects": [],
+      "payload": {
+        "totals": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      },
+      "entryCount": 0,
+      "entries": [],
+      "errors": []
+    }
+  ]
+}

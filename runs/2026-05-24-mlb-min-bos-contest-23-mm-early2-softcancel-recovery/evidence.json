@@ -1,0 +1,546 @@
+{
+  "artifactId": "2026-05-24-mlb-min-bos-contest-23-mm-early2-softcancel-recovery",
+  "artifactType": "run",
+  "status": "complete_verified_with_caveats",
+  "date": "2026-05-24",
+  "publishedAt": "2026-05-24T21:53:35Z",
+  "capturedAt": "2026-05-24T21:53:35Z",
+  "completedAt": "2026-05-24T21:53:35Z",
+  "network": "polygon-mainnet",
+  "chainId": 137,
+  "title": "Twins @ Red Sox MM early2 soft-cancel recovery lifecycle wrap",
+  "codeTargets": {
+    "capturedAt": "2026-05-24T21:53:35Z",
+    "marketMaker": {
+      "repo": "ospex-org/ospex-market-maker",
+      "sha": "a933d93338cecfe69a37b508a5f082c50f4cdcdb",
+      "packageVersion": "0.0.0"
+    },
+    "sdkCli": {
+      "repo": "ospex-org/ospex-sdk",
+      "sha": "625f7e1a907cc03a7c23e01c9761641cae94d31d",
+      "cliVersion": "0.3.1",
+      "packageVersion": "0.3.1"
+    },
+    "node": "v22.22.0",
+    "yarn": "1.22.22"
+  },
+  "contest": {
+    "contestId": 23,
+    "speculationId": 14,
+    "sport": "mlb",
+    "marketType": "moneyline",
+    "slug": "min-bos-2026-05-24",
+    "awayTeam": "Minnesota Twins",
+    "homeTeam": "Boston Red Sox",
+    "startTime": "2026-05-24T17:35:00+00:00",
+    "contestCreator": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+    "contestStatus": "scored",
+    "protocolScoreAtCapture": {
+      "away": 6,
+      "home": 5
+    },
+    "scoredAt": "2026-05-24T21:38:50+00:00",
+    "verifiedAt": "2026-05-24T16:35:19+00:00",
+    "externalFinalScore": {
+      "away": 6,
+      "home": 5
+    },
+    "winner": {
+      "team": "Minnesota Twins",
+      "protocolWinSide": "away/upper"
+    },
+    "gameStatusProjectionCaveat": "games.status remained 'upcoming' in the projection at capture"
+  },
+  "marketSemantics": {
+    "upper": "away/Minnesota Twins",
+    "lower": "home/Boston Red Sox",
+    "winningPositionType": "upper"
+  },
+  "participants": {
+    "ospex-stage-maker-a": {
+      "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+      "explorer": "https://polygonscan.com/address/0x5316fa54c170D1927F30d1a497aC9E85E3826A9B"
+    },
+    "ospex-flow-a": {
+      "address": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+      "explorer": "https://polygonscan.com/address/0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30"
+    },
+    "ospex-fresh-user": {
+      "address": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+      "explorer": "https://polygonscan.com/address/0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D"
+    }
+  },
+  "commitments": {
+    "seedCommitmentHash": "0xce95af27ddc8fefd8c6652b12a5e0f35790eb18eaa08410808bd57394738c136",
+    "controlledMmCommitmentHash": "0xe9b243ee5b3a333e76d67fcea76fc3fe7c44a7e26bf6bfe01fa0e051dcf8c0a3",
+    "byCommitment": [
+      {
+        "commitmentHash": "0x09c20d43491f258a5a50b53acce4b2160dd6cd7096710c735e40c790991bdbaf",
+        "makerLabel": "ospex-stage-maker-a",
+        "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "positionType": "upper",
+        "sideLabel": "upper/away/Minnesota Twins",
+        "oddsTick": 261,
+        "riskWei6": "120000",
+        "riskUsdc": "0.120000",
+        "filledRiskWei6": "0",
+        "filledRiskUsdc": "0.000000",
+        "storedStatus": "open",
+        "bookVisible": false,
+        "expiry": "2026-05-24T17:00:40+00:00"
+      },
+      {
+        "commitmentHash": "0x679e4f33699d52ced963c2852bed1cc5b7b6f669a9efb3c27a21e24471dfe516",
+        "makerLabel": "ospex-stage-maker-a",
+        "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "positionType": "lower",
+        "sideLabel": "lower/home/Boston Red Sox",
+        "oddsTick": 163,
+        "riskWei6": "120000",
+        "riskUsdc": "0.120000",
+        "filledRiskWei6": "0",
+        "filledRiskUsdc": "0.000000",
+        "storedStatus": "open",
+        "bookVisible": false,
+        "expiry": "2026-05-24T16:44:35+00:00"
+      },
+      {
+        "commitmentHash": "0xce95af27ddc8fefd8c6652b12a5e0f35790eb18eaa08410808bd57394738c136",
+        "makerLabel": "ospex-fresh-user",
+        "maker": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "positionType": "upper",
+        "sideLabel": "upper/away/Minnesota Twins",
+        "oddsTick": 200,
+        "riskWei6": "20000",
+        "riskUsdc": "0.020000",
+        "filledRiskWei6": "20000",
+        "filledRiskUsdc": "0.020000",
+        "storedStatus": "filled",
+        "bookVisible": true,
+        "expiry": "2026-05-24T17:35:00+00:00"
+      },
+      {
+        "commitmentHash": "0xe9b243ee5b3a333e76d67fcea76fc3fe7c44a7e26bf6bfe01fa0e051dcf8c0a3",
+        "makerLabel": "ospex-stage-maker-a",
+        "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "positionType": "lower",
+        "sideLabel": "lower/home/Boston Red Sox",
+        "oddsTick": 164,
+        "riskWei6": "120000",
+        "riskUsdc": "0.120000",
+        "filledRiskWei6": "31200",
+        "filledRiskUsdc": "0.031200",
+        "storedStatus": "partially_filled",
+        "bookVisible": false,
+        "expiry": "2026-05-24T17:00:40+00:00"
+      },
+      {
+        "commitmentHash": "0xf1440eb56a59f58a77b440cafd9f00dd152be0a09b7fa7474961689064c10fac",
+        "makerLabel": "ospex-stage-maker-a",
+        "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "positionType": "upper",
+        "sideLabel": "upper/away/Minnesota Twins",
+        "oddsTick": 264,
+        "riskWei6": "120000",
+        "riskUsdc": "0.120000",
+        "filledRiskWei6": "0",
+        "filledRiskUsdc": "0.000000",
+        "storedStatus": "open",
+        "bookVisible": false,
+        "expiry": "2026-05-24T16:44:35+00:00"
+      }
+    ]
+  },
+  "fills": [
+    {
+      "commitmentHash": "0xce95af27ddc8fefd8c6652b12a5e0f35790eb18eaa08410808bd57394738c136",
+      "txHash": "0x9c3a79cc772835f7bc9b691f288b7e4c5ac9b56d253ac58d18951df086b77212",
+      "explorer": "https://polygonscan.com/tx/0x9c3a79cc772835f7bc9b691f288b7e4c5ac9b56d253ac58d18951df086b77212",
+      "filledAt": "2026-05-24T16:35:56+00:00",
+      "makerLabel": "ospex-fresh-user",
+      "makerAddress": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "takerLabel": "ospex-flow-a",
+      "takerAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "makerPositionType": "upper",
+      "makerSideLabel": "upper/away/Minnesota Twins",
+      "takerPositionType": "lower",
+      "takerSideLabel": "lower/home/Boston Red Sox",
+      "makerRiskWei6": "20000",
+      "makerRiskUsdc": "0.020000",
+      "takerRiskWei6": "20000",
+      "takerRiskUsdc": "0.020000",
+      "oddsTick": 200
+    },
+    {
+      "commitmentHash": "0xe9b243ee5b3a333e76d67fcea76fc3fe7c44a7e26bf6bfe01fa0e051dcf8c0a3",
+      "txHash": "0xa8b4422a502e870a70ea7c371a8e05d197bb31162dc06aba77c65d43fda97202",
+      "explorer": "https://polygonscan.com/tx/0xa8b4422a502e870a70ea7c371a8e05d197bb31162dc06aba77c65d43fda97202",
+      "filledAt": "2026-05-24T16:46:49+00:00",
+      "makerLabel": "ospex-stage-maker-a",
+      "makerAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "takerLabel": "ospex-flow-a",
+      "takerAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "makerPositionType": "lower",
+      "makerSideLabel": "lower/home/Boston Red Sox",
+      "takerPositionType": "upper",
+      "takerSideLabel": "upper/away/Minnesota Twins",
+      "makerRiskWei6": "31200",
+      "makerRiskUsdc": "0.031200",
+      "takerRiskWei6": "19968",
+      "takerRiskUsdc": "0.019968",
+      "oddsTick": 164
+    }
+  ],
+  "positions": {
+    "byIndexedPosition": [
+      {
+        "label": "ospex-flow-a",
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "positionType": "upper",
+        "sideLabel": "upper/away/Minnesota Twins",
+        "riskWei6": "19968",
+        "riskUsdc": "0.019968",
+        "profitWei6": "31200",
+        "profitUsdc": "0.031200",
+        "outcome": "won",
+        "claimed": true,
+        "claimedWei6": "51168",
+        "claimedUsdc": "0.051168",
+        "claimedAt": "2026-05-24T21:41:03+00:00"
+      },
+      {
+        "label": "ospex-flow-a",
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "positionType": "lower",
+        "sideLabel": "lower/home/Boston Red Sox",
+        "riskWei6": "20000",
+        "riskUsdc": "0.020000",
+        "profitWei6": "20000",
+        "profitUsdc": "0.020000",
+        "outcome": "lost",
+        "claimed": false,
+        "claimedWei6": null,
+        "claimedUsdc": null,
+        "claimedAt": null
+      },
+      {
+        "label": "ospex-fresh-user",
+        "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "positionType": "upper",
+        "sideLabel": "upper/away/Minnesota Twins",
+        "riskWei6": "20000",
+        "riskUsdc": "0.020000",
+        "profitWei6": "20000",
+        "profitUsdc": "0.020000",
+        "outcome": "won",
+        "claimed": true,
+        "claimedWei6": "40000",
+        "claimedUsdc": "0.040000",
+        "claimedAt": "2026-05-24T21:40:21+00:00"
+      },
+      {
+        "label": "ospex-stage-maker-a",
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "positionType": "lower",
+        "sideLabel": "lower/home/Boston Red Sox",
+        "riskWei6": "31200",
+        "riskUsdc": "0.031200",
+        "profitWei6": "19968",
+        "profitUsdc": "0.019968",
+        "outcome": "lost",
+        "claimed": false,
+        "claimedWei6": null,
+        "claimedUsdc": null,
+        "claimedAt": null
+      }
+    ]
+  },
+  "postgame": {
+    "scoreRequestTx": "0x376e31715650fdb94b52f5f09884555e5518d6023155c6020b41b37bed61edd3",
+    "scoreCallbackTx": "0x2c4d7df6dacb8a0db74659c3aee3686a5bc53df8786c5631a846f88c14633dfa",
+    "settleTx": "0x197043a852f096519d56b2cc9e3b01cfdc04acb5a6a61f4303ec8892bb6b21d4",
+    "claimTxs": {
+      "ospex-fresh-user": "0xbedca3232659f2eed0e3a968f5c307698da82f06f068d65efa080c1450a9c2f9",
+      "ospex-flow-a": "0x8d400ef611dacac5f141ce7f6b1f057dea4fd0f5fc09af4d6ba4e22eacb7ffad"
+    },
+    "finalDryRuns": {
+      "ospex-fresh-user": {
+        "ok": true,
+        "entries": 0,
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "totalPayoutWei6": "0",
+          "totalPayoutUSDC": 0
+        }
+      },
+      "ospex-flow-a": {
+        "ok": true,
+        "entries": 0,
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "totalPayoutWei6": "0",
+          "totalPayoutUSDC": 0
+        }
+      }
+    },
+    "finalPositionStatusTotals": {
+      "ospex-fresh-user": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutWei6": "0"
+      },
+      "ospex-flow-a": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutWei6": "0"
+      }
+    },
+    "projectionLagObserved": [
+      "The second early2 winner initially attempted claim-all while the projection still exposed the position as pendingSettle after fresh-user had already settled speculation 14; estimateGas for a duplicate settle reverted, and a retry after projection convergence succeeded as claim-only."
+    ]
+  },
+  "lifecycleChecks": {
+    "contestCreated": true,
+    "contestVerified": true,
+    "mmQuotedLive": true,
+    "controlledFillExecuted": true,
+    "postgameScore": true,
+    "speculationSettled": true,
+    "winningPositionsClaimed": true,
+    "finalClaimDryRunsEmpty": true,
+    "finalPositionActivePendingClaimableCountsZero": true,
+    "visibleLiveCommitmentsFinal": 0,
+    "mmRunnerProcessesAfterWrapup": 0
+  },
+  "acceptanceChecks": {
+    "cleanGreenD1D2AcceptanceEvidence": false,
+    "softCancelledFillRecoveryExercised": true,
+    "softCancelRecoveryFillTelemetryCount": 1,
+    "onchainCancelTelemetryCount": 0,
+    "partialRemainderRetainedTelemetryCount": 0,
+    "postgameScore": true,
+    "speculationSettled": true,
+    "winnerClaimedAtCapture": true
+  },
+  "marketMaker": {
+    "runIds": [
+      "2026-05-24T16-45-39-251Z-tlpty8",
+      "2026-05-24T16-47-30-805Z-j4g818"
+    ],
+    "eventCounts": {
+      "tick-start": 2,
+      "candidate": 2,
+      "fair-value": 0,
+      "risk-verdict": 2,
+      "quote-intent": 2,
+      "quote-competitiveness": 2,
+      "competitiveness-unavailable": 0,
+      "submit": 2,
+      "would-submit": 0,
+      "soft-cancel": 2,
+      "would-soft-cancel": 0,
+      "replace": 0,
+      "would-replace": 0,
+      "onchain-cancel": 0,
+      "nonce-floor-raise": 0,
+      "expire": 0,
+      "approval": 0,
+      "fill": 2,
+      "position-transition": 0,
+      "settle": 0,
+      "claim": 0,
+      "degraded": 0,
+      "error": 2,
+      "kill": 2
+    },
+    "liveMetrics": {
+      "fills": {
+        "quotedUsdcWei6": "240000",
+        "filledUsdcWei6": "62400",
+        "fillRate": 0.26
+      },
+      "gas": {
+        "totalPolWei": "0",
+        "byKind": {
+          "approval": "0",
+          "onchainCancel": "0",
+          "settle": "0",
+          "claim": "0"
+        },
+        "totalUsdcEquivWei6": "0"
+      },
+      "settlements": {
+        "settleCount": 0,
+        "claimCount": 0,
+        "totalClaimedPayoutWei6": "0"
+      },
+      "realizedPnl": {
+        "netUsdcWei6": "0",
+        "claimedProfitUsdcWei6": "0",
+        "realizedLossUsdcWei6": "0",
+        "wonCount": 0,
+        "lostCount": 0,
+        "pushCount": 0,
+        "wonUnclaimedCount": 0,
+        "unsettledCount": 1
+      },
+      "totalFeeUsdcWei6": "0"
+    },
+    "quoteCompetitiveness": {
+      "samples": 2,
+      "atOrInsideBookCount": 2,
+      "atOrInsideBookRate": 1,
+      "vsReferenceTicks": {
+        "min": 4,
+        "p50": 4,
+        "mean": 4.5,
+        "max": 5
+      },
+      "unavailable": 0
+    },
+    "finalStatus": {
+      "makerAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "stateIntegrity": "loaded",
+      "commitments": {
+        "total": 2,
+        "byLifecycle": {
+          "visibleOpen": 0,
+          "softCancelled": 2,
+          "partiallyFilled": 0,
+          "filled": 0,
+          "expired": 0,
+          "authoritativelyInvalidated": 0
+        },
+        "distinctContestsNonTerminal": 1
+      },
+      "positions": {
+        "total": 1,
+        "byStatus": {
+          "active": {
+            "count": 1,
+            "ownRiskWei6": "31200"
+          },
+          "pendingSettle": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "claimable": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "claimed": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          }
+        }
+      },
+      "livePositionTotals": {
+        "activeCount": 2,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "claimablePayoutWei6": "0",
+        "pendingSettlePayoutWei6": "0"
+      },
+      "pnl": {
+        "realizedUsdcWei6": "0",
+        "unrealizedUsdcWei6": "0",
+        "asOfUnixSec": 0
+      }
+    },
+    "telemetrySummaryPath": "raw/mm-telemetry-summary.sanitized.json",
+    "finalStatusPath": "raw/mm-final-status.sanitized.json",
+    "telemetryScope": {
+      "canonicalCountsSource": "raw/mm-final-status.sanitized.json",
+      "canonicalCountsScope": "two post-restart live runs used for final status and evidence.json eventCounts",
+      "canonicalRunIds": [
+        "2026-05-24T16-45-39-251Z-tlpty8",
+        "2026-05-24T16-47-30-805Z-j4g818"
+      ],
+      "rawTelemetrySummaryPath": "raw/mm-telemetry-summary.sanitized.json",
+      "rawTelemetryScope": "all three early2 lifecycle run logs, including the earlier 16:37 setup/aborted quoting attempt",
+      "rawRunIds": [
+        "2026-05-24T16-37-34-585Z-a48pxo",
+        "2026-05-24T16-45-39-251Z-tlpty8",
+        "2026-05-24T16-47-30-805Z-j4g818"
+      ],
+      "rawEventCounts": {
+        "candidate": 3,
+        "error": 5,
+        "fill": 2,
+        "kill": 3,
+        "quote-competitiveness": 4,
+        "quote-intent": 3,
+        "risk-verdict": 3,
+        "soft-cancel": 4,
+        "submit": 4,
+        "tick-start": 5
+      },
+      "positionWithoutCommitment": {
+        "rawTotal": 5,
+        "canonicalFinalStatusTotal": 2,
+        "targetRelevantTotal": 0,
+        "targetSpeculationId": "14",
+        "unrelatedSpeculationId": "13",
+        "note": "All PositionWithoutCommitment errors were position-poll noise for older speculation 13 on the shared maker wallet, not target speculation 14."
+      }
+    }
+  },
+  "txs": {
+    "contest-create": "0x5a7d5807ce2203c8bdc2a4285df144e640ea2dc76fd3465f1f589bc11bde2c94",
+    "contest-verified": "0x98a7c922c00fc55cfe2fc49c72d8733c2a7a29fd9214be4b53750da8dd7c6177",
+    "seed-match": "0x9c3a79cc772835f7bc9b691f288b7e4c5ac9b56d253ac58d18951df086b77212",
+    "controlled-fill": "0xa8b4422a502e870a70ea7c371a8e05d197bb31162dc06aba77c65d43fda97202",
+    "fresh-user-link-approval": "0x9a54038961d6e36441fc8fff2855f8e41572ee64b7b6c2ba326cfcc76941c0a6",
+    "score-request": "0x376e31715650fdb94b52f5f09884555e5518d6023155c6020b41b37bed61edd3",
+    "score-callback": "0x2c4d7df6dacb8a0db74659c3aee3686a5bc53df8786c5631a846f88c14633dfa",
+    "settle": "0x197043a852f096519d56b2cc9e3b01cfdc04acb5a6a61f4303ec8892bb6b21d4",
+    "ospex-fresh-user": "0xbedca3232659f2eed0e3a968f5c307698da82f06f068d65efa080c1450a9c2f9",
+    "ospex-flow-a": "0x8d400ef611dacac5f141ce7f6b1f057dea4fd0f5fc09af4d6ba4e22eacb7ffad"
+  },
+  "externalScoreSources": [
+    {
+      "schemaVersion": 1,
+      "capturedAt": "2026-05-24T21:53:35Z",
+      "source": "MLB Stats API",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-24&hydrate=team,linescore",
+      "gamePk": 824759,
+      "gameGuid": "0f313b0a-26f6-4ceb-bc48-bf6a1a9c9f11",
+      "gameDate": "2026-05-24T17:35:00Z",
+      "away": "Minnesota Twins",
+      "home": "Boston Red Sox",
+      "status": "Final",
+      "abstractGameState": "Final",
+      "awayScore": 6,
+      "homeScore": 5,
+      "lineScoreTotals": {
+        "away": {
+          "runs": 6,
+          "hits": 12,
+          "errors": 1,
+          "leftOnBase": 10
+        },
+        "home": {
+          "runs": 5,
+          "hits": 11,
+          "errors": 1,
+          "leftOnBase": 6
+        }
+      }
+    }
+  ],
+  "knownCaveats": [
+    "This is complete lifecycle evidence for early2 and does exercise soft-cancelled hidden-hash fill recovery, but it is not clean green D1/D2 on-chain-cancel acceptance evidence.",
+    "The first early2 score attempt failed before sending a tx because the fresh-user contest creator had zero LINK allowance for OracleModule; approving 0.005 LINK and retrying scored cleanly.",
+    "The canonical marketMaker block is scoped to the two post-restart final-status runs and has two PositionWithoutCommitment errors; raw/mm-telemetry-summary.sanitized.json intentionally aggregates all three early2 lifecycle runs, including the earlier 16:37 setup/aborted quoting attempt, and has five such errors. All five were for older speculation 13 on the shared maker wallet; target speculation 14 target-relevant PositionWithoutCommitment count is zero, the soft-cancel recovery fill recorded via source=softcancel-recovery, and final protocol state is complete.",
+    "Projection lag after the first settlement caused one duplicate-settle estimateGas failure for the second winner; retry after convergence succeeded and final dry-runs were empty.",
+    "The games projection still reported status upcoming at capture even though contest/speculation protocol state and MLB Stats API were final/scored/settled.",
+    "The public artifact intentionally excludes raw signatures, private operator material, credential material, keystore paths, local run paths, raw provider IDs, and raw telemetry transcripts."
+  ]
+}
