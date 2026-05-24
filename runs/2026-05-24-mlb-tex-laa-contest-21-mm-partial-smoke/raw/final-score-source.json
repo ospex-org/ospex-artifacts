@@ -1,0 +1,29 @@
+{
+  "abstractGameState": "Final",
+  "away": "Texas Rangers",
+  "awayScore": 2,
+  "capturedAt": "2026-05-24T06:00:03Z",
+  "gameDate": "2026-05-24T02:05:00Z",
+  "gameGuid": "547e618a-eee2-45ab-9940-81d14a997da6",
+  "gamePk": 824030,
+  "home": "Los Angeles Angels",
+  "homeScore": 5,
+  "lineScoreTotals": {
+    "away": {
+      "errors": 1,
+      "hits": 8,
+      "leftOnBase": 11,
+      "runs": 2
+    },
+    "home": {
+      "errors": 0,
+      "hits": 8,
+      "leftOnBase": 7,
+      "runs": 5
+    }
+  },
+  "schemaVersion": 1,
+  "source": "MLB Stats API",
+  "status": "Final",
+  "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-23&hydrate=team,linescore"
+}
