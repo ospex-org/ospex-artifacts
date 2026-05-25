@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-05-25T21:29:54Z",
+  "stateIntegrity": "loaded",
+  "stateLossAssessment": {
+    "holdQuoting": false,
+    "reason": "state loaded cleanly"
+  },
+  "lastFlushedAt": "2026-05-25T17:30:32.449Z",
+  "commitments": {
+    "total": 8,
+    "byLifecycle": {
+      "visibleOpen": 0,
+      "softCancelled": 7,
+      "partiallyFilled": 0,
+      "filled": 0,
+      "expired": 0,
+      "authoritativelyInvalidated": 1
+    },
+    "distinctContestsNonTerminal": 1
+  },
+  "positions": {
+    "total": 1,
+    "byStatus": {
+      "active": {
+        "count": 1,
+        "ownRiskWei6": "4700"
+      },
+      "pendingSettle": {
+        "count": 0,
+        "ownRiskWei6": "0"
+      },
+      "claimable": {
+        "count": 0,
+        "ownRiskWei6": "0"
+      },
+      "claimed": {
+        "count": 0,
+        "ownRiskWei6": "0"
+      }
+    }
+  },
+  "dailyCounters": {
+    "today": "2026-05-25",
+    "todayGasPolWei": "18997055873371829",
+    "todayFeeUsdcWei6": "0",
+    "lifetimeGasPolWei": "18997055873371829",
+    "lifetimeFeeUsdcWei6": "0"
+  },
+  "pnl": {
+    "realizedUsdcWei6": "0",
+    "unrealizedUsdcWei6": "0",
+    "asOfUnixSec": 0
+  },
+  "makerAddressSource": "not published",
+  "livePositionTotals": null,
+  "livePositionsSkipReason": "maker address not derivable from Foundry keystore metadata"
+}

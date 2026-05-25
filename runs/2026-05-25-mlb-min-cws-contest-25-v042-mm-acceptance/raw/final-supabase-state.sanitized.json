@@ -1,0 +1,264 @@
+{
+  "capturedAt": "2026-05-25T21:29:54Z",
+  "contest": {
+    "network": "polygon",
+    "contest_id": 25,
+    "away_team": "Minnesota Twins",
+    "home_team": "Chicago White Sox",
+    "contest_status": "scored",
+    "away_score": 1,
+    "home_score": 3,
+    "start_time": "2026-05-25T18:10:00+00:00",
+    "contest_created_at": "2026-05-25T17:14:53+00:00",
+    "verified_at": "2026-05-25T17:15:06+00:00",
+    "scored_at": "2026-05-25T21:17:44+00:00",
+    "voided_at": null,
+    "contest_creator": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "source_block": 87422620,
+    "row_updated_at": "2026-05-25T21:17:54.623344+00:00"
+  },
+  "speculation": {
+    "network": "polygon",
+    "win_side": "home",
+    "scored_at": "2026-05-25T21:17:44+00:00",
+    "contest_id": 25,
+    "line_ticks": 0,
+    "settled_at": "2026-05-25T21:18:52+00:00",
+    "market_type": "moneyline",
+    "source_block": 87422710,
+    "row_updated_at": "2026-05-25T21:18:55.345822+00:00",
+    "speculation_id": 16,
+    "speculation_status": "closed"
+  },
+  "fills": [
+    {
+      "network": "polygon",
+      "tx_hash": "0x654f399f74b26b67b8b20dd6fd0ba78cdd8660fb9a82567c69dbfdf11f5937af",
+      "filled_at": "2026-05-25T17:17:31+00:00",
+      "log_index": 1277,
+      "odds_tick": 200,
+      "contest_id": 25,
+      "source_block": 87422710,
+      "maker_address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "taker_address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "row_updated_at": "2026-05-25T17:17:34.391988+00:00",
+      "speculation_id": 16,
+      "commitment_hash": "0xcb2ec007a5124b3e3d0c25b01e3ddec6b5a15fb57f5ffe615f29f74a98512478",
+      "contest_started": false,
+      "maker_risk_amount": 10000,
+      "taker_risk_amount": 10000,
+      "maker_position_type": "upper",
+      "taker_position_type": "lower"
+    },
+    {
+      "network": "polygon",
+      "tx_hash": "0xe2d56b6e0a6b2281aced7fb317e10c63e0f17796186e25eb7add34874a15b2c3",
+      "filled_at": "2026-05-25T17:29:04+00:00",
+      "log_index": 1332,
+      "odds_tick": 205,
+      "contest_id": 25,
+      "source_block": 87423106,
+      "maker_address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "taker_address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "row_updated_at": "2026-05-25T17:29:12.520925+00:00",
+      "speculation_id": 16,
+      "commitment_hash": "0x150862b2b1f96e9b095b6d15712277c2c89628327175bf4d89a87b8800e966ad",
+      "contest_started": false,
+      "maker_risk_amount": 4700,
+      "taker_risk_amount": 4935,
+      "maker_position_type": "upper",
+      "taker_position_type": "lower"
+    }
+  ],
+  "positions": [
+    {
+      "claimed": true,
+      "network": "polygon",
+      "claimed_at": "2026-05-25T21:18:56+00:00",
+      "risk_amount": 14935,
+      "source_block": 87422710,
+      "user_address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "position_type": "lower",
+      "profit_amount": 14700,
+      "claimed_amount": 29635,
+      "row_updated_at": "2026-05-25T21:19:10.560224+00:00",
+      "speculation_id": 16,
+      "position_created_at": "2026-05-25T17:17:31+00:00",
+      "first_fill_timestamp": "2026-05-25T17:17:31+00:00",
+      "acquired_via_secondary_market": false
+    },
+    {
+      "claimed": false,
+      "network": "polygon",
+      "claimed_at": null,
+      "risk_amount": 4700,
+      "source_block": 87423106,
+      "user_address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "position_type": "upper",
+      "profit_amount": 4935,
+      "claimed_amount": null,
+      "row_updated_at": "2026-05-25T17:29:12.450715+00:00",
+      "speculation_id": 16,
+      "position_created_at": "2026-05-25T17:29:04+00:00",
+      "first_fill_timestamp": "2026-05-25T17:29:04+00:00",
+      "acquired_via_secondary_market": false
+    },
+    {
+      "claimed": false,
+      "network": "polygon",
+      "claimed_at": null,
+      "risk_amount": 10000,
+      "source_block": 87422710,
+      "user_address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "position_type": "upper",
+      "profit_amount": 10000,
+      "claimed_amount": null,
+      "row_updated_at": "2026-05-25T17:17:34.31568+00:00",
+      "speculation_id": 16,
+      "position_created_at": "2026-05-25T17:17:31+00:00",
+      "first_fill_timestamp": "2026-05-25T17:17:31+00:00",
+      "acquired_via_secondary_market": false
+    }
+  ],
+  "targetCommitment": {
+    "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "nonce": 1779730103,
+    "expiry": "2026-05-25T17:43:21+00:00",
+    "scorer": "0xd846b7fdbd8c9f67d1580b2c6a8bd7fdcb15390b",
+    "source": "agent",
+    "status": "cancelled",
+    "network": "polygon",
+    "odds_tick": 205,
+    "contest_id": 25,
+    "created_at": "2026-05-25T17:28:22.882568+00:00",
+    "line_ticks": 0,
+    "market_type": "moneyline",
+    "risk_amount": 20000,
+    "book_visible": false,
+    "source_block": null,
+    "applied_fills": {
+      "0xe2d56b6e0a6b2281aced7fb317e10c63e0f17796186e25eb7add34874a15b2c3:1332": "4700"
+    },
+    "position_type": "upper",
+    "row_updated_at": "2026-05-25T17:29:42.945806+00:00",
+    "commitment_hash": "0x150862b2b1f96e9b095b6d15712277c2c89628327175bf4d89a87b8800e966ad",
+    "speculation_key": "0x1a4b2a29b5eb47be284b28773b1501152a99a8d19b7aea5503f31165f2e4af0f",
+    "nonce_invalidated": false,
+    "filled_risk_amount": 4700
+  },
+  "chainEvents": [
+    {
+      "block_number": 87422620,
+      "block_time": "2026-05-25T17:14:53+00:00",
+      "event_name": "CONTEST_CREATED",
+      "entity_type": "contest",
+      "entity_id": 25,
+      "tx_hash": "0xa5471973ee695ac42b91e89bd21a93068874f3adf7ada86b5730233aeeb93ce6",
+      "log_index": 1029
+    },
+    {
+      "block_number": 87422620,
+      "block_time": "2026-05-25T17:14:53+00:00",
+      "event_name": "SCRIPT_APPROVAL_VERIFIED",
+      "entity_type": "contest",
+      "entity_id": 25,
+      "tx_hash": "0xa5471973ee695ac42b91e89bd21a93068874f3adf7ada86b5730233aeeb93ce6",
+      "log_index": 1031
+    },
+    {
+      "block_number": 87422620,
+      "block_time": "2026-05-25T17:14:53+00:00",
+      "event_name": "SCRIPT_APPROVAL_VERIFIED",
+      "entity_type": "contest",
+      "entity_id": 25,
+      "tx_hash": "0xa5471973ee695ac42b91e89bd21a93068874f3adf7ada86b5730233aeeb93ce6",
+      "log_index": 1033
+    },
+    {
+      "block_number": 87422620,
+      "block_time": "2026-05-25T17:14:53+00:00",
+      "event_name": "SCRIPT_APPROVAL_VERIFIED",
+      "entity_type": "contest",
+      "entity_id": 25,
+      "tx_hash": "0xa5471973ee695ac42b91e89bd21a93068874f3adf7ada86b5730233aeeb93ce6",
+      "log_index": 1035
+    },
+    {
+      "block_number": 87422627,
+      "block_time": "2026-05-25T17:15:06+00:00",
+      "event_name": "CONTEST_VERIFIED",
+      "entity_type": "contest",
+      "entity_id": 25,
+      "tx_hash": "0x841c115ee445e99e14810deb24ff9aa64084bd5a29dee8b992655b0893963df5",
+      "log_index": 162
+    },
+    {
+      "block_number": 87422710,
+      "block_time": "2026-05-25T17:17:31+00:00",
+      "event_name": "SPECULATION_CREATED",
+      "entity_type": "speculation",
+      "entity_id": 16,
+      "tx_hash": "0x654f399f74b26b67b8b20dd6fd0ba78cdd8660fb9a82567c69dbfdf11f5937af",
+      "log_index": 1271
+    },
+    {
+      "block_number": 87423106,
+      "block_time": "2026-05-25T17:29:04+00:00",
+      "event_name": "POSITION_MATCHED_PAIR",
+      "entity_type": "position",
+      "entity_id": 16,
+      "tx_hash": "0xe2d56b6e0a6b2281aced7fb317e10c63e0f17796186e25eb7add34874a15b2c3",
+      "log_index": 1330
+    },
+    {
+      "block_number": 87423106,
+      "block_time": "2026-05-25T17:29:04+00:00",
+      "event_name": "COMMITMENT_MATCHED",
+      "entity_type": "fill",
+      "entity_id": 16,
+      "tx_hash": "0xe2d56b6e0a6b2281aced7fb317e10c63e0f17796186e25eb7add34874a15b2c3",
+      "log_index": 1332
+    },
+    {
+      "block_number": 87423121,
+      "block_time": "2026-05-25T17:29:30+00:00",
+      "event_name": "COMMITMENT_CANCELLED",
+      "entity_type": "commitment",
+      "entity_id": null,
+      "tx_hash": "0x24028f2d43316556a5ed3a9c044ea4801f3baae94c53c5ec39069ea424cb62c2",
+      "log_index": 810
+    },
+    {
+      "block_number": 87430946,
+      "block_time": "2026-05-25T21:17:44+00:00",
+      "event_name": "CONTEST_SCORES_SET",
+      "entity_type": "contest",
+      "entity_id": 25,
+      "tx_hash": "0xdafa9d1be41c4163829619965b55e9c87a3feb1ad2691127cd3df0ffd01adc00",
+      "log_index": 954
+    },
+    {
+      "block_number": 87430985,
+      "block_time": "2026-05-25T21:18:52+00:00",
+      "event_name": "SPECULATION_SETTLED",
+      "entity_type": "speculation",
+      "entity_id": 16,
+      "tx_hash": "0x2ea8ff0acb44e6844a56204abcf5e687c595da16d2a492beff99f69261a31833",
+      "log_index": 866
+    },
+    {
+      "block_number": 87430987,
+      "block_time": "2026-05-25T21:18:56+00:00",
+      "event_name": "POSITION_CLAIMED",
+      "entity_type": "position",
+      "entity_id": 16,
+      "tx_hash": "0xfd50a9166287cac6d9ad6c1de4adb252440050f944b79d65b74bc3f66d19e8c6",
+      "log_index": 874
+    }
+  ],
+  "derived": {
+    "visibleLiveCommitmentsContest25Spec16": 0,
+    "targetCommitmentBookVisible": false,
+    "targetCommitmentStatus": "cancelled"
+  }
+}
