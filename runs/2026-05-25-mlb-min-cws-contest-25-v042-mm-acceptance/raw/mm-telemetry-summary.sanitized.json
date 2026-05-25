@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-25T17:31:04.020Z",
+  "canonicalRun": "live2",
+  "setupRunNote": "live1 was setup/aborted and is not canonical for the acceptance evidence.",
+  "runIds": [
+    "2026-05-25T17-25-05-972Z-2uae57",
+    "2026-05-25T17-28-20-346Z-01dnjn"
+  ],
+  "firstEventAt": "2026-05-25T17:25:05.975Z",
+  "lastEventAt": "2026-05-25T17:30:32.449Z",
+  "ticks": 9,
+  "eventCounts": {
+    "tick-start": 9,
+    "candidate": 3,
+    "fair-value": 0,
+    "risk-verdict": 8,
+    "quote-intent": 8,
+    "quote-competitiveness": 10,
+    "competitiveness-unavailable": 0,
+    "submit": 5,
+    "would-submit": 0,
+    "soft-cancel": 4,
+    "would-soft-cancel": 0,
+    "replace": 3,
+    "would-replace": 0,
+    "onchain-cancel": 1,
+    "nonce-floor-raise": 0,
+    "expire": 0,
+    "approval": 0,
+    "fill": 1,
+    "position-transition": 0,
+    "settle": 0,
+    "claim": 0,
+    "degraded": 0,
+    "error": 0,
+    "kill": 2
+  },
+  "candidates": {
+    "total": 3,
+    "tracked": 2,
+    "skipReasons": {
+      "partial-remainder-retained": 1
+    }
+  },
+  "quoteIntents": {
+    "total": 8,
+    "canQuote": 5,
+    "refused": 3
+  },
+  "quoteCompetitiveness": {
+    "samples": 10,
+    "atOrInsideBookCount": 10,
+    "atOrInsideBookRate": 1,
+    "vsReferenceTicks": {
+      "min": 4,
+      "p50": 4,
+      "mean": 4,
+      "max": 4
+    },
+    "unavailable": 0
+  },
+  "latentExposurePeakWei6": "0",
+  "staleQuoteIncidents": 0,
+  "errors": {
+    "total": 0,
+    "byPhase": {}
+  },
+  "kill": {
+    "reason": "kill-file",
+    "ticks": 4
+  },
+  "liveMetrics": {
+    "fills": {
+      "quotedUsdcWei6": "160000",
+      "filledUsdcWei6": "4700",
+      "fillRate": 0.029375
+    },
+    "gas": {
+      "totalPolWei": "18997055873371829",
+      "byKind": {
+        "approval": "0",
+        "onchainCancel": "18997055873371829",
+        "settle": "0",
+        "claim": "0"
+      },
+      "totalUsdcEquivWei6": "4749"
+    },
+    "settlements": {
+      "settleCount": 0,
+      "claimCount": 0,
+      "totalClaimedPayoutWei6": "0"
+    },
+    "realizedPnl": {
+      "netUsdcWei6": "0",
+      "claimedProfitUsdcWei6": "0",
+      "realizedLossUsdcWei6": "0",
+      "wonCount": 0,
+      "lostCount": 0,
+      "pushCount": 0,
+      "wonUnclaimedCount": 0,
+      "unsettledCount": 1
+    },
+    "totalFeeUsdcWei6": "0"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "verdict": "GREEN",
+  "canonicalRun": "live2",
+  "setupRunNote": "live1 was setup/aborted and is not canonical.",
+  "provenGates": [
+    "v0.4.2 CLI/MM install and runtime path stayed pinned to the run checkout",
+    "canonical live run submitted and filled the controlled target commitment",
+    "partial fill was observed by telemetry and retained as a partial remainder candidate",
+    "maker did not submit/replace the same-side remainder before cancellation",
+    "authoritative on-chain cancel invalidated the target remainder after the partial fill",
+    "final visible orderbook and maker visible commitments were zero",
+    "no background MM process remained",
+    "MM telemetry reported zero errors"
+  ],
+  "stageA": {
+    "verdict": "GREEN",
+    "purpose": "seed contest/speculation and baseline position state",
+    "seedFillTx": "0x654f399f74b26b67b8b20dd6fd0ba78cdd8660fb9a82567c69dbfdf11f5937af",
+    "seedCommitmentHash": "0xcb2ec007a5124b3e3d0c25b01e3ddec6b5a15fb57f5ffe615f29f74a98512478"
+  },
+  "stageB": {
+    "verdict": "GREEN",
+    "makerLabel": "ospex-stage-maker-b",
+    "makerAddress": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+    "takerLabel": "ospex-flow-a",
+    "takerAddress": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+    "filledCommitmentHash": "0x150862b2b1f96e9b095b6d15712277c2c89628327175bf4d89a87b8800e966ad",
+    "matchTx": "0xe2d56b6e0a6b2281aced7fb317e10c63e0f17796186e25eb7add34874a15b2c3",
+    "makerFilledRiskWei6": "4700",
+    "takerRiskWei6": "4935",
+    "retainedPartialRemainderObserved": true,
+    "sameSideSubmitOrReplaceBeforeCancel": 0,
+    "onchainCancelTx": "0x24028f2d43316556a5ed3a9c044ea4801f3baae94c53c5ec39069ea424cb62c2",
+    "finalVisibleOpen": 0,
+    "mmErrorCount": 0
+  }
+}

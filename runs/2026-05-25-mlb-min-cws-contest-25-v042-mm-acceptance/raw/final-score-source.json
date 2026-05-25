@@ -1,0 +1,27 @@
+{
+  "source": "MLB Stats API schedule",
+  "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-25&hydrate=team,linescore",
+  "fetchedAt": "2026-05-25T21:15:26Z",
+  "gamePk": 824598,
+  "gameDate": "2026-05-25T18:10:00Z",
+  "status": {
+    "abstractGameState": "Final",
+    "detailedState": "Final",
+    "statusCode": "F"
+  },
+  "away": {
+    "team": "Minnesota Twins",
+    "score": 1
+  },
+  "home": {
+    "team": "Chicago White Sox",
+    "score": 3
+  },
+  "mappedOspexOutcome": {
+    "market": "moneyline",
+    "winner": "home",
+    "winnerProtocolSide": "lower",
+    "winnerTeam": "Chicago White Sox"
+  },
+  "capturedAt": "2026-05-25T21:15:26Z"
+}

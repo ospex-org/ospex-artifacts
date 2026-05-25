@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-25T21:19:20.489Z",
+  "network": "polygon",
+  "chainId": 137,
+  "cliVersion": "0.4.2",
+  "sdkVersion": "0.4.2",
+  "payload": {
+    "contestId": "25",
+    "awayTeam": "Minnesota Twins",
+    "homeTeam": "Chicago White Sox",
+    "sport": "mlb",
+    "matchTime": "2026-05-25T18:10:00+00:00",
+    "status": "scored",
+    "awayScore": 1,
+    "homeScore": 3,
+    "contestCreator": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "contestCreatedAt": "2026-05-25T17:14:53+00:00",
+    "verifiedAt": "2026-05-25T17:15:06+00:00",
+    "scoredAt": "2026-05-25T21:17:44+00:00",
+    "speculations": [
+      {
+        "speculationId": "16",
+        "contestId": "25",
+        "type": "moneyline",
+        "lineTicks": 0,
+        "line": null,
+        "speculationStatus": 1,
+        "orderbookLength": 0
+      }
+    ]
+  }
+}

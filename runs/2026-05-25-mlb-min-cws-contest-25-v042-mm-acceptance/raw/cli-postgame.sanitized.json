@@ -1,0 +1,183 @@
+{
+  "schemaVersion": 1,
+  "scoreContest": {
+    "generatedAt": "2026-05-25T21:17:33.034Z",
+    "ok": true,
+    "network": "polygon",
+    "chainId": 137,
+    "cliVersion": "0.4.2",
+    "sdkVersion": "0.4.2",
+    "effects": [
+      {
+        "type": "transaction",
+        "purpose": "score-contest",
+        "ok": true,
+        "txHash": "0xda87981b680dc39e5c302ce05fa97cdccd094fcdc666ec1f5ccc5edbb1d554eb",
+        "blockNumber": "87430940",
+        "status": "confirmed"
+      }
+    ],
+    "payload": {
+      "contestId": "25",
+      "txHash": "0xda87981b680dc39e5c302ce05fa97cdccd094fcdc666ec1f5ccc5edbb1d554eb",
+      "requestId": "0xb8f8b197f3e69c79e80dffd6ccaa8c916486ca52bee9323b85a88b7fc1868060",
+      "status": "success"
+    }
+  },
+  "claimAllFlowA": {
+    "generatedAt": "2026-05-25T21:18:55.079Z",
+    "ok": true,
+    "network": "polygon",
+    "chainId": 137,
+    "cliVersion": "0.4.2",
+    "sdkVersion": "0.4.2",
+    "effects": [
+      {
+        "type": "transaction",
+        "purpose": "settle-speculation",
+        "ok": true,
+        "txHash": "0x2ea8ff0acb44e6844a56204abcf5e687c595da16d2a492beff99f69261a31833",
+        "status": "confirmed"
+      },
+      {
+        "type": "transaction",
+        "purpose": "claim-position",
+        "ok": true,
+        "txHash": "0xfd50a9166287cac6d9ad6c1de4adb252440050f944b79d65b74bc3f66d19e8c6",
+        "status": "confirmed"
+      }
+    ],
+    "payload": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "dryRun": false,
+      "success": true,
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "totalPayoutWei6": "29635",
+        "totalPayoutUSDC": 0.029635
+      },
+      "entries": [
+        {
+          "positionId": "16_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+          "speculationId": "16",
+          "bucket": "pendingSettle",
+          "description": "Chicago White Sox moneyline — Won (≈ $0.03, needs settle)",
+          "success": true,
+          "txHashes": [
+            "0x2ea8ff0acb44e6844a56204abcf5e687c595da16d2a492beff99f69261a31833",
+            "0xfd50a9166287cac6d9ad6c1de4adb252440050f944b79d65b74bc3f66d19e8c6"
+          ],
+          "steps": [
+            {
+              "name": "settleSpeculation",
+              "outcome": "sent",
+              "txHash": "0x2ea8ff0acb44e6844a56204abcf5e687c595da16d2a492beff99f69261a31833",
+              "winSide": "home"
+            },
+            {
+              "name": "claimPosition",
+              "outcome": "sent",
+              "txHash": "0xfd50a9166287cac6d9ad6c1de4adb252440050f944b79d65b74bc3f66d19e8c6",
+              "payoutWei6": "29635",
+              "payoutUSDC": 0.029635
+            }
+          ],
+          "payoutUSDC": 0.029635,
+          "payoutWei6": "29635",
+          "winSide": "home"
+        }
+      ]
+    }
+  },
+  "finalClaimDryRuns": {
+    "ospex-flow-a": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "entryCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      },
+      "generatedAt": "2026-05-25T21:19:23.142Z"
+    },
+    "ospex-stage-maker-a": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "entryCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      },
+      "generatedAt": "2026-05-25T21:19:24.520Z"
+    },
+    "ospex-stage-maker-b": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "entryCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      },
+      "generatedAt": "2026-05-25T21:19:21.839Z"
+    }
+  },
+  "finalPositionsStatus": {
+    "ospex-flow-a": {
+      "generatedAt": "2026-05-25T21:19:23.799Z",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      },
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0
+    },
+    "ospex-stage-maker-a": {
+      "generatedAt": "2026-05-25T21:19:25.148Z",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      },
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0
+    },
+    "ospex-stage-maker-b": {
+      "generatedAt": "2026-05-25T21:19:22.479Z",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      },
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0
+    }
+  },
+  "finalOrderbook": {
+    "generatedAt": "2026-05-25T21:19:46.603Z",
+    "entryCount": 0,
+    "entries": []
+  }
+}
