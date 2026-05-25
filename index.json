@@ -1,10 +1,11 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-05-24T21:53:47Z",
+  "generatedAt": "2026-05-25T04:29:50Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
+      "runs/2026-05-24-mlb-tex-laa-contest-24-v040-mm-acceptance/evidence.json",
       "runs/2026-05-24-mlb-pit-tor-contest-22-mm-early1/evidence.json",
       "runs/2026-05-24-mlb-min-bos-contest-23-mm-early2-softcancel-recovery/evidence.json",
       "runs/2026-05-24-mlb-tex-laa-contest-21-mm-partial-smoke/evidence.json",
@@ -19,6 +20,18 @@
     "daily-digest": []
   },
   "recentArtifacts": [
+    {
+      "artifactId": "2026-05-24-mlb-tex-laa-contest-24-v040-mm-acceptance",
+      "artifactType": "run",
+      "dataPath": "runs/2026-05-24-mlb-tex-laa-contest-24-v040-mm-acceptance/evidence.json",
+      "date": "2026-05-24",
+      "network": "polygon",
+      "rawPath": "runs/2026-05-24-mlb-tex-laa-contest-24-v040-mm-acceptance/raw/",
+      "release": "ospex-org/ospex-sdk v0.4.0",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-05-24-mlb-tex-laa-contest-24-v040-mm-acceptance/summary.md",
+      "publishedAt": "2026-05-25T04:26:48Z"
+    },
     {
       "artifactId": "2026-05-24-mlb-pit-tor-contest-22-mm-early1",
       "artifactType": "run",
@@ -114,9 +127,9 @@
       "scope": "year",
       "year": 2026,
       "path": "archive/2026/index.json",
-      "artifactCount": 8,
+      "artifactCount": 9,
       "oldestPublishedAt": "2026-05-20T02:48:35Z",
-      "newestPublishedAt": "2026-05-24T21:53:35Z"
+      "newestPublishedAt": "2026-05-25T04:26:48Z"
     }
   ]
 }

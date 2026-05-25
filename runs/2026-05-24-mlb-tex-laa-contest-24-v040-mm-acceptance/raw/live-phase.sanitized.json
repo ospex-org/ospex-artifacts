@@ -1,0 +1,41 @@
+{
+  "verdict": "GREEN",
+  "coverageCaveat": "Stage B directly proved soft-cancelled signed-payload recovery plus authoritative on-chain cancellation after recovered partial fill. It did not directly prove the alternate visibleOpen -> observed partial -> retained partial -> routine onchain-cancel path; this is coverage amber only, not safety amber and not a protocol failure.",
+  "methodologyCaveat": "stage-maker-a/b had prior active positions/noisy shared-wallet state on speculation 15; clean Stage B evidence source is ospex-fresh-user.",
+  "provenGates": [
+    "v0.4.0 CLI install/runtime path",
+    "expiry release grace with zero public exposure during local grace",
+    "soft-cancelled signed-payload recovery",
+    "authoritative on-chain cancel after recovered partial",
+    "final zero public exposure / zero orderbook",
+    "no background MM process",
+    "no MM errors"
+  ],
+  "stageA": {
+    "verdict": "GREEN",
+    "submittedCommitments": [
+      "0x2b731eda83086015a6cafc724f04f48d515743d47b7ac4f3265134db60cd988f",
+      "0x8080671a5539a3bf655f95a41b3abdf9acf978db70b2ea30ca992ad66dc08a6a"
+    ],
+    "preExpiryVisibleRows": 2,
+    "gracePlus20ApiVisibleRows": 0,
+    "postGraceVisibleRows": 0,
+    "postGraceExpiredLocalCount": 2
+  },
+  "stageB": {
+    "verdict": "GREEN_WITH_COVERAGE_AMBER",
+    "makerLabel": "ospex-fresh-user",
+    "makerAddress": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+    "takerLabel": "ospex-flow-a",
+    "takerAddress": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+    "filledCommitmentHash": "0x73144e58ba4e650eb0ed07f127a2095d83780800169a2098001c41570b000805",
+    "matchTx": "0x50fb9c70cc4c0964c35ed32e45cb2b8255a43ed7ae7b58649d117a3a62ebea34",
+    "makerFilledRiskWei6": "10600",
+    "takerRiskWei6": "9964",
+    "recoveredBy": "position poll + softcancel-recovery",
+    "onchainCancelTx": "0x9ee5b426c90f692fd598ed2f6f31d255b96ecd218fbd59a9e942f8da9586e729",
+    "finalVisibleOpen": 0,
+    "finalAuthoritativelyInvalidated": 4,
+    "mmErrorCount": 0
+  }
+}

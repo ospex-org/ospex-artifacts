@@ -1,0 +1,495 @@
+{
+  "artifactId": "2026-05-24-mlb-tex-laa-contest-24-v040-mm-acceptance",
+  "artifactType": "run",
+  "status": "complete_verified_with_caveats",
+  "date": "2026-05-24",
+  "publishedAt": "2026-05-25T04:26:48Z",
+  "capturedAt": "2026-05-25T04:26:48Z",
+  "completedAt": "2026-05-25T04:26:48Z",
+  "network": "polygon-mainnet",
+  "chainId": 137,
+  "title": "Rangers @ Angels v0.4.0 MM acceptance lifecycle",
+  "release": {
+    "repo": "ospex-org/ospex-sdk",
+    "tag": "v0.4.0"
+  },
+  "codeTargets": {
+    "capturedAt": "2026-05-25T04:26:48Z",
+    "marketMaker": {
+      "repo": "ospex-org/ospex-market-maker",
+      "sha": "a637cb78e36154f7a20e639c1240156368f16432",
+      "packageVersion": "0.0.0"
+    },
+    "sdkCli": {
+      "repo": "ospex-org/ospex-sdk",
+      "sha": "bffb03b46964a6875e2e659ac4a89f01d8aadf3a",
+      "tag": "v0.4.0",
+      "cliVersion": "0.4.0",
+      "packageVersion": "0.4.0"
+    },
+    "node": "v22.22.0",
+    "yarn": "1.22.22"
+  },
+  "contest": {
+    "contestId": 24,
+    "speculationId": 15,
+    "sport": "mlb",
+    "marketType": "moneyline",
+    "slug": "tex-laa-2026-05-24-2320",
+    "awayTeam": "Texas Rangers",
+    "homeTeam": "Los Angeles Angels",
+    "startTime": "2026-05-24T23:20:00+00:00",
+    "contestCreator": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "contestStatus": "scored",
+    "protocolScoreAtCapture": {
+      "away": 1,
+      "home": 2
+    },
+    "scoredAt": "2026-05-25T04:13:40+00:00",
+    "verifiedAt": "2026-05-24T22:47:03+00:00",
+    "externalFinalScore": {
+      "away": 1,
+      "home": 2
+    },
+    "winner": {
+      "team": "Los Angeles Angels",
+      "protocolWinSide": "home/lower"
+    },
+    "gameStatusProjectionCaveat": "games.status remained 'upcoming' in the projection at capture"
+  },
+  "marketSemantics": {
+    "upper": "away/Texas Rangers",
+    "lower": "home/Los Angeles Angels",
+    "winningPositionType": "lower"
+  },
+  "participants": {
+    "ospex-stage-maker-a": {
+      "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+      "role": "contest creator / shared-wallet winner / noisy Stage B attempt",
+      "explorer": "https://polygonscan.com/address/0x5316fa54c170D1927F30d1a497aC9E85E3826A9B"
+    },
+    "ospex-stage-maker-b": {
+      "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "role": "seed speculation creator / losing upper position",
+      "explorer": "https://polygonscan.com/address/0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482"
+    },
+    "ospex-flow-a": {
+      "address": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+      "role": "controlled flow/taker",
+      "explorer": "https://polygonscan.com/address/0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30"
+    },
+    "ospex-fresh-user": {
+      "address": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+      "role": "clean Stage B maker evidence source",
+      "explorer": "https://polygonscan.com/address/0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D"
+    }
+  },
+  "livePhase": {
+    "verdict": "GREEN",
+    "coverageCaveat": "Stage B directly proved soft-cancelled signed-payload recovery plus authoritative on-chain cancellation after recovered partial fill. It did not directly prove the alternate visibleOpen -> observed partial -> retained partial -> routine onchain-cancel path; this is coverage amber only, not safety amber and not a protocol failure.",
+    "methodologyCaveat": "stage-maker-a/b had prior active positions/noisy shared-wallet state on speculation 15; clean Stage B evidence source is ospex-fresh-user.",
+    "provenGates": [
+      "v0.4.0 CLI install/runtime path",
+      "expiry release grace with zero public exposure during local grace",
+      "soft-cancelled signed-payload recovery",
+      "authoritative on-chain cancel after recovered partial",
+      "final zero public exposure / zero orderbook",
+      "no background MM process",
+      "no MM errors"
+    ],
+    "stageA": {
+      "verdict": "GREEN",
+      "submittedCommitments": [
+        "0x2b731eda83086015a6cafc724f04f48d515743d47b7ac4f3265134db60cd988f",
+        "0x8080671a5539a3bf655f95a41b3abdf9acf978db70b2ea30ca992ad66dc08a6a"
+      ],
+      "preExpiryVisibleRows": 2,
+      "gracePlus20ApiVisibleRows": 0,
+      "postGraceVisibleRows": 0,
+      "postGraceExpiredLocalCount": 2
+    },
+    "stageB": {
+      "verdict": "GREEN_WITH_COVERAGE_AMBER",
+      "makerLabel": "ospex-fresh-user",
+      "makerAddress": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+      "takerLabel": "ospex-flow-a",
+      "takerAddress": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+      "filledCommitmentHash": "0x73144e58ba4e650eb0ed07f127a2095d83780800169a2098001c41570b000805",
+      "matchTx": "0x50fb9c70cc4c0964c35ed32e45cb2b8255a43ed7ae7b58649d117a3a62ebea34",
+      "makerFilledRiskWei6": "10600",
+      "takerRiskWei6": "9964",
+      "recoveredBy": "position poll + softcancel-recovery",
+      "onchainCancelTx": "0x9ee5b426c90f692fd598ed2f6f31d255b96ecd218fbd59a9e942f8da9586e729",
+      "finalVisibleOpen": 0,
+      "finalAuthoritativelyInvalidated": 4,
+      "mmErrorCount": 0
+    }
+  },
+  "commitments": {
+    "seedCommitmentHash": "0x54ee4509be7d8a0553a829630efa381896ddf06941ec8586bd0aedf82f15e282",
+    "cleanStageBFilledCommitmentHash": "0x73144e58ba4e650eb0ed07f127a2095d83780800169a2098001c41570b000805",
+    "byCommitment": [
+      {
+        "role": "seed",
+        "commitmentHash": "0x54ee4509be7d8a0553a829630efa381896ddf06941ec8586bd0aedf82f15e282",
+        "makerLabel": "ospex-stage-maker-b",
+        "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "positionType": "upper",
+        "sideLabel": "upper/away/Texas Rangers",
+        "oddsTick": 206,
+        "riskWei6": "10000",
+        "riskUsdc": "0.010000",
+        "filledRiskWei6": "10000",
+        "filledRiskUsdc": "0.010000",
+        "storedStatus": "filled",
+        "bookVisible": true,
+        "expiry": "2026-05-25T00:50:55+00:00"
+      },
+      {
+        "role": "stageAExpiredHome",
+        "commitmentHash": "0x2b731eda83086015a6cafc724f04f48d515743d47b7ac4f3265134db60cd988f",
+        "makerLabel": "ospex-stage-maker-a",
+        "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "positionType": "lower",
+        "sideLabel": "lower/home/Los Angeles Angels",
+        "oddsTick": 194,
+        "riskWei6": "50000",
+        "riskUsdc": "0.050000",
+        "filledRiskWei6": "0",
+        "filledRiskUsdc": "0.000000",
+        "storedStatus": "open",
+        "bookVisible": true,
+        "expiry": "2026-05-24T22:58:08+00:00"
+      },
+      {
+        "role": "stageAExpiredAway",
+        "commitmentHash": "0x8080671a5539a3bf655f95a41b3abdf9acf978db70b2ea30ca992ad66dc08a6a",
+        "makerLabel": "ospex-stage-maker-a",
+        "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "positionType": "upper",
+        "sideLabel": "upper/away/Texas Rangers",
+        "oddsTick": 219,
+        "riskWei6": "50000",
+        "riskUsdc": "0.050000",
+        "filledRiskWei6": "0",
+        "filledRiskUsdc": "0.000000",
+        "storedStatus": "open",
+        "bookVisible": true,
+        "expiry": "2026-05-24T22:58:08+00:00"
+      },
+      {
+        "role": "noisySharedWalletFill",
+        "commitmentHash": "0x4afaa75c0eb3a5185693719bbf76bf53d6d9abfd250daf413f2f4398636374a8",
+        "makerLabel": "ospex-stage-maker-a",
+        "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "positionType": "lower",
+        "sideLabel": "lower/home/Los Angeles Angels",
+        "oddsTick": 194,
+        "riskWei6": "50000",
+        "riskUsdc": "0.050000",
+        "filledRiskWei6": "10600",
+        "filledRiskUsdc": "0.010600",
+        "storedStatus": "partially_filled",
+        "bookVisible": true,
+        "expiry": "2026-05-24T23:02:15+00:00"
+      },
+      {
+        "role": "cleanInitialHome",
+        "commitmentHash": "0x92452010bcda8dcb02558fa43d494e9fb479fa4eaedf4f121f33493cbd7e5323",
+        "makerLabel": "ospex-fresh-user",
+        "maker": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "positionType": "lower",
+        "sideLabel": "lower/home/Los Angeles Angels",
+        "oddsTick": 194,
+        "riskWei6": "50000",
+        "riskUsdc": "0.050000",
+        "filledRiskWei6": "0",
+        "filledRiskUsdc": "0.000000",
+        "storedStatus": "cancelled",
+        "bookVisible": false,
+        "expiry": "2026-05-24T23:14:09+00:00"
+      },
+      {
+        "role": "cleanInitialAway",
+        "commitmentHash": "0xdbf7da3f7f3deaad07b0e642967febd491d5ea31aefcf14d0aab14656f052388",
+        "makerLabel": "ospex-fresh-user",
+        "maker": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "positionType": "upper",
+        "sideLabel": "upper/away/Texas Rangers",
+        "oddsTick": 219,
+        "riskWei6": "50000",
+        "riskUsdc": "0.050000",
+        "filledRiskWei6": "0",
+        "filledRiskUsdc": "0.000000",
+        "storedStatus": "cancelled",
+        "bookVisible": false,
+        "expiry": "2026-05-24T23:14:09+00:00"
+      },
+      {
+        "role": "cleanFilledReplacement",
+        "commitmentHash": "0x73144e58ba4e650eb0ed07f127a2095d83780800169a2098001c41570b000805",
+        "makerLabel": "ospex-fresh-user",
+        "maker": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "positionType": "lower",
+        "sideLabel": "lower/home/Los Angeles Angels",
+        "oddsTick": 194,
+        "riskWei6": "50000",
+        "riskUsdc": "0.050000",
+        "filledRiskWei6": "10600",
+        "filledRiskUsdc": "0.010600",
+        "storedStatus": "cancelled",
+        "bookVisible": false,
+        "expiry": "2026-05-24T23:14:40+00:00"
+      },
+      {
+        "role": "cleanOppositeReplacement",
+        "commitmentHash": "0xce6c94463ff5888e06fd21cdc7eadfdbaea6fb611b8f06665bc3a0d5067e69c1",
+        "makerLabel": "ospex-fresh-user",
+        "maker": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "positionType": "upper",
+        "sideLabel": "upper/away/Texas Rangers",
+        "oddsTick": 219,
+        "riskWei6": "50000",
+        "riskUsdc": "0.050000",
+        "filledRiskWei6": "0",
+        "filledRiskUsdc": "0.000000",
+        "storedStatus": "cancelled",
+        "bookVisible": false,
+        "expiry": "2026-05-24T23:14:40+00:00"
+      }
+    ],
+    "finalLiveVisibleCommitmentCount": 0
+  },
+  "fills": [
+    {
+      "commitmentHash": "0x54ee4509be7d8a0553a829630efa381896ddf06941ec8586bd0aedf82f15e282",
+      "txHash": "0xd0b5b98f214f35c45515ba34205e8b4d162f8b0618f402e320c4e8a30ec01f81",
+      "explorer": "https://polygonscan.com/tx/0xd0b5b98f214f35c45515ba34205e8b4d162f8b0618f402e320c4e8a30ec01f81",
+      "filledAt": "2026-05-24T22:51:12+00:00",
+      "makerLabel": "ospex-stage-maker-b",
+      "makerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "takerLabel": "ospex-flow-a",
+      "takerAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "makerPositionType": "upper",
+      "makerSideLabel": "upper/away/Texas Rangers",
+      "takerPositionType": "lower",
+      "takerSideLabel": "lower/home/Los Angeles Angels",
+      "makerRiskWei6": "10000",
+      "makerRiskUsdc": "0.010000",
+      "takerRiskWei6": "10600",
+      "takerRiskUsdc": "0.010600",
+      "oddsTick": 206
+    },
+    {
+      "commitmentHash": "0x4afaa75c0eb3a5185693719bbf76bf53d6d9abfd250daf413f2f4398636374a8",
+      "txHash": "0x8466804b6e4f348f2afb07a973d30390a30a537accd9015bc0690e4ab8ac9665",
+      "explorer": "https://polygonscan.com/tx/0x8466804b6e4f348f2afb07a973d30390a30a537accd9015bc0690e4ab8ac9665",
+      "filledAt": "2026-05-24T23:00:40+00:00",
+      "makerLabel": "ospex-stage-maker-a",
+      "makerAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "takerLabel": "ospex-flow-a",
+      "takerAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "makerPositionType": "lower",
+      "makerSideLabel": "lower/home/Los Angeles Angels",
+      "takerPositionType": "upper",
+      "takerSideLabel": "upper/away/Texas Rangers",
+      "makerRiskWei6": "10600",
+      "makerRiskUsdc": "0.010600",
+      "takerRiskWei6": "9964",
+      "takerRiskUsdc": "0.009964",
+      "oddsTick": 194
+    },
+    {
+      "commitmentHash": "0x73144e58ba4e650eb0ed07f127a2095d83780800169a2098001c41570b000805",
+      "txHash": "0x50fb9c70cc4c0964c35ed32e45cb2b8255a43ed7ae7b58649d117a3a62ebea34",
+      "explorer": "https://polygonscan.com/tx/0x50fb9c70cc4c0964c35ed32e45cb2b8255a43ed7ae7b58649d117a3a62ebea34",
+      "filledAt": "2026-05-24T23:10:09+00:00",
+      "makerLabel": "ospex-fresh-user",
+      "makerAddress": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "takerLabel": "ospex-flow-a",
+      "takerAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "makerPositionType": "lower",
+      "makerSideLabel": "lower/home/Los Angeles Angels",
+      "takerPositionType": "upper",
+      "takerSideLabel": "upper/away/Texas Rangers",
+      "makerRiskWei6": "10600",
+      "makerRiskUsdc": "0.010600",
+      "takerRiskWei6": "9964",
+      "takerRiskUsdc": "0.009964",
+      "oddsTick": 194
+    }
+  ],
+  "positions": {
+    "byIndexedPosition": [
+      {
+        "label": "ospex-flow-a",
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "positionType": "lower",
+        "sideLabel": "lower/home/Los Angeles Angels",
+        "riskWei6": "10600",
+        "riskUsdc": "0.010600",
+        "profitWei6": "10000",
+        "profitUsdc": "0.010000",
+        "outcome": "won",
+        "claimed": true,
+        "claimedWei6": "20600",
+        "claimedUsdc": "0.020600",
+        "claimedAt": "2026-05-25T04:15:47+00:00"
+      },
+      {
+        "label": "ospex-flow-a",
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "positionType": "upper",
+        "sideLabel": "upper/away/Texas Rangers",
+        "riskWei6": "19928",
+        "riskUsdc": "0.019928",
+        "profitWei6": "21200",
+        "profitUsdc": "0.021200",
+        "outcome": "lost",
+        "claimed": false
+      },
+      {
+        "label": "ospex-fresh-user",
+        "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "positionType": "lower",
+        "sideLabel": "lower/home/Los Angeles Angels",
+        "riskWei6": "10600",
+        "riskUsdc": "0.010600",
+        "profitWei6": "9964",
+        "profitUsdc": "0.009964",
+        "outcome": "won",
+        "claimed": true,
+        "claimedWei6": "20564",
+        "claimedUsdc": "0.020564",
+        "claimedAt": "2026-05-25T04:15:53+00:00"
+      },
+      {
+        "label": "ospex-stage-maker-b",
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "positionType": "upper",
+        "sideLabel": "upper/away/Texas Rangers",
+        "riskWei6": "10000",
+        "riskUsdc": "0.010000",
+        "profitWei6": "10600",
+        "profitUsdc": "0.010600",
+        "outcome": "lost",
+        "claimed": false
+      },
+      {
+        "label": "ospex-stage-maker-a",
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "positionType": "lower",
+        "sideLabel": "lower/home/Los Angeles Angels",
+        "riskWei6": "10600",
+        "riskUsdc": "0.010600",
+        "profitWei6": "9964",
+        "profitUsdc": "0.009964",
+        "outcome": "won",
+        "claimed": true,
+        "claimedWei6": "20564",
+        "claimedUsdc": "0.020564",
+        "claimedAt": "2026-05-25T04:14:46+00:00"
+      }
+    ]
+  },
+  "postgame": {
+    "externalFinal": {
+      "source": "MLB Stats API",
+      "away": 1,
+      "home": 2,
+      "status": "Final"
+    },
+    "scoreRequestTx": "0x7e49dc73cf23ff25145608e823c277363fdf48e697620a5d8df0e152201e226b",
+    "scoreCallbackTx": "0xd3697df1fd0ecdc823bfa7cc1ef44f4c9e7181c3e99faf375014ec6386ce0ee1",
+    "settleTx": "0x8e70cd5a28861707320ab9a997fd1f2a317aa9ee02402a652a0c77069acfec73",
+    "claimTxs": [
+      "0x8e70cd5a28861707320ab9a997fd1f2a317aa9ee02402a652a0c77069acfec73",
+      "0x32463e0b4af4843f0717d12b39da57f5ed3af60c0aadc975d3a890cbc45572bc",
+      "0x2a62cb9393e95b3a872ee1fc98272bbfb04afe4fa9cabe3ce47281b4b0114d83"
+    ],
+    "settledWinSide": "home",
+    "finalClaimDryRuns": {
+      "ospex-stage-maker-a": {
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "entryCount": 0,
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "totalPayoutWei6": "0",
+          "totalPayoutUSDC": 0
+        }
+      },
+      "ospex-stage-maker-b": {
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "entryCount": 0,
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "totalPayoutWei6": "0",
+          "totalPayoutUSDC": 0
+        }
+      },
+      "ospex-flow-a": {
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "entryCount": 0,
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "totalPayoutWei6": "0",
+          "totalPayoutUSDC": 0
+        }
+      },
+      "ospex-fresh-user": {
+        "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "entryCount": 0,
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "totalPayoutWei6": "0",
+          "totalPayoutUSDC": 0
+        }
+      }
+    },
+    "targetClaimableCount": 0,
+    "finalOrderbook": []
+  },
+  "verdict": {
+    "overall": "GREEN_WITH_COVERAGE_CAVEATS",
+    "protocolSafety": "GREEN",
+    "postgameLifecycle": "GREEN",
+    "artifactStatus": "complete_verified_with_caveats",
+    "summary": "Live MM acceptance and postgame lifecycle completed successfully. Caveats are coverage/methodology/projection-lag only; no protocol-safety failure was observed."
+  },
+  "caveats": [
+    {
+      "kind": "coverage",
+      "severity": "amber_non_blocking",
+      "description": "Stage B directly proved soft-cancelled signed-payload recovery plus authoritative on-chain cancellation after recovered partial fill. It did not directly prove the alternate visibleOpen -> observed partial -> retained partial -> routine onchain-cancel path; this is coverage amber only, not safety amber and not a protocol failure."
+    },
+    {
+      "kind": "operator_methodology",
+      "severity": "non_blocking",
+      "description": "stage-maker-a/b had prior active positions/noisy shared-wallet state on speculation 15; clean Stage B evidence source is ospex-fresh-user."
+    },
+    {
+      "kind": "projection_lag",
+      "severity": "non_blocking",
+      "description": "After ospex-stage-maker-a settled speculation 15, immediate ospex-flow-a/ospex-fresh-user live claim-all attempts still planned settle-speculation and failed pre-send; after projection convergence, both dry-runs moved to claimable and claims succeeded."
+    },
+    {
+      "kind": "game_projection",
+      "severity": "non_blocking",
+      "description": "The games projection row still showed status='upcoming' at capture, while contest/speculation lifecycle and external final score were complete."
+    }
+  ],
+  "rawEvidence": {
+    "finalScoreSource": "raw/final-score-source.json",
+    "finalSupabaseState": "raw/final-supabase-state.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json",
+    "cliPostgame": "raw/cli-postgame.sanitized.json",
+    "finalContestShow": "raw/final-contest-show.sanitized.json",
+    "mmFinalStatus": "raw/mm-final-status.sanitized.json",
+    "mmTelemetrySummary": "raw/mm-telemetry-summary.sanitized.json",
+    "livePhase": "raw/live-phase.sanitized.json"
+  }
+}

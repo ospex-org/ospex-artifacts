@@ -1,0 +1,28 @@
+{
+  "source": "MLB Stats API",
+  "sourceUrl": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-24&hydrate=team,linescore",
+  "fetchedAt": "2026-05-25T04:10:47.001716Z",
+  "gamePk": 824028,
+  "officialDate": "2026-05-24",
+  "gameDate": "2026-05-24T23:20:00Z",
+  "status": {
+    "abstractGameCode": "F",
+    "abstractGameState": "Final",
+    "codedGameState": "F",
+    "detailedState": "Final",
+    "startTimeTBD": false,
+    "statusCode": "F"
+  },
+  "away": {
+    "id": 140,
+    "isWinner": false,
+    "name": "Texas Rangers",
+    "score": 1
+  },
+  "home": {
+    "id": 108,
+    "isWinner": true,
+    "name": "Los Angeles Angels",
+    "score": 2
+  }
+}

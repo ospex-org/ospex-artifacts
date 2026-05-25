@@ -1,0 +1,55 @@
+{
+  "network": "polygon-mainnet",
+  "chainId": 137,
+  "capturedAt": "2026-05-25T04:26:48Z",
+  "transactions": [
+    {
+      "purpose": "score-contest-request",
+      "txHash": "0x7e49dc73cf23ff25145608e823c277363fdf48e697620a5d8df0e152201e226b",
+      "explorer": "https://polygonscan.com/tx/0x7e49dc73cf23ff25145608e823c277363fdf48e697620a5d8df0e152201e226b",
+      "status": "confirmed"
+    },
+    {
+      "purpose": "score-contest-callback",
+      "txHash": "0xd3697df1fd0ecdc823bfa7cc1ef44f4c9e7181c3e99faf375014ec6386ce0ee1",
+      "explorer": "https://polygonscan.com/tx/0xd3697df1fd0ecdc823bfa7cc1ef44f4c9e7181c3e99faf375014ec6386ce0ee1",
+      "status": "confirmed"
+    },
+    {
+      "purpose": "settle-speculation",
+      "txHash": "0x8e70cd5a28861707320ab9a997fd1f2a317aa9ee02402a652a0c77069acfec73",
+      "explorer": "https://polygonscan.com/tx/0x8e70cd5a28861707320ab9a997fd1f2a317aa9ee02402a652a0c77069acfec73",
+      "status": "confirmed"
+    },
+    {
+      "purpose": "claim-ospex-stage-maker-a",
+      "txHash": "0x731fac3c73b5d34f02b15f730f9ed0d7f62ac79ae6a9f31c702561d4c98123d7",
+      "explorer": "https://polygonscan.com/tx/0x731fac3c73b5d34f02b15f730f9ed0d7f62ac79ae6a9f31c702561d4c98123d7",
+      "status": "confirmed"
+    },
+    {
+      "purpose": "claim-ospex-flow-a",
+      "txHash": "0x32463e0b4af4843f0717d12b39da57f5ed3af60c0aadc975d3a890cbc45572bc",
+      "explorer": "https://polygonscan.com/tx/0x32463e0b4af4843f0717d12b39da57f5ed3af60c0aadc975d3a890cbc45572bc",
+      "status": "confirmed"
+    },
+    {
+      "purpose": "claim-ospex-fresh-user",
+      "txHash": "0x2a62cb9393e95b3a872ee1fc98272bbfb04afe4fa9cabe3ce47281b4b0114d83",
+      "explorer": "https://polygonscan.com/tx/0x2a62cb9393e95b3a872ee1fc98272bbfb04afe4fa9cabe3ce47281b4b0114d83",
+      "status": "confirmed"
+    },
+    {
+      "purpose": "clean-stage-b-fill",
+      "txHash": "0x50fb9c70cc4c0964c35ed32e45cb2b8255a43ed7ae7b58649d117a3a62ebea34",
+      "explorer": "https://polygonscan.com/tx/0x50fb9c70cc4c0964c35ed32e45cb2b8255a43ed7ae7b58649d117a3a62ebea34",
+      "status": "confirmed"
+    },
+    {
+      "purpose": "clean-stage-b-onchain-cancel",
+      "txHash": "0x9ee5b426c90f692fd598ed2f6f31d255b96ecd218fbd59a9e942f8da9586e729",
+      "explorer": "https://polygonscan.com/tx/0x9ee5b426c90f692fd598ed2f6f31d255b96ecd218fbd59a9e942f8da9586e729",
+      "status": "confirmed"
+    }
+  ]
+}
