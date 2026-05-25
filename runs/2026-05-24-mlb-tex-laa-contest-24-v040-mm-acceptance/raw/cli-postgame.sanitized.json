@@ -1,0 +1,166 @@
+{
+  "scoreContestRequest": {
+    "ok": true,
+    "requestTxHash": "0x7e49dc73cf23ff25145608e823c277363fdf48e697620a5d8df0e152201e226b",
+    "requestBlockNumber": "87395828",
+    "requestId": "0x9a3993f91f526d9ec39e2d305c8e5ef956877ac09d318c02bb2185256aa66411",
+    "scoreCallbackTxHash": "0xd3697df1fd0ecdc823bfa7cc1ef44f4c9e7181c3e99faf375014ec6386ce0ee1"
+  },
+  "settlementAndClaims": [
+    {
+      "label": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "ok": true,
+      "entries": [
+        {
+          "positionId": "15_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_1",
+          "speculationId": "15",
+          "bucket": "pendingSettle",
+          "description": "Los Angeles Angels moneyline — Won (≈ $0.02, needs settle)",
+          "success": true,
+          "txHashes": [
+            "0x8e70cd5a28861707320ab9a997fd1f2a317aa9ee02402a652a0c77069acfec73",
+            "0x731fac3c73b5d34f02b15f730f9ed0d7f62ac79ae6a9f31c702561d4c98123d7"
+          ],
+          "payoutUSDC": 0.020564,
+          "payoutWei6": "20564",
+          "winSide": "home"
+        }
+      ],
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "totalPayoutWei6": "20564",
+        "totalPayoutUSDC": 0.020564
+      },
+      "effects": [
+        {
+          "purpose": "settle-speculation",
+          "ok": true,
+          "txHash": "0x8e70cd5a28861707320ab9a997fd1f2a317aa9ee02402a652a0c77069acfec73",
+          "status": "confirmed"
+        },
+        {
+          "purpose": "claim-position",
+          "ok": true,
+          "txHash": "0x731fac3c73b5d34f02b15f730f9ed0d7f62ac79ae6a9f31c702561d4c98123d7",
+          "status": "confirmed"
+        }
+      ]
+    },
+    {
+      "label": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "ok": true,
+      "entries": [
+        {
+          "positionId": "15_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+          "speculationId": "15",
+          "bucket": "claimable",
+          "description": "Los Angeles Angels moneyline — Won (≈ $0.02)",
+          "success": true,
+          "txHashes": [
+            "0x32463e0b4af4843f0717d12b39da57f5ed3af60c0aadc975d3a890cbc45572bc"
+          ],
+          "payoutUSDC": 0.0206,
+          "payoutWei6": "20600"
+        }
+      ],
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "totalPayoutWei6": "20600",
+        "totalPayoutUSDC": 0.0206
+      },
+      "effects": [
+        {
+          "purpose": "claim-position",
+          "ok": true,
+          "txHash": "0x32463e0b4af4843f0717d12b39da57f5ed3af60c0aadc975d3a890cbc45572bc",
+          "status": "confirmed"
+        }
+      ]
+    },
+    {
+      "label": "ospex-fresh-user",
+      "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "ok": true,
+      "entries": [
+        {
+          "positionId": "15_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+          "speculationId": "15",
+          "bucket": "claimable",
+          "description": "Los Angeles Angels moneyline — Won (≈ $0.02)",
+          "success": true,
+          "txHashes": [
+            "0x2a62cb9393e95b3a872ee1fc98272bbfb04afe4fa9cabe3ce47281b4b0114d83"
+          ],
+          "payoutUSDC": 0.020564,
+          "payoutWei6": "20564"
+        }
+      ],
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "totalPayoutWei6": "20564",
+        "totalPayoutUSDC": 0.020564
+      },
+      "effects": [
+        {
+          "purpose": "claim-position",
+          "ok": true,
+          "txHash": "0x2a62cb9393e95b3a872ee1fc98272bbfb04afe4fa9cabe3ce47281b4b0114d83",
+          "status": "confirmed"
+        }
+      ]
+    }
+  ],
+  "projectionLagObserved": {
+    "description": "After ospex-stage-maker-a settled speculation 15, immediate ospex-flow-a/ospex-fresh-user live claim-all attempts still planned settle-speculation and failed pre-send; after projection convergence, both dry-runs moved to claimable and claims succeeded.",
+    "failedAttemptEffectPurpose": "settle-speculation",
+    "failedAttemptErrorCode": "CHAIN_ERROR",
+    "classifiedAs": "projection-lag caveat, not final blocker"
+  },
+  "finalDryRuns": {
+    "ospex-stage-maker-a": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "entryCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      }
+    },
+    "ospex-stage-maker-b": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "entryCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      }
+    },
+    "ospex-flow-a": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "entryCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      }
+    },
+    "ospex-fresh-user": {
+      "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "entryCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      }
+    }
+  }
+}

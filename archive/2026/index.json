@@ -1,13 +1,25 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-05-24T21:53:47Z",
+  "generatedAt": "2026-05-25T04:29:50Z",
   "repository": "ospex-org/ospex-artifacts",
   "archive": {
     "scope": "year",
     "year": 2026
   },
   "artifacts": [
+    {
+      "artifactId": "2026-05-24-mlb-tex-laa-contest-24-v040-mm-acceptance",
+      "artifactType": "run",
+      "dataPath": "runs/2026-05-24-mlb-tex-laa-contest-24-v040-mm-acceptance/evidence.json",
+      "date": "2026-05-24",
+      "network": "polygon",
+      "rawPath": "runs/2026-05-24-mlb-tex-laa-contest-24-v040-mm-acceptance/raw/",
+      "release": "ospex-org/ospex-sdk v0.4.0",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-05-24-mlb-tex-laa-contest-24-v040-mm-acceptance/summary.md",
+      "publishedAt": "2026-05-25T04:26:48Z"
+    },
     {
       "artifactId": "2026-05-24-mlb-pit-tor-contest-22-mm-early1",
       "artifactType": "run",

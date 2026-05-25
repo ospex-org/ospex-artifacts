@@ -1,0 +1,26 @@
+{
+  "ok": true,
+  "network": "polygon",
+  "chainId": 137,
+  "generatedAt": "2026-05-25T04:17:06.740Z",
+  "payload": {
+    "contestId": "24",
+    "awayTeam": "Texas Rangers",
+    "homeTeam": "Los Angeles Angels",
+    "sport": "mlb",
+    "matchTime": "2026-05-24T23:20:00+00:00",
+    "status": "scored",
+    "awayScore": 1,
+    "homeScore": 2,
+    "scoredAt": "2026-05-25T04:13:40+00:00",
+    "speculations": [
+      {
+        "speculationId": "15",
+        "contestId": "24",
+        "type": "moneyline",
+        "lineTicks": 0,
+        "orderbook": []
+      }
+    ]
+  }
+}
