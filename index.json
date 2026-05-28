@@ -1,10 +1,11 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-05-25T21:30:08Z",
+  "generatedAt": "2026-05-28T06:08:42Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
+      "runs/2026-05-28-mlb-col-lad-contest-27-d2-solvency-lifecycle/evidence.json",
       "runs/2026-05-25-mlb-min-cws-contest-25-v042-mm-acceptance/evidence.json",
       "runs/2026-05-24-mlb-tex-laa-contest-24-v040-mm-acceptance/evidence.json",
       "runs/2026-05-24-mlb-pit-tor-contest-22-mm-early1/evidence.json",
@@ -21,6 +22,17 @@
     "daily-digest": []
   },
   "recentArtifacts": [
+    {
+      "artifactId": "2026-05-28-mlb-col-lad-contest-27-d2-solvency-lifecycle",
+      "artifactType": "run",
+      "dataPath": "runs/2026-05-28-mlb-col-lad-contest-27-d2-solvency-lifecycle/evidence.json",
+      "date": "2026-05-28",
+      "network": "polygon",
+      "rawPath": "runs/2026-05-28-mlb-col-lad-contest-27-d2-solvency-lifecycle/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-05-28-mlb-col-lad-contest-27-d2-solvency-lifecycle/summary.md",
+      "publishedAt": "2026-05-28T06:08:32Z"
+    },
     {
       "artifactId": "2026-05-25-mlb-min-cws-contest-25-v042-mm-acceptance",
       "artifactType": "run",
@@ -140,9 +152,9 @@
       "scope": "year",
       "year": 2026,
       "path": "archive/2026/index.json",
-      "artifactCount": 10,
+      "artifactCount": 11,
       "oldestPublishedAt": "2026-05-20T02:48:35Z",
-      "newestPublishedAt": "2026-05-25T21:29:54Z"
+      "newestPublishedAt": "2026-05-28T06:08:32Z"
     }
   ]
 }

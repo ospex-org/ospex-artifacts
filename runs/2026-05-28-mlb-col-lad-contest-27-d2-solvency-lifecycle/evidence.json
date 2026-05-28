@@ -1,0 +1,427 @@
+{
+  "artifactId": "2026-05-28-mlb-col-lad-contest-27-d2-solvency-lifecycle",
+  "artifactType": "run",
+  "status": "complete_verified_with_caveats",
+  "date": "2026-05-28",
+  "publishedAt": "2026-05-28T06:08:32Z",
+  "capturedAt": "2026-05-28T06:08:32Z",
+  "completedAt": "2026-05-28T06:08:32Z",
+  "network": "polygon-mainnet",
+  "chainId": 137,
+  "title": "Rockies @ Dodgers D2 solvency/script-hash lifecycle smoke",
+  "codeTargets": {
+    "capturedAt": "2026-05-28T06:08:32Z",
+    "sdkCli": {
+      "repo": "ospex-org/ospex-sdk",
+      "branch": "review/pr-108",
+      "head": "e2b6e2903937ab6a9e08ff83994de9de6e2920f0",
+      "cliVersion": "0.4.6",
+      "packageVersion": "0.4.6",
+      "scope": "local PR checkout, not a tagged release artifact"
+    },
+    "coreApi": {
+      "repo": "ospex-org/ospex-core-api",
+      "scope": "live production API observed through public SDK/CLI surfaces"
+    }
+  },
+  "contest": {
+    "contestId": 27,
+    "speculationId": 17,
+    "sport": "mlb",
+    "marketType": "moneyline",
+    "slug": "col-lad-2026-05-28",
+    "awayTeam": "Colorado Rockies",
+    "homeTeam": "Los Angeles Dodgers",
+    "startTime": "2026-05-28T02:10:00+00:00",
+    "contestCreator": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "contestStatus": "scored",
+    "protocolScoreAtCapture": {
+      "away": 1,
+      "home": 4
+    },
+    "scoredAt": "2026-05-28T06:02:36+00:00",
+    "verifiedAt": "2026-05-28T01:09:16+00:00",
+    "externalFinalScore": {
+      "away": 1,
+      "home": 4
+    },
+    "winner": {
+      "team": "Los Angeles Dodgers",
+      "protocolWinSide": "home/lower"
+    }
+  },
+  "marketSemantics": {
+    "upper": "away/Colorado Rockies",
+    "lower": "home/Los Angeles Dodgers",
+    "winningPositionType": "lower"
+  },
+  "participants": {
+    "ospex-stage-maker-a": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "role": "contest creator; maker; winning lower/home Dodgers position; postgame settle/claim executor",
+      "explorer": "https://polygonscan.com/address/0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    "ospex-flow-a": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "role": "controlled taker; losing upper/away Rockies position",
+      "explorer": "https://polygonscan.com/address/0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    }
+  },
+  "smokePhase": {
+    "verdict": "GREEN_WITH_CLI_CREATE_CAVEAT",
+    "provenGates": [
+      "refreshed contest verification script hash matched before live writes",
+      "contest 27 was created and verified on Polygon mainnet",
+      "tiny fundable commitment was submitted with fundability evidence",
+      "oversized submit was refused before signature/offchain write",
+      "controlled taker matched the tiny quote",
+      "final commitment state converged to filled with zero remaining risk",
+      "maker commitments list was empty after fill and no background MM process remained"
+    ],
+    "scriptHash": "0xec6a7e9cdffa09fdcaa611220e2c99ba0ec58cc082812a01b5d321ccc1e5ebcf",
+    "commitmentHash": "0x4ba7598c03eae419a2340dbd28ba1dcc8c19f5bd8bb9d1721d3a272e4957326f",
+    "makerRiskWei6": "100000",
+    "makerRiskUsdc": "0.100000",
+    "matchTx": "0x4114152ac6a6461e7fa062ee034044d9d7a2ff01e2b9105f40459154a67a5c6e",
+    "oversizedRefusalReasonCodes": [
+      "MAKER_USDC_BALANCE_INSUFFICIENT",
+      "MAKER_POSITION_ALLOWANCE_INSUFFICIENT"
+    ],
+    "finalVisibleOpenCommitmentCount": 0
+  },
+  "commitments": {
+    "targetCommitmentHash": "0x4ba7598c03eae419a2340dbd28ba1dcc8c19f5bd8bb9d1721d3a272e4957326f",
+    "byCommitment": [
+      {
+        "role": "D2 tiny fundable quote",
+        "commitmentHash": "0x4ba7598c03eae419a2340dbd28ba1dcc8c19f5bd8bb9d1721d3a272e4957326f",
+        "makerLabel": "ospex-stage-maker-a",
+        "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "positionType": "lower",
+        "sideLabel": "lower/home/Los Angeles Dodgers",
+        "oddsTick": 210,
+        "riskWei6": "100000",
+        "riskUsdc": "0.100000",
+        "filledRiskWei6": "100000",
+        "filledRiskUsdc": "0.100000",
+        "storedStatus": "filled",
+        "bookVisible": true,
+        "isLive": false,
+        "remainingRiskWei6": "0"
+      }
+    ],
+    "finalLiveVisibleCommitmentCount": 0
+  },
+  "fills": [
+    {
+      "commitmentHash": "0x4ba7598c03eae419a2340dbd28ba1dcc8c19f5bd8bb9d1721d3a272e4957326f",
+      "txHash": "0x4114152ac6a6461e7fa062ee034044d9d7a2ff01e2b9105f40459154a67a5c6e",
+      "explorer": "https://polygonscan.com/tx/0x4114152ac6a6461e7fa062ee034044d9d7a2ff01e2b9105f40459154a67a5c6e",
+      "makerLabel": "ospex-stage-maker-a",
+      "makerAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "takerLabel": "ospex-flow-a",
+      "takerAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "makerPositionType": "lower",
+      "makerSideLabel": "lower/home/Los Angeles Dodgers",
+      "takerPositionType": "upper",
+      "takerSideLabel": "upper/away/Colorado Rockies",
+      "makerRiskWei6": "100000",
+      "makerRiskUsdc": "0.100000",
+      "takerRiskWei6": "91000",
+      "takerRiskUsdc": "0.091000",
+      "oddsTick": 210
+    }
+  ],
+  "positions": {
+    "byIndexedPosition": [
+      {
+        "label": "ospex-flow-a",
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "positionType": "upper",
+        "sideLabel": "upper/away/Colorado Rockies",
+        "riskWei6": "91000",
+        "riskUsdc": "0.091000",
+        "profitWei6": "100000",
+        "profitUsdc": "0.100000",
+        "outcome": "lost",
+        "claimed": false,
+        "claimedWei6": null,
+        "claimedUsdc": null,
+        "claimedAt": null
+      },
+      {
+        "label": "ospex-stage-maker-a",
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "positionType": "lower",
+        "sideLabel": "lower/home/Los Angeles Dodgers",
+        "riskWei6": "100000",
+        "riskUsdc": "0.100000",
+        "profitWei6": "91000",
+        "profitUsdc": "0.091000",
+        "outcome": "won",
+        "claimed": true,
+        "claimedWei6": "191000",
+        "claimedUsdc": "0.191000",
+        "claimedAt": "2026-05-28T06:03:23+00:00"
+      }
+    ]
+  },
+  "postgame": {
+    "externalFinal": {
+      "source": "MLB Stats API",
+      "away": 1,
+      "home": 4,
+      "status": "Final"
+    },
+    "scoreAttempts": [
+      {
+        "label": "initial",
+        "scoreRequestTx": "0xa9c384af8e30f761fa1f7b19518ecb9d042becd3d749575474fd58fc4ecc74e5",
+        "requestId": "0x7a7476845fe2624bc8d0708ff017ef6a766b96283479637050c4cdb3a9f65674",
+        "callbackTx": "0xdec4c728679c7cfb47734a597a3fb58426762ddfd5e58ea71a0071ddde257949",
+        "result": "oracle_request_failed_no_scores_set",
+        "classification": "external_oracle_upstream_transient"
+      },
+      {
+        "label": "retry1",
+        "scoreRequestTx": "0x84635509dd5c9de596084556e8943ad55b99cbfa7435c3816c0a1a9f626ecbe4",
+        "requestId": "0x714a847cf597483d53f53f3e44b55c6e2d0be3830e4bad7eccc14bb23c3eceb2",
+        "callbackTx": "0x69daa6cf031d98a7d611684e763ae7ca2930bff0caf421d6b2119b1334e1932d",
+        "result": "scores_set",
+        "awayScore": 1,
+        "homeScore": 4
+      }
+    ],
+    "scoreRequestTx": "0x84635509dd5c9de596084556e8943ad55b99cbfa7435c3816c0a1a9f626ecbe4",
+    "scoreCallbackTx": "0x69daa6cf031d98a7d611684e763ae7ca2930bff0caf421d6b2119b1334e1932d",
+    "settleTx": "0x1dbce640272789833d16d48efb139185b4a26a0a4d336eac941fad0001e9ab7d",
+    "claimTxs": [
+      "0x9c5382f5430d05e3d5dc6e298f1a0b2d1a8f6eac19781c73000cc339f1d80a60"
+    ],
+    "settledWinSide": "home",
+    "claimedPayoutWei6": "191000",
+    "claimedPayoutUsdc": "0.191000",
+    "finalClaimDryRuns": {
+      "ospex-stage-maker-a": {
+        "generatedAt": "2026-05-28T06:04:07.102Z",
+        "stage": "dry-run",
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "dryRun": true,
+        "entryCount": 0,
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "claimedFresh": 0,
+          "alreadyClaimed": 0,
+          "recoveredAlreadyClaimed": 0,
+          "totalPayoutWei6": "0",
+          "totalPayoutUSDC": 0
+        },
+        "payout": null
+      },
+      "ospex-flow-a": {
+        "generatedAt": "2026-05-28T06:04:08.544Z",
+        "stage": "dry-run",
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "dryRun": true,
+        "entryCount": 0,
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "claimedFresh": 0,
+          "alreadyClaimed": 0,
+          "recoveredAlreadyClaimed": 0,
+          "totalPayoutWei6": "0",
+          "totalPayoutUSDC": 0
+        },
+        "payout": null
+      }
+    },
+    "targetClaimableCount": 0,
+    "finalOrderbook": []
+  },
+  "projectionConvergence": {
+    "expectation": "Receipts are followed by final API/indexer projection convergence before artifact assertions.",
+    "gates": [
+      {
+        "name": "score callback projected after retry",
+        "afterWrite": "score retry request 0x84635509dd5c9de596084556e8943ad55b99cbfa7435c3816c0a1a9f626ecbe4 and callback 0x69daa6cf031d98a7d611684e763ae7ca2930bff0caf421d6b2119b1334e1932d",
+        "txConfirmed": true,
+        "waitTarget": "contest 27 status=scored and score 1-4",
+        "expectedFinalState": [
+          "contest status scored",
+          "away score 1",
+          "home score 4"
+        ],
+        "observedFinalState": [
+          "contest status scored",
+          "away score 1",
+          "home score 4"
+        ],
+        "converged": true,
+        "staleReadObserved": false
+      },
+      {
+        "name": "settle and claim projected",
+        "afterWrite": "claim-all stage-maker-a sent settle 0x1dbce640272789833d16d48efb139185b4a26a0a4d336eac941fad0001e9ab7d and claim 0x9c5382f5430d05e3d5dc6e298f1a0b2d1a8f6eac19781c73000cc339f1d80a60",
+        "txConfirmed": true,
+        "waitTarget": "speculation 17 closed; maker lower position claimed; final dry-runs empty",
+        "expectedFinalState": [
+          "speculation closed",
+          "win side home",
+          "maker lower position claimed",
+          "zero final claim dry-run entries"
+        ],
+        "observedFinalState": [
+          "speculation closed",
+          "win side home",
+          "maker lower claimed=true",
+          "maker/taker final dry-run entries 0"
+        ],
+        "converged": true,
+        "staleReadObserved": false
+      },
+      {
+        "name": "live exposure closed",
+        "afterWrite": "match 0x4114152ac6a6461e7fa062ee034044d9d7a2ff01e2b9105f40459154a67a5c6e",
+        "txConfirmed": true,
+        "waitTarget": "target commitment filled and maker visible commitment list empty",
+        "expectedFinalState": [
+          "target commitment filled",
+          "remaining risk 0",
+          "final maker commitments list empty"
+        ],
+        "observedFinalState": [
+          "target commitment filled",
+          "remaining risk 0",
+          "maker commitments list count 0"
+        ],
+        "converged": true,
+        "staleReadObserved": false
+      }
+    ]
+  },
+  "txs": [
+    {
+      "purpose": "contest_create_request",
+      "transactionHash": "0x95b9c03c2aa5412ce0322959d9f00e6d57bf1a10bfae53866052897624aedf79",
+      "success": true,
+      "blockNumber": 87537613,
+      "gasUsed": 1385351,
+      "explorer": "https://polygonscan.com/tx/0x95b9c03c2aa5412ce0322959d9f00e6d57bf1a10bfae53866052897624aedf79"
+    },
+    {
+      "purpose": "contest_verified_callback",
+      "transactionHash": "0xbef1860c894a46a42f0c7a850bc79c8bd9324b3e75fadc5abb964b4172b66b2f",
+      "success": true,
+      "blockNumber": 87537620,
+      "gasUsed": 343397,
+      "explorer": "https://polygonscan.com/tx/0xbef1860c894a46a42f0c7a850bc79c8bd9324b3e75fadc5abb964b4172b66b2f"
+    },
+    {
+      "purpose": "taker_approve_usdc",
+      "transactionHash": "0x302427971f58efb5238280b7f7724040a4143fbda033f29ea45c9f3655cbed3a",
+      "success": true,
+      "blockNumber": 87537721,
+      "gasUsed": 66357,
+      "explorer": "https://polygonscan.com/tx/0x302427971f58efb5238280b7f7724040a4143fbda033f29ea45c9f3655cbed3a"
+    },
+    {
+      "purpose": "match_commitment_create_speculation",
+      "transactionHash": "0x4114152ac6a6461e7fa062ee034044d9d7a2ff01e2b9105f40459154a67a5c6e",
+      "success": true,
+      "blockNumber": 87537724,
+      "gasUsed": 677602,
+      "explorer": "https://polygonscan.com/tx/0x4114152ac6a6461e7fa062ee034044d9d7a2ff01e2b9105f40459154a67a5c6e"
+    },
+    {
+      "purpose": "score_request_first_failed_callback",
+      "transactionHash": "0xa9c384af8e30f761fa1f7b19518ecb9d042becd3d749575474fd58fc4ecc74e5",
+      "success": true,
+      "blockNumber": 87547245,
+      "gasUsed": 664329,
+      "explorer": "https://polygonscan.com/tx/0xa9c384af8e30f761fa1f7b19518ecb9d042becd3d749575474fd58fc4ecc74e5"
+    },
+    {
+      "purpose": "score_callback_failed_no_scores_set",
+      "transactionHash": "0xdec4c728679c7cfb47734a597a3fb58426762ddfd5e58ea71a0071ddde257949",
+      "success": true,
+      "blockNumber": 87547253,
+      "gasUsed": 287990,
+      "explorer": "https://polygonscan.com/tx/0xdec4c728679c7cfb47734a597a3fb58426762ddfd5e58ea71a0071ddde257949"
+    },
+    {
+      "purpose": "score_request_retry_successful_callback",
+      "transactionHash": "0x84635509dd5c9de596084556e8943ad55b99cbfa7435c3816c0a1a9f626ecbe4",
+      "success": true,
+      "blockNumber": 87547670,
+      "gasUsed": 664329,
+      "explorer": "https://polygonscan.com/tx/0x84635509dd5c9de596084556e8943ad55b99cbfa7435c3816c0a1a9f626ecbe4"
+    },
+    {
+      "purpose": "score_callback_scores_set",
+      "transactionHash": "0x69daa6cf031d98a7d611684e763ae7ca2930bff0caf421d6b2119b1334e1932d",
+      "success": true,
+      "blockNumber": 87547677,
+      "gasUsed": 315922,
+      "explorer": "https://polygonscan.com/tx/0x69daa6cf031d98a7d611684e763ae7ca2930bff0caf421d6b2119b1334e1932d"
+    },
+    {
+      "purpose": "settle_speculation",
+      "transactionHash": "0x1dbce640272789833d16d48efb139185b4a26a0a4d336eac941fad0001e9ab7d",
+      "success": true,
+      "blockNumber": 87547702,
+      "gasUsed": 155619,
+      "explorer": "https://polygonscan.com/tx/0x1dbce640272789833d16d48efb139185b4a26a0a4d336eac941fad0001e9ab7d"
+    },
+    {
+      "purpose": "claim_position",
+      "transactionHash": "0x9c5382f5430d05e3d5dc6e298f1a0b2d1a8f6eac19781c73000cc339f1d80a60",
+      "success": true,
+      "blockNumber": 87547704,
+      "gasUsed": 123415,
+      "explorer": "https://polygonscan.com/tx/0x9c5382f5430d05e3d5dc6e298f1a0b2d1a8f6eac19781c73000cc339f1d80a60"
+    }
+  ],
+  "verdict": {
+    "overall": "GREEN_WITH_NON_BLOCKING_CAVEATS",
+    "protocolSafety": "GREEN",
+    "scriptHashGate": "GREEN",
+    "d2Solvency": "GREEN",
+    "postgameLifecycle": "GREEN",
+    "artifactStatus": "complete_verified_with_caveats",
+    "summary": "D2 solvency/script-hash smoke and full postgame score/settle/claim lifecycle completed. Caveats are SDK/CLI observability and transient oracle-upstream behavior, not final protocol safety blockers."
+  },
+  "caveats": [
+    {
+      "kind": "sdk_cli_create_observability",
+      "severity": "non_blocking_followup",
+      "description": "Bundled CLI contests create emitted generic CHAIN_ERROR with no transaction hash/effects twice; after nonce/game-state checks, direct SDK create with the same signer/env succeeded."
+    },
+    {
+      "kind": "oracle_upstream_transient",
+      "severity": "non_blocking_recovered",
+      "description": "The first score callback emitted OracleRequestFailed and left the contest verified/unscored. A single retry scored the contest correctly and the lifecycle then settled/claimed successfully."
+    },
+    {
+      "kind": "sdk_cli_fillability_envelope",
+      "severity": "non_blocking_followup",
+      "description": "The match envelope retained the pre-approval taker fillability verdict even though the command remediated allowance and matched successfully."
+    },
+    {
+      "kind": "operator_methodology",
+      "severity": "non_blocking",
+      "description": "The run used small controlled live mainnet positions and pre-funded operator wallets. Public evidence records only public addresses and transaction hashes."
+    }
+  ],
+  "rawEvidence": {
+    "finalScoreSource": "raw/final-score-source.json",
+    "finalSupabaseState": "raw/final-supabase-state.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json",
+    "cliPostgame": "raw/cli-postgame.sanitized.json",
+    "finalContestShow": "raw/final-contest-show.sanitized.json",
+    "oracleScoreCallbacks": "raw/oracle-score-callbacks.sanitized.json",
+    "smokePhase": "raw/smoke-phase.sanitized.json",
+    "processCheck": "raw/process-check.sanitized.txt"
+  }
+}

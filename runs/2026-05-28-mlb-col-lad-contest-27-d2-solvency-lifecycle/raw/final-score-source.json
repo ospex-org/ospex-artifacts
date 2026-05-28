@@ -1,0 +1,47 @@
+{
+  "abstractGameState": "Final",
+  "away": {
+    "isWinner": false,
+    "name": "Colorado Rockies",
+    "score": 1
+  },
+  "codedGameState": "F",
+  "detailedState": "Final",
+  "gameDate": "2026-05-28T02:10:00Z",
+  "gamePk": 823947,
+  "home": {
+    "isWinner": true,
+    "name": "Los Angeles Dodgers",
+    "score": 4
+  },
+  "linescore": {
+    "currentInning": 9,
+    "currentInningOrdinal": "9th",
+    "inningState": "Top",
+    "teams": {
+      "away": {
+        "errors": 1,
+        "hits": 1,
+        "leftOnBase": 5,
+        "runs": 1
+      },
+      "home": {
+        "errors": 1,
+        "hits": 8,
+        "leftOnBase": 4,
+        "runs": 4
+      }
+    }
+  },
+  "link": "/api/v1.1/game/823947/feed/live",
+  "source": "MLB Stats API schedule",
+  "sourceUrl": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-27&hydrate=team,linescore",
+  "status": {
+    "abstractGameCode": "F",
+    "abstractGameState": "Final",
+    "codedGameState": "F",
+    "detailedState": "Final",
+    "startTimeTBD": false,
+    "statusCode": "F"
+  }
+}

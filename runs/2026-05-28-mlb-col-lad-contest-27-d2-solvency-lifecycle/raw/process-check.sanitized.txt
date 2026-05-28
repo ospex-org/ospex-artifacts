@@ -1,0 +1,3 @@
+capturedAt: 2026-05-28T06:08:32Z
+relevantBackgroundProcessCount: 0
+note: no active process remained for this SDK/CLI smoke; no MM runtime was part of this artifact.

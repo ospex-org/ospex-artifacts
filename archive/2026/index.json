@@ -1,13 +1,24 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-05-25T21:30:08Z",
+  "generatedAt": "2026-05-28T06:08:42Z",
   "repository": "ospex-org/ospex-artifacts",
   "archive": {
     "scope": "year",
     "year": 2026
   },
   "artifacts": [
+    {
+      "artifactId": "2026-05-28-mlb-col-lad-contest-27-d2-solvency-lifecycle",
+      "artifactType": "run",
+      "dataPath": "runs/2026-05-28-mlb-col-lad-contest-27-d2-solvency-lifecycle/evidence.json",
+      "date": "2026-05-28",
+      "network": "polygon",
+      "rawPath": "runs/2026-05-28-mlb-col-lad-contest-27-d2-solvency-lifecycle/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-05-28-mlb-col-lad-contest-27-d2-solvency-lifecycle/summary.md",
+      "publishedAt": "2026-05-28T06:08:32Z"
+    },
     {
       "artifactId": "2026-05-25-mlb-min-cws-contest-25-v042-mm-acceptance",
       "artifactType": "run",
