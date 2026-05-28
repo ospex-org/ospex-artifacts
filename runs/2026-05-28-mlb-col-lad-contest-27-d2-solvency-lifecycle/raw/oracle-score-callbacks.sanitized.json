@@ -1,0 +1,20 @@
+{
+  "initialScoreRequest": {
+    "requestTx": "0xa9c384af8e30f761fa1f7b19518ecb9d042becd3d749575474fd58fc4ecc74e5",
+    "requestId": "0x7a7476845fe2624bc8d0708ff017ef6a766b96283479637050c4cdb3a9f65674",
+    "requestTxStatus": "success",
+    "callbackTx": "0xdec4c728679c7cfb47734a597a3fb58426762ddfd5e58ea71a0071ddde257949",
+    "callbackResult": "OracleRequestFailed",
+    "failureClass": "transient_oracle_upstream_error",
+    "note": "The callback transaction succeeded on-chain but emitted an OracleRequestFailed event and did not set contest scores."
+  },
+  "retryScoreRequest": {
+    "requestTx": "0x84635509dd5c9de596084556e8943ad55b99cbfa7435c3816c0a1a9f626ecbe4",
+    "requestId": "0x714a847cf597483d53f53f3e44b55c6e2d0be3830e4bad7eccc14bb23c3eceb2",
+    "requestTxStatus": "success",
+    "callbackTx": "0x69daa6cf031d98a7d611684e763ae7ca2930bff0caf421d6b2119b1334e1932d",
+    "callbackResult": "CONTEST_SCORES_SET",
+    "awayScore": 1,
+    "homeScore": 4
+  }
+}

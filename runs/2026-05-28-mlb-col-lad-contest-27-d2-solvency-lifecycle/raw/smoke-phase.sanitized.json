@@ -1,0 +1,201 @@
+{
+  "runId": "2026-05-28T005928Z-d2-solvency-script-hash-col-lad",
+  "repo": {
+    "path": "<ospex-sdk>",
+    "branch": "review/pr-108",
+    "head": "e2b6e2903937ab6a9e08ff83994de9de6e2920f0",
+    "cliVersion": "0.4.6"
+  },
+  "scriptApproval": {
+    "observedVerifyScriptHash": "0xec6a7e9cdffa09fdcaa611220e2c99ba0ec58cc082812a01b5d321ccc1e5ebcf",
+    "expectedMatched": true,
+    "validUntil": 1795737600,
+    "approvedSignerPresent": true
+  },
+  "targetGame": {
+    "gameId": "5e51c375-f0f6-4a77-936f-95aad7bf7d2b",
+    "slug": "col-lad-2026-05-28",
+    "away": "Colorado Rockies",
+    "home": "Los Angeles Dodgers",
+    "matchTime": "2026-05-28T02:10:00+00:00",
+    "status": "upcoming",
+    "hasOdds": true,
+    "canCreateContest": true,
+    "contestCreated": false,
+    "contestId": null
+  },
+  "contestCreation": {
+    "contestId": "27",
+    "txHash": "0x95b9c03c2aa5412ce0322959d9f00e6d57bf1a10bfae53866052897624aedf79",
+    "requestId": "0x2bbe48599bd5ca0d4751640e7d2c997a3faf58e5f08cae099f7836e1f84879fe",
+    "blockNumber": "87537613",
+    "verificationStatus": "verified",
+    "cliCreateFailures": [
+      {
+        "file": "raw/contest-create.json",
+        "ok": false,
+        "errors": [
+          {
+            "code": "CHAIN_ERROR",
+            "message": "Transaction broadcast or inclusion failed."
+          }
+        ],
+        "effects": []
+      },
+      {
+        "file": "raw/contest-create-nowait.json",
+        "ok": false,
+        "errors": [
+          {
+            "code": "CHAIN_ERROR",
+            "message": "Transaction broadcast or inclusion failed."
+          }
+        ],
+        "effects": []
+      }
+    ]
+  },
+  "smallCommitment": {
+    "hash": "0x4ba7598c03eae419a2340dbd28ba1dcc8c19f5bd8bb9d1721d3a272e4957326f",
+    "side": "Los Angeles Dodgers",
+    "counterpartySide": "Colorado Rockies",
+    "riskWei6": "100000",
+    "riskUSDC": "0.100000",
+    "odds": "-110",
+    "expiry": "2026-05-28T02:10:00+00:00",
+    "fundability": {
+      "outcome": "fundable",
+      "fundableNow": true,
+      "advisory": true,
+      "checkedAtBlock": "87537675",
+      "requirement": {
+        "newCommitmentRiskWei6": "100000",
+        "existingOpenRiskWei6": "0",
+        "existingOpenCommitmentCount": 0,
+        "lazyCreationFeeWei6": "250000",
+        "lazyCreation": true,
+        "existingMaybeLazyKeyCount": 0,
+        "existingLazyFeeMaxWei6": "0",
+        "balanceRequiredWei6": "350000",
+        "positionAllowanceRequiredWei6": "100000",
+        "treasuryAllowanceRequiredWei6": "250000"
+      }
+    }
+  },
+  "advisoryFillability": {
+    "listSmallAppeared": true,
+    "listFillability": {
+      "advisory": true,
+      "makerFundingStatus": "fully_backed",
+      "orderIndividuallyBackedNow": true,
+      "makerBookBackedNow": true,
+      "makerBackingWei6": "4155410",
+      "makerVisibleCommittedWei6": "100000",
+      "makerCoverageRatioBps": 415541,
+      "checkedAtBlock": "87537692",
+      "stale": false
+    },
+    "standaloneBeforeMatch": {
+      "outcome": "not-fillable",
+      "fillableNow": false,
+      "checkedAtBlock": "87537700",
+      "advisory": true
+    },
+    "standaloneBeforeMatchReasons": [
+      "TAKER_TREASURY_ALLOWANCE_INSUFFICIENT"
+    ]
+  },
+  "oversizedNegative": {
+    "exitCode": "1",
+    "ok": false,
+    "payloadAction": "refused-before-sign",
+    "outcome": "not-fundable",
+    "reasonCodes": [
+      "MAKER_USDC_BALANCE_INSUFFICIENT",
+      "MAKER_POSITION_ALLOWANCE_INSUFFICIENT"
+    ],
+    "requirement": {
+      "newCommitmentRiskWei6": "999999000000",
+      "existingOpenRiskWei6": "100000",
+      "existingOpenCommitmentCount": 1,
+      "lazyCreationFeeWei6": "250000",
+      "lazyCreation": true,
+      "existingMaybeLazyKeyCount": 0,
+      "existingLazyFeeMaxWei6": "0",
+      "balanceRequiredWei6": "999999350000",
+      "positionAllowanceRequiredWei6": "999999100000",
+      "treasuryAllowanceRequiredWei6": "250000"
+    },
+    "reasons": [
+      {
+        "code": "MAKER_USDC_BALANCE_INSUFFICIENT",
+        "token": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+        "requiredWei6": "999999350000",
+        "actualWei6": "4155410"
+      },
+      {
+        "code": "MAKER_POSITION_ALLOWANCE_INSUFFICIENT",
+        "token": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+        "spender": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+        "requiredWei6": "999999100000",
+        "actualWei6": "12039200"
+      }
+    ],
+    "effects": [],
+    "hugeRowsFoundAfter": []
+  },
+  "match": {
+    "txHash": "0x4114152ac6a6461e7fa062ee034044d9d7a2ff01e2b9105f40459154a67a5c6e",
+    "status": "success",
+    "takerRiskWei6": "91000",
+    "takerRiskUSDC": "0.091000",
+    "fillMakerRiskWei6": "100000",
+    "fillMakerRiskUSDC": "0.100000",
+    "effects": [
+      {
+        "type": "transaction",
+        "purpose": "approve-usdc",
+        "ok": true,
+        "txHash": "0x302427971f58efb5238280b7f7724040a4143fbda033f29ea45c9f3655cbed3a",
+        "blockNumber": "87537721",
+        "status": "confirmed"
+      },
+      {
+        "type": "transaction",
+        "purpose": "match-commitment",
+        "ok": true,
+        "txHash": "0x4114152ac6a6461e7fa062ee034044d9d7a2ff01e2b9105f40459154a67a5c6e",
+        "blockNumber": "87537724",
+        "status": "confirmed"
+      }
+    ],
+    "fillabilityInEnvelope": {
+      "outcome": "not-fillable",
+      "fillableNow": false,
+      "checkedAtBlock": "87537719",
+      "advisory": true
+    },
+    "fillabilityReasonCodes": [
+      "TAKER_TREASURY_ALLOWANCE_INSUFFICIENT"
+    ]
+  },
+  "finalStateBeforePostgame": {
+    "speculationId": "17",
+    "commitmentStatus": "filled",
+    "remainingRiskAmount": "0",
+    "filledRiskAmount": "100000",
+    "isLive": false,
+    "makerListCount": 0,
+    "activeMmRunProcesses": 0,
+    "projectionConverged": true,
+    "projectionLagSeconds": 0
+  },
+  "issueClassification": {
+    "sdkCliUxTransport": [
+      "Bundled CLI contests create emitted generic CHAIN_ERROR with no tx/effects twice; direct SDK create with the same signer/env succeeded.",
+      "Match envelope retained the pre-approval fillability verdict even though the command remediated allowance and matched successfully."
+    ],
+    "operatorMethodology": [],
+    "protocolIndexerApiBlockers": []
+  }
+}

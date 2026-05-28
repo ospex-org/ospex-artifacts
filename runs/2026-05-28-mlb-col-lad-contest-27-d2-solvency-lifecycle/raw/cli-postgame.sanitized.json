@@ -1,0 +1,197 @@
+{
+  "scoreInitial": {
+    "generatedAt": "2026-05-28T05:50:00.929Z",
+    "ok": true,
+    "requestTx": "0xa9c384af8e30f761fa1f7b19518ecb9d042becd3d749575474fd58fc4ecc74e5",
+    "requestId": "0x7a7476845fe2624bc8d0708ff017ef6a766b96283479637050c4cdb3a9f65674",
+    "effects": [
+      {
+        "type": "transaction",
+        "purpose": "score-contest",
+        "ok": true,
+        "txHash": "0xa9c384af8e30f761fa1f7b19518ecb9d042becd3d749575474fd58fc4ecc74e5",
+        "blockNumber": "87547245",
+        "status": "confirmed"
+      }
+    ],
+    "callback": {
+      "txHash": "0xdec4c728679c7cfb47734a597a3fb58426762ddfd5e58ea71a0071ddde257949",
+      "result": "oracle_request_failed",
+      "classification": "transient_oracle_upstream_error",
+      "publicDetail": "First score callback emitted OracleRequestFailed with an upstream API error; exact upstream name omitted from public artifact."
+    }
+  },
+  "scoreRetry1": {
+    "generatedAt": "2026-05-28T06:02:24.204Z",
+    "ok": true,
+    "requestTx": "0x84635509dd5c9de596084556e8943ad55b99cbfa7435c3816c0a1a9f626ecbe4",
+    "requestId": "0x714a847cf597483d53f53f3e44b55c6e2d0be3830e4bad7eccc14bb23c3eceb2",
+    "effects": [
+      {
+        "type": "transaction",
+        "purpose": "score-contest",
+        "ok": true,
+        "txHash": "0x84635509dd5c9de596084556e8943ad55b99cbfa7435c3816c0a1a9f626ecbe4",
+        "blockNumber": "87547670",
+        "status": "confirmed"
+      }
+    ],
+    "callback": {
+      "txHash": "0x69daa6cf031d98a7d611684e763ae7ca2930bff0caf421d6b2119b1334e1932d",
+      "result": "scores_set",
+      "awayScore": 1,
+      "homeScore": 4
+    }
+  },
+  "claimDryRunBefore": {
+    "ospex-stage-maker-a": {
+      "generatedAt": "2026-05-28T06:02:57.257Z",
+      "stage": "dry-run",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "dryRun": true,
+      "entryCount": 1,
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "191000",
+        "totalPayoutUSDC": 0.191
+      },
+      "payout": {
+        "profit": {
+          "wei6": "191000",
+          "usdc": "0.191000"
+        },
+        "totalReturn": {
+          "wei6": "191000",
+          "usdc": "0.191000"
+        }
+      }
+    },
+    "ospex-flow-a": {
+      "generatedAt": "2026-05-28T06:02:57.956Z",
+      "stage": "dry-run",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "dryRun": true,
+      "entryCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      },
+      "payout": null
+    }
+  },
+  "claimLive": {
+    "generatedAt": "2026-05-28T06:03:24.562Z",
+    "ok": true,
+    "effects": [
+      {
+        "type": "transaction",
+        "purpose": "settle-speculation",
+        "ok": true,
+        "txHash": "0x1dbce640272789833d16d48efb139185b4a26a0a4d336eac941fad0001e9ab7d",
+        "status": "confirmed"
+      },
+      {
+        "type": "transaction",
+        "purpose": "claim-position",
+        "ok": true,
+        "txHash": "0x9c5382f5430d05e3d5dc6e298f1a0b2d1a8f6eac19781c73000cc339f1d80a60",
+        "status": "confirmed"
+      }
+    ],
+    "entries": [
+      {
+        "positionId": "17_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_1",
+        "speculationId": "17",
+        "bucket": "pendingSettle",
+        "description": "Los Angeles Dodgers moneyline \u2014 Won (\u2248 $0.19, needs settle)",
+        "success": true,
+        "txHashes": [
+          "0x1dbce640272789833d16d48efb139185b4a26a0a4d336eac941fad0001e9ab7d",
+          "0x9c5382f5430d05e3d5dc6e298f1a0b2d1a8f6eac19781c73000cc339f1d80a60"
+        ],
+        "steps": [
+          {
+            "name": "settleSpeculation",
+            "outcome": "sent",
+            "txHash": "0x1dbce640272789833d16d48efb139185b4a26a0a4d336eac941fad0001e9ab7d",
+            "winSide": "home"
+          },
+          {
+            "name": "claimPosition",
+            "outcome": "sent",
+            "txHash": "0x9c5382f5430d05e3d5dc6e298f1a0b2d1a8f6eac19781c73000cc339f1d80a60",
+            "payoutWei6": "191000",
+            "payoutUSDC": 0.191
+          }
+        ],
+        "payoutUSDC": 0.191,
+        "payoutWei6": "191000",
+        "winSide": "home"
+      }
+    ],
+    "totals": {
+      "claimed": 1,
+      "failed": 0,
+      "claimedFresh": 1,
+      "alreadyClaimed": 0,
+      "recoveredAlreadyClaimed": 0,
+      "totalPayoutWei6": "191000",
+      "totalPayoutUSDC": 0.191
+    },
+    "payout": {
+      "profit": {
+        "wei6": "191000",
+        "usdc": "0.191000"
+      },
+      "totalReturn": {
+        "wei6": "191000",
+        "usdc": "0.191000"
+      }
+    }
+  },
+  "claimDryRunFinal": {
+    "ospex-stage-maker-a": {
+      "generatedAt": "2026-05-28T06:04:07.102Z",
+      "stage": "dry-run",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "dryRun": true,
+      "entryCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      },
+      "payout": null
+    },
+    "ospex-flow-a": {
+      "generatedAt": "2026-05-28T06:04:08.544Z",
+      "stage": "dry-run",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "dryRun": true,
+      "entryCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      },
+      "payout": null
+    }
+  }
+}
