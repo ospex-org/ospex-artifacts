@@ -99,7 +99,7 @@
         "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
         "positionType": "lower",
         "sideLabel": "lower/home/Los Angeles Dodgers",
-        "oddsTick": 210,
+        "oddsTick": 191,
         "riskWei6": "100000",
         "riskUsdc": "0.100000",
         "filledRiskWei6": "100000",
@@ -129,7 +129,7 @@
       "makerRiskUsdc": "0.100000",
       "takerRiskWei6": "91000",
       "takerRiskUsdc": "0.091000",
-      "oddsTick": 210
+      "oddsTick": 191
     }
   ],
   "positions": {
