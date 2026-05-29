@@ -1,0 +1,137 @@
+{
+  "files": [
+    "run-2026-05-28T20-42-28-954Z-smbqvr.ndjson"
+  ],
+  "eventCounts": {
+    "tick-start": 3,
+    "candidate": 2,
+    "quote-intent": 2,
+    "risk-verdict": 2,
+    "submit": 2,
+    "quote-competitiveness": 4,
+    "fill": 1,
+    "replace": 1,
+    "soft-cancel": 1,
+    "kill": 1
+  },
+  "samples": [
+    {
+      "ts": "2026-05-28T20:42:29.362Z",
+      "runId": "2026-05-28T20-42-28-954Z-smbqvr",
+      "kind": "tick-start",
+      "tick": 1
+    },
+    {
+      "ts": "2026-05-28T20:42:30.104Z",
+      "runId": "2026-05-28T20-42-28-954Z-smbqvr",
+      "kind": "candidate",
+      "contestId": "28",
+      "speculationId": "18"
+    },
+    {
+      "ts": "2026-05-28T20:42:30.783Z",
+      "runId": "2026-05-28T20-42-28-954Z-smbqvr",
+      "kind": "quote-intent",
+      "contestId": "28",
+      "speculationId": "18"
+    },
+    {
+      "ts": "2026-05-28T20:42:30.784Z",
+      "runId": "2026-05-28T20-42-28-954Z-smbqvr",
+      "kind": "risk-verdict",
+      "contestId": "28",
+      "speculationId": "18"
+    },
+    {
+      "ts": "2026-05-28T20:42:31.141Z",
+      "runId": "2026-05-28T20-42-28-954Z-smbqvr",
+      "kind": "submit",
+      "contestId": "28",
+      "speculationId": "18",
+      "commitmentHash": "0x4a4731d8ab9997fe7d0a5208e35a27e0e337375e72f32b442519b590ffee69dd",
+      "makerSide": "home",
+      "takerSide": "away",
+      "positionType": 1,
+      "makerOddsTick": 188,
+      "riskAmountWei6": "100000"
+    },
+    {
+      "ts": "2026-05-28T20:42:31.502Z",
+      "runId": "2026-05-28T20-42-28-954Z-smbqvr",
+      "kind": "submit",
+      "contestId": "28",
+      "speculationId": "18",
+      "commitmentHash": "0x61df7f533a884d8345d47402ecd2982a0e1a3a9e15046b867eeab9e2af5272ed",
+      "makerSide": "away",
+      "takerSide": "home",
+      "positionType": 0,
+      "makerOddsTick": 228,
+      "riskAmountWei6": "100000"
+    },
+    {
+      "ts": "2026-05-28T20:43:01.506Z",
+      "runId": "2026-05-28T20-42-28-954Z-smbqvr",
+      "kind": "tick-start",
+      "tick": 2
+    },
+    {
+      "ts": "2026-05-28T20:43:32.931Z",
+      "runId": "2026-05-28T20-42-28-954Z-smbqvr",
+      "kind": "tick-start",
+      "tick": 3
+    },
+    {
+      "ts": "2026-05-28T20:43:33.612Z",
+      "runId": "2026-05-28T20-42-28-954Z-smbqvr",
+      "kind": "fill",
+      "contestId": "28",
+      "speculationId": "18",
+      "commitmentHash": "0x4a4731d8ab9997fe7d0a5208e35a27e0e337375e72f32b442519b590ffee69dd",
+      "makerSide": "home",
+      "takerSide": "away",
+      "positionType": 1,
+      "makerOddsTick": 188,
+      "filledRiskWei6": "100000"
+    },
+    {
+      "ts": "2026-05-28T20:43:34.362Z",
+      "runId": "2026-05-28T20-42-28-954Z-smbqvr",
+      "kind": "quote-intent",
+      "contestId": "28",
+      "speculationId": "18"
+    },
+    {
+      "ts": "2026-05-28T20:43:34.362Z",
+      "runId": "2026-05-28T20-42-28-954Z-smbqvr",
+      "kind": "risk-verdict",
+      "contestId": "28",
+      "speculationId": "18"
+    },
+    {
+      "ts": "2026-05-28T20:43:34.997Z",
+      "runId": "2026-05-28T20-42-28-954Z-smbqvr",
+      "kind": "candidate",
+      "contestId": "28",
+      "takerSide": "away"
+    },
+    {
+      "ts": "2026-05-28T20:44:05.322Z",
+      "runId": "2026-05-28T20-42-28-954Z-smbqvr",
+      "kind": "soft-cancel",
+      "contestId": "28",
+      "speculationId": "18",
+      "commitmentHash": "0x3746a789a84d0a79b75f21865694dfe891efb9dd8db96c48c196585cd79026b1",
+      "makerSide": "away",
+      "takerSide": "home",
+      "positionType": 0,
+      "makerOddsTick": 228,
+      "reason": "shutdown"
+    },
+    {
+      "ts": "2026-05-28T20:44:05.323Z",
+      "runId": "2026-05-28T20-42-28-954Z-smbqvr",
+      "kind": "kill",
+      "reason": "kill-file"
+    }
+  ]
+}

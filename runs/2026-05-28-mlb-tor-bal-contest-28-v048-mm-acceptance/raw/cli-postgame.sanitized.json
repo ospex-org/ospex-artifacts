@@ -1,0 +1,141 @@
+{
+  "capturedAt": "2026-05-29T02:31:08Z",
+  "claimAllDryRuns": {
+    "ospex-flow-a": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "dryRun": true,
+      "entries": [],
+      "errors": [],
+      "ok": true,
+      "stage": "dry-run",
+      "totals": {
+        "alreadyClaimed": 0,
+        "claimed": 0,
+        "claimedFresh": 0,
+        "failed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutUSDC": 0,
+        "totalPayoutWei6": "0"
+      },
+      "warnings": []
+    },
+    "ospex-fresh-user": {
+      "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "dryRun": true,
+      "entries": [],
+      "errors": [],
+      "ok": true,
+      "stage": "dry-run",
+      "totals": {
+        "alreadyClaimed": 0,
+        "claimed": 0,
+        "claimedFresh": 0,
+        "failed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutUSDC": 0,
+        "totalPayoutWei6": "0"
+      },
+      "warnings": []
+    },
+    "ospex-stage-maker-a": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "dryRun": true,
+      "entries": [],
+      "errors": [],
+      "ok": true,
+      "stage": "dry-run",
+      "totals": {
+        "alreadyClaimed": 0,
+        "claimed": 0,
+        "claimedFresh": 0,
+        "failed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutUSDC": 0,
+        "totalPayoutWei6": "0"
+      },
+      "warnings": []
+    },
+    "ospex-stage-maker-b": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "dryRun": true,
+      "entries": [],
+      "errors": [],
+      "ok": true,
+      "stage": "dry-run",
+      "totals": {
+        "alreadyClaimed": 0,
+        "claimed": 0,
+        "claimedFresh": 0,
+        "failed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutUSDC": 0,
+        "totalPayoutWei6": "0"
+      },
+      "warnings": []
+    }
+  },
+  "contestShow": {
+    "action": "contests.show",
+    "approvalRequirements": [],
+    "chainId": 137,
+    "cliVersion": "0.4.8",
+    "commitment": null,
+    "contest": null,
+    "effects": [],
+    "errors": [],
+    "estimatedCosts": null,
+    "generatedAt": "2026-05-29T02:31:09.808Z",
+    "network": "polygon",
+    "nextCommands": [],
+    "ok": true,
+    "payload": {
+      "awayScore": 2,
+      "awayTeam": "Toronto Blue Jays",
+      "awayTeamId": "f818202a-8565-436d-a216-0ece5d795906",
+      "contestCreatedAt": "2026-05-28T20:33:00+00:00",
+      "contestCreator": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "contestId": "28",
+      "homeScore": 1,
+      "homeTeam": "Baltimore Orioles",
+      "homeTeamId": "0c8091ee-0c12-4dba-b9f5-ac5cdd55bbe9",
+      "jsonoddsId": "386da824-5f00-49e2-835d-6b47854b55a5",
+      "leagueId": "mlb",
+      "marketUpdateSourceHash": "0x7f5ce70565133fedb2e0f1aeb925f38a3b26924917cff852e7de40a9297119b4",
+      "matchTime": "2026-05-28T22:35:00+00:00",
+      "rundownId": "3d3c205b28f1f41429e2235648381577",
+      "scoreContestSourceHash": "0xcb2a11db3190c322239b52afb3caefccfccd850566834819b012c5520f8d31cd",
+      "scoredAt": "2026-05-29T02:17:08+00:00",
+      "speculations": [
+        {
+          "contestId": "28",
+          "line": null,
+          "lineTicks": 0,
+          "orderbook": [],
+          "speculationId": "18",
+          "speculationStatus": 1,
+          "type": "moneyline"
+        }
+      ],
+      "sport": "mlb",
+      "sportId": 0,
+      "sportspageId": "336822",
+      "status": "scored",
+      "verifiedAt": "2026-05-28T20:33:12+00:00",
+      "verifySourceHash": "0xec6a7e9cdffa09fdcaa611220e2c99ba0ec58cc082812a01b5d321ccc1e5ebcf",
+      "voidedAt": null
+    },
+    "payout": null,
+    "requiresSignature": false,
+    "requiresTransaction": false,
+    "risk": null,
+    "schemaVersion": 2,
+    "sdkVersion": "0.4.8",
+    "sideSummary": null,
+    "signer": null,
+    "speculation": null,
+    "stage": "read",
+    "wallet": null,
+    "walletRole": "none",
+    "warnings": []
+  }
+}
