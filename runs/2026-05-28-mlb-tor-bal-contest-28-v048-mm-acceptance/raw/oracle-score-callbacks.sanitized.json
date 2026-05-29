@@ -1,0 +1,54 @@
+{
+  "events": [
+    {
+      "block_number": 87577526,
+      "block_time": "2026-05-28T20:33:12+00:00",
+      "entity_id": null,
+      "entity_type": "oracle",
+      "event_name": "ORACLE_RESPONSE",
+      "log_index": 128,
+      "payload": {
+        "err": "0x",
+        "requestId": "0x8a2dc0ed84b74b170079446df61396df61817f9a9f686fd25db8e14255ea3883",
+        "response": "0x00000000000000000000000000000000000000000000000029b3e7ffb2483b14"
+      },
+      "tx_hash": "0x0906e77ce6f0290dd561586d6809ef0b32f98d869da4ebb7776ff722dc916a57"
+    },
+    {
+      "block_number": 87589318,
+      "block_time": "2026-05-29T02:17:08+00:00",
+      "entity_id": null,
+      "entity_type": "oracle",
+      "event_name": "ORACLE_RESPONSE",
+      "log_index": 1572,
+      "payload": {
+        "err": "0x",
+        "requestId": "0xf9490ceb11ff2e9e6db2466977edd1c9aa16701995037973ba5fc6e10eb97813",
+        "response": "0x00000000000000000000000000000000000000000000000000000000000007d1"
+      },
+      "tx_hash": "0x765da2f3eabb296e8dfa6be25e9d600539f75c49f11ced83b917c66438e70087"
+    },
+    {
+      "block_number": 87589318,
+      "block_time": "2026-05-29T02:17:08+00:00",
+      "entity_id": 28,
+      "entity_type": "contest",
+      "event_name": "CONTEST_SCORES_SET",
+      "log_index": 1574,
+      "payload": {
+        "awayScore": "2",
+        "contestId": "28",
+        "homeScore": "1"
+      },
+      "tx_hash": "0x765da2f3eabb296e8dfa6be25e9d600539f75c49f11ced83b917c66438e70087"
+    }
+  ],
+  "observedScore": {
+    "away": 2,
+    "home": 1
+  },
+  "requestId": "0xf9490ceb11ff2e9e6db2466977edd1c9aa16701995037973ba5fc6e10eb97813",
+  "scoreCallbackTx": "0x765da2f3eabb296e8dfa6be25e9d600539f75c49f11ced83b917c66438e70087",
+  "scoreRequestTx": "0x71b1320e2298ba8f5797ae252609db0392a46296c4e1ef24e4d3a3fdbcb81347",
+  "terminal": "success_scores_set"
+}

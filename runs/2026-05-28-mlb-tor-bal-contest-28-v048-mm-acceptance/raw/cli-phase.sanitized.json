@@ -1,0 +1,136 @@
+{
+  "scriptHashGate": {
+    "expected": "0xec6a7e9cdffa09fdcaa611220e2c99ba0ec58cc082812a01b5d321ccc1e5ebcf",
+    "observed": "0xec6a7e9cdffa09fdcaa611220e2c99ba0ec58cc082812a01b5d321ccc1e5ebcf",
+    "hashMatch": true,
+    "approvedSignerPresent": true,
+    "validUntil": "1795737600",
+    "nonExpired": true
+  },
+  "targetSelection": {
+    "selected": "primary",
+    "gameId": "386da824-5f00-49e2-835d-6b47854b55a5",
+    "slug": "tor-bal-2026-05-28",
+    "awayTeam": "Toronto Blue Jays",
+    "homeTeam": "Baltimore Orioles",
+    "matchTime": "2026-05-28T22:35:00+00:00",
+    "contestCreatedBeforeRun": false,
+    "canCreateContest": true
+  },
+  "contestCreate": {
+    "initialAttempt": "blocked_by_creator_treasury_allowance_no_tx",
+    "retryOk": true,
+    "contestId": 28,
+    "createTx": "0xd111bf649be221391186abfe42450c98d5003d23d605ab5fdea94d2ab5ec448c",
+    "requestId": "0x8a2dc0ed84b74b170079446df61396df61817f9a9f686fd25db8e14255ea3883",
+    "effects": [
+      {
+        "type": "transaction",
+        "purpose": "create-contest",
+        "ok": true,
+        "status": "confirmed",
+        "txHash": "0xd111bf649be221391186abfe42450c98d5003d23d605ab5fdea94d2ab5ec448c",
+        "blockNumber": "87577519"
+      }
+    ],
+    "verified": true,
+    "verifiedStatus": "verified",
+    "genericChainErrorNoTxEffects": false,
+    "creatorFeeApprovalTx": "0x3044f48bbb1dad44011891bbabc7b6b6197869833f1784bbc0376b6c9414ff61"
+  },
+  "seedSubmit": {
+    "commitmentHash": "0x45dff7210a447809d8bd0e055298d0eff508e89347203fcc07c71acd19485994",
+    "ok": true,
+    "fundabilityOutcome": "fundable",
+    "fundableNow": true,
+    "riskWei6": "100000",
+    "riskUsdc": "0.100000",
+    "side": "home/Baltimore Orioles",
+    "odds": "-110",
+    "oddsTick": 191,
+    "effects": [
+      {
+        "type": "transaction",
+        "purpose": "approve-usdc",
+        "ok": true,
+        "status": "confirmed",
+        "txHash": "0xaf834804285c3723dc4c5a972d6a9260128ce15302aa95a52993934cc4ebb2d7",
+        "blockNumber": "87577614"
+      },
+      {
+        "type": "eip712-signature",
+        "purpose": "submit-commitment",
+        "ok": true
+      },
+      {
+        "type": "offchain-write",
+        "purpose": "submit-commitment",
+        "ok": true
+      }
+    ]
+  },
+  "oversizedSubmit": {
+    "ok": false,
+    "exitCode": "1",
+    "payloadAction": "refused-before-sign",
+    "fundabilityOutcome": "not-fundable",
+    "blocking": [
+      "MAKER_USDC_BALANCE_INSUFFICIENT",
+      "MAKER_POSITION_ALLOWANCE_INSUFFICIENT"
+    ],
+    "effectsCount": 0,
+    "existingOpenRiskWei6": "100000",
+    "makerContestRowsAfter": "1",
+    "hugeRowsAfter": "0"
+  },
+  "seedMatch": {
+    "ok": true,
+    "approvalTxs": [
+      "0x223cec4ff38939ad159fe1bddc3b79cc68c1b3c73e63c9ed8d81b1925527104d"
+    ],
+    "matchTxs": [
+      "0x52b95f8f6ad386969923ae72df41a2a07dfd4b7268d6c10b9dcdcf59936fc04f"
+    ],
+    "fillabilityOutcome": "fillable",
+    "fillableNow": true,
+    "preflightOutcome": "not-fillable",
+    "preflightBlocking": [
+      "TAKER_TREASURY_ALLOWANCE_INSUFFICIENT"
+    ],
+    "approvalRemediation": {
+      "remediatedReasonCodes": [
+        "TAKER_TREASURY_ALLOWANCE_INSUFFICIENT"
+      ],
+      "approvalPurposes": [
+        "lazy-creation-fee"
+      ]
+    },
+    "warnings": "",
+    "currentStaleBlocking": false,
+    "effects": [
+      {
+        "type": "transaction",
+        "purpose": "approve-usdc",
+        "ok": true,
+        "status": "confirmed",
+        "txHash": "0x223cec4ff38939ad159fe1bddc3b79cc68c1b3c73e63c9ed8d81b1925527104d",
+        "blockNumber": "87577644"
+      },
+      {
+        "type": "transaction",
+        "purpose": "match-commitment",
+        "ok": true,
+        "status": "confirmed",
+        "txHash": "0x52b95f8f6ad386969923ae72df41a2a07dfd4b7268d6c10b9dcdcf59936fc04f",
+        "blockNumber": "87577649"
+      }
+    ]
+  },
+  "postSeedProjection": {
+    "commitmentStatus": "filled",
+    "remainingRiskWei6": "0",
+    "filledRiskWei6": "100000",
+    "speculationId": 18,
+    "seedMakerVisibleLiveLike": 0
+  }
+}

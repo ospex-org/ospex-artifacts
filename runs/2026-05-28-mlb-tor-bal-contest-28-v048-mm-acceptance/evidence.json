@@ -1,0 +1,684 @@
+{
+  "artifactId": "2026-05-28-mlb-tor-bal-contest-28-v048-mm-acceptance",
+  "artifactType": "run",
+  "capturedAt": "2026-05-29T02:31:08Z",
+  "caveats": [
+    {
+      "classification": "operator methodology/precondition",
+      "detail": "Creator wallet had insufficient TreasuryModule fee allowance before contest create; v0.4.8 returned typed ALLOWANCE_INSUFFICIENT with no tx/effects, then exact bounded approval and bundled CLI create succeeded."
+    },
+    {
+      "classification": "operator methodology/precondition",
+      "detail": "MM live used a fresh isolated state dir after confirming zero visible pre-live exposure for the maker wallet; MM status showed zero positions before live."
+    },
+    {
+      "classification": "MM product/state bug",
+      "detail": "While waiting for fill detection, MM replaced the unfilled opposite-side quote once; the replacement was soft-cancelled at stop and expired before final exposure check."
+    },
+    {
+      "classification": "operator methodology/precondition",
+      "detail": "Postgame one-shot wrap was scheduled for 03:15Z / 22:15 CDT, later than the user's 21:13 CDT expectation; manual postgame completion was run before the cron fired and the duplicate cron was removed after publication."
+    },
+    {
+      "classification": "projection/indexer caveat",
+      "detail": "Two expired, non-visible replacement commitments remain stored as open rows in projection, but final orderbook, visible-live count, and unmatched-live-like count are zero."
+    }
+  ],
+  "chainId": 137,
+  "codeTargets": {
+    "marketMaker": {
+      "branch": "main",
+      "dirty": "clean",
+      "head": "dae4782a3efdcb8e788014edb10aaeb5870c94be",
+      "installedSdkVersion": "0.4.8",
+      "node": "v22.22.0",
+      "packageVersion": "0.0.0",
+      "repo": "ospex-org/ospex-market-maker",
+      "sdkDependency": "https://github.com/ospex-org/ospex-sdk/releases/download/v0.4.8/ospex-sdk-0.4.8.tgz",
+      "sdkTarballSha256": "445ad4f1262ad65da37e4d36f707c082acd6359ca24b5bb27513d8ad1780ad88",
+      "yarn": "1.22.22"
+    },
+    "sdkCli": {
+      "branch": "main",
+      "cliPackageVersion": "0.4.8",
+      "cliVersion": "0.4.8",
+      "dirty": "clean",
+      "head": "eec7e151b684d07c87beb490ef17bdbbbee41823",
+      "node": "v22.22.0",
+      "packageVersion": "0.4.8",
+      "repo": "ospex-org/ospex-sdk",
+      "sdkPackageVersion": "0.4.8",
+      "tag": "v0.4.8",
+      "tagCommit": "eec7e151b684d07c87beb490ef17bdbbbee41823",
+      "yarn": "1.22.22"
+    }
+  },
+  "completedAt": "2026-05-29T02:31:08Z",
+  "contest": {
+    "awayTeam": "Toronto Blue Jays",
+    "contestCreator": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "contestId": 28,
+    "contestStatus": "scored",
+    "externalFinalScore": {
+      "away": 2,
+      "home": 1,
+      "source": "MLB Stats API",
+      "status": "Final"
+    },
+    "gameId": "386da824-5f00-49e2-835d-6b47854b55a5",
+    "homeTeam": "Baltimore Orioles",
+    "marketType": "moneyline",
+    "protocolScoreAtCapture": {
+      "away": 2,
+      "home": 1
+    },
+    "scoredAt": "2026-05-29T02:17:08+00:00",
+    "slug": "tor-bal-2026-05-28",
+    "speculationId": 18,
+    "sport": "mlb",
+    "startTime": "2026-05-28T22:35:00+00:00",
+    "winner": {
+      "protocolWinSide": "away/upper",
+      "team": "Toronto Blue Jays"
+    }
+  },
+  "d2Primitives": {
+    "oversizedRefusal": {
+      "blocking": [
+        "MAKER_USDC_BALANCE_INSUFFICIENT",
+        "MAKER_POSITION_ALLOWANCE_INSUFFICIENT"
+      ],
+      "effectsCount": 0,
+      "existingOpenRiskWei6": "100000",
+      "exitCode": "1",
+      "fundabilityOutcome": "not-fundable",
+      "hugeRowsAfter": "0",
+      "makerContestRowsAfter": "1",
+      "ok": false,
+      "payloadAction": "refused-before-sign"
+    },
+    "postSeedProjection": {
+      "commitmentStatus": "filled",
+      "filledRiskWei6": "100000",
+      "remainingRiskWei6": "0",
+      "seedMakerVisibleLiveLike": 0,
+      "speculationId": 18
+    },
+    "seedMatch": {
+      "approvalRemediation": {
+        "approvalPurposes": [
+          "lazy-creation-fee"
+        ],
+        "remediatedReasonCodes": [
+          "TAKER_TREASURY_ALLOWANCE_INSUFFICIENT"
+        ]
+      },
+      "approvalTxs": [
+        "0x223cec4ff38939ad159fe1bddc3b79cc68c1b3c73e63c9ed8d81b1925527104d"
+      ],
+      "currentStaleBlocking": false,
+      "effects": [
+        {
+          "blockNumber": "87577644",
+          "ok": true,
+          "purpose": "approve-usdc",
+          "status": "confirmed",
+          "txHash": "0x223cec4ff38939ad159fe1bddc3b79cc68c1b3c73e63c9ed8d81b1925527104d",
+          "type": "transaction"
+        },
+        {
+          "blockNumber": "87577649",
+          "ok": true,
+          "purpose": "match-commitment",
+          "status": "confirmed",
+          "txHash": "0x52b95f8f6ad386969923ae72df41a2a07dfd4b7268d6c10b9dcdcf59936fc04f",
+          "type": "transaction"
+        }
+      ],
+      "fillabilityOutcome": "fillable",
+      "fillableNow": true,
+      "matchTxs": [
+        "0x52b95f8f6ad386969923ae72df41a2a07dfd4b7268d6c10b9dcdcf59936fc04f"
+      ],
+      "ok": true,
+      "preflightBlocking": [
+        "TAKER_TREASURY_ALLOWANCE_INSUFFICIENT"
+      ],
+      "preflightOutcome": "not-fillable",
+      "warnings": ""
+    },
+    "smallSubmit": {
+      "commitmentHash": "0x45dff7210a447809d8bd0e055298d0eff508e89347203fcc07c71acd19485994",
+      "effects": [
+        {
+          "blockNumber": "87577614",
+          "ok": true,
+          "purpose": "approve-usdc",
+          "status": "confirmed",
+          "txHash": "0xaf834804285c3723dc4c5a972d6a9260128ce15302aa95a52993934cc4ebb2d7",
+          "type": "transaction"
+        },
+        {
+          "ok": true,
+          "purpose": "submit-commitment",
+          "type": "eip712-signature"
+        },
+        {
+          "ok": true,
+          "purpose": "submit-commitment",
+          "type": "offchain-write"
+        }
+      ],
+      "fundabilityOutcome": "fundable",
+      "fundableNow": true,
+      "odds": "-110",
+      "oddsTick": 191,
+      "ok": true,
+      "riskUsdc": "0.100000",
+      "riskWei6": "100000",
+      "side": "home/Baltimore Orioles"
+    }
+  },
+  "date": "2026-05-28",
+  "fixVerification": {
+    "cliContestCreate": {
+      "contestId": 28,
+      "createTx": "0xd111bf649be221391186abfe42450c98d5003d23d605ab5fdea94d2ab5ec448c",
+      "details": "No generic CHAIN_ERROR/no tx/no effects regression. Initial no-tx refusal was typed ALLOWANCE_INSUFFICIENT for creator TreasuryModule fee allowance; exact bounded approval then allowed bundled/local CLI create to succeed.",
+      "requestId": "0x8a2dc0ed84b74b170079446df61396df61817f9a9f686fd25db8e14255ea3883",
+      "status": "pass_after_operator_precondition_remediation",
+      "verified": true
+    },
+    "matchJsonUx": {
+      "approvalRemediationExercised": true,
+      "approvalTx": "0x223cec4ff38939ad159fe1bddc3b79cc68c1b3c73e63c9ed8d81b1925527104d",
+      "currentStaleBlocking": false,
+      "finalFillabilityOutcome": "fillable",
+      "matchTx": "0x52b95f8f6ad386969923ae72df41a2a07dfd4b7268d6c10b9dcdcf59936fc04f",
+      "mmFillAlsoClean": {
+        "currentStaleBlocking": false,
+        "finalFillabilityOutcome": "fillable",
+        "matchTx": "0x0cff3b6f7372e7018b49d70a00be834137b8bc8c6799f450c787e064addc93c9",
+        "warnings": "expires-soon"
+      },
+      "remediatedReason": "TAKER_TREASURY_ALLOWANCE_INSUFFICIENT on lazy speculation creation fee",
+      "status": "pass"
+    }
+  },
+  "marketMaker": {
+    "commitments": [
+      {
+        "contestId": "28",
+        "hash": "0x4a4731d8ab9997fe7d0a5208e35a27e0e337375e72f32b442519b590ffee69dd",
+        "kind": "submit",
+        "makerOddsTick": 188,
+        "makerSide": "home",
+        "riskAmountWei6": "100000",
+        "sourceField": "commitmentHash",
+        "speculationId": "18",
+        "takerSide": "away",
+        "ts": "2026-05-28T20:42:31.141Z"
+      },
+      {
+        "contestId": "28",
+        "hash": "0x61df7f533a884d8345d47402ecd2982a0e1a3a9e15046b867eeab9e2af5272ed",
+        "kind": "submit",
+        "makerOddsTick": 228,
+        "makerSide": "away",
+        "riskAmountWei6": "100000",
+        "sourceField": "commitmentHash",
+        "speculationId": "18",
+        "takerSide": "home",
+        "ts": "2026-05-28T20:42:31.502Z"
+      },
+      {
+        "contestId": "28",
+        "hash": "0x3746a789a84d0a79b75f21865694dfe891efb9dd8db96c48c196585cd79026b1",
+        "kind": "replace",
+        "makerOddsTick": 228,
+        "makerSide": "away",
+        "riskAmountWei6": "100000",
+        "sourceField": "newCommitmentHash",
+        "speculationId": "18",
+        "takerSide": "home",
+        "ts": "2026-05-28T20:43:34.997Z"
+      }
+    ],
+    "controlledFill": {
+      "currentStaleBlocking": false,
+      "effects": [
+        {
+          "blockNumber": "87577870",
+          "ok": true,
+          "purpose": "match-commitment",
+          "status": "confirmed",
+          "txHash": "0x0cff3b6f7372e7018b49d70a00be834137b8bc8c6799f450c787e064addc93c9",
+          "type": "transaction"
+        }
+      ],
+      "fillabilityOutcome": "fillable",
+      "fillableNow": true,
+      "matchTxs": [
+        "0x0cff3b6f7372e7018b49d70a00be834137b8bc8c6799f450c787e064addc93c9"
+      ],
+      "targetHash": "0x4a4731d8ab9997fe7d0a5208e35a27e0e337375e72f32b442519b590ffee69dd",
+      "warnings": "expires-soon"
+    },
+    "dependencyProof": {
+      "branch": "main",
+      "dirty": "clean",
+      "head": "dae4782a3efdcb8e788014edb10aaeb5870c94be",
+      "installedSdkVersion": "0.4.8",
+      "node": "v22.22.0",
+      "packageVersion": "0.0.0",
+      "repo": "ospex-org/ospex-market-maker",
+      "sdkDependency": "https://github.com/ospex-org/ospex-sdk/releases/download/v0.4.8/ospex-sdk-0.4.8.tgz",
+      "sdkTarballSha256": "445ad4f1262ad65da37e4d36f707c082acd6359ca24b5bb27513d8ad1780ad88",
+      "yarn": "1.22.22"
+    },
+    "dryRun": {
+      "doctor": {
+        "doctor_checks": "config:ok,keystore:warn,wallet:ok,api:ok,rpc:ok,pol-balance:ok,usdc-balance:ok,allowance:ok,state:ok",
+        "doctor_dryRunReady": "true:no FAILs \u2014 `ospex-mm run --dry-run` should boot (the shadow loop posts nothing, so a keystore is not required)",
+        "doctor_postCommitments": "false:no usable keystore (set wallet.keystorePath or OSPEX_KEYSTORE_PATH \u2014 live signing needs one); config has mode.dryRun: true (flip to false; you would also pass --live at run time)",
+        "quote_away": "{\"takerSide\":\"away\",\"quoteProb\":0.46957252317525855,\"quoteDecimal\":2.1295964960598215,\"quoteAmerican\":113,\"quoteTick\":213,\"sizeUSDC\":0.1,\"sizeWei6\":100000}",
+        "quote_canQuote": "true",
+        "quote_context": "{\"contestId\":\"28\",\"awayTeam\":\"Toronto Blue Jays\",\"homeTeam\":\"Baltimore Orioles\",\"sport\":\"mlb\",\"matchTime\":\"2026-05-28T22:35:00+00:00\",\"status\":\"verified\",\"referenceGameId\":\"386da824-5f00-49e2-835d-6b47854b55a5\"}",
+        "quote_exit_code": "0",
+        "quote_home": "{\"takerSide\":\"home\",\"quoteProb\":0.5604274768247415,\"quoteDecimal\":1.784352197836158,\"quoteAmerican\":-127,\"quoteTick\":178,\"sizeUSDC\":0.1,\"sizeWei6\":100000}",
+        "quote_notes": "",
+        "quote_pipeline": "computed",
+        "status_commitments": "{\"total\":0,\"byLifecycle\":{\"visibleOpen\":0,\"softCancelled\":0,\"partiallyFilled\":0,\"filled\":0,\"expired\":0,\"authoritativelyInvalidated\":0},\"distinctContestsNonTerminal\":0}",
+        "status_stateIntegrity": "fresh"
+      },
+      "run": {
+        "candidates": "[object Object]",
+        "errors": "[object Object]",
+        "lastRunId": "",
+        "posted": "",
+        "runIds": "2026-05-28T20-39-29-045Z-n1agmk",
+        "status_commitments": "{\"total\":2,\"byLifecycle\":{\"visibleOpen\":0,\"softCancelled\":2,\"partiallyFilled\":0,\"filled\":0,\"expired\":0,\"authoritativelyInvalidated\":0},\"distinctContestsNonTerminal\":1}",
+        "status_stateIntegrity": "loaded",
+        "ticks": "2",
+        "wouldPost": ""
+      },
+      "telemetryEventCounts": null
+    },
+    "finalExposure": {
+      "liveUnmatchedLike": 0,
+      "postExpiryStates": "[{\"hash\":\"0x4a4731d8ab9997fe7d0a5208e35a27e0e337375e72f32b442519b590ffee69dd\",\"status\":\"filled\",\"bookVisible\":true,\"isLive\":false,\"remainingRiskAmount\":\"0\",\"filledRiskAmount\":\"100000\"},{\"hash\":\"0x61df7f533a884d8345d47402ecd2982a0e1a3a9e15046b867eeab9e2af5272ed\",\"status\":\"cancelled\",\"bookVisible\":false,\"isLive\":false,\"remainingRiskAmount\":\"100000\",\"filledRiskAmount\":\"0\"},{\"hash\":\"0x3746a789a84d0a79b75f21865694dfe891efb9dd8db96c48c196585cd79026b1\",\"status\":\"cancelled\",\"bookVisible\":false,\"isLive\":false,\"remainingRiskAmount\":\"100000\",\"filledRiskAmount\":\"0\"}]",
+      "visibleLiveLike": 0
+    },
+    "liveRun": {
+      "candidates": {
+        "skipReasons": {
+          "cap-hit": 1
+        },
+        "total": 2,
+        "tracked": 1
+      },
+      "errors": {
+        "byPhase": {},
+        "total": 0
+      },
+      "eventCounts": {
+        "approval": 0,
+        "candidate": 2,
+        "claim": 0,
+        "competitiveness-unavailable": 0,
+        "degraded": 0,
+        "error": 0,
+        "expire": 0,
+        "fair-value": 0,
+        "fill": 1,
+        "funding-hold": 0,
+        "kill": 1,
+        "nonce-floor-raise": 0,
+        "onchain-cancel": 0,
+        "position-transition": 0,
+        "quote-competitiveness": 4,
+        "quote-intent": 2,
+        "replace": 1,
+        "risk-verdict": 2,
+        "settle": 0,
+        "soft-cancel": 1,
+        "submit": 2,
+        "tick-start": 3,
+        "would-replace": 0,
+        "would-soft-cancel": 0,
+        "would-submit": 0
+      },
+      "firstEventAt": "2026-05-28T20:42:29.362Z",
+      "kill": {
+        "reason": "kill-file",
+        "ticks": 3
+      },
+      "lastEventAt": "2026-05-28T20:44:05.323Z",
+      "liveMetrics": {
+        "fills": {
+          "fillRate": 0.3333333333333333,
+          "filledUsdcWei6": "100000",
+          "quotedUsdcWei6": "300000"
+        },
+        "gas": {
+          "byKind": {
+            "approval": "0",
+            "claim": "0",
+            "onchainCancel": "0",
+            "settle": "0"
+          },
+          "totalPolWei": "0",
+          "totalUsdcEquivWei6": "0"
+        },
+        "realizedPnl": {
+          "alreadyClaimedCount": 0,
+          "claimedProfitUsdcWei6": "0",
+          "lostCount": 0,
+          "netUsdcWei6": "0",
+          "pushCount": 0,
+          "realizedLossUsdcWei6": "0",
+          "unsettledCount": 1,
+          "wonCount": 0,
+          "wonUnclaimedCount": 0
+        },
+        "settlements": {
+          "claimCount": 0,
+          "settleCount": 0,
+          "totalClaimedPayoutWei6": "0"
+        },
+        "totalFeeUsdcWei6": "0"
+      },
+      "quoteIntents": {
+        "canQuote": 2,
+        "refused": 0,
+        "total": 2
+      },
+      "runIds": [
+        "2026-05-28T20-42-28-954Z-smbqvr"
+      ],
+      "ticks": 3
+    }
+  },
+  "marketSemantics": {
+    "lower": "home/Baltimore Orioles",
+    "upper": "away/Toronto Blue Jays",
+    "winningPositionType": "upper"
+  },
+  "network": "polygon-mainnet",
+  "operations": {
+    "processCheck": {
+      "capturedAt": "2026-05-29T02:31:08Z",
+      "matchingMmRunnerPidsOnly": [],
+      "matchingMmRunnerProcessCount": 0,
+      "note": "Command lines intentionally omitted from the public artifact. Hermes background-process list was also checked in-session and was empty."
+    },
+    "timezoneAudit": {
+      "localTimezone": "America/Chicago",
+      "observedLocalTimeAtManualCheck": "2026-05-28T21:14:51-05:00",
+      "outcome": "manual completion before one-shot cron fired; cron removed after completion",
+      "scheduledPostgameWrap": "2026-05-29T03:15:00Z",
+      "scheduledPostgameWrapLocal": "2026-05-28T22:15:00-05:00"
+    }
+  },
+  "participants": {
+    "ospex-flow-a": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "explorer": "https://polygonscan.com/address/0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "role": "controlled taker for seed and MM fills"
+    },
+    "ospex-fresh-user": {
+      "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "explorer": "https://polygonscan.com/address/0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "role": "auth-checked spare controlled taker; not used for writes"
+    },
+    "ospex-stage-maker-a": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "explorer": "https://polygonscan.com/address/0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "role": "contest creator; direct seed maker"
+    },
+    "ospex-stage-maker-b": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "explorer": "https://polygonscan.com/address/0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "role": "market-maker wallet"
+    }
+  },
+  "postgame": {
+    "contest": {
+      "awayScore": 2,
+      "contestId": 28,
+      "homeScore": 1,
+      "scoredAt": "2026-05-29T02:17:08+00:00",
+      "status": "scored"
+    },
+    "externalFinalScore": {
+      "awayScore": 2,
+      "awayTeam": "Toronto Blue Jays",
+      "fetchedAt": "2026-05-29T02:31:08Z",
+      "gameDate": "2026-05-28T22:35:00Z",
+      "gameGuid": "a70c95df-ff85-4bbc-9b60-1aba1ff70d2b",
+      "gamePk": 824834,
+      "homeScore": 1,
+      "homeTeam": "Baltimore Orioles",
+      "linescore": {
+        "currentInning": 9,
+        "currentInningOrdinal": "9th",
+        "inningState": "Bottom",
+        "innings": [
+          {
+            "awayRuns": 0,
+            "homeRuns": 0,
+            "num": 1,
+            "ordinalNum": "1st"
+          },
+          {
+            "awayRuns": 0,
+            "homeRuns": 0,
+            "num": 2,
+            "ordinalNum": "2nd"
+          },
+          {
+            "awayRuns": 1,
+            "homeRuns": 0,
+            "num": 3,
+            "ordinalNum": "3rd"
+          },
+          {
+            "awayRuns": 0,
+            "homeRuns": 1,
+            "num": 4,
+            "ordinalNum": "4th"
+          },
+          {
+            "awayRuns": 0,
+            "homeRuns": 0,
+            "num": 5,
+            "ordinalNum": "5th"
+          },
+          {
+            "awayRuns": 0,
+            "homeRuns": 0,
+            "num": 6,
+            "ordinalNum": "6th"
+          },
+          {
+            "awayRuns": 0,
+            "homeRuns": 0,
+            "num": 7,
+            "ordinalNum": "7th"
+          },
+          {
+            "awayRuns": 1,
+            "homeRuns": 0,
+            "num": 8,
+            "ordinalNum": "8th"
+          },
+          {
+            "awayRuns": 0,
+            "homeRuns": 0,
+            "num": 9,
+            "ordinalNum": "9th"
+          }
+        ],
+        "outs": 3,
+        "scheduledInnings": 9,
+        "teams": {
+          "away": {
+            "errors": 1,
+            "hits": 6,
+            "leftOnBase": 8,
+            "runs": 2
+          },
+          "home": {
+            "errors": 0,
+            "hits": 8,
+            "leftOnBase": 7,
+            "runs": 1
+          }
+        }
+      },
+      "source": "MLB Stats API",
+      "sourceUrl": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-28&hydrate=team,linescore",
+      "status": {
+        "abstractGameState": "Final",
+        "codedGameState": "F",
+        "detailedState": "Final"
+      }
+    },
+    "finalClaimDryRuns": {
+      "ospex-flow-a": {
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "entryCount": 0,
+        "totalPayoutWei6": "0"
+      },
+      "ospex-fresh-user": {
+        "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "entryCount": 0,
+        "totalPayoutWei6": "0"
+      },
+      "ospex-stage-maker-a": {
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "entryCount": 0,
+        "totalPayoutWei6": "0"
+      },
+      "ospex-stage-maker-b": {
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "entryCount": 0,
+        "totalPayoutWei6": "0"
+      }
+    },
+    "finalOrderbook": {
+      "contestShowOrderbookCount": 0,
+      "unmatchedLiveLikeCommitments": 0,
+      "visibleLiveCommitments": 0
+    },
+    "oracle": {
+      "callbackTx": "0x765da2f3eabb296e8dfa6be25e9d600539f75c49f11ced83b917c66438e70087",
+      "requestId": "0xf9490ceb11ff2e9e6db2466977edd1c9aa16701995037973ba5fc6e10eb97813",
+      "terminal": "success_scores_set"
+    },
+    "speculation": {
+      "settledAt": "2026-05-29T02:18:06+00:00",
+      "speculationId": 18,
+      "status": "closed",
+      "winSide": "away/upper"
+    },
+    "status": "complete_verified",
+    "transactions": {
+      "claimTxs": [
+        "0x7383ba430542321d620b77eac2c202bc3ac672bc8669e9a74bf7d6cd16ba48dc"
+      ],
+      "scoreCallbackScoresSetTx": "0x765da2f3eabb296e8dfa6be25e9d600539f75c49f11ced83b917c66438e70087",
+      "scoreRequestTx": "0x71b1320e2298ba8f5797ae252609db0392a46296c4e1ef24e4d3a3fdbcb81347",
+      "settleSpeculationTx": "0xbc4e86dd9be0ca5227cdbe3bd9ce1cad8ad70e0b977c1b798daf79c52e21dc1f"
+    },
+    "winningClaims": [
+      {
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "claimTx": "0x7383ba430542321d620b77eac2c202bc3ac672bc8669e9a74bf7d6cd16ba48dc",
+        "claimedAmountUsdc": "0.379000",
+        "claimedAmountWei6": "379000",
+        "positionType": "upper",
+        "profitWei6": "200000",
+        "riskWei6": "179000",
+        "walletLabel": "ospex-flow-a"
+      }
+    ]
+  },
+  "projectionConvergence": {
+    "expectation": "Final external score, protocol score, settlement, winning claim, dry-run emptiness, and zero orderbook exposure converge.",
+    "gates": [
+      {
+        "afterWrite": "0x71b1320e2298ba8f5797ae252609db0392a46296c4e1ef24e4d3a3fdbcb81347",
+        "converged": true,
+        "expectedFinalState": [
+          "contest scored",
+          "awayScore=2",
+          "homeScore=1"
+        ],
+        "name": "score contest",
+        "observedFinalState": [
+          "contest_status=scored",
+          "away_score=2",
+          "home_score=1"
+        ],
+        "txConfirmed": true,
+        "waitTarget": "Chainlink Functions callback / CONTEST_SCORES_SET"
+      },
+      {
+        "afterWrite": "0xbc4e86dd9be0ca5227cdbe3bd9ce1cad8ad70e0b977c1b798daf79c52e21dc1f",
+        "converged": true,
+        "expectedFinalState": [
+          "speculation closed",
+          "win_side=away"
+        ],
+        "name": "settle speculation",
+        "observedFinalState": [
+          "speculation_status=closed",
+          "win_side=away"
+        ],
+        "txConfirmed": true,
+        "waitTarget": "SPECULATION_SETTLED"
+      },
+      {
+        "afterWrite": "0x7383ba430542321d620b77eac2c202bc3ac672bc8669e9a74bf7d6cd16ba48dc",
+        "converged": true,
+        "expectedFinalState": [
+          "ospex-flow-a upper position claimed",
+          "all controlled claim dry-run entry counts are zero"
+        ],
+        "name": "claim winning controlled position",
+        "observedFinalState": [
+          "claimed_amount=379000",
+          "claim dry-run entry counts=0"
+        ],
+        "txConfirmed": true,
+        "waitTarget": "POSITION_CLAIMED and claim-all dry-runs"
+      }
+    ]
+  },
+  "publishedAt": "2026-05-29T02:31:08Z",
+  "rawFiles": [
+    "raw/cli-phase.sanitized.json",
+    "raw/cli-postgame.sanitized.json",
+    "raw/final-score-source.json",
+    "raw/final-supabase-state.sanitized.json",
+    "raw/mm-phase.sanitized.json",
+    "raw/mm-telemetry-summary.sanitized.json",
+    "raw/oracle-score-callbacks.sanitized.json",
+    "raw/process-check.sanitized.json",
+    "raw/process-check.sanitized.txt",
+    "raw/repo-freshness.sanitized.json",
+    "raw/tx-receipts.summary.json"
+  ],
+  "status": "complete_verified_with_caveats",
+  "title": "Blue Jays @ Orioles v0.4.8 CLI/MM acceptance lifecycle smoke",
+  "verdict": {
+    "blockers": [],
+    "nonBlockingCaveats": [
+      "creator fee allowance required exact bounded approval before contest create; v0.4.8 returned typed no-tx ALLOWANCE_INSUFFICIENT rather than generic CHAIN_ERROR",
+      "MM replacement cycle occurred while waiting for fill telemetry; replacement quotes were non-visible and expired before final exposure check",
+      "postgame wrap was originally scheduled for 2026-05-29T03:15:00Z / 22:15 CDT; manual completion started before that one-shot cron fired"
+    ],
+    "overall": "GREEN_COMPLETE_WITH_CAVEATS"
+  }
+}

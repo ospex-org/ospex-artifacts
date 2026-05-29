@@ -1,0 +1,28 @@
+{
+  "sdkCli": {
+    "repo": "ospex-org/ospex-sdk",
+    "branch": "main",
+    "head": "eec7e151b684d07c87beb490ef17bdbbbee41823",
+    "dirty": "clean",
+    "packageVersion": "0.4.8",
+    "sdkPackageVersion": "0.4.8",
+    "cliPackageVersion": "0.4.8",
+    "cliVersion": "0.4.8",
+    "node": "v22.22.0",
+    "yarn": "1.22.22",
+    "tag": "v0.4.8",
+    "tagCommit": "eec7e151b684d07c87beb490ef17bdbbbee41823"
+  },
+  "marketMaker": {
+    "repo": "ospex-org/ospex-market-maker",
+    "branch": "main",
+    "head": "dae4782a3efdcb8e788014edb10aaeb5870c94be",
+    "dirty": "clean",
+    "packageVersion": "0.0.0",
+    "node": "v22.22.0",
+    "yarn": "1.22.22",
+    "sdkDependency": "https://github.com/ospex-org/ospex-sdk/releases/download/v0.4.8/ospex-sdk-0.4.8.tgz",
+    "installedSdkVersion": "0.4.8",
+    "sdkTarballSha256": "445ad4f1262ad65da37e4d36f707c082acd6359ca24b5bb27513d8ad1780ad88"
+  }
+}

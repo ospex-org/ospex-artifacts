@@ -1,0 +1,94 @@
+{
+  "awayScore": 2,
+  "awayTeam": "Toronto Blue Jays",
+  "fetchedAt": "2026-05-29T02:31:08Z",
+  "gameDate": "2026-05-28T22:35:00Z",
+  "gameGuid": "a70c95df-ff85-4bbc-9b60-1aba1ff70d2b",
+  "gamePk": 824834,
+  "homeScore": 1,
+  "homeTeam": "Baltimore Orioles",
+  "linescore": {
+    "currentInning": 9,
+    "currentInningOrdinal": "9th",
+    "inningState": "Bottom",
+    "innings": [
+      {
+        "awayRuns": 0,
+        "homeRuns": 0,
+        "num": 1,
+        "ordinalNum": "1st"
+      },
+      {
+        "awayRuns": 0,
+        "homeRuns": 0,
+        "num": 2,
+        "ordinalNum": "2nd"
+      },
+      {
+        "awayRuns": 1,
+        "homeRuns": 0,
+        "num": 3,
+        "ordinalNum": "3rd"
+      },
+      {
+        "awayRuns": 0,
+        "homeRuns": 1,
+        "num": 4,
+        "ordinalNum": "4th"
+      },
+      {
+        "awayRuns": 0,
+        "homeRuns": 0,
+        "num": 5,
+        "ordinalNum": "5th"
+      },
+      {
+        "awayRuns": 0,
+        "homeRuns": 0,
+        "num": 6,
+        "ordinalNum": "6th"
+      },
+      {
+        "awayRuns": 0,
+        "homeRuns": 0,
+        "num": 7,
+        "ordinalNum": "7th"
+      },
+      {
+        "awayRuns": 1,
+        "homeRuns": 0,
+        "num": 8,
+        "ordinalNum": "8th"
+      },
+      {
+        "awayRuns": 0,
+        "homeRuns": 0,
+        "num": 9,
+        "ordinalNum": "9th"
+      }
+    ],
+    "outs": 3,
+    "scheduledInnings": 9,
+    "teams": {
+      "away": {
+        "errors": 1,
+        "hits": 6,
+        "leftOnBase": 8,
+        "runs": 2
+      },
+      "home": {
+        "errors": 0,
+        "hits": 8,
+        "leftOnBase": 7,
+        "runs": 1
+      }
+    }
+  },
+  "source": "MLB Stats API",
+  "sourceUrl": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-05-28&hydrate=team,linescore",
+  "status": {
+    "abstractGameState": "Final",
+    "codedGameState": "F",
+    "detailedState": "Final"
+  }
+}
