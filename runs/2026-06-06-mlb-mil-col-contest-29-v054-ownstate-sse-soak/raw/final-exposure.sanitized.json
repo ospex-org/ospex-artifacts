@@ -1,0 +1,258 @@
+{
+  "checkedAtUtc": "2026-06-07T00:05:06.235111Z",
+  "finalStatusSummary": {
+    "commitments": {
+      "byLifecycle": {
+        "authoritativelyInvalidated": 0,
+        "expired": 1,
+        "filled": 0,
+        "partiallyFilled": 0,
+        "softCancelled": 1,
+        "visibleOpen": 0
+      },
+      "distinctContestsNonTerminal": 1,
+      "total": 2
+    },
+    "configPath": "<run-dir>/live-mil-col-contest-29-stage-maker-b/ospex-mm-live.yaml",
+    "dailyCounters": {
+      "lifetimeFeeUsdcWei6": "0",
+      "lifetimeGasPolWei": "0",
+      "today": "2026-06-06",
+      "todayFeeUsdcWei6": "0",
+      "todayGasPolWei": "0"
+    },
+    "lastFlushedAt": "2026-06-06T23:55:03.515Z",
+    "lastRunId": null,
+    "livePositionTotals": {
+      "activeCount": 1,
+      "claimableCount": 0,
+      "claimablePayoutWei6": "0",
+      "pendingSettleCount": 0,
+      "pendingSettlePayoutWei6": "0"
+    },
+    "livePositionsSkipReason": null,
+    "makerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "makerAddressSource": "flag",
+    "pnl": {
+      "asOfUnixSec": 0,
+      "realizedUsdcWei6": "0",
+      "unrealizedUsdcWei6": "0"
+    },
+    "positions": {
+      "byStatus": {
+        "active": {
+          "count": 1,
+          "ownRiskWei6": "100000"
+        },
+        "claimable": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "claimed": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "pendingSettle": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "settledLost": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "void": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        }
+      },
+      "total": 1
+    },
+    "schemaVersion": 1,
+    "stateIntegrity": "loaded",
+    "stateLossAssessment": {
+      "holdQuoting": false,
+      "reason": "state loaded cleanly"
+    },
+    "statePath": "<state-path>"
+  },
+  "interpretation": "No MM process remains; own-state/odds subscribers returned to 0; public visible/open commitment query returned 0. One local soft-cancelled row remains in state but its expiry is before the latest Polygon block timestamp, so it is no longer matchable on chain; one active position remains from the intentional controlled fill pending postgame outcome/settlement.",
+  "latestPolygonBlockTimeUtc": "2026-06-06T23:56:30Z",
+  "latestPolygonBlockTimestamp": 1780790190,
+  "localStateCommitments": [
+    {
+      "commitmentHash": "0xe15ab0f1033f2deac178cf68d7bee68cf77b66afa73f7eb3974ad18239df1f26",
+      "contestId": "29",
+      "expiryUnixSec": 1780790005,
+      "filledRiskWei6": "0",
+      "lifecycle": "expired",
+      "riskAmountWei6": "100000",
+      "payloadPersistenceStatus": "present",
+      "speculationId": "19"
+    },
+    {
+      "commitmentHash": "0x90897d3bfaf07815d180170fb744a374f091ba123f8e7de732f9cf7eb6a93de5",
+      "contestId": "29",
+      "expiryUnixSec": 1780790062,
+      "filledRiskWei6": "0",
+      "lifecycle": "softCancelled",
+      "riskAmountWei6": "100000",
+      "payloadPersistenceStatus": "present",
+      "speculationId": "19"
+    }
+  ],
+  "localStatePositions": [
+    {
+      "contestId": "29",
+      "id": "19:away",
+      "ownRiskWei6": "100000",
+      "speculationId": "19",
+      "status": "active"
+    }
+  ],
+  "metricsOdds": {
+    "channelDegradedTotal": 0,
+    "channelOpen": false,
+    "degraded": false,
+    "hardResetTotal": 0,
+    "subscribed": false,
+    "subscribers": 0
+  },
+  "metricsOwnState": {
+    "resyncBroadcastTotal": 0,
+    "subscribers": 0,
+    "wallets": 0
+  },
+  "mmRunSummary": {
+    "candidates": {
+      "skipReasons": {},
+      "total": 2,
+      "tracked": 2
+    },
+    "degradedByReason": {},
+    "errors": {
+      "byPhase": {},
+      "total": 0
+    },
+    "eventCounts": {
+      "approval": 0,
+      "cancel-blocked-missing-payload": 0,
+      "candidate": 2,
+      "claim": 0,
+      "competitiveness-unavailable": 0,
+      "degraded": 0,
+      "divergence": 0,
+      "error": 0,
+      "expire": 1,
+      "fair-value": 0,
+      "fill": 1,
+      "funding-hold": 0,
+      "kill": 2,
+      "nonce-floor-raise": 0,
+      "onchain-cancel": 0,
+      "owner-mapping-failed": 0,
+      "position-transition": 0,
+      "quote-competitiveness": 6,
+      "quote-intent": 4,
+      "replace": 0,
+      "risk-verdict": 4,
+      "settle": 0,
+      "soft-cancel": 2,
+      "stream-cold-restart": 1,
+      "stream-health-degraded": 0,
+      "stream-health-hold": 2,
+      "stream-would-hold": 0,
+      "submit": 3,
+      "tick-start": 16,
+      "unknown-own-fill": 0,
+      "would-replace": 0,
+      "would-soft-cancel": 0,
+      "would-submit": 0
+    },
+    "expired": 1,
+    "firstEventAt": "2026-06-06T23:51:24.350Z",
+    "generatedAt": "2026-06-06T23:55:26.750Z",
+    "kill": {
+      "reason": "kill-file",
+      "ticks": 10
+    },
+    "lastEventAt": "2026-06-06T23:55:03.515Z",
+    "latentExposurePeakWei6": "0",
+    "lines": 44,
+    "liveMetrics": {
+      "fills": {
+        "fillRate": 0.3333333333333333,
+        "filledUsdcWei6": "100000",
+        "quotedUsdcWei6": "300000"
+      },
+      "gas": {
+        "byKind": {
+          "approval": "0",
+          "claim": "0",
+          "onchainCancel": "0",
+          "settle": "0"
+        },
+        "totalPolWei": "0",
+        "totalUsdcEquivWei6": "0"
+      },
+      "realizedPnl": {
+        "alreadyClaimedCount": 0,
+        "claimedProfitUsdcWei6": "0",
+        "lostCount": 0,
+        "netUsdcWei6": "0",
+        "pushCount": 0,
+        "realizedLossUsdcWei6": "0",
+        "unsettledCount": 1,
+        "wonCount": 0,
+        "wonUnclaimedCount": 0
+      },
+      "settlements": {
+        "claimCount": 0,
+        "settleCount": 0,
+        "totalClaimedPayoutWei6": "0"
+      },
+      "totalFeeUsdcWei6": "0"
+    },
+    "malformedLines": 0,
+    "quoteAgeSeconds": null,
+    "quoteCompetitiveness": {
+      "atOrInsideBookCount": 6,
+      "atOrInsideBookRate": 1,
+      "samples": 6,
+      "unavailable": 0,
+      "vsReferenceTicks": {
+        "max": 2,
+        "mean": -2,
+        "min": -6,
+        "p50": -6
+      }
+    },
+    "quoteIntents": {
+      "canQuote": 3,
+      "refused": 1,
+      "total": 4
+    },
+    "runIds": [
+      "2026-06-06T23-51-24-315Z-l7ggny",
+      "2026-06-06T23-53-11-801Z-qysens"
+    ],
+    "schemaVersion": 1,
+    "sources": [
+      "<telemetry-file>",
+      "<telemetry-file>"
+    ],
+    "staleQuoteIncidents": 0,
+    "ticks": 16,
+    "wouldReplace": {
+      "byReason": {},
+      "total": 0
+    },
+    "wouldSoftCancel": {
+      "byReason": {},
+      "total": 0
+    },
+    "wouldSubmit": 0
+  },
+  "processHits": 0,
+  "publicVisibleOpenOrPartiallyFilledCommitmentsForMakerContest29": 0,
+  "softCancelledRowsAllExpiredOnChain": true
+}

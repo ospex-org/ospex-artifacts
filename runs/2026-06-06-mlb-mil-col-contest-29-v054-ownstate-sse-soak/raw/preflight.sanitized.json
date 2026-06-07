@@ -1,0 +1,33 @@
+{
+  "coreApi": [
+    "yarn_install PASS",
+    "build PASS",
+    "typecheck PASS",
+    "test PASS",
+    "bench_check PASS",
+    "bench_ownstate PASS"
+  ],
+  "indexer": [
+    "yarn_install PASS",
+    "typecheck PASS",
+    "test PASS",
+    "7f1cca2190cc25f897fd65a6267d8c263bb46725c23423abb0199db5d35073ce  schema/live.sql"
+  ],
+  "marketMaker": [
+    "yarn_install PASS",
+    "installed_sdk_version PASS",
+    "pin_grep PASS",
+    "build PASS",
+    "typecheck PASS",
+    "test PASS"
+  ],
+  "node": "v22.22.0",
+  "npm": "11.13.0",
+  "sdk": [
+    "yarn_install PASS",
+    "build PASS",
+    "typecheck PASS",
+    "test PASS"
+  ],
+  "yarn": "1.22.22"
+}

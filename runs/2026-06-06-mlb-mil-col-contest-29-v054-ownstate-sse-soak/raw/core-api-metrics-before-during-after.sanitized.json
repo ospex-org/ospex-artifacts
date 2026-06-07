@@ -1,0 +1,24 @@
+{
+  "after": {
+    "odds": {
+      "channelDegradedTotal": 0,
+      "channelOpen": false,
+      "degraded": false,
+      "hardResetTotal": 0,
+      "subscribed": false,
+      "subscribers": 0
+    },
+    "ownState": {
+      "resyncBroadcastTotal": 0,
+      "subscribers": 0,
+      "wallets": 0
+    }
+  },
+  "before": {
+    "ownStateSubscribersBaseline": "0 (from earlier readiness/artifact)"
+  },
+  "during": {
+    "oddsSubscribers": 1,
+    "ownStateSubscribers": 1
+  }
+}

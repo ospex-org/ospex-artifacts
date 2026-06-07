@@ -1,0 +1,53 @@
+{
+  "capturedAtUtc": "2026-06-07T06:14:09Z",
+  "receipts": {
+    "claimStageMakerA": {
+      "blockNumber": 88071678,
+      "effectiveGasPriceWei": 281094109329,
+      "from": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "gasCostPOL": 0.03575207867144618,
+      "gasUsed": 127189,
+      "label": "claimStageMakerA",
+      "logsCount": 4,
+      "status": "0x1",
+      "to": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+      "txHash": "0xa61ae88c1f5df026b5606139d515d90af715c2b62dc053f3e6041b2901d2d6e4"
+    },
+    "claimStageMakerB": {
+      "blockNumber": 88071681,
+      "effectiveGasPriceWei": 280810829755,
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "gasCostPOL": 0.0346040377398789,
+      "gasUsed": 123229,
+      "label": "claimStageMakerB",
+      "logsCount": 4,
+      "status": "0x1",
+      "to": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+      "txHash": "0x61d306a6c6b1daa7ae94c8d163f29053f674a971eed266af1a3d50a4a5ab4d76"
+    },
+    "scoreContest": {
+      "blockNumber": 88071596,
+      "effectiveGasPriceWei": 279129176809,
+      "from": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "gasCostPOL": 0.1854336069003462,
+      "gasUsed": 664329,
+      "label": "scoreContest",
+      "logsCount": 8,
+      "status": "0x1",
+      "to": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+      "txHash": "0x42288378b6daf4f7555530c423d80c53bac22b286e4e7ea9d88baffc8a469111"
+    },
+    "settleSpeculation": {
+      "blockNumber": 88071631,
+      "effectiveGasPriceWei": 278385808447,
+      "from": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "gasCostPOL": 0.04331766695177854,
+      "gasUsed": 155603,
+      "label": "settleSpeculation",
+      "logsCount": 3,
+      "status": "0x1",
+      "to": "0xd757387893e779ac35451cea639a408a537b9a1b",
+      "txHash": "0x65c76f323a304cc39da83e69ba69fe585e047716b510a523ef79fdf09260d1c7"
+    }
+  }
+}

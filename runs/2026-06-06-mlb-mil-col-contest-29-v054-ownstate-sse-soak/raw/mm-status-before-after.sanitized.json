@@ -1,0 +1,236 @@
+{
+  "afterFirstStop": {
+    "schemaVersion": 1,
+    "status": {
+      "commitments": {
+        "byLifecycle": {
+          "authoritativelyInvalidated": 0,
+          "expired": 0,
+          "filled": 1,
+          "partiallyFilled": 0,
+          "softCancelled": 2,
+          "visibleOpen": 0
+        },
+        "distinctContestsNonTerminal": 1,
+        "total": 3
+      },
+      "configPath": "<run-dir>/live-mil-col-contest-29-stage-maker-b/ospex-mm-live.yaml",
+      "dailyCounters": {
+        "lifetimeFeeUsdcWei6": "0",
+        "lifetimeGasPolWei": "0",
+        "today": "2026-06-06",
+        "todayFeeUsdcWei6": "0",
+        "todayGasPolWei": "0"
+      },
+      "lastFlushedAt": "2026-06-06T23:52:33.172Z",
+      "lastRunId": null,
+      "livePositionTotals": {
+        "activeCount": 1,
+        "claimableCount": 0,
+        "claimablePayoutWei6": "0",
+        "pendingSettleCount": 0,
+        "pendingSettlePayoutWei6": "0"
+      },
+      "livePositionsSkipReason": null,
+      "makerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "makerAddressSource": "flag",
+      "pnl": {
+        "asOfUnixSec": 0,
+        "realizedUsdcWei6": "0",
+        "unrealizedUsdcWei6": "0"
+      },
+      "positions": {
+        "byStatus": {
+          "active": {
+            "count": 1,
+            "ownRiskWei6": "100000"
+          },
+          "claimable": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "claimed": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "pendingSettle": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "settledLost": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "void": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          }
+        },
+        "total": 1
+      },
+      "schemaVersion": 1,
+      "stateIntegrity": "loaded",
+      "stateLossAssessment": {
+        "holdQuoting": false,
+        "reason": "state loaded cleanly"
+      },
+      "statePath": "<state-path>"
+    }
+  },
+  "beforeLive": {
+    "schemaVersion": 1,
+    "status": {
+      "commitments": {
+        "byLifecycle": {
+          "authoritativelyInvalidated": 0,
+          "expired": 0,
+          "filled": 0,
+          "partiallyFilled": 0,
+          "softCancelled": 0,
+          "visibleOpen": 0
+        },
+        "distinctContestsNonTerminal": 0,
+        "total": 0
+      },
+      "configPath": "<run-dir>/live-mil-col-contest-29-stage-maker-b/ospex-mm-live.yaml",
+      "dailyCounters": {
+        "lifetimeFeeUsdcWei6": "0",
+        "lifetimeGasPolWei": "0",
+        "today": "2026-06-06",
+        "todayFeeUsdcWei6": "0",
+        "todayGasPolWei": "0"
+      },
+      "lastFlushedAt": null,
+      "lastRunId": null,
+      "livePositionTotals": {
+        "activeCount": 0,
+        "claimableCount": 0,
+        "claimablePayoutWei6": "0",
+        "pendingSettleCount": 0,
+        "pendingSettlePayoutWei6": "0"
+      },
+      "livePositionsSkipReason": null,
+      "makerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "makerAddressSource": "flag",
+      "pnl": {
+        "asOfUnixSec": 0,
+        "realizedUsdcWei6": "0",
+        "unrealizedUsdcWei6": "0"
+      },
+      "positions": {
+        "byStatus": {
+          "active": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "claimable": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "claimed": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "pendingSettle": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "settledLost": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "void": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          }
+        },
+        "total": 0
+      },
+      "schemaVersion": 1,
+      "stateIntegrity": "fresh",
+      "stateLossAssessment": {
+        "holdQuoting": false,
+        "reason": "no prior state and no prior telemetry \u2014 genuine first run, nothing to under-count"
+      },
+      "statePath": "<state-path>"
+    }
+  },
+  "final": {
+    "schemaVersion": 1,
+    "status": {
+      "commitments": {
+        "byLifecycle": {
+          "authoritativelyInvalidated": 0,
+          "expired": 1,
+          "filled": 0,
+          "partiallyFilled": 0,
+          "softCancelled": 1,
+          "visibleOpen": 0
+        },
+        "distinctContestsNonTerminal": 1,
+        "total": 2
+      },
+      "configPath": "<run-dir>/live-mil-col-contest-29-stage-maker-b/ospex-mm-live.yaml",
+      "dailyCounters": {
+        "lifetimeFeeUsdcWei6": "0",
+        "lifetimeGasPolWei": "0",
+        "today": "2026-06-06",
+        "todayFeeUsdcWei6": "0",
+        "todayGasPolWei": "0"
+      },
+      "lastFlushedAt": "2026-06-06T23:55:03.515Z",
+      "lastRunId": null,
+      "livePositionTotals": {
+        "activeCount": 1,
+        "claimableCount": 0,
+        "claimablePayoutWei6": "0",
+        "pendingSettleCount": 0,
+        "pendingSettlePayoutWei6": "0"
+      },
+      "livePositionsSkipReason": null,
+      "makerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "makerAddressSource": "flag",
+      "pnl": {
+        "asOfUnixSec": 0,
+        "realizedUsdcWei6": "0",
+        "unrealizedUsdcWei6": "0"
+      },
+      "positions": {
+        "byStatus": {
+          "active": {
+            "count": 1,
+            "ownRiskWei6": "100000"
+          },
+          "claimable": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "claimed": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "pendingSettle": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "settledLost": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "void": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          }
+        },
+        "total": 1
+      },
+      "schemaVersion": 1,
+      "stateIntegrity": "loaded",
+      "stateLossAssessment": {
+        "holdQuoting": false,
+        "reason": "state loaded cleanly"
+      },
+      "statePath": "<state-path>"
+    }
+  }
+}

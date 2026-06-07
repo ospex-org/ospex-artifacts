@@ -1,0 +1,21 @@
+{
+  "commitmentHash": "0xae048c69aabda42666288aabdef7e7908fcf733457c07c43446983f70d73638c",
+  "contestId": "29",
+  "fillTx": "0xb3f7501681352c18c5dc41b11138028e20b666e40b3750f76f40687d9de443c7",
+  "fillType": "full fill",
+  "maker": {
+    "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "role": "stage-maker-b",
+    "side": "Milwaukee Brewers"
+  },
+  "makerRiskFilledWei6": "100000",
+  "observedBy": "MM telemetry fill event source=own-state-stream, exactly one fill event for this hash.",
+  "speculationId": "19",
+  "taker": {
+    "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+    "role": "ospex-flow-a",
+    "side": "Colorado Rockies"
+  },
+  "takerRiskWei6": "41000",
+  "warning": "Commitment was close to short fixed expiry; fill still confirmed successfully."
+}

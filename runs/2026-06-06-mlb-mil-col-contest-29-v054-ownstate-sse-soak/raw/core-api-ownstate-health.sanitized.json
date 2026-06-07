@@ -1,0 +1,8 @@
+{
+  "ownStateHealth": {
+    "indexerLagSeconds": 6,
+    "lagSource": "indexer_cursor",
+    "lastIndexedAt": "2026-06-06T23:08:36.935Z"
+  },
+  "source": "client.ownState.health() against production API during read-only smoke"
+}
