@@ -1,0 +1,42 @@
+{
+  "startedAtUtc": "2026-06-07T21:45:54Z",
+  "startedAtLocal": "2026-06-07T16:45:54 CDT (-0500)",
+  "noAdditionalCronJobsScheduledByThisRun": true,
+  "processCheck": {
+    "status": "passed",
+    "matchingProcessesFound": 0,
+    "searchedTerms": [
+      "ospex-market-maker",
+      "ownstate",
+      "own-state",
+      "sse_test",
+      "ospex_sse_test",
+      "packages/cli/dist/index.js"
+    ],
+    "note": "No matching MM/live soak/SSE test processes were running at start; MM was not restarted and the live soak was not rerun."
+  },
+  "releaseCliSdkCheck": {
+    "status": "passed",
+    "installSource": "fresh temporary install from previously captured GitHub release tarballs",
+    "cliPackageVersion": "0.5.4",
+    "sdkPackageVersion": "0.5.4",
+    "ospexVersion": "0.5.4"
+  },
+  "signerResolution": {
+    "status": "passed",
+    "contestCreatorExpectedAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "resolvedContestCreatorAccount": "ospex-stage-maker-a",
+    "resolvedContestCreatorAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "claimSignerAccounts": {
+      "stage-maker-b": {
+        "account": "ospex-stage-maker-b",
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+      },
+      "ospex-fresh-user": {
+        "account": "ospex-fresh-user",
+        "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d"
+      }
+    },
+    "expectedAddressGuardUsedForEveryWrite": true
+  }
+}

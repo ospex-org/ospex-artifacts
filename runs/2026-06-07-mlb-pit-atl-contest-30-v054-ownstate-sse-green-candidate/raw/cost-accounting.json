@@ -2,22 +2,25 @@
   "parser": {
     "status": "passed",
     "notes": "Robust parser accepts hex strings, decimal strings, integers, nulls/unknowns, and formatted integer strings without Decimal(ConversionSyntax). Unparseable fields are recorded as unknown with reasons.",
-    "receiptLinesParsed": 9,
-    "txMetadataCount": 9,
-    "matchedMetadataCount": 9
+    "receiptLinesParsed": 13,
+    "txMetadataCount": 13,
+    "matchedMetadataCount": 13
   },
   "totals": {
-    "gasPOL": "0.815285406394901999",
+    "gasPOL": "1.116642961820084357",
     "gasPOLByPurpose": {
       "approve-usdc": "0.055855769669577666",
       "create-contest": "0.39337663102065394",
       "match-commitment": "0.307735529168889962",
-      "onchain-cancel": "0.058317476535780431"
+      "onchain-cancel": "0.058317476535780431",
+      "score-contest": "0.187794642757079079",
+      "settle-speculation": "0.043602728573762379",
+      "claim-position": "0.06996018409434090"
     },
     "gasPOLByWallet": {
-      "ospex-fresh-user": "0.326564444413845665",
-      "stage-maker-a": "0.430403485445275903",
-      "stage-maker-b": "0.058317476535780431"
+      "ospex-fresh-user": "0.361212099249604815",
+      "stage-maker-a": "0.661800856776117361",
+      "stage-maker-b": "0.093630005794362181"
     }
   },
   "linkAccounting": {
@@ -73,12 +76,46 @@
           "address": "0xdc2aaf042aeff2e68b3e8e33f19e4b9fa7c73f10",
           "label": "oracle/link-recipient"
         }
+      },
+      {
+        "txHash": "0xbf0e141cdfeee5bdc6c3fbe4a4b998487a7b16ee38ef3f8b7d35d55b4bb35009",
+        "purpose": "score-contest",
+        "source": "raw/postgame-tx-receipts.summary.json",
+        "token": "LINK",
+        "raw": "5000000000000000",
+        "amount": "0.005",
+        "event": "Transfer",
+        "from": {
+          "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "label": "stage-maker-a"
+        },
+        "to": {
+          "address": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+          "label": "OracleModule"
+        }
+      },
+      {
+        "txHash": "0xbf0e141cdfeee5bdc6c3fbe4a4b998487a7b16ee38ef3f8b7d35d55b4bb35009",
+        "purpose": "score-contest",
+        "source": "raw/postgame-tx-receipts.summary.json",
+        "token": "LINK",
+        "raw": "5000000000000000",
+        "amount": "0.005",
+        "event": "Transfer",
+        "from": {
+          "address": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+          "label": "OracleModule"
+        },
+        "to": {
+          "address": "0xdc2aaf042aeff2e68b3e8e33f19e4b9fa7c73f10",
+          "label": "oracle/link-recipient"
+        }
       }
     ],
     "netSpendObserved": {
       "stage-maker-a": {
-        "LINK": "0.005",
-        "reason": "contest-create receipt shows 0.005 LINK transferred from stage-maker-a to ContestModule, then forwarded by ContestModule to oracle/link recipient; no separate LINK approval tx was present in captured receipts."
+        "LINK": "0.010",
+        "reason": "contest creation and postgame score request receipts each show 0.005 LINK transferred from stage-maker-a to an Ospex oracle module, then forwarded to the oracle/link recipient. The fulfillment/callback tx was not signed by the operator wallet."
       }
     }
   },
@@ -255,6 +292,40 @@
           "address": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
           "label": "PositionModule"
         }
+      },
+      {
+        "txHash": "0x1859b8ce4a7818d0f97d5063597a5fb4b0f3b9b81ce13c4dac25b50841cd324d",
+        "purpose": "claim-position",
+        "source": "raw/postgame-tx-receipts.summary.json",
+        "token": "USDC",
+        "raw": "46288",
+        "amount": "0.046288",
+        "event": "Transfer",
+        "from": {
+          "address": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+          "label": "PositionModule"
+        },
+        "to": {
+          "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+          "label": "stage-maker-b"
+        }
+      },
+      {
+        "txHash": "0x6a2387e62e411d4cfd40e75414fc83c9549cc2a7b60dbe715adef37490813b58",
+        "purpose": "claim-position",
+        "source": "raw/postgame-tx-receipts.summary.json",
+        "token": "USDC",
+        "raw": "229000",
+        "amount": "0.229",
+        "event": "Transfer",
+        "from": {
+          "address": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+          "label": "PositionModule"
+        },
+        "to": {
+          "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+          "label": "ospex-fresh-user"
+        }
       }
     ],
     "movementSummary": {
@@ -280,6 +351,11 @@
       "onchainCancels": {
         "USDC": "0",
         "evidence": "three on-chain cancel receipts had no USDC transfer/approval events"
+      },
+      "postgameClaims": {
+        "stage-maker-b_USDC": "0.046288",
+        "ospex-fresh-user_USDC": "0.229",
+        "evidence": "postgame claim receipts transferred payouts from PositionModule to the winning lower/home positions."
       }
     },
     "unknowns": [
@@ -654,5 +730,18 @@
       "erc20Events": []
     }
   ],
-  "unknowns": []
+  "unknowns": [],
+  "postgameAccounting": {
+    "source": "raw/postgame-tx-receipts.summary.json",
+    "operatorPaidGasPOL": "0.301357555425182358",
+    "callbackFulfillmentGasPOL": "0.14114029822685597",
+    "callbackFulfillmentNote": "Recorded as chain evidence only; this tx was not signed by the operator wallet and is excluded from operator-paid gas totals.",
+    "linkNetSpendObserved": {
+      "stage-maker-a": "0.005 LINK postgame score request; 0.010 LINK cumulative including contest creation"
+    },
+    "usdcPayouts": {
+      "stage-maker-b": "46288 wei6 / 0.046288 USDC",
+      "ospex-fresh-user": "229000 wei6 / 0.229 USDC"
+    }
+  }
 }

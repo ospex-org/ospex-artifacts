@@ -1,7 +1,7 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-06-07T16:25:19Z",
+  "generatedAt": "2026-06-07T22:09:09Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
@@ -30,7 +30,7 @@
       "network": "polygon",
       "rawPath": "runs/2026-06-07-mlb-pit-atl-contest-30-v054-ownstate-sse-green-candidate/raw/",
       "release": "ospex-org/ospex-sdk v0.5.4",
-      "status": "partial",
+      "status": "complete_verified_with_caveats",
       "summaryPath": "runs/2026-06-07-mlb-pit-atl-contest-30-v054-ownstate-sse-green-candidate/summary.md",
       "publishedAt": "2026-06-07T16:24:37Z"
     },

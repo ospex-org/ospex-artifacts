@@ -1,11 +1,11 @@
 {
   "artifactId": "2026-06-07-mlb-pit-atl-contest-30-v054-ownstate-sse-green-candidate",
   "artifactType": "run",
-  "artifactStatus": "green_candidate_live_soak_postgame_pending",
-  "status": "partial",
+  "artifactStatus": "green_candidate_postgame_complete_verified",
+  "status": "complete_verified_with_caveats",
   "date": "2026-06-07",
-  "publishedAt": "2026-06-07T16:27:46Z",
-  "capturedAtUtc": "2026-06-07T16:27:46Z",
+  "publishedAt": "2026-06-07T22:06:44Z",
+  "capturedAtUtc": "2026-06-07T22:06:44Z",
   "network": "polygon",
   "chainId": 137,
   "artifactPath": "<artifact-dir>",
@@ -14,13 +14,22 @@
   "contest": {
     "contestId": "30",
     "speculationId": "20",
-    "status": "verified",
+    "status": "scored",
     "contestCreator": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
     "verifiedAt": "2026-06-07T07:52:57+00:00",
     "contestCreatedAt": "2026-06-07T07:52:45+00:00",
     "moneylineSemantics": {
       "upper": "away/Pittsburgh Pirates",
       "lower": "home/Atlanta Braves"
+    },
+    "awayScore": 2,
+    "homeScore": 3,
+    "scoredAt": "2026-06-07T21:49:49+00:00",
+    "settledSpeculation": {
+      "speculationId": "20",
+      "status": "closed",
+      "settledAt": "2026-06-07T21:50:33+00:00",
+      "winSide": "lower/home/Atlanta Braves"
     }
   },
   "game": {
@@ -51,6 +60,20 @@
         "detail": "Scheduled",
         "shortDetail": "6/7 - 1:35 PM EDT"
       }
+    },
+    "finalScoreVerification": {
+      "status": "passed",
+      "sourceFile": "raw/final-score-sources.sanitized.json",
+      "mlbStatsGamePk": 824916,
+      "espnEventId": "401815661",
+      "awayTeam": "Pittsburgh Pirates",
+      "awayScore": 2,
+      "homeTeam": "Atlanta Braves",
+      "homeScore": 3,
+      "winner": "Atlanta Braves",
+      "winningSide": "lower/home",
+      "allSourcesFinal": true,
+      "sourcesAgree": true
     }
   },
   "release": {
@@ -127,6 +150,13 @@
           "summary": "schema refresh through migrations 047-053"
         }
       ]
+    },
+    "postgameCliSdkCheck": {
+      "status": "passed",
+      "sourceFile": "raw/postgame-readonly-preflight.sanitized.json",
+      "cliPackageVersion": "0.5.4",
+      "sdkPackageVersion": "0.5.4",
+      "ospexVersion": "0.5.4"
     }
   },
   "walletRoles": {
@@ -516,7 +546,16 @@
       "finalOwnStateSubscribers": 0,
       "finalConnectionsTotal": 0
     },
-    "processHitsVerifiedAtWrap": 0
+    "processHitsVerifiedAtWrap": 0,
+    "postgameFinalStateSource": "raw/postgame-final-state.sanitized.json",
+    "postgamePublicExposureSummary": {
+      "totalRows": 4,
+      "visibleRows": 1,
+      "visibleOpenOrPartiallyFilled": 0,
+      "cliCommitmentsListContest30Speculation20Rows": 0,
+      "contestOrderbookRows": 0
+    },
+    "postgameClaimsComplete": true
   },
   "costAccounting": {
     "parser": {
@@ -1222,13 +1261,115 @@
     "raw/selected-telemetry.sanitized.ndjson"
   ],
   "caveats": [
-    "Postgame score/settle/claim is scheduled but not yet completed in this artifact revision because the game had not started at wrap-up time.",
-    "A legitimate filled active position remains pending game completion; this is separated from public/orderbook quote exposure, which is zero.",
-    "One restart on-chain-cancel attempt emitted an OspexChainError without tx hash before later successful authoritative cancels; final public exposure remained zero.",
-    "No manufactured API outage/fault injection was performed; natural stream-health hold/restart coverage was observed."
+    "GREEN-candidate means the live own-state SSE acceptance gates passed for this bounded one-contest run; it is not a broad MVE scale proof.",
+    "No manufactured API outage/fault injection was performed; natural restart/health-hold behavior and authoritative cancel cleanup were observed.",
+    "One restart on-chain-cancel attempt emitted an OspexChainError without tx hash before later successful authoritative cancels; final public exposure and postgame claim state are clean.",
+    "The score callback/fulfillment tx is recorded as chain evidence but was not signed by the operator wallet and is excluded from operator-paid gas totals."
   ],
   "publicSafety": {
     "policy": "No private keys, local secret-path material, raw RPC URLs, API tokens, raw signatures/signed payload fields, or raw calldata blobs are intentionally included.",
     "validationScanPath": "raw/validation-scan.json"
+  },
+  "postgameLifecycle": {
+    "status": "complete_verified",
+    "sourceFiles": [
+      "raw/postgame-readonly-preflight.sanitized.json",
+      "raw/final-score-sources.sanitized.json",
+      "raw/postgame-cli-actions.sanitized.json",
+      "raw/postgame-tx-receipts.summary.json",
+      "raw/postgame-claim-sweeps.sanitized.json",
+      "raw/postgame-final-state.sanitized.json"
+    ],
+    "readOnlyPreflight": {
+      "startedAtUtc": "2026-06-07T21:45:54Z",
+      "startedAtLocal": "2026-06-07T16:45:54 CDT (-0500)",
+      "noMMOrLiveSoakProcessFound": true,
+      "mmRestarted": false,
+      "liveSoakRerun": false
+    },
+    "finalScore": {
+      "status": "passed",
+      "sourceFile": "raw/final-score-sources.sanitized.json",
+      "mlbStatsGamePk": 824916,
+      "espnEventId": "401815661",
+      "awayTeam": "Pittsburgh Pirates",
+      "awayScore": 2,
+      "homeTeam": "Atlanta Braves",
+      "homeScore": 3,
+      "winner": "Atlanta Braves",
+      "winningSide": "lower/home",
+      "allSourcesFinal": true,
+      "sourcesAgree": true
+    },
+    "scoreContest": {
+      "operator": "stage-maker-a",
+      "operatorAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "requestTxHash": "0xbf0e141cdfeee5bdc6c3fbe4a4b998487a7b16ee38ef3f8b7d35d55b4bb35009",
+      "scoreCallbackTxHash": "0xefb50d47f17593fcc1ccd08b126068b3cd81a7bf56732fd303a69cfc92c8360f",
+      "indexedStatus": "scored",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    "settleSpeculation": {
+      "operator": "stage-maker-a",
+      "operatorAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "txHash": "0xc76dae2047636ee97c1e637771d84c549b5ba7bc1ca967754b1ec87552a7a3ca",
+      "indexedStatus": "closed",
+      "settledAt": "2026-06-07T21:50:33+00:00",
+      "winningSide": "lower/home/Atlanta Braves"
+    },
+    "claims": [
+      {
+        "wallet": "stage-maker-b",
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "txHash": "0x1859b8ce4a7818d0f97d5063597a5fb4b0f3b9b81ce13c4dac25b50841cd324d",
+        "positionId": "20_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_1",
+        "payoutWei6": "46288",
+        "payoutUSDC": "0.046288"
+      },
+      {
+        "wallet": "ospex-fresh-user",
+        "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "txHash": "0x6a2387e62e411d4cfd40e75414fc83c9549cc2a7b60dbe715adef37490813b58",
+        "positionId": "20_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+        "payoutWei6": "229000",
+        "payoutUSDC": "0.229"
+      }
+    ],
+    "claimSweepsAfter": {
+      "stage-maker-a": {
+        "entriesCount": 0,
+        "totalPayoutWei6": "0"
+      },
+      "stage-maker-b": {
+        "entriesCount": 0,
+        "totalPayoutWei6": "0"
+      },
+      "ospex-fresh-user": {
+        "entriesCount": 0,
+        "totalPayoutWei6": "0"
+      },
+      "ospex-flow-a": {
+        "entriesCount": 0,
+        "totalPayoutWei6": "0"
+      }
+    },
+    "postClaimSweepsAllZero": true,
+    "finalExposure": {
+      "contestOrderbookRows": 0,
+      "cliCommitmentsListContest30Speculation20Rows": 0,
+      "visibleOpenOrPartiallyFilledCommitments": 0,
+      "winningPositionsClaimed": true
+    }
+  },
+  "costAccountingPostgame": {
+    "source": "raw/cost-accounting.json",
+    "totalOperatorPaidGasPOL": "1.116642961820084357",
+    "postgameOperatorPaidGasPOL": "0.301357555425182358",
+    "postgameScoreLinkNetSpend": "0.005 LINK",
+    "postgameClaimPayoutsUSDC": {
+      "stage-maker-b": "0.046288",
+      "ospex-fresh-user": "0.229"
+    }
   }
 }

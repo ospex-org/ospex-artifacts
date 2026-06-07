@@ -348,5 +348,31 @@
     "finalOwnStateSubscribers": 0,
     "finalConnectionsTotal": 0
   },
-  "processHitsVerifiedAtWrap": 0
+  "processHitsVerifiedAtWrap": 0,
+  "postgameFinalState": {
+    "source": "raw/postgame-final-state.sanitized.json",
+    "contestStatus": "scored",
+    "speculationStatus": "closed",
+    "winningSide": "lower/home/Atlanta Braves",
+    "publicVisibleOpenOrPartiallyFilledCommitments": 0,
+    "cliCommitmentsListContest30Speculation20Rows": 0,
+    "contestShowOrderbookRows": 0,
+    "winningPositionsClaimed": [
+      {
+        "wallet": "ospex-fresh-user",
+        "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "claimedAmountWei6": "229000",
+        "claimedAmountUSDC": "0.229",
+        "claimedAt": "2026-06-07T21:57:39+00:00"
+      },
+      {
+        "wallet": "stage-maker-b",
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "claimedAmountWei6": "46288",
+        "claimedAmountUSDC": "0.046288",
+        "claimedAt": "2026-06-07T21:57:33+00:00"
+      }
+    ],
+    "postClaimSweepsAllZero": true
+  }
 }

@@ -1,0 +1,119 @@
+{
+  "capturedAtUtc": "2026-06-07T22:06:44Z",
+  "preClaimDryRunWinningWallets": {
+    "stage-maker-b": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "entriesCount": 1,
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "46288",
+        "totalPayoutUSDC": 0.046288
+      },
+      "entries": [
+        {
+          "positionId": "20_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_1",
+          "speculationId": "20",
+          "bucket": "claimable",
+          "payoutWei6": "46288",
+          "payoutUSDC": 0.046288
+        }
+      ]
+    },
+    "ospex-fresh-user": {
+      "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "entriesCount": 1,
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "229000",
+        "totalPayoutUSDC": 0.229
+      },
+      "entries": [
+        {
+          "positionId": "20_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+          "speculationId": "20",
+          "bucket": "claimable",
+          "payoutWei6": "229000",
+          "payoutUSDC": 0.229
+        }
+      ]
+    }
+  },
+  "postClaimDryRunAllControlledWallets": {
+    "stage-maker-a": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "ok": true,
+      "generatedAt": "2026-06-07T21:58:12.806Z",
+      "entriesCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      },
+      "errorsCount": 0,
+      "warningsCount": 0
+    },
+    "stage-maker-b": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "ok": true,
+      "generatedAt": "2026-06-07T21:58:13.468Z",
+      "entriesCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      },
+      "errorsCount": 0,
+      "warningsCount": 0
+    },
+    "ospex-fresh-user": {
+      "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "ok": true,
+      "generatedAt": "2026-06-07T21:58:14.138Z",
+      "entriesCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      },
+      "errorsCount": 0,
+      "warningsCount": 0
+    },
+    "ospex-flow-a": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "ok": true,
+      "generatedAt": "2026-06-07T21:58:14.815Z",
+      "entriesCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      },
+      "errorsCount": 0,
+      "warningsCount": 0
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "scoreContest": {
+    "ok": true,
+    "action": "contests.score",
+    "stage": "execute",
+    "generatedAt": "2026-06-07T21:49:38.183Z",
+    "cliVersion": "0.5.4",
+    "sdkVersion": "0.5.4",
+    "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "signer": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "effects": [
+      {
+        "type": "transaction",
+        "purpose": "score-contest",
+        "ok": true,
+        "txHash": "0xbf0e141cdfeee5bdc6c3fbe4a4b998487a7b16ee38ef3f8b7d35d55b4bb35009",
+        "blockNumber": "88109328",
+        "status": "confirmed"
+      }
+    ],
+    "payload": {
+      "contestId": "30",
+      "txHash": "0xbf0e141cdfeee5bdc6c3fbe4a4b998487a7b16ee38ef3f8b7d35d55b4bb35009",
+      "requestId": "0xe5809cee0822b3bf257171bc5c24307beb4a146118bfa60ed3cc47865279209f",
+      "status": "success"
+    },
+    "warnings": [],
+    "errors": []
+  },
+  "settleSpeculation": {
+    "ok": true,
+    "action": "settle",
+    "stage": "execute",
+    "generatedAt": "2026-06-07T21:50:33.625Z",
+    "cliVersion": "0.5.4",
+    "sdkVersion": "0.5.4",
+    "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "signer": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "effects": [
+      {
+        "type": "transaction",
+        "purpose": "settle-speculation",
+        "ok": true,
+        "txHash": "0xc76dae2047636ee97c1e637771d84c549b5ba7bc1ca967754b1ec87552a7a3ca",
+        "blockNumber": "88109365",
+        "status": "confirmed"
+      }
+    ],
+    "payload": {
+      "speculationId": "20",
+      "txHash": "0xc76dae2047636ee97c1e637771d84c549b5ba7bc1ca967754b1ec87552a7a3ca"
+    },
+    "warnings": [],
+    "errors": []
+  },
+  "claimStageMakerB": {
+    "ok": true,
+    "action": "claim-all",
+    "stage": "execute",
+    "generatedAt": "2026-06-07T21:57:33.383Z",
+    "cliVersion": "0.5.4",
+    "sdkVersion": "0.5.4",
+    "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "signer": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "effects": [
+      {
+        "type": "transaction",
+        "purpose": "claim-position",
+        "ok": true,
+        "txHash": "0x1859b8ce4a7818d0f97d5063597a5fb4b0f3b9b81ce13c4dac25b50841cd324d",
+        "status": "confirmed"
+      }
+    ],
+    "payload": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "dryRun": false,
+      "success": true,
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "claimedFresh": 1,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "46288",
+        "totalPayoutUSDC": 0.046288
+      }
+    },
+    "warnings": [],
+    "errors": [],
+    "entries": [
+      {
+        "positionId": "20_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_1",
+        "speculationId": "20",
+        "bucket": "claimable",
+        "success": true,
+        "txHashes": [
+          "0x1859b8ce4a7818d0f97d5063597a5fb4b0f3b9b81ce13c4dac25b50841cd324d"
+        ],
+        "payoutWei6": "46288",
+        "payoutUSDC": 0.046288
+      }
+    ]
+  },
+  "claimOspexFreshUser": {
+    "ok": true,
+    "action": "claim-all",
+    "stage": "execute",
+    "generatedAt": "2026-06-07T21:57:38.242Z",
+    "cliVersion": "0.5.4",
+    "sdkVersion": "0.5.4",
+    "wallet": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+    "signer": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+    "effects": [
+      {
+        "type": "transaction",
+        "purpose": "claim-position",
+        "ok": true,
+        "txHash": "0x6a2387e62e411d4cfd40e75414fc83c9549cc2a7b60dbe715adef37490813b58",
+        "status": "confirmed"
+      }
+    ],
+    "payload": {
+      "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "dryRun": false,
+      "success": true,
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "claimedFresh": 1,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "229000",
+        "totalPayoutUSDC": 0.229
+      }
+    },
+    "warnings": [],
+    "errors": [],
+    "entries": [
+      {
+        "positionId": "20_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+        "speculationId": "20",
+        "bucket": "claimable",
+        "success": true,
+        "txHashes": [
+          "0x6a2387e62e411d4cfd40e75414fc83c9549cc2a7b60dbe715adef37490813b58"
+        ],
+        "payoutWei6": "229000",
+        "payoutUSDC": 0.229
+      }
+    ]
+  }
+}

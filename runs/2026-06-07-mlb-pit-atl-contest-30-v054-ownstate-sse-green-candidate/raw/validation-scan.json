@@ -1,10 +1,10 @@
 {
   "status": "passed",
-  "generatedAt": "2026-06-07T16:29:55Z",
+  "generatedAt": "2026-06-07T22:09:55Z",
   "artifactPath": "runs/2026-06-07-mlb-pit-atl-contest-30-v054-ownstate-sse-green-candidate",
   "jsonValidation": {
     "status": "passed",
-    "jsonFiles": 19,
+    "jsonFiles": 25,
     "ndjsonFiles": 1,
     "ndjsonLines": 20,
     "errors": []
@@ -14,13 +14,12 @@
     "textFindings": [],
     "secretLikeJsonKeyFindings": [],
     "notes": [
-      "Scanned for local home/temp paths, local Ospex config paths, password file option/path markers, private-key and seed-phrase markers, RPC URLs, Authorization/Bearer material, raw signature-sized hex, signed-payload JSON keys, long calldata blobs, and specific upstream odds-provider names.",
-      "Public tx hashes, public wallet addresses, GitHub release URLs, Chainlink source hashes, MLB Stats IDs, and ESPN IDs are expected public evidence and are not secret findings."
+      "Scanned artifact text files for local home paths, local tmp paths, local Ospex config paths, signer-password option markers, private-key and seed-phrase markers, RPC/Postgres URLs, Authorization/Bearer material, raw-signature or signed-payload material, and long calldata blobs. Public tx hashes, wallet addresses, GitHub release URLs, Chainlink source hashes, MLB Stats IDs, and ESPN IDs are expected public evidence."
     ]
   },
   "repoValidator": {
     "status": "passed",
     "command": "python3 scripts/validate-artifacts.py",
-    "output": "Artifact validation passed: 168 JSON files, 119 NDJSON lines, 201 text files scanned."
+    "output": "Artifact validation passed: 174 JSON files, 119 NDJSON lines, 207 text files scanned."
   }
 }

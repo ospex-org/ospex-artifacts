@@ -32,7 +32,7 @@
   {
     "scenario": "Controlled partial fill observed through own-state stream",
     "classification": "proven",
-    "evidence": "ospex-fresh-user partially filled stage-maker-b commitment 0xad05…; telemetry emitted fill source=own-state-stream with newFillWei6=26300."
+    "evidence": "ospex-fresh-user partially filled stage-maker-b commitment 0xad05\u2026; telemetry emitted fill source=own-state-stream with newFillWei6=26300."
   },
   {
     "scenario": "Post-fill retained/remainder risk cleanup",
@@ -57,21 +57,21 @@
   {
     "scenario": "Filled-position separation from quote exposure",
     "classification": "proven",
-    "evidence": "Final MM status still has one legitimate active filled position risk 26300 wei6 awaiting postgame; this is not open quote/orderbook exposure."
+    "evidence": "The live run separated filled position risk from quote exposure; postgame settlement/claims later moved the winning lower/home positions to claimed while public commitment/orderbook exposure remained zero."
   },
   {
     "scenario": "Cost accounting parser",
     "classification": "proven",
-    "evidence": "Receipt parser handled hex/decimal/null/formatted fields and parsed 9/9 receipt lines without Decimal ConversionSyntax."
+    "evidence": "Receipt parser handled prior and postgame receipt summaries; operator-paid gas totals, LINK scoring spend, and USDC claim payouts are recorded in raw/cost-accounting.json."
   },
   {
     "scenario": "Public-safety artifact hygiene",
     "classification": "proven_after_validation",
-    "evidence": "Sanitized artifact excludes private keys, local secret-path material, raw RPC URLs, API tokens, raw signatures/signed payload fields, and local raw workdir paths; validation scan result is recorded in raw/validation-scan.json."
+    "evidence": "Sanitized artifact excludes private keys, local secret-path material, raw RPC URLs, API tokens, raw signatures/signed payload fields, local raw workdir paths, and long calldata blobs; validation scan result is recorded in raw/validation-scan.json."
   },
   {
     "scenario": "Postgame score/settle/claim continuation",
-    "classification": "scheduled",
-    "evidence": "One-shot read-only-first continuation scheduled for 2026-06-07T21:45:00Z (2026-06-07 16:45 CDT (America/Chicago)), cron job 039b18a3eae6."
+    "classification": "proven",
+    "evidence": "One-shot read-only-first postgame continuation verified MLB Stats + ESPN Final PIT 2 / ATL 3, scored contest 30, settled speculation 20 lower/home, claimed stage-maker-b and ospex-fresh-user winnings, and all four controlled-wallet claim sweeps are zero-entry after claims."
   }
 ]
