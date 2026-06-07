@@ -1,0 +1,44 @@
+{
+  "game": {
+    "awayTeam": "Pittsburgh Pirates",
+    "homeTeam": "Atlanta Braves",
+    "sport": "mlb",
+    "startTimeUtc": "2026-06-07T17:35:00Z",
+    "mlbStatsGamePk": 824916,
+    "espnEventId": "401815661",
+    "mlbPregameStatus": {
+      "abstractGameState": "Preview",
+      "codedGameState": "S",
+      "detailedState": "Scheduled",
+      "statusCode": "S",
+      "startTimeTBD": false,
+      "abstractGameCode": "P"
+    },
+    "espnPregameStatus": {
+      "clock": 0.0,
+      "displayClock": "0:00",
+      "period": 1,
+      "type": {
+        "id": "1",
+        "name": "STATUS_SCHEDULED",
+        "state": "pre",
+        "completed": false,
+        "description": "Scheduled",
+        "detail": "Scheduled",
+        "shortDetail": "6/7 - 1:35 PM EDT"
+      }
+    }
+  },
+  "contest": {
+    "contestId": "30",
+    "speculationId": "20",
+    "status": "verified",
+    "contestCreator": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "verifiedAt": "2026-06-07T07:52:57+00:00",
+    "contestCreatedAt": "2026-06-07T07:52:45+00:00",
+    "moneylineSemantics": {
+      "upper": "away/Pittsburgh Pirates",
+      "lower": "home/Atlanta Braves"
+    }
+  }
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "wallet": "stage-maker-a",
+    "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "exit": 0,
+    "ok": true,
+    "payload": {
+      "owner": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "chainId": 137,
+      "usdc": {
+        "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+        "decimals": 6,
+        "allowances": {
+          "positionModule": {
+            "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c",
+            "raw": "11739200",
+            "formatted": "11.7392",
+            "isMax": false
+          },
+          "treasuryModule": {
+            "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e",
+            "raw": "0",
+            "formatted": "0",
+            "isMax": false
+          }
+        }
+      },
+      "link": {
+        "address": "0xb0897686c545045aFc77CF20eC7A532E3120E0F1",
+        "decimals": 18,
+        "allowances": {
+          "oracleModule": {
+            "spender": "0x7e1397eD5b4c9f606DCF2EB0281485B2296E29Bb",
+            "raw": "190000000000000000",
+            "formatted": "0.19",
+            "isMax": false
+          }
+        }
+      }
+    }
+  },
+  {
+    "wallet": "stage-maker-b",
+    "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "exit": 0,
+    "ok": true,
+    "payload": {
+      "owner": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "chainId": 137,
+      "usdc": {
+        "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+        "decimals": 6,
+        "allowances": {
+          "positionModule": {
+            "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c",
+            "raw": "3875300",
+            "formatted": "3.8753",
+            "isMax": false
+          },
+          "treasuryModule": {
+            "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e",
+            "raw": "0",
+            "formatted": "0",
+            "isMax": false
+          }
+        }
+      },
+      "link": {
+        "address": "0xb0897686c545045aFc77CF20eC7A532E3120E0F1",
+        "decimals": 18,
+        "allowances": {
+          "oracleModule": {
+            "spender": "0x7e1397eD5b4c9f606DCF2EB0281485B2296E29Bb",
+            "raw": "225000000000000000",
+            "formatted": "0.225",
+            "isMax": false
+          }
+        }
+      }
+    }
+  },
+  {
+    "wallet": "ospex-flow-a",
+    "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+    "exit": 0,
+    "ok": true,
+    "payload": {
+      "owner": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "chainId": 137,
+      "usdc": {
+        "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+        "decimals": 6,
+        "allowances": {
+          "positionModule": {
+            "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c",
+            "raw": "603569",
+            "formatted": "0.603569",
+            "isMax": false
+          },
+          "treasuryModule": {
+            "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e",
+            "raw": "0",
+            "formatted": "0",
+            "isMax": false
+          }
+        }
+      },
+      "link": {
+        "address": "0xb0897686c545045aFc77CF20eC7A532E3120E0F1",
+        "decimals": 18,
+        "allowances": {
+          "oracleModule": {
+            "spender": "0x7e1397eD5b4c9f606DCF2EB0281485B2296E29Bb",
+            "raw": "0",
+            "formatted": "0",
+            "isMax": false
+          }
+        }
+      }
+    }
+  },
+  {
+    "wallet": "ospex-fresh-user",
+    "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+    "exit": 0,
+    "ok": true,
+    "payload": {
+      "owner": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "chainId": 137,
+      "usdc": {
+        "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+        "decimals": 6,
+        "allowances": {
+          "positionModule": {
+            "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c",
+            "raw": "1869400",
+            "formatted": "1.8694",
+            "isMax": false
+          },
+          "treasuryModule": {
+            "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e",
+            "raw": "0",
+            "formatted": "0",
+            "isMax": false
+          }
+        }
+      },
+      "link": {
+        "address": "0xb0897686c545045aFc77CF20eC7A532E3120E0F1",
+        "decimals": 18,
+        "allowances": {
+          "oracleModule": {
+            "spender": "0x7e1397eD5b4c9f606DCF2EB0281485B2296E29Bb",
+            "raw": "0",
+            "formatted": "0",
+            "isMax": false
+          }
+        }
+      }
+    }
+  }
+]

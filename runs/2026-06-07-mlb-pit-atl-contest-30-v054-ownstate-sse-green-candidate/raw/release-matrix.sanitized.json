@@ -1,0 +1,72 @@
+{
+  "sdkLatestRelease": {
+    "tagName": "v0.5.4",
+    "name": "v0.5.4",
+    "publishedAt": "2026-06-06T22:13:49Z",
+    "isDraft": false,
+    "isPrerelease": false,
+    "url": "https://github.com/ospex-org/ospex-sdk/releases/tag/v0.5.4",
+    "assets": [
+      {
+        "name": "ospex-cli-0.5.4.tgz",
+        "size": 707399,
+        "url": "https://github.com/ospex-org/ospex-sdk/releases/download/v0.5.4/ospex-cli-0.5.4.tgz"
+      },
+      {
+        "name": "ospex-sdk-0.5.4.tgz",
+        "size": 448632,
+        "url": "https://github.com/ospex-org/ospex-sdk/releases/download/v0.5.4/ospex-sdk-0.5.4.tgz"
+      }
+    ]
+  },
+  "assetSha256": [
+    {
+      "sha256": "1395874cd85408e0c4e351c4537dd991fd6398987428fafcc00f795dd6085e87",
+      "asset": "ospex-cli-0.5.4.tgz"
+    },
+    {
+      "sha256": "07a50f55ac2c626348ad13ef13e84efe7258c40cd79940505372d80370919108",
+      "asset": "ospex-sdk-0.5.4.tgz"
+    }
+  ],
+  "cliInstallSmoke": {
+    "package": "@ospex/cli",
+    "version": "0.5.4",
+    "cliVersion": "0.5.4"
+  },
+  "mmSdkDependency": {
+    "package": "@ospex/sdk",
+    "version": "0.5.4",
+    "source": "GitHub release tarball v0.5.4"
+  },
+  "recentChangeCoverage": [
+    {
+      "repo": "ospex-sdk",
+      "pr": 135,
+      "status": "merged",
+      "sha": "7622600bf3a940b892db2560e6cceb997e976a01",
+      "summary": "v0.5.4 release for own-state uint256 schema + stream-auth token validation hardening"
+    },
+    {
+      "repo": "ospex-market-maker",
+      "pr": 85,
+      "status": "merged",
+      "sha": "350e6f62cc8e3b4f3e337674c4e198cb20c2c3f1",
+      "summary": "MM pinned @ospex/sdk v0.5.4"
+    },
+    {
+      "repo": "ospex-core-api",
+      "pr": 38,
+      "status": "merged",
+      "sha": "2b6c78ae56632ae050f982289ee7222b683637c5",
+      "summary": "M1 own-state SSE load harness/cap correctness"
+    },
+    {
+      "repo": "ospex-indexer",
+      "pr": 42,
+      "status": "merged",
+      "sha": "6cfbdda3dd144a2d8c1230c3f2153ccdf2f07ee6",
+      "summary": "schema refresh through migrations 047-053"
+    }
+  ]
+}

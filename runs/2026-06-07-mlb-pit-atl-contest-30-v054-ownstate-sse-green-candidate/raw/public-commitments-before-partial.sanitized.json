@@ -1,0 +1,48 @@
+{
+  "source": "fill/public-commitments-before-partial.json",
+  "ok": true,
+  "generatedAt": "2026-06-07T08:08:34.760Z",
+  "count": 2,
+  "rows": [
+    {
+      "commitmentHash": "0x29ee8e75e3015f8c0eca9d85f2778b17b49e91f22a24e94227245eae7a6bf98e",
+      "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "contestId": "30",
+      "positionType": 0,
+      "oddsTick": 243,
+      "marketType": "moneyline",
+      "riskAmount": "50000",
+      "filledRiskAmount": "0",
+      "remainingRiskAmount": "50000",
+      "nonce": "1780819660",
+      "expiry": "2026-06-07T17:35:00+00:00",
+      "status": "open",
+      "storedStatus": "open",
+      "visibility": "visible",
+      "redacted": false,
+      "isLive": true,
+      "nonceInvalidated": false,
+      "createdAt": "2026-06-07T08:07:40.149348+00:00"
+    },
+    {
+      "commitmentHash": "0xad05fb35f01a00d753e7207c2bd65c0bc2298fe81a6de7d0e0b7931005f52c21",
+      "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "contestId": "30",
+      "positionType": 1,
+      "oddsTick": 176,
+      "marketType": "moneyline",
+      "riskAmount": "50000",
+      "filledRiskAmount": "0",
+      "remainingRiskAmount": "50000",
+      "nonce": "1780819659",
+      "expiry": "2026-06-07T17:35:00+00:00",
+      "status": "open",
+      "storedStatus": "open",
+      "visibility": "visible",
+      "redacted": false,
+      "isLive": true,
+      "nonceInvalidated": false,
+      "createdAt": "2026-06-07T08:07:39.829068+00:00"
+    }
+  ]
+}

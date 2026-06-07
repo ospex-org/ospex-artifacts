@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 2,
+  "ok": true,
+  "action": "commitments.submit",
+  "stage": "execute",
+  "network": "polygon",
+  "chainId": 137,
+  "generatedAt": "2026-06-07T07:54:22.470Z",
+  "cliVersion": "0.5.4",
+  "sdkVersion": "0.5.4",
+  "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+  "walletRole": "signer",
+  "signer": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+  "requiresSignature": false,
+  "requiresTransaction": false,
+  "risk": {
+    "wei6": "100000",
+    "usdc": "0.100000"
+  },
+  "payout": {
+    "profit": {
+      "wei6": "129000",
+      "usdc": "0.129000"
+    },
+    "totalReturn": {
+      "wei6": "229000",
+      "usdc": "0.229000"
+    }
+  },
+  "contest": {
+    "contestId": "30",
+    "label": "Pittsburgh Pirates @ Atlanta Braves, 2026-06-07 — MLB",
+    "awayTeam": "Pittsburgh Pirates",
+    "homeTeam": "Atlanta Braves",
+    "awayTeamId": "b1bf529a-1300-46e4-83fc-4163c5708af5",
+    "homeTeamId": "a8593e3b-79a0-4f63-ab32-2083c88eb4ac",
+    "sport": "mlb",
+    "matchTime": "2026-06-07T17:35:00+00:00"
+  },
+  "speculation": {
+    "mode": "lazy",
+    "speculationId": null,
+    "speculationKey": "0xe7b1a7dd4714e3d55f0f7ec9bbb8ac8e7d3ca017716ca52f9d8546ceb2633145",
+    "makerCreationFeeUSDC": "0.250000",
+    "creationFee": {
+      "applies": true,
+      "condition": "if-first-match-at-execution",
+      "totalFeeWei6": "500000",
+      "totalFeeUSDC": "0.500000",
+      "takerShareWei6": "250000",
+      "takerShareUSDC": "0.250000",
+      "makerShareWei6": "250000",
+      "makerShareUSDC": "0.250000",
+      "viewerShareWei6": "250000",
+      "viewerShareUSDC": "0.250000",
+      "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e",
+      "spenderLabel": "TreasuryModule",
+      "approvalPurpose": "lazy-creation-fee",
+      "approvalNeeded": false,
+      "note": "Lazy creation: 0.500000 USDC fee split 50/50 — you pay 0.250000 USDC, counterparty pays 0.250000 USDC to TreasuryModule, IF this tx is still the first match at execution time."
+    }
+  },
+  "commitment": {
+    "commitmentHash": "0xa026f0a48c97891d9abe1a76dd72ab7105e2558302c94d8f424f7f08a2b416ac",
+    "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "contestId": "30",
+    "scorer": "0xd846b7fdbd8c9f67d1580b2c6a8bd7fdcb15390b",
+    "lineTicks": 0,
+    "positionType": 0,
+    "oddsTick": 229,
+    "marketType": "moneyline",
+    "riskAmount": "100000",
+    "filledRiskAmount": "0",
+    "remainingRiskAmount": "100000",
+    "nonce": "1780818862",
+    "expiry": "2026-06-07T17:35:00+00:00",
+    "speculationKey": "0xe7b1a7dd4714e3d55f0f7ec9bbb8ac8e7d3ca017716ca52f9d8546ceb2633145",
+    "status": "open",
+    "storedStatus": "open",
+    "source": "agent",
+    "network": "polygon",
+    "nonceInvalidated": false,
+    "createdAt": "2026-06-07T07:54:22.398027+00:00",
+    "visibility": "visible",
+    "redacted": false,
+    "isLive": true
+  },
+  "sideSummary": "Pittsburgh Pirates",
+  "warnings": [],
+  "errors": [],
+  "effects": [
+    {
+      "type": "eip712-signature",
+      "purpose": "submit-commitment",
+      "ok": true
+    },
+    {
+      "type": "offchain-write",
+      "purpose": "submit-commitment",
+      "ok": true
+    }
+  ],
+  "payload": {
+    "preview": {
+      "contest": {
+        "contestId": "30",
+        "label": "Pittsburgh Pirates @ Atlanta Braves, 2026-06-07 — MLB",
+        "awayTeam": "Pittsburgh Pirates",
+        "homeTeam": "Atlanta Braves",
+        "awayTeamId": "b1bf529a-1300-46e4-83fc-4163c5708af5",
+        "homeTeamId": "a8593e3b-79a0-4f63-ab32-2083c88eb4ac",
+        "sport": "mlb",
+        "matchTime": "2026-06-07T17:35:00+00:00"
+      },
+      "market": {
+        "type": "moneyline",
+        "speculation": {
+          "mode": "lazy",
+          "speculationId": null,
+          "speculationKey": "0xe7b1a7dd4714e3d55f0f7ec9bbb8ac8e7d3ca017716ca52f9d8546ceb2633145",
+          "makerCreationFeeUSDC": "0.250000",
+          "creationFee": {
+            "applies": true,
+            "condition": "if-first-match-at-execution",
+            "totalFeeWei6": "500000",
+            "totalFeeUSDC": "0.500000",
+            "takerShareWei6": "250000",
+            "takerShareUSDC": "0.250000",
+            "makerShareWei6": "250000",
+            "makerShareUSDC": "0.250000",
+            "viewerShareWei6": "250000",
+            "viewerShareUSDC": "0.250000",
+            "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e",
+            "spenderLabel": "TreasuryModule",
+            "approvalPurpose": "lazy-creation-fee",
+            "approvalNeeded": false,
+            "note": "Lazy creation: 0.500000 USDC fee split 50/50 — you pay 0.250000 USDC, counterparty pays 0.250000 USDC to TreasuryModule, IF this tx is still the first match at execution time."
+          }
+        },
+        "lineTicks": 0,
+        "displayLine": null
+      },
+      "side": {
+        "input": "Pittsburgh Pirates",
+        "resolvedLabel": "Pittsburgh Pirates",
+        "positionType": 0,
+        "role": "away",
+        "resolutionSource": "exact"
+      },
+      "economics": {
+        "oddsTick": 229,
+        "oddsDecimal": "2.29",
+        "oddsAmerican": "+129",
+        "riskWei6": "100000",
+        "riskUSDC": "0.100000",
+        "profitUSDC": "0.129000",
+        "returnUSDC": "0.229000",
+        "counterpartyRiskUSDC": "0.129000"
+      },
+      "expiry": {
+        "unixSec": "1780853700",
+        "iso": "2026-06-07T17:35:00.000Z",
+        "source": "user-iso",
+        "afterMatchTime": false,
+        "matchTimeUnixSec": "1780853700"
+      },
+      "raw": {
+        "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "chainId": 137,
+        "verifyingContract": "0x1B93579B044f0eE3c4C8a9F479A323DeF7770712",
+        "contestId": "30",
+        "scorer": "0xd846B7FdbD8C9F67d1580B2C6a8Bd7Fdcb15390b",
+        "lineTicks": 0,
+        "positionType": 0,
+        "oddsTick": 229,
+        "riskAmount": "100000",
+        "expiry": "1780853700",
+        "nonce": "1780818862",
+        "speculationKey": "0xe7b1a7dd4714e3d55f0f7ec9bbb8ac8e7d3ca017716ca52f9d8546ceb2633145"
+      },
+      "approvals": [
+        {
+          "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c",
+          "required": "100000",
+          "current": "11739200",
+          "needsApproval": false,
+          "purpose": "commitment-risk"
+        },
+        {
+          "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e",
+          "required": "250000",
+          "current": "250000",
+          "needsApproval": false,
+          "purpose": "lazy-creation-fee"
+        }
+      ],
+      "outcomes": [
+        {
+          "condition": "Pittsburgh Pirates wins",
+          "result": "win",
+          "payoutUSDC": "0.129000"
+        },
+        {
+          "condition": "Atlanta Braves wins",
+          "result": "lose",
+          "payoutUSDC": "-0.100000"
+        }
+      ],
+      "you": {
+        "role": "maker",
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "backing": "Pittsburgh Pirates",
+        "odds": {
+          "decimal": "2.29",
+          "american": "+129",
+          "oddsTick": 229
+        },
+        "risk": {
+          "wei6": "100000",
+          "usdc": "0.100000"
+        },
+        "profit": {
+          "wei6": "129000",
+          "usdc": "0.129000"
+        },
+        "totalReturn": {
+          "wei6": "229000",
+          "usdc": "0.229000"
+        }
+      },
+      "counterparty": {
+        "role": "taker",
+        "address": null,
+        "backing": "Atlanta Braves",
+        "odds": {
+          "decimal": "1.78",
+          "american": "-128",
+          "oddsTick": 178
+        },
+        "risk": {
+          "wei6": "129000",
+          "usdc": "0.129000"
+        },
+        "profit": {
+          "wei6": "100000",
+          "usdc": "0.100000"
+        },
+        "totalReturn": {
+          "wei6": "229000",
+          "usdc": "0.229000"
+        }
+      },
+      "submitAction": "trade-and-create-speculation"
+    },
+    "result": {
+      "hash": "0xa026f0a48c97891d9abe1a76dd72ab7105e2558302c94d8f424f7f08a2b416ac",
+      "commitment": {
+        "commitmentHash": "0xa026f0a48c97891d9abe1a76dd72ab7105e2558302c94d8f424f7f08a2b416ac",
+        "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "contestId": "30",
+        "scorer": "0xd846b7fdbd8c9f67d1580b2c6a8bd7fdcb15390b",
+        "lineTicks": 0,
+        "positionType": 0,
+        "oddsTick": 229,
+        "marketType": "moneyline",
+        "riskAmount": "100000",
+        "filledRiskAmount": "0",
+        "remainingRiskAmount": "100000",
+        "nonce": "1780818862",
+        "expiry": "2026-06-07T17:35:00+00:00",
+        "speculationKey": "0xe7b1a7dd4714e3d55f0f7ec9bbb8ac8e7d3ca017716ca52f9d8546ceb2633145",
+        "status": "open",
+        "storedStatus": "open",
+        "source": "agent",
+        "network": "polygon",
+        "nonceInvalidated": false,
+        "createdAt": "2026-06-07T07:54:22.398027+00:00",
+        "visibility": "visible",
+        "redacted": false,
+        "isLive": true
+      }
+    },
+    "fundability": {
+      "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "fundableNow": true,
+      "outcome": "fundable",
+      "advisory": true,
+      "reasons": [],
+      "checkedAtBlock": "88075917",
+      "requirement": {
+        "newCommitmentRiskWei6": "100000",
+        "existingOpenRiskWei6": "0",
+        "existingOpenCommitmentCount": 0,
+        "lazyCreationFeeWei6": "250000",
+        "lazyCreation": true,
+        "existingMaybeLazyKeyCount": 0,
+        "existingLazyFeeMaxWei6": "0",
+        "balanceRequiredWei6": "350000",
+        "positionAllowanceRequiredWei6": "100000",
+        "treasuryAllowanceRequiredWei6": "250000"
+      }
+    }
+  }
+}

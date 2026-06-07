@@ -1,0 +1,23 @@
+{
+  "status": "scheduled",
+  "cronJobId": "039b18a3eae6",
+  "scheduledForUtc": "2026-06-07T21:45:00Z",
+  "scheduledForLocal": "2026-06-07 16:45 CDT (America/Chicago)",
+  "readOnlyFirst": true,
+  "mustVerifyFinalScoreWith": [
+    "MLB Stats API gamePk 824916",
+    "ESPN event 401815661"
+  ],
+  "mustUseReleaseCliSdk": "0.5.4",
+  "contestCreatorOperatorWallet": {
+    "role": "stage-maker-a",
+    "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+  },
+  "requiredActionsAfterFinalScore": [
+    "score contest 30",
+    "settle speculation 20",
+    "claim winnings for winning controlled wallets",
+    "dry-run claim sweeps for all relevant controlled wallets",
+    "update this artifact branch/PR"
+  ]
+}

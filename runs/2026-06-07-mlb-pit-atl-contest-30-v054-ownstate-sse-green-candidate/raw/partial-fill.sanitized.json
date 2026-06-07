@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 2,
+  "ok": true,
+  "action": "commitments.match",
+  "stage": "execute",
+  "network": "polygon",
+  "chainId": 137,
+  "generatedAt": "2026-06-07T08:09:12.159Z",
+  "cliVersion": "0.5.4",
+  "sdkVersion": "0.5.4",
+  "wallet": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+  "walletRole": "signer",
+  "signer": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+  "requiresSignature": false,
+  "requiresTransaction": false,
+  "risk": {
+    "wei6": "19988",
+    "usdc": "0.019988"
+  },
+  "payout": {
+    "profit": {
+      "wei6": "26300",
+      "usdc": "0.026300"
+    },
+    "totalReturn": {
+      "wei6": "46288",
+      "usdc": "0.046288"
+    }
+  },
+  "contest": {
+    "contestId": "30",
+    "label": "Pittsburgh Pirates @ Atlanta Braves, 2026-06-07 — MLB",
+    "awayTeam": "Pittsburgh Pirates",
+    "homeTeam": "Atlanta Braves",
+    "awayTeamId": "b1bf529a-1300-46e4-83fc-4163c5708af5",
+    "homeTeamId": "a8593e3b-79a0-4f63-ab32-2083c88eb4ac",
+    "sport": "mlb",
+    "matchTime": "2026-06-07T17:35:00+00:00"
+  },
+  "speculation": {
+    "mode": "existing",
+    "speculationId": "20",
+    "creationFee": {
+      "applies": false,
+      "condition": "never",
+      "totalFeeWei6": "0",
+      "totalFeeUSDC": "0.000000",
+      "takerShareWei6": "0",
+      "takerShareUSDC": "0.000000",
+      "makerShareWei6": "0",
+      "makerShareUSDC": "0.000000",
+      "viewerShareWei6": "0",
+      "viewerShareUSDC": "0.000000",
+      "spender": null,
+      "spenderLabel": null,
+      "approvalPurpose": null,
+      "approvalNeeded": false,
+      "note": "Speculation #20 already exists — no creation fee on this match."
+    }
+  },
+  "commitment": {
+    "commitmentHash": "0xad05fb35f01a00d753e7207c2bd65c0bc2298fe81a6de7d0e0b7931005f52c21",
+    "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "contestId": "30",
+    "scorer": "0xd846b7fdbd8c9f67d1580b2c6a8bd7fdcb15390b",
+    "lineTicks": 0,
+    "positionType": 1,
+    "oddsTick": 176,
+    "marketType": "moneyline",
+    "riskAmount": "50000",
+    "filledRiskAmount": "0",
+    "remainingRiskAmount": "50000",
+    "nonce": "1780819659",
+    "expiry": "2026-06-07T17:35:00+00:00",
+    "speculationKey": "0xe7b1a7dd4714e3d55f0f7ec9bbb8ac8e7d3ca017716ca52f9d8546ceb2633145",
+    "status": "open",
+    "storedStatus": "open",
+    "source": "agent",
+    "network": "polygon",
+    "nonceInvalidated": false,
+    "createdAt": "2026-06-07T08:07:39.829068+00:00",
+    "visibility": "visible",
+    "redacted": false,
+    "isLive": true
+  },
+  "sideSummary": "Pittsburgh Pirates",
+  "warnings": [
+    {
+      "code": "partial-fill",
+      "message": "Taker risk is less than the maker remaining capacity — this will be a partial fill.",
+      "severity": "info"
+    }
+  ],
+  "errors": [],
+  "effects": [
+    {
+      "type": "transaction",
+      "purpose": "match-commitment",
+      "ok": true,
+      "txHash": "0xc69c43c87668c47a6832d6bafd728c4fbecab54f54570ba8f3ba2bfd33d88922",
+      "blockNumber": "88076511",
+      "status": "confirmed"
+    }
+  ],
+  "payload": {
+    "preview": {
+      "commitment": {
+        "commitmentHash": "0xad05fb35f01a00d753e7207c2bd65c0bc2298fe81a6de7d0e0b7931005f52c21",
+        "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "contestId": "30",
+        "scorer": "0xd846b7fdbd8c9f67d1580b2c6a8bd7fdcb15390b",
+        "lineTicks": 0,
+        "positionType": 1,
+        "oddsTick": 176,
+        "marketType": "moneyline",
+        "riskAmount": "50000",
+        "filledRiskAmount": "0",
+        "remainingRiskAmount": "50000",
+        "nonce": "1780819659",
+        "expiry": "2026-06-07T17:35:00+00:00",
+        "speculationKey": "0xe7b1a7dd4714e3d55f0f7ec9bbb8ac8e7d3ca017716ca52f9d8546ceb2633145",
+        "status": "open",
+        "storedStatus": "open",
+        "source": "agent",
+        "network": "polygon",
+        "nonceInvalidated": false,
+        "createdAt": "2026-06-07T08:07:39.829068+00:00",
+        "visibility": "visible",
+        "redacted": false,
+        "isLive": true
+      },
+      "chainId": 137,
+      "verifyingContract": "0x1B93579B044f0eE3c4C8a9F479A323DeF7770712",
+      "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "taker": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "selfMatch": false,
+      "contest": {
+        "contestId": "30",
+        "label": "Pittsburgh Pirates @ Atlanta Braves, 2026-06-07 — MLB",
+        "awayTeam": "Pittsburgh Pirates",
+        "homeTeam": "Atlanta Braves",
+        "awayTeamId": "b1bf529a-1300-46e4-83fc-4163c5708af5",
+        "homeTeamId": "a8593e3b-79a0-4f63-ab32-2083c88eb4ac",
+        "sport": "mlb",
+        "matchTime": "2026-06-07T17:35:00+00:00"
+      },
+      "market": {
+        "type": "moneyline",
+        "lineTicks": 0,
+        "makerLineDisplay": null,
+        "takerLineDisplay": null
+      },
+      "makerSide": {
+        "positionType": 1,
+        "resolvedLabel": "Atlanta Braves",
+        "role": "home"
+      },
+      "takerSide": {
+        "positionType": 0,
+        "resolvedLabel": "Pittsburgh Pirates",
+        "role": "away"
+      },
+      "odds": {
+        "oddsTick": 176,
+        "makerDecimal": "1.76",
+        "makerAmerican": "-132",
+        "takerOddsTick": 232,
+        "takerDecimal": "2.32",
+        "takerAmerican": "+132"
+      },
+      "economics": {
+        "oddsTick": 176,
+        "remainingMakerRiskWei6": "50000",
+        "remainingMakerRiskUSDC": "0.050000",
+        "takerDesiredRiskWei6": "20000",
+        "takerDesiredRiskUSDC": "0.020000",
+        "fillMakerRiskWei6": "26300",
+        "fillMakerRiskUSDC": "0.026300",
+        "takerRiskWei6": "19988",
+        "takerRiskUSDC": "0.019988",
+        "takerProfitOnWinUSDC": "0.026300",
+        "takerReturnOnWinUSDC": "0.046288"
+      },
+      "expiry": {
+        "unixSec": "1780853700",
+        "iso": "2026-06-07T17:35:00.000Z",
+        "expired": false,
+        "expiresSoonMinutes": null
+      },
+      "speculation": {
+        "mode": "existing",
+        "speculationId": "20",
+        "speculationKey": "0xe7b1a7dd4714e3d55f0f7ec9bbb8ac8e7d3ca017716ca52f9d8546ceb2633145",
+        "creationFee": {
+          "applies": false,
+          "condition": "never",
+          "totalFeeWei6": "0",
+          "totalFeeUSDC": "0.000000",
+          "takerShareWei6": "0",
+          "takerShareUSDC": "0.000000",
+          "makerShareWei6": "0",
+          "makerShareUSDC": "0.000000",
+          "viewerShareWei6": "0",
+          "viewerShareUSDC": "0.000000",
+          "spender": null,
+          "spenderLabel": null,
+          "approvalPurpose": null,
+          "approvalNeeded": false,
+          "note": "Speculation #20 already exists — no creation fee on this match."
+        }
+      },
+      "approvals": [
+        {
+          "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c",
+          "required": "19988",
+          "current": "1740400",
+          "needsApproval": false,
+          "purpose": "commitment-risk"
+        }
+      ],
+      "nonceInvalidated": false,
+      "isLive": true,
+      "warnings": [
+        "partial-fill"
+      ],
+      "you": {
+        "role": "taker",
+        "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "backing": "Pittsburgh Pirates",
+        "odds": {
+          "decimal": "2.32",
+          "american": "+132",
+          "oddsTick": 232
+        },
+        "risk": {
+          "wei6": "19988",
+          "usdc": "0.019988"
+        },
+        "profit": {
+          "wei6": "26300",
+          "usdc": "0.026300"
+        },
+        "totalReturn": {
+          "wei6": "46288",
+          "usdc": "0.046288"
+        }
+      },
+      "counterparty": {
+        "role": "maker",
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "backing": "Atlanta Braves",
+        "odds": {
+          "decimal": "1.76",
+          "american": "-132",
+          "oddsTick": 176
+        },
+        "risk": {
+          "wei6": "26300",
+          "usdc": "0.026300"
+        },
+        "profit": {
+          "wei6": "19988",
+          "usdc": "0.019988"
+        },
+        "totalReturn": {
+          "wei6": "46288",
+          "usdc": "0.046288"
+        }
+      },
+      "outcomes": [
+        {
+          "condition": "Pittsburgh Pirates wins",
+          "result": "win",
+          "payoutUSDC": "0.026300"
+        },
+        {
+          "condition": "Atlanta Braves wins",
+          "result": "lose",
+          "payoutUSDC": "-0.019988"
+        }
+      ],
+      "tradeAction": "trade-only"
+    },
+    "result": {
+      "txHash": "0xc69c43c87668c47a6832d6bafd728c4fbecab54f54570ba8f3ba2bfd33d88922",
+      "status": "success",
+      "blockNumber": "88076511",
+      "takerRiskWei6": "19988",
+      "fillMakerRiskWei6": "26300"
+    },
+    "fillability": {
+      "commitmentHash": "0xad05fb35f01a00d753e7207c2bd65c0bc2298fe81a6de7d0e0b7931005f52c21",
+      "fillableNow": true,
+      "outcome": "fillable",
+      "advisory": true,
+      "reasons": [],
+      "checkedAtBlock": "88076508",
+      "fill": {
+        "makerRiskWei6": "26300",
+        "takerRiskWei6": "19988",
+        "selfMatch": false
+      }
+    }
+  }
+}

@@ -1,0 +1,658 @@
+{
+  "parser": {
+    "status": "passed",
+    "notes": "Robust parser accepts hex strings, decimal strings, integers, nulls/unknowns, and formatted integer strings without Decimal(ConversionSyntax). Unparseable fields are recorded as unknown with reasons.",
+    "receiptLinesParsed": 9,
+    "txMetadataCount": 9,
+    "matchedMetadataCount": 9
+  },
+  "totals": {
+    "gasPOL": "0.815285406394901999",
+    "gasPOLByPurpose": {
+      "approve-usdc": "0.055855769669577666",
+      "create-contest": "0.39337663102065394",
+      "match-commitment": "0.307735529168889962",
+      "onchain-cancel": "0.058317476535780431"
+    },
+    "gasPOLByWallet": {
+      "ospex-fresh-user": "0.326564444413845665",
+      "stage-maker-a": "0.430403485445275903",
+      "stage-maker-b": "0.058317476535780431"
+    }
+  },
+  "linkAccounting": {
+    "preflightAllowanceEvidence": {
+      "stage-maker-a": {
+        "oracleModuleAllowanceLINK": "0.19",
+        "source": "wallets/allowance-preflight.sanitized.json"
+      },
+      "stage-maker-b": {
+        "oracleModuleAllowanceLINK": "0.225",
+        "source": "wallets/allowance-preflight.sanitized.json"
+      },
+      "ospex-flow-a": {
+        "oracleModuleAllowanceLINK": "0",
+        "source": "wallets/allowance-preflight.sanitized.json"
+      },
+      "ospex-fresh-user": {
+        "oracleModuleAllowanceLINK": "0",
+        "source": "wallets/allowance-preflight.sanitized.json"
+      }
+    },
+    "capturedTransferEvidence": [
+      {
+        "txHash": "0x997f247e1f9246405befe66b5773c176eb2069d0fd21a1bdca1bf0de2696bdd1",
+        "purpose": "create-contest",
+        "source": "live-write/contest-create-pit-atl.json",
+        "token": "LINK",
+        "raw": "5000000000000000",
+        "amount": "0.005",
+        "event": "Transfer",
+        "from": {
+          "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "label": "stage-maker-a"
+        },
+        "to": {
+          "address": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+          "label": "ContestModule"
+        }
+      },
+      {
+        "txHash": "0x997f247e1f9246405befe66b5773c176eb2069d0fd21a1bdca1bf0de2696bdd1",
+        "purpose": "create-contest",
+        "source": "live-write/contest-create-pit-atl.json",
+        "token": "LINK",
+        "raw": "5000000000000000",
+        "amount": "0.005",
+        "event": "Transfer",
+        "from": {
+          "address": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+          "label": "ContestModule"
+        },
+        "to": {
+          "address": "0xdc2aaf042aeff2e68b3e8e33f19e4b9fa7c73f10",
+          "label": "oracle/link-recipient"
+        }
+      }
+    ],
+    "netSpendObserved": {
+      "stage-maker-a": {
+        "LINK": "0.005",
+        "reason": "contest-create receipt shows 0.005 LINK transferred from stage-maker-a to ContestModule, then forwarded by ContestModule to oracle/link recipient; no separate LINK approval tx was present in captured receipts."
+      }
+    }
+  },
+  "usdcAccounting": {
+    "approvals": [
+      {
+        "txHash": "0x0dc6c22c23c981967b3a231743f501318b341a153c006f22a7de300fd858d4cb",
+        "purpose": "approve-usdc",
+        "source": "live-write/stage-maker-a-approve-fee-1.json",
+        "token": "USDC",
+        "raw": "1000000",
+        "amount": "1",
+        "event": "Approval",
+        "owner": {
+          "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "label": "stage-maker-a"
+        },
+        "spender": {
+          "address": "0xcb56cd2c509301e888965dd3a2e5c486fe03a56e",
+          "label": "TreasuryModule"
+        }
+      },
+      {
+        "txHash": "0x057f72e136bf7faede19b6c0156d1b48e66c7b1bf600851f0b0735b17ac8e66a",
+        "purpose": "approve-usdc",
+        "source": "seed/ospex-stage-maker-a-approve-treasury-0.25.json",
+        "token": "USDC",
+        "raw": "250000",
+        "amount": "0.25",
+        "event": "Approval",
+        "owner": {
+          "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "label": "stage-maker-a"
+        },
+        "spender": {
+          "address": "0xcb56cd2c509301e888965dd3a2e5c486fe03a56e",
+          "label": "TreasuryModule"
+        }
+      },
+      {
+        "txHash": "0x60e7c1dc7974e77533ef92eb615620ea7775f7f290c844b0c8523525d02931ec",
+        "purpose": "approve-usdc",
+        "source": "seed/ospex-fresh-user-approve-treasury-0.25.json",
+        "token": "USDC",
+        "raw": "250000",
+        "amount": "0.25",
+        "event": "Approval",
+        "owner": {
+          "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+          "label": "ospex-fresh-user"
+        },
+        "spender": {
+          "address": "0xcb56cd2c509301e888965dd3a2e5c486fe03a56e",
+          "label": "TreasuryModule"
+        }
+      }
+    ],
+    "transfers": [
+      {
+        "txHash": "0x997f247e1f9246405befe66b5773c176eb2069d0fd21a1bdca1bf0de2696bdd1",
+        "purpose": "create-contest",
+        "source": "live-write/contest-create-pit-atl.json",
+        "token": "USDC",
+        "raw": "1000000",
+        "amount": "1",
+        "event": "Transfer",
+        "from": {
+          "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "label": "stage-maker-a"
+        },
+        "to": {
+          "address": "0xdac630ae52b868ff0a180458efb9ac88e7425114",
+          "label": "protocol-fee-recipient"
+        }
+      },
+      {
+        "txHash": "0x01c257a4d5e9ef0611e6a6ed0eb4fc4493b5d6896623cc6f7fe65b0f0d083034",
+        "purpose": "match-commitment",
+        "source": "seed/seed-match-execute.json",
+        "token": "USDC",
+        "raw": "250000",
+        "amount": "0.25",
+        "event": "Transfer",
+        "from": {
+          "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "label": "stage-maker-a"
+        },
+        "to": {
+          "address": "0xdac630ae52b868ff0a180458efb9ac88e7425114",
+          "label": "protocol-fee-recipient"
+        }
+      },
+      {
+        "txHash": "0x01c257a4d5e9ef0611e6a6ed0eb4fc4493b5d6896623cc6f7fe65b0f0d083034",
+        "purpose": "match-commitment",
+        "source": "seed/seed-match-execute.json",
+        "token": "USDC",
+        "raw": "250000",
+        "amount": "0.25",
+        "event": "Transfer",
+        "from": {
+          "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+          "label": "ospex-fresh-user"
+        },
+        "to": {
+          "address": "0xdac630ae52b868ff0a180458efb9ac88e7425114",
+          "label": "protocol-fee-recipient"
+        }
+      },
+      {
+        "txHash": "0x01c257a4d5e9ef0611e6a6ed0eb4fc4493b5d6896623cc6f7fe65b0f0d083034",
+        "purpose": "match-commitment",
+        "source": "seed/seed-match-execute.json",
+        "token": "USDC",
+        "raw": "100000",
+        "amount": "0.1",
+        "event": "Transfer",
+        "from": {
+          "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "label": "stage-maker-a"
+        },
+        "to": {
+          "address": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+          "label": "PositionModule"
+        }
+      },
+      {
+        "txHash": "0x01c257a4d5e9ef0611e6a6ed0eb4fc4493b5d6896623cc6f7fe65b0f0d083034",
+        "purpose": "match-commitment",
+        "source": "seed/seed-match-execute.json",
+        "token": "USDC",
+        "raw": "129000",
+        "amount": "0.129",
+        "event": "Transfer",
+        "from": {
+          "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+          "label": "ospex-fresh-user"
+        },
+        "to": {
+          "address": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+          "label": "PositionModule"
+        }
+      },
+      {
+        "txHash": "0xc69c43c87668c47a6832d6bafd728c4fbecab54f54570ba8f3ba2bfd33d88922",
+        "purpose": "match-commitment",
+        "source": "fill/partial-match-execute.sanitized.json",
+        "token": "USDC",
+        "raw": "26300",
+        "amount": "0.0263",
+        "event": "Transfer",
+        "from": {
+          "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+          "label": "stage-maker-b"
+        },
+        "to": {
+          "address": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+          "label": "PositionModule"
+        }
+      },
+      {
+        "txHash": "0xc69c43c87668c47a6832d6bafd728c4fbecab54f54570ba8f3ba2bfd33d88922",
+        "purpose": "match-commitment",
+        "source": "fill/partial-match-execute.sanitized.json",
+        "token": "USDC",
+        "raw": "19988",
+        "amount": "0.019988",
+        "event": "Transfer",
+        "from": {
+          "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+          "label": "ospex-fresh-user"
+        },
+        "to": {
+          "address": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+          "label": "PositionModule"
+        }
+      }
+    ],
+    "movementSummary": {
+      "contestCreation": {
+        "stage-maker-a_USDC": "1",
+        "evidence": "create-contest receipt USDC transfer to protocol-fee-recipient"
+      },
+      "seedSpeculationCreationFee": {
+        "stage-maker-a_USDC": "0.25",
+        "ospex-fresh-user_USDC": "0.25",
+        "evidence": "seed match receipt lazy creation fee transfers to protocol-fee-recipient"
+      },
+      "seedMatchRiskEscrow": {
+        "stage-maker-a_USDC": "0.1",
+        "ospex-fresh-user_USDC": "0.129",
+        "evidence": "seed match receipt risk transfers to PositionModule"
+      },
+      "controlledPartialFillRiskEscrow": {
+        "stage-maker-b_USDC": "0.0263",
+        "ospex-fresh-user_USDC": "0.019988",
+        "evidence": "controlled partial fill receipt risk transfers to PositionModule"
+      },
+      "onchainCancels": {
+        "USDC": "0",
+        "evidence": "three on-chain cancel receipts had no USDC transfer/approval events"
+      }
+    },
+    "unknowns": [
+      {
+        "field": "protocol-fee-recipient contract display name",
+        "reason": "receipt proves recipient address and transfer amount; artifact labels it by observed role rather than asserting an unverified contract name."
+      }
+    ]
+  },
+  "receiptSummaries": [
+    {
+      "line": 1,
+      "txHash": "0x0dc6c22c23c981967b3a231743f501318b341a153c006f22a7de300fd858d4cb",
+      "purpose": "approve-usdc",
+      "source": "live-write/stage-maker-a-approve-fee-1.json",
+      "wallet": {
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "label": "stage-maker-a"
+      },
+      "status": "0x1",
+      "blockNumber": 88075843,
+      "blockTimestampUnix": null,
+      "gasUsed": 66357,
+      "effectiveGasPriceWei": 279117560365,
+      "gasCostPOL": "0.018521403953140305",
+      "erc20Events": [
+        {
+          "txHash": "0x0dc6c22c23c981967b3a231743f501318b341a153c006f22a7de300fd858d4cb",
+          "purpose": "approve-usdc",
+          "source": "live-write/stage-maker-a-approve-fee-1.json",
+          "token": "USDC",
+          "raw": "1000000",
+          "amount": "1",
+          "event": "Approval",
+          "owner": {
+            "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+            "label": "stage-maker-a"
+          },
+          "spender": {
+            "address": "0xcb56cd2c509301e888965dd3a2e5c486fe03a56e",
+            "label": "TreasuryModule"
+          }
+        }
+      ]
+    },
+    {
+      "line": 3,
+      "txHash": "0x997f247e1f9246405befe66b5773c176eb2069d0fd21a1bdca1bf0de2696bdd1",
+      "purpose": "create-contest",
+      "source": "live-write/contest-create-pit-atl.json",
+      "wallet": {
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "label": "stage-maker-a"
+      },
+      "status": "0x1",
+      "blockNumber": 88075853,
+      "blockTimestampUnix": null,
+      "gasUsed": 1381391,
+      "effectiveGasPriceWei": 284768491340,
+      "gasCostPOL": "0.39337663102065394",
+      "erc20Events": [
+        {
+          "txHash": "0x997f247e1f9246405befe66b5773c176eb2069d0fd21a1bdca1bf0de2696bdd1",
+          "purpose": "create-contest",
+          "source": "live-write/contest-create-pit-atl.json",
+          "token": "LINK",
+          "raw": "5000000000000000",
+          "amount": "0.005",
+          "event": "Transfer",
+          "from": {
+            "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+            "label": "stage-maker-a"
+          },
+          "to": {
+            "address": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+            "label": "ContestModule"
+          }
+        },
+        {
+          "txHash": "0x997f247e1f9246405befe66b5773c176eb2069d0fd21a1bdca1bf0de2696bdd1",
+          "purpose": "create-contest",
+          "source": "live-write/contest-create-pit-atl.json",
+          "token": "LINK",
+          "raw": "5000000000000000",
+          "amount": "0.005",
+          "event": "Transfer",
+          "from": {
+            "address": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+            "label": "ContestModule"
+          },
+          "to": {
+            "address": "0xdc2aaf042aeff2e68b3e8e33f19e4b9fa7c73f10",
+            "label": "oracle/link-recipient"
+          }
+        },
+        {
+          "txHash": "0x997f247e1f9246405befe66b5773c176eb2069d0fd21a1bdca1bf0de2696bdd1",
+          "purpose": "create-contest",
+          "source": "live-write/contest-create-pit-atl.json",
+          "token": "USDC",
+          "raw": "1000000",
+          "amount": "1",
+          "event": "Transfer",
+          "from": {
+            "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+            "label": "stage-maker-a"
+          },
+          "to": {
+            "address": "0xdac630ae52b868ff0a180458efb9ac88e7425114",
+            "label": "protocol-fee-recipient"
+          }
+        }
+      ]
+    },
+    {
+      "line": 5,
+      "txHash": "0x057f72e136bf7faede19b6c0156d1b48e66c7b1bf600851f0b0735b17ac8e66a",
+      "purpose": "approve-usdc",
+      "source": "seed/ospex-stage-maker-a-approve-treasury-0.25.json",
+      "wallet": {
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "label": "stage-maker-a"
+      },
+      "status": "0x1",
+      "blockNumber": 88075903,
+      "blockTimestampUnix": null,
+      "gasUsed": 66357,
+      "effectiveGasPriceWei": 278877141394,
+      "gasCostPOL": "0.018505450471481658",
+      "erc20Events": [
+        {
+          "txHash": "0x057f72e136bf7faede19b6c0156d1b48e66c7b1bf600851f0b0735b17ac8e66a",
+          "purpose": "approve-usdc",
+          "source": "seed/ospex-stage-maker-a-approve-treasury-0.25.json",
+          "token": "USDC",
+          "raw": "250000",
+          "amount": "0.25",
+          "event": "Approval",
+          "owner": {
+            "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+            "label": "stage-maker-a"
+          },
+          "spender": {
+            "address": "0xcb56cd2c509301e888965dd3a2e5c486fe03a56e",
+            "label": "TreasuryModule"
+          }
+        }
+      ]
+    },
+    {
+      "line": 7,
+      "txHash": "0x60e7c1dc7974e77533ef92eb615620ea7775f7f290c844b0c8523525d02931ec",
+      "purpose": "approve-usdc",
+      "source": "seed/ospex-fresh-user-approve-treasury-0.25.json",
+      "wallet": {
+        "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "label": "ospex-fresh-user"
+      },
+      "status": "0x1",
+      "blockNumber": 88075906,
+      "blockTimestampUnix": null,
+      "gasUsed": 66357,
+      "effectiveGasPriceWei": 283751755579,
+      "gasCostPOL": "0.018828915244955703",
+      "erc20Events": [
+        {
+          "txHash": "0x60e7c1dc7974e77533ef92eb615620ea7775f7f290c844b0c8523525d02931ec",
+          "purpose": "approve-usdc",
+          "source": "seed/ospex-fresh-user-approve-treasury-0.25.json",
+          "token": "USDC",
+          "raw": "250000",
+          "amount": "0.25",
+          "event": "Approval",
+          "owner": {
+            "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+            "label": "ospex-fresh-user"
+          },
+          "spender": {
+            "address": "0xcb56cd2c509301e888965dd3a2e5c486fe03a56e",
+            "label": "TreasuryModule"
+          }
+        }
+      ]
+    },
+    {
+      "line": 9,
+      "txHash": "0x01c257a4d5e9ef0611e6a6ed0eb4fc4493b5d6896623cc6f7fe65b0f0d083034",
+      "purpose": "match-commitment",
+      "source": "seed/seed-match-execute.json",
+      "wallet": {
+        "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "label": "ospex-fresh-user"
+      },
+      "status": "0x1",
+      "blockNumber": 88075929,
+      "blockTimestampUnix": null,
+      "gasUsed": 673618,
+      "effectiveGasPriceWei": 282497775432,
+      "gasCostPOL": "0.190295586490952976",
+      "erc20Events": [
+        {
+          "txHash": "0x01c257a4d5e9ef0611e6a6ed0eb4fc4493b5d6896623cc6f7fe65b0f0d083034",
+          "purpose": "match-commitment",
+          "source": "seed/seed-match-execute.json",
+          "token": "USDC",
+          "raw": "250000",
+          "amount": "0.25",
+          "event": "Transfer",
+          "from": {
+            "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+            "label": "stage-maker-a"
+          },
+          "to": {
+            "address": "0xdac630ae52b868ff0a180458efb9ac88e7425114",
+            "label": "protocol-fee-recipient"
+          }
+        },
+        {
+          "txHash": "0x01c257a4d5e9ef0611e6a6ed0eb4fc4493b5d6896623cc6f7fe65b0f0d083034",
+          "purpose": "match-commitment",
+          "source": "seed/seed-match-execute.json",
+          "token": "USDC",
+          "raw": "250000",
+          "amount": "0.25",
+          "event": "Transfer",
+          "from": {
+            "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+            "label": "ospex-fresh-user"
+          },
+          "to": {
+            "address": "0xdac630ae52b868ff0a180458efb9ac88e7425114",
+            "label": "protocol-fee-recipient"
+          }
+        },
+        {
+          "txHash": "0x01c257a4d5e9ef0611e6a6ed0eb4fc4493b5d6896623cc6f7fe65b0f0d083034",
+          "purpose": "match-commitment",
+          "source": "seed/seed-match-execute.json",
+          "token": "USDC",
+          "raw": "100000",
+          "amount": "0.1",
+          "event": "Transfer",
+          "from": {
+            "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+            "label": "stage-maker-a"
+          },
+          "to": {
+            "address": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+            "label": "PositionModule"
+          }
+        },
+        {
+          "txHash": "0x01c257a4d5e9ef0611e6a6ed0eb4fc4493b5d6896623cc6f7fe65b0f0d083034",
+          "purpose": "match-commitment",
+          "source": "seed/seed-match-execute.json",
+          "token": "USDC",
+          "raw": "129000",
+          "amount": "0.129",
+          "event": "Transfer",
+          "from": {
+            "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+            "label": "ospex-fresh-user"
+          },
+          "to": {
+            "address": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+            "label": "PositionModule"
+          }
+        }
+      ]
+    },
+    {
+      "line": 11,
+      "txHash": "0xc69c43c87668c47a6832d6bafd728c4fbecab54f54570ba8f3ba2bfd33d88922",
+      "purpose": "match-commitment",
+      "source": "fill/partial-match-execute.sanitized.json",
+      "wallet": {
+        "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "label": "ospex-fresh-user"
+      },
+      "status": "0x1",
+      "blockNumber": 88076511,
+      "blockTimestampUnix": null,
+      "gasUsed": 419821,
+      "effectiveGasPriceWei": 279738132866,
+      "gasCostPOL": "0.117439942677936986",
+      "erc20Events": [
+        {
+          "txHash": "0xc69c43c87668c47a6832d6bafd728c4fbecab54f54570ba8f3ba2bfd33d88922",
+          "purpose": "match-commitment",
+          "source": "fill/partial-match-execute.sanitized.json",
+          "token": "USDC",
+          "raw": "26300",
+          "amount": "0.0263",
+          "event": "Transfer",
+          "from": {
+            "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+            "label": "stage-maker-b"
+          },
+          "to": {
+            "address": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+            "label": "PositionModule"
+          }
+        },
+        {
+          "txHash": "0xc69c43c87668c47a6832d6bafd728c4fbecab54f54570ba8f3ba2bfd33d88922",
+          "purpose": "match-commitment",
+          "source": "fill/partial-match-execute.sanitized.json",
+          "token": "USDC",
+          "raw": "19988",
+          "amount": "0.019988",
+          "event": "Transfer",
+          "from": {
+            "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+            "label": "ospex-fresh-user"
+          },
+          "to": {
+            "address": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+            "label": "PositionModule"
+          }
+        }
+      ]
+    },
+    {
+      "line": 13,
+      "txHash": "0x8ef5f828f229bf6a6e8b367c0ef3d2f51044f79972bd36a3ba7b099391c7e5f0",
+      "purpose": "onchain-cancel",
+      "source": "mm-live-b/telemetry/run-2026-06-07T08-06-37-517Z-75tupd.ndjson",
+      "wallet": {
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "label": "stage-maker-b"
+      },
+      "status": "0x1",
+      "blockNumber": 88076534,
+      "blockTimestampUnix": null,
+      "gasUsed": 68663,
+      "effectiveGasPriceWei": 284212166221,
+      "gasCostPOL": "0.019514859969232523",
+      "erc20Events": []
+    },
+    {
+      "line": 15,
+      "txHash": "0xd171e740d3a870755263cc11c2cfc16565144cd2f275b8948c32e4d500cbf082",
+      "purpose": "onchain-cancel",
+      "source": "mm-live-b/telemetry/run-2026-06-07T09-11-37-706Z-p8btp1.ndjson",
+      "wallet": {
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "label": "stage-maker-b"
+      },
+      "status": "0x1",
+      "blockNumber": 88079132,
+      "blockTimestampUnix": null,
+      "gasUsed": 68663,
+      "effectiveGasPriceWei": 284979214440,
+      "gasCostPOL": "0.01956752780109372",
+      "erc20Events": []
+    },
+    {
+      "line": 17,
+      "txHash": "0x8ddd85166f60ca13a8a102397dc9d23f4a0fa278aa9cdba95fcedd0fd1500e5c",
+      "purpose": "onchain-cancel",
+      "source": "mm-live-b/telemetry/run-2026-06-07T09-17-04-404Z-5bkh1z.ndjson",
+      "wallet": {
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "label": "stage-maker-b"
+      },
+      "status": "0x1",
+      "blockNumber": 88079228,
+      "blockTimestampUnix": null,
+      "gasUsed": 68651,
+      "effectiveGasPriceWei": 280186577988,
+      "gasCostPOL": "0.019235088765454188",
+      "erc20Events": []
+    }
+  ],
+  "unknowns": []
+}

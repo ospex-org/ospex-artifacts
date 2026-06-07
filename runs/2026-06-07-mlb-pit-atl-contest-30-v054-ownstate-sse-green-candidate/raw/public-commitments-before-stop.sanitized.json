@@ -1,0 +1,28 @@
+{
+  "source": "mm-live-b/public/commitments-before-stop.sanitized.json",
+  "ok": true,
+  "generatedAt": "2026-06-07T09:08:34.860Z",
+  "count": 1,
+  "rows": [
+    {
+      "commitmentHash": "0x9101e184b359bd6a179d174fa03007581f5a80f93663adde02658b7ebd3943dc",
+      "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "contestId": "30",
+      "positionType": 1,
+      "oddsTick": 176,
+      "marketType": "moneyline",
+      "riskAmount": "50000",
+      "filledRiskAmount": "0",
+      "remainingRiskAmount": "50000",
+      "nonce": "1780819848",
+      "expiry": "2026-06-07T17:35:00+00:00",
+      "status": "open",
+      "storedStatus": "open",
+      "visibility": "visible",
+      "redacted": false,
+      "isLive": true,
+      "nonceInvalidated": false,
+      "createdAt": "2026-06-07T08:10:48.852296+00:00"
+    }
+  ]
+}

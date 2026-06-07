@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "ok": true,
+  "action": "contests.create",
+  "stage": "execute",
+  "network": "polygon",
+  "chainId": 137,
+  "generatedAt": "2026-06-07T07:52:57.264Z",
+  "cliVersion": "0.5.4",
+  "sdkVersion": "0.5.4",
+  "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+  "walletRole": "signer",
+  "signer": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+  "requiresSignature": false,
+  "requiresTransaction": false,
+  "risk": null,
+  "payout": null,
+  "contest": null,
+  "speculation": null,
+  "commitment": null,
+  "sideSummary": null,
+  "warnings": [],
+  "errors": [],
+  "effects": [
+    {
+      "type": "transaction",
+      "purpose": "create-contest",
+      "ok": true,
+      "txHash": "0x997f247e1f9246405befe66b5773c176eb2069d0fd21a1bdca1bf0de2696bdd1",
+      "blockNumber": "88075853",
+      "status": "confirmed"
+    }
+  ],
+  "payload": {
+    "contestId": "30",
+    "txHash": "0x997f247e1f9246405befe66b5773c176eb2069d0fd21a1bdca1bf0de2696bdd1",
+    "requestId": "0x644d699dabe42ff92eee03427d949cfbd36b5060bb5dc1f80c64a238f898d1b4",
+    "status": "success",
+    "verification": {
+      "contestId": "30",
+      "status": "verified"
+    }
+  }
+}

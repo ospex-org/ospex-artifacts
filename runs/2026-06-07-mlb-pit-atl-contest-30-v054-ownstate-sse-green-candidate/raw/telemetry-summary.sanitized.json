@@ -1,0 +1,70 @@
+{
+  "files": [
+    {
+      "sourceFile": "telemetry/run-2026-06-07T08-06-37-517Z-75tupd.ndjson",
+      "lineCount": 84,
+      "firstTs": "2026-06-07T08:06:37.553Z",
+      "lastTs": "2026-06-07T09:08:50.990Z",
+      "kindCounts": {
+        "candidate": 3,
+        "fill": 1,
+        "kill": 1,
+        "onchain-cancel": 1,
+        "quote-competitiveness": 4,
+        "quote-intent": 3,
+        "risk-verdict": 3,
+        "soft-cancel": 2,
+        "stream-health-hold": 2,
+        "submit": 3,
+        "tick-start": 61
+      }
+    },
+    {
+      "sourceFile": "telemetry/run-2026-06-07T09-11-37-706Z-p8btp1.ndjson",
+      "lineCount": 7,
+      "firstTs": "2026-06-07T09:11:37.743Z",
+      "lastTs": "2026-06-07T09:15:44.574Z",
+      "kindCounts": {
+        "candidate": 1,
+        "error": 1,
+        "kill": 1,
+        "onchain-cancel": 1,
+        "stream-cold-restart": 1,
+        "stream-health-hold": 1,
+        "tick-start": 1
+      }
+    },
+    {
+      "sourceFile": "telemetry/run-2026-06-07T09-17-04-404Z-5bkh1z.ndjson",
+      "lineCount": 1,
+      "firstTs": "2026-06-07T09:17:07.366Z",
+      "lastTs": "2026-06-07T09:17:07.366Z",
+      "kindCounts": {
+        "onchain-cancel": 1
+      }
+    },
+    {
+      "sourceFile": "telemetry/run-2026-06-07T08-03-41-171Z-hdkfjc.ndjson",
+      "lineCount": 9,
+      "firstTs": "2026-06-07T08:03:41.206Z",
+      "lastTs": "2026-06-07T08:05:43.047Z",
+      "kindCounts": {
+        "candidate": 1,
+        "error": 1,
+        "kill": 1,
+        "quote-intent": 1,
+        "risk-verdict": 1,
+        "stream-health-hold": 2,
+        "tick-start": 2
+      }
+    }
+  ],
+  "liveSoakMainWindow": {
+    "sourceFile": "telemetry/run-2026-06-07T08-06-37-517Z-75tupd.ndjson",
+    "startTs": "2026-06-07T08:06:37.553Z",
+    "endTs": "2026-06-07T09:08:50.990Z",
+    "duration": "approximately 62 minutes",
+    "tickCount": 61
+  },
+  "selectedEventCount": 20
+}

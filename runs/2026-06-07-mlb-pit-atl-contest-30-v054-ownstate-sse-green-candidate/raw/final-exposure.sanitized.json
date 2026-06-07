@@ -1,0 +1,352 @@
+{
+  "contestShowOrderbookRows": 0,
+  "publicCommitmentsContest30": {
+    "source": "final/commitments-contest-30-final.raw.json",
+    "ok": true,
+    "generatedAt": "2026-06-07T09:18:09.540Z",
+    "count": 0,
+    "rows": []
+  },
+  "publicCommitmentsSpeculation20": {
+    "source": "final/commitments-speculation-20-final.raw.json",
+    "ok": true,
+    "generatedAt": "2026-06-07T09:18:10.177Z",
+    "count": 0,
+    "rows": []
+  },
+  "mmFinalStatus": {
+    "source": "final/mm-status-final.json",
+    "stateIntegrity": "loaded",
+    "stateLossAssessment": {
+      "holdQuoting": false,
+      "reason": "state loaded cleanly"
+    },
+    "lastFlushedAt": "2026-06-07T09:17:07.367Z",
+    "commitments": {
+      "total": 2,
+      "byLifecycle": {
+        "visibleOpen": 0,
+        "softCancelled": 0,
+        "partiallyFilled": 0,
+        "filled": 0,
+        "expired": 0,
+        "authoritativelyInvalidated": 2
+      },
+      "distinctContestsNonTerminal": 0
+    },
+    "positions": {
+      "total": 1,
+      "byStatus": {
+        "active": {
+          "count": 1,
+          "ownRiskWei6": "26300"
+        },
+        "pendingSettle": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "claimable": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "claimed": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "settledLost": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "void": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        }
+      }
+    },
+    "dailyCounters": {
+      "today": "2026-06-07",
+      "todayGasPolWei": "58317476535780431",
+      "todayFeeUsdcWei6": "0",
+      "lifetimeGasPolWei": "58317476535780431",
+      "lifetimeFeeUsdcWei6": "0"
+    },
+    "makerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "livePositionTotals": {
+      "activeCount": 1,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "claimablePayoutWei6": "0",
+      "pendingSettlePayoutWei6": "0"
+    },
+    "livePositionsSkipReason": null
+  },
+  "metricsFinal": {
+    "snapshots": [
+      {
+        "source": "api/v1_metrics.body",
+        "timestamp": "2026-06-07T07:48:40.352Z",
+        "ownState": {
+          "wallets": 0,
+          "subscribers": 0,
+          "resyncBroadcastTotal": 0
+        },
+        "odds": {
+          "subscribers": 0,
+          "channelOpen": false,
+          "subscribed": false,
+          "degraded": false,
+          "channelDegradedTotal": 0,
+          "hardResetTotal": 0
+        },
+        "connections": {
+          "total": 0,
+          "ips": 0,
+          "maxTotal": 200,
+          "maxPerIp": 10,
+          "rejectedTotal": 0,
+          "rejectedByScope": {
+            "ip": 0,
+            "total": 0
+          },
+          "slowClientShedTotal": 0
+        }
+      },
+      {
+        "source": "api/_v1_metrics.body",
+        "timestamp": "2026-06-07T07:59:54.863Z",
+        "ownState": {
+          "wallets": 0,
+          "subscribers": 0,
+          "resyncBroadcastTotal": 0
+        },
+        "odds": {
+          "subscribers": 0,
+          "channelOpen": false,
+          "subscribed": false,
+          "degraded": false,
+          "channelDegradedTotal": 0,
+          "hardResetTotal": 0
+        },
+        "connections": {
+          "total": 0,
+          "ips": 0,
+          "maxTotal": 200,
+          "maxPerIp": 10,
+          "rejectedTotal": 0,
+          "rejectedByScope": {
+            "ip": 0,
+            "total": 0
+          },
+          "slowClientShedTotal": 0
+        }
+      },
+      {
+        "source": "api/_v1_metrics-during-0816.body",
+        "timestamp": "2026-06-07T08:16:47.508Z",
+        "ownState": {
+          "wallets": 1,
+          "subscribers": 1,
+          "resyncBroadcastTotal": 0
+        },
+        "odds": {
+          "subscribers": 1,
+          "channelOpen": true,
+          "subscribed": true,
+          "degraded": false,
+          "channelDegradedTotal": 0,
+          "hardResetTotal": 0
+        },
+        "connections": {
+          "total": 2,
+          "ips": 1,
+          "maxTotal": 200,
+          "maxPerIp": 10,
+          "rejectedTotal": 0,
+          "rejectedByScope": {
+            "ip": 0,
+            "total": 0
+          },
+          "slowClientShedTotal": 0
+        }
+      },
+      {
+        "source": "api/_v1_metrics-during-0826.body",
+        "timestamp": "2026-06-07T08:26:10.462Z",
+        "ownState": {
+          "wallets": 1,
+          "subscribers": 1,
+          "resyncBroadcastTotal": 0
+        },
+        "odds": {
+          "subscribers": 1,
+          "channelOpen": true,
+          "subscribed": true,
+          "degraded": false,
+          "channelDegradedTotal": 0,
+          "hardResetTotal": 0
+        },
+        "connections": {
+          "total": 2,
+          "ips": 1,
+          "maxTotal": 200,
+          "maxPerIp": 10,
+          "rejectedTotal": 0,
+          "rejectedByScope": {
+            "ip": 0,
+            "total": 0
+          },
+          "slowClientShedTotal": 0
+        }
+      },
+      {
+        "source": "api/_v1_metrics-during-0835.body",
+        "timestamp": "2026-06-07T08:35:28.818Z",
+        "ownState": {
+          "wallets": 1,
+          "subscribers": 1,
+          "resyncBroadcastTotal": 0
+        },
+        "odds": {
+          "subscribers": 1,
+          "channelOpen": true,
+          "subscribed": true,
+          "degraded": false,
+          "channelDegradedTotal": 0,
+          "hardResetTotal": 0
+        },
+        "connections": {
+          "total": 2,
+          "ips": 1,
+          "maxTotal": 200,
+          "maxPerIp": 10,
+          "rejectedTotal": 0,
+          "rejectedByScope": {
+            "ip": 0,
+            "total": 0
+          },
+          "slowClientShedTotal": 0
+        }
+      },
+      {
+        "source": "api/_v1_metrics-during-0844.body",
+        "timestamp": "2026-06-07T08:44:46.443Z",
+        "ownState": {
+          "wallets": 1,
+          "subscribers": 1,
+          "resyncBroadcastTotal": 0
+        },
+        "odds": {
+          "subscribers": 1,
+          "channelOpen": true,
+          "subscribed": true,
+          "degraded": false,
+          "channelDegradedTotal": 0,
+          "hardResetTotal": 0
+        },
+        "connections": {
+          "total": 2,
+          "ips": 1,
+          "maxTotal": 200,
+          "maxPerIp": 10,
+          "rejectedTotal": 0,
+          "rejectedByScope": {
+            "ip": 0,
+            "total": 0
+          },
+          "slowClientShedTotal": 0
+        }
+      },
+      {
+        "source": "api/_v1_metrics-during-0908-prestop.body",
+        "timestamp": "2026-06-07T09:08:15.263Z",
+        "ownState": {
+          "wallets": 1,
+          "subscribers": 1,
+          "resyncBroadcastTotal": 0
+        },
+        "odds": {
+          "subscribers": 1,
+          "channelOpen": true,
+          "subscribed": true,
+          "degraded": false,
+          "channelDegradedTotal": 0,
+          "hardResetTotal": 0
+        },
+        "connections": {
+          "total": 2,
+          "ips": 1,
+          "maxTotal": 200,
+          "maxPerIp": 10,
+          "rejectedTotal": 0,
+          "rejectedByScope": {
+            "ip": 0,
+            "total": 0
+          },
+          "slowClientShedTotal": 0
+        }
+      },
+      {
+        "source": "api/_v1_metrics-after-stop-0910.body",
+        "timestamp": "2026-06-07T09:09:00.888Z",
+        "ownState": {
+          "wallets": 0,
+          "subscribers": 0,
+          "resyncBroadcastTotal": 0
+        },
+        "odds": {
+          "subscribers": 0,
+          "channelOpen": false,
+          "subscribed": false,
+          "degraded": false,
+          "channelDegradedTotal": 0,
+          "hardResetTotal": 0
+        },
+        "connections": {
+          "total": 0,
+          "ips": 0,
+          "maxTotal": 200,
+          "maxPerIp": 10,
+          "rejectedTotal": 0,
+          "rejectedByScope": {
+            "ip": 0,
+            "total": 0
+          },
+          "slowClientShedTotal": 0
+        }
+      },
+      {
+        "source": "final/_v1_metrics-final.body",
+        "timestamp": "2026-06-07T09:17:37.023Z",
+        "ownState": {
+          "wallets": 0,
+          "subscribers": 0,
+          "resyncBroadcastTotal": 0
+        },
+        "odds": {
+          "subscribers": 0,
+          "channelOpen": false,
+          "subscribed": false,
+          "degraded": false,
+          "channelDegradedTotal": 0,
+          "hardResetTotal": 0
+        },
+        "connections": {
+          "total": 0,
+          "ips": 0,
+          "maxTotal": 200,
+          "maxPerIp": 10,
+          "rejectedTotal": 0,
+          "rejectedByScope": {
+            "ip": 0,
+            "total": 0
+          },
+          "slowClientShedTotal": 0
+        }
+      }
+    ],
+    "maxOwnStateSubscribers": 1,
+    "finalOwnStateSubscribers": 0,
+    "finalConnectionsTotal": 0
+  },
+  "processHitsVerifiedAtWrap": 0
+}
