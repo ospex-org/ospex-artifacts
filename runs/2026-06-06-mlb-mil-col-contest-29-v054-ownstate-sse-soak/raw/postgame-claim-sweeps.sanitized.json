@@ -1,0 +1,337 @@
+{
+  "afterScoreBeforeSettleDryRunsAtUtc": "2026-06-07T06:07:00Z..2026-06-07T06:07:02Z",
+  "afterScoreBeforeSettleSummary": {
+    "ospex-flow-a": {
+      "entries": 0,
+      "totalPayoutWei6": "0"
+    },
+    "ospex-fresh-user": {
+      "entries": 0,
+      "totalPayoutWei6": "0"
+    },
+    "stage-maker-a": {
+      "bucket": "pendingSettle",
+      "entries": 1,
+      "totalPayoutUSDC": 0.2,
+      "totalPayoutWei6": "200000"
+    },
+    "stage-maker-b": {
+      "bucket": "pendingSettle",
+      "entries": 1,
+      "totalPayoutUSDC": 0.141,
+      "totalPayoutWei6": "141000"
+    }
+  },
+  "afterSettleBeforeLiveClaimDryRunsAtUtc": "2026-06-07T06:08:01Z..2026-06-07T06:08:03Z",
+  "afterSettleBeforeLiveClaimSummary": {
+    "ospex-flow-a": {
+      "entries": 0,
+      "totalPayoutWei6": "0"
+    },
+    "ospex-fresh-user": {
+      "entries": 0,
+      "totalPayoutWei6": "0"
+    },
+    "stage-maker-a": {
+      "bucket": "claimable",
+      "entries": 1,
+      "totalPayoutUSDC": 0.2,
+      "totalPayoutWei6": "200000"
+    },
+    "stage-maker-b": {
+      "bucket": "claimable",
+      "entries": 1,
+      "totalPayoutUSDC": 0.141,
+      "totalPayoutWei6": "141000"
+    }
+  },
+  "capturedAtUtc": "2026-06-07T06:14:09Z",
+  "liveClaims": {
+    "stage-maker-a": {
+      "claimedFresh": 1,
+      "ok": true,
+      "payoutUSDC": 0.2,
+      "payoutWei6": "200000",
+      "txHash": "0xa61ae88c1f5df026b5606139d515d90af715c2b62dc053f3e6041b2901d2d6e4"
+    },
+    "stage-maker-b": {
+      "claimedFresh": 1,
+      "ok": true,
+      "payoutUSDC": 0.141,
+      "payoutWei6": "141000",
+      "txHash": "0x61d306a6c6b1daa7ae94c8d163f29053f674a971eed266af1a3d50a4a5ab4d76"
+    }
+  },
+  "postLiveClaimDryRuns": {
+    "ospex-flow-a": {
+      "action": "claim-all",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.5.3",
+      "commitment": null,
+      "contest": null,
+      "effects": [],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-06-07T06:14:18.263Z",
+      "network": "polygon",
+      "nextCommands": [
+        {
+          "argv": [
+            "claim-all",
+            "--address",
+            "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+            "--json"
+          ],
+          "command": "ospex claim-all --address 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json",
+          "description": "Execute the planned claim sweep.",
+          "id": "complete-claim-all",
+          "safeToAutoRun": false,
+          "suggestedFor": "complete"
+        }
+      ],
+      "ok": true,
+      "payload": {
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "dryRun": true,
+        "entries": [],
+        "success": false,
+        "totals": {
+          "alreadyClaimed": 0,
+          "claimed": 0,
+          "claimedFresh": 0,
+          "failed": 0,
+          "recoveredAlreadyClaimed": 0,
+          "totalPayoutUSDC": 0,
+          "totalPayoutWei6": "0"
+        }
+      },
+      "payout": null,
+      "requiresSignature": true,
+      "requiresTransaction": true,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.5.3",
+      "sideSummary": null,
+      "signer": null,
+      "speculation": null,
+      "stage": "dry-run",
+      "wallet": null,
+      "walletRole": "none",
+      "warnings": []
+    },
+    "ospex-fresh-user": {
+      "action": "claim-all",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.5.3",
+      "commitment": null,
+      "contest": null,
+      "effects": [],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-06-07T06:14:19.586Z",
+      "network": "polygon",
+      "nextCommands": [
+        {
+          "argv": [
+            "claim-all",
+            "--address",
+            "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+            "--json"
+          ],
+          "command": "ospex claim-all --address 0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d --json",
+          "description": "Execute the planned claim sweep.",
+          "id": "complete-claim-all",
+          "safeToAutoRun": false,
+          "suggestedFor": "complete"
+        }
+      ],
+      "ok": true,
+      "payload": {
+        "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "dryRun": true,
+        "entries": [],
+        "success": false,
+        "totals": {
+          "alreadyClaimed": 0,
+          "claimed": 0,
+          "claimedFresh": 0,
+          "failed": 0,
+          "recoveredAlreadyClaimed": 0,
+          "totalPayoutUSDC": 0,
+          "totalPayoutWei6": "0"
+        }
+      },
+      "payout": null,
+      "requiresSignature": true,
+      "requiresTransaction": true,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.5.3",
+      "sideSummary": null,
+      "signer": null,
+      "speculation": null,
+      "stage": "dry-run",
+      "wallet": null,
+      "walletRole": "none",
+      "warnings": []
+    },
+    "stage-maker-a": {
+      "action": "claim-all",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.5.3",
+      "commitment": null,
+      "contest": null,
+      "effects": [],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-06-07T06:14:15.651Z",
+      "network": "polygon",
+      "nextCommands": [
+        {
+          "argv": [
+            "claim-all",
+            "--address",
+            "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+            "--json"
+          ],
+          "command": "ospex claim-all --address 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b --json",
+          "description": "Execute the planned claim sweep.",
+          "id": "complete-claim-all",
+          "safeToAutoRun": false,
+          "suggestedFor": "complete"
+        }
+      ],
+      "ok": true,
+      "payload": {
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "dryRun": true,
+        "entries": [],
+        "success": false,
+        "totals": {
+          "alreadyClaimed": 0,
+          "claimed": 0,
+          "claimedFresh": 0,
+          "failed": 0,
+          "recoveredAlreadyClaimed": 0,
+          "totalPayoutUSDC": 0,
+          "totalPayoutWei6": "0"
+        }
+      },
+      "payout": null,
+      "requiresSignature": true,
+      "requiresTransaction": true,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.5.3",
+      "sideSummary": null,
+      "signer": null,
+      "speculation": null,
+      "stage": "dry-run",
+      "wallet": null,
+      "walletRole": "none",
+      "warnings": []
+    },
+    "stage-maker-b": {
+      "action": "claim-all",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.5.3",
+      "commitment": null,
+      "contest": null,
+      "effects": [],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-06-07T06:14:16.918Z",
+      "network": "polygon",
+      "nextCommands": [
+        {
+          "argv": [
+            "claim-all",
+            "--address",
+            "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+            "--json"
+          ],
+          "command": "ospex claim-all --address 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482 --json",
+          "description": "Execute the planned claim sweep.",
+          "id": "complete-claim-all",
+          "safeToAutoRun": false,
+          "suggestedFor": "complete"
+        }
+      ],
+      "ok": true,
+      "payload": {
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "dryRun": true,
+        "entries": [],
+        "success": false,
+        "totals": {
+          "alreadyClaimed": 0,
+          "claimed": 0,
+          "claimedFresh": 0,
+          "failed": 0,
+          "recoveredAlreadyClaimed": 0,
+          "totalPayoutUSDC": 0,
+          "totalPayoutWei6": "0"
+        }
+      },
+      "payout": null,
+      "requiresSignature": true,
+      "requiresTransaction": true,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.5.3",
+      "sideSummary": null,
+      "signer": null,
+      "speculation": null,
+      "stage": "dry-run",
+      "wallet": null,
+      "walletRole": "none",
+      "warnings": []
+    }
+  },
+  "postLiveClaimDryRunsAtUtc": "2026-06-07T06:14:09Z",
+  "postLiveClaimSummary": {
+    "ospex-flow-a": {
+      "entries": 0,
+      "totalPayoutUSDC": 0,
+      "totalPayoutWei6": "0"
+    },
+    "ospex-fresh-user": {
+      "entries": 0,
+      "totalPayoutUSDC": 0,
+      "totalPayoutWei6": "0"
+    },
+    "stage-maker-a": {
+      "entries": 0,
+      "totalPayoutUSDC": 0,
+      "totalPayoutWei6": "0"
+    },
+    "stage-maker-b": {
+      "entries": 0,
+      "totalPayoutUSDC": 0,
+      "totalPayoutWei6": "0"
+    }
+  },
+  "preScoreDryRunsAtUtc": "2026-06-07T06:06:04Z..2026-06-07T06:06:06Z",
+  "preScoreSummary": {
+    "ospex-flow-a": {
+      "entries": 0,
+      "totalPayoutWei6": "0"
+    },
+    "ospex-fresh-user": {
+      "entries": 0,
+      "totalPayoutWei6": "0"
+    },
+    "stage-maker-a": {
+      "entries": 0,
+      "totalPayoutWei6": "0"
+    },
+    "stage-maker-b": {
+      "entries": 0,
+      "totalPayoutWei6": "0"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "capturedAtUtc": "2026-06-07T06:14:09Z",
+  "claimSweepPostEntries": {
+    "ospex-flow-a": 0,
+    "ospex-fresh-user": 0,
+    "stage-maker-a": 0,
+    "stage-maker-b": 0
+  },
+  "metrics": {
+    "oddsSubscribers": null,
+    "ownState": {
+      "resyncBroadcastTotal": 0,
+      "subscribers": 0,
+      "wallets": 0
+    },
+    "status": 200,
+    "streamSubscribers": null,
+    "timestamp": "2026-06-07T06:14:20.698Z"
+  },
+  "mmProcesses": {
+    "matchesRedacted": [],
+    "matchingProcessCount": 0
+  },
+  "positionsStatusTotals": {
+    "ospex-flow-a": {
+      "activeCount": 0,
+      "claimableCount": 0,
+      "estimatedPayoutUSDC": 0,
+      "estimatedPayoutWei6": "0",
+      "pendingSettleCount": 0,
+      "pendingSettlePayoutUSDC": 0,
+      "pendingSettlePayoutWei6": "0"
+    },
+    "ospex-fresh-user": {
+      "activeCount": 0,
+      "claimableCount": 0,
+      "estimatedPayoutUSDC": 0,
+      "estimatedPayoutWei6": "0",
+      "pendingSettleCount": 0,
+      "pendingSettlePayoutUSDC": 0,
+      "pendingSettlePayoutWei6": "0"
+    },
+    "stage-maker-a": {
+      "activeCount": 0,
+      "claimableCount": 0,
+      "estimatedPayoutUSDC": 0,
+      "estimatedPayoutWei6": "0",
+      "pendingSettleCount": 0,
+      "pendingSettlePayoutUSDC": 0,
+      "pendingSettlePayoutWei6": "0"
+    },
+    "stage-maker-b": {
+      "activeCount": 0,
+      "claimableCount": 0,
+      "estimatedPayoutUSDC": 0,
+      "estimatedPayoutWei6": "0",
+      "pendingSettleCount": 0,
+      "pendingSettlePayoutUSDC": 0,
+      "pendingSettlePayoutWei6": "0"
+    }
+  },
+  "postgresCounts": {
+    "claimedWinningUpperPositions": 2,
+    "positions": 4,
+    "visibleLiveOpenOrPartialCommitmentsForContest29": 0,
+    "visibleOpenOrPartialCommitmentsForContest29IgnoringExpiry": 0
+  },
+  "publicVisibleOpenCommitments": {
+    "contest29Count": 0,
+    "contestShowOrderbookRows": 0,
+    "speculation19Count": 0
+  }
+}

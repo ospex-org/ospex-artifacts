@@ -1,0 +1,50 @@
+{
+  "capturedAtLocal": "2026-06-07T01:14:09-05:00",
+  "capturedAtUtc": "2026-06-07T06:14:09Z",
+  "consensus": {
+    "away": "Milwaukee Brewers",
+    "awayScore": 7,
+    "home": "Colorado Rockies",
+    "homeScore": 1,
+    "status": "Final"
+  },
+  "sources": [
+    {
+      "away": {
+        "name": "Milwaukee Brewers",
+        "score": 7
+      },
+      "currentInning": 9,
+      "gamePk": 824351,
+      "home": {
+        "name": "Colorado Rockies",
+        "score": 1
+      },
+      "inningState": "Bottom",
+      "scheduled": "2026-06-07T01:10:00Z",
+      "source": "MLB Stats API feed/live",
+      "status": {
+        "abstractGameState": "Final",
+        "codedGameState": "F",
+        "detailedState": "Final",
+        "statusCode": "F"
+      },
+      "url": "https://statsapi.mlb.com/api/v1.1/game/824351/feed/live"
+    },
+    {
+      "containsFinal": true,
+      "containsScore7to1": true,
+      "derivedFinalScore": {
+        "away": "Milwaukee Brewers",
+        "awayScore": 7,
+        "home": "Colorado Rockies",
+        "homeScore": 1
+      },
+      "description": "Game summary of the Milwaukee Brewers vs. Colorado Rockies MLB game, final score 7-1, from June 6, 2026 on ESPN.",
+      "source": "ESPN game summary page",
+      "status": "fetched",
+      "title": null,
+      "url": "https://www.espn.com/mlb/game/_/gameId/401815654"
+    }
+  ]
+}

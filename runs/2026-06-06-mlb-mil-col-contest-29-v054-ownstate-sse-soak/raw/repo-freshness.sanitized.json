@@ -1,0 +1,763 @@
+{
+  "releaseFacts": {
+    "directCliInstallVersion": "0.5.4",
+    "downloadSha256": {
+      "ospex-cli-0.5.4.tgz": "1395874cd85408e0c4e351c4537dd991fd6398987428fafcc00f795dd6085e87",
+      "ospex-sdk-0.5.4.tgz": "07a50f55ac2c626348ad13ef13e84efe7258c40cd79940505372d80370919108"
+    },
+    "expectedSdkTagCommit": "7622600bf3a940b892db2560e6cceb997e976a01",
+    "githubRelease": {
+      "assets": [
+        {
+          "name": "ospex-cli-0.5.4.tgz",
+          "size": 707399,
+          "state": "uploaded",
+          "url": "https://github.com/ospex-org/ospex-sdk/releases/download/v0.5.4/ospex-cli-0.5.4.tgz"
+        },
+        {
+          "name": "ospex-sdk-0.5.4.tgz",
+          "size": 448632,
+          "state": "uploaded",
+          "url": "https://github.com/ospex-org/ospex-sdk/releases/download/v0.5.4/ospex-sdk-0.5.4.tgz"
+        }
+      ],
+      "isDraft": false,
+      "isPrerelease": false,
+      "publishedAt": "2026-06-06T22:13:49Z",
+      "tagName": "v0.5.4"
+    },
+    "intendedSdkCliRelease": "v0.5.4",
+    "marketMakerLockHas054": true,
+    "marketMakerSdkPin": "https://github.com/ospex-org/ospex-sdk/releases/download/v0.5.4/ospex-sdk-0.5.4.tgz",
+    "sdkTagCommit": "7622600bf3a940b892db2560e6cceb997e976a01",
+    "sdkTagMatchesExpected": true,
+    "sdkTagObject": "4171066dd4fb69fa9cb64562799d318eb0ffeec7"
+  },
+  "repoFreshness": {
+    "ospex-artifacts": {
+      "branch": "(detached)",
+      "head": "df105d69ec2b61dca9c9a2b1d207eb04eedc75f4",
+      "originMain": "df105d69ec2b61dca9c9a2b1d207eb04eedc75f4",
+      "recentCommitsSince2026-05-29T02:31:08Z": [
+        {
+          "committedAt": "2026-05-28T21:33:13-05:00",
+          "sha": "df105d69ec2b61dca9c9a2b1d207eb04eedc75f4",
+          "subject": "docs: add TOR-BAL v0.4.8 MM lifecycle artifact (#13)"
+        }
+      ],
+      "statusShort": ""
+    },
+    "ospex-core-api": {
+      "branch": "(detached)",
+      "head": "2b6c78ae56632ae050f982289ee7222b683637c5",
+      "originMain": "2b6c78ae56632ae050f982289ee7222b683637c5",
+      "recentCommitsSince2026-05-29T02:31:08Z": [
+        {
+          "committedAt": "2026-06-06T08:11:46-05:00",
+          "sha": "2b6c78ae56632ae050f982289ee7222b683637c5",
+          "subject": "Merge pull request #38 from ospex-org/feature/m1-ownstate-load-harness"
+        },
+        {
+          "committedAt": "2026-06-06T07:54:35-05:00",
+          "sha": "1707bcc85b3a7b8800ab39f51db9bd5736675eed",
+          "subject": "fix(bench): make the M1 resume gate load-bearing \u2014 measure catch-up deltas, not the snapshot (review)"
+        },
+        {
+          "committedAt": "2026-06-06T06:57:13-05:00",
+          "sha": "98afbeb92a9319db1b4d2415dae027298677cfeb",
+          "subject": "feat(bench): M1 own-state SSE load harness \u2014 cap correctness + graceful-SIGTERM slice"
+        },
+        {
+          "committedAt": "2026-06-05T22:36:28-05:00",
+          "sha": "a370ae64cb9eaa5abea7431012a30764bf534fa1",
+          "subject": "Merge pull request #37 from ospex-org/fix/hidden-row-redaction-runtime-mask"
+        },
+        {
+          "committedAt": "2026-06-05T22:12:46-05:00",
+          "sha": "11ff7f1ed90048161c4a3afc34a91cfa3fc29e23",
+          "subject": "fix(commitments): make hidden-row redaction allow-list runtime-load-bearing + route orderbook embeds through it (F2+F4)"
+        },
+        {
+          "committedAt": "2026-06-05T12:59:28-05:00",
+          "sha": "527f4e0544ff9088292c6b83a5c85013c47aee52",
+          "subject": "Merge pull request #36 from ospex-org/chore/metrics-ownstate-hub"
+        },
+        {
+          "committedAt": "2026-06-05T12:34:13-05:00",
+          "sha": "b1d651cd46ad358e03e8a2aff09ba2dc15edf412",
+          "subject": "feat(metrics): surface own-state hub stats on GET /v1/metrics"
+        },
+        {
+          "committedAt": "2026-06-01T15:57:52-05:00",
+          "sha": "5bb87f6cdda75b36cb9671902cce05f31d0084e9",
+          "subject": "Merge pull request #35 from ospex-org/fix/own-state-health-indexer-cursor"
+        },
+        {
+          "committedAt": "2026-06-01T15:42:16-05:00",
+          "sha": "74b17e56244d104b6f407853cd90cf37db501c0e",
+          "subject": "fix(ownState/health): source indexer lag from indexer_cursor.updated_at, not the empty sync_state"
+        },
+        {
+          "committedAt": "2026-06-01T13:32:58-05:00",
+          "sha": "bd1c03f558df83060167f69b6e5e3685a1004420",
+          "subject": "Merge pull request #34 from ospex-org/feature/phase3-pr0b-ownstate-enrichment"
+        },
+        {
+          "committedAt": "2026-06-01T12:05:48-05:00",
+          "sha": "06b54424f4f9b845b07a1c9e0c4cbdda84e4786a",
+          "subject": "feat(ownState): enrich owner-state bodies \u2014 sport/teams/speculationId/signedPayload + wei6 (Phase 3 PR0b \u00a73.1/\u00a73.2)"
+        },
+        {
+          "committedAt": "2026-06-01T11:43:29-05:00",
+          "sha": "5cb5dc48dbf68deed9e3075efef9840429b45259",
+          "subject": "Merge pull request #33 from ospex-org/feature/phase3-pr0b-indexer-lag-health"
+        },
+        {
+          "committedAt": "2026-06-01T11:23:10-05:00",
+          "sha": "6cdb6a0bcadb6d660fa0f17ee561a588649cdb99",
+          "subject": "feat(ownState): public GET /v1/health/own-state indexer-lag probe (Phase 3 PR0b A4)"
+        },
+        {
+          "committedAt": "2026-05-29T14:30:31-05:00",
+          "sha": "2eba3623eca3b49913b8e267dcc86a5fb05a4ed9",
+          "subject": "Merge pull request #32 from ospex-org/feature/m4b-own-state-stream"
+        },
+        {
+          "committedAt": "2026-05-29T14:14:11-05:00",
+          "sha": "9ea11bc52fc865936e76ce6bac2cd456f84cd883",
+          "subject": "fix(ownState): M4b review-32 round 6 \u2014 snapshot p mint micros-safe + degraded docs"
+        },
+        {
+          "committedAt": "2026-05-29T13:45:27-05:00",
+          "sha": "d5c0798a2ead98aaf9c80dd3244573dfc379d000",
+          "subject": "fix(ownState): M4b review-32 round 5 \u2014 sorted emissions + microsecond cursor + contract docs"
+        },
+        {
+          "committedAt": "2026-05-29T13:03:28-05:00",
+          "sha": "8bc81df332d515b10f346d2e45308f790e369e53",
+          "subject": "fix(ownState): M4b review-32 round 4 \u2014 keyset+overlap + payload dedup + EOF"
+        },
+        {
+          "committedAt": "2026-05-29T12:28:15-05:00",
+          "sha": "2943ae8e16d62ce3b6f4197148eb323f51df3ae0",
+          "subject": "fix(ownState): M4b review-32 round 3 \u2014 same-read seeding + offline terminals + unified cursor"
+        },
+        {
+          "committedAt": "2026-05-29T11:50:43-05:00",
+          "sha": "92d358b3c241200a48ea7eb877f60a6d6ce1d343",
+          "subject": "fix(ownState): M4b review-32 round 2 \u2014 convergence, race, cap"
+        },
+        {
+          "committedAt": "2026-05-29T11:07:33-05:00",
+          "sha": "17d35d1beb36b3599a90c0dc020eb4af21ab7d55",
+          "subject": "fix(ownState): M4b review-32 \u2014 convergence + ready gates + zero-risk + cleanup"
+        },
+        {
+          "committedAt": "2026-05-29T10:01:34-05:00",
+          "sha": "ddbdf8407057558ca4ba32baa3d0ca9a9862fa6a",
+          "subject": "feat(ownState): M4b \u2014 owner-auth composite SSE stream (/v1/stream/own-state)"
+        },
+        {
+          "committedAt": "2026-05-29T02:17:15-05:00",
+          "sha": "b55a60e6d1a507c05b135007dab9627dce83db84",
+          "subject": "Merge pull request #31 from ospex-org/feature/m4a-own-state-snapshot"
+        },
+        {
+          "committedAt": "2026-05-29T01:57:11-05:00",
+          "sha": "4991b3cca38118550f10eb024b91e263409c1328",
+          "subject": "docs(ownState): M4a review-31 round 4 \u2014 explicit passive-expiry contract"
+        },
+        {
+          "committedAt": "2026-05-29T01:32:32-05:00",
+          "sha": "0ca9e0525b00bc067d2524ade2dd8e64b137f9c6",
+          "subject": "fix(ownState): M4a review-31 round 3 \u2014 cursor wire contract self-compat"
+        },
+        {
+          "committedAt": "2026-05-29T01:00:17-05:00",
+          "sha": "74daa05c24ce4e717e6761c6792a101ecd23e7cd",
+          "subject": "fix(ownState): M4a review-31 round 2 \u2014 explicit two-phase recovery model"
+        },
+        {
+          "committedAt": "2026-05-29T00:21:07-05:00",
+          "sha": "1fbcaa3f7d0e9b864860b521643f21702c97e8e5",
+          "subject": "fix(ownState): M4a review-31 round 1 \u2014 cursor state machine + overlap"
+        },
+        {
+          "committedAt": "2026-05-28T23:04:48-05:00",
+          "sha": "740496d07edb064b5e40f30ea2f01ebdcfce6a52",
+          "subject": "feat(ownState): M4a snapshot \u2014 owner-auth GET /v1/own-state/snapshot"
+        },
+        {
+          "committedAt": "2026-05-28T22:46:24-05:00",
+          "sha": "42673a3c840f55c790aec2cb7df4fce94ca4eb19",
+          "subject": "Merge pull request #30 from ospex-org/feature/m3-stream-auth"
+        },
+        {
+          "committedAt": "2026-05-28T22:29:56-05:00",
+          "sha": "ffa8094e485d45500b2ff9d82bb3c73f506d4f5e",
+          "subject": "fix(auth): M3 review-30 round 2 \u2014 bind challenge timestamps + canonical token"
+        },
+        {
+          "committedAt": "2026-05-28T22:04:35-05:00",
+          "sha": "c88fe2d505aee89e5b55cc57037d97aa80f77a42",
+          "subject": "fix(auth): M3 review-30 \u2014 safe-integer guards, unified 503, TTL caps"
+        },
+        {
+          "committedAt": "2026-05-28T21:38:30-05:00",
+          "sha": "40fce466e1200580beea3030ebff4062f5682ce9",
+          "subject": "feat(auth): M3 stream-auth foundations \u2014 challenge + token + middleware"
+        }
+      ],
+      "statusShort": ""
+    },
+    "ospex-indexer": {
+      "branch": "(detached)",
+      "head": "6cfbdda3dd144a2d8c1230c3f2153ccdf2f07ee6",
+      "originMain": "6cfbdda3dd144a2d8c1230c3f2153ccdf2f07ee6",
+      "recentCommitsSince2026-05-29T02:31:08Z": [
+        {
+          "committedAt": "2026-06-04T02:34:04-05:00",
+          "sha": "6cfbdda3dd144a2d8c1230c3f2153ccdf2f07ee6",
+          "subject": "chore(schema): refresh live.sql via yarn dump-schema (migrations 047-053) (#42)"
+        }
+      ],
+      "statusShort": ""
+    },
+    "ospex-market-maker": {
+      "branch": "(detached)",
+      "head": "350e6f62cc8e3b4f3e337674c4e198cb20c2c3f1",
+      "originMain": "350e6f62cc8e3b4f3e337674c4e198cb20c2c3f1",
+      "recentCommitsSince2026-05-29T02:31:08Z": [
+        {
+          "committedAt": "2026-06-06T17:25:02-05:00",
+          "sha": "350e6f62cc8e3b4f3e337674c4e198cb20c2c3f1",
+          "subject": "Merge pull request #85 from ospex-org/chore/pin-sdk-v0.5.4"
+        },
+        {
+          "committedAt": "2026-06-06T17:17:17-05:00",
+          "sha": "fa770e80abae30d4e3a56937230e471ab71e44e5",
+          "subject": "chore(deps): pin @ospex/sdk v0.5.4"
+        },
+        {
+          "committedAt": "2026-06-05T23:59:11-05:00",
+          "sha": "fe682df7203c18e0e371270f44831b497ceefbb6",
+          "subject": "fix(telemetry): point TelemetryKind at its source array + relax bare-sig redaction regex (F7+F9)"
+        },
+        {
+          "committedAt": "2026-06-05T21:05:59-05:00",
+          "sha": "e33b592a46d4b86a61a335dd7e654d127f3d1c37",
+          "subject": "docs(test): align the fills-history validator comment with the no-boot-seed contract (Hermes #83 r2)"
+        },
+        {
+          "committedAt": "2026-06-05T21:05:59-05:00",
+          "sha": "9d4d42a503001c2ea31c8fe73d8a7a3ca21e1af5",
+          "subject": "docs: realign fill-dedup contract docs with the boot-seed removal (Hermes #83)"
+        },
+        {
+          "committedAt": "2026-06-05T21:05:59-05:00",
+          "sha": "5b200b03da9a16e7eab08d0d48dc3ca28ec54b0d",
+          "subject": "refactor(runner): remove the dead-in-practice fill-dedup boot-seed (F5)"
+        },
+        {
+          "committedAt": "2026-06-05T21:05:59-05:00",
+          "sha": "74bcf9c229180759ad58a7dff507d63b4d96fe7e",
+          "subject": "test(runner): cover the fill-dedup boot-seed reconstruction (F5)"
+        },
+        {
+          "committedAt": "2026-06-05T18:43:33-05:00",
+          "sha": "a71ce32492ad77672d47a6391544181ebb3c4674",
+          "subject": "fix(runner): self-heal the ownStateMappingDegraded latch (F1)"
+        },
+        {
+          "committedAt": "2026-06-05T13:32:21-05:00",
+          "sha": "2beb0fd6dbdbb36068a177dc44781adaba85e77a",
+          "subject": "docs(example): de-shadow the divergenceToleranceMs comment (Hermes #81)"
+        },
+        {
+          "committedAt": "2026-06-05T13:32:21-05:00",
+          "sha": "e24143296b6db246a09921cad0e20fc8e13cd302",
+          "subject": "docs: correct stale Phase-2 \"shadow-only\" framing post-PR3b cutover"
+        },
+        {
+          "committedAt": "2026-06-03T12:38:51-05:00",
+          "sha": "e0bde0f4a9c1e238774b4a9b9c7291e07a7abb51",
+          "subject": "docs(agents): complete the on-chain-cancel producer lists (Hermes #80 r1)"
+        },
+        {
+          "committedAt": "2026-06-03T12:38:51-05:00",
+          "sha": "365c8f3a38cf73022abdd50a8f0a4e9d911f57eb",
+          "subject": "feat(runner): \u00a75.1 own-state-health active cancel-sweep (Phase 3 PR3b-ii)"
+        },
+        {
+          "committedAt": "2026-06-03T10:08:12-05:00",
+          "sha": "8ad3679f56fc0af0d4a463e251b197145ee0a0a1",
+          "subject": "fix(runner): close the per-hash audit getCommitment gap (Hermes #79 round 2)"
+        },
+        {
+          "committedAt": "2026-06-03T10:08:12-05:00",
+          "sha": "7e557618c67af7139a5b19bf862effc2a5e808b1",
+          "subject": "fix(runner): address Hermes #79 review \u2014 fail-closed on mapping failure + don't clear divergence on a failed audit + telemetry docs"
+        },
+        {
+          "committedAt": "2026-06-03T10:08:12-05:00",
+          "sha": "6a15604052aebb7762bbca9424b3f831cc74448f",
+          "subject": "fix(runner): adversarial-review fixes for the PR3b-i source flip \u2014 Phase 3 PR3b-i [review]"
+        },
+        {
+          "committedAt": "2026-06-03T10:08:12-05:00",
+          "sha": "748b08ad1054288d882ac9bb7faf0825cb54958f",
+          "subject": "wip(test): migrate own-state tests to the PR3b-i source flip \u2014 Phase 3 PR3b-i [tests]"
+        },
+        {
+          "committedAt": "2026-06-03T10:08:12-05:00",
+          "sha": "82d703cad3fae60f5a2b239896ec87c5207742e1",
+          "subject": "wip(runner): own-state SSE source flip \u2014 SSE writes canonical MakerState \u2014 Phase 3 PR3b-i [source]"
+        },
+        {
+          "committedAt": "2026-06-03T01:22:03-05:00",
+          "sha": "3fd57e708d646a09f371d9beeb686d98ea9982e5",
+          "subject": "refactor(runner): promote the onReady cursor, drop pendingBaselineCursor staging \u2014 Phase 3 PR3b-0"
+        },
+        {
+          "committedAt": "2026-06-02T22:56:54-05:00",
+          "sha": "1f4c44207bdc15d62436a1b71df865683bfedffc",
+          "subject": "fix(shadow-comparator): normalize terminal canonical status for shadow comparison (Hermes #77 blocker)"
+        },
+        {
+          "committedAt": "2026-06-02T22:56:54-05:00",
+          "sha": "3f121e286ce7c1fd2c86ee1fa00d64b4e64a0e09",
+          "subject": "feat(reducers): canonical own-state mappers + MakerPositionStatus A7 extension \u2014 Phase 3 PR3a"
+        },
+        {
+          "committedAt": "2026-06-02T20:01:50-05:00",
+          "sha": "c3e215fffec1e0eeb8e38d5f563458a6e2b9830d",
+          "subject": "feat(runner): wire \u00a75 own-state health latch 5 (auditDivergenceUnresolved) \u2014 Phase 3 PR2c-ii"
+        },
+        {
+          "committedAt": "2026-06-02T18:54:54-05:00",
+          "sha": "2bed56f34938e21052a1ce5b5dd7877985aeb6f0",
+          "subject": "feat(runner): wire \u00a75 own-state health latch 6 (indexerLagDegraded) \u2014 Phase 3 PR2c-i"
+        },
+        {
+          "committedAt": "2026-06-02T17:57:38-05:00",
+          "sha": "9dc6db85a2d36d06d0a927fbce0fb0bba26104af",
+          "subject": "feat(runner): wire \u00a75 own-state health latches 2 (transportFresh) + 7 (tokenRefresh) \u2014 Phase 3 PR2b"
+        },
+        {
+          "committedAt": "2026-06-02T09:36:55-05:00",
+          "sha": "0c8c8fa4794e01e4842c696dc668d8ff92397c85",
+          "subject": "feat(runner): wire SDK beforePost to enforce \u00a75.1 at the POST boundary; pin @ospex/sdk v0.5.3 (Hermes #73 r3)"
+        },
+        {
+          "committedAt": "2026-06-02T09:36:55-05:00",
+          "sha": "975b5c69e986c39cbd664b23749dd9998a80f37b",
+          "subject": "fix(runner): enforce \u00a75.1 own-state gate at the submit effect site \u2014 close mid-reconcile race (Hermes #73 r2)"
+        },
+        {
+          "committedAt": "2026-06-02T09:36:55-05:00",
+          "sha": "e1b550f21dda8b3fae081170733ee40ab361e5d5",
+          "subject": "fix(runner): close same-tick own-state overflow/posting race + telemetry docs (Hermes #73)"
+        },
+        {
+          "committedAt": "2026-06-02T09:36:55-05:00",
+          "sha": "ae98956422692913ce498ed66ab34573a30d1816",
+          "subject": "feat(runner): composite own-state health gate + \u00a75.1 posting gate (PR2a)"
+        },
+        {
+          "committedAt": "2026-06-02T09:36:55-05:00",
+          "sha": "eb8a25f0f2cf8a131a2e6fe8afbfdc557c12bf0f",
+          "subject": "feat(config): add \u00a75.2 own-state health-gate knobs (PR2a)"
+        },
+        {
+          "committedAt": "2026-06-01T20:44:04-05:00",
+          "sha": "26ac9fccf90ca10d1f5cb4b453c419ada7b90651",
+          "subject": "refactor(runner): adversarial-review fixes for PR1 cursor persistence"
+        },
+        {
+          "committedAt": "2026-06-01T20:44:04-05:00",
+          "sha": "020ccc8c408d96b4ed2fe3185fa47a3cf2e012ce",
+          "subject": "feat(runner): boot resume wiring + empty-baseline guard (PR1)"
+        },
+        {
+          "committedAt": "2026-06-01T20:44:04-05:00",
+          "sha": "784c4be66615a451e651d253e02dfe4a1951c563",
+          "subject": "feat(runner): thread own-state cursor + \u00a74.3 promotion contract (PR1)"
+        },
+        {
+          "committedAt": "2026-06-01T20:44:04-05:00",
+          "sha": "d8503af6dc9b43fee539c81d046d6d3fbaa34706",
+          "subject": "feat(state): add ownStateCursor to MakerState (PR1 schema slice)"
+        },
+        {
+          "committedAt": "2026-06-01T18:55:39-05:00",
+          "sha": "94052132c541f1a3dc058f3260a46339609de881",
+          "subject": "docs: drop stale v0.2.1 SDK-pin references"
+        },
+        {
+          "committedAt": "2026-06-01T18:55:39-05:00",
+          "sha": "c7d2ef991860ecb78af6c373f164f20f127a6b23",
+          "subject": "chore: bump @ospex/sdk pin to v0.5.2"
+        },
+        {
+          "committedAt": "2026-05-31T18:59:41-05:00",
+          "sha": "8052f9f8eb2b1f6cc60b732bb7ee03d30d81dc61",
+          "subject": "fix(comparator): exempt shadow-only terminal commitments \u2014 symmetric to canonical-only exemption (Hermes #70 round 2)"
+        },
+        {
+          "committedAt": "2026-05-31T18:59:41-05:00",
+          "sha": "bb220ffaa0358a77fb6885e4ee9f3c2c87515353",
+          "subject": "feat(runner): shadow-vs-canonical comparator + divergence telemetry (Phase 2 PR5)"
+        },
+        {
+          "committedAt": "2026-05-31T18:08:15-05:00",
+          "sha": "fc52e668642f2dfeb3cd5e94b00440c782ecb7c1",
+          "subject": "fix(runner): clear ownStateQueue on resync \u2014 prevents pre-resync delta double-count (Hermes #69 review)"
+        },
+        {
+          "committedAt": "2026-05-31T18:08:15-05:00",
+          "sha": "89aa2ebf963ee6e5147f6f4da71662110fd1088d",
+          "subject": "feat(reducers): implement owner-side bodies + drainShadow dispatch + dedup-set boot (Phase 2 PR4b)"
+        },
+        {
+          "committedAt": "2026-05-31T16:51:58-05:00",
+          "sha": "40acbbeeb6163e744e54ff6cbfc4847a1c61eed4",
+          "subject": "fix(runner): close 4 health/lifecycle holes in PR4a (Hermes #68 review)"
+        },
+        {
+          "committedAt": "2026-05-31T16:51:58-05:00",
+          "sha": "864cd9dc2ade051c3d33af88e94d86f71aed18d4",
+          "subject": "feat(runner): own-state SSE subscription wiring + baseline projection + lifecycle invariant (Phase 2 PR4a)"
+        },
+        {
+          "committedAt": "2026-05-31T14:31:04-05:00",
+          "sha": "385a01716da4e3cc3a5722ff38ff171a457e24da",
+          "subject": "fix(runner): clear pending wake after debounce-drain + bound poll-deadline overshoot (Hermes PR #67 review)"
+        },
+        {
+          "committedAt": "2026-05-31T14:31:04-05:00",
+          "sha": "1f6f425d67ef60348f56f3737c542e646ead556d",
+          "subject": "feat(runner): wakeable loop + ownStateQueue infrastructure (Phase 2 PR3)"
+        },
+        {
+          "committedAt": "2026-05-31T13:01:24-05:00",
+          "sha": "85fb2ccc2361f75856632c7fc16ded1f5c41386f",
+          "subject": "refactor(reducers): extract source-aware poll reducers with typed shadow boundary (Phase 2 PR2)"
+        },
+        {
+          "committedAt": "2026-05-31T12:10:00-05:00",
+          "sha": "972c66ad310b63ce2e280895b717ec1a402ace49",
+          "subject": "feat(state): persist fills[] history on MakerCommitmentRecord (Phase 2 PR1)"
+        },
+        {
+          "committedAt": "2026-05-31T03:12:12-05:00",
+          "sha": "0cca56dc9bfb0825a998d105727438d81d12f7d6",
+          "subject": "docs(agents+security): bring AGENTS.md state schema to M6/A reality (Hermes #64 round 2)"
+        },
+        {
+          "committedAt": "2026-05-31T03:12:12-05:00",
+          "sha": "f14e8ba755dd1ca275f5825a708fb91ba3f953ac",
+          "subject": "fix(state+telemetry): fail-closed file mode + string-value redaction (Hermes #64 round 1)"
+        },
+        {
+          "committedAt": "2026-05-31T03:12:12-05:00",
+          "sha": "a5089d151702fc2238d320ca3de8a67f9301a104",
+          "subject": "feat(state+telemetry): M6/B sensitive-state hardening"
+        },
+        {
+          "committedAt": "2026-05-31T01:19:00-05:00",
+          "sha": "7722a1dea576125b61764bad2cb1871ad21ee5ef",
+          "subject": "fix(cancel): pre-populate touched-set with ALL pre-pass candidates upfront (Hermes #63 round 2)"
+        },
+        {
+          "committedAt": "2026-05-31T01:19:00-05:00",
+          "sha": "20d012474e95a81d188ca937ebafc8ce45d9725e",
+          "subject": "fix(cancel): on-chain { hash } pre-pass for missing-legacy + visibleOpen records (Hermes #63)"
+        },
+        {
+          "committedAt": "2026-05-31T01:19:00-05:00",
+          "sha": "0ba17a0eeb6ed9a68cf879c22e381fb8759d5be5",
+          "subject": "feat(state+runner): persist SDK signedPayload + route on-chain cancel via signed-payload dispatch (M6/A)"
+        },
+        {
+          "committedAt": "2026-05-30T21:24:36-05:00",
+          "sha": "865068daff2869643903e20918c88a70f8313cf1",
+          "subject": "chore(deps): realign @ospex/sdk pin to v0.5.1"
+        },
+        {
+          "committedAt": "2026-05-30T00:22:09-05:00",
+          "sha": "47f1128bfc3f8546b7da03ede135a6ff35aa2e43",
+          "subject": "chore(deps): realign @ospex/sdk pin to v0.5.0 + migrate adapter for 2 BREAKING changes"
+        }
+      ],
+      "statusShort": "?? scripts/ownstate-smoke.mjs"
+    },
+    "ospex-sdk": {
+      "branch": "(detached)",
+      "head": "7622600bf3a940b892db2560e6cceb997e976a01",
+      "originMain": "7622600bf3a940b892db2560e6cceb997e976a01",
+      "recentCommitsSince2026-05-29T02:31:08Z": [
+        {
+          "committedAt": "2026-06-06T17:11:50-05:00",
+          "sha": "7622600bf3a940b892db2560e6cceb997e976a01",
+          "subject": "Merge pull request #135 from ospex-org/release/v0.5.4"
+        },
+        {
+          "committedAt": "2026-06-06T17:07:18-05:00",
+          "sha": "79ff53d9b1f909296be6534480916b7054a09658",
+          "subject": "chore(release): v0.5.4 \u2014 own-state uint256 schema + stream-auth token validation hardening"
+        },
+        {
+          "committedAt": "2026-06-05T23:52:24-05:00",
+          "sha": "0a72e0466ed55214a36ff50d6c561cde16de1ca5",
+          "subject": "Merge pull request #134 from ospex-org/fix/ownstate-uint256-schema-and-stream-token-guard"
+        },
+        {
+          "committedAt": "2026-06-05T23:15:40-05:00",
+          "sha": "989f3161fc16cf14e1f90d6054dd4328f7e1492c",
+          "subject": "fix(ownState): validate own-state uint256 fields + stream-auth token response (F6+F8)"
+        },
+        {
+          "committedAt": "2026-06-05T20:13:52-05:00",
+          "sha": "89deb0b805c52836b9fb6a9db0f60b7245784ecf",
+          "subject": "Merge pull request #133 from ospex-org/test/f3-lifecycle-assertions"
+        },
+        {
+          "committedAt": "2026-06-05T19:26:07-05:00",
+          "sha": "1ff658d7cc6f59b7818dab95bf48403c9cce0f3c",
+          "subject": "test(ownState): make the post-unsubscribe lifecycle test actually assert (F3)"
+        },
+        {
+          "committedAt": "2026-06-04T02:19:00-05:00",
+          "sha": "3e324894e35e80abd650f08b8d2b908807067c96",
+          "subject": "Merge pull request #132 from ospex-org/docs/content-accuracy-pass"
+        },
+        {
+          "committedAt": "2026-06-04T01:10:28-05:00",
+          "sha": "b3d19446fa67f1f1ab537f1aa676300c15f048fc",
+          "subject": "docs: promote own-state SSE engineering lessons into CLAUDE.md + CONTRIBUTING.md"
+        },
+        {
+          "committedAt": "2026-06-02T01:24:40-05:00",
+          "sha": "47be83f24dd64c9c9913ebe82dc497d7daed83b3",
+          "subject": "Merge pull request #131 from ospex-org/release/v0.5.3"
+        },
+        {
+          "committedAt": "2026-06-02T01:21:59-05:00",
+          "sha": "63e8071a4930fb615a65909a3b4e81709e50fcc4",
+          "subject": "chore(release): v0.5.3 \u2014 submitRaw beforePost fail-closed precondition"
+        },
+        {
+          "committedAt": "2026-06-02T01:16:59-05:00",
+          "sha": "bb808e04fb737f7783bba129694f325edb01c747",
+          "subject": "Merge pull request #130 from ospex-org/feature/submit-beforepost-hook"
+        },
+        {
+          "committedAt": "2026-06-02T01:06:58-05:00",
+          "sha": "6ccc2b84c69e473d847bc8657a898aafc8717469",
+          "subject": "fix(commitments): swallow misused-async beforePost rejection \u2014 no unhandledRejection (Hermes #130 r2)"
+        },
+        {
+          "committedAt": "2026-06-02T00:37:53-05:00",
+          "sha": "c9f7bfaaab286860ff3ba28c3af9ab51b2b7c36c",
+          "subject": "fix(commitments): enforce beforePost synchronous contract fail-closed (Hermes #130)"
+        },
+        {
+          "committedAt": "2026-06-02T00:12:39-05:00",
+          "sha": "88e944aa84e5312e116137868408fda47481af72",
+          "subject": "feat(commitments): add synchronous beforePost precondition to submitRaw"
+        },
+        {
+          "committedAt": "2026-06-01T16:54:42-05:00",
+          "sha": "dee35ee34beecdd1d372d8f12fba655632f4812c",
+          "subject": "Merge pull request #129 from ospex-org/chore/v0.5.2-release-date"
+        },
+        {
+          "committedAt": "2026-06-01T16:51:01-05:00",
+          "sha": "8ca12c614fed3943b2cb21e94a0952f6a15c9165",
+          "subject": "chore(release): set v0.5.2 release date 2026-06-01 + drop prep comment"
+        },
+        {
+          "committedAt": "2026-06-01T16:46:47-05:00",
+          "sha": "5e5365d842fc160099d1d9d2ef798e0c67c1644d",
+          "subject": "Merge pull request #128 from ospex-org/docs/ownstate-onready-meta-jsdoc"
+        },
+        {
+          "committedAt": "2026-06-01T16:46:28-05:00",
+          "sha": "1afe4e87fc87661cd2d20c0040c17a51ea4f73ac",
+          "subject": "Merge pull request #127 from ospex-org/release/v0.5.2"
+        },
+        {
+          "committedAt": "2026-06-01T16:32:35-05:00",
+          "sha": "899e241631397bd1ccdc8e694663adf59871eeb3",
+          "subject": "docs(ownState): fix onReady \"second argument\" imprecision in the handler JSDoc"
+        },
+        {
+          "committedAt": "2026-06-01T16:31:25-05:00",
+          "sha": "9a21b28e8fb88f97a57e7773e9bd383b6d251831",
+          "subject": "docs(changelog): correct the onReady handler-meta wording (Hermes #127 review)"
+        },
+        {
+          "committedAt": "2026-06-01T16:09:48-05:00",
+          "sha": "d19ef0f0e97222a8bb169735aaf7fec9b8149876",
+          "subject": "docs(changelog): refresh the v0.5.2 prep note \u2014 core-api PR0b is deployed (v38)"
+        },
+        {
+          "committedAt": "2026-06-01T15:24:56-05:00",
+          "sha": "362eb19e7191f05d5f513f954fc10bc81236d8f0",
+          "subject": "chore(release): v0.5.2 \u2014 own-state cursor surface + dispatch model (PR0a-v2) + body enrichment + health() (PR0b)"
+        },
+        {
+          "committedAt": "2026-06-01T15:07:49-05:00",
+          "sha": "04ef85e955b78fe158a9a481f419a4b467ac5517",
+          "subject": "Merge pull request #126 from ospex-org/feature/phase3-pr0b-sdk-enrichment"
+        },
+        {
+          "committedAt": "2026-06-01T13:52:22-05:00",
+          "sha": "270724224c38b560b2a16f9ea5cc464914e7f043",
+          "subject": "feat(ownState): consume PR0b enrichment + add client.ownState.health() (v0.5.2)"
+        },
+        {
+          "committedAt": "2026-06-01T10:56:12-05:00",
+          "sha": "d4e7fb16cca6abed62c111689e92d258e33fe267",
+          "subject": "Merge pull request #125 from ospex-org/feature/phase3-pr0a-v2-zod"
+        },
+        {
+          "committedAt": "2026-06-01T10:22:20-05:00",
+          "sha": "630cb2c47bb19b3727f30e5c66150f1069208203",
+          "subject": "feat(ownState): Phase 3 PR0a-v2 \u2014 cursor meta + onFrame + error.phase on a zod validation layer"
+        },
+        {
+          "committedAt": "2026-05-30T20:26:59-05:00",
+          "sha": "13f2cf28559c50e5cec75faf6e2de33e853960a5",
+          "subject": "Merge pull request #123 from ospex-org/release/v0.5.1"
+        },
+        {
+          "committedAt": "2026-05-30T19:56:18-05:00",
+          "sha": "531765873c873de64fc5614f6bc0b448a798e7dd",
+          "subject": "chore(release): v0.5.1 \u2014 surface canonical SignedCommitmentPayload on SubmitResult (M6 prereq)"
+        },
+        {
+          "committedAt": "2026-05-30T19:47:30-05:00",
+          "sha": "68619772ebe37e2cacc0d3c113c3aecd598f6fe3",
+          "subject": "Merge pull request #122 from ospex-org/feature/submit-result-signed-payload"
+        },
+        {
+          "committedAt": "2026-05-30T19:22:30-05:00",
+          "sha": "a8d4f3edc993c69b503bd3bfd1179fe919f7b717",
+          "subject": "fix(docs+cli): align v2 envelope contract \u2014 result is {hash, commitment}, not the wider SubmitResult (Hermes round 2)"
+        },
+        {
+          "committedAt": "2026-05-30T18:50:28-05:00",
+          "sha": "c5d4320d753538e948e1afbf7ff7efe75e92a6f6",
+          "subject": "fix(types): lock SubmitJsonResult.result to v0.5.0 SubmitResult subset (Hermes round 1)"
+        },
+        {
+          "committedAt": "2026-05-30T17:44:37-05:00",
+          "sha": "7e2e5203d6da20a5c76f749b96b8b880af92df0b",
+          "subject": "feat(commitments): surface canonical SignedCommitmentPayload on SubmitResult"
+        },
+        {
+          "committedAt": "2026-05-29T23:21:51-05:00",
+          "sha": "67e8ccbe0a5a68f08fe702aa0af066bb412f9157",
+          "subject": "Merge pull request #121 from ospex-org/release/v0.5.0"
+        },
+        {
+          "committedAt": "2026-05-29T23:13:15-05:00",
+          "sha": "840c1292f91c55f05bd39759b7d2951197e7e03d",
+          "subject": "docs(changelog): roll [Unreleased] compare to v0.5.0 + add [0.5.0] release tag link (Hermes round 1)"
+        },
+        {
+          "committedAt": "2026-05-29T22:58:53-05:00",
+          "sha": "6d52fffe7d628071c3d5927de4ea3c89d5ede412",
+          "subject": "chore(release): v0.5.0 \u2014 owner-auth own-state + commitment type split + signed-cancel primitive (M5)"
+        },
+        {
+          "committedAt": "2026-05-29T22:48:52-05:00",
+          "sha": "ca696890bb1d1cd67eb03a729c1aa7662a849875",
+          "subject": "Merge pull request #120 from ospex-org/feature/m5-ownstate-subscribe"
+        },
+        {
+          "committedAt": "2026-05-29T22:25:20-05:00",
+          "sha": "9e4857d21c617f9d27a0bbfee8280d309ff42ade",
+          "subject": "fix(ownState/subscribe): truncated-paging cursor leak + REST paging error containment + persistent-failure degraded (Hermes round 1)"
+        },
+        {
+          "committedAt": "2026-05-29T21:51:12-05:00",
+          "sha": "3f66fe7a74a34263ce4501865c43095cb7835c55",
+          "subject": "feat(ownState): client.ownState.subscribe \u2014 composite owner-auth SSE (M5/PR3c)"
+        },
+        {
+          "committedAt": "2026-05-29T21:36:18-05:00",
+          "sha": "6dd5968f15e6be020b5bcb9d6cac454b572174cd",
+          "subject": "Merge pull request #119 from ospex-org/feature/m5-ownstate-snapshot"
+        },
+        {
+          "committedAt": "2026-05-29T21:14:37-05:00",
+          "sha": "77ae58fff806ddd41a24f96443eafeaa1fc2e992",
+          "subject": "docs(ownState): fix snapshot one-page semantics in public PublicHiddenCommitment JSDoc + sweep stragglers (Hermes round 2)"
+        },
+        {
+          "committedAt": "2026-05-29T20:52:21-05:00",
+          "sha": "6c0c26f3df74771959fab52dc5645cb32b820802",
+          "subject": "fix(ownState): root-export public types, throw on getCommitment scan-cap, paging docs (Hermes round 1)"
+        },
+        {
+          "committedAt": "2026-05-29T20:16:53-05:00",
+          "sha": "6eed652ecf880382234f91e0d9a160bab710804c",
+          "subject": "feat(ownState): client.ownState.{snapshot, getCommitment} (M5/PR3b)"
+        },
+        {
+          "committedAt": "2026-05-29T19:59:52-05:00",
+          "sha": "b35ff7bdc6de062590fea3f82e0159cfe3a08aed",
+          "subject": "Merge pull request #118 from ospex-org/feature/m5-ownstate-auth"
+        },
+        {
+          "committedAt": "2026-05-29T19:38:46-05:00",
+          "sha": "e5d611269f75b8dbc2f58ddfe8eaf97adfa9b386",
+          "subject": "feat(ownState): EIP-712 stream-auth + mintStreamToken primitive (M5/PR3a)"
+        },
+        {
+          "committedAt": "2026-05-29T18:42:28-05:00",
+          "sha": "4d3e8176e82a3c5e8590fbbc06325e5be37479c4",
+          "subject": "Merge pull request #117 from ospex-org/feature/m5-cancel-onchain-signed"
+        },
+        {
+          "committedAt": "2026-05-29T18:23:02-05:00",
+          "sha": "fad036a6abccd588fc7ca380fb0abd47f1274bb8",
+          "subject": "fix(tests/integration): wire onchain-cancel integration suite to {hash} overload (Hermes round 1)"
+        },
+        {
+          "committedAt": "2026-05-29T17:51:58-05:00",
+          "sha": "8808927f3086d11e7da49d72ad7f4dc9aabb5555",
+          "subject": "feat(commitments): cancelOnchainSigned canonical primitive + cancelOnchain overload (M5/PR2)"
+        },
+        {
+          "committedAt": "2026-05-29T17:39:20-05:00",
+          "sha": "c8e5c9d0f6033ab76ef05bcfb7991c3e17242edf",
+          "subject": "Merge pull request #116 from ospex-org/feature/m5-type-split"
+        },
+        {
+          "committedAt": "2026-05-29T17:06:20-05:00",
+          "sha": "1726856441067c6b2b8d7b5d4ee6ee0b6226f338",
+          "subject": "docs(commitments): purge stale 'sensible default newMinNonce' references (Hermes round 4)"
+        },
+        {
+          "committedAt": "2026-05-29T16:35:25-05:00",
+          "sha": "b54ecc86b674af02521e3c3aa6a38b3030ae281c",
+          "subject": "fix(commitments): cancelAllOnSpeculation requires explicit newMinNonce (Hermes round 3)"
+        },
+        {
+          "committedAt": "2026-05-29T16:05:03-05:00",
+          "sha": "d550c7ed8fde52ecce2570f9ad198cc543ba86a2",
+          "subject": "fix(commitments): honor type-split contracts at every gate (Hermes round 2)"
+        },
+        {
+          "committedAt": "2026-05-29T15:20:27-05:00",
+          "sha": "949099cda5eb394570373120a5f5470a922dc87a",
+          "subject": "feat(commitments): split public Commitment into visible/hidden discriminated union (M5/PR1)"
+        }
+      ],
+      "statusShort": ""
+    }
+  }
+}

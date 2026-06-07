@@ -1,0 +1,25 @@
+{
+  "commitmentHash": "0xb681946368c63d500be73a1b093f303299871b79a4ba4fb3f2d26ac330ab2b26",
+  "contestId": "29",
+  "creationFee": "0.500000 USDC total, split 0.250000 maker / 0.250000 taker",
+  "makerTreasuryApprovalTx": "0x1de96a6e470d48aafe655cb4a8f4e53ce4cb136c45f8233002bded3242e18e7a",
+  "matchTx": "0x92eaa54eaba733f426570f3ba91eb8c163a2bdab832d1378bd3fb2d37cc007fe",
+  "purpose": "Seed an open moneyline speculation after contest creation, per explicit approval.",
+  "result": "Speculation 19 became available immediately after the controlled seed match.",
+  "seedMaker": {
+    "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "odds": "2.00 decimal / +100",
+    "riskUSDC": "0.100000",
+    "role": "stage-maker-a",
+    "side": "Milwaukee Brewers"
+  },
+  "seedTaker": {
+    "address": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+    "odds": "2.00 decimal / +100",
+    "riskUSDC": "0.100000",
+    "role": "ospex-fresh-user",
+    "side": "Colorado Rockies"
+  },
+  "speculationId": "19",
+  "speculationType": "moneyline"
+}

@@ -1,0 +1,92 @@
+
+apiUrl: "https://api.ospex.org"
+chainId: 137
+
+marketSelection:
+  sports: ["mlb"]
+  markets: ["moneyline"]
+  maxStartsWithinHours: 3
+  maxTrackedContests: 1
+  requireReferenceOdds: true
+  requireOpenSpeculation: true
+  contestAllowList: ["29"]
+  contestDenyList: []
+
+discovery:
+  everyNTicks: 1
+  jitterPct: 0
+
+odds:
+  subscribe: true
+  maxRealtimeChannels: 1
+
+ownState:
+  subscribe: true
+  debounceMs: 500
+  divergenceToleranceMs: 5000
+  auditPollIntervalMs: 10000
+  indexerLagMaxSeconds: 30
+  staleMaxMs: 60000
+  recoveryHoldMs: 0
+
+pricing:
+  mode: direct
+  direct:
+    spreadBps: 300
+  quoteBothSides: true
+  minEdgeBps: 0
+  maxPerQuotePctOfCapital: 0.25
+
+risk:
+  bankrollUSDC: "0.40"
+  maxBankrollUtilizationPct: 0.75
+  maxRiskPerCommitmentUSDC: "0.10"
+  maxRiskPerContestUSDC: "0.20"
+  maxRiskPerTeamUSDC: "0.20"
+  maxRiskPerSportUSDC: "0.20"
+  maxOpenCommitments: 4
+  maxDailyFeeUSDC: "0"
+
+gas:
+  maxDailyGasPOL: "0.20"
+  emergencyReservePOL: "2.0"
+  reportInUSDC: true
+  nativeTokenUSDCPrice: "0.25"
+
+approvals:
+  autoApprove: false
+  mode: exact
+
+orders:
+  expiryMode: fixed-seconds
+  expirySeconds: 120
+  expiryReleaseGraceSeconds: 60
+  staleAfterSeconds: 90
+  staleReferenceAfterSeconds: 300
+  replaceOnOddsMoveBps: 50
+  cancelMode: offchain
+
+fundingGuard:
+  enabled: true
+  checkIntervalMs: 10000
+  underfundedCancelMode: offchain
+  failClosedOnReadError: true
+
+settlement:
+  autoSettleOwn: false
+  autoClaimOwn: false
+  continueOnGasBudgetExhausted: true
+
+telemetry:
+  logDir: '<run-dir>/telemetry'
+  logLevel: info
+
+state:
+  dir: '<run-dir>/state'
+
+killSwitchFile: '<run-dir>/KILL'
+killCancelOnChain: false
+pollIntervalMs: 30000
+
+mode:
+  dryRun: false

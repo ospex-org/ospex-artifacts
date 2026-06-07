@@ -1,0 +1,91 @@
+{
+  "blockingReason": "No verified/open MLB contest and no open MLB speculation existed in the production API for the same-evening candidates. Games had hasOdds/canCreateContest but contestId=null, so the prompt-required target preconditions were not met.",
+  "contestsMlb168hCount": 0,
+  "contestsMlb24hCount": 0,
+  "generatedAtUtc": "2026-06-06T23:14:56.428168Z",
+  "openMlbSpeculationsCount": 0,
+  "sameEveningGames10h": [
+    {
+      "awayTeam": {
+        "abbreviation": "CLE",
+        "name": "Cleveland Guardians"
+      },
+      "canCreateContest": true,
+      "contestId": null,
+      "gameId": "bd4c55db-c2c0-4044-bf92-e5a0656285ac",
+      "hasOdds": true,
+      "homeTeam": {
+        "abbreviation": "TEX",
+        "name": "Texas Rangers"
+      },
+      "matchTime": "2026-06-06T23:35:00+00:00",
+      "status": "upcoming"
+    },
+    {
+      "awayTeam": {
+        "abbreviation": "BOS",
+        "name": "Boston Red Sox"
+      },
+      "canCreateContest": true,
+      "contestId": null,
+      "gameId": "5c88ffd3-c86a-4716-926d-a9783ff9e460",
+      "hasOdds": true,
+      "homeTeam": {
+        "abbreviation": "NYY",
+        "name": "New York Yankees"
+      },
+      "matchTime": "2026-06-06T23:35:00+00:00",
+      "status": "upcoming"
+    },
+    {
+      "awayTeam": {
+        "abbreviation": "MIL",
+        "name": "Milwaukee Brewers"
+      },
+      "canCreateContest": true,
+      "contestId": null,
+      "gameId": "9ae11f36-cb9a-4811-a1c3-e80e76bdd724",
+      "hasOdds": true,
+      "homeTeam": {
+        "abbreviation": "COL",
+        "name": "Colorado Rockies"
+      },
+      "matchTime": "2026-06-07T01:10:00+00:00",
+      "status": "upcoming"
+    },
+    {
+      "awayTeam": {
+        "abbreviation": "NYM",
+        "name": "New York Mets"
+      },
+      "canCreateContest": true,
+      "contestId": null,
+      "gameId": "e7a96f1a-280b-47b2-9ccb-77548010966d",
+      "hasOdds": true,
+      "homeTeam": {
+        "abbreviation": "SD",
+        "name": "San Diego Padres"
+      },
+      "matchTime": "2026-06-07T02:10:00+00:00",
+      "status": "upcoming"
+    },
+    {
+      "awayTeam": {
+        "abbreviation": "LAA",
+        "name": "Los Angeles Angels"
+      },
+      "canCreateContest": true,
+      "contestId": null,
+      "gameId": "b1747eb1-5a63-49f5-b6d7-ec51c94e15f1",
+      "hasOdds": true,
+      "homeTeam": {
+        "abbreviation": "LAD",
+        "name": "Los Angeles Dodgers"
+      },
+      "matchTime": "2026-06-07T02:10:00+00:00",
+      "status": "upcoming"
+    }
+  ],
+  "selectedTarget": null,
+  "selectionRule": "same-evening MLB, preferably next 1-6h; require verified/open contest + open moneyline speculation + reference odds; do not create contest/speculation without explicit approval"
+}

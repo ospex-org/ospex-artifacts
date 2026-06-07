@@ -1,0 +1,79 @@
+{
+  "selectedCreator": "stage-maker-a",
+  "selectionReason": "Best ready balance/allowance profile: healthy POL/LINK/USDC, existing LINK OracleModule allowance, only Treasury USDC needed bounded remediation.",
+  "wallets": [
+    {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "doctorExit": 1,
+      "link": "0.195",
+      "linkOracleAllowance": "0.195",
+      "pol": "10.699651",
+      "readyCreateContestsByAddressCheck": {
+        "ok": false,
+        "reasons": [
+          "no keystore configured",
+          "TreasuryModule USDC not approved"
+        ]
+      },
+      "usdc": "1.64641",
+      "usdcPositionAllowance": "11.8392",
+      "usdcTreasuryAllowance": "0",
+      "wallet": "stage-maker-a"
+    },
+    {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "doctorExit": 1,
+      "link": "0.225",
+      "linkOracleAllowance": "0.225",
+      "pol": "13.514239",
+      "readyCreateContestsByAddressCheck": {
+        "ok": false,
+        "reasons": [
+          "no keystore configured",
+          "TreasuryModule USDC not approved"
+        ]
+      },
+      "usdc": "0.3923",
+      "usdcPositionAllowance": "3.9753",
+      "usdcTreasuryAllowance": "0",
+      "wallet": "stage-maker-b"
+    },
+    {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "doctorExit": 1,
+      "link": "0.3",
+      "linkOracleAllowance": "0",
+      "pol": "20.470325",
+      "readyCreateContestsByAddressCheck": {
+        "ok": false,
+        "reasons": [
+          "no keystore configured",
+          "TreasuryModule USDC not approved",
+          "OracleModule LINK not approved"
+        ]
+      },
+      "usdc": "8.382526",
+      "usdcPositionAllowance": "0.644569",
+      "usdcTreasuryAllowance": "0",
+      "wallet": "ospex-flow-a"
+    },
+    {
+      "address": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+      "doctorExit": 1,
+      "link": "0.28",
+      "linkOracleAllowance": "0",
+      "pol": "21.559633",
+      "readyCreateContestsByAddressCheck": {
+        "ok": false,
+        "reasons": [
+          "no keystore configured",
+          "OracleModule LINK not approved"
+        ]
+      },
+      "usdc": "7.779964",
+      "usdcPositionAllowance": "1.9694",
+      "usdcTreasuryAllowance": "0.25",
+      "wallet": "ospex-fresh-user"
+    }
+  ]
+}

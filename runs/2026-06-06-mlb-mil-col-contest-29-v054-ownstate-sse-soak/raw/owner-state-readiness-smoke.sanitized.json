@@ -1,0 +1,71 @@
+{
+  "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+  "health": {
+    "indexerLagSeconds": 6,
+    "lagSource": "indexer_cursor",
+    "lastIndexedAt": "2026-06-06T23:08:36.935Z"
+  },
+  "metrics": {
+    "after": {
+      "oddsSubscribers": 0,
+      "ownState": {
+        "resyncBroadcastTotal": 0,
+        "subscribers": 0,
+        "wallets": 0
+      },
+      "status": 200,
+      "streamSubscribers": 0,
+      "timestamp": "2026-06-06T23:09:10.053Z"
+    },
+    "before": {
+      "oddsSubscribers": 0,
+      "ownState": {
+        "resyncBroadcastTotal": 0,
+        "subscribers": 0,
+        "wallets": 0
+      },
+      "status": 200,
+      "streamSubscribers": 0,
+      "timestamp": "2026-06-06T23:08:42.793Z"
+    },
+    "during": {
+      "oddsSubscribers": 0,
+      "ownState": {
+        "resyncBroadcastTotal": 0,
+        "subscribers": 1,
+        "wallets": 1
+      },
+      "status": 200,
+      "streamSubscribers": 0,
+      "timestamp": "2026-06-06T23:08:55.858Z"
+    }
+  },
+  "role": "stage-maker-a",
+  "sdkVersion": "0.5.4",
+  "signerAddress": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+  "snapshot": {
+    "commitments": 0,
+    "hiddenCommitments": 0,
+    "liveCommitments": 0,
+    "positionStatuses": {},
+    "positions": 0,
+    "positionsTruncated": false,
+    "signedPayloadPresent": 0,
+    "statuses": {},
+    "truncated": false,
+    "visibleCommitments": 0
+  },
+  "sse": {
+    "commitments": 0,
+    "errors": [],
+    "fills": 0,
+    "frames": 4,
+    "heartbeats": 2,
+    "positionStatus": 0,
+    "ready": 1,
+    "snapshots": 1,
+    "status": [
+      "connected"
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "classification": "proven",
+    "evidence": "market-maker/sdk/core-api/indexer local gates were recorded PASS before live work.",
+    "scenario": "Fresh current checkout/build/test"
+  },
+  {
+    "classification": "proven",
+    "evidence": "bench:check and bench:ownstate were recorded PASS.",
+    "scenario": "core-api M1 local own-state load harness"
+  },
+  {
+    "classification": "proven",
+    "evidence": "MM live ownState.subscribe:true connected to owner-auth SSE; subscriber count rose to 1.",
+    "scenario": "stream-auth token mint"
+  },
+  {
+    "classification": "read_only_proven",
+    "evidence": "Earlier owner snapshot smoke passed; restart baseline loaded without blank-state undercount.",
+    "scenario": "owner snapshot"
+  },
+  {
+    "classification": "proven",
+    "evidence": "ownState subscriber count 1 during run; fill arrived via own-state-stream; restart stream health hold cleared.",
+    "scenario": "owner SSE ready/heartbeat/frame path"
+  },
+  {
+    "classification": "proven",
+    "evidence": "MM config ownState.subscribe:true; fill event source=own-state-stream; audit/poll produced no divergence events.",
+    "scenario": "MM canonical SSE writer enabled"
+  },
+  {
+    "classification": "proven",
+    "evidence": "Stage-maker-b live MM posted three commitments total under contest allowlist 29.",
+    "scenario": "controlled live quote"
+  },
+  {
+    "classification": "proven",
+    "evidence": "ospex-flow-a full-filled one live MM quote; telemetry recorded exactly one fill event source=own-state-stream.",
+    "scenario": "controlled fill observed via own-state SSE"
+  },
+  {
+    "classification": "proven_with_caveats",
+    "evidence": "Restart loaded same state, emitted stream-cold-restart/resume health hold, refused blank-slate repost due no headroom; no duplicate fill events. Caveat: state retained an expired soft-cancelled row until next run cleanup.",
+    "scenario": "fill dedup/restart safety"
+  },
+  {
+    "classification": "proven",
+    "evidence": "No divergence events in telemetry summary.",
+    "scenario": "audit-vs-canonical divergence"
+  },
+  {
+    "classification": "proven",
+    "evidence": "Natural restart stream-health-hold entered with exposure and then cleared before quoting; health gate halted posting.",
+    "scenario": "own-state health/indexer lag gate"
+  },
+  {
+    "classification": "proven_with_caveats",
+    "evidence": "During restart, the hold/no-headroom prevented posting while stream baseline was cold; no post occurred before hold cleared. Caveat: no manufactured degraded API outage.",
+    "scenario": "beforePost fail-closed posting gate"
+  },
+  {
+    "classification": "proven",
+    "evidence": "MM state persisted signedPayload internally; artifact safety scan excludes signedPayload/signature material.",
+    "scenario": "signedPayload persisted but not leaked"
+  },
+  {
+    "classification": "proven",
+    "evidence": "Final public visible/open commitment query returned 0 while local soft-cancelled/expired lifecycle rows remained internal only.",
+    "scenario": "hidden-row/public redaction safety"
+  },
+  {
+    "classification": "deferred",
+    "evidence": "Run used off-chain cancel mode because explicit on-chain cancel approval was not requested/obtained for the MM; no authoritative cancel tx.",
+    "scenario": "routine on-chain cancel / authoritative invalidation"
+  },
+  {
+    "classification": "deferred",
+    "evidence": "Run used orders.cancelMode: offchain; no on-chain active cancel-sweep occurred. Natural stream-health hold was observed on restart, but sweep behavior was not exercised.",
+    "scenario": "active stream-health cancel-sweep"
+  },
+  {
+    "classification": "proven",
+    "evidence": "No MM process; ownState/odds subscribers 0; public visible open/partial commitments 0; soft-cancelled local row expired on-chain.",
+    "scenario": "final zero public exposure"
+  },
+  {
+    "classification": "proven_with_caveats",
+    "evidence": "Postgame continuation: MLB Stats API and ESPN agreed MIL 7, COL 1 final; contest 29 scored, speculation 19 settled/closed with win_side=away, both upper/away winner claims confirmed, final claim sweeps empty. Overall artifact remains AMBER because original soak was short/full-fill/offchain-cancel-only.",
+    "scenario": "postgame score/settle/claim"
+  }
+]

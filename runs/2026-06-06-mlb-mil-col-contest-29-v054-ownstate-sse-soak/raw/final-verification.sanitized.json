@@ -1,0 +1,39 @@
+{
+  "cliVersion": "0.5.4",
+  "exposure": {
+    "ospex-flow-a": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "errors": [],
+      "ok": true,
+      "openVisibleCommitments": 0
+    },
+    "stage-maker-a": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "errors": [],
+      "ok": true,
+      "openVisibleCommitments": 0
+    },
+    "stage-maker-b": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "errors": [],
+      "ok": true,
+      "openVisibleCommitments": 0
+    }
+  },
+  "liveWritesExecuted": false,
+  "marketMakerProcessHitLinesRedacted": [],
+  "marketMakerProcessHits": 0,
+  "metrics": {
+    "ownStateSubscribers": 0,
+    "rawOwnState": {
+      "resyncBroadcastTotal": 0,
+      "subscribers": 0,
+      "wallets": 0
+    }
+  },
+  "riskUsed": {
+    "POL": "0",
+    "USDC": "0"
+  },
+  "verifiedAtUtc": "2026-06-06T23:18:39.352824Z"
+}

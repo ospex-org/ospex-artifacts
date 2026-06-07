@@ -1,0 +1,200 @@
+{
+  "approvalScope": {
+    "feeUsdcAllowanceTarget": "1.0",
+    "reason": "Contest creation required 1.0 USDC Treasury allowance; initial 0.25 approval was insufficient and no contest tx was sent before remediation.",
+    "wallet": "stage-maker-a"
+  },
+  "contestCreate": {
+    "contestCreatedAt": "2026-06-06T23:43:51+00:00",
+    "contestId": "29",
+    "errors": [],
+    "ok": true,
+    "requestId": "0x0dedd7405ca2424ebe2ed7459a66d59baa5e3d616fcc884976441de407d0e05a",
+    "status": "verified",
+    "verifiedAt": "2026-06-06T23:44:03+00:00",
+    "warnings": []
+  },
+  "contestShow": {
+    "awayScore": null,
+    "awayTeam": "Milwaukee Brewers",
+    "awayTeamId": "86f0944a-c6b4-4732-b9e6-d0c5bd494b07",
+    "contestCreatedAt": "2026-06-06T23:43:51+00:00",
+    "contestCreator": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "contestId": "29",
+    "homeScore": null,
+    "homeTeam": "Colorado Rockies",
+    "homeTeamId": "c0dca6b9-def1-468f-bbd7-23db3840d3ac",
+    "jsonoddsId": "9ae11f36-cb9a-4811-a1c3-e80e76bdd724",
+    "leagueId": "mlb",
+    "marketUpdateSourceHash": "0x7f5ce70565133fedb2e0f1aeb925f38a3b26924917cff852e7de40a9297119b4",
+    "matchTime": "2026-06-07T01:10:00+00:00",
+    "rundownId": "d73bf0e64edf1baf90e761a334f9f8b4",
+    "scoreContestSourceHash": "0xcb2a11db3190c322239b52afb3caefccfccd850566834819b012c5520f8d31cd",
+    "scoredAt": null,
+    "speculations": [],
+    "sport": "mlb",
+    "sportId": 0,
+    "sportspageId": "336961",
+    "status": "verified",
+    "verifiedAt": "2026-06-06T23:44:03+00:00",
+    "verifySourceHash": "0xec6a7e9cdffa09fdcaa611220e2c99ba0ec58cc082812a01b5d321ccc1e5ebcf",
+    "voidedAt": null
+  },
+  "createdAtUtc": "2026-06-06T23:46:35.849960Z",
+  "creatorWallet": {
+    "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "role": "stage-maker-a"
+  },
+  "nextGate": "Open moneyline speculation still absent; live MM/controlled fill remains paused pending explicit approval to seed/create a moneyline speculation or another approved path.",
+  "openSpeculationsAfterCreate": {
+    "count": 0,
+    "rows": []
+  },
+  "referenceOdds": {
+    "moneyline": {
+      "awayOddsAmerican": -300,
+      "changedAt": "2026-06-06T23:39:58.197+00:00",
+      "homeOddsAmerican": 249,
+      "market": "moneyline",
+      "pollCapturedAt": "2026-06-06T23:43:57.877+00:00",
+      "upstreamLastUpdated": "2026-06-06T23:37:05+00:00"
+    },
+    "spread": {
+      "awayLine": -1.5,
+      "awayOddsAmerican": -195,
+      "changedAt": "2026-06-06T23:19:57.378+00:00",
+      "homeLine": 1.5,
+      "homeOddsAmerican": 165,
+      "market": "spread",
+      "pollCapturedAt": "2026-06-06T23:43:57.947+00:00",
+      "upstreamLastUpdated": "2026-06-06T23:37:05+00:00"
+    },
+    "total": {
+      "changedAt": "2026-06-06T22:54:56.219+00:00",
+      "line": 10.5,
+      "market": "total",
+      "overOddsAmerican": -122,
+      "pollCapturedAt": "2026-06-06T23:43:58.008+00:00",
+      "underOddsAmerican": 102,
+      "upstreamLastUpdated": "2026-06-06T23:37:05+00:00"
+    }
+  },
+  "target": {
+    "away": "Milwaukee Brewers",
+    "gameId": "9ae11f36-cb9a-4811-a1c3-e80e76bdd724",
+    "home": "Colorado Rockies",
+    "matchTime": "2026-06-07T01:10:00+00:00",
+    "slug": "mil-col-2026-06-07-0110",
+    "sport": "mlb"
+  },
+  "txReceipts": [
+    {
+      "blockNumber": "0x53fa17c",
+      "effectiveGasPriceWei": 282429225946,
+      "from": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "gasCostPOL": 0.01874115614609872,
+      "gasUsed": 66357,
+      "label": "approval_fee_0_25",
+      "status": "0x1",
+      "to": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+      "txHash": "0xb13ddc93e1ef24778c3335d0dbb669b5ae3330af50aa0bb23149194e81d89f4d"
+    },
+    {
+      "blockNumber": "0x53fa1de",
+      "effectiveGasPriceWei": 274460088008,
+      "from": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "gasCostPOL": 0.013288534081083336,
+      "gasUsed": 48417,
+      "label": "approval_fee_1_0",
+      "status": "0x1",
+      "to": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+      "txHash": "0x45295768b48df7984b6838be28e321c03f19ac88a55f1f6867126d053609f0c6"
+    },
+    {
+      "blockNumber": "0x53fa1e9",
+      "effectiveGasPriceWei": 277473072352,
+      "from": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "gasCostPOL": 0.3832988048894016,
+      "gasUsed": 1381391,
+      "label": "contest_create",
+      "status": "0x1",
+      "to": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+      "txHash": "0x51d1647723f2d31b63edb35e0d583265659fc548b60e71265d6f202dd55453ef"
+    }
+  ],
+  "walletBalancesAllowancesPostCreate": [
+    {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "doctorExit": 1,
+      "link": "0.195",
+      "linkOracleAllowance": "0.195",
+      "pol": "10.699651",
+      "readyCreateContestsByAddressCheck": {
+        "ok": false,
+        "reasons": [
+          "no keystore configured",
+          "TreasuryModule USDC not approved"
+        ]
+      },
+      "usdc": "1.64641",
+      "usdcPositionAllowance": "11.8392",
+      "usdcTreasuryAllowance": "0",
+      "wallet": "stage-maker-a"
+    },
+    {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "doctorExit": 1,
+      "link": "0.225",
+      "linkOracleAllowance": "0.225",
+      "pol": "13.514239",
+      "readyCreateContestsByAddressCheck": {
+        "ok": false,
+        "reasons": [
+          "no keystore configured",
+          "TreasuryModule USDC not approved"
+        ]
+      },
+      "usdc": "0.3923",
+      "usdcPositionAllowance": "3.9753",
+      "usdcTreasuryAllowance": "0",
+      "wallet": "stage-maker-b"
+    },
+    {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "doctorExit": 1,
+      "link": "0.3",
+      "linkOracleAllowance": "0",
+      "pol": "20.470325",
+      "readyCreateContestsByAddressCheck": {
+        "ok": false,
+        "reasons": [
+          "no keystore configured",
+          "TreasuryModule USDC not approved",
+          "OracleModule LINK not approved"
+        ]
+      },
+      "usdc": "8.382526",
+      "usdcPositionAllowance": "0.644569",
+      "usdcTreasuryAllowance": "0",
+      "wallet": "ospex-flow-a"
+    },
+    {
+      "address": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+      "doctorExit": 1,
+      "link": "0.28",
+      "linkOracleAllowance": "0",
+      "pol": "21.559633",
+      "readyCreateContestsByAddressCheck": {
+        "ok": false,
+        "reasons": [
+          "no keystore configured",
+          "OracleModule LINK not approved"
+        ]
+      },
+      "usdc": "7.779964",
+      "usdcPositionAllowance": "1.9694",
+      "usdcTreasuryAllowance": "0.25",
+      "wallet": "ospex-fresh-user"
+    }
+  ]
+}

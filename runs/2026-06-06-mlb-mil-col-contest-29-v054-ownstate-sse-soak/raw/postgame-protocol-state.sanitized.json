@@ -1,0 +1,235 @@
+{
+  "capturedAtUtc": "2026-06-07T06:14:09Z",
+  "postPostgameSnapshot": {
+    "commitments": [
+      {
+        "book_visible": true,
+        "commitment_hash": "0xb681946368c63d500be73a1b093f303299871b79a4ba4fb3f2d26ac330ab2b26",
+        "expiry": "2026-06-07T01:10:00+00:00",
+        "filled_risk_amount": 100000,
+        "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "nonce_invalidated": false,
+        "odds_tick": 200,
+        "position_type": "upper",
+        "risk_amount": 100000,
+        "row_updated_at": "2026-06-06T23:49:13.410536+00:00",
+        "status": "filled"
+      },
+      {
+        "book_visible": false,
+        "commitment_hash": "0xe15ab0f1033f2deac178cf68d7bee68cf77b66afa73f7eb3974ad18239df1f26",
+        "expiry": "2026-06-06T23:53:25+00:00",
+        "filled_risk_amount": 0,
+        "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "nonce_invalidated": false,
+        "odds_tick": 386,
+        "position_type": "lower",
+        "risk_amount": 100000,
+        "row_updated_at": "2026-06-06T23:52:32.960888+00:00",
+        "status": "open"
+      },
+      {
+        "book_visible": true,
+        "commitment_hash": "0xae048c69aabda42666288aabdef7e7908fcf733457c07c43446983f70d73638c",
+        "expiry": "2026-06-06T23:53:25+00:00",
+        "filled_risk_amount": 100000,
+        "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "nonce_invalidated": false,
+        "odds_tick": 141,
+        "position_type": "upper",
+        "risk_amount": 100000,
+        "row_updated_at": "2026-06-06T23:52:15.425668+00:00",
+        "status": "filled"
+      },
+      {
+        "book_visible": false,
+        "commitment_hash": "0x90897d3bfaf07815d180170fb744a374f091ba123f8e7de732f9cf7eb6a93de5",
+        "expiry": "2026-06-06T23:54:22+00:00",
+        "filled_risk_amount": 0,
+        "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "nonce_invalidated": false,
+        "odds_tick": 141,
+        "position_type": "upper",
+        "risk_amount": 100000,
+        "row_updated_at": "2026-06-06T23:52:33.124677+00:00",
+        "status": "open"
+      }
+    ],
+    "contest": {
+      "away_score": 7,
+      "away_team": "Milwaukee Brewers",
+      "contest_creator": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "contest_id": 29,
+      "contest_status": "scored",
+      "home_score": 1,
+      "home_team": "Colorado Rockies",
+      "row_updated_at": "2026-06-07T06:06:42.400909+00:00",
+      "scored_at": "2026-06-07T06:06:31+00:00",
+      "source_block": 88056297,
+      "start_time": "2026-06-07T01:10:00+00:00",
+      "verified_at": "2026-06-06T23:44:03+00:00",
+      "voided_at": null
+    },
+    "counts": {
+      "claimedWinningUpperPositions": 2,
+      "positions": 4,
+      "visibleLiveOpenOrPartialCommitmentsForContest29": 0,
+      "visibleOpenOrPartialCommitmentsForContest29IgnoringExpiry": 0
+    },
+    "positionFills": [
+      {
+        "commitment_hash": "0xb681946368c63d500be73a1b093f303299871b79a4ba4fb3f2d26ac330ab2b26",
+        "filled_at": "2026-06-06T23:49:04+00:00",
+        "log_index": 1597,
+        "maker_address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "maker_position_type": "upper",
+        "maker_risk_amount": 100000,
+        "odds_tick": 200,
+        "source_block": 88056506,
+        "taker_address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "taker_position_type": "lower",
+        "taker_risk_amount": 100000,
+        "tx_hash": "0x92eaa54eaba733f426570f3ba91eb8c163a2bdab832d1378bd3fb2d37cc007fe"
+      },
+      {
+        "commitment_hash": "0xae048c69aabda42666288aabdef7e7908fcf733457c07c43446983f70d73638c",
+        "filled_at": "2026-06-06T23:52:04+00:00",
+        "log_index": 1541,
+        "maker_address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "maker_position_type": "upper",
+        "maker_risk_amount": 100000,
+        "odds_tick": 141,
+        "source_block": 88056626,
+        "taker_address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "taker_position_type": "lower",
+        "taker_risk_amount": 41000,
+        "tx_hash": "0xb3f7501681352c18c5dc41b11138028e20b666e40b3750f76f40687d9de443c7"
+      }
+    ],
+    "positions": [
+      {
+        "claimed": false,
+        "claimed_amount": null,
+        "claimed_at": null,
+        "position_type": "lower",
+        "profit_amount": 100000,
+        "risk_amount": 41000,
+        "row_updated_at": "2026-06-06T23:52:15.358317+00:00",
+        "source_block": 88056626,
+        "user_address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+      },
+      {
+        "claimed": false,
+        "claimed_amount": null,
+        "claimed_at": null,
+        "position_type": "lower",
+        "profit_amount": 100000,
+        "risk_amount": 100000,
+        "row_updated_at": "2026-06-06T23:49:13.330903+00:00",
+        "source_block": 88056506,
+        "user_address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d"
+      },
+      {
+        "claimed": true,
+        "claimed_amount": 141000,
+        "claimed_at": "2026-06-07T06:08:27+00:00",
+        "position_type": "upper",
+        "profit_amount": 41000,
+        "risk_amount": 100000,
+        "row_updated_at": "2026-06-07T06:08:43.705251+00:00",
+        "source_block": 88056626,
+        "user_address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+      },
+      {
+        "claimed": true,
+        "claimed_amount": 200000,
+        "claimed_at": "2026-06-07T06:08:22+00:00",
+        "position_type": "upper",
+        "profit_amount": 100000,
+        "risk_amount": 100000,
+        "row_updated_at": "2026-06-07T06:08:28.530994+00:00",
+        "source_block": 88056506,
+        "user_address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+      }
+    ],
+    "queriedAt": "2026-06-07T06:14:12.431995+00:00",
+    "speculation": {
+      "contest_id": 29,
+      "line_ticks": 0,
+      "market_type": "moneyline",
+      "row_updated_at": "2026-06-07T06:07:27.89658+00:00",
+      "scored_at": "2026-06-07T06:06:31+00:00",
+      "settled_at": "2026-06-07T06:07:12+00:00",
+      "source_block": 88056506,
+      "speculation_creator": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "speculation_id": 19,
+      "speculation_scorer": "0xd846b7fdbd8c9f67d1580b2c6a8bd7fdcb15390b",
+      "speculation_status": "closed",
+      "speculation_taker": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "voided": false,
+      "win_side": "away"
+    }
+  },
+  "prePostgameSnapshot": {
+    "capturedAtUtc": "2026-06-07T06:03:36Z",
+    "commitmentSummary": {
+      "filledRows": 2,
+      "hiddenExpiredOpenRows": 2,
+      "rows": 4,
+      "visibleLiveOpenOrPartialCommitments": 0
+    },
+    "contest": {
+      "awayScore": null,
+      "awayTeam": "Milwaukee Brewers",
+      "contestCreator": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "contestId": 29,
+      "homeScore": null,
+      "homeTeam": "Colorado Rockies",
+      "scoredAt": null,
+      "status": "verified"
+    },
+    "positions": [
+      {
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "claimed": false,
+        "positionType": "lower",
+        "profitWei6": "100000",
+        "riskWei6": "41000",
+        "wallet": "ospex-flow-a"
+      },
+      {
+        "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "claimed": false,
+        "positionType": "lower",
+        "profitWei6": "100000",
+        "riskWei6": "100000",
+        "wallet": "ospex-fresh-user"
+      },
+      {
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "claimed": false,
+        "positionType": "upper",
+        "profitWei6": "41000",
+        "riskWei6": "100000",
+        "wallet": "stage-maker-b"
+      },
+      {
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "claimed": false,
+        "positionType": "upper",
+        "profitWei6": "100000",
+        "riskWei6": "100000",
+        "wallet": "stage-maker-a"
+      }
+    ],
+    "source": "cron pre-write psql snapshot before score/settle/claim writes",
+    "speculation": {
+      "lineTicks": 0,
+      "marketType": "moneyline",
+      "settledAt": null,
+      "speculationId": 19,
+      "status": "open",
+      "winSide": "tbd"
+    }
+  }
+}

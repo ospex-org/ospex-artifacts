@@ -1,0 +1,17 @@
+{
+  "capturedAtUtc": "2026-06-07T06:16:30Z",
+  "excludedSelf": "raw/artifact-safety-scan.sanitized.json",
+  "filesScanned": 26,
+  "hits": [],
+  "notes": "Scans for secret-bearing values/keys and absolute local paths; benign prose such as \u201cno passphrases included\u201d is not a hit.",
+  "patterns": [
+    "absolute local path",
+    "password/passphrase marker",
+    "private-key marker",
+    "raw signature key",
+    "RPC secret marker",
+    "Supabase secret marker"
+  ],
+  "result": "pass",
+  "root": "<artifact-dir>"
+}
