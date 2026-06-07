@@ -1,0 +1,77 @@
+[
+  {
+    "scenario": "Release alignment and public-path install",
+    "classification": "proven",
+    "evidence": "@ospex/cli 0.5.4 and @ospex/sdk 0.5.4 release tarballs were captured with SHA256s; MM dependency was pinned to the v0.5.4 SDK tarball."
+  },
+  {
+    "scenario": "Single approved target selection",
+    "classification": "proven",
+    "evidence": "PIT-ATL MLB game was selected from MLB Stats/ESPN/Ospex game evidence; contest 30 and moneyline speculation 20 are the only live target in the run."
+  },
+  {
+    "scenario": "Contest creation and verification",
+    "classification": "proven",
+    "evidence": "Contest creation tx confirmed; contest 30 indexed as verified with Pittsburgh Pirates @ Atlanta Braves start 2026-06-07T17:35:00Z."
+  },
+  {
+    "scenario": "Moneyline speculation seed",
+    "classification": "proven",
+    "evidence": "Lazy first match created/seeded speculation 20 with a controlled low-value seed match."
+  },
+  {
+    "scenario": "Owner-state SSE connection/subscriber accounting",
+    "classification": "proven",
+    "evidence": "During the main run API metrics showed ownState wallets=1/subscribers=1; final metrics returned ownState subscribers=0 and connections=0."
+  },
+  {
+    "scenario": "62-minute live own-state SSE soak",
+    "classification": "proven",
+    "evidence": "Main stage-maker-b live run telemetry spanned 2026-06-07T08:06:37Z to 2026-06-07T09:08:50Z with 61 ticks."
+  },
+  {
+    "scenario": "Controlled partial fill observed through own-state stream",
+    "classification": "proven",
+    "evidence": "ospex-fresh-user partially filled stage-maker-b commitment 0xad05\u2026; telemetry emitted fill source=own-state-stream with newFillWei6=26300."
+  },
+  {
+    "scenario": "Post-fill retained/remainder risk cleanup",
+    "classification": "proven",
+    "evidence": "The partially filled commitment and subsequent replacement/open commitments were authoritatively invalidated by on-chain cancel txs; final public commitments for contest 30/speculation 20 were zero."
+  },
+  {
+    "scenario": "Restart/resume safety",
+    "classification": "proven",
+    "evidence": "Restart telemetry emitted stream-cold-restart and stream-health-hold with exposure; no blank-slate repost remained live; later on-chain cancel cleaned remaining commitment."
+  },
+  {
+    "scenario": "Active stream-health/on-chain cancel behavior",
+    "classification": "proven_with_caveats",
+    "evidence": "Authoritative cancels were exercised. A natural restart health hold occurred; no manufactured API outage/fault injection was performed."
+  },
+  {
+    "scenario": "Final public/orderbook exposure",
+    "classification": "proven",
+    "evidence": "Final commitment list by contest and speculation returned zero rows; contest 30 orderbook had zero rows; MM visibleOpen=0 and authoritativelyInvalidated=2."
+  },
+  {
+    "scenario": "Filled-position separation from quote exposure",
+    "classification": "proven",
+    "evidence": "The live run separated filled position risk from quote exposure; postgame settlement/claims later moved the winning lower/home positions to claimed while public commitment/orderbook exposure remained zero."
+  },
+  {
+    "scenario": "Cost accounting parser",
+    "classification": "proven",
+    "evidence": "Receipt parser handled prior and postgame receipt summaries; operator-paid gas totals, LINK scoring spend, and USDC claim payouts are recorded in raw/cost-accounting.json."
+  },
+  {
+    "scenario": "Public-safety artifact hygiene",
+    "classification": "proven_after_validation",
+    "evidence": "Sanitized artifact excludes private keys, local secret-path material, raw RPC URLs, API tokens, raw signatures/signed payload fields, local raw workdir paths, and long calldata blobs; validation scan result is recorded in raw/validation-scan.json."
+  },
+  {
+    "scenario": "Postgame score/settle/claim continuation",
+    "classification": "proven",
+    "evidence": "One-shot read-only-first postgame continuation verified MLB Stats + ESPN Final PIT 2 / ATL 3, scored contest 30, settled speculation 20 lower/home, claimed stage-maker-b and ospex-fresh-user winnings, and all four controlled-wallet claim sweeps are zero-entry after claims."
+  }
+]

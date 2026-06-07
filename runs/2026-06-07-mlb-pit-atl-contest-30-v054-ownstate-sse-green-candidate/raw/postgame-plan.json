@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "completedAtUtc": "2026-06-07T22:06:44Z",
+  "readOnlyFirst": true,
+  "noAdditionalCronJobsScheduledByThisRun": true,
+  "finalScoreVerifiedWith": [
+    "MLB Stats API schedule/feed gamePk 824916",
+    "ESPN summary API event 401815661"
+  ],
+  "result": {
+    "finalScore": "Pittsburgh Pirates 2, Atlanta Braves 3",
+    "winningSide": "lower/home/Atlanta Braves",
+    "contestScored": true,
+    "speculationSettled": true,
+    "winningControlledWalletsClaimed": [
+      "stage-maker-b",
+      "ospex-fresh-user"
+    ],
+    "postClaimSweepsAllZero": true
+  }
+}

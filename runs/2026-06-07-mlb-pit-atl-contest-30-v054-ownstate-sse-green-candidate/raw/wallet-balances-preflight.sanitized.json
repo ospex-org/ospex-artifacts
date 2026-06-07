@@ -1,0 +1,38 @@
+[
+  {
+    "wallet": "stage-maker-a",
+    "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "pol": "10.416486975603611619",
+    "usdcRaw": "1496410",
+    "usdc": "1.49641",
+    "linkRaw": "190000000000000000",
+    "link": "0.19"
+  },
+  {
+    "wallet": "stage-maker-b",
+    "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "pol": "13.479635856449254546",
+    "usdcRaw": "433300",
+    "usdc": "0.4333",
+    "linkRaw": "225000000000000000",
+    "link": "0.225"
+  },
+  {
+    "wallet": "ospex-flow-a",
+    "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+    "pol": "20.351628346229477634",
+    "usdcRaw": "8341526",
+    "usdc": "8.341526",
+    "linkRaw": "300000000000000000",
+    "link": "0.3"
+  },
+  {
+    "wallet": "ospex-fresh-user",
+    "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+    "pol": "21.372384560372235541",
+    "usdcRaw": "7429964",
+    "usdc": "7.429964",
+    "linkRaw": "280000000000000000",
+    "link": "0.28"
+  }
+]

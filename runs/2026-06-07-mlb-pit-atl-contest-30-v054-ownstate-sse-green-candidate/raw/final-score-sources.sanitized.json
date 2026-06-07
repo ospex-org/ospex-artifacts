@@ -1,0 +1,72 @@
+{
+  "agreement": {
+    "allFinal": true,
+    "finalScore": {
+      "awayScore": 2,
+      "awayTeam": "Pittsburgh Pirates",
+      "homeScore": 3,
+      "homeTeam": "Atlanta Braves"
+    },
+    "scoresAgree": true,
+    "winner": "Atlanta Braves",
+    "winningSide": "lower/home"
+  },
+  "capturedAtUtc": "2026-06-07T22:03:13Z",
+  "sources": [
+    {
+      "abstractGameState": "Final",
+      "awayScore": 2,
+      "awayTeam": "Pittsburgh Pirates",
+      "codedGameState": "F",
+      "gameDate": "2026-06-07T17:35:00Z",
+      "gamePk": 824916,
+      "homeScore": 3,
+      "homeTeam": "Atlanta Braves",
+      "source": "MLB Stats API schedule",
+      "status": "Final",
+      "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&gamePk=824916"
+    },
+    {
+      "abstractGameState": "Final",
+      "awayScore": 2,
+      "awayTeam": "Pittsburgh Pirates",
+      "codedGameState": "F",
+      "gameDate": "2026-06-07T17:35:00Z",
+      "gamePk": 824916,
+      "homeScore": 3,
+      "homeTeam": "Atlanta Braves",
+      "source": "MLB Stats API live feed",
+      "status": "Final",
+      "url": "https://statsapi.mlb.com/api/v1.1/game/824916/feed/live"
+    },
+    {
+      "awayScore": 2,
+      "awayTeam": "Pittsburgh Pirates",
+      "competitors": [
+        {
+          "abbreviation": "ATL",
+          "homeAway": "home",
+          "score": 3,
+          "team": "Atlanta Braves",
+          "winner": true
+        },
+        {
+          "abbreviation": "PIT",
+          "homeAway": "away",
+          "score": 2,
+          "team": "Pittsburgh Pirates",
+          "winner": false
+        }
+      ],
+      "completed": true,
+      "date": "2026-06-07T17:35Z",
+      "eventId": "401815661",
+      "homeScore": 3,
+      "homeTeam": "Atlanta Braves",
+      "source": "ESPN summary API",
+      "state": "post",
+      "status": "Final",
+      "url": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/summary?event=401815661"
+    }
+  ]
+}
