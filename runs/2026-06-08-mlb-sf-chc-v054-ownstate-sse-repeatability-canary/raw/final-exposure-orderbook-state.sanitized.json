@@ -1,0 +1,75 @@
+{
+  "publicVisibleCommitments": 0,
+  "contestSpeculationOrderbookRows": 0,
+  "mmStateCommitments": {
+    "total": 4,
+    "byLifecycle": {
+      "visibleOpen": 0,
+      "softCancelled": 0,
+      "partiallyFilled": 0,
+      "filled": 0,
+      "expired": 0,
+      "authoritativelyInvalidated": 4
+    },
+    "distinctContestsNonTerminal": 0
+  },
+  "mmPositions": {
+    "total": 1,
+    "byStatus": {
+      "active": {
+        "count": 1,
+        "ownRiskWei6": "32000"
+      },
+      "pendingSettle": {
+        "count": 0,
+        "ownRiskWei6": "0"
+      },
+      "claimable": {
+        "count": 0,
+        "ownRiskWei6": "0"
+      },
+      "claimed": {
+        "count": 0,
+        "ownRiskWei6": "0"
+      },
+      "settledLost": {
+        "count": 0,
+        "ownRiskWei6": "0"
+      },
+      "void": {
+        "count": 0,
+        "ownRiskWei6": "0"
+      }
+    }
+  },
+  "activePositionRiskWei6": "32000",
+  "activePositionMeaning": "settlement exposure only, pending final game outcome; not a public/matchable orderbook commitment",
+  "processesRemaining": "none observed by process scan",
+  "apiMetricsAfterShutdown": {
+    "ownState": {
+      "wallets": 0,
+      "subscribers": 0,
+      "resyncBroadcastTotal": 0
+    },
+    "stream": {
+      "resources": 0,
+      "subscribers": 0,
+      "resyncBroadcastTotal": 0,
+      "catchupStartedTotal": 0,
+      "catchupCompletedTotal": 0,
+      "catchupResyncedTotal": 0
+    },
+    "connections": {
+      "total": 0,
+      "ips": 0,
+      "maxTotal": 200,
+      "maxPerIp": 10,
+      "rejectedTotal": 0,
+      "rejectedByScope": {
+        "ip": 0,
+        "total": 0
+      },
+      "slowClientShedTotal": 0
+    }
+  }
+}

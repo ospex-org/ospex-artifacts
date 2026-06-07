@@ -1,0 +1,198 @@
+{
+  "runs": [
+    {
+      "runName": "run-2026-06-07T22-57-34-260Z-udk4qf.ndjson",
+      "startTs": "2026-06-07T22:57:34.295Z",
+      "endTs": "2026-06-07T23:02:57.281Z",
+      "eventCounts": {
+        "candidate": 1,
+        "expire": 2,
+        "funding-hold": 3,
+        "kill": 1,
+        "onchain-cancel": 4,
+        "quote-competitiveness": 8,
+        "quote-intent": 4,
+        "replace": 2,
+        "risk-verdict": 4,
+        "soft-cancel": 4,
+        "submit": 4,
+        "tick-start": 28
+      },
+      "submitCount": 4,
+      "fillCount": 0,
+      "onchainCancelCount": 4,
+      "divergenceCount": 0,
+      "unknownOwnFillCount": 0,
+      "streamColdRestartCount": 0,
+      "streamHealthHoldCount": 0,
+      "killObserved": true,
+      "fillSources": []
+    },
+    {
+      "runName": "run-2026-06-07T23-05-31-393Z-f6sb7f.ndjson",
+      "startTs": "2026-06-07T23:05:31.429Z",
+      "endTs": "2026-06-07T23:07:54.181Z",
+      "eventCounts": {
+        "candidate": 3,
+        "fill": 1,
+        "kill": 1,
+        "onchain-cancel": 3,
+        "quote-competitiveness": 4,
+        "quote-intent": 3,
+        "risk-verdict": 3,
+        "soft-cancel": 2,
+        "stream-cold-restart": 1,
+        "stream-health-hold": 2,
+        "submit": 3,
+        "tick-start": 12
+      },
+      "submitCount": 3,
+      "fillCount": 1,
+      "onchainCancelCount": 3,
+      "divergenceCount": 0,
+      "unknownOwnFillCount": 0,
+      "streamColdRestartCount": 1,
+      "streamHealthHoldCount": 2,
+      "killObserved": true,
+      "fillSources": [
+        "own-state-stream"
+      ]
+    },
+    {
+      "runName": "run-2026-06-07T23-08-28-751Z-pwt2kz.ndjson",
+      "startTs": "2026-06-07T23:08:28.791Z",
+      "endTs": "2026-06-07T23:08:58.722Z",
+      "eventCounts": {
+        "candidate": 1,
+        "kill": 1,
+        "onchain-cancel": 2,
+        "quote-competitiveness": 2,
+        "quote-intent": 1,
+        "risk-verdict": 1,
+        "soft-cancel": 2,
+        "stream-cold-restart": 1,
+        "stream-health-hold": 2,
+        "submit": 2,
+        "tick-start": 2
+      },
+      "submitCount": 2,
+      "fillCount": 0,
+      "onchainCancelCount": 2,
+      "divergenceCount": 0,
+      "unknownOwnFillCount": 0,
+      "streamColdRestartCount": 1,
+      "streamHealthHoldCount": 2,
+      "killObserved": true,
+      "fillSources": []
+    }
+  ],
+  "aggregateEventCounts": {
+    "tick-start": 42,
+    "candidate": 5,
+    "fair-value": 0,
+    "risk-verdict": 8,
+    "quote-intent": 8,
+    "quote-competitiveness": 14,
+    "competitiveness-unavailable": 0,
+    "submit": 9,
+    "would-submit": 0,
+    "soft-cancel": 8,
+    "would-soft-cancel": 0,
+    "replace": 2,
+    "would-replace": 0,
+    "onchain-cancel": 9,
+    "cancel-blocked-missing-payload": 0,
+    "nonce-floor-raise": 0,
+    "expire": 2,
+    "approval": 0,
+    "funding-hold": 3,
+    "fill": 1,
+    "position-transition": 0,
+    "settle": 0,
+    "claim": 0,
+    "degraded": 0,
+    "stream-health-degraded": 0,
+    "stream-would-hold": 0,
+    "stream-cold-restart": 2,
+    "stream-health-hold": 4,
+    "divergence": 0,
+    "unknown-own-fill": 0,
+    "owner-mapping-failed": 0,
+    "error": 0,
+    "kill": 3
+  },
+  "liveMetrics": {
+    "fills": {
+      "quotedUsdcWei6": "1207900",
+      "filledUsdcWei6": "32000",
+      "fillRate": 0.02649225929298783
+    },
+    "gas": {
+      "totalPolWei": "173371015944151979",
+      "byKind": {
+        "approval": "0",
+        "onchainCancel": "173371015944151979",
+        "settle": "0",
+        "claim": "0"
+      },
+      "totalUsdcEquivWei6": "43343"
+    },
+    "settlements": {
+      "settleCount": 0,
+      "claimCount": 0,
+      "totalClaimedPayoutWei6": "0"
+    },
+    "realizedPnl": {
+      "netUsdcWei6": "0",
+      "claimedProfitUsdcWei6": "0",
+      "realizedLossUsdcWei6": "0",
+      "wonCount": 0,
+      "lostCount": 0,
+      "pushCount": 0,
+      "wonUnclaimedCount": 0,
+      "alreadyClaimedCount": 0,
+      "unsettledCount": 1
+    },
+    "totalFeeUsdcWei6": "0"
+  },
+  "controlledPartialFill": {
+    "commitmentHash": "0x3d7e892053d045069cd0b426263aa08a98823cf9f0b9dad6f2c3e93ccd713335",
+    "fillTxHash": "0x30ca335e185af1a2303dd58b9d92f37f7af94508fce05119293a0ff6f2931cec",
+    "maker": "stage-maker-b",
+    "makerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "taker": "ospex-fresh-user",
+    "takerAddress": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+    "makerSide": "away/San Francisco Giants",
+    "takerSide": "home/Chicago Cubs",
+    "originalMakerRiskWei6": "100000",
+    "makerFilledRiskWei6": "32000",
+    "makerRetainedRemainderWei6": "68000",
+    "takerRiskWei6": "40000",
+    "sourceObserved": "own-state-stream",
+    "receiptStatus": "success"
+  },
+  "restartResume": {
+    "restartRun": "run-2026-06-07T23-08-28-751Z-pwt2kz.ndjson",
+    "streamColdRestartObserved": true,
+    "streamHealthHoldEnteredAndCleared": true,
+    "duplicateFillEventsForSelectedHashInRestartRun": 0,
+    "unsafeDuplicateExposureInFinalState": false
+  },
+  "auditComparator": {
+    "divergenceEvents": 0,
+    "unknownOwnFillEvents": 0,
+    "ownerMappingFailedEvents": 0,
+    "status": "retained_no_divergence_observed"
+  },
+  "ownStateSse": {
+    "streamColdRestartObserved": true,
+    "healthHoldEnteredAndCleared": true,
+    "fillIngestedViaOwnStateStream": true,
+    "explicitHeartbeatFrameArchived": false,
+    "subscriberCleanupAfterShutdown": {
+      "ownStateSubscribers": 0,
+      "streamSubscribers": 0
+    }
+  },
+  "serialWindowsNote": "One wallet/state/target was used. There were serial warmup, fill, and restart windows; no simultaneous second MM and no second live target."
+}

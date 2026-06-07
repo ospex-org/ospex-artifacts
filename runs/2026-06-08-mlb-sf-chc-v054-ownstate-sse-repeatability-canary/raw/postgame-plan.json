@@ -1,0 +1,19 @@
+{
+  "status": "scheduled",
+  "cronJobId": "3d597ff4ea6c",
+  "scheduledAtUtc": "2026-06-08T04:45:00Z",
+  "scheduledAtAmericaChicago": "2026-06-07 23:45 CDT",
+  "basis": "roughly 4.25 hours after first pitch",
+  "requirements": [
+    "read-only first",
+    "verify no MM/live process",
+    "MLB Stats and ESPN must both be Final and agree on score",
+    "v0.5.4 release runtime only",
+    "score with ospex-flow-a expected-address guard",
+    "settle speculation 21",
+    "claim only winning controlled wallets",
+    "dry-run claim sweeps for all four controlled wallets",
+    "update artifact and PR",
+    "do not schedule more cron jobs"
+  ]
+}

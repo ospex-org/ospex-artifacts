@@ -1,0 +1,48 @@
+{
+  "partialFill": {
+    "commitmentHash": "0x3d7e892053d045069cd0b426263aa08a98823cf9f0b9dad6f2c3e93ccd713335",
+    "fillTxHash": "0x30ca335e185af1a2303dd58b9d92f37f7af94508fce05119293a0ff6f2931cec",
+    "maker": "stage-maker-b",
+    "makerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "taker": "ospex-fresh-user",
+    "takerAddress": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+    "makerSide": "away/San Francisco Giants",
+    "takerSide": "home/Chicago Cubs",
+    "originalMakerRiskWei6": "100000",
+    "makerFilledRiskWei6": "32000",
+    "makerRetainedRemainderWei6": "68000",
+    "takerRiskWei6": "40000",
+    "sourceObserved": "own-state-stream",
+    "receiptStatus": "success"
+  },
+  "receipt": [
+    {
+      "action": "controlled_partial_fill",
+      "txHash": "0x30ca335e185af1a2303dd58b9d92f37f7af94508fce05119293a0ff6f2931cec",
+      "status": "success",
+      "blockNumber": 88112382,
+      "from": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "to": "0x1b93579b044f0ee3c4c8a9f479a323def7770712",
+      "gasUsed": "358095",
+      "effectiveGasPriceWei": "280806178796",
+      "gasCostWei": "100555288595953620",
+      "gasCostPOL": "0.10055528859595362",
+      "tokenTransfers": [
+        {
+          "token": "USDC",
+          "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+          "to": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+          "amountRaw": "32000",
+          "amount": "0.032"
+        },
+        {
+          "token": "USDC",
+          "from": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+          "to": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+          "amountRaw": "40000",
+          "amount": "0.04"
+        }
+      ]
+    }
+  ]
+}

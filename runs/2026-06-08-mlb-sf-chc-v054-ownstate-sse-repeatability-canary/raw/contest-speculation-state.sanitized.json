@@ -1,0 +1,27 @@
+{
+  "contestId": "31",
+  "speculationId": "21",
+  "sport": "mlb",
+  "awayTeam": "San Francisco Giants",
+  "homeTeam": "Chicago Cubs",
+  "startTimeUtc": "2026-06-08T00:30:00Z",
+  "startTimeAmericaChicago": "2026-06-07 19:30 CDT",
+  "mlbStatsGamePk": 824670,
+  "contestStatus": "verified",
+  "speculationStatus": 0,
+  "contestCreator": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+  "verifiedAt": "2026-06-07T22:53:39+00:00",
+  "contestCreatedAt": "2026-06-07T22:53:27+00:00",
+  "moneylineSemantics": {
+    "upper": "away/San Francisco Giants",
+    "lower": "home/Chicago Cubs"
+  },
+  "pregameMlbStatus": {
+    "abstractGameState": "Preview",
+    "codedGameState": "P",
+    "detailedState": "Pre-Game",
+    "statusCode": "P",
+    "startTimeTBD": false,
+    "abstractGameCode": "P"
+  }
+}

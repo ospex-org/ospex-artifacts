@@ -1,0 +1,135 @@
+{
+  "artifactId": "2026-06-08-mlb-sf-chc-v054-ownstate-sse-repeatability-canary",
+  "generatedAt": "2026-06-07T23:20:20Z",
+  "statuses": [
+    "proven",
+    "proven_with_caveats",
+    "read_only_proven",
+    "synthetic_only",
+    "pending",
+    "deferred",
+    "failed"
+  ],
+  "scenarios": [
+    {
+      "id": 1,
+      "scenario": "Fresh install SDK/CLI release v0.5.4",
+      "status": "proven",
+      "evidence": "Release assets and v0.5.4 CLI package/bin verified."
+    },
+    {
+      "id": 2,
+      "scenario": "MM installed SDK v0.5.4 from release tarball",
+      "status": "proven",
+      "evidence": "MM node_modules has @ospex/sdk 0.5.4 and package/lock reference the v0.5.4 release tarball."
+    },
+    {
+      "id": 3,
+      "scenario": "Same-evening target discovery",
+      "status": "proven",
+      "evidence": "SF @ CHC same-evening MLB target selected with reference odds available and contest creation allowed."
+    },
+    {
+      "id": 4,
+      "scenario": "Contest creation, if needed",
+      "status": "proven",
+      "evidence": "Contest 31 created and verified on Polygon mainnet."
+    },
+    {
+      "id": 5,
+      "scenario": "Moneyline speculation seed/create",
+      "status": "proven",
+      "evidence": "Speculation 21 moneyline created/seeded; upper=away, lower=home."
+    },
+    {
+      "id": 6,
+      "scenario": "Single controlled live quote/fill",
+      "status": "proven",
+      "evidence": "One controlled partial fill tx executed against a live MM quote."
+    },
+    {
+      "id": 7,
+      "scenario": "Partial-fill retained remainder",
+      "status": "proven",
+      "evidence": "Maker quote risk 100000 wei6; fill consumed 32000 wei6, leaving retained remainder before authoritative cancel."
+    },
+    {
+      "id": 8,
+      "scenario": "Authoritative on-chain cancel after partial fill",
+      "status": "proven",
+      "evidence": "Filled/remainder and shutdown quotes were authoritatively cancelled on-chain."
+    },
+    {
+      "id": 9,
+      "scenario": "Restart/resume after fill",
+      "status": "proven_with_caveats",
+      "evidence": "Restart used same wallet/state, recovered health, and showed zero duplicate fill events for the filled hash; short restart emitted then canceled new quotes."
+    },
+    {
+      "id": 10,
+      "scenario": "Own-state SSE ready/heartbeat/fill ingestion",
+      "status": "proven_with_caveats",
+      "evidence": "Own-state health hold cleared and fill was ingested from own-state-stream; explicit heartbeat frame not separately archived in public artifact."
+    },
+    {
+      "id": 11,
+      "scenario": "Audit/poll comparator retained, no divergence",
+      "status": "proven",
+      "evidence": "Telemetry summary has zero divergence, unknown-own-fill, and owner-mapping-failed events."
+    },
+    {
+      "id": 12,
+      "scenario": "Final zero public/orderbook exposure",
+      "status": "proven",
+      "evidence": "Commitments list returned zero visible rows; contest/speculation orderbook rows zero after shutdown."
+    },
+    {
+      "id": 13,
+      "scenario": "Subscriber cleanup after shutdown",
+      "status": "proven_with_caveats",
+      "evidence": "API metrics after shutdown show own-state and stream subscribers at 0; during subscriber count not separately archived."
+    },
+    {
+      "id": 14,
+      "scenario": "Postgame score/settle/claim lifecycle",
+      "status": "pending",
+      "evidence": "Scheduled continuation job 3d597ff4ea6c for 2026-06-08T04:45:00Z."
+    },
+    {
+      "id": 15,
+      "scenario": "Final empty claim sweeps",
+      "status": "pending",
+      "evidence": "Postgame continuation will run claim sweeps after score/settle/claims."
+    },
+    {
+      "id": 16,
+      "scenario": "Multi-contest read-only discovery",
+      "status": "read_only_proven",
+      "evidence": "Read-only games discovery ran; canary intentionally selected one target."
+    },
+    {
+      "id": 17,
+      "scenario": "Two simultaneous live targets",
+      "status": "deferred",
+      "evidence": "Intentionally not run for bounded canary."
+    },
+    {
+      "id": 18,
+      "scenario": "Two independent live MMs",
+      "status": "deferred",
+      "evidence": "Intentionally not run; no simultaneous second MM observed."
+    },
+    {
+      "id": 19,
+      "scenario": "Fillability/solvency signaling",
+      "status": "proven_with_caveats",
+      "evidence": "Fillability/advisory and funding guard data were observed; not treated as a broad solvency proof."
+    },
+    {
+      "id": 20,
+      "scenario": "Long soak / 24–48h stability",
+      "status": "deferred",
+      "evidence": "Out of scope for repeatability canary."
+    }
+  ]
+}
