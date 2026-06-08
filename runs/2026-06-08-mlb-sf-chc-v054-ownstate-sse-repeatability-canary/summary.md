@@ -2,7 +2,7 @@
 
 ## Verdict
 
-**GREEN-candidate / partial artifact** — live quote, one controlled partial fill, restart/resume, authoritative cancel, zero public/orderbook exposure, and subscriber cleanup evidence completed. Postgame score/settle/claim is not complete yet; one continuation job is scheduled.
+**GREEN repeatability canary / complete verified with caveats** — live quote, one controlled partial fill, restart/resume, authoritative cancel, zero public/orderbook exposure, subscriber cleanup, independent final-score agreement, scoring, settlement, claims, and empty post-claim sweeps are complete.
 
 Strategic result: **Phase 3 own-state SSE is live-proven twice / repeatability improved; still not MVE-scale-proven.**
 
@@ -18,11 +18,11 @@ Strategic result: **Phase 3 own-state SSE is live-proven twice / repeatability i
 - Start: `2026-06-08T00:30:00Z` / `2026-06-07 19:30 CDT`
 - Contest ID: `31`
 - Speculation ID: `21` (moneyline; `upper = away/San Francisco Giants`, `lower = home/Chicago Cubs`)
-- Contest status during canary: `verified`; game status at artifact publication: pre-game.
+- Final score: San Francisco Giants `2`, Chicago Cubs `1`.
 
 ## Wallet roles
 
-- Contest creator / postgame scorer: ospex-flow-a `0x16dc5d67d080a5521ef2c79680dbfc2abf724d30`
+- Contest creator / scorer / seed upper winner: ospex-flow-a `0x16dc5d67d080a5521ef2c79680dbfc2abf724d30`
 - Market-maker: stage-maker-b `0x4fa0a5aa3187517efc320aac7d33cd6115cc7482`
 - Controlled taker/fill wallet: ospex-fresh-user `0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d`
 - Claim-sweep/readiness wallet: stage-maker-a `0x5316fa54c170d1927f30d1a497ac9e85e3826a9b`
@@ -49,29 +49,40 @@ Strategic result: **Phase 3 own-state SSE is live-proven twice / repeatability i
 - Authoritative cancel txs are listed in `raw/tx-receipts.summary.json`; final public commitments/orderbook rows are zero.
 - Subscriber cleanup: post-shutdown API metrics show own-state subscribers `0`, stream subscribers `0`, connections `0`.
 
+## Postgame evidence
+
+- Read-only preflight captured UTC and America/Chicago time, no MM/live-soak process, and v0.5.4 CLI/SDK runtime proof.
+- MLB Stats API and ESPN both showed Final and agreed: San Francisco Giants `2`, Chicago Cubs `1`.
+- Score: initial request tx `0x7c08ccaec288854d18d946ea26c4529e0b9e06df38557e62d60e260613bbec0b` emitted a sanitized oracle upstream API failure callback `0x4d92d656d59a903afb499e70c0e4f92b356b1fb8037a0b9bd3d28fadb48c8628`; retry request tx `0x8a47c3ef1d0418cede5887ee92954e3062a1b6abfdc6a7d7f0712f3bda62a195` fulfilled via callback `0xec0fb8c1e3d9a5129771d731a4d831fece19c65b5ffc6307b17faae55d2e21d2` and projected contest 31 as scored `2-1`.
+- Settle: speculation 21 settled away/upper with tx `0xd14c2f9eb5a67f04c21d2202e081b1035909d16bc981c0104cf7f01e5e1a8fa7`.
+- Claims: stage-maker-b claimed `72000` wei6 (`0.072000 USDC`) with tx `0x3aa349fa934ca9c4139409630c99002eb0a7e69935e99c45dfd04644e34ff2fd`; ospex-flow-a seed/setup upper position claimed `200000` wei6 (`0.200000 USDC`) with tx `0x990f9b0b88334a93d21c5c65e951d98cdf1c78dd97ad0a27594a4978ae801baa`.
+- Not claimed: ospex-fresh-user lower/home position lost; stage-maker-a had no claimable entry.
+- Post-claim dry-run sweeps for stage-maker-a, stage-maker-b, ospex-fresh-user, and ospex-flow-a all returned zero entries.
+
 ## Cost accounting
 
-- Captured run tx count: `12`.
-- Total captured operator POL gas: `0.853754960952895306` POL.
-- Gas by action: contest create `0.387391704461504809` POL; seed match `0.192436951951284898` POL; controlled partial fill `0.10055528859595362` POL; on-chain cancels `0.173371015944151979` POL.
-- LINK: operator net spend `0.005 LINK` for contest creation verification request.
-- USDC movements: contest creation `1.000000`; speculation seed/create fees `0.250000` per seed participant; seed risk `0.100000` per side; partial fill risk `0.032000` maker + `0.040000` taker; cancels transferred no USDC. Claims are pending postgame.
-- Budget assessment: below the approved `<= $5` equivalent cap before postgame.
+- Captured pre-postgame run tx count: `12`.
+- Pre-postgame captured operator POL gas: `0.853754960952895306` POL.
+- LINK: operator net spend before postgame was `0.005 LINK`; the postgame score retry added one additional scoring request after the first callback failed.
+- USDC movements before claims: contest creation `1.000000`; speculation seed/create fees `0.250000` per seed participant; seed risk `0.100000` per side; partial fill risk `0.032000` maker + `0.040000` taker; cancels transferred no USDC.
+- Postgame claims paid `0.072000 USDC` to stage-maker-b and `0.200000 USDC` to ospex-flow-a.
+- Budget assessment: below the approved `<= $5` equivalent cap.
 
-## Postgame
+## Final exposure
 
-- Status: scheduled, not complete.
-- Cron job: `3d597ff4ea6c`
-- Scheduled time: `2026-06-08T04:45:00Z` / `2026-06-07 23:45 CDT`.
-- Continuation will verify MLB Stats + ESPN Final/agreed score before scoring contest 31, settling speculation 21, claiming winners only, running empty sweeps, updating this artifact, validating, safety scanning, committing, pushing, and updating/opening the PR.
+- Public visible commitments/orderbook rows for contest 31/speculation 21: `0`.
+- Active/pending/claimable positions across the four checked wallets: `0`.
+- Winning controlled positions are claimed; losing lower/home position has no claimable payout.
+- No Ospex MM/live-soak process observed after shutdown/postgame.
+- No additional cron jobs were scheduled by this run.
 
 ## Caveats
 
 - This is a repeatability + one-new-coverage-axis canary, not broad MVE scale proof.
 - A short serial warmup window for the same wallet/state/target emitted and cancelled quotes before the controlled partial-fill window; no second target and no simultaneous second MM were run.
 - Explicit raw stream-auth token and heartbeat frames were intentionally not printed or archived; readiness/fill ingestion is evidenced indirectly through stream health, fill source, and cleanup metrics.
-- One active position (`32000` wei6 maker risk) remains pending game outcome. It is not live/matchable/orderbook exposure.
+- The first score request produced a sanitized oracle upstream API failure callback; a bounded retry fulfilled and scored the contest.
 
 ## Raw/sanitized evidence
 
-See `evidence.json`, `scenario-matrix.md`, `scenario-matrix.json`, and the `raw/` directory. No private signing material, raw signatures, signed payloads, local-only paths, RPC URLs, authorization headers, or specific upstream odds-provider labels are included.
+See `evidence.json`, `scenario-matrix.md`, `scenario-matrix.json`, and the `raw/` directory, especially the `raw/postgame-*` files. No signing material, raw signatures, signed payloads, local-only paths, endpoint URLs, auth headers, or specific upstream odds-provider labels are included.

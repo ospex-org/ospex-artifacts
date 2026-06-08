@@ -1,0 +1,158 @@
+{
+  "capturedAtUtc": "2026-06-08T05:14:03Z",
+  "contest": {
+    "sport": "mlb",
+    "awayTeam": "San Francisco Giants",
+    "homeTeam": "Chicago Cubs",
+    "scoredAt": "2026-06-08T04:56:42+00:00",
+    "awayScore": 2,
+    "contestId": "31",
+    "homeScore": 1,
+    "verifiedAt": "2026-06-07T22:53:39+00:00",
+    "rowUpdatedAt": "2026-06-08T04:56:54.573899+00:00",
+    "startTimeUtc": "2026-06-08T00:30:00Z",
+    "contestStatus": "scored",
+    "contestCreator": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+  },
+  "speculation": {
+    "voided": false,
+    "winSide": "away",
+    "scoredAt": "2026-06-08T04:56:42+00:00",
+    "contestId": "31",
+    "lineTicks": 0,
+    "settledAt": "2026-06-08T04:57:27+00:00",
+    "marketType": "moneyline",
+    "rowUpdatedAt": "2026-06-08T04:57:40.001673+00:00",
+    "speculationId": "21",
+    "speculationStatus": "closed"
+  },
+  "moneylineSemantics": {
+    "upper": "away/San Francisco Giants",
+    "lower": "home/Chicago Cubs"
+  },
+  "positions": [
+    {
+      "role": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "claimed": true,
+      "outcome": "won",
+      "claimedAt": "2026-06-08T04:59:04+00:00",
+      "positionType": "upper",
+      "riskAmountWei6": "100000",
+      "profitAmountWei6": "100000",
+      "claimedAmountWei6": "200000"
+    },
+    {
+      "role": "ospex-fresh-user",
+      "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "claimed": false,
+      "outcome": "lost",
+      "claimedAt": null,
+      "positionType": "lower",
+      "riskAmountWei6": "140000",
+      "profitAmountWei6": "132000",
+      "claimedAmountWei6": null
+    },
+    {
+      "role": "stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "claimed": true,
+      "outcome": "won",
+      "claimedAt": "2026-06-08T04:58:58+00:00",
+      "positionType": "upper",
+      "riskAmountWei6": "32000",
+      "profitAmountWei6": "40000",
+      "claimedAmountWei6": "72000"
+    }
+  ],
+  "fills": [
+    {
+      "txHash": "0xfe246a89389ae0c79a824951a0e545bcc71728a5fc12da889945330fccb1eec6",
+      "filledAt": "2026-06-07T22:54:52+00:00",
+      "oddsTick": 200,
+      "makerRole": "ospex-flow-a",
+      "takerRole": "ospex-fresh-user",
+      "commitmentHash": "0x7b6bba337a09d569f9af0135da8932d8db7501c353c5ad4f74b28a11d6b7e4ac",
+      "makerPositionType": "upper",
+      "takerPositionType": "lower",
+      "makerRiskAmountWei6": "100000",
+      "takerRiskAmountWei6": "100000"
+    },
+    {
+      "txHash": "0x30ca335e185af1a2303dd58b9d92f37f7af94508fce05119293a0ff6f2931cec",
+      "filledAt": "2026-06-07T23:05:58+00:00",
+      "oddsTick": 225,
+      "makerRole": "stage-maker-b",
+      "takerRole": "ospex-fresh-user",
+      "commitmentHash": "0x3d7e892053d045069cd0b426263aa08a98823cf9f0b9dad6f2c3e93ccd713335",
+      "makerPositionType": "upper",
+      "takerPositionType": "lower",
+      "makerRiskAmountWei6": "32000",
+      "takerRiskAmountWei6": "40000"
+    }
+  ],
+  "projectionConvergence": {
+    "expectation": "Postgame chain writes should project to Supabase/API before the artifact is finalized.",
+    "contestScoredProjected": true,
+    "speculationSettledProjected": true,
+    "winningPositionsClaimedProjected": true,
+    "gates": [
+      {
+        "name": "contest-score-projection",
+        "afterWrite": "score retry callback transaction confirmed",
+        "txConfirmed": true,
+        "waitTarget": "contest 31 indexed as scored with awayScore=2 and homeScore=1",
+        "expectedFinalState": [
+          "contestStatus=scored",
+          "awayScore=2",
+          "homeScore=1"
+        ],
+        "observedFinalState": [
+          "contestStatus=scored",
+          "awayScore=2",
+          "homeScore=1"
+        ],
+        "staleReadObserved": false,
+        "converged": true
+      },
+      {
+        "name": "speculation-settle-projection",
+        "afterWrite": "settleSpeculation(21) transaction confirmed",
+        "txConfirmed": true,
+        "waitTarget": "speculation 21 indexed closed with winSide=away and non-null settledAt",
+        "expectedFinalState": [
+          "speculationStatus=closed",
+          "winSide=away",
+          "settledAt non-null"
+        ],
+        "observedFinalState": [
+          "speculationStatus=closed",
+          "winSide=away",
+          "settledAt=2026-06-08T04:57:27+00:00"
+        ],
+        "staleReadObserved": false,
+        "converged": true
+      },
+      {
+        "name": "winning-claims-projection",
+        "afterWrite": "winner claim transactions confirmed",
+        "txConfirmed": true,
+        "waitTarget": "all upper/away winning positions for speculation 21 indexed claimed",
+        "expectedFinalState": [
+          "upper positions claimed=true",
+          "post-claim dry-run sweeps empty"
+        ],
+        "observedFinalState": [
+          "winningPositionsClaimedProjected=True",
+          "postClaimSweepsAllEmpty=true"
+        ],
+        "staleReadObserved": false,
+        "converged": true
+      }
+    ]
+  },
+  "visibleCommitmentCounts": {
+    "allCommitmentsForContest": 12,
+    "visibleOpenOrPartiallyFilledCommitments": 0
+  }
+}

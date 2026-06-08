@@ -1,0 +1,35 @@
+{
+  "capturedAtUtc": "2026-06-08T05:14:03Z",
+  "capturedAtAmericaChicago": "2026-06-08 00:14:03 CDT (-0500)",
+  "liveProcessScan": {
+    "patterns": [
+      "ospex",
+      "market-maker",
+      "ownstate",
+      "own-state",
+      "soak"
+    ],
+    "matches": [],
+    "noOspexMmOrLiveSoakProcessObserved": true
+  },
+  "releaseRuntime": {
+    "ospexVersion": "0.5.4",
+    "cliPackageVersion": "0.5.4",
+    "sdkRuntimeVersion": "0.5.4",
+    "release": "v0.5.4",
+    "liveWritesUsedReleaseRuntimeOnly": true,
+    "note": "The SDK runtime is bundled inside the installed v0.5.4 CLI package for these live writes."
+  },
+  "signerGuards": {
+    "ospex-flow-a": {
+      "expected": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "observed": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "status": "matched"
+    },
+    "stage-maker-b": {
+      "expected": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "observed": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "status": "matched"
+    }
+  }
+}

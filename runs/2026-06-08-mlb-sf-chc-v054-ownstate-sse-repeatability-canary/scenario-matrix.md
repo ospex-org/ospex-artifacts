@@ -15,8 +15,8 @@
 | 11 | Audit/poll comparator retained, no divergence | `proven` | Telemetry summary has zero divergence, unknown-own-fill, and owner-mapping-failed events. |
 | 12 | Final zero public/orderbook exposure | `proven` | Commitments list returned zero visible rows; contest/speculation orderbook rows zero after shutdown. |
 | 13 | Subscriber cleanup after shutdown | `proven_with_caveats` | API metrics after shutdown show own-state and stream subscribers at 0; during subscriber count not separately archived. |
-| 14 | Postgame score/settle/claim lifecycle | `pending` | Scheduled continuation job 3d597ff4ea6c for 2026-06-08T04:45:00Z. |
-| 15 | Final empty claim sweeps | `pending` | Postgame continuation will run claim sweeps after score/settle/claims. |
+| 14 | Postgame score/settle/claim lifecycle | `proven_with_caveats` | MLB Stats API and ESPN both showed Final with SF 2, CHC 1; initial score request emitted a sanitized upstream API failure, retry fulfilled, contest 31 scored, speculation 21 settled away/upper, and winning controlled positions claimed. |
+| 15 | Final empty claim sweeps | `proven` | Post-claim dry-run sweeps for stage-maker-a, stage-maker-b, ospex-fresh-user, and ospex-flow-a all returned zero entries. |
 | 16 | Multi-contest read-only discovery | `read_only_proven` | Read-only games discovery ran; canary intentionally selected one target. |
 | 17 | Two simultaneous live targets | `deferred` | Intentionally not run for bounded canary. |
 | 18 | Two independent live MMs | `deferred` | Intentionally not run; no simultaneous second MM observed. |

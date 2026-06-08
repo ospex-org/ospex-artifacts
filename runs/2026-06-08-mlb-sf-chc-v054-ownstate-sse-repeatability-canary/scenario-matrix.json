@@ -1,6 +1,6 @@
 {
   "artifactId": "2026-06-08-mlb-sf-chc-v054-ownstate-sse-repeatability-canary",
-  "generatedAt": "2026-06-07T23:20:20Z",
+  "generatedAt": "2026-06-08T05:14:03Z",
   "statuses": [
     "proven",
     "proven_with_caveats",
@@ -92,14 +92,14 @@
     {
       "id": 14,
       "scenario": "Postgame score/settle/claim lifecycle",
-      "status": "pending",
-      "evidence": "Scheduled continuation job 3d597ff4ea6c for 2026-06-08T04:45:00Z."
+      "status": "proven_with_caveats",
+      "evidence": "MLB Stats API and ESPN both showed Final with SF 2, CHC 1; initial score request emitted a sanitized upstream API failure, retry fulfilled, contest 31 scored, speculation 21 settled away/upper, and winning controlled positions claimed."
     },
     {
       "id": 15,
       "scenario": "Final empty claim sweeps",
-      "status": "pending",
-      "evidence": "Postgame continuation will run claim sweeps after score/settle/claims."
+      "status": "proven",
+      "evidence": "Post-claim dry-run sweeps for stage-maker-a, stage-maker-b, ospex-fresh-user, and ospex-flow-a all returned zero entries."
     },
     {
       "id": 16,
@@ -127,7 +127,7 @@
     },
     {
       "id": 20,
-      "scenario": "Long soak / 24–48h stability",
+      "scenario": "Long soak / 24\u201348h stability",
       "status": "deferred",
       "evidence": "Out of scope for repeatability canary."
     }

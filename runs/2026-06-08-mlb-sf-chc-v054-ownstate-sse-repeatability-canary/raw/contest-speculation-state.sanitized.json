@@ -7,21 +7,17 @@
   "startTimeUtc": "2026-06-08T00:30:00Z",
   "startTimeAmericaChicago": "2026-06-07 19:30 CDT",
   "mlbStatsGamePk": 824670,
-  "contestStatus": "verified",
-  "speculationStatus": 0,
+  "contestStatus": "scored",
+  "awayScore": 2,
+  "homeScore": 1,
+  "scoredAt": "2026-06-08T04:56:42+00:00",
+  "speculationStatus": "closed",
+  "winSide": "away",
+  "settledAt": "2026-06-08T04:57:27+00:00",
   "contestCreator": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
   "verifiedAt": "2026-06-07T22:53:39+00:00",
-  "contestCreatedAt": "2026-06-07T22:53:27+00:00",
   "moneylineSemantics": {
     "upper": "away/San Francisco Giants",
     "lower": "home/Chicago Cubs"
-  },
-  "pregameMlbStatus": {
-    "abstractGameState": "Preview",
-    "codedGameState": "P",
-    "detailedState": "Pre-Game",
-    "statusCode": "P",
-    "startTimeTBD": false,
-    "abstractGameCode": "P"
   }
 }

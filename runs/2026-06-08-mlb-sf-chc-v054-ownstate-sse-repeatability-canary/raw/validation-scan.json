@@ -3,5 +3,21 @@
   "scope": "new artifact run directory",
   "status": "passed",
   "failureCount": 0,
-  "failures": []
+  "failures": [],
+  "lastPostgameUpdateAtUtc": "2026-06-08T05:14:03Z",
+  "postgameStatus": "complete_verified_with_caveats",
+  "postgameSafetyScan": {
+    "safetyScan": "passed",
+    "filesScanned": 27,
+    "rules": [
+      "local_path",
+      "auth_or_rpc",
+      "raw_signature_payload",
+      "long_calldata_or_revert",
+      "upstream_odds_provider_name"
+    ]
+  },
+  "postgameJsonValidation": "passed",
+  "postgameGenerateIndexes": "passed",
+  "postgameArtifactValidation": "passed"
 }

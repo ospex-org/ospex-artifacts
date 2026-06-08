@@ -1,7 +1,7 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-06-07T23:21:17Z",
+  "generatedAt": "2026-06-08T05:14:19Z",
   "repository": "ospex-org/ospex-artifacts",
   "archive": {
     "scope": "year",
@@ -16,7 +16,7 @@
       "network": "polygon",
       "rawPath": "runs/2026-06-08-mlb-sf-chc-v054-ownstate-sse-repeatability-canary/raw/",
       "release": "ospex-org/ospex-sdk v0.5.4",
-      "status": "partial",
+      "status": "complete_verified_with_caveats",
       "summaryPath": "runs/2026-06-08-mlb-sf-chc-v054-ownstate-sse-repeatability-canary/summary.md",
       "publishedAt": "2026-06-07T23:20:20Z"
     },

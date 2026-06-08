@@ -1,11 +1,11 @@
 {
   "artifactId": "2026-06-08-mlb-sf-chc-v054-ownstate-sse-repeatability-canary",
   "artifactType": "run",
-  "artifactStatus": "green_candidate_partial_postgame_scheduled",
-  "status": "partial",
+  "artifactStatus": "green_repeatability_canary_complete_with_caveats",
+  "status": "complete_verified_with_caveats",
   "date": "2026-06-08",
   "publishedAt": "2026-06-07T23:20:20Z",
-  "capturedAtUtc": "2026-06-07T23:20:20Z",
+  "capturedAtUtc": "2026-06-08T05:14:03Z",
   "network": "polygon",
   "chainId": 137,
   "artifactPath": "runs/2026-06-08-mlb-sf-chc-v054-ownstate-sse-repeatability-canary/",
@@ -19,8 +19,8 @@
     "checks": "JSON, schema, path, and public-safety checks: SUCCESS"
   },
   "verdict": {
-    "label": "GREEN-candidate / partial artifact",
-    "reason": "Live quote, one controlled partial fill, restart/resume, authoritative cancel, zero public/orderbook exposure, and subscriber cleanup evidence completed; postgame score/settle/claim is scheduled and pending."
+    "label": "GREEN repeatability canary / complete verified with caveats",
+    "reason": "Live quote, controlled partial fill, restart/resume, authoritative cancel, zero public/orderbook exposure, subscriber cleanup, final score verification, scoring, settlement, claims, and empty post-claim sweeps are evidenced. Caveats remain: bounded one-target canary, one initial score oracle retry, and no explicit raw heartbeat frame archived."
   },
   "strategicResult": "Phase 3 own-state SSE is live-proven twice / repeatability improved; still not MVE-scale-proven.",
   "game": {
@@ -32,8 +32,8 @@
     "startTimeUtc": "2026-06-08T00:30:00Z",
     "startTimeAmericaChicago": "2026-06-07 19:30 CDT",
     "mlbStatsGamePk": 824670,
-    "contestStatus": "verified",
-    "speculationStatus": 0,
+    "contestStatus": "scored",
+    "speculationStatus": "closed",
     "contestCreator": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
     "verifiedAt": "2026-06-07T22:53:39+00:00",
     "contestCreatedAt": "2026-06-07T22:53:27+00:00",
@@ -48,7 +48,12 @@
       "statusCode": "P",
       "startTimeTBD": false,
       "abstractGameCode": "P"
-    }
+    },
+    "awayScore": 2,
+    "homeScore": 1,
+    "scoredAt": "2026-06-08T04:56:42+00:00",
+    "winSide": "away",
+    "settledAt": "2026-06-08T04:57:27+00:00"
   },
   "contest": {
     "contestId": "31",
@@ -59,8 +64,8 @@
     "startTimeUtc": "2026-06-08T00:30:00Z",
     "startTimeAmericaChicago": "2026-06-07 19:30 CDT",
     "mlbStatsGamePk": 824670,
-    "contestStatus": "verified",
-    "speculationStatus": 0,
+    "contestStatus": "scored",
+    "speculationStatus": "closed",
     "contestCreator": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
     "verifiedAt": "2026-06-07T22:53:39+00:00",
     "contestCreatedAt": "2026-06-07T22:53:27+00:00",
@@ -75,7 +80,12 @@
       "statusCode": "P",
       "startTimeTBD": false,
       "abstractGameCode": "P"
-    }
+    },
+    "awayScore": 2,
+    "homeScore": 1,
+    "scoredAt": "2026-06-08T04:56:42+00:00",
+    "winSide": "away",
+    "settledAt": "2026-06-08T04:57:27+00:00"
   },
   "walletRoles": {
     "stage-maker-a": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
@@ -97,6 +107,26 @@
     "controlled-taker": {
       "expected": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
       "observed": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "status": "matched"
+    },
+    "postgame-score": {
+      "expected": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "observed": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "status": "matched"
+    },
+    "postgame-settle": {
+      "expected": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "observed": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "status": "matched"
+    },
+    "postgame-claim-stage-maker-b": {
+      "expected": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "observed": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "status": "matched"
+    },
+    "postgame-claim-ospex-flow-a": {
+      "expected": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "observed": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
       "status": "matched"
     }
   },
@@ -169,7 +199,8 @@
       "reason": "same-evening MLB target with sufficient pregame runway and reference odds available"
     },
     "wallets": "raw/wallet-balances-allowances.sanitized.json",
-    "noExistingLiveProcessAtFinalCheck": true
+    "noExistingLiveProcessAtFinalCheck": true,
+    "postgameReadOnly": "raw/postgame-readonly-preflight.sanitized.json"
   },
   "liveCanary": {
     "telemetrySummary": "raw/mm-telemetry-summary.sanitized.json",
@@ -225,8 +256,10 @@
       "0xf19c5162f9063a6ecc2bbc9433bfccee4311ef5936b03a47b0fc04534cb5abb9"
     ],
     "finalExposure": {
+      "capturedAtUtc": "2026-06-08T05:14:03Z",
       "publicVisibleCommitments": 0,
       "contestSpeculationOrderbookRows": 0,
+      "visibleOpenOrPartiallyFilledCommitmentsQuery": 0,
       "mmStateCommitments": {
         "total": 4,
         "byLifecycle": {
@@ -243,8 +276,8 @@
         "total": 1,
         "byStatus": {
           "active": {
-            "count": 1,
-            "ownRiskWei6": "32000"
+            "count": 0,
+            "ownRiskWei6": "0"
           },
           "pendingSettle": {
             "count": 0,
@@ -255,8 +288,9 @@
             "ownRiskWei6": "0"
           },
           "claimed": {
-            "count": 0,
-            "ownRiskWei6": "0"
+            "count": 1,
+            "ownRiskWei6": "32000",
+            "claimedAmountWei6": "72000"
           },
           "settledLost": {
             "count": 0,
@@ -268,9 +302,11 @@
           }
         }
       },
-      "activePositionRiskWei6": "32000",
-      "activePositionMeaning": "settlement exposure only, pending final game outcome; not a public/matchable orderbook commitment",
+      "activePositionRiskWei6": "0",
+      "activePositionMeaning": "none; contest scored, speculation settled, winning controlled positions claimed, losing lower/home position has no claimable payout",
       "processesRemaining": "none observed by process scan",
+      "positionsStatusCliAllEmpty": true,
+      "claimSweepsAllEmpty": true,
       "apiMetricsAfterShutdown": {
         "ownState": {
           "wallets": 0,
@@ -338,38 +374,80 @@
       "seedMatchRisk": "0.100000 USDC per side from ospex-flow-a and ospex-fresh-user",
       "controlledPartialFillRisk": "0.032000 USDC from stage-maker-b and 0.040000 USDC from ospex-fresh-user",
       "cancels": "no USDC transfer observed",
-      "claims": "pending postgame",
+      "claims": "0.072000 USDC claimed by stage-maker-b and 0.200000 USDC claimed by ospex-flow-a seed/setup winner; ospex-fresh-user lower/home position lost and stage-maker-a had no entry.",
       "byWalletObservedOutflow": {
         "ospex-flow-a": "1.35",
         "ospex-fresh-user": "0.39",
         "stage-maker-b": "0.032"
       }
     },
-    "budgetAssessment": "actual observed spend/movements remain below the approved <= $5 equivalent cap; postgame gas/claims remain pending"
+    "budgetAssessment": "actual observed spend/movements, including postgame score retry/settle/claim gas and tiny claim payouts, remain below the approved <= $5 equivalent cap"
   },
   "postgame": {
-    "status": "scheduled",
-    "cronJobId": "3d597ff4ea6c",
-    "scheduledAtUtc": "2026-06-08T04:45:00Z",
-    "scheduledAtAmericaChicago": "2026-06-07 23:45 CDT",
-    "basis": "roughly 4.25 hours after first pitch",
-    "requirements": [
-      "read-only first",
-      "verify no MM/live process",
-      "MLB Stats and ESPN must both be Final and agree on score",
-      "v0.5.4 release runtime only",
-      "score with ospex-flow-a expected-address guard",
-      "settle speculation 21",
-      "claim only winning controlled wallets",
-      "dry-run claim sweeps for all four controlled wallets",
-      "update artifact and PR",
-      "do not schedule more cron jobs"
-    ]
+    "status": "complete_verified_with_caveats",
+    "completedAtUtc": "2026-06-08T05:14:03Z",
+    "completedAtAmericaChicago": "2026-06-08 00:14:03 CDT (-0500)",
+    "finalScoreSources": "raw/postgame-final-score-sources.sanitized.json",
+    "scoreSourceAgreement": {
+      "bothFinal": true,
+      "scoresAgree": true,
+      "finalScore": "San Francisco Giants 2, Chicago Cubs 1",
+      "winner": "San Francisco Giants",
+      "moneylineWinSide": "upper/away",
+      "status": "agreed_final"
+    },
+    "score": {
+      "initialRequestTxHash": "0x7c08ccaec288854d18d946ea26c4529e0b9e06df38557e62d60e260613bbec0b",
+      "initialCallbackTxHash": "0x4d92d656d59a903afb499e70c0e4f92b356b1fb8037a0b9bd3d28fadb48c8628",
+      "initialOutcome": "oracle_failure_callback_observed_sanitized",
+      "retryRequestTxHash": "0x8a47c3ef1d0418cede5887ee92954e3062a1b6abfdc6a7d7f0712f3bda62a195",
+      "retryCallbackTxHash": "0xec0fb8c1e3d9a5129771d731a4d831fece19c65b5ffc6307b17faae55d2e21d2",
+      "finalOutcome": "contest_scored",
+      "awayScore": 2,
+      "homeScore": 1
+    },
+    "settle": {
+      "speculationId": "21",
+      "txHash": "0xd14c2f9eb5a67f04c21d2202e081b1035909d16bc981c0104cf7f01e5e1a8fa7",
+      "winSide": "away/upper",
+      "status": "settled"
+    },
+    "claims": {
+      "claimed": [
+        {
+          "role": "stage-maker-b",
+          "txHash": "0x3aa349fa934ca9c4139409630c99002eb0a7e69935e99c45dfd04644e34ff2fd",
+          "amountWei6": "72000",
+          "amountUSDC": "0.072000"
+        },
+        {
+          "role": "ospex-flow-a",
+          "txHash": "0x990f9b0b88334a93d21c5c65e951d98cdf1c78dd97ad0a27594a4978ae801baa",
+          "amountWei6": "200000",
+          "amountUSDC": "0.200000"
+        }
+      ],
+      "notClaimed": [
+        {
+          "role": "ospex-fresh-user",
+          "reason": "lower/home lost"
+        },
+        {
+          "role": "stage-maker-a",
+          "reason": "no claimable entry"
+        }
+      ],
+      "postClaimSweeps": "raw/postgame-claim-sweeps.sanitized.json",
+      "allPostClaimSweepsEmpty": true
+    },
+    "txReceipts": "raw/postgame-score-settle-claim-receipts.sanitized.json",
+    "chainIndexerState": "raw/postgame-chain-indexer-state.sanitized.json",
+    "finalExposure": "raw/postgame-final-exposure.sanitized.json",
+    "noAdditionalCronJobsScheduledByThisRun": true
   },
   "scenarioMatrixSummary": {
-    "proven": 10,
-    "proven_with_caveats": 4,
-    "pending": 2,
+    "proven": 11,
+    "proven_with_caveats": 5,
     "read_only_proven": 1,
     "deferred": 3
   },
@@ -378,28 +456,35 @@
     "evidence.json",
     "scenario-matrix.md",
     "scenario-matrix.json",
-    "raw/release-version-matrix.sanitized.json",
-    "raw/repo-shas-open-prs.sanitized.json",
-    "raw/target-discovery.sanitized.json",
-    "raw/wallet-balances-allowances.sanitized.json",
+    "raw/api-health.sanitized.json",
+    "raw/cancel-shutdown-receipt-summary.sanitized.json",
     "raw/contest-speculation-state.sanitized.json",
+    "raw/controlled-fill-receipt-summary.sanitized.json",
+    "raw/cost-accounting.json",
+    "raw/final-exposure-orderbook-state.sanitized.json",
     "raw/mm-config-summary.sanitized.json",
     "raw/mm-telemetry-summary.sanitized.json",
-    "raw/sse-metrics-summary.sanitized.json",
-    "raw/controlled-fill-receipt-summary.sanitized.json",
-    "raw/cancel-shutdown-receipt-summary.sanitized.json",
-    "raw/final-exposure-orderbook-state.sanitized.json",
-    "raw/cost-accounting.json",
-    "raw/tx-receipts.summary.json",
+    "raw/postgame-chain-indexer-state.sanitized.json",
+    "raw/postgame-claim-sweeps.sanitized.json",
+    "raw/postgame-final-exposure.sanitized.json",
+    "raw/postgame-final-score-sources.sanitized.json",
     "raw/postgame-plan.json",
-    "raw/api-health.sanitized.json",
+    "raw/postgame-readonly-preflight.sanitized.json",
+    "raw/postgame-score-settle-claim-receipts.sanitized.json",
+    "raw/release-version-matrix.sanitized.json",
+    "raw/repo-shas-open-prs.sanitized.json",
+    "raw/selected-telemetry.sanitized.ndjson",
+    "raw/sse-metrics-summary.sanitized.json",
+    "raw/target-discovery.sanitized.json",
+    "raw/tx-receipts.summary.json",
     "raw/validation-scan.json",
-    "raw/selected-telemetry.sanitized.ndjson"
+    "raw/wallet-balances-allowances.sanitized.json"
   ],
   "caveats": [
-    "Postgame final score/settle/claim lifecycle is pending the scheduled continuation.",
-    "One serial warmup MM window for the same wallet/state/target emitted and cancelled quotes before the controlled partial-fill window; no second live target and no simultaneous second MM were run.",
+    "This is a repeatability + one-new-coverage-axis canary, not broad MVE scale proof.",
+    "A short serial warmup MM window for the same wallet/state/target emitted and cancelled quotes before the controlled partial-fill window; no second live target and no simultaneous second MM were run.",
     "Explicit raw stream-auth token and heartbeat frames were not printed or archived; own-state readiness/fill ingestion is evidenced through health-hold clear, own-state-stream fill source, and subscriber cleanup metrics.",
-    "A 0.032 USDC active position remains pending game outcome; it is not public/orderbook/matchable exposure."
-  ]
+    "The first score request produced a sanitized oracle upstream API failure callback; a bounded retry fulfilled and scored the contest 2-1."
+  ],
+  "updatedAtUtc": "2026-06-08T05:14:03Z"
 }

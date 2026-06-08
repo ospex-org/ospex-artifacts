@@ -1,0 +1,182 @@
+{
+  "capturedAtUtc": "2026-06-08T05:14:03Z",
+  "preClaimDryRuns": [
+    {
+      "role": "stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "ok": true,
+      "entries": [
+        {
+          "bucket": "claimable",
+          "speculationId": "21",
+          "positionId": "21_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_0",
+          "payoutWei6": "72000",
+          "success": true,
+          "txHashes": []
+        }
+      ],
+      "entriesCount": 1,
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "72000",
+        "totalPayoutUSDC": 0.072
+      }
+    },
+    {
+      "role": "ospex-fresh-user",
+      "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "ok": true,
+      "entries": [],
+      "entriesCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      }
+    },
+    {
+      "role": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "ok": true,
+      "entries": [
+        {
+          "bucket": "claimable",
+          "speculationId": "21",
+          "positionId": "21_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+          "payoutWei6": "200000",
+          "success": true,
+          "txHashes": []
+        }
+      ],
+      "entriesCount": 1,
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "200000",
+        "totalPayoutUSDC": 0.2
+      }
+    },
+    {
+      "role": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "ok": true,
+      "entries": [],
+      "entriesCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      }
+    }
+  ],
+  "liveClaimsSubmitted": [
+    {
+      "role": "stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "reason": "winning upper/away controlled market-maker position",
+      "txHash": "0x3aa349fa934ca9c4139409630c99002eb0a7e69935e99c45dfd04644e34ff2fd",
+      "claimedAmountWei6": "72000"
+    },
+    {
+      "role": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "reason": "winning upper/away seed/setup position discovered by dry-run; claimed with own signer to leave final sweeps empty",
+      "txHash": "0x990f9b0b88334a93d21c5c65e951d98cdf1c78dd97ad0a27594a4978ae801baa",
+      "claimedAmountWei6": "200000"
+    }
+  ],
+  "notClaimed": [
+    {
+      "role": "ospex-fresh-user",
+      "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "reason": "lower/home position lost after final score"
+    },
+    {
+      "role": "stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "reason": "no position/claimable entry"
+    }
+  ],
+  "postClaimDryRuns": [
+    {
+      "role": "stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "ok": true,
+      "entries": [],
+      "entriesCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      }
+    },
+    {
+      "role": "ospex-fresh-user",
+      "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "ok": true,
+      "entries": [],
+      "entriesCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      }
+    },
+    {
+      "role": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "ok": true,
+      "entries": [],
+      "entriesCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      }
+    },
+    {
+      "role": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "ok": true,
+      "entries": [],
+      "entriesCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      }
+    }
+  ],
+  "postClaimAllEmpty": true
+}
