@@ -1,0 +1,59 @@
+{"contestId": "31", "kind": "quote-intent", "speculationId": "21", "ts": "2026-06-07T22:57:35.543Z"}
+{"contestId": "31", "kind": "risk-verdict", "speculationId": "21", "ts": "2026-06-07T22:57:35.544Z"}
+{"commitmentHash": "0x24c312c0193ee681971cfa06ea1544b84b20003d9324fade9462b7a9d8cb55fc", "contestId": "31", "kind": "submit", "makerSide": "home", "riskAmountWei6": "150000", "speculationId": "21", "takerSide": "away", "ts": "2026-06-07T22:57:36.108Z"}
+{"commitmentHash": "0xb548ffd62c5c1f046f5701d06510ebc5858758f96bfb9e4ca920d49bd0a370c5", "contestId": "31", "kind": "submit", "makerSide": "away", "riskAmountWei6": "150000", "speculationId": "21", "takerSide": "home", "ts": "2026-06-07T22:57:36.440Z"}
+{"contestId": "31", "kind": "quote-intent", "speculationId": "21", "ts": "2026-06-07T22:57:47.628Z"}
+{"contestId": "31", "kind": "risk-verdict", "speculationId": "21", "ts": "2026-06-07T22:57:47.629Z"}
+{"contestId": "31", "kind": "quote-intent", "speculationId": "21", "ts": "2026-06-07T22:59:57.518Z"}
+{"contestId": "31", "kind": "risk-verdict", "speculationId": "21", "ts": "2026-06-07T22:59:57.518Z"}
+{"commitmentHash": "0x3f1b6336048211d0afe5c75665a984b4b7a43cf2d92941531d6244497cb2a3da", "contestId": "31", "kind": "replace", "makerSide": "home", "reason": "stale", "riskAmountWei6": "100000", "speculationId": "21", "takerSide": "away", "ts": "2026-06-07T22:59:58.112Z"}
+{"commitmentHash": "0x91bff065a15ea434a2f269857eb0e26e41b59488c32b04ca8fde8b0ff14aaa24", "contestId": "31", "kind": "replace", "makerSide": "away", "reason": "stale", "riskAmountWei6": "100000", "speculationId": "21", "takerSide": "home", "ts": "2026-06-07T22:59:58.556Z"}
+{"kind": "funding-hold", "reason": "funding-shortfall", "state": "entered", "ts": "2026-06-07T23:00:31.903Z"}
+{"commitmentHash": "0x3f1b6336048211d0afe5c75665a984b4b7a43cf2d92941531d6244497cb2a3da", "contestId": "31", "kind": "soft-cancel", "makerSide": "home", "reason": "funding", "speculationId": "21", "takerSide": "away", "ts": "2026-06-07T23:00:32.046Z"}
+{"commitmentHash": "0x91bff065a15ea434a2f269857eb0e26e41b59488c32b04ca8fde8b0ff14aaa24", "contestId": "31", "kind": "soft-cancel", "makerSide": "away", "reason": "funding", "speculationId": "21", "takerSide": "home", "ts": "2026-06-07T23:00:32.180Z"}
+{"kind": "funding-hold", "reason": "funding-shortfall", "state": "cleared", "ts": "2026-06-07T23:01:05.502Z"}
+{"commitmentHash": "0x24c312c0193ee681971cfa06ea1544b84b20003d9324fade9462b7a9d8cb55fc", "contestId": "31", "kind": "expire", "makerSide": "home", "speculationId": "21", "ts": "2026-06-07T23:01:05.596Z"}
+{"commitmentHash": "0xb548ffd62c5c1f046f5701d06510ebc5858758f96bfb9e4ca920d49bd0a370c5", "contestId": "31", "kind": "expire", "makerSide": "away", "speculationId": "21", "ts": "2026-06-07T23:01:05.597Z"}
+{"contestId": "31", "kind": "quote-intent", "speculationId": "21", "ts": "2026-06-07T23:02:00.300Z"}
+{"contestId": "31", "kind": "risk-verdict", "speculationId": "21", "ts": "2026-06-07T23:02:00.300Z"}
+{"commitmentHash": "0x1a2855275e343495328099912e7ecd02e236db37bbedf5530f85d4d51fb538df", "contestId": "31", "kind": "submit", "makerSide": "home", "riskAmountWei6": "150000", "speculationId": "21", "takerSide": "away", "ts": "2026-06-07T23:02:00.786Z"}
+{"commitmentHash": "0xe6f73b32447726af8b43ab07b40ee038171fb495075b8fd11276b28a4fcefb23", "contestId": "31", "kind": "submit", "makerSide": "away", "riskAmountWei6": "150000", "speculationId": "21", "takerSide": "home", "ts": "2026-06-07T23:02:01.109Z"}
+{"kind": "funding-hold", "reason": "funding-shortfall", "state": "entered", "ts": "2026-06-07T23:02:12.271Z"}
+{"commitmentHash": "0x1a2855275e343495328099912e7ecd02e236db37bbedf5530f85d4d51fb538df", "contestId": "31", "kind": "soft-cancel", "makerSide": "home", "reason": "funding", "speculationId": "21", "takerSide": "away", "ts": "2026-06-07T23:02:12.411Z"}
+{"commitmentHash": "0xe6f73b32447726af8b43ab07b40ee038171fb495075b8fd11276b28a4fcefb23", "contestId": "31", "kind": "soft-cancel", "makerSide": "away", "reason": "funding", "speculationId": "21", "takerSide": "home", "ts": "2026-06-07T23:02:12.544Z"}
+{"commitmentHash": "0x3f1b6336048211d0afe5c75665a984b4b7a43cf2d92941531d6244497cb2a3da", "contestId": "31", "gasPolWei": "19074770534990475", "kind": "onchain-cancel", "makerSide": "home", "speculationId": "21", "ts": "2026-06-07T23:02:48.036Z", "txHash": "0xb5eff8a0133b6029aee7ea416936be14981cd41a2c4dc16d4fde8a38f54669b4"}
+{"commitmentHash": "0x91bff065a15ea434a2f269857eb0e26e41b59488c32b04ca8fde8b0ff14aaa24", "contestId": "31", "gasPolWei": "19347478370149524", "kind": "onchain-cancel", "makerSide": "away", "speculationId": "21", "ts": "2026-06-07T23:02:50.760Z", "txHash": "0x0711c98297db0a716853bf6488501e2c03c180ce68b927ee51de89094d7aa09f"}
+{"commitmentHash": "0x1a2855275e343495328099912e7ecd02e236db37bbedf5530f85d4d51fb538df", "contestId": "31", "gasPolWei": "19364797550736825", "kind": "onchain-cancel", "makerSide": "home", "speculationId": "21", "ts": "2026-06-07T23:02:54.580Z", "txHash": "0x48fdec471676db0dac0c01f7d73dc49bdb2b2d9823a11d7e03c1d9dcba57f66f"}
+{"commitmentHash": "0xe6f73b32447726af8b43ab07b40ee038171fb495075b8fd11276b28a4fcefb23", "contestId": "31", "gasPolWei": "19211609169194463", "kind": "onchain-cancel", "makerSide": "away", "speculationId": "21", "ts": "2026-06-07T23:02:57.280Z", "txHash": "0x6283de1b6df0653ae38a3f0e9c1668112e0116b4646bf187663a72cd631b16c2"}
+{"kind": "kill", "reason": "kill-file", "ts": "2026-06-07T23:02:57.281Z"}
+{"kind": "stream-cold-restart", "reason": "resume-without-baseline", "ts": "2026-06-07T23:05:32.154Z"}
+{"kind": "stream-health-hold", "state": "entered", "ts": "2026-06-07T23:05:32.457Z"}
+{"kind": "stream-health-hold", "state": "cleared", "ts": "2026-06-07T23:05:43.097Z"}
+{"contestId": "31", "kind": "quote-intent", "speculationId": "21", "ts": "2026-06-07T23:05:43.283Z"}
+{"contestId": "31", "kind": "risk-verdict", "speculationId": "21", "ts": "2026-06-07T23:05:43.284Z"}
+{"commitmentHash": "0xfc47960e73e36ec370c9d8acf13cb606ade6ab388a819ff30a8a609ccf1d002f", "contestId": "31", "kind": "submit", "makerSide": "home", "riskAmountWei6": "100000", "speculationId": "21", "takerSide": "away", "ts": "2026-06-07T23:05:43.763Z"}
+{"commitmentHash": "0x3d7e892053d045069cd0b426263aa08a98823cf9f0b9dad6f2c3e93ccd713335", "contestId": "31", "kind": "submit", "makerSide": "away", "riskAmountWei6": "100000", "speculationId": "21", "takerSide": "home", "ts": "2026-06-07T23:05:44.066Z"}
+{"commitmentHash": "0x3d7e892053d045069cd0b426263aa08a98823cf9f0b9dad6f2c3e93ccd713335", "contestId": "31", "kind": "fill", "makerSide": "away", "source": "own-state-stream", "speculationId": "21", "takerSide": "home", "ts": "2026-06-07T23:06:17.044Z"}
+{"contestId": "31", "kind": "quote-intent", "speculationId": "21", "ts": "2026-06-07T23:06:27.883Z"}
+{"contestId": "31", "kind": "risk-verdict", "speculationId": "21", "ts": "2026-06-07T23:06:27.884Z"}
+{"commitmentHash": "0xfc47960e73e36ec370c9d8acf13cb606ade6ab388a819ff30a8a609ccf1d002f", "contestId": "31", "kind": "soft-cancel", "makerSide": "home", "reason": "side-not-quoted", "speculationId": "21", "takerSide": "away", "ts": "2026-06-07T23:06:28.021Z"}
+{"commitmentHash": "0x3d7e892053d045069cd0b426263aa08a98823cf9f0b9dad6f2c3e93ccd713335", "contestId": "31", "gasPolWei": "19624008083683913", "kind": "onchain-cancel", "makerSide": "away", "speculationId": "21", "ts": "2026-06-07T23:06:30.768Z", "txHash": "0x5c8a1863677f573a03f3343902d94537139853c69d2ec56dee6b265e3382641e"}
+{"contestId": "31", "kind": "quote-intent", "speculationId": "21", "ts": "2026-06-07T23:06:41.666Z"}
+{"contestId": "31", "kind": "risk-verdict", "speculationId": "21", "ts": "2026-06-07T23:06:41.667Z"}
+{"commitmentHash": "0xdd46627ff37d44d385a285c7b27bef62161b7c521475ee1478754f59c8baea5c", "contestId": "31", "kind": "submit", "makerSide": "home", "riskAmountWei6": "19900", "speculationId": "21", "takerSide": "away", "ts": "2026-06-07T23:06:42.111Z"}
+{"commitmentHash": "0xdd46627ff37d44d385a285c7b27bef62161b7c521475ee1478754f59c8baea5c", "contestId": "31", "kind": "soft-cancel", "makerSide": "home", "reason": "shutdown", "speculationId": "21", "takerSide": "away", "ts": "2026-06-07T23:07:47.191Z"}
+{"commitmentHash": "0xfc47960e73e36ec370c9d8acf13cb606ade6ab388a819ff30a8a609ccf1d002f", "contestId": "31", "gasPolWei": "19047171844839300", "kind": "onchain-cancel", "makerSide": "home", "speculationId": "21", "ts": "2026-06-07T23:07:50.325Z", "txHash": "0x376d80fc3eb3d0e693ffadc3fe0a0fa8c996b360eb022133a9642cd63a9d8568"}
+{"commitmentHash": "0xdd46627ff37d44d385a285c7b27bef62161b7c521475ee1478754f59c8baea5c", "contestId": "31", "gasPolWei": "19198697212754017", "kind": "onchain-cancel", "makerSide": "home", "speculationId": "21", "ts": "2026-06-07T23:07:54.181Z", "txHash": "0x9e74f8048ca606411e8334065337f0af6d7882b596e2e66172e53e899a47c61e"}
+{"kind": "kill", "reason": "kill-file", "ts": "2026-06-07T23:07:54.181Z"}
+{"kind": "stream-cold-restart", "reason": "resume-without-baseline", "ts": "2026-06-07T23:08:29.558Z"}
+{"kind": "stream-health-hold", "state": "entered", "ts": "2026-06-07T23:08:29.859Z"}
+{"kind": "stream-health-hold", "state": "cleared", "ts": "2026-06-07T23:08:40.501Z"}
+{"contestId": "31", "kind": "quote-intent", "speculationId": "21", "ts": "2026-06-07T23:08:40.693Z"}
+{"contestId": "31", "kind": "risk-verdict", "speculationId": "21", "ts": "2026-06-07T23:08:40.694Z"}
+{"commitmentHash": "0x344c7665d542c9a0e961945b71546caeb5b674b5578717969785b01a3a5b60e9", "contestId": "31", "kind": "submit", "makerSide": "home", "riskAmountWei6": "100000", "speculationId": "21", "takerSide": "away", "ts": "2026-06-07T23:08:41.167Z"}
+{"commitmentHash": "0x9d82821e3e2880a15b491ef47e1c3e025d0f226c05e4d62841b81db8317eb08a", "contestId": "31", "kind": "submit", "makerSide": "away", "riskAmountWei6": "88000", "speculationId": "21", "takerSide": "home", "ts": "2026-06-07T23:08:41.485Z"}
+{"commitmentHash": "0x344c7665d542c9a0e961945b71546caeb5b674b5578717969785b01a3a5b60e9", "contestId": "31", "kind": "soft-cancel", "makerSide": "home", "reason": "shutdown", "speculationId": "21", "takerSide": "away", "ts": "2026-06-07T23:08:51.785Z"}
+{"commitmentHash": "0x9d82821e3e2880a15b491ef47e1c3e025d0f226c05e4d62841b81db8317eb08a", "contestId": "31", "kind": "soft-cancel", "makerSide": "away", "reason": "shutdown", "speculationId": "21", "takerSide": "home", "ts": "2026-06-07T23:08:52.049Z"}
+{"commitmentHash": "0x344c7665d542c9a0e961945b71546caeb5b674b5578717969785b01a3a5b60e9", "contestId": "31", "gasPolWei": "19417043805864375", "kind": "onchain-cancel", "makerSide": "home", "speculationId": "21", "ts": "2026-06-07T23:08:54.939Z", "txHash": "0xfcff3c1c6839eb7fb8f89638ddea496193d312d5df971e342c51e662db91176b"}
+{"commitmentHash": "0x9d82821e3e2880a15b491ef47e1c3e025d0f226c05e4d62841b81db8317eb08a", "contestId": "31", "gasPolWei": "19085439371939087", "kind": "onchain-cancel", "makerSide": "away", "speculationId": "21", "ts": "2026-06-07T23:08:58.722Z", "txHash": "0xf19c5162f9063a6ecc2bbc9433bfccee4311ef5936b03a47b0fc04534cb5abb9"}
+{"kind": "kill", "reason": "kill-file", "ts": "2026-06-07T23:08:58.722Z"}

@@ -1,0 +1,53 @@
+{
+  "capturedAtUtc": "2026-06-08T05:14:03Z",
+  "target": {
+    "game": "San Francisco Giants @ Chicago Cubs",
+    "mlbStatsGamePk": 824670,
+    "contestId": "31",
+    "speculationId": "21"
+  },
+  "sources": [
+    {
+      "source": "MLB Stats API",
+      "gamePk": 824670,
+      "status": {
+        "abstractGameState": "Final",
+        "detailedState": "Final",
+        "statusCode": "F",
+        "codedGameState": "F"
+      },
+      "awayTeam": "San Francisco Giants",
+      "homeTeam": "Chicago Cubs",
+      "awayRuns": 2,
+      "homeRuns": 1,
+      "inningState": "Bottom",
+      "currentInning": 10
+    },
+    {
+      "source": "ESPN",
+      "eventId": "401815668",
+      "dateQuery": "20260607",
+      "name": "San Francisco Giants at Chicago Cubs",
+      "status": {
+        "name": "STATUS_FINAL",
+        "description": "Final",
+        "detail": "Final/10",
+        "shortDetail": "Final/10",
+        "completed": true,
+        "state": "post"
+      },
+      "awayTeam": "San Francisco Giants",
+      "homeTeam": "Chicago Cubs",
+      "awayRuns": 2,
+      "homeRuns": 1
+    }
+  ],
+  "agreement": {
+    "bothFinal": true,
+    "scoresAgree": true,
+    "finalScore": "San Francisco Giants 2, Chicago Cubs 1",
+    "winner": "San Francisco Giants",
+    "moneylineWinSide": "upper/away",
+    "status": "agreed_final"
+  }
+}

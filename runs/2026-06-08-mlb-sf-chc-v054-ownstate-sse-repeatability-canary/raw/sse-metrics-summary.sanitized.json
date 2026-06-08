@@ -1,0 +1,35 @@
+{
+  "preRunMetricsObserved": {
+    "ownStateSubscribers": 0,
+    "streamSubscribers": 0,
+    "connectionsTotal": 0
+  },
+  "duringRunEvidence": "stream health hold entered/cleared and fill source own-state-stream in telemetry",
+  "afterShutdownMetrics": {
+    "ownState": {
+      "wallets": 0,
+      "subscribers": 0,
+      "resyncBroadcastTotal": 0
+    },
+    "stream": {
+      "resources": 0,
+      "subscribers": 0,
+      "resyncBroadcastTotal": 0,
+      "catchupStartedTotal": 0,
+      "catchupCompletedTotal": 0,
+      "catchupResyncedTotal": 0
+    },
+    "connections": {
+      "total": 0,
+      "ips": 0,
+      "maxTotal": 200,
+      "maxPerIp": 10,
+      "rejectedTotal": 0,
+      "rejectedByScope": {
+        "ip": 0,
+        "total": 0
+      },
+      "slowClientShedTotal": 0
+    }
+  }
+}

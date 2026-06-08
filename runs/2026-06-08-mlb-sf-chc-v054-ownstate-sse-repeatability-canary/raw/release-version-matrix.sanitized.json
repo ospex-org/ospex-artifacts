@@ -1,0 +1,46 @@
+{
+  "sdkRelease": {
+    "repo": "ospex-org/ospex-sdk",
+    "tag": "v0.5.4",
+    "tagObject": "4171066dd4fb69fa9cb64562799d318eb0ffeec7",
+    "tagCommit": "7622600bf3a940b892db2560e6cceb997e976a01",
+    "assets": [
+      {
+        "name": "ospex-cli-0.5.4.tgz",
+        "size": 707399,
+        "sha256": "1395874cd85408e0c4e351c4537dd991fd6398987428fafcc00f795dd6085e87"
+      },
+      {
+        "name": "ospex-sdk-0.5.4.tgz",
+        "size": 448632,
+        "sha256": "07a50f55ac2c626348ad13ef13e84efe7258c40cd79940505372d80370919108"
+      }
+    ]
+  },
+  "runtimeVersions": {
+    "ospexVersion": "0.5.4",
+    "cliPackageVersion": "0.5.4",
+    "sdkPackageVersion": "0.5.4",
+    "mmInstalledSdkVersion": "0.5.4"
+  },
+  "mmSdkDependency": {
+    "package": "@ospex/sdk",
+    "version": "0.5.4",
+    "releaseTarball": "https://github.com/ospex-org/ospex-sdk/releases/download/v0.5.4/ospex-sdk-0.5.4.tgz",
+    "lockfileContainsReleaseTarball": true
+  },
+  "repoShas": {
+    "ospex-market-maker": "350e6f62cc8e3b4f3e337674c4e198cb20c2c3f1",
+    "ospex-sdk": "989f3161fc16cf14e1f90d6054dd4328f7e1492c",
+    "ospex-core-api": "11ff7f1ed90048161c4a3afc34a91cfa3fc29e23",
+    "ospex-indexer": "24403d5e6a157a1229de119e80bc48232282cc15",
+    "ospex-artifacts-base": "c280253b1b8dd74397b2bad89cbe1bda1f4eda90"
+  },
+  "openPRs": {
+    "ospex-market-maker": [],
+    "ospex-sdk": [],
+    "ospex-core-api": [],
+    "ospex-indexer": []
+  },
+  "note": "The local ospex-sdk worktree was not used for live writes; live writes used v0.5.4 release CLI/MM runtime artifacts."
+}

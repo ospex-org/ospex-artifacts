@@ -1,0 +1,47 @@
+{
+  "gas": {
+    "gasWei": "853754960952895306",
+    "gasPOL": "0.853754960952895306",
+    "gasByAction": {
+      "contest_create": {
+        "gasWei": "387391704461504809",
+        "gasPOL": "0.387391704461504809"
+      },
+      "seed_match": {
+        "gasWei": "192436951951284898",
+        "gasPOL": "0.192436951951284898"
+      },
+      "onchain_cancel": {
+        "gasWei": "173371015944151979",
+        "gasPOL": "0.173371015944151979"
+      },
+      "controlled_partial_fill": {
+        "gasWei": "100555288595953620",
+        "gasPOL": "0.10055528859595362"
+      }
+    },
+    "tokenTransferRawTotals": {
+      "LINK_18": "10000000000000000",
+      "USDC_6": "1772000"
+    }
+  },
+  "link": {
+    "operatorNetSpend": "0.005",
+    "observedTransferChainTotal": "0.010",
+    "note": "Observed LINK transfer chain includes operator-to-oracle and oracle-to-recipient legs; operator net spend is the first leg."
+  },
+  "usdcMovements": {
+    "contestCreationFee": "1.000000 USDC from ospex-flow-a",
+    "speculationCreationFeeDuringSeedMatch": "0.250000 USDC from ospex-flow-a and 0.250000 USDC from ospex-fresh-user",
+    "seedMatchRisk": "0.100000 USDC per side from ospex-flow-a and ospex-fresh-user",
+    "controlledPartialFillRisk": "0.032000 USDC from stage-maker-b and 0.040000 USDC from ospex-fresh-user",
+    "cancels": "no USDC transfer observed",
+    "claims": "pending postgame",
+    "byWalletObservedOutflow": {
+      "ospex-flow-a": "1.35",
+      "ospex-fresh-user": "0.39",
+      "stage-maker-b": "0.032"
+    }
+  },
+  "budgetAssessment": "actual observed spend/movements remain below the approved <= $5 equivalent cap; postgame gas/claims remain pending"
+}

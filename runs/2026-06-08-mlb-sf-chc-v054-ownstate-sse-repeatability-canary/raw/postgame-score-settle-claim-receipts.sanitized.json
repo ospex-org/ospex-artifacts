@@ -1,0 +1,150 @@
+{
+  "capturedAtUtc": "2026-06-08T05:14:03Z",
+  "network": "polygon",
+  "chainId": 137,
+  "txs": [
+    {
+      "transactionHash": "0x7c08ccaec288854d18d946ea26c4529e0b9e06df38557e62d60e260613bbec0b",
+      "blockNumber": 88126110,
+      "status": "success",
+      "success": true,
+      "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "to": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+      "gasUsed": "664329",
+      "effectiveGasPriceWei": "274729216008",
+      "gasWei": "182510585341378632",
+      "gasPOL": "0.182510585341378632",
+      "logsCount": 8,
+      "purpose": "score_request_initial_failed",
+      "requestId": "0x34ac16921e761500c25183c8e5e57e293f5c35dc3901a4a464de246cdfa73f57",
+      "actionOutcome": "request_sent_then_oracle_failure",
+      "stateChanged": false
+    },
+    {
+      "transactionHash": "0x4d92d656d59a903afb499e70c0e4f92b356b1fb8037a0b9bd3d28fadb48c8628",
+      "blockNumber": 88126118,
+      "status": "success",
+      "success": true,
+      "from": "0x73398758f4b47318d3936d279734136d40b09701",
+      "to": "0x71f707344a3fe10223c22d5929add95b3dfa007c",
+      "gasUsed": "287954",
+      "effectiveGasPriceWei": "414791074584",
+      "gasWei": "119440749090761136",
+      "gasPOL": "0.119440749090761136",
+      "logsCount": 10,
+      "purpose": "score_callback_initial_failed",
+      "requestId": "0x34ac16921e761500c25183c8e5e57e293f5c35dc3901a4a464de246cdfa73f57",
+      "actionOutcome": "oracle_failure_callback_observed",
+      "failureSummary": "score oracle upstream API error; no contest score state change"
+    },
+    {
+      "transactionHash": "0x8a47c3ef1d0418cede5887ee92954e3062a1b6abfdc6a7d7f0712f3bda62a195",
+      "blockNumber": 88126404,
+      "status": "success",
+      "success": true,
+      "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "to": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+      "gasUsed": "664329",
+      "effectiveGasPriceWei": "279742819629",
+      "gasWei": "185841267621313941",
+      "gasPOL": "0.185841267621313941",
+      "logsCount": 8,
+      "purpose": "score_request_retry_success",
+      "requestId": "0x610a1cb7d7f3fea48fc323333208a387accd0b80905cf84199e8cda331b82728",
+      "actionOutcome": "request_sent"
+    },
+    {
+      "transactionHash": "0xec0fb8c1e3d9a5129771d731a4d831fece19c65b5ffc6307b17faae55d2e21d2",
+      "blockNumber": 88126411,
+      "status": "success",
+      "success": true,
+      "from": "0xb593e5b30548026c7b9e9e602241fb0cbbff8154",
+      "to": "0x71f707344a3fe10223c22d5929add95b3dfa007c",
+      "gasUsed": "315922",
+      "effectiveGasPriceWei": "304329186475",
+      "gasWei": "96144285249554950",
+      "gasPOL": "0.09614428524955495",
+      "logsCount": 10,
+      "purpose": "score_callback_retry_success",
+      "requestId": "0x610a1cb7d7f3fea48fc323333208a387accd0b80905cf84199e8cda331b82728",
+      "actionOutcome": "oracle_fulfilled_contest_scored",
+      "score": {
+        "away": 2,
+        "home": 1
+      }
+    },
+    {
+      "transactionHash": "0xd14c2f9eb5a67f04c21d2202e081b1035909d16bc981c0104cf7f01e5e1a8fa7",
+      "blockNumber": 88126441,
+      "status": "success",
+      "success": true,
+      "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "to": "0xd757387893e779ac35451cea639a408a537b9a1b",
+      "gasUsed": "155603",
+      "effectiveGasPriceWei": "278770828539",
+      "gasWei": "43377577233154017",
+      "gasPOL": "0.043377577233154017",
+      "logsCount": 3,
+      "purpose": "settle_speculation_21",
+      "actionOutcome": "settled",
+      "speculationId": "21",
+      "winSide": "away/upper"
+    },
+    {
+      "transactionHash": "0x3aa349fa934ca9c4139409630c99002eb0a7e69935e99c45dfd04644e34ff2fd",
+      "blockNumber": 88126502,
+      "status": "success",
+      "success": true,
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "to": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+      "gasUsed": "127189",
+      "effectiveGasPriceWei": "280482348870",
+      "gasWei": "35674269470426430",
+      "gasPOL": "0.03567426947042643",
+      "logsCount": 4,
+      "purpose": "claim_stage_maker_b",
+      "actionOutcome": "claimed",
+      "role": "stage-maker-b",
+      "claimedAmountWei6": "72000",
+      "claimedAmountUSDC": "0.072000"
+    },
+    {
+      "transactionHash": "0x990f9b0b88334a93d21c5c65e951d98cdf1c78dd97ad0a27594a4978ae801baa",
+      "blockNumber": 88126506,
+      "status": "success",
+      "success": true,
+      "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "to": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+      "gasUsed": "123229",
+      "effectiveGasPriceWei": "280725240369",
+      "gasWei": "34593490645431501",
+      "gasPOL": "0.034593490645431501",
+      "logsCount": 4,
+      "purpose": "claim_ospex_flow_a_seed_winner",
+      "actionOutcome": "claimed",
+      "role": "ospex-flow-a",
+      "claimedAmountWei6": "200000",
+      "claimedAmountUSDC": "0.200000",
+      "note": "seed/setup upper position also won and was claimed with its own signer guard so final sweeps are empty"
+    }
+  ],
+  "scoreRequestSummary": {
+    "initialRequest": {
+      "requestId": "0x34ac16921e761500c25183c8e5e57e293f5c35dc3901a4a464de246cdfa73f57",
+      "requestTxHash": "0x7c08ccaec288854d18d946ea26c4529e0b9e06df38557e62d60e260613bbec0b",
+      "callbackTxHash": "0x4d92d656d59a903afb499e70c0e4f92b356b1fb8037a0b9bd3d28fadb48c8628",
+      "outcome": "failed_oracle_callback_sanitized"
+    },
+    "retryRequest": {
+      "requestId": "0x610a1cb7d7f3fea48fc323333208a387accd0b80905cf84199e8cda331b82728",
+      "requestTxHash": "0x8a47c3ef1d0418cede5887ee92954e3062a1b6abfdc6a7d7f0712f3bda62a195",
+      "callbackTxHash": "0xec0fb8c1e3d9a5129771d731a4d831fece19c65b5ffc6307b17faae55d2e21d2",
+      "outcome": "fulfilled_scored_2_1"
+    }
+  },
+  "settleTxHash": "0xd14c2f9eb5a67f04c21d2202e081b1035909d16bc981c0104cf7f01e5e1a8fa7",
+  "claimTxs": {
+    "stage-maker-b": "0x3aa349fa934ca9c4139409630c99002eb0a7e69935e99c45dfd04644e34ff2fd",
+    "ospex-flow-a": "0x990f9b0b88334a93d21c5c65e951d98cdf1c78dd97ad0a27594a4978ae801baa"
+  }
+}

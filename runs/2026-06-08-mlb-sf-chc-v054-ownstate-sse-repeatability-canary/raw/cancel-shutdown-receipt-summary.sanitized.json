@@ -1,0 +1,196 @@
+{
+  "onchainCancelReceipts": [
+    {
+      "action": "warmup_cancel_home_quote_1",
+      "txHash": "0xb5eff8a0133b6029aee7ea416936be14981cd41a2c4dc16d4fde8a38f54669b4",
+      "status": "success",
+      "blockNumber": 88112255,
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "to": "0x1b93579b044f0ee3c4c8a9f479a323def7770712",
+      "gasUsed": "68675",
+      "effectiveGasPriceWei": "277754212377",
+      "gasCostWei": "19074770534990475",
+      "gasCostPOL": "0.019074770534990475",
+      "tokenTransfers": []
+    },
+    {
+      "action": "warmup_cancel_away_quote_1",
+      "txHash": "0x0711c98297db0a716853bf6488501e2c03c180ce68b927ee51de89094d7aa09f",
+      "status": "success",
+      "blockNumber": 88112257,
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "to": "0x1b93579b044f0ee3c4c8a9f479a323def7770712",
+      "gasUsed": "68663",
+      "effectiveGasPriceWei": "281774439948",
+      "gasCostWei": "19347478370149524",
+      "gasCostPOL": "0.019347478370149524",
+      "tokenTransfers": []
+    },
+    {
+      "action": "warmup_cancel_home_quote_2",
+      "txHash": "0x48fdec471676db0dac0c01f7d73dc49bdb2b2d9823a11d7e03c1d9dcba57f66f",
+      "status": "success",
+      "blockNumber": 88112259,
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "to": "0x1b93579b044f0ee3c4c8a9f479a323def7770712",
+      "gasUsed": "68675",
+      "effectiveGasPriceWei": "281977394259",
+      "gasCostWei": "19364797550736825",
+      "gasCostPOL": "0.019364797550736825",
+      "tokenTransfers": []
+    },
+    {
+      "action": "warmup_cancel_away_quote_2",
+      "txHash": "0x6283de1b6df0653ae38a3f0e9c1668112e0116b4646bf187663a72cd631b16c2",
+      "status": "success",
+      "blockNumber": 88112262,
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "to": "0x1b93579b044f0ee3c4c8a9f479a323def7770712",
+      "gasUsed": "68663",
+      "effectiveGasPriceWei": "279795656601",
+      "gasCostWei": "19211609169194463",
+      "gasCostPOL": "0.019211609169194463",
+      "tokenTransfers": []
+    },
+    {
+      "action": "main_cancel_filled_remainder",
+      "txHash": "0x5c8a1863677f573a03f3343902d94537139853c69d2ec56dee6b265e3382641e",
+      "status": "success",
+      "blockNumber": 88112404,
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "to": "0x1b93579b044f0ee3c4c8a9f479a323def7770712",
+      "gasUsed": "68663",
+      "effectiveGasPriceWei": "285801786751",
+      "gasCostWei": "19624008083683913",
+      "gasCostPOL": "0.019624008083683913",
+      "tokenTransfers": []
+    },
+    {
+      "action": "main_cancel_unfilled_away_quote",
+      "txHash": "0x376d80fc3eb3d0e693ffadc3fe0a0fa8c996b360eb022133a9642cd63a9d8568",
+      "status": "success",
+      "blockNumber": 88112457,
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "to": "0x1b93579b044f0ee3c4c8a9f479a323def7770712",
+      "gasUsed": "68675",
+      "effectiveGasPriceWei": "277352338476",
+      "gasCostWei": "19047171844839300",
+      "gasCostPOL": "0.0190471718448393",
+      "tokenTransfers": []
+    },
+    {
+      "action": "main_cancel_retained_remainder_quote",
+      "txHash": "0x9e74f8048ca606411e8334065337f0af6d7882b596e2e66172e53e899a47c61e",
+      "status": "success",
+      "blockNumber": 88112459,
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "to": "0x1b93579b044f0ee3c4c8a9f479a323def7770712",
+      "gasUsed": "68663",
+      "effectiveGasPriceWei": "279607608359",
+      "gasCostWei": "19198697212754017",
+      "gasCostPOL": "0.019198697212754017",
+      "tokenTransfers": []
+    },
+    {
+      "action": "restart_cancel_home_quote",
+      "txHash": "0xfcff3c1c6839eb7fb8f89638ddea496193d312d5df971e342c51e662db91176b",
+      "status": "success",
+      "blockNumber": 88112500,
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "to": "0x1b93579b044f0ee3c4c8a9f479a323def7770712",
+      "gasUsed": "68675",
+      "effectiveGasPriceWei": "282738169725",
+      "gasCostWei": "19417043805864375",
+      "gasCostPOL": "0.019417043805864375",
+      "tokenTransfers": []
+    },
+    {
+      "action": "restart_cancel_away_quote",
+      "txHash": "0xf19c5162f9063a6ecc2bbc9433bfccee4311ef5936b03a47b0fc04534cb5abb9",
+      "status": "success",
+      "blockNumber": 88112502,
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "to": "0x1b93579b044f0ee3c4c8a9f479a323def7770712",
+      "gasUsed": "68663",
+      "effectiveGasPriceWei": "277958134249",
+      "gasCostWei": "19085439371939087",
+      "gasCostPOL": "0.019085439371939087",
+      "tokenTransfers": []
+    }
+  ],
+  "finalPublicExposure": {
+    "publicVisibleCommitments": 0,
+    "contestSpeculationOrderbookRows": 0,
+    "mmStateCommitments": {
+      "total": 4,
+      "byLifecycle": {
+        "visibleOpen": 0,
+        "softCancelled": 0,
+        "partiallyFilled": 0,
+        "filled": 0,
+        "expired": 0,
+        "authoritativelyInvalidated": 4
+      },
+      "distinctContestsNonTerminal": 0
+    },
+    "mmPositions": {
+      "total": 1,
+      "byStatus": {
+        "active": {
+          "count": 1,
+          "ownRiskWei6": "32000"
+        },
+        "pendingSettle": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "claimable": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "claimed": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "settledLost": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "void": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        }
+      }
+    },
+    "activePositionRiskWei6": "32000",
+    "activePositionMeaning": "settlement exposure only, pending final game outcome; not a public/matchable orderbook commitment",
+    "processesRemaining": "none observed by process scan",
+    "apiMetricsAfterShutdown": {
+      "ownState": {
+        "wallets": 0,
+        "subscribers": 0,
+        "resyncBroadcastTotal": 0
+      },
+      "stream": {
+        "resources": 0,
+        "subscribers": 0,
+        "resyncBroadcastTotal": 0,
+        "catchupStartedTotal": 0,
+        "catchupCompletedTotal": 0,
+        "catchupResyncedTotal": 0
+      },
+      "connections": {
+        "total": 0,
+        "ips": 0,
+        "maxTotal": 200,
+        "maxPerIp": 10,
+        "rejectedTotal": 0,
+        "rejectedByScope": {
+          "ip": 0,
+          "total": 0
+        },
+        "slowClientShedTotal": 0
+      }
+    }
+  }
+}

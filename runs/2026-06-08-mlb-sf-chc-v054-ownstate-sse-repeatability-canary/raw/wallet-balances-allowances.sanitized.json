@@ -1,0 +1,275 @@
+{
+  "wallets": {
+    "stage-maker-a": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "resolvedSigner": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "readinessCliOk": false,
+      "balances": {
+        "native": {
+          "raw": "9754686118827494258",
+          "formatted": "9.754686",
+          "decimals": 18,
+          "symbol": "POL"
+        },
+        "usdc": {
+          "raw": "146410",
+          "formatted": "0.14641",
+          "decimals": 6,
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+        },
+        "link": {
+          "raw": "180000000000000000",
+          "formatted": "0.18",
+          "decimals": 18,
+          "address": "0xb0897686c545045aFc77CF20eC7A532E3120E0F1"
+        }
+      },
+      "allowances": {
+        "usdcPositionModule": {
+          "raw": "11639200",
+          "formatted": "11.6392",
+          "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c"
+        },
+        "usdcTreasuryModule": {
+          "raw": "0",
+          "formatted": "0",
+          "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e"
+        },
+        "linkOracleModule": {
+          "raw": "180000000000000000",
+          "formatted": "0.18",
+          "spender": "0x7e1397eD5b4c9f606DCF2EB0281485B2296E29Bb"
+        }
+      },
+      "ready": {
+        "matchCommitments": {
+          "ok": false,
+          "reasons": [
+            "no keystore configured"
+          ]
+        },
+        "submitCommitments": {
+          "ok": false,
+          "reasons": [
+            "no keystore configured"
+          ]
+        },
+        "createContests": {
+          "ok": false,
+          "reasons": [
+            "no keystore configured",
+            "TreasuryModule USDC not approved"
+          ]
+        }
+      }
+    },
+    "stage-maker-b": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "resolvedSigner": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "readinessCliOk": false,
+      "balances": {
+        "native": {
+          "raw": "13386005850654892365",
+          "formatted": "13.386005",
+          "decimals": 18,
+          "symbol": "POL"
+        },
+        "usdc": {
+          "raw": "453288",
+          "formatted": "0.453288",
+          "decimals": 6,
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+        },
+        "link": {
+          "raw": "225000000000000000",
+          "formatted": "0.225",
+          "decimals": 18,
+          "address": "0xb0897686c545045aFc77CF20eC7A532E3120E0F1"
+        }
+      },
+      "allowances": {
+        "usdcPositionModule": {
+          "raw": "3849000",
+          "formatted": "3.849",
+          "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c"
+        },
+        "usdcTreasuryModule": {
+          "raw": "0",
+          "formatted": "0",
+          "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e"
+        },
+        "linkOracleModule": {
+          "raw": "225000000000000000",
+          "formatted": "0.225",
+          "spender": "0x7e1397eD5b4c9f606DCF2EB0281485B2296E29Bb"
+        }
+      },
+      "ready": {
+        "matchCommitments": {
+          "ok": false,
+          "reasons": [
+            "no keystore configured"
+          ]
+        },
+        "submitCommitments": {
+          "ok": false,
+          "reasons": [
+            "no keystore configured"
+          ]
+        },
+        "createContests": {
+          "ok": false,
+          "reasons": [
+            "no keystore configured",
+            "TreasuryModule USDC not approved"
+          ]
+        }
+      }
+    },
+    "ospex-fresh-user": {
+      "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "resolvedSigner": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "readinessCliOk": false,
+      "balances": {
+        "native": {
+          "raw": "21011172461122630726",
+          "formatted": "21.011172",
+          "decimals": 18,
+          "symbol": "POL"
+        },
+        "usdc": {
+          "raw": "7259976",
+          "formatted": "7.259976",
+          "decimals": 6,
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+        },
+        "link": {
+          "raw": "280000000000000000",
+          "formatted": "0.28",
+          "decimals": 18,
+          "address": "0xb0897686c545045aFc77CF20eC7A532E3120E0F1"
+        }
+      },
+      "allowances": {
+        "usdcPositionModule": {
+          "raw": "1720412",
+          "formatted": "1.720412",
+          "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c"
+        },
+        "usdcTreasuryModule": {
+          "raw": "0",
+          "formatted": "0",
+          "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e"
+        },
+        "linkOracleModule": {
+          "raw": "0",
+          "formatted": "0",
+          "spender": "0x7e1397eD5b4c9f606DCF2EB0281485B2296E29Bb"
+        }
+      },
+      "ready": {
+        "matchCommitments": {
+          "ok": false,
+          "reasons": [
+            "no keystore configured"
+          ]
+        },
+        "submitCommitments": {
+          "ok": false,
+          "reasons": [
+            "no keystore configured"
+          ]
+        },
+        "createContests": {
+          "ok": false,
+          "reasons": [
+            "no keystore configured",
+            "TreasuryModule USDC not approved",
+            "OracleModule LINK not approved"
+          ]
+        }
+      }
+    },
+    "ospex-flow-a": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "resolvedSigner": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "readinessCliOk": false,
+      "balances": {
+        "native": {
+          "raw": "20351628346229477634",
+          "formatted": "20.351628",
+          "decimals": 18,
+          "symbol": "POL"
+        },
+        "usdc": {
+          "raw": "8341526",
+          "formatted": "8.341526",
+          "decimals": 6,
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+        },
+        "link": {
+          "raw": "300000000000000000",
+          "formatted": "0.3",
+          "decimals": 18,
+          "address": "0xb0897686c545045aFc77CF20eC7A532E3120E0F1"
+        }
+      },
+      "allowances": {
+        "usdcPositionModule": {
+          "raw": "603569",
+          "formatted": "0.603569",
+          "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c"
+        },
+        "usdcTreasuryModule": {
+          "raw": "0",
+          "formatted": "0",
+          "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e"
+        },
+        "linkOracleModule": {
+          "raw": "0",
+          "formatted": "0",
+          "spender": "0x7e1397eD5b4c9f606DCF2EB0281485B2296E29Bb"
+        }
+      },
+      "ready": {
+        "matchCommitments": {
+          "ok": false,
+          "reasons": [
+            "no keystore configured"
+          ]
+        },
+        "submitCommitments": {
+          "ok": false,
+          "reasons": [
+            "no keystore configured"
+          ]
+        },
+        "createContests": {
+          "ok": false,
+          "reasons": [
+            "no keystore configured",
+            "TreasuryModule USDC not approved",
+            "OracleModule LINK not approved"
+          ]
+        }
+      }
+    }
+  },
+  "signerGuards": {
+    "contest-create-and-seed-maker": {
+      "expected": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "observed": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "status": "matched"
+    },
+    "market-maker": {
+      "expected": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "observed": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "status": "matched"
+    },
+    "controlled-taker": {
+      "expected": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "observed": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "status": "matched"
+    }
+  }
+}

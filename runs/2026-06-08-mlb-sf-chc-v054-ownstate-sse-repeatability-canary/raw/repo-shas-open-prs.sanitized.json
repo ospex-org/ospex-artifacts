@@ -1,0 +1,15 @@
+{
+  "repoShas": {
+    "ospex-market-maker": "350e6f62cc8e3b4f3e337674c4e198cb20c2c3f1",
+    "ospex-sdk": "989f3161fc16cf14e1f90d6054dd4328f7e1492c",
+    "ospex-core-api": "11ff7f1ed90048161c4a3afc34a91cfa3fc29e23",
+    "ospex-indexer": "24403d5e6a157a1229de119e80bc48232282cc15",
+    "ospex-artifacts-base": "c280253b1b8dd74397b2bad89cbe1bda1f4eda90"
+  },
+  "openPRs": {
+    "ospex-market-maker": [],
+    "ospex-sdk": [],
+    "ospex-core-api": [],
+    "ospex-indexer": []
+  }
+}

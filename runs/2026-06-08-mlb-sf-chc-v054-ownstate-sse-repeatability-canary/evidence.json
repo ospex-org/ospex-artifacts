@@ -1,0 +1,490 @@
+{
+  "artifactId": "2026-06-08-mlb-sf-chc-v054-ownstate-sse-repeatability-canary",
+  "artifactType": "run",
+  "artifactStatus": "green_repeatability_canary_complete_with_caveats",
+  "status": "complete_verified_with_caveats",
+  "date": "2026-06-08",
+  "publishedAt": "2026-06-07T23:20:20Z",
+  "capturedAtUtc": "2026-06-08T05:14:03Z",
+  "network": "polygon",
+  "chainId": 137,
+  "artifactPath": "runs/2026-06-08-mlb-sf-chc-v054-ownstate-sse-repeatability-canary/",
+  "branch": "artifact/2026-06-08-sf-chc-ownstate-sse-repeatability",
+  "baseline": {
+    "pr": 15,
+    "state": "MERGED",
+    "url": "https://github.com/ospex-org/ospex-artifacts/pull/15",
+    "mergedAt": "2026-06-07T22:45:05Z",
+    "mergeCommit": "c280253b1b8dd74397b2bad89cbe1bda1f4eda90",
+    "checks": "JSON, schema, path, and public-safety checks: SUCCESS"
+  },
+  "verdict": {
+    "label": "GREEN repeatability canary / complete verified with caveats",
+    "reason": "Live quote, controlled partial fill, restart/resume, authoritative cancel, zero public/orderbook exposure, subscriber cleanup, final score verification, scoring, settlement, claims, and empty post-claim sweeps are evidenced. Caveats remain: bounded one-target canary, one initial score oracle retry, and no explicit raw heartbeat frame archived."
+  },
+  "strategicResult": "Phase 3 own-state SSE is live-proven twice / repeatability improved; still not MVE-scale-proven.",
+  "game": {
+    "contestId": "31",
+    "speculationId": "21",
+    "sport": "mlb",
+    "awayTeam": "San Francisco Giants",
+    "homeTeam": "Chicago Cubs",
+    "startTimeUtc": "2026-06-08T00:30:00Z",
+    "startTimeAmericaChicago": "2026-06-07 19:30 CDT",
+    "mlbStatsGamePk": 824670,
+    "contestStatus": "scored",
+    "speculationStatus": "closed",
+    "contestCreator": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+    "verifiedAt": "2026-06-07T22:53:39+00:00",
+    "contestCreatedAt": "2026-06-07T22:53:27+00:00",
+    "moneylineSemantics": {
+      "upper": "away/San Francisco Giants",
+      "lower": "home/Chicago Cubs"
+    },
+    "pregameMlbStatus": {
+      "abstractGameState": "Preview",
+      "codedGameState": "P",
+      "detailedState": "Pre-Game",
+      "statusCode": "P",
+      "startTimeTBD": false,
+      "abstractGameCode": "P"
+    },
+    "awayScore": 2,
+    "homeScore": 1,
+    "scoredAt": "2026-06-08T04:56:42+00:00",
+    "winSide": "away",
+    "settledAt": "2026-06-08T04:57:27+00:00"
+  },
+  "contest": {
+    "contestId": "31",
+    "speculationId": "21",
+    "sport": "mlb",
+    "awayTeam": "San Francisco Giants",
+    "homeTeam": "Chicago Cubs",
+    "startTimeUtc": "2026-06-08T00:30:00Z",
+    "startTimeAmericaChicago": "2026-06-07 19:30 CDT",
+    "mlbStatsGamePk": 824670,
+    "contestStatus": "scored",
+    "speculationStatus": "closed",
+    "contestCreator": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+    "verifiedAt": "2026-06-07T22:53:39+00:00",
+    "contestCreatedAt": "2026-06-07T22:53:27+00:00",
+    "moneylineSemantics": {
+      "upper": "away/San Francisco Giants",
+      "lower": "home/Chicago Cubs"
+    },
+    "pregameMlbStatus": {
+      "abstractGameState": "Preview",
+      "codedGameState": "P",
+      "detailedState": "Pre-Game",
+      "statusCode": "P",
+      "startTimeTBD": false,
+      "abstractGameCode": "P"
+    },
+    "awayScore": 2,
+    "homeScore": 1,
+    "scoredAt": "2026-06-08T04:56:42+00:00",
+    "winSide": "away",
+    "settledAt": "2026-06-08T04:57:27+00:00"
+  },
+  "walletRoles": {
+    "stage-maker-a": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "stage-maker-b": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "ospex-fresh-user": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+    "ospex-flow-a": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+  },
+  "signerGuards": {
+    "contest-create-and-seed-maker": {
+      "expected": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "observed": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "status": "matched"
+    },
+    "market-maker": {
+      "expected": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "observed": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "status": "matched"
+    },
+    "controlled-taker": {
+      "expected": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "observed": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "status": "matched"
+    },
+    "postgame-score": {
+      "expected": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "observed": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "status": "matched"
+    },
+    "postgame-settle": {
+      "expected": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "observed": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "status": "matched"
+    },
+    "postgame-claim-stage-maker-b": {
+      "expected": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "observed": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "status": "matched"
+    },
+    "postgame-claim-ospex-flow-a": {
+      "expected": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "observed": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "status": "matched"
+    }
+  },
+  "release": {
+    "repo": "ospex-org/ospex-sdk",
+    "tag": "v0.5.4",
+    "matrix": {
+      "sdkRelease": {
+        "repo": "ospex-org/ospex-sdk",
+        "tag": "v0.5.4",
+        "tagObject": "4171066dd4fb69fa9cb64562799d318eb0ffeec7",
+        "tagCommit": "7622600bf3a940b892db2560e6cceb997e976a01",
+        "assets": [
+          {
+            "name": "ospex-cli-0.5.4.tgz",
+            "size": 707399,
+            "sha256": "1395874cd85408e0c4e351c4537dd991fd6398987428fafcc00f795dd6085e87"
+          },
+          {
+            "name": "ospex-sdk-0.5.4.tgz",
+            "size": 448632,
+            "sha256": "07a50f55ac2c626348ad13ef13e84efe7258c40cd79940505372d80370919108"
+          }
+        ]
+      },
+      "runtimeVersions": {
+        "ospexVersion": "0.5.4",
+        "cliPackageVersion": "0.5.4",
+        "sdkPackageVersion": "0.5.4",
+        "mmInstalledSdkVersion": "0.5.4"
+      },
+      "mmSdkDependency": {
+        "package": "@ospex/sdk",
+        "version": "0.5.4",
+        "releaseTarball": "https://github.com/ospex-org/ospex-sdk/releases/download/v0.5.4/ospex-sdk-0.5.4.tgz",
+        "lockfileContainsReleaseTarball": true
+      },
+      "repoShas": {
+        "ospex-market-maker": "350e6f62cc8e3b4f3e337674c4e198cb20c2c3f1",
+        "ospex-sdk": "989f3161fc16cf14e1f90d6054dd4328f7e1492c",
+        "ospex-core-api": "11ff7f1ed90048161c4a3afc34a91cfa3fc29e23",
+        "ospex-indexer": "24403d5e6a157a1229de119e80bc48232282cc15",
+        "ospex-artifacts-base": "c280253b1b8dd74397b2bad89cbe1bda1f4eda90"
+      },
+      "openPRs": {
+        "ospex-market-maker": [],
+        "ospex-sdk": [],
+        "ospex-core-api": [],
+        "ospex-indexer": []
+      },
+      "note": "The local ospex-sdk worktree was not used for live writes; live writes used v0.5.4 release CLI/MM runtime artifacts."
+    }
+  },
+  "preflight": {
+    "utcTime": "2026-06-07T23:12:10Z",
+    "americaChicagoTime": "2026-06-07 18:12:10 CDT",
+    "apiHealth": {
+      "ok": true,
+      "service": "ospex-core-api",
+      "network": "polygon",
+      "chainId": 137,
+      "timestamp": "2026-06-07T23:17:27.378Z"
+    },
+    "targetDiscovery": {
+      "hasOdds": true,
+      "canCreateContest": true,
+      "existingContestBeforeRun": false,
+      "apiHealthy": true,
+      "singleTargetSelected": true,
+      "reason": "same-evening MLB target with sufficient pregame runway and reference odds available"
+    },
+    "wallets": "raw/wallet-balances-allowances.sanitized.json",
+    "noExistingLiveProcessAtFinalCheck": true,
+    "postgameReadOnly": "raw/postgame-readonly-preflight.sanitized.json"
+  },
+  "liveCanary": {
+    "telemetrySummary": "raw/mm-telemetry-summary.sanitized.json",
+    "quoteEmitted": true,
+    "controlledPartialFill": {
+      "commitmentHash": "0x3d7e892053d045069cd0b426263aa08a98823cf9f0b9dad6f2c3e93ccd713335",
+      "fillTxHash": "0x30ca335e185af1a2303dd58b9d92f37f7af94508fce05119293a0ff6f2931cec",
+      "maker": "stage-maker-b",
+      "makerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "taker": "ospex-fresh-user",
+      "takerAddress": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "makerSide": "away/San Francisco Giants",
+      "takerSide": "home/Chicago Cubs",
+      "originalMakerRiskWei6": "100000",
+      "makerFilledRiskWei6": "32000",
+      "makerRetainedRemainderWei6": "68000",
+      "takerRiskWei6": "40000",
+      "sourceObserved": "own-state-stream",
+      "receiptStatus": "success"
+    },
+    "restartResume": {
+      "restartRun": "run-2026-06-07T23-08-28-751Z-pwt2kz.ndjson",
+      "streamColdRestartObserved": true,
+      "streamHealthHoldEnteredAndCleared": true,
+      "duplicateFillEventsForSelectedHashInRestartRun": 0,
+      "unsafeDuplicateExposureInFinalState": false
+    },
+    "ownStateSse": {
+      "streamColdRestartObserved": true,
+      "healthHoldEnteredAndCleared": true,
+      "fillIngestedViaOwnStateStream": true,
+      "explicitHeartbeatFrameArchived": false,
+      "subscriberCleanupAfterShutdown": {
+        "ownStateSubscribers": 0,
+        "streamSubscribers": 0
+      }
+    },
+    "auditComparator": {
+      "divergenceEvents": 0,
+      "unknownOwnFillEvents": 0,
+      "ownerMappingFailedEvents": 0,
+      "status": "retained_no_divergence_observed"
+    },
+    "authoritativeCancels": [
+      "0xb5eff8a0133b6029aee7ea416936be14981cd41a2c4dc16d4fde8a38f54669b4",
+      "0x0711c98297db0a716853bf6488501e2c03c180ce68b927ee51de89094d7aa09f",
+      "0x48fdec471676db0dac0c01f7d73dc49bdb2b2d9823a11d7e03c1d9dcba57f66f",
+      "0x6283de1b6df0653ae38a3f0e9c1668112e0116b4646bf187663a72cd631b16c2",
+      "0x5c8a1863677f573a03f3343902d94537139853c69d2ec56dee6b265e3382641e",
+      "0x376d80fc3eb3d0e693ffadc3fe0a0fa8c996b360eb022133a9642cd63a9d8568",
+      "0x9e74f8048ca606411e8334065337f0af6d7882b596e2e66172e53e899a47c61e",
+      "0xfcff3c1c6839eb7fb8f89638ddea496193d312d5df971e342c51e662db91176b",
+      "0xf19c5162f9063a6ecc2bbc9433bfccee4311ef5936b03a47b0fc04534cb5abb9"
+    ],
+    "finalExposure": {
+      "capturedAtUtc": "2026-06-08T05:14:03Z",
+      "publicVisibleCommitments": 0,
+      "contestSpeculationOrderbookRows": 0,
+      "visibleOpenOrPartiallyFilledCommitmentsQuery": 0,
+      "mmStateCommitments": {
+        "total": 4,
+        "byLifecycle": {
+          "visibleOpen": 0,
+          "softCancelled": 0,
+          "partiallyFilled": 0,
+          "filled": 0,
+          "expired": 0,
+          "authoritativelyInvalidated": 4
+        },
+        "distinctContestsNonTerminal": 0
+      },
+      "mmPositions": {
+        "total": 1,
+        "byStatus": {
+          "active": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "pendingSettle": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "claimable": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "claimed": {
+            "count": 1,
+            "ownRiskWei6": "32000",
+            "claimedAmountWei6": "72000"
+          },
+          "settledLost": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          },
+          "void": {
+            "count": 0,
+            "ownRiskWei6": "0"
+          }
+        }
+      },
+      "activePositionRiskWei6": "0",
+      "activePositionMeaning": "none; contest scored, speculation settled, winning controlled positions claimed, losing lower/home position has no claimable payout",
+      "processesRemaining": "none observed by process scan",
+      "positionsStatusCliAllEmpty": true,
+      "claimSweepsAllEmpty": true,
+      "apiMetricsAfterShutdown": {
+        "ownState": {
+          "wallets": 0,
+          "subscribers": 0,
+          "resyncBroadcastTotal": 0
+        },
+        "stream": {
+          "resources": 0,
+          "subscribers": 0,
+          "resyncBroadcastTotal": 0,
+          "catchupStartedTotal": 0,
+          "catchupCompletedTotal": 0,
+          "catchupResyncedTotal": 0
+        },
+        "connections": {
+          "total": 0,
+          "ips": 0,
+          "maxTotal": 200,
+          "maxPerIp": 10,
+          "rejectedTotal": 0,
+          "rejectedByScope": {
+            "ip": 0,
+            "total": 0
+          },
+          "slowClientShedTotal": 0
+        }
+      }
+    }
+  },
+  "costAccounting": {
+    "gas": {
+      "gasWei": "853754960952895306",
+      "gasPOL": "0.853754960952895306",
+      "gasByAction": {
+        "contest_create": {
+          "gasWei": "387391704461504809",
+          "gasPOL": "0.387391704461504809"
+        },
+        "seed_match": {
+          "gasWei": "192436951951284898",
+          "gasPOL": "0.192436951951284898"
+        },
+        "onchain_cancel": {
+          "gasWei": "173371015944151979",
+          "gasPOL": "0.173371015944151979"
+        },
+        "controlled_partial_fill": {
+          "gasWei": "100555288595953620",
+          "gasPOL": "0.10055528859595362"
+        }
+      },
+      "tokenTransferRawTotals": {
+        "LINK_18": "10000000000000000",
+        "USDC_6": "1772000"
+      }
+    },
+    "link": {
+      "operatorNetSpend": "0.005",
+      "observedTransferChainTotal": "0.010",
+      "note": "Observed LINK transfer chain includes operator-to-oracle and oracle-to-recipient legs; operator net spend is the first leg."
+    },
+    "usdcMovements": {
+      "contestCreationFee": "1.000000 USDC from ospex-flow-a",
+      "speculationCreationFeeDuringSeedMatch": "0.250000 USDC from ospex-flow-a and 0.250000 USDC from ospex-fresh-user",
+      "seedMatchRisk": "0.100000 USDC per side from ospex-flow-a and ospex-fresh-user",
+      "controlledPartialFillRisk": "0.032000 USDC from stage-maker-b and 0.040000 USDC from ospex-fresh-user",
+      "cancels": "no USDC transfer observed",
+      "claims": "0.072000 USDC claimed by stage-maker-b and 0.200000 USDC claimed by ospex-flow-a seed/setup winner; ospex-fresh-user lower/home position lost and stage-maker-a had no entry.",
+      "byWalletObservedOutflow": {
+        "ospex-flow-a": "1.35",
+        "ospex-fresh-user": "0.39",
+        "stage-maker-b": "0.032"
+      }
+    },
+    "budgetAssessment": "actual observed spend/movements, including postgame score retry/settle/claim gas and tiny claim payouts, remain below the approved <= $5 equivalent cap"
+  },
+  "postgame": {
+    "status": "complete_verified_with_caveats",
+    "completedAtUtc": "2026-06-08T05:14:03Z",
+    "completedAtAmericaChicago": "2026-06-08 00:14:03 CDT (-0500)",
+    "finalScoreSources": "raw/postgame-final-score-sources.sanitized.json",
+    "scoreSourceAgreement": {
+      "bothFinal": true,
+      "scoresAgree": true,
+      "finalScore": "San Francisco Giants 2, Chicago Cubs 1",
+      "winner": "San Francisco Giants",
+      "moneylineWinSide": "upper/away",
+      "status": "agreed_final"
+    },
+    "score": {
+      "initialRequestTxHash": "0x7c08ccaec288854d18d946ea26c4529e0b9e06df38557e62d60e260613bbec0b",
+      "initialCallbackTxHash": "0x4d92d656d59a903afb499e70c0e4f92b356b1fb8037a0b9bd3d28fadb48c8628",
+      "initialOutcome": "oracle_failure_callback_observed_sanitized",
+      "retryRequestTxHash": "0x8a47c3ef1d0418cede5887ee92954e3062a1b6abfdc6a7d7f0712f3bda62a195",
+      "retryCallbackTxHash": "0xec0fb8c1e3d9a5129771d731a4d831fece19c65b5ffc6307b17faae55d2e21d2",
+      "finalOutcome": "contest_scored",
+      "awayScore": 2,
+      "homeScore": 1
+    },
+    "settle": {
+      "speculationId": "21",
+      "txHash": "0xd14c2f9eb5a67f04c21d2202e081b1035909d16bc981c0104cf7f01e5e1a8fa7",
+      "winSide": "away/upper",
+      "status": "settled"
+    },
+    "claims": {
+      "claimed": [
+        {
+          "role": "stage-maker-b",
+          "txHash": "0x3aa349fa934ca9c4139409630c99002eb0a7e69935e99c45dfd04644e34ff2fd",
+          "amountWei6": "72000",
+          "amountUSDC": "0.072000"
+        },
+        {
+          "role": "ospex-flow-a",
+          "txHash": "0x990f9b0b88334a93d21c5c65e951d98cdf1c78dd97ad0a27594a4978ae801baa",
+          "amountWei6": "200000",
+          "amountUSDC": "0.200000"
+        }
+      ],
+      "notClaimed": [
+        {
+          "role": "ospex-fresh-user",
+          "reason": "lower/home lost"
+        },
+        {
+          "role": "stage-maker-a",
+          "reason": "no claimable entry"
+        }
+      ],
+      "postClaimSweeps": "raw/postgame-claim-sweeps.sanitized.json",
+      "allPostClaimSweepsEmpty": true
+    },
+    "txReceipts": "raw/postgame-score-settle-claim-receipts.sanitized.json",
+    "chainIndexerState": "raw/postgame-chain-indexer-state.sanitized.json",
+    "finalExposure": "raw/postgame-final-exposure.sanitized.json",
+    "noAdditionalCronJobsScheduledByThisRun": true
+  },
+  "scenarioMatrixSummary": {
+    "proven": 11,
+    "proven_with_caveats": 5,
+    "read_only_proven": 1,
+    "deferred": 3
+  },
+  "artifactFiles": [
+    "summary.md",
+    "evidence.json",
+    "scenario-matrix.md",
+    "scenario-matrix.json",
+    "raw/api-health.sanitized.json",
+    "raw/cancel-shutdown-receipt-summary.sanitized.json",
+    "raw/contest-speculation-state.sanitized.json",
+    "raw/controlled-fill-receipt-summary.sanitized.json",
+    "raw/cost-accounting.json",
+    "raw/final-exposure-orderbook-state.sanitized.json",
+    "raw/mm-config-summary.sanitized.json",
+    "raw/mm-telemetry-summary.sanitized.json",
+    "raw/postgame-chain-indexer-state.sanitized.json",
+    "raw/postgame-claim-sweeps.sanitized.json",
+    "raw/postgame-final-exposure.sanitized.json",
+    "raw/postgame-final-score-sources.sanitized.json",
+    "raw/postgame-plan.json",
+    "raw/postgame-readonly-preflight.sanitized.json",
+    "raw/postgame-score-settle-claim-receipts.sanitized.json",
+    "raw/release-version-matrix.sanitized.json",
+    "raw/repo-shas-open-prs.sanitized.json",
+    "raw/selected-telemetry.sanitized.ndjson",
+    "raw/sse-metrics-summary.sanitized.json",
+    "raw/target-discovery.sanitized.json",
+    "raw/tx-receipts.summary.json",
+    "raw/validation-scan.json",
+    "raw/wallet-balances-allowances.sanitized.json"
+  ],
+  "caveats": [
+    "This is a repeatability + one-new-coverage-axis canary, not broad MVE scale proof.",
+    "A short serial warmup MM window for the same wallet/state/target emitted and cancelled quotes before the controlled partial-fill window; no second live target and no simultaneous second MM were run.",
+    "Explicit raw stream-auth token and heartbeat frames were not printed or archived; own-state readiness/fill ingestion is evidenced through health-hold clear, own-state-stream fill source, and subscriber cleanup metrics.",
+    "The first score request produced a sanitized oracle upstream API failure callback; a bounded retry fulfilled and scored the contest 2-1."
+  ],
+  "updatedAtUtc": "2026-06-08T05:14:03Z"
+}
