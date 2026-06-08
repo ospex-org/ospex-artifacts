@@ -1,0 +1,63 @@
+{
+  "parsedCount": 8,
+  "receiptCount": 8,
+  "totalPOL": "0.77985881746265763",
+  "receipts": [
+    {
+      "name": "approval-treasury-0.35.json",
+      "txHash": "0xe90f7342e1908941842e5c3ccd1e7098c915ce53cd77abc8e661dbdd641b3c00",
+      "gasUsed": "66357",
+      "feePOL": "0.018429193200711384",
+      "parsed": true
+    },
+    {
+      "name": "approval-treasury-1.0.json",
+      "txHash": "0x2cc6805df0f43fef0dd4101f0f3739af440ad9c66a28adcf2e1c4eee98aa8b54",
+      "gasUsed": "48417",
+      "feePOL": "0.013484820756070122",
+      "parsed": true
+    },
+    {
+      "name": "contest-create-32.json",
+      "txHash": "0x28fab025e65d00ce3f23055efcc2cae266fa9f0790702abcf993f141db3d2640",
+      "gasUsed": "1381391",
+      "feePOL": "0.387123872672879012",
+      "parsed": true
+    },
+    {
+      "name": "approval-treasury-0.25-lazy.json",
+      "txHash": "0xd00edddcdceccab974457b76e1dc1e91fc5011760e0d60abde93d948d53d1dfa",
+      "gasUsed": "66357",
+      "feePOL": "0.01842016229224164",
+      "parsed": true
+    },
+    {
+      "name": "seed-match-open-speculation-22.json",
+      "txHash": "0x0f1b38bf8a176f75830c7a929a24019767679eea27ccf1896e89b2803e30badf",
+      "gasUsed": "677554",
+      "feePOL": "0.187862908183591478",
+      "parsed": true
+    },
+    {
+      "name": "controlled-fill-main.json",
+      "txHash": "0x1590ec5398b6ef103fba850ae492bd5c5b8e21a4e4b21d88f670eb553ce8bded",
+      "gasUsed": "419833",
+      "feePOL": "0.116416705914659145",
+      "parsed": true
+    },
+    {
+      "name": "cleanup-cancel-partial.json",
+      "txHash": "0xb051cfcd450f9b4e0007d265627f80c8a1771faa4981af3737e5dde1fcf27ddd",
+      "gasUsed": "68675",
+      "feePOL": "0.0191351417467428",
+      "parsed": true
+    },
+    {
+      "name": "cleanup-cancel-opposite.json",
+      "txHash": "0x9d0c376e24d594ba6d713d514e61c9d0c8ca8dcdd9ece4df383ebf014db38a4e",
+      "gasUsed": "68663",
+      "feePOL": "0.018986012695762049",
+      "parsed": true
+    }
+  ]
+}

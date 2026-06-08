@@ -1,0 +1,92 @@
+{
+  "generatedAt": "2026-06-08T18:33:59.633515+00:00",
+  "matched": true,
+  "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+  "taker": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+  "speculationId": "22",
+  "riskUSDC": "0.10",
+  "commitment": {
+    "commitmentHash": "0x2e62e694ba0856203cbc0716c9343e084003065ac1db9c69e9891cc34fef4f9d",
+    "contestId": "32",
+    "createdAt": "2026-06-08T18:32:48.262358+00:00",
+    "expiry": "2026-06-08T18:35:17+00:00",
+    "filledRiskAmount": "0",
+    "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "oddsTick": 220,
+    "positionType": 1,
+    "riskAmount": "250000",
+    "status": "open"
+  },
+  "attempts": [
+    {
+      "at": "2026-06-08T18:30:33.444630+00:00",
+      "stage": "wait",
+      "visibleCommitments": 0,
+      "untriedCandidates": 0
+    },
+    {
+      "at": "2026-06-08T18:30:35.051449+00:00",
+      "stage": "wait",
+      "visibleCommitments": 0,
+      "untriedCandidates": 0
+    },
+    {
+      "at": "2026-06-08T18:30:36.702177+00:00",
+      "stage": "wait",
+      "visibleCommitments": 0,
+      "untriedCandidates": 0
+    },
+    {
+      "at": "2026-06-08T18:30:38.340503+00:00",
+      "stage": "wait",
+      "visibleCommitments": 0,
+      "untriedCandidates": 0
+    },
+    {
+      "at": "2026-06-08T18:30:40.017828+00:00",
+      "stage": "wait",
+      "visibleCommitments": 0,
+      "untriedCandidates": 0
+    },
+    {
+      "at": "2026-06-08T18:30:41.676856+00:00",
+      "stage": "wait",
+      "visibleCommitments": 0,
+      "untriedCandidates": 0
+    },
+    {
+      "at": "2026-06-08T18:30:43.345470+00:00",
+      "stage": "wait",
+      "visibleCommitments": 0,
+      "untriedCandidates": 0
+    },
+    {
+      "at": "2026-06-08T18:30:44.958303+00:00",
+      "stage": "wait",
+      "visibleCommitments": 0,
+      "untriedCandidates": 0
+    },
+    {
+      "at": "2026-06-08T18:30:46.578513+00:00",
+      "stage": "wait",
+      "visibleCommitments": 0,
+      "untriedCandidates": 0
+    },
+    {
+      "at": "2026-06-08T18:33:51.053063+00:00",
+      "stage": "match",
+      "hash": "0xc71193199ee964a7647d9aeebad6618eeaea7e0edb499a6f4a8143b59c9134e9",
+      "rc": 1,
+      "riskUSDC": "0.10",
+      "result": "timed out while waiting for inclusion; follow-up evidence found no landed transaction/receipt"
+    },
+    {
+      "at": "2026-06-08T18:33:59.633428+00:00",
+      "stage": "match",
+      "hash": "0x2e62e694ba0856203cbc0716c9343e084003065ac1db9c69e9891cc34fef4f9d",
+      "rc": 0,
+      "riskUSDC": "0.10",
+      "result": "controlled partial fill confirmed"
+    }
+  ]
+}

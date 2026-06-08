@@ -1,0 +1,9 @@
+{"kind": "error", "phase": "position-poll", "runId": "2026-06-08T18-24-38-112Z-d7nv8h", "speculationId": "22", "ts": "2026-06-08T18:24:39.190Z"}
+{"kind": "kill", "reason": "signal", "runId": "2026-06-08T18-24-38-112Z-d7nv8h", "ts": "2026-06-08T18:28:36.686Z"}
+{"kind": "stream-cold-restart", "reason": "resume-without-baseline", "runId": "2026-06-08T18-30-34-157Z-809r5b", "ts": "2026-06-08T18:30:35.102Z"}
+{"exposureWei6": "50000", "kind": "stream-health-hold", "runId": "2026-06-08T18-30-34-157Z-809r5b", "severity": "high", "state": "entered", "ts": "2026-06-08T18:30:35.314Z"}
+{"kind": "stream-health-hold", "runId": "2026-06-08T18-30-34-157Z-809r5b", "state": "cleared", "ts": "2026-06-08T18:30:46.026Z"}
+{"kind": "error", "phase": "own-state-stream", "runId": "2026-06-08T18-30-34-157Z-809r5b", "speculationId": "22", "ts": "2026-06-08T18:34:05.166Z"}
+{"commitmentHash": "0x2e62e694ba0856203cbc0716c9343e084003065ac1db9c69e9891cc34fef4f9d", "contestId": "32", "cumulativeRiskWei6": "83300", "kind": "fill", "newFillWei6": "83300", "runId": "2026-06-08T18-30-34-157Z-809r5b", "speculationId": "22", "ts": "2026-06-08T18:34:06.428Z"}
+{"commitmentHash": "0x2e62e694ba0856203cbc0716c9343e084003065ac1db9c69e9891cc34fef4f9d", "contestId": "32", "kind": "candidate", "reason": "shutdown", "runId": "2026-06-08T18-30-34-157Z-809r5b", "skipReason": "partial-remainder-retained", "speculationId": "22", "ts": "2026-06-08T18:34:27.547Z"}
+{"kind": "kill", "reason": "kill-file", "runId": "2026-06-08T18-30-34-157Z-809r5b", "ts": "2026-06-08T18:34:34.455Z"}

@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "runIds": [
+    "2026-06-08T18-24-38-112Z-d7nv8h",
+    "2026-06-08T18-30-34-157Z-809r5b"
+  ],
+  "firstEventAt": "2026-06-08T18:24:38.147Z",
+  "lastEventAt": "2026-06-08T18:34:34.455Z",
+  "ticks": 43,
+  "lines": 89,
+  "malformedLines": 0,
+  "eventCounts": {
+    "tick-start": 43,
+    "candidate": 3,
+    "fair-value": 0,
+    "risk-verdict": 6,
+    "quote-intent": 6,
+    "quote-competitiveness": 8,
+    "competitiveness-unavailable": 0,
+    "submit": 5,
+    "would-submit": 0,
+    "soft-cancel": 3,
+    "would-soft-cancel": 0,
+    "replace": 1,
+    "would-replace": 0,
+    "onchain-cancel": 2,
+    "cancel-blocked-missing-payload": 0,
+    "nonce-floor-raise": 0,
+    "expire": 4,
+    "approval": 0,
+    "funding-hold": 0,
+    "fill": 1,
+    "position-transition": 0,
+    "settle": 0,
+    "claim": 0,
+    "degraded": 0,
+    "stream-health-degraded": 0,
+    "stream-would-hold": 0,
+    "stream-cold-restart": 1,
+    "stream-health-hold": 2,
+    "divergence": 0,
+    "unknown-own-fill": 0,
+    "owner-mapping-failed": 0,
+    "error": 2,
+    "kill": 2
+  },
+  "candidates": {
+    "total": 3,
+    "tracked": 2,
+    "skipReasons": {
+      "partial-remainder-retained": 1
+    }
+  },
+  "quoteIntents": {
+    "total": 6,
+    "canQuote": 4,
+    "refused": 2
+  },
+  "quoteCompetitiveness": {
+    "samples": 8,
+    "atOrInsideBookCount": 8,
+    "atOrInsideBookRate": 1,
+    "vsReferenceTicks": {
+      "min": 0,
+      "p50": 0,
+      "mean": 0,
+      "max": 0
+    },
+    "unavailable": 0
+  },
+  "errors": {
+    "total": 2,
+    "byPhase": {
+      "position-poll": 1,
+      "own-state-stream": 1
+    }
+  },
+  "kill": {
+    "reason": "kill-file",
+    "ticks": 21
+  },
+  "liveMetrics": {
+    "fills": {
+      "quotedUsdcWei6": "1500000",
+      "filledUsdcWei6": "83300",
+      "fillRate": 0.05553333333333333
+    },
+    "gas": {
+      "totalPolWei": "38121154442504849",
+      "byKind": {
+        "approval": "0",
+        "onchainCancel": "38121154442504849",
+        "settle": "0",
+        "claim": "0"
+      },
+      "totalUsdcEquivWei6": "9530"
+    },
+    "settlements": {
+      "settleCount": 0,
+      "claimCount": 0,
+      "totalClaimedPayoutWei6": "0"
+    },
+    "realizedPnl": {
+      "netUsdcWei6": "0",
+      "claimedProfitUsdcWei6": "0",
+      "realizedLossUsdcWei6": "0",
+      "wonCount": 0,
+      "lostCount": 0,
+      "pushCount": 0,
+      "wonUnclaimedCount": 0,
+      "alreadyClaimedCount": 0,
+      "unsettledCount": 1
+    },
+    "totalFeeUsdcWei6": "0"
+  },
+  "ownStateAssertions": {
+    "streamColdRestartObserved": true,
+    "streamHealthHoldEnteredAndCleared": true,
+    "fillCount": 1,
+    "targetFillEventsForMainHash": 1
+  },
+  "sourcePaths": "not published; telemetry source paths are local-only"
+}

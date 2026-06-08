@@ -1,0 +1,83 @@
+{
+  "artifactId": "2026-06-08-mlb-sea-bal-contest-32-v054-ownstate-sse-repeatability",
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-08T19:26:10Z",
+  "scenarios": [
+    {
+      "id": "phase0-baseline",
+      "scenario": "Phase 0 target selection and approval handoff",
+      "status": "pass",
+      "evidence": [
+        "raw/phase0-preflight.sanitized.json"
+      ],
+      "notes": "SEA/BAL selected; no contest/speculation existed; bounded create/seed approval required."
+    },
+    {
+      "id": "runtime-matrix",
+      "scenario": "Release/runtime matrix",
+      "status": "pass",
+      "evidence": [
+        "evidence.json"
+      ],
+      "notes": "CLI/SDK/MM v0.5.4 aligned; MM installed SDK release tarball pin present; runtime PR pressure zero."
+    },
+    {
+      "id": "setup-create-seed",
+      "scenario": "Contest/speculation setup",
+      "status": "pass",
+      "evidence": [
+        "raw/phase1-handoff.sanitized.md"
+      ],
+      "notes": "Contest 32 created/verified; moneyline speculation 22 opened; bounded allowance remediation recorded."
+    },
+    {
+      "id": "live-mm-fill",
+      "scenario": "Live MM canary and controlled partial fill",
+      "status": "pass",
+      "evidence": [
+        "raw/controlled-match-report.sanitized.json",
+        "raw/mm-telemetry-summary.sanitized.json"
+      ],
+      "notes": "Main quote filled by controlled taker; fill economics and exactly-one telemetry ingestion recorded."
+    },
+    {
+      "id": "restart-resume-ownstate",
+      "scenario": "Restart/resume own-state SSE",
+      "status": "pass",
+      "evidence": [
+        "raw/mm-telemetry-summary.sanitized.json",
+        "raw/telemetry-ownstate-extract.sanitized.ndjson"
+      ],
+      "notes": "Same state dir reused privately; stream-cold-restart observed; stream-health-hold entered and cleared; no duplicate fill accounting."
+    },
+    {
+      "id": "cleanup-safety",
+      "scenario": "Cleanup and final safety",
+      "status": "pass",
+      "evidence": [
+        "raw/cleanup-report.sanitized.json",
+        "raw/phase2-safety-recheck.sanitized.json",
+        "raw/mm-final-state.sanitized.json"
+      ],
+      "notes": "Partial remainder and opposite-side quote cancelled; visible commitments 0; orderbook empty; live process count 0."
+    },
+    {
+      "id": "budget-cost",
+      "scenario": "Budget and receipt accounting",
+      "status": "pass",
+      "evidence": [
+        "raw/receipt-cost-rollup.sanitized.json"
+      ],
+      "notes": "8/8 receipts parsed; total gas 0.77985881746265763 POL; estimated USDC movement/lock 1.778760 under cap."
+    },
+    {
+      "id": "postgame-lifecycle",
+      "scenario": "Postgame score/settle/claim lifecycle",
+      "status": "pending",
+      "evidence": [
+        "evidence.json"
+      ],
+      "notes": "Not attempted in Phase 2 by design; required before artifact can be upgraded from partial."
+    }
+  ]
+}

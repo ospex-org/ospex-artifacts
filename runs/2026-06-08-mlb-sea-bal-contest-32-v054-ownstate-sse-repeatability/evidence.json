@@ -1,0 +1,187 @@
+{
+  "artifactId": "2026-06-08-mlb-sea-bal-contest-32-v054-ownstate-sse-repeatability",
+  "artifactType": "run",
+  "artifactStatus": "partial_green_candidate_pending_postgame",
+  "status": "partial",
+  "date": "2026-06-08",
+  "publishedAt": "2026-06-08T19:26:10Z",
+  "capturedAtUtc": "2026-06-08T19:26:10Z",
+  "network": "polygon",
+  "chainId": 137,
+  "artifactPath": "runs/2026-06-08-mlb-sea-bal-contest-32-v054-ownstate-sse-repeatability/",
+  "branch": "artifact/2026-06-08-sea-bal-v054-ownstate-sse-repeatability",
+  "baseline": {
+    "pr": 16,
+    "state": "MERGED",
+    "url": "https://github.com/ospex-org/ospex-artifacts/pull/16",
+    "mergedAt": "2026-06-08T15:10:43Z",
+    "mergeCommit": "9fbbac9c158f7f7dfd08d52b170dbccf10049537",
+    "checks": "JSON, schema, path, and public-safety checks: SUCCESS"
+  },
+  "verdict": {
+    "label": "PARTIAL / GREEN-candidate pending postgame lifecycle",
+    "reason": "Phase 1 produced a bounded v0.5.4 own-state SSE repeatability canary with exactly-one fill ingestion, restart/resume evidence, on-chain cleanup, and zero final public/orderbook exposure. Full GREEN is withheld until postgame scoring, settlement, claims, and final artifact update complete."
+  },
+  "strategicResult": "v0.5.4 own-state SSE repeatability has a second same-day bounded live canary candidate, pending postgame lifecycle completion.",
+  "target": {
+    "slug": "sea-bal-2026-06-08",
+    "contestId": "32",
+    "speculationId": "22",
+    "sport": "mlb",
+    "market": "moneyline",
+    "awayTeam": "Seattle Mariners",
+    "homeTeam": "Baltimore Orioles",
+    "startTimeUtc": "2026-06-08T22:35:00Z",
+    "startTimeAmericaChicago": "2026-06-08 17:35 CDT",
+    "contestStatusAfterPhase1": "verified",
+    "speculationStatusAfterPhase1": 0,
+    "moneylineSemantics": {
+      "upper": "away/Seattle Mariners",
+      "lower": "home/Baltimore Orioles"
+    }
+  },
+  "walletRoles": {
+    "creatorMaker": {
+      "label": "stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    "controlledTakerFlow": {
+      "label": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    }
+  },
+  "release": {
+    "repo": "ospex-org/ospex-sdk",
+    "tag": "v0.5.4",
+    "matrix": {
+      "runtimeVersions": {
+        "cliPackageVersion": "0.5.4",
+        "sdkRuntimeVersion": "0.5.4",
+        "mmInstalledSdkVersion": "0.5.4"
+      },
+      "mmSdkDependency": {
+        "package": "@ospex/sdk",
+        "version": "0.5.4",
+        "releaseTarballPinned": true,
+        "lockfileContainsReleaseTarball": true
+      },
+      "openPRsAtPhase0": {
+        "ospex-market-maker": [],
+        "ospex-sdk": [],
+        "ospex-core-api": [],
+        "ospex-indexer": []
+      },
+      "note": "Live writes used the v0.5.4 release CLI/MM runtime artifacts."
+    }
+  },
+  "preflight": {
+    "selectedTarget": "sea-bal-2026-06-08",
+    "existingContestBeforeRun": false,
+    "existingSpeculationBeforeRun": false,
+    "operatorApproval": "Phase 1 approved for bounded create + seed + MM canary + controlled fill + cleanup only",
+    "spendCapUSDC": "5.00",
+    "phase0Evidence": "raw/phase0-preflight.sanitized.json"
+  },
+  "setup": {
+    "contestId": "32",
+    "speculationId": "22",
+    "boundedAllowanceRemediation": [
+      {
+        "purpose": "Treasury allowance 0 -> 0.35 USDC",
+        "txHash": "0xe90f7342e1908941842e5c3ccd1e7098c915ce53cd77abc8e661dbdd641b3c00"
+      },
+      {
+        "purpose": "Treasury allowance 0.35 -> 1.0 USDC",
+        "txHash": "0x2cc6805df0f43fef0dd4101f0f3739af440ad9c66a28adcf2e1c4eee98aa8b54"
+      },
+      {
+        "purpose": "Lazy moneyline/speculation maker-fee allowance 0.25 USDC",
+        "txHash": "0xd00edddcdceccab974457b76e1dc1e91fc5011760e0d60abde93d948d53d1dfa"
+      }
+    ],
+    "contestCreateTxHash": "0x28fab025e65d00ce3f23055efcc2cae266fa9f0790702abcf993f141db3d2640",
+    "seedCommitmentHash": "0x60515a8bf862119d9cdb2f01b17ac0d5d250d6d551b3a2c50f712fc2dfcebcb0",
+    "seedOpenSpeculationTxHash": "0x0f1b38bf8a176f75830c7a929a24019767679eea27ccf1896e89b2803e30badf",
+    "seedEconomics": {
+      "makerRiskUSDC": "0.050000",
+      "takerRiskUSDC": "0.045500",
+      "lazyCreationFeeUSDC": "0.500000"
+    }
+  },
+  "liveCanary": {
+    "configSummary": "raw/mm-config-summary.sanitized.json",
+    "ownStateSubscribeEnabled": true,
+    "stateAndTelemetryDirs": "local-only paths omitted; same state directory reused across restart/resume",
+    "mainFilledQuoteHash": "0x2e62e694ba0856203cbc0716c9343e084003065ac1db9c69e9891cc34fef4f9d",
+    "controlledFillTxHash": "0x1590ec5398b6ef103fba850ae492bd5c5b8e21a4e4b21d88f670eb553ce8bded",
+    "controlledFillEconomics": {
+      "takerRiskUSDC": "0.099960",
+      "makerFilledRiskUSDC": "0.083300"
+    },
+    "partialRemainderEvidence": "match payload and telemetry showed a partial fill before retained remainder cleanup",
+    "ownStateFillIngestion": {
+      "targetFillEvents": 1,
+      "finalEventCountsFill": 1,
+      "duplicateFillAccountingObserved": false
+    },
+    "telemetrySummary": "raw/mm-telemetry-summary.sanitized.json",
+    "telemetryExtract": "raw/telemetry-ownstate-extract.sanitized.ndjson"
+  },
+  "restartResume": {
+    "sameStateDirUsed": true,
+    "streamColdRestartObserved": true,
+    "streamHealthHoldEntered": true,
+    "streamHealthHoldCleared": true,
+    "duplicateFillAccountingObserved": false
+  },
+  "cleanupSafety": {
+    "retainedPartialCancelTxHash": "0xb051cfcd450f9b4e0007d265627f80c8a1771faa4981af3737e5dde1fcf27ddd",
+    "oppositeSideQuoteCancelTxHash": "0x9d0c376e24d594ba6d713d514e61c9d0c8ca8dcdd9ece4df383ebf014db38a4e",
+    "finalVisibleMakerCommitments": 0,
+    "finalOrderbook": [],
+    "finalMmProcessCount": 0,
+    "phase2Recheck": {
+      "visibleCommitments": 0,
+      "orderbookCount": 0,
+      "processCount": 0,
+      "ok": true
+    },
+    "publicApiMatchableExposureObserved": false,
+    "filledPositionsRemainActive": {
+      "count": 2,
+      "ownRiskWei6": "133300",
+      "expectedUntilPostgame": true
+    }
+  },
+  "budget": {
+    "confirmedReceiptCount": "8 / 8",
+    "totalGasPOL": "0.77985881746265763",
+    "estimatedUSDCMovementOrLock": "1.778760",
+    "spendCapUSDC": "5.00",
+    "link": "not measured in Phase 1",
+    "receiptCostRollup": "raw/receipt-cost-rollup.sanitized.json"
+  },
+  "caveats": [
+    "Initial maxOpenCommitments: 2 self-limited; successful run used bounded 4.",
+    "One near-expiry candidate attempt returned rc 1 with timeout/no receipt and did not land.",
+    "A transient OwnerPositionStatusForUnknownPosition occurred before fill materialization; fill accounting then occurred exactly once.",
+    "Filled positions remain active until postgame lifecycle work."
+  ],
+  "artifactFiles": {
+    "summary": "summary.md",
+    "evidence": "evidence.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "scenarioMatrixJson": "scenario-matrix.json",
+    "phase0Preflight": "raw/phase0-preflight.sanitized.json",
+    "phase1Handoff": "raw/phase1-handoff.sanitized.md",
+    "receiptCostRollup": "raw/receipt-cost-rollup.sanitized.json",
+    "mmConfigSummary": "raw/mm-config-summary.sanitized.json",
+    "mmTelemetrySummary": "raw/mm-telemetry-summary.sanitized.json",
+    "mmFinalState": "raw/mm-final-state.sanitized.json",
+    "controlledMatchReport": "raw/controlled-match-report.sanitized.json",
+    "cleanupReport": "raw/cleanup-report.sanitized.json",
+    "phase2SafetyRecheck": "raw/phase2-safety-recheck.sanitized.json",
+    "ownstateTelemetryExtract": "raw/telemetry-ownstate-extract.sanitized.ndjson",
+    "phase2VerifierReport": "raw/validation-scan.phasekit.json"
+  }
+}
