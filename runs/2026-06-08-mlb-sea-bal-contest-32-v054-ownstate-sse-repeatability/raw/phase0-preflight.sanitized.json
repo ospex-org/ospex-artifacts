@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "snapshotUtc": "2026-06-08 17:45:54 UTC",
+  "selectedTarget": {
+    "slug": "sea-bal-2026-06-08",
+    "game": "Seattle Mariners @ Baltimore Orioles",
+    "startTimeUtc": "2026-06-08T22:35:00Z",
+    "startTimeAmericaChicago": "2026-06-08 17:35 CDT",
+    "statusAtPreflight": "upcoming",
+    "referenceOddsAvailable": true,
+    "existingContestAtPreflight": false,
+    "canCreateContest": true
+  },
+  "baseline": {
+    "artifactPr16State": "MERGED",
+    "artifactPr16Url": "https://github.com/ospex-org/ospex-artifacts/pull/16",
+    "artifactPr16MergedAt": "2026-06-08T15:10:43Z",
+    "artifactPr16MergeCommit": "9fbbac9c158f7f7dfd08d52b170dbccf10049537"
+  },
+  "runtime": {
+    "cliVersion": "0.5.4",
+    "sdkRuntimeFromDoctor": "0.5.4",
+    "mmInstalledSdkVersion": "0.5.4",
+    "mmUsesSdkReleaseTarball": true
+  },
+  "openRuntimePRsAtPreflight": {
+    "ospex-market-maker": 0,
+    "ospex-sdk": 0,
+    "ospex-core-api": 0,
+    "ospex-indexer": 0
+  },
+  "walletsAtPreflight": {
+    "stage-maker-a": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "POL": "9.754686118827494258",
+      "USDC": "10.14641",
+      "LINK": "0.18",
+      "USDC_to_PositionModule": "11.6392",
+      "USDC_to_TreasuryModule": "0",
+      "LINK_to_OracleModule": "0.18"
+    },
+    "ospex-flow-a": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "POL": "19.486146667421899005",
+      "USDC": "7.191526",
+      "LINK": "0.285",
+      "USDC_to_PositionModule": "0.503569",
+      "USDC_to_TreasuryModule": "0.35",
+      "LINK_to_OracleModule": "0.285"
+    }
+  },
+  "phase0Decision": {
+    "directLiveReadiness": "NO-GO without create/seed because no existing verified contest/speculation existed",
+    "operatorApprovalForPhase1": "approval received to create contest, seed/open moneyline speculation, run bounded canary, and clean up",
+    "spendCapUSDC": "5.00"
+  }
+}

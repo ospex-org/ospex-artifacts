@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 2,
+  "ok": true,
+  "action": "contests.show",
+  "stage": "read",
+  "network": "polygon",
+  "chainId": 137,
+  "generatedAt": "2026-06-09T03:14:05.035Z",
+  "cliVersion": "0.5.4",
+  "sdkVersion": "0.5.4",
+  "payload": {
+    "contestId": "32",
+    "awayTeam": "Seattle Mariners",
+    "homeTeam": "Baltimore Orioles",
+    "sport": "mlb",
+    "matchTime": "2026-06-08T22:35:00+00:00",
+    "status": "scored",
+    "awayScore": 6,
+    "homeScore": 3,
+    "contestCreator": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "scoredAt": "2026-06-09T03:11:31+00:00",
+    "speculations": [
+      {
+        "speculationId": "22",
+        "contestId": "32",
+        "type": "moneyline",
+        "lineTicks": 0,
+        "line": null,
+        "speculationStatus": 1,
+        "orderbook": []
+      }
+    ]
+  }
+}

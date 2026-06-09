@@ -1,0 +1,313 @@
+{
+  "artifactId": "2026-06-08-mlb-sea-bal-contest-32-v054-ownstate-sse-repeatability",
+  "artifactType": "run",
+  "artifactStatus": "complete_verified_with_caveats",
+  "status": "complete_verified_with_caveats",
+  "date": "2026-06-08",
+  "publishedAt": "2026-06-08T19:26:10Z",
+  "capturedAtUtc": "2026-06-09T03:19:52Z",
+  "network": "polygon",
+  "chainId": 137,
+  "artifactPath": "runs/2026-06-08-mlb-sea-bal-contest-32-v054-ownstate-sse-repeatability/",
+  "branch": "artifact/2026-06-08-sea-bal-v054-ownstate-sse-repeatability",
+  "baseline": {
+    "pr": 16,
+    "state": "MERGED",
+    "url": "https://github.com/ospex-org/ospex-artifacts/pull/16",
+    "mergedAt": "2026-06-08T15:10:43Z",
+    "mergeCommit": "9fbbac9c158f7f7dfd08d52b170dbccf10049537",
+    "checks": "JSON, schema, path, and public-safety checks: SUCCESS"
+  },
+  "verdict": {
+    "label": "COMPLETE VERIFIED WITH CAVEATS / GREEN repeatability canary",
+    "reason": "Official MLB Stats and ESPN sources agreed the SEA/BAL game was Final with Seattle 6, Baltimore 3. Contest 32 was scored, speculation 22 was settled/closed, both winning controlled wallets claimed, final claim-all sweeps were empty, and public/orderbook exposure remained zero. Caveats are limited to Phase 1 operational observations already recorded."
+  },
+  "strategicResult": "v0.5.4 own-state SSE repeatability canary completed through postgame score, settlement, claim, and zero-exposure verification.",
+  "target": {
+    "slug": "sea-bal-2026-06-08",
+    "contestId": "32",
+    "speculationId": "22",
+    "sport": "mlb",
+    "market": "moneyline",
+    "awayTeam": "Seattle Mariners",
+    "homeTeam": "Baltimore Orioles",
+    "startTimeUtc": "2026-06-08T22:35:00Z",
+    "startTimeAmericaChicago": "2026-06-08 17:35 CDT",
+    "contestStatusAfterPhase1": "verified",
+    "speculationStatusAfterPhase1": 0,
+    "moneylineSemantics": {
+      "upper": "away/Seattle Mariners",
+      "lower": "home/Baltimore Orioles"
+    },
+    "contestStatusAfterPostgame": "scored",
+    "speculationStatusAfterPostgame": 1,
+    "officialFinalScore": {
+      "awayTeam": "Seattle Mariners",
+      "awayScore": 6,
+      "homeTeam": "Baltimore Orioles",
+      "homeScore": 3,
+      "winner": "away/Seattle Mariners"
+    }
+  },
+  "walletRoles": {
+    "creatorMaker": {
+      "label": "stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    "controlledTakerFlow": {
+      "label": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    }
+  },
+  "release": {
+    "repo": "ospex-org/ospex-sdk",
+    "tag": "v0.5.4",
+    "matrix": {
+      "runtimeVersions": {
+        "cliPackageVersion": "0.5.4",
+        "sdkRuntimeVersion": "0.5.4",
+        "mmInstalledSdkVersion": "0.5.4"
+      },
+      "mmSdkDependency": {
+        "package": "@ospex/sdk",
+        "version": "0.5.4",
+        "releaseTarballPinned": true,
+        "lockfileContainsReleaseTarball": true
+      },
+      "openPRsAtPhase0": {
+        "ospex-market-maker": [],
+        "ospex-sdk": [],
+        "ospex-core-api": [],
+        "ospex-indexer": []
+      },
+      "note": "Live writes used the v0.5.4 release CLI/MM runtime artifacts."
+    }
+  },
+  "preflight": {
+    "selectedTarget": "sea-bal-2026-06-08",
+    "existingContestBeforeRun": false,
+    "existingSpeculationBeforeRun": false,
+    "operatorApproval": "Phase 1 approved for bounded create + seed + MM canary + controlled fill + cleanup only",
+    "spendCapUSDC": "5.00",
+    "phase0Evidence": "raw/phase0-preflight.sanitized.json"
+  },
+  "setup": {
+    "contestId": "32",
+    "speculationId": "22",
+    "boundedAllowanceRemediation": [
+      {
+        "purpose": "Treasury allowance 0 -> 0.35 USDC",
+        "txHash": "0xe90f7342e1908941842e5c3ccd1e7098c915ce53cd77abc8e661dbdd641b3c00"
+      },
+      {
+        "purpose": "Treasury allowance 0.35 -> 1.0 USDC",
+        "txHash": "0x2cc6805df0f43fef0dd4101f0f3739af440ad9c66a28adcf2e1c4eee98aa8b54"
+      },
+      {
+        "purpose": "Lazy moneyline/speculation maker-fee allowance 0.25 USDC",
+        "txHash": "0xd00edddcdceccab974457b76e1dc1e91fc5011760e0d60abde93d948d53d1dfa"
+      }
+    ],
+    "contestCreateTxHash": "0x28fab025e65d00ce3f23055efcc2cae266fa9f0790702abcf993f141db3d2640",
+    "seedCommitmentHash": "0x60515a8bf862119d9cdb2f01b17ac0d5d250d6d551b3a2c50f712fc2dfcebcb0",
+    "seedOpenSpeculationTxHash": "0x0f1b38bf8a176f75830c7a929a24019767679eea27ccf1896e89b2803e30badf",
+    "seedEconomics": {
+      "makerRiskUSDC": "0.050000",
+      "takerRiskUSDC": "0.045500",
+      "lazyCreationFeeUSDC": "0.500000"
+    }
+  },
+  "liveCanary": {
+    "configSummary": "raw/mm-config-summary.sanitized.json",
+    "ownStateSubscribeEnabled": true,
+    "stateAndTelemetryDirs": "local-only paths omitted; same state directory reused across restart/resume",
+    "mainFilledQuoteHash": "0x2e62e694ba0856203cbc0716c9343e084003065ac1db9c69e9891cc34fef4f9d",
+    "controlledFillTxHash": "0x1590ec5398b6ef103fba850ae492bd5c5b8e21a4e4b21d88f670eb553ce8bded",
+    "controlledFillEconomics": {
+      "takerRiskUSDC": "0.099960",
+      "makerFilledRiskUSDC": "0.083300"
+    },
+    "partialRemainderEvidence": "match payload and telemetry showed a partial fill before retained remainder cleanup",
+    "ownStateFillIngestion": {
+      "targetFillEvents": 1,
+      "finalEventCountsFill": 1,
+      "duplicateFillAccountingObserved": false
+    },
+    "telemetrySummary": "raw/mm-telemetry-summary.sanitized.json",
+    "telemetryExtract": "raw/telemetry-ownstate-extract.sanitized.ndjson"
+  },
+  "restartResume": {
+    "sameStateDirUsed": true,
+    "streamColdRestartObserved": true,
+    "streamHealthHoldEntered": true,
+    "streamHealthHoldCleared": true,
+    "duplicateFillAccountingObserved": false
+  },
+  "cleanupSafety": {
+    "retainedPartialCancelTxHash": "0xb051cfcd450f9b4e0007d265627f80c8a1771faa4981af3737e5dde1fcf27ddd",
+    "oppositeSideQuoteCancelTxHash": "0x9d0c376e24d594ba6d713d514e61c9d0c8ca8dcdd9ece4df383ebf014db38a4e",
+    "finalVisibleMakerCommitments": 0,
+    "finalOrderbook": [],
+    "finalMmProcessCount": 0,
+    "phase2Recheck": {
+      "visibleCommitments": 0,
+      "orderbookCount": 0,
+      "processCount": 0,
+      "ok": true
+    },
+    "publicApiMatchableExposureObserved": false,
+    "filledPositionsRemainActive": {
+      "count": 0,
+      "ownRiskWei6": "0",
+      "expectedUntilPostgame": false,
+      "resolvedByPostgameLifecycle": true
+    }
+  },
+  "budget": {
+    "confirmedReceiptCount": "8 / 8",
+    "totalGasPOL": "0.77985881746265763",
+    "estimatedUSDCMovementOrLock": "1.778760",
+    "spendCapUSDC": "5.00",
+    "link": "not measured in Phase 1",
+    "receiptCostRollup": "raw/receipt-cost-rollup.sanitized.json",
+    "postgameReceiptCount": "4 / 4",
+    "postgameGasPOL": "0.301535670981113934",
+    "totalGasPOLIncludingPostgame": "1.081394488443771564",
+    "postgameReceiptSummary": "raw/tx-receipts.summary.json"
+  },
+  "caveats": [
+    "Initial maxOpenCommitments: 2 self-limited; successful run used bounded 4.",
+    "One near-expiry candidate attempt returned rc 1 with timeout/no receipt and did not land.",
+    "A transient OwnerPositionStatusForUnknownPosition occurred before fill materialization; fill accounting then occurred exactly once."
+  ],
+  "artifactFiles": {
+    "summary": "summary.md",
+    "evidence": "evidence.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "scenarioMatrixJson": "scenario-matrix.json",
+    "phase0Preflight": "raw/phase0-preflight.sanitized.json",
+    "phase1Handoff": "raw/phase1-handoff.sanitized.md",
+    "receiptCostRollup": "raw/receipt-cost-rollup.sanitized.json",
+    "mmConfigSummary": "raw/mm-config-summary.sanitized.json",
+    "mmTelemetrySummary": "raw/mm-telemetry-summary.sanitized.json",
+    "mmFinalState": "raw/mm-final-state.sanitized.json",
+    "controlledMatchReport": "raw/controlled-match-report.sanitized.json",
+    "cleanupReport": "raw/cleanup-report.sanitized.json",
+    "phase2SafetyRecheck": "raw/phase2-safety-recheck.sanitized.json",
+    "ownstateTelemetryExtract": "raw/telemetry-ownstate-extract.sanitized.ndjson",
+    "phase2VerifierReport": "raw/validation-scan.phasekit.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "cliPostgame": "raw/cli-postgame.sanitized.json",
+    "finalContestShow": "raw/final-contest-show.sanitized.json",
+    "finalPositionsClaims": "raw/final-positions-claims.sanitized.json",
+    "finalSafetyState": "raw/final-safety-state.sanitized.json",
+    "postgameTxReceipts": "raw/tx-receipts.summary.json"
+  },
+  "postgameLifecycle": {
+    "completedAtUtc": "2026-06-09T03:19:52Z",
+    "officialFinality": "raw/final-score-source.json",
+    "officialScoreAgreement": true,
+    "scoreContestTxHash": "0x4dda5dadd3cdab71b6220028cb11122de8e66cdac5d6fa1feb6f5aa246c4329d",
+    "scoreContestRequestId": "0x53f5d234435bc32e336b4957db532e82b6742b42be9e0c985ff4b3005ce10f85",
+    "scoreSignerGuard": {
+      "account": "ospex-stage-maker-a",
+      "expectedAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "signer": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "walletMatchesExpected": true,
+      "signerMatchesExpected": true,
+      "expectedAddressGuardUsed": true
+    },
+    "agreedScore": {
+      "away": 6,
+      "home": 3,
+      "winner": "away"
+    },
+    "settleSpeculationTxHash": "0x78e3bc0c954a6b8cdda8354e6a77ebe5866c06eafe57521f2209a4b32f7b54a2",
+    "settleSignerGuard": {
+      "account": "ospex-stage-maker-a",
+      "expectedAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "signer": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "walletMatchesExpected": true,
+      "signerMatchesExpected": true,
+      "expectedAddressGuardUsed": true
+    },
+    "claimTxs": [
+      {
+        "walletLabel": "stage-maker-a",
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "positionType": "upper",
+        "claimedAmountWei6": "95500",
+        "txHash": "0x23379e64b9416358ff1d7e29a7e0680a9afe7e79e18cdfb91738f3a308df4719",
+        "signerGuard": {
+          "account": "ospex-stage-maker-a",
+          "expectedAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "signer": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "walletMatchesExpected": true,
+          "signerMatchesExpected": true,
+          "expectedAddressGuardUsed": true
+        }
+      },
+      {
+        "walletLabel": "ospex-flow-a",
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "positionType": "upper",
+        "claimedAmountWei6": "183260",
+        "txHash": "0xe196e6934de5389d4cd044b9e85bb6b3a17c5f429dcc89144f984c308bbd9601",
+        "signerGuard": {
+          "account": "ospex-flow-a",
+          "expectedAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+          "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+          "signer": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+          "walletMatchesExpected": true,
+          "signerMatchesExpected": true,
+          "expectedAddressGuardUsed": true
+        }
+      }
+    ],
+    "finalClaimSweeps": {
+      "stage-maker-a": {
+        "entries": 0,
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "claimedFresh": 0,
+          "alreadyClaimed": 0,
+          "recoveredAlreadyClaimed": 0,
+          "totalPayoutWei6": "0",
+          "totalPayoutUSDC": 0
+        }
+      },
+      "ospex-flow-a": {
+        "entries": 0,
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "claimedFresh": 0,
+          "alreadyClaimed": 0,
+          "recoveredAlreadyClaimed": 0,
+          "totalPayoutWei6": "0",
+          "totalPayoutUSDC": 0
+        }
+      }
+    },
+    "finalProtocolState": {
+      "contestStatus": "scored",
+      "speculationStatus": "closed",
+      "winSide": "away",
+      "visibleOpenCommitments": 0,
+      "orderbookCount": 0,
+      "liveMmProcessCount": 0
+    },
+    "rawEvidence": {
+      "finalScoreSource": "raw/final-score-source.json",
+      "cliPostgame": "raw/cli-postgame.sanitized.json",
+      "finalContestShow": "raw/final-contest-show.sanitized.json",
+      "finalPositionsClaims": "raw/final-positions-claims.sanitized.json",
+      "finalSafetyState": "raw/final-safety-state.sanitized.json",
+      "postgameReceipts": "raw/tx-receipts.summary.json"
+    }
+  }
+}

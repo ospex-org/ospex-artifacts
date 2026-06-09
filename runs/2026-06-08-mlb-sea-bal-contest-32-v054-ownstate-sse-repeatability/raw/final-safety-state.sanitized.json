@@ -1,0 +1,39 @@
+{
+  "capturedAtUtc": "2026-06-09T03:19:52Z",
+  "contestId": "32",
+  "speculationId": "22",
+  "contestStatus": "scored",
+  "awayScore": 6,
+  "homeScore": 3,
+  "speculationStatus": 1,
+  "orderbook": [],
+  "orderbookCount": 0,
+  "visibleMakerCommitments": [],
+  "visibleMakerCommitmentCount": 0,
+  "indexerVisibleOpenCommitmentCount": 0,
+  "processCheck": {
+    "checkedAtUtc": "2026-06-09T03:19:52Z",
+    "liveMarketMakerProcessCount": 0,
+    "processes": []
+  },
+  "finalPositionStatusTotals": {
+    "stage-maker-a": {
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "estimatedPayoutUSDC": 0,
+      "estimatedPayoutWei6": "0",
+      "pendingSettlePayoutUSDC": 0,
+      "pendingSettlePayoutWei6": "0"
+    },
+    "ospex-flow-a": {
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "estimatedPayoutUSDC": 0,
+      "estimatedPayoutWei6": "0",
+      "pendingSettlePayoutUSDC": 0,
+      "pendingSettlePayoutWei6": "0"
+    }
+  }
+}

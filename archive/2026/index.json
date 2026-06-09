@@ -1,13 +1,25 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-06-08T05:14:19Z",
+  "generatedAt": "2026-06-09T03:20:07Z",
   "repository": "ospex-org/ospex-artifacts",
   "archive": {
     "scope": "year",
     "year": 2026
   },
   "artifacts": [
+    {
+      "artifactId": "2026-06-08-mlb-sea-bal-contest-32-v054-ownstate-sse-repeatability",
+      "artifactType": "run",
+      "dataPath": "runs/2026-06-08-mlb-sea-bal-contest-32-v054-ownstate-sse-repeatability/evidence.json",
+      "date": "2026-06-08",
+      "network": "polygon",
+      "rawPath": "runs/2026-06-08-mlb-sea-bal-contest-32-v054-ownstate-sse-repeatability/raw/",
+      "release": "ospex-org/ospex-sdk v0.5.4",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-06-08-mlb-sea-bal-contest-32-v054-ownstate-sse-repeatability/summary.md",
+      "publishedAt": "2026-06-08T19:26:10Z"
+    },
     {
       "artifactId": "2026-06-08-mlb-sf-chc-v054-ownstate-sse-repeatability-canary",
       "artifactType": "run",

@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "chainId": 137,
+  "walletRole": "stage-maker-a",
+  "marketSelection": {
+    "sports": [
+      "mlb"
+    ],
+    "markets": [
+      "moneyline"
+    ],
+    "maxTrackedContests": 1,
+    "requireReferenceOdds": true,
+    "requireOpenSpeculation": true,
+    "contestAllowList": [
+      "32"
+    ]
+  },
+  "ownState": {
+    "subscribe": true,
+    "debounceMs": 500,
+    "divergenceToleranceMs": 5000,
+    "auditPollIntervalMs": 10000,
+    "indexerLagMaxSeconds": 30,
+    "staleMaxMs": 60000,
+    "recoveryHoldMs": 0
+  },
+  "risk": {
+    "bankrollUSDC": "5",
+    "maxBankrollUtilizationPct": 0.2,
+    "maxRiskPerCommitmentUSDC": "0.25",
+    "maxRiskPerContestUSDC": "0.75",
+    "maxRiskPerTeamUSDC": "0.50",
+    "maxRiskPerSportUSDC": "1",
+    "maxOpenCommitments": 4,
+    "maxDailyFeeUSDC": "0"
+  },
+  "orders": {
+    "expiryMode": "fixed-seconds",
+    "expirySeconds": 150,
+    "cancelMode": "onchain"
+  },
+  "settlement": {
+    "autoSettleOwn": false,
+    "autoClaimOwn": false
+  },
+  "mode": {
+    "dryRun": false
+  },
+  "localPaths": "not published; local telemetry/state/kill-switch paths are intentionally omitted"
+}
