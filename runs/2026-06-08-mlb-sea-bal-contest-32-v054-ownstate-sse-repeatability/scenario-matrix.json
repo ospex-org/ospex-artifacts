@@ -1,7 +1,7 @@
 {
   "artifactId": "2026-06-08-mlb-sea-bal-contest-32-v054-ownstate-sse-repeatability",
   "schemaVersion": 1,
-  "generatedAt": "2026-06-08T19:26:10Z",
+  "generatedAt": "2026-06-09T03:19:52Z",
   "scenarios": [
     {
       "id": "phase0-baseline",
@@ -73,11 +73,15 @@
     {
       "id": "postgame-lifecycle",
       "scenario": "Postgame score/settle/claim lifecycle",
-      "status": "pending",
+      "status": "pass",
       "evidence": [
-        "evidence.json"
+        "raw/final-score-source.json",
+        "raw/cli-postgame.sanitized.json",
+        "raw/final-positions-claims.sanitized.json",
+        "raw/final-safety-state.sanitized.json",
+        "raw/tx-receipts.summary.json"
       ],
-      "notes": "Not attempted in Phase 2 by design; required before artifact can be upgraded from partial."
+      "notes": "Official sources agreed SEA 6, BAL 3 Final; contest scored; speculation settled; both winning controlled wallets claimed; final claim sweeps empty; orderbook and visible commitments zero."
     }
   ]
 }

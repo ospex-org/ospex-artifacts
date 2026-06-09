@@ -5,7 +5,7 @@
     "stderrTail": "",
     "stdoutTail": "Generated 2 index file(s).\n"
   },
-  "generatedAt": "2026-06-08T19:26:51.340828+00:00",
+  "generatedAt": "2026-06-09T03:20:19.305812+00:00",
   "jsonChecks": {
     "evidence.json": {
       "ok": true
@@ -13,7 +13,22 @@
     "raw/cleanup-report.sanitized.json": {
       "ok": true
     },
+    "raw/cli-postgame.sanitized.json": {
+      "ok": true
+    },
     "raw/controlled-match-report.sanitized.json": {
+      "ok": true
+    },
+    "raw/final-contest-show.sanitized.json": {
+      "ok": true
+    },
+    "raw/final-positions-claims.sanitized.json": {
+      "ok": true
+    },
+    "raw/final-safety-state.sanitized.json": {
+      "ok": true
+    },
+    "raw/final-score-source.json": {
       "ok": true
     },
     "raw/mm-config-summary.sanitized.json": {
@@ -38,6 +53,12 @@
       "lines": 9,
       "ok": true
     },
+    "raw/tx-receipts.summary.json": {
+      "ok": true
+    },
+    "raw/validation-scan.phasekit.json": {
+      "ok": true
+    },
     "scenario-matrix.json": {
       "ok": true
     }
@@ -48,6 +69,6 @@
   "validateArtifacts": {
     "rc": 0,
     "stderrTail": "",
-    "stdoutTail": "Artifact validation passed: 208 JSON files, 187 NDJSON lines, 248 text files scanned.\n"
+    "stdoutTail": "Artifact validation passed: 215 JSON files, 187 NDJSON lines, 255 text files scanned.\n"
   }
 }

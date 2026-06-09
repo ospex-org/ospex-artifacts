@@ -1,12 +1,17 @@
-# SEA/BAL v0.5.4 own-state SSE repeatability canary — partial artifact
+# SEA/BAL v0.5.4 own-state SSE repeatability canary — complete verified with caveats
 
-**Status:** `partial` / GREEN-candidate pending postgame lifecycle. This is not a full GREEN artifact yet.
+**Status:** `complete_verified_with_caveats` / GREEN repeatability canary with documented Phase 1 operational caveats.
 
 ## Verdict
 
-Phase 1 produced a bounded v0.5.4 own-state SSE repeatability canary for **Seattle Mariners @ Baltimore Orioles** (`sea-bal-2026-06-08`) with contest `32` and moneyline speculation `22`. The run exercised contest/speculation setup, bounded allowance remediation, live MM quote publication, a controlled partial fill, restart/resume own-state behavior, on-chain cleanup, and Phase 2 safety rechecks.
+The SEA/BAL v0.5.4 own-state SSE repeatability canary is complete through postgame lifecycle. Phase 1 proved the bounded live MM + own-state SSE restart/resume path; Phase 3 verified official finality, scored contest `32`, settled moneyline speculation `22`, claimed the two winning controlled wallets only, and rechecked empty final claim sweeps plus zero public/orderbook exposure.
 
-Full GREEN is intentionally withheld until the postgame score/settle/claim lifecycle is completed and this same artifact/PR is updated.
+## Official final score gate
+
+- MLB Stats API: `Final`, Seattle Mariners `6`, Baltimore Orioles `3`.
+- ESPN API: `Final`, Seattle Mariners `6`, Baltimore Orioles `3`.
+- Agreement: `true`; moneyline win side `upper` / away / Seattle Mariners.
+- Evidence: `raw/final-score-source.json`.
 
 ## Target
 
@@ -51,29 +56,38 @@ Full GREEN is intentionally withheld until the postgame score/settle/claim lifec
 - `stream-health-hold` entered with setup exposure and then cleared.
 - No duplicate fill accounting observed.
 
-## Cleanup and safety
+## Cleanup and Phase 2 safety
 
 - Retained partial cancel tx: `0xb051cfcd450f9b4e0007d265627f80c8a1771faa4981af3737e5dde1fcf27ddd`
 - Opposite-side quote cancel tx: `0x9d0c376e24d594ba6d713d514e61c9d0c8ca8dcdd9ece4df383ebf014db38a4e`
-- Final visible maker commitments: `0`
-- Final orderbook: `[]`
-- Final live MM process count: `0`
-- Phase 2 recheck confirmed: visible commitments `0`, orderbook count `0`, process count `0`.
-- Active filled positions remain for postgame lifecycle handling: `2` positions / `133300 wei6` own risk.
+- Final visible maker commitments after Phase 1/2: `0`
+- Final orderbook after Phase 1/2: `[]`
+- Final live MM process count after Phase 1/2: `0`
+
+## Phase 3 postgame lifecycle
+
+- Score contest tx: `0x4dda5dadd3cdab71b6220028cb11122de8e66cdac5d6fa1feb6f5aa246c4329d` (signer guard matched `stage-maker-a` / `0x5316fa54c170d1927f30d1a497ac9e85e3826a9b`)
+- Settle speculation tx: `0x78e3bc0c954a6b8cdda8354e6a77ebe5866c06eafe57521f2209a4b32f7b54a2` (signer guard matched `stage-maker-a` / `0x5316fa54c170d1927f30d1a497ac9e85e3826a9b`)
+- Claim `stage-maker-a` winning upper position: `0x23379e64b9416358ff1d7e29a7e0680a9afe7e79e18cdfb91738f3a308df4719`; claimed `95500 wei6` / `0.095500 USDC`.
+- Claim `ospex-flow-a` winning upper position: `0xe196e6934de5389d4cd044b9e85bb6b3a17c5f429dcc89144f984c308bbd9601`; claimed `183260 wei6` / `0.183260 USDC`.
+- Final `claim-all --dry-run` sweeps: both controlled wallets returned zero entries / zero payout.
+- Final protocol state: contest `scored`, speculation `closed`, win side `away`, orderbook `[]`, visible live maker commitments `0`, live MM process count `0`.
+- Evidence: `raw/cli-postgame.sanitized.json`, `raw/final-contest-show.sanitized.json`, `raw/final-positions-claims.sanitized.json`, `raw/final-safety-state.sanitized.json`, `raw/tx-receipts.summary.json`.
 
 ## Budget / cost
 
-- Confirmed write receipts: `8 / 8` parsed
-- Total gas: `0.77985881746265763 POL`
-- Estimated USDC movement/lock: `1.778760 USDC`, under the `≤ 5.00 USDC` cap
-- LINK: not measured in Phase 1
+- Phase 1 confirmed write receipts: `8 / 8` parsed
+- Phase 1 total gas: `0.77985881746265763 POL`
+- Phase 3 postgame receipts: `4 / 4` parsed; postgame gas `0.301535670981113934 POL`
+- Total gas including postgame: `1.081394488443771564 POL`
+- Estimated Phase 1 USDC movement/lock: `1.778760 USDC`, under the `≤ 5.00 USDC` cap
+- LINK/operator subscription spend: not measured in local receipt gas; score transaction and callback projection succeeded.
 
 ## Caveats
 
 1. Initial `maxOpenCommitments: 2` self-limited before the controlled taker saw a candidate; successful run used bounded `4`.
 2. One near-expiry candidate attempt returned rc `1` with timeout/no receipt and did not land.
 3. One transient `OwnerPositionStatusForUnknownPosition` occurred before fill materialization; fill accounting then occurred exactly once.
-4. Filled positions remain active until postgame score/settle/claim.
 
 ## Files
 

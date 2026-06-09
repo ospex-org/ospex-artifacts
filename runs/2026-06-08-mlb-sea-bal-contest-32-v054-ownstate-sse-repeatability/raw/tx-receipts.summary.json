@@ -1,0 +1,51 @@
+{
+  "network": "polygon",
+  "chainId": 137,
+  "capturedAtUtc": "2026-06-09T03:19:52Z",
+  "scope": "postgame write receipts only; logs/calldata omitted",
+  "receiptCount": 4,
+  "allSucceeded": true,
+  "totalGasPOL": "0.301535670981113934",
+  "receipts": [
+    {
+      "action": "score-contest",
+      "txHash": "0x4dda5dadd3cdab71b6220028cb11122de8e66cdac5d6fa1feb6f5aa246c4329d",
+      "status": 1,
+      "success": true,
+      "blockNumber": 88179796,
+      "gasUsed": 664329,
+      "effectiveGasPriceWei": 281660356371,
+      "gasPOL": "0.187115142887590059"
+    },
+    {
+      "action": "settle-speculation",
+      "txHash": "0x78e3bc0c954a6b8cdda8354e6a77ebe5866c06eafe57521f2209a4b32f7b54a2",
+      "status": 1,
+      "success": true,
+      "blockNumber": 88179830,
+      "gasUsed": 155603,
+      "effectiveGasPriceWei": 281535748323,
+      "gasPOL": "0.043807807046303769"
+    },
+    {
+      "action": "claim-stage-maker-a",
+      "txHash": "0x23379e64b9416358ff1d7e29a7e0680a9afe7e79e18cdfb91738f3a308df4719",
+      "status": 1,
+      "success": true,
+      "blockNumber": 88179873,
+      "gasUsed": 127189,
+      "effectiveGasPriceWei": 282259428901,
+      "gasPOL": "0.035900294502489289"
+    },
+    {
+      "action": "claim-ospex-flow-a",
+      "txHash": "0xe196e6934de5389d4cd044b9e85bb6b3a17c5f429dcc89144f984c308bbd9601",
+      "status": 1,
+      "success": true,
+      "blockNumber": 88179876,
+      "gasUsed": 123229,
+      "effectiveGasPriceWei": 281690401973,
+      "gasPOL": "0.034712426544730817"
+    }
+  ]
+}

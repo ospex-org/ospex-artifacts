@@ -1,0 +1,68 @@
+{
+  "capturedAtUtc": "2026-06-09T03:19:52Z",
+  "target": {
+    "game": "Seattle Mariners @ Baltimore Orioles",
+    "slug": "sea-bal-2026-06-08",
+    "mlbGamePk": 824829,
+    "espnEventId": 401815676,
+    "contestId": "32",
+    "speculationId": "22"
+  },
+  "mlbStats": {
+    "source": "MLB Stats API",
+    "url": "https://statsapi.mlb.com/api/v1.1/game/824829/feed/live",
+    "gamePk": 824829,
+    "status": {
+      "abstractGameState": "Final",
+      "detailedState": "Final",
+      "codedGameState": "F",
+      "statusCode": "F",
+      "abstractGameCode": "F"
+    },
+    "teams": {
+      "away": {
+        "name": "Seattle Mariners",
+        "abbreviation": "SEA",
+        "score": 6
+      },
+      "home": {
+        "name": "Baltimore Orioles",
+        "abbreviation": "BAL",
+        "score": 3
+      }
+    }
+  },
+  "espn": {
+    "source": "ESPN API",
+    "url": "https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/summary?event=401815676",
+    "eventId": 401815676,
+    "status": {
+      "typeName": "STATUS_FINAL",
+      "state": "post",
+      "completed": true,
+      "description": "Final"
+    },
+    "teams": {
+      "away": {
+        "name": "Seattle Mariners",
+        "abbreviation": "SEA",
+        "score": 6,
+        "winner": true
+      },
+      "home": {
+        "name": "Baltimore Orioles",
+        "abbreviation": "BAL",
+        "score": 3,
+        "winner": false
+      }
+    }
+  },
+  "agreement": {
+    "bothFinal": true,
+    "scoreAndTeamsAgree": true,
+    "awayScore": 6,
+    "homeScore": 3,
+    "winner": "away",
+    "moneylineWinSide": "away"
+  }
+}

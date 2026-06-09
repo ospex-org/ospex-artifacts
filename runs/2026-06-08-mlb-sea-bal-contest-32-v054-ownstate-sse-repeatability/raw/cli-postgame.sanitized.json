@@ -1,0 +1,295 @@
+{
+  "capturedAtUtc": "2026-06-09T03:19:52Z",
+  "runtime": {
+    "cliVersion": "0.5.4",
+    "sdkVersion": "0.5.4",
+    "releaseTag": "v0.5.4"
+  },
+  "officialScoreGate": {
+    "bothSourcesFinal": true,
+    "scoreAndTeamsAgree": true,
+    "awayScore": 6,
+    "homeScore": 3,
+    "winner": "away"
+  },
+  "scoreContest": {
+    "ok": true,
+    "contestId": "32",
+    "signerGuard": {
+      "account": "ospex-stage-maker-a",
+      "expectedAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "signer": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "walletMatchesExpected": true,
+      "signerMatchesExpected": true,
+      "expectedAddressGuardUsed": true
+    },
+    "txHash": "0x4dda5dadd3cdab71b6220028cb11122de8e66cdac5d6fa1feb6f5aa246c4329d",
+    "requestId": "0x53f5d234435bc32e336b4957db532e82b6742b42be9e0c985ff4b3005ce10f85",
+    "postScoreProjection": {
+      "status": "scored",
+      "awayScore": 6,
+      "homeScore": 3,
+      "scoredAt": "2026-06-09T03:11:31+00:00"
+    }
+  },
+  "settleSpeculation": {
+    "ok": true,
+    "speculationId": "22",
+    "signerGuard": {
+      "account": "ospex-stage-maker-a",
+      "expectedAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "signer": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "walletMatchesExpected": true,
+      "signerMatchesExpected": true,
+      "expectedAddressGuardUsed": true
+    },
+    "txHash": "0x78e3bc0c954a6b8cdda8354e6a77ebe5866c06eafe57521f2209a4b32f7b54a2",
+    "postSettleProjection": {
+      "status": "closed",
+      "voided": false,
+      "winSide": "away",
+      "scoredAt": "2026-06-09T03:11:31+00:00",
+      "contestId": 32,
+      "lineTicks": 0,
+      "settledAt": "2026-06-09T03:12:10+00:00",
+      "marketType": "moneyline",
+      "speculationId": 22
+    }
+  },
+  "claims": [
+    {
+      "role": "creatorMaker",
+      "label": "stage-maker-a",
+      "accountUsed": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "winningPositionType": "upper",
+      "preClaimDryRun": {
+        "ok": true,
+        "generatedAt": "2026-06-09T03:12:47.167Z",
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "entries": [
+          {
+            "positionId": "22_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_0",
+            "speculationId": "22",
+            "bucket": "claimable",
+            "description": "Seattle Mariners moneyline — Won (≈ $0.10)",
+            "success": true,
+            "txHashes": [],
+            "steps": [],
+            "payoutUSDC": 0.0955,
+            "payoutWei6": "95500"
+          }
+        ],
+        "totals": {
+          "claimed": 1,
+          "failed": 0,
+          "claimedFresh": 0,
+          "alreadyClaimed": 0,
+          "recoveredAlreadyClaimed": 0,
+          "totalPayoutWei6": "95500",
+          "totalPayoutUSDC": 0.0955
+        }
+      },
+      "claimResult": {
+        "ok": true,
+        "signerGuard": {
+          "account": "ospex-stage-maker-a",
+          "expectedAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "signer": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "walletMatchesExpected": true,
+          "signerMatchesExpected": true,
+          "expectedAddressGuardUsed": true
+        },
+        "txHashes": [
+          "0x23379e64b9416358ff1d7e29a7e0680a9afe7e79e18cdfb91738f3a308df4719"
+        ],
+        "totals": {
+          "claimed": 1,
+          "failed": 0,
+          "claimedFresh": 1,
+          "alreadyClaimed": 0,
+          "recoveredAlreadyClaimed": 0,
+          "totalPayoutWei6": "95500",
+          "totalPayoutUSDC": 0.0955
+        },
+        "entries": [
+          {
+            "positionId": "22_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_0",
+            "speculationId": "22",
+            "bucket": "claimable",
+            "description": "Seattle Mariners moneyline — Won (≈ $0.10)",
+            "success": true,
+            "txHashes": [
+              "0x23379e64b9416358ff1d7e29a7e0680a9afe7e79e18cdfb91738f3a308df4719"
+            ],
+            "steps": [
+              {
+                "name": "claimPosition",
+                "outcome": "sent",
+                "txHash": "0x23379e64b9416358ff1d7e29a7e0680a9afe7e79e18cdfb91738f3a308df4719",
+                "payoutWei6": "95500",
+                "payoutUSDC": 0.0955
+              }
+            ],
+            "payoutUSDC": 0.0955,
+            "payoutWei6": "95500"
+          }
+        ]
+      },
+      "finalDryRun": {
+        "ok": true,
+        "generatedAt": "2026-06-09T03:13:37.668Z",
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "entries": [],
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "claimedFresh": 0,
+          "alreadyClaimed": 0,
+          "recoveredAlreadyClaimed": 0,
+          "totalPayoutWei6": "0",
+          "totalPayoutUSDC": 0
+        }
+      }
+    },
+    {
+      "role": "controlledTakerFlow",
+      "label": "ospex-flow-a",
+      "accountUsed": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "winningPositionType": "upper",
+      "preClaimDryRun": {
+        "ok": true,
+        "generatedAt": "2026-06-09T03:12:47.866Z",
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "entries": [
+          {
+            "positionId": "22_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+            "speculationId": "22",
+            "bucket": "claimable",
+            "description": "Seattle Mariners moneyline — Won (≈ $0.18)",
+            "success": true,
+            "txHashes": [],
+            "steps": [],
+            "payoutUSDC": 0.18326,
+            "payoutWei6": "183260"
+          }
+        ],
+        "totals": {
+          "claimed": 1,
+          "failed": 0,
+          "claimedFresh": 0,
+          "alreadyClaimed": 0,
+          "recoveredAlreadyClaimed": 0,
+          "totalPayoutWei6": "183260",
+          "totalPayoutUSDC": 0.18326
+        }
+      },
+      "claimResult": {
+        "ok": true,
+        "signerGuard": {
+          "account": "ospex-flow-a",
+          "expectedAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+          "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+          "signer": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+          "walletMatchesExpected": true,
+          "signerMatchesExpected": true,
+          "expectedAddressGuardUsed": true
+        },
+        "txHashes": [
+          "0xe196e6934de5389d4cd044b9e85bb6b3a17c5f429dcc89144f984c308bbd9601"
+        ],
+        "totals": {
+          "claimed": 1,
+          "failed": 0,
+          "claimedFresh": 1,
+          "alreadyClaimed": 0,
+          "recoveredAlreadyClaimed": 0,
+          "totalPayoutWei6": "183260",
+          "totalPayoutUSDC": 0.18326
+        },
+        "entries": [
+          {
+            "positionId": "22_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+            "speculationId": "22",
+            "bucket": "claimable",
+            "description": "Seattle Mariners moneyline — Won (≈ $0.18)",
+            "success": true,
+            "txHashes": [
+              "0xe196e6934de5389d4cd044b9e85bb6b3a17c5f429dcc89144f984c308bbd9601"
+            ],
+            "steps": [
+              {
+                "name": "claimPosition",
+                "outcome": "sent",
+                "txHash": "0xe196e6934de5389d4cd044b9e85bb6b3a17c5f429dcc89144f984c308bbd9601",
+                "payoutWei6": "183260",
+                "payoutUSDC": 0.18326
+              }
+            ],
+            "payoutUSDC": 0.18326,
+            "payoutWei6": "183260"
+          }
+        ]
+      },
+      "finalDryRun": {
+        "ok": true,
+        "generatedAt": "2026-06-09T03:13:38.341Z",
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "entries": [],
+        "totals": {
+          "claimed": 0,
+          "failed": 0,
+          "claimedFresh": 0,
+          "alreadyClaimed": 0,
+          "recoveredAlreadyClaimed": 0,
+          "totalPayoutWei6": "0",
+          "totalPayoutUSDC": 0
+        }
+      }
+    }
+  ],
+  "finalSafety": {
+    "capturedAtUtc": "2026-06-09T03:19:52Z",
+    "contestId": "32",
+    "speculationId": "22",
+    "contestStatus": "scored",
+    "awayScore": 6,
+    "homeScore": 3,
+    "speculationStatus": 1,
+    "orderbook": [],
+    "orderbookCount": 0,
+    "visibleMakerCommitments": [],
+    "visibleMakerCommitmentCount": 0,
+    "indexerVisibleOpenCommitmentCount": 0,
+    "processCheck": {
+      "checkedAtUtc": "2026-06-09T03:19:52Z",
+      "liveMarketMakerProcessCount": 0,
+      "processes": []
+    },
+    "finalPositionStatusTotals": {
+      "stage-maker-a": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      },
+      "ospex-flow-a": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      }
+    }
+  },
+  "receiptsSummary": "raw/tx-receipts.summary.json"
+}
