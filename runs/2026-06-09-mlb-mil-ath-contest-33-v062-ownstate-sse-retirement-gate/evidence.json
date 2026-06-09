@@ -1,0 +1,96 @@
+{
+  "artifactFiles": {
+    "evidence": "evidence.json",
+    "raw": "raw/",
+    "scenarioMatrixJson": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "summary": "summary.md"
+  },
+  "artifactId": "2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate",
+  "artifactPath": "runs/2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate/",
+  "artifactStatus": "complete_verified_with_caveats",
+  "artifactType": "run",
+  "branch": "artifact/2026-06-09-mil-ath-v062-ownstate-retirement-gate",
+  "schemaVersion": 1,
+  "budget": {
+    "carryOverMakerPositionRiskObservedUSDC": "0.346200",
+    "newMatchedMakerRiskUSDC": "0.250000",
+    "newMatchedTakerRiskUSDC": "0.266000",
+    "notes": [
+      "Receipt gas covers two controlled match txs and five on-chain cancel txs. Off-chain soft cancels had no on-chain gas."
+    ],
+    "spendCapUSDC": "5.00",
+    "totalGasPOL": "0.263331208166012854",
+    "withinControlledTinyRiskEnvelope": true,
+    "writeReceiptCount": 7
+  },
+  "capturedAtUtc": "2026-06-09T21:36:13Z",
+  "caveats": [
+    "Score/settle/claim lifecycle deferred because contest 33 was still pre-game during the pre-test window; this remains a separate postgame cleanup obligation for the real tiny positions.",
+    "Two initial MM audit-poll PositionWithoutCommitment errors were observed from carry-over contest-33 positions and a fresh local MM state; they did not create persistent divergence, duplicate fill telemetry, or non-zero final exposure.",
+    "Reconnect coverage used a separate v0.6.2 watcher through a local drop proxy so the full-soak watcher could remain never-reconnected for the passive-expiry regression row."
+  ],
+  "chainId": 137,
+  "cleanupSafety": {
+    "evidence": "raw/final-drain-proof.sanitized.json",
+    "finalOrderbookCount": 0,
+    "finalPublicCommitments": 0,
+    "finalVisibleMakerCommitments": 0,
+    "freshWatchSummaryLiveCommitmentCount": 0,
+    "fullWatchSummaryLiveCommitmentCount": 0,
+    "orphanProcessCount": 0
+  },
+  "coverage": {
+    "fillActions": "raw/fill-actions.sanitized.json",
+    "passiveExpiryRegression": "raw/passive-expiry-regression-proof.sanitized.json",
+    "reconnectProof": "raw/reconnect-proof.sanitized.json",
+    "scenarioMatrix": "scenario-matrix.json",
+    "softCancelHiddenRecovery": "raw/soft-cancel-hidden-recovery.sanitized.json"
+  },
+  "date": "2026-06-09",
+  "network": "polygon",
+  "observers": {
+    "fullSoakOperatorWatch": "raw/own-state-watch.sanitized.ndjson",
+    "mmTelemetrySummary": "raw/mm-telemetry-summary.sanitized.json",
+    "ownStateSubscribeEnabled": true,
+    "slowAuditPollMs": 60000
+  },
+  "release": {
+    "marketMakerRealignmentPr": "https://github.com/ospex-org/ospex-market-maker/pull/88",
+    "releaseMatrix": "raw/release-version-matrix.sanitized.json",
+    "sdkCliVersion": "0.6.2"
+  },
+  "status": "complete_verified_with_caveats",
+  "target": {
+    "awayTeam": "Milwaukee Brewers",
+    "contestId": "33",
+    "contestStatus": "verified",
+    "homeTeam": "Athletics",
+    "market": "moneyline",
+    "speculationId": "23",
+    "sport": "mlb",
+    "startTimeUtc": "2026-06-10T02:05:00+00:00",
+    "teamIdentity": {
+      "away": "Milwaukee Brewers / underdog by reference implied probability during run",
+      "home": "Athletics / favorite by reference implied probability during run",
+      "moneylineSemantics": {
+        "lower": "home/Athletics",
+        "upper": "away/Milwaukee Brewers"
+      }
+    }
+  },
+  "verdict": {
+    "label": "GREEN pre-test / PASS with allowed postgame lifecycle deferral",
+    "reason": "v0.6.2 corrected the long-running watcher passive-expiry liveCommitmentCount regression: the same full-soak watch stayed connected, heartbeat count fell to 0 by passive expiry, final summary was 0, and fresh watch/public/orderbook agreed. Required fill, partial, soft-cancel, expiry/replacement, reconnect, restart/resume, no-duplicate, no-divergence, and zero-drain checks passed. Postgame lifecycle is deferred because contest 33 had not started."
+  },
+  "walletRoles": {
+    "controlledTaker": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "label": "ospex-flow-a"
+    },
+    "maker": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "label": "stage-maker-a"
+    }
+  }
+}

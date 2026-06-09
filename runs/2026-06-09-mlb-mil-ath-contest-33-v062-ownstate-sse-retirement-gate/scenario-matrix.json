@@ -1,0 +1,143 @@
+{
+  "artifactId": "2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate",
+  "generatedAt": "2026-06-09T21:36:13Z",
+  "scenarios": [
+    {
+      "evidence": [
+        "raw/own-state-watch.sanitized.ndjson"
+      ],
+      "id": "cold-start",
+      "notes": "full watch counts: snapshot=1, ready=1, first status connected",
+      "scenario": "\u22651 cold-start snapshot \u2192 ready on operator watch",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        "raw/fill-actions.sanitized.json",
+        "raw/mm-telemetry-summary.sanitized.json"
+      ],
+      "id": "normal-visible-fill",
+      "notes": "watch fills=2, MM own-state-stream fills=2; normal fill tx 0xcbdbe0afc35393a98cb4b59bc42f12cbaff449ad72968d075620328e04494791",
+      "scenario": "\u22651 normal visible fill",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        "raw/fill-actions.sanitized.json",
+        "raw/mm-telemetry-summary.sanitized.json"
+      ],
+      "id": "partial-fill",
+      "notes": "partial fill tx 0xa67bad453d28550a6ec255abacdde4e5c62d4546d94e31926adc1a6e06bca3d9 with taker risk 0.050000 USDC; MM telemetry newFillWei6=50000",
+      "scenario": "\u22651 partial fill",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        "raw/soft-cancel-hidden-recovery.sanitized.json",
+        "raw/own-state-watch.sanitized.ndjson"
+      ],
+      "id": "soft-cancel-hidden",
+      "notes": "owner watch emitted hidden visibility with signedPayloadPresent=true; anonymous list did not contain hash; no audit divergence events",
+      "scenario": "soft-cancelled hidden recovery visible to owner, absent anonymously",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        "raw/mm-telemetry-summary.sanitized.json",
+        "raw/own-state-watch.sanitized.ndjson"
+      ],
+      "id": "expiry-replacement",
+      "notes": "MM replace events=3, expire events=3",
+      "scenario": "expiry / replacement lifecycle",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        "raw/passive-expiry-regression-proof.sanitized.json",
+        "raw/own-state-watch.sanitized.ndjson"
+      ],
+      "id": "passive-expiry-regression",
+      "notes": "full-soak watcher never reconnected; heartbeat fell from 2 to 0 at 2026-06-09T21:25:57Z; summary liveCommitmentCount=0; fresh watch and public/orderbook also 0",
+      "scenario": "v0.6.2 long-running watch passive expiry live count falls to zero",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        "raw/reconnect-proof.sanitized.json",
+        "raw/reconnect-probe-watch.sanitized.ndjson"
+      ],
+      "id": "reconnect",
+      "notes": "separate reconnect probe statuses=['connected', 'reconnecting', 'connected']; ready count=2; no duplicate fill keys in main watch/MM",
+      "scenario": "\u22651 reconnect with catchup ready and no duplicate fill",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        "raw/mm-telemetry-summary.sanitized.json"
+      ],
+      "id": "restart-resume",
+      "notes": "restart emitted 1 stream-cold-restart event(s); restart run recorded 0 fill telemetry; duplicateFillTelemetryObserved=false",
+      "scenario": "\u22651 MM restart/resume from persisted cursor, no duplicate fill telemetry",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        "raw/final-drain-proof.sanitized.json"
+      ],
+      "id": "score-settle-claim",
+      "notes": "deferred per scenario allowance: contest 33 was still verified/pre-game at 2026-06-10T02:05:00+00:00; claim-all dry-runs returned zero entries; postgame cleanup remains a separate live position obligation",
+      "scenario": "score \u2192 settle \u2192 claim lifecycle or terminal status",
+      "status": "deferred"
+    },
+    {
+      "evidence": [
+        "raw/mm-telemetry-summary.sanitized.json"
+      ],
+      "id": "audit-divergence",
+      "notes": "divergence events=0; two initial PositionWithoutCommitment audit-poll errors were carry-over local-state caveats, not persistent divergence",
+      "scenario": "zero persistent audit divergence",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        "raw/fill-actions.sanitized.json",
+        "raw/mm-telemetry-summary.sanitized.json"
+      ],
+      "id": "duplicate-fills",
+      "notes": "watch fill keys unique=True; MM fill keys unique=True",
+      "scenario": "no duplicate fill telemetry across reconnect/resync/restart",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        "raw/own-state-watch.sanitized.ndjson"
+      ],
+      "id": "monotonic-position-status",
+      "notes": "operator watch observed two active positionStatus events and no backwards transition",
+      "scenario": "no backwards position transition",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        "raw/passive-expiry-regression-proof.sanitized.json",
+        "raw/reconnect-proof.sanitized.json",
+        "raw/mm-telemetry-summary.sanitized.json"
+      ],
+      "id": "post-close-mutation",
+      "notes": "full watch lines after summary=0; reconnect probe lines after summary=0; MM telemetry files ended with kill events",
+      "scenario": "no direct state mutation after unsubscribe/reconnect/resync",
+      "status": "pass"
+    },
+    {
+      "evidence": [
+        "raw/final-drain-proof.sanitized.json",
+        "raw/passive-expiry-regression-proof.sanitized.json"
+      ],
+      "id": "final-zero",
+      "notes": "visible=0, public/orderbook=0/0, watch summary=0, process scan=0",
+      "scenario": "maker visible commitments 0, orderbook 0, watch summary 0, no orphaned processes",
+      "status": "pass"
+    }
+  ],
+  "schemaVersion": 1
+}

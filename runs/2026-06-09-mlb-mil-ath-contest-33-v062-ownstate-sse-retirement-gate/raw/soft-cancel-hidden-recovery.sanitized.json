@@ -1,0 +1,41 @@
+{
+  "auditDivergenceEvents": 0,
+  "note": "Owner-authorized watch retained hidden row with signedPayloadPresent=true; anonymous public list did not include the soft-cancelled hash.",
+  "operatorWatchHiddenEvent": {
+    "at": "2026-06-09T21:15:25.514Z",
+    "commitment": {
+      "awayTeam": "Milwaukee Brewers",
+      "commitmentHash": "0xe667b0f9cdd62bdc58282a4ff8c89cc2b580656170a8fe67f4d740522bf4b4eb",
+      "expiry": "2026-06-09T21:16:56+00:00",
+      "homeTeam": "Athletics",
+      "isLive": true,
+      "oddsTick": 208,
+      "positionType": 0,
+      "remainingRiskAmount": "200000",
+      "signatureRedacted": true,
+      "signedPayloadPresent": true,
+      "status": "cancelled",
+      "storedStatus": "open",
+      "visibility": "hidden"
+    },
+    "kind": "commitment"
+  },
+  "publicAnonymousListAfterSoftCancelCount": 1,
+  "publicAnonymousListContainsSoftHash": false,
+  "softCancelAction": {
+    "commitmentHash": "0xe667b0f9cdd62bdc58282a4ff8c89cc2b580656170a8fe67f4d740522bf4b4eb",
+    "effects": [
+      {
+        "ok": true,
+        "purpose": "offchain-cancel",
+        "type": "eip712-signature"
+      },
+      {
+        "ok": true,
+        "purpose": "offchain-cancel",
+        "type": "offchain-write"
+      }
+    ],
+    "ok": true
+  }
+}

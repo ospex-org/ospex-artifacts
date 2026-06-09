@@ -1,0 +1,38 @@
+{
+  "capturedAtUtc": "2026-06-09T21:32:47Z",
+  "cliVersion": "0.6.2",
+  "downloadsPageContainsV062": {
+    "ospex-cli-0.6.2.tgz": false,
+    "ospex-sdk-0.6.2.tgz": false,
+    "v0.6.2": false
+  },
+  "downloadsPageRenderedContainsV062": {
+    "evidence": "rendered extraction of https://ospex.org/downloads during run",
+    "ospex-cli-0.6.2.tgz": true,
+    "ospex-sdk-0.6.2.tgz": true,
+    "v0.6.2": true
+  },
+  "mmOriginMain": "6e03b8e6cf2d5ec36ff858084c1a51efa248ef84",
+  "mmPr88": {
+    "mergeCommit": {
+      "oid": "6e03b8e6cf2d5ec36ff858084c1a51efa248ef84"
+    },
+    "mergedAt": "2026-06-09T20:44:20Z",
+    "number": 88,
+    "state": "MERGED",
+    "title": "chore(deps): pin @ospex/sdk v0.6.2",
+    "url": "https://github.com/ospex-org/ospex-market-maker/pull/88"
+  },
+  "sdkOriginMain": "7632955d0c689a04d3e40b2cca2653cf772119c3",
+  "sdkRelease": {
+    "assets": [
+      "ospex-cli-0.6.2.tgz",
+      "ospex-sdk-0.6.2.tgz"
+    ],
+    "isDraft": false,
+    "isPrerelease": false,
+    "publishedAt": "2026-06-09T20:41:58Z",
+    "tagName": "v0.6.2"
+  },
+  "sdkTagCommit": "7632955d0c689a04d3e40b2cca2653cf772119c3"
+}

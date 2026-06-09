@@ -1,0 +1,69 @@
+{
+  "doctor": {
+    "apiUrl": "https://api.ospex.org",
+    "chainId": 137,
+    "checks": [
+      {
+        "detail": "loaded from <local-path-redacted> (chainId=137, pricing.mode=direct, mode.dryRun=false)",
+        "name": "config",
+        "status": "ok"
+      },
+      {
+        "detail": "at <local-path-redacted>",
+        "name": "keystore",
+        "status": "ok"
+      },
+      {
+        "detail": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b (from flag)",
+        "name": "wallet",
+        "status": "ok"
+      },
+      {
+        "detail": "reachable at https://api.ospex.org",
+        "name": "api",
+        "status": "ok"
+      },
+      {
+        "detail": "reachable; configured for chain 137",
+        "name": "rpc",
+        "status": "ok"
+      },
+      {
+        "detail": "8.469949 POL (above the 0.1 POL reserve)",
+        "name": "pol-balance",
+        "status": "ok"
+      },
+      {
+        "detail": "7.262410 USDC (\u2265 the 1.600000 USDC required)",
+        "name": "usdc-balance",
+        "status": "ok"
+      },
+      {
+        "detail": "11.159700 USDC allowed to PositionModule (0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c)",
+        "name": "allowance",
+        "status": "ok"
+      },
+      {
+        "detail": "no prior state at <local-path-redacted> \u2014 fresh start",
+        "name": "state",
+        "status": "ok"
+      }
+    ],
+    "configDryRun": false,
+    "configPath": "<local-path-redacted>",
+    "ready": {
+      "dryRunShadow": {
+        "ok": true,
+        "reason": "no FAILs \u2014 `ospex-mm run --dry-run` should boot (the shadow loop posts nothing, so a keystore is not required)"
+      },
+      "postCommitments": {
+        "ok": true,
+        "reason": "all live prerequisites met \u2014 pass --live to `run` to go live"
+      }
+    },
+    "schemaVersion": 1,
+    "walletAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "walletAddressSource": "flag"
+  },
+  "schemaVersion": 1
+}

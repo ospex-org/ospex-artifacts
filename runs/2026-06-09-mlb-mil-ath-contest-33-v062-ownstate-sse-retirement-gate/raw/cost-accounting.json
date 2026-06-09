@@ -1,0 +1,12 @@
+{
+  "carryOverMakerPositionRiskObservedUSDC": "0.346200",
+  "newMatchedMakerRiskUSDC": "0.250000",
+  "newMatchedTakerRiskUSDC": "0.266000",
+  "notes": [
+    "Receipt gas covers two controlled match txs and five on-chain cancel txs. Off-chain soft cancels had no on-chain gas."
+  ],
+  "spendCapUSDC": "5.00",
+  "totalGasPOL": "0.263331208166012854",
+  "withinControlledTinyRiskEnvelope": true,
+  "writeReceiptCount": 7
+}

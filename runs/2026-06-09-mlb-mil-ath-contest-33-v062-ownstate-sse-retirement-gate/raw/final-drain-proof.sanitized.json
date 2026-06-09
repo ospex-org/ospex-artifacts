@@ -1,0 +1,46 @@
+{
+  "claimAllMakerDryRun": {
+    "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "dryRun": true,
+    "entries": [],
+    "success": false,
+    "totals": {
+      "alreadyClaimed": 0,
+      "claimed": 0,
+      "claimedFresh": 0,
+      "failed": 0,
+      "recoveredAlreadyClaimed": 0,
+      "totalPayoutUSDC": 0,
+      "totalPayoutWei6": "0"
+    }
+  },
+  "claimAllTakerDryRun": {
+    "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+    "dryRun": true,
+    "entries": [],
+    "success": false,
+    "totals": {
+      "alreadyClaimed": 0,
+      "claimed": 0,
+      "claimedFresh": 0,
+      "failed": 0,
+      "recoveredAlreadyClaimed": 0,
+      "totalPayoutUSDC": 0,
+      "totalPayoutWei6": "0"
+    }
+  },
+  "claimDryRunInterpretation": "success:false with entries:[] is expected here because contest 33 was still pre-game/unsettled; there were no claimable rows yet. This is not treated as a lifecycle failure, and postgame score/settle/claim remains a separate cleanup obligation after official finality.",
+  "contestMatchTimeUtc": "2026-06-10T02:05:00+00:00",
+  "contestStatus": "verified",
+  "freshPostDrainWatchLiveCommitmentCount": 0,
+  "fullWatchSummaryLiveCommitmentCount": 0,
+  "makerVisibleCommitmentCount": 0,
+  "processScanMatchedLines": [],
+  "publicSpeculationCommitmentCount": 0,
+  "rawEvidence": {
+    "finalMakerVisibleCommitments": "operator-private raw local only; sanitized count published",
+    "finalPublicOrderbookCommitments": "operator-private raw local only; sanitized count published",
+    "freshPostDrainWatch": "raw/own-state-watch.sanitized.ndjson summary plus this proof"
+  },
+  "speculationOrderbookCount": 0
+}

@@ -1,0 +1,51 @@
+{
+  "finalSummary": {
+    "at": "2026-06-09T21:29:16.002Z",
+    "counts": {
+      "commitment": 26,
+      "error": 0,
+      "fill": 2,
+      "heartbeat": 56,
+      "positionStatus": 2,
+      "ready": 1,
+      "snapshot": 1,
+      "status": 1
+    },
+    "exitReason": "signal",
+    "lastStatus": "connected",
+    "liveCommitmentCount": 0,
+    "readyObserved": true
+  },
+  "firstZeroHeartbeatAfterPassiveExpiry": {
+    "at": "2026-06-09T21:25:57.051Z",
+    "liveCommitmentCount": 0
+  },
+  "freshPostDrainWatchSummary": {
+    "at": "2026-06-09T21:30:14.347Z",
+    "counts": {
+      "commitment": 0,
+      "error": 0,
+      "fill": 0,
+      "heartbeat": 1,
+      "positionStatus": 0,
+      "ready": 1,
+      "snapshot": 1,
+      "status": 0
+    },
+    "exitReason": "until-ready",
+    "lastStatus": null,
+    "liveCommitmentCount": 0,
+    "readyObserved": true
+  },
+  "fullWatchErrors": 0,
+  "fullWatchNeverReconnected": true,
+  "lastPositiveHeartbeatBeforeZero": {
+    "at": "2026-06-09T21:25:37.054Z",
+    "liveCommitmentCount": 2
+  },
+  "linesAfterFullWatchSummary": 0,
+  "makerVisibleCommitmentCount": 0,
+  "note": "The long-running full-soak watcher stayed connected from cold-start through shutdown. After the final soft-cancelled rows passively expired by wall clock, heartbeat liveCommitmentCount fell to 0 and final summary stayed 0, matching fresh watch and public/orderbook state.",
+  "publicOrderbookCount": 0,
+  "speculationOrderbookCount": 0
+}

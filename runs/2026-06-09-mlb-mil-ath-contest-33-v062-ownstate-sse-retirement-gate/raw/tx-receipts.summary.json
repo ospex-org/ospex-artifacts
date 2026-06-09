@@ -1,0 +1,56 @@
+{
+  "receiptCount": 7,
+  "receipts": [
+    {
+      "blockNumber": 88223081,
+      "effectiveGasPrice": 278313647658,
+      "gasUsed": 296378,
+      "status": "0x1",
+      "txHash": "0xcbdbe0afc35393a98cb4b59bc42f12cbaff449ad72968d075620328e04494791"
+    },
+    {
+      "blockNumber": 88223086,
+      "effectiveGasPrice": 288434239565,
+      "gasUsed": 296402,
+      "status": "0x1",
+      "txHash": "0xa67bad453d28550a6ec255abacdde4e5c62d4546d94e31926adc1a6e06bca3d9"
+    },
+    {
+      "blockNumber": 88223103,
+      "effectiveGasPrice": 278660518279,
+      "gasUsed": 68675,
+      "status": "0x1",
+      "txHash": "0x6e4d72dbe76e2f48c07e95b0bf2a07a23f5e9e3411083df283bc2dd3c75c8c71"
+    },
+    {
+      "blockNumber": 88223405,
+      "effectiveGasPrice": 278936232125,
+      "gasUsed": 68675,
+      "status": "0x1",
+      "txHash": "0x20fe50f76a07fea3c7ca438d38838ca4c8697978f1e7d5ae11eee290bb4bda02"
+    },
+    {
+      "blockNumber": 88223407,
+      "effectiveGasPrice": 277358831875,
+      "gasUsed": 68663,
+      "status": "0x1",
+      "txHash": "0xec10574ef4c4e9107cdc442f7121dc88a6fa7ef13a705cce39a5157c16f8bccf"
+    },
+    {
+      "blockNumber": 88223409,
+      "effectiveGasPrice": 277084665473,
+      "gasUsed": 68675,
+      "status": "0x1",
+      "txHash": "0x4faa587fc9d4764b301e2796827523e2d083b7fe6735bb3694671845da9d8578"
+    },
+    {
+      "blockNumber": 88223411,
+      "effectiveGasPrice": 276519300300,
+      "gasUsed": 68663,
+      "status": "0x1",
+      "txHash": "0xe93d451522daf084c820d24dfcaeb8287a515e51e0e395932db92e19adcd08ec"
+    }
+  ],
+  "totalGasPOL": "0.263331208166012854",
+  "totalGasWei": "263331208166012854"
+}

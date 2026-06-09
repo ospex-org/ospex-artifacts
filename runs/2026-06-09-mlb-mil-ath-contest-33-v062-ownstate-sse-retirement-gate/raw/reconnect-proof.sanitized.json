@@ -1,0 +1,72 @@
+{
+  "counts": {
+    "commitment": 7,
+    "error": 1,
+    "fill": 2,
+    "heartbeat": 4,
+    "positionStatus": 2,
+    "ready": 2,
+    "snapshot": 1,
+    "status": 3,
+    "summary": 1
+  },
+  "errorCount": 1,
+  "linesAfterSummary": 0,
+  "proxyLog": [
+    {
+      "at": "2026-06-09T21:19:32.803Z",
+      "event": "listening",
+      "port": 18062
+    },
+    {
+      "at": "2026-06-09T21:19:46.904Z",
+      "event": "drop-scheduled",
+      "path": "/v1/stream/own-state"
+    },
+    {
+      "at": "2026-06-09T21:19:54.907Z",
+      "event": "drop-now",
+      "path": "/v1/stream/own-state"
+    },
+    {
+      "at": "2026-06-09T21:19:54.911Z",
+      "event": "request-error",
+      "message": "intentional reconnect test drop",
+      "path": "/v1/stream/own-state"
+    },
+    {
+      "at": "2026-06-09T21:19:54.913Z",
+      "event": "upstream-error",
+      "message": "intentional reconnect test drop",
+      "path": "/v1/stream/own-state"
+    },
+    {
+      "at": "2026-06-09T21:29:36.238Z",
+      "event": "sigterm"
+    }
+  ],
+  "readyCount": 2,
+  "reasonForSeparateProbe": "The full-soak watcher was intentionally kept continuously connected to satisfy the passive-expiry regression row; reconnect coverage used a separate v0.6.2 watch through a local drop proxy.",
+  "statusSequence": [
+    "connected",
+    "reconnecting",
+    "connected"
+  ],
+  "summary": {
+    "at": "2026-06-09T21:20:41.375Z",
+    "counts": {
+      "commitment": 7,
+      "error": 1,
+      "fill": 2,
+      "heartbeat": 4,
+      "positionStatus": 2,
+      "ready": 2,
+      "snapshot": 1,
+      "status": 3
+    },
+    "exitReason": "duration",
+    "lastStatus": "connected",
+    "liveCommitmentCount": 4,
+    "readyObserved": true
+  }
+}
