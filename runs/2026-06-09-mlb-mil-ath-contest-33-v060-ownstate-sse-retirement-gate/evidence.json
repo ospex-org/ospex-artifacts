@@ -1,0 +1,54 @@
+{
+  "cost": {
+    "authoritativeCancelGasPOL": "0.21347992253871062",
+    "authoritativeCancelGasPolWei": "213479922538710633",
+    "budgetCapUSDC": "5",
+    "matchedMakerRiskUSDC": "0.246200 new fills (0.346200 cumulative maker positions including setup exposure observed by MM)"
+  },
+  "coverage": {
+    "coldStartSnapshotReady": true,
+    "expiryReplacement": true,
+    "finalDrainToZero": false,
+    "lifecycleOrTerminal": "deferred: target game had not started during window",
+    "noBackwardsPositionTransition": true,
+    "noDuplicateFillTelemetry": true,
+    "noPostSummaryMutation": true,
+    "normalVisibleFill": true,
+    "partialFill": true,
+    "reconnectCatchupNoDuplicateFill": true,
+    "restartResumeNoDuplicateFill": true,
+    "softCancelHiddenRecovery": true,
+    "zeroPersistentDivergence": false
+  },
+  "files": [
+    "summary.md",
+    "scenario-matrix.md",
+    "scenario-matrix.json",
+    "raw/"
+  ],
+  "generatedAt": "2026-06-09T18:10:00Z",
+  "maker": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+  "runtime": {
+    "cliVersion": "0.6.0",
+    "marketMakerCommit": "1d9bc94",
+    "sdkCommitOrTag": "v0.6.0",
+    "sdkVersion": "0.6.0"
+  },
+  "schemaVersion": 1,
+  "status": "fail_blocked",
+  "target": {
+    "awayTeam": "Milwaukee Brewers",
+    "contestId": "33",
+    "favoriteUnderdog": "reference odds during run treated Athletics as slight favorite / Milwaukee Brewers as underdog by implied probability",
+    "homeTeam": "Athletics",
+    "market": "moneyline",
+    "matchTime": "2026-06-10T02:05:00+00:00",
+    "speculationId": "23",
+    "sport": "mlb"
+  },
+  "title": "MIL/ATH contest 33 v0.6.0 own-state SSE retirement-gate soak",
+  "verdict": {
+    "blockingReason": "full-soak operator watch summary reported liveCommitmentCount=8 after drain; fresh watch/public reads showed zero actual live/open commitments",
+    "overall": "FAIL"
+  }
+}

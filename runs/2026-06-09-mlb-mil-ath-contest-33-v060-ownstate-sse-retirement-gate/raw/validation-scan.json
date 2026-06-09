@@ -1,0 +1,9 @@
+{
+  "artifact": "/home/vince/Documents/solidity/ospex-artifacts/runs/2026-06-09-mlb-mil-ath-contest-33-v060-ownstate-sse-retirement-gate",
+  "findings": {},
+  "generatedAt": "2026-06-09T18:13:36Z",
+  "notes": [
+    "signedPayloadPresent and signatureRedacted booleans are allowed; scan flags signedPayload/signature structs only."
+  ],
+  "passed": true
+}

@@ -1,0 +1,499 @@
+{
+  "cancelStaleFinal": {
+    "blockedMissingPayload": 0,
+    "errored": 0,
+    "gasDenied": 0,
+    "gasPolWei": "77528519696094796",
+    "inspected": 4,
+    "offchainCancelled": 0,
+    "offchainSkippedAlready": 4,
+    "offchainSkippedPartial": 0,
+    "onchainCancelled": 4,
+    "runId": "2026-06-09T18-05-32-796Z-y0yikc"
+  },
+  "duplicateChecks": {
+    "telemetryDuplicateCommitmentFillKeys": [],
+    "telemetryFillSources": [
+      "own-state-stream"
+    ],
+    "watchDuplicateTxLogKeys": []
+  },
+  "eventCounts": {
+    "candidate": 3,
+    "degraded": 1,
+    "error": 1,
+    "expire": 8,
+    "fill": 2,
+    "kill": 2,
+    "onchain-cancel": 7,
+    "quote-competitiveness": 20,
+    "quote-intent": 10,
+    "replace": 9,
+    "risk-verdict": 10,
+    "soft-cancel": 4,
+    "stream-cold-restart": 1,
+    "stream-health-hold": 4,
+    "submit": 7,
+    "tick-start": 19
+  },
+  "expires": [
+    {
+      "commitmentHash": "0xb39ff7c198d0f65e3240b0fe3cb91cb9daf1c03fd41c46c8ae9edec705b3f633",
+      "contestId": "33",
+      "kind": "expire",
+      "makerSide": "home",
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "speculationId": "23",
+      "ts": "2026-06-09T17:50:50.878Z"
+    },
+    {
+      "commitmentHash": "0x253983dbdb5631ac7975b120718da216af8f37cdfe15adb38bc7fcb1c9f6e33d",
+      "contestId": "33",
+      "kind": "expire",
+      "makerSide": "away",
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "speculationId": "23",
+      "ts": "2026-06-09T17:50:50.878Z"
+    },
+    {
+      "commitmentHash": "0x0d90a6ff9e5c3dfdf62807ef7ad799e8b9a03c552df79e31956ef27fca693c6a",
+      "contestId": "33",
+      "kind": "expire",
+      "makerSide": "home",
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "speculationId": "23",
+      "ts": "2026-06-09T17:52:56.549Z"
+    },
+    {
+      "commitmentHash": "0xfdd6bb1d9c51768834826df71d28ccc82ae68a694d85bc38b2b08d06af45d967",
+      "contestId": "33",
+      "kind": "expire",
+      "makerSide": "away",
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "speculationId": "23",
+      "ts": "2026-06-09T17:52:56.549Z"
+    },
+    {
+      "commitmentHash": "0x2d3986d30aa498141b7dfdcd3d102211388569adfcd6391cf5c270c9e6a729af",
+      "contestId": "33",
+      "kind": "expire",
+      "makerSide": "home",
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "speculationId": "23",
+      "ts": "2026-06-09T17:57:04.328Z"
+    },
+    {
+      "commitmentHash": "0x77f94a124a888b35739d8472dd6483d26596492ce379abf598e9de420b6ebae7",
+      "contestId": "33",
+      "kind": "expire",
+      "makerSide": "away",
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "speculationId": "23",
+      "ts": "2026-06-09T17:58:07.207Z"
+    },
+    {
+      "commitmentHash": "0xb4bc697be0cbbda283a2419a7d3792e1851017ecf8715528f7106a9f83900319",
+      "contestId": "33",
+      "kind": "expire",
+      "makerSide": "home",
+      "runId": "2026-06-09T18-00-08-483Z-8m1i3f",
+      "speculationId": "23",
+      "ts": "2026-06-09T18:00:17.314Z"
+    },
+    {
+      "commitmentHash": "0x36100f145a0c0ef66071f3f19ad5ed7754e395da9297fe01861a557dcb416762",
+      "contestId": "33",
+      "kind": "expire",
+      "makerSide": "away",
+      "runId": "2026-06-09T18-00-08-483Z-8m1i3f",
+      "speculationId": "23",
+      "ts": "2026-06-09T18:00:17.314Z"
+    }
+  ],
+  "fills": [
+    {
+      "awayTeam": "Milwaukee Brewers",
+      "commitmentHash": "0x6c6632f70c87714e3fe7e75bb9158ec5eec68f8176fe653c1f5dbbd1d513a068",
+      "contestId": "33",
+      "cumulativeRiskWei6": "300000",
+      "homeTeam": "Athletics",
+      "makerSide": "home",
+      "newFillWei6": "200000",
+      "positionType": 1,
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "source": "own-state-stream",
+      "speculationId": "23",
+      "sport": "mlb",
+      "takerSide": "away",
+      "ts": "2026-06-09T17:52:11.098Z"
+    },
+    {
+      "awayTeam": "Milwaukee Brewers",
+      "commitmentHash": "0x26e57de0349351975f926ccdf31babec3d4d4950745b1adf031c49c1c13643bb",
+      "contestId": "33",
+      "cumulativeRiskWei6": "46200",
+      "homeTeam": "Athletics",
+      "makerSide": "away",
+      "newFillWei6": "46200",
+      "positionType": 0,
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "source": "own-state-stream",
+      "speculationId": "23",
+      "sport": "mlb",
+      "takerSide": "home",
+      "ts": "2026-06-09T17:52:26.157Z"
+    }
+  ],
+  "freshFinalWatchSummary": {
+    "at": "2026-06-09T18:09:44.980Z",
+    "counts": {
+      "commitment": 0,
+      "error": 0,
+      "fill": 0,
+      "heartbeat": 1,
+      "positionStatus": 0,
+      "ready": 1,
+      "snapshot": 1,
+      "status": 0
+    },
+    "exitReason": "until-ready",
+    "lastStatus": null,
+    "liveCommitmentCount": 0,
+    "readyObserved": true
+  },
+  "generatedAt": "2026-06-09T18:10:00Z",
+  "onchainCancels": [
+    {
+      "commitmentHash": "0x26e57de0349351975f926ccdf31babec3d4d4950745b1adf031c49c1c13643bb",
+      "contestId": "33",
+      "gasPolWei": "19078060317734628",
+      "makerSide": "away",
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "speculationId": "23",
+      "ts": "2026-06-09T17:52:56.548Z",
+      "txHash": "0x0c3725694da210b86a3f87d5bd81759ba3cad94470b10e4d971ce46f1543fef3"
+    },
+    {
+      "commitmentHash": "0x59c25c355fac20e8689464def151604ff302305c675dcd74652263d2a7bc531c",
+      "contestId": "33",
+      "gasPolWei": "19776168014770875",
+      "makerSide": "home",
+      "runId": "2026-06-09T18-00-08-483Z-8m1i3f",
+      "speculationId": "23",
+      "ts": "2026-06-09T18:00:13.479Z",
+      "txHash": "0xab5afcc525ebf012cc63e5511af2c7357f0d418ba4fa9d8cb97c471f6ca4ccc4"
+    },
+    {
+      "commitmentHash": "0xff9e790621872f26521934593f7b4001d2e32b513ace3e1b5b3baa4463206b7f",
+      "contestId": "33",
+      "gasPolWei": "19568654814015538",
+      "makerSide": "away",
+      "runId": "2026-06-09T18-00-08-483Z-8m1i3f",
+      "speculationId": "23",
+      "ts": "2026-06-09T18:00:17.312Z",
+      "txHash": "0x7f79b8bc6aa87d0f289f88166de6ac00868a9829cf51557468ec3b701bd80b67"
+    },
+    {
+      "commitmentHash": "0x36d7990b1ff621e823d82e78b7c39ae4243f2ee09151374295784b31a951cc0c",
+      "contestId": "33",
+      "gasPolWei": "19577785461463725",
+      "makerSide": "home",
+      "runId": "2026-06-09T18-05-32-796Z-y0yikc",
+      "speculationId": "23",
+      "ts": "2026-06-09T18:05:37.021Z",
+      "txHash": "0xb7933878a13dfbd15c6c38bb1e08e00e08cb5c3b165b2aea0553fa3e8d1f8a5a"
+    },
+    {
+      "commitmentHash": "0xd017e87a56a58f40e6b86fe48e46a703ca38ef52714838790bb02e2d5e12b33e",
+      "contestId": "33",
+      "gasPolWei": "19369538386861229",
+      "makerSide": "away",
+      "runId": "2026-06-09T18-05-32-796Z-y0yikc",
+      "speculationId": "23",
+      "ts": "2026-06-09T18:05:39.745Z",
+      "txHash": "0x16d6ff2932e1203e47a40be088fa5293b2265793f59b2665c413eec01313e9ff"
+    },
+    {
+      "commitmentHash": "0x96180bc2d1664b7630d6778ffa47c06d7f39a3d08c375bd57c02381894aa0cff",
+      "contestId": "33",
+      "gasPolWei": "19195267805295800",
+      "makerSide": "home",
+      "runId": "2026-06-09T18-05-32-796Z-y0yikc",
+      "speculationId": "23",
+      "ts": "2026-06-09T18:05:42.470Z",
+      "txHash": "0xf92d8506c044dfa8194e6bf104a96a8cc6368951251e1750e46bcc974c0af9cf"
+    },
+    {
+      "commitmentHash": "0x50a6a87a4d2cc8886e690e45a6491513d8296bd6a5eabf8bf72ad26c025bfc4e",
+      "contestId": "33",
+      "gasPolWei": "19385928042474042",
+      "makerSide": "away",
+      "runId": "2026-06-09T18-05-32-796Z-y0yikc",
+      "speculationId": "23",
+      "ts": "2026-06-09T18:05:45.200Z",
+      "txHash": "0x4949efce0963f91ff82c5db2ca555bf1fe72df150be9e862760d076442d86580"
+    }
+  ],
+  "operatorWatchSummary": {
+    "at": "2026-06-09T18:08:27.495Z",
+    "counts": {
+      "commitment": 38,
+      "error": 0,
+      "fill": 2,
+      "heartbeat": 69,
+      "positionStatus": 2,
+      "ready": 1,
+      "snapshot": 1,
+      "status": 1
+    },
+    "exitReason": "signal",
+    "lastStatus": "connected",
+    "liveCommitmentCount": 8,
+    "readyObserved": true
+  },
+  "positionStatusEvents": [
+    {
+      "at": "2026-06-09T17:52:10.890Z",
+      "contestId": null,
+      "positionType": null,
+      "side": null,
+      "speculationId": null,
+      "status": null
+    },
+    {
+      "at": "2026-06-09T17:52:25.870Z",
+      "contestId": null,
+      "positionType": null,
+      "side": null,
+      "speculationId": null,
+      "status": null
+    }
+  ],
+  "replacements": [
+    {
+      "contestId": "33",
+      "makerSide": "home",
+      "newCommitmentHash": "0x0d90a6ff9e5c3dfdf62807ef7ad799e8b9a03c552df79e31956ef27fca693c6a",
+      "reason": "stale",
+      "replacedCommitmentHash": "0xb39ff7c198d0f65e3240b0fe3cb91cb9daf1c03fd41c46c8ae9edec705b3f633",
+      "riskAmountWei6": "200000",
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "speculationId": "23",
+      "ts": "2026-06-09T17:48:44.982Z"
+    },
+    {
+      "contestId": "33",
+      "makerSide": "away",
+      "newCommitmentHash": "0xfdd6bb1d9c51768834826df71d28ccc82ae68a694d85bc38b2b08d06af45d967",
+      "reason": "stale",
+      "replacedCommitmentHash": "0x253983dbdb5631ac7975b120718da216af8f37cdfe15adb38bc7fcb1c9f6e33d",
+      "riskAmountWei6": "200000",
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "speculationId": "23",
+      "ts": "2026-06-09T17:48:45.540Z"
+    },
+    {
+      "contestId": "33",
+      "makerSide": "home",
+      "newCommitmentHash": "0x6c6632f70c87714e3fe7e75bb9158ec5eec68f8176fe653c1f5dbbd1d513a068",
+      "reason": "stale",
+      "replacedCommitmentHash": "0x0d90a6ff9e5c3dfdf62807ef7ad799e8b9a03c552df79e31956ef27fca693c6a",
+      "riskAmountWei6": "200000",
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "speculationId": "23",
+      "ts": "2026-06-09T17:50:50.082Z"
+    },
+    {
+      "contestId": "33",
+      "makerSide": "away",
+      "newCommitmentHash": "0x26e57de0349351975f926ccdf31babec3d4d4950745b1adf031c49c1c13643bb",
+      "reason": "stale",
+      "replacedCommitmentHash": "0xfdd6bb1d9c51768834826df71d28ccc82ae68a694d85bc38b2b08d06af45d967",
+      "riskAmountWei6": "200000",
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "speculationId": "23",
+      "ts": "2026-06-09T17:50:50.877Z"
+    },
+    {
+      "contestId": "33",
+      "makerSide": "away",
+      "newCommitmentHash": "0x36100f145a0c0ef66071f3f19ad5ed7754e395da9297fe01861a557dcb416762",
+      "reason": "stale",
+      "replacedCommitmentHash": "0x77f94a124a888b35739d8472dd6483d26596492ce379abf598e9de420b6ebae7",
+      "riskAmountWei6": "200000",
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "speculationId": "23",
+      "ts": "2026-06-09T17:56:02.751Z"
+    },
+    {
+      "contestId": "33",
+      "makerSide": "home",
+      "newCommitmentHash": "0x59c25c355fac20e8689464def151604ff302305c675dcd74652263d2a7bc531c",
+      "reason": "stale",
+      "replacedCommitmentHash": "0xb4bc697be0cbbda283a2419a7d3792e1851017ecf8715528f7106a9f83900319",
+      "riskAmountWei6": "200000",
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "speculationId": "23",
+      "ts": "2026-06-09T17:58:06.663Z"
+    },
+    {
+      "contestId": "33",
+      "makerSide": "away",
+      "newCommitmentHash": "0xff9e790621872f26521934593f7b4001d2e32b513ace3e1b5b3baa4463206b7f",
+      "reason": "stale",
+      "replacedCommitmentHash": "0x36100f145a0c0ef66071f3f19ad5ed7754e395da9297fe01861a557dcb416762",
+      "riskAmountWei6": "200000",
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "speculationId": "23",
+      "ts": "2026-06-09T17:58:07.207Z"
+    },
+    {
+      "contestId": "33",
+      "makerSide": "home",
+      "newCommitmentHash": "0x96180bc2d1664b7630d6778ffa47c06d7f39a3d08c375bd57c02381894aa0cff",
+      "reason": "stale",
+      "replacedCommitmentHash": "0x36d7990b1ff621e823d82e78b7c39ae4243f2ee09151374295784b31a951cc0c",
+      "riskAmountWei6": "200000",
+      "runId": "2026-06-09T18-00-08-483Z-8m1i3f",
+      "speculationId": "23",
+      "ts": "2026-06-09T18:03:23.337Z"
+    },
+    {
+      "contestId": "33",
+      "makerSide": "away",
+      "newCommitmentHash": "0x50a6a87a4d2cc8886e690e45a6491513d8296bd6a5eabf8bf72ad26c025bfc4e",
+      "reason": "stale",
+      "replacedCommitmentHash": "0xd017e87a56a58f40e6b86fe48e46a703ca38ef52714838790bb02e2d5e12b33e",
+      "riskAmountWei6": "200000",
+      "runId": "2026-06-09T18-00-08-483Z-8m1i3f",
+      "speculationId": "23",
+      "ts": "2026-06-09T18:03:23.842Z"
+    }
+  ],
+  "softCancels": [
+    {
+      "commitmentHash": "0x59c25c355fac20e8689464def151604ff302305c675dcd74652263d2a7bc531c",
+      "contestId": "33",
+      "kind": "soft-cancel",
+      "makerSide": "home",
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "speculationId": "23",
+      "ts": "2026-06-09T17:59:56.895Z"
+    },
+    {
+      "commitmentHash": "0xff9e790621872f26521934593f7b4001d2e32b513ace3e1b5b3baa4463206b7f",
+      "contestId": "33",
+      "kind": "soft-cancel",
+      "makerSide": "away",
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "speculationId": "23",
+      "ts": "2026-06-09T17:59:57.042Z"
+    },
+    {
+      "commitmentHash": "0x96180bc2d1664b7630d6778ffa47c06d7f39a3d08c375bd57c02381894aa0cff",
+      "contestId": "33",
+      "kind": "soft-cancel",
+      "makerSide": "home",
+      "runId": "2026-06-09T18-00-08-483Z-8m1i3f",
+      "speculationId": "23",
+      "ts": "2026-06-09T18:05:12.224Z"
+    },
+    {
+      "commitmentHash": "0x50a6a87a4d2cc8886e690e45a6491513d8296bd6a5eabf8bf72ad26c025bfc4e",
+      "contestId": "33",
+      "kind": "soft-cancel",
+      "makerSide": "away",
+      "runId": "2026-06-09T18-00-08-483Z-8m1i3f",
+      "speculationId": "23",
+      "ts": "2026-06-09T18:05:12.492Z"
+    }
+  ],
+  "streamEvents": [
+    {
+      "contestId": null,
+      "exposureWei6": "100000",
+      "kind": "stream-health-hold",
+      "reason": null,
+      "referenceGameId": null,
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "severity": "high",
+      "state": "entered",
+      "ts": "2026-06-09T17:45:39.082Z"
+    },
+    {
+      "contestId": null,
+      "exposureWei6": null,
+      "kind": "stream-health-hold",
+      "reason": null,
+      "referenceGameId": null,
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "severity": null,
+      "state": "cleared",
+      "ts": "2026-06-09T17:46:39.892Z"
+    },
+    {
+      "contestId": "33",
+      "exposureWei6": null,
+      "kind": "degraded",
+      "reason": "stream-degraded",
+      "referenceGameId": "760cb5a5-ac75-49fd-9e0c-0d4ac004be8f",
+      "runId": "2026-06-09T17-45-37-676Z-it4omh",
+      "severity": null,
+      "state": null,
+      "ts": "2026-06-09T17:51:02.077Z"
+    },
+    {
+      "contestId": null,
+      "exposureWei6": null,
+      "kind": "stream-cold-restart",
+      "reason": "resume-without-baseline",
+      "referenceGameId": null,
+      "runId": "2026-06-09T18-00-08-483Z-8m1i3f",
+      "severity": null,
+      "state": null,
+      "ts": "2026-06-09T18:00:09.509Z"
+    },
+    {
+      "contestId": null,
+      "exposureWei6": "746200",
+      "kind": "stream-health-hold",
+      "reason": null,
+      "referenceGameId": null,
+      "runId": "2026-06-09T18-00-08-483Z-8m1i3f",
+      "severity": "high",
+      "state": "entered",
+      "ts": "2026-06-09T18:00:10.759Z"
+    },
+    {
+      "contestId": null,
+      "exposureWei6": null,
+      "kind": "stream-health-hold",
+      "reason": null,
+      "referenceGameId": null,
+      "runId": "2026-06-09T18-00-08-483Z-8m1i3f",
+      "severity": null,
+      "state": "cleared",
+      "ts": "2026-06-09T18:01:18.238Z"
+    }
+  ],
+  "telemetryFiles": [
+    "run-2026-06-09T17-45-37-676Z-it4omh.ndjson",
+    "run-2026-06-09T18-00-08-483Z-8m1i3f.ndjson",
+    "run-2026-06-09T18-05-32-796Z-y0yikc.ndjson"
+  ],
+  "watchFills": [
+    {
+      "at": "2026-06-09T17:52:10.752Z",
+      "commitmentHash": "0x6c6632f70c87714e3fe7e75bb9158ec5eec68f8176fe653c1f5dbbd1d513a068",
+      "logIndex": 1194,
+      "txHash": "0xaa65c8861541ac70624ff0691fa8ca4b1f85e01763a246d39e741e505d12f46f"
+    },
+    {
+      "at": "2026-06-09T17:52:25.730Z",
+      "commitmentHash": "0x26e57de0349351975f926ccdf31babec3d4d4950745b1adf031c49c1c13643bb",
+      "logIndex": 1061,
+      "txHash": "0x9d362fcae43533ed2558a2a3553b86bdae0f71c85e80a606a63f859ff2245c5a"
+    }
+  ],
+  "watchLinesAfterSummary": 0
+}

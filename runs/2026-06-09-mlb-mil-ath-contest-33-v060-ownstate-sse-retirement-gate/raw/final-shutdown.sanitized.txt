@@ -1,0 +1,8 @@
+2026-06-09T18:05:11Z begin final shutdown/drain: stopping MM before cancel-stale
+ 119259  119250 Sl         05:05 node /usr/bin/yarn -s mm run --config [RUN_CONFIG] --live --ignore-missing-state
+ 119271  119259 S          05:04 /bin/sh -c node dist/cli/index.js run --config [RUN_CONFIG] --live --ignore-missing-state
+ 119272  119271 Sl         05:04 /usr/bin/node dist/cli/index.js run --config [RUN_CONFIG] --live --ignore-missing-state
+2026-06-09T18:05:12Z MM processes after stop:
+2026-06-09T18:08:27Z stopping operator watch pid=118362
+2026-06-09T18:08:47Z watch still present after SIGINT; sending TERM
+2026-06-09T18:08:49Z processes after watch stop:

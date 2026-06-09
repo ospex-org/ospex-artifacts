@@ -1,0 +1,29 @@
+{
+  "apiUrl": "https://api.ospex.org",
+  "chainId": 137,
+  "configFile": "ospex-mm.retirement-v060.yaml",
+  "orders": {
+    "cancelMode": "onchain",
+    "expiryMode": "fixed-seconds",
+    "expirySeconds": 180,
+    "staleAfterSeconds": 120
+  },
+  "ownState": {
+    "auditPollIntervalMs": 60000,
+    "divergenceToleranceMs": 5000,
+    "indexerLagMaxSeconds": 30,
+    "subscribe": true
+  },
+  "risk": {
+    "bankrollUSDC": "5",
+    "maxRiskPerCommitmentUSDC": "0.20",
+    "maxRiskPerContestUSDC": "0.80"
+  },
+  "rpcUrl": "[REDACTED]",
+  "stateDir": "[REDACTED_LOCAL_PATH]",
+  "telemetryLogDir": "[REDACTED_LOCAL_PATH]",
+  "wallet": {
+    "keystorePath": "[REDACTED_LOCAL_PATH]",
+    "maker": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B"
+  }
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "runtime-v060",
+    "scenario": "SDK/CLI/MM v0.6.0 alignment",
+    "status": "pass",
+    "evidence": "evidence.json, raw/mm-config-summary.sanitized.json",
+    "notes": "Released CLI/SDK v0.6.0 and MM v0.6.0 pin used."
+  },
+  {
+    "id": "observers",
+    "scenario": "Operator watch and MM own-state observer live",
+    "status": "pass",
+    "evidence": "raw/own-state-watch.ndjson, raw/mm-telemetry-summary.sanitized.json",
+    "notes": "Operator watch snapshot\u2192ready; MM telemetry with ownState.subscribe=true and slow audit polling configured."
+  },
+  {
+    "id": "cold-start",
+    "scenario": "Cold-start snapshot\u2192ready",
+    "status": "pass",
+    "evidence": "raw/own-state-watch.ndjson",
+    "notes": "Full-soak watch emitted snapshot and ready at 2026-06-09T17:45:29Z."
+  },
+  {
+    "id": "visible-fill",
+    "scenario": "Normal visible fill",
+    "status": "pass",
+    "evidence": "raw/mm-telemetry-summary.sanitized.json",
+    "notes": "Commitment 0x6c66\u2026 filled once; MM source own-state-stream; watch tx/log 0xaa65\u2026/1194."
+  },
+  {
+    "id": "partial-fill",
+    "scenario": "Partial fill",
+    "status": "pass",
+    "evidence": "raw/mm-telemetry-summary.sanitized.json",
+    "notes": "Commitment 0x26e5\u2026 partial fill newFillWei6=46200; no duplicate telemetry."
+  },
+  {
+    "id": "hidden-soft-cancel",
+    "scenario": "Soft-cancel/hidden recovery",
+    "status": "pass_with_caveat",
+    "evidence": "raw/own-state-extract.sanitized.ndjson",
+    "notes": "Watch observed hidden cancelled commitments with signedPayloadPresent=true and later terminal on-chain cancellation; simultaneous anonymous hidden-read probe was not captured."
+  },
+  {
+    "id": "expiry-replacement",
+    "scenario": "Expiry/replacement lifecycle",
+    "status": "pass",
+    "evidence": "raw/mm-telemetry-summary.sanitized.json",
+    "notes": "MM emitted replacement and expiry telemetry across short-lived quotes."
+  },
+  {
+    "id": "reconnect",
+    "scenario": "Reconnect/degraded catchup without duplicate fill",
+    "status": "pass",
+    "evidence": "raw/mm-telemetry-summary.sanitized.json",
+    "notes": "Stream-degraded event observed at 17:51:02Z; no duplicate fills across the run."
+  },
+  {
+    "id": "restart-resume",
+    "scenario": "MM restart/resume from persisted cursor",
+    "status": "pass_with_caveat",
+    "evidence": "raw/mm-telemetry-summary.sanitized.json",
+    "notes": "Restart reused state/cursor, then emitted stream-cold-restart reason=resume-without-baseline; health hold cleared and no duplicate fill telemetry."
+  },
+  {
+    "id": "lifecycle-terminal",
+    "scenario": "Score\u2192settle\u2192claim or terminal position lifecycle",
+    "status": "deferred",
+    "evidence": "raw/final-speculation-23.sanitized.json",
+    "notes": "Target game MIL/ATH starts 2026-06-10T02:05Z, outside this run window; positions remained active."
+  },
+  {
+    "id": "divergence",
+    "scenario": "Zero persistent audit divergence",
+    "status": "fail",
+    "evidence": "raw/final-safety-state.sanitized.json",
+    "notes": "Actual public/orderbook/fresh watch state was zero, but full-soak operator watch summary reported liveCommitmentCount=8 after drain."
+  },
+  {
+    "id": "duplicate-fills",
+    "scenario": "No duplicate fill telemetry",
+    "status": "pass",
+    "evidence": "raw/mm-telemetry-summary.sanitized.json",
+    "notes": "Watch tx/log keys and MM commitment fill keys unique."
+  },
+  {
+    "id": "position-monotonic",
+    "scenario": "No backwards position transition",
+    "status": "pass",
+    "evidence": "raw/mm-telemetry-summary.sanitized.json",
+    "notes": "Only active positionStatus events observed; no backwards rank transition detected."
+  },
+  {
+    "id": "post-summary",
+    "scenario": "No direct state mutation after summary",
+    "status": "pass",
+    "evidence": "raw/final-safety-state.sanitized.json",
+    "notes": "0 lines after operator-watch summary."
+  },
+  {
+    "id": "final-drain",
+    "scenario": "Drain to zero and no orphaned processes",
+    "status": "fail",
+    "evidence": "raw/final-safety-state.sanitized.json",
+    "notes": "No orphaned processes and public/fresh state zero, but full-soak watch summary liveCommitmentCount=8, failing the scenario final row."
+  },
+  {
+    "id": "public-safety",
+    "scenario": "Public artifact safety scan",
+    "status": "pass",
+    "evidence": "raw/validation-scan.json",
+    "notes": "No signatures/secrets detected by artifact scan."
+  }
+]

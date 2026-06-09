@@ -1,0 +1,33 @@
+{
+  "cancelStaleFinal": {
+    "blockedMissingPayload": 0,
+    "errored": 0,
+    "gasDenied": 0,
+    "gasPolWei": "77528519696094796",
+    "inspected": 4,
+    "offchainCancelled": 0,
+    "offchainSkippedAlready": 4,
+    "offchainSkippedPartial": 0,
+    "onchainCancelled": 4,
+    "runId": "2026-06-09T18-05-32-796Z-y0yikc"
+  },
+  "freshFinalWatchLiveCommitmentCount": 0,
+  "generatedAt": "2026-06-09T18:10:00Z",
+  "makerVisibleCommitmentsPayloadLength": 0,
+  "note": "Final public/orderbook state and fresh own-state snapshot are zero, but the full-soak operator watch summary reported liveCommitmentCount=8. This is the blocking discrepancy for the retirement gate.",
+  "operatorWatchSummaryLiveCommitmentCount": 8,
+  "processesAfterShutdown": [],
+  "publicVisibleCommitmentsPayloadLength": 0,
+  "speculationOrderbookLength": 0,
+  "target": {
+    "awayTeam": "Milwaukee Brewers",
+    "contestId": "33",
+    "favoriteUnderdog": "reference odds during run treated Athletics as slight favorite / Milwaukee Brewers as underdog by implied probability",
+    "homeTeam": "Athletics",
+    "market": "moneyline",
+    "matchTime": "2026-06-10T02:05:00+00:00",
+    "speculationId": "23",
+    "sport": "mlb"
+  },
+  "watchLinesAfterSummary": 0
+}
