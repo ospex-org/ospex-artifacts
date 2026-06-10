@@ -4,7 +4,8 @@
     "raw": "raw/",
     "scenarioMatrixJson": "scenario-matrix.json",
     "scenarioMatrixMarkdown": "scenario-matrix.md",
-    "summary": "summary.md"
+    "summary": "summary.md",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json"
   },
   "artifactId": "2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate",
   "artifactPath": "runs/2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate/",
@@ -17,16 +18,21 @@
     "newMatchedMakerRiskUSDC": "0.250000",
     "newMatchedTakerRiskUSDC": "0.266000",
     "notes": [
-      "Receipt gas covers two controlled match txs and five on-chain cancel txs. Off-chain soft cancels had no on-chain gas."
+      "Receipt gas covers two controlled match txs, five on-chain cancel txs, score request, settle, and two claim txs. Off-chain submits/cancels had no on-chain gas.",
+      "Oracle callback receipt is recorded separately and is not counted as operator-controlled POL gas."
     ],
     "spendCapUSDC": "5.00",
-    "totalGasPOL": "0.263331208166012854",
+    "totalGasPOL": "0.561997396247496700",
     "withinControlledTinyRiskEnvelope": true,
-    "writeReceiptCount": 7
+    "writeReceiptCount": 11,
+    "postgameControlledGasPOL": "0.298666188081483846",
+    "scoreRequestLinkSpentLINK": "0.005000",
+    "oracleCallbackReceiptCount": 1,
+    "makerClaimPayoutUSDC": "0.702000",
+    "takerClaimPayoutUSDC": "0.512096"
   },
-  "capturedAtUtc": "2026-06-09T21:36:13Z",
+  "capturedAtUtc": "2026-06-10T06:35:36Z",
   "caveats": [
-    "Score/settle/claim lifecycle deferred because contest 33 was still pre-game during the pre-test window; this remains a separate postgame cleanup obligation for the real tiny positions.",
     "Two initial MM audit-poll PositionWithoutCommitment errors were observed from carry-over contest-33 positions and a fresh local MM state; they did not create persistent divergence, duplicate fill telemetry, or non-zero final exposure.",
     "Reconnect coverage used a separate v0.6.2 watcher through a local drop proxy so the full-soak watcher could remain never-reconnected for the passive-expiry regression row."
   ],
@@ -38,14 +44,19 @@
     "finalVisibleMakerCommitments": 0,
     "freshWatchSummaryLiveCommitmentCount": 0,
     "fullWatchSummaryLiveCommitmentCount": 0,
-    "orphanProcessCount": 0
+    "orphanProcessCount": 0,
+    "postgameFinalDryRunMakerEntries": 0,
+    "postgameFinalDryRunTakerEntries": 0,
+    "postgameWinningPositionsClaimed": 2,
+    "postgameLosingPositionsClaimable": 0
   },
   "coverage": {
     "fillActions": "raw/fill-actions.sanitized.json",
     "passiveExpiryRegression": "raw/passive-expiry-regression-proof.sanitized.json",
     "reconnectProof": "raw/reconnect-proof.sanitized.json",
     "scenarioMatrix": "scenario-matrix.json",
-    "softCancelHiddenRecovery": "raw/soft-cancel-hidden-recovery.sanitized.json"
+    "softCancelHiddenRecovery": "raw/soft-cancel-hidden-recovery.sanitized.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json"
   },
   "date": "2026-06-09",
   "network": "polygon",
@@ -64,7 +75,7 @@
   "target": {
     "awayTeam": "Milwaukee Brewers",
     "contestId": "33",
-    "contestStatus": "verified",
+    "contestStatus": "scored",
     "homeTeam": "Athletics",
     "market": "moneyline",
     "speculationId": "23",
@@ -77,11 +88,15 @@
         "lower": "home/Athletics",
         "upper": "away/Milwaukee Brewers"
       }
-    }
+    },
+    "awayScore": 5,
+    "homeScore": 7,
+    "winner": "home/Athletics",
+    "winSide": "home/lower"
   },
   "verdict": {
-    "label": "GREEN pre-test / PASS with allowed postgame lifecycle deferral",
-    "reason": "v0.6.2 corrected the long-running watcher passive-expiry liveCommitmentCount regression: the same full-soak watch stayed connected, heartbeat count fell to 0 by passive expiry, final summary was 0, and fresh watch/public/orderbook agreed. Required fill, partial, soft-cancel, expiry/replacement, reconnect, restart/resume, no-duplicate, no-divergence, and zero-drain checks passed. Postgame lifecycle is deferred because contest 33 had not started."
+    "label": "GREEN / PASS complete with postgame lifecycle claimed",
+    "reason": "v0.6.2 corrected the long-running watcher passive-expiry liveCommitmentCount regression and the postgame lifecycle is now complete: MLB final was Athletics 7, Milwaukee Brewers 5; contest 33 scored, speculation 23 closed with home/lower as winner, both controlled winning lower positions were claimed, final claim-all dry-runs are empty, and public/orderbook/watch/process zero checks remain clean."
   },
   "walletRoles": {
     "controlledTaker": {
@@ -92,5 +107,19 @@
       "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
       "label": "stage-maker-a"
     }
+  },
+  "postgameLifecycle": {
+    "finalScoreSource": "raw/final-score-source.sanitized.json",
+    "evidence": "raw/postgame-lifecycle.sanitized.json",
+    "contestStatus": "scored",
+    "speculationStatus": "closed",
+    "winSide": "home/lower",
+    "scoreRequestTx": "0x965d72f833aa9338c75af7245bb638239f2946e89ca1a899c80342aa1a8fa901",
+    "scoreCallbackTx": "0x1c0cf69e522e78fd6bd180a8d256b816f2dc0c9c73c96ceccce4b4a6ea46bf72",
+    "settleTx": "0xe30337862ba55ee963968fb959caa4b4b36ff1869067de9b13fcc0585fa0c606",
+    "makerClaimTx": "0x0b477a0b92ac83a0c43ad3107f5d5728703ca84bbfbdb821f9a7ba5701757545",
+    "takerClaimTx": "0x1de3508cdc9b42d98f8cdc682a6bd5b669814f6d4fd179225cfaaba10086a38a",
+    "makerClaimPayoutUSDC": "0.702000",
+    "takerClaimPayoutUSDC": "0.512096"
   }
 }

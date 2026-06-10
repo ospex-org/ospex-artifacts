@@ -82,12 +82,14 @@
     },
     {
       "evidence": [
-        "raw/final-drain-proof.sanitized.json"
+        "raw/postgame-lifecycle.sanitized.json",
+        "raw/final-score-source.sanitized.json",
+        "raw/cli-postgame.sanitized.json"
       ],
       "id": "score-settle-claim",
-      "notes": "deferred per scenario allowance: contest 33 was still verified/pre-game at 2026-06-10T02:05:00+00:00; claim-all dry-runs returned zero entries; postgame cleanup remains a separate live position obligation",
+      "notes": "Athletics defeated Milwaukee Brewers 7-5; contest 33 scored, speculation 23 closed home/lower; maker lower payout 0.702000 USDC and taker lower payout 0.512096 USDC claimed; final claim-all dry-runs empty.",
       "scenario": "score \u2192 settle \u2192 claim lifecycle or terminal status",
-      "status": "deferred"
+      "status": "pass"
     },
     {
       "evidence": [

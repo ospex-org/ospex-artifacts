@@ -29,9 +29,9 @@
       "totalPayoutWei6": "0"
     }
   },
-  "claimDryRunInterpretation": "success:false with entries:[] is expected here because contest 33 was still pre-game/unsettled; there were no claimable rows yet. This is not treated as a lifecycle failure, and postgame score/settle/claim remains a separate cleanup obligation after official finality.",
+  "claimDryRunInterpretation": "historical pre-postgame drain snapshot: success:false with entries:[] was expected because contest 33 was still pre-game/unsettled at this snapshot; postgame score/settle/claim is now complete in raw/postgame-lifecycle.sanitized.json.",
   "contestMatchTimeUtc": "2026-06-10T02:05:00+00:00",
-  "contestStatus": "verified",
+  "contestStatusAtDrainSnapshot": "verified",
   "freshPostDrainWatchLiveCommitmentCount": 0,
   "fullWatchSummaryLiveCommitmentCount": 0,
   "makerVisibleCommitmentCount": 0,

@@ -1,0 +1,342 @@
+{
+  "schemaVersion": 1,
+  "capturedAtUtc": "2026-06-10T06:35:36Z",
+  "finalScoreSource": "raw/final-score-source.sanitized.json",
+  "score": {
+    "awayTeam": "Milwaukee Brewers",
+    "awayScore": 5,
+    "homeTeam": "Athletics",
+    "homeScore": 7,
+    "winner": "home/Athletics",
+    "protocolWinSide": "home/lower",
+    "sourceStatus": "Final"
+  },
+  "protocolState": {
+    "contest": {
+      "contestId": "33",
+      "status": "scored",
+      "awayScore": 5,
+      "homeScore": 7,
+      "scoredAt": "2026-06-10T06:23:21+00:00"
+    },
+    "speculation": {
+      "speculationId": "23",
+      "speculationStatus": 1,
+      "speculationStatusLabel": "closed",
+      "winSide": "home",
+      "settledAt": "2026-06-10T06:24:13+00:00",
+      "orderbookCount": 0
+    },
+    "positions": [
+      {
+        "speculationId": "23",
+        "positionType": "upper",
+        "side": "away/Milwaukee Brewers",
+        "userAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "riskWei6": "352000",
+        "riskUSDC": "0.352000",
+        "profitWei6": "350000",
+        "profitUSDC": "0.350000",
+        "won": false,
+        "claimed": false,
+        "claimedAmountWei6": null,
+        "claimedAmountUSDC": null,
+        "claimedAt": null
+      },
+      {
+        "speculationId": "23",
+        "positionType": "lower",
+        "side": "home/Athletics",
+        "userAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "riskWei6": "265896",
+        "riskUSDC": "0.265896",
+        "profitWei6": "246200",
+        "profitUSDC": "0.246200",
+        "won": true,
+        "claimed": true,
+        "claimedAmountWei6": "512096",
+        "claimedAmountUSDC": "0.512096",
+        "claimedAt": "2026-06-10 06:24:33+00"
+      },
+      {
+        "speculationId": "23",
+        "positionType": "upper",
+        "side": "away/Milwaukee Brewers",
+        "userAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "riskWei6": "246200",
+        "riskUSDC": "0.246200",
+        "profitWei6": "265896",
+        "profitUSDC": "0.265896",
+        "won": false,
+        "claimed": false,
+        "claimedAmountWei6": null,
+        "claimedAmountUSDC": null,
+        "claimedAt": null
+      },
+      {
+        "speculationId": "23",
+        "positionType": "lower",
+        "side": "home/Athletics",
+        "userAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "riskWei6": "350000",
+        "riskUSDC": "0.350000",
+        "profitWei6": "352000",
+        "profitUSDC": "0.352000",
+        "won": true,
+        "claimed": true,
+        "claimedAmountWei6": "702000",
+        "claimedAmountUSDC": "0.702000",
+        "claimedAt": "2026-06-10 06:24:16+00"
+      }
+    ]
+  },
+  "actions": {
+    "scoreRequest": {
+      "txHash": "0x965d72f833aa9338c75af7245bb638239f2946e89ca1a899c80342aa1a8fa901",
+      "requestId": "0x4a26f91455d13d80015224e257d6a1b2b27497e7b2a5d14d8b466d43e9ace1da",
+      "status": "success",
+      "signer": "stage-maker-a / contest creator"
+    },
+    "scoreCallback": {
+      "blockNumber": 88245077,
+      "txHash": "0x1c0cf69e522e78fd6bd180a8d256b816f2dc0c9c73c96ceccce4b4a6ea46bf72",
+      "logIndex": 377,
+      "eventName": "CONTEST_SCORES_SET",
+      "entityType": "contest",
+      "entityId": "33",
+      "payload": {
+        "awayScore": "5",
+        "contestId": "33",
+        "homeScore": "7"
+      }
+    },
+    "makerClaimAll": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "success": true,
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "claimedFresh": 1,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "702000",
+        "totalPayoutUSDC": 0.702
+      },
+      "effects": [
+        {
+          "type": "transaction",
+          "purpose": "settle-speculation",
+          "ok": true,
+          "txHash": "0xe30337862ba55ee963968fb959caa4b4b36ff1869067de9b13fcc0585fa0c606",
+          "status": "confirmed"
+        },
+        {
+          "type": "transaction",
+          "purpose": "claim-position",
+          "ok": true,
+          "txHash": "0x0b477a0b92ac83a0c43ad3107f5d5728703ca84bbfbdb821f9a7ba5701757545",
+          "status": "confirmed"
+        }
+      ],
+      "entries": [
+        {
+          "positionId": "23_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_1",
+          "speculationId": "23",
+          "bucket": "pendingSettle",
+          "description": "Athletics moneyline \u2014 Won (\u2248 $0.70, needs settle)",
+          "success": true,
+          "txHashes": [
+            "0xe30337862ba55ee963968fb959caa4b4b36ff1869067de9b13fcc0585fa0c606",
+            "0x0b477a0b92ac83a0c43ad3107f5d5728703ca84bbfbdb821f9a7ba5701757545"
+          ],
+          "steps": [
+            {
+              "name": "settleSpeculation",
+              "outcome": "sent",
+              "txHash": "0xe30337862ba55ee963968fb959caa4b4b36ff1869067de9b13fcc0585fa0c606",
+              "winSide": "home"
+            },
+            {
+              "name": "claimPosition",
+              "outcome": "sent",
+              "txHash": "0x0b477a0b92ac83a0c43ad3107f5d5728703ca84bbfbdb821f9a7ba5701757545",
+              "payoutWei6": "702000",
+              "payoutUSDC": 0.702
+            }
+          ],
+          "payoutUSDC": 0.702,
+          "payoutWei6": "702000",
+          "winSide": "home"
+        }
+      ]
+    },
+    "takerClaimAll": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "success": true,
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "claimedFresh": 1,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "512096",
+        "totalPayoutUSDC": 0.512096
+      },
+      "effects": [
+        {
+          "type": "transaction",
+          "purpose": "claim-position",
+          "ok": true,
+          "txHash": "0x1de3508cdc9b42d98f8cdc682a6bd5b669814f6d4fd179225cfaaba10086a38a",
+          "status": "confirmed"
+        }
+      ],
+      "entries": [
+        {
+          "positionId": "23_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+          "speculationId": "23",
+          "bucket": "pendingSettle",
+          "description": "Athletics moneyline \u2014 Won (\u2248 $0.51, needs settle)",
+          "success": true,
+          "txHashes": [
+            "0x1de3508cdc9b42d98f8cdc682a6bd5b669814f6d4fd179225cfaaba10086a38a"
+          ],
+          "steps": [
+            {
+              "name": "settleSpeculation",
+              "outcome": "skippedAlreadySettled",
+              "winSide": "home"
+            },
+            {
+              "name": "claimPosition",
+              "outcome": "sent",
+              "txHash": "0x1de3508cdc9b42d98f8cdc682a6bd5b669814f6d4fd179225cfaaba10086a38a",
+              "payoutWei6": "512096",
+              "payoutUSDC": 0.512096
+            }
+          ],
+          "payoutUSDC": 0.512096,
+          "payoutWei6": "512096",
+          "winSide": "home"
+        }
+      ]
+    }
+  },
+  "chainEvents": [
+    {
+      "blockNumber": 88245077,
+      "txHash": "0x1c0cf69e522e78fd6bd180a8d256b816f2dc0c9c73c96ceccce4b4a6ea46bf72",
+      "logIndex": 375,
+      "eventName": "ORACLE_RESPONSE",
+      "entityType": "oracle",
+      "entityId": null,
+      "payload": {
+        "err": "0x",
+        "response": "0x000000000000000000000000000000000000000000000000000000000000138f",
+        "requestId": "0x4a26f91455d13d80015224e257d6a1b2b27497e7b2a5d14d8b466d43e9ace1da"
+      }
+    },
+    {
+      "blockNumber": 88245077,
+      "txHash": "0x1c0cf69e522e78fd6bd180a8d256b816f2dc0c9c73c96ceccce4b4a6ea46bf72",
+      "logIndex": 377,
+      "eventName": "CONTEST_SCORES_SET",
+      "entityType": "contest",
+      "entityId": "33",
+      "payload": {
+        "awayScore": "5",
+        "contestId": "33",
+        "homeScore": "7"
+      }
+    },
+    {
+      "blockNumber": 88245112,
+      "txHash": "0xe30337862ba55ee963968fb959caa4b4b36ff1869067de9b13fcc0585fa0c606",
+      "logIndex": 1504,
+      "eventName": "SPECULATION_SETTLED",
+      "entityType": "speculation",
+      "entityId": "23",
+      "payload": {
+        "scorer": "0xd846B7FdbD8C9F67d1580B2C6a8Bd7Fdcb15390b",
+        "winSideValue": "2",
+        "speculationId": "23"
+      }
+    },
+    {
+      "blockNumber": 88245114,
+      "txHash": "0x0b477a0b92ac83a0c43ad3107f5d5728703ca84bbfbdb821f9a7ba5701757545",
+      "logIndex": 945,
+      "eventName": "POSITION_CLAIMED",
+      "entityType": "position",
+      "entityId": "23",
+      "payload": {
+        "user": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+        "payout": "702000",
+        "positionType": "1",
+        "speculationId": "23"
+      }
+    },
+    {
+      "blockNumber": 88245125,
+      "txHash": "0x1de3508cdc9b42d98f8cdc682a6bd5b669814f6d4fd179225cfaaba10086a38a",
+      "logIndex": 892,
+      "eventName": "POSITION_CLAIMED",
+      "entityType": "position",
+      "entityId": "23",
+      "payload": {
+        "user": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+        "payout": "512096",
+        "positionType": "1",
+        "speculationId": "23"
+      }
+    }
+  ],
+  "finalDryRuns": {
+    "maker": {
+      "entries": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      },
+      "success": false
+    },
+    "taker": {
+      "entries": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      },
+      "success": false
+    },
+    "interpretation": "Both controlled wallets have zero remaining claim-all entries after the lower/home winning positions were claimed; losing upper/away positions are terminal non-claimable rows."
+  },
+  "ownStatePostClaimReadOnly": {
+    "maker": {
+      "readyObserved": true,
+      "liveCommitmentCount": 0,
+      "positionStatusLines": 0
+    },
+    "taker": {
+      "readyObserved": true,
+      "liveCommitmentCount": 0,
+      "positionStatusLines": 0
+    }
+  },
+  "costs": {
+    "postgameControlledGasPOL": "0.298666188081483846",
+    "scoreRequestLinkSpentLINK": "0.005000",
+    "oracleCallbackGasPOLNotOperatorPaid": "0.143667214711388808",
+    "makerClaimPayoutUSDC": "0.702000",
+    "takerClaimPayoutUSDC": "0.512096"
+  }
+}
