@@ -1,0 +1,18 @@
+{
+  "carryOverMakerPositionRiskObservedUSDC": "0.346200",
+  "newMatchedMakerRiskUSDC": "0.250000",
+  "newMatchedTakerRiskUSDC": "0.266000",
+  "notes": [
+    "Receipt gas covers two controlled match txs, five on-chain cancel txs, score request, settle, and two claim txs. Off-chain submits/cancels had no on-chain gas.",
+    "Oracle callback receipt is recorded separately and is not counted as operator-controlled POL gas."
+  ],
+  "spendCapUSDC": "5.00",
+  "totalGasPOL": "0.561997396247496700",
+  "withinControlledTinyRiskEnvelope": true,
+  "writeReceiptCount": 11,
+  "postgameControlledGasPOL": "0.298666188081483846",
+  "scoreRequestLinkSpentLINK": "0.005000",
+  "oracleCallbackReceiptCount": 1,
+  "makerClaimPayoutUSDC": "0.702000",
+  "takerClaimPayoutUSDC": "0.512096"
+}

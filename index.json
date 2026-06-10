@@ -1,10 +1,11 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-06-09T03:20:07Z",
+  "generatedAt": "2026-06-09T21:40:04Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
+      "runs/2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate/evidence.json",
       "runs/2026-06-08-mlb-sea-bal-contest-32-v054-ownstate-sse-repeatability/evidence.json",
       "runs/2026-06-08-mlb-sf-chc-v054-ownstate-sse-repeatability-canary/evidence.json",
       "runs/2026-06-07-mlb-pit-atl-contest-30-v054-ownstate-sse-green-candidate/evidence.json",
@@ -13,8 +14,7 @@
       "runs/2026-05-28-mlb-col-lad-contest-27-d2-solvency-lifecycle/evidence.json",
       "runs/2026-05-25-mlb-min-cws-contest-25-v042-mm-acceptance/evidence.json",
       "runs/2026-05-24-mlb-tex-laa-contest-24-v040-mm-acceptance/evidence.json",
-      "runs/2026-05-24-mlb-pit-tor-contest-22-mm-early1/evidence.json",
-      "runs/2026-05-24-mlb-min-bos-contest-23-mm-early2-softcancel-recovery/evidence.json"
+      "runs/2026-05-24-mlb-pit-tor-contest-22-mm-early1/evidence.json"
     ],
     "release-acceptance": [
       "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.json"
@@ -22,6 +22,17 @@
     "daily-digest": []
   },
   "recentArtifacts": [
+    {
+      "artifactId": "2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate",
+      "artifactType": "run",
+      "dataPath": "runs/2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate/evidence.json",
+      "date": "2026-06-09",
+      "network": "polygon",
+      "rawPath": "runs/2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate/summary.md",
+      "publishedAt": "2026-06-09T21:40:04Z"
+    },
     {
       "artifactId": "2026-06-08-mlb-sea-bal-contest-32-v054-ownstate-sse-repeatability",
       "artifactType": "run",
@@ -210,9 +221,9 @@
       "scope": "year",
       "year": 2026,
       "path": "archive/2026/index.json",
-      "artifactCount": 16,
+      "artifactCount": 17,
       "oldestPublishedAt": "2026-05-20T02:48:35Z",
-      "newestPublishedAt": "2026-06-08T19:26:10Z"
+      "newestPublishedAt": "2026-06-09T21:40:04Z"
     }
   ]
 }

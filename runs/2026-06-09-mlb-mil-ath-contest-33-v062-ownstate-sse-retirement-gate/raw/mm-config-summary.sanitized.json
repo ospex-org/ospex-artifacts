@@ -1,0 +1,32 @@
+{
+  "orders": {
+    "cancelMode": "onchain",
+    "expiryMode": "fixed-seconds",
+    "expirySeconds": 180,
+    "staleAfterSeconds": 120
+  },
+  "ownState": {
+    "auditPollIntervalMs": 60000,
+    "divergenceToleranceMs": 5000,
+    "recoveryHoldMs": 30000,
+    "staleMaxMs": 60000,
+    "subscribe": true
+  },
+  "risk": {
+    "bankrollUSDC": "5",
+    "maxOpenCommitments": 8,
+    "maxRiskPerCommitmentUSDC": "0.20",
+    "maxRiskPerContestUSDC": "0.80"
+  },
+  "state": {
+    "localPathRedacted": true,
+    "sameStateDirectoryReusedAcrossRestart": true
+  },
+  "telemetry": {
+    "captured": true,
+    "files": [
+      "run-2026-06-09T21-10-50-199Z-jbmg0x.ndjson",
+      "run-2026-06-09T21-21-27-674Z-lut087.ndjson"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "source": "MLB Stats API schedule endpoint",
+  "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-06-09&hydrate=team,linescore",
+  "gamePk": 824999,
+  "gameDate": "2026-06-10T02:05:00Z",
+  "status": "Final",
+  "statusCode": "F",
+  "awayTeam": "Milwaukee Brewers",
+  "homeTeam": "Athletics",
+  "awayScore": 5,
+  "homeScore": 7,
+  "winner": "home/Athletics",
+  "capturedAtUtc": "2026-06-10T06:35:36Z"
+}

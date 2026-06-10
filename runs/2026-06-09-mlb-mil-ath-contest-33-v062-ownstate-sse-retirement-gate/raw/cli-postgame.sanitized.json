@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "scoreContest": {
+    "ok": true,
+    "stage": "execute",
+    "effects": [
+      {
+        "type": "transaction",
+        "purpose": "score-contest",
+        "ok": true,
+        "txHash": "0x965d72f833aa9338c75af7245bb638239f2946e89ca1a899c80342aa1a8fa901",
+        "blockNumber": "88245069",
+        "status": "confirmed"
+      }
+    ],
+    "payload": {
+      "contestId": "33",
+      "txHash": "0x965d72f833aa9338c75af7245bb638239f2946e89ca1a899c80342aa1a8fa901",
+      "requestId": "0x4a26f91455d13d80015224e257d6a1b2b27497e7b2a5d14d8b466d43e9ace1da",
+      "status": "success"
+    }
+  },
+  "claimAllDryRunAfterScore": {
+    "maker": {
+      "entries": 1,
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "702000",
+        "totalPayoutUSDC": 0.702
+      }
+    },
+    "taker": {
+      "entries": 1,
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "512096",
+        "totalPayoutUSDC": 0.512096
+      }
+    }
+  },
+  "claimAllLive": {
+    "maker": {
+      "success": true,
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "claimedFresh": 1,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "702000",
+        "totalPayoutUSDC": 0.702
+      },
+      "effects": [
+        {
+          "type": "transaction",
+          "purpose": "settle-speculation",
+          "ok": true,
+          "txHash": "0xe30337862ba55ee963968fb959caa4b4b36ff1869067de9b13fcc0585fa0c606",
+          "status": "confirmed"
+        },
+        {
+          "type": "transaction",
+          "purpose": "claim-position",
+          "ok": true,
+          "txHash": "0x0b477a0b92ac83a0c43ad3107f5d5728703ca84bbfbdb821f9a7ba5701757545",
+          "status": "confirmed"
+        }
+      ],
+      "entries": [
+        {
+          "positionId": "23_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_1",
+          "speculationId": "23",
+          "bucket": "pendingSettle",
+          "description": "Athletics moneyline \u2014 Won (\u2248 $0.70, needs settle)",
+          "success": true,
+          "txHashes": [
+            "0xe30337862ba55ee963968fb959caa4b4b36ff1869067de9b13fcc0585fa0c606",
+            "0x0b477a0b92ac83a0c43ad3107f5d5728703ca84bbfbdb821f9a7ba5701757545"
+          ],
+          "steps": [
+            {
+              "name": "settleSpeculation",
+              "outcome": "sent",
+              "txHash": "0xe30337862ba55ee963968fb959caa4b4b36ff1869067de9b13fcc0585fa0c606",
+              "winSide": "home"
+            },
+            {
+              "name": "claimPosition",
+              "outcome": "sent",
+              "txHash": "0x0b477a0b92ac83a0c43ad3107f5d5728703ca84bbfbdb821f9a7ba5701757545",
+              "payoutWei6": "702000",
+              "payoutUSDC": 0.702
+            }
+          ],
+          "payoutUSDC": 0.702,
+          "payoutWei6": "702000",
+          "winSide": "home"
+        }
+      ]
+    },
+    "taker": {
+      "success": true,
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "claimedFresh": 1,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "512096",
+        "totalPayoutUSDC": 0.512096
+      },
+      "effects": [
+        {
+          "type": "transaction",
+          "purpose": "claim-position",
+          "ok": true,
+          "txHash": "0x1de3508cdc9b42d98f8cdc682a6bd5b669814f6d4fd179225cfaaba10086a38a",
+          "status": "confirmed"
+        }
+      ],
+      "entries": [
+        {
+          "positionId": "23_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+          "speculationId": "23",
+          "bucket": "pendingSettle",
+          "description": "Athletics moneyline \u2014 Won (\u2248 $0.51, needs settle)",
+          "success": true,
+          "txHashes": [
+            "0x1de3508cdc9b42d98f8cdc682a6bd5b669814f6d4fd179225cfaaba10086a38a"
+          ],
+          "steps": [
+            {
+              "name": "settleSpeculation",
+              "outcome": "skippedAlreadySettled",
+              "winSide": "home"
+            },
+            {
+              "name": "claimPosition",
+              "outcome": "sent",
+              "txHash": "0x1de3508cdc9b42d98f8cdc682a6bd5b669814f6d4fd179225cfaaba10086a38a",
+              "payoutWei6": "512096",
+              "payoutUSDC": 0.512096
+            }
+          ],
+          "payoutUSDC": 0.512096,
+          "payoutWei6": "512096",
+          "winSide": "home"
+        }
+      ]
+    }
+  },
+  "claimAllFinalDryRun": {
+    "maker": {
+      "entries": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      },
+      "success": false
+    },
+    "taker": {
+      "entries": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      },
+      "success": false
+    },
+    "interpretation": "Both controlled wallets have zero remaining claim-all entries after the lower/home winning positions were claimed; losing upper/away positions are terminal non-claimable rows."
+  }
+}

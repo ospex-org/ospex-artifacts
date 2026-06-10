@@ -1,0 +1,163 @@
+{
+  "divergenceEvents": [],
+  "duplicateFillTelemetryObserved": false,
+  "errorEvents": [
+    {
+      "class": "PositionWithoutCommitment",
+      "detail": "getPositionStatus reports a position on (23, away) but no local commitment with that (speculationId, makerSide) is present \u2014 refusing to create an incomplete MakerPositionRecord",
+      "kind": "error",
+      "phase": "position-poll",
+      "runId": "2026-06-09T21-10-50-199Z-jbmg0x",
+      "speculationId": "23",
+      "ts": "2026-06-09T21:10:51.579Z"
+    },
+    {
+      "class": "PositionWithoutCommitment",
+      "detail": "getPositionStatus reports a position on (23, home) but no local commitment with that (speculationId, makerSide) is present \u2014 refusing to create an incomplete MakerPositionRecord",
+      "kind": "error",
+      "phase": "position-poll",
+      "runId": "2026-06-09T21-10-50-199Z-jbmg0x",
+      "speculationId": "23",
+      "ts": "2026-06-09T21:10:51.580Z"
+    }
+  ],
+  "eventCounts": {
+    "candidate": 3,
+    "error": 2,
+    "expire": 3,
+    "fill": 2,
+    "kill": 2,
+    "onchain-cancel": 5,
+    "quote-competitiveness": 14,
+    "quote-intent": 7,
+    "replace": 3,
+    "risk-verdict": 7,
+    "soft-cancel": 4,
+    "stream-cold-restart": 1,
+    "stream-health-hold": 4,
+    "submit": 8,
+    "tick-start": 12
+  },
+  "expireEvents": 3,
+  "files": [
+    {
+      "counts": {
+        "candidate": 2,
+        "error": 2,
+        "expire": 3,
+        "fill": 2,
+        "kill": 1,
+        "onchain-cancel": 1,
+        "quote-competitiveness": 12,
+        "quote-intent": 6,
+        "replace": 3,
+        "risk-verdict": 6,
+        "soft-cancel": 2,
+        "stream-health-hold": 2,
+        "submit": 6,
+        "tick-start": 10
+      },
+      "file": "run-2026-06-09T21-10-50-199Z-jbmg0x.ndjson",
+      "lastAt": "2026-06-09T21:21:13.266Z",
+      "lastKind": "kill"
+    },
+    {
+      "counts": {
+        "candidate": 1,
+        "kill": 1,
+        "onchain-cancel": 4,
+        "quote-competitiveness": 2,
+        "quote-intent": 1,
+        "risk-verdict": 1,
+        "soft-cancel": 2,
+        "stream-cold-restart": 1,
+        "stream-health-hold": 2,
+        "submit": 2,
+        "tick-start": 2
+      },
+      "file": "run-2026-06-09T21-21-27-674Z-lut087.ndjson",
+      "lastAt": "2026-06-09T21:23:45.420Z",
+      "lastKind": "kill"
+    }
+  ],
+  "fills": [
+    {
+      "awayTeam": "Milwaukee Brewers",
+      "commitmentHash": "0xe27907da03c28f8904831d080f0c217ffd45d400796b1f5bf629a032abe407f1",
+      "contestId": "33",
+      "cumulativeRiskWei6": "246200",
+      "homeTeam": "Athletics",
+      "kind": "fill",
+      "makerOddsTick": 208,
+      "makerSide": "away",
+      "newFillWei6": "200000",
+      "positionType": 0,
+      "runId": "2026-06-09T21-10-50-199Z-jbmg0x",
+      "source": "own-state-stream",
+      "speculationId": "23",
+      "sport": "mlb",
+      "takerSide": "home",
+      "ts": "2026-06-09T21:13:36.484Z"
+    },
+    {
+      "awayTeam": "Milwaukee Brewers",
+      "commitmentHash": "0x5b1dff967bed958d05f225860527cad2c167e32f9538383c43eff4a426ca1877",
+      "contestId": "33",
+      "cumulativeRiskWei6": "350000",
+      "homeTeam": "Athletics",
+      "kind": "fill",
+      "makerOddsTick": 200,
+      "makerSide": "home",
+      "newFillWei6": "50000",
+      "positionType": 1,
+      "runId": "2026-06-09T21-10-50-199Z-jbmg0x",
+      "source": "own-state-stream",
+      "speculationId": "23",
+      "sport": "mlb",
+      "takerSide": "away",
+      "ts": "2026-06-09T21:13:51.474Z"
+    }
+  ],
+  "lastEventIsKillByFile": true,
+  "onchainCancelEvents": 5,
+  "replaceEvents": 3,
+  "softCancelEvents": 4,
+  "streamColdRestart": [
+    {
+      "kind": "stream-cold-restart",
+      "reason": "resume-without-baseline",
+      "runId": "2026-06-09T21-21-27-674Z-lut087",
+      "ts": "2026-06-09T21:21:28.692Z"
+    }
+  ],
+  "streamHealthHolds": [
+    {
+      "exposureWei6": "346200",
+      "kind": "stream-health-hold",
+      "runId": "2026-06-09T21-10-50-199Z-jbmg0x",
+      "severity": "high",
+      "state": "entered",
+      "ts": "2026-06-09T21:10:51.722Z"
+    },
+    {
+      "kind": "stream-health-hold",
+      "runId": "2026-06-09T21-10-50-199Z-jbmg0x",
+      "state": "cleared",
+      "ts": "2026-06-09T21:11:52.810Z"
+    },
+    {
+      "exposureWei6": "1396200",
+      "kind": "stream-health-hold",
+      "runId": "2026-06-09T21-21-27-674Z-lut087",
+      "severity": "high",
+      "state": "entered",
+      "ts": "2026-06-09T21:21:29.737Z"
+    },
+    {
+      "kind": "stream-health-hold",
+      "runId": "2026-06-09T21-21-27-674Z-lut087",
+      "state": "cleared",
+      "ts": "2026-06-09T21:22:43.858Z"
+    }
+  ]
+}

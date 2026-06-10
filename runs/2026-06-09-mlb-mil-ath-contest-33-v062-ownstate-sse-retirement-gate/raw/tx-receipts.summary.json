@@ -1,0 +1,128 @@
+{
+  "receiptCount": 12,
+  "operatorControlledReceiptCount": 11,
+  "oracleCallbackReceiptCount": 1,
+  "receipts": [
+    {
+      "blockNumber": 88223081,
+      "effectiveGasPrice": 278313647658,
+      "gasUsed": 296378,
+      "status": "0x1",
+      "txHash": "0xcbdbe0afc35393a98cb4b59bc42f12cbaff449ad72968d075620328e04494791",
+      "operatorControlledGas": true
+    },
+    {
+      "blockNumber": 88223086,
+      "effectiveGasPrice": 288434239565,
+      "gasUsed": 296402,
+      "status": "0x1",
+      "txHash": "0xa67bad453d28550a6ec255abacdde4e5c62d4546d94e31926adc1a6e06bca3d9",
+      "operatorControlledGas": true
+    },
+    {
+      "blockNumber": 88223103,
+      "effectiveGasPrice": 278660518279,
+      "gasUsed": 68675,
+      "status": "0x1",
+      "txHash": "0x6e4d72dbe76e2f48c07e95b0bf2a07a23f5e9e3411083df283bc2dd3c75c8c71",
+      "operatorControlledGas": true
+    },
+    {
+      "blockNumber": 88223405,
+      "effectiveGasPrice": 278936232125,
+      "gasUsed": 68675,
+      "status": "0x1",
+      "txHash": "0x20fe50f76a07fea3c7ca438d38838ca4c8697978f1e7d5ae11eee290bb4bda02",
+      "operatorControlledGas": true
+    },
+    {
+      "blockNumber": 88223407,
+      "effectiveGasPrice": 277358831875,
+      "gasUsed": 68663,
+      "status": "0x1",
+      "txHash": "0xec10574ef4c4e9107cdc442f7121dc88a6fa7ef13a705cce39a5157c16f8bccf",
+      "operatorControlledGas": true
+    },
+    {
+      "blockNumber": 88223409,
+      "effectiveGasPrice": 277084665473,
+      "gasUsed": 68675,
+      "status": "0x1",
+      "txHash": "0x4faa587fc9d4764b301e2796827523e2d083b7fe6735bb3694671845da9d8578",
+      "operatorControlledGas": true
+    },
+    {
+      "blockNumber": 88223411,
+      "effectiveGasPrice": 276519300300,
+      "gasUsed": 68663,
+      "status": "0x1",
+      "txHash": "0xe93d451522daf084c820d24dfcaeb8287a515e51e0e395932db92e19adcd08ec",
+      "operatorControlledGas": true
+    },
+    {
+      "txHash": "0x965d72f833aa9338c75af7245bb638239f2946e89ca1a899c80342aa1a8fa901",
+      "purpose": "score-contest-request",
+      "blockNumber": 88245069,
+      "status": "0x1",
+      "gasUsed": 664329,
+      "effectiveGasPrice": 280731483318,
+      "gasCostWei": "186498065581163622",
+      "gasCostPOL": "0.186498065581163622",
+      "operatorControlledGas": true,
+      "payer": "stage-maker-a"
+    },
+    {
+      "txHash": "0x1c0cf69e522e78fd6bd180a8d256b816f2dc0c9c73c96ceccce4b4a6ea46bf72",
+      "purpose": "score-contest-callback",
+      "blockNumber": 88245077,
+      "status": "0x1",
+      "gasUsed": 315898,
+      "effectiveGasPrice": 454789883796,
+      "gasCostWei": "143667214711388808",
+      "gasCostPOL": "0.143667214711388808",
+      "operatorControlledGas": false,
+      "payer": "Chainlink callback"
+    },
+    {
+      "txHash": "0xe30337862ba55ee963968fb959caa4b4b36ff1869067de9b13fcc0585fa0c606",
+      "purpose": "settle-speculation",
+      "blockNumber": 88245112,
+      "status": "0x1",
+      "gasUsed": 155619,
+      "effectiveGasPrice": 274529209496,
+      "gasCostWei": "42721961052558024",
+      "gasCostPOL": "0.042721961052558024",
+      "operatorControlledGas": true,
+      "payer": "stage-maker-a"
+    },
+    {
+      "txHash": "0x0b477a0b92ac83a0c43ad3107f5d5728703ca84bbfbdb821f9a7ba5701757545",
+      "purpose": "claim-maker-lower-home-position",
+      "blockNumber": 88245114,
+      "status": "0x1",
+      "gasUsed": 127375,
+      "effectiveGasPrice": 275915901200,
+      "gasCostWei": "35144787915350000",
+      "gasCostPOL": "0.03514478791535",
+      "operatorControlledGas": true,
+      "payer": "stage-maker-a"
+    },
+    {
+      "txHash": "0x1de3508cdc9b42d98f8cdc682a6bd5b669814f6d4fd179225cfaaba10086a38a",
+      "purpose": "claim-taker-lower-home-position",
+      "blockNumber": 88245125,
+      "status": "0x1",
+      "gasUsed": 123415,
+      "effectiveGasPrice": 277935206680,
+      "gasCostWei": "34301373532412200",
+      "gasCostPOL": "0.0343013735324122",
+      "operatorControlledGas": true,
+      "payer": "ospex-flow-a"
+    }
+  ],
+  "prePostgameControlledGasPOL": "0.263331208166012854",
+  "postgameControlledGasPOL": "0.298666188081483846",
+  "oracleCallbackGasPOLNotOperatorPaid": "0.143667214711388808",
+  "totalGasPOL": "0.561997396247496700",
+  "totalGasWei": "561997396247496700"
+}

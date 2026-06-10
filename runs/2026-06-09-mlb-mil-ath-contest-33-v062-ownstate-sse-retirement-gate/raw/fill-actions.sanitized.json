@@ -1,0 +1,48 @@
+{
+  "duplicateMmFillKeysObserved": false,
+  "duplicateWatchFillKeysObserved": false,
+  "mmFillKeys": [
+    [
+      "0xe27907da03c28f8904831d080f0c217ffd45d400796b1f5bf629a032abe407f1",
+      "200000",
+      "own-state-stream"
+    ],
+    [
+      "0x5b1dff967bed958d05f225860527cad2c167e32f9538383c43eff4a426ca1877",
+      "50000",
+      "own-state-stream"
+    ]
+  ],
+  "mmOwnStateStreamFillCount": 2,
+  "normalVisibleFill": {
+    "blockNumber": "88223081",
+    "commitmentHash": "0xe27907da03c28f8904831d080f0c217ffd45d400796b1f5bf629a032abe407f1",
+    "makerRiskWei6": "200000",
+    "makerSide": "away/Milwaukee Brewers (underdog by reference implied probability)",
+    "sideSummary": "Athletics",
+    "takerRiskUSDC": "0.216000",
+    "takerSide": "home/Athletics (favorite by reference implied probability)",
+    "txHash": "0xcbdbe0afc35393a98cb4b59bc42f12cbaff449ad72968d075620328e04494791"
+  },
+  "partialFill": {
+    "blockNumber": "88223086",
+    "commitmentHash": "0x5b1dff967bed958d05f225860527cad2c167e32f9538383c43eff4a426ca1877",
+    "makerRiskRemainingBeforeFillWei6": "200000",
+    "makerSide": "home/Athletics (favorite by reference implied probability)",
+    "sideSummary": "Milwaukee Brewers",
+    "takerRiskUSDC": "0.050000",
+    "takerSide": "away/Milwaukee Brewers (underdog by reference implied probability)",
+    "txHash": "0xa67bad453d28550a6ec255abacdde4e5c62d4546d94e31926adc1a6e06bca3d9"
+  },
+  "watchFillCount": 2,
+  "watchFillKeys": [
+    [
+      "0xcbdbe0afc35393a98cb4b59bc42f12cbaff449ad72968d075620328e04494791",
+      2631
+    ],
+    [
+      "0xa67bad453d28550a6ec255abacdde4e5c62d4546d94e31926adc1a6e06bca3d9",
+      1351
+    ]
+  ]
+}

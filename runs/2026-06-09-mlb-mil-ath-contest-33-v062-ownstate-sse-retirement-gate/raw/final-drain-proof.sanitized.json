@@ -1,0 +1,46 @@
+{
+  "claimAllMakerDryRun": {
+    "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "dryRun": true,
+    "entries": [],
+    "success": false,
+    "totals": {
+      "alreadyClaimed": 0,
+      "claimed": 0,
+      "claimedFresh": 0,
+      "failed": 0,
+      "recoveredAlreadyClaimed": 0,
+      "totalPayoutUSDC": 0,
+      "totalPayoutWei6": "0"
+    }
+  },
+  "claimAllTakerDryRun": {
+    "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+    "dryRun": true,
+    "entries": [],
+    "success": false,
+    "totals": {
+      "alreadyClaimed": 0,
+      "claimed": 0,
+      "claimedFresh": 0,
+      "failed": 0,
+      "recoveredAlreadyClaimed": 0,
+      "totalPayoutUSDC": 0,
+      "totalPayoutWei6": "0"
+    }
+  },
+  "claimDryRunInterpretation": "historical pre-postgame drain snapshot: success:false with entries:[] was expected because contest 33 was still pre-game/unsettled at this snapshot; postgame score/settle/claim is now complete in raw/postgame-lifecycle.sanitized.json.",
+  "contestMatchTimeUtc": "2026-06-10T02:05:00+00:00",
+  "contestStatusAtDrainSnapshot": "verified",
+  "freshPostDrainWatchLiveCommitmentCount": 0,
+  "fullWatchSummaryLiveCommitmentCount": 0,
+  "makerVisibleCommitmentCount": 0,
+  "processScanMatchedLines": [],
+  "publicSpeculationCommitmentCount": 0,
+  "rawEvidence": {
+    "finalMakerVisibleCommitments": "operator-private raw local only; sanitized count published",
+    "finalPublicOrderbookCommitments": "operator-private raw local only; sanitized count published",
+    "freshPostDrainWatch": "raw/fresh-post-drain-watch.sanitized.ndjson"
+  },
+  "speculationOrderbookCount": 0
+}
