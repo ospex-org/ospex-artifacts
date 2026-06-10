@@ -21,8 +21,7 @@ The postgame lifecycle is now complete. The independent final-score source repor
 - Released CLI used by operator watch: `0.6.2`.
 - SDK tag `v0.6.2`: `7632955d0c689a04d3e40b2cca2653cf772119c3`.
 - `ospex-market-maker` realignment PR #88 merged at `2026-06-09T20:44:20Z`.
-- `yarn smoke` in `ospex-market-maker` and `yarn build && yarn typecheck && yarn test` in `ospex-sdk` were green during preflight.
-- Evidence: `raw/release-version-matrix.sanitized.json`, `raw/mm-doctor-before-live.sanitized.json`.
+- Evidence for release/download/MM-doctor alignment: `raw/release-version-matrix.sanitized.json`, `raw/mm-doctor-before-live.sanitized.json`.
 - Public artifact hygiene: raw signatures and `signedPayload` structs are excluded; only redaction/presence booleans such as `signatureRedacted` and `signedPayloadPresent` are published.
 
 ## Observer evidence
@@ -30,7 +29,7 @@ The postgame lifecycle is now complete. The independent final-score source repor
 - Full-soak watch counts: `{'heartbeat': 56, 'snapshot': 1, 'ready': 1, 'status': 1, 'commitment': 26, 'fill': 2, 'positionStatus': 2, 'summary': 1}`.
 - Full-soak watch summary: `readyObserved=True`, `lastStatus=connected`, `liveCommitmentCount=0`, `exitReason=signal`, `linesAfterSummary=0`.
 - Passive expiry proof: last positive heartbeat `2026-06-09T21:25:37.054Z` count `2` → first zero heartbeat `2026-06-09T21:25:57.051Z` count `0`.
-- Fresh post-drain watch summary: `liveCommitmentCount=0`, `readyObserved=True`, `exitReason=until-ready`.
+- Fresh post-drain watch summary: `liveCommitmentCount=0`, `readyObserved=True`, `exitReason=until-ready`; raw NDJSON is published at `raw/fresh-post-drain-watch.sanitized.ndjson`.
 - Post-claim own-state read-only probes for maker and taker both reached `ready` with `liveCommitmentCount=0`.
 
 ## Coverage highlights
@@ -40,7 +39,7 @@ The postgame lifecycle is now complete. The independent final-score source repor
 - Soft-cancel/hidden recovery: commitment `0xe667b0f9cdd62bdc58282a4ff8c89cc2b580656170a8fe67f4d740522bf4b4eb` became `visibility:hidden` in owner watch with `signedPayloadPresent:true`; anonymous public list did not contain the hash.
 - Expiry/replacement: MM telemetry recorded `3` replace event(s) and `3` expire event(s).
 - Reconnect: separate v0.6.2 probe through a local drop proxy saw statuses `['connected', 'reconnecting', 'connected']` with `2` ready events.
-- Restart/resume: restart run emitted `1` `stream-cold-restart` event and no fill telemetry in the restart run.
+- Restart safety: the process restart emitted `stream-cold-restart` with `reason=resume-without-baseline`, then rebuilt from a fresh baseline; stream-health hold entered/cleared, stale quotes were swept, divergence stayed zero, and no duplicate fill telemetry was observed. This is a cold-restart fallback proof, not proof of process-level cursor+baseline resume.
 - No duplicate fill telemetry: watch fill keys unique = `True`; MM fill keys unique = `True`.
 - Audit divergence events: `0`.
 - Score → settle → claim: score request `0x965d72f833aa9338c75af7245bb638239f2946e89ca1a899c80342aa1a8fa901`, score callback `0x1c0cf69e522e78fd6bd180a8d256b816f2dc0c9c73c96ceccce4b4a6ea46bf72`, settle `0xe30337862ba55ee963968fb959caa4b4b36ff1869067de9b13fcc0585fa0c606`, maker claim `0x0b477a0b92ac83a0c43ad3107f5d5728703ca84bbfbdb821f9a7ba5701757545`, taker claim `0x1de3508cdc9b42d98f8cdc682a6bd5b669814f6d4fd179225cfaaba10086a38a`.
@@ -60,7 +59,7 @@ The postgame lifecycle is now complete. The independent final-score source repor
 
 - New matched maker risk: `0.250000 USDC`.
 - New matched taker risk: `0.266000 USDC`.
-- Carry-over maker position risk observed from the v0.6.0 run: `0.346200 USDC`.
+- Carry-over maker position risk observed when reusing contest `33` with prior filled positions: `0.346200 USDC`.
 - Postgame controlled gas: `0.298666188081483846 POL`.
 - Score request LINK spent: `0.005000 LINK`.
 - Total operator-controlled gas across run + postgame: `0.561997396247496700 POL`.
@@ -70,10 +69,12 @@ The postgame lifecycle is now complete. The independent final-score source repor
 
 1. Two initial `PositionWithoutCommitment` MM audit-poll errors were observed because this run reused contest `33` with carry-over filled positions and a fresh local MM state. They did not persist as divergence and did not cause duplicate fill telemetry or non-zero final exposure.
 2. Reconnect coverage used a separate operator watch/proxy so the full-soak watch could remain never-reconnected for the v0.6.2 passive-expiry regression proof.
+3. MM persisted-cursor catchup resume across process restart was not exercised. Current MM design persists only the cursor; the baseline book is in memory, so a process restart intentionally trips `resume-without-baseline` and cold-starts from a fresh snapshot. This artifact therefore treats the restart row as a clean restart-safety fallback proof, while mid-session cursor catchup is covered by the reconnect probe.
 
 ## Files
 
 - Evidence: `evidence.json`
 - Scenario matrix: `scenario-matrix.md`, `scenario-matrix.json`
 - Postgame lifecycle: `raw/postgame-lifecycle.sanitized.json`, `raw/final-score-source.sanitized.json`, `raw/cli-postgame.sanitized.json`
+- Fresh post-drain watch: `raw/fresh-post-drain-watch.sanitized.ndjson`
 - Sanitized raw evidence: `raw/`

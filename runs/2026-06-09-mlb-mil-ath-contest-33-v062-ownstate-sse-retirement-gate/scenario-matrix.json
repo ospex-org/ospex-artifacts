@@ -1,6 +1,6 @@
 {
   "artifactId": "2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate",
-  "generatedAt": "2026-06-09T21:36:13Z",
+  "generatedAt": "2026-06-10T15:09:48Z",
   "scenarios": [
     {
       "evidence": [
@@ -54,10 +54,11 @@
     {
       "evidence": [
         "raw/passive-expiry-regression-proof.sanitized.json",
-        "raw/own-state-watch.sanitized.ndjson"
+        "raw/own-state-watch.sanitized.ndjson",
+        "raw/fresh-post-drain-watch.sanitized.ndjson"
       ],
       "id": "passive-expiry-regression",
-      "notes": "full-soak watcher never reconnected; heartbeat fell from 2 to 0 at 2026-06-09T21:25:57Z; summary liveCommitmentCount=0; fresh watch and public/orderbook also 0",
+      "notes": "full-soak watcher never reconnected; heartbeat fell from 2 to 0 at 2026-06-09T21:25:57Z; summary liveCommitmentCount=0; fresh post-drain watch NDJSON and public/orderbook also 0",
       "scenario": "v0.6.2 long-running watch passive expiry live count falls to zero",
       "status": "pass"
     },
@@ -73,11 +74,12 @@
     },
     {
       "evidence": [
-        "raw/mm-telemetry-summary.sanitized.json"
+        "raw/mm-telemetry-summary.sanitized.json",
+        "raw/run-2026-06-09T21-21-27-674Z-lut087.sanitized.ndjson"
       ],
       "id": "restart-resume",
-      "notes": "restart emitted 1 stream-cold-restart event(s); restart run recorded 0 fill telemetry; duplicateFillTelemetryObserved=false",
-      "scenario": "\u22651 MM restart/resume from persisted cursor, no duplicate fill telemetry",
+      "notes": "restart emitted stream-cold-restart reason=resume-without-baseline; this is designed MM behavior because only the cursor persists and the in-memory baseline does not. The restart leg proved the cold-restart fallback: fresh baseline rebuild, stream-health hold entered/cleared, stale-quote cancel sweep, zero divergence, and no duplicate fill telemetry; it did not exercise persisted-cursor catchup resume across process restart.",
+      "scenario": "MM process restart exercises documented resume-without-baseline cold-restart fallback, then rebuilds safely with no duplicate fill telemetry or persistent divergence",
       "status": "pass"
     },
     {
@@ -133,10 +135,11 @@
     {
       "evidence": [
         "raw/final-drain-proof.sanitized.json",
-        "raw/passive-expiry-regression-proof.sanitized.json"
+        "raw/passive-expiry-regression-proof.sanitized.json",
+        "raw/fresh-post-drain-watch.sanitized.ndjson"
       ],
       "id": "final-zero",
-      "notes": "visible=0, public/orderbook=0/0, watch summary=0, process scan=0",
+      "notes": "visible=0, public/orderbook=0/0, full watch summary=0, fresh post-drain watch summary=0, process scan=0",
       "scenario": "maker visible commitments 0, orderbook 0, watch summary 0, no orphaned processes",
       "status": "pass"
     }

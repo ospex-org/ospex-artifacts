@@ -40,7 +40,7 @@
   "rawEvidence": {
     "finalMakerVisibleCommitments": "operator-private raw local only; sanitized count published",
     "finalPublicOrderbookCommitments": "operator-private raw local only; sanitized count published",
-    "freshPostDrainWatch": "raw/own-state-watch.sanitized.ndjson summary plus this proof"
+    "freshPostDrainWatch": "raw/fresh-post-drain-watch.sanitized.ndjson"
   },
   "speculationOrderbookCount": 0
 }

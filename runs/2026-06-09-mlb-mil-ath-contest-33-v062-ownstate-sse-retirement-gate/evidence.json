@@ -5,7 +5,8 @@
     "scenarioMatrixJson": "scenario-matrix.json",
     "scenarioMatrixMarkdown": "scenario-matrix.md",
     "summary": "summary.md",
-    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json"
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "freshPostDrainWatch": "raw/fresh-post-drain-watch.sanitized.ndjson"
   },
   "artifactId": "2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate",
   "artifactPath": "runs/2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate/",
@@ -31,10 +32,11 @@
     "makerClaimPayoutUSDC": "0.702000",
     "takerClaimPayoutUSDC": "0.512096"
   },
-  "capturedAtUtc": "2026-06-10T06:35:36Z",
+  "capturedAtUtc": "2026-06-10T15:09:48Z",
   "caveats": [
     "Two initial MM audit-poll PositionWithoutCommitment errors were observed from carry-over contest-33 positions and a fresh local MM state; they did not create persistent divergence, duplicate fill telemetry, or non-zero final exposure.",
-    "Reconnect coverage used a separate v0.6.2 watcher through a local drop proxy so the full-soak watcher could remain never-reconnected for the passive-expiry regression row."
+    "Reconnect coverage used a separate v0.6.2 watcher through a local drop proxy so the full-soak watcher could remain never-reconnected for the passive-expiry regression row.",
+    "MM persisted-cursor catchup resume across process restart was not exercised: current MM design persists the cursor but not the baseline book, so a process restart with only a cursor intentionally triggers resume-without-baseline cold-restart/fresh-snapshot fallback. The artifact treats the restart leg as a restart-safety fallback proof, not as proof of process-level cursor+baseline resume."
   ],
   "chainId": 137,
   "cleanupSafety": {
@@ -48,7 +50,8 @@
     "postgameFinalDryRunMakerEntries": 0,
     "postgameFinalDryRunTakerEntries": 0,
     "postgameWinningPositionsClaimed": 2,
-    "postgameLosingPositionsClaimable": 0
+    "postgameLosingPositionsClaimable": 0,
+    "freshPostDrainWatch": "raw/fresh-post-drain-watch.sanitized.ndjson"
   },
   "coverage": {
     "fillActions": "raw/fill-actions.sanitized.json",
@@ -56,7 +59,8 @@
     "reconnectProof": "raw/reconnect-proof.sanitized.json",
     "scenarioMatrix": "scenario-matrix.json",
     "softCancelHiddenRecovery": "raw/soft-cancel-hidden-recovery.sanitized.json",
-    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json"
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "freshPostDrainWatch": "raw/fresh-post-drain-watch.sanitized.ndjson"
   },
   "date": "2026-06-09",
   "network": "polygon",
@@ -64,7 +68,8 @@
     "fullSoakOperatorWatch": "raw/own-state-watch.sanitized.ndjson",
     "mmTelemetrySummary": "raw/mm-telemetry-summary.sanitized.json",
     "ownStateSubscribeEnabled": true,
-    "slowAuditPollMs": 60000
+    "slowAuditPollMs": 60000,
+    "freshPostDrainWatch": "raw/fresh-post-drain-watch.sanitized.ndjson"
   },
   "release": {
     "marketMakerRealignmentPr": "https://github.com/ospex-org/ospex-market-maker/pull/88",
@@ -96,7 +101,8 @@
   },
   "verdict": {
     "label": "GREEN / PASS complete with postgame lifecycle claimed",
-    "reason": "v0.6.2 corrected the long-running watcher passive-expiry liveCommitmentCount regression and the postgame lifecycle is now complete: MLB final was Athletics 7, Milwaukee Brewers 5; contest 33 scored, speculation 23 closed with home/lower as winner, both controlled winning lower positions were claimed, final claim-all dry-runs are empty, and public/orderbook/watch/process zero checks remain clean."
+    "reason": "v0.6.2 corrected the long-running watcher passive-expiry liveCommitmentCount regression and the postgame lifecycle is now complete: MLB final was Athletics 7, Milwaukee Brewers 5; contest 33 scored, speculation 23 closed with home/lower as winner, both controlled winning lower positions were claimed, final claim-all dry-runs are empty, and public/orderbook/watch/process zero checks remain clean.",
+    "restartScope": "process restart proved documented cold-restart fallback safety; mid-session cursor catchup is covered by the separate reconnect probe; process-level cursor+baseline resume is not implemented in current MM design."
   },
   "walletRoles": {
     "controlledTaker": {
@@ -121,5 +127,13 @@
     "takerClaimTx": "0x1de3508cdc9b42d98f8cdc682a6bd5b669814f6d4fd179225cfaaba10086a38a",
     "makerClaimPayoutUSDC": "0.702000",
     "takerClaimPayoutUSDC": "0.512096"
+  },
+  "restartSafety": {
+    "evidence": "raw/mm-telemetry-summary.sanitized.json",
+    "observedEvent": "stream-cold-restart",
+    "reason": "resume-without-baseline",
+    "interpretation": "The MM process restart did not exercise persisted-cursor catchup resume. Current MM design persists only the cursor; the baseline book is in memory, so a process restart with only a cursor triggers the documented resume-without-baseline cold-start fallback before rebuilding from a fresh snapshot.",
+    "safetyOutcome": "fallback rebuilt cleanly, health hold entered and cleared, stale quotes were cancelled, divergence remained zero, and duplicate fill telemetry was not observed.",
+    "rawRestartRun": "raw/run-2026-06-09T21-21-27-674Z-lut087.sanitized.ndjson"
   }
 }
