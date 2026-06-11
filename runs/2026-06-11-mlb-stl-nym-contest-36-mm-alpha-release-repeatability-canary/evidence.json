@@ -1,0 +1,705 @@
+{
+  "artifactType": "run",
+  "artifactId": "2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary",
+  "artifactPath": "runs/2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary/",
+  "artifactStatus": "complete_verified_with_caveats",
+  "status": "complete_verified_with_caveats",
+  "date": "2026-06-11",
+  "capturedAtUtc": "2026-06-11T20:55:48Z",
+  "network": "polygon",
+  "chainId": 137,
+  "artifactFiles": {
+    "summary": "summary.md",
+    "evidence": "evidence.json",
+    "raw": "raw/",
+    "scenarioMatrixJson": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md"
+  },
+  "coverage": {
+    "repoRuntime": "raw/release-runtime-matrix.sanitized.json",
+    "walletAuthBalance": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "targetDecision": "raw/target-decision.sanitized.json",
+    "setupSeed": "raw/setup-seed.sanitized.json",
+    "commandMatrix": "raw/command-matrix.sanitized.json",
+    "dryRun": "raw/mm-dryrun-summary.sanitized.json",
+    "liveCommitments": "raw/live-public-commitments-posted.sanitized.json",
+    "fill": "raw/live-fill.sanitized.json",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json",
+    "restartColdStart": "raw/restart-cold-start-probe.sanitized.json",
+    "postgameContinuation": "raw/postgame-continuation.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json",
+    "finalScoreProbe": "raw/final-score-probe-current.json",
+    "postgameProjectionState": "raw/postgame-projection-state.sanitized.json"
+  },
+  "release": {
+    "repo": "ospex-org/ospex-market-maker",
+    "tag": "v0.1.0-alpha.1",
+    "url": "https://github.com/ospex-org/ospex-market-maker/releases/tag/v0.1.0-alpha.1",
+    "testedHeadSha": "af1bb107af47dc80f27485dee7417ca95b782b50",
+    "sdkDependencyObserved": "@ospex/sdk v0.6.2",
+    "nodeVersion": "v22.22.0",
+    "yarnVersion": "1.22.22"
+  },
+  "target": {
+    "sport": "mlb",
+    "game": "St. Louis Cardinals @ New York Mets",
+    "gamePk": 823619,
+    "awayTeam": "St. Louis Cardinals",
+    "homeTeam": "New York Mets",
+    "startTimeUtc": "2026-06-11T17:10:00Z",
+    "startTimeCentral": "2026-06-11 12:10 CDT",
+    "contestId": "36",
+    "speculationId": "26",
+    "market": "moneyline",
+    "contestStatusAtLiveWindow": "verified",
+    "speculationStatusAtLiveWindow": "open",
+    "postgameStatus": "complete",
+    "contestStatusAfterPostgame": "scored",
+    "speculationStatusAfterPostgame": "closed",
+    "finalScore": {
+      "awayRuns": 4,
+      "homeRuns": 5,
+      "winner": "New York Mets"
+    },
+    "teamIdentity": {
+      "homeFavorite": {
+        "team": "New York Mets",
+        "role": "home",
+        "positionType": "lower",
+        "marketOddsAmerican": "-133",
+        "quoteTick": 175,
+        "identity": "favorite",
+        "protocolOutcome": "winner"
+      },
+      "awayUnderdog": {
+        "team": "St. Louis Cardinals",
+        "role": "away",
+        "positionType": "upper",
+        "marketOddsAmerican": "+133",
+        "quoteTick": 233,
+        "identity": "underdog",
+        "protocolOutcome": "loser"
+      },
+      "source": "raw/mm-dryrun-summary.sanitized.json quoteResult; restored reader-facing favorite/underdog identity convention"
+    }
+  },
+  "walletRoles": {
+    "setupScoring": {
+      "label": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B"
+    },
+    "liveMaker": {
+      "label": "ospex-stage-maker-b",
+      "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482"
+    },
+    "controlledTaker": {
+      "label": "ospex-flow-a",
+      "address": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30"
+    }
+  },
+  "setupAndSeed": {
+    "initialContestCreateAttempt": {
+      "exit": 1,
+      "ok": false,
+      "blocker": "TreasuryModule USDC allowance was 0.25 USDC but contest creation required 1.0 USDC; bounded approval followed."
+    },
+    "approvals": [
+      {
+        "purpose": "setup wallet TreasuryModule USDC approval for contest fee",
+        "amountUSDC": "1.000000",
+        "txHash": "0xf799f0cb58765d7bad0d7cd359351fac71b0b82ed631899b7663d3ebd2e655c7",
+        "exit": 0
+      },
+      {
+        "purpose": "setup wallet TreasuryModule USDC approval for seed/open fee",
+        "amountUSDC": "0.250000",
+        "txHash": "0x4a3e15e739542822fb4dc60ee13bf79e64e88c4819e287111a7900b09a334a89",
+        "exit": 0
+      },
+      {
+        "purpose": "flow wallet TreasuryModule USDC approval for seed/open fee",
+        "amountUSDC": "0.250000",
+        "txHash": "0x8f3ecc073b00d0773949c3968716b8b80b07bae49ce977514b526f9cbd29edf9",
+        "exit": 0
+      }
+    ],
+    "contestCreate": {
+      "exit": 0,
+      "txHash": "0xc43ecd8ab00283d998ce3821631e6829771f47c5141949bf2c32745b3988df0e",
+      "contestId": "36",
+      "ok": true
+    },
+    "seedCommitment": {
+      "exit": 0,
+      "commitmentHash": "0x0c320d55b5e67b0658ed68806b7697c404a77a26e03b258fac8fc645668dc354",
+      "makerSide": "away/St. Louis Cardinals",
+      "riskUSDC": "0.050000",
+      "counterpartyRiskUSDC": "0.063500",
+      "rawSignatureRedacted": true
+    },
+    "seedMatchOpenSpeculation": {
+      "exit": 0,
+      "txHash": "0x5190f1261623f6a9315e3de1796fe27e0bfe401f05993f7f8864b34769e55203",
+      "takerSide": "home/New York Mets",
+      "takerRiskUSDC": "0.063500",
+      "fillMakerRiskUSDC": "0.050000",
+      "speculationId": "26"
+    }
+  },
+  "liveWindow": {
+    "commitmentsPosted": [
+      {
+        "commitmentHash": "0x3e98bfc63732940c61a56fc68cadf07cd83d3d2815ba551b667a0175e9faf764",
+        "contestId": "36",
+        "speculationId": "26",
+        "makerSide": "home",
+        "takerSide": "away",
+        "positionType": 1,
+        "makerOddsTick": 175,
+        "riskWei6": "100000",
+        "riskUSDC": "0.100000",
+        "expiryUnixSec": 1781193253,
+        "expiryUtc": "2026-06-11T15:54:13Z",
+        "signatureRedacted": true
+      },
+      {
+        "commitmentHash": "0xf2b961cc392b26dbf725247ad85e53de51438eb137b1b4dbbb2c1d942111bcdc",
+        "contestId": "36",
+        "speculationId": "26",
+        "makerSide": "away",
+        "takerSide": "home",
+        "positionType": 0,
+        "makerOddsTick": 235,
+        "riskWei6": "100000",
+        "riskUSDC": "0.100000",
+        "expiryUnixSec": 1781193253,
+        "expiryUtc": "2026-06-11T15:54:13Z",
+        "signatureRedacted": true
+      }
+    ],
+    "controlledFill": {
+      "exit": 0,
+      "ok": true,
+      "commitmentHash": "0xf2b961cc392b26dbf725247ad85e53de51438eb137b1b4dbbb2c1d942111bcdc",
+      "fillTxHash": "0x1b60890d18e1afba6433c47ebceeb93dac108bfddaac5cb6871b638565065eae",
+      "receiptStatus": "confirmed",
+      "partialFill": true,
+      "takerRiskUSDC": "0.049950",
+      "makerFilledRiskUSDC": "0.037000",
+      "makerSide": {
+        "role": "away",
+        "team": "St. Louis Cardinals",
+        "positionType": 0
+      },
+      "takerSide": {
+        "role": "home",
+        "team": "New York Mets",
+        "positionType": 1
+      },
+      "warnings": [
+        {
+          "code": "expires-soon",
+          "severity": "warning"
+        },
+        {
+          "code": "partial-fill",
+          "severity": "info"
+        }
+      ],
+      "rawSignatureRedacted": true,
+      "rawSignedPayloadRedacted": true
+    },
+    "ownStateSseAssertions": {
+      "telemetryRunId": "2026-06-11T15-51-41-306Z-h6alw0",
+      "eventCounts": {
+        "tick-start": 5,
+        "candidate": 2,
+        "stream-health-hold": 2,
+        "quote-intent": 2,
+        "risk-verdict": 2,
+        "submit": 2,
+        "quote-competitiveness": 4,
+        "fill": 1,
+        "soft-cancel": 1,
+        "kill": 1
+      },
+      "sseOpenedAutomaticallyEvidence": "Live mode emitted stream-health-hold entered then cleared without ownState.subscribe or top-level pollIntervalMs config; fill event source was own-state-stream.",
+      "streamHealthHolds": [
+        {
+          "ts": "2026-06-11T15:51:42.753Z",
+          "state": "entered",
+          "severity": "low",
+          "exposureWei6": "0"
+        },
+        {
+          "ts": "2026-06-11T15:52:13.642Z",
+          "state": "cleared",
+          "severity": null,
+          "exposureWei6": null
+        }
+      ],
+      "fillEvents": [
+        {
+          "ts": "2026-06-11T15:52:57.976Z",
+          "source": "own-state-stream",
+          "commitmentHash": "0xf2b961cc392b26dbf725247ad85e53de51438eb137b1b4dbbb2c1d942111bcdc",
+          "contestId": "36",
+          "speculationId": "26",
+          "makerSide": "away",
+          "takerSide": "home",
+          "positionType": 0,
+          "makerOddsTick": 235,
+          "newFillWei6": "37000",
+          "cumulativeRiskWei6": "37000"
+        }
+      ],
+      "fillSource": "own-state-stream",
+      "canonicalLegacyFillSourcesObserved": [],
+      "auditOrComparatorEvents": [],
+      "partialFillSafety": {
+        "partialRemainderRetainedSkipEvents": [
+          {
+            "ts": "2026-06-11T15:54:19.223Z",
+            "skipReason": "partial-remainder-retained",
+            "commitmentHash": "0xf2b961cc392b26dbf725247ad85e53de51438eb137b1b4dbbb2c1d942111bcdc",
+            "contestId": "36",
+            "speculationId": "26",
+            "makerSide": "away",
+            "takerSide": "home",
+            "reason": "shutdown"
+          }
+        ],
+        "noSameSideReplacementWhileRetainedPartial": true,
+        "postExpiryPublicCommitmentsZero": true
+      },
+      "softCancelEvents": [
+        {
+          "ts": "2026-06-11T15:54:19.222Z",
+          "commitmentHash": "0x3e98bfc63732940c61a56fc68cadf07cd83d3d2815ba551b667a0175e9faf764",
+          "contestId": "36",
+          "speculationId": "26",
+          "makerSide": "home",
+          "takerSide": "away",
+          "positionType": 1,
+          "reason": "shutdown"
+        }
+      ]
+    },
+    "restartColdStart": {
+      "runExit": 124,
+      "summaryExit": 0,
+      "postRestartCommitmentListExit": 0,
+      "summary": {
+        "ticks": 3,
+        "eventCounts": {
+          "tick-start": 3,
+          "candidate": 1,
+          "fair-value": 0,
+          "risk-verdict": 2,
+          "quote-intent": 2,
+          "quote-competitiveness": 4,
+          "competitiveness-unavailable": 0,
+          "submit": 0,
+          "would-submit": 2,
+          "soft-cancel": 0,
+          "would-soft-cancel": 0,
+          "replace": 0,
+          "would-replace": 0,
+          "onchain-cancel": 0,
+          "cancel-blocked-missing-payload": 0,
+          "nonce-floor-raise": 0,
+          "expire": 0,
+          "approval": 0,
+          "funding-hold": 0,
+          "fill": 0,
+          "position-transition": 0,
+          "settle": 0,
+          "claim": 0,
+          "degraded": 0,
+          "stream-health-degraded": 0,
+          "stream-would-hold": 0,
+          "stream-cold-restart": 0,
+          "stream-health-hold": 0,
+          "divergence": 0,
+          "unknown-own-fill": 0,
+          "owner-mapping-failed": 0,
+          "error": 0,
+          "kill": 1
+        },
+        "errors": {
+          "total": 0,
+          "byPhase": {}
+        }
+      },
+      "publicMakerVisibleCommitmentsAfterProbe": 0,
+      "interpretation": "Read-only dry-run cold-start probe with fresh state; bounded timeout exit 124 expected. It created no phantom public exposure and did not depend on persisted cursor state."
+    },
+    "zeroExposure": {
+      "checkedAtUtc": "2026-06-11T16:11:33Z",
+      "publicMakerVisibleCommitments": 0,
+      "publicContestSpecVisibleCommitments": 0,
+      "contestOrderbookCount": 0,
+      "mmStatusVisibleOpenCommitments": 0,
+      "mmStatusTotalCommitmentsTracked": 2,
+      "mmStatusActivePositions": 1,
+      "orphanProcessCount": 0,
+      "noUnintendedTargets": true,
+      "onlyFilledPositionExposureRemainsForPostgame": true
+    },
+    "summary": {
+      "ticks": 5,
+      "eventCounts": {
+        "tick-start": 5,
+        "candidate": 2,
+        "fair-value": 0,
+        "risk-verdict": 2,
+        "quote-intent": 2,
+        "quote-competitiveness": 4,
+        "competitiveness-unavailable": 0,
+        "submit": 2,
+        "would-submit": 0,
+        "soft-cancel": 1,
+        "would-soft-cancel": 0,
+        "replace": 0,
+        "would-replace": 0,
+        "onchain-cancel": 0,
+        "cancel-blocked-missing-payload": 0,
+        "nonce-floor-raise": 0,
+        "expire": 0,
+        "approval": 0,
+        "funding-hold": 0,
+        "fill": 1,
+        "position-transition": 0,
+        "settle": 0,
+        "claim": 0,
+        "degraded": 0,
+        "stream-health-degraded": 0,
+        "stream-would-hold": 0,
+        "stream-cold-restart": 0,
+        "stream-health-hold": 2,
+        "divergence": 0,
+        "unknown-own-fill": 0,
+        "owner-mapping-failed": 0,
+        "error": 0,
+        "kill": 1
+      },
+      "errors": {
+        "total": 0,
+        "byPhase": {}
+      },
+      "kill": {
+        "reason": "kill-file",
+        "ticks": 5
+      }
+    }
+  },
+  "budget": {
+    "spendCapUSDC": "5.00",
+    "withinCap": true,
+    "liveCommitmentCount": 2,
+    "liveCommitmentMaxRiskEachUSDC": "0.100000",
+    "newControlledTakerRiskUSDC": "0.049950",
+    "newControlledMakerFilledRiskUSDC": "0.037000",
+    "setupSeedMakerRiskUSDC": "0.050000",
+    "setupSeedTakerRiskUSDC": "0.063500",
+    "operatorGasReportingPOLUSDCPrice": "0.25",
+    "totalOperatorGasPOL": "0.995266336341340767",
+    "totalOperatorGasUSDCAtReportPrice": "0.24881658408533519175",
+    "observedUSDCBalanceDeltasByWallet": {
+      "setup": "-1.30000",
+      "maker": "-0.037000",
+      "flow": "-0.363450"
+    },
+    "note": "USDC balance deltas include contest/open fees plus tiny risk locks; postgame claim returned 0.200450 USDC to the controlled taker. POL gas includes approval/create/fill/score/settle/claim transactions.",
+    "postgameGasPOL": "0.263374338176443792",
+    "postgameGasUSDCAtReportPrice": "0.06584358454411094800",
+    "postgameClaimPayoutToFlowUSDC": "0.200450",
+    "observedUSDCBalanceDeltasAsOfUtc": "2026-06-11T15:59:15Z",
+    "observedUSDCBalanceDeltasScope": "live-window ending wallet snapshot before postgame continuation/claim; the 0.200450 USDC postgame claim return is recorded separately."
+  },
+  "postgame": {
+    "status": "COMPLETE_VERIFIED_WITH_CAVEATS",
+    "completedAtUtc": "2026-06-11T20:55:48Z",
+    "finalScore": {
+      "awayTeam": "St. Louis Cardinals",
+      "fetchedAtUtc": "2026-06-11T20:53:07Z",
+      "gameDateUtc": "2026-06-11T17:10:00Z",
+      "gamePk": 823619,
+      "homeTeam": "New York Mets",
+      "officialDate": "2026-06-11",
+      "score": {
+        "awayRuns": 4,
+        "homeRuns": 5
+      },
+      "source": "MLB Stats API live feed",
+      "sourceUrl": "https://statsapi.mlb.com/api/v1.1/game/823619/feed/live",
+      "status": {
+        "abstractGameCode": "F",
+        "abstractGameState": "Final",
+        "codedGameState": "F",
+        "detailedState": "Final",
+        "startTimeTBD": false,
+        "statusCode": "F"
+      },
+      "winner": "New York Mets"
+    },
+    "preClaimDryRuns": {
+      "setup": {
+        "exit": 0,
+        "entries": 0,
+        "buckets": [],
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      },
+      "maker": {
+        "exit": 0,
+        "entries": 0,
+        "buckets": [],
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      },
+      "flow": {
+        "exit": 0,
+        "entries": 1,
+        "buckets": [
+          "claimable"
+        ],
+        "totalPayoutWei6": "200450",
+        "totalPayoutUSDC": 0.20045
+      }
+    },
+    "executedClaims": {
+      "setup": {
+        "executed": false,
+        "reason": "no claimable entries"
+      },
+      "maker": {
+        "executed": false,
+        "reason": "no claimable entries"
+      },
+      "flow": {
+        "executed": true,
+        "claimTxHash": "0xb8f86df71715b3dc3639ce6c4aedc42bd93e31fdcf5f3f1f2b9f1c6aa574513c",
+        "positionId": "26_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+        "payoutWei6": "200450",
+        "payoutUSDC": 0.20045
+      }
+    },
+    "transactions": {
+      "scoreContest": {
+        "txHash": "0xb2dde952cc0223e5b2826ef0016ce1658b3ab0f87d40933820d6f3110c6f8173",
+        "requestId": "0x3e4f341bfe504bc2da8e4d07aca5f1cdf4012863e79c7b93ff09576ca95e05bf",
+        "contestId": "36",
+        "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+      },
+      "settleSpeculation": {
+        "txHash": "0x0894efa5130d64d9138f6f5ae16cf8327ed218ef19a133bd2a0aa99832c94048",
+        "speculationId": "26",
+        "winSide": "home",
+        "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+      },
+      "claimPosition": {
+        "txHash": "0xb8f86df71715b3dc3639ce6c4aedc42bd93e31fdcf5f3f1f2b9f1c6aa574513c",
+        "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "payoutWei6": "200450",
+        "payoutUSDC": 0.20045
+      }
+    },
+    "projectionConvergence": {
+      "contestScorePoll": {
+        "attempts": 2,
+        "last": "2026-06-11T20:48:48Z\tscored\t4\t5\t2026-06-11 20:48:21+00"
+      },
+      "speculationSettlePoll": {
+        "attempts": 2,
+        "last": "2026-06-11T20:49:39Z\tclosed\thome\t2026-06-11 20:49:13+00"
+      },
+      "claimPoll": {
+        "attempts": 1,
+        "last": "2026-06-11T20:50:35Z\ttrue\t200450\t2026-06-11 20:50:21+00"
+      },
+      "finalProjectedState": "raw/postgame-projection-state.sanitized.json",
+      "contestStatus": "scored",
+      "score": {
+        "awayRuns": 4,
+        "homeRuns": 5
+      },
+      "speculationStatus": "closed",
+      "winSide": "home",
+      "claimedPositionCount": 1,
+      "expectation": "Each confirmed postgame write converges in projected API/Supabase state before the next lifecycle step proceeds.",
+      "gates": [
+        {
+          "name": "score contest 36 projection",
+          "afterWrite": "scoreContestFromOracle transaction confirmed",
+          "txConfirmed": true,
+          "waitTarget": "contests[contest_id=36]",
+          "expectedFinalState": [
+            "contest_status=scored",
+            "away_score=4",
+            "home_score=5"
+          ],
+          "observedFinalState": [
+            "contest_status=scored",
+            "away_score=4",
+            "home_score=5"
+          ],
+          "converged": true,
+          "staleReadObserved": true
+        },
+        {
+          "name": "settle speculation 26 projection",
+          "afterWrite": "settleSpeculation transaction confirmed",
+          "txConfirmed": true,
+          "waitTarget": "speculations[speculation_id=26]",
+          "expectedFinalState": [
+            "speculation_status=closed",
+            "win_side=home",
+            "settled_at populated"
+          ],
+          "observedFinalState": [
+            "speculation_status=closed",
+            "win_side=home",
+            "settled_at populated"
+          ],
+          "converged": true,
+          "staleReadObserved": true
+        },
+        {
+          "name": "claim flow lower position projection",
+          "afterWrite": "claimPosition transaction confirmed",
+          "txConfirmed": true,
+          "waitTarget": "positions[speculation_id=26, flow wallet, lower]",
+          "expectedFinalState": [
+            "claimed=true",
+            "claimed_amount=200450"
+          ],
+          "observedFinalState": [
+            "claimed=true",
+            "claimed_amount=200450"
+          ],
+          "converged": true,
+          "staleReadObserved": false
+        }
+      ]
+    },
+    "finalDryRuns": {
+      "setup": {
+        "exit": 0,
+        "entries": 0,
+        "buckets": [],
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      },
+      "maker": {
+        "exit": 0,
+        "entries": 0,
+        "buckets": [],
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      },
+      "flow": {
+        "exit": 0,
+        "entries": 0,
+        "buckets": [],
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      }
+    },
+    "zeroExposureAndProcessChecks": {
+      "publicMakerVisibleCommitments": 0,
+      "publicContestSpecVisibleCommitments": 0,
+      "contestOrderbookCount": 0,
+      "contestStatus": "scored",
+      "score": {
+        "awayRuns": 4,
+        "homeRuns": 5
+      },
+      "mmStatusVisibleOpenCommitments": 0,
+      "mmStatusLivePositionTotals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "claimablePayoutWei6": "0",
+        "pendingSettlePayoutWei6": "0"
+      },
+      "mmStatusPersistedStatePositionBuckets": {
+        "active": {
+          "count": 1,
+          "ownRiskWei6": "37000"
+        },
+        "pendingSettle": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "claimable": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "claimed": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "settledLost": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "void": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        }
+      },
+      "orphanProcessCount": 0
+    },
+    "receipts": {
+      "postgamePolCost": "0.263374338176443792",
+      "postgameUSDCEquivAt0.25": "0.06584358454411094800",
+      "totalPolCostIncludingLiveWindow": "0.995266336341340767",
+      "totalUSDCEquivAt0.25": "0.24881658408533519175",
+      "summaryFile": "raw/tx-receipts.summary.json"
+    },
+    "safety": {
+      "noSecretsExposed": true,
+      "rawSignaturesExcluded": true,
+      "rawSignedPayloadExcluded": true,
+      "rawMakerStateJsonExcluded": true,
+      "rpcUrlsExcluded": true,
+      "localSecretPathsExcluded": true,
+      "publicRedArtifactNotPublished": true
+    },
+    "caveats": [
+      "Postgame was completed by this continuation job using the controlled setup/flow wallets, not by restarting the frozen live MM runtime.",
+      "The MM local state file is intentionally not published; signer-free live position totals are zero after settlement/claim, while the frozen local status still records the pre-postgame maker position bucket.",
+      "Coverage remains one target / one maker / one controlled taker; not broad multi-contest MM scale.",
+      "Score and settle projection gates each observed one stale pre-convergence read; both converged before the next lifecycle step."
+    ],
+    "privateRunDirRedacted": true,
+    "localSecretPathsExcluded": true
+  },
+  "safety": {
+    "noSecretsExposed": true,
+    "rawSignaturesExcluded": true,
+    "rawSignedPayloadExcluded": true,
+    "rawMakerStateJsonExcluded": true,
+    "rpcUrlsExcluded": true,
+    "localSecretPathsExcluded": true,
+    "noUnintendedTargets": true,
+    "noLivePublicApiCommitmentExposureRemains": true,
+    "noOrphanProcessRemains": true,
+    "spendStayedWithinCap": true,
+    "postgameClaimAllDryRunsEmpty": true
+  },
+  "caveats": [
+    "Initial contest create attempt intentionally stopped on insufficient bounded allowance before any write; bounded approval/retry succeeded.",
+    "Restart probe is read-only/dry-run with fresh state and expected timeout, not a process-level persisted cursor resume proof.",
+    "Postgame was completed by the continuation job rather than restarting the frozen live MM runtime; local maker-state remains private and is not published.",
+    "Coverage is one target/one maker/one controlled taker; not broad multi-contest MM scale.",
+    "Score and settle projection gates each observed one stale pre-convergence read; both converged before the next lifecycle step.",
+    "Dry-run summary recorded one degraded telemetry event during the bounded dry-run; errors stayed 0, no live writes occurred, and the quote-intent/would-submit path remained valid."
+  ],
+  "verdict": {
+    "label": "FULL GREEN / complete_verified_with_caveats",
+    "reason": "Tagged v0.1.0-alpha.1 repeatability canary completed live-window and postgame lifecycle: target prepared, dry-run quote worked, tagged MM posted tiny intended-target-only commitments, controlled partial fill succeeded with canonical own-state-stream evidence, public/API exposure drained to zero, MLB final score was verified (Mets 5, Cardinals 4), contest 36 was scored, speculation 26 settled home/lower, the controlled taker claimed 0.200450 USDC, final claim-all dry-runs were empty for setup/maker/flow, no orphan MM process remained, and spend stayed within cap."
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "repo": "ospex-org/ospex-market-maker",
+  "tag": "v0.1.0-alpha.1",
+  "releaseUrl": "https://github.com/ospex-org/ospex-market-maker/releases/tag/v0.1.0-alpha.1",
+  "testedHeadSha": "af1bb107af47dc80f27485dee7417ca95b782b50",
+  "distributionMode": "clone-and-run at tag; no npm package/release assets expected",
+  "sdkDependencyObserved": "@ospex/sdk v0.6.2 via GitHub release tarball in package.json",
+  "nodeVersion": "v22.22.0",
+  "yarnVersion": "1.22.22",
+  "chainId": 137,
+  "apiUrl": "https://api.ospex.org",
+  "releaseGates": [
+    {
+      "command": "yarn install --frozen-lockfile",
+      "exit": 0,
+      "duration": "6s"
+    },
+    {
+      "command": "yarn build",
+      "exit": 0,
+      "duration": "9s"
+    },
+    {
+      "command": "yarn smoke",
+      "exit": 0,
+      "duration": "37s"
+    },
+    {
+      "command": "yarn typecheck",
+      "exit": 0,
+      "duration": "8s"
+    },
+    {
+      "command": "yarn lint",
+      "exit": 0,
+      "duration": "6s"
+    },
+    {
+      "command": "yarn test",
+      "exit": 0,
+      "duration": "12s"
+    }
+  ]
+}

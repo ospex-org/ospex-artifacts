@@ -1,0 +1,51 @@
+{
+  "artifactId": "2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary",
+  "scenarios": [
+    {
+      "name": "release-tag clone/install/build/smoke/typecheck/lint/test",
+      "status": "pass",
+      "evidence": "raw/release-runtime-matrix.sanitized.json"
+    },
+    {
+      "name": "wallet auth/balance/allowance preflight",
+      "status": "pass",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json"
+    },
+    {
+      "name": "12:10 CDT target creation and moneyline seed/open",
+      "status": "pass",
+      "evidence": "raw/setup-seed.sanitized.json"
+    },
+    {
+      "name": "dry-run quote and bounded dry-run loop",
+      "status": "pass",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "note": "One dry-run degraded telemetry event was recorded; errors total stayed 0, no live writes occurred, and would-submit remained 2."
+    },
+    {
+      "name": "tagged MM live quote and controlled tiny fill",
+      "status": "pass",
+      "evidence": "raw/live-fill.sanitized.json"
+    },
+    {
+      "name": "own-state SSE canonical fill source",
+      "status": "pass",
+      "evidence": "raw/own-state-sse-summary.sanitized.json"
+    },
+    {
+      "name": "shutdown/expiry/zero public exposure",
+      "status": "pass",
+      "evidence": "raw/zero-exposure.sanitized.json"
+    },
+    {
+      "name": "restart/cold-start read-only probe",
+      "status": "pass_with_expected_timeout",
+      "evidence": "raw/restart-cold-start-probe.sanitized.json"
+    },
+    {
+      "name": "postgame score/settle/claim",
+      "status": "pass_with_caveats",
+      "evidence": "raw/postgame-continuation.sanitized.json"
+    }
+  ]
+}

@@ -1,10 +1,11 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-06-11T01:32:26Z",
+  "generatedAt": "2026-06-11T20:55:54Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
+      "runs/2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary/evidence.json",
       "runs/2026-06-11-mlb-hou-laa-contest-35-mm-live-canary/evidence.json",
       "runs/2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate/evidence.json",
       "runs/2026-06-08-mlb-sea-bal-contest-32-v054-ownstate-sse-repeatability/evidence.json",
@@ -13,8 +14,7 @@
       "runs/2026-06-06-mlb-mil-col-contest-29-v054-ownstate-sse-soak/evidence.json",
       "runs/2026-05-28-mlb-tor-bal-contest-28-v048-mm-acceptance/evidence.json",
       "runs/2026-05-28-mlb-col-lad-contest-27-d2-solvency-lifecycle/evidence.json",
-      "runs/2026-05-25-mlb-min-cws-contest-25-v042-mm-acceptance/evidence.json",
-      "runs/2026-05-24-mlb-tex-laa-contest-24-v040-mm-acceptance/evidence.json"
+      "runs/2026-05-25-mlb-min-cws-contest-25-v042-mm-acceptance/evidence.json"
     ],
     "release-acceptance": [
       "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.json"
@@ -22,6 +22,18 @@
     "daily-digest": []
   },
   "recentArtifacts": [
+    {
+      "artifactId": "2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary",
+      "artifactType": "run",
+      "dataPath": "runs/2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary/evidence.json",
+      "date": "2026-06-11",
+      "network": "polygon",
+      "rawPath": "runs/2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary/raw/",
+      "release": "ospex-org/ospex-market-maker v0.1.0-alpha.1",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary/summary.md",
+      "publishedAt": "2026-06-11T16:27:27Z"
+    },
     {
       "artifactId": "2026-06-11-mlb-hou-laa-contest-35-mm-live-canary",
       "artifactType": "run",
@@ -232,9 +244,9 @@
       "scope": "year",
       "year": 2026,
       "path": "archive/2026/index.json",
-      "artifactCount": 18,
+      "artifactCount": 19,
       "oldestPublishedAt": "2026-05-20T02:48:35Z",
-      "newestPublishedAt": "2026-06-11T01:32:02Z"
+      "newestPublishedAt": "2026-06-11T16:27:27Z"
     }
   ]
 }

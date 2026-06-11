@@ -1,0 +1,88 @@
+{
+  "wallets": [
+    {
+      "role": "setup",
+      "alias": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+      "authStrict": "ok",
+      "start": {
+        "POL": "7.086433806587675946",
+        "USDC": "5.19441",
+        "LINK": null,
+        "positionModuleAllowanceUSDC": "10.8897",
+        "treasuryModuleAllowanceUSDC": "0.25",
+        "oracleModuleLinkAllowance": "0.145"
+      },
+      "end": {
+        "POL": "6.664848793960639336",
+        "USDC": "3.89441",
+        "LINK": "0.14",
+        "positionModuleAllowanceUSDC": "10.8397",
+        "treasuryModuleAllowanceUSDC": "0",
+        "oracleModuleLinkAllowance": "0.14"
+      },
+      "delta": {
+        "POL": "-0.421585012627036610",
+        "USDC": "-1.30000"
+      }
+    },
+    {
+      "role": "maker",
+      "alias": "ospex-stage-maker-b",
+      "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "authStrict": "ok",
+      "start": {
+        "POL": "13.097694014300719545",
+        "USDC": "0.543272",
+        "LINK": null,
+        "positionModuleAllowanceUSDC": "3.7602",
+        "treasuryModuleAllowanceUSDC": "0",
+        "oracleModuleLinkAllowance": "0.225"
+      },
+      "end": {
+        "POL": "13.097694014300719545",
+        "USDC": "0.506272",
+        "LINK": "0.225",
+        "positionModuleAllowanceUSDC": "3.7232",
+        "treasuryModuleAllowanceUSDC": "0",
+        "oracleModuleLinkAllowance": "0.225"
+      },
+      "delta": {
+        "POL": "0E-18",
+        "USDC": "-0.037000"
+      }
+    },
+    {
+      "role": "flow",
+      "alias": "ospex-flow-a",
+      "address": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+      "authStrict": "ok",
+      "start": {
+        "POL": "17.977474019502105759",
+        "USDC": "6.073542",
+        "LINK": null,
+        "positionModuleAllowanceUSDC": "1.31132",
+        "treasuryModuleAllowanceUSDC": "0",
+        "oracleModuleLinkAllowance": "0.285"
+      },
+      "end": {
+        "POL": "17.667167033964245394",
+        "USDC": "5.710092",
+        "LINK": "0.285",
+        "positionModuleAllowanceUSDC": "1.19787",
+        "treasuryModuleAllowanceUSDC": "0",
+        "oracleModuleLinkAllowance": "0.285"
+      },
+      "delta": {
+        "POL": "-0.310306985537860365",
+        "USDC": "-0.363450"
+      }
+    }
+  ],
+  "retiredWalletsNotUsed": [
+    "mm-shakeout-maker-a",
+    "mm-shakeout-flow-a"
+  ],
+  "snapshotAsOfUtc": "2026-06-11T15:59:15Z",
+  "snapshotScope": "live-window ending wallet snapshot before postgame continuation/claim; the 0.200450 USDC postgame claim return is recorded separately."
+}

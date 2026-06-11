@@ -1,0 +1,20 @@
+{
+  "selectedGame": "St. Louis Cardinals @ New York Mets",
+  "reasonSelected": "First user-preferred 12:10pm Central candidate with clean current MLB identity, reference odds, no doubleheader ambiguity, and an Ospex create/seed path before first pitch.",
+  "mlbGamePk": 823619,
+  "matchTimeUtc": "2026-06-11T17:10:00Z",
+  "matchTimeCentral": "2026-06-11 12:10 CDT",
+  "awayTeam": "St. Louis Cardinals",
+  "homeTeam": "New York Mets",
+  "contestId": "36",
+  "speculationId": "26",
+  "ospexGameId": "98821bdf-6396-4427-9d30-c782bcfeca20",
+  "rundownIdPresent": true,
+  "hasReferenceOdds": true,
+  "mlbStatusAtFinalReport": {
+    "abstractGameState": "Preview",
+    "detailedState": "Pre-Game",
+    "statusCode": "P"
+  },
+  "noEveningFallbackUsed": true
+}

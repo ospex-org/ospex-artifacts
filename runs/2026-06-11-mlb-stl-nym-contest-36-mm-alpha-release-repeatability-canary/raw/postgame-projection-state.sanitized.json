@@ -1,0 +1,112 @@
+{
+  "fills": [
+    {
+      "tx_hash": "0x1b60890d18e1afba6433c47ebceeb93dac108bfddaac5cb6871b638565065eae",
+      "log_index": 1758,
+      "odds_tick": 235,
+      "maker_address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "taker_address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "commitment_hash": "0xf2b961cc392b26dbf725247ad85e53de51438eb137b1b4dbbb2c1d942111bcdc",
+      "maker_risk_amount": "37000",
+      "taker_risk_amount": "49950",
+      "maker_position_type": "upper",
+      "taker_position_type": "lower"
+    },
+    {
+      "tx_hash": "0x5190f1261623f6a9315e3de1796fe27e0bfe401f05993f7f8864b34769e55203",
+      "log_index": 3172,
+      "odds_tick": 227,
+      "maker_address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "taker_address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "commitment_hash": "0x0c320d55b5e67b0658ed68806b7697c404a77a26e03b258fac8fc645668dc354",
+      "maker_risk_amount": "50000",
+      "taker_risk_amount": "63500",
+      "maker_position_type": "upper",
+      "taker_position_type": "lower"
+    }
+  ],
+  "contest": {
+    "network": "polygon",
+    "away_team": "St. Louis Cardinals",
+    "home_team": "New York Mets",
+    "scored_at": "2026-06-11T20:48:21+00:00",
+    "away_score": 4,
+    "contest_id": "36",
+    "home_score": 5,
+    "contest_status": "scored",
+    "contest_creator": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+  },
+  "positions": [
+    {
+      "claimed": true,
+      "claimed_at": "2026-06-11T20:50:21+00:00",
+      "risk_amount": "113450",
+      "user_address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "position_type": "lower",
+      "profit_amount": "87000",
+      "claimed_amount": "200450",
+      "speculation_id": "26"
+    },
+    {
+      "claimed": false,
+      "claimed_at": null,
+      "risk_amount": "37000",
+      "user_address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "position_type": "upper",
+      "profit_amount": "49950",
+      "claimed_amount": null,
+      "speculation_id": "26"
+    },
+    {
+      "claimed": false,
+      "claimed_at": null,
+      "risk_amount": "50000",
+      "user_address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "position_type": "upper",
+      "profit_amount": "63500",
+      "claimed_amount": null,
+      "speculation_id": "26"
+    }
+  ],
+  "speculation": {
+    "network": "polygon",
+    "win_side": "home",
+    "scored_at": "2026-06-11T20:48:21+00:00",
+    "contest_id": "36",
+    "line_ticks": 0,
+    "settled_at": "2026-06-11T20:49:13+00:00",
+    "market_type": "moneyline",
+    "speculation_id": "26",
+    "speculation_status": "closed"
+  },
+  "capturedAtUtc": "2026-06-11T20:53:42Z",
+  "commitmentVisibility": [
+    {
+      "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "expiry": "2026-06-11T16:04:32+00:00",
+      "status": "filled",
+      "risk_amount": "50000",
+      "book_visible": true,
+      "commitment_hash": "0x0c320d55b5e67b0658ed68806b7697c404a77a26e03b258fac8fc645668dc354",
+      "filled_risk_amount": "50000"
+    },
+    {
+      "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "expiry": "2026-06-11T15:54:13+00:00",
+      "status": "open",
+      "risk_amount": "100000",
+      "book_visible": false,
+      "commitment_hash": "0x3e98bfc63732940c61a56fc68cadf07cd83d3d2815ba551b667a0175e9faf764",
+      "filled_risk_amount": "0"
+    },
+    {
+      "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "expiry": "2026-06-11T15:54:13+00:00",
+      "status": "partially_filled",
+      "risk_amount": "100000",
+      "book_visible": true,
+      "commitment_hash": "0xf2b961cc392b26dbf725247ad85e53de51438eb137b1b4dbbb2c1d942111bcdc",
+      "filled_risk_amount": "37000"
+    }
+  ]
+}

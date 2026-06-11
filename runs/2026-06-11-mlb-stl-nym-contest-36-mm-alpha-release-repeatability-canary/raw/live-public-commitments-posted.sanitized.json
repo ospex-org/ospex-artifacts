@@ -1,0 +1,36 @@
+{
+  "firstVisibleCount": 2,
+  "commitments": [
+    {
+      "commitmentHash": "0x3e98bfc63732940c61a56fc68cadf07cd83d3d2815ba551b667a0175e9faf764",
+      "contestId": "36",
+      "speculationId": "26",
+      "makerSide": "home",
+      "takerSide": "away",
+      "positionType": 1,
+      "makerOddsTick": 175,
+      "riskWei6": "100000",
+      "riskUSDC": "0.100000",
+      "expiryUnixSec": 1781193253,
+      "expiryUtc": "2026-06-11T15:54:13Z",
+      "signatureRedacted": true
+    },
+    {
+      "commitmentHash": "0xf2b961cc392b26dbf725247ad85e53de51438eb137b1b4dbbb2c1d942111bcdc",
+      "contestId": "36",
+      "speculationId": "26",
+      "makerSide": "away",
+      "takerSide": "home",
+      "positionType": 0,
+      "makerOddsTick": 235,
+      "riskWei6": "100000",
+      "riskUSDC": "0.100000",
+      "expiryUnixSec": 1781193253,
+      "expiryUtc": "2026-06-11T15:54:13Z",
+      "signatureRedacted": true
+    }
+  ],
+  "postExpiryMakerVisibleCount": 0,
+  "postExpiryContestSpecVisibleCount": 0,
+  "unintendedTargetCount": 0
+}

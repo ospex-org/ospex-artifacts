@@ -1,0 +1,76 @@
+{
+  "telemetryRunId": "2026-06-11T15-51-41-306Z-h6alw0",
+  "eventCounts": {
+    "tick-start": 5,
+    "candidate": 2,
+    "stream-health-hold": 2,
+    "quote-intent": 2,
+    "risk-verdict": 2,
+    "submit": 2,
+    "quote-competitiveness": 4,
+    "fill": 1,
+    "soft-cancel": 1,
+    "kill": 1
+  },
+  "sseOpenedAutomaticallyEvidence": "Live mode emitted stream-health-hold entered then cleared without ownState.subscribe or top-level pollIntervalMs config; fill event source was own-state-stream.",
+  "streamHealthHolds": [
+    {
+      "ts": "2026-06-11T15:51:42.753Z",
+      "state": "entered",
+      "severity": "low",
+      "exposureWei6": "0"
+    },
+    {
+      "ts": "2026-06-11T15:52:13.642Z",
+      "state": "cleared",
+      "severity": null,
+      "exposureWei6": null
+    }
+  ],
+  "fillEvents": [
+    {
+      "ts": "2026-06-11T15:52:57.976Z",
+      "source": "own-state-stream",
+      "commitmentHash": "0xf2b961cc392b26dbf725247ad85e53de51438eb137b1b4dbbb2c1d942111bcdc",
+      "contestId": "36",
+      "speculationId": "26",
+      "makerSide": "away",
+      "takerSide": "home",
+      "positionType": 0,
+      "makerOddsTick": 235,
+      "newFillWei6": "37000",
+      "cumulativeRiskWei6": "37000"
+    }
+  ],
+  "fillSource": "own-state-stream",
+  "canonicalLegacyFillSourcesObserved": [],
+  "auditOrComparatorEvents": [],
+  "partialFillSafety": {
+    "partialRemainderRetainedSkipEvents": [
+      {
+        "ts": "2026-06-11T15:54:19.223Z",
+        "skipReason": "partial-remainder-retained",
+        "commitmentHash": "0xf2b961cc392b26dbf725247ad85e53de51438eb137b1b4dbbb2c1d942111bcdc",
+        "contestId": "36",
+        "speculationId": "26",
+        "makerSide": "away",
+        "takerSide": "home",
+        "reason": "shutdown"
+      }
+    ],
+    "noSameSideReplacementWhileRetainedPartial": true,
+    "postExpiryPublicCommitmentsZero": true
+  },
+  "softCancelEvents": [
+    {
+      "ts": "2026-06-11T15:54:19.222Z",
+      "commitmentHash": "0x3e98bfc63732940c61a56fc68cadf07cd83d3d2815ba551b667a0175e9faf764",
+      "contestId": "36",
+      "speculationId": "26",
+      "makerSide": "home",
+      "takerSide": "away",
+      "positionType": 1,
+      "reason": "shutdown"
+    }
+  ]
+}

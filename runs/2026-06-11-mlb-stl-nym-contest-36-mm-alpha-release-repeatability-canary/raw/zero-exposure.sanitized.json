@@ -1,0 +1,12 @@
+{
+  "checkedAtUtc": "2026-06-11T16:11:33Z",
+  "publicMakerVisibleCommitments": 0,
+  "publicContestSpecVisibleCommitments": 0,
+  "contestOrderbookCount": 0,
+  "mmStatusVisibleOpenCommitments": 0,
+  "mmStatusTotalCommitmentsTracked": 2,
+  "mmStatusActivePositions": 1,
+  "orphanProcessCount": 0,
+  "noUnintendedTargets": true,
+  "onlyFilledPositionExposureRemainsForPostgame": true
+}
