@@ -1,0 +1,35 @@
+{
+  "status": "POSTGAME_DEFERRED",
+  "contestId": "35",
+  "speculationId": "25",
+  "teams": "Houston Astros @ Los Angeles Angels",
+  "matchTimeUtc": "2026-06-11T01:38:00+00:00",
+  "creatorOrOperatorWallet": "stage-maker-a / 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+  "liveMakerWallet": "stage-maker-b / 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+  "controlledFlowWallet": "flow-a / 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+  "seedMakerWallet": "stage-maker-a / 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+  "config": "[REDACTED_LOCAL_RUN_DIR]/ospex-mm-live-canary.yaml",
+  "telemetryDir": "[REDACTED_LOCAL_RUN_DIR]/telemetry-live",
+  "stateDir": "[REDACTED_LOCAL_RUN_DIR]/state-live",
+  "liveCommitmentHashes": [
+    "0xa614b53b44cf09e6b22634f684fa6e435f349070204e509bf83f7ab12786ca38",
+    "0xa0b7040ceeb02af4f96c0a338d81f4db06a7072739b688604ef45d9a01c39d8a"
+  ],
+  "filledCommitmentHashes": [
+    "0xa614b53b44cf09e6b22634f684fa6e435f349070204e509bf83f7ab12786ca38",
+    "0x15bbf544ee533534fe280070249da8bf88a7b0e5d3383cd2154d7780ec3eb929"
+  ],
+  "liveFillTx": "0x61b910e5d363fbe1733e505a572876d7ead4b8b6677077ed5f41defc251f39d2",
+  "expectedEarliestFinalScoreCheckUtc": "2026-06-11T06:00:00Z",
+  "cronJobId": "a17f517fd6c3",
+  "cronScheduleUtc": "2026-06-11T06:00:00Z",
+  "requirements": [
+    "verify real-world final score from external/current source",
+    "score contest 35 only after final is independently verified",
+    "wait for API/projection convergence",
+    "settle speculation/positions",
+    "claim winnings/no-op claim all for controlled wallets",
+    "final own-state/readiness/public exposure zero checks",
+    "update artifact with score/settle/claim txs and costs"
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "auth": [
+    {
+      "walletLabel": "stage-maker-a",
+      "exit": 0,
+      "ok": true,
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "unlockAttempted": true,
+      "unlockSucceeded": true,
+      "accountProvenance": "flag-account"
+    },
+    {
+      "walletLabel": "stage-maker-b",
+      "exit": 0,
+      "ok": true,
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "unlockAttempted": true,
+      "unlockSucceeded": true,
+      "accountProvenance": "flag-account"
+    },
+    {
+      "walletLabel": "flow-a",
+      "exit": 0,
+      "ok": true,
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "unlockAttempted": true,
+      "unlockSucceeded": true,
+      "accountProvenance": "flag-account"
+    },
+    {
+      "walletLabel": "stage-maker-a",
+      "doctorExit": 0,
+      "doctorOk": true,
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "note": "strict doctor command completed; live MM doctor checked selected maker config before live run"
+    },
+    {
+      "walletLabel": "stage-maker-b",
+      "doctorExit": 0,
+      "doctorOk": true,
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "note": "strict doctor command completed; live MM doctor checked selected maker config before live run"
+    },
+    {
+      "walletLabel": "flow-a",
+      "doctorExit": 0,
+      "doctorOk": true,
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "note": "strict doctor command completed; live MM doctor checked selected maker config before live run"
+    }
+  ],
+  "startingBalancesAllowances": [
+    {
+      "name": "stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "pol": "7.691828",
+      "usdc": "6.454410",
+      "link": "0.155000",
+      "allowancePositionUSDC": "10.899700",
+      "allowanceTreasuryUSDC": "0.750000",
+      "allowanceOracleLINK": "0.155000"
+    },
+    {
+      "name": "stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "pol": "13.176961",
+      "usdc": "0.493288",
+      "link": "0.225000",
+      "allowancePositionUSDC": "3.817000",
+      "allowanceTreasuryUSDC": "0.000000",
+      "allowanceOracleLINK": "0.225000"
+    },
+    {
+      "name": "flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "pol": "18.332362",
+      "usdc": "6.363526",
+      "link": "0.285000",
+      "allowancePositionUSDC": "1.372104",
+      "allowanceTreasuryUSDC": "0.000000",
+      "allowanceOracleLINK": "0.285000"
+    },
+    {
+      "name": "fresh-user",
+      "address": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+      "pol": "20.699651",
+      "usdc": "6.869976",
+      "link": "0.280000",
+      "allowancePositionUSDC": "1.580412",
+      "allowanceTreasuryUSDC": "0.350000",
+      "allowanceOracleLINK": "0.000000"
+    }
+  ],
+  "endingBalancesAllowances": {
+    "maker_stage_b": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "POL_wei": "13176960565240313956",
+      "POL": "13.176960565240313956",
+      "USDC_wei": "436488",
+      "USDC": "0.436488",
+      "LINK_wei": "225000000000000000",
+      "LINK": "0.225",
+      "PositionModule_USDC_allowance_wei": "3760200",
+      "PositionModule_USDC_allowance": "3.7602",
+      "TreasuryModule_USDC_allowance_wei": "0",
+      "TreasuryModule_USDC_allowance": "0",
+      "OracleModule_LINK_allowance_wei": "225000000000000000",
+      "OracleModule_LINK_allowance": "0.225"
+    },
+    "flow_a": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "POL_wei": "18012819636182737134",
+      "POL": "18.012819636182737134",
+      "USDC_wei": "6052742",
+      "USDC": "6.052742",
+      "LINK_wei": "285000000000000000",
+      "LINK": "0.285",
+      "PositionModule_USDC_allowance_wei": "1311320",
+      "PositionModule_USDC_allowance": "1.31132",
+      "TreasuryModule_USDC_allowance_wei": "0",
+      "TreasuryModule_USDC_allowance": "0",
+      "OracleModule_LINK_allowance_wei": "285000000000000000",
+      "OracleModule_LINK_allowance": "0.285"
+    },
+    "fresh_user": {
+      "address": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+      "POL_wei": "20699650616850867411",
+      "POL": "20.699650616850867411",
+      "USDC_wei": "6869976",
+      "USDC": "6.869976",
+      "LINK_wei": "280000000000000000",
+      "LINK": "0.28",
+      "PositionModule_USDC_allowance_wei": "1580412",
+      "PositionModule_USDC_allowance": "1.580412",
+      "TreasuryModule_USDC_allowance_wei": "350000",
+      "TreasuryModule_USDC_allowance": "0.35",
+      "OracleModule_LINK_allowance_wei": "0",
+      "OracleModule_LINK_allowance": "0"
+    },
+    "stage_maker_a": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "POL_wei": "7271892333600828723",
+      "POL": "7.271892333600828723",
+      "USDC_wei": "5194410",
+      "USDC": "5.19441",
+      "LINK_wei": "150000000000000000",
+      "LINK": "0.15",
+      "PositionModule_USDC_allowance_wei": "10889700",
+      "PositionModule_USDC_allowance": "10.8897",
+      "TreasuryModule_USDC_allowance_wei": "250000",
+      "TreasuryModule_USDC_allowance": "0.25",
+      "OracleModule_LINK_allowance_wei": "150000000000000000",
+      "OracleModule_LINK_allowance": "0.15"
+    }
+  },
+  "boundedApprovalPolicy": "Existing PositionModule allowances were bounded low-value allowances; no unlimited approvals were created. Fee approvals were bounded and only used where target setup commands required them."
+}

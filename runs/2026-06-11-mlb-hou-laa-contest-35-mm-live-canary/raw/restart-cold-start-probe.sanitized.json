@@ -1,0 +1,534 @@
+{
+  "summary": {
+    "generatedAt": "2026-06-11T01:19:47Z",
+    "doctorExit": 0,
+    "dryRunExit": 124,
+    "dryRunDurationSec": 75.03,
+    "summaryExit": 0,
+    "statusExit": 0,
+    "dryRunShadowOk": true,
+    "publicExposureAfterProbe": {
+      "contest35": {
+        "status": 200,
+        "count": 0,
+        "items": []
+      },
+      "maker": {
+        "status": 200,
+        "count": 0,
+        "items": []
+      },
+      "contest35spec25": {
+        "status": 200,
+        "count": 0,
+        "items": []
+      }
+    },
+    "orphanScan": [],
+    "interpretation": "Fresh-state cold-start probe was read-only/dry-run, booted without persisted cursor/state, selected only contest 35, and left public/API live exposure at zero. This is a cold-start safety/no-phantom-exposure proof, not a process-level cursor-resume proof."
+  },
+  "rawSelected": {
+    "short": {
+      "generatedAt": "2026-06-11T01:19:47Z",
+      "commands": {
+        "doctorExit": 0,
+        "runExit": 124,
+        "runDurationSec": 75.03,
+        "summaryExit": 0,
+        "statusExit": 0
+      },
+      "doctorReady": {
+        "dryRunShadow": {
+          "ok": true,
+          "reason": "no FAILs \u2014 `ospex-mm run --dry-run` should boot (the shadow loop posts nothing, so a keystore is not required)"
+        },
+        "postCommitments": {
+          "ok": false,
+          "reason": "no usable keystore (set wallet.keystorePath or OSPEX_KEYSTORE_PATH \u2014 live signing needs one); config has mode.dryRun: true (flip to false; you would also pass --live at run time)"
+        }
+      },
+      "summarySelected": {
+        "eventCounts": {
+          "tick-start": 2,
+          "candidate": 1,
+          "fair-value": 0,
+          "risk-verdict": 2,
+          "quote-intent": 2,
+          "quote-competitiveness": 4,
+          "competitiveness-unavailable": 0,
+          "submit": 0,
+          "would-submit": 2,
+          "soft-cancel": 0,
+          "would-soft-cancel": 0,
+          "replace": 0,
+          "would-replace": 0,
+          "onchain-cancel": 0,
+          "cancel-blocked-missing-payload": 0,
+          "nonce-floor-raise": 0,
+          "expire": 0,
+          "approval": 0,
+          "funding-hold": 0,
+          "fill": 0,
+          "position-transition": 0,
+          "settle": 0,
+          "claim": 0,
+          "degraded": 0,
+          "stream-health-degraded": 0,
+          "stream-would-hold": 0,
+          "stream-cold-restart": 0,
+          "stream-health-hold": 0,
+          "divergence": 0,
+          "unknown-own-fill": 0,
+          "owner-mapping-failed": 0,
+          "error": 0,
+          "kill": 1
+        },
+        "candidates": {
+          "total": 1,
+          "tracked": 1,
+          "skipReasons": {}
+        },
+        "quoteIntents": {
+          "total": 2,
+          "canQuote": 2,
+          "refused": 0
+        },
+        "wouldSubmit": 2,
+        "errors": {
+          "total": 0,
+          "byPhase": {}
+        },
+        "kill": {
+          "reason": "signal",
+          "ticks": 2
+        },
+        "latentExposurePeakWei6": "200000"
+      },
+      "statusSelected": {
+        "schemaVersion": 1,
+        "configPath": "[REDACTED_PATH]",
+        "statePath": "[REDACTED_PATH]",
+        "stateIntegrity": "loaded",
+        "stateLossAssessment": {
+          "holdQuoting": false,
+          "reason": "state loaded cleanly"
+        },
+        "lastFlushedAt": "2026-06-11T01:19:43.942Z",
+        "lastRunId": null,
+        "commitments": {
+          "total": 2,
+          "byLifecycle": {
+            "visibleOpen": 2,
+            "softCancelled": 0,
+            "partiallyFilled": 0,
+            "filled": 0,
+            "expired": 0,
+            "authoritativelyInvalidated": 0
+          },
+          "distinctContestsNonTerminal": 1
+        },
+        "positions": {
+          "total": 0,
+          "byStatus": {
+            "active": {
+              "count": 0,
+              "ownRiskWei6": "0"
+            },
+            "pendingSettle": {
+              "count": 0,
+              "ownRiskWei6": "0"
+            },
+            "claimable": {
+              "count": 0,
+              "ownRiskWei6": "0"
+            },
+            "claimed": {
+              "count": 0,
+              "ownRiskWei6": "0"
+            },
+            "settledLost": {
+              "count": 0,
+              "ownRiskWei6": "0"
+            },
+            "void": {
+              "count": 0,
+              "ownRiskWei6": "0"
+            }
+          }
+        },
+        "dailyCounters": {
+          "today": "2026-06-11",
+          "todayGasPolWei": "0",
+          "todayFeeUsdcWei6": "0",
+          "lifetimeGasPolWei": "0",
+          "lifetimeFeeUsdcWei6": "0"
+        },
+        "pnl": {
+          "realizedUsdcWei6": "0",
+          "unrealizedUsdcWei6": "0",
+          "asOfUnixSec": 0
+        },
+        "makerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "makerAddressSource": "flag",
+        "livePositionTotals": {
+          "activeCount": 1,
+          "pendingSettleCount": 0,
+          "claimableCount": 0,
+          "claimablePayoutWei6": "0",
+          "pendingSettlePayoutWei6": "0"
+        },
+        "livePositionsSkipReason": null
+      },
+      "publicExposure": {
+        "contest35": {
+          "status": 200,
+          "count": 0,
+          "items": []
+        },
+        "maker": {
+          "status": 200,
+          "count": 0,
+          "items": []
+        },
+        "contest35spec25": {
+          "status": 200,
+          "count": 0,
+          "items": []
+        }
+      },
+      "orphanScan": []
+    },
+    "results": {
+      "doctor": {
+        "exit": 0,
+        "json": {
+          "schemaVersion": 1,
+          "doctor": {
+            "schemaVersion": 1,
+            "configPath": "[REDACTED_PATH]",
+            "chainId": 137,
+            "apiUrl": "https://api.ospex.org",
+            "walletAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+            "walletAddressSource": "flag",
+            "configDryRun": true,
+            "checks": [
+              {
+                "name": "config",
+                "status": "ok",
+                "detail": "loaded from [REDACTED_PATH] (chainId=137, pricing.mode=economics, mode.dryRun=true)"
+              },
+              {
+                "name": "keystore",
+                "status": "warn",
+                "detail": "no keystore configured \u2014 set wallet.keystorePath or OSPEX_KEYSTORE_PATH (required for `run` flows; harmless for `doctor` / `quote --dry-run`)"
+              },
+              {
+                "name": "wallet",
+                "status": "ok",
+                "detail": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482 (from flag)"
+              },
+              {
+                "name": "api",
+                "status": "ok",
+                "detail": "reachable at https://api.ospex.org"
+              },
+              {
+                "name": "rpc",
+                "status": "ok",
+                "detail": "reachable; configured for chain 137"
+              },
+              {
+                "name": "pol-balance",
+                "status": "ok",
+                "detail": "13.176960 POL (above the 0.2 POL reserve)"
+              },
+              {
+                "name": "usdc-balance",
+                "status": "ok",
+                "detail": "0.436488 USDC (\u2265 the 0.400000 USDC required)"
+              },
+              {
+                "name": "allowance",
+                "status": "ok",
+                "detail": "3.760200 USDC allowed to PositionModule (0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c)"
+              },
+              {
+                "name": "state",
+                "status": "ok",
+                "detail": "no prior state at [REDACTED_PATH] \u2014 fresh start"
+              }
+            ],
+            "ready": {
+              "dryRunShadow": {
+                "ok": true,
+                "reason": "no FAILs \u2014 `ospex-mm run --dry-run` should boot (the shadow loop posts nothing, so a keystore is not required)"
+              },
+              "postCommitments": {
+                "ok": false,
+                "reason": "no usable keystore (set wallet.keystorePath or OSPEX_KEYSTORE_PATH \u2014 live signing needs one); config has mode.dryRun: true (flip to false; you would also pass --live at run time)"
+              }
+            }
+          }
+        }
+      },
+      "run": {
+        "exit": 124,
+        "durationSec": 75.03,
+        "outputTail": "warning ../../../../package.json: No license field\n[run] maker wallet: 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482\n[runner] starting run 2026-06-11T01-18-30-183Z-t3kpri \u2014 chain 137, api https://api.ospex.org, mode dry-run\n"
+      },
+      "summary": {
+        "exit": 0,
+        "json": {
+          "schemaVersion": 1,
+          "summary": {
+            "schemaVersion": 1,
+            "generatedAt": "2026-06-11T01:19:45.195Z",
+            "sources": [
+              "[REDACTED_PATH]"
+            ],
+            "lines": 14,
+            "malformedLines": 0,
+            "runIds": [
+              "2026-06-11T01-18-30-183Z-t3kpri"
+            ],
+            "firstEventAt": "2026-06-11T01:18:30.185Z",
+            "lastEventAt": "2026-06-11T01:19:43.941Z",
+            "ticks": 2,
+            "eventCounts": {
+              "tick-start": 2,
+              "candidate": 1,
+              "fair-value": 0,
+              "risk-verdict": 2,
+              "quote-intent": 2,
+              "quote-competitiveness": 4,
+              "competitiveness-unavailable": 0,
+              "submit": 0,
+              "would-submit": 2,
+              "soft-cancel": 0,
+              "would-soft-cancel": 0,
+              "replace": 0,
+              "would-replace": 0,
+              "onchain-cancel": 0,
+              "cancel-blocked-missing-payload": 0,
+              "nonce-floor-raise": 0,
+              "expire": 0,
+              "approval": 0,
+              "funding-hold": 0,
+              "fill": 0,
+              "position-transition": 0,
+              "settle": 0,
+              "claim": 0,
+              "degraded": 0,
+              "stream-health-degraded": 0,
+              "stream-would-hold": 0,
+              "stream-cold-restart": 0,
+              "stream-health-hold": 0,
+              "divergence": 0,
+              "unknown-own-fill": 0,
+              "owner-mapping-failed": 0,
+              "error": 0,
+              "kill": 1
+            },
+            "candidates": {
+              "total": 1,
+              "tracked": 1,
+              "skipReasons": {}
+            },
+            "quoteIntents": {
+              "total": 2,
+              "canQuote": 2,
+              "refused": 0
+            },
+            "wouldSubmit": 2,
+            "wouldReplace": {
+              "total": 0,
+              "byReason": {}
+            },
+            "wouldSoftCancel": {
+              "total": 0,
+              "byReason": {}
+            },
+            "expired": 0,
+            "quoteCompetitiveness": {
+              "samples": 4,
+              "atOrInsideBookCount": 4,
+              "atOrInsideBookRate": 1,
+              "vsReferenceTicks": {
+                "min": 5,
+                "p50": 5,
+                "mean": 5.5,
+                "max": 6
+              },
+              "unavailable": 0
+            },
+            "quoteAgeSeconds": null,
+            "latentExposurePeakWei6": "200000",
+            "staleQuoteIncidents": 0,
+            "degradedByReason": {},
+            "errors": {
+              "total": 0,
+              "byPhase": {}
+            },
+            "kill": {
+              "reason": "signal",
+              "ticks": 2
+            },
+            "liveMetrics": {
+              "fills": {
+                "quotedUsdcWei6": "0",
+                "filledUsdcWei6": "0",
+                "fillRate": null
+              },
+              "gas": {
+                "totalPolWei": "0",
+                "byKind": {
+                  "approval": "0",
+                  "onchainCancel": "0",
+                  "settle": "0",
+                  "claim": "0"
+                },
+                "totalUsdcEquivWei6": "0"
+              },
+              "settlements": {
+                "settleCount": 0,
+                "claimCount": 0,
+                "totalClaimedPayoutWei6": "0"
+              },
+              "realizedPnl": {
+                "netUsdcWei6": "0",
+                "claimedProfitUsdcWei6": "0",
+                "realizedLossUsdcWei6": "0",
+                "wonCount": 0,
+                "lostCount": 0,
+                "pushCount": 0,
+                "wonUnclaimedCount": 0,
+                "alreadyClaimedCount": 0,
+                "unsettledCount": 0
+              },
+              "totalFeeUsdcWei6": "0"
+            }
+          }
+        }
+      },
+      "status": {
+        "exit": 0,
+        "json": {
+          "schemaVersion": 1,
+          "status": {
+            "schemaVersion": 1,
+            "configPath": "[REDACTED_PATH]",
+            "statePath": "[REDACTED_PATH]",
+            "stateIntegrity": "loaded",
+            "stateLossAssessment": {
+              "holdQuoting": false,
+              "reason": "state loaded cleanly"
+            },
+            "lastFlushedAt": "2026-06-11T01:19:43.942Z",
+            "lastRunId": null,
+            "commitments": {
+              "total": 2,
+              "byLifecycle": {
+                "visibleOpen": 2,
+                "softCancelled": 0,
+                "partiallyFilled": 0,
+                "filled": 0,
+                "expired": 0,
+                "authoritativelyInvalidated": 0
+              },
+              "distinctContestsNonTerminal": 1
+            },
+            "positions": {
+              "total": 0,
+              "byStatus": {
+                "active": {
+                  "count": 0,
+                  "ownRiskWei6": "0"
+                },
+                "pendingSettle": {
+                  "count": 0,
+                  "ownRiskWei6": "0"
+                },
+                "claimable": {
+                  "count": 0,
+                  "ownRiskWei6": "0"
+                },
+                "claimed": {
+                  "count": 0,
+                  "ownRiskWei6": "0"
+                },
+                "settledLost": {
+                  "count": 0,
+                  "ownRiskWei6": "0"
+                },
+                "void": {
+                  "count": 0,
+                  "ownRiskWei6": "0"
+                }
+              }
+            },
+            "dailyCounters": {
+              "today": "2026-06-11",
+              "todayGasPolWei": "0",
+              "todayFeeUsdcWei6": "0",
+              "lifetimeGasPolWei": "0",
+              "lifetimeFeeUsdcWei6": "0"
+            },
+            "pnl": {
+              "realizedUsdcWei6": "0",
+              "unrealizedUsdcWei6": "0",
+              "asOfUnixSec": 0
+            },
+            "makerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+            "makerAddressSource": "flag",
+            "livePositionTotals": {
+              "activeCount": 1,
+              "pendingSettleCount": 0,
+              "claimableCount": 0,
+              "claimablePayoutWei6": "0",
+              "pendingSettlePayoutWei6": "0"
+            },
+            "livePositionsSkipReason": null
+          }
+        }
+      }
+    },
+    "api": {
+      "contest35": {
+        "status": 200,
+        "json": {
+          "commitments": [],
+          "pagination": {
+            "limit": 50,
+            "offset": 0,
+            "total": 0,
+            "hasMore": false
+          }
+        }
+      },
+      "maker": {
+        "status": 200,
+        "json": {
+          "commitments": [],
+          "pagination": {
+            "limit": 50,
+            "offset": 0,
+            "total": 0,
+            "hasMore": false
+          }
+        }
+      },
+      "contest35spec25": {
+        "status": 200,
+        "json": {
+          "commitments": [],
+          "pagination": {
+            "limit": 50,
+            "offset": 0,
+            "total": 0,
+            "hasMore": false
+          }
+        }
+      }
+    }
+  }
+}

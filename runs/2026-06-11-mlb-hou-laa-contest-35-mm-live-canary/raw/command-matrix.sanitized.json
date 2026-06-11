@@ -1,0 +1,30 @@
+{
+  "repo": {
+    "gitClone": "git clone https://github.com/ospex-org/ospex-market-maker.git [WORK]; git checkout main; git pull --ff-only origin main",
+    "install": "yarn install --frozen-lockfile",
+    "build": "yarn build",
+    "smoke": "yarn smoke"
+  },
+  "targetSetup": {
+    "approveContestFee": "ospex approvals setup --fee-usdc 1.000000 --account ospex-stage-maker-a --password-file [REDACTED] --expected-address 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b --yes --json",
+    "contestCreate": "ospex contests create --game-id acc4e59b-999e-469b-9137-a2ed1b45aab2 --account ospex-stage-maker-a --password-file [REDACTED] --expected-address 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b --yes --json",
+    "approveLazyFee": "ospex approvals setup --fee-usdc 0.500000 --account ospex-stage-maker-a --password-file [REDACTED] --expected-address 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b --yes --json",
+    "seedSubmit": "ospex commitments submit --contest 35 --market moneyline --side \"Houston Astros\" --odds +108 --risk-usdc 0.01 --expiry 30m --account ospex-stage-maker-a --password-file [REDACTED] --expected-address 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b --yes --json",
+    "seedMatch": "ospex commitments match 0x15bbf544ee533534fe280070249da8bf88a7b0e5d3383cd2154d7780ec3eb929 --account ospex-flow-a --password-file [REDACTED] --expected-address 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --yes --json"
+  },
+  "marketMaker": {
+    "doctor": "OSPEX_RPC_URL=[REDACTED] yarn -s mm doctor --config [REDACTED_CONFIG] --address 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482 --json",
+    "quoteDry": "OSPEX_RPC_URL=[REDACTED] yarn -s mm quote --config [REDACTED_CONFIG] --dry-run 35 --json",
+    "dryRunLoop": "OSPEX_RPC_URL=[REDACTED] timeout 120s yarn -s mm run --config [REDACTED_CONFIG] --dry-run --address 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482 --ignore-missing-state",
+    "liveRun": "OSPEX_RPC_URL=[REDACTED] OSPEX_KEYSTORE_PASSPHRASE=[REDACTED] timeout 600s yarn -s mm run --config [REDACTED_CONFIG] --live --ignore-missing-state",
+    "summary": "yarn -s mm summary --config [REDACTED_CONFIG] --json",
+    "status": "yarn -s mm status --config [REDACTED_CONFIG] --address 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482 --json"
+  },
+  "controlledFill": {
+    "fill": "ospex commitments match 0xa614b53b44cf09e6b22634f684fa6e435f349070204e509bf83f7ab12786ca38 --risk-usdc 0.05 --account ospex-flow-a --password-file [REDACTED] --expected-address 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --yes --json"
+  },
+  "restartProbe": {
+    "doctor": "yarn -s mm doctor --config [REDACTED_COLD_PROBE_CONFIG] --address 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482 --json",
+    "dryRun": "timeout 75s yarn -s mm run --config [REDACTED_COLD_PROBE_CONFIG] --dry-run --address 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482 --ignore-missing-state"
+  }
+}

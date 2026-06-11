@@ -1,0 +1,42 @@
+{
+  "generatedFrom": "public API commitments snapshot after live MM post, before fill/expiry; raw signatures removed",
+  "count": 2,
+  "commitments": [
+    {
+      "commitmentHash": "0xa0b7040ceeb02af4f96c0a338d81f4db06a7072739b688604ef45d9a01c39d8a",
+      "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "contestId": "35",
+      "speculationId": "25",
+      "positionType": 0,
+      "side": "away/Houston Astros",
+      "oddsTick": 215,
+      "riskWei6": "100000",
+      "riskUSDC": "0.1",
+      "filledRiskWei6": "0",
+      "remainingRiskWei6": "100000",
+      "expiry": "2026-06-11T01:12:24+00:00",
+      "status": "open",
+      "bookVisible": true,
+      "createdAt": "2026-06-11T01:10:25.123658+00:00",
+      "signatureRedacted": true
+    },
+    {
+      "commitmentHash": "0xa614b53b44cf09e6b22634f684fa6e435f349070204e509bf83f7ab12786ca38",
+      "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "contestId": "35",
+      "speculationId": "25",
+      "positionType": 1,
+      "side": "home/Los Angeles Angels",
+      "oddsTick": 188,
+      "riskWei6": "100000",
+      "riskUSDC": "0.1",
+      "filledRiskWei6": "0",
+      "remainingRiskWei6": "100000",
+      "expiry": "2026-06-11T01:12:24+00:00",
+      "status": "open",
+      "bookVisible": true,
+      "createdAt": "2026-06-11T01:10:24.803775+00:00",
+      "signatureRedacted": true
+    }
+  ]
+}

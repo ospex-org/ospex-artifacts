@@ -1,0 +1,40 @@
+{
+  "preferredContest34": "Skipped for live writes because match time 2026-06-11T00:40:00Z had already passed target preflight; no stale commitments observed.",
+  "selectedTarget": {
+    "contestId": "35",
+    "awayTeam": "Houston Astros",
+    "homeTeam": "Los Angeles Angels",
+    "sport": "mlb",
+    "sportId": 0,
+    "matchTime": "2026-06-11T01:38:00+00:00",
+    "status": "verified",
+    "speculations": [
+      {
+        "speculationId": "25",
+        "contestId": "35",
+        "type": "moneyline",
+        "lineTicks": 0,
+        "line": null,
+        "speculationStatus": 0,
+        "orderbook": []
+      }
+    ],
+    "jsonoddsId": "acc4e59b-999e-469b-9137-a2ed1b45aab2",
+    "rundownId": "36b374d4086c851895867291a902b85e",
+    "sportspageId": "336983",
+    "contestCreator": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "leagueId": "mlb",
+    "verifySourceHash": "0xec6a7e9cdffa09fdcaa611220e2c99ba0ec58cc082812a01b5d321ccc1e5ebcf",
+    "marketUpdateSourceHash": "0x7f5ce70565133fedb2e0f1aeb925f38a3b26924917cff852e7de40a9297119b4",
+    "scoreContestSourceHash": "0xcb2a11db3190c322239b52afb3caefccfccd850566834819b012c5520f8d31cd",
+    "awayScore": null,
+    "homeScore": null,
+    "contestCreatedAt": "2026-06-11T00:59:48+00:00",
+    "verifiedAt": "2026-06-11T01:00:00+00:00",
+    "scoredAt": null,
+    "voidedAt": null,
+    "awayTeamId": "84718555-3735-403f-92ad-702a8636ec2d",
+    "homeTeamId": "5f69b6e1-b63f-41bd-8e90-ca6695dd8772"
+  },
+  "operatorDecision": "Created and seeded HOU-LAA under user green light because no existing late-start moneyline target was public and time constraints made Contest 34 unsafe."
+}

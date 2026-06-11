@@ -1,0 +1,54 @@
+{
+  "classifiedTxs": [
+    {
+      "txHash": "0x05432b582110e65a5bb54e6232bee349f9b9a7fdf7b130b93436f19fb7a132f8",
+      "role": "bounded flow USDC approval emitted by seed match helper",
+      "status": "success",
+      "blockNumber": "88289845",
+      "gasUsed": "66357",
+      "polCost": "0.018758159476187481"
+    },
+    {
+      "txHash": "0x2991e5c11dd6ae26a107a7c6c01f19783d74425eb4e06016aacfdbe31449361b",
+      "role": "create HOU-LAA contest 35",
+      "status": "success",
+      "blockNumber": "88289735",
+      "gasUsed": "1381391",
+      "polCost": "0.387662020608048439"
+    },
+    {
+      "txHash": "0x61b910e5d363fbe1733e505a572876d7ead4b8b6677077ed5f41defc251f39d2",
+      "role": "controlled live partial fill",
+      "status": "success",
+      "blockNumber": "88290198",
+      "gasUsed": "419821",
+      "polCost": "0.116825608126546258"
+    },
+    {
+      "txHash": "0x7e41e0b2f765c5ca7e82ce15d1e11c194988c5f8a441cccbed79014ce979f28c",
+      "role": "bounded USDC fee approval for lazy/speculation seed",
+      "status": "success",
+      "blockNumber": "88289808",
+      "gasUsed": "66357",
+      "polCost": "0.01847470103555823"
+    },
+    {
+      "txHash": "0xde2881bfc91e6ad4b7c8ece80a028572fab99adf41eb72d8c04829e0531cef3f",
+      "role": "seed match for initial moneyline speculation 25",
+      "status": "success",
+      "blockNumber": "88289847",
+      "gasUsed": "659614",
+      "polCost": "0.183958269050017012"
+    },
+    {
+      "txHash": "0xfdb90f6f1cc78e53d40fe981cd4f07b39527b7eb2c1bd8095f083623aed38cc1",
+      "role": "bounded USDC fee approval for contest create",
+      "status": "success",
+      "blockNumber": "88289714",
+      "gasUsed": "48417",
+      "polCost": "0.01379885121335361"
+    }
+  ],
+  "totalPolCost": "0.73947760950971103",
+  "totalPolCostWei": "739477609509711030"
+}

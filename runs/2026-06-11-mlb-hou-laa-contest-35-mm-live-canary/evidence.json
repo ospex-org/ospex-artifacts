@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-06-11-mlb-hou-laa-contest-35-mm-live-canary",
+  "artifactType": "run",
+  "artifactPath": "runs/2026-06-11-mlb-hou-laa-contest-35-mm-live-canary/",
+  "artifactStatus": "live_window_green_postgame_deferred",
+  "status": "complete_verified_with_caveats",
+  "date": "2026-06-11",
+  "network": "polygon",
+  "chainId": 137,
+  "capturedAtUtc": "2026-06-11T01:31:45Z",
+  "artifactFiles": {
+    "evidence": "evidence.json",
+    "summary": "summary.md",
+    "scenarioMatrixJson": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "raw": "raw/",
+    "postgameContinuation": "raw/postgame-continuation.sanitized.json"
+  },
+  "verdict": {
+    "label": "GREEN-live-window / POSTGAME-DEFERRED",
+    "reason": "Tiny post-retirement live canary passed: HOU-LAA contest 35/speculation 25 was prepared under user green light, live MM posted only tiny short-expiry commitments on the intended target, one controlled partial fill succeeded, canonical fill source was own-state-stream, no canonical legacy fill source was observed, and public/API live exposure drained to zero after shutdown/expiry. Postgame score/settle/claim is deferred until real-world final score verification."
+  },
+  "caveats": [
+    "Contest 34 was skipped for live writes because first pitch had already passed; HOU-LAA was created/seeded to preserve the test window under explicit user green light.",
+    "The MM posted two tiny live commitments because quote-both-sides was enabled; only one was partially filled and the other was soft-cancelled/expired with public exposure zero.",
+    "Restart probe was a read-only/dry-run cold-start safety proof with fresh local state, not proof of process-level persisted cursor resume.",
+    "Postgame score/settle/claim is scheduled but not complete in this artifact."
+  ],
+  "release": {
+    "marketMakerRepo": "ospex-org/ospex-market-maker",
+    "marketMakerHeadSha": "eb06ce2dbd18ff5817e976bc5be53f6c332ee103",
+    "sdkDependencyObserved": "@ospex/sdk v0.6.2",
+    "sdkCliVersion": "0.6.2",
+    "nodeVersion": "v22.22.0",
+    "yarnVersion": "1.22.22"
+  },
+  "target": {
+    "contestId": "35",
+    "speculationId": "25",
+    "game": "Houston Astros @ Los Angeles Angels",
+    "awayTeam": "Houston Astros",
+    "homeTeam": "Los Angeles Angels",
+    "sport": "mlb",
+    "market": "moneyline",
+    "startTimeUtc": "2026-06-11T01:38:00+00:00",
+    "contestStatusAtLiveWindow": "verified",
+    "contestCreator": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+  },
+  "walletRoles": {
+    "setupSeedMaker": {
+      "label": "stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    "liveMaker": {
+      "label": "stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    },
+    "controlledTaker": {
+      "label": "flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    }
+  },
+  "budget": {
+    "spendCapUSDC": "5.00",
+    "newControlledTakerRiskUSDC": "0.049984",
+    "newControlledMakerFilledRiskUSDC": "0.056800",
+    "liveCommitmentMaxRiskEachUSDC": "0.100000",
+    "liveCommitmentCount": 2,
+    "totalOperatorGasPOL": "0.73947760950971103",
+    "withinCap": true,
+    "notes": [
+      "New controlled live fill was under 0.06 USDC risk on each side. Target setup included contest/spec seed writes because no safe late existing target was public."
+    ]
+  },
+  "coverage": {
+    "commandMatrix": "raw/command-matrix.sanitized.json",
+    "repoRuntime": "raw/release-runtime-matrix.sanitized.json",
+    "walletAuthBalance": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "targetDecision": "raw/target-decision.sanitized.json",
+    "liveCommitments": "raw/live-public-commitments-posted.sanitized.json",
+    "fill": "raw/live-fill.sanitized.json",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json",
+    "restartColdStart": "raw/restart-cold-start-probe.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json",
+    "postgameContinuation": "raw/postgame-continuation.sanitized.json"
+  },
+  "liveWindow": {
+    "commitmentsPosted": [
+      {
+        "commitmentHash": "0xa0b7040ceeb02af4f96c0a338d81f4db06a7072739b688604ef45d9a01c39d8a",
+        "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "contestId": "35",
+        "speculationId": "25",
+        "positionType": 0,
+        "side": "away/Houston Astros",
+        "oddsTick": 215,
+        "riskWei6": "100000",
+        "riskUSDC": "0.1",
+        "filledRiskWei6": "0",
+        "remainingRiskWei6": "100000",
+        "expiry": "2026-06-11T01:12:24+00:00",
+        "status": "open",
+        "bookVisible": true,
+        "createdAt": "2026-06-11T01:10:25.123658+00:00",
+        "signatureRedacted": true
+      },
+      {
+        "commitmentHash": "0xa614b53b44cf09e6b22634f684fa6e435f349070204e509bf83f7ab12786ca38",
+        "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "contestId": "35",
+        "speculationId": "25",
+        "positionType": 1,
+        "side": "home/Los Angeles Angels",
+        "oddsTick": 188,
+        "riskWei6": "100000",
+        "riskUSDC": "0.1",
+        "filledRiskWei6": "0",
+        "remainingRiskWei6": "100000",
+        "expiry": "2026-06-11T01:12:24+00:00",
+        "status": "open",
+        "bookVisible": true,
+        "createdAt": "2026-06-11T01:10:24.803775+00:00",
+        "signatureRedacted": true
+      }
+    ],
+    "controlledFill": {
+      "exit": 0,
+      "durationSec": 8.43,
+      "commitmentHash": "0xa614b53b44cf09e6b22634f684fa6e435f349070204e509bf83f7ab12786ca38",
+      "txHash": "0x61b910e5d363fbe1733e505a572876d7ead4b8b6677077ed5f41defc251f39d2",
+      "txStatus": "confirmed",
+      "blockNumber": "88290198",
+      "takerWallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "makerWallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "makerSide": {
+        "positionType": 1,
+        "resolvedLabel": "Los Angeles Angels",
+        "role": "home"
+      },
+      "takerSide": {
+        "positionType": 0,
+        "resolvedLabel": "Houston Astros",
+        "role": "away"
+      },
+      "makerRiskFilledUSDC": "0.056800",
+      "takerRiskUSDC": "0.049984",
+      "partialFill": true,
+      "expiry": "2026-06-11T01:12:24+00:00",
+      "speculationId": "25"
+    },
+    "ownStateSseAssertions": {
+      "sseOpenedAutomaticallyEvidence": "stream-health-hold entered and cleared in live mode without ownState.subscribe or top-level pollIntervalMs config; fill event was emitted from own-state-stream",
+      "fillSource": "own-state-stream",
+      "legacyCanonicalFillSources": [],
+      "auditEvents": [],
+      "eventCounts": {
+        "tick-start": 3,
+        "candidate": 1,
+        "stream-health-hold": 2,
+        "quote-intent": 1,
+        "risk-verdict": 1,
+        "submit": 2,
+        "quote-competitiveness": 2,
+        "fill": 1
+      }
+    },
+    "zeroExposure": {
+      "generatedAt": "2026-06-11T01:14:48Z",
+      "publicContest35VisibleCommitments": 0,
+      "publicContest35Spec25VisibleCommitments": 0,
+      "publicMakerVisibleCommitments": 0,
+      "mmSummaryExit": 0,
+      "mmStatusExit": 0,
+      "mmVisibleOpenCommitments": 0,
+      "mmSoftCancelledCommitments": 1,
+      "mmPartiallyFilledCommitments": 1,
+      "activeMakerPositionRiskWei6": "56800",
+      "activeMakerPositionRiskUSDC": "0.0568",
+      "orphanProcessCount": 0,
+      "note": "Public/API live commitment exposure is zero; the filled maker position remains active until postgame settlement/claim."
+    },
+    "restartColdStart": {
+      "generatedAt": "2026-06-11T01:19:47Z",
+      "doctorExit": 0,
+      "dryRunExit": 124,
+      "dryRunDurationSec": 75.03,
+      "summaryExit": 0,
+      "statusExit": 0,
+      "dryRunShadowOk": true,
+      "publicExposureAfterProbe": {
+        "contest35": {
+          "status": 200,
+          "count": 0,
+          "items": []
+        },
+        "maker": {
+          "status": 200,
+          "count": 0,
+          "items": []
+        },
+        "contest35spec25": {
+          "status": 200,
+          "count": 0,
+          "items": []
+        }
+      },
+      "orphanScan": [],
+      "interpretation": "Fresh-state cold-start probe was read-only/dry-run, booted without persisted cursor/state, selected only contest 35, and left public/API live exposure at zero. This is a cold-start safety/no-phantom-exposure proof, not a process-level cursor-resume proof."
+    }
+  },
+  "postgameContinuation": {
+    "status": "POSTGAME_DEFERRED",
+    "contestId": "35",
+    "speculationId": "25",
+    "teams": "Houston Astros @ Los Angeles Angels",
+    "matchTimeUtc": "2026-06-11T01:38:00+00:00",
+    "creatorOrOperatorWallet": "stage-maker-a / 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "liveMakerWallet": "stage-maker-b / 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "controlledFlowWallet": "flow-a / 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+    "seedMakerWallet": "stage-maker-a / 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "config": "[REDACTED_LOCAL_RUN_DIR]/ospex-mm-live-canary.yaml",
+    "telemetryDir": "[REDACTED_LOCAL_RUN_DIR]/telemetry-live",
+    "stateDir": "[REDACTED_LOCAL_RUN_DIR]/state-live",
+    "liveCommitmentHashes": [
+      "0xa614b53b44cf09e6b22634f684fa6e435f349070204e509bf83f7ab12786ca38",
+      "0xa0b7040ceeb02af4f96c0a338d81f4db06a7072739b688604ef45d9a01c39d8a"
+    ],
+    "filledCommitmentHashes": [
+      "0xa614b53b44cf09e6b22634f684fa6e435f349070204e509bf83f7ab12786ca38",
+      "0x15bbf544ee533534fe280070249da8bf88a7b0e5d3383cd2154d7780ec3eb929"
+    ],
+    "liveFillTx": "0x61b910e5d363fbe1733e505a572876d7ead4b8b6677077ed5f41defc251f39d2",
+    "expectedEarliestFinalScoreCheckUtc": "2026-06-11T06:00:00Z",
+    "cronJobId": "a17f517fd6c3",
+    "cronScheduleUtc": "2026-06-11T06:00:00Z",
+    "requirements": [
+      "verify real-world final score from external/current source",
+      "score contest 35 only after final is independently verified",
+      "wait for API/projection convergence",
+      "settle speculation/positions",
+      "claim winnings/no-op claim all for controlled wallets",
+      "final own-state/readiness/public exposure zero checks",
+      "update artifact with score/settle/claim txs and costs"
+    ]
+  },
+  "safety": {
+    "noSecretsExposed": true,
+    "rawSignaturesExcluded": true,
+    "rawSignedPayloadExcluded": true,
+    "localSecretPathsExcluded": true,
+    "rpcUrlsExcluded": true,
+    "rawMakerStateJsonExcluded": true,
+    "noUnintendedTargets": true,
+    "noLiveExposureRemains": true,
+    "noOrphanProcessRemains": true
+  }
+}
