@@ -12,4 +12,4 @@
 | own-state SSE canonical fill | `pass` | `raw/own-state-sse-summary.sanitized.json` | Telemetry recorded fill source own-state-stream and zero canonical legacy source events. |
 | expiry/shutdown zero public exposure | `pass` | `raw/zero-exposure.sanitized.json` | After shutdown and expiry grace, public/API commitments were zero; no orphan process remained. |
 | restart/cold-start safety | `pass_with_caveat` | `raw/restart-cold-start-probe.sanitized.json` | Read-only dry-run cold-start booted without persisted state/cursor and left public exposure zero; not a process-level cursor-resume proof. |
-| postgame lifecycle | `deferred` | `raw/postgame-continuation.sanitized.json` | Score/settle/claim deferred until final score. Continuation cron scheduled for 2026-06-11T06:00:00Z. |
+| postgame lifecycle | `pass` | `raw/postgame-continuation.sanitized.json` | External final score verified (Angels 3, Astros 2); contest scored, speculation settled home/lower, stage-maker-b and flow-a winners claimed, stage-maker-a no-op dry-run, final dry-runs/public exposure/process checks zero. |

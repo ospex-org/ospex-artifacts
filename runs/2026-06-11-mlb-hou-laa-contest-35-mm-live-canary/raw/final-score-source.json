@@ -1,0 +1,32 @@
+{
+  "abstractGameState": "Final",
+  "away": {
+    "isWinner": false,
+    "name": "Houston Astros",
+    "score": 2
+  },
+  "codedGameState": "F",
+  "fetchedAtUtc": "2026-06-11T06:18:55Z",
+  "gameDate": "2026-06-11T01:38:00Z",
+  "gamePk": 824022,
+  "home": {
+    "isWinner": true,
+    "name": "Los Angeles Angels",
+    "score": 3
+  },
+  "linescore": {
+    "currentInning": 10,
+    "currentInningOrdinal": "10th",
+    "isTopInning": false
+  },
+  "protocolOutcome": {
+    "lower": "home/Los Angeles Angels",
+    "market": "moneyline",
+    "upper": "away/Houston Astros",
+    "winSide": "home",
+    "winningPositionType": "lower"
+  },
+  "source": "MLB Stats API schedule",
+  "sourceUrl": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-06-10&hydrate=team,linescore",
+  "status": "Final"
+}

@@ -1,0 +1,206 @@
+{
+  "claimAllFinalDryRuns": [
+    {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "buckets": [],
+      "entries": 0,
+      "label": "stage-maker-b",
+      "ok": true
+    },
+    {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "buckets": [],
+      "entries": 0,
+      "label": "flow-a",
+      "ok": true
+    },
+    {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "buckets": [],
+      "entries": 0,
+      "label": "stage-maker-a",
+      "ok": true
+    }
+  ],
+  "claimAllLive": [
+    {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "effects": [
+        {
+          "ok": true,
+          "purpose": "settle-speculation",
+          "status": "confirmed",
+          "txHash": "0x9a9491db3315de1b3e2050c485503c4ae4731b6a4285b5a46d7b6c52b517fa89",
+          "type": "transaction"
+        },
+        {
+          "ok": true,
+          "purpose": "claim-position",
+          "status": "confirmed",
+          "txHash": "0x22ddc13d4cdcd7a0edd288fdf32ab9218d0cbbac998535934090221592dbbea4",
+          "type": "transaction"
+        }
+      ],
+      "entries": [
+        {
+          "bucket": "pendingSettle",
+          "description": "Los Angeles Angels moneyline \u2014 Won (\u2248 $0.11, needs settle)",
+          "payoutUSDC": 0.106784,
+          "payoutWei6": "106784",
+          "positionId": "25_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_1",
+          "speculationId": "25",
+          "steps": [
+            {
+              "name": "settleSpeculation",
+              "outcome": "sent",
+              "txHash": "0x9a9491db3315de1b3e2050c485503c4ae4731b6a4285b5a46d7b6c52b517fa89",
+              "winSide": "home"
+            },
+            {
+              "name": "claimPosition",
+              "outcome": "sent",
+              "payoutUSDC": 0.106784,
+              "payoutWei6": "106784",
+              "txHash": "0x22ddc13d4cdcd7a0edd288fdf32ab9218d0cbbac998535934090221592dbbea4"
+            }
+          ],
+          "success": true,
+          "txHashes": [
+            "0x9a9491db3315de1b3e2050c485503c4ae4731b6a4285b5a46d7b6c52b517fa89",
+            "0x22ddc13d4cdcd7a0edd288fdf32ab9218d0cbbac998535934090221592dbbea4"
+          ],
+          "winSide": "home"
+        }
+      ],
+      "label": "stage-maker-b",
+      "ok": true,
+      "totals": {
+        "alreadyClaimed": 0,
+        "claimed": 1,
+        "claimedFresh": 1,
+        "failed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutUSDC": 0.106784,
+        "totalPayoutWei6": "106784"
+      }
+    },
+    {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "effects": [
+        {
+          "ok": true,
+          "purpose": "claim-position",
+          "status": "confirmed",
+          "txHash": "0xcbd92cd4c1fe5b2412613be2333368090e2410a9fe794dacb303111e0fd38865",
+          "type": "transaction"
+        }
+      ],
+      "entries": [
+        {
+          "bucket": "claimable",
+          "description": "Los Angeles Angels moneyline \u2014 Won (\u2248 $0.02)",
+          "payoutUSDC": 0.0208,
+          "payoutWei6": "20800",
+          "positionId": "25_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+          "speculationId": "25",
+          "steps": [
+            {
+              "name": "claimPosition",
+              "outcome": "sent",
+              "payoutUSDC": 0.0208,
+              "payoutWei6": "20800",
+              "txHash": "0xcbd92cd4c1fe5b2412613be2333368090e2410a9fe794dacb303111e0fd38865"
+            }
+          ],
+          "success": true,
+          "txHashes": [
+            "0xcbd92cd4c1fe5b2412613be2333368090e2410a9fe794dacb303111e0fd38865"
+          ]
+        }
+      ],
+      "label": "flow-a",
+      "ok": true,
+      "totals": {
+        "alreadyClaimed": 0,
+        "claimed": 1,
+        "claimedFresh": 1,
+        "failed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "totalPayoutUSDC": 0.0208,
+        "totalPayoutWei6": "20800"
+      }
+    }
+  ],
+  "generatedAtUtc": "2026-06-11T06:23:31Z",
+  "positionsStatusFinal": [
+    {
+      "activeCount": 0,
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "claimableCount": 0,
+      "label": "stage-maker-b",
+      "ok": true,
+      "pendingSettleCount": 0,
+      "totals": {
+        "activeCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettleCount": 0,
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      }
+    },
+    {
+      "activeCount": 1,
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "claimableCount": 0,
+      "label": "flow-a",
+      "ok": true,
+      "pendingSettleCount": 0,
+      "totals": {
+        "activeCount": 1,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettleCount": 0,
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      }
+    },
+    {
+      "activeCount": 1,
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "claimableCount": 0,
+      "label": "stage-maker-a",
+      "ok": true,
+      "pendingSettleCount": 0,
+      "totals": {
+        "activeCount": 1,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettleCount": 0,
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      }
+    }
+  ],
+  "scoreCommand": {
+    "contestId": "35",
+    "effects": [
+      {
+        "blockNumber": "88301938",
+        "ok": true,
+        "purpose": "score-contest",
+        "status": "confirmed",
+        "txHash": "0xd2db66dcc8d8740ce933ef9704b3f7b7bded72caecfb538ca6a68177d71074be",
+        "type": "transaction"
+      }
+    ],
+    "ok": true,
+    "requestId": "0xecfcff0e9c4994864d88c53df1d3f8a3e5c4736fc8c17515f6e67346cdc821fc",
+    "signer": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "txHash": "0xd2db66dcc8d8740ce933ef9704b3f7b7bded72caecfb538ca6a68177d71074be",
+    "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+  }
+}

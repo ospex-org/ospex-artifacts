@@ -1,73 +1,73 @@
 {
-  "schemaVersion": 1,
   "artifactId": "2026-06-11-mlb-hou-laa-contest-35-mm-live-canary",
-  "generatedAt": "2026-06-11T01:31:45Z",
+  "generatedAt": "2026-06-11T06:23:31Z",
   "scenarios": [
     {
-      "scenario": "target preflight",
-      "status": "pass",
       "evidence": "raw/target-decision.sanitized.json",
-      "notes": "Contest 34 verified but already post-start; HOU-LAA target was created/seeded under user green light."
+      "notes": "Contest 34 verified but already post-start; HOU-LAA target was created/seeded under user green light.",
+      "scenario": "target preflight",
+      "status": "pass"
     },
     {
-      "scenario": "repo/runtime gates",
-      "status": "pass",
       "evidence": "raw/release-runtime-matrix.sanitized.json",
-      "notes": "Fresh clone main, install/build/smoke passed."
+      "notes": "Fresh clone main, install/build/smoke passed.",
+      "scenario": "repo/runtime gates",
+      "status": "pass"
     },
     {
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Strict non-interactive auth succeeded for setup, maker, and flow wallets after signer source resolution.",
       "scenario": "wallet/auth/balances",
-      "status": "pass",
-      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
-      "notes": "Strict non-interactive auth succeeded for setup, maker, and flow wallets after signer source resolution."
+      "status": "pass"
     },
     {
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Only bounded low-value allowances observed/created; no unlimited approvals.",
       "scenario": "bounded approvals",
-      "status": "pass",
-      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
-      "notes": "Only bounded low-value allowances observed/created; no unlimited approvals."
+      "status": "pass"
     },
     {
-      "scenario": "MM doctor/quote/dry-run loop",
-      "status": "pass",
       "evidence": "raw/mm-dryrun-summary.sanitized.json",
-      "notes": "Dry-run selected only contest 35 and produced intended quote intents with no writes."
+      "notes": "Dry-run selected only contest 35 and produced intended quote intents with no writes.",
+      "scenario": "MM doctor/quote/dry-run loop",
+      "status": "pass"
     },
     {
-      "scenario": "live commitments posted",
-      "status": "pass",
       "evidence": "raw/live-public-commitments-posted.sanitized.json",
-      "notes": "MM posted two tiny 0.100000 USDC live commitments on contest 35/speculation 25 only; both had short expiry."
+      "notes": "MM posted two tiny 0.100000 USDC live commitments on contest 35/speculation 25 only; both had short expiry.",
+      "scenario": "live commitments posted",
+      "status": "pass"
     },
     {
-      "scenario": "controlled partial fill",
-      "status": "pass",
       "evidence": "raw/live-fill.sanitized.json",
-      "notes": "One flow-a partial fill succeeded: taker risk 0.049984 USDC, maker filled risk 0.056800 USDC."
+      "notes": "One flow-a partial fill succeeded: taker risk 0.049984 USDC, maker filled risk 0.056800 USDC.",
+      "scenario": "controlled partial fill",
+      "status": "pass"
     },
     {
-      "scenario": "own-state SSE canonical fill",
-      "status": "pass",
       "evidence": "raw/own-state-sse-summary.sanitized.json",
-      "notes": "Telemetry recorded fill source own-state-stream and zero canonical legacy source events."
+      "notes": "Telemetry recorded fill source own-state-stream and zero canonical legacy source events.",
+      "scenario": "own-state SSE canonical fill",
+      "status": "pass"
     },
     {
-      "scenario": "expiry/shutdown zero public exposure",
-      "status": "pass",
       "evidence": "raw/zero-exposure.sanitized.json",
-      "notes": "After shutdown and expiry grace, public/API commitments were zero; no orphan process remained."
+      "notes": "After shutdown and expiry grace, public/API commitments were zero; no orphan process remained.",
+      "scenario": "expiry/shutdown zero public exposure",
+      "status": "pass"
     },
     {
-      "scenario": "restart/cold-start safety",
-      "status": "pass_with_caveat",
       "evidence": "raw/restart-cold-start-probe.sanitized.json",
-      "notes": "Read-only dry-run cold-start booted without persisted state/cursor and left public exposure zero; not a process-level cursor-resume proof."
+      "notes": "Read-only dry-run cold-start booted without persisted state/cursor and left public exposure zero; not a process-level cursor-resume proof.",
+      "scenario": "restart/cold-start safety",
+      "status": "pass_with_caveat"
     },
     {
-      "scenario": "postgame lifecycle",
-      "status": "deferred",
       "evidence": "raw/postgame-continuation.sanitized.json",
-      "notes": "Score/settle/claim deferred until final score. Continuation cron scheduled for 2026-06-11T06:00:00Z."
+      "notes": "External final score verified (Angels 3, Astros 2); contest scored, speculation settled home/lower, stage-maker-b and flow-a winners claimed, stage-maker-a no-op dry-run, final dry-runs/public exposure/process checks zero.",
+      "scenario": "postgame lifecycle",
+      "status": "pass"
     }
-  ]
+  ],
+  "schemaVersion": 1
 }
