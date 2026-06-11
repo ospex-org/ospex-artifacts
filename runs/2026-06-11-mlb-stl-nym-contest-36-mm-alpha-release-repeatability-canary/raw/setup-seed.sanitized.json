@@ -1,0 +1,49 @@
+{
+  "initialContestCreateAttempt": {
+    "exit": 1,
+    "ok": false,
+    "blocker": "TreasuryModule USDC allowance was 0.25 USDC but contest creation required 1.0 USDC; bounded approval followed."
+  },
+  "approvals": [
+    {
+      "purpose": "setup wallet TreasuryModule USDC approval for contest fee",
+      "amountUSDC": "1.000000",
+      "txHash": "0xf799f0cb58765d7bad0d7cd359351fac71b0b82ed631899b7663d3ebd2e655c7",
+      "exit": 0
+    },
+    {
+      "purpose": "setup wallet TreasuryModule USDC approval for seed/open fee",
+      "amountUSDC": "0.250000",
+      "txHash": "0x4a3e15e739542822fb4dc60ee13bf79e64e88c4819e287111a7900b09a334a89",
+      "exit": 0
+    },
+    {
+      "purpose": "flow wallet TreasuryModule USDC approval for seed/open fee",
+      "amountUSDC": "0.250000",
+      "txHash": "0x8f3ecc073b00d0773949c3968716b8b80b07bae49ce977514b526f9cbd29edf9",
+      "exit": 0
+    }
+  ],
+  "contestCreate": {
+    "exit": 0,
+    "txHash": "0xc43ecd8ab00283d998ce3821631e6829771f47c5141949bf2c32745b3988df0e",
+    "contestId": "36",
+    "ok": true
+  },
+  "seedCommitment": {
+    "exit": 0,
+    "commitmentHash": "0x0c320d55b5e67b0658ed68806b7697c404a77a26e03b258fac8fc645668dc354",
+    "makerSide": "away/St. Louis Cardinals",
+    "riskUSDC": "0.050000",
+    "counterpartyRiskUSDC": "0.063500",
+    "rawSignatureRedacted": true
+  },
+  "seedMatchOpenSpeculation": {
+    "exit": 0,
+    "txHash": "0x5190f1261623f6a9315e3de1796fe27e0bfe401f05993f7f8864b34769e55203",
+    "takerSide": "home/New York Mets",
+    "takerRiskUSDC": "0.063500",
+    "fillMakerRiskUSDC": "0.050000",
+    "speculationId": "26"
+  }
+}

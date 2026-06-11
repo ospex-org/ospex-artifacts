@@ -1,0 +1,67 @@
+{
+  "status": "POSTGAME_DEFERRED",
+  "reason": "MLB Stats API status was Pre-Game during live-window report; score/settle/claim cannot be executed until final.",
+  "currentMlbProbe": {
+    "source": "MLB Stats API live feed",
+    "sourceUrl": "https://statsapi.mlb.com/api/v1.1/game/823619/feed/live",
+    "fetchedDuringLiveWindowTailUtc": "2026-06-11T16:12:07Z",
+    "gamePk": 823619,
+    "awayTeam": "St. Louis Cardinals",
+    "homeTeam": "New York Mets",
+    "gameDateUtc": "2026-06-11T17:10:00Z",
+    "status": {
+      "abstractGameState": "Preview",
+      "codedGameState": "P",
+      "detailedState": "Pre-Game",
+      "statusCode": "P",
+      "startTimeTBD": false,
+      "abstractGameCode": "P"
+    },
+    "score": {
+      "awayRuns": 0,
+      "homeRuns": 0
+    }
+  },
+  "earliestFinalScoreCheck": {
+    "utc": "2026-06-11T20:45:00Z",
+    "central": "2026-06-11 15:45 CDT"
+  },
+  "scheduledContinuationJobs": [
+    {
+      "attempt": "1/4",
+      "jobId": "c1038df187fe",
+      "runAtUtc": "2026-06-11T20:45:00Z",
+      "runAtCentral": "2026-06-11 15:45 CDT"
+    },
+    {
+      "attempt": "2/4",
+      "jobId": "9130d0200f4e",
+      "runAtUtc": "2026-06-11T21:45:00Z",
+      "runAtCentral": "2026-06-11 16:45 CDT"
+    },
+    {
+      "attempt": "3/4",
+      "jobId": "f045214d464f",
+      "runAtUtc": "2026-06-11T23:15:00Z",
+      "runAtCentral": "2026-06-11 18:15 CDT"
+    },
+    {
+      "attempt": "4/4",
+      "jobId": "efbe97881f7d",
+      "runAtUtc": "2026-06-12T01:30:00Z",
+      "runAtCentral": "2026-06-11 20:30 CDT"
+    }
+  ],
+  "continuationPlan": [
+    "Independently verify final score from MLB Stats API for gamePk 823619.",
+    "Score contest 36 with the setup/scoring wallet if not already scored.",
+    "Wait for projection convergence to scored contest and settled/closed speculation.",
+    "Settle speculation 26 if not already settled.",
+    "Run claim-all dry-run for setup, maker, and flow wallets; execute only claimable actions; run final dry-runs again.",
+    "Verify public/API commitment exposure remains zero and no MM process remains.",
+    "Update this artifact from partial to complete_verified_with_caveats and validate artifact repo.",
+    "Remove later duplicate one-shot continuation jobs if manual or earlier cron completion succeeds."
+  ],
+  "privateRunDirRedacted": true,
+  "localSecretPathsExcluded": true
+}

@@ -1,0 +1,32 @@
+{
+  "exit": 0,
+  "ok": true,
+  "commitmentHash": "0xf2b961cc392b26dbf725247ad85e53de51438eb137b1b4dbbb2c1d942111bcdc",
+  "fillTxHash": "0x1b60890d18e1afba6433c47ebceeb93dac108bfddaac5cb6871b638565065eae",
+  "receiptStatus": "confirmed",
+  "partialFill": true,
+  "takerRiskUSDC": "0.049950",
+  "makerFilledRiskUSDC": "0.037000",
+  "makerSide": {
+    "role": "away",
+    "team": "St. Louis Cardinals",
+    "positionType": 0
+  },
+  "takerSide": {
+    "role": "home",
+    "team": "New York Mets",
+    "positionType": 1
+  },
+  "warnings": [
+    {
+      "code": "expires-soon",
+      "severity": "warning"
+    },
+    {
+      "code": "partial-fill",
+      "severity": "info"
+    }
+  ],
+  "rawSignatureRedacted": true,
+  "rawSignedPayloadRedacted": true
+}

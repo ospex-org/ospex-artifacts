@@ -1,0 +1,49 @@
+{
+  "runExit": 124,
+  "summaryExit": 0,
+  "postRestartCommitmentListExit": 0,
+  "summary": {
+    "ticks": 3,
+    "eventCounts": {
+      "tick-start": 3,
+      "candidate": 1,
+      "fair-value": 0,
+      "risk-verdict": 2,
+      "quote-intent": 2,
+      "quote-competitiveness": 4,
+      "competitiveness-unavailable": 0,
+      "submit": 0,
+      "would-submit": 2,
+      "soft-cancel": 0,
+      "would-soft-cancel": 0,
+      "replace": 0,
+      "would-replace": 0,
+      "onchain-cancel": 0,
+      "cancel-blocked-missing-payload": 0,
+      "nonce-floor-raise": 0,
+      "expire": 0,
+      "approval": 0,
+      "funding-hold": 0,
+      "fill": 0,
+      "position-transition": 0,
+      "settle": 0,
+      "claim": 0,
+      "degraded": 0,
+      "stream-health-degraded": 0,
+      "stream-would-hold": 0,
+      "stream-cold-restart": 0,
+      "stream-health-hold": 0,
+      "divergence": 0,
+      "unknown-own-fill": 0,
+      "owner-mapping-failed": 0,
+      "error": 0,
+      "kill": 1
+    },
+    "errors": {
+      "total": 0,
+      "byPhase": {}
+    }
+  },
+  "publicMakerVisibleCommitmentsAfterProbe": 0,
+  "interpretation": "Read-only dry-run cold-start probe with fresh state; bounded timeout exit 124 expected. It created no phantom public exposure and did not depend on persisted cursor state."
+}

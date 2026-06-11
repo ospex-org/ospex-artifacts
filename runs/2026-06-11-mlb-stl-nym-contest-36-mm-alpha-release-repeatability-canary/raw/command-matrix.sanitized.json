@@ -1,0 +1,130 @@
+{
+  "releaseGates": [
+    {
+      "command": "yarn install --frozen-lockfile",
+      "exit": 0,
+      "duration": "6s"
+    },
+    {
+      "command": "yarn build",
+      "exit": 0,
+      "duration": "9s"
+    },
+    {
+      "command": "yarn smoke",
+      "exit": 0,
+      "duration": "37s"
+    },
+    {
+      "command": "yarn typecheck",
+      "exit": 0,
+      "duration": "8s"
+    },
+    {
+      "command": "yarn lint",
+      "exit": 0,
+      "duration": "6s"
+    },
+    {
+      "command": "yarn test",
+      "exit": 0,
+      "duration": "12s"
+    }
+  ],
+  "targetPrep": [
+    {
+      "command": "ospex games list --sport mlb --json",
+      "exit": 0
+    },
+    {
+      "command": "ospex contests create ... --json",
+      "exit": 1,
+      "note": "blocked by bounded allowance; no write occurred"
+    },
+    {
+      "command": "ospex approvals setup --amount 1 USDC --json",
+      "exit": 0
+    },
+    {
+      "command": "ospex contests create ... --json",
+      "exit": 0
+    },
+    {
+      "command": "ospex commitments submit ... --json",
+      "exit": 0
+    },
+    {
+      "command": "ospex commitments match <seed-commitment> ... --json",
+      "exit": 0
+    }
+  ],
+  "mmDryRun": [
+    {
+      "command": "yarn -s mm doctor --config <canary-config.yaml> --address <maker> --json",
+      "exit": 0
+    },
+    {
+      "command": "yarn -s mm quote --config <canary-config.yaml> --dry-run 36 --json",
+      "exit": 0
+    },
+    {
+      "command": "timeout 120s yarn -s mm run --config <canary-config.yaml> --dry-run --address <maker> --ignore-missing-state",
+      "exit": 124,
+      "note": "timeout exit 124 is expected for bounded dry-run loop"
+    },
+    {
+      "command": "yarn -s mm summary --config <canary-config.yaml> --json",
+      "exit": 0
+    }
+  ],
+  "liveWindow": [
+    {
+      "command": "timeout/kill-file bounded yarn -s mm run --config <canary-config.yaml> --live --ignore-missing-state",
+      "exit": "not separately captured; telemetry kill-file recorded clean bounded stop"
+    },
+    {
+      "command": "ospex commitments match <live-commitment> ... --json",
+      "exit": 0
+    },
+    {
+      "command": "yarn -s mm summary --config <canary-config.yaml> --json",
+      "exit": 0
+    },
+    {
+      "command": "yarn -s mm status --config <canary-config.yaml> --address <maker> --json",
+      "exit": 0
+    }
+  ],
+  "restartColdStart": [
+    {
+      "command": "timeout 60s yarn -s mm run --config <restart-config.yaml> --dry-run --address <maker> --ignore-missing-state",
+      "exit": 124,
+      "note": "timeout exit 124 is expected for bounded read-only restart probe"
+    },
+    {
+      "command": "yarn -s mm summary --config <restart-config.yaml> --json",
+      "exit": 0
+    },
+    {
+      "command": "ospex commitments list --maker <maker> --contest 36 --json",
+      "exit": 0
+    }
+  ],
+  "finalExposureChecks": [
+    {
+      "command": "ospex commitments list --maker <maker> --contest 36 --json",
+      "exit": 0,
+      "visibleLiveCount": 0
+    },
+    {
+      "command": "ospex commitments list --contest 36 --speculation 26 --json",
+      "exit": 0,
+      "visibleLiveCount": 0
+    },
+    {
+      "command": "ps scan for MM processes",
+      "exit": 0,
+      "orphanProcessCount": 0
+    }
+  ]
+}

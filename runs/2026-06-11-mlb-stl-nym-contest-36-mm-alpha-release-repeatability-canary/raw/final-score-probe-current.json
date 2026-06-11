@@ -1,0 +1,21 @@
+{
+  "source": "MLB Stats API live feed",
+  "sourceUrl": "https://statsapi.mlb.com/api/v1.1/game/823619/feed/live",
+  "fetchedDuringLiveWindowTailUtc": "2026-06-11T16:12:07Z",
+  "gamePk": 823619,
+  "awayTeam": "St. Louis Cardinals",
+  "homeTeam": "New York Mets",
+  "gameDateUtc": "2026-06-11T17:10:00Z",
+  "status": {
+    "abstractGameState": "Preview",
+    "codedGameState": "P",
+    "detailedState": "Pre-Game",
+    "statusCode": "P",
+    "startTimeTBD": false,
+    "abstractGameCode": "P"
+  },
+  "score": {
+    "awayRuns": 0,
+    "homeRuns": 0
+  }
+}

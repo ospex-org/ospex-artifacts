@@ -1,13 +1,25 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-06-11T01:32:02Z",
+  "generatedAt": "2026-06-11T16:27:27Z",
   "repository": "ospex-org/ospex-artifacts",
   "archive": {
     "scope": "year",
     "year": 2026
   },
   "artifacts": [
+    {
+      "artifactId": "2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary",
+      "artifactType": "run",
+      "dataPath": "runs/2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary/evidence.json",
+      "date": "2026-06-11",
+      "network": "polygon",
+      "rawPath": "runs/2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary/raw/",
+      "release": "ospex-org/ospex-market-maker v0.1.0-alpha.1",
+      "status": "partial",
+      "summaryPath": "runs/2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary/summary.md",
+      "publishedAt": "2026-06-11T16:27:27Z"
+    },
     {
       "artifactId": "2026-06-11-mlb-hou-laa-contest-35-mm-live-canary",
       "artifactType": "run",

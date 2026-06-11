@@ -1,0 +1,60 @@
+{
+  "receipts": [
+    {
+      "label": "setup Treasury approval 1 USDC",
+      "txHash": "0xf799f0cb58765d7bad0d7cd359351fac71b0b82ed631899b7663d3ebd2e655c7",
+      "status": "0x1",
+      "blockNumber": "0x543bbb6",
+      "gasUsed": 48417,
+      "effectiveGasPriceWei": 280940126456,
+      "polCost": "0.013602278102620152"
+    },
+    {
+      "label": "contest create",
+      "txHash": "0xc43ecd8ab00283d998ce3821631e6829771f47c5141949bf2c32745b3988df0e",
+      "status": "0x1",
+      "blockNumber": "0x543bbce",
+      "gasUsed": 1381391,
+      "effectiveGasPriceWei": 281921455816,
+      "polCost": "0.389443761771120056"
+    },
+    {
+      "label": "setup Treasury approval 0.25 USDC for seed",
+      "txHash": "0x4a3e15e739542822fb4dc60ee13bf79e64e88c4819e287111a7900b09a334a89",
+      "status": "0x1",
+      "blockNumber": "0x543bbfa",
+      "gasUsed": 66357,
+      "effectiveGasPriceWei": 279382322186,
+      "polCost": "0.018538972753296402"
+    },
+    {
+      "label": "flow Treasury approval 0.25 USDC for seed",
+      "txHash": "0x8f3ecc073b00d0773949c3968716b8b80b07bae49ce977514b526f9cbd29edf9",
+      "status": "0x1",
+      "blockNumber": "0x543bc23",
+      "gasUsed": 66357,
+      "effectiveGasPriceWei": 281851191686,
+      "polCost": "0.018702799526707902"
+    },
+    {
+      "label": "seed match/open speculation",
+      "txHash": "0x5190f1261623f6a9315e3de1796fe27e0bfe401f05993f7f8864b34769e55203",
+      "status": "0x1",
+      "blockNumber": "0x543bc30",
+      "gasUsed": 655654,
+      "effectiveGasPriceWei": 287879313987,
+      "polCost": "0.188749223732832498"
+    },
+    {
+      "label": "controlled live fill",
+      "txHash": "0x1b60890d18e1afba6433c47ebceeb93dac108bfddaac5cb6871b638565065eae",
+      "status": "0x1",
+      "blockNumber": "0x543bd4a",
+      "gasUsed": 358095,
+      "effectiveGasPriceWei": 287228144147,
+      "polCost": "0.102854962278319965"
+    }
+  ],
+  "totalPolCost": "0.731891998164896975",
+  "totalUSDCEquivAt0.25": "0.18297299954122424375"
+}
