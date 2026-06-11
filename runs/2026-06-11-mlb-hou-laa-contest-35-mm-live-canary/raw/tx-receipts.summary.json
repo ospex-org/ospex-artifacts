@@ -1,0 +1,186 @@
+{
+  "classifiedTxs": [
+    {
+      "blockNumber": "88289845",
+      "gasUsed": "66357",
+      "polCost": "0.018758159476187481",
+      "role": "approve-usdc",
+      "status": "success",
+      "txHash": "0x05432b582110e65a5bb54e6232bee349f9b9a7fdf7b130b93436f19fb7a132f8"
+    },
+    {
+      "blockNumber": "88289735",
+      "gasUsed": "1381391",
+      "polCost": "0.387662020608048439",
+      "role": "create-contest",
+      "status": "success",
+      "txHash": "0x2991e5c11dd6ae26a107a7c6c01f19783d74425eb4e06016aacfdbe31449361b"
+    },
+    {
+      "blockNumber": "88290198",
+      "gasUsed": "419821",
+      "polCost": "0.116825608126546258",
+      "role": "match-commitment",
+      "status": "success",
+      "txHash": "0x61b910e5d363fbe1733e505a572876d7ead4b8b6677077ed5f41defc251f39d2"
+    },
+    {
+      "blockNumber": "88289808",
+      "gasUsed": "66357",
+      "polCost": "0.01847470103555823",
+      "role": "approve-usdc",
+      "status": "success",
+      "txHash": "0x7e41e0b2f765c5ca7e82ce15d1e11c194988c5f8a441cccbed79014ce979f28c"
+    },
+    {
+      "blockNumber": "88289847",
+      "gasUsed": "659614",
+      "polCost": "0.183958269050017012",
+      "role": "match-commitment",
+      "status": "success",
+      "txHash": "0xde2881bfc91e6ad4b7c8ece80a028572fab99adf41eb72d8c04829e0531cef3f"
+    },
+    {
+      "blockNumber": "88289714",
+      "gasUsed": "48417",
+      "polCost": "0.01379885121335361",
+      "role": "approve-usdc",
+      "status": "success",
+      "txHash": "0xfdb90f6f1cc78e53d40fe981cd4f07b39527b7eb2c1bd8095f083623aed38cc1"
+    },
+    {
+      "blockNumber": "88301938",
+      "effectiveGasPriceWei": "279166688513",
+      "from": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "gasUsed": "664329",
+      "polCost": "0.185458527013152777",
+      "polCostWei": "185458527013152777",
+      "role": "score contest 35 request (stage-maker-a)",
+      "status": "success",
+      "to": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+      "txHash": "0xd2db66dcc8d8740ce933ef9704b3f7b7bded72caecfb538ca6a68177d71074be"
+    },
+    {
+      "blockNumber": "88301946",
+      "effectiveGasPriceWei": "348600821563",
+      "from": "0xb593e5b30548026c7b9e9e602241fb0cbbff8154",
+      "gasUsed": "315946",
+      "polCost": "0.110139035169543598",
+      "polCostWei": "110139035169543598",
+      "role": "Chainlink Functions callback / CONTEST_SCORES_SET",
+      "status": "success",
+      "to": "0x71f707344a3fe10223c22d5929add95b3dfa007c",
+      "txHash": "0x9091ac23b31bd36f2457702b01d9329dc78f6d46fb41879e90922f820f5ff00c"
+    },
+    {
+      "blockNumber": "88302397",
+      "effectiveGasPriceWei": "281941351994",
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "gasUsed": "155619",
+      "polCost": "0.043875431255954286",
+      "polCostWei": "43875431255954286",
+      "role": "settle speculation 25 (stage-maker-b claim-all)",
+      "status": "success",
+      "to": "0xd757387893e779ac35451cea639a408a537b9a1b",
+      "txHash": "0x9a9491db3315de1b3e2050c485503c4ae4731b6a4285b5a46d7b6c52b517fa89"
+    },
+    {
+      "blockNumber": "88302399",
+      "effectiveGasPriceWei": "277849811059",
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "gasUsed": "127375",
+      "polCost": "0.035391119683640125",
+      "polCostWei": "35391119683640125",
+      "role": "claim stage-maker-b winning lower position",
+      "status": "success",
+      "to": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+      "txHash": "0x22ddc13d4cdcd7a0edd288fdf32ab9218d0cbbac998535934090221592dbbea4"
+    },
+    {
+      "blockNumber": "88302426",
+      "effectiveGasPriceWei": "277492574529",
+      "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "gasUsed": "127375",
+      "polCost": "0.035345616680631375",
+      "polCostWei": "35345616680631375",
+      "role": "claim flow-a winning lower seed position",
+      "status": "success",
+      "to": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+      "txHash": "0xcbd92cd4c1fe5b2412613be2333368090e2410a9fe794dacb303111e0fd38865"
+    }
+  ],
+  "generatedAtUtc": "2026-06-11T06:19:35Z",
+  "notes": [
+    "Callback receipt is included for lifecycle evidence; operator spend total includes only txs sent from controlled maker/taker/setup wallets."
+  ],
+  "postgameAllObservedPolCost": "0.410209729802922161",
+  "postgameAllObservedPolCostWei": "410209729802922161",
+  "postgameOperatorPolCost": "0.300070694633378563",
+  "postgameOperatorPolCostWei": "300070694633378563",
+  "postgameTxs": [
+    {
+      "blockNumber": "88301938",
+      "effectiveGasPriceWei": "279166688513",
+      "from": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "gasUsed": "664329",
+      "polCost": "0.185458527013152777",
+      "polCostWei": "185458527013152777",
+      "role": "score contest 35 request (stage-maker-a)",
+      "status": "success",
+      "to": "0x7e1397ed5b4c9f606dcf2eb0281485b2296e29bb",
+      "txHash": "0xd2db66dcc8d8740ce933ef9704b3f7b7bded72caecfb538ca6a68177d71074be"
+    },
+    {
+      "blockNumber": "88301946",
+      "effectiveGasPriceWei": "348600821563",
+      "from": "0xb593e5b30548026c7b9e9e602241fb0cbbff8154",
+      "gasUsed": "315946",
+      "polCost": "0.110139035169543598",
+      "polCostWei": "110139035169543598",
+      "role": "Chainlink Functions callback / CONTEST_SCORES_SET",
+      "status": "success",
+      "to": "0x71f707344a3fe10223c22d5929add95b3dfa007c",
+      "txHash": "0x9091ac23b31bd36f2457702b01d9329dc78f6d46fb41879e90922f820f5ff00c"
+    },
+    {
+      "blockNumber": "88302397",
+      "effectiveGasPriceWei": "281941351994",
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "gasUsed": "155619",
+      "polCost": "0.043875431255954286",
+      "polCostWei": "43875431255954286",
+      "role": "settle speculation 25 (stage-maker-b claim-all)",
+      "status": "success",
+      "to": "0xd757387893e779ac35451cea639a408a537b9a1b",
+      "txHash": "0x9a9491db3315de1b3e2050c485503c4ae4731b6a4285b5a46d7b6c52b517fa89"
+    },
+    {
+      "blockNumber": "88302399",
+      "effectiveGasPriceWei": "277849811059",
+      "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "gasUsed": "127375",
+      "polCost": "0.035391119683640125",
+      "polCostWei": "35391119683640125",
+      "role": "claim stage-maker-b winning lower position",
+      "status": "success",
+      "to": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+      "txHash": "0x22ddc13d4cdcd7a0edd288fdf32ab9218d0cbbac998535934090221592dbbea4"
+    },
+    {
+      "blockNumber": "88302426",
+      "effectiveGasPriceWei": "277492574529",
+      "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "gasUsed": "127375",
+      "polCost": "0.035345616680631375",
+      "polCostWei": "35345616680631375",
+      "role": "claim flow-a winning lower seed position",
+      "status": "success",
+      "to": "0x0dcd42f8609cd7884ddba3481b03a78dfc88366c",
+      "txHash": "0xcbd92cd4c1fe5b2412613be2333368090e2410a9fe794dacb303111e0fd38865"
+    }
+  ],
+  "prePostgameOperatorPolCost": "0.73947760950971103",
+  "prePostgameOperatorPolCostWei": "739477609509711030",
+  "totalOperatorPolCost": "1.039548304143089593",
+  "totalOperatorPolCostWei": "1039548304143089593"
+}

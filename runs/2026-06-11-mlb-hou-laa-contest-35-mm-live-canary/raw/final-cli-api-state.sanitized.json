@@ -1,0 +1,253 @@
+{
+  "cliContestShow": {
+    "awayScore": 2,
+    "awayTeam": "Houston Astros",
+    "contestId": "35",
+    "homeScore": 3,
+    "homeTeam": "Los Angeles Angels",
+    "ok": true,
+    "scoredAt": "2026-06-11T06:05:04+00:00",
+    "speculations": [
+      {
+        "orderbookCount": 0,
+        "speculationId": "25",
+        "speculationStatus": 1,
+        "type": "moneyline"
+      }
+    ],
+    "status": "scored"
+  },
+  "finalClaimAllDryRuns": [
+    {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "buckets": [],
+      "entries": 0,
+      "label": "stage-maker-b",
+      "ok": true
+    },
+    {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "buckets": [],
+      "entries": 0,
+      "label": "flow-a",
+      "ok": true
+    },
+    {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "buckets": [],
+      "entries": 0,
+      "label": "stage-maker-a",
+      "ok": true
+    }
+  ],
+  "generatedAtUtc": "2026-06-11T06:23:31Z",
+  "indexerProjection": [
+    {
+      "awayScore": 2,
+      "contestId": "35",
+      "homeScore": 3,
+      "scoredAt": "2026-06-11 06:05:04+00",
+      "status": "scored",
+      "type": "contest"
+    },
+    {
+      "settledAt": "2026-06-11 06:16:21+00",
+      "speculationId": "25",
+      "status": "closed",
+      "type": "speculation",
+      "winSide": "home"
+    },
+    {
+      "claimed": false,
+      "claimedAmountWei6": null,
+      "claimedAt": null,
+      "id": "207",
+      "positionType": "upper",
+      "profitWei6": "56800",
+      "riskWei6": "49984",
+      "type": "position",
+      "userAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    },
+    {
+      "claimed": true,
+      "claimedAmountWei6": "20800",
+      "claimedAt": "2026-06-11 06:17:04+00",
+      "id": "205",
+      "positionType": "lower",
+      "profitWei6": "10000",
+      "riskWei6": "10800",
+      "type": "position",
+      "userAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    },
+    {
+      "claimed": true,
+      "claimedAmountWei6": "106784",
+      "claimedAt": "2026-06-11 06:16:24+00",
+      "id": "206",
+      "positionType": "lower",
+      "profitWei6": "49984",
+      "riskWei6": "56800",
+      "type": "position",
+      "userAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    },
+    {
+      "claimed": false,
+      "claimedAmountWei6": null,
+      "claimedAt": null,
+      "id": "204",
+      "positionType": "upper",
+      "profitWei6": "10800",
+      "riskWei6": "10000",
+      "type": "position",
+      "userAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    {
+      "blockNumber": "88289847",
+      "commitmentHash": "0x15bbf544ee533534fe280070249da8bf88a7b0e5d3383cd2154d7780ec3eb929",
+      "id": "85",
+      "makerAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "makerPositionType": "upper",
+      "makerRiskWei6": "10000",
+      "oddsTick": 208,
+      "takerAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "takerPositionType": "lower",
+      "takerRiskWei6": "10800",
+      "txHash": "0xde2881bfc91e6ad4b7c8ece80a028572fab99adf41eb72d8c04829e0531cef3f",
+      "type": "fill"
+    },
+    {
+      "blockNumber": "88290198",
+      "commitmentHash": "0xa614b53b44cf09e6b22634f684fa6e435f349070204e509bf83f7ab12786ca38",
+      "id": "86",
+      "makerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "makerPositionType": "lower",
+      "makerRiskWei6": "56800",
+      "oddsTick": 188,
+      "takerAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "takerPositionType": "upper",
+      "takerRiskWei6": "49984",
+      "txHash": "0x61b910e5d363fbe1733e505a572876d7ead4b8b6677077ed5f41defc251f39d2",
+      "type": "fill"
+    },
+    {
+      "bookVisible": true,
+      "count": 1,
+      "status": "filled",
+      "type": "commitmentCount"
+    },
+    {
+      "bookVisible": false,
+      "count": 1,
+      "status": "open",
+      "type": "commitmentCount"
+    },
+    {
+      "bookVisible": true,
+      "count": 1,
+      "status": "partially_filled",
+      "type": "commitmentCount"
+    },
+    {
+      "count": 0,
+      "type": "visibleLiveCommitments"
+    },
+    {
+      "blockNumber": "88289735",
+      "entityId": "35",
+      "entityType": "contest",
+      "eventName": "CONTEST_CREATED",
+      "ingestedAt": "2026-06-11 01:00:03.156777+00",
+      "txHash": "0x2991e5c11dd6ae26a107a7c6c01f19783d74425eb4e06016aacfdbe31449361b",
+      "type": "event"
+    },
+    {
+      "blockNumber": "88289735",
+      "entityId": "35",
+      "entityType": "contest",
+      "eventName": "SCRIPT_APPROVAL_VERIFIED",
+      "ingestedAt": "2026-06-11 01:00:03.361083+00",
+      "txHash": "0x2991e5c11dd6ae26a107a7c6c01f19783d74425eb4e06016aacfdbe31449361b",
+      "type": "event"
+    },
+    {
+      "blockNumber": "88289735",
+      "entityId": "35",
+      "entityType": "contest",
+      "eventName": "SCRIPT_APPROVAL_VERIFIED",
+      "ingestedAt": "2026-06-11 01:00:03.405455+00",
+      "txHash": "0x2991e5c11dd6ae26a107a7c6c01f19783d74425eb4e06016aacfdbe31449361b",
+      "type": "event"
+    },
+    {
+      "blockNumber": "88289735",
+      "entityId": "35",
+      "entityType": "contest",
+      "eventName": "SCRIPT_APPROVAL_VERIFIED",
+      "ingestedAt": "2026-06-11 01:00:03.454678+00",
+      "txHash": "0x2991e5c11dd6ae26a107a7c6c01f19783d74425eb4e06016aacfdbe31449361b",
+      "type": "event"
+    },
+    {
+      "blockNumber": "88289743",
+      "entityId": "35",
+      "entityType": "contest",
+      "eventName": "CONTEST_VERIFIED",
+      "ingestedAt": "2026-06-11 01:00:18.740226+00",
+      "txHash": "0xb363f18b31acc1d89705005d383f6735e6463f7f095b6b6fb511575f430104cd",
+      "type": "event"
+    },
+    {
+      "blockNumber": "88289847",
+      "entityId": "25",
+      "entityType": "speculation",
+      "eventName": "SPECULATION_CREATED",
+      "ingestedAt": "2026-06-11 01:02:50.900103+00",
+      "txHash": "0xde2881bfc91e6ad4b7c8ece80a028572fab99adf41eb72d8c04829e0531cef3f",
+      "type": "event"
+    },
+    {
+      "blockNumber": "88301946",
+      "entityId": "35",
+      "entityType": "contest",
+      "eventName": "CONTEST_SCORES_SET",
+      "ingestedAt": "2026-06-11 06:05:07.819476+00",
+      "txHash": "0x9091ac23b31bd36f2457702b01d9329dc78f6d46fb41879e90922f820f5ff00c",
+      "type": "event"
+    },
+    {
+      "blockNumber": "88302397",
+      "entityId": "25",
+      "entityType": "speculation",
+      "eventName": "SPECULATION_SETTLED",
+      "ingestedAt": "2026-06-11 06:16:29.183176+00",
+      "txHash": "0x9a9491db3315de1b3e2050c485503c4ae4731b6a4285b5a46d7b6c52b517fa89",
+      "type": "event"
+    },
+    {
+      "entityId": "25",
+      "entityType": "position",
+      "eventName": "POSITION_CLAIMED",
+      "txHash": "0x22ddc13d4cdcd7a0edd288fdf32ab9218d0cbbac998535934090221592dbbea4",
+      "type": "event"
+    },
+    {
+      "entityId": "25",
+      "entityType": "position",
+      "eventName": "POSITION_CLAIMED",
+      "txHash": "0xcbd92cd4c1fe5b2412613be2333368090e2410a9fe794dacb303111e0fd38865",
+      "type": "event"
+    }
+  ],
+  "orphanProcessScan": {
+    "generatedAtUtc": "2026-06-11T06:18:23Z",
+    "matches": [],
+    "orphanProcessCount": 0
+  },
+  "publicExposure": {
+    "contestOrderbookCounts": [
+      0
+    ],
+    "indexerVisibleLiveCommitments": 0,
+    "orphanProcessCount": 0
+  }
+}

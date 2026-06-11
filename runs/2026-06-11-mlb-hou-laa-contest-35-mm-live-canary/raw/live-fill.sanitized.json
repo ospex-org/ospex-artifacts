@@ -1,0 +1,338 @@
+{
+  "exit": 0,
+  "durationSec": 8.43,
+  "result": {
+    "schemaVersion": 2,
+    "ok": true,
+    "action": "commitments.match",
+    "stage": "execute",
+    "network": "polygon",
+    "chainId": 137,
+    "generatedAt": "2026-06-11T01:11:23.119Z",
+    "cliVersion": "0.6.2",
+    "sdkVersion": "0.6.2",
+    "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+    "walletRole": "signer",
+    "signer": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+    "requiresSignature": "[REDACTED]",
+    "signatureRedacted": true,
+    "requiresTransaction": false,
+    "approvalRequirements": [],
+    "estimatedCosts": null,
+    "risk": {
+      "wei6": "49984",
+      "usdc": "0.049984"
+    },
+    "payout": {
+      "profit": {
+        "wei6": "56800",
+        "usdc": "0.056800"
+      },
+      "totalReturn": {
+        "wei6": "106784",
+        "usdc": "0.106784"
+      }
+    },
+    "contest": {
+      "contestId": "35",
+      "label": "Houston Astros @ Los Angeles Angels, 2026-06-11 \u2014 MLB",
+      "awayTeam": "Houston Astros",
+      "homeTeam": "Los Angeles Angels",
+      "awayTeamId": "84718555-3735-403f-92ad-702a8636ec2d",
+      "homeTeamId": "5f69b6e1-b63f-41bd-8e90-ca6695dd8772",
+      "sport": "mlb",
+      "matchTime": "2026-06-11T01:38:00+00:00"
+    },
+    "speculation": {
+      "mode": "existing",
+      "speculationId": "25",
+      "creationFee": {
+        "applies": false,
+        "condition": "never",
+        "totalFeeWei6": "0",
+        "totalFeeUSDC": "0.000000",
+        "takerShareWei6": "0",
+        "takerShareUSDC": "0.000000",
+        "makerShareWei6": "0",
+        "makerShareUSDC": "0.000000",
+        "viewerShareWei6": "0",
+        "viewerShareUSDC": "0.000000",
+        "spender": null,
+        "spenderLabel": null,
+        "approvalPurpose": null,
+        "approvalNeeded": false,
+        "note": "Speculation #25 already exists \u2014 no creation fee on this match."
+      }
+    },
+    "commitment": {
+      "commitmentHash": "0xa614b53b44cf09e6b22634f684fa6e435f349070204e509bf83f7ab12786ca38",
+      "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "contestId": "35",
+      "scorer": "0xd846b7fdbd8c9f67d1580b2c6a8bd7fdcb15390b",
+      "lineTicks": 0,
+      "positionType": 1,
+      "oddsTick": 188,
+      "marketType": "moneyline",
+      "riskAmount": "100000",
+      "filledRiskAmount": "0",
+      "remainingRiskAmount": "100000",
+      "nonce": "1781140224",
+      "expiry": "2026-06-11T01:12:24+00:00",
+      "speculationKey": "0xfcdc4e35b17147c499faa7d33cd56265ed307389b6d72ae4d4445dc1447e69b0",
+      "signature": "[REDACTED]",
+      "signatureRedacted": true,
+      "status": "open",
+      "storedStatus": "open",
+      "source": "agent",
+      "network": "polygon",
+      "nonceInvalidated": false,
+      "createdAt": "2026-06-11T01:10:24.803775+00:00",
+      "visibility": "visible",
+      "redacted": false,
+      "isLive": true
+    },
+    "sideSummary": "Houston Astros",
+    "warnings": [
+      {
+        "code": "expires-soon",
+        "message": "Commitment expires soon (within the 5-minute window).",
+        "severity": "warning"
+      },
+      {
+        "code": "partial-fill",
+        "message": "Taker risk is less than the maker remaining capacity \u2014 this will be a partial fill.",
+        "severity": "info"
+      }
+    ],
+    "errors": [],
+    "effects": [
+      {
+        "type": "transaction",
+        "purpose": "match-commitment",
+        "ok": true,
+        "txHash": "0x61b910e5d363fbe1733e505a572876d7ead4b8b6677077ed5f41defc251f39d2",
+        "blockNumber": "88290198",
+        "status": "confirmed"
+      }
+    ],
+    "nextCommands": [
+      {
+        "id": "verify-commitment",
+        "description": "Verify the commitment on-chain by looking up the hash.",
+        "suggestedFor": "verify",
+        "command": "ospex commitments show 0xa614b53b44cf09e6b22634f684fa6e435f349070204e509bf83f7ab12786ca38 --json",
+        "argv": [
+          "commitments",
+          "show",
+          "0xa614b53b44cf09e6b22634f684fa6e435f349070204e509bf83f7ab12786ca38",
+          "--json"
+        ],
+        "safeToAutoRun": true
+      }
+    ],
+    "payload": {
+      "preview": {
+        "commitment": {
+          "commitmentHash": "0xa614b53b44cf09e6b22634f684fa6e435f349070204e509bf83f7ab12786ca38",
+          "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+          "contestId": "35",
+          "scorer": "0xd846b7fdbd8c9f67d1580b2c6a8bd7fdcb15390b",
+          "lineTicks": 0,
+          "positionType": 1,
+          "oddsTick": 188,
+          "marketType": "moneyline",
+          "riskAmount": "100000",
+          "filledRiskAmount": "0",
+          "remainingRiskAmount": "100000",
+          "nonce": "1781140224",
+          "expiry": "2026-06-11T01:12:24+00:00",
+          "speculationKey": "0xfcdc4e35b17147c499faa7d33cd56265ed307389b6d72ae4d4445dc1447e69b0",
+          "signature": "[REDACTED]",
+          "signatureRedacted": true,
+          "status": "open",
+          "storedStatus": "open",
+          "source": "agent",
+          "network": "polygon",
+          "nonceInvalidated": false,
+          "createdAt": "2026-06-11T01:10:24.803775+00:00",
+          "visibility": "visible",
+          "redacted": false,
+          "isLive": true
+        },
+        "chainId": 137,
+        "verifyingContract": "0x1B93579B044f0eE3c4C8a9F479A323DeF7770712",
+        "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "taker": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "selfMatch": false,
+        "contest": {
+          "contestId": "35",
+          "label": "Houston Astros @ Los Angeles Angels, 2026-06-11 \u2014 MLB",
+          "awayTeam": "Houston Astros",
+          "homeTeam": "Los Angeles Angels",
+          "awayTeamId": "84718555-3735-403f-92ad-702a8636ec2d",
+          "homeTeamId": "5f69b6e1-b63f-41bd-8e90-ca6695dd8772",
+          "sport": "mlb",
+          "matchTime": "2026-06-11T01:38:00+00:00"
+        },
+        "market": {
+          "type": "moneyline",
+          "lineTicks": 0,
+          "makerLineDisplay": null,
+          "takerLineDisplay": null
+        },
+        "makerSide": {
+          "positionType": 1,
+          "resolvedLabel": "Los Angeles Angels",
+          "role": "home"
+        },
+        "takerSide": {
+          "positionType": 0,
+          "resolvedLabel": "Houston Astros",
+          "role": "away"
+        },
+        "odds": {
+          "oddsTick": 188,
+          "makerDecimal": "1.88",
+          "makerAmerican": "-114",
+          "takerOddsTick": 214,
+          "takerDecimal": "2.14",
+          "takerAmerican": "+114"
+        },
+        "economics": {
+          "oddsTick": 188,
+          "remainingMakerRiskWei6": "100000",
+          "remainingMakerRiskUSDC": "0.100000",
+          "takerDesiredRiskWei6": "50000",
+          "takerDesiredRiskUSDC": "0.050000",
+          "fillMakerRiskWei6": "56800",
+          "fillMakerRiskUSDC": "0.056800",
+          "takerRiskWei6": "49984",
+          "takerRiskUSDC": "0.049984",
+          "takerProfitOnWinUSDC": "0.056800",
+          "takerReturnOnWinUSDC": "0.106784"
+        },
+        "expiry": {
+          "unixSec": "1781140344",
+          "iso": "2026-06-11T01:12:24.000Z",
+          "expired": false,
+          "expiresSoonMinutes": 1
+        },
+        "speculation": {
+          "mode": "existing",
+          "speculationId": "25",
+          "speculationKey": "0xfcdc4e35b17147c499faa7d33cd56265ed307389b6d72ae4d4445dc1447e69b0",
+          "creationFee": {
+            "applies": false,
+            "condition": "never",
+            "totalFeeWei6": "0",
+            "totalFeeUSDC": "0.000000",
+            "takerShareWei6": "0",
+            "takerShareUSDC": "0.000000",
+            "makerShareWei6": "0",
+            "makerShareUSDC": "0.000000",
+            "viewerShareWei6": "0",
+            "viewerShareUSDC": "0.000000",
+            "spender": null,
+            "spenderLabel": null,
+            "approvalPurpose": null,
+            "approvalNeeded": false,
+            "note": "Speculation #25 already exists \u2014 no creation fee on this match."
+          }
+        },
+        "approvals": [
+          {
+            "token": "USDC",
+            "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c",
+            "required": "49984",
+            "current": "1361304",
+            "needsApproval": false,
+            "purpose": "commitment-risk"
+          }
+        ],
+        "nonceInvalidated": false,
+        "isLive": true,
+        "warnings": [
+          "expires-soon",
+          "partial-fill"
+        ],
+        "you": {
+          "role": "taker",
+          "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+          "backing": "Houston Astros",
+          "odds": {
+            "decimal": "2.14",
+            "american": "+114",
+            "oddsTick": 214
+          },
+          "risk": {
+            "wei6": "49984",
+            "usdc": "0.049984"
+          },
+          "profit": {
+            "wei6": "56800",
+            "usdc": "0.056800"
+          },
+          "totalReturn": {
+            "wei6": "106784",
+            "usdc": "0.106784"
+          }
+        },
+        "counterparty": {
+          "role": "maker",
+          "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+          "backing": "Los Angeles Angels",
+          "odds": {
+            "decimal": "1.88",
+            "american": "-114",
+            "oddsTick": 188
+          },
+          "risk": {
+            "wei6": "56800",
+            "usdc": "0.056800"
+          },
+          "profit": {
+            "wei6": "49984",
+            "usdc": "0.049984"
+          },
+          "totalReturn": {
+            "wei6": "106784",
+            "usdc": "0.106784"
+          }
+        },
+        "outcomes": [
+          {
+            "condition": "Houston Astros wins",
+            "result": "win",
+            "payoutUSDC": "0.056800"
+          },
+          {
+            "condition": "Los Angeles Angels wins",
+            "result": "lose",
+            "payoutUSDC": "-0.049984"
+          }
+        ],
+        "tradeAction": "trade-only"
+      },
+      "result": {
+        "txHash": "0x61b910e5d363fbe1733e505a572876d7ead4b8b6677077ed5f41defc251f39d2",
+        "status": "success",
+        "blockNumber": "88290198",
+        "takerRiskWei6": "49984",
+        "fillMakerRiskWei6": "56800"
+      },
+      "fillability": {
+        "commitmentHash": "0xa614b53b44cf09e6b22634f684fa6e435f349070204e509bf83f7ab12786ca38",
+        "fillableNow": true,
+        "outcome": "fillable",
+        "advisory": true,
+        "reasons": [],
+        "checkedAtBlock": "88290195",
+        "fill": {
+          "makerRiskWei6": "56800",
+          "takerRiskWei6": "49984",
+          "selfMatch": false
+        }
+      }
+    }
+  }
+}

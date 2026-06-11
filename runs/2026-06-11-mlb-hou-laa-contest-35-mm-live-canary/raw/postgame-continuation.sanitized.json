@@ -1,0 +1,102 @@
+{
+  "claims": [
+    {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "label": "stage-maker-b",
+      "payoutUSDC": 0.106784,
+      "payoutWei6": "106784",
+      "txHash": "0x22ddc13d4cdcd7a0edd288fdf32ab9218d0cbbac998535934090221592dbbea4"
+    },
+    {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "label": "flow-a",
+      "payoutUSDC": 0.0208,
+      "payoutWei6": "20800",
+      "txHash": "0xcbd92cd4c1fe5b2412613be2333368090e2410a9fe794dacb303111e0fd38865",
+      "provenance": {
+        "source": "target setup seed fill",
+        "position": "winning home/lower Los Angeles Angels seed-taker position",
+        "seedFillTx": "0xde2881bfc91e6ad4b7c8ece80a028572fab99adf41eb72d8c04829e0531cef3f",
+        "seedCommitmentHash": "0x15bbf544ee533534fe280070249da8bf88a7b0e5d3383cd2154d7780ec3eb929",
+        "seedMaker": "stage-maker-a / 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "seedMakerSide": "upper/away Houston Astros at +108",
+        "taker": "flow-a / 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "takerSide": "lower/home Los Angeles Angels",
+        "whyFlowAClaimed": "Angels won 3-2, so flow-a claimed the target-setup lower/home seed-taker position; flow-a's later live-fill away/Astros position lost and is not the source of this payout."
+      }
+    },
+    {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "label": "stage-maker-a",
+      "noOpReason": "no winning/claimable position after final dry-run",
+      "txHash": null
+    }
+  ],
+  "completedAtUtc": "2026-06-11T06:23:31Z",
+  "contestId": "35",
+  "costs": {
+    "note": "Callback receipt gas is lifecycle evidence; controlled-operator spend total includes only transactions sent from controlled wallets.",
+    "postgameOperatorGasPOL": "0.300070694633378563",
+    "postgameOperatorGasUSDCAtReportPrice": "0.075018",
+    "reportingPOLUSDCPrice": "0.25",
+    "scoreCallbackObservedGasPOL": "0.110139035169543598",
+    "totalOperatorGasPOL": "1.039548304143089593",
+    "totalOperatorGasUSDCAtReportPrice": "0.259887"
+  },
+  "externalFinalScore": {
+    "awayScore": 2,
+    "awayTeam": "Houston Astros",
+    "fetchedAtUtc": "2026-06-11T06:18:55Z",
+    "gamePk": 824022,
+    "homeScore": 3,
+    "homeTeam": "Los Angeles Angels",
+    "source": "MLB Stats API schedule",
+    "sourceUrl": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-06-10&hydrate=team,linescore",
+    "status": "Final"
+  },
+  "finalChecks": {
+    "claimAllDryRunsEmpty": true,
+    "indexerVisibleLiveCommitments": 0,
+    "orphanProcessCount": 0,
+    "publicOrderbookCommitments": 0
+  },
+  "protocolOutcome": {
+    "lower": "home/Los Angeles Angels",
+    "market": "moneyline",
+    "upper": "away/Houston Astros",
+    "winSide": "home",
+    "winningPositionType": "lower"
+  },
+  "requirements": [
+    "external final score verified before scoring",
+    "contest scored by contest creator/operator wallet",
+    "projection converged to scored contest / closed speculation / claimed winners",
+    "settle/claim executed or no-op-proven for controlled wallets",
+    "final public/API live commitments zero",
+    "no orphan MM process remains"
+  ],
+  "safety": {
+    "localSecretPathsExcluded": true,
+    "rawMakerStateJsonExcluded": true,
+    "rawSignaturesExcluded": true,
+    "rawSignedPayloadExcluded": true,
+    "rpcUrlsExcluded": true,
+    "secretsExcluded": true
+  },
+  "score": {
+    "awayScore": 2,
+    "callbackScoresSetTx": "0x9091ac23b31bd36f2457702b01d9329dc78f6d46fb41879e90922f820f5ff00c",
+    "contestStatus": "scored",
+    "homeScore": 3,
+    "requestTx": "0xd2db66dcc8d8740ce933ef9704b3f7b7bded72caecfb538ca6a68177d71074be"
+  },
+  "settle": {
+    "speculationId": "25",
+    "status": "closed",
+    "txHash": "0x9a9491db3315de1b3e2050c485503c4ae4731b6a4285b5a46d7b6c52b517fa89",
+    "winSide": "home"
+  },
+  "speculationId": "25",
+  "status": "POSTGAME_COMPLETE",
+  "teams": "Houston Astros @ Los Angeles Angels"
+}

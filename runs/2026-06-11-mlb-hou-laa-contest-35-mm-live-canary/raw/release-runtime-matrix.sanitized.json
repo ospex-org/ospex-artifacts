@@ -1,0 +1,12 @@
+{
+  "marketMaker": {
+    "marketMakerHeadSha": "eb06ce2dbd18ff5817e976bc5be53f6c332ee103",
+    "nodeVersion": "v22.22.0",
+    "yarnVersion": "1.22.22",
+    "sdkDependency": "https://github.com/ospex-org/ospex-sdk/releases/download/v0.6.2/ospex-sdk-0.6.2.tgz",
+    "sdkDependencyObserved": "@ospex/sdk v0.6.2 tarball from GitHub release"
+  },
+  "sdkCliVersion": "0.6.2",
+  "network": "polygon",
+  "chainId": 137
+}
