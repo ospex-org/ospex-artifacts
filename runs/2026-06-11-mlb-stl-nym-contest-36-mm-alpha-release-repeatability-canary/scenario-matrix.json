@@ -19,7 +19,8 @@
     {
       "name": "dry-run quote and bounded dry-run loop",
       "status": "pass",
-      "evidence": "raw/mm-dryrun-summary.sanitized.json"
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "note": "One dry-run degraded telemetry event was recorded; errors total stayed 0, no live writes occurred, and would-submit remained 2."
     },
     {
       "name": "tagged MM live quote and controlled tiny fill",

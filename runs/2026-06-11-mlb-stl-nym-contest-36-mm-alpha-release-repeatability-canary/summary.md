@@ -15,6 +15,7 @@ Postgame continuation completed after MLB Stats API reported Final: New York Met
 - MLB gamePk: `823619`
 - Final score: St. Louis Cardinals `4`, New York Mets `5` (MLB Stats API Final)
 - Contest/speculation: `36` / `26`; market: moneyline
+- Team identity / market odds: New York Mets were the home favorite (`-133`, tick `175`); St. Louis Cardinals were the road underdog (`+133`, tick `233`).
 - Start: `2026-06-11T17:10:00Z` UTC / `2026-06-11 12:10 CDT`
 - Target setup/scoring wallet: ospex-stage-maker-a `0x5316fa54c170D1927F30d1a497aC9E85E3826A9B`
 - Live MM maker wallet: ospex-stage-maker-b `0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482`
@@ -63,14 +64,17 @@ Postgame continuation completed after MLB Stats API reported Final: New York Met
 - Total operator gas observed: `0.995266336341340767 POL` (≈ `0.24881658408533519175 USDC` at the run's reporting price `0.25 USDC/POL`).
 - New controlled live risk: `0.049950 USDC` taker / `0.037000 USDC` maker filled.
 - Postgame controlled taker claim returned `0.200450 USDC`.
+- Wallet USDC balance deltas in `evidence.json` are from the live-window ending snapshot as of `2026-06-11T15:59:15Z`, before the postgame claim return.
 - Within the `≤5.00 USDC` controlled tiny-risk/spend cap.
 
 ## Caveats
 
 - Initial contest create attempt intentionally stopped on insufficient bounded allowance before any write; bounded approval/retry succeeded.
 - Restart probe is read-only/dry-run with fresh state and expected timeout, not a process-level persisted cursor resume proof.
+- Dry-run summary recorded one degraded telemetry event during the bounded dry-run; errors stayed 0, no live writes occurred, and the quote-intent/would-submit path remained valid.
 - Postgame was completed by the continuation job rather than restarting the frozen live MM runtime; local maker-state remains private and is not published.
-- Coverage is one target/one maker/one controlled taker; not broad MVE/fishbowl coverage.
+- Score and settle projection gates each observed one stale pre-convergence read; both converged before the next lifecycle step.
+- Coverage is one target/one maker/one controlled taker; not broad multi-contest MM scale.
 
 ## Files
 

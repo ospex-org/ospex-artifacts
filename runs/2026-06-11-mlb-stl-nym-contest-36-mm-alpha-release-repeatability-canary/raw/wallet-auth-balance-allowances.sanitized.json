@@ -82,5 +82,7 @@
   "retiredWalletsNotUsed": [
     "mm-shakeout-maker-a",
     "mm-shakeout-flow-a"
-  ]
+  ],
+  "snapshotAsOfUtc": "2026-06-11T15:59:15Z",
+  "snapshotScope": "live-window ending wallet snapshot before postgame continuation/claim; the 0.200450 USDC postgame claim return is recorded separately."
 }

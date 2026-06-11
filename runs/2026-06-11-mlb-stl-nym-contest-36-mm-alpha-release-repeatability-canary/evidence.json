@@ -61,6 +61,27 @@
       "awayRuns": 4,
       "homeRuns": 5,
       "winner": "New York Mets"
+    },
+    "teamIdentity": {
+      "homeFavorite": {
+        "team": "New York Mets",
+        "role": "home",
+        "positionType": "lower",
+        "marketOddsAmerican": "-133",
+        "quoteTick": 175,
+        "identity": "favorite",
+        "protocolOutcome": "winner"
+      },
+      "awayUnderdog": {
+        "team": "St. Louis Cardinals",
+        "role": "away",
+        "positionType": "upper",
+        "marketOddsAmerican": "+133",
+        "quoteTick": 233,
+        "identity": "underdog",
+        "protocolOutcome": "loser"
+      },
+      "source": "raw/mm-dryrun-summary.sanitized.json quoteResult; restored reader-facing favorite/underdog identity convention"
     }
   },
   "walletRoles": {
@@ -315,7 +336,7 @@
       "interpretation": "Read-only dry-run cold-start probe with fresh state; bounded timeout exit 124 expected. It created no phantom public exposure and did not depend on persisted cursor state."
     },
     "zeroExposure": {
-      "checkedAtUtc": "2026-06-11T20:55:48Z",
+      "checkedAtUtc": "2026-06-11T16:11:33Z",
       "publicMakerVisibleCommitments": 0,
       "publicContestSpecVisibleCommitments": 0,
       "contestOrderbookCount": 0,
@@ -324,8 +345,7 @@
       "mmStatusActivePositions": 1,
       "orphanProcessCount": 0,
       "noUnintendedTargets": true,
-      "onlyFilledPositionExposureRemainsForPostgame": false,
-      "postgameClaimAllDryRunsEmpty": true
+      "onlyFilledPositionExposureRemainsForPostgame": true
     },
     "summary": {
       "ticks": 5,
@@ -394,7 +414,9 @@
     "note": "USDC balance deltas include contest/open fees plus tiny risk locks; postgame claim returned 0.200450 USDC to the controlled taker. POL gas includes approval/create/fill/score/settle/claim transactions.",
     "postgameGasPOL": "0.263374338176443792",
     "postgameGasUSDCAtReportPrice": "0.06584358454411094800",
-    "postgameClaimPayoutToFlowUSDC": "0.200450"
+    "postgameClaimPayoutToFlowUSDC": "0.200450",
+    "observedUSDCBalanceDeltasAsOfUtc": "2026-06-11T15:59:15Z",
+    "observedUSDCBalanceDeltasScope": "live-window ending wallet snapshot before postgame continuation/claim; the 0.200450 USDC postgame claim return is recorded separately."
   },
   "postgame": {
     "status": "COMPLETE_VERIFIED_WITH_CAVEATS",
@@ -649,7 +671,8 @@
     "caveats": [
       "Postgame was completed by this continuation job using the controlled setup/flow wallets, not by restarting the frozen live MM runtime.",
       "The MM local state file is intentionally not published; signer-free live position totals are zero after settlement/claim, while the frozen local status still records the pre-postgame maker position bucket.",
-      "Coverage remains one target / one maker / one controlled taker; not broad MVE/fishbowl coverage."
+      "Coverage remains one target / one maker / one controlled taker; not broad multi-contest MM scale.",
+      "Score and settle projection gates each observed one stale pre-convergence read; both converged before the next lifecycle step."
     ],
     "privateRunDirRedacted": true,
     "localSecretPathsExcluded": true
@@ -671,7 +694,9 @@
     "Initial contest create attempt intentionally stopped on insufficient bounded allowance before any write; bounded approval/retry succeeded.",
     "Restart probe is read-only/dry-run with fresh state and expected timeout, not a process-level persisted cursor resume proof.",
     "Postgame was completed by the continuation job rather than restarting the frozen live MM runtime; local maker-state remains private and is not published.",
-    "Coverage is one target/one maker/one controlled taker; not broad MVE/fishbowl coverage."
+    "Coverage is one target/one maker/one controlled taker; not broad multi-contest MM scale.",
+    "Score and settle projection gates each observed one stale pre-convergence read; both converged before the next lifecycle step.",
+    "Dry-run summary recorded one degraded telemetry event during the bounded dry-run; errors stayed 0, no live writes occurred, and the quote-intent/would-submit path remained valid."
   ],
   "verdict": {
     "label": "FULL GREEN / complete_verified_with_caveats",

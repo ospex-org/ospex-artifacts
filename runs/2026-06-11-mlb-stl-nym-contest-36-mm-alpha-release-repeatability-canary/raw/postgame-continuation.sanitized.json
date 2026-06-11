@@ -251,7 +251,8 @@
   "caveats": [
     "Postgame was completed by this continuation job using the controlled setup/flow wallets, not by restarting the frozen live MM runtime.",
     "The MM local state file is intentionally not published; signer-free live position totals are zero after settlement/claim, while the frozen local status still records the pre-postgame maker position bucket.",
-    "Coverage remains one target / one maker / one controlled taker; not broad MVE/fishbowl coverage."
+    "Coverage remains one target / one maker / one controlled taker; not broad multi-contest MM scale.",
+    "Score and settle projection gates each observed one stale pre-convergence read; both converged before the next lifecycle step."
   ],
   "privateRunDirRedacted": true,
   "localSecretPathsExcluded": true
