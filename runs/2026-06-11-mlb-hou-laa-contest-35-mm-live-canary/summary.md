@@ -16,6 +16,7 @@ Postgame is now complete: MLB Stats API verified a final score of Houston Astros
 - Start: `2026-06-11T01:38:00+00:00` UTC
 - Final score source: MLB Stats API schedule (`gamePk` `824022`), fetched `2026-06-11T06:18:55Z`; status `Final`
 - Protocol outcome: home/lower (Los Angeles Angels) wins
+- Team identity / market odds: Los Angeles Angels were the home favorite (`-114`); Houston Astros were the road underdog (`+114`).
 - Target setup/seed wallet: stage-maker-a `0x5316fa54c170d1927f30d1a497ac9e85e3826a9b`
 - Live MM maker wallet: stage-maker-b `0x4fa0a5aa3187517efc320aac7d33cd6115cc7482`
 - Controlled taker wallet: flow-a `0x16dc5d67d080a5521ef2c79680dbfc2abf724d30`
@@ -44,7 +45,7 @@ Postgame is now complete: MLB Stats API verified a final score of Houston Astros
 - Score callback / `CONTEST_SCORES_SET` tx: `0x9091ac23b31bd36f2457702b01d9329dc78f6d46fb41879e90922f820f5ff00c` (`0.110139035169543598 POL` observed callback gas; callback sender is not a controlled wallet).
 - Settle speculation tx: `0x9a9491db3315de1b3e2050c485503c4ae4731b6a4285b5a46d7b6c52b517fa89` (`0.043875431255954286 POL` gas), win side `home`.
 - Claim tx — stage-maker-b: `0x22ddc13d4cdcd7a0edd288fdf32ab9218d0cbbac998535934090221592dbbea4` (`0.035391119683640125 POL` gas), payout `106784` wei6 / `0.106784 USDC`.
-- Claim tx — flow-a: `0xcbd92cd4c1fe5b2412613be2333368090e2410a9fe794dacb303111e0fd38865` (`0.035345616680631375 POL` gas), payout `20800` wei6 / `0.020800 USDC`.
+- Claim tx — flow-a: `0xcbd92cd4c1fe5b2412613be2333368090e2410a9fe794dacb303111e0fd38865` (`0.035345616680631375 POL` gas), payout `20800` wei6 / `0.020800 USDC` from the winning home/lower Angels seed position created during target setup, not from the later losing away/Astros live fill.
 - stage-maker-a final claim-all dry-run: zero entries / no-op (upper/away seed maker position lost).
 - Final claim-all dry-runs: zero entries for stage-maker-b, flow-a, and stage-maker-a.
 

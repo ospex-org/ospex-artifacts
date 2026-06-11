@@ -58,7 +58,7 @@
     },
     {
       "evidence": "raw/restart-cold-start-probe.sanitized.json",
-      "notes": "Read-only dry-run cold-start booted without persisted state/cursor and left public exposure zero; not a process-level cursor-resume proof.",
+      "notes": "Read-only dry-run cold-start booted without persisted state/cursor and left public exposure zero; exit 124 was the expected 75s timeout signal, not a masked failure; not a process-level cursor-resume proof.",
       "scenario": "restart/cold-start safety",
       "status": "pass_with_caveat"
     },

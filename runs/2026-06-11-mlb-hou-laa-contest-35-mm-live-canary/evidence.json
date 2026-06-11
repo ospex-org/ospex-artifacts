@@ -140,7 +140,7 @@
       "dryRunExit": 124,
       "dryRunShadowOk": true,
       "generatedAt": "2026-06-11T01:19:47Z",
-      "interpretation": "Fresh-state cold-start probe was read-only/dry-run, booted without persisted cursor/state, selected only contest 35, and left public/API live exposure at zero. This is a cold-start safety/no-phantom-exposure proof, not a process-level cursor-resume proof.",
+      "interpretation": "Fresh-state cold-start probe was read-only/dry-run, booted without persisted cursor/state, selected only contest 35, and left public/API live exposure at zero. This is a cold-start safety/no-phantom-exposure proof, not a process-level cursor-resume proof. dryRunExit 124 is expected here: the 75s timeout wrapper sent the terminating signal at runDurationSec 75.03, and dryRunShadowOk=true plus summary/status exits 0 indicate no masked dry-run failure.",
       "orphanScan": [],
       "publicExposureAfterProbe": {
         "contest35": {
@@ -212,7 +212,18 @@
         "label": "flow-a",
         "payoutUSDC": 0.0208,
         "payoutWei6": "20800",
-        "txHash": "0xcbd92cd4c1fe5b2412613be2333368090e2410a9fe794dacb303111e0fd38865"
+        "txHash": "0xcbd92cd4c1fe5b2412613be2333368090e2410a9fe794dacb303111e0fd38865",
+        "provenance": {
+          "source": "target setup seed fill",
+          "position": "winning home/lower Los Angeles Angels seed-taker position",
+          "seedFillTx": "0xde2881bfc91e6ad4b7c8ece80a028572fab99adf41eb72d8c04829e0531cef3f",
+          "seedCommitmentHash": "0x15bbf544ee533534fe280070249da8bf88a7b0e5d3383cd2154d7780ec3eb929",
+          "seedMaker": "stage-maker-a / 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "seedMakerSide": "upper/away Houston Astros at +108",
+          "taker": "flow-a / 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+          "takerSide": "lower/home Los Angeles Angels",
+          "whyFlowAClaimed": "Angels won 3-2, so flow-a claimed the target-setup lower/home seed-taker position; flow-a's later live-fill away/Astros position lost and is not the source of this payout."
+        }
       }
     ],
     "publicLiveCommitments": 0,
@@ -235,7 +246,18 @@
         "label": "flow-a",
         "payoutUSDC": 0.0208,
         "payoutWei6": "20800",
-        "txHash": "0xcbd92cd4c1fe5b2412613be2333368090e2410a9fe794dacb303111e0fd38865"
+        "txHash": "0xcbd92cd4c1fe5b2412613be2333368090e2410a9fe794dacb303111e0fd38865",
+        "provenance": {
+          "source": "target setup seed fill",
+          "position": "winning home/lower Los Angeles Angels seed-taker position",
+          "seedFillTx": "0xde2881bfc91e6ad4b7c8ece80a028572fab99adf41eb72d8c04829e0531cef3f",
+          "seedCommitmentHash": "0x15bbf544ee533534fe280070249da8bf88a7b0e5d3383cd2154d7780ec3eb929",
+          "seedMaker": "stage-maker-a / 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "seedMakerSide": "upper/away Houston Astros at +108",
+          "taker": "flow-a / 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+          "takerSide": "lower/home Los Angeles Angels",
+          "whyFlowAClaimed": "Angels won 3-2, so flow-a claimed the target-setup lower/home seed-taker position; flow-a's later live-fill away/Astros position lost and is not the source of this payout."
+        }
       },
       {
         "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
@@ -349,7 +371,26 @@
     "sport": "mlb",
     "startTimeUtc": "2026-06-11T01:38:00+00:00",
     "winSide": "home",
-    "winningPositionType": "lower"
+    "winningPositionType": "lower",
+    "teamIdentity": {
+      "homeFavorite": {
+        "team": "Los Angeles Angels",
+        "role": "home",
+        "positionType": "lower",
+        "marketOddsAmerican": "-114",
+        "identity": "favorite",
+        "protocolOutcome": "winner"
+      },
+      "awayUnderdog": {
+        "team": "Houston Astros",
+        "role": "away",
+        "positionType": "upper",
+        "marketOddsAmerican": "+114",
+        "identity": "underdog",
+        "protocolOutcome": "loser"
+      },
+      "source": "raw target setup/orderbook evidence; restored reader-facing favorite/underdog identity convention"
+    }
   },
   "verdict": {
     "label": "FULL GREEN / COMPLETE",

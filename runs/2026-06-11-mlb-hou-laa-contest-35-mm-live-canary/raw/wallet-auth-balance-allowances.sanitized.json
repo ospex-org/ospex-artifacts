@@ -79,16 +79,6 @@
       "allowancePositionUSDC": "1.372104",
       "allowanceTreasuryUSDC": "0.000000",
       "allowanceOracleLINK": "0.285000"
-    },
-    {
-      "name": "fresh-user",
-      "address": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
-      "pol": "20.699651",
-      "usdc": "6.869976",
-      "link": "0.280000",
-      "allowancePositionUSDC": "1.580412",
-      "allowanceTreasuryUSDC": "0.350000",
-      "allowanceOracleLINK": "0.000000"
     }
   ],
   "endingBalancesAllowances": {
@@ -121,21 +111,6 @@
       "TreasuryModule_USDC_allowance": "0",
       "OracleModule_LINK_allowance_wei": "285000000000000000",
       "OracleModule_LINK_allowance": "0.285"
-    },
-    "fresh_user": {
-      "address": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
-      "POL_wei": "20699650616850867411",
-      "POL": "20.699650616850867411",
-      "USDC_wei": "6869976",
-      "USDC": "6.869976",
-      "LINK_wei": "280000000000000000",
-      "LINK": "0.28",
-      "PositionModule_USDC_allowance_wei": "1580412",
-      "PositionModule_USDC_allowance": "1.580412",
-      "TreasuryModule_USDC_allowance_wei": "350000",
-      "TreasuryModule_USDC_allowance": "0.35",
-      "OracleModule_LINK_allowance_wei": "0",
-      "OracleModule_LINK_allowance": "0"
     },
     "stage_maker_a": {
       "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
