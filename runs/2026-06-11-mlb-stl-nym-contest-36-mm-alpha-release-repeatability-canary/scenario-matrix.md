@@ -8,4 +8,4 @@
 - **pass** — own-state SSE canonical fill source (`raw/own-state-sse-summary.sanitized.json`)
 - **pass** — shutdown/expiry/zero public exposure (`raw/zero-exposure.sanitized.json`)
 - **pass_with_expected_timeout** — restart/cold-start read-only probe (`raw/restart-cold-start-probe.sanitized.json`)
-- **deferred** — postgame score/settle/claim (`raw/postgame-continuation.sanitized.json`)
+- **pass_with_caveats** — postgame score/settle/claim (`raw/postgame-continuation.sanitized.json`)

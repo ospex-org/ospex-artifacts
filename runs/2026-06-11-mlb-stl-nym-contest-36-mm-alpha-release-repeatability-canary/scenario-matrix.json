@@ -43,7 +43,7 @@
     },
     {
       "name": "postgame score/settle/claim",
-      "status": "deferred",
+      "status": "pass_with_caveats",
       "evidence": "raw/postgame-continuation.sanitized.json"
     }
   ]

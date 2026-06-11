@@ -1,21 +1,23 @@
 {
+  "awayTeam": "St. Louis Cardinals",
+  "fetchedAtUtc": "2026-06-11T20:53:07Z",
+  "gameDateUtc": "2026-06-11T17:10:00Z",
+  "gamePk": 823619,
+  "homeTeam": "New York Mets",
+  "officialDate": "2026-06-11",
+  "score": {
+    "awayRuns": 4,
+    "homeRuns": 5
+  },
   "source": "MLB Stats API live feed",
   "sourceUrl": "https://statsapi.mlb.com/api/v1.1/game/823619/feed/live",
-  "fetchedDuringLiveWindowTailUtc": "2026-06-11T16:12:07Z",
-  "gamePk": 823619,
-  "awayTeam": "St. Louis Cardinals",
-  "homeTeam": "New York Mets",
-  "gameDateUtc": "2026-06-11T17:10:00Z",
   "status": {
-    "abstractGameState": "Preview",
-    "codedGameState": "P",
-    "detailedState": "Pre-Game",
-    "statusCode": "P",
+    "abstractGameCode": "F",
+    "abstractGameState": "Final",
+    "codedGameState": "F",
+    "detailedState": "Final",
     "startTimeTBD": false,
-    "abstractGameCode": "P"
+    "statusCode": "F"
   },
-  "score": {
-    "awayRuns": 0,
-    "homeRuns": 0
-  }
+  "winner": "New York Mets"
 }

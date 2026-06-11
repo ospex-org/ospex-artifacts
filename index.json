@@ -1,7 +1,7 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-06-11T16:27:27Z",
+  "generatedAt": "2026-06-11T20:55:54Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
@@ -30,7 +30,7 @@
       "network": "polygon",
       "rawPath": "runs/2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary/raw/",
       "release": "ospex-org/ospex-market-maker v0.1.0-alpha.1",
-      "status": "partial",
+      "status": "complete_verified_with_caveats",
       "summaryPath": "runs/2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary/summary.md",
       "publishedAt": "2026-06-11T16:27:27Z"
     },

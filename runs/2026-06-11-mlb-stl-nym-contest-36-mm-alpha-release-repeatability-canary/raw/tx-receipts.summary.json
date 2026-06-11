@@ -53,8 +53,66 @@
       "gasUsed": 358095,
       "effectiveGasPriceWei": 287228144147,
       "polCost": "0.102854962278319965"
+    },
+    {
+      "label": "score contest",
+      "txHash": "0xb2dde952cc0223e5b2826ef0016ce1658b3ab0f87d40933820d6f3110c6f8173",
+      "status": "0x1",
+      "blockNumber": "0x543eb75",
+      "gasUsed": 664329,
+      "effectiveGasPriceWei": 277454713581,
+      "polCost": "0.184321212418552149"
+    },
+    {
+      "label": "settle speculation",
+      "txHash": "0x0894efa5130d64d9138f6f5ae16cf8327ed218ef19a133bd2a0aa99832c94048",
+      "status": "0x1",
+      "blockNumber": "0x543eba0",
+      "gasUsed": 155619,
+      "effectiveGasPriceWei": 279249899622,
+      "polCost": "0.043456590129276018"
+    },
+    {
+      "label": "flow claim",
+      "txHash": "0xb8f86df71715b3dc3639ce6c4aedc42bd93e31fdcf5f3f1f2b9f1c6aa574513c",
+      "status": "0x1",
+      "blockNumber": "0x543ebcd",
+      "gasUsed": 127375,
+      "effectiveGasPriceWei": 279462497575,
+      "polCost": "0.035596535628615625"
     }
   ],
-  "totalPolCost": "0.731891998164896975",
-  "totalUSDCEquivAt0.25": "0.18297299954122424375"
+  "postgameReceipts": [
+    {
+      "label": "score contest",
+      "txHash": "0xb2dde952cc0223e5b2826ef0016ce1658b3ab0f87d40933820d6f3110c6f8173",
+      "status": "0x1",
+      "blockNumber": "0x543eb75",
+      "gasUsed": 664329,
+      "effectiveGasPriceWei": 277454713581,
+      "polCost": "0.184321212418552149"
+    },
+    {
+      "label": "settle speculation",
+      "txHash": "0x0894efa5130d64d9138f6f5ae16cf8327ed218ef19a133bd2a0aa99832c94048",
+      "status": "0x1",
+      "blockNumber": "0x543eba0",
+      "gasUsed": 155619,
+      "effectiveGasPriceWei": 279249899622,
+      "polCost": "0.043456590129276018"
+    },
+    {
+      "label": "flow claim",
+      "txHash": "0xb8f86df71715b3dc3639ce6c4aedc42bd93e31fdcf5f3f1f2b9f1c6aa574513c",
+      "status": "0x1",
+      "blockNumber": "0x543ebcd",
+      "gasUsed": 127375,
+      "effectiveGasPriceWei": 279462497575,
+      "polCost": "0.035596535628615625"
+    }
+  ],
+  "liveWindowPolCost": "0.731891998164896975",
+  "postgamePolCost": "0.263374338176443792",
+  "totalPolCost": "0.995266336341340767",
+  "totalUSDCEquivAt0.25": "0.24881658408533519175"
 }

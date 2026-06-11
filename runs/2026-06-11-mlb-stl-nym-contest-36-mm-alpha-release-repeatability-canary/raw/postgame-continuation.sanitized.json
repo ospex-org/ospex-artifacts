@@ -1,66 +1,257 @@
 {
-  "status": "POSTGAME_DEFERRED",
-  "reason": "MLB Stats API status was Pre-Game during live-window report; score/settle/claim cannot be executed until final.",
-  "currentMlbProbe": {
+  "status": "COMPLETE_VERIFIED_WITH_CAVEATS",
+  "completedAtUtc": "2026-06-11T20:55:48Z",
+  "finalScore": {
+    "awayTeam": "St. Louis Cardinals",
+    "fetchedAtUtc": "2026-06-11T20:53:07Z",
+    "gameDateUtc": "2026-06-11T17:10:00Z",
+    "gamePk": 823619,
+    "homeTeam": "New York Mets",
+    "officialDate": "2026-06-11",
+    "score": {
+      "awayRuns": 4,
+      "homeRuns": 5
+    },
     "source": "MLB Stats API live feed",
     "sourceUrl": "https://statsapi.mlb.com/api/v1.1/game/823619/feed/live",
-    "fetchedDuringLiveWindowTailUtc": "2026-06-11T16:12:07Z",
-    "gamePk": 823619,
-    "awayTeam": "St. Louis Cardinals",
-    "homeTeam": "New York Mets",
-    "gameDateUtc": "2026-06-11T17:10:00Z",
     "status": {
-      "abstractGameState": "Preview",
-      "codedGameState": "P",
-      "detailedState": "Pre-Game",
-      "statusCode": "P",
+      "abstractGameCode": "F",
+      "abstractGameState": "Final",
+      "codedGameState": "F",
+      "detailedState": "Final",
       "startTimeTBD": false,
-      "abstractGameCode": "P"
+      "statusCode": "F"
     },
+    "winner": "New York Mets"
+  },
+  "preClaimDryRuns": {
+    "setup": {
+      "exit": 0,
+      "entries": 0,
+      "buckets": [],
+      "totalPayoutWei6": "0",
+      "totalPayoutUSDC": 0
+    },
+    "maker": {
+      "exit": 0,
+      "entries": 0,
+      "buckets": [],
+      "totalPayoutWei6": "0",
+      "totalPayoutUSDC": 0
+    },
+    "flow": {
+      "exit": 0,
+      "entries": 1,
+      "buckets": [
+        "claimable"
+      ],
+      "totalPayoutWei6": "200450",
+      "totalPayoutUSDC": 0.20045
+    }
+  },
+  "executedClaims": {
+    "setup": {
+      "executed": false,
+      "reason": "no claimable entries"
+    },
+    "maker": {
+      "executed": false,
+      "reason": "no claimable entries"
+    },
+    "flow": {
+      "executed": true,
+      "claimTxHash": "0xb8f86df71715b3dc3639ce6c4aedc42bd93e31fdcf5f3f1f2b9f1c6aa574513c",
+      "positionId": "26_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+      "payoutWei6": "200450",
+      "payoutUSDC": 0.20045
+    }
+  },
+  "transactions": {
+    "scoreContest": {
+      "txHash": "0xb2dde952cc0223e5b2826ef0016ce1658b3ab0f87d40933820d6f3110c6f8173",
+      "requestId": "0x3e4f341bfe504bc2da8e4d07aca5f1cdf4012863e79c7b93ff09576ca95e05bf",
+      "contestId": "36",
+      "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    "settleSpeculation": {
+      "txHash": "0x0894efa5130d64d9138f6f5ae16cf8327ed218ef19a133bd2a0aa99832c94048",
+      "speculationId": "26",
+      "winSide": "home",
+      "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    "claimPosition": {
+      "txHash": "0xb8f86df71715b3dc3639ce6c4aedc42bd93e31fdcf5f3f1f2b9f1c6aa574513c",
+      "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "payoutWei6": "200450",
+      "payoutUSDC": 0.20045
+    }
+  },
+  "projectionConvergence": {
+    "contestScorePoll": {
+      "attempts": 2,
+      "last": "2026-06-11T20:48:48Z\tscored\t4\t5\t2026-06-11 20:48:21+00"
+    },
+    "speculationSettlePoll": {
+      "attempts": 2,
+      "last": "2026-06-11T20:49:39Z\tclosed\thome\t2026-06-11 20:49:13+00"
+    },
+    "claimPoll": {
+      "attempts": 1,
+      "last": "2026-06-11T20:50:35Z\ttrue\t200450\t2026-06-11 20:50:21+00"
+    },
+    "finalProjectedState": "raw/postgame-projection-state.sanitized.json",
+    "contestStatus": "scored",
     "score": {
-      "awayRuns": 0,
-      "homeRuns": 0
+      "awayRuns": 4,
+      "homeRuns": 5
+    },
+    "speculationStatus": "closed",
+    "winSide": "home",
+    "claimedPositionCount": 1,
+    "expectation": "Each confirmed postgame write converges in projected API/Supabase state before the next lifecycle step proceeds.",
+    "gates": [
+      {
+        "name": "score contest 36 projection",
+        "afterWrite": "scoreContestFromOracle transaction confirmed",
+        "txConfirmed": true,
+        "waitTarget": "contests[contest_id=36]",
+        "expectedFinalState": [
+          "contest_status=scored",
+          "away_score=4",
+          "home_score=5"
+        ],
+        "observedFinalState": [
+          "contest_status=scored",
+          "away_score=4",
+          "home_score=5"
+        ],
+        "converged": true,
+        "staleReadObserved": true
+      },
+      {
+        "name": "settle speculation 26 projection",
+        "afterWrite": "settleSpeculation transaction confirmed",
+        "txConfirmed": true,
+        "waitTarget": "speculations[speculation_id=26]",
+        "expectedFinalState": [
+          "speculation_status=closed",
+          "win_side=home",
+          "settled_at populated"
+        ],
+        "observedFinalState": [
+          "speculation_status=closed",
+          "win_side=home",
+          "settled_at populated"
+        ],
+        "converged": true,
+        "staleReadObserved": true
+      },
+      {
+        "name": "claim flow lower position projection",
+        "afterWrite": "claimPosition transaction confirmed",
+        "txConfirmed": true,
+        "waitTarget": "positions[speculation_id=26, flow wallet, lower]",
+        "expectedFinalState": [
+          "claimed=true",
+          "claimed_amount=200450"
+        ],
+        "observedFinalState": [
+          "claimed=true",
+          "claimed_amount=200450"
+        ],
+        "converged": true,
+        "staleReadObserved": false
+      }
+    ]
+  },
+  "finalDryRuns": {
+    "setup": {
+      "exit": 0,
+      "entries": 0,
+      "buckets": [],
+      "totalPayoutWei6": "0",
+      "totalPayoutUSDC": 0
+    },
+    "maker": {
+      "exit": 0,
+      "entries": 0,
+      "buckets": [],
+      "totalPayoutWei6": "0",
+      "totalPayoutUSDC": 0
+    },
+    "flow": {
+      "exit": 0,
+      "entries": 0,
+      "buckets": [],
+      "totalPayoutWei6": "0",
+      "totalPayoutUSDC": 0
     }
   },
-  "earliestFinalScoreCheck": {
-    "utc": "2026-06-11T20:45:00Z",
-    "central": "2026-06-11 15:45 CDT"
+  "zeroExposureAndProcessChecks": {
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "contestStatus": "scored",
+    "score": {
+      "awayRuns": 4,
+      "homeRuns": 5
+    },
+    "mmStatusVisibleOpenCommitments": 0,
+    "mmStatusLivePositionTotals": {
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "claimablePayoutWei6": "0",
+      "pendingSettlePayoutWei6": "0"
+    },
+    "mmStatusPersistedStatePositionBuckets": {
+      "active": {
+        "count": 1,
+        "ownRiskWei6": "37000"
+      },
+      "pendingSettle": {
+        "count": 0,
+        "ownRiskWei6": "0"
+      },
+      "claimable": {
+        "count": 0,
+        "ownRiskWei6": "0"
+      },
+      "claimed": {
+        "count": 0,
+        "ownRiskWei6": "0"
+      },
+      "settledLost": {
+        "count": 0,
+        "ownRiskWei6": "0"
+      },
+      "void": {
+        "count": 0,
+        "ownRiskWei6": "0"
+      }
+    },
+    "orphanProcessCount": 0
   },
-  "scheduledContinuationJobs": [
-    {
-      "attempt": "1/4",
-      "jobId": "c1038df187fe",
-      "runAtUtc": "2026-06-11T20:45:00Z",
-      "runAtCentral": "2026-06-11 15:45 CDT"
-    },
-    {
-      "attempt": "2/4",
-      "jobId": "9130d0200f4e",
-      "runAtUtc": "2026-06-11T21:45:00Z",
-      "runAtCentral": "2026-06-11 16:45 CDT"
-    },
-    {
-      "attempt": "3/4",
-      "jobId": "f045214d464f",
-      "runAtUtc": "2026-06-11T23:15:00Z",
-      "runAtCentral": "2026-06-11 18:15 CDT"
-    },
-    {
-      "attempt": "4/4",
-      "jobId": "efbe97881f7d",
-      "runAtUtc": "2026-06-12T01:30:00Z",
-      "runAtCentral": "2026-06-11 20:30 CDT"
-    }
-  ],
-  "continuationPlan": [
-    "Independently verify final score from MLB Stats API for gamePk 823619.",
-    "Score contest 36 with the setup/scoring wallet if not already scored.",
-    "Wait for projection convergence to scored contest and settled/closed speculation.",
-    "Settle speculation 26 if not already settled.",
-    "Run claim-all dry-run for setup, maker, and flow wallets; execute only claimable actions; run final dry-runs again.",
-    "Verify public/API commitment exposure remains zero and no MM process remains.",
-    "Update this artifact from partial to complete_verified_with_caveats and validate artifact repo.",
-    "Remove later duplicate one-shot continuation jobs if manual or earlier cron completion succeeds."
+  "receipts": {
+    "postgamePolCost": "0.263374338176443792",
+    "postgameUSDCEquivAt0.25": "0.06584358454411094800",
+    "totalPolCostIncludingLiveWindow": "0.995266336341340767",
+    "totalUSDCEquivAt0.25": "0.24881658408533519175",
+    "summaryFile": "raw/tx-receipts.summary.json"
+  },
+  "safety": {
+    "noSecretsExposed": true,
+    "rawSignaturesExcluded": true,
+    "rawSignedPayloadExcluded": true,
+    "rawMakerStateJsonExcluded": true,
+    "rpcUrlsExcluded": true,
+    "localSecretPathsExcluded": true,
+    "publicRedArtifactNotPublished": true
+  },
+  "caveats": [
+    "Postgame was completed by this continuation job using the controlled setup/flow wallets, not by restarting the frozen live MM runtime.",
+    "The MM local state file is intentionally not published; signer-free live position totals are zero after settlement/claim, while the frozen local status still records the pre-postgame maker position bucket.",
+    "Coverage remains one target / one maker / one controlled taker; not broad MVE/fishbowl coverage."
   ],
   "privateRunDirRedacted": true,
   "localSecretPathsExcluded": true
