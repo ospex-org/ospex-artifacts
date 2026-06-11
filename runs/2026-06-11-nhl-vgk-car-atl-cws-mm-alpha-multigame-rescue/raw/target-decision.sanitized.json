@@ -1,0 +1,63 @@
+{
+  "generatedAtUtc": "2026-06-11T23:38:07Z",
+  "verdict": "GREEN-live-window / NHL+MLB-MULTIGAME-RESCUE-POSTGAME-DEFERRED",
+  "targets": {
+    "nhl": {
+      "game": "Vegas Golden Knights @ Carolina Hurricanes",
+      "sport": "nhl",
+      "ospexGameId": "12fcb924-bfbe-4fac-b447-af05b8c9c3e1",
+      "slug": "vgk-car-2026-06-12",
+      "nhlGameId": 2025030415,
+      "officialStartUtc": "2026-06-12T00:00:00Z",
+      "officialStartCentral": "2026-06-11 19:00 CDT",
+      "contestId": "39",
+      "speculationId": "28",
+      "statusAtPreflight": "upcoming",
+      "hasOdds": true,
+      "canCreateContestAtPreflight": true,
+      "officialStatusPostLiveProbe": {
+        "checkedAtUtc": "2026-06-11T23:35:39Z",
+        "source": "https://api-web.nhle.com/v1/gamecenter/2025030415/landing",
+        "gameId": 2025030415,
+        "gameDate": "2026-06-11",
+        "startTimeUTC": "2026-06-12T00:00:00Z",
+        "gameState": "PRE",
+        "gameScheduleState": "OK",
+        "awayTeam": "VGK",
+        "homeTeam": "CAR",
+        "periodDescriptor": null
+      }
+    },
+    "mlb": {
+      "game": "Atlanta Braves @ Chicago White Sox",
+      "sport": "mlb",
+      "mlbGamePk": 824589,
+      "officialStartUtc": "2026-06-11T23:40:00Z",
+      "officialStartCentral": "2026-06-11 18:40 CDT",
+      "contestId": "38",
+      "speculationId": "27",
+      "statusAtPreflight": "Pre-Game",
+      "abstractStateAtPreflight": "Preview",
+      "hasOdds": true
+    },
+    "excluded": [
+      {
+        "game": "Seattle Mariners @ Baltimore Orioles",
+        "contestId": "37",
+        "reason": "missed safe window before live/prep; not included in live scope"
+      }
+    ]
+  },
+  "safetyTiming": {
+    "phase0CheckedAtUtc": "2026-06-11T23:08:22Z",
+    "phase0CheckedAtCentral": "2026-06-11 18:08:22 CDT (-0500)",
+    "liveStartedAtUtc": "2026-06-11T23:20:44.905Z",
+    "liveStoppedAtUtc": "2026-06-11T23:23:51.093Z"
+  },
+  "caveats": [
+    "NHL official API initially returned 403 without browser-like headers; a later browser-header official probe showed PRE/OK before the official 00:00Z start.",
+    "Ospex NHL game row reported a rounded/delayed matchTime of 00:22Z, but the run used the official 00:00Z cutoff for safety.",
+    "NHL path is configured but less recently exercised than MLB.",
+    "ATL/CWS prior prep remains a separate setup fact and still requires postgame cleanup."
+  ]
+}

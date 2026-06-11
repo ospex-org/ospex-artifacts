@@ -1,0 +1,45 @@
+{
+  "artifactId": "2026-06-11-nhl-vgk-car-atl-cws-mm-alpha-multigame-rescue",
+  "scenarios": [
+    {
+      "id": "release_gate",
+      "status": "pass",
+      "evidence": "raw/release-runtime-matrix.sanitized.json"
+    },
+    {
+      "id": "nhl_create_seed",
+      "status": "pass",
+      "evidence": "raw/setup-create-seed.sanitized.json"
+    },
+    {
+      "id": "two_target_dry_run",
+      "status": "pass",
+      "evidence": "raw/dry-run-quote-readiness.sanitized.json"
+    },
+    {
+      "id": "live_quote_multigame",
+      "status": "pass",
+      "evidence": "raw/live-window.sanitized.json"
+    },
+    {
+      "id": "controlled_fill_own_state_sse",
+      "status": "pass",
+      "evidence": "raw/live-window.sanitized.json"
+    },
+    {
+      "id": "shutdown_zero_exposure",
+      "status": "pass",
+      "evidence": "raw/zero-exposure.sanitized.json"
+    },
+    {
+      "id": "restart_cold_start",
+      "status": "pass",
+      "evidence": "raw/restart-cold-start-probe.sanitized.json"
+    },
+    {
+      "id": "postgame_cleanup",
+      "status": "deferred",
+      "evidence": "raw/postgame-continuation.sanitized.json"
+    }
+  ]
+}

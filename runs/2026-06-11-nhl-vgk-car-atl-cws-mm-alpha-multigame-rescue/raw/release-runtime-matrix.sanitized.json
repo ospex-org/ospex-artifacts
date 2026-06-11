@@ -1,0 +1,14 @@
+{
+  "repo": "ospex-org/ospex-market-maker",
+  "tag": "v0.1.0-alpha.1",
+  "expectedHead": "af1bb107af47dc80f27485dee7417ca95b782b50",
+  "head": "af1bb107af47dc80f27485dee7417ca95b782b50",
+  "node": "v22.22.0",
+  "yarn": "1.22.22",
+  "sdkDependency": "repo-pinned @ospex/sdk v0.6.2",
+  "installFrozenLockfileExit": 0,
+  "buildExit": 0,
+  "smokeExit": 0,
+  "smokeTestsPassed": 793,
+  "smokeTestFilesPassed": 20
+}

@@ -1,0 +1,30 @@
+{
+  "nhlContestCreate": {
+    "contestId": "39",
+    "txHash": "0xb399afd119947cd7634815236c4841bb366f2bc3c8199af5cecd8f0e61cabbef",
+    "requestId": "0x77239ad7f26e9c2fbc7a57cc12dad44caa41a0e8000821b33cb92f7956266e78",
+    "verificationStatus": "verified",
+    "creator": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+  },
+  "nhlMoneylineSpeculation": {
+    "speculationId": "28",
+    "contestId": "39",
+    "market": "NHL moneyline",
+    "upperAway": "Vegas Golden Knights",
+    "lowerHome": "Carolina Hurricanes"
+  },
+  "nhlSeed": {
+    "commitmentHash": "0x3a68c05b4416a01e439852d2616116473971e7251526cab0f24d965a04ee1053",
+    "matchTxHash": "0x5ff421a372f778d4643ac05c0c036a6b5803538249aa457a16555767acc64a43",
+    "makerSide": "upper/away Vegas Golden Knights",
+    "makerRiskUSDC": "0.050000",
+    "takerSide": "lower/home Carolina Hurricanes",
+    "takerRiskUSDC": "0.050000",
+    "statusAfterMatch": "filled",
+    "remainingRiskAmount": "0"
+  },
+  "finalSeedExposure": {
+    "publicOpenCommitmentsContest39": 0,
+    "setupMakerOpenCommitmentsContest39": 0
+  }
+}

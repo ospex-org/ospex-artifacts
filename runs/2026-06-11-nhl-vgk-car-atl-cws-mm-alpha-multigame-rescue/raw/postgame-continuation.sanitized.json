@@ -1,0 +1,72 @@
+{
+  "status": "scheduled_pending",
+  "targets": [
+    {
+      "sport": "nhl",
+      "game": "VGK @ CAR",
+      "contestId": "39",
+      "speculationId": "28",
+      "externalGameId": "2025030415",
+      "ospexGameId": "12fcb924-bfbe-4fac-b447-af05b8c9c3e1",
+      "cleanupRequiredBecause": "NHL contest/speculation has real seed positions and one live controlled fill."
+    },
+    {
+      "sport": "mlb",
+      "game": "ATL @ CWS",
+      "contestId": "38",
+      "speculationId": "27",
+      "externalGameId": "824589",
+      "ospexGameId": "93e4384a-f46e-4799-a612-b7fd0c3435e6",
+      "cleanupRequiredBecause": "ATL/CWS has real seed positions from earlier prep and was live-quoted in the two-target rescue window."
+    }
+  ],
+  "requestedScheduleUtc": [
+    "2026-06-12T03:45:00Z",
+    "2026-06-12T04:45:00Z",
+    "2026-06-12T06:15:00Z",
+    "2026-06-12T14:00:00Z"
+  ],
+  "requestedScheduleCentral": [
+    "2026-06-11 22:45 CDT",
+    "2026-06-11 23:45 CDT",
+    "2026-06-12 01:15 CDT",
+    "2026-06-12 09:00 CDT"
+  ],
+  "finalPostgameInvariants": [
+    "authoritative final score verified",
+    "contest scored",
+    "projection converged",
+    "speculation settled",
+    "setup/maker/flow claim or no-op confirmed",
+    "claim-all dry-runs empty",
+    "public/API commitment exposure zero",
+    "no MM process remains",
+    "artifact updated and validated"
+  ],
+  "cronJobs": [
+    {
+      "attempt": 1,
+      "jobId": "ea49b582c69a",
+      "scheduleUtc": "2026-06-12T03:45:00Z",
+      "scheduleCentral": "2026-06-11 22:45 CDT"
+    },
+    {
+      "attempt": 2,
+      "jobId": "a64b15a39e12",
+      "scheduleUtc": "2026-06-12T04:45:00Z",
+      "scheduleCentral": "2026-06-11 23:45 CDT"
+    },
+    {
+      "attempt": 3,
+      "jobId": "a892557ad21b",
+      "scheduleUtc": "2026-06-12T06:15:00Z",
+      "scheduleCentral": "2026-06-12 01:15 CDT"
+    },
+    {
+      "attempt": 4,
+      "jobId": "60f2e1990a64",
+      "scheduleUtc": "2026-06-12T14:00:00Z",
+      "scheduleCentral": "2026-06-12 09:00 CDT"
+    }
+  ]
+}

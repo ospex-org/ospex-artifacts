@@ -1,0 +1,252 @@
+{
+  "artifactType": "run",
+  "artifactId": "2026-06-11-nhl-vgk-car-atl-cws-mm-alpha-multigame-rescue",
+  "artifactPath": "runs/2026-06-11-nhl-vgk-car-atl-cws-mm-alpha-multigame-rescue/",
+  "status": "complete_verified_with_caveats",
+  "artifactStatus": "live_window_green_postgame_deferred",
+  "publishedAt": "2026-06-11T23:38:07Z",
+  "capturedAtUtc": "2026-06-11T23:38:07Z",
+  "date": "2026-06-11",
+  "network": "polygon",
+  "chainId": 137,
+  "release": {
+    "repo": "ospex-org/ospex-market-maker",
+    "tag": "v0.1.0-alpha.1",
+    "expectedHead": "af1bb107af47dc80f27485dee7417ca95b782b50",
+    "head": "af1bb107af47dc80f27485dee7417ca95b782b50",
+    "node": "v22.22.0",
+    "yarn": "1.22.22",
+    "sdkDependency": "repo-pinned @ospex/sdk v0.6.2",
+    "installFrozenLockfileExit": 0,
+    "buildExit": 0,
+    "smokeExit": 0,
+    "smokeTestsPassed": 793,
+    "smokeTestFilesPassed": 20
+  },
+  "targets": {
+    "nhl": {
+      "game": "Vegas Golden Knights @ Carolina Hurricanes",
+      "sport": "nhl",
+      "ospexGameId": "12fcb924-bfbe-4fac-b447-af05b8c9c3e1",
+      "slug": "vgk-car-2026-06-12",
+      "nhlGameId": 2025030415,
+      "officialStartUtc": "2026-06-12T00:00:00Z",
+      "officialStartCentral": "2026-06-11 19:00 CDT",
+      "contestId": "39",
+      "speculationId": "28",
+      "statusAtPreflight": "upcoming",
+      "hasOdds": true,
+      "canCreateContestAtPreflight": true,
+      "officialStatusPostLiveProbe": {
+        "checkedAtUtc": "2026-06-11T23:35:39Z",
+        "source": "https://api-web.nhle.com/v1/gamecenter/2025030415/landing",
+        "gameId": 2025030415,
+        "gameDate": "2026-06-11",
+        "startTimeUTC": "2026-06-12T00:00:00Z",
+        "gameState": "PRE",
+        "gameScheduleState": "OK",
+        "awayTeam": "VGK",
+        "homeTeam": "CAR",
+        "periodDescriptor": null
+      }
+    },
+    "mlb": {
+      "game": "Atlanta Braves @ Chicago White Sox",
+      "sport": "mlb",
+      "mlbGamePk": 824589,
+      "officialStartUtc": "2026-06-11T23:40:00Z",
+      "officialStartCentral": "2026-06-11 18:40 CDT",
+      "contestId": "38",
+      "speculationId": "27",
+      "statusAtPreflight": "Pre-Game",
+      "abstractStateAtPreflight": "Preview",
+      "hasOdds": true
+    },
+    "excluded": [
+      {
+        "game": "Seattle Mariners @ Baltimore Orioles",
+        "contestId": "37",
+        "reason": "missed safe window before live/prep; not included in live scope"
+      }
+    ]
+  },
+  "wallets": {
+    "setup": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+    "maker": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+    "flow": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30"
+  },
+  "budget": {
+    "previous_mlb_prep_fees_and_seed_risk_USDC": "2.600000",
+    "additional_nhl_wallet_usdc_delta_USDC": "1.684500",
+    "combined_fees_seed_and_live_risk_USDC": "4.284500",
+    "operator_gas_usdc_equiv_at_0_25": "0.426932",
+    "combined_estimated_total_USDC": "4.711432",
+    "within_5_usdc_cap": true,
+    "link_consumed_total_LINK": "0.015000",
+    "link_note": "LINK is reported separately from the USDC/POL spend cap calculation."
+  },
+  "liveWindow": {
+    "commitmentsPosted": [
+      {
+        "commitmentHash": "0x195dfd683abbd625f3284168fd1fb3120d24bc722310dbbdf289dc9690700d0d",
+        "contestId": "38",
+        "speculationId": "27",
+        "sport": "mlb",
+        "makerSide": "home",
+        "takerSide": "away",
+        "riskAmountWei6": "50000",
+        "expiryUnixSec": 1781220227
+      },
+      {
+        "commitmentHash": "0x1f215e1d50647bdd350d10d68ef1252f882ee6d2c6104ffb3f774cf1aa42217b",
+        "contestId": "38",
+        "speculationId": "27",
+        "sport": "mlb",
+        "makerSide": "away",
+        "takerSide": "home",
+        "riskAmountWei6": "50000",
+        "expiryUnixSec": 1781220227
+      },
+      {
+        "commitmentHash": "0xef375d7fa5d3e05a186e030da1b36a583985d39d092c13100bce8443d008c850",
+        "contestId": "39",
+        "speculationId": "28",
+        "sport": "nhl",
+        "makerSide": "home",
+        "takerSide": "away",
+        "riskAmountWei6": "50000",
+        "expiryUnixSec": 1781220227
+      },
+      {
+        "commitmentHash": "0x1a27a11b5c3442ca41baa12d21069ea3b923ae7ebb3eef8faf082eea9ed9bb11",
+        "contestId": "39",
+        "speculationId": "28",
+        "sport": "nhl",
+        "makerSide": "away",
+        "takerSide": "home",
+        "riskAmountWei6": "50000",
+        "expiryUnixSec": 1781220227
+      }
+    ],
+    "controlledFill": {
+      "commitmentHash": "0xef375d7fa5d3e05a186e030da1b36a583985d39d092c13100bce8443d008c850",
+      "txHash": "0x4ae5d0a19614d5abe80cbc5784a429ee8121c277605062b4892bb25749eb80f0",
+      "makerFilledRiskUSDC": "0.050000",
+      "takerRiskUSDC": "0.034500",
+      "fillSource": "own-state-stream"
+    },
+    "zeroExposure": {
+      "publicContest38VisibleCommitments": 0,
+      "publicContest39VisibleCommitments": 0,
+      "publicMakerVisibleCommitments": 0,
+      "orphanProcessCount": 0
+    },
+    "restartColdStart": {
+      "exit": 124,
+      "errorsTotal": 0,
+      "wouldSubmit": 4
+    }
+  },
+  "postgame": {
+    "status": "scheduled_pending",
+    "targets": [
+      {
+        "sport": "nhl",
+        "game": "VGK @ CAR",
+        "contestId": "39",
+        "speculationId": "28",
+        "externalGameId": "2025030415",
+        "ospexGameId": "12fcb924-bfbe-4fac-b447-af05b8c9c3e1",
+        "cleanupRequiredBecause": "NHL contest/speculation has real seed positions and one live controlled fill."
+      },
+      {
+        "sport": "mlb",
+        "game": "ATL @ CWS",
+        "contestId": "38",
+        "speculationId": "27",
+        "externalGameId": "824589",
+        "ospexGameId": "93e4384a-f46e-4799-a612-b7fd0c3435e6",
+        "cleanupRequiredBecause": "ATL/CWS has real seed positions from earlier prep and was live-quoted in the two-target rescue window."
+      }
+    ],
+    "requestedScheduleUtc": [
+      "2026-06-12T03:45:00Z",
+      "2026-06-12T04:45:00Z",
+      "2026-06-12T06:15:00Z",
+      "2026-06-12T14:00:00Z"
+    ],
+    "requestedScheduleCentral": [
+      "2026-06-11 22:45 CDT",
+      "2026-06-11 23:45 CDT",
+      "2026-06-12 01:15 CDT",
+      "2026-06-12 09:00 CDT"
+    ],
+    "finalPostgameInvariants": [
+      "authoritative final score verified",
+      "contest scored",
+      "projection converged",
+      "speculation settled",
+      "setup/maker/flow claim or no-op confirmed",
+      "claim-all dry-runs empty",
+      "public/API commitment exposure zero",
+      "no MM process remains",
+      "artifact updated and validated"
+    ],
+    "cronJobs": [
+      {
+        "attempt": 1,
+        "jobId": "ea49b582c69a",
+        "scheduleUtc": "2026-06-12T03:45:00Z",
+        "scheduleCentral": "2026-06-11 22:45 CDT"
+      },
+      {
+        "attempt": 2,
+        "jobId": "a64b15a39e12",
+        "scheduleUtc": "2026-06-12T04:45:00Z",
+        "scheduleCentral": "2026-06-11 23:45 CDT"
+      },
+      {
+        "attempt": 3,
+        "jobId": "a892557ad21b",
+        "scheduleUtc": "2026-06-12T06:15:00Z",
+        "scheduleCentral": "2026-06-12 01:15 CDT"
+      },
+      {
+        "attempt": 4,
+        "jobId": "60f2e1990a64",
+        "scheduleUtc": "2026-06-12T14:00:00Z",
+        "scheduleCentral": "2026-06-12 09:00 CDT"
+      }
+    ]
+  },
+  "caveats": [
+    "NHL official API initially needed browser-like headers; later official probe showed PRE/OK before the cutoff.",
+    "NHL is configured but less recently tested than MLB.",
+    "SEA/BAL was excluded after missing the safe window.",
+    "Postgame score/settle/claim is deferred for NHL contest 39/speculation 28 and ATL/CWS contest 38/speculation 27."
+  ],
+  "coverage": {
+    "targetDecision": "raw/target-decision.sanitized.json",
+    "walletAuthBalance": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json",
+    "repoRuntime": "raw/release-runtime-matrix.sanitized.json",
+    "setupSeed": "raw/setup-create-seed.sanitized.json",
+    "dryRunQuotes": "raw/dry-run-quote-readiness.sanitized.json",
+    "liveWindow": "raw/live-window.sanitized.json",
+    "liveTelemetry": "raw/live-telemetry.sanitized.ndjson",
+    "zeroExposure": "raw/zero-exposure.sanitized.json",
+    "restartColdStart": "raw/restart-cold-start-probe.sanitized.json",
+    "postgameContinuation": "raw/postgame-continuation.sanitized.json",
+    "commandMatrix": "raw/command-matrix.sanitized.json",
+    "scenarioMatrixJson": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "summary": "summary.md"
+  },
+  "artifactFiles": {
+    "evidence": "evidence.json",
+    "summary": "summary.md",
+    "raw": "raw/",
+    "scenarioMatrixJson": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md"
+  }
+}

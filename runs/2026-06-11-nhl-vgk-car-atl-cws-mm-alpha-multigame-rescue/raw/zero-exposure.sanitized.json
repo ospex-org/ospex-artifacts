@@ -1,0 +1,267 @@
+{
+  "generatedAtUtc": "2026-06-11T23:25:34Z",
+  "publicExposureCounts": {
+    "public-open-commitments_contest_38": 0,
+    "maker-open-commitments_contest_38": 0,
+    "maker-open-include-expired_contest_38": 0,
+    "public-open-commitments_contest_39": 0,
+    "maker-open-commitments_contest_39": 0,
+    "maker-open-include-expired_contest_39": 0
+  },
+  "mmStatus": {
+    "schemaVersion": 1,
+    "stateIntegrity": "loaded",
+    "stateLossAssessment": {
+      "holdQuoting": false,
+      "reason": "state loaded cleanly"
+    },
+    "lastFlushedAt": "2026-06-11T23:23:51.093Z",
+    "lastRunId": null,
+    "commitments": {
+      "total": 4,
+      "byLifecycle": {
+        "visibleOpen": 0,
+        "softCancelled": 3,
+        "partiallyFilled": 0,
+        "filled": 1,
+        "expired": 0,
+        "authoritativelyInvalidated": 0
+      },
+      "distinctContestsNonTerminal": 2
+    },
+    "positions": {
+      "total": 1,
+      "byStatus": {
+        "active": {
+          "count": 1,
+          "ownRiskWei6": "50000"
+        },
+        "pendingSettle": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "claimable": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "claimed": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "settledLost": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        },
+        "void": {
+          "count": 0,
+          "ownRiskWei6": "0"
+        }
+      }
+    },
+    "dailyCounters": {
+      "today": "2026-06-11",
+      "todayGasPolWei": "0",
+      "todayFeeUsdcWei6": "0",
+      "lifetimeGasPolWei": "0",
+      "lifetimeFeeUsdcWei6": "0"
+    },
+    "pnl": {
+      "realizedUsdcWei6": "0",
+      "unrealizedUsdcWei6": "0",
+      "asOfUnixSec": 0
+    },
+    "makerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "makerAddressSource": "flag",
+    "livePositionTotals": {
+      "activeCount": 1,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "claimablePayoutWei6": "0",
+      "pendingSettlePayoutWei6": "0"
+    },
+    "livePositionsSkipReason": null
+  },
+  "processCheck": {
+    "matches": [],
+    "count": 0
+  },
+  "positions": {
+    "maker": {
+      "schemaVersion": 2,
+      "ok": true,
+      "action": "positions.status",
+      "stage": "read",
+      "network": "polygon",
+      "chainId": 137,
+      "generatedAt": "2026-06-11T23:25:41.667Z",
+      "cliVersion": "0.6.2",
+      "sdkVersion": "0.6.2",
+      "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "walletRole": "subject",
+      "signer": null,
+      "requiresSignature": false,
+      "requiresTransaction": false,
+      "approvalRequirements": [],
+      "estimatedCosts": null,
+      "risk": null,
+      "payout": null,
+      "contest": null,
+      "speculation": null,
+      "commitment": null,
+      "sideSummary": null,
+      "warnings": [],
+      "errors": [],
+      "effects": [],
+      "nextCommands": [],
+      "payload": {
+        "active": [
+          {
+            "positionId": "28_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_1",
+            "speculationId": "28",
+            "positionType": 1,
+            "team": "Carolina Hurricanes",
+            "opponent": "Vegas Golden Knights",
+            "market": "moneyline",
+            "oddsDecimal": 1.69,
+            "riskAmountUSDC": 0.05,
+            "profitAmountUSDC": 0.0345,
+            "contestId": "39",
+            "sport": "nhl",
+            "awayTeam": "Vegas Golden Knights",
+            "homeTeam": "Carolina Hurricanes",
+            "riskAmountWei6": "50000",
+            "counterpartyRiskWei6": "34500",
+            "updatedAtUnixSec": 1781220203
+          }
+        ],
+        "pendingSettle": [],
+        "claimable": [],
+        "totals": {
+          "activeCount": 1,
+          "pendingSettleCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      }
+    },
+    "flow": {
+      "schemaVersion": 2,
+      "ok": true,
+      "action": "positions.status",
+      "stage": "read",
+      "network": "polygon",
+      "chainId": 137,
+      "generatedAt": "2026-06-11T23:25:42.420Z",
+      "cliVersion": "0.6.2",
+      "sdkVersion": "0.6.2",
+      "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "walletRole": "subject",
+      "signer": null,
+      "requiresSignature": false,
+      "requiresTransaction": false,
+      "approvalRequirements": [],
+      "estimatedCosts": null,
+      "risk": null,
+      "payout": null,
+      "contest": null,
+      "speculation": null,
+      "commitment": null,
+      "sideSummary": null,
+      "warnings": [],
+      "errors": [],
+      "effects": [],
+      "nextCommands": [],
+      "payload": {
+        "active": [
+          {
+            "positionId": "28_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+            "speculationId": "28",
+            "positionType": 0,
+            "team": "Vegas Golden Knights",
+            "opponent": "Carolina Hurricanes",
+            "market": "moneyline",
+            "oddsDecimal": 2.449275362318841,
+            "riskAmountUSDC": 0.0345,
+            "profitAmountUSDC": 0.05,
+            "contestId": "39",
+            "sport": "nhl",
+            "awayTeam": "Vegas Golden Knights",
+            "homeTeam": "Carolina Hurricanes",
+            "riskAmountWei6": "34500",
+            "counterpartyRiskWei6": "50000",
+            "updatedAtUnixSec": 1781220203
+          },
+          {
+            "positionId": "28_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+            "speculationId": "28",
+            "positionType": 1,
+            "team": "Carolina Hurricanes",
+            "opponent": "Vegas Golden Knights",
+            "market": "moneyline",
+            "oddsDecimal": 2,
+            "riskAmountUSDC": 0.05,
+            "profitAmountUSDC": 0.05,
+            "contestId": "39",
+            "sport": "nhl",
+            "awayTeam": "Vegas Golden Knights",
+            "homeTeam": "Carolina Hurricanes",
+            "riskAmountWei6": "50000",
+            "counterpartyRiskWei6": "50000",
+            "updatedAtUnixSec": 1781219552
+          },
+          {
+            "positionId": "27_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+            "speculationId": "27",
+            "positionType": 1,
+            "team": "Chicago White Sox",
+            "opponent": "Atlanta Braves",
+            "market": "moneyline",
+            "oddsDecimal": 2,
+            "riskAmountUSDC": 0.05,
+            "profitAmountUSDC": 0.05,
+            "contestId": "38",
+            "sport": "mlb",
+            "awayTeam": "Atlanta Braves",
+            "homeTeam": "Chicago White Sox",
+            "riskAmountWei6": "50000",
+            "counterpartyRiskWei6": "50000",
+            "updatedAtUnixSec": 1781217446
+          },
+          {
+            "positionId": "24_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+            "speculationId": "24",
+            "positionType": 1,
+            "team": "Colorado Rockies",
+            "opponent": "Chicago Cubs",
+            "market": "moneyline",
+            "oddsDecimal": 2,
+            "riskAmountUSDC": 0.01,
+            "profitAmountUSDC": 0.01,
+            "contestId": "34",
+            "sport": "mlb",
+            "awayTeam": "Chicago Cubs",
+            "homeTeam": "Colorado Rockies",
+            "riskAmountWei6": "10000",
+            "counterpartyRiskWei6": "10000",
+            "updatedAtUnixSec": 1781136255
+          }
+        ],
+        "pendingSettle": [],
+        "claimable": [],
+        "totals": {
+          "activeCount": 4,
+          "pendingSettleCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      }
+    }
+  },
+  "interpretation": "Public/API live commitment exposure is zero; filled seed/live positions remain real positions until postgame settlement/claim."
+}
