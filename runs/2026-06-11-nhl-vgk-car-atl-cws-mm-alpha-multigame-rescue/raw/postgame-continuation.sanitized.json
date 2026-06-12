@@ -1,72 +1,201 @@
 {
-  "status": "scheduled_pending",
-  "targets": [
-    {
-      "sport": "nhl",
-      "game": "VGK @ CAR",
-      "contestId": "39",
-      "speculationId": "28",
-      "externalGameId": "2025030415",
-      "ospexGameId": "12fcb924-bfbe-4fac-b447-af05b8c9c3e1",
-      "cleanupRequiredBecause": "NHL contest/speculation has real seed positions and one live controlled fill."
+  "status": "partial_nhl_complete_mlb_postponed_deferred",
+  "attempt": 1,
+  "checkedAtUtc": "2026-06-12T03:45:58Z",
+  "checkedAtCentral": "2026-06-11 22:45 CDT",
+  "updatedAtUtc": "2026-06-12T04:10:23Z",
+  "verdict": "AMBER_POSTGAME_PARTIAL",
+  "whyAmber": "NHL cleanup completed, but MLB gamePk 824589 is postponed/rescheduled and is not final/scoreable for contest 38/speculation 27.",
+  "officialResults": {
+    "nhl": {
+      "source": "NHL official API gamecenter landing/boxscore",
+      "gameId": 2025030415,
+      "gameState": "OFF",
+      "gameScheduleState": "OK",
+      "awayTeam": "VGK",
+      "homeTeam": "CAR",
+      "awayScore": 2,
+      "homeScore": 4,
+      "winner": "Carolina Hurricanes",
+      "ospexWinSide": "home/lower",
+      "safeToScore": true
     },
-    {
-      "sport": "mlb",
-      "game": "ATL @ CWS",
-      "contestId": "38",
-      "speculationId": "27",
-      "externalGameId": "824589",
-      "ospexGameId": "93e4384a-f46e-4799-a612-b7fd0c3435e6",
-      "cleanupRequiredBecause": "ATL/CWS has real seed positions from earlier prep and was live-quoted in the two-target rescue window."
+    "mlb": {
+      "source": "MLB Stats API schedule and feed/live",
+      "gamePk": 824589,
+      "originalGameDateUtc": "2026-06-11T23:40:00Z",
+      "awayTeam": "ATL",
+      "homeTeam": "CWS",
+      "originalStatus": {
+        "abstractGameState": "Final",
+        "codedGameState": "D",
+        "detailedState": "Postponed",
+        "statusCode": "DR",
+        "reason": "Rain"
+      },
+      "makeupStatus": {
+        "gameDateUtc": "2026-08-20T18:10:00Z",
+        "officialDate": "2026-08-20",
+        "detailedState": "Scheduled",
+        "description": "Makeup of 6/11ppd"
+      },
+      "awayScore": null,
+      "homeScore": null,
+      "safeToScore": false,
+      "scoreAction": "skipped_no_force_alternate_ids"
     }
-  ],
-  "requestedScheduleUtc": [
-    "2026-06-12T03:45:00Z",
-    "2026-06-12T04:45:00Z",
-    "2026-06-12T06:15:00Z",
-    "2026-06-12T14:00:00Z"
-  ],
-  "requestedScheduleCentral": [
-    "2026-06-11 22:45 CDT",
-    "2026-06-11 23:45 CDT",
-    "2026-06-12 01:15 CDT",
-    "2026-06-12 09:00 CDT"
-  ],
-  "finalPostgameInvariants": [
-    "authoritative final score verified",
-    "contest scored",
-    "projection converged",
-    "speculation settled",
-    "setup/maker/flow claim or no-op confirmed",
-    "claim-all dry-runs empty",
-    "public/API commitment exposure zero",
-    "no MM process remains",
-    "artifact updated and validated"
-  ],
-  "cronJobs": [
-    {
-      "attempt": 1,
-      "jobId": "ea49b582c69a",
-      "scheduleUtc": "2026-06-12T03:45:00Z",
-      "scheduleCentral": "2026-06-11 22:45 CDT"
+  },
+  "nhlActions": {
+    "contestId": "39",
+    "speculationId": "28",
+    "contestScore": {
+      "status": "scored",
+      "awayScore": 2,
+      "homeScore": 4,
+      "txHash": "0x748a3e699fbc4c938f1a486ee765ce1adbfa25032edb4a1336bd28118185f10b"
     },
-    {
-      "attempt": 2,
-      "jobId": "a64b15a39e12",
-      "scheduleUtc": "2026-06-12T04:45:00Z",
-      "scheduleCentral": "2026-06-11 23:45 CDT"
+    "projection": {
+      "contestStatus": "scored",
+      "speculationStatus": "closed",
+      "winSide": "home",
+      "settledAtUtc": "2026-06-12T03:59:55Z"
     },
-    {
-      "attempt": 3,
-      "jobId": "a892557ad21b",
-      "scheduleUtc": "2026-06-12T06:15:00Z",
-      "scheduleCentral": "2026-06-12 01:15 CDT"
+    "settle": {
+      "status": "sent_confirmed",
+      "txHash": "0x5d527556d6533c9de6809bb24e079703e720bb0ce622ae4ca39eeaacfcbbfa31"
     },
-    {
-      "attempt": 4,
-      "jobId": "60f2e1990a64",
-      "scheduleUtc": "2026-06-12T14:00:00Z",
-      "scheduleCentral": "2026-06-12 09:00 CDT"
+    "claims": [
+      {
+        "walletAlias": "ospex-stage-maker-a",
+        "role": "setup/scoring",
+        "result": "no_claimable_entries_lost_upper_side",
+        "payoutWei6": "0"
+      },
+      {
+        "walletAlias": "ospex-stage-maker-b",
+        "role": "maker",
+        "result": "claimed",
+        "positionSide": "lower",
+        "payoutWei6": "84500",
+        "payoutUSDC": "0.084500",
+        "txHash": "0xc7020e5dc49d02022767de3dc9e3e8bac500d0564c93e07657826e180ea929c2"
+      },
+      {
+        "walletAlias": "ospex-flow-a",
+        "role": "flow",
+        "result": "claimed",
+        "positionSide": "lower",
+        "payoutWei6": "100000",
+        "payoutUSDC": "0.100000",
+        "txHash": "0xbe67332441816ed55d72cb0b5b4656b5f81c5bdf71116aee3229d78b803bc49f"
+      }
+    ],
+    "finalClaimAllDryRuns": {
+      "ospex-stage-maker-a": {
+        "entries": 0,
+        "totalPayoutWei6": "0"
+      },
+      "ospex-stage-maker-b": {
+        "entries": 0,
+        "totalPayoutWei6": "0"
+      },
+      "ospex-flow-a": {
+        "entries": 0,
+        "totalPayoutWei6": "0"
+      }
     }
+  },
+  "mlbActions": {
+    "contestId": "38",
+    "speculationId": "27",
+    "score": "skipped_postponed_not_final",
+    "settle": "skipped_not_scored",
+    "claims": "skipped_not_settled",
+    "currentProjection": {
+      "contestStatus": "verified",
+      "speculationStatus": "open",
+      "winSide": "tbd"
+    },
+    "remainingRequirement": "defer until MLB makeup final score is official, or follow the protocol void/refund path when eligible under the mainnet void cooldown."
+  },
+  "finalExposureChecks": {
+    "cliCommitmentsListPayloadCount": {
+      "contest38": 0,
+      "contest39": 0,
+      "makerContest38": 0,
+      "makerContest39": 0
+    },
+    "postgresLiveVisibleOpen": {
+      "contest38": 0,
+      "contest39": 0
+    },
+    "postgresMakerVisibleLiveOpen": {
+      "contest38": 0,
+      "contest39": 0
+    },
+    "targetCommitmentRows": {
+      "contest38": 3,
+      "contest39": 3
+    },
+    "remainingHiddenExpiredRows": {
+      "contest38": [
+        "0x195dfd683abbd625f3284168fd1fb3120d24bc722310dbbdf289dc9690700d0d",
+        "0x1f215e1d50647bdd350d10d68ef1252f882ee6d2c6104ffb3f774cf1aa42217b"
+      ],
+      "contest39": [
+        "0x1a27a11b5c3442ca41baa12d21069ea3b923ae7ebb3eef8faf082eea9ed9bb11"
+      ]
+    },
+    "orphanMmProcesses": 0,
+    "unexpectedTargetCommitments": 0
+  },
+  "cronDisposition": {
+    "laterDuplicateCronsRemoved": false,
+    "reason": "Not fully complete because MLB is postponed/rescheduled; later attempts were left in place as requested for non-final targets."
+  },
+  "postgameReceipts": {
+    "nhl_score_contest": {
+      "blockNumber": "88354153",
+      "effectiveGasPriceWei": "283249590432",
+      "gasCostPOL": "0.188170917162100128",
+      "gasCostUSDCEquivAt0_25": "0.04704272929052503200",
+      "gasCostWei": "188170917162100128",
+      "gasUsed": "664329",
+      "status": "0x1",
+      "txHash": "0x748a3e699fbc4c938f1a486ee765ce1adbfa25032edb4a1336bd28118185f10b"
+    },
+    "nhl_settle_speculation": {
+      "blockNumber": "88354540",
+      "effectiveGasPriceWei": "280685641260",
+      "gasCostPOL": "0.04368001880723994",
+      "gasCostUSDCEquivAt0_25": "0.0109200047018099850",
+      "gasCostWei": "43680018807239940",
+      "gasUsed": "155619",
+      "status": "0x1",
+      "txHash": "0x5d527556d6533c9de6809bb24e079703e720bb0ce622ae4ca39eeaacfcbbfa31"
+    },
+    "nhl_maker_claim": {
+      "blockNumber": "88354542",
+      "effectiveGasPriceWei": "286243837909",
+      "gasCostPOL": "0.036460308853658875",
+      "gasCostUSDCEquivAt0_25": "0.00911507721341471875",
+      "gasCostWei": "36460308853658875",
+      "gasUsed": "127375",
+      "status": "0x1",
+      "txHash": "0xc7020e5dc49d02022767de3dc9e3e8bac500d0564c93e07657826e180ea929c2"
+    },
+    "nhl_flow_claim": {
+      "blockNumber": "88354551",
+      "effectiveGasPriceWei": "282349237957",
+      "gasCostPOL": "0.035964234184772875",
+      "gasCostUSDCEquivAt0_25": "0.00899105854619321875",
+      "gasCostWei": "35964234184772875",
+      "gasUsed": "127375",
+      "status": "0x1",
+      "txHash": "0xbe67332441816ed55d72cb0b5b4656b5f81c5bdf71116aee3229d78b803bc49f"
+    }
+  },
+  "blockers": [
+    "MLB gamePk 824589 is postponed for rain and rescheduled to 2026-08-20T18:10:00Z; contest 38/speculation 27 remains verified/open and cannot be safely scored in this attempt."
   ]
 }

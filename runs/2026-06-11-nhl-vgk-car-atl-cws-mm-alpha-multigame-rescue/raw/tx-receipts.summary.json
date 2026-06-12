@@ -92,13 +92,60 @@
       "gasUsed": "48417",
       "status": "0x1",
       "txHash": "0x025557927c31ae6becd4ba2f7ee49e6fc7541b306b014a700c6537d21f3f82cd"
+    },
+    "nhl_score_contest": {
+      "blockNumber": "88354153",
+      "effectiveGasPriceWei": "283249590432",
+      "gasCostPOL": "0.188170917162100128",
+      "gasCostUSDCEquivAt0_25": "0.04704272929052503200",
+      "gasCostWei": "188170917162100128",
+      "gasUsed": "664329",
+      "status": "0x1",
+      "txHash": "0x748a3e699fbc4c938f1a486ee765ce1adbfa25032edb4a1336bd28118185f10b"
+    },
+    "nhl_settle_speculation": {
+      "blockNumber": "88354540",
+      "effectiveGasPriceWei": "280685641260",
+      "gasCostPOL": "0.04368001880723994",
+      "gasCostUSDCEquivAt0_25": "0.0109200047018099850",
+      "gasCostWei": "43680018807239940",
+      "gasUsed": "155619",
+      "status": "0x1",
+      "txHash": "0x5d527556d6533c9de6809bb24e079703e720bb0ce622ae4ca39eeaacfcbbfa31"
+    },
+    "nhl_maker_claim": {
+      "blockNumber": "88354542",
+      "effectiveGasPriceWei": "286243837909",
+      "gasCostPOL": "0.036460308853658875",
+      "gasCostUSDCEquivAt0_25": "0.00911507721341471875",
+      "gasCostWei": "36460308853658875",
+      "gasUsed": "127375",
+      "status": "0x1",
+      "txHash": "0xc7020e5dc49d02022767de3dc9e3e8bac500d0564c93e07657826e180ea929c2"
+    },
+    "nhl_flow_claim": {
+      "blockNumber": "88354551",
+      "effectiveGasPriceWei": "282349237957",
+      "gasCostPOL": "0.035964234184772875",
+      "gasCostUSDCEquivAt0_25": "0.00899105854619321875",
+      "gasCostWei": "35964234184772875",
+      "gasUsed": "127375",
+      "status": "0x1",
+      "txHash": "0xbe67332441816ed55d72cb0b5b4656b5f81c5bdf71116aee3229d78b803bc49f"
     }
   },
   "totals": {
     "operatorGasPOL": "1.707729091358687121",
-    "operatorGasUSDCAtReportPrice": "0.42693227283967178"
+    "operatorGasUSDCAtReportPrice": "0.42693227283967178",
+    "operatorGasPOLPrePostgame": "1.707729091358687121",
+    "operatorGasUSDCAtReportPricePrePostgame": "0.42693227283967178",
+    "nhlPostgameGasPOL": "0.304275479007771818",
+    "nhlPostgameGasUSDCAtReportPrice": "0.07606886975194295450",
+    "operatorGasPOLIncludingNhlPostgame": "2.012004570366458939",
+    "operatorGasUSDCAtReportPriceIncludingNhlPostgame": "0.50300114259161473475"
   },
   "notes": [
-    "Total includes the earlier same-evening MLB prep transactions plus the NHL rescue setup/fill transactions because they share the same controlled spend cap."
+    "Total includes the earlier same-evening MLB prep transactions plus the NHL rescue setup/fill transactions because they share the same controlled spend cap.",
+    "NHL attempt-1 postgame receipts are summaries only; full logs/source payloads are intentionally excluded from public artifacts."
   ]
 }

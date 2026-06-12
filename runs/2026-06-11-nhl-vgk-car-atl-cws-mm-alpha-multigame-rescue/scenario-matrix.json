@@ -38,7 +38,7 @@
     },
     {
       "id": "postgame_cleanup",
-      "status": "deferred",
+      "status": "partial_nhl_complete_mlb_postponed_deferred",
       "evidence": "raw/postgame-continuation.sanitized.json"
     }
   ]
