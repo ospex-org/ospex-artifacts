@@ -1,0 +1,160 @@
+{
+  "generatedAtUtc": "2026-06-11T23:38:07Z",
+  "verdict": "GREEN-live-window / NHL+MLB-MULTIGAME-RESCUE-POSTGAME-DEFERRED",
+  "targets": {
+    "nhl": {
+      "game": "Vegas Golden Knights @ Carolina Hurricanes",
+      "sport": "nhl",
+      "ospexGameId": "12fcb924-bfbe-4fac-b447-af05b8c9c3e1",
+      "slug": "vgk-car-2026-06-12",
+      "nhlGameId": 2025030415,
+      "officialStartUtc": "2026-06-12T00:00:00Z",
+      "officialStartCentral": "2026-06-11 19:00 CDT",
+      "contestId": "39",
+      "speculationId": "28",
+      "statusAtPreflight": "upcoming",
+      "hasOdds": true,
+      "canCreateContestAtPreflight": true,
+      "officialStatusPostLiveProbe": {
+        "checkedAtUtc": "2026-06-11T23:35:39Z",
+        "source": "https://api-web.nhle.com/v1/gamecenter/2025030415/landing",
+        "gameId": 2025030415,
+        "gameDate": "2026-06-11",
+        "startTimeUTC": "2026-06-12T00:00:00Z",
+        "gameState": "PRE",
+        "gameScheduleState": "OK",
+        "awayTeam": "VGK",
+        "homeTeam": "CAR",
+        "periodDescriptor": null
+      },
+      "teamIdentity": {
+        "homeFavorite": {
+          "team": "Carolina Hurricanes",
+          "role": "home",
+          "positionType": "lower",
+          "marketOddsAmerican": "-160",
+          "quoteTick": 163,
+          "identity": "favorite",
+          "protocolOutcome": "winner"
+        },
+        "awayUnderdog": {
+          "team": "Vegas Golden Knights",
+          "role": "away",
+          "positionType": "upper",
+          "marketOddsAmerican": "+140",
+          "quoteTick": 240,
+          "identity": "underdog",
+          "protocolOutcome": "loser"
+        },
+        "source": "raw/dry-run-quote-readiness.sanitized.json referenceOdds; upper=away, lower=home; NHL final CAR 4, VGK 2"
+      }
+    },
+    "mlb": {
+      "game": "Atlanta Braves @ Chicago White Sox",
+      "sport": "mlb",
+      "mlbGamePk": 824589,
+      "officialStartUtc": "2026-06-11T23:40:00Z",
+      "officialStartCentral": "2026-06-11 18:40 CDT",
+      "contestId": "38",
+      "speculationId": "27",
+      "statusAtPreflight": "Pre-Game",
+      "abstractStateAtPreflight": "Preview",
+      "hasOdds": true,
+      "teamIdentity": {
+        "awayFavorite": {
+          "team": "Atlanta Braves",
+          "role": "away",
+          "positionType": "upper",
+          "marketOddsAmerican": "-113",
+          "quoteTick": 188,
+          "identity": "favorite",
+          "protocolOutcome": "pending_postponed"
+        },
+        "homeUnderdog": {
+          "team": "Chicago White Sox",
+          "role": "home",
+          "positionType": "lower",
+          "marketOddsAmerican": "-100",
+          "quoteTick": 200,
+          "identity": "underdog",
+          "protocolOutcome": "pending_postponed"
+        },
+        "source": "raw/dry-run-quote-readiness.sanitized.json referenceOdds; upper=away, lower=home; MLB gamePk 824589 postponed/rain"
+      },
+      "protocolOutcome": "pending_postponed",
+      "deferredLockedFunds": {
+        "status": "pending_postponed_void_or_makeup_final",
+        "totalEscrowUSDC": "0.100000",
+        "seedCommitmentHash": "0x633b523bbd4da612bc93dba9f66526adff9fd8486f5c62f1dbde49758a441a8d",
+        "seedMatchTxHash": "0x5e9573c37e4471ea64881214de44987d2626b2b8d563f70bc1d00e8872b38ff2",
+        "positions": [
+          {
+            "walletAlias": "ospex-stage-maker-a",
+            "walletAddress": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+            "role": "setup/scoring seed maker",
+            "side": {
+              "role": "away",
+              "team": "Atlanta Braves",
+              "protocolPosition": "upper",
+              "positionType": 0
+            },
+            "riskUSDC": "0.050000",
+            "counterpartyWalletAlias": "ospex-flow-a",
+            "counterpartyWalletAddress": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30"
+          },
+          {
+            "walletAlias": "ospex-flow-a",
+            "walletAddress": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+            "role": "controlled flow seed taker",
+            "side": {
+              "role": "home",
+              "team": "Chicago White Sox",
+              "protocolPosition": "lower",
+              "positionType": 1
+            },
+            "riskUSDC": "0.050000",
+            "counterpartyWalletAlias": "ospex-stage-maker-a",
+            "counterpartyWalletAddress": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B"
+          }
+        ],
+        "refundExpectationIfVoided": "risk-only refund of 0.050000 USDC to each controlled seed position holder after void settlement and claim"
+      },
+      "voidFollowup": {
+        "originalStartUtc": "2026-06-11T23:40:00Z",
+        "voidCooldownSeconds": 604800,
+        "voidEligibleAtUtc": "2026-06-18T23:40:00Z",
+        "voidEligibleAtCentral": "2026-06-18 18:40 CDT",
+        "scheduledFollowupCronId": "1f8435fe7fbb",
+        "scheduledFollowupUtc": "2026-06-18T23:45:00Z",
+        "scheduledFollowupCentral": "2026-06-18 18:45 CDT",
+        "scheduledFollowupPurpose": "single postponed-game void/refund follow-up after mainnet void cooldown; do not score with makeup result"
+      }
+    },
+    "excluded": [
+      {
+        "game": "Seattle Mariners @ Baltimore Orioles",
+        "contestId": "37",
+        "reason": "missed safe window before live/prep; not included in live scope",
+        "disposition": "created_verified_no_speculation_no_locked_funds_no_postgame_owed",
+        "contestCreateTxHash": "0xd5f88f32d9ab68f528dc6351813586d48fa29d2f98c80a672398cc1b03b1d75f",
+        "onChainStatus": "verified/public",
+        "speculationOpened": false,
+        "lockedFundsUSDC": "0.000000",
+        "postgameOwed": false,
+        "costsIncludedInPrepFigures": true
+      }
+    ]
+  },
+  "safetyTiming": {
+    "phase0CheckedAtUtc": "2026-06-11T23:08:22Z",
+    "phase0CheckedAtCentral": "2026-06-11 18:08:22 CDT (-0500)",
+    "liveStartedAtUtc": "2026-06-11T23:20:44.905Z",
+    "liveStoppedAtUtc": "2026-06-11T23:23:51.093Z"
+  },
+  "caveats": [
+    "NHL official API initially returned 403 without browser-like headers; a later browser-header official probe showed PRE/OK before the official 00:00Z start.",
+    "Ospex NHL game row reported a rounded/delayed matchTime of 00:22Z, but the run used the official 00:00Z cutoff for safety.",
+    "NHL path is configured but less recently exercised than MLB.",
+    "ATL/CWS prior prep remains a separate setup fact and still requires postgame cleanup."
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "commands": [
+    {
+      "phase": "release-gate",
+      "commandShape": "git rev-parse HEAD; yarn install --frozen-lockfile; yarn build; yarn smoke",
+      "result": "passed"
+    },
+    {
+      "phase": "dry-run",
+      "commandShape": "yarn -s mm doctor --config <two-target-config> --address <maker> --json; yarn -s mm quote --dry-run <contest> --json; timeout 60s yarn -s mm run --dry-run --address <maker> --ignore-missing-state",
+      "result": "both targets canQuote=true, would-submit only"
+    },
+    {
+      "phase": "live",
+      "commandShape": "timeout 420s yarn -s mm run --config <two-target-live-config> --live --ignore-missing-state",
+      "result": "posted four tiny commitments across two contests, then stopped via kill-file"
+    },
+    {
+      "phase": "controlled-fill",
+      "commandShape": "ospex commitments match <nhl-maker-commitment-hash> --risk-usdc 0.05 --account ospex-flow-a --yes --json",
+      "result": "one NHL fill confirmed"
+    },
+    {
+      "phase": "zero-exposure",
+      "commandShape": "mm summary/status plus ospex commitments list filters",
+      "result": "public/maker open commitments zero for contests 38 and 39"
+    }
+  ]
+}

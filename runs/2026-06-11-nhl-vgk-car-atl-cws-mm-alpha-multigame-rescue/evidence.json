@@ -1,0 +1,842 @@
+{
+  "artifactType": "run",
+  "artifactId": "2026-06-11-nhl-vgk-car-atl-cws-mm-alpha-multigame-rescue",
+  "artifactPath": "runs/2026-06-11-nhl-vgk-car-atl-cws-mm-alpha-multigame-rescue/",
+  "status": "complete_verified_with_caveats",
+  "artifactStatus": "live_window_green_nhl_postgame_complete_mlb_postponed_deferred",
+  "publishedAt": "2026-06-11T23:38:07Z",
+  "capturedAtUtc": "2026-06-12T04:53:05Z",
+  "date": "2026-06-11",
+  "network": "polygon",
+  "chainId": 137,
+  "release": {
+    "repo": "ospex-org/ospex-market-maker",
+    "tag": "v0.1.0-alpha.1",
+    "expectedHead": "af1bb107af47dc80f27485dee7417ca95b782b50",
+    "head": "af1bb107af47dc80f27485dee7417ca95b782b50",
+    "node": "v22.22.0",
+    "yarn": "1.22.22",
+    "sdkDependency": "repo-pinned @ospex/sdk v0.6.2",
+    "installFrozenLockfileExit": 0,
+    "buildExit": 0,
+    "smokeExit": 0,
+    "smokeTestsPassed": 793,
+    "smokeTestFilesPassed": 20
+  },
+  "targets": {
+    "nhl": {
+      "game": "Vegas Golden Knights @ Carolina Hurricanes",
+      "sport": "nhl",
+      "ospexGameId": "12fcb924-bfbe-4fac-b447-af05b8c9c3e1",
+      "slug": "vgk-car-2026-06-12",
+      "nhlGameId": 2025030415,
+      "officialStartUtc": "2026-06-12T00:00:00Z",
+      "officialStartCentral": "2026-06-11 19:00 CDT",
+      "contestId": "39",
+      "speculationId": "28",
+      "statusAtPreflight": "upcoming",
+      "hasOdds": true,
+      "canCreateContestAtPreflight": true,
+      "officialStatusPostLiveProbe": {
+        "checkedAtUtc": "2026-06-11T23:35:39Z",
+        "source": "https://api-web.nhle.com/v1/gamecenter/2025030415/landing",
+        "gameId": 2025030415,
+        "gameDate": "2026-06-11",
+        "startTimeUTC": "2026-06-12T00:00:00Z",
+        "gameState": "PRE",
+        "gameScheduleState": "OK",
+        "awayTeam": "VGK",
+        "homeTeam": "CAR",
+        "periodDescriptor": null
+      },
+      "officialFinalResultAttempt1": {
+        "source": "NHL official API gamecenter landing/boxscore",
+        "gameId": 2025030415,
+        "gameState": "OFF",
+        "gameScheduleState": "OK",
+        "awayTeam": "VGK",
+        "homeTeam": "CAR",
+        "awayScore": 2,
+        "homeScore": 4,
+        "winner": "Carolina Hurricanes",
+        "ospexWinSide": "home/lower",
+        "safeToScore": true,
+        "ospexWinSideDetail": {
+          "role": "home",
+          "team": "Carolina Hurricanes",
+          "protocolPosition": "lower",
+          "positionType": 1
+        }
+      },
+      "officialFinalResultAttempt2": {
+        "source": "NHL official API gamecenter landing",
+        "gameId": 2025030415,
+        "gameState": "OFF",
+        "gameScheduleState": "OK",
+        "awayTeam": "VGK",
+        "homeTeam": "CAR",
+        "awayScore": 2,
+        "homeScore": 4,
+        "winner": "Carolina Hurricanes",
+        "ospexWinSide": "home/lower",
+        "safeToScore": true,
+        "ospexWinSideDetail": {
+          "role": "home",
+          "team": "Carolina Hurricanes",
+          "protocolPosition": "lower",
+          "positionType": 1
+        }
+      },
+      "teamIdentity": {
+        "homeFavorite": {
+          "team": "Carolina Hurricanes",
+          "role": "home",
+          "positionType": "lower",
+          "marketOddsAmerican": "-160",
+          "quoteTick": 163,
+          "identity": "favorite",
+          "protocolOutcome": "winner"
+        },
+        "awayUnderdog": {
+          "team": "Vegas Golden Knights",
+          "role": "away",
+          "positionType": "upper",
+          "marketOddsAmerican": "+140",
+          "quoteTick": 240,
+          "identity": "underdog",
+          "protocolOutcome": "loser"
+        },
+        "source": "raw/dry-run-quote-readiness.sanitized.json referenceOdds; upper=away, lower=home; NHL final CAR 4, VGK 2"
+      }
+    },
+    "mlb": {
+      "game": "Atlanta Braves @ Chicago White Sox",
+      "sport": "mlb",
+      "mlbGamePk": 824589,
+      "officialStartUtc": "2026-06-11T23:40:00Z",
+      "officialStartCentral": "2026-06-11 18:40 CDT",
+      "contestId": "38",
+      "speculationId": "27",
+      "statusAtPreflight": "Pre-Game",
+      "abstractStateAtPreflight": "Preview",
+      "hasOdds": true,
+      "officialStatusAttempt1": {
+        "source": "MLB Stats API schedule and feed/live",
+        "gamePk": 824589,
+        "originalGameDateUtc": "2026-06-11T23:40:00Z",
+        "awayTeam": "ATL",
+        "homeTeam": "CWS",
+        "originalStatus": {
+          "abstractGameState": "Final",
+          "codedGameState": "D",
+          "detailedState": "Postponed",
+          "statusCode": "DR",
+          "reason": "Rain"
+        },
+        "makeupStatus": {
+          "gameDateUtc": "2026-08-20T18:10:00Z",
+          "officialDate": "2026-08-20",
+          "detailedState": "Scheduled",
+          "description": "Makeup of 6/11ppd"
+        },
+        "awayScore": null,
+        "homeScore": null,
+        "safeToScore": false,
+        "scoreAction": "skipped_no_force_alternate_ids"
+      },
+      "officialStatusAttempt2": {
+        "source": "MLB Stats API feed/live and schedule",
+        "gamePk": 824589,
+        "feedGameDateUtc": "2026-08-20T18:10:00Z",
+        "feedOfficialDate": "2026-08-20",
+        "awayTeam": "ATL",
+        "homeTeam": "CWS",
+        "feedStatus": {
+          "abstractGameState": "Preview",
+          "codedGameState": "S",
+          "detailedState": "Scheduled",
+          "statusCode": "S"
+        },
+        "scheduleGames": [
+          {
+            "gamePk": 824589,
+            "gameDateUtc": "2026-06-11T23:40:00Z",
+            "officialDate": "2026-08-20",
+            "detailedState": "Postponed",
+            "abstractGameState": "Final",
+            "statusCode": "DR",
+            "codedGameState": "D",
+            "reason": "Rain",
+            "description": null
+          },
+          {
+            "gamePk": 824589,
+            "gameDateUtc": "2026-08-20T18:10:00Z",
+            "officialDate": "2026-08-20",
+            "detailedState": "Scheduled",
+            "abstractGameState": "Preview",
+            "statusCode": "S",
+            "codedGameState": "S",
+            "reason": null,
+            "description": "Makeup of 6/11ppd"
+          }
+        ],
+        "awayScore": null,
+        "homeScore": null,
+        "safeToScore": false,
+        "scoreAction": "skipped_makeup_scheduled_not_final"
+      },
+      "teamIdentity": {
+        "awayFavorite": {
+          "team": "Atlanta Braves",
+          "role": "away",
+          "positionType": "upper",
+          "marketOddsAmerican": "-113",
+          "quoteTick": 188,
+          "identity": "favorite",
+          "protocolOutcome": "pending_postponed"
+        },
+        "homeUnderdog": {
+          "team": "Chicago White Sox",
+          "role": "home",
+          "positionType": "lower",
+          "marketOddsAmerican": "-100",
+          "quoteTick": 200,
+          "identity": "underdog",
+          "protocolOutcome": "pending_postponed"
+        },
+        "source": "raw/dry-run-quote-readiness.sanitized.json referenceOdds; upper=away, lower=home; MLB gamePk 824589 postponed/rain"
+      },
+      "protocolOutcome": "pending_postponed",
+      "deferredLockedFunds": {
+        "status": "pending_postponed_void_or_makeup_final",
+        "totalEscrowUSDC": "0.100000",
+        "seedCommitmentHash": "0x633b523bbd4da612bc93dba9f66526adff9fd8486f5c62f1dbde49758a441a8d",
+        "seedMatchTxHash": "0x5e9573c37e4471ea64881214de44987d2626b2b8d563f70bc1d00e8872b38ff2",
+        "positions": [
+          {
+            "walletAlias": "ospex-stage-maker-a",
+            "walletAddress": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+            "role": "setup/scoring seed maker",
+            "side": {
+              "role": "away",
+              "team": "Atlanta Braves",
+              "protocolPosition": "upper",
+              "positionType": 0
+            },
+            "riskUSDC": "0.050000",
+            "counterpartyWalletAlias": "ospex-flow-a",
+            "counterpartyWalletAddress": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30"
+          },
+          {
+            "walletAlias": "ospex-flow-a",
+            "walletAddress": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+            "role": "controlled flow seed taker",
+            "side": {
+              "role": "home",
+              "team": "Chicago White Sox",
+              "protocolPosition": "lower",
+              "positionType": 1
+            },
+            "riskUSDC": "0.050000",
+            "counterpartyWalletAlias": "ospex-stage-maker-a",
+            "counterpartyWalletAddress": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B"
+          }
+        ],
+        "refundExpectationIfVoided": "risk-only refund of 0.050000 USDC to each controlled seed position holder after void settlement and claim"
+      },
+      "voidFollowup": {
+        "originalStartUtc": "2026-06-11T23:40:00Z",
+        "voidCooldownSeconds": 604800,
+        "voidEligibleAtUtc": "2026-06-18T23:40:00Z",
+        "voidEligibleAtCentral": "2026-06-18 18:40 CDT",
+        "scheduledFollowupCronId": "1f8435fe7fbb",
+        "scheduledFollowupUtc": "2026-06-18T23:45:00Z",
+        "scheduledFollowupCentral": "2026-06-18 18:45 CDT",
+        "scheduledFollowupPurpose": "single postponed-game void/refund follow-up after mainnet void cooldown; do not score with makeup result"
+      }
+    },
+    "excluded": [
+      {
+        "game": "Seattle Mariners @ Baltimore Orioles",
+        "contestId": "37",
+        "reason": "missed safe window before live/prep; not included in live scope",
+        "disposition": "created_verified_no_speculation_no_locked_funds_no_postgame_owed",
+        "contestCreateTxHash": "0xd5f88f32d9ab68f528dc6351813586d48fa29d2f98c80a672398cc1b03b1d75f",
+        "onChainStatus": "verified/public",
+        "speculationOpened": false,
+        "lockedFundsUSDC": "0.000000",
+        "postgameOwed": false,
+        "costsIncludedInPrepFigures": true
+      }
+    ]
+  },
+  "wallets": {
+    "setup": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+    "maker": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+    "flow": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30"
+  },
+  "budget": {
+    "previous_mlb_prep_fees_and_seed_risk_USDC": "2.600000",
+    "additional_nhl_wallet_usdc_delta_USDC": "1.684500",
+    "combined_fees_seed_and_live_risk_USDC": "4.284500",
+    "operator_gas_usdc_equiv_at_0_25": "0.426932",
+    "combined_estimated_total_USDC": "4.711432",
+    "within_5_usdc_cap": true,
+    "link_consumed_total_LINK": "0.020000",
+    "link_note": "LINK is reported separately from the USDC/POL spend cap calculation; total now includes the NHL postgame score request.",
+    "postgame_nhl_operator_gas_usdc_equiv_at_0_25": "0.076069",
+    "operator_gas_usdc_equiv_at_0_25_including_nhl_postgame": "0.503001",
+    "combined_estimated_total_USDC_including_nhl_postgame_gas": "4.787501",
+    "within_5_usdc_cap_after_nhl_postgame": true,
+    "link_consumed_pre_postgame_LINK": "0.015000",
+    "link_consumed_nhl_postgame_score_LINK": "0.005000"
+  },
+  "liveWindow": {
+    "commitmentsPosted": [
+      {
+        "commitmentHash": "0x195dfd683abbd625f3284168fd1fb3120d24bc722310dbbdf289dc9690700d0d",
+        "contestId": "38",
+        "speculationId": "27",
+        "sport": "mlb",
+        "makerSide": "home",
+        "takerSide": "away",
+        "riskAmountWei6": "50000",
+        "expiryUnixSec": 1781220227,
+        "positionType": 1,
+        "makerOddsTick": 208,
+        "takerOddsTick": 193,
+        "takerImpliedProb": 0.5175841559098963,
+        "makerSideDetail": {
+          "role": "home",
+          "team": "Chicago White Sox",
+          "protocolPosition": "lower",
+          "positionType": 1
+        },
+        "takerSideDetail": {
+          "role": "away",
+          "team": "Atlanta Braves",
+          "protocolPosition": "upper",
+          "positionType": 0
+        }
+      },
+      {
+        "commitmentHash": "0x1f215e1d50647bdd350d10d68ef1252f882ee6d2c6104ffb3f774cf1aa42217b",
+        "contestId": "38",
+        "speculationId": "27",
+        "sport": "mlb",
+        "makerSide": "away",
+        "takerSide": "home",
+        "riskAmountWei6": "50000",
+        "expiryUnixSec": 1781220227,
+        "positionType": 0,
+        "makerOddsTick": 195,
+        "takerOddsTick": 205,
+        "takerImpliedProb": 0.4879713996456594,
+        "makerSideDetail": {
+          "role": "away",
+          "team": "Atlanta Braves",
+          "protocolPosition": "upper",
+          "positionType": 0
+        },
+        "takerSideDetail": {
+          "role": "home",
+          "team": "Chicago White Sox",
+          "protocolPosition": "lower",
+          "positionType": 1
+        }
+      },
+      {
+        "commitmentHash": "0xef375d7fa5d3e05a186e030da1b36a583985d39d092c13100bce8443d008c850",
+        "contestId": "39",
+        "speculationId": "28",
+        "sport": "nhl",
+        "makerSide": "home",
+        "takerSide": "away",
+        "riskAmountWei6": "50000",
+        "expiryUnixSec": 1781220227,
+        "positionType": 1,
+        "makerOddsTick": 169,
+        "takerOddsTick": 244,
+        "takerImpliedProb": 0.4091032774483246,
+        "makerSideDetail": {
+          "role": "home",
+          "team": "Carolina Hurricanes",
+          "protocolPosition": "lower",
+          "positionType": 1
+        },
+        "takerSideDetail": {
+          "role": "away",
+          "team": "Vegas Golden Knights",
+          "protocolPosition": "upper",
+          "positionType": 0
+        }
+      },
+      {
+        "commitmentHash": "0x1a27a11b5c3442ca41baa12d21069ea3b923ae7ebb3eef8faf082eea9ed9bb11",
+        "contestId": "39",
+        "speculationId": "28",
+        "sport": "nhl",
+        "makerSide": "away",
+        "takerSide": "home",
+        "riskAmountWei6": "50000",
+        "expiryUnixSec": 1781220227,
+        "positionType": 0,
+        "makerOddsTick": 247,
+        "takerOddsTick": 168,
+        "takerImpliedProb": 0.5964522781072309,
+        "makerSideDetail": {
+          "role": "away",
+          "team": "Vegas Golden Knights",
+          "protocolPosition": "upper",
+          "positionType": 0
+        },
+        "takerSideDetail": {
+          "role": "home",
+          "team": "Carolina Hurricanes",
+          "protocolPosition": "lower",
+          "positionType": 1
+        }
+      }
+    ],
+    "controlledFill": {
+      "commitmentHash": "0xef375d7fa5d3e05a186e030da1b36a583985d39d092c13100bce8443d008c850",
+      "txHash": "0x4ae5d0a19614d5abe80cbc5784a429ee8121c277605062b4892bb25749eb80f0",
+      "makerFilledRiskUSDC": "0.050000",
+      "takerRiskUSDC": "0.034500",
+      "fillSource": "own-state-stream",
+      "makerSideDetail": {
+        "role": "home",
+        "team": "Carolina Hurricanes",
+        "protocolPosition": "lower",
+        "positionType": 1
+      },
+      "takerSideDetail": {
+        "role": "away",
+        "team": "Vegas Golden Knights",
+        "protocolPosition": "upper",
+        "positionType": 0
+      },
+      "makerOddsTick": 169,
+      "takerOddsTick": 244
+    },
+    "zeroExposure": {
+      "publicContest38VisibleCommitments": 0,
+      "publicContest39VisibleCommitments": 0,
+      "publicMakerVisibleCommitments": 0,
+      "orphanProcessCount": 0
+    },
+    "restartColdStart": {
+      "exit": 124,
+      "errorsTotal": 0,
+      "wouldSubmit": 4
+    },
+    "telemetryScope": {
+      "publishedFile": "raw/live-telemetry.sanitized.ndjson",
+      "publishedLineCount": 17,
+      "canonicalSummaryEventCount": 24,
+      "scopeNote": "Published NDJSON is a selected public-safe subset; canonical live event counts are in raw/live-window.sanitized.json liveRun.eventCounts."
+    }
+  },
+  "postgame": {
+    "status": "partial_nhl_complete_mlb_postponed_deferred",
+    "attempt": 2,
+    "checkedAtUtc": "2026-06-12T04:53:05Z",
+    "checkedAtCentral": "2026-06-11 23:53 CDT",
+    "updatedAtUtc": "2026-06-12T04:53:05Z",
+    "verdict": "AMBER_POSTGAME_PARTIAL",
+    "whyAmber": "Attempt 2 confirmed NHL is already complete, but MLB gamePk 824589 is still not final/scoreable; MLB feed/live points to the scheduled 2026-08-20 makeup and the original schedule row remains postponed for rain.",
+    "officialResults": {
+      "nhl": {
+        "source": "NHL official API gamecenter landing",
+        "gameId": 2025030415,
+        "gameState": "OFF",
+        "gameScheduleState": "OK",
+        "awayTeam": "VGK",
+        "homeTeam": "CAR",
+        "awayScore": 2,
+        "homeScore": 4,
+        "winner": "Carolina Hurricanes",
+        "ospexWinSide": "home/lower",
+        "safeToScore": true,
+        "ospexWinSideDetail": {
+          "role": "home",
+          "team": "Carolina Hurricanes",
+          "protocolPosition": "lower",
+          "positionType": 1
+        }
+      },
+      "mlb": {
+        "source": "MLB Stats API feed/live and schedule",
+        "gamePk": 824589,
+        "feedGameDateUtc": "2026-08-20T18:10:00Z",
+        "feedOfficialDate": "2026-08-20",
+        "awayTeam": "ATL",
+        "homeTeam": "CWS",
+        "feedStatus": {
+          "abstractGameState": "Preview",
+          "codedGameState": "S",
+          "detailedState": "Scheduled",
+          "statusCode": "S"
+        },
+        "scheduleGames": [
+          {
+            "gamePk": 824589,
+            "gameDateUtc": "2026-06-11T23:40:00Z",
+            "officialDate": "2026-08-20",
+            "detailedState": "Postponed",
+            "abstractGameState": "Final",
+            "statusCode": "DR",
+            "codedGameState": "D",
+            "reason": "Rain",
+            "description": null
+          },
+          {
+            "gamePk": 824589,
+            "gameDateUtc": "2026-08-20T18:10:00Z",
+            "officialDate": "2026-08-20",
+            "detailedState": "Scheduled",
+            "abstractGameState": "Preview",
+            "statusCode": "S",
+            "codedGameState": "S",
+            "reason": null,
+            "description": "Makeup of 6/11ppd"
+          }
+        ],
+        "awayScore": null,
+        "homeScore": null,
+        "safeToScore": false,
+        "scoreAction": "skipped_makeup_scheduled_not_final"
+      }
+    },
+    "nhlActions": {
+      "contestId": "39",
+      "speculationId": "28",
+      "contestScore": {
+        "status": "scored",
+        "awayScore": 2,
+        "homeScore": 4,
+        "txHash": "0x748a3e699fbc4c938f1a486ee765ce1adbfa25032edb4a1336bd28118185f10b"
+      },
+      "projection": {
+        "contestStatus": "scored",
+        "speculationStatus": "closed",
+        "winSide": "home",
+        "settledAtUtc": "2026-06-12T03:59:55+00:00",
+        "awayScore": 2,
+        "homeScore": 4
+      },
+      "settle": {
+        "status": "sent_confirmed",
+        "txHash": "0x5d527556d6533c9de6809bb24e079703e720bb0ce622ae4ca39eeaacfcbbfa31"
+      },
+      "claims": [
+        {
+          "walletAlias": "ospex-stage-maker-a",
+          "role": "setup/scoring",
+          "result": "no_claimable_entries_lost_upper_side",
+          "payoutWei6": "0",
+          "positionSideDetail": {
+            "role": "away",
+            "team": "Vegas Golden Knights",
+            "protocolPosition": "upper",
+            "positionType": 0,
+            "protocolOutcome": "loser"
+          }
+        },
+        {
+          "walletAlias": "ospex-stage-maker-b",
+          "role": "maker",
+          "result": "claimed",
+          "positionSide": "lower",
+          "payoutWei6": "84500",
+          "payoutUSDC": "0.084500",
+          "txHash": "0xc7020e5dc49d02022767de3dc9e3e8bac500d0564c93e07657826e180ea929c2",
+          "positionSideDetail": {
+            "role": "home",
+            "team": "Carolina Hurricanes",
+            "protocolPosition": "lower",
+            "positionType": 1,
+            "protocolOutcome": "winner"
+          }
+        },
+        {
+          "walletAlias": "ospex-flow-a",
+          "role": "flow",
+          "result": "claimed",
+          "positionSide": "lower",
+          "payoutWei6": "100000",
+          "payoutUSDC": "0.100000",
+          "txHash": "0xbe67332441816ed55d72cb0b5b4656b5f81c5bdf71116aee3229d78b803bc49f",
+          "positionSideDetail": {
+            "role": "home",
+            "team": "Carolina Hurricanes",
+            "protocolPosition": "lower",
+            "positionType": 1,
+            "protocolOutcome": "winner"
+          },
+          "positionProvenance": "NHL seed/open lower/home Carolina position; separate from the live controlled taker upper/away Vegas fill that lost."
+        }
+      ],
+      "finalClaimAllDryRuns": {
+        "ospex-stage-maker-a": {
+          "entries": 0,
+          "totalPayoutWei6": "0"
+        },
+        "ospex-stage-maker-b": {
+          "entries": 0,
+          "totalPayoutWei6": "0"
+        },
+        "ospex-flow-a": {
+          "entries": 0,
+          "totalPayoutWei6": "0"
+        }
+      },
+      "attempt2Action": "read_only_no_new_transactions_already_scored_settled_claimed"
+    },
+    "mlbActions": {
+      "contestId": "38",
+      "speculationId": "27",
+      "score": "skipped_makeup_scheduled_not_final",
+      "settle": "skipped_not_scored",
+      "claims": "skipped_not_settled",
+      "currentProjection": {
+        "contestStatus": "verified",
+        "awayScore": null,
+        "homeScore": null,
+        "speculationStatus": "open",
+        "winSide": "tbd",
+        "settledAtUtc": null
+      },
+      "remainingRequirement": "Follow deferred void/refund track after mainnet cooldown if still unscored; do not score contest 38 from the later makeup game unless protocol/product policy changes.",
+      "lockedFunds": {
+        "status": "pending_postponed_void_or_makeup_final",
+        "totalEscrowUSDC": "0.100000",
+        "seedCommitmentHash": "0x633b523bbd4da612bc93dba9f66526adff9fd8486f5c62f1dbde49758a441a8d",
+        "seedMatchTxHash": "0x5e9573c37e4471ea64881214de44987d2626b2b8d563f70bc1d00e8872b38ff2",
+        "positions": [
+          {
+            "walletAlias": "ospex-stage-maker-a",
+            "walletAddress": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+            "role": "setup/scoring seed maker",
+            "side": {
+              "role": "away",
+              "team": "Atlanta Braves",
+              "protocolPosition": "upper",
+              "positionType": 0
+            },
+            "riskUSDC": "0.050000",
+            "counterpartyWalletAlias": "ospex-flow-a",
+            "counterpartyWalletAddress": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30"
+          },
+          {
+            "walletAlias": "ospex-flow-a",
+            "walletAddress": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+            "role": "controlled flow seed taker",
+            "side": {
+              "role": "home",
+              "team": "Chicago White Sox",
+              "protocolPosition": "lower",
+              "positionType": 1
+            },
+            "riskUSDC": "0.050000",
+            "counterpartyWalletAlias": "ospex-stage-maker-a",
+            "counterpartyWalletAddress": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B"
+          }
+        ],
+        "refundExpectationIfVoided": "risk-only refund of 0.050000 USDC to each controlled seed position holder after void settlement and claim"
+      },
+      "voidFollowup": {
+        "originalStartUtc": "2026-06-11T23:40:00Z",
+        "voidCooldownSeconds": 604800,
+        "voidEligibleAtUtc": "2026-06-18T23:40:00Z",
+        "voidEligibleAtCentral": "2026-06-18 18:40 CDT",
+        "scheduledFollowupCronId": "1f8435fe7fbb",
+        "scheduledFollowupUtc": "2026-06-18T23:45:00Z",
+        "scheduledFollowupCentral": "2026-06-18 18:45 CDT",
+        "scheduledFollowupPurpose": "single postponed-game void/refund follow-up after mainnet void cooldown; do not score with makeup result"
+      }
+    },
+    "finalExposureChecks": {
+      "cliCommitmentsListPayloadCount": {
+        "contest38": 0,
+        "contest39": 0,
+        "makerContest38": 0,
+        "makerContest39": 0
+      },
+      "postgresLiveVisibleOpen": {
+        "contest38": 0,
+        "contest39": 0
+      },
+      "postgresMakerVisibleLiveOpen": {
+        "contest38": 0,
+        "contest39": 0
+      },
+      "targetCommitmentRows": {
+        "contest38": 3,
+        "contest39": 3
+      },
+      "remainingHiddenExpiredRows": {
+        "contest38": [
+          "0x195dfd683abbd625f3284168fd1fb3120d24bc722310dbbdf289dc9690700d0d",
+          "0x1f215e1d50647bdd350d10d68ef1252f882ee6d2c6104ffb3f774cf1aa42217b"
+        ],
+        "contest39": [
+          "0x1a27a11b5c3442ca41baa12d21069ea3b923ae7ebb3eef8faf082eea9ed9bb11"
+        ]
+      },
+      "orphanMmProcesses": 0,
+      "unexpectedTargetCommitments": 0
+    },
+    "cronDisposition": {
+      "nearTermDuplicateCronsRemoved": true,
+      "removedJobIds": [
+        "a892557ad21b",
+        "60f2e1990a64"
+      ],
+      "replacementCron": {
+        "originalStartUtc": "2026-06-11T23:40:00Z",
+        "voidCooldownSeconds": 604800,
+        "voidEligibleAtUtc": "2026-06-18T23:40:00Z",
+        "voidEligibleAtCentral": "2026-06-18 18:40 CDT",
+        "scheduledFollowupCronId": "1f8435fe7fbb",
+        "scheduledFollowupUtc": "2026-06-18T23:45:00Z",
+        "scheduledFollowupCentral": "2026-06-18 18:45 CDT",
+        "scheduledFollowupPurpose": "single postponed-game void/refund follow-up after mainnet void cooldown; do not score with makeup result"
+      },
+      "reason": "NHL postgame is complete; MLB gamePk 824589 is postponed/rain and follows the deferred void/refund track instead of repeated near-term postgame polling."
+    },
+    "postgameReceipts": {
+      "nhl_score_contest": {
+        "blockNumber": "88354153",
+        "effectiveGasPriceWei": "283249590432",
+        "gasCostPOL": "0.188170917162100128",
+        "gasCostUSDCEquivAt0_25": "0.04704272929052503200",
+        "gasCostWei": "188170917162100128",
+        "gasUsed": "664329",
+        "status": "0x1",
+        "txHash": "0x748a3e699fbc4c938f1a486ee765ce1adbfa25032edb4a1336bd28118185f10b"
+      },
+      "nhl_settle_speculation": {
+        "blockNumber": "88354540",
+        "effectiveGasPriceWei": "280685641260",
+        "gasCostPOL": "0.04368001880723994",
+        "gasCostUSDCEquivAt0_25": "0.0109200047018099850",
+        "gasCostWei": "43680018807239940",
+        "gasUsed": "155619",
+        "status": "0x1",
+        "txHash": "0x5d527556d6533c9de6809bb24e079703e720bb0ce622ae4ca39eeaacfcbbfa31"
+      },
+      "nhl_maker_claim": {
+        "blockNumber": "88354542",
+        "effectiveGasPriceWei": "286243837909",
+        "gasCostPOL": "0.036460308853658875",
+        "gasCostUSDCEquivAt0_25": "0.00911507721341471875",
+        "gasCostWei": "36460308853658875",
+        "gasUsed": "127375",
+        "status": "0x1",
+        "txHash": "0xc7020e5dc49d02022767de3dc9e3e8bac500d0564c93e07657826e180ea929c2"
+      },
+      "nhl_flow_claim": {
+        "blockNumber": "88354551",
+        "effectiveGasPriceWei": "282349237957",
+        "gasCostPOL": "0.035964234184772875",
+        "gasCostUSDCEquivAt0_25": "0.00899105854619321875",
+        "gasCostWei": "35964234184772875",
+        "gasUsed": "127375",
+        "status": "0x1",
+        "txHash": "0xbe67332441816ed55d72cb0b5b4656b5f81c5bdf71116aee3229d78b803bc49f"
+      }
+    },
+    "blockers": [
+      "MLB gamePk 824589 is still not final/scoreable: feed/live is Scheduled for the 2026-08-20 makeup, and the original schedule row remains Postponed/Rain. Contest 38/speculation 27 remains verified/open."
+    ],
+    "attemptHistory": [
+      {
+        "attempt": 1,
+        "checkedAtUtc": "2026-06-12T03:45:58Z",
+        "checkedAtCentral": "2026-06-11 22:45 CDT",
+        "verdict": "AMBER_POSTGAME_PARTIAL",
+        "result": "nhl_completed_mlb_postponed_deferred",
+        "newTransactions": [
+          "nhl_score_contest",
+          "nhl_settle_speculation",
+          "nhl_maker_claim",
+          "nhl_flow_claim"
+        ],
+        "blockers": [
+          "MLB gamePk 824589 is postponed for rain and rescheduled to 2026-08-20T18:10:00Z; contest 38/speculation 27 remains verified/open and cannot be safely scored in this attempt."
+        ]
+      },
+      {
+        "attempt": 2,
+        "checkedAtUtc": "2026-06-12T04:53:05Z",
+        "checkedAtCentral": "2026-06-11 23:53 CDT",
+        "verdict": "AMBER_POSTGAME_PARTIAL",
+        "result": "nhl_already_complete_mlb_makeup_scheduled_not_final",
+        "newTransactions": [],
+        "finalClaimAllDryRuns": {
+          "ospex-stage-maker-a": {
+            "entries": 0,
+            "totalPayoutWei6": "0"
+          },
+          "ospex-stage-maker-b": {
+            "entries": 0,
+            "totalPayoutWei6": "0"
+          },
+          "ospex-flow-a": {
+            "entries": 0,
+            "totalPayoutWei6": "0"
+          }
+        },
+        "exposure": {
+          "cliCommitmentsListPayloadCount": {
+            "contest38": 0,
+            "contest39": 0,
+            "makerContest38": 0,
+            "makerContest39": 0
+          },
+          "postgresLiveVisibleOpen": {
+            "contest38": 0,
+            "contest39": 0
+          },
+          "orphanMmProcesses": 0
+        },
+        "blockers": [
+          "MLB gamePk 824589 is not final: MLB feed/live now points to the scheduled makeup on 2026-08-20T18:10:00Z; the original schedule row remains postponed for rain."
+        ]
+      }
+    ]
+  },
+  "caveats": [
+    "NHL official API initially needed browser-like headers; final official probe was OFF/OK with CAR 4, VGK 2.",
+    "NHL postgame score/settle/claim completed for contest 39/speculation 28 in attempt 1.",
+    "MLB gamePk 824589 was postponed for rain and rescheduled to 2026-08-20T18:10:00Z, so contest 38/speculation 27 remains verified/open with 0.100000 USDC controlled seed escrow pending makeup-final or void/refund follow-up.",
+    "SEA/BAL was excluded after missing the safe window.",
+    "Attempt 2 was read-only: NHL remained scored/settled/claimed; MLB gamePk 824589 remained not final/scoreable with a 2026-08-20 scheduled makeup, so no MLB score/settle/claim transactions were sent."
+  ],
+  "coverage": {
+    "targetDecision": "raw/target-decision.sanitized.json",
+    "walletAuthBalance": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json",
+    "repoRuntime": "raw/release-runtime-matrix.sanitized.json",
+    "setupSeed": "raw/setup-create-seed.sanitized.json",
+    "dryRunQuotes": "raw/dry-run-quote-readiness.sanitized.json",
+    "liveWindow": "raw/live-window.sanitized.json",
+    "liveTelemetry": "raw/live-telemetry.sanitized.ndjson",
+    "zeroExposure": "raw/zero-exposure.sanitized.json",
+    "restartColdStart": "raw/restart-cold-start-probe.sanitized.json",
+    "postgameContinuation": "raw/postgame-continuation.sanitized.json",
+    "commandMatrix": "raw/command-matrix.sanitized.json",
+    "scenarioMatrixJson": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "summary": "summary.md"
+  },
+  "artifactFiles": {
+    "evidence": "evidence.json",
+    "summary": "summary.md",
+    "raw": "raw/",
+    "scenarioMatrixJson": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md"
+  }
+}
