@@ -38,7 +38,12 @@
     },
     {
       "id": "postgame_cleanup",
-      "status": "partial_nhl_complete_mlb_postponed_deferred",
+      "status": "partial_nhl_complete_mlb_postponed_deferred_attempt2",
+      "evidence": "raw/postgame-continuation.sanitized.json"
+    },
+    {
+      "id": "postgame_attempt2_recheck",
+      "status": "amber_mlb_makeup_deferred",
       "evidence": "raw/postgame-continuation.sanitized.json"
     }
   ]

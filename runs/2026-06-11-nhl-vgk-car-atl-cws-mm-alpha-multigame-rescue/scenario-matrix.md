@@ -7,4 +7,5 @@
 | controlled_fill_own_state_sse | pass | `raw/live-window.sanitized.json` |
 | shutdown_zero_exposure | pass | `raw/zero-exposure.sanitized.json` |
 | restart_cold_start | pass | `raw/restart-cold-start-probe.sanitized.json` |
-| postgame_cleanup | partial_nhl_complete_mlb_postponed_deferred | `raw/postgame-continuation.sanitized.json` |
+| postgame_cleanup | partial_nhl_complete_mlb_postponed_deferred_attempt2 | `raw/postgame-continuation.sanitized.json` |
+| postgame_attempt2_recheck | amber_mlb_makeup_deferred | `raw/postgame-continuation.sanitized.json` |

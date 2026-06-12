@@ -5,7 +5,7 @@
   "status": "complete_verified_with_caveats",
   "artifactStatus": "live_window_green_nhl_postgame_complete_mlb_postponed_deferred",
   "publishedAt": "2026-06-11T23:38:07Z",
-  "capturedAtUtc": "2026-06-12T04:10:23Z",
+  "capturedAtUtc": "2026-06-12T04:53:05Z",
   "date": "2026-06-11",
   "network": "polygon",
   "chainId": 137,
@@ -61,6 +61,19 @@
         "winner": "Carolina Hurricanes",
         "ospexWinSide": "home/lower",
         "safeToScore": true
+      },
+      "officialFinalResultAttempt2": {
+        "source": "NHL official API gamecenter landing",
+        "gameId": 2025030415,
+        "gameState": "OFF",
+        "gameScheduleState": "OK",
+        "awayTeam": "VGK",
+        "homeTeam": "CAR",
+        "awayScore": 2,
+        "homeScore": 4,
+        "winner": "Carolina Hurricanes",
+        "ospexWinSide": "home/lower",
+        "safeToScore": true
       }
     },
     "mlb": {
@@ -97,6 +110,48 @@
         "homeScore": null,
         "safeToScore": false,
         "scoreAction": "skipped_no_force_alternate_ids"
+      },
+      "officialStatusAttempt2": {
+        "source": "MLB Stats API feed/live and schedule",
+        "gamePk": 824589,
+        "feedGameDateUtc": "2026-08-20T18:10:00Z",
+        "feedOfficialDate": "2026-08-20",
+        "awayTeam": "ATL",
+        "homeTeam": "CWS",
+        "feedStatus": {
+          "abstractGameState": "Preview",
+          "codedGameState": "S",
+          "detailedState": "Scheduled",
+          "statusCode": "S"
+        },
+        "scheduleGames": [
+          {
+            "gamePk": 824589,
+            "gameDateUtc": "2026-06-11T23:40:00Z",
+            "officialDate": "2026-08-20",
+            "detailedState": "Postponed",
+            "abstractGameState": "Final",
+            "statusCode": "DR",
+            "codedGameState": "D",
+            "reason": "Rain",
+            "description": null
+          },
+          {
+            "gamePk": 824589,
+            "gameDateUtc": "2026-08-20T18:10:00Z",
+            "officialDate": "2026-08-20",
+            "detailedState": "Scheduled",
+            "abstractGameState": "Preview",
+            "statusCode": "S",
+            "codedGameState": "S",
+            "reason": null,
+            "description": "Makeup of 6/11ppd"
+          }
+        ],
+        "awayScore": null,
+        "homeScore": null,
+        "safeToScore": false,
+        "scoreAction": "skipped_makeup_scheduled_not_final"
       }
     },
     "excluded": [
@@ -190,15 +245,15 @@
   },
   "postgame": {
     "status": "partial_nhl_complete_mlb_postponed_deferred",
-    "attempt": 1,
-    "checkedAtUtc": "2026-06-12T03:45:58Z",
-    "checkedAtCentral": "2026-06-11 22:45 CDT",
-    "updatedAtUtc": "2026-06-12T04:10:23Z",
+    "attempt": 2,
+    "checkedAtUtc": "2026-06-12T04:53:05Z",
+    "checkedAtCentral": "2026-06-11 23:53 CDT",
+    "updatedAtUtc": "2026-06-12T04:53:05Z",
     "verdict": "AMBER_POSTGAME_PARTIAL",
-    "whyAmber": "NHL cleanup completed, but MLB gamePk 824589 is postponed/rescheduled and is not final/scoreable for contest 38/speculation 27.",
+    "whyAmber": "Attempt 2 confirmed NHL is already complete, but MLB gamePk 824589 is still not final/scoreable; MLB feed/live points to the scheduled 2026-08-20 makeup and the original schedule row remains postponed for rain.",
     "officialResults": {
       "nhl": {
-        "source": "NHL official API gamecenter landing/boxscore",
+        "source": "NHL official API gamecenter landing",
         "gameId": 2025030415,
         "gameState": "OFF",
         "gameScheduleState": "OK",
@@ -211,28 +266,46 @@
         "safeToScore": true
       },
       "mlb": {
-        "source": "MLB Stats API schedule and feed/live",
+        "source": "MLB Stats API feed/live and schedule",
         "gamePk": 824589,
-        "originalGameDateUtc": "2026-06-11T23:40:00Z",
+        "feedGameDateUtc": "2026-08-20T18:10:00Z",
+        "feedOfficialDate": "2026-08-20",
         "awayTeam": "ATL",
         "homeTeam": "CWS",
-        "originalStatus": {
-          "abstractGameState": "Final",
-          "codedGameState": "D",
-          "detailedState": "Postponed",
-          "statusCode": "DR",
-          "reason": "Rain"
-        },
-        "makeupStatus": {
-          "gameDateUtc": "2026-08-20T18:10:00Z",
-          "officialDate": "2026-08-20",
+        "feedStatus": {
+          "abstractGameState": "Preview",
+          "codedGameState": "S",
           "detailedState": "Scheduled",
-          "description": "Makeup of 6/11ppd"
+          "statusCode": "S"
         },
+        "scheduleGames": [
+          {
+            "gamePk": 824589,
+            "gameDateUtc": "2026-06-11T23:40:00Z",
+            "officialDate": "2026-08-20",
+            "detailedState": "Postponed",
+            "abstractGameState": "Final",
+            "statusCode": "DR",
+            "codedGameState": "D",
+            "reason": "Rain",
+            "description": null
+          },
+          {
+            "gamePk": 824589,
+            "gameDateUtc": "2026-08-20T18:10:00Z",
+            "officialDate": "2026-08-20",
+            "detailedState": "Scheduled",
+            "abstractGameState": "Preview",
+            "statusCode": "S",
+            "codedGameState": "S",
+            "reason": null,
+            "description": "Makeup of 6/11ppd"
+          }
+        ],
         "awayScore": null,
         "homeScore": null,
         "safeToScore": false,
-        "scoreAction": "skipped_no_force_alternate_ids"
+        "scoreAction": "skipped_makeup_scheduled_not_final"
       }
     },
     "nhlActions": {
@@ -248,7 +321,9 @@
         "contestStatus": "scored",
         "speculationStatus": "closed",
         "winSide": "home",
-        "settledAtUtc": "2026-06-12T03:59:55Z"
+        "settledAtUtc": "2026-06-12T03:59:55+00:00",
+        "awayScore": 2,
+        "homeScore": 4
       },
       "settle": {
         "status": "sent_confirmed",
@@ -293,18 +368,22 @@
           "entries": 0,
           "totalPayoutWei6": "0"
         }
-      }
+      },
+      "attempt2Action": "read_only_no_new_transactions_already_scored_settled_claimed"
     },
     "mlbActions": {
       "contestId": "38",
       "speculationId": "27",
-      "score": "skipped_postponed_not_final",
+      "score": "skipped_makeup_scheduled_not_final",
       "settle": "skipped_not_scored",
       "claims": "skipped_not_settled",
       "currentProjection": {
         "contestStatus": "verified",
+        "awayScore": null,
+        "homeScore": null,
         "speculationStatus": "open",
-        "winSide": "tbd"
+        "winSide": "tbd",
+        "settledAtUtc": null
       },
       "remainingRequirement": "defer until MLB makeup final score is official, or follow the protocol void/refund path when eligible under the mainnet void cooldown."
     },
@@ -341,7 +420,7 @@
     },
     "cronDisposition": {
       "laterDuplicateCronsRemoved": false,
-      "reason": "Not fully complete because MLB is postponed/rescheduled; later attempts were left in place as requested for non-final targets."
+      "reason": "Not fully complete because MLB is still not final/scoreable; later attempts were left in place for the deferred target."
     },
     "postgameReceipts": {
       "nhl_score_contest": {
@@ -386,14 +465,71 @@
       }
     },
     "blockers": [
-      "MLB gamePk 824589 is postponed for rain and rescheduled to 2026-08-20T18:10:00Z; contest 38/speculation 27 remains verified/open and cannot be safely scored in this attempt."
+      "MLB gamePk 824589 is still not final/scoreable: feed/live is Scheduled for the 2026-08-20 makeup, and the original schedule row remains Postponed/Rain. Contest 38/speculation 27 remains verified/open."
+    ],
+    "attemptHistory": [
+      {
+        "attempt": 1,
+        "checkedAtUtc": "2026-06-12T03:45:58Z",
+        "checkedAtCentral": "2026-06-11 22:45 CDT",
+        "verdict": "AMBER_POSTGAME_PARTIAL",
+        "result": "nhl_completed_mlb_postponed_deferred",
+        "newTransactions": [
+          "nhl_score_contest",
+          "nhl_settle_speculation",
+          "nhl_maker_claim",
+          "nhl_flow_claim"
+        ],
+        "blockers": [
+          "MLB gamePk 824589 is postponed for rain and rescheduled to 2026-08-20T18:10:00Z; contest 38/speculation 27 remains verified/open and cannot be safely scored in this attempt."
+        ]
+      },
+      {
+        "attempt": 2,
+        "checkedAtUtc": "2026-06-12T04:53:05Z",
+        "checkedAtCentral": "2026-06-11 23:53 CDT",
+        "verdict": "AMBER_POSTGAME_PARTIAL",
+        "result": "nhl_already_complete_mlb_makeup_scheduled_not_final",
+        "newTransactions": [],
+        "finalClaimAllDryRuns": {
+          "ospex-stage-maker-a": {
+            "entries": 0,
+            "totalPayoutWei6": "0"
+          },
+          "ospex-stage-maker-b": {
+            "entries": 0,
+            "totalPayoutWei6": "0"
+          },
+          "ospex-flow-a": {
+            "entries": 0,
+            "totalPayoutWei6": "0"
+          }
+        },
+        "exposure": {
+          "cliCommitmentsListPayloadCount": {
+            "contest38": 0,
+            "contest39": 0,
+            "makerContest38": 0,
+            "makerContest39": 0
+          },
+          "postgresLiveVisibleOpen": {
+            "contest38": 0,
+            "contest39": 0
+          },
+          "orphanMmProcesses": 0
+        },
+        "blockers": [
+          "MLB gamePk 824589 is not final: MLB feed/live now points to the scheduled makeup on 2026-08-20T18:10:00Z; the original schedule row remains postponed for rain."
+        ]
+      }
     ]
   },
   "caveats": [
     "NHL official API initially needed browser-like headers; final official probe was OFF/OK with CAR 4, VGK 2.",
     "NHL postgame score/settle/claim completed for contest 39/speculation 28 in attempt 1.",
     "MLB gamePk 824589 was postponed for rain and rescheduled to 2026-08-20T18:10:00Z, so contest 38/speculation 27 remains verified/open and postgame is deferred.",
-    "SEA/BAL was excluded after missing the safe window."
+    "SEA/BAL was excluded after missing the safe window.",
+    "Attempt 2 was read-only: NHL remained scored/settled/claimed; MLB gamePk 824589 remained not final/scoreable with a 2026-08-20 scheduled makeup, so no MLB score/settle/claim transactions were sent."
   ],
   "coverage": {
     "targetDecision": "raw/target-decision.sanitized.json",
