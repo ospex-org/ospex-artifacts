@@ -229,30 +229,12 @@
             "riskAmountWei6": "50000",
             "counterpartyRiskWei6": "50000",
             "updatedAtUnixSec": 1781217446
-          },
-          {
-            "positionId": "24_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
-            "speculationId": "24",
-            "positionType": 1,
-            "team": "Colorado Rockies",
-            "opponent": "Chicago Cubs",
-            "market": "moneyline",
-            "oddsDecimal": 2,
-            "riskAmountUSDC": 0.01,
-            "profitAmountUSDC": 0.01,
-            "contestId": "34",
-            "sport": "mlb",
-            "awayTeam": "Chicago Cubs",
-            "homeTeam": "Colorado Rockies",
-            "riskAmountWei6": "10000",
-            "counterpartyRiskWei6": "10000",
-            "updatedAtUnixSec": 1781136255
           }
         ],
         "pendingSettle": [],
         "claimable": [],
         "totals": {
-          "activeCount": 4,
+          "activeCount": 3,
           "pendingSettleCount": 0,
           "claimableCount": 0,
           "estimatedPayoutUSDC": 0,
@@ -263,5 +245,17 @@
       }
     }
   },
-  "interpretation": "Public/API live commitment exposure is zero; filled seed/live positions remain real positions until postgame settlement/claim."
+  "interpretation": "Public/API live commitment exposure is zero; filled seed/live positions remain real positions until postgame settlement/claim.",
+  "targetScope": {
+    "includedContestIds": [
+      "38",
+      "39"
+    ],
+    "includedSpeculationIds": [
+      "27",
+      "28"
+    ],
+    "scopeNote": "positions.status output is target-scoped for this artifact; unrelated controlled-wallet positions are omitted rather than published in this raw capture.",
+    "omittedOutOfScopePositionCount": 1
+  }
 }

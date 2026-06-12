@@ -26,6 +26,27 @@
         "awayTeam": "VGK",
         "homeTeam": "CAR",
         "periodDescriptor": null
+      },
+      "teamIdentity": {
+        "homeFavorite": {
+          "team": "Carolina Hurricanes",
+          "role": "home",
+          "positionType": "lower",
+          "marketOddsAmerican": "-160",
+          "quoteTick": 163,
+          "identity": "favorite",
+          "protocolOutcome": "winner"
+        },
+        "awayUnderdog": {
+          "team": "Vegas Golden Knights",
+          "role": "away",
+          "positionType": "upper",
+          "marketOddsAmerican": "+140",
+          "quoteTick": 240,
+          "identity": "underdog",
+          "protocolOutcome": "loser"
+        },
+        "source": "raw/dry-run-quote-readiness.sanitized.json referenceOdds; upper=away, lower=home; NHL final CAR 4, VGK 2"
       }
     },
     "mlb": {
@@ -38,13 +59,89 @@
       "speculationId": "27",
       "statusAtPreflight": "Pre-Game",
       "abstractStateAtPreflight": "Preview",
-      "hasOdds": true
+      "hasOdds": true,
+      "teamIdentity": {
+        "awayFavorite": {
+          "team": "Atlanta Braves",
+          "role": "away",
+          "positionType": "upper",
+          "marketOddsAmerican": "-113",
+          "quoteTick": 188,
+          "identity": "favorite",
+          "protocolOutcome": "pending_postponed"
+        },
+        "homeUnderdog": {
+          "team": "Chicago White Sox",
+          "role": "home",
+          "positionType": "lower",
+          "marketOddsAmerican": "-100",
+          "quoteTick": 200,
+          "identity": "underdog",
+          "protocolOutcome": "pending_postponed"
+        },
+        "source": "raw/dry-run-quote-readiness.sanitized.json referenceOdds; upper=away, lower=home; MLB gamePk 824589 postponed/rain"
+      },
+      "protocolOutcome": "pending_postponed",
+      "deferredLockedFunds": {
+        "status": "pending_postponed_void_or_makeup_final",
+        "totalEscrowUSDC": "0.100000",
+        "seedCommitmentHash": "0x633b523bbd4da612bc93dba9f66526adff9fd8486f5c62f1dbde49758a441a8d",
+        "seedMatchTxHash": "0x5e9573c37e4471ea64881214de44987d2626b2b8d563f70bc1d00e8872b38ff2",
+        "positions": [
+          {
+            "walletAlias": "ospex-stage-maker-a",
+            "walletAddress": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+            "role": "setup/scoring seed maker",
+            "side": {
+              "role": "away",
+              "team": "Atlanta Braves",
+              "protocolPosition": "upper",
+              "positionType": 0
+            },
+            "riskUSDC": "0.050000",
+            "counterpartyWalletAlias": "ospex-flow-a",
+            "counterpartyWalletAddress": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30"
+          },
+          {
+            "walletAlias": "ospex-flow-a",
+            "walletAddress": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+            "role": "controlled flow seed taker",
+            "side": {
+              "role": "home",
+              "team": "Chicago White Sox",
+              "protocolPosition": "lower",
+              "positionType": 1
+            },
+            "riskUSDC": "0.050000",
+            "counterpartyWalletAlias": "ospex-stage-maker-a",
+            "counterpartyWalletAddress": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B"
+          }
+        ],
+        "refundExpectationIfVoided": "risk-only refund of 0.050000 USDC to each controlled seed position holder after void settlement and claim"
+      },
+      "voidFollowup": {
+        "originalStartUtc": "2026-06-11T23:40:00Z",
+        "voidCooldownSeconds": 604800,
+        "voidEligibleAtUtc": "2026-06-18T23:40:00Z",
+        "voidEligibleAtCentral": "2026-06-18 18:40 CDT",
+        "scheduledFollowupCronId": "1f8435fe7fbb",
+        "scheduledFollowupUtc": "2026-06-18T23:45:00Z",
+        "scheduledFollowupCentral": "2026-06-18 18:45 CDT",
+        "scheduledFollowupPurpose": "single postponed-game void/refund follow-up after mainnet void cooldown; do not score with makeup result"
+      }
     },
     "excluded": [
       {
         "game": "Seattle Mariners @ Baltimore Orioles",
         "contestId": "37",
-        "reason": "missed safe window before live/prep; not included in live scope"
+        "reason": "missed safe window before live/prep; not included in live scope",
+        "disposition": "created_verified_no_speculation_no_locked_funds_no_postgame_owed",
+        "contestCreateTxHash": "0xd5f88f32d9ab68f528dc6351813586d48fa29d2f98c80a672398cc1b03b1d75f",
+        "onChainStatus": "verified/public",
+        "speculationOpened": false,
+        "lockedFundsUSDC": "0.000000",
+        "postgameOwed": false,
+        "costsIncludedInPrepFigures": true
       }
     ]
   },

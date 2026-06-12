@@ -18,7 +18,13 @@
       "homeScore": 4,
       "winner": "Carolina Hurricanes",
       "ospexWinSide": "home/lower",
-      "safeToScore": true
+      "safeToScore": true,
+      "ospexWinSideDetail": {
+        "role": "home",
+        "team": "Carolina Hurricanes",
+        "protocolPosition": "lower",
+        "positionType": 1
+      }
     },
     "mlb": {
       "source": "MLB Stats API feed/live and schedule",
@@ -89,7 +95,14 @@
         "walletAlias": "ospex-stage-maker-a",
         "role": "setup/scoring",
         "result": "no_claimable_entries_lost_upper_side",
-        "payoutWei6": "0"
+        "payoutWei6": "0",
+        "positionSideDetail": {
+          "role": "away",
+          "team": "Vegas Golden Knights",
+          "protocolPosition": "upper",
+          "positionType": 0,
+          "protocolOutcome": "loser"
+        }
       },
       {
         "walletAlias": "ospex-stage-maker-b",
@@ -98,7 +111,14 @@
         "positionSide": "lower",
         "payoutWei6": "84500",
         "payoutUSDC": "0.084500",
-        "txHash": "0xc7020e5dc49d02022767de3dc9e3e8bac500d0564c93e07657826e180ea929c2"
+        "txHash": "0xc7020e5dc49d02022767de3dc9e3e8bac500d0564c93e07657826e180ea929c2",
+        "positionSideDetail": {
+          "role": "home",
+          "team": "Carolina Hurricanes",
+          "protocolPosition": "lower",
+          "positionType": 1,
+          "protocolOutcome": "winner"
+        }
       },
       {
         "walletAlias": "ospex-flow-a",
@@ -107,7 +127,15 @@
         "positionSide": "lower",
         "payoutWei6": "100000",
         "payoutUSDC": "0.100000",
-        "txHash": "0xbe67332441816ed55d72cb0b5b4656b5f81c5bdf71116aee3229d78b803bc49f"
+        "txHash": "0xbe67332441816ed55d72cb0b5b4656b5f81c5bdf71116aee3229d78b803bc49f",
+        "positionSideDetail": {
+          "role": "home",
+          "team": "Carolina Hurricanes",
+          "protocolPosition": "lower",
+          "positionType": 1,
+          "protocolOutcome": "winner"
+        },
+        "positionProvenance": "NHL seed/open lower/home Carolina position; separate from the live controlled taker upper/away Vegas fill that lost."
       }
     ],
     "finalClaimAllDryRuns": {
@@ -140,7 +168,54 @@
       "winSide": "tbd",
       "settledAtUtc": null
     },
-    "remainingRequirement": "defer until MLB makeup final score is official, or follow the protocol void/refund path when eligible under the mainnet void cooldown."
+    "remainingRequirement": "Follow deferred void/refund track after mainnet cooldown if still unscored; do not score contest 38 from the later makeup game unless protocol/product policy changes.",
+    "lockedFunds": {
+      "status": "pending_postponed_void_or_makeup_final",
+      "totalEscrowUSDC": "0.100000",
+      "seedCommitmentHash": "0x633b523bbd4da612bc93dba9f66526adff9fd8486f5c62f1dbde49758a441a8d",
+      "seedMatchTxHash": "0x5e9573c37e4471ea64881214de44987d2626b2b8d563f70bc1d00e8872b38ff2",
+      "positions": [
+        {
+          "walletAlias": "ospex-stage-maker-a",
+          "walletAddress": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+          "role": "setup/scoring seed maker",
+          "side": {
+            "role": "away",
+            "team": "Atlanta Braves",
+            "protocolPosition": "upper",
+            "positionType": 0
+          },
+          "riskUSDC": "0.050000",
+          "counterpartyWalletAlias": "ospex-flow-a",
+          "counterpartyWalletAddress": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30"
+        },
+        {
+          "walletAlias": "ospex-flow-a",
+          "walletAddress": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+          "role": "controlled flow seed taker",
+          "side": {
+            "role": "home",
+            "team": "Chicago White Sox",
+            "protocolPosition": "lower",
+            "positionType": 1
+          },
+          "riskUSDC": "0.050000",
+          "counterpartyWalletAlias": "ospex-stage-maker-a",
+          "counterpartyWalletAddress": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B"
+        }
+      ],
+      "refundExpectationIfVoided": "risk-only refund of 0.050000 USDC to each controlled seed position holder after void settlement and claim"
+    },
+    "voidFollowup": {
+      "originalStartUtc": "2026-06-11T23:40:00Z",
+      "voidCooldownSeconds": 604800,
+      "voidEligibleAtUtc": "2026-06-18T23:40:00Z",
+      "voidEligibleAtCentral": "2026-06-18 18:40 CDT",
+      "scheduledFollowupCronId": "1f8435fe7fbb",
+      "scheduledFollowupUtc": "2026-06-18T23:45:00Z",
+      "scheduledFollowupCentral": "2026-06-18 18:45 CDT",
+      "scheduledFollowupPurpose": "single postponed-game void/refund follow-up after mainnet void cooldown; do not score with makeup result"
+    }
   },
   "finalExposureChecks": {
     "cliCommitmentsListPayloadCount": {
@@ -174,8 +249,22 @@
     "unexpectedTargetCommitments": 0
   },
   "cronDisposition": {
-    "laterDuplicateCronsRemoved": false,
-    "reason": "Not fully complete because MLB is still not final/scoreable; later attempts were left in place for the deferred target."
+    "nearTermDuplicateCronsRemoved": true,
+    "removedJobIds": [
+      "a892557ad21b",
+      "60f2e1990a64"
+    ],
+    "replacementCron": {
+      "originalStartUtc": "2026-06-11T23:40:00Z",
+      "voidCooldownSeconds": 604800,
+      "voidEligibleAtUtc": "2026-06-18T23:40:00Z",
+      "voidEligibleAtCentral": "2026-06-18 18:40 CDT",
+      "scheduledFollowupCronId": "1f8435fe7fbb",
+      "scheduledFollowupUtc": "2026-06-18T23:45:00Z",
+      "scheduledFollowupCentral": "2026-06-18 18:45 CDT",
+      "scheduledFollowupPurpose": "single postponed-game void/refund follow-up after mainnet void cooldown; do not score with makeup result"
+    },
+    "reason": "NHL postgame is complete; MLB gamePk 824589 is postponed/rain and follows the deferred void/refund track instead of repeated near-term postgame polling."
   },
   "postgameReceipts": {
     "nhl_score_contest": {

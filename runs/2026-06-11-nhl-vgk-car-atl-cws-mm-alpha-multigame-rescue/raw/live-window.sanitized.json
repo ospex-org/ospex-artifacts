@@ -127,7 +127,19 @@
       "riskAmountWei6": "50000",
       "expiryUnixSec": 1781220227,
       "takerOddsTick": 193,
-      "takerImpliedProb": 0.5175841559098963
+      "takerImpliedProb": 0.5175841559098963,
+      "makerSideDetail": {
+        "role": "home",
+        "team": "Chicago White Sox",
+        "protocolPosition": "lower",
+        "positionType": 1
+      },
+      "takerSideDetail": {
+        "role": "away",
+        "team": "Atlanta Braves",
+        "protocolPosition": "upper",
+        "positionType": 0
+      }
     },
     {
       "ts": "2026-06-11T23:21:48.304Z",
@@ -146,7 +158,19 @@
       "riskAmountWei6": "50000",
       "expiryUnixSec": 1781220227,
       "takerOddsTick": 205,
-      "takerImpliedProb": 0.4879713996456594
+      "takerImpliedProb": 0.4879713996456594,
+      "makerSideDetail": {
+        "role": "away",
+        "team": "Atlanta Braves",
+        "protocolPosition": "upper",
+        "positionType": 0
+      },
+      "takerSideDetail": {
+        "role": "home",
+        "team": "Chicago White Sox",
+        "protocolPosition": "lower",
+        "positionType": 1
+      }
     },
     {
       "ts": "2026-06-11T23:21:48.799Z",
@@ -165,7 +189,19 @@
       "riskAmountWei6": "50000",
       "expiryUnixSec": 1781220227,
       "takerOddsTick": 244,
-      "takerImpliedProb": 0.4091032774483246
+      "takerImpliedProb": 0.4091032774483246,
+      "makerSideDetail": {
+        "role": "home",
+        "team": "Carolina Hurricanes",
+        "protocolPosition": "lower",
+        "positionType": 1
+      },
+      "takerSideDetail": {
+        "role": "away",
+        "team": "Vegas Golden Knights",
+        "protocolPosition": "upper",
+        "positionType": 0
+      }
     },
     {
       "ts": "2026-06-11T23:21:49.124Z",
@@ -184,7 +220,19 @@
       "riskAmountWei6": "50000",
       "expiryUnixSec": 1781220227,
       "takerOddsTick": 168,
-      "takerImpliedProb": 0.5964522781072309
+      "takerImpliedProb": 0.5964522781072309,
+      "makerSideDetail": {
+        "role": "away",
+        "team": "Vegas Golden Knights",
+        "protocolPosition": "upper",
+        "positionType": 0
+      },
+      "takerSideDetail": {
+        "role": "home",
+        "team": "Carolina Hurricanes",
+        "protocolPosition": "lower",
+        "positionType": 1
+      }
     }
   ],
   "controlledFill": {
@@ -196,7 +244,21 @@
     "takerRiskUSDC": "0.034500",
     "partialFill": false,
     "fillSource": "own-state-stream",
-    "blockNumber": null
+    "blockNumber": null,
+    "makerSideDetail": {
+      "role": "home",
+      "team": "Carolina Hurricanes",
+      "protocolPosition": "lower",
+      "positionType": 1
+    },
+    "takerSideDetail": {
+      "role": "away",
+      "team": "Vegas Golden Knights",
+      "protocolPosition": "upper",
+      "positionType": 0
+    },
+    "makerOddsTick": 169,
+    "takerOddsTick": 244
   },
   "ownStateSseAssertions": {
     "fillSource": "own-state-stream",
@@ -218,7 +280,19 @@
       "makerSide": "home",
       "positionType": 1,
       "makerOddsTick": 208,
-      "reason": "shutdown"
+      "reason": "shutdown",
+      "makerSideDetail": {
+        "role": "home",
+        "team": "Chicago White Sox",
+        "protocolPosition": "lower",
+        "positionType": 1
+      },
+      "takerSideDetail": {
+        "role": "away",
+        "team": "Atlanta Braves",
+        "protocolPosition": "upper",
+        "positionType": 0
+      }
     },
     {
       "ts": "2026-06-11T23:23:50.766Z",
@@ -234,7 +308,19 @@
       "makerSide": "away",
       "positionType": 0,
       "makerOddsTick": 195,
-      "reason": "shutdown"
+      "reason": "shutdown",
+      "makerSideDetail": {
+        "role": "away",
+        "team": "Atlanta Braves",
+        "protocolPosition": "upper",
+        "positionType": 0
+      },
+      "takerSideDetail": {
+        "role": "home",
+        "team": "Chicago White Sox",
+        "protocolPosition": "lower",
+        "positionType": 1
+      }
     },
     {
       "ts": "2026-06-11T23:23:51.093Z",
@@ -250,7 +336,19 @@
       "makerSide": "away",
       "positionType": 0,
       "makerOddsTick": 247,
-      "reason": "shutdown"
+      "reason": "shutdown",
+      "makerSideDetail": {
+        "role": "away",
+        "team": "Vegas Golden Knights",
+        "protocolPosition": "upper",
+        "positionType": 0
+      },
+      "takerSideDetail": {
+        "role": "home",
+        "team": "Carolina Hurricanes",
+        "protocolPosition": "lower",
+        "positionType": 1
+      }
     }
   ],
   "mmSummary": {
@@ -377,5 +475,11 @@
       },
       "totalFeeUsdcWei6": "0"
     }
+  },
+  "telemetryScope": {
+    "publishedNdjson": "raw/live-telemetry.sanitized.ndjson",
+    "publishedLineCount": 17,
+    "canonicalSummaryEventCount": 24,
+    "scopeNote": "Published NDJSON is a selected public-safe subset; this JSON liveRun.eventCounts is the count source."
   }
 }
