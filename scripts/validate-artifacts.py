@@ -42,8 +42,19 @@ STATUS_BY_ARTIFACT_TYPE = {
 TEXT_SUFFIXES = {".json", ".md", ".ndjson", ".txt", ".yml", ".yaml"}
 SHA256_RE = re.compile(r"^[a-fA-F0-9]{64}$")
 TX_HASH_RE = re.compile(r"^0x[a-fA-F0-9]{64}$")
-RAW_SIGNATURE_RE = re.compile(r"0x[a-fA-F0-9]{130}\b")
+RAW_SIGNATURE_RE = re.compile(r"0[xX][a-fA-F0-9]{130}\b")
+AMERICAN_ODDS_RE = re.compile(r"^[+-]\d+$")
 SLUG_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+
+# Pre-scheme files that legitimately contain long sanitized event-data hex blobs
+# (verified to carry no signature-sized ABI fields). New artifacts must summarize
+# calldata instead of dumping it (docs/publication-rules.md), so only these two
+# files are exempt from the calldata-sized-hex pattern.
+LEGACY_LONG_HEX_FILES = {
+    "runs/2026-05-24-mlb-tex-laa-contest-21-mm-partial-smoke/raw/final-supabase-state.sanitized.json",
+    "runs/2026-05-24-mlb-tex-laa-contest-21-mm-partial-smoke/raw/indexer-snapshot.sanitized.json",
+}
+LONG_HEX_LABEL = "raw calldata-sized hex blob"
 
 # Scenario matrix v2 + MVE readiness scorecard contracts (docs/mm-live-canary-evidence.md).
 # These checks apply only to runs that adopt the schema-backed shapes; earlier
@@ -129,11 +140,23 @@ SAFETY_PATTERNS = [
     ("ospex secret path", re.compile(r"\.ospex/(?:secrets|wallets|keystores)|\.(?:pass|pem|key)\b", re.I)),
     ("raw EIP-712 signature-sized hex", RAW_SIGNATURE_RE),
     (
+        "signature-sized bare hex",
+        re.compile(r"(?<![a-fA-F0-9])(?:0[xX])?[a-fA-F0-9]{128,132}(?![a-fA-F0-9])"),
+    ),
+    (
+        "signature r/s components",
+        re.compile(r"\"r\"\s*:\s*\"0[xX][a-fA-F0-9]{64}\"\s*,\s*\"s\"\s*:\s*\"0[xX][a-fA-F0-9]{64}\""),
+    ),
+    (
         "signature/signedPayload-keyed hex value",
         re.compile(
-            r"\"(?:raw)?(?:eip712)?(?:signature|signedPayload|signedMessage|signedTypedData)\"\s*:\s*\"0x[a-fA-F0-9]{8,}",
+            r"\"[A-Za-z0-9_-]*(?:signature|signedPayload|signedMessage|signedTypedData)[A-Za-z0-9_-]*\"\s*:\s*\"(?:0[xX])?[a-fA-F0-9]{8,}",
             re.I,
         ),
+    ),
+    (
+        LONG_HEX_LABEL,
+        re.compile(r"(?<![a-fA-F0-9])(?:0[xX])?[a-fA-F0-9]{192,}"),
     ),
     (
         "specific upstream odds provider name",
@@ -207,6 +230,22 @@ def is_one_of(value: Any, vocab: set[str]) -> bool:
     return isinstance(value, str) and value in vocab
 
 
+COMPANION_ARTIFACT_FILES = {
+    "evidence.json",
+    "scenario-matrix.json",
+    "scenario-matrix.md",
+    "mve-scorecard.json",
+    "mve-scorecard.md",
+    "summary.md",
+}
+
+
+def is_companion_reference(value: Any) -> bool:
+    # Evidence rows must point at sanitized raw evidence; pointing a row at the
+    # artifact's own companion files is circular by construction.
+    return isinstance(value, str) and bool(value) and PurePosixPath(value).as_posix() in COMPANION_ARTIFACT_FILES
+
+
 def check_relative_path(path_value: Any, *, base: Path, errors: list[str], context: str, expect_dir: bool = False) -> None:
     if path_value is None:
         return
@@ -241,7 +280,12 @@ def parse_json_files(files: list[Path], errors: list[str]) -> dict[Path, Any]:
 def parse_ndjson_files(files: list[Path], errors: list[str]) -> int:
     count = 0
     for path in sorted(p for p in files if p.suffix == ".ndjson"):
-        for line_no, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+        try:
+            text = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError as exc:
+            errors.append(f"{rel(path)}: not valid UTF-8: {exc}")
+            continue
+        for line_no, line in enumerate(text.splitlines(), start=1):
             if not line.strip():
                 continue
             count += 1
@@ -732,6 +776,8 @@ def validate_scenario_matrix(path: Path, doc: Any, errors: list[str]) -> None:
         if evidence is None:
             if is_one_of(status, {"pass", "pass_with_caveats", "fail"}):
                 errors.append(f"{row_context}: evidence is required when status is {status!r}")
+        elif is_companion_reference(evidence):
+            errors.append(f"{row_context}.evidence must point at sanitized raw evidence, not the artifact's own companion files")
         else:
             check_relative_path(evidence, base=artifact_dir, errors=errors, context=f"{row_context}.evidence")
 
@@ -757,13 +803,22 @@ def validate_team_identity(context: str, target: dict[str, Any], errors: list[st
         if entry.get("positionType") != expected_position:
             errors.append(f"{entry_context}.positionType must be {expected_position!r} for the {role} side")
         odds = entry.get("marketOddsAmerican")
-        if not isinstance(odds, str) or not odds.strip():
-            errors.append(f"{entry_context}.marketOddsAmerican must be a non-empty string")
+        odds_valid = isinstance(odds, str) and AMERICAN_ODDS_RE.match(odds) and abs(int(odds)) >= 100
+        if not odds_valid:
+            errors.append(f"{entry_context}.marketOddsAmerican must be signed American odds with magnitude >= 100, like '-114' or '+114'")
         side_identity = entry.get("identity")
         if not is_one_of(side_identity, {"favorite", "underdog", "even"}):
             errors.append(f"{entry_context}.identity must be favorite, underdog, or even")
         else:
             identities[role] = side_identity
+            if odds_valid:
+                # Sign/identity confusion is the exact failure the Team Identity Rule exists for.
+                if side_identity == "favorite" and not odds.startswith("-"):
+                    errors.append(f"{entry_context}: favorite must carry negative American odds, got {odds!r}")
+                elif side_identity == "underdog" and not odds.startswith("+"):
+                    errors.append(f"{entry_context}: underdog must carry positive American odds, got {odds!r}")
+                elif side_identity == "even" and abs(int(odds)) != 100:
+                    errors.append(f"{entry_context}: even identity requires American odds of magnitude 100, got {odds!r}")
     if len(teams) == 2 and teams["home"] == teams["away"]:
         errors.append(f"{context}: teamIdentity home and away teams must differ")
     if len(identities) == 2:
@@ -780,12 +835,19 @@ def validate_adopting_run_evidence(
 ) -> None:
     context = display_path(scorecard_path.parent / "evidence.json")
 
+    if evidence_doc.get("artifactType") != "run":
+        errors.append(f"{context}: artifactType must be 'run' for a scorecard-adopting artifact")
+
     artifact_files = evidence_doc.get("artifactFiles")
     referenced: set[str] = set()
     if isinstance(artifact_files, dict):
         for key, value in artifact_files.items():
             if isinstance(value, str):
                 referenced.add(value)
+                # The companion files' existence is guaranteed elsewhere (the scorecard is the
+                # document under validation; the matrix is required by the pairing check).
+                if value not in {"scenario-matrix.json", "mve-scorecard.json"}:
+                    check_relative_path(value, base=scorecard_path.parent, errors=errors, context=f"{context}: artifactFiles.{key}")
             else:
                 errors.append(f"{context}: artifactFiles.{key} must be a string path")
     for required_value in ["scenario-matrix.json", "mve-scorecard.json"]:
@@ -800,6 +862,15 @@ def validate_adopting_run_evidence(
                 f"{context}: status {status!r} does not match scorecard verdict {verdict_label}; "
                 "expected one of: " + ", ".join(sorted(allowed))
             )
+    if status == "superseded":
+        superseded_by = evidence_doc.get("supersededBy")
+        if not isinstance(superseded_by, str) or not superseded_by.strip():
+            errors.append(
+                f"{context}: status 'superseded' requires a supersededBy pointer "
+                "(repo-relative path to the successor artifact's evidence JSON)"
+            )
+        else:
+            check_relative_path(superseded_by, base=ROOT, errors=errors, context=f"{context}.supersededBy")
 
     evidence_verdict = evidence_doc.get("verdict")
     if verdict_label and isinstance(evidence_verdict, dict) and "label" in evidence_verdict:
@@ -903,6 +974,8 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
                 if evidence is None:
                     if is_one_of(proof, PROVEN_LEVELS) or proof == "failed":
                         errors.append(f"{row_context}: evidence is required when proof is {proof!r}")
+                elif is_companion_reference(evidence):
+                    errors.append(f"{row_context}.evidence must point at sanitized raw evidence, not the artifact's own companion files")
                 else:
                     check_relative_path(evidence, base=artifact_dir, errors=errors, context=f"{row_context}.evidence")
 
@@ -926,6 +999,19 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
             )
             if unproven:
                 errors.append(f"{context}: verdict FULL_GREEN requires proven core capabilities; not proven: {', '.join(unproven)}")
+        # A live canary's headline claim is live behavior: the live-window rows accept only
+        # proven_live under any verdict that claims them, never proven_synthetic_only.
+        if verdict_label in {"FULL_GREEN", "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED"}:
+            not_live = sorted(
+                cid
+                for cid in ("live-commitments-posted", "live-fill")
+                if cid in proof_by_id and proof_by_id[cid] != "proven_live"
+            )
+            if not_live:
+                errors.append(
+                    f"{context}: verdict {verdict_label} requires proven_live for the live-window capabilities; "
+                    "not proven_live: " + ", ".join(not_live)
+                )
         if verdict_label == "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED":
             not_deferred = sorted(
                 cid for cid in POSTGAME_CAPABILITY_IDS if cid in proof_by_id and proof_by_id[cid] != "deferred"
@@ -935,20 +1021,10 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
                     f"{context}: verdict GREEN_LIVE_WINDOW_POSTGAME_DEFERRED requires deferred postgame capabilities; "
                     "not deferred: " + ", ".join(not_deferred)
                 )
-            unproven_live = sorted(
-                cid
-                for cid in ("live-commitments-posted", "live-fill", "exposure-drain-zero")
-                if cid in proof_by_id and proof_by_id[cid] not in PROVEN_LEVELS
-            )
-            if unproven_live:
-                errors.append(
-                    f"{context}: verdict GREEN_LIVE_WINDOW_POSTGAME_DEFERRED requires a proven live window; "
-                    "not proven: " + ", ".join(unproven_live)
-                )
         if verdict_label == "AMBER_QUOTED_NO_FILL":
             posted_proof = proof_by_id.get("live-commitments-posted")
-            if posted_proof is not None and posted_proof not in PROVEN_LEVELS:
-                errors.append(f"{context}: verdict AMBER_QUOTED_NO_FILL requires proven live-commitments-posted")
+            if posted_proof is not None and posted_proof != "proven_live":
+                errors.append(f"{context}: verdict AMBER_QUOTED_NO_FILL requires proven_live live-commitments-posted")
             fill_proof = proof_by_id.get("live-fill")
             if fill_proof is not None and fill_proof not in {"deferred", "failed"}:
                 errors.append(f"{context}: verdict AMBER_QUOTED_NO_FILL requires live-fill to be deferred or failed")
@@ -973,6 +1049,10 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
                 if zero.get("evidence") is None:
                     errors.append(
                         f"{context}: zeroExposure.evidence must be a non-empty string path to the sanitized exposure snapshot"
+                    )
+                elif is_companion_reference(zero.get("evidence")):
+                    errors.append(
+                        f"{context}: zeroExposure.evidence must point at sanitized raw evidence, not the artifact's own companion files"
                     )
                 else:
                     check_relative_path(zero.get("evidence"), base=artifact_dir, errors=errors, context=f"{context}: zeroExposure.evidence")
@@ -1079,6 +1159,40 @@ def validate_adoption_pairing(docs: dict[Path, Any], errors: list[str]) -> None:
                 f"mve-scorecard.json runClass {scorecard_class!r}"
             )
 
+        # When a scenario row and a capability row share an id, their results must not tell
+        # contradictory stories about the same run.
+        matrix_doc = docs.get(directory / "scenario-matrix.json")
+        scorecard_doc = docs.get(directory / "mve-scorecard.json")
+        if not scenario_matrix_is_v2(matrix_doc) or not isinstance(scorecard_doc, dict):
+            continue
+        status_by_id: dict[str, str] = {}
+        scenarios = matrix_doc.get("scenarios")
+        if isinstance(scenarios, list):
+            for row in scenarios:
+                if isinstance(row, dict) and isinstance(row.get("id"), str) and isinstance(row.get("status"), str):
+                    status_by_id[row["id"]] = row["status"]
+        capabilities = scorecard_doc.get("capabilities")
+        if not isinstance(capabilities, list):
+            continue
+        for cap in capabilities:
+            if not isinstance(cap, dict):
+                continue
+            cap_id = cap.get("id")
+            proof = cap.get("proof")
+            if not isinstance(cap_id, str) or not isinstance(proof, str):
+                continue
+            row_status = status_by_id.get(cap_id)
+            if row_status is None:
+                continue
+            contradiction = (row_status == "fail" and proof in PROVEN_LEVELS) or (
+                row_status in {"pass", "pass_with_caveats"} and proof == "failed"
+            )
+            if contradiction:
+                errors.append(
+                    f"{display_path(directory)}: scenario-matrix.json row {cap_id!r} status {row_status!r} "
+                    f"contradicts mve-scorecard.json proof {proof!r}"
+                )
+
 
 def validate_schema_pointers(docs: dict[Path, Any], errors: list[str]) -> None:
     known_schema_ids = {
@@ -1108,6 +1222,21 @@ def validate_schema_pointers(docs: dict[Path, Any], errors: list[str]) -> None:
         schema_pointer = doc.get("$schema")
         if schema_pointer is not None and schema_pointer not in known_schema_ids:
             errors.append(f"{rel(path)}: unknown $schema pointer {schema_pointer!r}")
+            continue
+        # The run-companion schemas are validated by filename, so a misnamed or misplaced
+        # file carrying their pointer would silently dodge every check. Templates are the
+        # only legitimate other carriers.
+        expected_name_by_schema = {
+            SCENARIO_MATRIX_SCHEMA_ID: "scenario-matrix.json",
+            MVE_SCORECARD_SCHEMA_ID: "mve-scorecard.json",
+        }
+        if schema_pointer in expected_name_by_schema and "templates" not in path.parts:
+            expected_name = expected_name_by_schema[schema_pointer]
+            if path.name != expected_name or "runs" not in path.parts:
+                errors.append(
+                    f"{rel(path)}: declares {schema_pointer} but must be named {expected_name} inside a runs/ "
+                    "artifact directory (templates under templates/ are exempt)"
+                )
 
 
 def validate_generated_indexes(errors: list[str]) -> None:
@@ -1135,21 +1264,31 @@ def validate_generated_indexes(errors: list[str]) -> None:
 def safety_scan(files: list[Path], errors: list[str]) -> int:
     scanned = 0
     for path in sorted(files):
+        relative = rel(path)
+        top_level = relative.split("/", 1)[0]
         if path.suffix not in TEXT_SUFFIXES:
+            # Artifact directories may only contain scannable text files; anything the
+            # safety scan cannot read must not be published.
+            if top_level in {"runs", "releases", "daily"}:
+                allowed = ", ".join(sorted(TEXT_SUFFIXES))
+                errors.append(f"{relative}: unexpected file type {path.suffix!r}; artifact files must be one of: {allowed}")
             continue
         # Avoid the validator tripping over its own regex literals.
-        if rel(path) == "scripts/validate-artifacts.py":
+        if relative == "scripts/validate-artifacts.py":
             continue
         try:
             text = path.read_text(encoding="utf-8")
-        except UnicodeDecodeError:
+        except UnicodeDecodeError as exc:
+            errors.append(f"{relative}: not valid UTF-8, so the public-safety scan cannot read it: {exc}")
             continue
         scanned += 1
         for label, pattern in SAFETY_PATTERNS:
+            if label == LONG_HEX_LABEL and relative in LEGACY_LONG_HEX_FILES:
+                continue
             match = pattern.search(text)
             if match:
                 sample = match.group(0).replace("\n", " ")[:120]
-                errors.append(f"{rel(path)}: public-safety scan matched {label}: {sample!r}")
+                errors.append(f"{relative}: public-safety scan matched {label}: {sample!r}")
     return scanned
 
 

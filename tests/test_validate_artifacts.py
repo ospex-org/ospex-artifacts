@@ -71,6 +71,7 @@ def make_postgame_deferred_scorecard() -> dict:
 
 def make_postgame_deferred_evidence() -> dict:
     return {
+        "artifactType": "run",
         "status": "partial",
         "artifactFiles": {
             "summary": "summary.md",
@@ -610,24 +611,167 @@ class ErrorMessageQualityTests(unittest.TestCase):
 
 
 class SignatureSafetyPatternTests(unittest.TestCase):
-    def pattern(self):
-        for label, compiled in validate_artifacts.SAFETY_PATTERNS:
-            if label == "signature/signedPayload-keyed hex value":
+    def pattern(self, label: str):
+        for pattern_label, compiled in validate_artifacts.SAFETY_PATTERNS:
+            if pattern_label == label:
                 return compiled
-        raise AssertionError("signature/signedPayload safety pattern is missing")
+        raise AssertionError(f"safety pattern {label!r} is missing")
 
     def test_matches_signature_keyed_hex_values(self) -> None:
-        pattern = self.pattern()
+        pattern = self.pattern("signature/signedPayload-keyed hex value")
         self.assertIsNotNone(pattern.search('"signature": "0xdeadbeef12345678"'))
         self.assertIsNotNone(pattern.search('"rawSignature": "0xABCDEF0123456789"'))
         self.assertIsNotNone(pattern.search('"signedPayload": "0x00112233445566778899"'))
+        self.assertIsNotNone(pattern.search('"makerSignature": "0xdeadbeef12345678"'))
+        self.assertIsNotNone(pattern.search('"signatureHex": "deadbeef12345678"'))
 
     def test_ignores_redaction_and_presence_booleans(self) -> None:
-        pattern = self.pattern()
+        pattern = self.pattern("signature/signedPayload-keyed hex value")
         self.assertIsNone(pattern.search('"signatureRedacted": true'))
         self.assertIsNone(pattern.search('"rawSignatureRedacted": true'))
         self.assertIsNone(pattern.search('"signedPayloadPresent": false'))
         self.assertIsNone(pattern.search('"signature": "0xREDACTED"'))
+
+    def test_matches_signature_sized_bare_hex(self) -> None:
+        pattern = self.pattern("signature-sized bare hex")
+        self.assertIsNotNone(pattern.search('"value": "' + "ab" * 65 + '"'))
+        self.assertIsNotNone(pattern.search('"value": "0x' + "ab" * 64 + '"'))
+        self.assertIsNone(pattern.search('"txHash": "0x' + "ab" * 32 + '"'))
+        self.assertIsNone(pattern.search('"blob": "' + "ab" * 200 + '"'))
+
+    def test_matches_signature_rs_components(self) -> None:
+        pattern = self.pattern("signature r/s components")
+        sample = '"r": "0x' + "ab" * 32 + '",\n  "s": "0x' + "cd" * 32 + '"'
+        self.assertIsNotNone(pattern.search(sample))
+        self.assertIsNone(pattern.search('"r": "0x' + "ab" * 32 + '"'))
+
+    def test_matches_calldata_sized_hex_blob(self) -> None:
+        pattern = self.pattern(validate_artifacts.LONG_HEX_LABEL)
+        self.assertIsNotNone(pattern.search('"data": "0x' + "ab" * 100 + '"'))
+        self.assertIsNone(pattern.search('"txHash": "0x' + "ab" * 32 + '"'))
+
+
+class SchemaPointerPlacementTests(unittest.TestCase):
+    def test_misnamed_scorecard_carrier_is_rejected(self) -> None:
+        errors: list[str] = []
+        docs = {ROOT / "runs" / "example-run" / "scorecard.json": {"$schema": validate_artifacts.MVE_SCORECARD_SCHEMA_ID}}
+        validate_artifacts.validate_schema_pointers(docs, errors)
+        self.assertTrue(any("must be named mve-scorecard.json" in error for error in errors), errors)
+
+    def test_template_carriers_are_exempt(self) -> None:
+        errors: list[str] = []
+        docs = {
+            ROOT / "templates" / "mm-live-canary" / "mve-scorecard.template.json": {
+                "$schema": validate_artifacts.MVE_SCORECARD_SCHEMA_ID
+            }
+        }
+        validate_artifacts.validate_schema_pointers(docs, errors)
+        self.assertEqual(errors, [])
+
+    def test_correctly_placed_carrier_passes(self) -> None:
+        errors: list[str] = []
+        docs = {
+            ROOT / "runs" / "example-run" / "mve-scorecard.json": {"$schema": validate_artifacts.MVE_SCORECARD_SCHEMA_ID}
+        }
+        validate_artifacts.validate_schema_pointers(docs, errors)
+        self.assertEqual(errors, [])
+
+
+class RowCoherenceTests(unittest.TestCase):
+    def test_matrix_fail_contradicting_proven_capability_is_rejected(self) -> None:
+        errors: list[str] = []
+        directory = ROOT / "runs" / "example-run"
+        docs = {
+            directory / "scenario-matrix.json": {
+                "schemaVersion": 2,
+                "runClass": "mm-live-canary",
+                "scenarios": [{"id": "live-fill", "scenario": "live fill", "status": "fail", "notes": "no fill"}],
+            },
+            directory / "mve-scorecard.json": {
+                "runClass": "mm-live-canary",
+                "capabilities": [{"id": "live-fill", "capability": "Live fill", "proof": "proven_live", "notes": "ok"}],
+            },
+        }
+        validate_artifacts.validate_adoption_pairing(docs, errors)
+        self.assertTrue(any("contradicts mve-scorecard.json proof 'proven_live'" in error for error in errors), errors)
+
+    def test_consistent_rows_pass(self) -> None:
+        errors: list[str] = []
+        directory = ROOT / "runs" / "example-run"
+        docs = {
+            directory / "scenario-matrix.json": {
+                "schemaVersion": 2,
+                "runClass": "mm-live-canary",
+                "scenarios": [{"id": "live-fill", "scenario": "live fill", "status": "pass", "notes": "ok"}],
+            },
+            directory / "mve-scorecard.json": {
+                "runClass": "mm-live-canary",
+                "capabilities": [{"id": "live-fill", "capability": "Live fill", "proof": "proven_live", "notes": "ok"}],
+            },
+        }
+        validate_artifacts.validate_adoption_pairing(docs, errors)
+        self.assertEqual(errors, [])
+
+
+class TeamIdentityOddsTests(unittest.TestCase):
+    def test_swapped_odds_signs_are_rejected(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        evidence["target"]["teamIdentity"]["home"]["marketOddsAmerican"] = "+114"
+        evidence["target"]["teamIdentity"]["away"]["marketOddsAmerican"] = "-114"
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("favorite must carry negative American odds" in error for error in errors), errors)
+        self.assertTrue(any("underdog must carry positive American odds" in error for error in errors), errors)
+
+    def test_non_odds_string_is_rejected(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        evidence["target"]["teamIdentity"]["home"]["marketOddsAmerican"] = "banana"
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("must be signed American odds" in error for error in errors), errors)
+
+
+class AdoptingEvidenceTests(unittest.TestCase):
+    def test_missing_artifact_type_is_rejected(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        del evidence["artifactType"]
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("artifactType must be 'run'" in error for error in errors), errors)
+
+    def test_dangling_artifact_files_path_is_rejected(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        evidence["artifactFiles"]["cliPostgame"] = "raw/this-file-does-not-exist.json"
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("artifactFiles.cliPostgame" in error and "does not exist" in error for error in errors), errors)
+
+    def test_superseded_requires_successor_pointer(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        evidence["status"] = "superseded"
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("requires a supersededBy pointer" in error for error in errors), errors)
+
+    def test_superseded_with_valid_successor_passes(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        evidence["status"] = "superseded"
+        evidence["supersededBy"] = (
+            "runs/2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary/evidence.json"
+        )
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertEqual(errors, [])
+
+    def test_companion_file_evidence_reference_is_rejected(self) -> None:
+        scorecard = make_postgame_deferred_scorecard()
+        for row in scorecard["capabilities"]:
+            if row["id"] == "live-fill":
+                row["evidence"] = "summary.md"
+        errors = run_scorecard_validation(scorecard, make_postgame_deferred_evidence())
+        self.assertTrue(any("not the artifact's own companion files" in error for error in errors), errors)
+
+    def test_full_green_rejects_synthetic_only_live_fill(self) -> None:
+        scorecard = make_full_green_scorecard()
+        for row in scorecard["capabilities"]:
+            if row["id"] == "live-fill":
+                row["proof"] = "proven_synthetic_only"
+        errors = run_scorecard_validation(scorecard, make_full_green_evidence())
+        self.assertTrue(any("requires proven_live for the live-window capabilities" in error for error in errors), errors)
 
 
 if __name__ == "__main__":
