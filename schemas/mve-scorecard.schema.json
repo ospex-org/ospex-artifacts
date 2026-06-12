@@ -36,8 +36,8 @@
     },
     "runClass": {
       "type": "string",
-      "description": "Run flavor this scorecard instantiates, for example mm-live-canary.",
-      "minLength": 1
+      "description": "Run class this scorecard instantiates. A closed registry enforced by the validator; a new run class is added to the registry (and this enum) together with its own pairing and capability rules.",
+      "enum": ["mm-live-canary"]
     },
     "verdict": {
       "type": "object",

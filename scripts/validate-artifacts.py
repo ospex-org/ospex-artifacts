@@ -49,6 +49,9 @@ SLUG_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 # These checks apply only to runs that adopt the schema-backed shapes; earlier
 # free-form scenario-matrix.json files are grandfathered.
 SCENARIO_MATRIX_MIN_VERSION = 2
+# Closed registry: a new run class is added here together with its own pairing
+# and capability rules. A free-form runClass would silently skip those checks.
+KNOWN_RUN_CLASSES = {"mm-live-canary"}
 SCENARIO_STATUSES = {"pass", "pass_with_caveats", "fail", "deferred", "not_run", "not_applicable"}
 PROOF_LEVELS = {"proven_live", "proven_synthetic_only", "deferred", "failed", "not_applicable"}
 PROVEN_LEVELS = {"proven_live", "proven_synthetic_only"}
@@ -197,6 +200,11 @@ def parse_date(value: Any) -> bool:
 
 def is_plain_int(value: Any) -> bool:
     return type(value) is int
+
+
+def is_one_of(value: Any, vocab: set[str]) -> bool:
+    # Membership tests on JSON-sourced values must never raise: lists/dicts are unhashable.
+    return isinstance(value, str) and value in vocab
 
 
 def check_relative_path(path_value: Any, *, base: Path, errors: list[str], context: str, expect_dir: bool = False) -> None:
@@ -649,9 +657,34 @@ def scenario_matrix_is_v2(doc: Any) -> bool:
     )
 
 
+def scenario_matrix_declares_adoption(doc: Any) -> bool:
+    """True when a matrix presents itself as schema-backed: any $schema pointer, or a numeric schemaVersion >= 2.
+
+    Wider than scenario_matrix_is_v2 so near-miss declarations (schemaVersion 2.0, "2", or a
+    $schema pointer with a malformed version) are rejected loudly instead of silently
+    grandfathered. None of the pre-scheme legacy matrices carries a $schema pointer or a
+    numeric schemaVersion above 1.
+    """
+    if not isinstance(doc, dict):
+        return False
+    if "$schema" in doc:
+        return True
+    version = doc.get("schemaVersion")
+    return isinstance(version, (int, float)) and not isinstance(version, bool) and version >= SCENARIO_MATRIX_MIN_VERSION
+
+
 def validate_scenario_matrix(path: Path, doc: Any, errors: list[str]) -> None:
     """Validate schema-backed (v2+) scenario matrices. Earlier free-form shapes are grandfathered."""
     if not scenario_matrix_is_v2(doc):
+        if isinstance(doc, dict):
+            context = display_path(path)
+            if scenario_matrix_declares_adoption(doc):
+                errors.append(
+                    f"{context}: declares the scenario-matrix schema but schemaVersion must be a plain integer >= "
+                    f"{SCENARIO_MATRIX_MIN_VERSION}"
+                )
+            elif "schemaVersion" in doc and not is_plain_int(doc["schemaVersion"]):
+                errors.append(f"{context}: schemaVersion must be a plain integer when present")
         return
     context = display_path(path)
     artifact_dir = path.parent
@@ -665,6 +698,8 @@ def validate_scenario_matrix(path: Path, doc: Any, errors: list[str]) -> None:
     run_class = doc.get("runClass")
     if not isinstance(run_class, str) or not run_class.strip():
         errors.append(f"{context}: runClass must be a non-empty string")
+    elif run_class not in KNOWN_RUN_CLASSES:
+        errors.append(f"{context}: runClass {run_class!r} must be one of: " + ", ".join(sorted(KNOWN_RUN_CLASSES)))
 
     scenarios = doc.get("scenarios")
     if not isinstance(scenarios, list) or not scenarios:
@@ -690,12 +725,12 @@ def validate_scenario_matrix(path: Path, doc: Any, errors: list[str]) -> None:
             if key in row and (not isinstance(row[key], str) or not row[key].strip()):
                 errors.append(f"{row_context}.{key} must be a non-empty string")
         status = row.get("status")
-        if "status" in row and status not in SCENARIO_STATUSES:
+        if "status" in row and not is_one_of(status, SCENARIO_STATUSES):
             allowed = ", ".join(sorted(SCENARIO_STATUSES))
             errors.append(f"{row_context}: status {status!r} must be one of: {allowed}")
         evidence = row.get("evidence")
         if evidence is None:
-            if status in {"pass", "pass_with_caveats", "fail"}:
+            if is_one_of(status, {"pass", "pass_with_caveats", "fail"}):
                 errors.append(f"{row_context}: evidence is required when status is {status!r}")
         else:
             check_relative_path(evidence, base=artifact_dir, errors=errors, context=f"{row_context}.evidence")
@@ -725,7 +760,7 @@ def validate_team_identity(context: str, target: dict[str, Any], errors: list[st
         if not isinstance(odds, str) or not odds.strip():
             errors.append(f"{entry_context}.marketOddsAmerican must be a non-empty string")
         side_identity = entry.get("identity")
-        if side_identity not in {"favorite", "underdog", "even"}:
+        if not is_one_of(side_identity, {"favorite", "underdog", "even"}):
             errors.append(f"{entry_context}.identity must be favorite, underdog, or even")
         else:
             identities[role] = side_identity
@@ -746,7 +781,13 @@ def validate_adopting_run_evidence(
     context = display_path(scorecard_path.parent / "evidence.json")
 
     artifact_files = evidence_doc.get("artifactFiles")
-    referenced = set(artifact_files.values()) if isinstance(artifact_files, dict) else set()
+    referenced: set[str] = set()
+    if isinstance(artifact_files, dict):
+        for key, value in artifact_files.items():
+            if isinstance(value, str):
+                referenced.add(value)
+            else:
+                errors.append(f"{context}: artifactFiles.{key} must be a string path")
     for required_value in ["scenario-matrix.json", "mve-scorecard.json"]:
         if required_value not in referenced:
             errors.append(f"{context}: artifactFiles must reference {required_value}")
@@ -754,7 +795,7 @@ def validate_adopting_run_evidence(
     status = evidence_doc.get("status")
     if verdict_label in RUN_STATUS_BY_VERDICT:
         allowed = RUN_STATUS_BY_VERDICT[verdict_label] | {"superseded"}
-        if status not in allowed:
+        if not is_one_of(status, allowed):
             errors.append(
                 f"{context}: status {status!r} does not match scorecard verdict {verdict_label}; "
                 "expected one of: " + ", ".join(sorted(allowed))
@@ -802,6 +843,8 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
     run_class = doc.get("runClass")
     if not isinstance(run_class, str) or not run_class.strip():
         errors.append(f"{context}: runClass must be a non-empty string")
+    elif run_class not in KNOWN_RUN_CLASSES:
+        errors.append(f"{context}: runClass {run_class!r} must be one of: " + ", ".join(sorted(KNOWN_RUN_CLASSES)))
 
     verdict_label: str | None = None
     verdict = doc.get("verdict")
@@ -810,7 +853,7 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
             errors.append(f"{context}: verdict must be an object")
         else:
             label = verdict.get("label")
-            if label not in VERDICT_LABELS:
+            if not is_one_of(label, VERDICT_LABELS):
                 allowed = ", ".join(sorted(VERDICT_LABELS))
                 errors.append(f"{context}: verdict.label {label!r} must be one of: {allowed}")
             elif label in UNPUBLISHABLE_VERDICTS:
@@ -851,20 +894,20 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
                     if key in row and (not isinstance(row[key], str) or not row[key].strip()):
                         errors.append(f"{row_context}.{key} must be a non-empty string")
                 proof = row.get("proof")
-                if "proof" in row and proof not in PROOF_LEVELS:
+                if "proof" in row and not is_one_of(proof, PROOF_LEVELS):
                     allowed = ", ".join(sorted(PROOF_LEVELS))
                     errors.append(f"{row_context}: proof {proof!r} must be one of: {allowed}")
                 elif isinstance(row_id, str) and isinstance(proof, str):
                     proof_by_id[row_id] = proof
                 evidence = row.get("evidence")
                 if evidence is None:
-                    if proof in PROVEN_LEVELS or proof == "failed":
+                    if is_one_of(proof, PROVEN_LEVELS) or proof == "failed":
                         errors.append(f"{row_context}: evidence is required when proof is {proof!r}")
                 else:
                     check_relative_path(evidence, base=artifact_dir, errors=errors, context=f"{row_context}.evidence")
 
     if run_class == "mm-live-canary" and isinstance(capabilities, list) and capabilities:
-        missing = sorted(MM_LIVE_CANARY_CAPABILITY_IDS - set(proof_by_id))
+        missing = sorted(MM_LIVE_CANARY_CAPABILITY_IDS - seen_capability_ids)
         if missing:
             errors.append(f"{context}: mm-live-canary scorecard is missing capability rows: {', '.join(missing)}")
 
@@ -927,9 +970,14 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
                 if key in zero and (not is_plain_int(zero[key]) or zero[key] != 0):
                     errors.append(f"{context}: zeroExposure.{key} must be the integer 0 in a published canary")
             if "evidence" in zero:
-                check_relative_path(zero.get("evidence"), base=artifact_dir, errors=errors, context=f"{context} zeroExposure.evidence")
+                if zero.get("evidence") is None:
+                    errors.append(
+                        f"{context}: zeroExposure.evidence must be a non-empty string path to the sanitized exposure snapshot"
+                    )
+                else:
+                    check_relative_path(zero.get("evidence"), base=artifact_dir, errors=errors, context=f"{context}: zeroExposure.evidence")
 
-    categories_seen: set[str] = set()
+    successful_categories: set[str] = set()
     txs = doc.get("transactions")
     if "transactions" in doc:
         if not isinstance(txs, list):
@@ -945,17 +993,19 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
                     if key not in tx:
                         errors.append(f"{tx_context} missing required key {key!r}")
                 category = tx.get("category")
-                if "category" in tx and category not in TX_CATEGORIES:
+                if "category" in tx and not is_one_of(category, TX_CATEGORIES):
                     allowed = ", ".join(sorted(TX_CATEGORIES))
                     errors.append(f"{tx_context}: category {category!r} must be one of: {allowed}")
                     category = None
-                elif isinstance(category, str):
-                    categories_seen.add(category)
+                elif isinstance(category, str) and tx.get("status") == "success":
+                    # Verdict coherence below counts only successful transactions, so an honestly
+                    # disclosed reverted attempt never forces evidence omission.
+                    successful_categories.add(category)
                 tx_hash = tx.get("txHash")
                 if "txHash" in tx and (not isinstance(tx_hash, str) or not TX_HASH_RE.match(tx_hash)):
                     errors.append(f"{tx_context}: txHash must be a 0x-prefixed 32-byte hash")
                     tx_hash = None
-                if "status" in tx and tx.get("status") not in {"success", "reverted"}:
+                if "status" in tx and not is_one_of(tx.get("status"), {"success", "reverted"}):
                     errors.append(f"{tx_context}: status must be success or reverted")
                 if "operatorControlled" in tx and not isinstance(tx.get("operatorControlled"), bool):
                     errors.append(f"{tx_context}: operatorControlled must be boolean")
@@ -969,17 +1019,19 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
                         errors.append(f"{tx_context}: duplicate transaction entry for {category} {tx_hash}")
                     seen_hash_category.add(pair)
             if verdict_label == "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED":
-                postgame_present = sorted(categories_seen & POSTGAME_TX_CATEGORIES)
+                postgame_present = sorted(successful_categories & POSTGAME_TX_CATEGORIES)
                 if postgame_present:
                     errors.append(
-                        f"{context}: verdict GREEN_LIVE_WINDOW_POSTGAME_DEFERRED cannot include postgame "
+                        f"{context}: verdict GREEN_LIVE_WINDOW_POSTGAME_DEFERRED cannot include successful postgame "
                         "transaction categories: " + ", ".join(postgame_present)
                     )
             if verdict_label == "FULL_GREEN":
-                if "settle" not in categories_seen:
-                    errors.append(f"{context}: verdict FULL_GREEN requires at least one settle transaction")
-                if not categories_seen & {"score-request", "score-callback"}:
-                    errors.append(f"{context}: verdict FULL_GREEN requires score-request or score-callback transaction evidence")
+                if "settle" not in successful_categories:
+                    errors.append(f"{context}: verdict FULL_GREEN requires at least one successful settle transaction")
+                if not successful_categories & {"score-request", "score-callback"}:
+                    errors.append(
+                        f"{context}: verdict FULL_GREEN requires successful score-request or score-callback transaction evidence"
+                    )
 
     evidence_doc = docs.get(artifact_dir / "evidence.json")
     if not isinstance(evidence_doc, dict):
@@ -989,22 +1041,43 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
 
 
 def validate_adoption_pairing(docs: dict[Path, Any], errors: list[str]) -> None:
-    scorecard_dirs = {path.parent for path in docs if path.name == "mve-scorecard.json" and "runs" in path.parts}
-    v2_matrix_dirs = {
-        path.parent
-        for path, doc in docs.items()
-        if path.name == "scenario-matrix.json" and "runs" in path.parts and scenario_matrix_is_v2(doc)
-    }
-    for directory in sorted(scorecard_dirs - v2_matrix_dirs):
+    scorecard_class_by_dir: dict[Path, Any] = {}
+    for path, doc in docs.items():
+        if path.name == "mve-scorecard.json" and "runs" in path.parts:
+            scorecard_class_by_dir[path.parent] = doc.get("runClass") if isinstance(doc, dict) else None
+
+    adopting_matrix_dirs: set[Path] = set()
+    canary_matrix_dirs: set[Path] = set()
+    matrix_class_by_dir: dict[Path, Any] = {}
+    for path, doc in docs.items():
+        if path.name != "scenario-matrix.json" or "runs" not in path.parts:
+            continue
+        if scenario_matrix_declares_adoption(doc):
+            adopting_matrix_dirs.add(path.parent)
+            matrix_class_by_dir[path.parent] = doc.get("runClass")
+            # A malformed adoption declaration already gets its own loud error from
+            # validate_scenario_matrix; only well-formed canary matrices demand a scorecard.
+            if scenario_matrix_is_v2(doc) and doc.get("runClass") == "mm-live-canary":
+                canary_matrix_dirs.add(path.parent)
+
+    for directory in sorted(set(scorecard_class_by_dir) - adopting_matrix_dirs):
         errors.append(
             f"{display_path(directory)}: mve-scorecard.json requires a schemaVersion >= {SCENARIO_MATRIX_MIN_VERSION} "
             "scenario-matrix.json in the same run directory"
         )
-    for directory in sorted(v2_matrix_dirs - scorecard_dirs):
+    for directory in sorted(canary_matrix_dirs - set(scorecard_class_by_dir)):
         errors.append(
-            f"{display_path(directory)}: schemaVersion >= {SCENARIO_MATRIX_MIN_VERSION} scenario-matrix.json requires an "
-            "mve-scorecard.json in the same run directory"
+            f"{display_path(directory)}: an mm-live-canary scenario-matrix.json with schemaVersion >= "
+            f"{SCENARIO_MATRIX_MIN_VERSION} requires an mve-scorecard.json in the same run directory"
         )
+    for directory in sorted(set(scorecard_class_by_dir) & set(matrix_class_by_dir)):
+        matrix_class = matrix_class_by_dir[directory]
+        scorecard_class = scorecard_class_by_dir[directory]
+        if isinstance(matrix_class, str) and isinstance(scorecard_class, str) and matrix_class != scorecard_class:
+            errors.append(
+                f"{display_path(directory)}: scenario-matrix.json runClass {matrix_class!r} must match "
+                f"mve-scorecard.json runClass {scorecard_class!r}"
+            )
 
 
 def validate_schema_pointers(docs: dict[Path, Any], errors: list[str]) -> None:

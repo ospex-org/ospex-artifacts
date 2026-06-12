@@ -26,8 +26,8 @@
     },
     "runClass": {
       "type": "string",
-      "description": "Run flavor this matrix instantiates, for example mm-live-canary.",
-      "minLength": 1
+      "description": "Run class this matrix instantiates. A closed registry enforced by the validator; a new run class is added to the registry (and this enum) together with its own pairing and capability rules.",
+      "enum": ["mm-live-canary"]
     },
     "scenarios": {
       "type": "array",

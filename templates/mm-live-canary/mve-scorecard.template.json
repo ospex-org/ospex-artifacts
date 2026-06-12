@@ -129,7 +129,7 @@
       "txHash": "0x<64-hex-transaction-hash>",
       "status": "success",
       "operatorControlled": true,
-      "purpose": "Replace with the actual purpose; postgame categories must be absent when the verdict defers postgame."
+      "purpose": "Replace with the actual purpose; successful postgame categories must be absent when the verdict defers postgame."
     }
   ]
 }

@@ -28,7 +28,7 @@ These are artifact-level statuses only. Individual check/gate fields can use the
 
 ## `runs/` — lifecycle evidence
 
-`runs/` artifacts record a completed protocol or market-maker lifecycle for one or more contests.
+`runs/` artifacts record a completed protocol or market-maker lifecycle for one or more contests. (Runs adopting the MVE scorecard cover exactly one contest/speculation each — see `docs/mm-live-canary-evidence.md`.)
 
 Typical files:
 

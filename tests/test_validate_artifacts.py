@@ -299,8 +299,8 @@ class MveScorecardValidationTests(unittest.TestCase):
         evidence = make_full_green_evidence()
         errors = run_scorecard_validation(scorecard, evidence)
         self.assertTrue(any("requires proven core capabilities" in error for error in errors), errors)
-        self.assertTrue(any("requires at least one settle transaction" in error for error in errors), errors)
-        self.assertTrue(any("requires score-request or score-callback" in error for error in errors), errors)
+        self.assertTrue(any("requires at least one successful settle transaction" in error for error in errors), errors)
+        self.assertTrue(any("requires successful score-request or score-callback" in error for error in errors), errors)
 
     def test_postgame_deferred_rejects_postgame_tx_categories(self) -> None:
         scorecard = make_postgame_deferred_scorecard()
@@ -308,7 +308,44 @@ class MveScorecardValidationTests(unittest.TestCase):
             {"category": "settle", "txHash": TX_E, "status": "success", "operatorControlled": True, "purpose": "early settle"}
         )
         errors = run_scorecard_validation(scorecard, make_postgame_deferred_evidence())
-        self.assertTrue(any("cannot include postgame transaction categories" in error for error in errors), errors)
+        self.assertTrue(any("cannot include successful postgame transaction categories" in error for error in errors), errors)
+
+    def test_postgame_deferred_allows_disclosed_reverted_postgame_attempt(self) -> None:
+        scorecard = make_postgame_deferred_scorecard()
+        scorecard["transactions"].append(
+            {
+                "category": "score-request",
+                "txHash": TX_E,
+                "status": "reverted",
+                "operatorControlled": True,
+                "purpose": "early scoring attempt reverted because the game was not final",
+            }
+        )
+        errors = run_scorecard_validation(scorecard, make_postgame_deferred_evidence())
+        self.assertEqual(errors, [])
+
+    def test_full_green_rejects_reverted_only_settle_and_score(self) -> None:
+        scorecard = make_full_green_scorecard()
+        for tx in scorecard["transactions"]:
+            if tx["category"] in {"settle", "score-request", "score-callback"}:
+                tx["status"] = "reverted"
+        errors = run_scorecard_validation(scorecard, make_full_green_evidence())
+        self.assertTrue(any("requires at least one successful settle transaction" in error for error in errors), errors)
+        self.assertTrue(any("requires successful score-request or score-callback" in error for error in errors), errors)
+
+    def test_full_green_allows_reverted_attempt_alongside_successful_retry(self) -> None:
+        scorecard = make_full_green_scorecard()
+        scorecard["transactions"].append(
+            {
+                "category": "settle",
+                "txHash": TX_A,
+                "status": "reverted",
+                "operatorControlled": True,
+                "purpose": "first settle attempt reverted before the successful retry",
+            }
+        )
+        errors = run_scorecard_validation(scorecard, make_full_green_evidence())
+        self.assertEqual(errors, [])
 
     def test_score_callback_must_not_be_operator_controlled(self) -> None:
         scorecard = make_full_green_scorecard()
@@ -390,30 +427,186 @@ class MveScorecardValidationTests(unittest.TestCase):
 class AdoptionPairingTests(unittest.TestCase):
     def test_scorecard_requires_v2_matrix(self) -> None:
         errors: list[str] = []
-        docs = {ROOT / "runs" / "example-run" / "mve-scorecard.json": {}}
+        docs = {ROOT / "runs" / "example-run" / "mve-scorecard.json": {"runClass": "mm-live-canary"}}
         validate_artifacts.validate_adoption_pairing(docs, errors)
         self.assertTrue(any("requires a schemaVersion >= 2 scenario-matrix.json" in error for error in errors), errors)
 
-    def test_v2_matrix_requires_scorecard(self) -> None:
+    def test_v2_canary_matrix_requires_scorecard(self) -> None:
         errors: list[str] = []
-        docs = {ROOT / "runs" / "example-run" / "scenario-matrix.json": {"schemaVersion": 2, "scenarios": []}}
+        docs = {
+            ROOT / "runs" / "example-run" / "scenario-matrix.json": {
+                "schemaVersion": 2,
+                "runClass": "mm-live-canary",
+                "scenarios": [],
+            }
+        }
         validate_artifacts.validate_adoption_pairing(docs, errors)
         self.assertTrue(any("requires an mve-scorecard.json" in error for error in errors), errors)
+
+    def test_non_canary_v2_matrix_does_not_require_scorecard(self) -> None:
+        errors: list[str] = []
+        docs = {
+            ROOT / "runs" / "example-run" / "scenario-matrix.json": {
+                "schemaVersion": 2,
+                "runClass": "future-run-class",
+                "scenarios": [],
+            }
+        }
+        validate_artifacts.validate_adoption_pairing(docs, errors)
+        self.assertEqual(errors, [])
 
     def test_paired_adoption_passes(self) -> None:
         errors: list[str] = []
         docs = {
-            ROOT / "runs" / "example-run" / "scenario-matrix.json": {"schemaVersion": 2, "scenarios": []},
-            ROOT / "runs" / "example-run" / "mve-scorecard.json": {},
+            ROOT / "runs" / "example-run" / "scenario-matrix.json": {
+                "schemaVersion": 2,
+                "runClass": "mm-live-canary",
+                "scenarios": [],
+            },
+            ROOT / "runs" / "example-run" / "mve-scorecard.json": {"runClass": "mm-live-canary"},
         }
         validate_artifacts.validate_adoption_pairing(docs, errors)
         self.assertEqual(errors, [])
+
+    def test_paired_run_class_mismatch_is_rejected(self) -> None:
+        errors: list[str] = []
+        docs = {
+            ROOT / "runs" / "example-run" / "scenario-matrix.json": {
+                "schemaVersion": 2,
+                "runClass": "future-run-class",
+                "scenarios": [],
+            },
+            ROOT / "runs" / "example-run" / "mve-scorecard.json": {"runClass": "mm-live-canary"},
+        }
+        validate_artifacts.validate_adoption_pairing(docs, errors)
+        self.assertTrue(any("runClass 'future-run-class' must match" in error for error in errors), errors)
 
     def test_legacy_matrix_without_scorecard_passes(self) -> None:
         errors: list[str] = []
         docs = {ROOT / "runs" / "example-run" / "scenario-matrix.json": {"schemaVersion": 1, "scenarios": []}}
         validate_artifacts.validate_adoption_pairing(docs, errors)
         self.assertEqual(errors, [])
+
+
+class AdoptionNearMissTests(unittest.TestCase):
+    def matrix_errors(self, doc: object) -> list[str]:
+        errors: list[str] = []
+        validate_artifacts.validate_scenario_matrix(ROOT / "runs" / "example-run" / "scenario-matrix.json", doc, errors)
+        return errors
+
+    def test_schema_pointer_with_string_schema_version_is_rejected(self) -> None:
+        errors = self.matrix_errors({"$schema": validate_artifacts.SCENARIO_MATRIX_SCHEMA_ID, "schemaVersion": "2", "scenarios": []})
+        self.assertTrue(any("schemaVersion must be a plain integer >= 2" in error for error in errors), errors)
+
+    def test_float_schema_version_is_rejected(self) -> None:
+        errors = self.matrix_errors({"schemaVersion": 2.0, "scenarios": []})
+        self.assertTrue(any("schemaVersion must be a plain integer >= 2" in error for error in errors), errors)
+
+    def test_schema_pointer_without_schema_version_is_rejected(self) -> None:
+        errors = self.matrix_errors({"$schema": validate_artifacts.SCENARIO_MATRIX_SCHEMA_ID, "scenarios": []})
+        self.assertTrue(any("schemaVersion must be a plain integer >= 2" in error for error in errors), errors)
+
+    def test_string_schema_version_without_schema_pointer_is_rejected(self) -> None:
+        errors = self.matrix_errors({"schemaVersion": "2", "scenarios": []})
+        self.assertTrue(any("schemaVersion must be a plain integer when present" in error for error in errors), errors)
+
+    def test_legacy_v1_and_array_shapes_stay_grandfathered(self) -> None:
+        self.assertEqual(self.matrix_errors({"schemaVersion": 1, "scenarios": []}), [])
+        self.assertEqual(self.matrix_errors([{"scenario": "legacy", "classification": "proven"}]), [])
+
+    def test_unknown_run_class_is_rejected_on_v2_matrix(self) -> None:
+        errors = self.matrix_errors(
+            {
+                "$schema": validate_artifacts.SCENARIO_MATRIX_SCHEMA_ID,
+                "schemaVersion": 2,
+                "artifactId": "example-run",
+                "generatedAt": "2026-06-11T06:00:00Z",
+                "runClass": "mm-live-canery",
+                "scenarios": [
+                    {"id": "live-fill", "scenario": "live fill", "status": "deferred", "evidence": None, "notes": "ok"},
+                ],
+            }
+        )
+        self.assertTrue(any("runClass 'mm-live-canery' must be one of: mm-live-canary" in error for error in errors), errors)
+
+
+class CrashResistanceTests(unittest.TestCase):
+    """JSON-sourced values can be arrays/objects; the validator must append errors, never raise."""
+
+    def test_scenario_row_list_status_is_reported_not_raised(self) -> None:
+        errors: list[str] = []
+        validate_artifacts.validate_scenario_matrix(
+            ROOT / "runs" / "example-run" / "scenario-matrix.json",
+            {
+                "$schema": validate_artifacts.SCENARIO_MATRIX_SCHEMA_ID,
+                "schemaVersion": 2,
+                "artifactId": "example-run",
+                "generatedAt": "2026-06-11T06:00:00Z",
+                "runClass": "mm-live-canary",
+                "scenarios": [{"id": "live-fill", "scenario": "live fill", "status": ["pass"], "notes": "ok"}],
+            },
+            errors,
+        )
+        self.assertTrue(any("must be one of" in error for error in errors), errors)
+
+    def test_scorecard_unhashable_values_are_reported_not_raised(self) -> None:
+        scorecard = make_postgame_deferred_scorecard()
+        scorecard["verdict"]["label"] = ["FULL_GREEN"]
+        for row in scorecard["capabilities"]:
+            if row["id"] == "live-fill":
+                row["proof"] = ["proven_live"]
+                del row["evidence"]
+        scorecard["transactions"][0]["category"] = ["approve"]
+        scorecard["transactions"][1]["status"] = {"value": "success"}
+        evidence = make_postgame_deferred_evidence()
+        evidence["status"] = ["partial"]
+        evidence["artifactFiles"]["raw"] = ["raw/a.json", "raw/b.json"]
+        evidence["target"]["teamIdentity"]["home"]["identity"] = ["favorite"]
+        errors = run_scorecard_validation(scorecard, evidence)
+        self.assertTrue(any("verdict.label" in error for error in errors), errors)
+        self.assertTrue(any("proof" in error and "must be one of" in error for error in errors), errors)
+        self.assertTrue(any("category" in error and "must be one of" in error for error in errors), errors)
+        self.assertTrue(any("status must be success or reverted" in error for error in errors), errors)
+        self.assertTrue(any("artifactFiles.raw must be a string path" in error for error in errors), errors)
+        self.assertTrue(any("identity must be favorite, underdog, or even" in error for error in errors), errors)
+
+
+class ErrorMessageQualityTests(unittest.TestCase):
+    def test_missing_proof_key_is_not_reported_as_missing_row(self) -> None:
+        scorecard = make_postgame_deferred_scorecard()
+        for row in scorecard["capabilities"]:
+            if row["id"] == "live-fill":
+                del row["proof"]
+        errors = run_scorecard_validation(scorecard, make_postgame_deferred_evidence())
+        self.assertTrue(any("missing required key 'proof'" in error for error in errors), errors)
+        self.assertFalse(any("missing capability rows" in error for error in errors), errors)
+
+    def test_invalid_proof_value_is_not_reported_as_missing_row(self) -> None:
+        scorecard = make_postgame_deferred_scorecard()
+        for row in scorecard["capabilities"]:
+            if row["id"] == "live-fill":
+                row["proof"] = "proven"
+        errors = run_scorecard_validation(scorecard, make_postgame_deferred_evidence())
+        self.assertTrue(any("proof 'proven' must be one of" in error for error in errors), errors)
+        self.assertFalse(any("missing capability rows" in error for error in errors), errors)
+
+    def test_unknown_scorecard_run_class_is_rejected(self) -> None:
+        scorecard = make_postgame_deferred_scorecard()
+        scorecard["runClass"] = "mm-live-canary "
+        errors = run_scorecard_validation(scorecard, make_postgame_deferred_evidence())
+        self.assertTrue(any("runClass 'mm-live-canary '" in error and "must be one of" in error for error in errors), errors)
+
+    def test_zero_exposure_null_evidence_is_rejected(self) -> None:
+        scorecard = make_postgame_deferred_scorecard()
+        scorecard["zeroExposure"]["evidence"] = None
+        errors = run_scorecard_validation(scorecard, make_postgame_deferred_evidence())
+        self.assertTrue(any("zeroExposure.evidence must be a non-empty string" in error for error in errors), errors)
+
+    def test_zero_exposure_empty_evidence_is_rejected(self) -> None:
+        scorecard = make_postgame_deferred_scorecard()
+        scorecard["zeroExposure"]["evidence"] = ""
+        errors = run_scorecard_validation(scorecard, make_postgame_deferred_evidence())
+        self.assertTrue(any("zeroExposure.evidence" in error for error in errors), errors)
 
 
 class SignatureSafetyPatternTests(unittest.TestCase):

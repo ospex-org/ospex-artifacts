@@ -9,7 +9,13 @@ Copyable starting points live in `templates/mm-live-canary/`. Both JSON files ar
 
 ## Adoption and grandfathering
 
-These contracts are opt-in per run. The validator enforces them when a run directory contains `mve-scorecard.json`, or a `scenario-matrix.json` declaring `schemaVersion` ≥ 2. The two adoptions are paired: a scorecard requires a v2 matrix in the same run directory and vice versa. Scenario matrices published before this scheme keep their original free-form shapes and are not re-validated against it.
+These contracts are opt-in per run. The validator enforces them when a run directory contains `mve-scorecard.json`, or a `scenario-matrix.json` that declares adoption (a `$schema` pointer, or a `schemaVersion` of 2 or higher — it must be a plain integer; near-miss declarations such as `"2"` or `2.0` are rejected loudly rather than skipped). Scenario matrices published before this scheme keep their original free-form shapes and are not re-validated against it.
+
+`runClass` is a closed registry, currently `mm-live-canary` only. A future run class is added to the registry in the validator together with its own pairing and capability rules; an unregistered or misspelled `runClass` is rejected rather than silently skipping checks.
+
+The two adoptions are paired: a scorecard requires a v2 matrix in the same run directory; a v2 matrix declaring `runClass` `mm-live-canary` requires a scorecard; and when both files are present their `runClass` values must match.
+
+An adopting run covers exactly one target contest/speculation. A multi-contest canary publishes one adopting run directory per contest — the verdict vocabulary, postgame capability rows, and transaction-category cross-checks are all defined per single target. (The legacy three-game shakeout run predates this scheme and stays grandfathered.)
 
 ## Scenario matrix (`schemaVersion` ≥ 2)
 
@@ -60,15 +66,15 @@ Proof levels:
 
 `verdict.label` is controlled. Exactly one label per run:
 
-- **`FULL_GREEN`** — the live window and the postgame lifecycle both completed. Core capabilities (`live-commitments-posted`, `live-fill`, `exposure-drain-zero`, `cost-within-cap`, and the three `postgame-*` rows) are proven, no capability is `failed`, and the transactions include settle plus score evidence. Artifact status: `complete_verified` or `complete_verified_with_caveats`.
-- **`GREEN_LIVE_WINDOW_POSTGAME_DEFERRED`** — the live window completed green but the artifact was cut before the game was final, so scoring, settlement, and claims are deferred. All three `postgame-*` capabilities are `deferred`, no capability is `failed`, and no postgame transaction categories appear. Artifact status: `partial`. When postgame later completes, the artifact is updated (or superseded by a fuller one) and the verdict becomes `FULL_GREEN`.
+- **`FULL_GREEN`** — the live window and the postgame lifecycle both completed. Core capabilities (`live-commitments-posted`, `live-fill`, `exposure-drain-zero`, `cost-within-cap`, and the three `postgame-*` rows) are proven, no capability is `failed`, and the transactions include a successful settle plus successful score evidence. Artifact status: `complete_verified` or `complete_verified_with_caveats`.
+- **`GREEN_LIVE_WINDOW_POSTGAME_DEFERRED`** — the live window completed green but the artifact was cut before the game was final, so scoring, settlement, and claims are deferred. All three `postgame-*` capabilities are `deferred`, no capability is `failed`, and no successful postgame transaction categories appear (a reverted postgame attempt — for example an early scoring attempt that reverted because the game was not final — may and should be disclosed). Artifact status: `partial`. When postgame later completes, the artifact is updated (or superseded by a fuller one) and the verdict becomes `FULL_GREEN`.
 - **`AMBER_QUOTED_NO_FILL`** — the MM posted live commitments but no fill occurred in the window. `live-commitments-posted` is proven; `live-fill` is `deferred` (or `failed` with evidence). Artifact status: `partial` or `complete_verified_with_caveats`.
 - **`AMBER_TOKEN_TOPUP_NEEDED`** — the run was limited or stopped early by a funding shortfall (gas token, USDC balance, or allowance) and needs a top-up before a rerun. At least one capability is `deferred` or `failed`. Artifact status: `partial` or `complete_verified_with_caveats`.
 - **`RED_SAFETY_HALT`** — a safety mechanism halted the run (for example unintended target selection, exposure beyond bounds, or an orphan process). This label exists so internal and operational tooling shares one vocabulary, but it is **not publishable in this repository**: the `run` artifact status vocabulary has no failure status, and the validator rejects any published scorecard carrying it. Halted/failed canary evidence stays internal; the underlying issue is tracked and fixed in the relevant code repository.
 
 A `superseded` artifact keeps its original scorecard verdict; the status-mapping checks accept `superseded` for any verdict.
 
-`GREEN_LIVE_WINDOW_POSTGAME_DEFERRED` and `FULL_GREEN` are deliberately distinct claims. A live-window artifact must not state or imply a completed lifecycle: deferral is recorded as `deferred` postgame rows, a `partial` artifact status, and the absence of postgame transaction categories, all of which the validator cross-checks.
+`GREEN_LIVE_WINDOW_POSTGAME_DEFERRED` and `FULL_GREEN` are deliberately distinct claims. A live-window artifact must not state or imply a completed lifecycle: deferral is recorded as `deferred` postgame rows, a `partial` artifact status, and the absence of successful postgame transaction categories, all of which the validator cross-checks.
 
 ## Transaction categories
 
@@ -80,10 +86,10 @@ Rules the validator enforces:
 
 - `txHash` is a 0x-prefixed 32-byte hash; `status` is `success` or `reverted`; `operatorControlled` is boolean.
 - `score-callback` entries must have `operatorControlled: false` — the oracle network sends the callback, and its gas is lifecycle evidence rather than controlled-operator spend.
-- The same hash may appear under two categories only when one transaction genuinely performs both actions; exact duplicates are rejected.
-- Category presence must match the verdict (no postgame categories under `GREEN_LIVE_WINDOW_POSTGAME_DEFERRED`; settle plus score evidence under `FULL_GREEN`).
+- Exact duplicate entries — the same `txHash` under the same `category` (hash compared case-insensitively) — are rejected.
+- Successful-category presence must match the verdict: no successful postgame categories under `GREEN_LIVE_WINDOW_POSTGAME_DEFERRED`, and a successful settle plus successful score evidence under `FULL_GREEN`. Reverted entries never count toward (or against) these checks, so disclosed failed attempts do not block an honest verdict.
 
-Free-form context (which wallet role, which position) belongs in `purpose`.
+Free-form context (which wallet role, which position) belongs in `purpose`. The validator permits the same hash to appear under two different categories but does not verify the reuse; authors must only dual-categorize a hash when one transaction genuinely performs both actions.
 
 ## Moneyline team identity
 
