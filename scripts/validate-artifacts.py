@@ -22,6 +22,8 @@ ROOT = Path(__file__).resolve().parents[1]
 INDEX_SCHEMA_ID = "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json"
 ARCHIVE_SCHEMA_ID = "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json"
 RELEASE_ACCEPTANCE_SCHEMA_ID = "https://github.com/ospex-org/ospex-artifacts/schemas/release-acceptance.schema.json"
+SCENARIO_MATRIX_SCHEMA_ID = "https://github.com/ospex-org/ospex-artifacts/schemas/scenario-matrix.schema.json"
+MVE_SCORECARD_SCHEMA_ID = "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json"
 
 RECENT_ARTIFACT_LIMIT = 100
 ARTIFACT_TYPES = ("run", "release-acceptance", "daily-digest")
@@ -41,6 +43,74 @@ TEXT_SUFFIXES = {".json", ".md", ".ndjson", ".txt", ".yml", ".yaml"}
 SHA256_RE = re.compile(r"^[a-fA-F0-9]{64}$")
 TX_HASH_RE = re.compile(r"^0x[a-fA-F0-9]{64}$")
 RAW_SIGNATURE_RE = re.compile(r"0x[a-fA-F0-9]{130}\b")
+SLUG_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+
+# Scenario matrix v2 + MVE readiness scorecard contracts (docs/mm-live-canary-evidence.md).
+# These checks apply only to runs that adopt the schema-backed shapes; earlier
+# free-form scenario-matrix.json files are grandfathered.
+SCENARIO_MATRIX_MIN_VERSION = 2
+SCENARIO_STATUSES = {"pass", "pass_with_caveats", "fail", "deferred", "not_run", "not_applicable"}
+PROOF_LEVELS = {"proven_live", "proven_synthetic_only", "deferred", "failed", "not_applicable"}
+PROVEN_LEVELS = {"proven_live", "proven_synthetic_only"}
+VERDICT_LABELS = {
+    "FULL_GREEN",
+    "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED",
+    "AMBER_QUOTED_NO_FILL",
+    "AMBER_TOKEN_TOPUP_NEEDED",
+    "RED_SAFETY_HALT",
+}
+# The run status vocabulary has no failure status; failed runs stay internal.
+UNPUBLISHABLE_VERDICTS = {"RED_SAFETY_HALT"}
+RUN_STATUS_BY_VERDICT = {
+    "FULL_GREEN": {"complete_verified", "complete_verified_with_caveats"},
+    "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED": {"partial"},
+    "AMBER_QUOTED_NO_FILL": {"partial", "complete_verified_with_caveats"},
+    "AMBER_TOKEN_TOPUP_NEEDED": {"partial", "complete_verified_with_caveats"},
+}
+TX_CATEGORIES = {
+    "approve",
+    "create-contest",
+    "seed-match",
+    "match-commitment",
+    "cancel-commitment",
+    "nonce-floor-raise",
+    "score-request",
+    "score-callback",
+    "settle",
+    "claim",
+    "other",
+}
+POSTGAME_TX_CATEGORIES = {"score-request", "score-callback", "settle", "claim"}
+MM_LIVE_CANARY_CAPABILITY_IDS = {
+    "target-preflight",
+    "repo-runtime-gates",
+    "wallet-auth-balances",
+    "bounded-approvals",
+    "dry-run-quote-loop",
+    "live-commitments-posted",
+    "live-fill",
+    "own-state-sse-canonical-fill",
+    "exposure-drain-zero",
+    "restart-cold-start-safety",
+    "postgame-score",
+    "postgame-settle",
+    "postgame-claim",
+    "cost-within-cap",
+}
+POSTGAME_CAPABILITY_IDS = {"postgame-score", "postgame-settle", "postgame-claim"}
+FULL_GREEN_CORE_CAPABILITY_IDS = {
+    "live-commitments-posted",
+    "live-fill",
+    "exposure-drain-zero",
+    "cost-within-cap",
+} | POSTGAME_CAPABILITY_IDS
+ZERO_EXPOSURE_COUNT_KEYS = (
+    "publicMakerVisibleCommitments",
+    "publicContestSpecVisibleCommitments",
+    "contestOrderbookCount",
+    "orphanProcessCount",
+)
+TEAM_IDENTITY_POSITION_TYPE_BY_ROLE = {"home": "lower", "away": "upper"}
 
 # Patterns are intentionally specific to reduce false positives from docs that
 # describe excluded material. Broad words like "secret" or "password" are not
@@ -56,6 +126,13 @@ SAFETY_PATTERNS = [
     ("ospex secret path", re.compile(r"\.ospex/(?:secrets|wallets|keystores)|\.(?:pass|pem|key)\b", re.I)),
     ("raw EIP-712 signature-sized hex", RAW_SIGNATURE_RE),
     (
+        "signature/signedPayload-keyed hex value",
+        re.compile(
+            r"\"(?:raw)?(?:eip712)?(?:signature|signedPayload|signedMessage|signedTypedData)\"\s*:\s*\"0x[a-fA-F0-9]{8,}",
+            re.I,
+        ),
+    ),
+    (
         "specific upstream odds provider name",
         re.compile(r"\b(draftkings|fan\s?duel|betrivers|betmgm|pinnacle|the[- ]odds[- ]api|sportradar)\b", re.I),
     ),
@@ -64,6 +141,13 @@ SAFETY_PATTERNS = [
 
 def rel(path: Path) -> str:
     return path.relative_to(ROOT).as_posix()
+
+
+def display_path(path: Path) -> str:
+    try:
+        return rel(path)
+    except ValueError:
+        return path.as_posix()
 
 
 def is_under_repo(path: Path) -> bool:
@@ -557,8 +641,380 @@ def validate_raw_file_maps(path: Path, doc: Any, errors: list[str]) -> None:
         check_relative_path(value, base=path.parent, errors=errors, context=f"{context} files.{key}")
 
 
+def scenario_matrix_is_v2(doc: Any) -> bool:
+    return (
+        isinstance(doc, dict)
+        and is_plain_int(doc.get("schemaVersion"))
+        and doc["schemaVersion"] >= SCENARIO_MATRIX_MIN_VERSION
+    )
+
+
+def validate_scenario_matrix(path: Path, doc: Any, errors: list[str]) -> None:
+    """Validate schema-backed (v2+) scenario matrices. Earlier free-form shapes are grandfathered."""
+    if not scenario_matrix_is_v2(doc):
+        return
+    context = display_path(path)
+    artifact_dir = path.parent
+
+    if doc.get("$schema") != SCENARIO_MATRIX_SCHEMA_ID:
+        errors.append(f"{context}: $schema must be {SCENARIO_MATRIX_SCHEMA_ID}")
+    if doc.get("artifactId") != artifact_dir.name:
+        errors.append(f"{context}: artifactId must equal the artifact directory name {artifact_dir.name!r}")
+    if not parse_datetime(doc.get("generatedAt")):
+        errors.append(f"{context}: generatedAt must be an ISO date-time")
+    run_class = doc.get("runClass")
+    if not isinstance(run_class, str) or not run_class.strip():
+        errors.append(f"{context}: runClass must be a non-empty string")
+
+    scenarios = doc.get("scenarios")
+    if not isinstance(scenarios, list) or not scenarios:
+        errors.append(f"{context}: scenarios must be a non-empty array")
+        return
+    seen_ids: set[str] = set()
+    for idx, row in enumerate(scenarios):
+        row_context = f"{context}: scenarios[{idx}]"
+        if not isinstance(row, dict):
+            errors.append(f"{row_context} must be an object")
+            continue
+        for key in ["id", "scenario", "status", "notes"]:
+            if key not in row:
+                errors.append(f"{row_context} missing required key {key!r}")
+        row_id = row.get("id")
+        if isinstance(row_id, str) and SLUG_RE.match(row_id):
+            if row_id in seen_ids:
+                errors.append(f"{row_context}: duplicate scenario id {row_id!r}")
+            seen_ids.add(row_id)
+        elif "id" in row:
+            errors.append(f"{row_context}: id must be a kebab-case slug")
+        for key in ["scenario", "notes"]:
+            if key in row and (not isinstance(row[key], str) or not row[key].strip()):
+                errors.append(f"{row_context}.{key} must be a non-empty string")
+        status = row.get("status")
+        if "status" in row and status not in SCENARIO_STATUSES:
+            allowed = ", ".join(sorted(SCENARIO_STATUSES))
+            errors.append(f"{row_context}: status {status!r} must be one of: {allowed}")
+        evidence = row.get("evidence")
+        if evidence is None:
+            if status in {"pass", "pass_with_caveats", "fail"}:
+                errors.append(f"{row_context}: evidence is required when status is {status!r}")
+        else:
+            check_relative_path(evidence, base=artifact_dir, errors=errors, context=f"{row_context}.evidence")
+
+
+def validate_team_identity(context: str, target: dict[str, Any], errors: list[str]) -> None:
+    identity = target.get("teamIdentity")
+    if not isinstance(identity, dict):
+        errors.append(f"{context}: moneyline target requires a teamIdentity object with home and away entries")
+        return
+    identities: dict[str, str] = {}
+    teams: dict[str, str] = {}
+    for role, expected_position in TEAM_IDENTITY_POSITION_TYPE_BY_ROLE.items():
+        entry = identity.get(role)
+        entry_context = f"{context}: teamIdentity.{role}"
+        if not isinstance(entry, dict):
+            errors.append(f"{entry_context} must be an object")
+            continue
+        team = entry.get("team")
+        if not isinstance(team, str) or not team.strip():
+            errors.append(f"{entry_context}.team must be a non-empty string")
+        else:
+            teams[role] = team
+        if entry.get("positionType") != expected_position:
+            errors.append(f"{entry_context}.positionType must be {expected_position!r} for the {role} side")
+        odds = entry.get("marketOddsAmerican")
+        if not isinstance(odds, str) or not odds.strip():
+            errors.append(f"{entry_context}.marketOddsAmerican must be a non-empty string")
+        side_identity = entry.get("identity")
+        if side_identity not in {"favorite", "underdog", "even"}:
+            errors.append(f"{entry_context}.identity must be favorite, underdog, or even")
+        else:
+            identities[role] = side_identity
+    if len(teams) == 2 and teams["home"] == teams["away"]:
+        errors.append(f"{context}: teamIdentity home and away teams must differ")
+    if len(identities) == 2:
+        pair = sorted(identities.values())
+        if pair not in (["favorite", "underdog"], ["even", "even"]):
+            errors.append(f"{context}: teamIdentity identities must pair favorite/underdog or even/even")
+
+
+def validate_adopting_run_evidence(
+    scorecard_path: Path,
+    evidence_doc: dict[str, Any],
+    verdict_label: str | None,
+    errors: list[str],
+) -> None:
+    context = display_path(scorecard_path.parent / "evidence.json")
+
+    artifact_files = evidence_doc.get("artifactFiles")
+    referenced = set(artifact_files.values()) if isinstance(artifact_files, dict) else set()
+    for required_value in ["scenario-matrix.json", "mve-scorecard.json"]:
+        if required_value not in referenced:
+            errors.append(f"{context}: artifactFiles must reference {required_value}")
+
+    status = evidence_doc.get("status")
+    if verdict_label in RUN_STATUS_BY_VERDICT:
+        allowed = RUN_STATUS_BY_VERDICT[verdict_label] | {"superseded"}
+        if status not in allowed:
+            errors.append(
+                f"{context}: status {status!r} does not match scorecard verdict {verdict_label}; "
+                "expected one of: " + ", ".join(sorted(allowed))
+            )
+
+    evidence_verdict = evidence_doc.get("verdict")
+    if verdict_label and isinstance(evidence_verdict, dict) and "label" in evidence_verdict:
+        if evidence_verdict.get("label") != verdict_label:
+            errors.append(f"{context}: verdict.label must equal the scorecard verdict label {verdict_label!r}")
+
+    target = evidence_doc.get("target")
+    if isinstance(target, dict) and target.get("market") == "moneyline":
+        validate_team_identity(context, target, errors)
+
+
+def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: list[str]) -> None:
+    context = display_path(path)
+    if not isinstance(doc, dict):
+        errors.append(f"{context}: must be a JSON object")
+        return
+    artifact_dir = path.parent
+
+    required_keys = [
+        "$schema",
+        "schemaVersion",
+        "artifactId",
+        "generatedAt",
+        "runClass",
+        "verdict",
+        "capabilities",
+        "zeroExposure",
+        "transactions",
+    ]
+    for key in required_keys:
+        if key not in doc:
+            errors.append(f"{context}: missing required key {key!r}")
+    if doc.get("$schema") != MVE_SCORECARD_SCHEMA_ID:
+        errors.append(f"{context}: $schema must be {MVE_SCORECARD_SCHEMA_ID}")
+    if not is_plain_int(doc.get("schemaVersion")) or doc.get("schemaVersion", 0) < 1:
+        errors.append(f"{context}: schemaVersion must be an integer >= 1")
+    if doc.get("artifactId") != artifact_dir.name:
+        errors.append(f"{context}: artifactId must equal the artifact directory name {artifact_dir.name!r}")
+    if not parse_datetime(doc.get("generatedAt")):
+        errors.append(f"{context}: generatedAt must be an ISO date-time")
+    run_class = doc.get("runClass")
+    if not isinstance(run_class, str) or not run_class.strip():
+        errors.append(f"{context}: runClass must be a non-empty string")
+
+    verdict_label: str | None = None
+    verdict = doc.get("verdict")
+    if "verdict" in doc:
+        if not isinstance(verdict, dict):
+            errors.append(f"{context}: verdict must be an object")
+        else:
+            label = verdict.get("label")
+            if label not in VERDICT_LABELS:
+                allowed = ", ".join(sorted(VERDICT_LABELS))
+                errors.append(f"{context}: verdict.label {label!r} must be one of: {allowed}")
+            elif label in UNPUBLISHABLE_VERDICTS:
+                errors.append(
+                    f"{context}: verdict.label {label!r} is not publishable; the run status vocabulary has no "
+                    "failure status, so halted/failed canary evidence stays internal"
+                )
+            else:
+                verdict_label = label
+            reason = verdict.get("reason")
+            if not isinstance(reason, str) or not reason.strip():
+                errors.append(f"{context}: verdict.reason must be a non-empty string")
+
+    proof_by_id: dict[str, str] = {}
+    seen_capability_ids: set[str] = set()
+    capabilities = doc.get("capabilities")
+    if "capabilities" in doc:
+        if not isinstance(capabilities, list) or not capabilities:
+            errors.append(f"{context}: capabilities must be a non-empty array")
+        else:
+            for idx, row in enumerate(capabilities):
+                row_context = f"{context}: capabilities[{idx}]"
+                if not isinstance(row, dict):
+                    errors.append(f"{row_context} must be an object")
+                    continue
+                for key in ["id", "capability", "proof", "notes"]:
+                    if key not in row:
+                        errors.append(f"{row_context} missing required key {key!r}")
+                row_id = row.get("id")
+                if isinstance(row_id, str) and SLUG_RE.match(row_id):
+                    if row_id in seen_capability_ids:
+                        errors.append(f"{row_context}: duplicate capability id {row_id!r}")
+                    seen_capability_ids.add(row_id)
+                elif "id" in row:
+                    errors.append(f"{row_context}: id must be a kebab-case slug")
+                    row_id = None
+                for key in ["capability", "notes"]:
+                    if key in row and (not isinstance(row[key], str) or not row[key].strip()):
+                        errors.append(f"{row_context}.{key} must be a non-empty string")
+                proof = row.get("proof")
+                if "proof" in row and proof not in PROOF_LEVELS:
+                    allowed = ", ".join(sorted(PROOF_LEVELS))
+                    errors.append(f"{row_context}: proof {proof!r} must be one of: {allowed}")
+                elif isinstance(row_id, str) and isinstance(proof, str):
+                    proof_by_id[row_id] = proof
+                evidence = row.get("evidence")
+                if evidence is None:
+                    if proof in PROVEN_LEVELS or proof == "failed":
+                        errors.append(f"{row_context}: evidence is required when proof is {proof!r}")
+                else:
+                    check_relative_path(evidence, base=artifact_dir, errors=errors, context=f"{row_context}.evidence")
+
+    if run_class == "mm-live-canary" and isinstance(capabilities, list) and capabilities:
+        missing = sorted(MM_LIVE_CANARY_CAPABILITY_IDS - set(proof_by_id))
+        if missing:
+            errors.append(f"{context}: mm-live-canary scorecard is missing capability rows: {', '.join(missing)}")
+
+        exposure_proof = proof_by_id.get("exposure-drain-zero")
+        if exposure_proof is not None and exposure_proof != "proven_live":
+            errors.append(f"{context}: exposure-drain-zero must be proven_live in every published scorecard")
+
+        failed_ids = sorted(cid for cid, proof in proof_by_id.items() if proof == "failed")
+        if verdict_label in {"FULL_GREEN", "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED"} and failed_ids:
+            errors.append(f"{context}: verdict {verdict_label} cannot carry failed capabilities: {', '.join(failed_ids)}")
+        if verdict_label == "FULL_GREEN":
+            unproven = sorted(
+                cid
+                for cid in FULL_GREEN_CORE_CAPABILITY_IDS
+                if cid in proof_by_id and proof_by_id[cid] not in PROVEN_LEVELS
+            )
+            if unproven:
+                errors.append(f"{context}: verdict FULL_GREEN requires proven core capabilities; not proven: {', '.join(unproven)}")
+        if verdict_label == "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED":
+            not_deferred = sorted(
+                cid for cid in POSTGAME_CAPABILITY_IDS if cid in proof_by_id and proof_by_id[cid] != "deferred"
+            )
+            if not_deferred:
+                errors.append(
+                    f"{context}: verdict GREEN_LIVE_WINDOW_POSTGAME_DEFERRED requires deferred postgame capabilities; "
+                    "not deferred: " + ", ".join(not_deferred)
+                )
+            unproven_live = sorted(
+                cid
+                for cid in ("live-commitments-posted", "live-fill", "exposure-drain-zero")
+                if cid in proof_by_id and proof_by_id[cid] not in PROVEN_LEVELS
+            )
+            if unproven_live:
+                errors.append(
+                    f"{context}: verdict GREEN_LIVE_WINDOW_POSTGAME_DEFERRED requires a proven live window; "
+                    "not proven: " + ", ".join(unproven_live)
+                )
+        if verdict_label == "AMBER_QUOTED_NO_FILL":
+            posted_proof = proof_by_id.get("live-commitments-posted")
+            if posted_proof is not None and posted_proof not in PROVEN_LEVELS:
+                errors.append(f"{context}: verdict AMBER_QUOTED_NO_FILL requires proven live-commitments-posted")
+            fill_proof = proof_by_id.get("live-fill")
+            if fill_proof is not None and fill_proof not in {"deferred", "failed"}:
+                errors.append(f"{context}: verdict AMBER_QUOTED_NO_FILL requires live-fill to be deferred or failed")
+        if verdict_label == "AMBER_TOKEN_TOPUP_NEEDED":
+            if proof_by_id and not any(proof in {"deferred", "failed"} for proof in proof_by_id.values()):
+                errors.append(f"{context}: verdict AMBER_TOKEN_TOPUP_NEEDED requires at least one deferred or failed capability")
+
+    zero = doc.get("zeroExposure")
+    if "zeroExposure" in doc:
+        if not isinstance(zero, dict):
+            errors.append(f"{context}: zeroExposure must be an object")
+        else:
+            for key in ["checkedAtUtc", *ZERO_EXPOSURE_COUNT_KEYS, "evidence"]:
+                if key not in zero:
+                    errors.append(f"{context}: zeroExposure missing required key {key!r}")
+            if "checkedAtUtc" in zero and not parse_datetime(zero.get("checkedAtUtc")):
+                errors.append(f"{context}: zeroExposure.checkedAtUtc must be an ISO date-time")
+            for key in ZERO_EXPOSURE_COUNT_KEYS:
+                if key in zero and (not is_plain_int(zero[key]) or zero[key] != 0):
+                    errors.append(f"{context}: zeroExposure.{key} must be the integer 0 in a published canary")
+            if "evidence" in zero:
+                check_relative_path(zero.get("evidence"), base=artifact_dir, errors=errors, context=f"{context} zeroExposure.evidence")
+
+    categories_seen: set[str] = set()
+    txs = doc.get("transactions")
+    if "transactions" in doc:
+        if not isinstance(txs, list):
+            errors.append(f"{context}: transactions must be an array")
+        else:
+            seen_hash_category: set[tuple[str, str]] = set()
+            for idx, tx in enumerate(txs):
+                tx_context = f"{context}: transactions[{idx}]"
+                if not isinstance(tx, dict):
+                    errors.append(f"{tx_context} must be an object")
+                    continue
+                for key in ["category", "txHash", "status", "operatorControlled"]:
+                    if key not in tx:
+                        errors.append(f"{tx_context} missing required key {key!r}")
+                category = tx.get("category")
+                if "category" in tx and category not in TX_CATEGORIES:
+                    allowed = ", ".join(sorted(TX_CATEGORIES))
+                    errors.append(f"{tx_context}: category {category!r} must be one of: {allowed}")
+                    category = None
+                elif isinstance(category, str):
+                    categories_seen.add(category)
+                tx_hash = tx.get("txHash")
+                if "txHash" in tx and (not isinstance(tx_hash, str) or not TX_HASH_RE.match(tx_hash)):
+                    errors.append(f"{tx_context}: txHash must be a 0x-prefixed 32-byte hash")
+                    tx_hash = None
+                if "status" in tx and tx.get("status") not in {"success", "reverted"}:
+                    errors.append(f"{tx_context}: status must be success or reverted")
+                if "operatorControlled" in tx and not isinstance(tx.get("operatorControlled"), bool):
+                    errors.append(f"{tx_context}: operatorControlled must be boolean")
+                if category == "score-callback" and tx.get("operatorControlled") is True:
+                    errors.append(
+                        f"{tx_context}: score-callback transactions are sent by the oracle network; operatorControlled must be false"
+                    )
+                if isinstance(tx_hash, str) and isinstance(category, str):
+                    pair = (tx_hash.lower(), category)
+                    if pair in seen_hash_category:
+                        errors.append(f"{tx_context}: duplicate transaction entry for {category} {tx_hash}")
+                    seen_hash_category.add(pair)
+            if verdict_label == "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED":
+                postgame_present = sorted(categories_seen & POSTGAME_TX_CATEGORIES)
+                if postgame_present:
+                    errors.append(
+                        f"{context}: verdict GREEN_LIVE_WINDOW_POSTGAME_DEFERRED cannot include postgame "
+                        "transaction categories: " + ", ".join(postgame_present)
+                    )
+            if verdict_label == "FULL_GREEN":
+                if "settle" not in categories_seen:
+                    errors.append(f"{context}: verdict FULL_GREEN requires at least one settle transaction")
+                if not categories_seen & {"score-request", "score-callback"}:
+                    errors.append(f"{context}: verdict FULL_GREEN requires score-request or score-callback transaction evidence")
+
+    evidence_doc = docs.get(artifact_dir / "evidence.json")
+    if not isinstance(evidence_doc, dict):
+        errors.append(f"{context}: missing companion evidence.json in the artifact directory")
+    else:
+        validate_adopting_run_evidence(path, evidence_doc, verdict_label, errors)
+
+
+def validate_adoption_pairing(docs: dict[Path, Any], errors: list[str]) -> None:
+    scorecard_dirs = {path.parent for path in docs if path.name == "mve-scorecard.json" and "runs" in path.parts}
+    v2_matrix_dirs = {
+        path.parent
+        for path, doc in docs.items()
+        if path.name == "scenario-matrix.json" and "runs" in path.parts and scenario_matrix_is_v2(doc)
+    }
+    for directory in sorted(scorecard_dirs - v2_matrix_dirs):
+        errors.append(
+            f"{display_path(directory)}: mve-scorecard.json requires a schemaVersion >= {SCENARIO_MATRIX_MIN_VERSION} "
+            "scenario-matrix.json in the same run directory"
+        )
+    for directory in sorted(v2_matrix_dirs - scorecard_dirs):
+        errors.append(
+            f"{display_path(directory)}: schemaVersion >= {SCENARIO_MATRIX_MIN_VERSION} scenario-matrix.json requires an "
+            "mve-scorecard.json in the same run directory"
+        )
+
+
 def validate_schema_pointers(docs: dict[Path, Any], errors: list[str]) -> None:
-    known_schema_ids = {INDEX_SCHEMA_ID, ARCHIVE_SCHEMA_ID, RELEASE_ACCEPTANCE_SCHEMA_ID}
+    known_schema_ids = {
+        INDEX_SCHEMA_ID,
+        ARCHIVE_SCHEMA_ID,
+        RELEASE_ACCEPTANCE_SCHEMA_ID,
+        SCENARIO_MATRIX_SCHEMA_ID,
+        MVE_SCORECARD_SCHEMA_ID,
+    }
     for path, doc in docs.items():
         if not isinstance(doc, dict):
             continue
@@ -639,9 +1095,14 @@ def main() -> int:
             validate_archive_index(path, doc, docs, errors)
         if path.name == "acceptance.json" and "releases" in path.parts:
             validate_release_acceptance(path, doc, errors)
+        if path.name == "scenario-matrix.json" and "runs" in path.parts:
+            validate_scenario_matrix(path, doc, errors)
+        if path.name == "mve-scorecard.json" and "runs" in path.parts:
+            validate_mve_scorecard(path, doc, docs, errors)
         validate_projection_convergence(path, doc, errors)
         validate_raw_file_maps(path, doc, errors)
 
+    validate_adoption_pairing(docs, errors)
     validate_generated_indexes(errors)
     scanned_text_files = safety_scan(files, errors)
 

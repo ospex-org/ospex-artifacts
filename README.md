@@ -14,7 +14,7 @@ This repository intentionally avoids internal planning notes, brainstorming text
 - `index.json` — a lightweight artifact index for agents, dashboards, and humans that need a stable entry point.
 - `archive/` — full-history index shards such as `archive/2026/index.json`; consumers fetch these only when they need older entries.
 
-See `docs/artifact-types.md` for the current conventions and `docs/test-harness-expectations.md` for live-write harness expectations.
+See `docs/artifact-types.md` for the current conventions and `docs/test-harness-expectations.md` for live-write harness expectations. Market-maker live canary runs publish a standardized scenario matrix and MVE readiness scorecard; see `docs/mm-live-canary-evidence.md` and the templates under `templates/mm-live-canary/`.
 
 ## Source-of-truth rule
 

@@ -1,0 +1,86 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/scenario-matrix.schema.json",
+  "schemaVersion": 2,
+  "artifactId": "YYYY-MM-DD-sport-away-home-contest-ID-mm-live-canary",
+  "generatedAt": "YYYY-MM-DDTHH:MM:SSZ",
+  "runClass": "mm-live-canary",
+  "scenarios": [
+    {
+      "id": "target-preflight",
+      "scenario": "target preflight",
+      "status": "not_run",
+      "evidence": null,
+      "notes": "Target contest/speculation selection and verification state. Name both teams with home/away roles."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "scenario": "repo/runtime gates",
+      "status": "not_run",
+      "evidence": null,
+      "notes": "Fresh clone or tagged release; install/build/smoke results; observed SDK/CLI/Node/Yarn versions."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "scenario": "wallet/auth/balances",
+      "status": "not_run",
+      "evidence": null,
+      "notes": "Strict non-interactive auth result per wallet role; balance sufficiency for the planned window."
+    },
+    {
+      "id": "bounded-approvals",
+      "scenario": "bounded approvals",
+      "status": "not_run",
+      "evidence": null,
+      "notes": "Only bounded low-value allowances observed/created; no unlimited approvals."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "scenario": "MM doctor/quote/dry-run loop",
+      "status": "not_run",
+      "evidence": null,
+      "notes": "Dry-run selected only the intended target and produced quote intents with no writes."
+    },
+    {
+      "id": "live-commitments-posted",
+      "scenario": "live commitments posted",
+      "status": "not_run",
+      "evidence": null,
+      "notes": "Count, per-commitment risk, expiry, and intended-target-only scope of live commitments."
+    },
+    {
+      "id": "live-fill",
+      "scenario": "live fill",
+      "status": "not_run",
+      "evidence": null,
+      "notes": "Fill transaction outcome with taker/maker risk amounts and sides named per the Team Identity Rule."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "scenario": "own-state SSE canonical fill",
+      "status": "not_run",
+      "evidence": null,
+      "notes": "Fill event source observed in telemetry; canonical legacy fill sources observed (expected: none)."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "scenario": "expiry/shutdown zero public exposure",
+      "status": "not_run",
+      "evidence": null,
+      "notes": "Public/API live commitment exposure after shutdown and expiry grace; orphan process scan result."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "scenario": "restart/cold-start safety",
+      "status": "not_run",
+      "evidence": null,
+      "notes": "State whether the probe was read-only/dry-run and whether it proves cursor resume or only no-phantom-exposure."
+    },
+    {
+      "id": "postgame-lifecycle",
+      "scenario": "postgame lifecycle",
+      "status": "not_run",
+      "evidence": null,
+      "notes": "External final score source and result, score/settle/claim transactions, final dry-run and process checks. Use status deferred when the artifact is cut before the game is final."
+    }
+  ]
+}
