@@ -143,10 +143,60 @@ def make_full_green_evidence() -> dict:
     return evidence
 
 
-def run_scorecard_validation(scorecard: dict, evidence: dict) -> list[str]:
+# Real raw evidence the default fixtures bind against (HOU/LAA contest 35 / speculation 25).
+RAW_BINDING_FILES = ("raw/target-decision.sanitized.json", "raw/live-fill.sanitized.json")
+
+
+def make_target_decision_doc(
+    contest_id: str = "35",
+    speculation_id: str = "25",
+    sport: str = "mlb",
+    home_team: str = "Los Angeles Angels",
+    away_team: str = "Houston Astros",
+    market: str = "moneyline",
+) -> dict:
+    return {
+        "selectedTarget": {
+            "contestId": contest_id,
+            "awayTeam": away_team,
+            "homeTeam": home_team,
+            "sport": sport,
+            "speculations": [
+                {"speculationId": speculation_id, "contestId": contest_id, "type": market},
+            ],
+        }
+    }
+
+
+def make_live_fill_doc(
+    contest_id: str = "35",
+    speculation_id: str = "25",
+    sport: str = "mlb",
+    home_team: str = "Los Angeles Angels",
+    away_team: str = "Houston Astros",
+    market: str = "moneyline",
+) -> dict:
+    return {
+        "result": {
+            "contest": {"contestId": contest_id, "awayTeam": away_team, "homeTeam": home_team, "sport": sport},
+            "speculation": {"speculationId": speculation_id},
+            "commitment": {"contestId": contest_id, "marketType": market},
+        }
+    }
+
+
+def run_scorecard_validation(
+    scorecard: dict, evidence: dict, raw_docs: dict | None = None, run_dir: Path = SAMPLE_RUN_DIR
+) -> list[str]:
     errors: list[str] = []
-    docs = {SAMPLE_RUN_DIR / "evidence.json": evidence}
-    validate_artifacts.validate_mve_scorecard(SAMPLE_RUN_DIR / "mve-scorecard.json", scorecard, docs, errors)
+    docs: dict = {run_dir / "evidence.json": evidence}
+    if run_dir == SAMPLE_RUN_DIR:
+        # Bind against the real on-disk HOU raw evidence by default; mismatch probes override below.
+        for rel in RAW_BINDING_FILES:
+            docs[run_dir / rel] = json.loads((run_dir / rel).read_text(encoding="utf-8"))
+    for rel, doc in (raw_docs or {}).items():
+        docs[run_dir / rel] = doc
+    validate_artifacts.validate_mve_scorecard(run_dir / "mve-scorecard.json", scorecard, docs, errors)
     return errors
 
 
@@ -644,6 +694,14 @@ class ErrorMessageQualityTests(unittest.TestCase):
         errors = run_scorecard_validation(scorecard, make_postgame_deferred_evidence())
         self.assertTrue(any("zeroExposure.evidence" in error for error in errors), errors)
 
+    def test_zero_exposure_directory_evidence_is_rejected(self) -> None:
+        scorecard = make_postgame_deferred_scorecard()
+        scorecard["zeroExposure"]["evidence"] = "raw/"
+        errors = run_scorecard_validation(scorecard, make_postgame_deferred_evidence())
+        self.assertTrue(
+            any("zeroExposure.evidence must point at a sanitized evidence file" in error for error in errors), errors
+        )
+
 
 class SignatureSafetyPatternTests(unittest.TestCase):
     def pattern(self, label: str):
@@ -960,7 +1018,15 @@ class MarketVocabularyTests(unittest.TestCase):
         evidence = make_postgame_deferred_evidence()
         evidence["target"]["market"] = "spread"
         del evidence["target"]["teamIdentity"]
-        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        # A spread target binds to spread raw evidence (no teamIdentity required for spread).
+        errors = run_scorecard_validation(
+            make_postgame_deferred_scorecard(),
+            evidence,
+            raw_docs={
+                "raw/target-decision.sanitized.json": make_target_decision_doc(market="spread"),
+                "raw/live-fill.sanitized.json": make_live_fill_doc(market="spread"),
+            },
+        )
         self.assertEqual(errors, [])
 
 
@@ -1076,7 +1142,7 @@ class TargetIdentityTests(unittest.TestCase):
         evidence = make_postgame_deferred_evidence()
         del evidence["target"]["contestId"]
         errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
-        self.assertTrue(any("target.contestId must be a non-empty string" in e for e in errors), errors)
+        self.assertTrue(any("target.contestId must be a non-empty decimal string" in e for e in errors), errors)
 
     def test_contest_id_mismatching_directory_is_rejected(self) -> None:
         evidence = make_postgame_deferred_evidence()
@@ -1088,7 +1154,7 @@ class TargetIdentityTests(unittest.TestCase):
         evidence = make_postgame_deferred_evidence()
         del evidence["target"]["speculationId"]
         errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
-        self.assertTrue(any("target.speculationId must be a non-empty string" in e for e in errors), errors)
+        self.assertTrue(any("target.speculationId must be a non-empty decimal string" in e for e in errors), errors)
 
     def test_sport_mismatching_directory_is_rejected(self) -> None:
         evidence = make_postgame_deferred_evidence()
@@ -1100,6 +1166,117 @@ class TargetIdentityTests(unittest.TestCase):
         errors = run_scorecard_validation(make_postgame_deferred_scorecard(), make_postgame_deferred_evidence())
         self.assertEqual(errors, [])
 
+    def test_non_decimal_contest_id_is_rejected(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        evidence["target"]["contestId"] = "35a"
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("target.contestId must be a non-empty decimal string" in e for e in errors), errors)
+
+    def test_non_decimal_speculation_id_is_rejected(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        evidence["target"]["speculationId"] = "x25"
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("target.speculationId must be a non-empty decimal string" in e for e in errors), errors)
+
+    def test_missing_sport_is_rejected(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        del evidence["target"]["sport"]
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("target.sport must be a non-empty string" in e for e in errors), errors)
+
+
+class CanonicalTargetBindingTests(unittest.TestCase):
+    """The public target must bind to the canonical raw evidence the artifact cites (the core invariant)."""
+
+    # --- target-preflight binding ---
+    def test_speculation_id_mismatches_preflight_evidence(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        evidence["target"]["speculationId"] = "999"  # decimal, but not the speculation in the raw evidence
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("has no speculation matching" in e for e in errors), errors)
+
+    def test_fictional_teams_rejected_even_when_team_identity_consistent(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        evidence["target"]["homeTeam"] = "Fictional Home"
+        evidence["target"]["awayTeam"] = "Fictional Away"
+        evidence["target"]["teamIdentity"]["home"]["team"] = "Fictional Home"
+        evidence["target"]["teamIdentity"]["away"]["team"] = "Fictional Away"
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("target.homeTeam" in e and "must match the raw/target-decision" in e for e in errors), errors)
+
+    def test_missing_target_preflight_evidence_path(self) -> None:
+        scorecard = make_postgame_deferred_scorecard()
+        for row in scorecard["capabilities"]:
+            if row["id"] == "target-preflight":
+                row["proof"] = "deferred"
+                row["evidence"] = None
+        errors = run_scorecard_validation(scorecard, make_postgame_deferred_evidence())
+        self.assertTrue(any("target-preflight capability must cite an evidence file" in e for e in errors), errors)
+
+    def test_target_preflight_evidence_directory_is_rejected(self) -> None:
+        scorecard = make_postgame_deferred_scorecard()
+        for row in scorecard["capabilities"]:
+            if row["id"] == "target-preflight":
+                row["evidence"] = "raw/"
+        errors = run_scorecard_validation(scorecard, make_postgame_deferred_evidence())
+        self.assertTrue(any("must be a readable JSON file" in e for e in errors), errors)
+
+    def test_target_preflight_missing_selected_target(self) -> None:
+        errors = run_scorecard_validation(
+            make_postgame_deferred_scorecard(),
+            make_postgame_deferred_evidence(),
+            raw_docs={"raw/target-decision.sanitized.json": {"noSelectedTarget": True}},
+        )
+        self.assertTrue(any("must contain a selectedTarget object" in e for e in errors), errors)
+
+    # --- live-fill binding ---
+    def test_live_fill_evidence_other_contest_is_rejected(self) -> None:
+        errors = run_scorecard_validation(
+            make_postgame_deferred_scorecard(),
+            make_postgame_deferred_evidence(),
+            raw_docs={"raw/live-fill.sanitized.json": make_live_fill_doc(contest_id="99", speculation_id="88")},
+        )
+        self.assertTrue(any("must match the raw/live-fill" in e for e in errors), errors)
+
+    # --- fail-closed slug parsing ---
+    def test_directory_without_contest_segment_is_rejected(self) -> None:
+        run_dir = ROOT / "runs" / "2026-06-08-mlb-sf-chc-v054-ownstate-sse-repeatability-canary"
+        scorecard = make_postgame_deferred_scorecard()
+        scorecard["artifactId"] = run_dir.name
+        errors = run_scorecard_validation(
+            scorecard,
+            make_postgame_deferred_evidence(),
+            raw_docs={
+                "raw/target-decision.sanitized.json": make_target_decision_doc(),
+                "raw/live-fill.sanitized.json": make_live_fill_doc(),
+            },
+            run_dir=run_dir,
+        )
+        self.assertTrue(any("must contain a parseable '-contest-<id>' segment" in e for e in errors), errors)
+
+    def test_directory_without_sport_prefix_is_rejected(self) -> None:
+        run_dir = ROOT / "runs" / "freeform-contest-35-canary"
+        scorecard = make_postgame_deferred_scorecard()
+        scorecard["artifactId"] = run_dir.name
+        errors = run_scorecard_validation(
+            scorecard,
+            make_postgame_deferred_evidence(),
+            raw_docs={
+                "raw/target-decision.sanitized.json": make_target_decision_doc(),
+                "raw/live-fill.sanitized.json": make_live_fill_doc(),
+            },
+            run_dir=run_dir,
+        )
+        self.assertTrue(any("must start with a parseable 'YYYY-MM-DD-<sport>-' prefix" in e for e in errors), errors)
+
+    def test_match_commitment_under_amber_is_rejected(self) -> None:
+        scorecard = make_amber_no_fill_scorecard()
+        scorecard["transactions"].append(
+            {"category": "match-commitment", "txHash": TX_E, "status": "success", "operatorControlled": True, "purpose": "p"}
+        )
+        errors = run_scorecard_validation(scorecard, make_amber_no_fill_evidence())
+        self.assertTrue(any("cannot include a successful" in e and "match-commitment" in e for e in errors), errors)
+
 
 class TemplateCoherenceTests(unittest.TestCase):
     """The shipped templates must validate cleanly once only the placeholder tokens are filled."""
@@ -1108,13 +1285,11 @@ class TemplateCoherenceTests(unittest.TestCase):
         return json.loads((TEMPLATE_DIR / name).read_text(encoding="utf-8"))
 
     def _fill_tokens(self, scorecard: dict) -> dict:
+        # Fill only the placeholder TOKENS; the template's evidence paths already point at real
+        # sanitized raw files under the sample run dir (and the binding files match the fixture).
         scorecard["artifactId"] = SAMPLE_RUN_DIR.name
         scorecard["generatedAt"] = "2026-06-11T06:00:00Z"
         scorecard["zeroExposure"]["checkedAtUtc"] = "2026-06-11T06:00:00Z"
-        scorecard["zeroExposure"]["evidence"] = "raw/tx-receipts.summary.json"
-        for row in scorecard["capabilities"]:
-            if row.get("evidence") is not None:
-                row["evidence"] = "raw/tx-receipts.summary.json"
         for idx, tx in enumerate(scorecard["transactions"]):
             tx["txHash"] = "0x" + f"{idx:02d}" * 32
         return scorecard
@@ -1129,9 +1304,6 @@ class TemplateCoherenceTests(unittest.TestCase):
         matrix = self._load("scenario-matrix.template.json")
         matrix["artifactId"] = SAMPLE_RUN_DIR.name
         matrix["generatedAt"] = "2026-06-11T06:00:00Z"
-        for row in matrix["scenarios"]:
-            if row.get("evidence") is not None:
-                row["evidence"] = "raw/tx-receipts.summary.json"
         errors: list[str] = []
         validate_artifacts.validate_scenario_matrix(SAMPLE_RUN_DIR / "scenario-matrix.json", matrix, errors)
         self.assertEqual(errors, [], errors)

@@ -895,10 +895,132 @@ def validate_team_identity(context: str, target: dict[str, Any], errors: list[st
                 )
 
 
+def resolve_run_json(artifact_dir: Path, rel_path: Any, docs: dict[Path, Any]) -> Any:
+    """Parsed JSON for a run-relative evidence path, or None if it is not a readable JSON file.
+
+    docs holds every successfully parsed .json file in the repo; a missing key therefore means
+    the path is absent, a directory, or unparsable — all of which the caller treats as fail-closed.
+    """
+    if not isinstance(rel_path, str) or not rel_path or rel_path.endswith("/"):
+        return None
+    return docs.get(artifact_dir / rel_path)
+
+
+def bind_identity_field(
+    context: str, name: str, target_value: Any, raw_value: Any, rel_path: str, errors: list[str], *, lower: bool = False
+) -> None:
+    # Only compares when the public target field is present; its absence is reported separately.
+    if not isinstance(target_value, str) or not target_value.strip() or raw_value is None:
+        return
+    expected = str(raw_value).strip()
+    actual = target_value.strip()
+    matches = actual.lower() == expected.lower() if lower else actual == expected
+    if not matches:
+        errors.append(f"{context}: target.{name} {target_value!r} must match the {rel_path} value {raw_value!r}")
+
+
+def validate_target_preflight_binding(
+    context: str, target: dict[str, Any], artifact_dir: Path, evidence_by_id: dict[str, Any], docs: dict[Path, Any], errors: list[str]
+) -> None:
+    rel_path = evidence_by_id.get("target-preflight")
+    if not isinstance(rel_path, str) or not rel_path:
+        errors.append(f"{context}: the target-preflight capability must cite an evidence file so the target identity can be bound")
+        return
+    raw = resolve_run_json(artifact_dir, rel_path, docs)
+    if not isinstance(raw, dict):
+        errors.append(f"{context}: target-preflight evidence {rel_path!r} must be a readable JSON file for target binding")
+        return
+    selected = raw.get("selectedTarget")
+    if not isinstance(selected, dict):
+        errors.append(f"{context}: target-preflight evidence {rel_path!r} must contain a selectedTarget object")
+        return
+    bind_identity_field(context, "contestId", target.get("contestId"), selected.get("contestId"), rel_path, errors)
+    bind_identity_field(context, "sport", target.get("sport"), selected.get("sport"), rel_path, errors, lower=True)
+    bind_identity_field(context, "homeTeam", target.get("homeTeam"), selected.get("homeTeam"), rel_path, errors)
+    bind_identity_field(context, "awayTeam", target.get("awayTeam"), selected.get("awayTeam"), rel_path, errors)
+
+    spec_id = target.get("speculationId")
+    contest_id = target.get("contestId")
+    market = target.get("market")
+    market_norm = market.strip().lower() if isinstance(market, str) else None
+    specs = selected.get("speculations")
+    matched = False
+    if isinstance(specs, list):
+        for spec in specs:
+            if not isinstance(spec, dict):
+                continue
+            spec_type = spec.get("type")
+            if (
+                isinstance(spec_id, str)
+                and str(spec.get("speculationId")).strip() == spec_id.strip()
+                and str(spec.get("contestId")).strip() == (contest_id.strip() if isinstance(contest_id, str) else None)
+                and isinstance(spec_type, str)
+                and spec_type.strip().lower() == market_norm
+            ):
+                matched = True
+                break
+    if not matched:
+        errors.append(
+            f"{context}: target-preflight evidence {rel_path!r} has no speculation matching "
+            f"speculationId={spec_id!r}, contestId={contest_id!r}, market={market!r}"
+        )
+
+
+def validate_live_fill_binding(
+    context: str,
+    target: dict[str, Any],
+    artifact_dir: Path,
+    evidence_by_id: dict[str, Any],
+    proof_by_id: dict[str, str],
+    successful_categories: set[str],
+    docs: dict[Path, Any],
+    errors: list[str],
+) -> None:
+    claims_fill = proof_by_id.get("live-fill") == "proven_live" or bool(successful_categories & FILL_TX_CATEGORIES)
+    if not claims_fill:
+        return
+    rel_path = evidence_by_id.get("live-fill")
+    if not isinstance(rel_path, str) or not rel_path:
+        errors.append(f"{context}: a claimed live fill requires the live-fill capability to cite fill evidence")
+        return
+    raw = resolve_run_json(artifact_dir, rel_path, docs)
+    if not isinstance(raw, dict):
+        errors.append(f"{context}: live-fill evidence {rel_path!r} must be a readable JSON file to bind the fill to the target")
+        return
+    result = raw.get("result")
+    if not isinstance(result, dict):
+        errors.append(f"{context}: live-fill evidence {rel_path!r} must contain a result object for target binding")
+        return
+    contest = result.get("contest")
+    if not isinstance(contest, dict):
+        errors.append(f"{context}: live-fill evidence {rel_path!r} result must contain a contest object")
+    else:
+        bind_identity_field(context, "contestId", target.get("contestId"), contest.get("contestId"), rel_path, errors)
+        bind_identity_field(context, "sport", target.get("sport"), contest.get("sport"), rel_path, errors, lower=True)
+        bind_identity_field(context, "homeTeam", target.get("homeTeam"), contest.get("homeTeam"), rel_path, errors)
+        bind_identity_field(context, "awayTeam", target.get("awayTeam"), contest.get("awayTeam"), rel_path, errors)
+    speculation = result.get("speculation")
+    if not isinstance(speculation, dict):
+        errors.append(f"{context}: live-fill evidence {rel_path!r} result must contain a speculation object")
+    else:
+        bind_identity_field(context, "speculationId", target.get("speculationId"), speculation.get("speculationId"), rel_path, errors)
+    commitment = result.get("commitment")
+    if isinstance(commitment, dict):
+        if commitment.get("contestId") is not None:
+            bind_identity_field(context, "contestId", target.get("contestId"), commitment.get("contestId"), rel_path, errors)
+        if commitment.get("marketType") is not None:
+            bind_identity_field(context, "market", target.get("market"), commitment.get("marketType"), rel_path, errors, lower=True)
+
+
 def validate_adopting_run_evidence(
     scorecard_path: Path,
     evidence_doc: dict[str, Any],
     verdict_label: str | None,
+    run_class: Any,
+    proof_by_id: dict[str, str],
+    successful_categories: set[str],
+    evidence_by_id: dict[str, Any],
+    docs: dict[Path, Any],
     errors: list[str],
 ) -> None:
     context = display_path(scorecard_path.parent / "evidence.json")
@@ -972,36 +1094,55 @@ def validate_adopting_run_evidence(
     if isinstance(home_team, str) and isinstance(away_team, str) and home_team and home_team == away_team:
         errors.append(f"{context}: target.homeTeam and target.awayTeam must differ")
 
-    # The "exactly one contest/speculation" claim must be a concrete, named identity, and the
-    # contest/sport are bound to the published run-directory name so a fabricated target cannot
-    # ride on the real run's slug.
+    # The "exactly one contest/speculation" claim must be a concrete, named identity. The
+    # contest/sport are bound to the published run-directory name FAIL-CLOSED: an mm-live-canary
+    # directory that cannot be parsed for both is rejected, never silently skipped.
     artifact_id = scorecard_path.parent.name
-    contest_id = target.get("contestId")
-    if not isinstance(contest_id, str) or not contest_id.strip():
-        errors.append(f"{context}: target.contestId must be a non-empty string identifying the single contest")
-    else:
-        slug_contest = re.search(r"-contest-(\d+)(?:-|$)", artifact_id)
-        if slug_contest and contest_id != slug_contest.group(1):
+    slug_contest = re.search(r"-contest-(\d+)(?:-|$)", artifact_id)
+    slug_sport = re.match(r"^\d{4}-\d{2}-\d{2}-([a-z0-9]+)-", artifact_id)
+    if run_class == "mm-live-canary":
+        if not slug_contest:
             errors.append(
-                f"{context}: target.contestId {contest_id!r} must match the contest id in the run directory name "
-                f"({slug_contest.group(1)!r})"
+                f"{context}: mm-live-canary run directory {artifact_id!r} must contain a parseable "
+                "'-contest-<id>' segment to bind the contest identity"
             )
-    if not isinstance(target.get("speculationId"), str) or not target.get("speculationId").strip():
-        errors.append(f"{context}: target.speculationId must be a non-empty string identifying the single speculation")
+        if not slug_sport:
+            errors.append(
+                f"{context}: mm-live-canary run directory {artifact_id!r} must start with a parseable "
+                "'YYYY-MM-DD-<sport>-' prefix to bind the sport identity"
+            )
+
+    contest_id = target.get("contestId")
+    if not isinstance(contest_id, str) or not re.fullmatch(r"\d+", contest_id.strip() if isinstance(contest_id, str) else ""):
+        errors.append(f"{context}: target.contestId must be a non-empty decimal string identifying the single contest")
+    elif slug_contest and contest_id.strip() != slug_contest.group(1):
+        errors.append(
+            f"{context}: target.contestId {contest_id!r} must match the contest id in the run directory name "
+            f"({slug_contest.group(1)!r})"
+        )
+    spec_id = target.get("speculationId")
+    if not isinstance(spec_id, str) or not re.fullmatch(r"\d+", spec_id.strip() if isinstance(spec_id, str) else ""):
+        errors.append(f"{context}: target.speculationId must be a non-empty decimal string identifying the single speculation")
     sport = target.get("sport")
     if not isinstance(sport, str) or not sport.strip():
         errors.append(f"{context}: target.sport must be a non-empty string")
-    else:
-        slug_sport = re.match(r"^\d{4}-\d{2}-\d{2}-([a-z0-9]+)-", artifact_id)
-        if slug_sport and sport.lower() != slug_sport.group(1):
-            errors.append(
-                f"{context}: target.sport {sport!r} must match the sport in the run directory name "
-                f"({slug_sport.group(1)!r})"
-            )
+    elif slug_sport and sport.strip().lower() != slug_sport.group(1):
+        errors.append(
+            f"{context}: target.sport {sport!r} must match the sport in the run directory name "
+            f"({slug_sport.group(1)!r})"
+        )
 
     # Trigger on the normalized value so 'Moneyline' / 'moneyline ' still require teamIdentity.
     if market_normalized == "moneyline":
         validate_team_identity(context, target, errors)
+
+    # Bind the public target to the canonical raw evidence the artifact cites. This is the core
+    # invariant: an adopting run must not claim a target its own evidence does not prove.
+    if run_class == "mm-live-canary":
+        validate_target_preflight_binding(context, target, scorecard_path.parent, evidence_by_id, docs, errors)
+        validate_live_fill_binding(
+            context, target, scorecard_path.parent, evidence_by_id, proof_by_id, successful_categories, docs, errors
+        )
 
 
 def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: list[str]) -> None:
@@ -1061,6 +1202,7 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
                 errors.append(f"{context}: verdict.reason must be a non-empty string")
 
     proof_by_id: dict[str, str] = {}
+    evidence_by_id: dict[str, Any] = {}
     seen_capability_ids: set[str] = set()
     capabilities = doc.get("capabilities")
     if "capabilities" in doc:
@@ -1093,6 +1235,8 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
                 elif isinstance(row_id, str) and isinstance(proof, str):
                     proof_by_id[row_id] = proof
                 evidence = row.get("evidence")
+                if isinstance(row_id, str) and evidence is not None:
+                    evidence_by_id[row_id] = evidence
                 if evidence is None:
                     if is_one_of(proof, PROVEN_LEVELS) or proof == "failed":
                         errors.append(f"{row_context}: evidence is required when proof is {proof!r}")
@@ -1263,7 +1407,17 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
     if not isinstance(evidence_doc, dict):
         errors.append(f"{context}: missing companion evidence.json in the artifact directory")
     else:
-        validate_adopting_run_evidence(path, evidence_doc, verdict_label, errors)
+        validate_adopting_run_evidence(
+            path,
+            evidence_doc,
+            verdict_label,
+            run_class,
+            proof_by_id,
+            successful_categories,
+            evidence_by_id,
+            docs,
+            errors,
+        )
 
 
 def validate_adoption_pairing(docs: dict[Path, Any], errors: list[str]) -> None:
