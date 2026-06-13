@@ -8,79 +8,79 @@
     {
       "id": "target-preflight",
       "scenario": "target preflight",
-      "status": "not_run",
-      "evidence": null,
+      "status": "pass",
+      "evidence": "raw/target-decision.sanitized.json",
       "notes": "Target contest/speculation selection and verification state. Name both teams with home/away roles."
     },
     {
       "id": "repo-runtime-gates",
       "scenario": "repo/runtime gates",
-      "status": "not_run",
-      "evidence": null,
+      "status": "pass",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
       "notes": "Fresh clone or tagged release; install/build/smoke results; observed SDK/CLI/Node/Yarn versions."
     },
     {
       "id": "wallet-auth-balances",
       "scenario": "wallet/auth/balances",
-      "status": "not_run",
-      "evidence": null,
+      "status": "pass",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
       "notes": "Strict non-interactive auth result per wallet role; balance sufficiency for the planned window."
     },
     {
       "id": "bounded-approvals",
       "scenario": "bounded approvals",
-      "status": "not_run",
-      "evidence": null,
+      "status": "pass",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
       "notes": "Only bounded low-value allowances observed/created; no unlimited approvals."
     },
     {
       "id": "dry-run-quote-loop",
       "scenario": "MM doctor/quote/dry-run loop",
-      "status": "not_run",
-      "evidence": null,
+      "status": "pass",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
       "notes": "Dry-run selected only the intended target and produced quote intents with no writes."
     },
     {
       "id": "live-commitments-posted",
       "scenario": "live commitments posted",
-      "status": "not_run",
-      "evidence": null,
+      "status": "pass",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
       "notes": "Count, per-commitment risk, expiry, and intended-target-only scope of live commitments."
     },
     {
       "id": "live-fill",
       "scenario": "live fill",
-      "status": "not_run",
-      "evidence": null,
-      "notes": "Fill transaction outcome with taker/maker risk amounts and sides named per the Team Identity Rule."
+      "status": "pass",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "Fill transaction outcome with taker/maker risk amounts and sides named per the Team Identity Rule. If quotes drew no fill, set this deferred/fail and use AMBER_QUOTED_NO_FILL in the scorecard."
     },
     {
       "id": "own-state-sse-canonical-fill",
       "scenario": "own-state SSE canonical fill",
-      "status": "not_run",
-      "evidence": null,
+      "status": "pass",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
       "notes": "Fill event source observed in telemetry; canonical legacy fill sources observed (expected: none)."
     },
     {
       "id": "exposure-drain-zero",
       "scenario": "expiry/shutdown zero public exposure",
-      "status": "not_run",
-      "evidence": null,
+      "status": "pass",
+      "evidence": "raw/zero-exposure.sanitized.json",
       "notes": "Public/API live commitment exposure after shutdown and expiry grace; orphan process scan result."
     },
     {
       "id": "restart-cold-start-safety",
       "scenario": "restart/cold-start safety",
-      "status": "not_run",
-      "evidence": null,
+      "status": "pass_with_caveats",
+      "evidence": "raw/restart-cold-start-probe.sanitized.json",
       "notes": "State whether the probe was read-only/dry-run and whether it proves cursor resume or only no-phantom-exposure."
     },
     {
       "id": "postgame-lifecycle",
       "scenario": "postgame lifecycle",
-      "status": "not_run",
+      "status": "deferred",
       "evidence": null,
-      "notes": "External final score source and result, score/settle/claim transactions, final dry-run and process checks. Use status deferred when the artifact is cut before the game is final."
+      "notes": "External final score source and result, score/settle/claim transactions, final dry-run and process checks. This default defers postgame (artifact cut before the game is final); set to pass with evidence once the lifecycle completes."
     }
   ]
 }

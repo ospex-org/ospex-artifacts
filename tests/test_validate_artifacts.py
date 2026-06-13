@@ -5,11 +5,13 @@ from __future__ import annotations
 
 import copy
 import importlib.util
+import json
 import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 VALIDATOR_PATH = ROOT / "scripts" / "validate-artifacts.py"
+TEMPLATE_DIR = ROOT / "templates" / "mm-live-canary"
 
 spec = importlib.util.spec_from_file_location("validate_artifacts", VALIDATOR_PATH)
 assert spec is not None and spec.loader is not None
@@ -732,6 +734,60 @@ class RowCoherenceTests(unittest.TestCase):
         validate_artifacts.validate_adoption_pairing(docs, errors)
         self.assertEqual(errors, [])
 
+    def _shared_id_contradicts(self, scenario_status: str, scorecard_proof: str) -> bool:
+        errors: list[str] = []
+        directory = ROOT / "runs" / "example-run"
+        docs = {
+            directory / "scenario-matrix.json": {
+                "schemaVersion": 2,
+                "runClass": "mm-live-canary",
+                "scenarios": [{"id": "live-fill", "scenario": "live fill", "status": scenario_status, "notes": "n"}],
+            },
+            directory / "mve-scorecard.json": {
+                "runClass": "mm-live-canary",
+                "capabilities": [{"id": "live-fill", "capability": "Live fill", "proof": scorecard_proof, "notes": "n"}],
+            },
+        }
+        validate_artifacts.validate_adoption_pairing(docs, errors)
+        return any("contradicts mve-scorecard.json proof" in error for error in errors)
+
+    def test_full_outcome_class_matrix(self) -> None:
+        # proven = {pass, pass_with_caveats} / {proven_live, proven_synthetic_only}
+        # failed = {fail} / {failed}; absent = {deferred, not_run, not_applicable} / {deferred, not_applicable}
+        proven_scn = ["pass", "pass_with_caveats"]
+        failed_scn = ["fail"]
+        absent_scn = ["deferred", "not_run", "not_applicable"]
+        proven_proof = ["proven_live", "proven_synthetic_only"]
+        failed_proof = ["failed"]
+        absent_proof = ["deferred", "not_applicable"]
+
+        same_class = (
+            [(s, p) for s in proven_scn for p in proven_proof]
+            + [(s, p) for s in failed_scn for p in failed_proof]
+            + [(s, p) for s in absent_scn for p in absent_proof]
+        )
+        for scenario_status, proof in same_class:
+            self.assertFalse(self._shared_id_contradicts(scenario_status, proof), f"{scenario_status} vs {proof} should be coherent")
+
+        cross_class = (
+            [(s, p) for s in proven_scn for p in failed_proof + absent_proof]
+            + [(s, p) for s in failed_scn for p in proven_proof + absent_proof]
+            + [(s, p) for s in absent_scn for p in proven_proof + failed_proof]
+        )
+        for scenario_status, proof in cross_class:
+            self.assertTrue(self._shared_id_contradicts(scenario_status, proof), f"{scenario_status} vs {proof} should contradict")
+
+    def test_hermes_probe_cases_now_rejected(self) -> None:
+        for scenario_status, proof in [
+            ("pass", "deferred"),
+            ("pass_with_caveats", "not_applicable"),
+            ("fail", "deferred"),
+            ("fail", "not_applicable"),
+            ("deferred", "proven_live"),
+            ("not_applicable", "proven_live"),
+        ]:
+            self.assertTrue(self._shared_id_contradicts(scenario_status, proof), f"{scenario_status} vs {proof}")
+
 
 class TeamIdentityOddsTests(unittest.TestCase):
     def test_swapped_odds_signs_are_rejected(self) -> None:
@@ -857,6 +913,109 @@ class AdoptingEvidenceTests(unittest.TestCase):
         )
         errors = run_scorecard_validation(scorecard, make_amber_no_fill_evidence())
         self.assertEqual(errors, [])
+
+
+class MarketVocabularyTests(unittest.TestCase):
+    def test_canonical_moneyline_passes(self) -> None:
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), make_postgame_deferred_evidence())
+        self.assertEqual(errors, [])
+
+    def test_market_case_variant_is_rejected_and_still_requires_team_identity(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        evidence["target"]["market"] = "Moneyline"
+        del evidence["target"]["teamIdentity"]
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("must be exactly one of" in error for error in errors), errors)
+        self.assertTrue(any("teamIdentity object" in error for error in errors), errors)
+
+    def test_market_trailing_space_is_rejected_and_still_requires_team_identity(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        evidence["target"]["market"] = "moneyline "
+        del evidence["target"]["teamIdentity"]
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("must be exactly one of" in error for error in errors), errors)
+        self.assertTrue(any("teamIdentity object" in error for error in errors), errors)
+
+    def test_unknown_market_is_rejected(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        evidence["target"]["market"] = "monyline"
+        del evidence["target"]["teamIdentity"]
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("must be exactly one of" in error for error in errors), errors)
+
+    def test_spread_market_passes_without_team_identity(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        evidence["target"]["market"] = "spread"
+        del evidence["target"]["teamIdentity"]
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertEqual(errors, [])
+
+
+class AmberFillTelemetryTests(unittest.TestCase):
+    def test_amber_no_fill_rejects_proven_canonical_fill(self) -> None:
+        scorecard = make_amber_no_fill_scorecard()
+        for row in scorecard["capabilities"]:
+            if row["id"] == "own-state-sse-canonical-fill":
+                row["proof"] = "proven_live"
+                row["evidence"] = "raw/own-state-sse-summary.sanitized.json"
+        errors = run_scorecard_validation(scorecard, make_amber_no_fill_evidence())
+        self.assertTrue(any("own-state-sse-canonical-fill" in error and "implies a fill occurred" in error for error in errors), errors)
+
+    def test_amber_no_fill_allows_not_applicable_canonical_fill(self) -> None:
+        scorecard = make_amber_no_fill_scorecard()
+        for row in scorecard["capabilities"]:
+            if row["id"] == "own-state-sse-canonical-fill":
+                row["proof"] = "not_applicable"
+                row["evidence"] = None
+        errors = run_scorecard_validation(scorecard, make_amber_no_fill_evidence())
+        self.assertEqual(errors, [])
+
+
+class TemplateCoherenceTests(unittest.TestCase):
+    """The shipped templates must validate cleanly once only the placeholder tokens are filled."""
+
+    def _load(self, name: str) -> dict:
+        return json.loads((TEMPLATE_DIR / name).read_text(encoding="utf-8"))
+
+    def _fill_tokens(self, scorecard: dict) -> dict:
+        scorecard["artifactId"] = SAMPLE_RUN_DIR.name
+        scorecard["generatedAt"] = "2026-06-11T06:00:00Z"
+        scorecard["zeroExposure"]["checkedAtUtc"] = "2026-06-11T06:00:00Z"
+        scorecard["zeroExposure"]["evidence"] = "raw/tx-receipts.summary.json"
+        for row in scorecard["capabilities"]:
+            if row.get("evidence") is not None:
+                row["evidence"] = "raw/tx-receipts.summary.json"
+        for idx, tx in enumerate(scorecard["transactions"]):
+            tx["txHash"] = "0x" + f"{idx:02d}" * 32
+        return scorecard
+
+    def test_scorecard_template_is_internally_coherent(self) -> None:
+        scorecard = self._fill_tokens(self._load("mve-scorecard.template.json"))
+        evidence = make_postgame_deferred_evidence()
+        errors = run_scorecard_validation(scorecard, evidence)
+        self.assertEqual(errors, [], errors)
+
+    def test_scenario_matrix_template_is_valid(self) -> None:
+        matrix = self._load("scenario-matrix.template.json")
+        matrix["artifactId"] = SAMPLE_RUN_DIR.name
+        matrix["generatedAt"] = "2026-06-11T06:00:00Z"
+        for row in matrix["scenarios"]:
+            if row.get("evidence") is not None:
+                row["evidence"] = "raw/tx-receipts.summary.json"
+        errors: list[str] = []
+        validate_artifacts.validate_scenario_matrix(SAMPLE_RUN_DIR / "scenario-matrix.json", matrix, errors)
+        self.assertEqual(errors, [], errors)
+
+    def test_template_pair_has_no_shared_id_contradiction(self) -> None:
+        matrix = self._load("scenario-matrix.template.json")
+        scorecard = self._load("mve-scorecard.template.json")
+        errors: list[str] = []
+        docs = {
+            SAMPLE_RUN_DIR / "scenario-matrix.json": matrix,
+            SAMPLE_RUN_DIR / "mve-scorecard.json": scorecard,
+        }
+        validate_artifacts.validate_adoption_pairing(docs, errors)
+        self.assertFalse(any("contradicts mve-scorecard.json proof" in error for error in errors), errors)
 
 
 if __name__ == "__main__":

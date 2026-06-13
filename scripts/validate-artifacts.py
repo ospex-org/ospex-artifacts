@@ -125,6 +125,29 @@ ZERO_EXPOSURE_COUNT_KEYS = (
     "orphanProcessCount",
 )
 TEAM_IDENTITY_POSITION_TYPE_BY_ROLE = {"home": "lower", "away": "upper"}
+# Closed market vocabulary (protocol scorer modules: Moneyline/Spread/Total). The
+# moneyline team-identity rule keys off the normalized value, so a case/space variant
+# cannot skip it.
+KNOWN_MARKETS = {"moneyline", "spread", "total"}
+# Fill-derived capability rows: a proven canonical-fill telemetry row implies a fill
+# occurred, so AMBER_QUOTED_NO_FILL must not claim it.
+# Shared-id coherence: when a scenario row and a capability row carry the same id they
+# describe the same thing, so their outcome class (proven / failed / absent) must agree.
+SCENARIO_OUTCOME_CLASS = {
+    "pass": "proven",
+    "pass_with_caveats": "proven",
+    "fail": "failed",
+    "deferred": "absent",
+    "not_run": "absent",
+    "not_applicable": "absent",
+}
+PROOF_OUTCOME_CLASS = {
+    "proven_live": "proven",
+    "proven_synthetic_only": "proven",
+    "failed": "failed",
+    "deferred": "absent",
+    "not_applicable": "absent",
+}
 
 # Patterns are intentionally specific to reduce false positives from docs that
 # describe excluded material. Broad words like "secret" or "password" are not
@@ -901,8 +924,13 @@ def validate_adopting_run_evidence(
         errors.append(f"{context}: target must be an object describing the single canary target")
         return
     market = target.get("market")
-    if not isinstance(market, str) or not market.strip():
+    market_normalized = market.strip().lower() if isinstance(market, str) else None
+    if not market_normalized:
         errors.append(f"{context}: target.market must be a non-empty string")
+    elif market not in KNOWN_MARKETS:
+        # Reject non-canonical spellings (case/whitespace/typo) outright so the
+        # normalized moneyline trigger below cannot be dodged.
+        errors.append(f"{context}: target.market {market!r} must be exactly one of: " + ", ".join(sorted(KNOWN_MARKETS)))
     home_team = target.get("homeTeam")
     away_team = target.get("awayTeam")
     for key, value in (("homeTeam", home_team), ("awayTeam", away_team)):
@@ -910,7 +938,8 @@ def validate_adopting_run_evidence(
             errors.append(f"{context}: target.{key} must be a non-empty string")
     if isinstance(home_team, str) and isinstance(away_team, str) and home_team and home_team == away_team:
         errors.append(f"{context}: target.homeTeam and target.awayTeam must differ")
-    if market == "moneyline":
+    # Trigger on the normalized value so 'Moneyline' / 'moneyline ' still require teamIdentity.
+    if market_normalized == "moneyline":
         validate_team_identity(context, target, errors)
 
 
@@ -1060,6 +1089,13 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
             fill_proof = proof_by_id.get("live-fill")
             if fill_proof is not None and fill_proof not in {"deferred", "failed"}:
                 errors.append(f"{context}: verdict AMBER_QUOTED_NO_FILL requires live-fill to be deferred or failed")
+            # A proven canonical-fill telemetry row implies a fill occurred, which the verdict denies.
+            sse_proof = proof_by_id.get("own-state-sse-canonical-fill")
+            if sse_proof is not None and sse_proof not in {"deferred", "failed", "not_applicable"}:
+                errors.append(
+                    f"{context}: verdict AMBER_QUOTED_NO_FILL requires own-state-sse-canonical-fill to be "
+                    "deferred, failed, or not_applicable — a proven canonical fill implies a fill occurred"
+                )
         if verdict_label == "AMBER_TOKEN_TOPUP_NEEDED":
             if proof_by_id and not any(proof in {"deferred", "failed"} for proof in proof_by_id.values()):
                 errors.append(f"{context}: verdict AMBER_TOKEN_TOPUP_NEEDED requires at least one deferred or failed capability")
@@ -1217,10 +1253,11 @@ def validate_adoption_pairing(docs: dict[Path, Any], errors: list[str]) -> None:
             row_status = status_by_id.get(cap_id)
             if row_status is None:
                 continue
-            contradiction = (row_status == "fail" and proof in PROVEN_LEVELS) or (
-                row_status in {"pass", "pass_with_caveats"} and proof == "failed"
-            )
-            if contradiction:
+            # Same id => same subject: the outcome class (proven / failed / absent) must
+            # agree across the two files. "absent" groups deferred / not_run / not_applicable.
+            row_class = SCENARIO_OUTCOME_CLASS.get(row_status)
+            proof_class = PROOF_OUTCOME_CLASS.get(proof)
+            if row_class is not None and proof_class is not None and row_class != proof_class:
                 errors.append(
                     f"{display_path(directory)}: scenario-matrix.json row {cap_id!r} status {row_status!r} "
                     f"contradicts mve-scorecard.json proof {proof!r}"
