@@ -10,7 +10,7 @@ The templates default to a coherent **live-window-green / postgame-deferred** ca
 2. Replace every placeholder token: `artifactId` (must equal the run directory name), `generatedAt`/`checkedAtUtc` timestamps, tx hashes, reasons, and notes; add the actual sanitized `raw/` evidence files the rows point at. Adjust statuses/proof levels/verdict only if the run differs from the green/deferred default.
 3. In `mve-scorecard.json`, add one `transactions` entry per on-chain transaction the run relies on and delete unused skeleton entries. Every entry needs a controlled `category`; free-form context goes in `purpose`.
 4. Keep all fourteen capability rows. A capability that did not apply or was intentionally left for a future run still gets a row (`not_applicable` or `deferred`) — the scorecard exists to show exactly what is proven, synthetic-only, deferred, or failed.
-5. Reference both files from `evidence.json` `artifactFiles` (the validator requires `scenario-matrix.json` and `mve-scorecard.json` to appear among the values), and give `evidence.json` a `target` with `market` (one of `moneyline`/`spread`/`total`), `homeTeam`, and `awayTeam`.
+5. Reference both files from `evidence.json` `artifactFiles` (the validator requires `scenario-matrix.json` and `mve-scorecard.json` to appear among the values), and give `evidence.json` a `target` with `market` (one of `moneyline`/`spread`/`total`), `sport`, `contestId`, `speculationId`, `homeTeam`, and `awayTeam`. `contestId` and `sport` must match the run-directory name (`…-<sport>-…-contest-<id>-…`).
 6. Update the markdown renders so they mirror the JSON facts; JSON is canonical.
 7. Run `python3 scripts/generate-indexes.py`, then `python3 scripts/validate-artifacts.py`.
 

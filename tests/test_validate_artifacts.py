@@ -86,6 +86,9 @@ def make_postgame_deferred_evidence() -> dict:
         },
         "target": {
             "market": "moneyline",
+            "sport": "mlb",
+            "contestId": "35",
+            "speculationId": "25",
             "homeTeam": "Los Angeles Angels",
             "awayTeam": "Houston Astros",
             "teamIdentity": {
@@ -1025,6 +1028,66 @@ class AmberPostgameTxTests(unittest.TestCase):
             {"category": "seed-match", "txHash": TX_E, "status": "reverted", "operatorControlled": True, "purpose": "seed"}
         )
         errors = run_scorecard_validation(scorecard, make_amber_no_fill_evidence())
+        self.assertEqual(errors, [])
+
+
+class LiveFillTxTests(unittest.TestCase):
+    def test_green_deferred_live_fill_requires_fill_tx(self) -> None:
+        scorecard = make_postgame_deferred_scorecard()
+        scorecard["transactions"] = [tx for tx in scorecard["transactions"] if tx["category"] not in validate_artifacts.FILL_TX_CATEGORIES]
+        errors = run_scorecard_validation(scorecard, make_postgame_deferred_evidence())
+        self.assertTrue(any("live-fill proven_live requires a successful fill transaction" in e for e in errors), errors)
+
+    def test_full_green_live_fill_requires_fill_tx(self) -> None:
+        scorecard = make_full_green_scorecard()
+        scorecard["transactions"] = [tx for tx in scorecard["transactions"] if tx["category"] not in validate_artifacts.FILL_TX_CATEGORIES]
+        errors = run_scorecard_validation(scorecard, make_full_green_evidence())
+        self.assertTrue(any("live-fill proven_live requires a successful fill transaction" in e for e in errors), errors)
+
+    def test_reverted_fill_tx_does_not_satisfy_proven_live(self) -> None:
+        scorecard = make_postgame_deferred_scorecard()
+        for tx in scorecard["transactions"]:
+            if tx["category"] == "match-commitment":
+                tx["status"] = "reverted"
+        errors = run_scorecard_validation(scorecard, make_postgame_deferred_evidence())
+        self.assertTrue(any("live-fill proven_live requires a successful fill transaction" in e for e in errors), errors)
+
+    def test_seed_match_satisfies_live_fill(self) -> None:
+        scorecard = make_postgame_deferred_scorecard()
+        for tx in scorecard["transactions"]:
+            if tx["category"] == "match-commitment":
+                tx["category"] = "seed-match"
+        errors = run_scorecard_validation(scorecard, make_postgame_deferred_evidence())
+        self.assertEqual(errors, [])
+
+
+class TargetIdentityTests(unittest.TestCase):
+    def test_missing_contest_id_is_rejected(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        del evidence["target"]["contestId"]
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("target.contestId must be a non-empty string" in e for e in errors), errors)
+
+    def test_contest_id_mismatching_directory_is_rejected(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        evidence["target"]["contestId"] = "99"
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("must match the contest id in the run directory name" in e for e in errors), errors)
+
+    def test_missing_speculation_id_is_rejected(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        del evidence["target"]["speculationId"]
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("target.speculationId must be a non-empty string" in e for e in errors), errors)
+
+    def test_sport_mismatching_directory_is_rejected(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        evidence["target"]["sport"] = "nfl"
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("must match the sport in the run directory name" in e for e in errors), errors)
+
+    def test_consistent_identity_passes(self) -> None:
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), make_postgame_deferred_evidence())
         self.assertEqual(errors, [])
 
 

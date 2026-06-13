@@ -961,6 +961,34 @@ def validate_adopting_run_evidence(
             errors.append(f"{context}: target.{key} must be a non-empty string")
     if isinstance(home_team, str) and isinstance(away_team, str) and home_team and home_team == away_team:
         errors.append(f"{context}: target.homeTeam and target.awayTeam must differ")
+
+    # The "exactly one contest/speculation" claim must be a concrete, named identity, and the
+    # contest/sport are bound to the published run-directory name so a fabricated target cannot
+    # ride on the real run's slug.
+    artifact_id = scorecard_path.parent.name
+    contest_id = target.get("contestId")
+    if not isinstance(contest_id, str) or not contest_id.strip():
+        errors.append(f"{context}: target.contestId must be a non-empty string identifying the single contest")
+    else:
+        slug_contest = re.search(r"-contest-(\d+)(?:-|$)", artifact_id)
+        if slug_contest and contest_id != slug_contest.group(1):
+            errors.append(
+                f"{context}: target.contestId {contest_id!r} must match the contest id in the run directory name "
+                f"({slug_contest.group(1)!r})"
+            )
+    if not isinstance(target.get("speculationId"), str) or not target.get("speculationId").strip():
+        errors.append(f"{context}: target.speculationId must be a non-empty string identifying the single speculation")
+    sport = target.get("sport")
+    if not isinstance(sport, str) or not sport.strip():
+        errors.append(f"{context}: target.sport must be a non-empty string")
+    else:
+        slug_sport = re.match(r"^\d{4}-\d{2}-\d{2}-([a-z0-9]+)-", artifact_id)
+        if slug_sport and sport.lower() != slug_sport.group(1):
+            errors.append(
+                f"{context}: target.sport {sport!r} must match the sport in the run directory name "
+                f"({slug_sport.group(1)!r})"
+            )
+
     # Trigger on the normalized value so 'Moneyline' / 'moneyline ' still require teamIdentity.
     if market_normalized == "moneyline":
         validate_team_identity(context, target, errors)
@@ -1213,6 +1241,13 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
                         + " or ".join(fill_present)
                         + " transaction — that records a fill"
                     )
+            # A proven_live live fill is an on-chain match, so it must be backed by a successful
+            # fill transaction — the symmetric guard to the AMBER no-fill rule above.
+            if proof_by_id.get("live-fill") == "proven_live" and not (successful_categories & FILL_TX_CATEGORIES):
+                errors.append(
+                    f"{context}: live-fill proven_live requires a successful fill transaction "
+                    "(match-commitment or seed-match)"
+                )
 
     evidence_doc = docs.get(artifact_dir / "evidence.json")
     if not isinstance(evidence_doc, dict):
