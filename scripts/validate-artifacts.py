@@ -101,13 +101,6 @@ TX_CATEGORIES = {
 POSTGAME_TX_CATEGORIES = {"score-request", "score-callback", "settle", "claim"}
 # A successful on-chain match records a fill (R4 has no no-counterparty seed tx).
 FILL_TX_CATEGORIES = {"match-commitment", "seed-match"}
-# Verdicts that stopped in the live window — none claims a completed postgame lifecycle,
-# so a successful postgame transaction contradicts them. FULL_GREEN is the only exception.
-NON_POSTGAME_VERDICTS = {
-    "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED",
-    "AMBER_QUOTED_NO_FILL",
-    "AMBER_TOKEN_TOPUP_NEEDED",
-}
 MM_LIVE_CANARY_CAPABILITY_IDS = {
     "target-preflight",
     "repo-runtime-gates",
@@ -1192,10 +1185,11 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
                     if pair in seen_hash_category:
                         errors.append(f"{tx_context}: duplicate transaction entry for {category} {tx_hash}")
                     seen_hash_category.add(pair)
-            # Only FULL_GREEN claims a completed postgame lifecycle; the other verdicts stopped
-            # in the live window, so a successful postgame transaction contradicts them. Reverted
-            # attempts never count, so a disclosed early-scoring revert stays publishable.
-            if verdict_label in NON_POSTGAME_VERDICTS:
+            # GREEN_LIVE_WINDOW_POSTGAME_DEFERRED explicitly asserts deferral, so a successful
+            # postgame transaction contradicts it. The AMBER labels assert only "no fill" /
+            # "needs top-up" and say nothing about postgame (settle is speculation-level), so
+            # they are not constrained here. Reverted attempts never count.
+            if verdict_label == "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED":
                 postgame_present = sorted(successful_categories & POSTGAME_TX_CATEGORIES)
                 if postgame_present:
                     errors.append(
