@@ -100,7 +100,7 @@ Free-form context (which wallet role, which position) belongs in `purpose`. The 
 
 `target.market` is a closed vocabulary — exactly `moneyline`, `spread`, or `total` (the protocol's scorer modules). The moneyline team-identity requirement keys off the normalized value, so a non-canonical spelling (`Moneyline`, `moneyline `) is both rejected as a market value and still required to carry `teamIdentity` — it cannot be used to slip past the rule.
 
-When an adopting run's `evidence.json` records `target.market` as `moneyline`, `target.teamIdentity` is required with `home` and `away` entries:
+When an adopting run's `evidence.json` records `target.market` as `moneyline`, `target.teamIdentity` is required with `home` and `away` entries. It is keyed by **role** (`home`/`away`), each entry carrying its own `identity` field — deliberately not the older `homeFavorite`/`awayUnderdog` shape some pre-scheme artifacts use, which breaks for pick'ems and for games where the away team is the favorite. (The validator gives a clear migration error if the legacy shape appears.)
 
 ```json
 "teamIdentity": {

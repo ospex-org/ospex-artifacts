@@ -437,6 +437,16 @@ class MveScorecardValidationTests(unittest.TestCase):
         errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
         self.assertTrue(any("teamIdentity.home.positionType must be 'lower'" in error for error in errors), errors)
 
+    def test_legacy_team_identity_shape_gets_migration_error(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        ti = evidence["target"]["teamIdentity"]
+        evidence["target"]["teamIdentity"] = {
+            "homeFavorite": ti["home"],
+            "awayUnderdog": ti["away"],
+        }
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("not the legacy 'homeFavorite'/'awayUnderdog' shape" in e for e in errors), errors)
+
     def test_team_identity_rejects_two_favorites(self) -> None:
         evidence = make_postgame_deferred_evidence()
         evidence["target"]["teamIdentity"]["away"]["identity"] = "favorite"

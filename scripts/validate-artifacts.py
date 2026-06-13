@@ -830,6 +830,16 @@ def validate_team_identity(context: str, target: dict[str, Any], errors: list[st
     if not isinstance(identity, dict):
         errors.append(f"{context}: moneyline target requires a teamIdentity object with home and away entries")
         return
+    # Adopting runs key teamIdentity by role (home/away), each carrying its own `identity`
+    # field. Some pre-scheme artifacts used a homeFavorite/awayUnderdog shape that breaks for
+    # pick'ems and away-favorite games; give those a clear migration message, not a cryptic
+    # missing-key cascade.
+    if "home" not in identity and "away" not in identity and ("homeFavorite" in identity or "awayUnderdog" in identity):
+        errors.append(
+            f"{context}: teamIdentity must be keyed by role ('home'/'away'), each with an 'identity' field "
+            "(favorite/underdog/even) — not the legacy 'homeFavorite'/'awayUnderdog' shape"
+        )
+        return
     identities: dict[str, str] = {}
     teams: dict[str, str] = {}
     odds_by_role: dict[str, int] = {}
