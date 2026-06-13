@@ -1277,6 +1277,69 @@ class CanonicalTargetBindingTests(unittest.TestCase):
         errors = run_scorecard_validation(scorecard, make_amber_no_fill_evidence())
         self.assertTrue(any("cannot include a successful" in e and "match-commitment" in e for e in errors), errors)
 
+    # --- fail-closed on MISSING canonical raw fields (not just missing objects) ---
+    def test_preflight_selected_target_missing_required_fields(self) -> None:
+        raw = {"selectedTarget": {"speculations": [{"speculationId": "25", "contestId": "35", "type": "moneyline"}]}}
+        errors = run_scorecard_validation(
+            make_postgame_deferred_scorecard(),
+            make_postgame_deferred_evidence(),
+            raw_docs={"raw/target-decision.sanitized.json": raw},
+        )
+        for field in ("contestId", "sport", "homeTeam", "awayTeam"):
+            self.assertTrue(any(f"is missing the {field} field" in e for e in errors), (field, errors))
+
+    def test_live_fill_contest_missing_required_fields(self) -> None:
+        raw = {
+            "result": {
+                "contest": {},
+                "speculation": {"speculationId": "25"},
+                "commitment": {"contestId": "35", "marketType": "moneyline"},
+            }
+        }
+        errors = run_scorecard_validation(
+            make_postgame_deferred_scorecard(),
+            make_postgame_deferred_evidence(),
+            raw_docs={"raw/live-fill.sanitized.json": raw},
+        )
+        for field in ("contestId", "sport", "homeTeam", "awayTeam"):
+            self.assertTrue(any(f"is missing the {field} field" in e for e in errors), (field, errors))
+
+    def test_live_fill_speculation_missing_id(self) -> None:
+        raw = {
+            "result": {
+                "contest": {"contestId": "35", "sport": "mlb", "homeTeam": "Los Angeles Angels", "awayTeam": "Houston Astros"},
+                "speculation": {},
+                "commitment": {},
+            }
+        }
+        errors = run_scorecard_validation(
+            make_postgame_deferred_scorecard(),
+            make_postgame_deferred_evidence(),
+            raw_docs={"raw/live-fill.sanitized.json": raw},
+        )
+        self.assertTrue(any("is missing the speculationId field" in e for e in errors), errors)
+
+    # --- exact public identity: no trim normalization ---
+    def test_padded_public_contest_id_is_rejected(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        evidence["target"]["contestId"] = " 35 "
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("target.contestId must be a non-empty decimal string" in e for e in errors), errors)
+
+    def test_padded_public_speculation_id_is_rejected(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        evidence["target"]["speculationId"] = "25 "
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("target.speculationId must be a non-empty decimal string" in e for e in errors), errors)
+
+    def test_padded_public_team_name_is_rejected(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        # Keep teamIdentity internally consistent so only the raw-evidence binding can reject the padding.
+        evidence["target"]["homeTeam"] = "Los Angeles Angels "
+        evidence["target"]["teamIdentity"]["home"]["team"] = "Los Angeles Angels "
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("target.homeTeam" in e and "must match the raw" in e for e in errors), errors)
+
 
 class TemplateCoherenceTests(unittest.TestCase):
     """The shipped templates must validate cleanly once only the placeholder tokens are filled."""

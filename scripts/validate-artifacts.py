@@ -907,14 +907,27 @@ def resolve_run_json(artifact_dir: Path, rel_path: Any, docs: dict[Path, Any]) -
 
 
 def bind_identity_field(
-    context: str, name: str, target_value: Any, raw_value: Any, rel_path: str, errors: list[str], *, lower: bool = False
+    context: str,
+    name: str,
+    target_value: Any,
+    raw_value: Any,
+    rel_path: str,
+    errors: list[str],
+    *,
+    lower: bool = False,
+    required: bool = True,
 ) -> None:
-    # Only compares when the public target field is present; its absence is reported separately.
-    if not isinstance(target_value, str) or not target_value.strip() or raw_value is None:
+    # A missing public field is reported by its own presence check, so skip to avoid double-report.
+    if not isinstance(target_value, str) or not target_value:
         return
-    expected = str(raw_value).strip()
-    actual = target_value.strip()
-    matches = actual.lower() == expected.lower() if lower else actual == expected
+    # A missing REQUIRED raw field is fail-closed: the canonical evidence must carry it. Comparison
+    # is exact (case-insensitive only when lower=True) — no trim, so padded public values don't match.
+    if raw_value is None:
+        if required:
+            errors.append(f"{context}: {rel_path} is missing the {name} field required to bind the target identity")
+        return
+    expected = str(raw_value)
+    matches = expected.lower() == target_value.lower() if lower else expected == target_value
     if not matches:
         errors.append(f"{context}: target.{name} {target_value!r} must match the {rel_path} value {raw_value!r}")
 
@@ -952,10 +965,11 @@ def validate_target_preflight_binding(
             spec_type = spec.get("type")
             if (
                 isinstance(spec_id, str)
-                and str(spec.get("speculationId")).strip() == spec_id.strip()
-                and str(spec.get("contestId")).strip() == (contest_id.strip() if isinstance(contest_id, str) else None)
+                and str(spec.get("speculationId")) == spec_id
+                and isinstance(contest_id, str)
+                and str(spec.get("contestId")) == contest_id
                 and isinstance(spec_type, str)
-                and spec_type.strip().lower() == market_norm
+                and spec_type.lower() == market_norm
             ):
                 matched = True
                 break
@@ -1006,10 +1020,9 @@ def validate_live_fill_binding(
         bind_identity_field(context, "speculationId", target.get("speculationId"), speculation.get("speculationId"), rel_path, errors)
     commitment = result.get("commitment")
     if isinstance(commitment, dict):
-        if commitment.get("contestId") is not None:
-            bind_identity_field(context, "contestId", target.get("contestId"), commitment.get("contestId"), rel_path, errors)
-        if commitment.get("marketType") is not None:
-            bind_identity_field(context, "market", target.get("market"), commitment.get("marketType"), rel_path, errors, lower=True)
+        # commitment.contestId / marketType are optional ("if present"); absence is not an error.
+        bind_identity_field(context, "contestId", target.get("contestId"), commitment.get("contestId"), rel_path, errors, required=False)
+        bind_identity_field(context, "market", target.get("market"), commitment.get("marketType"), rel_path, errors, lower=True, required=False)
 
 
 def validate_adopting_run_evidence(
@@ -1112,21 +1125,22 @@ def validate_adopting_run_evidence(
                 "'YYYY-MM-DD-<sport>-' prefix to bind the sport identity"
             )
 
+    # Public ids are exact decimal strings (no surrounding whitespace) and bind exactly to the slug.
     contest_id = target.get("contestId")
-    if not isinstance(contest_id, str) or not re.fullmatch(r"\d+", contest_id.strip() if isinstance(contest_id, str) else ""):
+    if not isinstance(contest_id, str) or not re.fullmatch(r"\d+", contest_id):
         errors.append(f"{context}: target.contestId must be a non-empty decimal string identifying the single contest")
-    elif slug_contest and contest_id.strip() != slug_contest.group(1):
+    elif slug_contest and contest_id != slug_contest.group(1):
         errors.append(
             f"{context}: target.contestId {contest_id!r} must match the contest id in the run directory name "
             f"({slug_contest.group(1)!r})"
         )
     spec_id = target.get("speculationId")
-    if not isinstance(spec_id, str) or not re.fullmatch(r"\d+", spec_id.strip() if isinstance(spec_id, str) else ""):
+    if not isinstance(spec_id, str) or not re.fullmatch(r"\d+", spec_id):
         errors.append(f"{context}: target.speculationId must be a non-empty decimal string identifying the single speculation")
     sport = target.get("sport")
     if not isinstance(sport, str) or not sport.strip():
         errors.append(f"{context}: target.sport must be a non-empty string")
-    elif slug_sport and sport.strip().lower() != slug_sport.group(1):
+    elif slug_sport and sport.lower() != slug_sport.group(1):
         errors.append(
             f"{context}: target.sport {sport!r} must match the sport in the run directory name "
             f"({slug_sport.group(1)!r})"
