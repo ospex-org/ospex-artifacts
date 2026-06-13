@@ -33,5 +33,5 @@ Checked at `YYYY-MM-DDTHH:MM:SSZ` (`raw/zero-exposure.sanitized.json`): public m
 
 | Category | Tx hash | Status | Operator-controlled | Purpose |
 |---|---|---|---|---|
+| `approve` | `0x…` | `success` | yes | … |
 | `match-commitment` | `0x…` | `success` | yes | … |
-| `settle` | `0x…` | `success` | yes | … |

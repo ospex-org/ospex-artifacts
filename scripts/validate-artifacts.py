@@ -246,6 +246,15 @@ def is_companion_reference(value: Any) -> bool:
     return isinstance(value, str) and bool(value) and PurePosixPath(value).as_posix() in COMPANION_ARTIFACT_FILES
 
 
+def check_evidence_file_path(value: Any, *, base: Path, errors: list[str], context: str) -> None:
+    if is_companion_reference(value):
+        errors.append(f"{context} must point at sanitized raw evidence, not the artifact's own companion files")
+    elif isinstance(value, str) and value.endswith("/"):
+        errors.append(f"{context} must point at a sanitized evidence file, not a directory")
+    else:
+        check_relative_path(value, base=base, errors=errors, context=context)
+
+
 def check_relative_path(path_value: Any, *, base: Path, errors: list[str], context: str, expect_dir: bool = False) -> None:
     if path_value is None:
         return
@@ -776,10 +785,8 @@ def validate_scenario_matrix(path: Path, doc: Any, errors: list[str]) -> None:
         if evidence is None:
             if is_one_of(status, {"pass", "pass_with_caveats", "fail"}):
                 errors.append(f"{row_context}: evidence is required when status is {status!r}")
-        elif is_companion_reference(evidence):
-            errors.append(f"{row_context}.evidence must point at sanitized raw evidence, not the artifact's own companion files")
         else:
-            check_relative_path(evidence, base=artifact_dir, errors=errors, context=f"{row_context}.evidence")
+            check_evidence_file_path(evidence, base=artifact_dir, errors=errors, context=f"{row_context}.evidence")
 
 
 def validate_team_identity(context: str, target: dict[str, Any], errors: list[str]) -> None:
@@ -800,6 +807,11 @@ def validate_team_identity(context: str, target: dict[str, Any], errors: list[st
             errors.append(f"{entry_context}.team must be a non-empty string")
         else:
             teams[role] = team
+            # Bind the identity block to the declared target so a home/away swap inside
+            # teamIdentity cannot pass while the rest of the artifact says otherwise.
+            expected_team = target.get(f"{role}Team")
+            if isinstance(expected_team, str) and expected_team.strip() and team != expected_team:
+                errors.append(f"{entry_context}.team {team!r} must equal target.{role}Team {expected_team!r}")
         if entry.get("positionType") != expected_position:
             errors.append(f"{entry_context}.positionType must be {expected_position!r} for the {role} side")
         odds = entry.get("marketOddsAmerican")
@@ -867,7 +879,12 @@ def validate_adopting_run_evidence(
         if not isinstance(superseded_by, str) or not superseded_by.strip():
             errors.append(
                 f"{context}: status 'superseded' requires a supersededBy pointer "
-                "(repo-relative path to the successor artifact's evidence JSON)"
+                "(repo-relative path to the successor run's evidence.json)"
+            )
+        elif not re.match(r"^runs/[^/]+/evidence\.json$", superseded_by) or superseded_by == context:
+            errors.append(
+                f"{context}: supersededBy must point at another run's evidence JSON "
+                "(runs/<artifact-id>/evidence.json), got " + repr(superseded_by)
             )
         else:
             check_relative_path(superseded_by, base=ROOT, errors=errors, context=f"{context}.supersededBy")
@@ -877,8 +894,23 @@ def validate_adopting_run_evidence(
         if evidence_verdict.get("label") != verdict_label:
             errors.append(f"{context}: verdict.label must equal the scorecard verdict label {verdict_label!r}")
 
+    # Without a required target the moneyline team-identity rule would be trivially
+    # bypassable by omission: every adopting canary names its single target explicitly.
     target = evidence_doc.get("target")
-    if isinstance(target, dict) and target.get("market") == "moneyline":
+    if not isinstance(target, dict):
+        errors.append(f"{context}: target must be an object describing the single canary target")
+        return
+    market = target.get("market")
+    if not isinstance(market, str) or not market.strip():
+        errors.append(f"{context}: target.market must be a non-empty string")
+    home_team = target.get("homeTeam")
+    away_team = target.get("awayTeam")
+    for key, value in (("homeTeam", home_team), ("awayTeam", away_team)):
+        if not isinstance(value, str) or not value.strip():
+            errors.append(f"{context}: target.{key} must be a non-empty string")
+    if isinstance(home_team, str) and isinstance(away_team, str) and home_team and home_team == away_team:
+        errors.append(f"{context}: target.homeTeam and target.awayTeam must differ")
+    if market == "moneyline":
         validate_team_identity(context, target, errors)
 
 
@@ -974,10 +1006,8 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
                 if evidence is None:
                     if is_one_of(proof, PROVEN_LEVELS) or proof == "failed":
                         errors.append(f"{row_context}: evidence is required when proof is {proof!r}")
-                elif is_companion_reference(evidence):
-                    errors.append(f"{row_context}.evidence must point at sanitized raw evidence, not the artifact's own companion files")
                 else:
-                    check_relative_path(evidence, base=artifact_dir, errors=errors, context=f"{row_context}.evidence")
+                    check_evidence_file_path(evidence, base=artifact_dir, errors=errors, context=f"{row_context}.evidence")
 
     if run_class == "mm-live-canary" and isinstance(capabilities, list) and capabilities:
         missing = sorted(MM_LIVE_CANARY_CAPABILITY_IDS - seen_capability_ids)
@@ -1000,16 +1030,18 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
             if unproven:
                 errors.append(f"{context}: verdict FULL_GREEN requires proven core capabilities; not proven: {', '.join(unproven)}")
         # A live canary's headline claim is live behavior: the live-window rows accept only
-        # proven_live under any verdict that claims them, never proven_synthetic_only.
+        # proven_live under any verdict that claims them, never proven_synthetic_only — and
+        # FULL_GREEN's completed postgame lifecycle is real on-chain behavior too.
         if verdict_label in {"FULL_GREEN", "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED"}:
+            live_required = {"live-commitments-posted", "live-fill"}
+            if verdict_label == "FULL_GREEN":
+                live_required |= POSTGAME_CAPABILITY_IDS
             not_live = sorted(
-                cid
-                for cid in ("live-commitments-posted", "live-fill")
-                if cid in proof_by_id and proof_by_id[cid] != "proven_live"
+                cid for cid in live_required if cid in proof_by_id and proof_by_id[cid] != "proven_live"
             )
             if not_live:
                 errors.append(
-                    f"{context}: verdict {verdict_label} requires proven_live for the live-window capabilities; "
+                    f"{context}: verdict {verdict_label} requires proven_live capabilities; "
                     "not proven_live: " + ", ".join(not_live)
                 )
         if verdict_label == "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED":
@@ -1050,12 +1082,8 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
                     errors.append(
                         f"{context}: zeroExposure.evidence must be a non-empty string path to the sanitized exposure snapshot"
                     )
-                elif is_companion_reference(zero.get("evidence")):
-                    errors.append(
-                        f"{context}: zeroExposure.evidence must point at sanitized raw evidence, not the artifact's own companion files"
-                    )
                 else:
-                    check_relative_path(zero.get("evidence"), base=artifact_dir, errors=errors, context=f"{context}: zeroExposure.evidence")
+                    check_evidence_file_path(zero.get("evidence"), base=artifact_dir, errors=errors, context=f"{context}: zeroExposure.evidence")
 
     successful_categories: set[str] = set()
     txs = doc.get("transactions")
@@ -1112,6 +1140,11 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
                     errors.append(
                         f"{context}: verdict FULL_GREEN requires successful score-request or score-callback transaction evidence"
                     )
+            if verdict_label == "AMBER_QUOTED_NO_FILL" and "match-commitment" in successful_categories:
+                errors.append(
+                    f"{context}: verdict AMBER_QUOTED_NO_FILL cannot include a successful match-commitment "
+                    "transaction — that is a fill"
+                )
 
     evidence_doc = docs.get(artifact_dir / "evidence.json")
     if not isinstance(evidence_doc, dict):

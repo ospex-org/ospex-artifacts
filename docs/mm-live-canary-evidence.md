@@ -1,6 +1,6 @@
 # MM live canary evidence: scenario matrix, MVE readiness scorecard, and verdict vocabulary
 
-Market-maker live canary runs publish two standardized companion files next to `evidence.json`:
+Every new market-maker live canary run is expected to publish two standardized companion files next to `evidence.json` (enforcement is adoption-triggered per run — see "Adoption and grandfathering" — so pre-scheme artifacts are unaffected):
 
 - `scenario-matrix.json` (+ `scenario-matrix.md` render) — what happened in this run, scenario by scenario.
 - `mve-scorecard.json` (+ `mve-scorecard.md` render) — what this run proves toward MVE (minimum viable ecosystem) readiness: for each standard capability, whether the run proved it live, proved it only through synthetic/controlled action, deferred it, or observed it fail.
@@ -60,9 +60,9 @@ Proof levels:
 - `failed` — attempted and observed to fail. Requires evidence.
 - `not_applicable` — the capability does not apply to this run variant.
 
-`exposure-drain-zero` must be `proven_live` in every published scorecard regardless of verdict: ending a canary with zero public exposure is the invariant that makes tiny live canaries safe to repeat. The live-window rows (`live-commitments-posted`, `live-fill`) likewise accept only `proven_live` under any verdict that claims them — a live canary's headline claim is live behavior, so `proven_synthetic_only` there forces an amber verdict or a `deferred` row.
+`exposure-drain-zero` must be `proven_live` in every published scorecard regardless of verdict: ending a canary with zero public exposure is the invariant that makes tiny live canaries safe to repeat. The live-window rows (`live-commitments-posted`, `live-fill`) likewise accept only `proven_live` under any verdict that claims them — a live canary's headline claim is live behavior, so `proven_synthetic_only` there forces an amber verdict or a `deferred` row. Under `FULL_GREEN` the three `postgame-*` rows must also be `proven_live`: a completed postgame lifecycle is real on-chain behavior, never synthetic.
 
-`evidence` paths in scenario rows, capability rows, and the zero-exposure block must point at sanitized raw evidence; pointing a row at the artifact's own companion files (`evidence.json`, the matrix/scorecard files, or `summary.md`) is circular and rejected.
+`evidence` paths in scenario rows, capability rows, and the zero-exposure block must point at a sanitized raw evidence file — not a directory, and not the artifact's own companion files (`evidence.json`, the matrix/scorecard files, or `summary.md`), which would be circular.
 
 ## Verdict vocabulary
 
@@ -70,11 +70,11 @@ Proof levels:
 
 - **`FULL_GREEN`** — the live window and the postgame lifecycle both completed. Core capabilities (`live-commitments-posted`, `live-fill`, `exposure-drain-zero`, `cost-within-cap`, and the three `postgame-*` rows) are proven, no capability is `failed`, and the transactions include a successful settle plus successful score evidence. Artifact status: `complete_verified` or `complete_verified_with_caveats`.
 - **`GREEN_LIVE_WINDOW_POSTGAME_DEFERRED`** — the live window completed green but the artifact was cut before the game was final, so scoring, settlement, and claims are deferred. All three `postgame-*` capabilities are `deferred`, no capability is `failed`, and no successful postgame transaction categories appear (a reverted postgame attempt — for example an early scoring attempt that reverted because the game was not final — may and should be disclosed). Artifact status: `partial`. When postgame later completes, the artifact is updated (or superseded by a fuller one) and the verdict becomes `FULL_GREEN`.
-- **`AMBER_QUOTED_NO_FILL`** — the MM posted live commitments but no fill occurred in the window. `live-commitments-posted` is `proven_live`; `live-fill` is `deferred` (or `failed` with evidence). Artifact status: `partial` or `complete_verified_with_caveats`.
+- **`AMBER_QUOTED_NO_FILL`** — the MM posted live commitments but no fill occurred in the window. `live-commitments-posted` is `proven_live`; `live-fill` is `deferred` (or `failed` with evidence); no successful `match-commitment` transaction appears (that would be a fill). Artifact status: `partial` or `complete_verified_with_caveats`.
 - **`AMBER_TOKEN_TOPUP_NEEDED`** — the run was limited or stopped early by a funding shortfall (gas token, USDC balance, or allowance) and needs a top-up before a rerun. At least one capability is `deferred` or `failed`. Artifact status: `partial` or `complete_verified_with_caveats`.
 - **`RED_SAFETY_HALT`** — a safety mechanism halted the run (for example unintended target selection, exposure beyond bounds, or an orphan process). This label exists so internal and operational tooling shares one vocabulary, but it is **not publishable in this repository**: the `run` artifact status vocabulary has no failure status, and the validator rejects any published scorecard carrying it. Halted/failed canary evidence stays internal; the underlying issue is tracked and fixed in the relevant code repository.
 
-A `superseded` artifact keeps its original scorecard verdict; the status-mapping checks accept `superseded` for any verdict, but the evidence must then carry a `supersededBy` pointer (repo-relative path to the successor artifact's evidence JSON, which must exist) so supersession is anchored rather than asserted.
+A `superseded` artifact keeps its original scorecard verdict; the status-mapping checks accept `superseded` for any verdict, but the evidence must then carry a `supersededBy` pointer — `runs/<artifact-id>/evidence.json` of another run, which must exist — so supersession is anchored rather than asserted. (`RED_SAFETY_HALT` is deliberately absent from the published schema's enum for the same reason it is rejected here.)
 
 `GREEN_LIVE_WINDOW_POSTGAME_DEFERRED` and `FULL_GREEN` are deliberately distinct claims. A live-window artifact must not state or imply a completed lifecycle: deferral is recorded as `deferred` postgame rows, a `partial` artifact status, and the absence of successful postgame transaction categories, all of which the validator cross-checks.
 
@@ -118,3 +118,4 @@ For adopting runs the validator also checks `evidence.json`:
 - `artifactFiles` references both `scenario-matrix.json` and `mve-scorecard.json`, and every other referenced path exists.
 - The artifact-level `status` matches the verdict mapping above; `superseded` additionally requires the `supersededBy` pointer.
 - If `evidence.json` carries a `verdict.label`, it equals the scorecard's label exactly.
+- `target` is required, with non-empty `market`, `homeTeam`, and `awayTeam` (distinct). For moneyline targets, `teamIdentity.home.team` and `teamIdentity.away.team` must equal `target.homeTeam` / `target.awayTeam`, so the identity block cannot quietly swap sides.

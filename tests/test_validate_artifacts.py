@@ -84,12 +84,32 @@ def make_postgame_deferred_evidence() -> dict:
         },
         "target": {
             "market": "moneyline",
+            "homeTeam": "Los Angeles Angels",
+            "awayTeam": "Houston Astros",
             "teamIdentity": {
                 "home": {"team": "Los Angeles Angels", "positionType": "lower", "marketOddsAmerican": "-114", "identity": "favorite"},
                 "away": {"team": "Houston Astros", "positionType": "upper", "marketOddsAmerican": "+114", "identity": "underdog"},
             },
         },
     }
+
+
+def make_amber_no_fill_scorecard() -> dict:
+    scorecard = make_postgame_deferred_scorecard()
+    scorecard["verdict"] = {"label": "AMBER_QUOTED_NO_FILL", "reason": "Quotes posted; no fill arrived in the window."}
+    for row in scorecard["capabilities"]:
+        if row["id"] in {"live-fill", "own-state-sse-canonical-fill"}:
+            row["proof"] = "deferred"
+            row["evidence"] = None
+            row["notes"] = "no fill in window"
+    scorecard["transactions"] = [tx for tx in scorecard["transactions"] if tx["category"] != "match-commitment"]
+    return scorecard
+
+
+def make_amber_no_fill_evidence() -> dict:
+    evidence = make_postgame_deferred_evidence()
+    evidence["verdict"] = {"label": "AMBER_QUOTED_NO_FILL", "reason": "Quotes posted; no fill arrived in the window."}
+    return evidence
 
 
 def make_full_green_scorecard() -> dict:
@@ -765,13 +785,78 @@ class AdoptingEvidenceTests(unittest.TestCase):
         errors = run_scorecard_validation(scorecard, make_postgame_deferred_evidence())
         self.assertTrue(any("not the artifact's own companion files" in error for error in errors), errors)
 
+    def test_adopting_run_requires_target(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        del evidence["target"]
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("target must be an object" in error for error in errors), errors)
+
+    def test_target_requires_market_and_team_names(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        evidence["target"] = {"teamIdentity": evidence["target"]["teamIdentity"]}
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("target.market must be a non-empty string" in error for error in errors), errors)
+        self.assertTrue(any("target.homeTeam must be a non-empty string" in error for error in errors), errors)
+        self.assertTrue(any("target.awayTeam must be a non-empty string" in error for error in errors), errors)
+
+    def test_team_identity_must_match_target_teams(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        evidence["target"]["teamIdentity"]["home"]["team"] = "Houston Astros"
+        evidence["target"]["teamIdentity"]["away"]["team"] = "Los Angeles Angels"
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("must equal target.homeTeam" in error for error in errors), errors)
+        self.assertTrue(any("must equal target.awayTeam" in error for error in errors), errors)
+
+    def test_directory_evidence_path_is_rejected(self) -> None:
+        scorecard = make_postgame_deferred_scorecard()
+        for row in scorecard["capabilities"]:
+            if row["id"] == "live-fill":
+                row["evidence"] = "raw/"
+        errors = run_scorecard_validation(scorecard, make_postgame_deferred_evidence())
+        self.assertTrue(any("must point at a sanitized evidence file, not a directory" in error for error in errors), errors)
+
+    def test_superseded_by_must_target_run_evidence(self) -> None:
+        evidence = make_postgame_deferred_evidence()
+        evidence["status"] = "superseded"
+        evidence["supersededBy"] = "README.md"
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), evidence)
+        self.assertTrue(any("must point at another run's evidence JSON" in error for error in errors), errors)
+
     def test_full_green_rejects_synthetic_only_live_fill(self) -> None:
         scorecard = make_full_green_scorecard()
         for row in scorecard["capabilities"]:
             if row["id"] == "live-fill":
                 row["proof"] = "proven_synthetic_only"
         errors = run_scorecard_validation(scorecard, make_full_green_evidence())
-        self.assertTrue(any("requires proven_live for the live-window capabilities" in error for error in errors), errors)
+        self.assertTrue(any("requires proven_live capabilities" in error for error in errors), errors)
+
+    def test_full_green_rejects_synthetic_only_postgame(self) -> None:
+        scorecard = make_full_green_scorecard()
+        for row in scorecard["capabilities"]:
+            if row["id"] == "postgame-settle":
+                row["proof"] = "proven_synthetic_only"
+        errors = run_scorecard_validation(scorecard, make_full_green_evidence())
+        self.assertTrue(any("requires proven_live capabilities" in error and "postgame-settle" in error for error in errors), errors)
+
+    def test_amber_no_fill_baseline_passes(self) -> None:
+        errors = run_scorecard_validation(make_amber_no_fill_scorecard(), make_amber_no_fill_evidence())
+        self.assertEqual(errors, [])
+
+    def test_amber_no_fill_rejects_successful_fill_transaction(self) -> None:
+        scorecard = make_amber_no_fill_scorecard()
+        scorecard["transactions"].append(
+            {"category": "match-commitment", "txHash": TX_B, "status": "success", "operatorControlled": True, "purpose": "a fill"}
+        )
+        errors = run_scorecard_validation(scorecard, make_amber_no_fill_evidence())
+        self.assertTrue(any("cannot include a successful match-commitment" in error for error in errors), errors)
+
+    def test_amber_no_fill_allows_reverted_fill_attempt(self) -> None:
+        scorecard = make_amber_no_fill_scorecard()
+        scorecard["transactions"].append(
+            {"category": "match-commitment", "txHash": TX_B, "status": "reverted", "operatorControlled": True, "purpose": "failed fill attempt"}
+        )
+        errors = run_scorecard_validation(scorecard, make_amber_no_fill_evidence())
+        self.assertEqual(errors, [])
 
 
 if __name__ == "__main__":

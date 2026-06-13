@@ -118,18 +118,18 @@
   },
   "transactions": [
     {
-      "category": "match-commitment",
+      "category": "approve",
       "txHash": "0x<64-hex-transaction-hash>",
       "status": "success",
       "operatorControlled": true,
       "purpose": "Replace with the actual purpose; add one entry per transaction the run relies on and delete unused skeleton entries."
     },
     {
-      "category": "settle",
+      "category": "match-commitment",
       "txHash": "0x<64-hex-transaction-hash>",
       "status": "success",
       "operatorControlled": true,
-      "purpose": "Replace with the actual purpose; successful postgame categories must be absent when the verdict defers postgame."
+      "purpose": "Replace with the actual purpose; successful postgame categories (score-request, score-callback, settle, claim) must be absent when the verdict defers postgame."
     }
   ]
 }

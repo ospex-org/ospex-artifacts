@@ -56,7 +56,7 @@ Typical facts:
 
 A run artifact may be `complete_verified`, `complete_verified_with_caveats`, `partial`, or `superseded`. Caveats are part of the record; they do not make an artifact invalid by default.
 
-Market-maker live canary runs additionally publish a schema-backed scenario matrix and MVE readiness scorecard with a controlled verdict vocabulary; see `docs/mm-live-canary-evidence.md` and the templates under `templates/mm-live-canary/`.
+New market-maker live canary runs additionally publish a schema-backed scenario matrix and MVE readiness scorecard with a controlled verdict vocabulary (enforcement is adoption-triggered per run; pre-scheme runs are grandfathered); see `docs/mm-live-canary-evidence.md` and the templates under `templates/mm-live-canary/`.
 
 ## `releases/` — release acceptance evidence
 

@@ -46,13 +46,12 @@
       "properties": {
         "label": {
           "type": "string",
-          "description": "Controlled run verdict. RED_SAFETY_HALT is part of the vocabulary for internal/ops use but is not publishable in this repository; the run status vocabulary has no failure status and failed runs stay internal.",
+          "description": "Controlled run verdict for published scorecards. The operational vocabulary also includes RED_SAFETY_HALT, deliberately absent from this enum: it is not publishable in this repository (the run status vocabulary has no failure status; halted/failed canary evidence stays internal).",
           "enum": [
             "FULL_GREEN",
             "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED",
             "AMBER_QUOTED_NO_FILL",
-            "AMBER_TOKEN_TOPUP_NEEDED",
-            "RED_SAFETY_HALT"
+            "AMBER_TOKEN_TOPUP_NEEDED"
           ]
         },
         "reason": {
