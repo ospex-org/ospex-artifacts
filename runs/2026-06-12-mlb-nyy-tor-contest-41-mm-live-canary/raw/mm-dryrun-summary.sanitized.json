@@ -1,0 +1,32 @@
+{
+  "boundedRun": {
+    "errors": 0,
+    "liveSubmit": 0,
+    "wouldSubmit": 2
+  },
+  "canQuote": true,
+  "capturedAtUtc": "2026-06-12T22:58:24Z",
+  "contestId": "41",
+  "market": "moneyline",
+  "quotes": [
+    {
+      "humanOdds": "+111",
+      "riskUSDC": "0.10",
+      "takerSide": "away",
+      "team": "New York Yankees"
+    },
+    {
+      "humanOdds": "-112",
+      "riskUSDC": "0.10",
+      "takerSide": "home",
+      "team": "Toronto Blue Jays"
+    }
+  ],
+  "scope": {
+    "allowlistedContestIds": [
+      "41"
+    ],
+    "unexpectedTargets": 0
+  },
+  "speculationId": "30"
+}

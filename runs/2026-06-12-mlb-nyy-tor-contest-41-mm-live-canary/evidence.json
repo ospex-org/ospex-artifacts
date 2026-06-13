@@ -1,0 +1,303 @@
+{
+  "artifactFiles": {
+    "evidence": "evidence.json",
+    "mveScorecardJson": "mve-scorecard.json",
+    "mveScorecardMarkdown": "mve-scorecard.md",
+    "raw": "raw/",
+    "scenarioMatrixJson": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "summary": "summary.md"
+  },
+  "artifactId": "2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary",
+  "artifactPath": "runs/2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary/",
+  "artifactStatus": "complete_verified_with_caveats",
+  "artifactType": "run",
+  "capturedAtUtc": "2026-06-13T04:45:19Z",
+  "caveats": [
+    "This artifact covers the NYY/TOR salvage target only; the missed MIA/PIT primary is preserved separately as skipped evidence.",
+    "Final CLI speculations.show omitted winSide/settledAt fields, but indexer/protocol position state converged to closed with win_side home and all target claims settled/no-op.",
+    "Flow wallet retains unrelated active positions outside contest/spec 41/30; target-scoped exposure is zero.",
+    "No restart/cold-start probe was run after the salvage; final process and public exposure checks were run instead."
+  ],
+  "chainId": 137,
+  "costs": {
+    "flowClaimUSDC": "0.095500",
+    "linkMovement": {
+      "flow": "0",
+      "maker": "0",
+      "scoreSettleOperator": "-0.005"
+    },
+    "liveFillMakerRiskUSDC": "0.056100",
+    "liveFillTakerRiskUSDC": "0.049929",
+    "liveMatchGasPOL": "0.10037259073362879",
+    "makerClaimUSDC": "0.106029",
+    "postgameGasPOL": "0.301188498318548031",
+    "totalTrackedGasPOL": "0.401561089052176821"
+  },
+  "coverage": {
+    "boundedApprovals": "raw/bounded-approvals.sanitized.json",
+    "dryRun": "raw/mm-dryrun-summary.sanitized.json",
+    "fill": "raw/live-fill.sanitized.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "indexerSnapshot": "raw/indexer-snapshot.sanitized.json",
+    "liveCommitments": "raw/live-public-commitments-posted.sanitized.json",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "repoRuntime": "raw/release-runtime-matrix.sanitized.json",
+    "targetPreflight": "raw/target-preflight.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json",
+    "walletAuthBalance": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json"
+  },
+  "date": "2026-06-12",
+  "liveWindow": {
+    "commitmentsPosted": [
+      {
+        "commitmentHash": "0xd9ad9e548213ba45cf240a6266052afa0e746fd35751b71a814c48fe195c55d1",
+        "expiryUtc": "2026-06-12T23:03:08Z",
+        "finalStatus": "expired / partially_filled / not live",
+        "humanTakerOdds": "+112",
+        "maker": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+        "makerOddsTick": 189,
+        "makerSide": "home",
+        "makerTeam": "Toronto Blue Jays",
+        "riskUSDC": "0.100000",
+        "signatureRedacted": true,
+        "takerSide": "away",
+        "takerTeam": "New York Yankees"
+      },
+      {
+        "commitmentHash": "0x2190854b5d29e185cf6e01335f7246046e71322f43fb86dcf9091e11c47ca9c0",
+        "expiryUtc": "2026-06-12T23:03:08Z",
+        "finalStatus": "cancelled / not visible",
+        "humanTakerOdds": "-112",
+        "maker": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+        "makerOddsTick": 212,
+        "makerSide": "away",
+        "makerTeam": "New York Yankees",
+        "riskUSDC": "0.100000",
+        "signatureRedacted": true,
+        "takerSide": "home",
+        "takerTeam": "Toronto Blue Jays"
+      }
+    ],
+    "controlledFill": {
+      "commitmentHash": "0xd9ad9e548213ba45cf240a6266052afa0e746fd35751b71a814c48fe195c55d1",
+      "effectiveTakerRiskUSDC": "0.049929",
+      "makerFilledRiskUSDC": "0.056100",
+      "makerWallet": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "receiptStatus": "0x1",
+      "requestedFillCapUSDC": "0.050000",
+      "takerWallet": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+      "txHash": "0x985408301fd5a40ec1978d4779e13fe869cbdf0852702df063bcd7db93e2cc32"
+    },
+    "ownStateSseAssertions": {
+      "eventCounts": {
+        "divergence": 0,
+        "error": 0,
+        "fill": 1,
+        "kill": 1,
+        "soft-cancel": 1,
+        "submit": 2,
+        "tick-start": 5,
+        "unknown-own-fill": 0
+      },
+      "fillEvent": {
+        "commitmentHash": "0xd9ad9e548213ba45cf240a6266052afa0e746fd35751b71a814c48fe195c55d1",
+        "contestId": "41",
+        "cumulativeRiskWei6": "56100",
+        "kind": "fill",
+        "makerSide": "home",
+        "newFillWei6": "56100",
+        "source": "own-state-stream",
+        "speculationId": "30",
+        "takerSide": "away"
+      },
+      "postFillInvariant": {
+        "postFillSameSideSubmitReplaceCount": 0,
+        "postFillWriteLikeCount": 0,
+        "verdict": "PASS"
+      },
+      "telemetryRunId": "2026-06-12T23-00-37-261Z-o31t3g"
+    },
+    "shutdownZeroExposure": {
+      "checkedAtUtc": "2026-06-13T04:45:19Z",
+      "commitmentFinalStates": [
+        {
+          "commitmentHash": "0xd9ad9e548213ba45cf240a6266052afa0e746fd35751b71a814c48fe195c55d1",
+          "finalState": "expired / not live"
+        },
+        {
+          "commitmentHash": "0x2190854b5d29e185cf6e01335f7246046e71322f43fb86dcf9091e11c47ca9c0",
+          "finalState": "cancelled / not visible"
+        }
+      ],
+      "contestOrderbookCount": 0,
+      "finalClaimSweepEntries": {
+        "flow": 0,
+        "maker": 0
+      },
+      "indexerVisibleLiveCommitmentCount": 0,
+      "orphanProcessCount": 0,
+      "publicContestSpecVisibleCommitments": 0,
+      "publicMakerVisibleCommitments": 0,
+      "targetActivePositions": {
+        "flow": 0,
+        "maker": 0
+      },
+      "targetClaimablePositions": {
+        "flow": 0,
+        "maker": 0
+      },
+      "targetPendingSettlePositions": {
+        "flow": 0,
+        "maker": 0
+      }
+    }
+  },
+  "network": "polygon",
+  "postgame": {
+    "capturedAtUtc": "2026-06-13T04:45:19Z",
+    "claims": [
+      {
+        "payoutUSDC": "0.106029",
+        "positionId": "30_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_1",
+        "side": "lower / Toronto Blue Jays",
+        "source": "live MM fill",
+        "txHash": "0xb5e41d48d00919690da8f5d6a7667d2d847b599601ce7deea47ed56675fe8b7b",
+        "wallet": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+        "walletLabel": "ospex-stage-maker-b"
+      },
+      {
+        "payoutUSDC": "0.095500",
+        "positionId": "30_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+        "side": "lower / Toronto Blue Jays",
+        "source": "setup seed/open fill",
+        "txHash": "0xc4d0371ceef99da65e3f6a0dc9e477c343b9e2a4ac4b9e5e2947e340e1249501",
+        "wallet": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+        "walletLabel": "ospex-flow-a"
+      }
+    ],
+    "finalClaimSweepsEmpty": true,
+    "finalScore": {
+      "awayRuns": 5,
+      "awayTeam": "New York Yankees",
+      "homeRuns": 8,
+      "homeTeam": "Toronto Blue Jays",
+      "winner": "Toronto Blue Jays",
+      "winnerProtocolSide": "lower"
+    },
+    "noOps": [
+      {
+        "claimStatus": "not claimable",
+        "positionId": "30_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+        "result": "lost",
+        "side": "upper / New York Yankees",
+        "source": "setup seed/open fill",
+        "walletLabel": "ospex-flow-a"
+      }
+    ],
+    "score": {
+      "contestId": "41",
+      "receiptStatus": "0x1",
+      "txHash": "0x26859a2f82309817c5fd89181ece0a63b83aae29b1611d472dfeaa58c159c6c3"
+    },
+    "settle": {
+      "receiptStatus": "0x1",
+      "speculationId": "30",
+      "txHash": "0x6e883a25524e64e17d5abe117cf4ce21ad41d3c2919874ed4bced8ddf5d26db2",
+      "winSide": "home/lower"
+    }
+  },
+  "release": {
+    "describe": "v0.1.0-alpha.1-3-g9fd1465",
+    "nodeVersion": "v22.22.0",
+    "packageVersion": "0.1.0-alpha.1",
+    "repo": "ospex-org/ospex-market-maker",
+    "sdkDependencyObserved": "@ospex/sdk v0.6.2",
+    "testedHeadSha": "9fd1465306d061391520552be68b17e0616ca76f",
+    "yarnVersion": "1.22.22"
+  },
+  "setupAndSeed": {
+    "seedCommitment": {
+      "commitmentHash": "0xfd30e3dd661623440619ce872aee602f6993b9935846e5a270e9c37a47a66a0c",
+      "makerSide": "lower / Toronto Blue Jays",
+      "signatureRedacted": true
+    },
+    "seedMatchOpenSpeculation": {
+      "createdRealPositions": true,
+      "speculationId": "30",
+      "txHash": "0xbd91c6180b1a7c8e00d72143f69de481174f77dde471563d8e638aa758352830"
+    }
+  },
+  "status": "complete_verified_with_caveats",
+  "target": {
+    "awayTeam": "New York Yankees",
+    "contestId": "41",
+    "contestStatusAfterPostgame": "scored",
+    "contestStatusAtLiveWindow": "verified",
+    "finalScore": {
+      "awayRuns": 5,
+      "homeRuns": 8,
+      "winner": "Toronto Blue Jays"
+    },
+    "game": "New York Yankees @ Toronto Blue Jays",
+    "gamePk": 822803,
+    "homeTeam": "Toronto Blue Jays",
+    "market": "moneyline",
+    "postgameStatus": "complete",
+    "speculationId": "30",
+    "speculationStatusAfterPostgame": "closed",
+    "speculationStatusAtLiveWindow": "open",
+    "sport": "mlb",
+    "startTimeCentral": "2026-06-12 18:37 CDT",
+    "startTimeUtc": "2026-06-12T23:37:00Z",
+    "teamIdentity": {
+      "away": {
+        "identity": "underdog",
+        "marketOddsAmerican": "+112",
+        "positionType": "upper",
+        "protocolOutcome": "loser",
+        "quoteTick": 212,
+        "role": "away",
+        "team": "New York Yankees"
+      },
+      "home": {
+        "identity": "favorite",
+        "marketOddsAmerican": "-112",
+        "positionType": "lower",
+        "protocolOutcome": "winner",
+        "quoteTick": 189,
+        "role": "home",
+        "team": "Toronto Blue Jays"
+      },
+      "source": "Dry-run/live MM quote ticks; neutral reference-odds wording; upper/lower semantics from setup handoff."
+    }
+  },
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "Live moneyline MM canary posted bounded quotes, completed one controlled fill, scored, settled, claimed winning positions, and ended with zero target exposure."
+  },
+  "walletRoles": {
+    "controlledTaker": {
+      "address": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+      "label": "ospex-flow-a"
+    },
+    "liveMaker": {
+      "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "label": "ospex-stage-maker-b"
+    },
+    "scoreSettleOperator": {
+      "address": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+      "label": "ospex-fresh-user"
+    }
+  },
+  "zeroExposure": {
+    "checkedAtUtc": "2026-06-13T04:45:19Z",
+    "contestOrderbookCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json",
+    "orphanProcessCount": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "publicMakerVisibleCommitments": 0
+  }
+}

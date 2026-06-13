@@ -1,0 +1,28 @@
+{
+  "capturedAtUtc": "2026-06-13T04:45:19Z",
+  "gates": {
+    "liveWindowBuildAndDryRun": {
+      "exitCode": 0,
+      "source": "LIVE_WINDOW_HANDOFF.md"
+    },
+    "yarnBuild": {
+      "exitCode": 0,
+      "observedInManualPostgameWrap": true
+    }
+  },
+  "node": "v22.22.0",
+  "ospexMarketMaker": {
+    "describe": "v0.1.0-alpha.1-3-g9fd1465",
+    "headSha": "9fd1465306d061391520552be68b17e0616ca76f",
+    "packageVersion": "0.1.0-alpha.1",
+    "repo": "ospex-org/ospex-market-maker",
+    "sdkDependency": "0.6.2"
+  },
+  "sdkCli": {
+    "cliVersion": "0.6.2",
+    "describe": "v0.6.2",
+    "headSha": "7632955d0c689a04d3e40b2cca2653cf772119c3",
+    "repo": "ospex-org/ospex-sdk"
+  },
+  "yarn": "1.22.22"
+}

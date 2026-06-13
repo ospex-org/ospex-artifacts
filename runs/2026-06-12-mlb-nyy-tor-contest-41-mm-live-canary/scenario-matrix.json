@@ -1,0 +1,105 @@
+{
+  "artifactId": "2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary",
+  "generatedAt": "2026-06-13T04:45:19Z",
+  "runClass": "mm-live-canary",
+  "scenarios": [
+    {
+      "evidence": "raw/target-preflight.sanitized.json",
+      "id": "target-preflight",
+      "notes": "Target selected as contest 41/spec 30 only; MIA/PIT and CHC/SF skipped.",
+      "scenario": "Target preflight and allowlist",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "id": "repo-runtime-gates",
+      "notes": "Version matrix captured and yarn build exited 0.",
+      "scenario": "Repo/runtime gates",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "id": "wallet-auth-balances",
+      "notes": "Strict signer/auth and balance/allowance checks passed for tiny canary.",
+      "scenario": "Wallet auth, balances, allowances",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "id": "bounded-approvals",
+      "notes": "No unlimited approvals or new live/postgame approvals were needed.",
+      "scenario": "Bounded approvals / no unlimited approvals",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "id": "dry-run-quote-loop",
+      "notes": "Dry-run proved exactly target 41/30 and 0.10 USDC quote sizes.",
+      "scenario": "Dry-run quote loop",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "id": "live-commitments-posted",
+      "notes": "Exactly two tiny live commitments posted on target 41/30.",
+      "scenario": "Live commitments posted",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/live-fill.sanitized.json",
+      "id": "live-fill",
+      "notes": "Exactly one controlled fill succeeded on the intended commitment.",
+      "scenario": "Controlled live fill",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "id": "own-state-sse-canonical-fill",
+      "notes": "Telemetry captured the fill from own-state-stream.",
+      "scenario": "Own-state SSE canonical fill source",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "id": "exposure-drain-zero",
+      "notes": "Final public commitments/orderbook/process/target claim sweeps are zero.",
+      "scenario": "Exposure drained to zero",
+      "status": "pass"
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "notes": "Not run for this salvage; final zero exposure/process checks were run instead.",
+      "scenario": "Restart/cold-start safety",
+      "status": "pass_with_caveats"
+    },
+    {
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "id": "postgame-score",
+      "notes": "Official final score was verified and contest 41 scored.",
+      "scenario": "Postgame score",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "id": "postgame-settle",
+      "notes": "Speculation 30 settled to home/lower/Toronto.",
+      "scenario": "Postgame settle",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "id": "postgame-claim",
+      "notes": "Winning lower/Toronto positions claimed; losing upper/Yankees position documented no-op.",
+      "scenario": "Postgame claim/no-op",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/tx-receipts.summary.json",
+      "id": "cost-within-cap",
+      "notes": "Tracked live+postgame costs stayed within low-value canary envelope.",
+      "scenario": "Cost within cap",
+      "status": "pass"
+    }
+  ],
+  "schemaVersion": 2
+}

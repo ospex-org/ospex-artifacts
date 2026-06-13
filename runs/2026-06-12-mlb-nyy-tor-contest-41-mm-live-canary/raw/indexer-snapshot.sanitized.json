@@ -1,0 +1,156 @@
+{
+  "capturedAtUtc": "2026-06-13T04:45:19Z",
+  "contest": {
+    "awayScore": 5,
+    "awayTeam": "New York Yankees",
+    "contestId": "41",
+    "homeScore": 8,
+    "homeTeam": "Toronto Blue Jays",
+    "scoredAt": "2026-06-13T04:30:00+00:00",
+    "status": "scored"
+  },
+  "events": [
+    {
+      "event_name": "POSITION_MATCHED_PAIR",
+      "tx_hash": "0x985408301fd5a40ec1978d4779e13fe869cbdf0852702df063bcd7db93e2cc32"
+    },
+    {
+      "event_name": "COMMITMENT_MATCHED",
+      "tx_hash": "0x985408301fd5a40ec1978d4779e13fe869cbdf0852702df063bcd7db93e2cc32"
+    },
+    {
+      "event_name": "SPECULATION_SETTLED",
+      "tx_hash": "0x6e883a25524e64e17d5abe117cf4ce21ad41d3c2919874ed4bced8ddf5d26db2"
+    },
+    {
+      "event_name": "POSITION_CLAIMED",
+      "tx_hash": "0xb5e41d48d00919690da8f5d6a7667d2d847b599601ce7deea47ed56675fe8b7b"
+    },
+    {
+      "event_name": "POSITION_CLAIMED",
+      "tx_hash": "0xc4d0371ceef99da65e3f6a0dc9e477c343b9e2a4ac4b9e5e2947e340e1249501"
+    }
+  ],
+  "fillsCount": 2,
+  "positions": [
+    {
+      "claimed": false,
+      "claimedAmountUSDC": null,
+      "claimedAt": null,
+      "positionType": "upper",
+      "profitUSDC": "0.106100",
+      "riskUSDC": "0.095429",
+      "sourceBlock": 88378634,
+      "speculationId": "30",
+      "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    },
+    {
+      "claimed": true,
+      "claimedAmountUSDC": "0.095500",
+      "claimedAt": "2026-06-13T04:32:00+00:00",
+      "positionType": "lower",
+      "profitUSDC": "0.045500",
+      "riskUSDC": "0.050000",
+      "sourceBlock": 88378634,
+      "speculationId": "30",
+      "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    },
+    {
+      "claimed": true,
+      "claimedAmountUSDC": "0.106029",
+      "claimedAt": "2026-06-13T04:31:55+00:00",
+      "positionType": "lower",
+      "profitUSDC": "0.049929",
+      "riskUSDC": "0.056100",
+      "sourceBlock": 88400238,
+      "speculationId": "30",
+      "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    }
+  ],
+  "speculation": {
+    "away_score": 5,
+    "contest_status": "scored",
+    "events": [
+      {
+        "event_name": "POSITION_MATCHED_PAIR",
+        "tx_hash": "0x985408301fd5a40ec1978d4779e13fe869cbdf0852702df063bcd7db93e2cc32"
+      },
+      {
+        "event_name": "COMMITMENT_MATCHED",
+        "tx_hash": "0x985408301fd5a40ec1978d4779e13fe869cbdf0852702df063bcd7db93e2cc32"
+      },
+      {
+        "event_name": "SPECULATION_SETTLED",
+        "tx_hash": "0x6e883a25524e64e17d5abe117cf4ce21ad41d3c2919874ed4bced8ddf5d26db2"
+      },
+      {
+        "event_name": "POSITION_CLAIMED",
+        "tx_hash": "0xb5e41d48d00919690da8f5d6a7667d2d847b599601ce7deea47ed56675fe8b7b"
+      },
+      {
+        "event_name": "POSITION_CLAIMED",
+        "tx_hash": "0xc4d0371ceef99da65e3f6a0dc9e477c343b9e2a4ac4b9e5e2947e340e1249501"
+      }
+    ],
+    "fills_count": 2,
+    "home_score": 8,
+    "positions": [
+      {
+        "acquired_via_secondary_market": false,
+        "claimed": false,
+        "claimed_amount": null,
+        "claimed_at": null,
+        "first_fill_timestamp": "2026-06-12T14:02:16+00:00",
+        "network": "polygon",
+        "position_created_at": "2026-06-12T14:02:16+00:00",
+        "position_type": "upper",
+        "profit_amount": 106100,
+        "risk_amount": 95429,
+        "row_created_at": "2026-06-12T14:02:33.335071+00:00",
+        "row_updated_at": "2026-06-12T23:02:31.669598+00:00",
+        "source_block": 88378634,
+        "speculation_id": 30,
+        "user_address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+      },
+      {
+        "acquired_via_secondary_market": false,
+        "claimed": true,
+        "claimed_amount": 95500,
+        "claimed_at": "2026-06-13T04:32:00+00:00",
+        "first_fill_timestamp": "2026-06-12T14:02:16+00:00",
+        "network": "polygon",
+        "position_created_at": "2026-06-12T14:02:16+00:00",
+        "position_type": "lower",
+        "profit_amount": 45500,
+        "risk_amount": 50000,
+        "row_created_at": "2026-06-12T14:02:33.335071+00:00",
+        "row_updated_at": "2026-06-13T04:32:08.308437+00:00",
+        "source_block": 88378634,
+        "speculation_id": 30,
+        "user_address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+      },
+      {
+        "acquired_via_secondary_market": false,
+        "claimed": true,
+        "claimed_amount": 106029,
+        "claimed_at": "2026-06-13T04:31:55+00:00",
+        "first_fill_timestamp": "2026-06-12T23:02:22+00:00",
+        "network": "polygon",
+        "position_created_at": "2026-06-12T23:02:22+00:00",
+        "position_type": "lower",
+        "profit_amount": 49929,
+        "risk_amount": 56100,
+        "row_created_at": "2026-06-12T23:02:31.669598+00:00",
+        "row_updated_at": "2026-06-13T04:32:08.247777+00:00",
+        "source_block": 88400238,
+        "speculation_id": 30,
+        "user_address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+      }
+    ],
+    "settled_at": "2026-06-13T04:30:45+00:00",
+    "speculation_status": "closed",
+    "visibleLiveCommitmentCount": 0,
+    "win_side": "home"
+  },
+  "visibleLiveCommitmentCount": 0
+}

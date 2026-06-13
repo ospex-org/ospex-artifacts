@@ -1,0 +1,14 @@
+{
+  "capturedAtUtc": "2026-06-13T04:45:19Z",
+  "evidence": [
+    "raw/wallet-auth-balance-allowances.sanitized.json"
+  ],
+  "newApprovalsDuringLiveOrPostgame": [],
+  "noUnlimitedApprovalsObserved": true,
+  "postgameReadiness": {
+    "allowanceUse": "no new approval required for score/settle/claim path",
+    "flowClaimAuth": "passed via expected-address signer use",
+    "freshUserAuthStrict": "passed before scoring",
+    "makerClaimAuth": "passed via expected-address signer use"
+  }
+}

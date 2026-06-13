@@ -1,0 +1,47 @@
+{
+  "capturedAtUtc": "2026-06-13T04:45:19Z",
+  "postgamePolCost": "0.301188498318548031",
+  "receipts": {
+    "claim_flow": {
+      "blockNumber": "0x54514ef",
+      "effectiveGasPriceWei": 282711151695,
+      "gasUsed": 127375,
+      "polCost": "0.036010332947150625",
+      "status": "0x1",
+      "txHash": "0xc4d0371ceef99da65e3f6a0dc9e477c343b9e2a4ac4b9e5e2947e340e1249501"
+    },
+    "claim_maker": {
+      "blockNumber": "0x54514ec",
+      "effectiveGasPriceWei": 282362258853,
+      "gasUsed": 127375,
+      "polCost": "0.035965892721400875",
+      "status": "0x1",
+      "txHash": "0xb5e41d48d00919690da8f5d6a7667d2d847b599601ce7deea47ed56675fe8b7b"
+    },
+    "match": {
+      "blockNumber": "0x544e16e",
+      "effectiveGasPriceWei": 280277200410,
+      "gasUsed": 358119,
+      "polCost": "0.10037259073362879",
+      "status": "0x1",
+      "txHash": "0x985408301fd5a40ec1978d4779e13fe869cbdf0852702df063bcd7db93e2cc32"
+    },
+    "score": {
+      "blockNumber": "0x5451497",
+      "effectiveGasPriceWei": 279388817046,
+      "gasUsed": 664329,
+      "polCost": "0.185606093439352134",
+      "status": "0x1",
+      "txHash": "0x26859a2f82309817c5fd89181ece0a63b83aae29b1611d472dfeaa58c159c6c3"
+    },
+    "settle": {
+      "blockNumber": "0x54514bd",
+      "effectiveGasPriceWei": 280211151663,
+      "gasUsed": 155619,
+      "polCost": "0.043606179210644397",
+      "status": "0x1",
+      "txHash": "0x6e883a25524e64e17d5abe117cf4ce21ad41d3c2919874ed4bced8ddf5d26db2"
+    }
+  },
+  "totalLivePlusPostgameTrackedPolCost": "0.401561089052176821"
+}

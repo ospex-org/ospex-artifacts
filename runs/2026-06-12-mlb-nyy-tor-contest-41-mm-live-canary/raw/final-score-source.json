@@ -1,0 +1,45 @@
+{
+  "fetchedAtUtc": "2026-06-13T04:25:09Z",
+  "gameDate": "2026-06-12T23:37:00Z",
+  "gamePk": 822803,
+  "isFinal": true,
+  "linescore": {
+    "currentInning": 9,
+    "currentInningOrdinal": "9th",
+    "inningHalf": "Top",
+    "inningState": "Top",
+    "scheduledInnings": 9
+  },
+  "officialDate": "2026-06-12",
+  "ospexSemantics": {
+    "lower": "Toronto Blue Jays",
+    "upper": "New York Yankees",
+    "winnerProtocolSide": "lower"
+  },
+  "sourceUrl": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-06-12&hydrate=team,linescore",
+  "status": {
+    "abstractGameCode": "F",
+    "abstractGameState": "Final",
+    "codedGameState": "F",
+    "detailedState": "Final",
+    "reason": null,
+    "startTimeTBD": false,
+    "statusCode": "F"
+  },
+  "teams": {
+    "away": {
+      "abbreviation": "NYY",
+      "name": "New York Yankees",
+      "score": 5,
+      "winner": false
+    },
+    "home": {
+      "abbreviation": "TOR",
+      "name": "Toronto Blue Jays",
+      "score": 8,
+      "winner": true
+    }
+  },
+  "winnerName": "Toronto Blue Jays",
+  "winnerSide": "home"
+}

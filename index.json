@@ -1,10 +1,11 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-06-11T20:55:54Z",
+  "generatedAt": "2026-06-13T04:48:09Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
+      "runs/2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary/evidence.json",
       "runs/2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary/evidence.json",
       "runs/2026-06-11-mlb-hou-laa-contest-35-mm-live-canary/evidence.json",
       "runs/2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate/evidence.json",
@@ -13,8 +14,7 @@
       "runs/2026-06-07-mlb-pit-atl-contest-30-v054-ownstate-sse-green-candidate/evidence.json",
       "runs/2026-06-06-mlb-mil-col-contest-29-v054-ownstate-sse-soak/evidence.json",
       "runs/2026-05-28-mlb-tor-bal-contest-28-v048-mm-acceptance/evidence.json",
-      "runs/2026-05-28-mlb-col-lad-contest-27-d2-solvency-lifecycle/evidence.json",
-      "runs/2026-05-25-mlb-min-cws-contest-25-v042-mm-acceptance/evidence.json"
+      "runs/2026-05-28-mlb-col-lad-contest-27-d2-solvency-lifecycle/evidence.json"
     ],
     "release-acceptance": [
       "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.json"
@@ -22,6 +22,17 @@
     "daily-digest": []
   },
   "recentArtifacts": [
+    {
+      "artifactId": "2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary",
+      "artifactType": "run",
+      "dataPath": "runs/2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary/evidence.json",
+      "date": "2026-06-12",
+      "network": "polygon",
+      "rawPath": "runs/2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary/summary.md",
+      "publishedAt": "2026-06-13T04:48:09Z"
+    },
     {
       "artifactId": "2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary",
       "artifactType": "run",
@@ -244,9 +255,9 @@
       "scope": "year",
       "year": 2026,
       "path": "archive/2026/index.json",
-      "artifactCount": 19,
+      "artifactCount": 20,
       "oldestPublishedAt": "2026-05-20T02:48:35Z",
-      "newestPublishedAt": "2026-06-11T16:27:27Z"
+      "newestPublishedAt": "2026-06-13T04:48:09Z"
     }
   ]
 }

@@ -1,0 +1,161 @@
+{
+  "artifactId": "2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary",
+  "capabilities": [
+    {
+      "capability": "Target preflight and allowlist",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "id": "target-preflight",
+      "notes": "Target selected as contest 41/spec 30 only; MIA/PIT and CHC/SF skipped.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Repo/runtime gates",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "id": "repo-runtime-gates",
+      "notes": "Version matrix captured and yarn build exited 0.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Wallet auth, balances, allowances",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "id": "wallet-auth-balances",
+      "notes": "Strict signer/auth and balance/allowance checks passed for tiny canary.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Bounded approvals / no unlimited approvals",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "id": "bounded-approvals",
+      "notes": "No unlimited approvals or new live/postgame approvals were needed.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Dry-run quote loop",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "id": "dry-run-quote-loop",
+      "notes": "Dry-run proved exactly target 41/30 and 0.10 USDC quote sizes.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Live commitments posted",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "id": "live-commitments-posted",
+      "notes": "Exactly two tiny live commitments posted on target 41/30.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Controlled live fill",
+      "evidence": "raw/live-fill.sanitized.json",
+      "id": "live-fill",
+      "notes": "Exactly one controlled fill succeeded on the intended commitment.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Own-state SSE canonical fill source",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "id": "own-state-sse-canonical-fill",
+      "notes": "Telemetry captured the fill from own-state-stream.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Exposure drained to zero",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "id": "exposure-drain-zero",
+      "notes": "Final public commitments/orderbook/process/target claim sweeps are zero.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Restart/cold-start safety",
+      "id": "restart-cold-start-safety",
+      "notes": "Not run for this salvage; final zero exposure/process checks were run instead.",
+      "proof": "not_applicable"
+    },
+    {
+      "capability": "Postgame score",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "id": "postgame-score",
+      "notes": "Official final score was verified and contest 41 scored.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Postgame settle",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "id": "postgame-settle",
+      "notes": "Speculation 30 settled to home/lower/Toronto.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Postgame claim/no-op",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "id": "postgame-claim",
+      "notes": "Winning lower/Toronto positions claimed; losing upper/Yankees position documented no-op.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Cost within cap",
+      "evidence": "raw/tx-receipts.summary.json",
+      "id": "cost-within-cap",
+      "notes": "Tracked live+postgame costs stayed within low-value canary envelope.",
+      "proof": "proven_live"
+    }
+  ],
+  "generatedAt": "2026-06-13T04:45:19Z",
+  "runClass": "mm-live-canary",
+  "schemaVersion": 1,
+  "transactions": [
+    {
+      "category": "seed-match",
+      "notes": "Setup seed/open fill that created real tracked positions.",
+      "operatorControlled": true,
+      "status": "success",
+      "txHash": "0xbd91c6180b1a7c8e00d72143f69de481174f77dde471563d8e638aa758352830"
+    },
+    {
+      "category": "match-commitment",
+      "notes": "Controlled live MM fill.",
+      "operatorControlled": true,
+      "status": "success",
+      "txHash": "0x985408301fd5a40ec1978d4779e13fe869cbdf0852702df063bcd7db93e2cc32"
+    },
+    {
+      "category": "score-request",
+      "notes": "Contest 41 score request/score path.",
+      "operatorControlled": true,
+      "status": "success",
+      "txHash": "0x26859a2f82309817c5fd89181ece0a63b83aae29b1611d472dfeaa58c159c6c3"
+    },
+    {
+      "category": "settle",
+      "notes": "Settle speculation 30 to home/lower.",
+      "operatorControlled": true,
+      "status": "success",
+      "txHash": "0x6e883a25524e64e17d5abe117cf4ce21ad41d3c2919874ed4bced8ddf5d26db2"
+    },
+    {
+      "category": "claim",
+      "notes": "Claim maker live winning position.",
+      "operatorControlled": true,
+      "status": "success",
+      "txHash": "0xb5e41d48d00919690da8f5d6a7667d2d847b599601ce7deea47ed56675fe8b7b"
+    },
+    {
+      "category": "claim",
+      "notes": "Claim flow setup lower winning position.",
+      "operatorControlled": true,
+      "status": "success",
+      "txHash": "0xc4d0371ceef99da65e3f6a0dc9e477c343b9e2a4ac4b9e5e2947e340e1249501"
+    }
+  ],
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "Live moneyline MM canary posted bounded quotes, completed one controlled fill, scored, settled, claimed winning positions, and ended with zero target exposure."
+  },
+  "zeroExposure": {
+    "checkedAtUtc": "2026-06-13T04:45:19Z",
+    "contestOrderbookCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json",
+    "orphanProcessCount": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "publicMakerVisibleCommitments": 0
+  }
+}

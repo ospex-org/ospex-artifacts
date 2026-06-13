@@ -1,0 +1,29 @@
+{
+  "eventCounts": {
+    "divergence": 0,
+    "error": 0,
+    "fill": 1,
+    "kill": 1,
+    "soft-cancel": 1,
+    "submit": 2,
+    "tick-start": 5,
+    "unknown-own-fill": 0
+  },
+  "fillEvent": {
+    "commitmentHash": "0xd9ad9e548213ba45cf240a6266052afa0e746fd35751b71a814c48fe195c55d1",
+    "contestId": "41",
+    "cumulativeRiskWei6": "56100",
+    "kind": "fill",
+    "makerSide": "home",
+    "newFillWei6": "56100",
+    "source": "own-state-stream",
+    "speculationId": "30",
+    "takerSide": "away"
+  },
+  "postFillInvariant": {
+    "postFillSameSideSubmitReplaceCount": 0,
+    "postFillWriteLikeCount": 0,
+    "verdict": "PASS"
+  },
+  "telemetryRunId": "2026-06-12T23-00-37-261Z-o31t3g"
+}
