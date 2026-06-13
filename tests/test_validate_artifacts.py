@@ -971,6 +971,71 @@ class AmberFillTelemetryTests(unittest.TestCase):
         self.assertEqual(errors, [])
 
 
+class EvenPickemTests(unittest.TestCase):
+    def _evidence_with_even(self, home_odds: str, away_odds: str) -> dict:
+        evidence = make_postgame_deferred_evidence()
+        ti = evidence["target"]["teamIdentity"]
+        ti["home"]["identity"] = "even"
+        ti["home"]["marketOddsAmerican"] = home_odds
+        ti["away"]["identity"] = "even"
+        ti["away"]["marketOddsAmerican"] = away_odds
+        return evidence
+
+    def test_standard_vigged_pickem_passes(self) -> None:
+        for home, away in [("-110", "-110"), ("-105", "-115"), ("-100", "+100"), ("+100", "+100")]:
+            errors = run_scorecard_validation(make_postgame_deferred_scorecard(), self._evidence_with_even(home, away))
+            self.assertEqual(errors, [], f"{home}/{away}: {errors}")
+
+    def test_lopsided_line_mislabeled_even_is_rejected(self) -> None:
+        errors = run_scorecard_validation(make_postgame_deferred_scorecard(), self._evidence_with_even("-150", "+130"))
+        self.assertTrue(any("even/even pick'em requires symmetric odds" in error for error in errors), errors)
+
+
+class AmberPostgameTxTests(unittest.TestCase):
+    def _amber_with_tx(self, label: str, category: str, status: str = "success") -> list[str]:
+        scorecard = make_amber_no_fill_scorecard() if label == "AMBER_QUOTED_NO_FILL" else make_postgame_deferred_scorecard()
+        scorecard["verdict"] = {"label": label, "reason": "r"}
+        evidence = make_amber_no_fill_evidence() if label == "AMBER_QUOTED_NO_FILL" else make_postgame_deferred_evidence()
+        evidence["verdict"] = {"label": label, "reason": "r"}
+        if label == "AMBER_TOKEN_TOPUP_NEEDED":
+            for row in scorecard["capabilities"]:
+                if row["id"] == "live-fill":
+                    row["proof"] = "deferred"
+                    row["evidence"] = None
+        scorecard["transactions"].append(
+            {"category": category, "txHash": TX_E, "status": status, "operatorControlled": True, "purpose": "p"}
+        )
+        return run_scorecard_validation(scorecard, evidence)
+
+    def test_amber_no_fill_rejects_successful_settle(self) -> None:
+        errors = self._amber_with_tx("AMBER_QUOTED_NO_FILL", "settle")
+        self.assertTrue(any("cannot include successful postgame transaction categories" in e for e in errors), errors)
+
+    def test_amber_topup_rejects_successful_claim(self) -> None:
+        errors = self._amber_with_tx("AMBER_TOKEN_TOPUP_NEEDED", "claim")
+        self.assertTrue(any("cannot include successful postgame transaction categories" in e for e in errors), errors)
+
+    def test_amber_allows_reverted_postgame_attempt(self) -> None:
+        errors = self._amber_with_tx("AMBER_QUOTED_NO_FILL", "score-request", status="reverted")
+        self.assertEqual(errors, [])
+
+    def test_amber_no_fill_rejects_successful_seed_match(self) -> None:
+        scorecard = make_amber_no_fill_scorecard()
+        scorecard["transactions"].append(
+            {"category": "seed-match", "txHash": TX_E, "status": "success", "operatorControlled": True, "purpose": "seed"}
+        )
+        errors = run_scorecard_validation(scorecard, make_amber_no_fill_evidence())
+        self.assertTrue(any("cannot include a successful" in e and "seed-match" in e for e in errors), errors)
+
+    def test_amber_no_fill_allows_reverted_seed_match(self) -> None:
+        scorecard = make_amber_no_fill_scorecard()
+        scorecard["transactions"].append(
+            {"category": "seed-match", "txHash": TX_E, "status": "reverted", "operatorControlled": True, "purpose": "seed"}
+        )
+        errors = run_scorecard_validation(scorecard, make_amber_no_fill_evidence())
+        self.assertEqual(errors, [])
+
+
 class TemplateCoherenceTests(unittest.TestCase):
     """The shipped templates must validate cleanly once only the placeholder tokens are filled."""
 

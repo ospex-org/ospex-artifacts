@@ -45,6 +45,10 @@ TX_HASH_RE = re.compile(r"^0x[a-fA-F0-9]{64}$")
 RAW_SIGNATURE_RE = re.compile(r"0[xX][a-fA-F0-9]{130}\b")
 AMERICAN_ODDS_RE = re.compile(r"^[+-]\d+$")
 SLUG_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+# An `even`/`even` pick'em is judged by symmetry, not an exact price: a real pick'em is
+# routinely quoted with vig as -110/-110 or -105/-115, so the two sides' implied
+# probabilities must be close rather than both exactly 100.
+EVEN_IMPLIED_PROB_TOLERANCE = 0.06
 
 # Pre-scheme files that legitimately contain long sanitized event-data hex blobs
 # (verified to carry no signature-sized ABI fields). New artifacts must summarize
@@ -95,6 +99,15 @@ TX_CATEGORIES = {
     "other",
 }
 POSTGAME_TX_CATEGORIES = {"score-request", "score-callback", "settle", "claim"}
+# A successful on-chain match records a fill (R4 has no no-counterparty seed tx).
+FILL_TX_CATEGORIES = {"match-commitment", "seed-match"}
+# Verdicts that stopped in the live window — none claims a completed postgame lifecycle,
+# so a successful postgame transaction contradicts them. FULL_GREEN is the only exception.
+NON_POSTGAME_VERDICTS = {
+    "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED",
+    "AMBER_QUOTED_NO_FILL",
+    "AMBER_TOKEN_TOPUP_NEEDED",
+}
 MM_LIVE_CANARY_CAPABILITY_IDS = {
     "target-preflight",
     "repo-runtime-gates",
@@ -251,6 +264,13 @@ def is_plain_int(value: Any) -> bool:
 def is_one_of(value: Any, vocab: set[str]) -> bool:
     # Membership tests on JSON-sourced values must never raise: lists/dicts are unhashable.
     return isinstance(value, str) and value in vocab
+
+
+def american_to_implied_prob(odds_int: int) -> float:
+    # Implied win probability from American odds (vig-inclusive).
+    if odds_int < 0:
+        return -odds_int / (-odds_int + 100)
+    return 100 / (odds_int + 100)
 
 
 COMPANION_ARTIFACT_FILES = {
@@ -819,6 +839,7 @@ def validate_team_identity(context: str, target: dict[str, Any], errors: list[st
         return
     identities: dict[str, str] = {}
     teams: dict[str, str] = {}
+    odds_by_role: dict[str, int] = {}
     for role, expected_position in TEAM_IDENTITY_POSITION_TYPE_BY_ROLE.items():
         entry = identity.get(role)
         entry_context = f"{context}: teamIdentity.{role}"
@@ -847,19 +868,28 @@ def validate_team_identity(context: str, target: dict[str, Any], errors: list[st
         else:
             identities[role] = side_identity
             if odds_valid:
+                odds_by_role[role] = int(odds)
                 # Sign/identity confusion is the exact failure the Team Identity Rule exists for.
+                # `even` is judged below as a pair (a vigged pick'em is -110/-110, both negative).
                 if side_identity == "favorite" and not odds.startswith("-"):
                     errors.append(f"{entry_context}: favorite must carry negative American odds, got {odds!r}")
                 elif side_identity == "underdog" and not odds.startswith("+"):
                     errors.append(f"{entry_context}: underdog must carry positive American odds, got {odds!r}")
-                elif side_identity == "even" and abs(int(odds)) != 100:
-                    errors.append(f"{entry_context}: even identity requires American odds of magnitude 100, got {odds!r}")
     if len(teams) == 2 and teams["home"] == teams["away"]:
         errors.append(f"{context}: teamIdentity home and away teams must differ")
     if len(identities) == 2:
         pair = sorted(identities.values())
         if pair not in (["favorite", "underdog"], ["even", "even"]):
             errors.append(f"{context}: teamIdentity identities must pair favorite/underdog or even/even")
+        elif pair == ["even", "even"] and len(odds_by_role) == 2:
+            # A genuine pick'em is symmetric: the two sides' implied probabilities are close
+            # (any vig spelling -110/-110, -105/-115). A lopsided line mislabeled `even` is rejected.
+            delta = abs(american_to_implied_prob(odds_by_role["home"]) - american_to_implied_prob(odds_by_role["away"]))
+            if delta > EVEN_IMPLIED_PROB_TOLERANCE:
+                errors.append(
+                    f"{context}: even/even pick'em requires symmetric odds (implied-probability gap "
+                    f"{delta:.3f} exceeds {EVEN_IMPLIED_PROB_TOLERANCE}); use favorite/underdog for a lopsided line"
+                )
 
 
 def validate_adopting_run_evidence(
@@ -1162,11 +1192,14 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
                     if pair in seen_hash_category:
                         errors.append(f"{tx_context}: duplicate transaction entry for {category} {tx_hash}")
                     seen_hash_category.add(pair)
-            if verdict_label == "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED":
+            # Only FULL_GREEN claims a completed postgame lifecycle; the other verdicts stopped
+            # in the live window, so a successful postgame transaction contradicts them. Reverted
+            # attempts never count, so a disclosed early-scoring revert stays publishable.
+            if verdict_label in NON_POSTGAME_VERDICTS:
                 postgame_present = sorted(successful_categories & POSTGAME_TX_CATEGORIES)
                 if postgame_present:
                     errors.append(
-                        f"{context}: verdict GREEN_LIVE_WINDOW_POSTGAME_DEFERRED cannot include successful postgame "
+                        f"{context}: verdict {verdict_label} cannot include successful postgame "
                         "transaction categories: " + ", ".join(postgame_present)
                     )
             if verdict_label == "FULL_GREEN":
@@ -1176,11 +1209,16 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
                     errors.append(
                         f"{context}: verdict FULL_GREEN requires successful score-request or score-callback transaction evidence"
                     )
-            if verdict_label == "AMBER_QUOTED_NO_FILL" and "match-commitment" in successful_categories:
-                errors.append(
-                    f"{context}: verdict AMBER_QUOTED_NO_FILL cannot include a successful match-commitment "
-                    "transaction — that is a fill"
-                )
+            if verdict_label == "AMBER_QUOTED_NO_FILL":
+                # In R4 there is no on-chain no-counterparty seed: a successful seed-match or
+                # match-commitment records a matched position, i.e. a fill.
+                fill_present = sorted(successful_categories & FILL_TX_CATEGORIES)
+                if fill_present:
+                    errors.append(
+                        f"{context}: verdict AMBER_QUOTED_NO_FILL cannot include a successful "
+                        + " or ".join(fill_present)
+                        + " transaction — that records a fill"
+                    )
 
     evidence_doc = docs.get(artifact_dir / "evidence.json")
     if not isinstance(evidence_doc, dict):
