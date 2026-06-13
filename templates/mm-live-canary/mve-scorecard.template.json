@@ -1,0 +1,135 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "YYYY-MM-DD-sport-away-home-contest-ID-mm-live-canary",
+  "generatedAt": "YYYY-MM-DDTHH:MM:SSZ",
+  "runClass": "mm-live-canary",
+  "verdict": {
+    "label": "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED",
+    "reason": "One-paragraph factual verdict reason derived from the evidence; see docs/mm-live-canary-evidence.md for the controlled label semantics. This template defaults to a live-window-green/postgame-deferred run; change the verdict and the proof levels together if the run differs."
+  },
+  "capabilities": [
+    {
+      "id": "target-preflight",
+      "capability": "Target selection and contest verification",
+      "proof": "proven_live",
+      "evidence": "raw/target-decision.sanitized.json",
+      "notes": "Fill from target-decision evidence; name both teams with home/away roles."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "capability": "Fresh clone/release install, build, and smoke gates",
+      "proof": "proven_live",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "notes": "Fill from release/runtime matrix evidence."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "capability": "Non-interactive wallet auth and balance sufficiency",
+      "proof": "proven_live",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Fill from wallet/auth/balance evidence."
+    },
+    {
+      "id": "bounded-approvals",
+      "capability": "Bounded low-value allowances only",
+      "proof": "proven_live",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Fill from allowance evidence; no unlimited approvals."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "capability": "Doctor/quote/dry-run loop on the intended target only",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "notes": "Dry-run produced quote intents with no writes, so this is synthetic-only by nature."
+    },
+    {
+      "id": "live-commitments-posted",
+      "capability": "Live commitments posted on the intended target",
+      "proof": "proven_live",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "notes": "proven_live when the MM posted live public commitments during the window. If no commitments posted, use a different verdict."
+    },
+    {
+      "id": "live-fill",
+      "capability": "Live fill against a posted commitment",
+      "proof": "proven_live",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "proven_live for an organic or controlled live fill on a live-posted commitment. If quotes drew no fill, switch the verdict to AMBER_QUOTED_NO_FILL and set this to deferred or failed."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "capability": "Fill detection sourced canonically from own-state SSE",
+      "proof": "proven_live",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "proven_live when telemetry shows fill source own-state-stream and no canonical legacy fill sources."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "capability": "Public/API live exposure drained to zero at end of run",
+      "proof": "proven_live",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "Must be proven_live in every published canary; mirror the zeroExposure block."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "capability": "Restart/cold-start safety without phantom exposure",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/restart-cold-start-probe.sanitized.json",
+      "notes": "A read-only/dry-run cold-start probe is synthetic-only; use proven_live only when a process-level cursor resume is actually proven."
+    },
+    {
+      "id": "postgame-score",
+      "capability": "Contest scored against a verified external final score",
+      "proof": "deferred",
+      "evidence": null,
+      "notes": "deferred when the artifact is cut before the game is final; set to proven_live (with evidence) and switch the verdict to FULL_GREEN once postgame completes."
+    },
+    {
+      "id": "postgame-settle",
+      "capability": "Speculation settled to the winning side",
+      "proof": "deferred",
+      "evidence": null,
+      "notes": "deferred when the artifact is cut before the game is final."
+    },
+    {
+      "id": "postgame-claim",
+      "capability": "Winning positions claimed or no-op proven via empty dry-runs",
+      "proof": "deferred",
+      "evidence": null,
+      "notes": "deferred when the artifact is cut before the game is final. A no-op proof (empty claim-all dry-run for every controlled wallet) counts as proven_live."
+    },
+    {
+      "id": "cost-within-cap",
+      "capability": "Total controlled spend and gas within the run cap",
+      "proof": "proven_live",
+      "evidence": "raw/tx-receipts.summary.json",
+      "notes": "Fill from budget/receipt evidence; state the cap and observed totals."
+    }
+  ],
+  "zeroExposure": {
+    "checkedAtUtc": "YYYY-MM-DDTHH:MM:SSZ",
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "orphanProcessCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json"
+  },
+  "transactions": [
+    {
+      "category": "approve",
+      "txHash": "0x<64-hex-transaction-hash>",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Replace with the actual purpose; add one entry per transaction the run relies on and delete unused skeleton entries."
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0x<64-hex-transaction-hash>",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Replace with the actual purpose; successful postgame categories (score-request, score-callback, settle, claim) must be absent when the verdict defers postgame."
+    }
+  ]
+}

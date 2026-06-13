@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "title": "Ospex MVE Readiness Scorecard",
+  "description": "Per-run readiness scorecard recording, for each standard capability, whether the run proved it live, proved it only through synthetic/controlled action, deferred it, or observed it fail. The run-level verdict uses a controlled vocabulary. See docs/mm-live-canary-evidence.md.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "artifactId",
+    "generatedAt",
+    "runClass",
+    "verdict",
+    "capabilities",
+    "zeroExposure",
+    "transactions"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "const": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json"
+    },
+    "schemaVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "artifactId": {
+      "type": "string",
+      "description": "Must equal the run artifact directory name.",
+      "minLength": 1
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "runClass": {
+      "type": "string",
+      "description": "Run class this scorecard instantiates. A closed registry enforced by the validator; a new run class is added to the registry (and this enum) together with its own pairing and capability rules.",
+      "enum": ["mm-live-canary"]
+    },
+    "verdict": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["label", "reason"],
+      "properties": {
+        "label": {
+          "type": "string",
+          "description": "Controlled run verdict for published scorecards. The operational vocabulary also includes RED_SAFETY_HALT, deliberately absent from this enum: it is not publishable in this repository (the run status vocabulary has no failure status; halted/failed canary evidence stays internal).",
+          "enum": [
+            "FULL_GREEN",
+            "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED",
+            "AMBER_QUOTED_NO_FILL",
+            "AMBER_TOKEN_TOPUP_NEEDED"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "capabilities": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["id", "capability", "proof", "notes"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Stable kebab-case capability identifier, unique within the scorecard.",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "capability": {
+            "type": "string",
+            "minLength": 1
+          },
+          "proof": {
+            "type": "string",
+            "description": "Proof level for this capability in this run.",
+            "enum": ["proven_live", "proven_synthetic_only", "deferred", "failed", "not_applicable"]
+          },
+          "evidence": {
+            "type": ["string", "null"],
+            "description": "Path to the supporting sanitized evidence file, relative to the artifact directory. Null only when proof is deferred or not_applicable."
+          },
+          "notes": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "zeroExposure": {
+      "type": "object",
+      "description": "End-of-run public exposure invariant. Every published canary must end with zero public/API live commitment exposure and no orphan process, regardless of verdict.",
+      "additionalProperties": true,
+      "required": [
+        "checkedAtUtc",
+        "publicMakerVisibleCommitments",
+        "publicContestSpecVisibleCommitments",
+        "contestOrderbookCount",
+        "orphanProcessCount",
+        "evidence"
+      ],
+      "properties": {
+        "checkedAtUtc": { "type": "string", "format": "date-time" },
+        "publicMakerVisibleCommitments": { "type": "integer", "const": 0 },
+        "publicContestSpecVisibleCommitments": { "type": "integer", "const": 0 },
+        "contestOrderbookCount": { "type": "integer", "const": 0 },
+        "orphanProcessCount": { "type": "integer", "const": 0 },
+        "evidence": { "type": "string", "minLength": 1 }
+      }
+    },
+    "transactions": {
+      "type": "array",
+      "description": "Every on-chain transaction the run relies on, classified into a controlled category. Free-form context belongs in purpose.",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["category", "txHash", "status", "operatorControlled"],
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "approve",
+              "create-contest",
+              "seed-match",
+              "match-commitment",
+              "cancel-commitment",
+              "nonce-floor-raise",
+              "score-request",
+              "score-callback",
+              "settle",
+              "claim",
+              "other"
+            ]
+          },
+          "txHash": {
+            "type": "string",
+            "pattern": "^0x[a-fA-F0-9]{64}$"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["success", "reverted"]
+          },
+          "operatorControlled": {
+            "type": "boolean",
+            "description": "True when the sender is a controlled operator wallet. Must be false for score-callback (the oracle network sends it)."
+          },
+          "purpose": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
