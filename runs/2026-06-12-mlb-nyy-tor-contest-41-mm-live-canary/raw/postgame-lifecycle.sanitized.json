@@ -1,0 +1,53 @@
+{
+  "capturedAtUtc": "2026-06-13T04:45:19Z",
+  "claims": [
+    {
+      "payoutUSDC": "0.106029",
+      "positionId": "30_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_1",
+      "side": "lower / Toronto Blue Jays",
+      "source": "live MM fill",
+      "txHash": "0xb5e41d48d00919690da8f5d6a7667d2d847b599601ce7deea47ed56675fe8b7b",
+      "wallet": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "walletLabel": "ospex-stage-maker-b"
+    },
+    {
+      "payoutUSDC": "0.095500",
+      "positionId": "30_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+      "side": "lower / Toronto Blue Jays",
+      "source": "setup seed/open fill",
+      "txHash": "0xc4d0371ceef99da65e3f6a0dc9e477c343b9e2a4ac4b9e5e2947e340e1249501",
+      "wallet": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+      "walletLabel": "ospex-flow-a"
+    }
+  ],
+  "finalClaimSweepsEmpty": true,
+  "finalScore": {
+    "awayRuns": 5,
+    "awayTeam": "New York Yankees",
+    "homeRuns": 8,
+    "homeTeam": "Toronto Blue Jays",
+    "winner": "Toronto Blue Jays",
+    "winnerProtocolSide": "lower"
+  },
+  "noOps": [
+    {
+      "claimStatus": "not claimable",
+      "positionId": "30_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+      "result": "lost",
+      "side": "upper / New York Yankees",
+      "source": "setup seed/open fill",
+      "walletLabel": "ospex-flow-a"
+    }
+  ],
+  "score": {
+    "contestId": "41",
+    "receiptStatus": "0x1",
+    "txHash": "0x26859a2f82309817c5fd89181ece0a63b83aae29b1611d472dfeaa58c159c6c3"
+  },
+  "settle": {
+    "receiptStatus": "0x1",
+    "speculationId": "30",
+    "txHash": "0x6e883a25524e64e17d5abe117cf4ce21ad41d3c2919874ed4bced8ddf5d26db2",
+    "winSide": "home/lower"
+  }
+}

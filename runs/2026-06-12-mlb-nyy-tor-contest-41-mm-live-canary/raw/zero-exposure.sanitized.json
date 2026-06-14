@@ -1,0 +1,34 @@
+{
+  "checkedAtUtc": "2026-06-13T04:45:19Z",
+  "commitmentFinalStates": [
+    {
+      "commitmentHash": "0xd9ad9e548213ba45cf240a6266052afa0e746fd35751b71a814c48fe195c55d1",
+      "finalState": "expired / not live"
+    },
+    {
+      "commitmentHash": "0x2190854b5d29e185cf6e01335f7246046e71322f43fb86dcf9091e11c47ca9c0",
+      "finalState": "cancelled / not visible"
+    }
+  ],
+  "contestOrderbookCount": 0,
+  "finalClaimSweepEntries": {
+    "flow": 0,
+    "maker": 0
+  },
+  "indexerVisibleLiveCommitmentCount": 0,
+  "orphanProcessCount": 0,
+  "publicContestSpecVisibleCommitments": 0,
+  "publicMakerVisibleCommitments": 0,
+  "targetActivePositions": {
+    "flow": 0,
+    "maker": 0
+  },
+  "targetClaimablePositions": {
+    "flow": 0,
+    "maker": 0
+  },
+  "targetPendingSettlePositions": {
+    "flow": 0,
+    "maker": 0
+  }
+}

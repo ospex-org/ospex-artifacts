@@ -1,0 +1,50 @@
+{
+  "selectedTarget": {
+    "awayTeam": "New York Yankees",
+    "contestId": "41",
+    "gamePk": 822803,
+    "homeTeam": "Toronto Blue Jays",
+    "matchTimeUtcCandidatesSurface": "2026-06-12T23:30:00+00:00",
+    "matchTimeUtcOfficial": "2026-06-12T23:37:00Z",
+    "speculations": [
+      {
+        "contestId": "41",
+        "speculationId": "30",
+        "status": "open",
+        "type": "moneyline"
+      }
+    ],
+    "sport": "mlb",
+    "statusBeforeLiveWrites": {
+      "officialMlb": "Pre-Game / Preview",
+      "ospexContest": "verified",
+      "ospexSpeculation": "open"
+    },
+    "teamIdentity": {
+      "away": {
+        "positionType": "upper",
+        "role": "away",
+        "team": "New York Yankees"
+      },
+      "home": {
+        "positionType": "lower",
+        "role": "home",
+        "team": "Toronto Blue Jays"
+      }
+    }
+  },
+  "skippedTargets": [
+    {
+      "contestId": "40",
+      "reason": "missed safe live window; no salvage writes",
+      "speculationId": "29",
+      "target": "MIA @ PIT"
+    },
+    {
+      "contestId": "42",
+      "reason": "not used after NYY/TOR produced clean one-target result",
+      "speculationId": "31",
+      "target": "CHC @ SF"
+    }
+  ]
+}
