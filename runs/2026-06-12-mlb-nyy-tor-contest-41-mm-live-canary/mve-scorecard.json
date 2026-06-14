@@ -1,5 +1,13 @@
 {
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "schemaVersion": 1,
   "artifactId": "2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary",
+  "generatedAt": "2026-06-13T04:45:19Z",
+  "runClass": "mm-live-canary",
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "Live moneyline MM canary posted bounded quotes, completed one controlled fill, scored, settled, claimed winning positions, and ended with zero target exposure; caveats are limited to the not-run restart/cold-start probe, final settlement confirmation via indexer/protocol convergence after the CLI read omitted winSide/settledAt, and unrelated out-of-scope flow-wallet positions."
+  },
   "capabilities": [
     {
       "capability": "Target preflight and allowlist",
@@ -33,8 +41,8 @@
       "capability": "Dry-run quote loop",
       "evidence": "raw/mm-dryrun-summary.sanitized.json",
       "id": "dry-run-quote-loop",
-      "notes": "Dry-run proved exactly target 41/30 and 0.10 USDC quote sizes.",
-      "proof": "proven_live"
+      "notes": "Dry-run proved exactly target 41/30 and 0.10 USDC quote sizes; this proof is synthetic-only by nature and made no writes.",
+      "proof": "proven_synthetic_only"
     },
     {
       "capability": "Live commitments posted",
@@ -67,7 +75,7 @@
     {
       "capability": "Restart/cold-start safety",
       "id": "restart-cold-start-safety",
-      "notes": "Not run for this salvage; final zero exposure/process checks were run instead.",
+      "notes": "Not run for this salvage; final zero-exposure and process checks were run instead.",
       "proof": "not_applicable"
     },
     {
@@ -99,9 +107,14 @@
       "proof": "proven_live"
     }
   ],
-  "generatedAt": "2026-06-13T04:45:19Z",
-  "runClass": "mm-live-canary",
-  "schemaVersion": 1,
+  "zeroExposure": {
+    "checkedAtUtc": "2026-06-13T04:45:19Z",
+    "contestOrderbookCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json",
+    "orphanProcessCount": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "publicMakerVisibleCommitments": 0
+  },
   "transactions": [
     {
       "category": "seed-match",
@@ -145,17 +158,5 @@
       "status": "success",
       "txHash": "0xc4d0371ceef99da65e3f6a0dc9e477c343b9e2a4ac4b9e5e2947e340e1249501"
     }
-  ],
-  "verdict": {
-    "label": "FULL_GREEN",
-    "reason": "Live moneyline MM canary posted bounded quotes, completed one controlled fill, scored, settled, claimed winning positions, and ended with zero target exposure."
-  },
-  "zeroExposure": {
-    "checkedAtUtc": "2026-06-13T04:45:19Z",
-    "contestOrderbookCount": 0,
-    "evidence": "raw/zero-exposure.sanitized.json",
-    "orphanProcessCount": 0,
-    "publicContestSpecVisibleCommitments": 0,
-    "publicMakerVisibleCommitments": 0
-  }
+  ]
 }

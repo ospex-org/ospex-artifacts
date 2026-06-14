@@ -11,7 +11,7 @@
 | `live-fill` | Controlled live fill | `pass` | Exactly one controlled fill succeeded on the intended commitment. |
 | `own-state-sse-canonical-fill` | Own-state SSE canonical fill source | `pass` | Telemetry captured the fill from own-state-stream. |
 | `exposure-drain-zero` | Exposure drained to zero | `pass` | Final public commitments/orderbook/process/target claim sweeps are zero. |
-| `restart-cold-start-safety` | Restart/cold-start safety | `pass_with_caveats` | Not run for this salvage; final zero exposure/process checks were run instead. |
+| `restart-cold-start-safety` | Restart/cold-start safety | `not_run` | Not run for this salvage; final zero-exposure and process checks were run instead. |
 | `postgame-score` | Postgame score | `pass` | Official final score was verified and contest 41 scored. |
 | `postgame-settle` | Postgame settle | `pass` | Speculation 30 settled to home/lower/Toronto. |
 | `postgame-claim` | Postgame claim/no-op | `pass` | Winning lower/Toronto positions claimed; losing upper/Yankees position documented no-op. |

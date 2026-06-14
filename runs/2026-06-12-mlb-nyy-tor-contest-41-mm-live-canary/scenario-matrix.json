@@ -1,4 +1,6 @@
 {
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/scenario-matrix.schema.json",
+  "schemaVersion": 2,
   "artifactId": "2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary",
   "generatedAt": "2026-06-13T04:45:19Z",
   "runClass": "mm-live-canary",
@@ -68,9 +70,10 @@
     },
     {
       "id": "restart-cold-start-safety",
-      "notes": "Not run for this salvage; final zero exposure/process checks were run instead.",
+      "notes": "Not run for this salvage; final zero-exposure and process checks were run instead.",
       "scenario": "Restart/cold-start safety",
-      "status": "pass_with_caveats"
+      "status": "not_run",
+      "evidence": null
     },
     {
       "evidence": "raw/postgame-lifecycle.sanitized.json",
@@ -100,6 +103,5 @@
       "scenario": "Cost within cap",
       "status": "pass"
     }
-  ],
-  "schemaVersion": 2
+  ]
 }

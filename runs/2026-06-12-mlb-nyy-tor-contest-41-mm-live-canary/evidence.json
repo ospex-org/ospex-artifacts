@@ -276,7 +276,7 @@
   },
   "verdict": {
     "label": "FULL_GREEN",
-    "reason": "Live moneyline MM canary posted bounded quotes, completed one controlled fill, scored, settled, claimed winning positions, and ended with zero target exposure."
+    "reason": "Live moneyline MM canary posted bounded quotes, completed one controlled fill, scored, settled, claimed winning positions, and ended with zero target exposure; caveats are limited to the not-run restart/cold-start probe, final settlement confirmation via indexer/protocol convergence after the CLI read omitted winSide/settledAt, and unrelated out-of-scope flow-wallet positions."
   },
   "walletRoles": {
     "controlledTaker": {

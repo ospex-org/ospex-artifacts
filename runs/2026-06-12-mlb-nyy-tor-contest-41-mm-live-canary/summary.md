@@ -1,11 +1,11 @@
 # NYY-TOR contest 41 MM live canary — FULL GREEN / complete_verified_with_caveats
 
-**Status:** `complete_verified_with_caveats` / **FULL GREEN with caveats**.  
+**Status:** `complete_verified_with_caveats` / **FULL GREEN with caveats**.
 Captured: `2026-06-13T04:45:19Z`.
 
 ## Verdict
 
-NYY @ TOR contest `41` / speculation `30` completed the Phase 2 live MM canary lifecycle. The market-maker live run was allowlisted to the single moneyline target, posted exactly two tiny short-expiry commitments, executed exactly one controlled partial fill, captured the fill through `own-state-stream`, shut down cleanly, and drained public/API-visible quote exposure to zero.
+NYY @ TOR contest `41` / speculation `30` completed the live MM canary lifecycle. The market-maker live run was allowlisted to the single moneyline target, posted exactly two tiny short-expiry commitments, executed exactly one controlled partial fill, captured the fill through `own-state-stream`, shut down cleanly, and drained public/API-visible quote exposure to zero.
 
 Postgame completion then verified the MLB Stats API Final score — New York Yankees `5`, Toronto Blue Jays `8` — scored contest `41`, settled speculation `30` to Toronto/home/lower, claimed the two winning lower/Toronto positions, and verified final target claim sweeps and public commitment exposure at zero.
 
@@ -77,6 +77,7 @@ Postgame completion then verified the MLB Stats API Final score — New York Yan
 - This is the NYY/TOR salvage lifecycle only. The missed MIA/PIT primary remains skipped/preserved evidence, not a public failure artifact.
 - Final CLI `speculations show` omitted win-side/settledAt fields after settlement; indexer/protocol position rows showed spec `30` closed with `win_side=home` and `settled_at=2026-06-13T04:30:45Z`, and claim/no-op checks converged.
 - Flow wallet has unrelated active positions outside contest/spec `41/30`; target-scoped active/claimable/pending-settle counts are zero.
+- The raw indexer snapshot preserves the losing upper/Yankees row's `profitUSDC` mirror value from matched-pair accounting; it is not a realized gain and was not claimed.
 - No restart/cold-start probe was performed for the salvage; final zero-exposure and process checks were performed instead.
 
 ## Files

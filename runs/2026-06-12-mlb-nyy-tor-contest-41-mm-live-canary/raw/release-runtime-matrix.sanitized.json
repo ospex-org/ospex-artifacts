@@ -3,7 +3,7 @@
   "gates": {
     "liveWindowBuildAndDryRun": {
       "exitCode": 0,
-      "source": "LIVE_WINDOW_HANDOFF.md"
+      "source": "live-window build + dry-run gate (operator run log)"
     },
     "yarnBuild": {
       "exitCode": 0,
