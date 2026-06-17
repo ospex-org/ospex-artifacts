@@ -1,0 +1,14 @@
+{
+  "txHash": "0x7d8ad8dc09db574e7b4ab1e713d8b1ff16b2df9dc0e0bc73335bb090849273cc",
+  "receiptStatus": "0x1",
+  "blockNumber": "88671584",
+  "gasUsed": "419833",
+  "effectiveGasPriceWei": "282121027070",
+  "computedGasCostPOL": "0.11844371715787931",
+  "balanceDeltas": {
+    "takerPOL": "-0.11844371715787931",
+    "takerUSDC": "-0.099999",
+    "makerUSDC": "-0.0813"
+  },
+  "controlledCostWithinFiveUsdCap": true
+}

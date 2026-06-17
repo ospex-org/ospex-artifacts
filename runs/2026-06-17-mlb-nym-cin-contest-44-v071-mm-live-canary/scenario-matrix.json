@@ -1,0 +1,107 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/scenario-matrix.schema.json",
+  "schemaVersion": 2,
+  "artifactId": "2026-06-17-mlb-nym-cin-contest-44-v071-mm-live-canary",
+  "generatedAt": "2026-06-17T16:21:27Z",
+  "runClass": "mm-live-canary",
+  "scenarios": [
+    {
+      "id": "target-preflight",
+      "scenario": "Target preflight and allowlist",
+      "status": "pass",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "notes": "Primary NYM away @ CIN home contest 44/spec 33 passed pre-live gates; fallback not used."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "scenario": "Repo/runtime gates",
+      "status": "pass",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "notes": "v0.7.1 CLI/SDK and MM SHA/pins verified; heavy setup gates reused because worktree unchanged."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "scenario": "Wallet auth, balances, allowances",
+      "status": "pass",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Reserved live maker was clean before start; maker and controlled taker balances/allowances sufficient."
+    },
+    {
+      "id": "bounded-approvals",
+      "scenario": "Bounded approvals / no unlimited approvals",
+      "status": "pass",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "notes": "autoApprove false; no new approvals and no unlimited approval creation."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "scenario": "Dry-run quote loop",
+      "status": "pass",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "notes": "Pre-live quote dry-run for contest 44 returned pipeline=computed and canQuote=true."
+    },
+    {
+      "id": "live-commitments-posted",
+      "scenario": "Live commitments posted",
+      "status": "pass",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "notes": "10 tiny live commitments posted over the bounded live loop, all target 44/33 only."
+    },
+    {
+      "id": "live-fill",
+      "scenario": "Controlled live fill",
+      "status": "pass",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "Exactly one controlled fill succeeded against live-posted commitment 0x7818744c\u2026 using mm-shakeout-flow-a."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "scenario": "Own-state SSE canonical fill source",
+      "status": "pass",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "Telemetry captured the fill with source own-state-stream."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "scenario": "Exposure drained to zero",
+      "status": "pass",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "Final public/API/MM visible-open exposure is zero and no orphan live MM process remained."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "scenario": "Restart/cold-start safety",
+      "status": "not_run",
+      "evidence": null,
+      "notes": "Not run for this live-window artifact; final zero-exposure and process checks were run instead."
+    },
+    {
+      "id": "postgame-score",
+      "scenario": "Postgame score",
+      "status": "deferred",
+      "evidence": null,
+      "notes": "Game had not reached final state at artifact cut; scoring is POSTGAME-DEFERRED."
+    },
+    {
+      "id": "postgame-settle",
+      "scenario": "Postgame settle",
+      "status": "deferred",
+      "evidence": null,
+      "notes": "Speculation 33 settlement is POSTGAME-DEFERRED."
+    },
+    {
+      "id": "postgame-claim",
+      "scenario": "Postgame claim/no-op",
+      "status": "deferred",
+      "evidence": null,
+      "notes": "Winning-position claim is POSTGAME-DEFERRED."
+    },
+    {
+      "id": "cost-within-cap",
+      "scenario": "Cost within cap",
+      "status": "pass",
+      "evidence": "raw/tx-receipts.summary.json",
+      "notes": "Controlled live fill stayed within the <= $5 cap."
+    }
+  ]
+}
