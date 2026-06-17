@@ -2,15 +2,15 @@
   "artifactId": "2026-06-17-mlb-nym-cin-contest-44-v071-mm-live-canary",
   "artifactPath": "runs/2026-06-17-mlb-nym-cin-contest-44-v071-mm-live-canary/",
   "artifactType": "run",
-  "artifactStatus": "partial",
-  "status": "partial",
-  "capturedAtUtc": "2026-06-17T16:21:27Z",
+  "artifactStatus": "complete_verified_with_caveats",
+  "status": "complete_verified_with_caveats",
+  "capturedAtUtc": "2026-06-17T19:42:04Z",
   "date": "2026-06-17",
   "network": "polygon",
   "chainId": 137,
   "verdict": {
-    "label": "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED",
-    "reason": "v0.7.1 live-window canary on NYM away @ CIN home contest 44/speculation 33 posted bounded live MM commitments, executed exactly one controlled fill from mm-shakeout-flow-a, observed the fill canonically via own-state SSE, stopped the MM cleanly, and ended with zero public/API/MM visible-open exposure. Postgame score, settle, and claim remain deferred because the game was not final at artifact cut."
+    "label": "FULL_GREEN",
+    "reason": "The v0.7.1 NYM @ CIN MM canary completed the full lifecycle: official final score New York Mets 9, Cincinnati Reds 1 was verified; contest 44 was scored; speculation 33 settled to away/upper/New York Mets; the winning controlled live-fill and setup seed/open positions were claimed; final claim sweeps, public commitments/orderbook, and live-MM process checks are zero. Caveats are limited to a not-run restart/cold-start probe and CLI readback omission of winSide/settledAt despite converged indexer/protocol state."
   },
   "artifactFiles": {
     "evidence": "evidence.json",
@@ -31,7 +31,10 @@
     "fill": "raw/live-fill.sanitized.json",
     "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
     "zeroExposure": "raw/zero-exposure.sanitized.json",
-    "txReceipts": "raw/tx-receipts.summary.json"
+    "txReceipts": "raw/tx-receipts.summary.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "finalContestShow": "raw/final-contest-show.sanitized.json"
   },
   "target": {
     "game": "New York Mets @ Cincinnati Reds",
@@ -61,6 +64,15 @@
         "marketOddsAmerican": "+115",
         "identity": "underdog"
       }
+    },
+    "contestStatusAfterPostgame": "scored",
+    "speculationStatusAfterPostgame": "closed",
+    "postgameStatus": "complete",
+    "finalScore": {
+      "awayRuns": 9,
+      "homeRuns": 1,
+      "winner": "New York Mets",
+      "winnerProtocolSide": "upper"
     }
   },
   "wallets": {
@@ -95,7 +107,25 @@
       "publicMakerVisibleCommitments": 0,
       "publicContestSpecVisibleCommitments": 0,
       "contestOrderbookCount": 0,
-      "orphanProcessCount": 0
+      "orphanProcessCount": 0,
+      "targetActivePositions": {
+        "maker": 0,
+        "taker": 0,
+        "seedMaker": 0,
+        "seedTaker": 0
+      },
+      "targetClaimablePositions": {
+        "maker": 0,
+        "taker": 0,
+        "seedMaker": 0,
+        "seedTaker": 0
+      },
+      "targetPendingSettlePositions": {
+        "maker": 0,
+        "taker": 0,
+        "seedMaker": 0,
+        "seedTaker": 0
+      }
     }
   },
   "release": {
@@ -108,20 +138,89 @@
     "liveFillTakerRiskUSDC": "0.099999",
     "liveFillMakerFilledRiskUSDC": "0.081300",
     "liveMatchGasPOL": "0.11844371715787931",
-    "totalTrackedGasPOL": "0.11844371715787931",
-    "controlledSpendWithinFiveUsdCap": true
+    "totalTrackedGasPOL": "0.420050875134059424",
+    "controlledSpendWithinFiveUsdCap": true,
+    "postgameGasPOL": "0.301607157976180114",
+    "flowClaimUSDC": "0.181299",
+    "seedMakerClaimUSDC": "0.100000"
   },
   "postgame": {
-    "status": "POSTGAME_DEFERRED",
-    "nextSteps": [
-      "score contest 44 after official MLB final",
-      "settle speculation 33",
-      "claim winning maker/taker position(s)",
-      "update/supersede artifact to FULL_GREEN if earned"
-    ]
+    "status": "complete",
+    "capturedAtUtc": "2026-06-17T19:42:04Z",
+    "finalScore": {
+      "awayTeam": "New York Mets",
+      "awayRuns": 9,
+      "homeTeam": "Cincinnati Reds",
+      "homeRuns": 1,
+      "winner": "New York Mets",
+      "winnerProtocolSide": "upper",
+      "winnerRole": "away"
+    },
+    "score": {
+      "contestId": "44",
+      "txHash": "0xec13a28e3fb6b1ca8ee2d8a66bb413a329be39cebc09857e348cfd486cde82de",
+      "receiptStatus": "0x1",
+      "requestId": "0xfc5bd721306eba535e6020d69d571e63ddf5165826105bb9a6f88549143c86d3",
+      "contestStatus": "scored",
+      "awayScore": 9,
+      "homeScore": 1
+    },
+    "settle": {
+      "speculationId": "33",
+      "txHash": "0xc5a9d1b68781b519484f903debdd179c6ffcf308fc1001cbc695519a143b957e",
+      "receiptStatus": "0x1",
+      "winSide": "away/upper/New York Mets",
+      "settledAt": "2026-06-17T19:36:52+00:00",
+      "speculationStatus": "closed"
+    },
+    "claims": [
+      {
+        "walletLabel": "mm-shakeout-flow-a",
+        "wallet": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494",
+        "positionId": "33_0x1de13292256fddca9eea1ae53a79a83243cfd494_0",
+        "side": "upper / away / New York Mets",
+        "source": "live MM fill",
+        "commitmentHash": "0x7818744c708eb986aefcfe7ec70913821652bd061268f61287f0a78b22a6662b",
+        "payoutWei6": "181299",
+        "payoutUSDC": "0.181299",
+        "txHash": "0x2e5d50bec4b618768c6193fcbe9cdddffd9e3813f2090cb9b50f6f3c9c5141c1",
+        "receiptStatus": "0x1"
+      },
+      {
+        "walletLabel": "ospex-stage-maker-b",
+        "wallet": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+        "positionId": "33_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_0",
+        "side": "upper / away / New York Mets",
+        "source": "setup seed/open fill",
+        "commitmentHash": "0x0beaafcb27e4521935b69fb5849b8f7dcd52d2e4210bf6b32d833393aee00cb1",
+        "payoutWei6": "100000",
+        "payoutUSDC": "0.100000",
+        "txHash": "0x390cf95777650673d2971377ca1914dc27274039610921bf9d860ffc942818e9",
+        "receiptStatus": "0x1"
+      }
+    ],
+    "noOps": [
+      {
+        "walletLabel": "mm-shakeout-maker-a",
+        "wallet": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+        "positionId": "33_0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2_1",
+        "side": "lower / home / Cincinnati Reds",
+        "result": "lost",
+        "claimStatus": "not claimable"
+      },
+      {
+        "walletLabel": "ospex-fresh-user",
+        "wallet": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+        "positionId": "33_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+        "side": "lower / home / Cincinnati Reds",
+        "result": "lost",
+        "claimStatus": "not claimable"
+      }
+    ],
+    "finalClaimSweepsEmpty": true
   },
   "caveats": [
-    "Postgame score/settle/claim were intentionally deferred because the game was not final at artifact cut.",
-    "Restart/cold-start probe was not part of this live-window artifact; final zero-exposure and orphan-process checks were run."
+    "Restart/cold-start probe was not run for this canary; final zero-exposure and no-orphan-process checks were run instead.",
+    "CLI speculations.show omitted winSide/settledAt at final read; the committed postgame evidence includes indexer/projection convergence showing win_side=away and settled_at populated."
   ]
 }

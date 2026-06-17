@@ -1,5 +1,5 @@
 {
-  "checkedAtUtc": "2026-06-17T16:21:27Z",
+  "checkedAtUtc": "2026-06-17T19:42:04Z",
   "publicMakerVisibleCommitments": 0,
   "publicContestSpecVisibleCommitments": 0,
   "contestOrderbookCount": 0,
@@ -17,25 +17,25 @@
     "expired": 8,
     "authoritativelyInvalidated": 0
   },
-  "activePositionsRetainedForPostgame": {
-    "maker": {
-      "activeCount": 1,
-      "pendingSettleCount": 0,
-      "claimableCount": 0,
-      "estimatedPayoutUSDC": 0,
-      "estimatedPayoutWei6": "0",
-      "pendingSettlePayoutUSDC": 0,
-      "pendingSettlePayoutWei6": "0"
-    },
-    "taker": {
-      "activeCount": 1,
-      "pendingSettleCount": 0,
-      "claimableCount": 0,
-      "estimatedPayoutUSDC": 0,
-      "estimatedPayoutWei6": "0",
-      "pendingSettlePayoutUSDC": 0,
-      "pendingSettlePayoutWei6": "0"
-    }
+  "zeroOpenExposure": true,
+  "targetActivePositions": {
+    "maker": 0,
+    "taker": 0,
+    "seedMaker": 0,
+    "seedTaker": 0
   },
-  "zeroOpenExposure": true
+  "targetClaimablePositions": {
+    "maker": 0,
+    "taker": 0,
+    "seedMaker": 0,
+    "seedTaker": 0
+  },
+  "targetPendingSettlePositions": {
+    "maker": 0,
+    "taker": 0,
+    "seedMaker": 0,
+    "seedTaker": 0
+  },
+  "finalClaimSweepsEmpty": true,
+  "postgameLifecycleComplete": true
 }

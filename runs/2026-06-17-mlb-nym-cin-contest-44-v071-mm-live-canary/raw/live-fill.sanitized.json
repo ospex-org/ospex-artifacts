@@ -25,8 +25,7 @@
       "takerSide": "away",
       "takerTeam": "New York Mets",
       "riskAmount": "100000",
-      "signatureRedacted": true,
-      "signedPayloadRedacted": true
+      "signatureRedacted": true
     },
     "fill": {
       "txHash": "0x7d8ad8dc09db574e7b4ab1e713d8b1ff16b2df9dc0e0bc73335bb090849273cc",

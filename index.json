@@ -1,7 +1,7 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-06-17T16:26:56Z",
+  "generatedAt": "2026-06-17T19:42:04Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
@@ -29,7 +29,7 @@
       "date": "2026-06-17",
       "network": "polygon",
       "rawPath": "runs/2026-06-17-mlb-nym-cin-contest-44-v071-mm-live-canary/raw/",
-      "status": "partial",
+      "status": "complete_verified_with_caveats",
       "summaryPath": "runs/2026-06-17-mlb-nym-cin-contest-44-v071-mm-live-canary/summary.md",
       "publishedAt": "2026-06-17T16:26:56Z"
     },

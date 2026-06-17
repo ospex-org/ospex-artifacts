@@ -12,7 +12,7 @@
 | own-state-sse-canonical-fill | Own-state SSE canonical fill source | pass | raw/own-state-sse-summary.sanitized.json | Telemetry captured the fill with source own-state-stream. |
 | exposure-drain-zero | Exposure drained to zero | pass | raw/zero-exposure.sanitized.json | Final public/API/MM visible-open exposure is zero and no orphan live MM process remained. |
 | restart-cold-start-safety | Restart/cold-start safety | not_run |  | Not run for this live-window artifact; final zero-exposure and process checks were run instead. |
-| postgame-score | Postgame score | deferred |  | Game had not reached final state at artifact cut; scoring is POSTGAME-DEFERRED. |
-| postgame-settle | Postgame settle | deferred |  | Speculation 33 settlement is POSTGAME-DEFERRED. |
-| postgame-claim | Postgame claim/no-op | deferred |  | Winning-position claim is POSTGAME-DEFERRED. |
-| cost-within-cap | Cost within cap | pass | raw/tx-receipts.summary.json | Controlled live fill stayed within the <= $5 cap. |
+| postgame-score | Postgame score | pass | raw/postgame-lifecycle.sanitized.json | Official MLB final score NYM 9, CIN 1 was verified and contest 44 scored. |
+| postgame-settle | Postgame settle | pass | raw/postgame-lifecycle.sanitized.json | Speculation 33 settled to away/upper/New York Mets. |
+| postgame-claim | Postgame claim/no-op | pass | raw/postgame-lifecycle.sanitized.json | Winning upper/New York Mets live-fill and setup seed positions were claimed; losing lower/Cincinnati positions are no-op. |
+| cost-within-cap | Cost within cap | pass | raw/tx-receipts.summary.json | Tracked live + postgame gas and USDC movement stayed within the low-value canary envelope. |

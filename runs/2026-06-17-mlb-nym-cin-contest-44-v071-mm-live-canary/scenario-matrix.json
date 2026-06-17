@@ -2,7 +2,7 @@
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/scenario-matrix.schema.json",
   "schemaVersion": 2,
   "artifactId": "2026-06-17-mlb-nym-cin-contest-44-v071-mm-live-canary",
-  "generatedAt": "2026-06-17T16:21:27Z",
+  "generatedAt": "2026-06-17T19:42:04Z",
   "runClass": "mm-live-canary",
   "scenarios": [
     {
@@ -78,30 +78,30 @@
     {
       "id": "postgame-score",
       "scenario": "Postgame score",
-      "status": "deferred",
-      "evidence": null,
-      "notes": "Game had not reached final state at artifact cut; scoring is POSTGAME-DEFERRED."
+      "status": "pass",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Official MLB final score NYM 9, CIN 1 was verified and contest 44 scored."
     },
     {
       "id": "postgame-settle",
       "scenario": "Postgame settle",
-      "status": "deferred",
-      "evidence": null,
-      "notes": "Speculation 33 settlement is POSTGAME-DEFERRED."
+      "status": "pass",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Speculation 33 settled to away/upper/New York Mets."
     },
     {
       "id": "postgame-claim",
       "scenario": "Postgame claim/no-op",
-      "status": "deferred",
-      "evidence": null,
-      "notes": "Winning-position claim is POSTGAME-DEFERRED."
+      "status": "pass",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Winning upper/New York Mets live-fill and setup seed positions were claimed; losing lower/Cincinnati positions are no-op."
     },
     {
       "id": "cost-within-cap",
       "scenario": "Cost within cap",
       "status": "pass",
       "evidence": "raw/tx-receipts.summary.json",
-      "notes": "Controlled live fill stayed within the <= $5 cap."
+      "notes": "Tracked live + postgame gas and USDC movement stayed within the low-value canary envelope."
     }
   ]
 }

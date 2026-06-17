@@ -2,11 +2,11 @@
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
   "schemaVersion": 1,
   "artifactId": "2026-06-17-mlb-nym-cin-contest-44-v071-mm-live-canary",
-  "generatedAt": "2026-06-17T16:21:27Z",
+  "generatedAt": "2026-06-17T19:42:04Z",
   "runClass": "mm-live-canary",
   "verdict": {
-    "label": "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED",
-    "reason": "v0.7.1 live-window canary on NYM away @ CIN home contest 44/speculation 33 posted bounded live MM commitments, executed exactly one controlled fill from mm-shakeout-flow-a, observed the fill canonically via own-state SSE, stopped the MM cleanly, and ended with zero public/API/MM visible-open exposure. Postgame score, settle, and claim remain deferred because the game was not final at artifact cut."
+    "label": "FULL_GREEN",
+    "reason": "The v0.7.1 NYM @ CIN MM canary completed the full lifecycle: official final score New York Mets 9, Cincinnati Reds 1 was verified; contest 44 was scored; speculation 33 settled to away/upper/New York Mets; the winning controlled live-fill and setup seed/open positions were claimed; final claim sweeps, public commitments/orderbook, and live-MM process checks are zero. Caveats are limited to a not-run restart/cold-start probe and CLI readback omission of winSide/settledAt despite converged indexer/protocol state."
   },
   "capabilities": [
     {
@@ -82,30 +82,30 @@
     {
       "id": "postgame-score",
       "capability": "Postgame score",
-      "proof": "deferred",
-      "evidence": null,
-      "notes": "POSTGAME-DEFERRED because NYM @ CIN was not final at artifact cut."
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Official final score New York Mets 9, Cincinnati Reds 1 verified and contest 44 scored."
     },
     {
       "id": "postgame-settle",
       "capability": "Postgame settle",
-      "proof": "deferred",
-      "evidence": null,
-      "notes": "POSTGAME-DEFERRED for speculation 33."
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Speculation 33 settled to away/upper/New York Mets."
     },
     {
       "id": "postgame-claim",
       "capability": "Postgame claim/no-op",
-      "proof": "deferred",
-      "evidence": null,
-      "notes": "POSTGAME-DEFERRED for maker/taker winning positions."
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Winning upper/New York Mets positions for mm-shakeout-flow-a and ospex-stage-maker-b claimed; losing lower/Cincinnati positions no-op."
     },
     {
       "id": "cost-within-cap",
       "capability": "Cost within cap",
       "proof": "proven_live",
       "evidence": "raw/tx-receipts.summary.json",
-      "notes": "Live fill taker risk/gas stayed under the <= $5 cap."
+      "notes": "Live + postgame controlled costs stayed within the low-value canary envelope."
     }
   ],
   "zeroExposure": {
@@ -129,7 +129,7 @@
       "txHash": "0x173f061fa56934fe51c906d9635d3a53b7c1d75a703e811d7b931d1b4143026e",
       "status": "success",
       "operatorControlled": true,
-      "purpose": "Setup handoff seed/open moneyline fill for speculation 33; not the live MM controlled fill."
+      "purpose": "Setup handoff seed/open moneyline fill for speculation 33."
     },
     {
       "category": "match-commitment",
@@ -137,6 +137,34 @@
       "status": "success",
       "operatorControlled": true,
       "purpose": "Exactly one controlled live MM fill by mm-shakeout-flow-a against commitment 0x7818744c708eb986aefcfe7ec70913821652bd061268f61287f0a78b22a6662b."
+    },
+    {
+      "category": "score-request",
+      "txHash": "0xec13a28e3fb6b1ca8ee2d8a66bb413a329be39cebc09857e348cfd486cde82de",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Score contest 44 after official MLB final source showed New York Mets 9, Cincinnati Reds 1."
+    },
+    {
+      "category": "settle",
+      "txHash": "0xc5a9d1b68781b519484f903debdd179c6ffcf308fc1001cbc695519a143b957e",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 33 to away/upper/New York Mets."
+    },
+    {
+      "category": "claim",
+      "txHash": "0x2e5d50bec4b618768c6193fcbe9cdddffd9e3813f2090cb9b50f6f3c9c5141c1",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim mm-shakeout-flow-a winning live-fill upper/New York Mets position."
+    },
+    {
+      "category": "claim",
+      "txHash": "0x390cf95777650673d2971377ca1914dc27274039610921bf9d860ffc942818e9",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim ospex-stage-maker-b winning setup seed/open upper/New York Mets position."
     }
   ]
 }
