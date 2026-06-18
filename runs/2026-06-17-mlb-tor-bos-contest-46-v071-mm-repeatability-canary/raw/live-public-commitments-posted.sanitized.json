@@ -1,0 +1,92 @@
+{
+  "runId": "2026-06-17T21-23-35-505Z-0v40sc",
+  "maker": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+  "contestId": "46",
+  "speculationId": "35",
+  "submitCount": 9,
+  "submittedCommitments": [
+    {
+      "ts": "2026-06-17T21:23:48.614Z",
+      "commitmentHash": "0xaec41bfae3df58a3ea6f181eac75d76f0f67db7924a916e210887ffe60c0aa9c",
+      "takerSide": "away",
+      "makerSide": "home",
+      "makerOddsTick": 190,
+      "riskAmountWei6": "100000",
+      "expiryUnixSec": 1781731547
+    },
+    {
+      "ts": "2026-06-17T21:23:49.041Z",
+      "commitmentHash": "0x2c8998343f6a54faec42077dd4a38bb5a135d4e13a9d361b4a3db19987964e7c",
+      "takerSide": "home",
+      "makerSide": "away",
+      "makerOddsTick": 211,
+      "riskAmountWei6": "100000",
+      "expiryUnixSec": 1781731547
+    },
+    {
+      "ts": "2026-06-17T21:27:07.759Z",
+      "commitmentHash": "0x3725139781c39a5a5dfc77b21e3f925e385baae5c7c251dee51b4398f6eb5838",
+      "takerSide": "away",
+      "makerSide": "home",
+      "makerOddsTick": 190,
+      "riskAmountWei6": "100000",
+      "expiryUnixSec": 1781731747
+    },
+    {
+      "ts": "2026-06-17T21:27:08.066Z",
+      "commitmentHash": "0x83d6f22a02dd5d625f0be68a1d1d6b8cc8535851784c08a0a9dcebc160402e18",
+      "takerSide": "home",
+      "makerSide": "away",
+      "makerOddsTick": 211,
+      "riskAmountWei6": "100000",
+      "expiryUnixSec": 1781731747
+    },
+    {
+      "ts": "2026-06-17T21:30:15.780Z",
+      "commitmentHash": "0xd15fe5b635df93662ced921376acdff6e596a230fb14ee03c8e19adc2787daaa",
+      "takerSide": "away",
+      "makerSide": "home",
+      "makerOddsTick": 188,
+      "riskAmountWei6": "100000",
+      "expiryUnixSec": 1781731935
+    },
+    {
+      "ts": "2026-06-17T21:30:16.130Z",
+      "commitmentHash": "0x55632614735ccbaab375858db056321475bb3d8f0ab68e349bba46c5b93c1b47",
+      "takerSide": "home",
+      "makerSide": "away",
+      "makerOddsTick": 214,
+      "riskAmountWei6": "100000",
+      "expiryUnixSec": 1781731935
+    },
+    {
+      "ts": "2026-06-17T21:33:34.509Z",
+      "commitmentHash": "0x9d3242ae2ee47e1b0aa38ba1aedbc085955c5dcfaedf7f36fa4ae252d9b7fd1f",
+      "takerSide": "away",
+      "makerSide": "home",
+      "makerOddsTick": 188,
+      "riskAmountWei6": "100000",
+      "expiryUnixSec": 1781732133
+    },
+    {
+      "ts": "2026-06-17T21:33:34.810Z",
+      "commitmentHash": "0xe84032f1a0f3d8a4b92bf6774e0e117fe5fe610bb678c2afa69aecf34709e2e8",
+      "takerSide": "home",
+      "makerSide": "away",
+      "makerOddsTick": 214,
+      "riskAmountWei6": "100000",
+      "expiryUnixSec": 1781732133
+    },
+    {
+      "ts": "2026-06-17T21:33:57.276Z",
+      "commitmentHash": "0x26a6c9d35267682d775f32eedec8ee8eac4064d3a06576d9ac1746dcf27d9104",
+      "takerSide": "home",
+      "makerSide": "away",
+      "makerOddsTick": 214,
+      "riskAmountWei6": "100000",
+      "expiryUnixSec": 1781732156
+    }
+  ],
+  "finalVisibleOpenCommitments": 0,
+  "telemetryErrorCount": 0
+}

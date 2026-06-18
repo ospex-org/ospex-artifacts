@@ -1,0 +1,106 @@
+{
+  "primary": {
+    "contestId": "46",
+    "speculationId": "35",
+    "finalScore": {
+      "awayTeam": "Toronto Blue Jays",
+      "awayRuns": 3,
+      "homeTeam": "Boston Red Sox",
+      "homeRuns": 0,
+      "winner": "Toronto Blue Jays",
+      "winnerProtocolSide": "upper",
+      "winnerRole": "away"
+    },
+    "score": {
+      "txHash": "0x5deff565bf47d9b56fdf60fc5cb14085653b815d84c55e175cabcc8acea3e70e",
+      "receiptStatus": "0x1",
+      "requestId": "0xe3b0aaa439fc61ad244d97c87f1da33eb8ccaf485c6703b9d9b23ae8792432f2",
+      "contestStatus": "scored",
+      "awayScore": 3,
+      "homeScore": 0
+    },
+    "settle": {
+      "txHash": "0x735adad17d9918b4fb3bf493a0442cde6d64b24e05960fa33ad346e74f9c4ed2",
+      "receiptStatus": "0x1",
+      "winSide": "away/upper/Toronto Blue Jays",
+      "settledAt": "2026-06-18T09:15:50Z",
+      "speculationStatus": "closed"
+    },
+    "claims": [
+      {
+        "walletLabel": "ospex-stage-maker-a",
+        "wallet": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+        "positionId": "35_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_0",
+        "side": "upper / away / Toronto Blue Jays",
+        "source": "setup seed/open fill",
+        "commitmentHash": "0x980534f17a6bc31a20eda82e3bcd2cbe89b4d8ca6c032985d1734b7adae975b8",
+        "payoutWei6": "100000",
+        "payoutUSDC": "0.100000",
+        "txHash": "0x315892ddf9230d6234f4a4a5a01974eaf7189f8b50f338d9b27e38c4b05afb82",
+        "receiptStatus": "0x1"
+      },
+      {
+        "walletLabel": "mm-shakeout-maker-a",
+        "wallet": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+        "positionId": "35_0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2_0",
+        "side": "upper / away / Toronto Blue Jays",
+        "source": "controlled live MM fill",
+        "commitmentHash": "0xe84032f1a0f3d8a4b92bf6774e0e117fe5fe610bb678c2afa69aecf34709e2e8",
+        "payoutWei6": "214000",
+        "payoutUSDC": "0.214000",
+        "txHash": "0x81362c0844457b2e05652caf446e159b06ebcbafba0cfd1d8998e162bd2df100",
+        "receiptStatus": "0x1"
+      }
+    ],
+    "noOps": [
+      {
+        "walletLabel": "ospex-fresh-user",
+        "wallet": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+        "positionId": "35_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+        "side": "lower / home / Boston Red Sox",
+        "result": "lost",
+        "claimStatus": "not claimable"
+      },
+      {
+        "walletLabel": "mm-shakeout-flow-a",
+        "wallet": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494",
+        "positionId": "35_0x1de13292256fddca9eea1ae53a79a83243cfd494_1",
+        "side": "lower / home / Boston Red Sox",
+        "result": "lost",
+        "claimStatus": "not claimable"
+      }
+    ],
+    "finalClaimSweepsEmpty": true
+  },
+  "fallbackSetupCleanup": {
+    "contestId": "47",
+    "speculationId": "36",
+    "finalScore": {
+      "awayTeam": "Cleveland Guardians",
+      "awayRuns": 4,
+      "homeTeam": "Milwaukee Brewers",
+      "homeRuns": 9,
+      "winner": "Milwaukee Brewers",
+      "winnerProtocolSide": "lower",
+      "winnerRole": "home"
+    },
+    "scoreTxHash": "0xa507e0974521bd84d0197bd301617a93b75b5863a9ab93e02a1e8aaf9458c15b",
+    "settleTxHash": "0xdb179c81ccb43066e8c0fa045067b3d4bdf062251b76bf2f3018aa8ff4c4cf0b",
+    "claimTxHash": "0x32e3d39f793b0d166f29f7f3cc6d218c4c708bbd74cd3fc2719f4c02a00924bc",
+    "claim": {
+      "walletLabel": "ospex-fresh-user",
+      "wallet": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+      "positionId": "36_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+      "side": "lower / home / Milwaukee Brewers",
+      "payoutWei6": "100000",
+      "payoutUSDC": "0.100000"
+    },
+    "noOp": {
+      "walletLabel": "ospex-stage-maker-a",
+      "side": "upper / away / Cleveland Guardians",
+      "result": "lost",
+      "claimStatus": "not claimable"
+    },
+    "finalClaimSweepsEmpty": true
+  }
+}

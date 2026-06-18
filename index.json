@@ -1,10 +1,11 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-06-17T19:42:04Z",
+  "generatedAt": "2026-06-18T09:27:04Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
+      "runs/2026-06-17-mlb-tor-bos-contest-46-v071-mm-repeatability-canary/evidence.json",
       "runs/2026-06-17-mlb-nym-cin-contest-44-v071-mm-live-canary/evidence.json",
       "runs/2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary/evidence.json",
       "runs/2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary/evidence.json",
@@ -13,8 +14,7 @@
       "runs/2026-06-08-mlb-sea-bal-contest-32-v054-ownstate-sse-repeatability/evidence.json",
       "runs/2026-06-08-mlb-sf-chc-v054-ownstate-sse-repeatability-canary/evidence.json",
       "runs/2026-06-07-mlb-pit-atl-contest-30-v054-ownstate-sse-green-candidate/evidence.json",
-      "runs/2026-06-06-mlb-mil-col-contest-29-v054-ownstate-sse-soak/evidence.json",
-      "runs/2026-05-28-mlb-tor-bal-contest-28-v048-mm-acceptance/evidence.json"
+      "runs/2026-06-06-mlb-mil-col-contest-29-v054-ownstate-sse-soak/evidence.json"
     ],
     "release-acceptance": [
       "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.json"
@@ -22,6 +22,17 @@
     "daily-digest": []
   },
   "recentArtifacts": [
+    {
+      "artifactId": "2026-06-17-mlb-tor-bos-contest-46-v071-mm-repeatability-canary",
+      "artifactType": "run",
+      "dataPath": "runs/2026-06-17-mlb-tor-bos-contest-46-v071-mm-repeatability-canary/evidence.json",
+      "date": "2026-06-17",
+      "network": "polygon",
+      "rawPath": "runs/2026-06-17-mlb-tor-bos-contest-46-v071-mm-repeatability-canary/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-06-17-mlb-tor-bos-contest-46-v071-mm-repeatability-canary/summary.md",
+      "publishedAt": "2026-06-18T09:27:04Z"
+    },
     {
       "artifactId": "2026-06-17-mlb-nym-cin-contest-44-v071-mm-live-canary",
       "artifactType": "run",
@@ -266,9 +277,9 @@
       "scope": "year",
       "year": 2026,
       "path": "archive/2026/index.json",
-      "artifactCount": 21,
+      "artifactCount": 22,
       "oldestPublishedAt": "2026-05-20T02:48:35Z",
-      "newestPublishedAt": "2026-06-17T16:26:56Z"
+      "newestPublishedAt": "2026-06-18T09:27:04Z"
     }
   ]
 }

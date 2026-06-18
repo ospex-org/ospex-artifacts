@@ -1,0 +1,88 @@
+{
+  "capturedAtUtc": "2026-06-17T21:23:02.190Z",
+  "selectedTarget": {
+    "game": "Toronto Blue Jays @ Boston Red Sox",
+    "gamePk": 824746,
+    "gameId": "1d26ddba-0368-476a-93e5-6660733e1e4e",
+    "slug": "tor-bos-2026-06-17",
+    "contestId": "46",
+    "speculationId": "35",
+    "startTimeUtc": "2026-06-17T22:45:00Z",
+    "officialStatus": {
+      "abstractGameState": "Preview",
+      "codedGameState": "P",
+      "detailedState": "Pre-Game",
+      "statusCode": "P",
+      "startTimeTBD": false,
+      "abstractGameCode": "P"
+    },
+    "identityOk": true,
+    "safeBeforeLive": true,
+    "quoteDryRun": {
+      "pipeline": "computed",
+      "canQuote": true,
+      "awayQuote": {
+        "takerSide": "away",
+        "quoteProb": 0.47374768993531824,
+        "quoteDecimal": 2.110828234616895,
+        "quoteAmerican": 111,
+        "quoteTick": 211,
+        "sizeUSDC": 0.1,
+        "sizeWei6": 100000
+      },
+      "homeQuote": {
+        "takerSide": "home",
+        "quoteProb": 0.5276411989535706,
+        "quoteDecimal": 1.8952272907862795,
+        "quoteAmerican": -112,
+        "quoteTick": 190,
+        "sizeUSDC": 0.1,
+        "sizeWei6": 100000
+      }
+    },
+    "sport": "mlb",
+    "awayTeam": "Toronto Blue Jays",
+    "homeTeam": "Boston Red Sox",
+    "speculations": [
+      {
+        "speculationId": "35",
+        "contestId": "46",
+        "type": "moneyline",
+        "lineTicks": 0,
+        "status": "open"
+      }
+    ]
+  },
+  "fallback": {
+    "game": "Cleveland Guardians @ Milwaukee Brewers",
+    "gamePk": 823774,
+    "gameId": "2f4cedd7-1558-4a96-8147-677698a85127",
+    "slug": "cle-mil-2026-06-17",
+    "contestId": "47",
+    "speculationId": "36",
+    "status": "prepared and unused for live; setup seed lifecycle cleaned up postgame"
+  },
+  "teamIdentity": {
+    "away": {
+      "team": "Toronto Blue Jays",
+      "abbreviation": "TOR",
+      "positionType": "upper",
+      "role": "away",
+      "marketOddsAmerican": "+105",
+      "identity": "underdog"
+    },
+    "home": {
+      "team": "Boston Red Sox",
+      "abbreviation": "BOS",
+      "positionType": "lower",
+      "role": "home",
+      "marketOddsAmerican": "-119",
+      "identity": "favorite"
+    },
+    "winner": {
+      "team": "Toronto Blue Jays",
+      "role": "away",
+      "positionType": "upper"
+    }
+  }
+}

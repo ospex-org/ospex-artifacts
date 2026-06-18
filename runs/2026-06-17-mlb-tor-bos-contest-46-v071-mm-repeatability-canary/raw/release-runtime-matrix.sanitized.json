@@ -1,0 +1,11 @@
+{
+  "cliVersion": "0.7.1",
+  "sdkVersion": "0.7.1",
+  "marketMakerHeadSha": "8389e11d53839941e998ad3686ca5eb05f50f905",
+  "packageSdkPin": "https://github.com/ospex-org/ospex-sdk/releases/download/v0.7.1/ospex-sdk-0.7.1.tgz",
+  "cliReleaseSha256": {
+    "ospex-cli": "4313d89e22914127aca4d70d140c4e1266a022d65cd16a72eeaca55b9e5f0aa8",
+    "ospex-sdk": "91dd27f262529fde0c69e500bdb7466f1cd0e13e9f054685a8804d790847b905"
+  },
+  "runtimeGateNotes": "MM install/build/typecheck/test/smoke gates reused from the earlier same-SHA v0.7.1 NYM/CIN run because the detached runtime worktree and SDK tarball pin were unchanged."
+}

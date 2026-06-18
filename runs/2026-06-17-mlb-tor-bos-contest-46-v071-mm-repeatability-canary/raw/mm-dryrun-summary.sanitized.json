@@ -1,0 +1,23 @@
+{
+  "candidatesAfterSetup": {
+    "primary": "quote_ready / quote",
+    "fallback": "quote_ready / quote"
+  },
+  "selectedQuoteDryRun": {
+    "contestId": "46",
+    "speculationId": "35",
+    "pipeline": "computed",
+    "canQuote": true,
+    "quoteSizesUSDC": {
+      "away": 0.1,
+      "home": 0.1
+    }
+  },
+  "fallbackQuoteDryRun": {
+    "contestId": "47",
+    "speculationId": "36",
+    "pipeline": "computed",
+    "canQuote": true
+  },
+  "writes": 0
+}
