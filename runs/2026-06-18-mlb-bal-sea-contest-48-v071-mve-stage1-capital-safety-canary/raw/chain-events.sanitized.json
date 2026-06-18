@@ -1,0 +1,130 @@
+{
+  "rows": [
+    {
+      "tx_hash": "0x5806157a850237a34f44f110d21bb44d06fd587c10afb7f0d4f6e5db2e932a5f",
+      "entity_id": 48,
+      "log_index": 1423,
+      "block_time": "2026-06-18T17:20:23+00:00",
+      "event_name": "CONTEST_CREATED",
+      "entity_type": "contest",
+      "block_number": 88732152
+    },
+    {
+      "tx_hash": "0x5806157a850237a34f44f110d21bb44d06fd587c10afb7f0d4f6e5db2e932a5f",
+      "entity_id": 48,
+      "log_index": 1425,
+      "block_time": "2026-06-18T17:20:23+00:00",
+      "event_name": "SCRIPT_APPROVAL_VERIFIED",
+      "entity_type": "contest",
+      "block_number": 88732152
+    },
+    {
+      "tx_hash": "0x5806157a850237a34f44f110d21bb44d06fd587c10afb7f0d4f6e5db2e932a5f",
+      "entity_id": 48,
+      "log_index": 1427,
+      "block_time": "2026-06-18T17:20:23+00:00",
+      "event_name": "SCRIPT_APPROVAL_VERIFIED",
+      "entity_type": "contest",
+      "block_number": 88732152
+    },
+    {
+      "tx_hash": "0x5806157a850237a34f44f110d21bb44d06fd587c10afb7f0d4f6e5db2e932a5f",
+      "entity_id": 48,
+      "log_index": 1429,
+      "block_time": "2026-06-18T17:20:23+00:00",
+      "event_name": "SCRIPT_APPROVAL_VERIFIED",
+      "entity_type": "contest",
+      "block_number": 88732152
+    },
+    {
+      "tx_hash": "0x47c705507b050397f0927968301d9228deeed2ea409c5327972587a3e37d15fa",
+      "entity_id": 48,
+      "log_index": 1344,
+      "block_time": "2026-06-18T17:20:35+00:00",
+      "event_name": "CONTEST_VERIFIED",
+      "entity_type": "contest",
+      "block_number": 88732160
+    },
+    {
+      "tx_hash": "0xf6831743ae1245ec555eb621fe4d4224cbeb1c5350a5abf7684308f090990c1c",
+      "entity_id": 37,
+      "log_index": 854,
+      "block_time": "2026-06-18T17:23:52+00:00",
+      "event_name": "SPECULATION_CREATED",
+      "entity_type": "speculation",
+      "block_number": 88732291
+    },
+    {
+      "tx_hash": "0xf6831743ae1245ec555eb621fe4d4224cbeb1c5350a5abf7684308f090990c1c",
+      "entity_id": 37,
+      "log_index": 858,
+      "block_time": "2026-06-18T17:23:52+00:00",
+      "event_name": "POSITION_MATCHED_PAIR",
+      "entity_type": "position",
+      "block_number": 88732291
+    },
+    {
+      "tx_hash": "0xf6831743ae1245ec555eb621fe4d4224cbeb1c5350a5abf7684308f090990c1c",
+      "entity_id": 37,
+      "log_index": 860,
+      "block_time": "2026-06-18T17:23:52+00:00",
+      "event_name": "COMMITMENT_MATCHED",
+      "entity_type": "fill",
+      "block_number": 88732291
+    },
+    {
+      "tx_hash": "0x8fbb99158ded6fd3938f5c2a9a01dce3d39bea4e9cf85f061cf51b5933643015",
+      "entity_id": 37,
+      "log_index": 1595,
+      "block_time": "2026-06-18T17:31:58+00:00",
+      "event_name": "POSITION_MATCHED_PAIR",
+      "entity_type": "position",
+      "block_number": 88732615
+    },
+    {
+      "tx_hash": "0x8fbb99158ded6fd3938f5c2a9a01dce3d39bea4e9cf85f061cf51b5933643015",
+      "entity_id": 37,
+      "log_index": 1597,
+      "block_time": "2026-06-18T17:31:58+00:00",
+      "event_name": "COMMITMENT_MATCHED",
+      "entity_type": "fill",
+      "block_number": 88732615
+    },
+    {
+      "tx_hash": "0xbebf7b7521a9016eee20b8b727c70a13ef0eb071d8115c310c3198601a3faca8",
+      "entity_id": 48,
+      "log_index": 256,
+      "block_time": "2026-06-18T22:47:16+00:00",
+      "event_name": "CONTEST_SCORES_SET",
+      "entity_type": "contest",
+      "block_number": 88745227
+    },
+    {
+      "tx_hash": "0x6fa6b3bc2f69443ef861b49a48de93f8c9126477e973e805ab714679a18402ba",
+      "entity_id": 37,
+      "log_index": 1758,
+      "block_time": "2026-06-18T22:48:34+00:00",
+      "event_name": "SPECULATION_SETTLED",
+      "entity_type": "speculation",
+      "block_number": 88745279
+    },
+    {
+      "tx_hash": "0xb50646b16a2c1405df722e327028d6dd84277ec24a0eb5ce694fd3e78a1bebe6",
+      "entity_id": 37,
+      "log_index": 1390,
+      "block_time": "2026-06-18T22:48:37+00:00",
+      "event_name": "POSITION_CLAIMED",
+      "entity_type": "position",
+      "block_number": 88745281
+    },
+    {
+      "tx_hash": "0xbe937782bf650354ad93e07b180aae20ad0bc04ee70b1298425ac04f2e07f7e4",
+      "entity_id": 37,
+      "log_index": 1471,
+      "block_time": "2026-06-18T22:49:05+00:00",
+      "event_name": "POSITION_CLAIMED",
+      "entity_type": "position",
+      "block_number": 88745300
+    }
+  ]
+}

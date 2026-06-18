@@ -1,0 +1,39 @@
+{
+  "wallets": {
+    "setupSeedMaker": {
+      "alias": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "role": "contest creator and setup seed maker",
+      "usedLive": false
+    },
+    "setupSeedTaker": {
+      "alias": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "role": "setup seed taker",
+      "usedLive": false
+    },
+    "liveMaker": {
+      "alias": "mm-shakeout-maker-a",
+      "address": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+      "role": "reserved live MM maker",
+      "preLiveClean": true,
+      "positionAllowanceUSDC": "25",
+      "usedForSetup": false
+    },
+    "controlledTaker": {
+      "alias": "mm-shakeout-flow-a",
+      "address": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494",
+      "role": "controlled live taker",
+      "preLiveClean": true
+    }
+  },
+  "tokenTopupNeeded": false,
+  "cleanMakerAssertions": {
+    "openCommitments": 0,
+    "active": 0,
+    "pendingSettle": 0,
+    "claimable": 0,
+    "ownRiskWei6": "0/0/0"
+  },
+  "boundedApprovalsOnly": true
+}

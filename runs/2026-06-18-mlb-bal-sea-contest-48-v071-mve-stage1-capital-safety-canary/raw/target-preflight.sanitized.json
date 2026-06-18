@@ -1,0 +1,59 @@
+{
+  "capturedAtUtc": "2026-06-18T17:29:37Z",
+  "status": "pass",
+  "selectedTarget": {
+    "contestId": "48",
+    "speculationId": "37",
+    "sport": "mlb",
+    "gamePk": 823125,
+    "gameId": "40d76d14-2afc-4fcb-9b8b-874f6e9d2b6a",
+    "slug": "bal-sea-2026-06-18-2010",
+    "awayTeam": "Baltimore Orioles",
+    "homeTeam": "Seattle Mariners",
+    "startTimeUtc": "2026-06-18T20:10:00Z",
+    "officialStatusAtSetup": {
+      "abstract": "Scheduled",
+      "detailed": "Preview"
+    },
+    "ospexStatusAtSetup": "upcoming",
+    "hasOdds": true,
+    "moneylineSemantics": {
+      "upper": "away",
+      "lower": "home"
+    },
+    "teamIdentity": {
+      "away": {
+        "team": "Baltimore Orioles",
+        "abbreviation": "BAL",
+        "positionType": "upper",
+        "role": "away",
+        "marketOddsAmerican": "+124",
+        "identity": "underdog"
+      },
+      "home": {
+        "team": "Seattle Mariners",
+        "abbreviation": "SEA",
+        "positionType": "lower",
+        "role": "home",
+        "marketOddsAmerican": "-140",
+        "identity": "favorite"
+      }
+    },
+    "speculations": [
+      {
+        "speculationId": "37",
+        "contestId": "48",
+        "type": "moneyline",
+        "lineTicks": 0,
+        "status": "open"
+      }
+    ]
+  },
+  "backupPreparedButNotLiveRun": {
+    "game": "Los Angeles Angels @ Athletics",
+    "contestId": "49",
+    "speculationId": "38",
+    "usedForLive": false,
+    "lifecycleStatus": "outside this BAL/SEA artifact"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "contestId": "48",
+  "speculationId": "37",
+  "pipeline": "computed",
+  "canQuote": true,
+  "quoteSizes": [
+    {
+      "side": "away",
+      "makerRiskUSDC": "2.000000",
+      "referenceOddsAmerican": "+124"
+    },
+    {
+      "side": "home",
+      "makerRiskUSDC": "2.000000",
+      "referenceOddsAmerican": "-140"
+    }
+  ],
+  "strictAllowlist": [
+    "48"
+  ],
+  "maxTrackedContests": 1,
+  "maxRealtimeChannels": 1
+}
