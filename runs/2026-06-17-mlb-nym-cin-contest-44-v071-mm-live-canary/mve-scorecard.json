@@ -1,0 +1,170 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "2026-06-17-mlb-nym-cin-contest-44-v071-mm-live-canary",
+  "generatedAt": "2026-06-17T19:42:04Z",
+  "runClass": "mm-live-canary",
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "The v0.7.1 NYM @ CIN MM canary completed the full lifecycle: official final score New York Mets 9, Cincinnati Reds 1 was verified; contest 44 was scored; speculation 33 settled to away/upper/New York Mets; the winning controlled live-fill and setup seed/open positions were claimed; final claim sweeps, public commitments/orderbook, and live-MM process checks are zero. Caveats are limited to a not-run restart/cold-start probe and CLI readback omission of winSide/settledAt despite converged indexer/protocol state."
+  },
+  "capabilities": [
+    {
+      "id": "target-preflight",
+      "capability": "Target preflight and allowlist",
+      "proof": "proven_live",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "notes": "Primary target verified and quote_ready before live writes."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "capability": "Repo/runtime gates",
+      "proof": "proven_live",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "notes": "v0.7.1 CLI/SDK/MM runtime alignment verified."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "capability": "Wallet auth, balances, allowances",
+      "proof": "proven_live",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Reserved live maker was clean before start and wallet balances/allowances were sufficient."
+    },
+    {
+      "id": "bounded-approvals",
+      "capability": "Bounded approvals / no unlimited approvals",
+      "proof": "proven_live",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "notes": "No unlimited approvals; no new live approvals were required."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "capability": "Dry-run quote loop",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "notes": "Quote dry-run was synthetic/read-only by nature and selected target 44 only."
+    },
+    {
+      "id": "live-commitments-posted",
+      "capability": "Live commitments posted",
+      "proof": "proven_live",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "notes": "Live public commitments posted on target 44/33 only."
+    },
+    {
+      "id": "live-fill",
+      "capability": "Controlled live fill",
+      "proof": "proven_live",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "Exactly one controlled live fill succeeded."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "capability": "Own-state SSE canonical fill source",
+      "proof": "proven_live",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "Telemetry fill event source is own-state-stream."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "capability": "Exposure drained to zero",
+      "proof": "proven_live",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "End-of-run public/API/MM visible-open exposure is zero."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "capability": "Restart/cold-start safety",
+      "proof": "not_applicable",
+      "evidence": null,
+      "notes": "Not part of this live-window canary artifact; final zero-exposure/process checks cover shutdown safety."
+    },
+    {
+      "id": "postgame-score",
+      "capability": "Postgame score",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Official final score New York Mets 9, Cincinnati Reds 1 verified and contest 44 scored."
+    },
+    {
+      "id": "postgame-settle",
+      "capability": "Postgame settle",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Speculation 33 settled to away/upper/New York Mets."
+    },
+    {
+      "id": "postgame-claim",
+      "capability": "Postgame claim/no-op",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Winning upper/New York Mets positions for mm-shakeout-flow-a and ospex-stage-maker-b claimed; losing lower/Cincinnati positions no-op."
+    },
+    {
+      "id": "cost-within-cap",
+      "capability": "Cost within cap",
+      "proof": "proven_live",
+      "evidence": "raw/tx-receipts.summary.json",
+      "notes": "Live + postgame controlled costs stayed within the low-value canary envelope."
+    }
+  ],
+  "zeroExposure": {
+    "checkedAtUtc": "2026-06-17T16:21:27Z",
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "orphanProcessCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json"
+  },
+  "transactions": [
+    {
+      "category": "create-contest",
+      "txHash": "0x1fa840f942a6b6c34981a91b98dc940e1a815160539e3bea9564a52839c32e73",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Setup handoff created verified contest 44 for NYM @ CIN before the live MM window."
+    },
+    {
+      "category": "seed-match",
+      "txHash": "0x173f061fa56934fe51c906d9635d3a53b7c1d75a703e811d7b931d1b4143026e",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Setup handoff seed/open moneyline fill for speculation 33."
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0x7d8ad8dc09db574e7b4ab1e713d8b1ff16b2df9dc0e0bc73335bb090849273cc",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Exactly one controlled live MM fill by mm-shakeout-flow-a against commitment 0x7818744c708eb986aefcfe7ec70913821652bd061268f61287f0a78b22a6662b."
+    },
+    {
+      "category": "score-request",
+      "txHash": "0xec13a28e3fb6b1ca8ee2d8a66bb413a329be39cebc09857e348cfd486cde82de",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Score contest 44 after official MLB final source showed New York Mets 9, Cincinnati Reds 1."
+    },
+    {
+      "category": "settle",
+      "txHash": "0xc5a9d1b68781b519484f903debdd179c6ffcf308fc1001cbc695519a143b957e",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 33 to away/upper/New York Mets."
+    },
+    {
+      "category": "claim",
+      "txHash": "0x2e5d50bec4b618768c6193fcbe9cdddffd9e3813f2090cb9b50f6f3c9c5141c1",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim mm-shakeout-flow-a winning live-fill upper/New York Mets position."
+    },
+    {
+      "category": "claim",
+      "txHash": "0x390cf95777650673d2971377ca1914dc27274039610921bf9d860ffc942818e9",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim ospex-stage-maker-b winning setup seed/open upper/New York Mets position."
+    }
+  ]
+}

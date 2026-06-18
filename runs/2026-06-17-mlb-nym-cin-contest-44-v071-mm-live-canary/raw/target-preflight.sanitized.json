@@ -1,0 +1,56 @@
+{
+  "selectedTarget": {
+    "gamePk": 824503,
+    "gameId": "aa9e6925-d291-40d4-b8a2-3f04cfbc449a",
+    "slug": "nym-cin-2026-06-17",
+    "contestId": "44",
+    "speculationId": "33",
+    "sport": "mlb",
+    "awayTeam": "New York Mets",
+    "homeTeam": "Cincinnati Reds",
+    "startTimeUtc": "2026-06-17T16:40:00Z",
+    "startTimeCentral": "2026-06-17 11:40 CDT",
+    "statusBeforeLiveWrites": {
+      "officialMlb": "Pre-Game / Preview",
+      "ospexContest": "verified",
+      "ospexSpeculation": "open",
+      "candidateKind": "quote_ready",
+      "quoteDryRun": {
+        "pipeline": "computed",
+        "canQuote": true
+      }
+    },
+    "warmupOverrideUsed": false,
+    "strictContestAllowList": [
+      "44"
+    ],
+    "speculations": [
+      {
+        "contestId": "44",
+        "speculationId": "33",
+        "type": "moneyline",
+        "status": "open"
+      }
+    ],
+    "teamIdentity": {
+      "away": {
+        "team": "New York Mets",
+        "role": "away",
+        "positionType": "upper",
+        "identity": "favorite",
+        "marketOddsAmerican": "-130"
+      },
+      "home": {
+        "team": "Cincinnati Reds",
+        "role": "home",
+        "positionType": "lower",
+        "identity": "underdog",
+        "marketOddsAmerican": "+115"
+      }
+    }
+  },
+  "fallbackNotUsed": {
+    "contestId": "45",
+    "reason": "primary target passed safety gates and produced live fill"
+  }
+}
