@@ -1,0 +1,234 @@
+{
+  "status": "complete_mlb_void_refund_followup",
+  "verdict": "GREEN_VOID_REFUND_COMPLETE",
+  "checkedAtUtc": "2026-06-18T23:51:37Z",
+  "checkedAtCentral": "2026-06-18 18:51:37 CDT",
+  "contestId": "38",
+  "speculationId": "27",
+  "cooldown": {
+    "originalStartUtc": "2026-06-11T23:40:00Z",
+    "voidCooldownSeconds": 604800,
+    "eligibleAtUtc": "2026-06-18T23:40:00Z",
+    "elapsedAtCheck": true,
+    "elapsedSecondsAtCheck": 697
+  },
+  "officialStatus": {
+    "checkedAtUtc": "2026-06-18T23:51:37Z",
+    "classification": "void_track_not_makeup_score",
+    "feedLive": {
+      "awayTeam": "Atlanta Braves",
+      "gameDateUtc": "2026-08-20T18:10:00Z",
+      "gamePk": 824589,
+      "homeTeam": "Chicago White Sox",
+      "officialDate": "2026-08-20",
+      "originalDate": "2026-08-20",
+      "reason": null,
+      "status": {
+        "abstractGameState": "Preview",
+        "codedGameState": "S",
+        "detailedState": "Scheduled",
+        "statusCode": "S"
+      }
+    },
+    "gamePk": 824589,
+    "safeToScore": false,
+    "scheduleGames": [
+      {
+        "abstractGameState": "Final",
+        "awayScore": null,
+        "awayTeam": "Atlanta Braves",
+        "codedGameState": "D",
+        "description": null,
+        "detailedState": "Postponed",
+        "gameDateUtc": "2026-06-11T23:40:00Z",
+        "gamePk": 824589,
+        "homeScore": null,
+        "homeTeam": "Chicago White Sox",
+        "officialDate": "2026-08-20",
+        "reason": "Rain",
+        "rescheduleDate": "2026-08-20T18:10:00Z",
+        "rescheduleGameDate": "2026-08-20",
+        "rescheduledFrom": null,
+        "rescheduledFromDate": null,
+        "statusCode": "DR"
+      },
+      {
+        "abstractGameState": "Preview",
+        "awayScore": null,
+        "awayTeam": "Atlanta Braves",
+        "codedGameState": "S",
+        "description": "Makeup of 6/11ppd",
+        "detailedState": "Scheduled",
+        "gameDateUtc": "2026-08-20T18:10:00Z",
+        "gamePk": 824589,
+        "homeScore": null,
+        "homeTeam": "Chicago White Sox",
+        "officialDate": "2026-08-20",
+        "reason": null,
+        "rescheduleDate": null,
+        "rescheduleGameDate": null,
+        "rescheduledFrom": "2026-06-11T23:40:00Z",
+        "rescheduledFromDate": "2026-06-11",
+        "statusCode": "S"
+      }
+    ],
+    "settleAsVoidEligible": true,
+    "source": "MLB Stats API feed/live and schedule"
+  },
+  "policyDecision": "do_not_score_makeup_game; use mainnet void path because original game row remained Postponed/Rain after cooldown",
+  "preconditions": {
+    "contestWasVerifiedBeforeSettle": true,
+    "speculationWasOpenBeforeSettle": true,
+    "officialOriginalRowPostponedRain": true,
+    "feedLivePointsToMakeup": true,
+    "controlledWalletsOnly": true
+  },
+  "settle": {
+    "status": "sent_confirmed",
+    "outcome": "settled",
+    "winSide": "void",
+    "txHash": "0x8632a86660b681e932c5d6673875804594e5cdb81c2f2df371a80760ded0439b",
+    "blockNumber": "88747736",
+    "signerAlias": "ospex-stage-maker-a",
+    "signerAddress": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B"
+  },
+  "claims": [
+    {
+      "walletAlias": "ospex-stage-maker-a",
+      "walletAddress": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+      "role": "setup/scoring seed maker",
+      "result": "claimed",
+      "positionSide": "upper",
+      "payoutWei6": "50000",
+      "payoutUSDC": "0.050000",
+      "txHash": "0xe3599e6ab1a9de4306fd578084a48d29f275df65c3c68d03e6c2b4373095291c",
+      "blockNumber": "88747753",
+      "positionSideDetail": {
+        "role": "away",
+        "team": "Atlanta Braves",
+        "protocolPosition": "upper",
+        "positionType": 0,
+        "protocolOutcome": "void_refund"
+      }
+    },
+    {
+      "walletAlias": "ospex-flow-a",
+      "walletAddress": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+      "role": "controlled flow seed taker",
+      "result": "claimed",
+      "positionSide": "lower",
+      "payoutWei6": "50000",
+      "payoutUSDC": "0.050000",
+      "txHash": "0xe866274484afd24367ef16b92ae53119f776868f8dae29fdad66c0037aaa9e99",
+      "blockNumber": "88747756",
+      "positionSideDetail": {
+        "role": "home",
+        "team": "Chicago White Sox",
+        "protocolPosition": "lower",
+        "positionType": 1,
+        "protocolOutcome": "void_refund"
+      }
+    }
+  ],
+  "refunds": {
+    "totalRefundWei6": "100000",
+    "totalRefundUSDC": "0.100000",
+    "riskOnly": true,
+    "perWallet": [
+      {
+        "walletAlias": "ospex-stage-maker-a",
+        "walletAddress": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+        "payoutWei6": "50000",
+        "payoutUSDC": "0.050000",
+        "txHash": "0xe3599e6ab1a9de4306fd578084a48d29f275df65c3c68d03e6c2b4373095291c"
+      },
+      {
+        "walletAlias": "ospex-flow-a",
+        "walletAddress": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+        "payoutWei6": "50000",
+        "payoutUSDC": "0.050000",
+        "txHash": "0xe866274484afd24367ef16b92ae53119f776868f8dae29fdad66c0037aaa9e99"
+      }
+    ]
+  },
+  "postClaimDryRuns": {
+    "ospex-stage-maker-a": {
+      "entries": 0,
+      "totalPayoutWei6": "0"
+    },
+    "ospex-flow-a": {
+      "entries": 0,
+      "totalPayoutWei6": "0"
+    }
+  },
+  "protocolProjectionFinal": {
+    "contestStatus": "voided",
+    "contestVoidedAtUtc": "2026-06-18T23:49:59+00:00",
+    "awayScore": null,
+    "homeScore": null,
+    "speculationStatus": "closed",
+    "winSide": "void",
+    "speculationVoided": true,
+    "settledAtUtc": "2026-06-18T23:49:59+00:00",
+    "positions": [
+      {
+        "walletAddress": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+        "positionType": "lower",
+        "riskWei6": "50000",
+        "claimed": true,
+        "claimedWei6": "50000",
+        "claimedAtUtc": "2026-06-18T23:50:29+00:00"
+      },
+      {
+        "walletAddress": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+        "positionType": "upper",
+        "riskWei6": "50000",
+        "claimed": true,
+        "claimedWei6": "50000",
+        "claimedAtUtc": "2026-06-18T23:50:25+00:00"
+      }
+    ],
+    "publicExposure": {
+      "visibleOpenRows": [],
+      "visibleOpenCommitments": 0
+    }
+  },
+  "receipts": {
+    "mlb_flow_a_void_claim": {
+      "blockNumber": "88747756",
+      "effectiveGasPriceWei": "281820668436",
+      "gasCostPOL": "0.035754870025143756",
+      "gasCostUSDCEquivAt0_25": "0.00893871750628593900",
+      "gasCostWei": "35754870025143756",
+      "gasUsed": "126871",
+      "status": "0x1",
+      "txHash": "0xe866274484afd24367ef16b92ae53119f776868f8dae29fdad66c0037aaa9e99"
+    },
+    "mlb_stage_maker_a_void_claim": {
+      "blockNumber": "88747753",
+      "effectiveGasPriceWei": "279342449913",
+      "gasCostPOL": "0.035437103853513267",
+      "gasCostUSDCEquivAt0_25": "0.00885927596337831675",
+      "gasCostWei": "35437103853513267",
+      "gasUsed": "126859",
+      "status": "0x1",
+      "txHash": "0xe3599e6ab1a9de4306fd578084a48d29f275df65c3c68d03e6c2b4373095291c"
+    },
+    "mlb_void_settle_speculation": {
+      "blockNumber": "88747736",
+      "effectiveGasPriceWei": "294765839254",
+      "gasCostPOL": "0.046252886900702156",
+      "gasCostUSDCEquivAt0_25": "0.01156322172517553900",
+      "gasCostWei": "46252886900702156",
+      "gasUsed": "156914",
+      "status": "0x1",
+      "txHash": "0x8632a86660b681e932c5d6673875804594e5cdb81c2f2df371a80760ded0439b"
+    }
+  },
+  "gas": {
+    "voidFollowupGasPOL": "0.117444860779359179",
+    "voidFollowupGasUSDCAt0_25": "0.02936121519483979475"
+  },
+  "publicSafety": "No private keys, passphrases, password-file paths, RPC URLs, raw signatures, raw signedPayload, or raw maker-state are included.",
+  "noAdditionalCronsScheduled": true
+}

@@ -132,6 +132,36 @@
       "gasUsed": "127375",
       "status": "0x1",
       "txHash": "0xbe67332441816ed55d72cb0b5b4656b5f81c5bdf71116aee3229d78b803bc49f"
+    },
+    "mlb_flow_a_void_claim": {
+      "blockNumber": "88747756",
+      "effectiveGasPriceWei": "281820668436",
+      "gasCostPOL": "0.035754870025143756",
+      "gasCostUSDCEquivAt0_25": "0.00893871750628593900",
+      "gasCostWei": "35754870025143756",
+      "gasUsed": "126871",
+      "status": "0x1",
+      "txHash": "0xe866274484afd24367ef16b92ae53119f776868f8dae29fdad66c0037aaa9e99"
+    },
+    "mlb_stage_maker_a_void_claim": {
+      "blockNumber": "88747753",
+      "effectiveGasPriceWei": "279342449913",
+      "gasCostPOL": "0.035437103853513267",
+      "gasCostUSDCEquivAt0_25": "0.00885927596337831675",
+      "gasCostWei": "35437103853513267",
+      "gasUsed": "126859",
+      "status": "0x1",
+      "txHash": "0xe3599e6ab1a9de4306fd578084a48d29f275df65c3c68d03e6c2b4373095291c"
+    },
+    "mlb_void_settle_speculation": {
+      "blockNumber": "88747736",
+      "effectiveGasPriceWei": "294765839254",
+      "gasCostPOL": "0.046252886900702156",
+      "gasCostUSDCEquivAt0_25": "0.01156322172517553900",
+      "gasCostWei": "46252886900702156",
+      "gasUsed": "156914",
+      "status": "0x1",
+      "txHash": "0x8632a86660b681e932c5d6673875804594e5cdb81c2f2df371a80760ded0439b"
     }
   },
   "totals": {
@@ -142,10 +172,15 @@
     "nhlPostgameGasPOL": "0.304275479007771818",
     "nhlPostgameGasUSDCAtReportPrice": "0.07606886975194295450",
     "operatorGasPOLIncludingNhlPostgame": "2.012004570366458939",
-    "operatorGasUSDCAtReportPriceIncludingNhlPostgame": "0.50300114259161473475"
+    "operatorGasUSDCAtReportPriceIncludingNhlPostgame": "0.50300114259161473475",
+    "mlbVoidFollowupGasPOL": "0.117444860779359179",
+    "mlbVoidFollowupGasUSDCAtReportPrice": "0.02936121519483979475",
+    "operatorGasPOLIncludingFullPostgame": "2.129449431145818118",
+    "operatorGasUSDCAtReportPriceIncludingFullPostgame": "0.53236235778645452950"
   },
   "notes": [
     "Total includes the earlier same-evening MLB prep transactions plus the NHL rescue setup/fill transactions because they share the same controlled spend cap.",
-    "NHL attempt-1 postgame receipts are summaries only; full logs/source payloads are intentionally excluded from public artifacts."
+    "NHL attempt-1 postgame receipts are summaries only; full logs/source payloads are intentionally excluded from public artifacts.",
+    "MLB void/refund follow-up receipts summarize the settle-as-void tx and the two risk-only refund claim txs; full logs/source payloads are intentionally excluded from public artifacts."
   ]
 }
