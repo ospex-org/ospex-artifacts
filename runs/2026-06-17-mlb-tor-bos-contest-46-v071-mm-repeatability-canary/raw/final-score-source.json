@@ -1,0 +1,35 @@
+{
+  "source": "MLB Stats API game feed/live",
+  "fetchedAt": "2026-06-18T09:12:03.114Z",
+  "gamePk": 824746,
+  "officialDate": "2026-06-17",
+  "status": {
+    "abstractGameState": "Final",
+    "codedGameState": "F",
+    "detailedState": "Final",
+    "statusCode": "F",
+    "startTimeTBD": false,
+    "abstractGameCode": "F"
+  },
+  "teams": {
+    "away": {
+      "name": "Toronto Blue Jays",
+      "abbreviation": "TOR",
+      "score": 3
+    },
+    "home": {
+      "name": "Boston Red Sox",
+      "abbreviation": "BOS",
+      "score": 0
+    }
+  },
+  "moneylineSemantics": {
+    "upper": "away / Toronto Blue Jays",
+    "lower": "home / Boston Red Sox"
+  },
+  "winner": {
+    "team": "Toronto Blue Jays",
+    "role": "away",
+    "protocolSide": "upper"
+  }
+}

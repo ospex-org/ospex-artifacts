@@ -1,0 +1,20 @@
+{
+  "liveConfig": {
+    "contestAllowList": [
+      "46"
+    ],
+    "maxTrackedContests": 1,
+    "maxRealtimeChannels": 1,
+    "autoApprove": false,
+    "approvalMode": "exact",
+    "maxOpenCommitments": 2,
+    "maxRiskPerCommitmentUSDC": "0.10",
+    "maxRiskPerContestUSDC": "0.25",
+    "cancelMode": "offchain",
+    "autoSettleOwn": false,
+    "autoClaimOwn": false
+  },
+  "approvalTxsDuringLive": 0,
+  "unlimitedApprovalsCreated": 0,
+  "notes": "Live MM used existing bounded PositionModule allowances; no approvals were sent during the live window."
+}

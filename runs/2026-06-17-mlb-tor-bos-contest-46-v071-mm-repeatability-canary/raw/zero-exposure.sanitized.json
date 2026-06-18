@@ -1,0 +1,79 @@
+{
+  "checkedAtUtc": "2026-06-18T09:16:20Z",
+  "publicMakerVisibleCommitments": 0,
+  "publicContestSpecVisibleCommitments": 0,
+  "contestOrderbookCount": 0,
+  "orphanProcessCount": 0,
+  "finalClaimSweepsEmpty": true,
+  "primary": {
+    "contestId": "46",
+    "speculationId": "35",
+    "claimDryRuns": {
+      "seedMaker": 0,
+      "liveMaker": 0,
+      "seedTaker": 0,
+      "liveTaker": 0
+    },
+    "commitments": {
+      "contestOpen": 0,
+      "contestDefault": 0,
+      "liveMakerContest": 0,
+      "liveMakerAll": 0
+    },
+    "targetPositions": {
+      "seedMaker": [
+        {
+          "speculationId": "35",
+          "positionType": 0,
+          "riskAmountUSDC": 0.05,
+          "profitAmountUSDC": 0.05,
+          "claimed": true,
+          "positionCreatedAt": "2026-06-17T20:55:16+00:00"
+        }
+      ],
+      "seedTaker": [
+        {
+          "speculationId": "35",
+          "positionType": 1,
+          "riskAmountUSDC": 0.05,
+          "profitAmountUSDC": 0.05,
+          "claimed": false,
+          "positionCreatedAt": "2026-06-17T20:55:16+00:00"
+        }
+      ],
+      "liveMaker": [
+        {
+          "speculationId": "35",
+          "positionType": 0,
+          "riskAmountUSDC": 0.1,
+          "profitAmountUSDC": 0.114,
+          "claimed": true,
+          "positionCreatedAt": "2026-06-17T21:33:41+00:00"
+        }
+      ],
+      "liveTaker": [
+        {
+          "speculationId": "35",
+          "positionType": 1,
+          "riskAmountUSDC": 0.114,
+          "profitAmountUSDC": 0.1,
+          "claimed": false,
+          "positionCreatedAt": "2026-06-17T21:33:41+00:00"
+        }
+      ]
+    }
+  },
+  "fallbackSetupCleanup": {
+    "contestId": "47",
+    "speculationId": "36",
+    "claimDryRuns": {
+      "seedTaker": 0,
+      "seedMaker": 0
+    },
+    "commitments": {
+      "contestOpen": 0,
+      "contestDefault": 0
+    }
+  },
+  "note": "Closed losing positions remain unclaimed/no-op by design; they are not active, claimable, or visible open quote exposure."
+}

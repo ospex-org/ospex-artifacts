@@ -1,0 +1,117 @@
+{
+  "finalScoreSource": {
+    "source": "MLB Stats API game feed/live",
+    "fetchedAt": "2026-06-18T09:18:27.036Z",
+    "gamePk": 823774,
+    "status": {
+      "abstractGameState": "Final",
+      "codedGameState": "F",
+      "detailedState": "Final",
+      "statusCode": "F",
+      "startTimeTBD": false,
+      "abstractGameCode": "F"
+    },
+    "teams": {
+      "away": {
+        "name": "Cleveland Guardians",
+        "abbreviation": "CLE",
+        "score": 4
+      },
+      "home": {
+        "name": "Milwaukee Brewers",
+        "abbreviation": "MIL",
+        "score": 9
+      }
+    },
+    "moneylineSemantics": {
+      "upper": "away / Cleveland Guardians",
+      "lower": "home / Milwaukee Brewers"
+    },
+    "winner": {
+      "team": "Milwaukee Brewers",
+      "role": "home",
+      "protocolSide": "lower"
+    }
+  },
+  "projection": "row_type\tcontest_id\tcontest_status\taway_score\thome_score\tscored_at\ncontest\t47\tscored\t4\t9\t2026-06-18 09:19:08+00\nspeculation\t36\tclosed\thome\t2026-06-18 09:20:11+00\t\n(2 rows)\n",
+  "positions": "speculation_id\tuser_address\tposition_type\trisk_amount\tprofit_amount\tclaimed\tclaimed_amount\tclaimed_at\tposition_created_at\n36\t0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d\tlower\t50000\t50000\tt\t100000\t2026-06-18 09:20:14+00\t2026-06-17 20:56:38+00\n36\t0x5316fa54c170d1927f30d1a497ac9e85e3826a9b\tupper\t50000\t50000\tf\t\t\t2026-06-17 20:56:38+00\n(2 rows)\n",
+  "claimSummary": {
+    "claim": {
+      "ok": true,
+      "entries": [
+        {
+          "positionId": "36_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+          "speculationId": "36",
+          "bucket": "pendingSettle",
+          "description": "Milwaukee Brewers moneyline \u2014 Won (\u2248 $0.10, needs settle)",
+          "payoutWei6": "100000",
+          "payoutUSDC": 0.1,
+          "txHashes": [
+            "0xdb179c81ccb43066e8c0fa045067b3d4bdf062251b76bf2f3018aa8ff4c4cf0b",
+            "0x32e3d39f793b0d166f29f7f3cc6d218c4c708bbd74cd3fc2719f4c02a00924bc"
+          ],
+          "steps": [
+            {
+              "name": "settleSpeculation",
+              "outcome": "sent",
+              "txHash": "0xdb179c81ccb43066e8c0fa045067b3d4bdf062251b76bf2f3018aa8ff4c4cf0b",
+              "winSide": "home"
+            },
+            {
+              "name": "claimPosition",
+              "outcome": "sent",
+              "txHash": "0x32e3d39f793b0d166f29f7f3cc6d218c4c708bbd74cd3fc2719f4c02a00924bc",
+              "payoutWei6": "100000",
+              "payoutUSDC": 0.1
+            }
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "type": "transaction",
+          "purpose": "settle-speculation",
+          "ok": true,
+          "txHash": "0xdb179c81ccb43066e8c0fa045067b3d4bdf062251b76bf2f3018aa8ff4c4cf0b",
+          "status": "confirmed"
+        },
+        {
+          "type": "transaction",
+          "purpose": "claim-position",
+          "ok": true,
+          "txHash": "0x32e3d39f793b0d166f29f7f3cc6d218c4c708bbd74cd3fc2719f4c02a00924bc",
+          "status": "confirmed"
+        }
+      ],
+      "warnings": [],
+      "errors": []
+    },
+    "finalSpec": {
+      "speculationId": "36",
+      "contestId": "47",
+      "type": "moneyline",
+      "lineTicks": 0,
+      "line": null,
+      "speculationStatus": 1,
+      "orderbook": [],
+      "contest": {
+        "contestId": "47",
+        "awayTeam": "Cleveland Guardians",
+        "homeTeam": "Milwaukee Brewers",
+        "awayTeamId": "1c17cfbb-1834-49d7-ac14-ef5f1bc17ed1",
+        "homeTeamId": "86f0944a-c6b4-4732-b9e6-d0c5bd494b07",
+        "sport": "mlb",
+        "matchTime": "2026-06-17T23:40:00+00:00",
+        "status": "scored"
+      }
+    },
+    "claimDry": {
+      "seedTaker": 0,
+      "seedMaker": 0
+    },
+    "commitments": {
+      "contestOpen": 0,
+      "contestDefault": 0
+    }
+  }
+}

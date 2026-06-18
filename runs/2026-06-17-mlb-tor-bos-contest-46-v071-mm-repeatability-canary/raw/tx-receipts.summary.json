@@ -1,0 +1,118 @@
+{
+  "network": "polygon",
+  "chainId": 137,
+  "receipts": [
+    {
+      "label": "primary_contest_create",
+      "txHash": "0x70e5cdfd8479dea6b96b7c46cb778d2aac321c0529c7a10069f1fdc445b3940c",
+      "status": "0x1",
+      "blockNumber": 88683042,
+      "gasUsed": "1385351",
+      "effectiveGasPriceWei": "283228578641",
+      "gasCostPOL_decimal": "0.39237099464888797"
+    },
+    {
+      "label": "primary_seed_match",
+      "txHash": "0xc1672bd732252147e567c68aa17ac596fe47f2e29c94c845bdc0c85c5827a189",
+      "status": "0x1",
+      "blockNumber": 88683147,
+      "gasUsed": "663574",
+      "effectiveGasPriceWei": "283099835582",
+      "gasCostPOL_decimal": "0.18785769029649008"
+    },
+    {
+      "label": "primary_live_fill",
+      "txHash": "0xe2d797bdd7936c7b81f5d5236c38749d35b57ea2b4ef1232b85079f4c80b3be8",
+      "status": "0x1",
+      "blockNumber": 88684684,
+      "gasUsed": "419821",
+      "effectiveGasPriceWei": "277792015639",
+      "gasCostPOL_decimal": "0.11662292179758062"
+    },
+    {
+      "label": "primary_score",
+      "txHash": "0x5deff565bf47d9b56fdf60fc5cb14085653b815d84c55e175cabcc8acea3e70e",
+      "status": "0x1",
+      "blockNumber": 88712706,
+      "gasUsed": "664329",
+      "effectiveGasPriceWei": "283459202265",
+      "gasCostPOL_decimal": "0.1883101683815052"
+    },
+    {
+      "label": "primary_settle",
+      "txHash": "0x735adad17d9918b4fb3bf493a0442cde6d64b24e05960fa33ad346e74f9c4ed2",
+      "status": "0x1",
+      "blockNumber": 88712770,
+      "gasUsed": "155603",
+      "effectiveGasPriceWei": "279392853872",
+      "gasCostPOL_decimal": "0.043474366241044816"
+    },
+    {
+      "label": "primary_seed_claim",
+      "txHash": "0x315892ddf9230d6234f4a4a5a01974eaf7189f8b50f338d9b27e38c4b05afb82",
+      "status": "0x1",
+      "blockNumber": 88712772,
+      "gasUsed": "127189",
+      "effectiveGasPriceWei": "280397933687",
+      "gasCostPOL_decimal": "0.03566353278771584"
+    },
+    {
+      "label": "primary_live_claim",
+      "txHash": "0x81362c0844457b2e05652caf446e159b06ebcbafba0cfd1d8998e162bd2df100",
+      "status": "0x1",
+      "blockNumber": 88712776,
+      "gasUsed": "127189",
+      "effectiveGasPriceWei": "281360154891",
+      "gasCostPOL_decimal": "0.0357859167404314"
+    },
+    {
+      "label": "fallback_contest_create",
+      "txHash": "0x74fc0b19884d1f02ebc924462d3993ee545bc089190c7164e4326342235d9d90",
+      "status": "0x1",
+      "blockNumber": 88683058,
+      "gasUsed": "1385351",
+      "effectiveGasPriceWei": "281814241578",
+      "gasCostPOL_decimal": "0.3904116413843239"
+    },
+    {
+      "label": "fallback_seed_match",
+      "txHash": "0x3634cfd524c723287209c75ef22473ab8b4ea12e6e2d68c676c34d03faab1573",
+      "status": "0x1",
+      "blockNumber": 88683202,
+      "gasUsed": "659614",
+      "effectiveGasPriceWei": "278105691686",
+      "gasCostPOL_decimal": "0.1834424077157692"
+    },
+    {
+      "label": "fallback_score",
+      "txHash": "0xa507e0974521bd84d0197bd301617a93b75b5863a9ab93e02a1e8aaf9458c15b",
+      "status": "0x1",
+      "blockNumber": 88712895,
+      "gasUsed": "664329",
+      "effectiveGasPriceWei": "278550394596",
+      "gasCostPOL_decimal": "0.18504910509156608"
+    },
+    {
+      "label": "fallback_settle",
+      "txHash": "0xdb179c81ccb43066e8c0fa045067b3d4bdf062251b76bf2f3018aa8ff4c4cf0b",
+      "status": "0x1",
+      "blockNumber": 88712944,
+      "gasUsed": "155619",
+      "effectiveGasPriceWei": "276099876604",
+      "gasCostPOL_decimal": "0.042966386697237874"
+    },
+    {
+      "label": "fallback_claim",
+      "txHash": "0x32e3d39f793b0d166f29f7f3cc6d218c4c708bbd74cd3fc2719f4c02a00924bc",
+      "status": "0x1",
+      "blockNumber": 88712946,
+      "gasUsed": "127375",
+      "effectiveGasPriceWei": "278075190507",
+      "gasCostPOL_decimal": "0.03541982739082913"
+    }
+  ],
+  "primaryTotalGasPOL": "1.000085590893655926",
+  "primaryPostgameGasPOL": "0.303233984150697256",
+  "fallbackTotalGasPOL": "0.837289368279726184",
+  "allTrackedGasPOL": "1.837374959173382110"
+}

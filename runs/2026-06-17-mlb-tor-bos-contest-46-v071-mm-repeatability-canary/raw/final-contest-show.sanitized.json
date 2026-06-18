@@ -1,0 +1,56 @@
+{
+  "contest": {
+    "contestId": "46",
+    "awayTeam": "Toronto Blue Jays",
+    "homeTeam": "Boston Red Sox",
+    "sport": "mlb",
+    "sportId": 0,
+    "matchTime": "2026-06-17T22:45:00+00:00",
+    "status": "scored",
+    "speculations": [
+      {
+        "speculationId": "35",
+        "contestId": "46",
+        "type": "moneyline",
+        "lineTicks": 0,
+        "line": null,
+        "speculationStatus": 1,
+        "orderbook": []
+      }
+    ],
+    "contestCreator": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "leagueId": "mlb",
+    "awayScore": 3,
+    "homeScore": 0,
+    "contestCreatedAt": "2026-06-17T20:52:38+00:00",
+    "verifiedAt": "2026-06-17T20:52:52+00:00",
+    "scoredAt": "2026-06-18T09:14:26+00:00",
+    "voidedAt": null,
+    "awayTeamId": "f818202a-8565-436d-a216-0ece5d795906",
+    "homeTeamId": "b23d5ad5-7531-48d4-9fd1-b1dd4053b833"
+  },
+  "speculation": {
+    "speculationId": "35",
+    "contestId": "46",
+    "type": "moneyline",
+    "lineTicks": 0,
+    "line": null,
+    "speculationStatus": 1,
+    "orderbook": [],
+    "contest": {
+      "contestId": "46",
+      "awayTeam": "Toronto Blue Jays",
+      "homeTeam": "Boston Red Sox",
+      "awayTeamId": "f818202a-8565-436d-a216-0ece5d795906",
+      "homeTeamId": "b23d5ad5-7531-48d4-9fd1-b1dd4053b833",
+      "sport": "mlb",
+      "matchTime": "2026-06-17T22:45:00+00:00",
+      "status": "scored"
+    }
+  },
+  "supabaseProjection": {
+    "primary": "row_type\tcontest_id\tcontest_status\taway_score\thome_score\tscored_at\ncontest\t46\tscored\t3\t0\t2026-06-18 09:14:26+00\nspeculation\t35\tclosed\taway\t2026-06-18 09:15:50+00\t\n(2 rows)\n",
+    "primaryPositions": "speculation_id\tuser_address\tposition_type\trisk_amount\tprofit_amount\tclaimed\tclaimed_amount\tclaimed_at\tposition_created_at\n35\t0x1de13292256fddca9eea1ae53a79a83243cfd494\tlower\t114000\t100000\tf\t\t\t2026-06-17 21:33:41+00\n35\t0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2\tupper\t100000\t114000\tt\t214000\t2026-06-18 09:15:59+00\t2026-06-17 21:33:41+00\n35\t0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d\tlower\t50000\t50000\tf\t\t\t2026-06-17 20:55:16+00\n35\t0x5316fa54c170d1927f30d1a497ac9e85e3826a9b\tupper\t50000\t50000\tt\t100000\t2026-06-18 09:15:53+00\t2026-06-17 20:55:16+00\n(4 rows)\n",
+    "primaryFills": "commitment_hash\ttx_hash\tmaker_address\ttaker_address\tmaker_risk_amount\ttaker_risk_amount\todds_tick\tfilled_at\n0x980534f17a6bc31a20eda82e3bcd2cbe89b4d8ca6c032985d1734b7adae975b8\t0xc1672bd732252147e567c68aa17ac596fe47f2e29c94c845bdc0c85c5827a189\t0x5316fa54c170d1927f30d1a497ac9e85e3826a9b\t0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d\t50000\t50000\t200\t2026-06-17 20:55:16+00\n0xe84032f1a0f3d8a4b92bf6774e0e117fe5fe610bb678c2afa69aecf34709e2e8\t0xe2d797bdd7936c7b81f5d5236c38749d35b57ea2b4ef1232b85079f4c80b3be8\t0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2\t0x1de13292256fddca9eea1ae53a79a83243cfd494\t100000\t114000\t214\t2026-06-17 21:33:41+00\n(2 rows)\n"
+  }
+}
