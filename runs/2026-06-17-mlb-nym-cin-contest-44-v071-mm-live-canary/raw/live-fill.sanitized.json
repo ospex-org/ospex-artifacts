@@ -1,0 +1,44 @@
+{
+  "capturedAtUtc": "2026-06-17T16:06:05Z",
+  "result": {
+    "contest": {
+      "contestId": "44",
+      "sport": "mlb",
+      "awayTeam": "New York Mets",
+      "homeTeam": "Cincinnati Reds"
+    },
+    "speculation": {
+      "contestId": "44",
+      "speculationId": "33",
+      "type": "moneyline"
+    },
+    "commitment": {
+      "commitmentHash": "0x7818744c708eb986aefcfe7ec70913821652bd061268f61287f0a78b22a6662b",
+      "contestId": "44",
+      "speculationId": "33",
+      "marketType": "moneyline",
+      "maker": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "makerSide": "home",
+      "makerTeam": "Cincinnati Reds",
+      "positionType": "lower",
+      "makerOddsTick": 223,
+      "takerSide": "away",
+      "takerTeam": "New York Mets",
+      "riskAmount": "100000",
+      "signatureRedacted": true
+    },
+    "fill": {
+      "txHash": "0x7d8ad8dc09db574e7b4ab1e713d8b1ff16b2df9dc0e0bc73335bb090849273cc",
+      "receiptStatus": "0x1",
+      "blockNumber": "88671584",
+      "makerWallet": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+      "takerWallet": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494",
+      "requestedFillCapUSDC": "0.100000",
+      "effectiveTakerRiskUSDC": "0.099999",
+      "makerFilledRiskUSDC": "0.081300",
+      "takerReturnOnWinUSDC": "0.181299",
+      "sideSummary": "New York Mets",
+      "controlledFillCount": 1
+    }
+  }
+}

@@ -22,6 +22,8 @@ ROOT = Path(__file__).resolve().parents[1]
 INDEX_SCHEMA_ID = "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json"
 ARCHIVE_SCHEMA_ID = "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json"
 RELEASE_ACCEPTANCE_SCHEMA_ID = "https://github.com/ospex-org/ospex-artifacts/schemas/release-acceptance.schema.json"
+SCENARIO_MATRIX_SCHEMA_ID = "https://github.com/ospex-org/ospex-artifacts/schemas/scenario-matrix.schema.json"
+MVE_SCORECARD_SCHEMA_ID = "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json"
 
 RECENT_ARTIFACT_LIMIT = 100
 ARTIFACT_TYPES = ("run", "release-acceptance", "daily-digest")
@@ -40,7 +42,118 @@ STATUS_BY_ARTIFACT_TYPE = {
 TEXT_SUFFIXES = {".json", ".md", ".ndjson", ".txt", ".yml", ".yaml"}
 SHA256_RE = re.compile(r"^[a-fA-F0-9]{64}$")
 TX_HASH_RE = re.compile(r"^0x[a-fA-F0-9]{64}$")
-RAW_SIGNATURE_RE = re.compile(r"0x[a-fA-F0-9]{130}\b")
+RAW_SIGNATURE_RE = re.compile(r"0[xX][a-fA-F0-9]{130}\b")
+AMERICAN_ODDS_RE = re.compile(r"^[+-]\d+$")
+SLUG_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+# An `even`/`even` pick'em is judged by symmetry, not an exact price: a real pick'em is
+# routinely quoted with vig as -110/-110 or -105/-115, so the two sides' implied
+# probabilities must be close rather than both exactly 100.
+EVEN_IMPLIED_PROB_TOLERANCE = 0.06
+
+# Pre-scheme files that legitimately contain long sanitized event-data hex blobs
+# (verified to carry no signature-sized ABI fields). New artifacts must summarize
+# calldata instead of dumping it (docs/publication-rules.md), so only these two
+# files are exempt from the calldata-sized-hex pattern.
+LEGACY_LONG_HEX_FILES = {
+    "runs/2026-05-24-mlb-tex-laa-contest-21-mm-partial-smoke/raw/final-supabase-state.sanitized.json",
+    "runs/2026-05-24-mlb-tex-laa-contest-21-mm-partial-smoke/raw/indexer-snapshot.sanitized.json",
+}
+LONG_HEX_LABEL = "raw calldata-sized hex blob"
+
+# Scenario matrix v2 + MVE readiness scorecard contracts (docs/mm-live-canary-evidence.md).
+# These checks apply only to runs that adopt the schema-backed shapes; earlier
+# free-form scenario-matrix.json files are grandfathered.
+SCENARIO_MATRIX_MIN_VERSION = 2
+# Closed registry: a new run class is added here together with its own pairing
+# and capability rules. A free-form runClass would silently skip those checks.
+KNOWN_RUN_CLASSES = {"mm-live-canary"}
+SCENARIO_STATUSES = {"pass", "pass_with_caveats", "fail", "deferred", "not_run", "not_applicable"}
+PROOF_LEVELS = {"proven_live", "proven_synthetic_only", "deferred", "failed", "not_applicable"}
+PROVEN_LEVELS = {"proven_live", "proven_synthetic_only"}
+VERDICT_LABELS = {
+    "FULL_GREEN",
+    "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED",
+    "AMBER_QUOTED_NO_FILL",
+    "AMBER_TOKEN_TOPUP_NEEDED",
+    "RED_SAFETY_HALT",
+}
+# The run status vocabulary has no failure status; failed runs stay internal.
+UNPUBLISHABLE_VERDICTS = {"RED_SAFETY_HALT"}
+RUN_STATUS_BY_VERDICT = {
+    "FULL_GREEN": {"complete_verified", "complete_verified_with_caveats"},
+    "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED": {"partial"},
+    "AMBER_QUOTED_NO_FILL": {"partial", "complete_verified_with_caveats"},
+    "AMBER_TOKEN_TOPUP_NEEDED": {"partial", "complete_verified_with_caveats"},
+}
+TX_CATEGORIES = {
+    "approve",
+    "create-contest",
+    "seed-match",
+    "match-commitment",
+    "cancel-commitment",
+    "nonce-floor-raise",
+    "score-request",
+    "score-callback",
+    "settle",
+    "claim",
+    "other",
+}
+POSTGAME_TX_CATEGORIES = {"score-request", "score-callback", "settle", "claim"}
+# A successful on-chain match records a fill (R4 has no no-counterparty seed tx).
+FILL_TX_CATEGORIES = {"match-commitment", "seed-match"}
+MM_LIVE_CANARY_CAPABILITY_IDS = {
+    "target-preflight",
+    "repo-runtime-gates",
+    "wallet-auth-balances",
+    "bounded-approvals",
+    "dry-run-quote-loop",
+    "live-commitments-posted",
+    "live-fill",
+    "own-state-sse-canonical-fill",
+    "exposure-drain-zero",
+    "restart-cold-start-safety",
+    "postgame-score",
+    "postgame-settle",
+    "postgame-claim",
+    "cost-within-cap",
+}
+POSTGAME_CAPABILITY_IDS = {"postgame-score", "postgame-settle", "postgame-claim"}
+FULL_GREEN_CORE_CAPABILITY_IDS = {
+    "live-commitments-posted",
+    "live-fill",
+    "exposure-drain-zero",
+    "cost-within-cap",
+} | POSTGAME_CAPABILITY_IDS
+ZERO_EXPOSURE_COUNT_KEYS = (
+    "publicMakerVisibleCommitments",
+    "publicContestSpecVisibleCommitments",
+    "contestOrderbookCount",
+    "orphanProcessCount",
+)
+TEAM_IDENTITY_POSITION_TYPE_BY_ROLE = {"home": "lower", "away": "upper"}
+# Closed market vocabulary (protocol scorer modules: Moneyline/Spread/Total). The
+# moneyline team-identity rule keys off the normalized value, so a case/space variant
+# cannot skip it.
+KNOWN_MARKETS = {"moneyline", "spread", "total"}
+# Fill-derived capability rows: a proven canonical-fill telemetry row implies a fill
+# occurred, so AMBER_QUOTED_NO_FILL must not claim it.
+# Shared-id coherence: when a scenario row and a capability row carry the same id they
+# describe the same thing, so their outcome class (proven / failed / absent) must agree.
+SCENARIO_OUTCOME_CLASS = {
+    "pass": "proven",
+    "pass_with_caveats": "proven",
+    "fail": "failed",
+    "deferred": "absent",
+    "not_run": "absent",
+    "not_applicable": "absent",
+}
+PROOF_OUTCOME_CLASS = {
+    "proven_live": "proven",
+    "proven_synthetic_only": "proven",
+    "failed": "failed",
+    "deferred": "absent",
+    "not_applicable": "absent",
+}
 
 # Patterns are intentionally specific to reduce false positives from docs that
 # describe excluded material. Broad words like "secret" or "password" are not
@@ -56,6 +169,25 @@ SAFETY_PATTERNS = [
     ("ospex secret path", re.compile(r"\.ospex/(?:secrets|wallets|keystores)|\.(?:pass|pem|key)\b", re.I)),
     ("raw EIP-712 signature-sized hex", RAW_SIGNATURE_RE),
     (
+        "signature-sized bare hex",
+        re.compile(r"(?<![a-fA-F0-9])(?:0[xX])?[a-fA-F0-9]{128,132}(?![a-fA-F0-9])"),
+    ),
+    (
+        "signature r/s components",
+        re.compile(r"\"r\"\s*:\s*\"0[xX][a-fA-F0-9]{64}\"\s*,\s*\"s\"\s*:\s*\"0[xX][a-fA-F0-9]{64}\""),
+    ),
+    (
+        "signature/signedPayload-keyed hex value",
+        re.compile(
+            r"\"[A-Za-z0-9_-]*(?:signature|signedPayload|signedMessage|signedTypedData)[A-Za-z0-9_-]*\"\s*:\s*\"(?:0[xX])?[a-fA-F0-9]{8,}",
+            re.I,
+        ),
+    ),
+    (
+        LONG_HEX_LABEL,
+        re.compile(r"(?<![a-fA-F0-9])(?:0[xX])?[a-fA-F0-9]{192,}"),
+    ),
+    (
         "specific upstream odds provider name",
         re.compile(r"\b(draftkings|fan\s?duel|betrivers|betmgm|pinnacle|the[- ]odds[- ]api|sportradar)\b", re.I),
     ),
@@ -64,6 +196,13 @@ SAFETY_PATTERNS = [
 
 def rel(path: Path) -> str:
     return path.relative_to(ROOT).as_posix()
+
+
+def display_path(path: Path) -> str:
+    try:
+        return rel(path)
+    except ValueError:
+        return path.as_posix()
 
 
 def is_under_repo(path: Path) -> bool:
@@ -115,6 +254,43 @@ def is_plain_int(value: Any) -> bool:
     return type(value) is int
 
 
+def is_one_of(value: Any, vocab: set[str]) -> bool:
+    # Membership tests on JSON-sourced values must never raise: lists/dicts are unhashable.
+    return isinstance(value, str) and value in vocab
+
+
+def american_to_implied_prob(odds_int: int) -> float:
+    # Implied win probability from American odds (vig-inclusive).
+    if odds_int < 0:
+        return -odds_int / (-odds_int + 100)
+    return 100 / (odds_int + 100)
+
+
+COMPANION_ARTIFACT_FILES = {
+    "evidence.json",
+    "scenario-matrix.json",
+    "scenario-matrix.md",
+    "mve-scorecard.json",
+    "mve-scorecard.md",
+    "summary.md",
+}
+
+
+def is_companion_reference(value: Any) -> bool:
+    # Evidence rows must point at sanitized raw evidence; pointing a row at the
+    # artifact's own companion files is circular by construction.
+    return isinstance(value, str) and bool(value) and PurePosixPath(value).as_posix() in COMPANION_ARTIFACT_FILES
+
+
+def check_evidence_file_path(value: Any, *, base: Path, errors: list[str], context: str) -> None:
+    if is_companion_reference(value):
+        errors.append(f"{context} must point at sanitized raw evidence, not the artifact's own companion files")
+    elif isinstance(value, str) and value.endswith("/"):
+        errors.append(f"{context} must point at a sanitized evidence file, not a directory")
+    else:
+        check_relative_path(value, base=base, errors=errors, context=context)
+
+
 def check_relative_path(path_value: Any, *, base: Path, errors: list[str], context: str, expect_dir: bool = False) -> None:
     if path_value is None:
         return
@@ -149,7 +325,12 @@ def parse_json_files(files: list[Path], errors: list[str]) -> dict[Path, Any]:
 def parse_ndjson_files(files: list[Path], errors: list[str]) -> int:
     count = 0
     for path in sorted(p for p in files if p.suffix == ".ndjson"):
-        for line_no, line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+        try:
+            text = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError as exc:
+            errors.append(f"{rel(path)}: not valid UTF-8: {exc}")
+            continue
+        for line_no, line in enumerate(text.splitlines(), start=1):
             if not line.strip():
                 continue
             count += 1
@@ -557,8 +738,785 @@ def validate_raw_file_maps(path: Path, doc: Any, errors: list[str]) -> None:
         check_relative_path(value, base=path.parent, errors=errors, context=f"{context} files.{key}")
 
 
+def scenario_matrix_is_v2(doc: Any) -> bool:
+    return (
+        isinstance(doc, dict)
+        and is_plain_int(doc.get("schemaVersion"))
+        and doc["schemaVersion"] >= SCENARIO_MATRIX_MIN_VERSION
+    )
+
+
+def scenario_matrix_declares_adoption(doc: Any) -> bool:
+    """True when a matrix presents itself as schema-backed: any $schema pointer, or a numeric schemaVersion >= 2.
+
+    Wider than scenario_matrix_is_v2 so near-miss declarations (schemaVersion 2.0, "2", or a
+    $schema pointer with a malformed version) are rejected loudly instead of silently
+    grandfathered. None of the pre-scheme legacy matrices carries a $schema pointer or a
+    numeric schemaVersion above 1.
+    """
+    if not isinstance(doc, dict):
+        return False
+    if "$schema" in doc:
+        return True
+    version = doc.get("schemaVersion")
+    return isinstance(version, (int, float)) and not isinstance(version, bool) and version >= SCENARIO_MATRIX_MIN_VERSION
+
+
+def validate_scenario_matrix(path: Path, doc: Any, errors: list[str]) -> None:
+    """Validate schema-backed (v2+) scenario matrices. Earlier free-form shapes are grandfathered."""
+    if not scenario_matrix_is_v2(doc):
+        if isinstance(doc, dict):
+            context = display_path(path)
+            if scenario_matrix_declares_adoption(doc):
+                errors.append(
+                    f"{context}: declares the scenario-matrix schema but schemaVersion must be a plain integer >= "
+                    f"{SCENARIO_MATRIX_MIN_VERSION}"
+                )
+            elif "schemaVersion" in doc and not is_plain_int(doc["schemaVersion"]):
+                errors.append(f"{context}: schemaVersion must be a plain integer when present")
+        return
+    context = display_path(path)
+    artifact_dir = path.parent
+
+    if doc.get("$schema") != SCENARIO_MATRIX_SCHEMA_ID:
+        errors.append(f"{context}: $schema must be {SCENARIO_MATRIX_SCHEMA_ID}")
+    if doc.get("artifactId") != artifact_dir.name:
+        errors.append(f"{context}: artifactId must equal the artifact directory name {artifact_dir.name!r}")
+    if not parse_datetime(doc.get("generatedAt")):
+        errors.append(f"{context}: generatedAt must be an ISO date-time")
+    run_class = doc.get("runClass")
+    if not isinstance(run_class, str) or not run_class.strip():
+        errors.append(f"{context}: runClass must be a non-empty string")
+    elif run_class not in KNOWN_RUN_CLASSES:
+        errors.append(f"{context}: runClass {run_class!r} must be one of: " + ", ".join(sorted(KNOWN_RUN_CLASSES)))
+
+    scenarios = doc.get("scenarios")
+    if not isinstance(scenarios, list) or not scenarios:
+        errors.append(f"{context}: scenarios must be a non-empty array")
+        return
+    seen_ids: set[str] = set()
+    for idx, row in enumerate(scenarios):
+        row_context = f"{context}: scenarios[{idx}]"
+        if not isinstance(row, dict):
+            errors.append(f"{row_context} must be an object")
+            continue
+        for key in ["id", "scenario", "status", "notes"]:
+            if key not in row:
+                errors.append(f"{row_context} missing required key {key!r}")
+        row_id = row.get("id")
+        if isinstance(row_id, str) and SLUG_RE.match(row_id):
+            if row_id in seen_ids:
+                errors.append(f"{row_context}: duplicate scenario id {row_id!r}")
+            seen_ids.add(row_id)
+        elif "id" in row:
+            errors.append(f"{row_context}: id must be a kebab-case slug")
+        for key in ["scenario", "notes"]:
+            if key in row and (not isinstance(row[key], str) or not row[key].strip()):
+                errors.append(f"{row_context}.{key} must be a non-empty string")
+        status = row.get("status")
+        if "status" in row and not is_one_of(status, SCENARIO_STATUSES):
+            allowed = ", ".join(sorted(SCENARIO_STATUSES))
+            errors.append(f"{row_context}: status {status!r} must be one of: {allowed}")
+        evidence = row.get("evidence")
+        if evidence is None:
+            if is_one_of(status, {"pass", "pass_with_caveats", "fail"}):
+                errors.append(f"{row_context}: evidence is required when status is {status!r}")
+        else:
+            check_evidence_file_path(evidence, base=artifact_dir, errors=errors, context=f"{row_context}.evidence")
+
+
+def validate_team_identity(context: str, target: dict[str, Any], errors: list[str]) -> None:
+    identity = target.get("teamIdentity")
+    if not isinstance(identity, dict):
+        errors.append(f"{context}: moneyline target requires a teamIdentity object with home and away entries")
+        return
+    # Adopting runs key teamIdentity by role (home/away), each carrying its own `identity`
+    # field. Some pre-scheme artifacts used a homeFavorite/awayUnderdog shape that breaks for
+    # pick'ems and away-favorite games; give those a clear migration message, not a cryptic
+    # missing-key cascade.
+    if "home" not in identity and "away" not in identity and ("homeFavorite" in identity or "awayUnderdog" in identity):
+        errors.append(
+            f"{context}: teamIdentity must be keyed by role ('home'/'away'), each with an 'identity' field "
+            "(favorite/underdog/even) — not the legacy 'homeFavorite'/'awayUnderdog' shape"
+        )
+        return
+    identities: dict[str, str] = {}
+    teams: dict[str, str] = {}
+    odds_by_role: dict[str, int] = {}
+    for role, expected_position in TEAM_IDENTITY_POSITION_TYPE_BY_ROLE.items():
+        entry = identity.get(role)
+        entry_context = f"{context}: teamIdentity.{role}"
+        if not isinstance(entry, dict):
+            errors.append(f"{entry_context} must be an object")
+            continue
+        team = entry.get("team")
+        if not isinstance(team, str) or not team.strip():
+            errors.append(f"{entry_context}.team must be a non-empty string")
+        else:
+            teams[role] = team
+            # Bind the identity block to the declared target so a home/away swap inside
+            # teamIdentity cannot pass while the rest of the artifact says otherwise.
+            expected_team = target.get(f"{role}Team")
+            if isinstance(expected_team, str) and expected_team.strip() and team != expected_team:
+                errors.append(f"{entry_context}.team {team!r} must equal target.{role}Team {expected_team!r}")
+        if entry.get("positionType") != expected_position:
+            errors.append(f"{entry_context}.positionType must be {expected_position!r} for the {role} side")
+        odds = entry.get("marketOddsAmerican")
+        odds_valid = isinstance(odds, str) and AMERICAN_ODDS_RE.match(odds) and abs(int(odds)) >= 100
+        if not odds_valid:
+            errors.append(f"{entry_context}.marketOddsAmerican must be signed American odds with magnitude >= 100, like '-114' or '+114'")
+        side_identity = entry.get("identity")
+        if not is_one_of(side_identity, {"favorite", "underdog", "even"}):
+            errors.append(f"{entry_context}.identity must be favorite, underdog, or even")
+        else:
+            identities[role] = side_identity
+            if odds_valid:
+                odds_by_role[role] = int(odds)
+                # Sign/identity confusion is the exact failure the Team Identity Rule exists for.
+                # `even` is judged below as a pair (a vigged pick'em is -110/-110, both negative).
+                if side_identity == "favorite" and not odds.startswith("-"):
+                    errors.append(f"{entry_context}: favorite must carry negative American odds, got {odds!r}")
+                elif side_identity == "underdog" and not odds.startswith("+"):
+                    errors.append(f"{entry_context}: underdog must carry positive American odds, got {odds!r}")
+    if len(teams) == 2 and teams["home"] == teams["away"]:
+        errors.append(f"{context}: teamIdentity home and away teams must differ")
+    if len(identities) == 2:
+        pair = sorted(identities.values())
+        if pair not in (["favorite", "underdog"], ["even", "even"]):
+            errors.append(f"{context}: teamIdentity identities must pair favorite/underdog or even/even")
+        elif pair == ["even", "even"] and len(odds_by_role) == 2:
+            # A genuine pick'em is symmetric: the two sides' implied probabilities are close
+            # (any vig spelling -110/-110, -105/-115). A lopsided line mislabeled `even` is rejected.
+            delta = abs(american_to_implied_prob(odds_by_role["home"]) - american_to_implied_prob(odds_by_role["away"]))
+            if delta > EVEN_IMPLIED_PROB_TOLERANCE:
+                errors.append(
+                    f"{context}: even/even pick'em requires symmetric odds (implied-probability gap "
+                    f"{delta:.3f} exceeds {EVEN_IMPLIED_PROB_TOLERANCE}); use favorite/underdog for a lopsided line"
+                )
+
+
+def resolve_run_json(artifact_dir: Path, rel_path: Any, docs: dict[Path, Any]) -> Any:
+    """Parsed JSON for a run-relative evidence path, or None if it is not a readable JSON file.
+
+    docs holds every successfully parsed .json file in the repo; a missing key therefore means
+    the path is absent, a directory, or unparsable — all of which the caller treats as fail-closed.
+    """
+    if not isinstance(rel_path, str) or not rel_path or rel_path.endswith("/"):
+        return None
+    return docs.get(artifact_dir / rel_path)
+
+
+def bind_identity_field(
+    context: str,
+    name: str,
+    target_value: Any,
+    raw_value: Any,
+    rel_path: str,
+    errors: list[str],
+    *,
+    lower: bool = False,
+    required: bool = True,
+) -> None:
+    # A missing public field is reported by its own presence check, so skip to avoid double-report.
+    if not isinstance(target_value, str) or not target_value:
+        return
+    # A missing REQUIRED raw field is fail-closed: the canonical evidence must carry it. Comparison
+    # is exact (case-insensitive only when lower=True) — no trim, so padded public values don't match.
+    if raw_value is None:
+        if required:
+            errors.append(f"{context}: {rel_path} is missing the {name} field required to bind the target identity")
+        return
+    expected = str(raw_value)
+    matches = expected.lower() == target_value.lower() if lower else expected == target_value
+    if not matches:
+        errors.append(f"{context}: target.{name} {target_value!r} must match the {rel_path} value {raw_value!r}")
+
+
+def validate_target_preflight_binding(
+    context: str, target: dict[str, Any], artifact_dir: Path, evidence_by_id: dict[str, Any], docs: dict[Path, Any], errors: list[str]
+) -> None:
+    rel_path = evidence_by_id.get("target-preflight")
+    if not isinstance(rel_path, str) or not rel_path:
+        errors.append(f"{context}: the target-preflight capability must cite an evidence file so the target identity can be bound")
+        return
+    raw = resolve_run_json(artifact_dir, rel_path, docs)
+    if not isinstance(raw, dict):
+        errors.append(f"{context}: target-preflight evidence {rel_path!r} must be a readable JSON file for target binding")
+        return
+    selected = raw.get("selectedTarget")
+    if not isinstance(selected, dict):
+        errors.append(f"{context}: target-preflight evidence {rel_path!r} must contain a selectedTarget object")
+        return
+    bind_identity_field(context, "contestId", target.get("contestId"), selected.get("contestId"), rel_path, errors)
+    bind_identity_field(context, "sport", target.get("sport"), selected.get("sport"), rel_path, errors, lower=True)
+    bind_identity_field(context, "homeTeam", target.get("homeTeam"), selected.get("homeTeam"), rel_path, errors)
+    bind_identity_field(context, "awayTeam", target.get("awayTeam"), selected.get("awayTeam"), rel_path, errors)
+
+    spec_id = target.get("speculationId")
+    contest_id = target.get("contestId")
+    market = target.get("market")
+    market_norm = market.strip().lower() if isinstance(market, str) else None
+    specs = selected.get("speculations")
+    matched = False
+    if isinstance(specs, list):
+        for spec in specs:
+            if not isinstance(spec, dict):
+                continue
+            spec_type = spec.get("type")
+            if (
+                isinstance(spec_id, str)
+                and str(spec.get("speculationId")) == spec_id
+                and isinstance(contest_id, str)
+                and str(spec.get("contestId")) == contest_id
+                and isinstance(spec_type, str)
+                and spec_type.lower() == market_norm
+            ):
+                matched = True
+                break
+    if not matched:
+        errors.append(
+            f"{context}: target-preflight evidence {rel_path!r} has no speculation matching "
+            f"speculationId={spec_id!r}, contestId={contest_id!r}, market={market!r}"
+        )
+
+
+def validate_live_fill_binding(
+    context: str,
+    target: dict[str, Any],
+    artifact_dir: Path,
+    evidence_by_id: dict[str, Any],
+    proof_by_id: dict[str, str],
+    successful_categories: set[str],
+    docs: dict[Path, Any],
+    errors: list[str],
+) -> None:
+    claims_fill = proof_by_id.get("live-fill") == "proven_live" or bool(successful_categories & FILL_TX_CATEGORIES)
+    if not claims_fill:
+        return
+    rel_path = evidence_by_id.get("live-fill")
+    if not isinstance(rel_path, str) or not rel_path:
+        errors.append(f"{context}: a claimed live fill requires the live-fill capability to cite fill evidence")
+        return
+    raw = resolve_run_json(artifact_dir, rel_path, docs)
+    if not isinstance(raw, dict):
+        errors.append(f"{context}: live-fill evidence {rel_path!r} must be a readable JSON file to bind the fill to the target")
+        return
+    result = raw.get("result")
+    if not isinstance(result, dict):
+        errors.append(f"{context}: live-fill evidence {rel_path!r} must contain a result object for target binding")
+        return
+    contest = result.get("contest")
+    if not isinstance(contest, dict):
+        errors.append(f"{context}: live-fill evidence {rel_path!r} result must contain a contest object")
+    else:
+        bind_identity_field(context, "contestId", target.get("contestId"), contest.get("contestId"), rel_path, errors)
+        bind_identity_field(context, "sport", target.get("sport"), contest.get("sport"), rel_path, errors, lower=True)
+        bind_identity_field(context, "homeTeam", target.get("homeTeam"), contest.get("homeTeam"), rel_path, errors)
+        bind_identity_field(context, "awayTeam", target.get("awayTeam"), contest.get("awayTeam"), rel_path, errors)
+    speculation = result.get("speculation")
+    if not isinstance(speculation, dict):
+        errors.append(f"{context}: live-fill evidence {rel_path!r} result must contain a speculation object")
+    else:
+        bind_identity_field(context, "speculationId", target.get("speculationId"), speculation.get("speculationId"), rel_path, errors)
+    commitment = result.get("commitment")
+    if isinstance(commitment, dict):
+        # commitment.contestId / marketType are optional ("if present"); absence is not an error.
+        bind_identity_field(context, "contestId", target.get("contestId"), commitment.get("contestId"), rel_path, errors, required=False)
+        bind_identity_field(context, "market", target.get("market"), commitment.get("marketType"), rel_path, errors, lower=True, required=False)
+
+
+def validate_adopting_run_evidence(
+    scorecard_path: Path,
+    evidence_doc: dict[str, Any],
+    verdict_label: str | None,
+    run_class: Any,
+    proof_by_id: dict[str, str],
+    successful_categories: set[str],
+    evidence_by_id: dict[str, Any],
+    docs: dict[Path, Any],
+    errors: list[str],
+) -> None:
+    context = display_path(scorecard_path.parent / "evidence.json")
+
+    if evidence_doc.get("artifactType") != "run":
+        errors.append(f"{context}: artifactType must be 'run' for a scorecard-adopting artifact")
+
+    artifact_files = evidence_doc.get("artifactFiles")
+    referenced: set[str] = set()
+    if isinstance(artifact_files, dict):
+        for key, value in artifact_files.items():
+            if isinstance(value, str):
+                referenced.add(value)
+                # The companion files' existence is guaranteed elsewhere (the scorecard is the
+                # document under validation; the matrix is required by the pairing check).
+                if value not in {"scenario-matrix.json", "mve-scorecard.json"}:
+                    check_relative_path(value, base=scorecard_path.parent, errors=errors, context=f"{context}: artifactFiles.{key}")
+            else:
+                errors.append(f"{context}: artifactFiles.{key} must be a string path")
+    for required_value in ["scenario-matrix.json", "mve-scorecard.json"]:
+        if required_value not in referenced:
+            errors.append(f"{context}: artifactFiles must reference {required_value}")
+
+    status = evidence_doc.get("status")
+    if verdict_label in RUN_STATUS_BY_VERDICT:
+        allowed = RUN_STATUS_BY_VERDICT[verdict_label] | {"superseded"}
+        if not is_one_of(status, allowed):
+            errors.append(
+                f"{context}: status {status!r} does not match scorecard verdict {verdict_label}; "
+                "expected one of: " + ", ".join(sorted(allowed))
+            )
+    if status == "superseded":
+        superseded_by = evidence_doc.get("supersededBy")
+        if not isinstance(superseded_by, str) or not superseded_by.strip():
+            errors.append(
+                f"{context}: status 'superseded' requires a supersededBy pointer "
+                "(repo-relative path to the successor run's evidence.json)"
+            )
+        elif not re.match(r"^runs/[^/]+/evidence\.json$", superseded_by) or superseded_by == context:
+            errors.append(
+                f"{context}: supersededBy must point at another run's evidence JSON "
+                "(runs/<artifact-id>/evidence.json), got " + repr(superseded_by)
+            )
+        else:
+            check_relative_path(superseded_by, base=ROOT, errors=errors, context=f"{context}.supersededBy")
+
+    evidence_verdict = evidence_doc.get("verdict")
+    if verdict_label and isinstance(evidence_verdict, dict) and "label" in evidence_verdict:
+        if evidence_verdict.get("label") != verdict_label:
+            errors.append(f"{context}: verdict.label must equal the scorecard verdict label {verdict_label!r}")
+
+    # Without a required target the moneyline team-identity rule would be trivially
+    # bypassable by omission: every adopting canary names its single target explicitly.
+    target = evidence_doc.get("target")
+    if not isinstance(target, dict):
+        errors.append(f"{context}: target must be an object describing the single canary target")
+        return
+    market = target.get("market")
+    market_normalized = market.strip().lower() if isinstance(market, str) else None
+    if not market_normalized:
+        errors.append(f"{context}: target.market must be a non-empty string")
+    elif market not in KNOWN_MARKETS:
+        # Reject non-canonical spellings (case/whitespace/typo) outright so the
+        # normalized moneyline trigger below cannot be dodged.
+        errors.append(f"{context}: target.market {market!r} must be exactly one of: " + ", ".join(sorted(KNOWN_MARKETS)))
+    home_team = target.get("homeTeam")
+    away_team = target.get("awayTeam")
+    for key, value in (("homeTeam", home_team), ("awayTeam", away_team)):
+        if not isinstance(value, str) or not value.strip():
+            errors.append(f"{context}: target.{key} must be a non-empty string")
+    if isinstance(home_team, str) and isinstance(away_team, str) and home_team and home_team == away_team:
+        errors.append(f"{context}: target.homeTeam and target.awayTeam must differ")
+
+    # The "exactly one contest/speculation" claim must be a concrete, named identity. The
+    # contest/sport are bound to the published run-directory name FAIL-CLOSED: an mm-live-canary
+    # directory that cannot be parsed for both is rejected, never silently skipped.
+    artifact_id = scorecard_path.parent.name
+    slug_contest = re.search(r"-contest-(\d+)(?:-|$)", artifact_id)
+    slug_sport = re.match(r"^\d{4}-\d{2}-\d{2}-([a-z0-9]+)-", artifact_id)
+    if run_class == "mm-live-canary":
+        if not slug_contest:
+            errors.append(
+                f"{context}: mm-live-canary run directory {artifact_id!r} must contain a parseable "
+                "'-contest-<id>' segment to bind the contest identity"
+            )
+        if not slug_sport:
+            errors.append(
+                f"{context}: mm-live-canary run directory {artifact_id!r} must start with a parseable "
+                "'YYYY-MM-DD-<sport>-' prefix to bind the sport identity"
+            )
+
+    # Public ids are exact decimal strings (no surrounding whitespace) and bind exactly to the slug.
+    contest_id = target.get("contestId")
+    if not isinstance(contest_id, str) or not re.fullmatch(r"\d+", contest_id):
+        errors.append(f"{context}: target.contestId must be a non-empty decimal string identifying the single contest")
+    elif slug_contest and contest_id != slug_contest.group(1):
+        errors.append(
+            f"{context}: target.contestId {contest_id!r} must match the contest id in the run directory name "
+            f"({slug_contest.group(1)!r})"
+        )
+    spec_id = target.get("speculationId")
+    if not isinstance(spec_id, str) or not re.fullmatch(r"\d+", spec_id):
+        errors.append(f"{context}: target.speculationId must be a non-empty decimal string identifying the single speculation")
+    sport = target.get("sport")
+    if not isinstance(sport, str) or not sport.strip():
+        errors.append(f"{context}: target.sport must be a non-empty string")
+    elif slug_sport and sport.lower() != slug_sport.group(1):
+        errors.append(
+            f"{context}: target.sport {sport!r} must match the sport in the run directory name "
+            f"({slug_sport.group(1)!r})"
+        )
+
+    # Trigger on the normalized value so 'Moneyline' / 'moneyline ' still require teamIdentity.
+    if market_normalized == "moneyline":
+        validate_team_identity(context, target, errors)
+
+    # Bind the public target to the canonical raw evidence the artifact cites. This is the core
+    # invariant: an adopting run must not claim a target its own evidence does not prove.
+    if run_class == "mm-live-canary":
+        validate_target_preflight_binding(context, target, scorecard_path.parent, evidence_by_id, docs, errors)
+        validate_live_fill_binding(
+            context, target, scorecard_path.parent, evidence_by_id, proof_by_id, successful_categories, docs, errors
+        )
+
+
+def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: list[str]) -> None:
+    context = display_path(path)
+    if not isinstance(doc, dict):
+        errors.append(f"{context}: must be a JSON object")
+        return
+    artifact_dir = path.parent
+
+    required_keys = [
+        "$schema",
+        "schemaVersion",
+        "artifactId",
+        "generatedAt",
+        "runClass",
+        "verdict",
+        "capabilities",
+        "zeroExposure",
+        "transactions",
+    ]
+    for key in required_keys:
+        if key not in doc:
+            errors.append(f"{context}: missing required key {key!r}")
+    if doc.get("$schema") != MVE_SCORECARD_SCHEMA_ID:
+        errors.append(f"{context}: $schema must be {MVE_SCORECARD_SCHEMA_ID}")
+    if not is_plain_int(doc.get("schemaVersion")) or doc.get("schemaVersion", 0) < 1:
+        errors.append(f"{context}: schemaVersion must be an integer >= 1")
+    if doc.get("artifactId") != artifact_dir.name:
+        errors.append(f"{context}: artifactId must equal the artifact directory name {artifact_dir.name!r}")
+    if not parse_datetime(doc.get("generatedAt")):
+        errors.append(f"{context}: generatedAt must be an ISO date-time")
+    run_class = doc.get("runClass")
+    if not isinstance(run_class, str) or not run_class.strip():
+        errors.append(f"{context}: runClass must be a non-empty string")
+    elif run_class not in KNOWN_RUN_CLASSES:
+        errors.append(f"{context}: runClass {run_class!r} must be one of: " + ", ".join(sorted(KNOWN_RUN_CLASSES)))
+
+    verdict_label: str | None = None
+    verdict = doc.get("verdict")
+    if "verdict" in doc:
+        if not isinstance(verdict, dict):
+            errors.append(f"{context}: verdict must be an object")
+        else:
+            label = verdict.get("label")
+            if not is_one_of(label, VERDICT_LABELS):
+                allowed = ", ".join(sorted(VERDICT_LABELS))
+                errors.append(f"{context}: verdict.label {label!r} must be one of: {allowed}")
+            elif label in UNPUBLISHABLE_VERDICTS:
+                errors.append(
+                    f"{context}: verdict.label {label!r} is not publishable; the run status vocabulary has no "
+                    "failure status, so halted/failed canary evidence stays internal"
+                )
+            else:
+                verdict_label = label
+            reason = verdict.get("reason")
+            if not isinstance(reason, str) or not reason.strip():
+                errors.append(f"{context}: verdict.reason must be a non-empty string")
+
+    proof_by_id: dict[str, str] = {}
+    evidence_by_id: dict[str, Any] = {}
+    seen_capability_ids: set[str] = set()
+    capabilities = doc.get("capabilities")
+    if "capabilities" in doc:
+        if not isinstance(capabilities, list) or not capabilities:
+            errors.append(f"{context}: capabilities must be a non-empty array")
+        else:
+            for idx, row in enumerate(capabilities):
+                row_context = f"{context}: capabilities[{idx}]"
+                if not isinstance(row, dict):
+                    errors.append(f"{row_context} must be an object")
+                    continue
+                for key in ["id", "capability", "proof", "notes"]:
+                    if key not in row:
+                        errors.append(f"{row_context} missing required key {key!r}")
+                row_id = row.get("id")
+                if isinstance(row_id, str) and SLUG_RE.match(row_id):
+                    if row_id in seen_capability_ids:
+                        errors.append(f"{row_context}: duplicate capability id {row_id!r}")
+                    seen_capability_ids.add(row_id)
+                elif "id" in row:
+                    errors.append(f"{row_context}: id must be a kebab-case slug")
+                    row_id = None
+                for key in ["capability", "notes"]:
+                    if key in row and (not isinstance(row[key], str) or not row[key].strip()):
+                        errors.append(f"{row_context}.{key} must be a non-empty string")
+                proof = row.get("proof")
+                if "proof" in row and not is_one_of(proof, PROOF_LEVELS):
+                    allowed = ", ".join(sorted(PROOF_LEVELS))
+                    errors.append(f"{row_context}: proof {proof!r} must be one of: {allowed}")
+                elif isinstance(row_id, str) and isinstance(proof, str):
+                    proof_by_id[row_id] = proof
+                evidence = row.get("evidence")
+                if isinstance(row_id, str) and evidence is not None:
+                    evidence_by_id[row_id] = evidence
+                if evidence is None:
+                    if is_one_of(proof, PROVEN_LEVELS) or proof == "failed":
+                        errors.append(f"{row_context}: evidence is required when proof is {proof!r}")
+                else:
+                    check_evidence_file_path(evidence, base=artifact_dir, errors=errors, context=f"{row_context}.evidence")
+
+    if run_class == "mm-live-canary" and isinstance(capabilities, list) and capabilities:
+        missing = sorted(MM_LIVE_CANARY_CAPABILITY_IDS - seen_capability_ids)
+        if missing:
+            errors.append(f"{context}: mm-live-canary scorecard is missing capability rows: {', '.join(missing)}")
+
+        exposure_proof = proof_by_id.get("exposure-drain-zero")
+        if exposure_proof is not None and exposure_proof != "proven_live":
+            errors.append(f"{context}: exposure-drain-zero must be proven_live in every published scorecard")
+
+        failed_ids = sorted(cid for cid, proof in proof_by_id.items() if proof == "failed")
+        if verdict_label in {"FULL_GREEN", "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED"} and failed_ids:
+            errors.append(f"{context}: verdict {verdict_label} cannot carry failed capabilities: {', '.join(failed_ids)}")
+        if verdict_label == "FULL_GREEN":
+            unproven = sorted(
+                cid
+                for cid in FULL_GREEN_CORE_CAPABILITY_IDS
+                if cid in proof_by_id and proof_by_id[cid] not in PROVEN_LEVELS
+            )
+            if unproven:
+                errors.append(f"{context}: verdict FULL_GREEN requires proven core capabilities; not proven: {', '.join(unproven)}")
+        # A live canary's headline claim is live behavior: the live-window rows accept only
+        # proven_live under any verdict that claims them, never proven_synthetic_only — and
+        # FULL_GREEN's completed postgame lifecycle is real on-chain behavior too.
+        if verdict_label in {"FULL_GREEN", "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED"}:
+            live_required = {"live-commitments-posted", "live-fill"}
+            if verdict_label == "FULL_GREEN":
+                live_required |= POSTGAME_CAPABILITY_IDS
+            not_live = sorted(
+                cid for cid in live_required if cid in proof_by_id and proof_by_id[cid] != "proven_live"
+            )
+            if not_live:
+                errors.append(
+                    f"{context}: verdict {verdict_label} requires proven_live capabilities; "
+                    "not proven_live: " + ", ".join(not_live)
+                )
+        if verdict_label == "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED":
+            not_deferred = sorted(
+                cid for cid in POSTGAME_CAPABILITY_IDS if cid in proof_by_id and proof_by_id[cid] != "deferred"
+            )
+            if not_deferred:
+                errors.append(
+                    f"{context}: verdict GREEN_LIVE_WINDOW_POSTGAME_DEFERRED requires deferred postgame capabilities; "
+                    "not deferred: " + ", ".join(not_deferred)
+                )
+        if verdict_label == "AMBER_QUOTED_NO_FILL":
+            posted_proof = proof_by_id.get("live-commitments-posted")
+            if posted_proof is not None and posted_proof != "proven_live":
+                errors.append(f"{context}: verdict AMBER_QUOTED_NO_FILL requires proven_live live-commitments-posted")
+            fill_proof = proof_by_id.get("live-fill")
+            if fill_proof is not None and fill_proof not in {"deferred", "failed"}:
+                errors.append(f"{context}: verdict AMBER_QUOTED_NO_FILL requires live-fill to be deferred or failed")
+            # A proven canonical-fill telemetry row implies a fill occurred, which the verdict denies.
+            sse_proof = proof_by_id.get("own-state-sse-canonical-fill")
+            if sse_proof is not None and sse_proof not in {"deferred", "failed", "not_applicable"}:
+                errors.append(
+                    f"{context}: verdict AMBER_QUOTED_NO_FILL requires own-state-sse-canonical-fill to be "
+                    "deferred, failed, or not_applicable — a proven canonical fill implies a fill occurred"
+                )
+        if verdict_label == "AMBER_TOKEN_TOPUP_NEEDED":
+            if proof_by_id and not any(proof in {"deferred", "failed"} for proof in proof_by_id.values()):
+                errors.append(f"{context}: verdict AMBER_TOKEN_TOPUP_NEEDED requires at least one deferred or failed capability")
+
+    zero = doc.get("zeroExposure")
+    if "zeroExposure" in doc:
+        if not isinstance(zero, dict):
+            errors.append(f"{context}: zeroExposure must be an object")
+        else:
+            for key in ["checkedAtUtc", *ZERO_EXPOSURE_COUNT_KEYS, "evidence"]:
+                if key not in zero:
+                    errors.append(f"{context}: zeroExposure missing required key {key!r}")
+            if "checkedAtUtc" in zero and not parse_datetime(zero.get("checkedAtUtc")):
+                errors.append(f"{context}: zeroExposure.checkedAtUtc must be an ISO date-time")
+            for key in ZERO_EXPOSURE_COUNT_KEYS:
+                if key in zero and (not is_plain_int(zero[key]) or zero[key] != 0):
+                    errors.append(f"{context}: zeroExposure.{key} must be the integer 0 in a published canary")
+            if "evidence" in zero:
+                if zero.get("evidence") is None:
+                    errors.append(
+                        f"{context}: zeroExposure.evidence must be a non-empty string path to the sanitized exposure snapshot"
+                    )
+                else:
+                    check_evidence_file_path(zero.get("evidence"), base=artifact_dir, errors=errors, context=f"{context}: zeroExposure.evidence")
+
+    successful_categories: set[str] = set()
+    txs = doc.get("transactions")
+    if "transactions" in doc:
+        if not isinstance(txs, list):
+            errors.append(f"{context}: transactions must be an array")
+        else:
+            seen_hash_category: set[tuple[str, str]] = set()
+            for idx, tx in enumerate(txs):
+                tx_context = f"{context}: transactions[{idx}]"
+                if not isinstance(tx, dict):
+                    errors.append(f"{tx_context} must be an object")
+                    continue
+                for key in ["category", "txHash", "status", "operatorControlled"]:
+                    if key not in tx:
+                        errors.append(f"{tx_context} missing required key {key!r}")
+                category = tx.get("category")
+                if "category" in tx and not is_one_of(category, TX_CATEGORIES):
+                    allowed = ", ".join(sorted(TX_CATEGORIES))
+                    errors.append(f"{tx_context}: category {category!r} must be one of: {allowed}")
+                    category = None
+                elif isinstance(category, str) and tx.get("status") == "success":
+                    # Verdict coherence below counts only successful transactions, so an honestly
+                    # disclosed reverted attempt never forces evidence omission.
+                    successful_categories.add(category)
+                tx_hash = tx.get("txHash")
+                if "txHash" in tx and (not isinstance(tx_hash, str) or not TX_HASH_RE.match(tx_hash)):
+                    errors.append(f"{tx_context}: txHash must be a 0x-prefixed 32-byte hash")
+                    tx_hash = None
+                if "status" in tx and not is_one_of(tx.get("status"), {"success", "reverted"}):
+                    errors.append(f"{tx_context}: status must be success or reverted")
+                if "operatorControlled" in tx and not isinstance(tx.get("operatorControlled"), bool):
+                    errors.append(f"{tx_context}: operatorControlled must be boolean")
+                if category == "score-callback" and tx.get("operatorControlled") is True:
+                    errors.append(
+                        f"{tx_context}: score-callback transactions are sent by the oracle network; operatorControlled must be false"
+                    )
+                if isinstance(tx_hash, str) and isinstance(category, str):
+                    pair = (tx_hash.lower(), category)
+                    if pair in seen_hash_category:
+                        errors.append(f"{tx_context}: duplicate transaction entry for {category} {tx_hash}")
+                    seen_hash_category.add(pair)
+            # GREEN_LIVE_WINDOW_POSTGAME_DEFERRED explicitly asserts deferral, so a successful
+            # postgame transaction contradicts it. The AMBER labels assert only "no fill" /
+            # "needs top-up" and say nothing about postgame (settle is speculation-level), so
+            # they are not constrained here. Reverted attempts never count.
+            if verdict_label == "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED":
+                postgame_present = sorted(successful_categories & POSTGAME_TX_CATEGORIES)
+                if postgame_present:
+                    errors.append(
+                        f"{context}: verdict {verdict_label} cannot include successful postgame "
+                        "transaction categories: " + ", ".join(postgame_present)
+                    )
+            if verdict_label == "FULL_GREEN":
+                if "settle" not in successful_categories:
+                    errors.append(f"{context}: verdict FULL_GREEN requires at least one successful settle transaction")
+                if not successful_categories & {"score-request", "score-callback"}:
+                    errors.append(
+                        f"{context}: verdict FULL_GREEN requires successful score-request or score-callback transaction evidence"
+                    )
+            if verdict_label == "AMBER_QUOTED_NO_FILL":
+                # In R4 there is no on-chain no-counterparty seed: a successful seed-match or
+                # match-commitment records a matched position, i.e. a fill.
+                fill_present = sorted(successful_categories & FILL_TX_CATEGORIES)
+                if fill_present:
+                    errors.append(
+                        f"{context}: verdict AMBER_QUOTED_NO_FILL cannot include a successful "
+                        + " or ".join(fill_present)
+                        + " transaction — that records a fill"
+                    )
+            # A proven_live live fill is an on-chain match, so it must be backed by a successful
+            # fill transaction — the symmetric guard to the AMBER no-fill rule above.
+            if proof_by_id.get("live-fill") == "proven_live" and not (successful_categories & FILL_TX_CATEGORIES):
+                errors.append(
+                    f"{context}: live-fill proven_live requires a successful fill transaction "
+                    "(match-commitment or seed-match)"
+                )
+
+    evidence_doc = docs.get(artifact_dir / "evidence.json")
+    if not isinstance(evidence_doc, dict):
+        errors.append(f"{context}: missing companion evidence.json in the artifact directory")
+    else:
+        validate_adopting_run_evidence(
+            path,
+            evidence_doc,
+            verdict_label,
+            run_class,
+            proof_by_id,
+            successful_categories,
+            evidence_by_id,
+            docs,
+            errors,
+        )
+
+
+def validate_adoption_pairing(docs: dict[Path, Any], errors: list[str]) -> None:
+    scorecard_class_by_dir: dict[Path, Any] = {}
+    for path, doc in docs.items():
+        if path.name == "mve-scorecard.json" and "runs" in path.parts:
+            scorecard_class_by_dir[path.parent] = doc.get("runClass") if isinstance(doc, dict) else None
+
+    adopting_matrix_dirs: set[Path] = set()
+    canary_matrix_dirs: set[Path] = set()
+    matrix_class_by_dir: dict[Path, Any] = {}
+    for path, doc in docs.items():
+        if path.name != "scenario-matrix.json" or "runs" not in path.parts:
+            continue
+        if scenario_matrix_declares_adoption(doc):
+            adopting_matrix_dirs.add(path.parent)
+            matrix_class_by_dir[path.parent] = doc.get("runClass")
+            # A malformed adoption declaration already gets its own loud error from
+            # validate_scenario_matrix; only well-formed canary matrices demand a scorecard.
+            if scenario_matrix_is_v2(doc) and doc.get("runClass") == "mm-live-canary":
+                canary_matrix_dirs.add(path.parent)
+
+    for directory in sorted(set(scorecard_class_by_dir) - adopting_matrix_dirs):
+        errors.append(
+            f"{display_path(directory)}: mve-scorecard.json requires a schemaVersion >= {SCENARIO_MATRIX_MIN_VERSION} "
+            "scenario-matrix.json in the same run directory"
+        )
+    for directory in sorted(canary_matrix_dirs - set(scorecard_class_by_dir)):
+        errors.append(
+            f"{display_path(directory)}: an mm-live-canary scenario-matrix.json with schemaVersion >= "
+            f"{SCENARIO_MATRIX_MIN_VERSION} requires an mve-scorecard.json in the same run directory"
+        )
+    for directory in sorted(set(scorecard_class_by_dir) & set(matrix_class_by_dir)):
+        matrix_class = matrix_class_by_dir[directory]
+        scorecard_class = scorecard_class_by_dir[directory]
+        if isinstance(matrix_class, str) and isinstance(scorecard_class, str) and matrix_class != scorecard_class:
+            errors.append(
+                f"{display_path(directory)}: scenario-matrix.json runClass {matrix_class!r} must match "
+                f"mve-scorecard.json runClass {scorecard_class!r}"
+            )
+
+        # When a scenario row and a capability row share an id, their results must not tell
+        # contradictory stories about the same run.
+        matrix_doc = docs.get(directory / "scenario-matrix.json")
+        scorecard_doc = docs.get(directory / "mve-scorecard.json")
+        if not scenario_matrix_is_v2(matrix_doc) or not isinstance(scorecard_doc, dict):
+            continue
+        status_by_id: dict[str, str] = {}
+        scenarios = matrix_doc.get("scenarios")
+        if isinstance(scenarios, list):
+            for row in scenarios:
+                if isinstance(row, dict) and isinstance(row.get("id"), str) and isinstance(row.get("status"), str):
+                    status_by_id[row["id"]] = row["status"]
+        capabilities = scorecard_doc.get("capabilities")
+        if not isinstance(capabilities, list):
+            continue
+        for cap in capabilities:
+            if not isinstance(cap, dict):
+                continue
+            cap_id = cap.get("id")
+            proof = cap.get("proof")
+            if not isinstance(cap_id, str) or not isinstance(proof, str):
+                continue
+            row_status = status_by_id.get(cap_id)
+            if row_status is None:
+                continue
+            # Same id => same subject: the outcome class (proven / failed / absent) must
+            # agree across the two files. "absent" groups deferred / not_run / not_applicable.
+            row_class = SCENARIO_OUTCOME_CLASS.get(row_status)
+            proof_class = PROOF_OUTCOME_CLASS.get(proof)
+            if row_class is not None and proof_class is not None and row_class != proof_class:
+                errors.append(
+                    f"{display_path(directory)}: scenario-matrix.json row {cap_id!r} status {row_status!r} "
+                    f"contradicts mve-scorecard.json proof {proof!r}"
+                )
+
+
 def validate_schema_pointers(docs: dict[Path, Any], errors: list[str]) -> None:
-    known_schema_ids = {INDEX_SCHEMA_ID, ARCHIVE_SCHEMA_ID, RELEASE_ACCEPTANCE_SCHEMA_ID}
+    known_schema_ids = {
+        INDEX_SCHEMA_ID,
+        ARCHIVE_SCHEMA_ID,
+        RELEASE_ACCEPTANCE_SCHEMA_ID,
+        SCENARIO_MATRIX_SCHEMA_ID,
+        MVE_SCORECARD_SCHEMA_ID,
+    }
     for path, doc in docs.items():
         if not isinstance(doc, dict):
             continue
@@ -579,6 +1537,21 @@ def validate_schema_pointers(docs: dict[Path, Any], errors: list[str]) -> None:
         schema_pointer = doc.get("$schema")
         if schema_pointer is not None and schema_pointer not in known_schema_ids:
             errors.append(f"{rel(path)}: unknown $schema pointer {schema_pointer!r}")
+            continue
+        # The run-companion schemas are validated by filename, so a misnamed or misplaced
+        # file carrying their pointer would silently dodge every check. Templates are the
+        # only legitimate other carriers.
+        expected_name_by_schema = {
+            SCENARIO_MATRIX_SCHEMA_ID: "scenario-matrix.json",
+            MVE_SCORECARD_SCHEMA_ID: "mve-scorecard.json",
+        }
+        if schema_pointer in expected_name_by_schema and "templates" not in path.parts:
+            expected_name = expected_name_by_schema[schema_pointer]
+            if path.name != expected_name or "runs" not in path.parts:
+                errors.append(
+                    f"{rel(path)}: declares {schema_pointer} but must be named {expected_name} inside a runs/ "
+                    "artifact directory (templates under templates/ are exempt)"
+                )
 
 
 def validate_generated_indexes(errors: list[str]) -> None:
@@ -606,21 +1579,31 @@ def validate_generated_indexes(errors: list[str]) -> None:
 def safety_scan(files: list[Path], errors: list[str]) -> int:
     scanned = 0
     for path in sorted(files):
+        relative = rel(path)
+        top_level = relative.split("/", 1)[0]
         if path.suffix not in TEXT_SUFFIXES:
+            # Artifact directories may only contain scannable text files; anything the
+            # safety scan cannot read must not be published.
+            if top_level in {"runs", "releases", "daily"}:
+                allowed = ", ".join(sorted(TEXT_SUFFIXES))
+                errors.append(f"{relative}: unexpected file type {path.suffix!r}; artifact files must be one of: {allowed}")
             continue
         # Avoid the validator tripping over its own regex literals.
-        if rel(path) == "scripts/validate-artifacts.py":
+        if relative == "scripts/validate-artifacts.py":
             continue
         try:
             text = path.read_text(encoding="utf-8")
-        except UnicodeDecodeError:
+        except UnicodeDecodeError as exc:
+            errors.append(f"{relative}: not valid UTF-8, so the public-safety scan cannot read it: {exc}")
             continue
         scanned += 1
         for label, pattern in SAFETY_PATTERNS:
+            if label == LONG_HEX_LABEL and relative in LEGACY_LONG_HEX_FILES:
+                continue
             match = pattern.search(text)
             if match:
                 sample = match.group(0).replace("\n", " ")[:120]
-                errors.append(f"{rel(path)}: public-safety scan matched {label}: {sample!r}")
+                errors.append(f"{relative}: public-safety scan matched {label}: {sample!r}")
     return scanned
 
 
@@ -639,9 +1622,14 @@ def main() -> int:
             validate_archive_index(path, doc, docs, errors)
         if path.name == "acceptance.json" and "releases" in path.parts:
             validate_release_acceptance(path, doc, errors)
+        if path.name == "scenario-matrix.json" and "runs" in path.parts:
+            validate_scenario_matrix(path, doc, errors)
+        if path.name == "mve-scorecard.json" and "runs" in path.parts:
+            validate_mve_scorecard(path, doc, docs, errors)
         validate_projection_convergence(path, doc, errors)
         validate_raw_file_maps(path, doc, errors)
 
+    validate_adoption_pairing(docs, errors)
     validate_generated_indexes(errors)
     scanned_text_files = safety_scan(files, errors)
 

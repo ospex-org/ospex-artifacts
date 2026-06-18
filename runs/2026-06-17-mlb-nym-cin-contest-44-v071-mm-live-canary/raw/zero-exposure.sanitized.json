@@ -1,0 +1,41 @@
+{
+  "checkedAtUtc": "2026-06-17T19:42:04Z",
+  "publicMakerVisibleCommitments": 0,
+  "publicContestSpecVisibleCommitments": 0,
+  "contestOrderbookCount": 0,
+  "orphanProcessCount": 0,
+  "finalCommitmentListCounts": {
+    "contest44": 0,
+    "contest44Spec33": 0,
+    "maker": 0
+  },
+  "mmCommitmentsByLifecycle": {
+    "visibleOpen": 0,
+    "softCancelled": 1,
+    "partiallyFilled": 1,
+    "filled": 0,
+    "expired": 8,
+    "authoritativelyInvalidated": 0
+  },
+  "zeroOpenExposure": true,
+  "targetActivePositions": {
+    "maker": 0,
+    "taker": 0,
+    "seedMaker": 0,
+    "seedTaker": 0
+  },
+  "targetClaimablePositions": {
+    "maker": 0,
+    "taker": 0,
+    "seedMaker": 0,
+    "seedTaker": 0
+  },
+  "targetPendingSettlePositions": {
+    "maker": 0,
+    "taker": 0,
+    "seedMaker": 0,
+    "seedTaker": 0
+  },
+  "finalClaimSweepsEmpty": true,
+  "postgameLifecycleComplete": true
+}

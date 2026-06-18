@@ -1,0 +1,283 @@
+{
+  "preLive": {
+    "reservedLiveMaker": {
+      "alias": "mm-shakeout-maker-a",
+      "address": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+      "activePendingClaimable": "0/0/0",
+      "openCommitments": 0,
+      "balances": {
+        "native": {
+          "raw": "4720164033236813130",
+          "formatted": "4.720164",
+          "decimals": 18,
+          "symbol": "POL"
+        },
+        "usdc": {
+          "raw": "75513372",
+          "formatted": "75.513372",
+          "decimals": 6,
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+        },
+        "link": {
+          "raw": "0",
+          "formatted": "0",
+          "decimals": 18,
+          "address": "0xb0897686c545045aFc77CF20eC7A532E3120E0F1"
+        }
+      },
+      "allowances": {
+        "usdcPositionModule": {
+          "raw": "24364900",
+          "formatted": "24.3649",
+          "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c"
+        },
+        "usdcTreasuryModule": {
+          "raw": "0",
+          "formatted": "0",
+          "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e"
+        },
+        "linkOracleModule": {
+          "raw": "0",
+          "formatted": "0",
+          "spender": "0x7e1397eD5b4c9f606DCF2EB0281485B2296E29Bb"
+        }
+      }
+    },
+    "controlledLiveTaker": {
+      "alias": "mm-shakeout-flow-a",
+      "address": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494",
+      "activePendingClaimable": "0/0/0",
+      "openCommitments": 0,
+      "balances": {
+        "native": {
+          "raw": "1499782960618543644",
+          "formatted": "1.499782",
+          "decimals": 18,
+          "symbol": "POL"
+        },
+        "usdc": {
+          "raw": "32979628",
+          "formatted": "32.979628",
+          "decimals": 6,
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+        },
+        "link": {
+          "raw": "0",
+          "formatted": "0",
+          "decimals": 18,
+          "address": "0xb0897686c545045aFc77CF20eC7A532E3120E0F1"
+        }
+      },
+      "allowances": {
+        "usdcPositionModule": {
+          "raw": "23991029",
+          "formatted": "23.991029",
+          "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c"
+        },
+        "usdcTreasuryModule": {
+          "raw": "0",
+          "formatted": "0",
+          "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e"
+        },
+        "linkOracleModule": {
+          "raw": "0",
+          "formatted": "0",
+          "spender": "0x7e1397eD5b4c9f606DCF2EB0281485B2296E29Bb"
+        }
+      }
+    },
+    "mmOwnRiskWei6": {
+      "active": "0",
+      "pending": "0",
+      "claimable": "0"
+    }
+  },
+  "finalAfterPostgame": [
+    {
+      "alias": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "balances": {
+        "native": {
+          "raw": "2209631598099798066",
+          "formatted": "2.209631",
+          "decimals": 18,
+          "symbol": "POL"
+        },
+        "usdc": {
+          "raw": "4794410",
+          "formatted": "4.79441",
+          "decimals": 6,
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+        },
+        "link": {
+          "raw": "70000000000000000",
+          "formatted": "0.07",
+          "decimals": 18,
+          "address": "0xb0897686c545045aFc77CF20eC7A532E3120E0F1"
+        }
+      },
+      "allowances": {
+        "usdcPositionModule": {
+          "raw": "10639700",
+          "formatted": "10.6397",
+          "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c"
+        },
+        "usdcTreasuryModule": {
+          "raw": "4500000",
+          "formatted": "4.5",
+          "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e"
+        },
+        "linkOracleModule": {
+          "raw": "70000000000000000",
+          "formatted": "0.07",
+          "spender": "0x7e1397eD5b4c9f606DCF2EB0281485B2296E29Bb"
+        }
+      }
+    },
+    {
+      "alias": "ospex-fresh-user",
+      "address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "balances": {
+        "native": {
+          "raw": "18446871179728508661",
+          "formatted": "18.446871",
+          "decimals": 18,
+          "symbol": "POL"
+        },
+        "usdc": {
+          "raw": "2769976",
+          "formatted": "2.769976",
+          "decimals": 6,
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+        },
+        "link": {
+          "raw": "260000000000000000",
+          "formatted": "0.26",
+          "decimals": 18,
+          "address": "0xb0897686c545045aFc77CF20eC7A532E3120E0F1"
+        }
+      },
+      "allowances": {
+        "usdcPositionModule": {
+          "raw": "1380412",
+          "formatted": "1.380412",
+          "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c"
+        },
+        "usdcTreasuryModule": {
+          "raw": "0",
+          "formatted": "0",
+          "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e"
+        },
+        "linkOracleModule": {
+          "raw": "80000000000000000",
+          "formatted": "0.08",
+          "spender": "0x7e1397eD5b4c9f606DCF2EB0281485B2296E29Bb"
+        }
+      }
+    },
+    {
+      "alias": "mm-shakeout-maker-a",
+      "address": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "balances": {
+        "native": {
+          "raw": "4684378116496381731",
+          "formatted": "4.684378",
+          "decimals": 18,
+          "symbol": "POL"
+        },
+        "usdc": {
+          "raw": "75627372",
+          "formatted": "75.627372",
+          "decimals": 6,
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+        },
+        "link": {
+          "raw": "0",
+          "formatted": "0",
+          "decimals": 18,
+          "address": "0xb0897686c545045aFc77CF20eC7A532E3120E0F1"
+        }
+      },
+      "allowances": {
+        "usdcPositionModule": {
+          "raw": "24264900",
+          "formatted": "24.2649",
+          "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c"
+        },
+        "usdcTreasuryModule": {
+          "raw": "0",
+          "formatted": "0",
+          "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e"
+        },
+        "linkOracleModule": {
+          "raw": "0",
+          "formatted": "0",
+          "spender": "0x7e1397eD5b4c9f606DCF2EB0281485B2296E29Bb"
+        }
+      }
+    },
+    {
+      "alias": "mm-shakeout-flow-a",
+      "address": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+      "balances": {
+        "native": {
+          "raw": "1383160038820963025",
+          "formatted": "1.38316",
+          "decimals": 18,
+          "symbol": "POL"
+        },
+        "usdc": {
+          "raw": "32865628",
+          "formatted": "32.865628",
+          "decimals": 6,
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+        },
+        "link": {
+          "raw": "0",
+          "formatted": "0",
+          "decimals": 18,
+          "address": "0xb0897686c545045aFc77CF20eC7A532E3120E0F1"
+        }
+      },
+      "allowances": {
+        "usdcPositionModule": {
+          "raw": "23877029",
+          "formatted": "23.877029",
+          "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c"
+        },
+        "usdcTreasuryModule": {
+          "raw": "0",
+          "formatted": "0",
+          "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e"
+        },
+        "linkOracleModule": {
+          "raw": "0",
+          "formatted": "0",
+          "spender": "0x7e1397eD5b4c9f606DCF2EB0281485B2296E29Bb"
+        }
+      }
+    }
+  ],
+  "roleAssignments": [
+    {
+      "role": "setup/contest creator + seed maker",
+      "alias": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B"
+    },
+    {
+      "role": "setup seed taker / fallback winner",
+      "alias": "ospex-fresh-user",
+      "address": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D"
+    },
+    {
+      "role": "reserved live MM maker / primary winner",
+      "alias": "mm-shakeout-maker-a",
+      "address": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2"
+    },
+    {
+      "role": "controlled live taker / primary losing side",
+      "alias": "mm-shakeout-flow-a",
+      "address": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494"
+    }
+  ]
+}

@@ -28,7 +28,7 @@ These are artifact-level statuses only. Individual check/gate fields can use the
 
 ## `runs/` — lifecycle evidence
 
-`runs/` artifacts record a completed protocol or market-maker lifecycle for one or more contests.
+`runs/` artifacts record a completed protocol or market-maker lifecycle for one or more contests. (Runs adopting the MVE scorecard cover exactly one contest/speculation each — see `docs/mm-live-canary-evidence.md`.)
 
 Typical files:
 
@@ -55,6 +55,8 @@ Typical facts:
 - known caveats observed during the run
 
 A run artifact may be `complete_verified`, `complete_verified_with_caveats`, `partial`, or `superseded`. Caveats are part of the record; they do not make an artifact invalid by default.
+
+New market-maker live canary runs additionally publish a schema-backed scenario matrix and MVE readiness scorecard with a controlled verdict vocabulary (enforcement is adoption-triggered per run; pre-scheme runs are grandfathered); see `docs/mm-live-canary-evidence.md` and the templates under `templates/mm-live-canary/`.
 
 ## `releases/` — release acceptance evidence
 

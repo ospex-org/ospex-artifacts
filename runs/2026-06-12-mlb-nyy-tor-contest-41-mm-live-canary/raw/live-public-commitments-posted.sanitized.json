@@ -1,0 +1,35 @@
+{
+  "capturedAtUtc": "2026-06-12T23:03:08Z",
+  "commitments": [
+    {
+      "commitmentHash": "0xd9ad9e548213ba45cf240a6266052afa0e746fd35751b71a814c48fe195c55d1",
+      "expiryUtc": "2026-06-12T23:03:08Z",
+      "finalStatus": "expired / partially_filled / not live",
+      "humanTakerOdds": "+112",
+      "maker": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "makerOddsTick": 189,
+      "makerSide": "home",
+      "makerTeam": "Toronto Blue Jays",
+      "riskUSDC": "0.100000",
+      "signatureRedacted": true,
+      "takerSide": "away",
+      "takerTeam": "New York Yankees"
+    },
+    {
+      "commitmentHash": "0x2190854b5d29e185cf6e01335f7246046e71322f43fb86dcf9091e11c47ca9c0",
+      "expiryUtc": "2026-06-12T23:03:08Z",
+      "finalStatus": "cancelled / not visible",
+      "humanTakerOdds": "-112",
+      "maker": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "makerOddsTick": 212,
+      "makerSide": "away",
+      "makerTeam": "New York Yankees",
+      "riskUSDC": "0.100000",
+      "signatureRedacted": true,
+      "takerSide": "home",
+      "takerTeam": "Toronto Blue Jays"
+    }
+  ],
+  "contestId": "41",
+  "speculationId": "30"
+}

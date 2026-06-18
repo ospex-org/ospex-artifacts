@@ -1,0 +1,34 @@
+{
+  "source": "MLB Stats API game feed/live",
+  "fetchedAt": "2026-06-18T09:18:27.036Z",
+  "gamePk": 823774,
+  "status": {
+    "abstractGameState": "Final",
+    "codedGameState": "F",
+    "detailedState": "Final",
+    "statusCode": "F",
+    "startTimeTBD": false,
+    "abstractGameCode": "F"
+  },
+  "teams": {
+    "away": {
+      "name": "Cleveland Guardians",
+      "abbreviation": "CLE",
+      "score": 4
+    },
+    "home": {
+      "name": "Milwaukee Brewers",
+      "abbreviation": "MIL",
+      "score": 9
+    }
+  },
+  "moneylineSemantics": {
+    "upper": "away / Cleveland Guardians",
+    "lower": "home / Milwaukee Brewers"
+  },
+  "winner": {
+    "team": "Milwaukee Brewers",
+    "role": "home",
+    "protocolSide": "lower"
+  }
+}

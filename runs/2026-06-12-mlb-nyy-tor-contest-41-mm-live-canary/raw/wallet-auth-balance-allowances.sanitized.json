@@ -1,0 +1,81 @@
+{
+  "capturedAtUtc": "2026-06-13T04:45:19Z",
+  "topUp": {
+    "neededForThisCanary": false,
+    "note": "Maker USDC remains tight for any future multi-target live testing."
+  },
+  "wallets": {
+    "ospex-flow-a": {
+      "address": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+      "allowancesFinal": {
+        "linkOracleModule": "0.285",
+        "usdcPositionModule": "0.704941",
+        "usdcTreasuryModule": "0.5"
+      },
+      "delta": {
+        "LINK": "0.000",
+        "POL": "-0.036010",
+        "USDC": "+0.095500"
+      },
+      "final": {
+        "LINK": "0.285",
+        "POL": "16.393948",
+        "USDC": "3.613113"
+      },
+      "prePostgame": {
+        "LINK": "0.285",
+        "POL": "16.429958",
+        "USDC": "3.517613"
+      },
+      "role": "controlled-taker-and-seed-claimant"
+    },
+    "ospex-fresh-user": {
+      "address": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+      "allowancesFinal": {
+        "linkOracleModule": "0.08",
+        "usdcPositionModule": "1.580412",
+        "usdcTreasuryModule": "1"
+      },
+      "delta": {
+        "LINK": "-0.005",
+        "POL": "-0.229212",
+        "USDC": "0.000000"
+      },
+      "final": {
+        "LINK": "0.260",
+        "POL": "19.271866",
+        "USDC": "3.869976"
+      },
+      "prePostgame": {
+        "LINK": "0.265",
+        "POL": "19.501078",
+        "USDC": "3.869976"
+      },
+      "role": "score-settle-operator"
+    },
+    "ospex-stage-maker-b": {
+      "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "allowancesFinal": {
+        "linkOracleModule": "0.225",
+        "usdcPositionModule": "3.6171",
+        "usdcTreasuryModule": "0"
+      },
+      "delta": {
+        "LINK": "0.000",
+        "POL": "-0.035966",
+        "USDC": "+0.106029"
+      },
+      "final": {
+        "LINK": "0.225",
+        "POL": "12.981587",
+        "USDC": "0.590701"
+      },
+      "prePostgame": {
+        "LINK": "0.225",
+        "POL": "13.017553",
+        "USDC": "0.484672"
+      },
+      "role": "live-maker-claimant"
+    }
+  }
+}

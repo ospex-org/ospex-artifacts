@@ -1,0 +1,189 @@
+{
+  "capturedAtUtc": "2026-06-17T19:42:04Z",
+  "finalScore": {
+    "awayTeam": "New York Mets",
+    "awayRuns": 9,
+    "homeTeam": "Cincinnati Reds",
+    "homeRuns": 1,
+    "winner": "New York Mets",
+    "winnerProtocolSide": "upper",
+    "winnerRole": "away"
+  },
+  "score": {
+    "contestId": "44",
+    "txHash": "0xec13a28e3fb6b1ca8ee2d8a66bb413a329be39cebc09857e348cfd486cde82de",
+    "receiptStatus": "0x1",
+    "requestId": "0xfc5bd721306eba535e6020d69d571e63ddf5165826105bb9a6f88549143c86d3",
+    "contestStatus": "scored",
+    "awayScore": 9,
+    "homeScore": 1
+  },
+  "settle": {
+    "speculationId": "33",
+    "txHash": "0xc5a9d1b68781b519484f903debdd179c6ffcf308fc1001cbc695519a143b957e",
+    "receiptStatus": "0x1",
+    "winSide": "away/upper/New York Mets",
+    "settledAt": "2026-06-17T19:36:52+00:00",
+    "speculationStatus": "closed"
+  },
+  "claims": [
+    {
+      "walletLabel": "mm-shakeout-flow-a",
+      "wallet": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494",
+      "positionId": "33_0x1de13292256fddca9eea1ae53a79a83243cfd494_0",
+      "side": "upper / away / New York Mets",
+      "source": "live MM fill",
+      "commitmentHash": "0x7818744c708eb986aefcfe7ec70913821652bd061268f61287f0a78b22a6662b",
+      "payoutWei6": "181299",
+      "payoutUSDC": "0.181299",
+      "txHash": "0x2e5d50bec4b618768c6193fcbe9cdddffd9e3813f2090cb9b50f6f3c9c5141c1",
+      "receiptStatus": "0x1"
+    },
+    {
+      "walletLabel": "ospex-stage-maker-b",
+      "wallet": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "positionId": "33_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_0",
+      "side": "upper / away / New York Mets",
+      "source": "setup seed/open fill",
+      "commitmentHash": "0x0beaafcb27e4521935b69fb5849b8f7dcd52d2e4210bf6b32d833393aee00cb1",
+      "payoutWei6": "100000",
+      "payoutUSDC": "0.100000",
+      "txHash": "0x390cf95777650673d2971377ca1914dc27274039610921bf9d860ffc942818e9",
+      "receiptStatus": "0x1"
+    }
+  ],
+  "noOps": [
+    {
+      "walletLabel": "mm-shakeout-maker-a",
+      "wallet": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+      "positionId": "33_0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2_1",
+      "side": "lower / home / Cincinnati Reds",
+      "result": "lost",
+      "claimStatus": "not claimable"
+    },
+    {
+      "walletLabel": "ospex-fresh-user",
+      "wallet": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+      "positionId": "33_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+      "side": "lower / home / Cincinnati Reds",
+      "result": "lost",
+      "claimStatus": "not claimable"
+    }
+  ],
+  "finalClaimSweepsEmpty": true,
+  "finalClaimDryRunTotals": {
+    "ospex-fresh-user": {
+      "claimed": 0,
+      "failed": 0,
+      "claimedFresh": 0,
+      "alreadyClaimed": 0,
+      "recoveredAlreadyClaimed": 0,
+      "settledFresh": 0,
+      "alreadySettled": 0,
+      "recoveredAlreadySettled": 0,
+      "totalPayoutWei6": "0",
+      "totalPayoutUSDC": 0
+    },
+    "mm-shakeout-flow-a": {
+      "claimed": 0,
+      "failed": 0,
+      "claimedFresh": 0,
+      "alreadyClaimed": 0,
+      "recoveredAlreadyClaimed": 0,
+      "settledFresh": 0,
+      "alreadySettled": 0,
+      "recoveredAlreadySettled": 0,
+      "totalPayoutWei6": "0",
+      "totalPayoutUSDC": 0
+    },
+    "ospex-stage-maker-b": {
+      "claimed": 0,
+      "failed": 0,
+      "claimedFresh": 0,
+      "alreadyClaimed": 0,
+      "recoveredAlreadyClaimed": 0,
+      "settledFresh": 0,
+      "alreadySettled": 0,
+      "recoveredAlreadySettled": 0,
+      "totalPayoutWei6": "0",
+      "totalPayoutUSDC": 0
+    },
+    "mm-shakeout-maker-a": {
+      "claimed": 0,
+      "failed": 0,
+      "claimedFresh": 0,
+      "alreadyClaimed": 0,
+      "recoveredAlreadyClaimed": 0,
+      "settledFresh": 0,
+      "alreadySettled": 0,
+      "recoveredAlreadySettled": 0,
+      "totalPayoutWei6": "0",
+      "totalPayoutUSDC": 0
+    },
+    "ospex-stage-maker-a": {
+      "claimed": 0,
+      "failed": 0,
+      "claimedFresh": 0,
+      "alreadyClaimed": 0,
+      "recoveredAlreadyClaimed": 0,
+      "settledFresh": 0,
+      "alreadySettled": 0,
+      "recoveredAlreadySettled": 0,
+      "totalPayoutWei6": "0",
+      "totalPayoutUSDC": 0
+    }
+  },
+  "targetPositions": [
+    {
+      "position_id": 229,
+      "user_address": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "position_type": "lower",
+      "risk_amount": 50000,
+      "claimed": false,
+      "payout": null,
+      "status": null,
+      "claim_tx_hash": null
+    },
+    {
+      "position_id": 232,
+      "user_address": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "position_type": "lower",
+      "risk_amount": 81300,
+      "claimed": false,
+      "payout": null,
+      "status": null,
+      "claim_tx_hash": null
+    },
+    {
+      "position_id": 233,
+      "user_address": "0x1de13292256fddca9eea1ae53a79a83243cfd494",
+      "position_type": "upper",
+      "risk_amount": 99999,
+      "claimed": true,
+      "payout": null,
+      "status": null,
+      "claim_tx_hash": null
+    },
+    {
+      "position_id": 228,
+      "user_address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "position_type": "upper",
+      "risk_amount": 50000,
+      "claimed": true,
+      "payout": null,
+      "status": null,
+      "claim_tx_hash": null
+    }
+  ],
+  "zeroExposure": {
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "orphanProcessCount": 0,
+    "targetWinningClaimablePositions": 0,
+    "targetPendingSettlePositions": 0
+  },
+  "caveats": [
+    "CLI speculations.show did not render winSide/settledAt at final read, but indexer/projection target speculation row shows win_side=away and settled_at populated."
+  ]
+}

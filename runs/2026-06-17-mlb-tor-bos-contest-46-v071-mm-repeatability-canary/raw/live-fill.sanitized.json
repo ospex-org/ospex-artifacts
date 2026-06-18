@@ -1,0 +1,52 @@
+{
+  "commitmentHash": "0xe84032f1a0f3d8a4b92bf6774e0e117fe5fe610bb678c2afa69aecf34709e2e8",
+  "txHash": "0xe2d797bdd7936c7b81f5d5236c38749d35b57ea2b4ef1232b85079f4c80b3be8",
+  "blockNumber": "88684684",
+  "maker": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+  "taker": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494",
+  "makerSide": {
+    "team": "Toronto Blue Jays",
+    "role": "away",
+    "positionType": "upper"
+  },
+  "takerSide": {
+    "team": "Boston Red Sox",
+    "role": "home",
+    "positionType": "lower"
+  },
+  "makerFilledRiskWei6": "100000",
+  "takerRiskWei6": "114000",
+  "odds": {
+    "oddsTick": 214,
+    "makerDecimal": "2.14",
+    "makerAmerican": "+114",
+    "takerOddsTick": 188,
+    "takerDecimal": "1.88",
+    "takerAmerican": "-114"
+  },
+  "filledAtUtc": "2026-06-17T21:33:41Z",
+  "operatorControl": "one controlled fill only",
+  "result": {
+    "contest": {
+      "contestId": "46",
+      "sport": "mlb",
+      "awayTeam": "Toronto Blue Jays",
+      "homeTeam": "Boston Red Sox"
+    },
+    "speculation": {
+      "speculationId": "35",
+      "contestId": "46",
+      "type": "moneyline"
+    },
+    "commitment": {
+      "commitmentHash": "0xe84032f1a0f3d8a4b92bf6774e0e117fe5fe610bb678c2afa69aecf34709e2e8",
+      "contestId": "46",
+      "marketType": "moneyline"
+    },
+    "fill": {
+      "txHash": "0xe2d797bdd7936c7b81f5d5236c38749d35b57ea2b4ef1232b85079f4c80b3be8",
+      "makerFilledRiskWei6": "100000",
+      "takerRiskWei6": "114000"
+    }
+  }
+}

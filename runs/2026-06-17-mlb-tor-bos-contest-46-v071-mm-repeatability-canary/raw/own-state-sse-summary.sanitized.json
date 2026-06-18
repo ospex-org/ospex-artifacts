@@ -1,0 +1,28 @@
+{
+  "runId": "2026-06-17T21-23-35-505Z-0v40sc",
+  "fillEventCount": 1,
+  "canonicalFillEvents": [
+    {
+      "ts": "2026-06-17T21:33:52.492Z",
+      "runId": "2026-06-17T21-23-35-505Z-0v40sc",
+      "maker": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "kind": "fill",
+      "source": "own-state-stream",
+      "commitmentHash": "0xe84032f1a0f3d8a4b92bf6774e0e117fe5fe610bb678c2afa69aecf34709e2e8",
+      "speculationId": "35",
+      "contestId": "46",
+      "sport": "mlb",
+      "awayTeam": "Toronto Blue Jays",
+      "homeTeam": "Boston Red Sox",
+      "takerSide": "home",
+      "makerSide": "away",
+      "positionType": 0,
+      "makerOddsTick": 214,
+      "newFillWei6": "100000",
+      "cumulativeRiskWei6": "100000"
+    }
+  ],
+  "streamHealthHoldEvents": 2,
+  "errorEvents": 0,
+  "assertion": "The only fill telemetry event has source=own-state-stream and matches the controlled live fill commitment."
+}
