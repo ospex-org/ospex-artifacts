@@ -1,10 +1,11 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-06-18T23:58:58Z",
+  "generatedAt": "2026-06-19T00:28:50Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
+      "runs/2026-06-18-mlb-bal-sea-contest-48-v071-mve-stage1-capital-safety-canary/evidence.json",
       "runs/2026-06-17-mlb-tor-bos-contest-46-v071-mm-repeatability-canary/evidence.json",
       "runs/2026-06-17-mlb-nym-cin-contest-44-v071-mm-live-canary/evidence.json",
       "runs/2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary/evidence.json",
@@ -13,8 +14,7 @@
       "runs/2026-06-11-mlb-hou-laa-contest-35-mm-live-canary/evidence.json",
       "runs/2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate/evidence.json",
       "runs/2026-06-08-mlb-sea-bal-contest-32-v054-ownstate-sse-repeatability/evidence.json",
-      "runs/2026-06-08-mlb-sf-chc-v054-ownstate-sse-repeatability-canary/evidence.json",
-      "runs/2026-06-07-mlb-pit-atl-contest-30-v054-ownstate-sse-green-candidate/evidence.json"
+      "runs/2026-06-08-mlb-sf-chc-v054-ownstate-sse-repeatability-canary/evidence.json"
     ],
     "release-acceptance": [
       "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.json"
@@ -22,6 +22,17 @@
     "daily-digest": []
   },
   "recentArtifacts": [
+    {
+      "artifactId": "2026-06-18-mlb-bal-sea-contest-48-v071-mve-stage1-capital-safety-canary",
+      "artifactType": "run",
+      "dataPath": "runs/2026-06-18-mlb-bal-sea-contest-48-v071-mve-stage1-capital-safety-canary/evidence.json",
+      "date": "2026-06-18",
+      "network": "polygon",
+      "rawPath": "runs/2026-06-18-mlb-bal-sea-contest-48-v071-mve-stage1-capital-safety-canary/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-06-18-mlb-bal-sea-contest-48-v071-mve-stage1-capital-safety-canary/summary.md",
+      "publishedAt": "2026-06-18T23:05:25Z"
+    },
     {
       "artifactId": "2026-06-17-mlb-tor-bos-contest-46-v071-mm-repeatability-canary",
       "artifactType": "run",
@@ -289,9 +300,9 @@
       "scope": "year",
       "year": 2026,
       "path": "archive/2026/index.json",
-      "artifactCount": 23,
+      "artifactCount": 24,
       "oldestPublishedAt": "2026-05-20T02:48:35Z",
-      "newestPublishedAt": "2026-06-18T09:27:04Z"
+      "newestPublishedAt": "2026-06-18T23:05:25Z"
     }
   ]
 }

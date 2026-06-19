@@ -1,0 +1,31 @@
+{
+  "sourceUrl": "https://statsapi.mlb.com/api/v1.1/game/823125/feed/live",
+  "scheduleUrl": "https://statsapi.mlb.com/api/v1/schedule?gamePk=823125&hydrate=team,linescore",
+  "fetchedAt": "2026-06-18T22:44:47.297676+00:00",
+  "gamePk": 823125,
+  "gameDate": "2026-06-18T20:10:00Z",
+  "status": {
+    "abstractGameState": "Final",
+    "codedGameState": "F",
+    "detailedState": "Final",
+    "statusCode": "F",
+    "startTimeTBD": false,
+    "abstractGameCode": "F"
+  },
+  "away": {
+    "name": "Baltimore Orioles",
+    "abbreviation": "BAL",
+    "runs": 0
+  },
+  "home": {
+    "name": "Seattle Mariners",
+    "abbreviation": "SEA",
+    "runs": 3
+  },
+  "winner": "home",
+  "moneylineSemantics": {
+    "upper": "away",
+    "lower": "home"
+  },
+  "winningProtocolSide": "lower"
+}

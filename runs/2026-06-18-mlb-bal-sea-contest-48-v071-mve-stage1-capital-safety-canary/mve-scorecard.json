@@ -1,0 +1,198 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "2026-06-18-mlb-bal-sea-contest-48-v071-mve-stage1-capital-safety-canary",
+  "generatedAt": "2026-06-18T23:05:14Z",
+  "runClass": "mm-live-canary",
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "The v0.7.1 BAL @ SEA Stage-1 MVE capital-safety canary completed the full BAL/SEA lifecycle: official final score Baltimore Orioles 0, Seattle Mariners 3 was verified; contest 48 was scored; speculation 37 settled to home/lower/Seattle; the winning controlled live-fill and setup seed positions were claimed; final claim sweeps, public commitments/orderbook, and live-MM process checks are zero. Caveats are limited to LAA/ATH being a prep-only backup outside this BAL/SEA artifact and no separate restart/cold-start probe."
+  },
+  "capabilities": [
+    {
+      "id": "target-preflight",
+      "capability": "Target preflight and allowlist",
+      "proof": "proven_live",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "notes": "BAL away @ SEA home contest 48/spec 37 passed official status, identity, allowlist, and quote-ready gates."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "capability": "Repo/runtime gates",
+      "proof": "proven_live",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "notes": "v0.7.1 CLI/SDK and MM SHA/pins verified; install/build/typecheck/test/smoke passed."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "capability": "Wallet auth, balances, allowances",
+      "proof": "proven_live",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Reserved live maker was clean before start; balances/allowances were sufficient and bounded."
+    },
+    {
+      "id": "bounded-approvals",
+      "capability": "Bounded approvals / no unlimited approvals",
+      "proof": "proven_live",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "notes": "Only bounded approvals were used; live auto-approval stayed off."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "capability": "Dry-run quote loop",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "notes": "Pre-live quote dry-run for contest 48 returned pipeline=computed and canQuote=true."
+    },
+    {
+      "id": "live-commitments-posted",
+      "capability": "Live commitments posted",
+      "proof": "proven_live",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "notes": "5 tiny live commitments posted, all target 48/37 only."
+    },
+    {
+      "id": "live-fill",
+      "capability": "Controlled live fill",
+      "proof": "proven_live",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "Exactly one controlled fill succeeded against live-posted commitment 0x5ec9a073\u2026 using mm-shakeout-flow-a."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "capability": "Own-state SSE canonical fill source",
+      "proof": "proven_live",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "Telemetry captured the fill with source own-state-stream."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "capability": "Exposure drained to zero",
+      "proof": "proven_live",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "Final public/API/MM visible-open exposure is zero and no orphan live MM process remained."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "capability": "Restart/cold-start safety",
+      "proof": "not_applicable",
+      "evidence": null,
+      "notes": "Not run for this Stage-1 live-window artifact; final zero-exposure and process checks were run instead."
+    },
+    {
+      "id": "postgame-score",
+      "capability": "Postgame score",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Official final score BAL 0, SEA 3 was verified and contest 48 scored."
+    },
+    {
+      "id": "postgame-settle",
+      "capability": "Postgame settle",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Speculation 37 settled to home/lower/Seattle Mariners."
+    },
+    {
+      "id": "postgame-claim",
+      "capability": "Postgame claim/no-op",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Winning lower/Seattle live-fill and setup seed positions were claimed; losing upper/Baltimore positions are no-op."
+    },
+    {
+      "id": "cost-within-cap",
+      "capability": "Cost within cap",
+      "proof": "proven_live",
+      "evidence": "raw/tx-receipts.summary.json",
+      "notes": "Tracked live maker risk and combined open+active maker risk stayed within Stage-1 caps; postgame gas recorded."
+    }
+  ],
+  "zeroExposure": {
+    "checkedAtUtc": "2026-06-18T23:05:14Z",
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "orphanProcessCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json"
+  },
+  "transactions": [
+    {
+      "category": "approve",
+      "txHash": "0x2388119a2a703f27e94e424a5c9c7ca1b715944e92d29bea4047dffb79ea44f2",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Bounded TreasuryModule USDC approval for setup contest creator/seed maker."
+    },
+    {
+      "category": "approve",
+      "txHash": "0x35823984dbf5aa39f1630d36547ffd4dd1729bb82abf92a551dbfc2a306e3b6d",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Bounded TreasuryModule USDC approval for setup seed taker."
+    },
+    {
+      "category": "approve",
+      "txHash": "0x4958f5d33988bb8a1a853ad09696d4df2ca0e2ef981019692804acf76f582e6c",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Bounded PositionModule USDC approval for live maker."
+    },
+    {
+      "category": "create-contest",
+      "txHash": "0x5806157a850237a34f44f110d21bb44d06fd587c10afb7f0d4f6e5db2e932a5f",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Create/verify BAL @ SEA contest 48 before the live MM window."
+    },
+    {
+      "category": "seed-match",
+      "txHash": "0xf6831743ae1245ec555eb621fe4d4224cbeb1c5350a5abf7684308f090990c1c",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Setup seed/open moneyline fill for speculation 37."
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0x8fbb99158ded6fd3938f5c2a9a01dce3d39bea4e9cf85f061cf51b5933643015",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Exactly one controlled live MM fill by mm-shakeout-flow-a against commitment 0x5ec9a0733f95d1edd6dcb269db4c70763864fb424e11bb4603a2d9c1996a5da2."
+    },
+    {
+      "category": "score-request",
+      "txHash": "0x8888e83a2170f3c0be45e0939b2a7a3aac800202700a864b549b8f3062b440c5",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Request score for contest 48 after official source showed Seattle Mariners 3, Baltimore Orioles 0."
+    },
+    {
+      "category": "score-callback",
+      "txHash": "0xbebf7b7521a9016eee20b8b727c70a13ef0eb071d8115c310c3198601a3faca8",
+      "status": "success",
+      "operatorControlled": false,
+      "purpose": "Oracle callback set final contest 48 scores BAL 0, SEA 3."
+    },
+    {
+      "category": "settle",
+      "txHash": "0x6fa6b3bc2f69443ef861b49a48de93f8c9126477e973e805ab714679a18402ba",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 37 to home/lower/Seattle Mariners."
+    },
+    {
+      "category": "claim",
+      "txHash": "0xb50646b16a2c1405df722e327028d6dd84277ec24a0eb5ce694fd3e78a1bebe6",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim mm-shakeout-flow-a winning controlled live-fill lower/Seattle position."
+    },
+    {
+      "category": "claim",
+      "txHash": "0xbe937782bf650354ad93e07b180aae20ad0bc04ee70b1298425ac04f2e07f7e4",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim ospex-flow-a winning setup seed lower/Seattle position."
+    }
+  ]
+}

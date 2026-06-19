@@ -1,0 +1,30 @@
+{
+  "unlimitedApprovalsUsed": false,
+  "autoApproveLive": false,
+  "approvals": [
+    {
+      "wallet": "ospex-stage-maker-b",
+      "spender": "TreasuryModule",
+      "token": "USDC",
+      "targetAllowanceUSDC": "6",
+      "txHash": "0x2388119a2a703f27e94e424a5c9c7ca1b715944e92d29bea4047dffb79ea44f2",
+      "receiptStatus": "0x1"
+    },
+    {
+      "wallet": "ospex-flow-a",
+      "spender": "TreasuryModule",
+      "token": "USDC",
+      "targetAllowanceUSDC": "1",
+      "txHash": "0x35823984dbf5aa39f1630d36547ffd4dd1729bb82abf92a551dbfc2a306e3b6d",
+      "receiptStatus": "0x1"
+    },
+    {
+      "wallet": "mm-shakeout-maker-a",
+      "spender": "PositionModule",
+      "token": "USDC",
+      "targetAllowanceUSDC": "25",
+      "txHash": "0x4958f5d33988bb8a1a853ad09696d4df2ca0e2ef981019692804acf76f582e6c",
+      "receiptStatus": "0x1"
+    }
+  ]
+}

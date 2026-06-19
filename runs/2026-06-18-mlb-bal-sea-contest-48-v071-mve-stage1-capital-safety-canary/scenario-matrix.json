@@ -1,0 +1,107 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/scenario-matrix.schema.json",
+  "schemaVersion": 2,
+  "artifactId": "2026-06-18-mlb-bal-sea-contest-48-v071-mve-stage1-capital-safety-canary",
+  "generatedAt": "2026-06-18T23:05:14Z",
+  "runClass": "mm-live-canary",
+  "scenarios": [
+    {
+      "id": "target-preflight",
+      "scenario": "Exact target preflight",
+      "status": "pass",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "notes": "Official identity, status, contest/speculation, and allowlist matched BAL away @ SEA home."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "scenario": "Release/runtime gate",
+      "status": "pass",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "notes": "v0.7.1 CLI/SDK and MM runtime gates passed."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "scenario": "Wallet role hygiene",
+      "status": "pass",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Live maker stayed separate from setup roles and was clean before live."
+    },
+    {
+      "id": "bounded-approvals",
+      "scenario": "Bounded approvals",
+      "status": "pass",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "notes": "Approvals were bounded; no unlimited approval used."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "scenario": "Quote dry-run",
+      "status": "pass",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "notes": "Quote dry-run returned computed/canQuote true."
+    },
+    {
+      "id": "live-commitments-posted",
+      "scenario": "Live commitments posted",
+      "status": "pass",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "notes": "Live MM posted target-scoped tiny commitments."
+    },
+    {
+      "id": "live-fill",
+      "scenario": "Controlled live fill",
+      "status": "pass",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "Exactly one controlled fill executed."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "scenario": "Canonical own-state fill",
+      "status": "pass",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "Canonical fill telemetry source was own-state-stream."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "scenario": "Final zero exposure",
+      "status": "pass",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "Visible/open exposure and claim sweeps are zero after postgame cleanup."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "scenario": "Restart/cold-start probe",
+      "status": "not_applicable",
+      "evidence": null,
+      "notes": "A separate restart probe was not part of this Stage-1 cleanup; final zero/process checks were used."
+    },
+    {
+      "id": "postgame-score",
+      "scenario": "Postgame score",
+      "status": "pass",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Contest 48 scored to BAL 0, SEA 3."
+    },
+    {
+      "id": "postgame-settle",
+      "scenario": "Postgame settle",
+      "status": "pass",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Speculation 37 settled to home/lower/Seattle."
+    },
+    {
+      "id": "postgame-claim",
+      "scenario": "Postgame claim/no-op",
+      "status": "pass",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Winning positions claimed; losing positions not claimable."
+    },
+    {
+      "id": "cost-within-cap",
+      "scenario": "Cost/risk cap",
+      "status": "pass",
+      "evidence": "raw/tx-receipts.summary.json",
+      "notes": "Maker risk and observed exposure stayed within Stage-1 caps; gas recorded."
+    }
+  ]
+}

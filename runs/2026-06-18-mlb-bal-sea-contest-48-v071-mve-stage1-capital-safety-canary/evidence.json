@@ -1,0 +1,259 @@
+{
+  "artifactId": "2026-06-18-mlb-bal-sea-contest-48-v071-mve-stage1-capital-safety-canary",
+  "artifactPath": "runs/2026-06-18-mlb-bal-sea-contest-48-v071-mve-stage1-capital-safety-canary/",
+  "artifactType": "run",
+  "artifactStatus": "complete_verified_with_caveats",
+  "status": "complete_verified_with_caveats",
+  "capturedAtUtc": "2026-06-18T23:05:14Z",
+  "date": "2026-06-18",
+  "network": "polygon",
+  "chainId": 137,
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "The v0.7.1 BAL @ SEA Stage-1 MVE capital-safety canary completed the full BAL/SEA lifecycle: official final score Baltimore Orioles 0, Seattle Mariners 3 was verified; contest 48 was scored; speculation 37 settled to home/lower/Seattle; the winning controlled live-fill and setup seed positions were claimed; final claim sweeps, public commitments/orderbook, and live-MM process checks are zero. Caveats are limited to LAA/ATH being a prep-only backup outside this BAL/SEA artifact and no separate restart/cold-start probe."
+  },
+  "artifactFiles": {
+    "evidence": "evidence.json",
+    "summary": "summary.md",
+    "scenarioMatrixJson": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "mveScorecardJson": "mve-scorecard.json",
+    "mveScorecardMarkdown": "mve-scorecard.md",
+    "raw": "raw/"
+  },
+  "coverage": {
+    "targetPreflight": "raw/target-preflight.sanitized.json",
+    "repoRuntime": "raw/release-runtime-matrix.sanitized.json",
+    "walletAuthBalance": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "boundedApprovals": "raw/bounded-approvals.sanitized.json",
+    "dryRun": "raw/mm-dryrun-summary.sanitized.json",
+    "liveCommitments": "raw/live-public-commitments-posted.sanitized.json",
+    "fill": "raw/live-fill.sanitized.json",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "finalContestShow": "raw/final-contest-show.sanitized.json",
+    "indexerSnapshot": "raw/indexer-snapshot.sanitized.json",
+    "chainEvents": "raw/chain-events.sanitized.json"
+  },
+  "target": {
+    "game": "Baltimore Orioles @ Seattle Mariners",
+    "gamePk": 823125,
+    "gameId": "40d76d14-2afc-4fcb-9b8b-874f6e9d2b6a",
+    "slug": "bal-sea-2026-06-18-2010",
+    "sport": "mlb",
+    "market": "moneyline",
+    "contestId": "48",
+    "speculationId": "37",
+    "awayTeam": "Baltimore Orioles",
+    "homeTeam": "Seattle Mariners",
+    "contestStatusAtLiveWindow": "verified",
+    "speculationStatusAtLiveWindow": "open",
+    "startTimeUtc": "2026-06-18T20:10:00Z",
+    "startTimeCentral": "2026-06-18 15:10 CDT",
+    "teamIdentity": {
+      "away": {
+        "team": "Baltimore Orioles",
+        "abbreviation": "BAL",
+        "positionType": "upper",
+        "role": "away",
+        "marketOddsAmerican": "+124",
+        "identity": "underdog"
+      },
+      "home": {
+        "team": "Seattle Mariners",
+        "abbreviation": "SEA",
+        "positionType": "lower",
+        "role": "home",
+        "marketOddsAmerican": "-140",
+        "identity": "favorite"
+      },
+      "winner": {
+        "team": "Seattle Mariners",
+        "role": "home",
+        "positionType": "lower"
+      }
+    },
+    "contestStatusAfterPostgame": "scored",
+    "speculationStatusAfterPostgame": "closed",
+    "postgameStatus": "complete",
+    "finalScore": {
+      "awayRuns": 0,
+      "homeRuns": 3,
+      "winner": "Seattle Mariners",
+      "winnerProtocolSide": "lower"
+    }
+  },
+  "backup": {
+    "game": "Los Angeles Angels @ Athletics",
+    "gamePk": 824989,
+    "contestId": "49",
+    "speculationId": "38",
+    "usedForLive": false,
+    "setupSeedLifecycle": "outside_artifact_scope"
+  },
+  "wallets": {
+    "liveMaker": {
+      "alias": "mm-shakeout-maker-a",
+      "address": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2"
+    },
+    "controlledTaker": {
+      "alias": "mm-shakeout-flow-a",
+      "address": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494"
+    },
+    "setupSeedMaker": {
+      "alias": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    },
+    "setupSeedTaker": {
+      "alias": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    }
+  },
+  "liveWindow": {
+    "runId": "2026-06-18T17-31-05-785Z-suhppv",
+    "startedAtUtc": "2026-06-18T17:31:06Z",
+    "stoppedAtUtc": "2026-06-18T17:37:42Z",
+    "commitmentCount": 5,
+    "controlledFill": {
+      "commitmentHash": "0x5ec9a0733f95d1edd6dcb269db4c70763864fb424e11bb4603a2d9c1996a5da2",
+      "txHash": "0x8fbb99158ded6fd3938f5c2a9a01dce3d39bea4e9cf85f061cf51b5933643015",
+      "makerFilledRiskUSDC": "2.000000",
+      "takerRiskUSDC": "2.640000",
+      "makerWallet": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+      "takerWallet": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494"
+    },
+    "ownStateSseAssertions": {
+      "fillSource": "own-state-stream",
+      "fillEventCount": 1
+    },
+    "postStopZeroExposure": {
+      "checkedAtUtc": "2026-06-18T23:05:14Z",
+      "publicMakerVisibleCommitments": 0,
+      "publicContestSpecVisibleCommitments": 0,
+      "contestOrderbookCount": 0,
+      "orphanProcessCount": 0,
+      "targetActivePositions": {
+        "maker": 0,
+        "taker": 0,
+        "seedMaker": 0,
+        "seedTaker": 0
+      },
+      "targetClaimablePositions": {
+        "maker": 0,
+        "taker": 0,
+        "seedMaker": 0,
+        "seedTaker": 0
+      },
+      "targetPendingSettlePositions": {
+        "maker": 0,
+        "taker": 0,
+        "seedMaker": 0,
+        "seedTaker": 0
+      }
+    }
+  },
+  "release": {
+    "cliVersion": "0.7.1",
+    "sdkVersion": "0.7.1",
+    "marketMakerHeadSha": "8389e11d53839941e998ad3686ca5eb05f50f905",
+    "packageSdkPin": "https://github.com/ospex-org/ospex-sdk/releases/download/v0.7.1/ospex-sdk-0.7.1.tgz",
+    "runtimeGateNotes": "Fresh run-local CLI and MM gates passed before setup/live."
+  },
+  "costs": {
+    "liveFillTakerRiskUSDC": "2.640000",
+    "liveFillMakerFilledRiskUSDC": "2.000000",
+    "maxOpenMakerRiskUSDC": "4.000000",
+    "maxActiveMakerRiskUSDC": "2.000000",
+    "maxCombinedOpenActiveMakerRiskUSDC": "6.000000",
+    "maxRiskPerContestUSDC": "12.000000",
+    "maxRiskPerSportUSDC": "12.000000",
+    "postgameGasPOL": "0.302552590036641",
+    "postgameGasIncludingOracleCallbackPOL": "0.436713144708173",
+    "controlledSpendWithinStage1Caps": true,
+    "setupSeedTakerClaimUSDC": "0.100000",
+    "controlledTakerClaimUSDC": "4.640000"
+  },
+  "postgame": {
+    "contestId": "48",
+    "speculationId": "37",
+    "finalScore": {
+      "awayTeam": "Baltimore Orioles",
+      "awayRuns": 0,
+      "homeTeam": "Seattle Mariners",
+      "homeRuns": 3,
+      "winner": "Seattle Mariners",
+      "winnerProtocolSide": "lower",
+      "winnerRole": "home"
+    },
+    "score": {
+      "requestTxHash": "0x8888e83a2170f3c0be45e0939b2a7a3aac800202700a864b549b8f3062b440c5",
+      "callbackTxHash": "0xbebf7b7521a9016eee20b8b727c70a13ef0eb071d8115c310c3198601a3faca8",
+      "receiptStatus": "0x1",
+      "requestId": "0x13c14de99f288521f8dac3d0cb86009cf926923c280146e5ae10d2fdc214efca",
+      "contestStatus": "scored",
+      "awayScore": 0,
+      "homeScore": 3
+    },
+    "settle": {
+      "txHash": "0x6fa6b3bc2f69443ef861b49a48de93f8c9126477e973e805ab714679a18402ba",
+      "receiptStatus": "0x1",
+      "winSide": "home/lower/Seattle Mariners",
+      "settledAt": "2026-06-18T22:48:34+00:00",
+      "speculationStatus": "closed"
+    },
+    "claims": [
+      {
+        "walletLabel": "mm-shakeout-flow-a",
+        "wallet": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494",
+        "positionId": "37_0x1de13292256fddca9eea1ae53a79a83243cfd494_1",
+        "side": "lower / home / Seattle Mariners",
+        "source": "controlled live MM fill",
+        "commitmentHash": "0x5ec9a0733f95d1edd6dcb269db4c70763864fb424e11bb4603a2d9c1996a5da2",
+        "payoutWei6": "4640000",
+        "payoutUSDC": "4.640000",
+        "txHash": "0xb50646b16a2c1405df722e327028d6dd84277ec24a0eb5ce694fd3e78a1bebe6",
+        "receiptStatus": "0x1"
+      },
+      {
+        "walletLabel": "ospex-flow-a",
+        "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "positionId": "37_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+        "side": "lower / home / Seattle Mariners",
+        "source": "setup seed/open fill",
+        "commitmentHash": "0x5a1537f60daf7f91d14630876b112dd5d91879a063280605321ed786dc212007",
+        "payoutWei6": "100000",
+        "payoutUSDC": "0.100000",
+        "txHash": "0xbe937782bf650354ad93e07b180aae20ad0bc04ee70b1298425ac04f2e07f7e4",
+        "receiptStatus": "0x1"
+      }
+    ],
+    "noOps": [
+      {
+        "walletLabel": "mm-shakeout-maker-a",
+        "wallet": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+        "positionId": "37_0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2_0",
+        "side": "upper / away / Baltimore Orioles",
+        "result": "lost",
+        "claimStatus": "not claimable"
+      },
+      {
+        "walletLabel": "ospex-stage-maker-b",
+        "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "positionId": "37_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_0",
+        "side": "upper / away / Baltimore Orioles",
+        "result": "lost",
+        "claimStatus": "not claimable"
+      }
+    ],
+    "finalClaimSweepsEmpty": true,
+    "status": "complete",
+    "capturedAtUtc": "2026-06-18T23:05:14Z"
+  },
+  "caveats": [
+    "LAA/ATH was prepared as a backup but was not live-run and is outside this BAL/SEA artifact lifecycle.",
+    "A separate restart/cold-start probe was not run; final zero-exposure and process checks were run instead."
+  ]
+}
