@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "selectedTarget": {
+    "gameId": "2744a162-cea5-48f3-b227-d89ae49ac45c",
+    "slug": "tor-chc-2026-06-19",
+    "sport": "mlb",
+    "gamePk": 824663,
+    "contestId": "50",
+    "awayTeam": "Toronto Blue Jays",
+    "awayAbbreviation": "TOR",
+    "homeTeam": "Chicago Cubs",
+    "homeAbbreviation": "CHC",
+    "matchTime": "2026-06-19T18:20:00Z",
+    "statusAtLiveGate": "verified",
+    "mlbStatusAtLiveGate": {
+      "abstractGameState": "Preview",
+      "detailedState": "Pre-Game",
+      "statusCode": "P",
+      "allPlaysCount": 0
+    },
+    "speculations": [
+      {
+        "speculationId": "39",
+        "contestId": "50",
+        "type": "moneyline",
+        "lineTicks": 0,
+        "speculationStatus": "open"
+      }
+    ],
+    "teamIdentity": {
+      "away": {
+        "team": "Toronto Blue Jays",
+        "abbreviation": "TOR",
+        "positionType": "upper",
+        "role": "away",
+        "identity": "underdog",
+        "marketOddsAmerican": "+107"
+      },
+      "home": {
+        "team": "Chicago Cubs",
+        "abbreviation": "CHC",
+        "positionType": "lower",
+        "role": "home",
+        "identity": "favorite",
+        "marketOddsAmerican": "-119"
+      }
+    },
+    "quoteDryRun": {
+      "pipeline": "computed",
+      "canQuote": true,
+      "contestId": "50",
+      "speculationId": "39",
+      "awayTakerOddsAmerican": "+112",
+      "homeTakerOddsAmerican": "-113"
+    },
+    "allowlist": [
+      "50"
+    ],
+    "gateOverallOk": true
+  }
+}

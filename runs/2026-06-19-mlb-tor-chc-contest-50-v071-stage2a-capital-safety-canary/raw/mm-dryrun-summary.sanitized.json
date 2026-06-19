@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "contestId": "50",
+  "speculationId": "39",
+  "pipeline": "computed",
+  "canQuote": true,
+  "market": "moneyline",
+  "quoteBothSides": true,
+  "awayTakerQuote": {
+    "side": "away/TOR",
+    "sizeUSDC": "5.000000",
+    "americanOdds": "+112"
+  },
+  "homeTakerQuote": {
+    "side": "home/CHC",
+    "sizeUSDC": "5.000000",
+    "americanOdds": "-113"
+  }
+}

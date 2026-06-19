@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "contest": {
+    "contestId": "50",
+    "status": "scored",
+    "awayScore": 2,
+    "homeScore": 16,
+    "scoredAt": "2026-06-19T21:35:10+00:00",
+    "voidedAt": null,
+    "awayTeam": "Toronto Blue Jays",
+    "homeTeam": "Chicago Cubs",
+    "jsonoddsId": "2744a162-cea5-48f3-b227-d89ae49ac45c"
+  },
+  "speculation": {
+    "speculationId": "39",
+    "contestId": "50",
+    "type": "moneyline",
+    "lineTicks": 0,
+    "speculationStatus": 1,
+    "settledAt": null,
+    "winSide": null
+  },
+  "orderbookCount": 0,
+  "publicOpenCounts": {
+    "contest50": 0,
+    "contest50Spec39": 0,
+    "liveMakerAll": 0,
+    "liveMakerContest50": 0
+  }
+}

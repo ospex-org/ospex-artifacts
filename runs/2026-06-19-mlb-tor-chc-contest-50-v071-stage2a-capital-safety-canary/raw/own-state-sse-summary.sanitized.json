@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-06-19T15-38-46-356Z-65vj20",
+  "fillEventCount": 1,
+  "fillEvent": {
+    "kind": "fill",
+    "source": "own-state-stream",
+    "commitmentHash": "0xdcee7fb35f7b0b62afbc41f18f3529fb51d85984ec4f3114ed8edd72b5fe8dd6",
+    "contestId": "50",
+    "speculationId": "39",
+    "makerSide": "home",
+    "takerSide": "away",
+    "newFillWei6": "5000000",
+    "cumulativeRiskWei6": "5000000"
+  },
+  "streamHealthHoldHighSeverityCount": 0,
+  "telemetryErrorCount": 0
+}

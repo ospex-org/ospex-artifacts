@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "preLive": {
+    "liveMaker": {
+      "alias": "mm-shakeout-maker-a",
+      "address": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+      "POL": "4.657335",
+      "USDC": "101.627372",
+      "positionAllowanceUSDC": "50",
+      "activePendingClaimable": "0/0/0",
+      "publicOpenCommitments": 0
+    },
+    "controlledTaker": {
+      "alias": "mm-shakeout-flow-a",
+      "address": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494",
+      "POL": "6.034264",
+      "USDC": "56.866603",
+      "positionAllowanceUSDC": "50",
+      "activePendingClaimable": "0/0/0",
+      "publicOpenCommitmentsAsMaker": 0
+    }
+  },
+  "finalPostgame": {
+    "liveMaker": {
+      "POL": "4.622021",
+      "USDC": "106.078317",
+      "positionAllowanceUSDC": "45",
+      "targetPosition": "claimed home/lower winner"
+    },
+    "controlledTaker": {
+      "POL": "5.9184",
+      "USDC": "52.416603",
+      "positionAllowanceUSDC": "45.55",
+      "targetPosition": "lost upper/away no-op"
+    },
+    "setupSeedMaker": {
+      "POL": "10.804364",
+      "USDC": "24.540701",
+      "positionAllowanceUSDC": "9.6",
+      "targetPosition": "lost upper/away no-op"
+    },
+    "setupSeedTaker": {
+      "POL": "15.212115",
+      "USDC": "12.613113",
+      "positionAllowanceUSDC": "5",
+      "targetPosition": "claimed home/lower winner"
+    }
+  }
+}

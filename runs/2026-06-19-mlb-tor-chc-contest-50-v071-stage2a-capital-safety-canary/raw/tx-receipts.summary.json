@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "fillTx": {
+    "transactionHash": "0x89f09327ac9d51ea18ca7d4391ce3ee106d71bd27cf40dc2adf4a8d469c2ccbc",
+    "status": "0x1",
+    "blockNumber": 88785733,
+    "gasUsed": "419845",
+    "effectiveGasPriceWei": "275966739596",
+    "gasCostPOL": "0.11586325578568262"
+  },
+  "postgameTxs": {
+    "claim_live_maker": {
+      "transactionHash": "0x4be831d50d2111ed14104c801a80c20d880c07506094f56568be4428a6554ae8",
+      "status": "0x1",
+      "blockNumber": 88800004,
+      "gasUsed": "127375",
+      "effectiveGasPriceWei": "277244030676",
+      "gasCostPOL": "0.0353139584073555"
+    },
+    "claim_setup_seed_taker": {
+      "transactionHash": "0xc0e73ae2d934eff9d03c491b6555016cc81a605d9d97b2fa6e6a3b2c50be1dbc",
+      "status": "0x1",
+      "blockNumber": 88800007,
+      "gasUsed": "127375",
+      "effectiveGasPriceWei": "280818883253",
+      "gasCostPOL": "0.035769305254350875"
+    },
+    "score_request": {
+      "transactionHash": "0x5ac8afe5e0808de878151a5bb8a0c96e356d48b11eab3a63afaba95d70c5d524",
+      "status": "0x1",
+      "blockNumber": 88799935,
+      "gasUsed": "664329",
+      "effectiveGasPriceWei": "279626912923",
+      "gasCostPOL": "0.185764267435223667"
+    },
+    "settle": {
+      "transactionHash": "0xd4f4edf930c97b0b72e3e425da00dfa5f7307b25a285daef1c9e39564bc57e44",
+      "status": "0x1",
+      "blockNumber": 88799969,
+      "gasUsed": "155619",
+      "effectiveGasPriceWei": "279258699153",
+      "gasCostPOL": "0.043457959503490707"
+    }
+  },
+  "postgameGasPOL": "0.300305490600420749",
+  "allRecordedLifecycleGasPOL": "0.416168746386103369"
+}

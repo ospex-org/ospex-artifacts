@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "source": "MLB Stats API",
+  "checkedAtUtc": "2026-06-19T21:34:32Z",
+  "gamePk": 824663,
+  "status": {
+    "abstractGameState": "Final",
+    "detailedState": "Final",
+    "statusCode": "F"
+  },
+  "awayTeam": "Toronto Blue Jays",
+  "homeTeam": "Chicago Cubs",
+  "awayRuns": 2,
+  "homeRuns": 16,
+  "winner": "Chicago Cubs",
+  "winnerRole": "home",
+  "winnerProtocolSide": "lower",
+  "doubleHeader": "N",
+  "gameNumber": 1
+}
