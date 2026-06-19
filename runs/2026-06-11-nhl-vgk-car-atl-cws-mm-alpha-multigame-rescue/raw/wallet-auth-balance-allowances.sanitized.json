@@ -1,0 +1,217 @@
+{
+  "checkedAtStartUtc": "2026-06-11T23:09:18Z",
+  "checkedAtEndUtc": "2026-06-11T23:29:39Z",
+  "walletsStart": {
+    "flow": {
+      "address": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+      "alias": "ospex-flow-a",
+      "allowances": {
+        "OracleModule_LINK": {
+          "formatted": "0.285",
+          "raw": "285000000000000000"
+        },
+        "PositionModule_USDC": {
+          "formatted": "1.14787",
+          "raw": "1147870"
+        },
+        "TreasuryModule_USDC": {
+          "formatted": "0.25",
+          "raw": "250000"
+        }
+      },
+      "balances": {
+        "LINK": {
+          "formatted": "0.285",
+          "raw": "285000000000000000"
+        },
+        "POL": {
+          "formatted": "17.42752462420275055",
+          "wei": "17427524624202750550"
+        },
+        "USDC": {
+          "formatted": "5.610542",
+          "raw": "5610542"
+        }
+      },
+      "matchesOperatorEnv": true
+    },
+    "maker": {
+      "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "alias": "ospex-stage-maker-b",
+      "allowances": {
+        "OracleModule_LINK": {
+          "formatted": "0.225",
+          "raw": "225000000000000000"
+        },
+        "PositionModule_USDC": {
+          "formatted": "3.7232",
+          "raw": "3723200"
+        },
+        "TreasuryModule_USDC": {
+          "formatted": "0",
+          "raw": "0"
+        }
+      },
+      "balances": {
+        "LINK": {
+          "formatted": "0.225",
+          "raw": "225000000000000000"
+        },
+        "POL": {
+          "formatted": "13.097694014300719545",
+          "wei": "13097694014300719545"
+        },
+        "USDC": {
+          "formatted": "0.506272",
+          "raw": "506272"
+        }
+      },
+      "matchesOperatorEnv": true
+    },
+    "setup": {
+      "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+      "alias": "ospex-stage-maker-a",
+      "allowances": {
+        "OracleModule_LINK": {
+          "formatted": "0.125",
+          "raw": "125000000000000000"
+        },
+        "PositionModule_USDC": {
+          "formatted": "10.7897",
+          "raw": "10789700"
+        },
+        "TreasuryModule_USDC": {
+          "formatted": "0.75",
+          "raw": "750000"
+        }
+      },
+      "balances": {
+        "LINK": {
+          "formatted": "0.125",
+          "raw": "125000000000000000"
+        },
+        "POL": {
+          "formatted": "5.642067976226055525",
+          "wei": "5642067976226055525"
+        },
+        "USDC": {
+          "formatted": "1.59441",
+          "raw": "1594410"
+        }
+      },
+      "matchesOperatorEnv": true
+    }
+  },
+  "walletsEnd": {
+    "flow": {
+      "address": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+      "alias": "ospex-flow-a",
+      "allowances": {
+        "OracleModule_LINK": {
+          "formatted": "0.285",
+          "raw": "285000000000000000"
+        },
+        "PositionModule_USDC": {
+          "formatted": "1.06337",
+          "raw": "1063370"
+        },
+        "TreasuryModule_USDC": {
+          "formatted": "0",
+          "raw": "0"
+        }
+      },
+      "balances": {
+        "LINK": {
+          "formatted": "0.285",
+          "raw": "285000000000000000"
+        },
+        "POL": {
+          "formatted": "17.125046624031585505",
+          "wei": "17125046624031585505"
+        },
+        "USDC": {
+          "formatted": "5.276042",
+          "raw": "5276042"
+        }
+      }
+    },
+    "maker": {
+      "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "alias": "ospex-stage-maker-b",
+      "allowances": {
+        "OracleModule_LINK": {
+          "formatted": "0.225",
+          "raw": "225000000000000000"
+        },
+        "PositionModule_USDC": {
+          "formatted": "3.6732",
+          "raw": "3673200"
+        },
+        "TreasuryModule_USDC": {
+          "formatted": "0",
+          "raw": "0"
+        }
+      },
+      "balances": {
+        "LINK": {
+          "formatted": "0.225",
+          "raw": "225000000000000000"
+        },
+        "POL": {
+          "formatted": "13.097694014300719545",
+          "wei": "13097694014300719545"
+        },
+        "USDC": {
+          "formatted": "0.456272",
+          "raw": "456272"
+        }
+      }
+    },
+    "setup": {
+      "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+      "alias": "ospex-stage-maker-a",
+      "allowances": {
+        "OracleModule_LINK": {
+          "formatted": "0.12",
+          "raw": "120000000000000000"
+        },
+        "PositionModule_USDC": {
+          "formatted": "10.7397",
+          "raw": "10739700"
+        },
+        "TreasuryModule_USDC": {
+          "formatted": "0.05",
+          "raw": "50000"
+        }
+      },
+      "balances": {
+        "LINK": {
+          "formatted": "0.12",
+          "raw": "120000000000000000"
+        },
+        "POL": {
+          "formatted": "5.235865774358168312",
+          "wei": "5235865774358168312"
+        },
+        "USDC": {
+          "formatted": "0.29441",
+          "raw": "294410"
+        }
+      }
+    }
+  },
+  "contracts": {
+    "LINK": "0xb0897686c545045aFc77CF20eC7A532E3120E0F1",
+    "OracleModule": "0x7e1397eD5b4c9f606DCF2EB0281485B2296E29Bb",
+    "PositionModule": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c",
+    "TreasuryModule": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e",
+    "USDC": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+  },
+  "budgetGate": {
+    "capUSDC": "5.000000",
+    "previousKnownGasUsdcEquiv": "0.249762",
+    "previousKnownUSDCFeesSeedRisk": "2.600000",
+    "projectedAdditionalNHLBeforeGasAndLiveMakerRisk": "1.650000",
+    "projectedSubtotalBeforeAdditionalGas": "4.499762"
+  }
+}

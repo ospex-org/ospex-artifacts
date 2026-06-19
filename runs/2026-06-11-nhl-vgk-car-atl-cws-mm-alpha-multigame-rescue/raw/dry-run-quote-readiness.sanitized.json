@@ -1,0 +1,328 @@
+{
+  "doctor": {
+    "apiOk": null,
+    "rawSummary": {
+      "schemaVersion": 1,
+      "doctor": {
+        "schemaVersion": 1,
+        "chainId": 137,
+        "apiUrl": "https://api.ospex.org",
+        "walletAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "walletAddressSource": "flag",
+        "configDryRun": true,
+        "checks": [
+          {
+            "name": "config",
+            "status": "ok",
+            "detail": "loaded from <local-path-redacted> (chainId=137, pricing.mode=economics, mode.dryRun=true)"
+          },
+          {
+            "name": "keystore",
+            "status": "warn",
+            "detail": "no keystore configured — set wallet.keystorePath or OSPEX_KEYSTORE_PATH (required for `run` flows; harmless for `doctor` / `quote --dry-run`)"
+          },
+          {
+            "name": "wallet",
+            "status": "ok",
+            "detail": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482 (from flag)"
+          },
+          {
+            "name": "api",
+            "status": "ok",
+            "detail": "reachable at https://api.ospex.org"
+          },
+          {
+            "name": "rpc",
+            "status": "ok",
+            "detail": "reachable; configured for chain 137"
+          },
+          {
+            "name": "pol-balance",
+            "status": "ok",
+            "detail": "13.097694 POL (above the 0.2 POL reserve)"
+          },
+          {
+            "name": "usdc-balance",
+            "status": "ok",
+            "detail": "0.506272 USDC (≥ the 0.300000 USDC required)"
+          },
+          {
+            "name": "allowance",
+            "status": "ok",
+            "detail": "3.723200 USDC allowed to PositionModule (0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c)"
+          },
+          {
+            "name": "state",
+            "status": "ok",
+            "detail": "no prior state at <local-path-redacted> — fresh start"
+          }
+        ],
+        "ready": {
+          "dryRunShadow": {
+            "ok": true,
+            "reason": "no FAILs — `ospex-mm run --dry-run` should boot (the shadow loop posts nothing, so a keystore is not required)"
+          },
+          "postCommitments": {
+            "ok": false,
+            "reason": "no usable keystore (set wallet.keystorePath or OSPEX_KEYSTORE_PATH — live signing needs one); config has mode.dryRun: true (flip to false; you would also pass --live at run time)"
+          }
+        }
+      }
+    }
+  },
+  "quotes": {
+    "nhlContest39": {
+      "schemaVersion": 1,
+      "quote": {
+        "pipeline": "computed",
+        "contestId": "39",
+        "context": {
+          "contestId": "39",
+          "awayTeam": "Vegas Golden Knights",
+          "homeTeam": "Carolina Hurricanes",
+          "sport": "nhl",
+          "matchTime": "2026-06-12T00:00:00+00:00",
+          "status": "verified",
+          "referenceGameId": "12fcb924-bfbe-4fac-b447-af05b8c9c3e1"
+        },
+        "referenceOdds": {
+          "awayOddsAmerican": 140,
+          "homeOddsAmerican": -160,
+          "awayDecimal": 2.4,
+          "homeDecimal": 1.625,
+          "awayImpliedProb": 0.4166666666666667,
+          "homeImpliedProb": 0.6153846153846154,
+          "overround": 0.03205128205128216
+        },
+        "spreadMode": "economics",
+        "result": {
+          "canQuote": true,
+          "away": {
+            "takerSide": "away",
+            "quoteProb": 0.4065044858523119,
+            "quoteDecimal": 2.4599974534187856,
+            "quoteAmerican": 146,
+            "quoteTick": 246,
+            "sizeUSDC": 0.05,
+            "sizeWei6": 50000
+          },
+          "home": {
+            "takerSide": "home",
+            "quoteProb": 0.5990510697032436,
+            "quoteDecimal": 1.6693067595979378,
+            "quoteAmerican": -149,
+            "quoteTick": 167,
+            "sizeUSDC": 0.05,
+            "sizeWei6": 50000
+          },
+          "fair": {
+            "awayFairProb": 0.40372670807453415,
+            "homeFairProb": 0.5962732919254659,
+            "awayFairDecimal": 2.476923076923077,
+            "homeFairDecimal": 1.6770833333333333,
+            "consensusOverround": 0.03205128205128216
+          },
+          "spread": 0.005555555555555557,
+          "targetMonthlyReturnUSDC": 0.01,
+          "expectedMonthlyFilledVolumeUSDC": 3.5999999999999996,
+          "notes": []
+        },
+        "inventoryNote": "Headroom computed from an empty inventory. `run --dry-run` (Phase 2) reconciles against your actual positions and open commitments; this preview is the per-quote ceiling."
+      }
+    },
+    "mlbContest38": {
+      "schemaVersion": 1,
+      "quote": {
+        "pipeline": "computed",
+        "contestId": "38",
+        "context": {
+          "contestId": "38",
+          "awayTeam": "Atlanta Braves",
+          "homeTeam": "Chicago White Sox",
+          "sport": "mlb",
+          "matchTime": "2026-06-11T23:40:00+00:00",
+          "status": "verified",
+          "referenceGameId": "93e4384a-f46e-4799-a612-b7fd0c3435e6"
+        },
+        "referenceOdds": {
+          "awayOddsAmerican": -113,
+          "homeOddsAmerican": -100,
+          "awayDecimal": 1.8849557522123894,
+          "homeDecimal": 2,
+          "awayImpliedProb": 0.5305164319248826,
+          "homeImpliedProb": 0.5,
+          "overround": 0.030516431924882514
+        },
+        "spreadMode": "economics",
+        "result": {
+          "canQuote": true,
+          "away": {
+            "takerSide": "away",
+            "quoteProb": 0.5175841559098963,
+            "quoteDecimal": 1.9320529590826292,
+            "quoteAmerican": -107,
+            "quoteTick": 193,
+            "sizeUSDC": 0.05,
+            "sizeWei6": 50000
+          },
+          "home": {
+            "takerSide": "home",
+            "quoteProb": 0.4879713996456594,
+            "quoteDecimal": 2.0493004318002046,
+            "quoteAmerican": 105,
+            "quoteTick": 205,
+            "sizeUSDC": 0.05,
+            "sizeWei6": 50000
+          },
+          "fair": {
+            "awayFairProb": 0.5148063781321185,
+            "homeFairProb": 0.4851936218678816,
+            "awayFairDecimal": 1.9424778761061945,
+            "homeFairDecimal": 2.061032863849765,
+            "consensusOverround": 0.030516431924882514
+          },
+          "spread": 0.005555555555555557,
+          "targetMonthlyReturnUSDC": 0.01,
+          "expectedMonthlyFilledVolumeUSDC": 3.5999999999999996,
+          "notes": []
+        },
+        "inventoryNote": "Headroom computed from an empty inventory. `run --dry-run` (Phase 2) reconciles against your actual positions and open commitments; this preview is the per-quote ceiling."
+      }
+    }
+  },
+  "dryRun": {
+    "exit": 124,
+    "intentionalTimeout": true,
+    "summary": {
+      "schemaVersion": 1,
+      "generatedAt": "2026-06-11T23:20:04.015Z",
+      "lines": 16,
+      "malformedLines": 0,
+      "runIds": [
+        "2026-06-11T23-19-03-988Z-bc5poi"
+      ],
+      "firstEventAt": "2026-06-11T23:19:03.990Z",
+      "lastEventAt": "2026-06-11T23:20:02.750Z",
+      "ticks": 1,
+      "eventCounts": {
+        "tick-start": 1,
+        "candidate": 2,
+        "fair-value": 0,
+        "risk-verdict": 2,
+        "quote-intent": 2,
+        "quote-competitiveness": 4,
+        "competitiveness-unavailable": 0,
+        "submit": 0,
+        "would-submit": 4,
+        "soft-cancel": 0,
+        "would-soft-cancel": 0,
+        "replace": 0,
+        "would-replace": 0,
+        "onchain-cancel": 0,
+        "cancel-blocked-missing-payload": 0,
+        "nonce-floor-raise": 0,
+        "expire": 0,
+        "approval": 0,
+        "funding-hold": 0,
+        "fill": 0,
+        "position-transition": 0,
+        "settle": 0,
+        "claim": 0,
+        "degraded": 0,
+        "stream-health-degraded": 0,
+        "stream-would-hold": 0,
+        "stream-cold-restart": 0,
+        "stream-health-hold": 0,
+        "divergence": 0,
+        "unknown-own-fill": 0,
+        "owner-mapping-failed": 0,
+        "error": 0,
+        "kill": 1
+      },
+      "candidates": {
+        "total": 2,
+        "tracked": 2,
+        "skipReasons": {}
+      },
+      "quoteIntents": {
+        "total": 2,
+        "canQuote": 2,
+        "refused": 0
+      },
+      "wouldSubmit": 4,
+      "wouldReplace": {
+        "total": 0,
+        "byReason": {}
+      },
+      "wouldSoftCancel": {
+        "total": 0,
+        "byReason": {}
+      },
+      "expired": 0,
+      "quoteCompetitiveness": {
+        "samples": 4,
+        "atOrInsideBookCount": 4,
+        "atOrInsideBookRate": 1,
+        "vsReferenceTicks": {
+          "min": 4,
+          "p50": 5,
+          "mean": 5,
+          "max": 6
+        },
+        "unavailable": 0
+      },
+      "quoteAgeSeconds": null,
+      "latentExposurePeakWei6": "200000",
+      "staleQuoteIncidents": 0,
+      "degradedByReason": {},
+      "errors": {
+        "total": 0,
+        "byPhase": {}
+      },
+      "kill": {
+        "reason": "signal",
+        "ticks": 1
+      },
+      "liveMetrics": {
+        "fills": {
+          "quotedUsdcWei6": "0",
+          "filledUsdcWei6": "0",
+          "fillRate": null
+        },
+        "gas": {
+          "totalPolWei": "0",
+          "byKind": {
+            "approval": "0",
+            "onchainCancel": "0",
+            "settle": "0",
+            "claim": "0"
+          },
+          "totalUsdcEquivWei6": "0"
+        },
+        "settlements": {
+          "settleCount": 0,
+          "claimCount": 0,
+          "totalClaimedPayoutWei6": "0"
+        },
+        "realizedPnl": {
+          "netUsdcWei6": "0",
+          "claimedProfitUsdcWei6": "0",
+          "realizedLossUsdcWei6": "0",
+          "wonCount": 0,
+          "lostCount": 0,
+          "pushCount": 0,
+          "wonUnclaimedCount": 0,
+          "alreadyClaimedCount": 0,
+          "unsettledCount": 0
+        },
+        "totalFeeUsdcWei6": "0"
+      }
+    }
+  },
+  "result": {
+    "twoTargetsTracked": 2,
+    "quoteIntentsCanQuote": 2,
+    "wouldSubmit": 4,
+    "errorsTotal": 0
+  }
+}

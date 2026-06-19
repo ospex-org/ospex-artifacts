@@ -1,0 +1,186 @@
+{
+  "network": "polygon",
+  "chainId": 137,
+  "reportingPOLUSDCPrice": "0.25",
+  "receipts": {
+    "mlb_atl_contest_create": {
+      "blockNumber": "88341504",
+      "effectiveGasPriceWei": "280620934845",
+      "gasCostPOL": "0.388758492708455595",
+      "gasCostUSDCEquivAt0_25": "0.097189623177113898",
+      "gasCostWei": "388758492708455595",
+      "gasUsed": "1385351",
+      "status": "0x1",
+      "txHash": "0x276131d40b14af69287fead5b40d6e515e3eae86cef10e0528a32561bc059226"
+    },
+    "mlb_atl_seed_match": {
+      "blockNumber": "88341632",
+      "effectiveGasPriceWei": "279478119358",
+      "gasCostPOL": "0.185454413574865492",
+      "gasCostUSDCEquivAt0_25": "0.046363603393716373",
+      "gasCostWei": "185454413574865492",
+      "gasUsed": "663574",
+      "status": "0x1",
+      "txHash": "0x5e9573c37e4471ea64881214de44987d2626b2b8d563f70bc1d00e8872b38ff2"
+    },
+    "mlb_flow_treasury_approval": {
+      "blockNumber": "88341469",
+      "effectiveGasPriceWei": "280173313411",
+      "gasCostPOL": "0.018591460558013727",
+      "gasCostUSDCEquivAt0_25": "0.004647865139503431",
+      "gasCostWei": "18591460558013727",
+      "gasUsed": "66357",
+      "status": "0x1",
+      "txHash": "0xc6731e5ed3e00c37545a5ab6b0c7b475115aac8980dcf4d0b9ad7867aa3966d3"
+    },
+    "mlb_sea_contest_create": {
+      "blockNumber": "88341481",
+      "effectiveGasPriceWei": "279630859139",
+      "gasCostPOL": "0.387386890339072789",
+      "gasCostUSDCEquivAt0_25": "0.096846722584768197",
+      "gasCostWei": "387386890339072789",
+      "gasUsed": "1385351",
+      "status": "0x1",
+      "txHash": "0xd5f88f32d9ab68f528dc6351813586d48fa29d2f98c80a672398cc1b03b1d75f"
+    },
+    "mlb_setup_treasury_approval": {
+      "blockNumber": "88341466",
+      "effectiveGasPriceWei": "284184519180",
+      "gasCostPOL": "0.01885763213922726",
+      "gasCostUSDCEquivAt0_25": "0.004714408034806815",
+      "gasCostWei": "18857632139227260",
+      "gasUsed": "66357",
+      "status": "0x1",
+      "txHash": "0xdebb0a8c4beb5313889ad2a6ae7a80dba226d4d77941404ed71b3e4e1fae2b51"
+    },
+    "nhl_controlled_fill": {
+      "blockNumber": "88343469",
+      "effectiveGasPriceWei": "279135598377",
+      "gasCostPOL": "0.117186986046230517",
+      "gasCostUSDCEquivAt0_25": "0.029296746511557629",
+      "gasCostWei": "117186986046230517",
+      "gasUsed": "419821",
+      "status": "0x1",
+      "txHash": "0x4ae5d0a19614d5abe80cbc5784a429ee8121c277605062b4892bb25749eb80f0"
+    },
+    "nhl_create_contest": {
+      "blockNumber": "88342959",
+      "effectiveGasPriceWei": "283489831106",
+      "gasCostPOL": "0.392732921012528206",
+      "gasCostUSDCEquivAt0_25": "0.098183230253132051",
+      "gasCostWei": "392732921012528206",
+      "gasUsed": "1385351",
+      "status": "0x1",
+      "txHash": "0xb399afd119947cd7634815236c4841bb366f2bc3c8199af5cecd8f0e61cabbef"
+    },
+    "nhl_seed_match": {
+      "blockNumber": "88343038",
+      "effectiveGasPriceWei": "280913360064",
+      "gasCostPOL": "0.185291014124934528",
+      "gasCostUSDCEquivAt0_25": "0.046322753531233632",
+      "gasCostWei": "185291014124934528",
+      "gasUsed": "659602",
+      "status": "0x1",
+      "txHash": "0x5ff421a372f778d4643ac05c0c036a6b5803538249aa457a16555767acc64a43"
+    },
+    "nhl_setup_fee_approval": {
+      "blockNumber": "88342942",
+      "effectiveGasPriceWei": "278193214271",
+      "gasCostPOL": "0.013469280855359007",
+      "gasCostUSDCEquivAt0_25": "0.003367320213839751",
+      "gasCostWei": "13469280855359007",
+      "gasUsed": "48417",
+      "status": "0x1",
+      "txHash": "0x025557927c31ae6becd4ba2f7ee49e6fc7541b306b014a700c6537d21f3f82cd"
+    },
+    "nhl_score_contest": {
+      "blockNumber": "88354153",
+      "effectiveGasPriceWei": "283249590432",
+      "gasCostPOL": "0.188170917162100128",
+      "gasCostUSDCEquivAt0_25": "0.04704272929052503200",
+      "gasCostWei": "188170917162100128",
+      "gasUsed": "664329",
+      "status": "0x1",
+      "txHash": "0x748a3e699fbc4c938f1a486ee765ce1adbfa25032edb4a1336bd28118185f10b"
+    },
+    "nhl_settle_speculation": {
+      "blockNumber": "88354540",
+      "effectiveGasPriceWei": "280685641260",
+      "gasCostPOL": "0.04368001880723994",
+      "gasCostUSDCEquivAt0_25": "0.0109200047018099850",
+      "gasCostWei": "43680018807239940",
+      "gasUsed": "155619",
+      "status": "0x1",
+      "txHash": "0x5d527556d6533c9de6809bb24e079703e720bb0ce622ae4ca39eeaacfcbbfa31"
+    },
+    "nhl_maker_claim": {
+      "blockNumber": "88354542",
+      "effectiveGasPriceWei": "286243837909",
+      "gasCostPOL": "0.036460308853658875",
+      "gasCostUSDCEquivAt0_25": "0.00911507721341471875",
+      "gasCostWei": "36460308853658875",
+      "gasUsed": "127375",
+      "status": "0x1",
+      "txHash": "0xc7020e5dc49d02022767de3dc9e3e8bac500d0564c93e07657826e180ea929c2"
+    },
+    "nhl_flow_claim": {
+      "blockNumber": "88354551",
+      "effectiveGasPriceWei": "282349237957",
+      "gasCostPOL": "0.035964234184772875",
+      "gasCostUSDCEquivAt0_25": "0.00899105854619321875",
+      "gasCostWei": "35964234184772875",
+      "gasUsed": "127375",
+      "status": "0x1",
+      "txHash": "0xbe67332441816ed55d72cb0b5b4656b5f81c5bdf71116aee3229d78b803bc49f"
+    },
+    "mlb_flow_a_void_claim": {
+      "blockNumber": "88747756",
+      "effectiveGasPriceWei": "281820668436",
+      "gasCostPOL": "0.035754870025143756",
+      "gasCostUSDCEquivAt0_25": "0.00893871750628593900",
+      "gasCostWei": "35754870025143756",
+      "gasUsed": "126871",
+      "status": "0x1",
+      "txHash": "0xe866274484afd24367ef16b92ae53119f776868f8dae29fdad66c0037aaa9e99"
+    },
+    "mlb_stage_maker_a_void_claim": {
+      "blockNumber": "88747753",
+      "effectiveGasPriceWei": "279342449913",
+      "gasCostPOL": "0.035437103853513267",
+      "gasCostUSDCEquivAt0_25": "0.00885927596337831675",
+      "gasCostWei": "35437103853513267",
+      "gasUsed": "126859",
+      "status": "0x1",
+      "txHash": "0xe3599e6ab1a9de4306fd578084a48d29f275df65c3c68d03e6c2b4373095291c"
+    },
+    "mlb_void_settle_speculation": {
+      "blockNumber": "88747736",
+      "effectiveGasPriceWei": "294765839254",
+      "gasCostPOL": "0.046252886900702156",
+      "gasCostUSDCEquivAt0_25": "0.01156322172517553900",
+      "gasCostWei": "46252886900702156",
+      "gasUsed": "156914",
+      "status": "0x1",
+      "txHash": "0x8632a86660b681e932c5d6673875804594e5cdb81c2f2df371a80760ded0439b"
+    }
+  },
+  "totals": {
+    "operatorGasPOL": "1.707729091358687121",
+    "operatorGasUSDCAtReportPrice": "0.42693227283967178",
+    "operatorGasPOLPrePostgame": "1.707729091358687121",
+    "operatorGasUSDCAtReportPricePrePostgame": "0.42693227283967178",
+    "nhlPostgameGasPOL": "0.304275479007771818",
+    "nhlPostgameGasUSDCAtReportPrice": "0.07606886975194295450",
+    "operatorGasPOLIncludingNhlPostgame": "2.012004570366458939",
+    "operatorGasUSDCAtReportPriceIncludingNhlPostgame": "0.50300114259161473475",
+    "mlbVoidFollowupGasPOL": "0.117444860779359179",
+    "mlbVoidFollowupGasUSDCAtReportPrice": "0.02936121519483979475",
+    "operatorGasPOLIncludingFullPostgame": "2.129449431145818118",
+    "operatorGasUSDCAtReportPriceIncludingFullPostgame": "0.53236235778645452950"
+  },
+  "notes": [
+    "Total includes the earlier same-evening MLB prep transactions plus the NHL rescue setup/fill transactions because they share the same controlled spend cap.",
+    "NHL attempt-1 postgame receipts are summaries only; full logs/source payloads are intentionally excluded from public artifacts.",
+    "MLB void/refund follow-up receipts summarize the settle-as-void tx and the two risk-only refund claim txs; full logs/source payloads are intentionally excluded from public artifacts."
+  ]
+}

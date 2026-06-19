@@ -1,0 +1,485 @@
+{
+  "liveRun": {
+    "startedAtUtc": "2026-06-11T23:20:44.905Z",
+    "endedAtUtc": "2026-06-11T23:23:51.093Z",
+    "ticks": 3,
+    "eventCounts": {
+      "tick-start": 3,
+      "candidate": 2,
+      "fair-value": 0,
+      "risk-verdict": 2,
+      "quote-intent": 2,
+      "quote-competitiveness": 4,
+      "competitiveness-unavailable": 0,
+      "submit": 4,
+      "would-submit": 0,
+      "soft-cancel": 3,
+      "would-soft-cancel": 0,
+      "replace": 0,
+      "would-replace": 0,
+      "onchain-cancel": 0,
+      "cancel-blocked-missing-payload": 0,
+      "nonce-floor-raise": 0,
+      "expire": 0,
+      "approval": 0,
+      "funding-hold": 0,
+      "fill": 1,
+      "position-transition": 0,
+      "settle": 0,
+      "claim": 0,
+      "degraded": 0,
+      "stream-health-degraded": 0,
+      "stream-would-hold": 0,
+      "stream-cold-restart": 0,
+      "stream-health-hold": 2,
+      "divergence": 0,
+      "unknown-own-fill": 0,
+      "owner-mapping-failed": 0,
+      "error": 0,
+      "kill": 1
+    },
+    "errors": {
+      "total": 0,
+      "byPhase": {}
+    },
+    "kill": {
+      "reason": "kill-file",
+      "ticks": 3
+    }
+  },
+  "quoteIntents": [
+    {
+      "ts": "2026-06-11T23:21:47.359Z",
+      "runId": "2026-06-11T23-20-44-869Z-pvd6uq",
+      "kind": "quote-intent",
+      "contestId": "38",
+      "speculationId": "27",
+      "sport": "mlb",
+      "awayTeam": "Atlanta Braves",
+      "homeTeam": "Chicago White Sox",
+      "canQuote": true,
+      "away": {
+        "takerOddsTick": 193,
+        "takerImpliedProb": 0.5175841559098963,
+        "makerSide": "home",
+        "makerOddsTick": 208,
+        "positionType": 1,
+        "sizeUSDC": 0.05,
+        "sizeWei6": "50000"
+      },
+      "home": {
+        "takerOddsTick": 205,
+        "takerImpliedProb": 0.4879713996456594,
+        "makerSide": "away",
+        "makerOddsTick": 195,
+        "positionType": 0,
+        "sizeUSDC": 0.05,
+        "sizeWei6": "50000"
+      },
+      "notes": []
+    },
+    {
+      "ts": "2026-06-11T23:21:48.485Z",
+      "runId": "2026-06-11T23-20-44-869Z-pvd6uq",
+      "kind": "quote-intent",
+      "contestId": "39",
+      "speculationId": "28",
+      "sport": "nhl",
+      "awayTeam": "Vegas Golden Knights",
+      "homeTeam": "Carolina Hurricanes",
+      "canQuote": true,
+      "away": {
+        "takerOddsTick": 244,
+        "takerImpliedProb": 0.4091032774483246,
+        "makerSide": "home",
+        "makerOddsTick": 169,
+        "positionType": 1,
+        "sizeUSDC": 0.05,
+        "sizeWei6": "50000"
+      },
+      "home": {
+        "takerOddsTick": 168,
+        "takerImpliedProb": 0.5964522781072309,
+        "makerSide": "away",
+        "makerOddsTick": 247,
+        "positionType": 0,
+        "sizeUSDC": 0.05,
+        "sizeWei6": "50000"
+      },
+      "notes": []
+    }
+  ],
+  "commitmentsPosted": [
+    {
+      "ts": "2026-06-11T23:21:47.980Z",
+      "runId": "2026-06-11T23-20-44-869Z-pvd6uq",
+      "kind": "submit",
+      "commitmentHash": "0x195dfd683abbd625f3284168fd1fb3120d24bc722310dbbdf289dc9690700d0d",
+      "speculationId": "27",
+      "contestId": "38",
+      "sport": "mlb",
+      "awayTeam": "Atlanta Braves",
+      "homeTeam": "Chicago White Sox",
+      "takerSide": "away",
+      "makerSide": "home",
+      "positionType": 1,
+      "makerOddsTick": 208,
+      "riskAmountWei6": "50000",
+      "expiryUnixSec": 1781220227,
+      "takerOddsTick": 193,
+      "takerImpliedProb": 0.5175841559098963,
+      "makerSideDetail": {
+        "role": "home",
+        "team": "Chicago White Sox",
+        "protocolPosition": "lower",
+        "positionType": 1
+      },
+      "takerSideDetail": {
+        "role": "away",
+        "team": "Atlanta Braves",
+        "protocolPosition": "upper",
+        "positionType": 0
+      }
+    },
+    {
+      "ts": "2026-06-11T23:21:48.304Z",
+      "runId": "2026-06-11T23-20-44-869Z-pvd6uq",
+      "kind": "submit",
+      "commitmentHash": "0x1f215e1d50647bdd350d10d68ef1252f882ee6d2c6104ffb3f774cf1aa42217b",
+      "speculationId": "27",
+      "contestId": "38",
+      "sport": "mlb",
+      "awayTeam": "Atlanta Braves",
+      "homeTeam": "Chicago White Sox",
+      "takerSide": "home",
+      "makerSide": "away",
+      "positionType": 0,
+      "makerOddsTick": 195,
+      "riskAmountWei6": "50000",
+      "expiryUnixSec": 1781220227,
+      "takerOddsTick": 205,
+      "takerImpliedProb": 0.4879713996456594,
+      "makerSideDetail": {
+        "role": "away",
+        "team": "Atlanta Braves",
+        "protocolPosition": "upper",
+        "positionType": 0
+      },
+      "takerSideDetail": {
+        "role": "home",
+        "team": "Chicago White Sox",
+        "protocolPosition": "lower",
+        "positionType": 1
+      }
+    },
+    {
+      "ts": "2026-06-11T23:21:48.799Z",
+      "runId": "2026-06-11T23-20-44-869Z-pvd6uq",
+      "kind": "submit",
+      "commitmentHash": "0xef375d7fa5d3e05a186e030da1b36a583985d39d092c13100bce8443d008c850",
+      "speculationId": "28",
+      "contestId": "39",
+      "sport": "nhl",
+      "awayTeam": "Vegas Golden Knights",
+      "homeTeam": "Carolina Hurricanes",
+      "takerSide": "away",
+      "makerSide": "home",
+      "positionType": 1,
+      "makerOddsTick": 169,
+      "riskAmountWei6": "50000",
+      "expiryUnixSec": 1781220227,
+      "takerOddsTick": 244,
+      "takerImpliedProb": 0.4091032774483246,
+      "makerSideDetail": {
+        "role": "home",
+        "team": "Carolina Hurricanes",
+        "protocolPosition": "lower",
+        "positionType": 1
+      },
+      "takerSideDetail": {
+        "role": "away",
+        "team": "Vegas Golden Knights",
+        "protocolPosition": "upper",
+        "positionType": 0
+      }
+    },
+    {
+      "ts": "2026-06-11T23:21:49.124Z",
+      "runId": "2026-06-11T23-20-44-869Z-pvd6uq",
+      "kind": "submit",
+      "commitmentHash": "0x1a27a11b5c3442ca41baa12d21069ea3b923ae7ebb3eef8faf082eea9ed9bb11",
+      "speculationId": "28",
+      "contestId": "39",
+      "sport": "nhl",
+      "awayTeam": "Vegas Golden Knights",
+      "homeTeam": "Carolina Hurricanes",
+      "takerSide": "home",
+      "makerSide": "away",
+      "positionType": 0,
+      "makerOddsTick": 247,
+      "riskAmountWei6": "50000",
+      "expiryUnixSec": 1781220227,
+      "takerOddsTick": 168,
+      "takerImpliedProb": 0.5964522781072309,
+      "makerSideDetail": {
+        "role": "away",
+        "team": "Vegas Golden Knights",
+        "protocolPosition": "upper",
+        "positionType": 0
+      },
+      "takerSideDetail": {
+        "role": "home",
+        "team": "Carolina Hurricanes",
+        "protocolPosition": "lower",
+        "positionType": 1
+      }
+    }
+  ],
+  "controlledFill": {
+    "commitmentHash": "0xef375d7fa5d3e05a186e030da1b36a583985d39d092c13100bce8443d008c850",
+    "txHash": "0x4ae5d0a19614d5abe80cbc5784a429ee8121c277605062b4892bb25749eb80f0",
+    "makerSide": "lower/home Carolina Hurricanes",
+    "takerSide": "upper/away Vegas Golden Knights",
+    "makerFilledRiskUSDC": "0.050000",
+    "takerRiskUSDC": "0.034500",
+    "partialFill": false,
+    "fillSource": "own-state-stream",
+    "blockNumber": null,
+    "makerSideDetail": {
+      "role": "home",
+      "team": "Carolina Hurricanes",
+      "protocolPosition": "lower",
+      "positionType": 1
+    },
+    "takerSideDetail": {
+      "role": "away",
+      "team": "Vegas Golden Knights",
+      "protocolPosition": "upper",
+      "positionType": 0
+    },
+    "makerOddsTick": 169,
+    "takerOddsTick": 244
+  },
+  "ownStateSseAssertions": {
+    "fillSource": "own-state-stream",
+    "legacyCanonicalFillSources": [],
+    "evidence": "telemetry fill event source=own-state-stream; no commitment-diff, position-poll, or softcancel-recovery fill events present; config used no ownState.subscribe and no top-level pollIntervalMs"
+  },
+  "softCancels": [
+    {
+      "ts": "2026-06-11T23:23:50.638Z",
+      "runId": "2026-06-11T23-20-44-869Z-pvd6uq",
+      "kind": "soft-cancel",
+      "commitmentHash": "0x195dfd683abbd625f3284168fd1fb3120d24bc722310dbbdf289dc9690700d0d",
+      "speculationId": "27",
+      "contestId": "38",
+      "sport": "mlb",
+      "awayTeam": "Atlanta Braves",
+      "homeTeam": "Chicago White Sox",
+      "takerSide": "away",
+      "makerSide": "home",
+      "positionType": 1,
+      "makerOddsTick": 208,
+      "reason": "shutdown",
+      "makerSideDetail": {
+        "role": "home",
+        "team": "Chicago White Sox",
+        "protocolPosition": "lower",
+        "positionType": 1
+      },
+      "takerSideDetail": {
+        "role": "away",
+        "team": "Atlanta Braves",
+        "protocolPosition": "upper",
+        "positionType": 0
+      }
+    },
+    {
+      "ts": "2026-06-11T23:23:50.766Z",
+      "runId": "2026-06-11T23-20-44-869Z-pvd6uq",
+      "kind": "soft-cancel",
+      "commitmentHash": "0x1f215e1d50647bdd350d10d68ef1252f882ee6d2c6104ffb3f774cf1aa42217b",
+      "speculationId": "27",
+      "contestId": "38",
+      "sport": "mlb",
+      "awayTeam": "Atlanta Braves",
+      "homeTeam": "Chicago White Sox",
+      "takerSide": "home",
+      "makerSide": "away",
+      "positionType": 0,
+      "makerOddsTick": 195,
+      "reason": "shutdown",
+      "makerSideDetail": {
+        "role": "away",
+        "team": "Atlanta Braves",
+        "protocolPosition": "upper",
+        "positionType": 0
+      },
+      "takerSideDetail": {
+        "role": "home",
+        "team": "Chicago White Sox",
+        "protocolPosition": "lower",
+        "positionType": 1
+      }
+    },
+    {
+      "ts": "2026-06-11T23:23:51.093Z",
+      "runId": "2026-06-11T23-20-44-869Z-pvd6uq",
+      "kind": "soft-cancel",
+      "commitmentHash": "0x1a27a11b5c3442ca41baa12d21069ea3b923ae7ebb3eef8faf082eea9ed9bb11",
+      "speculationId": "28",
+      "contestId": "39",
+      "sport": "nhl",
+      "awayTeam": "Vegas Golden Knights",
+      "homeTeam": "Carolina Hurricanes",
+      "takerSide": "home",
+      "makerSide": "away",
+      "positionType": 0,
+      "makerOddsTick": 247,
+      "reason": "shutdown",
+      "makerSideDetail": {
+        "role": "away",
+        "team": "Vegas Golden Knights",
+        "protocolPosition": "upper",
+        "positionType": 0
+      },
+      "takerSideDetail": {
+        "role": "home",
+        "team": "Carolina Hurricanes",
+        "protocolPosition": "lower",
+        "positionType": 1
+      }
+    }
+  ],
+  "mmSummary": {
+    "schemaVersion": 1,
+    "generatedAt": "2026-06-11T23:25:35.291Z",
+    "lines": 24,
+    "malformedLines": 0,
+    "runIds": [
+      "2026-06-11T23-20-44-869Z-pvd6uq"
+    ],
+    "firstEventAt": "2026-06-11T23:20:44.905Z",
+    "lastEventAt": "2026-06-11T23:23:51.093Z",
+    "ticks": 3,
+    "eventCounts": {
+      "tick-start": 3,
+      "candidate": 2,
+      "fair-value": 0,
+      "risk-verdict": 2,
+      "quote-intent": 2,
+      "quote-competitiveness": 4,
+      "competitiveness-unavailable": 0,
+      "submit": 4,
+      "would-submit": 0,
+      "soft-cancel": 3,
+      "would-soft-cancel": 0,
+      "replace": 0,
+      "would-replace": 0,
+      "onchain-cancel": 0,
+      "cancel-blocked-missing-payload": 0,
+      "nonce-floor-raise": 0,
+      "expire": 0,
+      "approval": 0,
+      "funding-hold": 0,
+      "fill": 1,
+      "position-transition": 0,
+      "settle": 0,
+      "claim": 0,
+      "degraded": 0,
+      "stream-health-degraded": 0,
+      "stream-would-hold": 0,
+      "stream-cold-restart": 0,
+      "stream-health-hold": 2,
+      "divergence": 0,
+      "unknown-own-fill": 0,
+      "owner-mapping-failed": 0,
+      "error": 0,
+      "kill": 1
+    },
+    "candidates": {
+      "total": 2,
+      "tracked": 2,
+      "skipReasons": {}
+    },
+    "quoteIntents": {
+      "total": 2,
+      "canQuote": 2,
+      "refused": 0
+    },
+    "wouldSubmit": 0,
+    "wouldReplace": {
+      "total": 0,
+      "byReason": {}
+    },
+    "wouldSoftCancel": {
+      "total": 0,
+      "byReason": {}
+    },
+    "expired": 0,
+    "quoteCompetitiveness": {
+      "samples": 4,
+      "atOrInsideBookCount": 4,
+      "atOrInsideBookRate": 1,
+      "vsReferenceTicks": {
+        "min": 5,
+        "p50": 5,
+        "mean": 5.25,
+        "max": 6
+      },
+      "unavailable": 0
+    },
+    "quoteAgeSeconds": null,
+    "latentExposurePeakWei6": "0",
+    "staleQuoteIncidents": 0,
+    "degradedByReason": {},
+    "errors": {
+      "total": 0,
+      "byPhase": {}
+    },
+    "kill": {
+      "reason": "kill-file",
+      "ticks": 3
+    },
+    "liveMetrics": {
+      "fills": {
+        "quotedUsdcWei6": "200000",
+        "filledUsdcWei6": "50000",
+        "fillRate": 0.25
+      },
+      "gas": {
+        "totalPolWei": "0",
+        "byKind": {
+          "approval": "0",
+          "onchainCancel": "0",
+          "settle": "0",
+          "claim": "0"
+        },
+        "totalUsdcEquivWei6": "0"
+      },
+      "settlements": {
+        "settleCount": 0,
+        "claimCount": 0,
+        "totalClaimedPayoutWei6": "0"
+      },
+      "realizedPnl": {
+        "netUsdcWei6": "0",
+        "claimedProfitUsdcWei6": "0",
+        "realizedLossUsdcWei6": "0",
+        "wonCount": 0,
+        "lostCount": 0,
+        "pushCount": 0,
+        "wonUnclaimedCount": 0,
+        "alreadyClaimedCount": 0,
+        "unsettledCount": 1
+      },
+      "totalFeeUsdcWei6": "0"
+    }
+  },
+  "telemetryScope": {
+    "publishedNdjson": "raw/live-telemetry.sanitized.ndjson",
+    "publishedLineCount": 17,
+    "canonicalSummaryEventCount": 24,
+    "scopeNote": "Published NDJSON is a selected public-safe subset; this JSON liveRun.eventCounts is the count source."
+  }
+}
