@@ -1,0 +1,79 @@
+{
+  "checkedAtUtc": "2026-06-19T00:08:38.076703Z",
+  "selectedTarget": {
+    "game": "Los Angeles Angels @ Athletics",
+    "gamePk": 824989,
+    "gameId": "da625f7e-c165-46be-bb62-e0a0aaaccf87",
+    "slug": "laa-ath-2026-06-19",
+    "contestId": "49",
+    "sport": "mlb",
+    "awayTeam": "Los Angeles Angels",
+    "homeTeam": "Athletics",
+    "scheduledStartUtc": "2026-06-19T01:40:00Z",
+    "gameStatus": {
+      "mlbAbstractGameState": "Preview",
+      "mlbDetailedState": "Pre-Game",
+      "playsCount": 0,
+      "ospexContestStatus": "verified"
+    },
+    "speculations": [
+      {
+        "speculationId": "38",
+        "contestId": "49",
+        "type": "moneyline",
+        "status": "open",
+        "speculationStatus": 0,
+        "orderbookCount": 0
+      }
+    ],
+    "teamIdentity": {
+      "away": {
+        "team": "Los Angeles Angels",
+        "abbreviation": "LAA",
+        "positionType": "upper",
+        "role": "away",
+        "identity": "underdog",
+        "marketOddsAmerican": "+156"
+      },
+      "home": {
+        "team": "Athletics",
+        "abbreviation": "ATH",
+        "positionType": "lower",
+        "role": "home",
+        "identity": "favorite",
+        "marketOddsAmerican": "-156"
+      }
+    },
+    "quoteDryRun": {
+      "pipeline": "computed",
+      "canQuote": true,
+      "contestId": "49",
+      "speculationId": "38"
+    },
+    "allowlist": [
+      "49"
+    ]
+  },
+  "checks": {
+    "version_cli_v071": true,
+    "doctor_versions_v071": true,
+    "mm_sha_min_exact": true,
+    "mm_sdk_pin": true,
+    "no_existing_mm_process": true,
+    "mlb_pre_game": true,
+    "start_not_passed": true,
+    "no_actual_play": true,
+    "contest_49_verified": true,
+    "spec_38_open_moneyline": true,
+    "team_identity": true,
+    "public_commitments_zero": true,
+    "seed_terminal_filled_zero_remaining": true,
+    "maker_positions_clean": true,
+    "maker_open_commitments_zero": true,
+    "mm_own_risk_zero": true,
+    "balances_allowances_ok": true,
+    "quote_ready": true,
+    "candidates_one_quote_ready": true,
+    "bal_sea_complete": true
+  }
+}

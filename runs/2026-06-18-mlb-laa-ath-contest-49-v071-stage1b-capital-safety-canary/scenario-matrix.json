@@ -1,0 +1,107 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/scenario-matrix.schema.json",
+  "schemaVersion": 2,
+  "artifactId": "2026-06-18-mlb-laa-ath-contest-49-v071-stage1b-capital-safety-canary",
+  "generatedAt": "2026-06-19T04:39:18Z",
+  "runClass": "mm-live-canary",
+  "scenarios": [
+    {
+      "id": "target-preflight",
+      "scenario": "Target preflight and allowlist",
+      "status": "pass",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "notes": "LAA away @ ATH home contest 49/spec 38 passed official pre-game status, identity, allowlist, and quote-ready gates."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "scenario": "Repo/runtime gates",
+      "status": "pass",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "notes": "v0.7.1 CLI/SDK and MM SHA/pins verified; prior install/build/typecheck/test/smoke evidence reused because SHA and pins were unchanged."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "scenario": "Wallet auth, balances, allowances",
+      "status": "pass",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Reserved live maker was clean before start; balances/allowances were sufficient and bounded."
+    },
+    {
+      "id": "bounded-approvals",
+      "scenario": "Bounded approvals / no unlimited approvals",
+      "status": "pass",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "notes": "No unlimited approvals; live auto-approval stayed off; existing PositionModule allowances were bounded."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "scenario": "Dry-run quote loop",
+      "status": "pass",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "notes": "Pre-live quote dry-run for contest 49 returned pipeline=computed and canQuote=true."
+    },
+    {
+      "id": "live-commitments-posted",
+      "scenario": "Live commitments posted",
+      "status": "pass",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "notes": "Tiny live commitments posted under strict allowlist [49], all target 49/38 only."
+    },
+    {
+      "id": "live-fill",
+      "scenario": "Controlled live fill",
+      "status": "pass",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "Exactly one controlled fill succeeded against live-posted commitment 0x0f6b5182\u2026 using mm-shakeout-flow-a."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "scenario": "Own-state SSE canonical fill source",
+      "status": "pass",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "Telemetry captured the fill with source own-state-stream."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "scenario": "Exposure drained to zero",
+      "status": "pass",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "Final public/API/MM visible-open exposure is zero and no orphan live MM process remained."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "scenario": "Restart/cold-start safety",
+      "status": "not_applicable",
+      "evidence": null,
+      "notes": "Not run for this Stage-1b live-window artifact; final zero-exposure and process checks were run instead."
+    },
+    {
+      "id": "postgame-score",
+      "scenario": "Postgame score",
+      "status": "pass",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Official final score LAA 0, ATH 5 was verified and contest 49 scored."
+    },
+    {
+      "id": "postgame-settle",
+      "scenario": "Postgame settle",
+      "status": "pass",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Speculation 38 settled to home/lower/Athletics."
+    },
+    {
+      "id": "postgame-claim",
+      "scenario": "Postgame claim/no-op",
+      "status": "pass",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Winning lower/Athletics live-fill and setup seed positions were claimed; losing upper/LAA positions are no-op."
+    },
+    {
+      "id": "cost-within-cap",
+      "scenario": "Cost within cap",
+      "status": "pass",
+      "evidence": "raw/tx-receipts.summary.json",
+      "notes": "Tracked live maker risk and combined open+active maker risk stayed within Stage-1b caps; postgame gas recorded."
+    }
+  ]
+}

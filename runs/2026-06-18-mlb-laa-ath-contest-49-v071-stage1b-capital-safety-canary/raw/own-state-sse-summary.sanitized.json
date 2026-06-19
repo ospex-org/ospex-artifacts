@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-06-19T00-09-05-807Z-522xcf",
+  "fillEventCount": 1,
+  "fillEvents": [
+    {
+      "ts": "2026-06-19T00:11:10.609Z",
+      "runId": "2026-06-19T00-09-05-807Z-522xcf",
+      "maker": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "kind": "fill",
+      "source": "own-state-stream",
+      "commitmentHash": "0x0f6b5182f859c887494f22f559038b31b828c1d904a2c3dd8df895f997ce06ae",
+      "speculationId": "38",
+      "contestId": "49",
+      "sport": "mlb",
+      "awayTeam": "Los Angeles Angels",
+      "homeTeam": "Athletics",
+      "takerSide": "home",
+      "makerSide": "away",
+      "positionType": 0,
+      "makerOddsTick": 256,
+      "newFillWei6": "2000000",
+      "cumulativeRiskWei6": "2000000"
+    }
+  ],
+  "assertion": "canonical controlled fill was observed from owner-auth own-state SSE",
+  "noUnknownOwnFill": true
+}

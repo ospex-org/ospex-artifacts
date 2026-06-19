@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-06-19T00-09-05-807Z-522xcf",
+  "target": {
+    "contestId": "49",
+    "speculationId": "38"
+  },
+  "strictAllowlist": [
+    "49"
+  ],
+  "submittedCommitmentsObserved": [
+    {
+      "submittedAtUtc": "2026-06-19T00:09:18.985Z",
+      "commitmentHash": "0xb152b8bd5cb28629027442d84aecb236f91ab2895cd6055f1d4e242f322e0cfc"
+    },
+    {
+      "submittedAtUtc": "2026-06-19T00:09:19.299Z",
+      "commitmentHash": "0xbcadd41ce07d1c612af8456cfe751b1bac403351bbb4d8d74597418a0cd80005"
+    },
+    {
+      "submittedAtUtc": "2026-06-19T00:12:43.803Z",
+      "commitmentHash": "0x7ff101a5fc77ec78fa93e089b1b75ad8b9a2d14be22574725403818a50ac31ad"
+    },
+    {
+      "submittedAtUtc": "2026-06-19T00:12:44.458Z",
+      "commitmentHash": "0x901383ed468b7266efeba19ba31fdeae9e091aee24290b041b1196bf0c7970a0"
+    },
+    {
+      "submittedAtUtc": "2026-06-19T00:15:46.135Z",
+      "commitmentHash": "0xcc2cce1b7448257a3d60e1efd9e5885279ae2e69984220af609e30135aed760c"
+    },
+    {
+      "submittedAtUtc": "2026-06-19T00:15:46.454Z",
+      "commitmentHash": "0x23c2b5b15362efadb847aead250e01307f2b356dccf5d329cb15c79cf3eb5d9a"
+    }
+  ],
+  "filledCommitmentHash": "0x0f6b5182f859c887494f22f559038b31b828c1d904a2c3dd8df895f997ce06ae",
+  "finalVisibleOpenCommitments": 0,
+  "finalOrderbookCount": 0,
+  "maxOpenCommitments": 4
+}

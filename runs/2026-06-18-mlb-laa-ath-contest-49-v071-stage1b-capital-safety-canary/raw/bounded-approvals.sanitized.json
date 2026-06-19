@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "autoApprove": false,
+  "approvalMode": "bounded-existing-allowances",
+  "newApprovalTransactionsDuringStage1b": [],
+  "unlimitedApprovalsUsed": false,
+  "liveMakerPrePositionAllowanceUSDC": "23",
+  "liveMakerPostLivePositionAllowanceUSDC": "21",
+  "controlledTakerPrePositionAllowanceUSDC": "21.237029",
+  "controlledTakerPostLivePositionAllowanceUSDC": "18.117029"
+}

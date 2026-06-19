@@ -1,0 +1,25 @@
+{
+  "source": "MLB Stats API",
+  "checkedAtUtc": "2026-06-19T04:18:54.645201Z",
+  "gamePk": 824989,
+  "status": {
+    "abstractGameState": "Final",
+    "codedGameState": "F",
+    "detailedState": "Final",
+    "statusCode": "F",
+    "startTimeTBD": false,
+    "abstractGameCode": "F"
+  },
+  "away": {
+    "name": "Los Angeles Angels",
+    "abbreviation": "LAA",
+    "runs": 0
+  },
+  "home": {
+    "name": "Athletics",
+    "abbreviation": "ATH",
+    "runs": 5
+  },
+  "winnerSide": "home/lower",
+  "allPlaysCount": 71
+}

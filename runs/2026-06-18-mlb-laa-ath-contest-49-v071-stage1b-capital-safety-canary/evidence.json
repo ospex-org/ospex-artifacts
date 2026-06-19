@@ -1,0 +1,254 @@
+{
+  "artifactId": "2026-06-18-mlb-laa-ath-contest-49-v071-stage1b-capital-safety-canary",
+  "artifactPath": "runs/2026-06-18-mlb-laa-ath-contest-49-v071-stage1b-capital-safety-canary/",
+  "artifactType": "run",
+  "artifactStatus": "complete_verified_with_caveats",
+  "status": "complete_verified_with_caveats",
+  "capturedAtUtc": "2026-06-19T04:39:18Z",
+  "date": "2026-06-18",
+  "network": "polygon",
+  "chainId": 137,
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "The v0.7.1 LAA @ ATH Stage-1b capital-safety canary completed the full lifecycle: official final score Los Angeles Angels 0, Athletics 5 was verified; contest 49 was scored; speculation 38 settled to home/lower/Athletics; the winning controlled live-fill and setup seed positions were claimed; final claim sweeps, public commitments/orderbook, and live-MM process checks are zero."
+  },
+  "artifactFiles": {
+    "evidence": "evidence.json",
+    "summary": "summary.md",
+    "scenarioMatrixJson": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "mveScorecardJson": "mve-scorecard.json",
+    "mveScorecardMarkdown": "mve-scorecard.md",
+    "raw": "raw/"
+  },
+  "coverage": {
+    "targetPreflight": "raw/target-preflight.sanitized.json",
+    "repoRuntime": "raw/release-runtime-matrix.sanitized.json",
+    "walletAuthBalance": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "boundedApprovals": "raw/bounded-approvals.sanitized.json",
+    "dryRun": "raw/mm-dryrun-summary.sanitized.json",
+    "liveCommitments": "raw/live-public-commitments-posted.sanitized.json",
+    "fill": "raw/live-fill.sanitized.json",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "finalContestShow": "raw/final-contest-show.sanitized.json"
+  },
+  "target": {
+    "game": "Los Angeles Angels @ Athletics",
+    "gamePk": 824989,
+    "gameId": "da625f7e-c165-46be-bb62-e0a0aaaccf87",
+    "slug": "laa-ath-2026-06-19",
+    "sport": "mlb",
+    "market": "moneyline",
+    "contestId": "49",
+    "speculationId": "38",
+    "awayTeam": "Los Angeles Angels",
+    "homeTeam": "Athletics",
+    "contestStatusAtLiveWindow": "verified",
+    "speculationStatusAtLiveWindow": "open",
+    "startTimeUtc": "2026-06-19T01:40:00Z",
+    "startTimeCentral": "2026-06-18 20:40 CDT",
+    "teamIdentity": {
+      "away": {
+        "team": "Los Angeles Angels",
+        "abbreviation": "LAA",
+        "positionType": "upper",
+        "role": "away",
+        "identity": "underdog",
+        "marketOddsAmerican": "+156"
+      },
+      "home": {
+        "team": "Athletics",
+        "abbreviation": "ATH",
+        "positionType": "lower",
+        "role": "home",
+        "identity": "favorite",
+        "marketOddsAmerican": "-156"
+      },
+      "winner": {
+        "team": "Athletics",
+        "role": "home",
+        "positionType": "lower"
+      }
+    },
+    "contestStatusAfterPostgame": "scored",
+    "speculationStatusAfterPostgame": "closed",
+    "postgameStatus": "complete",
+    "finalScore": {
+      "awayRuns": 0,
+      "homeRuns": 5,
+      "winner": "Athletics",
+      "winnerProtocolSide": "lower"
+    }
+  },
+  "wallets": {
+    "liveMaker": {
+      "alias": "mm-shakeout-maker-a",
+      "address": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2"
+    },
+    "controlledTaker": {
+      "alias": "mm-shakeout-flow-a",
+      "address": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494"
+    },
+    "setupSeedMaker": {
+      "alias": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    },
+    "setupSeedTaker": {
+      "alias": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    }
+  },
+  "liveWindow": {
+    "runId": "2026-06-19T00-09-05-807Z-522xcf",
+    "startedAtUtc": "2026-06-19T00:09:05Z",
+    "stoppedAtUtc": "2026-06-19T00:16:41Z",
+    "commitmentCount": 6,
+    "controlledFill": {
+      "commitmentHash": "0x0f6b5182f859c887494f22f559038b31b828c1d904a2c3dd8df895f997ce06ae",
+      "txHash": "0xabdd54e077b29c2d856d96a3071d53c88a163074e574dd141013de755ba3c114",
+      "makerFilledRiskUSDC": "2.000000",
+      "takerRiskUSDC": "3.120000",
+      "makerWallet": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+      "takerWallet": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494"
+    },
+    "ownStateSseAssertions": {
+      "fillSource": "own-state-stream",
+      "fillEventCount": 1
+    },
+    "postStopZeroExposure": {
+      "checkedAtUtc": "2026-06-19T04:39:18Z",
+      "publicMakerVisibleCommitments": 0,
+      "publicContestSpecVisibleCommitments": 0,
+      "contestOrderbookCount": 0,
+      "orphanProcessCount": 0,
+      "targetActivePositions": {
+        "maker": 0,
+        "taker": 0,
+        "seedMaker": 0,
+        "seedTaker": 0
+      },
+      "targetClaimablePositions": {
+        "maker": 0,
+        "taker": 0,
+        "seedMaker": 0,
+        "seedTaker": 0
+      },
+      "targetPendingSettlePositions": {
+        "maker": 0,
+        "taker": 0,
+        "seedMaker": 0,
+        "seedTaker": 0
+      }
+    }
+  },
+  "release": {
+    "cliVersion": "0.7.1",
+    "sdkVersion": "0.7.1",
+    "marketMakerHeadSha": "8389e11d53839941e998ad3686ca5eb05f50f905",
+    "packageSdkPin": "https://github.com/ospex-org/ospex-sdk/releases/download/v0.7.1/ospex-sdk-0.7.1.tgz",
+    "runtimeGateNotes": "Run-local CLI and MM runtime gates passed before setup/live; unchanged MM SHA/pins reused prior v0.7.1 build/test evidence."
+  },
+  "costs": {
+    "liveFillTakerRiskUSDC": "3.120000",
+    "liveFillMakerFilledRiskUSDC": "2.000000",
+    "maxOpenMakerRiskUSDC": "4.000000",
+    "maxActiveMakerRiskUSDC": "2.000000",
+    "maxCombinedOpenActiveMakerRiskUSDC": "6.000000",
+    "maxRiskPerContestUSDC": "12.000000",
+    "maxRiskPerSportUSDC": "12.000000",
+    "postgameGasPOL": "0.13937083249286696",
+    "allRecordedLifecycleGasPOL": "0.44437680980823312",
+    "controlledSpendWithinStage1bCaps": true,
+    "setupSeedTakerClaimUSDC": "0.100000",
+    "controlledTakerClaimUSDC": "5.120000"
+  },
+  "postgame": {
+    "schemaVersion": 1,
+    "target": {
+      "contestId": "49",
+      "speculationId": "38",
+      "gamePk": 824989,
+      "awayTeam": "Los Angeles Angels",
+      "homeTeam": "Athletics"
+    },
+    "finalScore": {
+      "awayTeam": "Los Angeles Angels",
+      "awayRuns": 0,
+      "homeTeam": "Athletics",
+      "homeRuns": 5,
+      "winner": "Athletics",
+      "winnerRole": "home",
+      "winnerProtocolSide": "lower"
+    },
+    "score": {
+      "requestTxHash": "0x3f08214754ccaab5f68797639b4380ceabced474a3883fa861e3f1ed905148c6",
+      "receiptStatus": "0x1",
+      "requestId": "0x5b591842988bddf570d63a93465a7e9bc359aa9bee42090687d1ef49927c4fa1",
+      "contestStatus": "scored",
+      "awayScore": 0,
+      "homeScore": 5,
+      "scoredAt": "2026-06-19T04:22:32+00:00"
+    },
+    "settle": {
+      "txHash": "0x104282aab58b8f2d4ecbc0849f0dc1987f2051fbb0b81724ea707366bb78644a",
+      "receiptStatus": "0x1",
+      "winSide": "home/lower/Athletics",
+      "speculationStatus": "closed"
+    },
+    "claims": [
+      {
+        "walletLabel": "mm-shakeout-flow-a",
+        "wallet": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494",
+        "positionId": "38_0x1de13292256fddca9eea1ae53a79a83243cfd494_1",
+        "side": "lower / home / Athletics",
+        "source": "controlled live MM fill",
+        "commitmentHash": "0x0f6b5182f859c887494f22f559038b31b828c1d904a2c3dd8df895f997ce06ae",
+        "payoutWei6": "5120000",
+        "payoutUSDC": "5.120000",
+        "txHash": "0xced29afbc6361965f151e524526e2ed182e42bb155f040a0e2d3368a41bf14e6",
+        "receiptStatus": "0x1"
+      },
+      {
+        "walletLabel": "ospex-flow-a",
+        "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "positionId": "38_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+        "side": "lower / home / Athletics",
+        "source": "setup seed/open fill",
+        "commitmentHash": "0x539923e80733bcdca92be9f8fc24ef8790c313e3bec66fc29c642cf61177e92b",
+        "payoutWei6": "100000",
+        "payoutUSDC": "0.100000",
+        "txHash": "0x3b390155a59f1adc4e6b8f1172a591b4c36dbda2f9bbd51faec92c426f941e61",
+        "receiptStatus": "0x1"
+      }
+    ],
+    "noOps": [
+      {
+        "walletLabel": "mm-shakeout-maker-a",
+        "wallet": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+        "positionId": "38_0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2_0",
+        "side": "upper / away / Los Angeles Angels",
+        "result": "lost",
+        "claimStatus": "not claimable"
+      },
+      {
+        "walletLabel": "ospex-stage-maker-b",
+        "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "positionId": "38_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_0",
+        "side": "upper / away / Los Angeles Angels",
+        "result": "lost",
+        "claimStatus": "not claimable"
+      }
+    ],
+    "finalClaimSweepsEmpty": true,
+    "status": "complete",
+    "capturedAtUtc": "2026-06-19T04:39:18Z"
+  },
+  "caveats": [
+    "A separate restart/cold-start probe was not run; final zero-exposure and process checks were run instead.",
+    "Only the operator-controlled score request transaction is listed; successful scoring was verified by the scored contest projection and subsequent settlement."
+  ]
+}
