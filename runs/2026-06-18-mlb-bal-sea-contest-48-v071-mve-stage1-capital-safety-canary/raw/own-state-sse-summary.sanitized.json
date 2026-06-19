@@ -1,0 +1,41 @@
+{
+  "runId": "2026-06-18T17-31-05-785Z-suhppv",
+  "fillEventCount": 1,
+  "canonicalFillSource": "own-state-stream",
+  "fills": [
+    {
+      "ts": "2026-06-18T17:32:16.605Z",
+      "runId": "2026-06-18T17-31-05-785Z-suhppv",
+      "maker": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "kind": "fill",
+      "source": "own-state-stream",
+      "commitmentHash": "0x5ec9a0733f95d1edd6dcb269db4c70763864fb424e11bb4603a2d9c1996a5da2",
+      "speculationId": "37",
+      "contestId": "48",
+      "sport": "mlb",
+      "awayTeam": "Baltimore Orioles",
+      "homeTeam": "Seattle Mariners",
+      "takerSide": "home",
+      "makerSide": "away",
+      "positionType": 0,
+      "makerOddsTick": 232,
+      "newFillWei6": "2000000",
+      "cumulativeRiskWei6": "2000000"
+    }
+  ],
+  "legacyAuditSourcesUsedAsCanonicalDrivers": false,
+  "eventKindCounts": {
+    "tick-start": 35,
+    "candidate": 4,
+    "stream-health-hold": 2,
+    "quote-intent": 10,
+    "risk-verdict": 10,
+    "submit": 5,
+    "quote-competitiveness": 14,
+    "replace": 4,
+    "fill": 1,
+    "soft-cancel": 5,
+    "expire": 4,
+    "kill": 1
+  }
+}

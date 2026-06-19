@@ -1,0 +1,33 @@
+{
+  "checkedAtUtc": "2026-06-18T23:05:14Z",
+  "publicMakerVisibleCommitments": 0,
+  "publicContestSpecVisibleCommitments": 0,
+  "contestOrderbookCount": 0,
+  "orphanProcessCount": 0,
+  "finalClaimDryRunEntries": {
+    "liveMaker": 0,
+    "controlledTaker": 0,
+    "seedMaker": 0,
+    "seedTaker": 0
+  },
+  "visibleLiveCommitmentCount": 0,
+  "targetActivePositions": {
+    "liveMaker": 0,
+    "controlledTaker": 0,
+    "seedMaker": 0,
+    "seedTaker": 0
+  },
+  "targetClaimablePositions": {
+    "liveMaker": 0,
+    "controlledTaker": 0,
+    "seedMaker": 0,
+    "seedTaker": 0
+  },
+  "targetPendingSettlePositions": {
+    "liveMaker": 0,
+    "controlledTaker": 0,
+    "seedMaker": 0,
+    "seedTaker": 0
+  },
+  "notes": "Losing upper-side BAL positions are no-op after settlement and are not claimable exposure."
+}
