@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-06-19T04:39:18Z",
+  "target": {
+    "contestId": "49",
+    "speculationId": "38"
+  },
+  "publicMakerVisibleCommitments": 0,
+  "publicContestVisibleCommitments": 0,
+  "publicContestSpecVisibleCommitments": 0,
+  "contestOrderbookCount": 0,
+  "orphanProcessCount": 0,
+  "finalClaimDryRunEntries": {
+    "liveMaker": 0,
+    "liveTaker": 0,
+    "seedMaker": 0,
+    "seedTaker": 0
+  },
+  "targetWalletPositions": {
+    "liveMaker": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    },
+    "controlledTaker": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    },
+    "setupSeedMaker": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    },
+    "setupSeedTaker": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    }
+  },
+  "note": "Any remaining active positions shown by seed wallets are older non-target positions; contest 49/speculation 38 has zero visible/open exposure and zero claimable entries after claims."
+}

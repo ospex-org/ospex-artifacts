@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "wallets": {
+    "liveMaker": {
+      "alias": "mm-shakeout-maker-a",
+      "address": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+      "preLive": {
+        "activePendingClaimable": "0/0/0",
+        "publicOpenCommitmentsAllContests": 0,
+        "mmOwnRiskWei6": "0/0/0",
+        "balances": {
+          "pol": "4.670889",
+          "usdc": "73.627372"
+        },
+        "allowances": {
+          "usdcPositionModule": "23",
+          "usdcTreasuryModule": "0",
+          "linkOracleModule": "0"
+        }
+      },
+      "postLive": {
+        "balances": {
+          "pol": "4.670889",
+          "usdc": "71.627372"
+        },
+        "allowances": {
+          "usdcPositionModule": "21",
+          "usdcTreasuryModule": "0",
+          "linkOracleModule": "0"
+        }
+      }
+    },
+    "controlledTaker": {
+      "alias": "mm-shakeout-flow-a",
+      "address": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494",
+      "preLive": {
+        "balances": {
+          "pol": "1.186591",
+          "usdc": "34.866092"
+        },
+        "allowances": {
+          "usdcPositionModule": "21.237029",
+          "usdcTreasuryModule": "0",
+          "linkOracleModule": "0"
+        }
+      },
+      "postLivePreClaim": {
+        "balances": {
+          "pol": "1.064442",
+          "usdc": "31.746092"
+        },
+        "allowances": {
+          "usdcPositionModule": "18.117029",
+          "usdcTreasuryModule": "0",
+          "linkOracleModule": "0"
+        }
+      },
+      "postClaim": {
+        "balances": {
+          "pol": "1.047932",
+          "usdc": "36.866603"
+        },
+        "allowances": {
+          "usdcPositionModule": "18.117029",
+          "usdcTreasuryModule": "0",
+          "linkOracleModule": "0"
+        }
+      }
+    },
+    "setupSeedMaker": {
+      "alias": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "prePostgame": {
+        "balances": {
+          "pol": "11.942405",
+          "usdc": "7.140701"
+        },
+        "allowances": {
+          "usdcPositionModule": "9.7",
+          "usdcTreasuryModule": "3.5",
+          "linkOracleModule": "0.21"
+        }
+      },
+      "postPostgame": {
+        "balances": {
+          "pol": "11.836055",
+          "usdc": "7.140701"
+        },
+        "allowances": {
+          "usdcPositionModule": "9.7",
+          "usdcTreasuryModule": "3.5",
+          "linkOracleModule": "0.205"
+        }
+      }
+    },
+    "setupSeedTaker": {
+      "alias": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "prePostgame": {
+        "balances": {
+          "pol": "15.661447",
+          "usdc": "13.013113"
+        },
+        "allowances": {
+          "usdcPositionModule": "4.8",
+          "usdcTreasuryModule": "0.5",
+          "linkOracleModule": "0.285"
+        }
+      },
+      "postPostgame": {
+        "balances": {
+          "pol": "15.644938",
+          "usdc": "13.113113"
+        },
+        "allowances": {
+          "usdcPositionModule": "4.8",
+          "usdcTreasuryModule": "0.5",
+          "linkOracleModule": "0.285"
+        }
+      }
+    }
+  },
+  "topupNeeded": false,
+  "makerReuseAfterPriorRun": "safe: clean active/pending/claimable state and zero public open commitments before live start"
+}

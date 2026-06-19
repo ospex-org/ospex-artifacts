@@ -1,0 +1,38 @@
+{
+  "result": {
+    "contest": {
+      "contestId": "49",
+      "sport": "mlb",
+      "awayTeam": "Los Angeles Angels",
+      "homeTeam": "Athletics",
+      "gamePk": 824989
+    },
+    "speculation": {
+      "speculationId": "38",
+      "marketType": "moneyline",
+      "lineTicks": 0
+    },
+    "commitment": {
+      "commitmentHash": "0x0f6b5182f859c887494f22f559038b31b828c1d904a2c3dd8df895f997ce06ae",
+      "contestId": "49",
+      "marketType": "moneyline",
+      "maker": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+      "makerSide": "away/upper/Los Angeles Angels",
+      "oddsTick": 256,
+      "makerFilledRiskWei6": "2000000"
+    },
+    "fill": {
+      "txHash": "0xabdd54e077b29c2d856d96a3071d53c88a163074e574dd141013de755ba3c114",
+      "blockNumber": 88748577,
+      "makerRiskWei6": "2000000",
+      "makerRiskUSDC": "2.000000",
+      "takerRiskWei6": "3120000",
+      "takerRiskUSDC": "3.120000",
+      "takerSide": "home/lower/Athletics"
+    },
+    "wallets": {
+      "maker": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+      "taker": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494"
+    }
+  }
+}

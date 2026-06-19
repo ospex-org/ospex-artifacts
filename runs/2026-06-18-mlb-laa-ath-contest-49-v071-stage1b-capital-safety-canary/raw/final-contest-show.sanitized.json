@@ -1,0 +1,19 @@
+{
+  "contest": {
+    "contestId": "49",
+    "status": "scored",
+    "awayTeam": "Los Angeles Angels",
+    "homeTeam": "Athletics",
+    "awayScore": 0,
+    "homeScore": 5,
+    "scoredAt": "2026-06-19T04:22:32+00:00",
+    "matchTime": "2026-06-19T01:40:00+00:00"
+  },
+  "speculation": {
+    "speculationId": "38",
+    "contestId": "49",
+    "type": "moneyline",
+    "speculationStatus": 1
+  },
+  "orderbookCount": 0
+}

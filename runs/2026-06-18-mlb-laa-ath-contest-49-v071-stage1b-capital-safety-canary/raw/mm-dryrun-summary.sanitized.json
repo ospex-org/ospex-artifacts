@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "target": {
+    "contestId": "49",
+    "speculationId": "38",
+    "market": "moneyline",
+    "awayTeam": "Los Angeles Angels",
+    "homeTeam": "Athletics"
+  },
+  "pipeline": "computed",
+  "canQuote": true,
+  "quoteBothSides": true,
+  "awayTakerQuote": {
+    "american": "+156",
+    "oddsTick": 256,
+    "makerRiskUSDC": "2.000000"
+  },
+  "homeTakerQuote": {
+    "american": "-156",
+    "oddsTick": 164,
+    "makerRiskUSDC": "2.000000"
+  }
+}

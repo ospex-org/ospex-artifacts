@@ -1,0 +1,163 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "2026-06-18-mlb-laa-ath-contest-49-v071-stage1b-capital-safety-canary",
+  "generatedAt": "2026-06-19T04:39:18Z",
+  "runClass": "mm-live-canary",
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "The v0.7.1 LAA @ ATH Stage-1b capital-safety canary completed the full lifecycle: official final score Los Angeles Angels 0, Athletics 5 was verified; contest 49 was scored; speculation 38 settled to home/lower/Athletics; the winning controlled live-fill and setup seed positions were claimed; final claim sweeps, public commitments/orderbook, and live-MM process checks are zero."
+  },
+  "capabilities": [
+    {
+      "id": "target-preflight",
+      "capability": "Target preflight and allowlist",
+      "proof": "proven_live",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "notes": "LAA away @ ATH home contest 49/spec 38 passed official pre-game status, identity, allowlist, and quote-ready gates."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "capability": "Repo/runtime gates",
+      "proof": "proven_live",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "notes": "v0.7.1 CLI/SDK and MM SHA/pins verified; prior install/build/typecheck/test/smoke evidence reused because SHA and pins were unchanged."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "capability": "Wallet auth, balances, allowances",
+      "proof": "proven_live",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Reserved live maker was clean before start; balances/allowances were sufficient and bounded."
+    },
+    {
+      "id": "bounded-approvals",
+      "capability": "Bounded approvals / no unlimited approvals",
+      "proof": "proven_live",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "notes": "No unlimited approvals; live auto-approval stayed off; existing PositionModule allowances were bounded."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "capability": "Dry-run quote loop",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "notes": "Pre-live quote dry-run for contest 49 returned pipeline=computed and canQuote=true."
+    },
+    {
+      "id": "live-commitments-posted",
+      "capability": "Live commitments posted",
+      "proof": "proven_live",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "notes": "Tiny live commitments posted under strict allowlist [49], all target 49/38 only."
+    },
+    {
+      "id": "live-fill",
+      "capability": "Controlled live fill",
+      "proof": "proven_live",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "Exactly one controlled fill succeeded against live-posted commitment 0x0f6b5182\u2026 using mm-shakeout-flow-a."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "capability": "Own-state SSE canonical fill source",
+      "proof": "proven_live",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "Telemetry captured the fill with source own-state-stream."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "capability": "Exposure drained to zero",
+      "proof": "proven_live",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "Final public/API/MM visible-open exposure is zero and no orphan live MM process remained."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "capability": "Restart/cold-start safety",
+      "proof": "not_applicable",
+      "evidence": null,
+      "notes": "Not run for this Stage-1b live-window artifact; final zero-exposure and process checks were run instead."
+    },
+    {
+      "id": "postgame-score",
+      "capability": "Postgame score",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Official final score LAA 0, ATH 5 was verified and contest 49 scored."
+    },
+    {
+      "id": "postgame-settle",
+      "capability": "Postgame settle",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Speculation 38 settled to home/lower/Athletics."
+    },
+    {
+      "id": "postgame-claim",
+      "capability": "Postgame claim/no-op",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Winning lower/Athletics live-fill and setup seed positions were claimed; losing upper/LAA positions are no-op."
+    },
+    {
+      "id": "cost-within-cap",
+      "capability": "Cost within cap",
+      "proof": "proven_live",
+      "evidence": "raw/tx-receipts.summary.json",
+      "notes": "Tracked live maker risk and combined open+active maker risk stayed within Stage-1b caps; postgame gas recorded."
+    }
+  ],
+  "zeroExposure": {
+    "checkedAtUtc": "2026-06-19T04:39:18Z",
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "orphanProcessCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json"
+  },
+  "transactions": [
+    {
+      "category": "seed-match",
+      "txHash": "0xd376002295b0071e5927b34ee42592a60171fb16a97cb58b8691523526a42365",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Setup seed/open fill for contest 49 before live canary."
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0xabdd54e077b29c2d856d96a3071d53c88a163074e574dd141013de755ba3c114",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Exactly one controlled live fill against the live MM quote."
+    },
+    {
+      "category": "score-request",
+      "txHash": "0x3f08214754ccaab5f68797639b4380ceabced474a3883fa861e3f1ed905148c6",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Score contest 49 after MLB final."
+    },
+    {
+      "category": "settle",
+      "txHash": "0x104282aab58b8f2d4ecbc0849f0dc1987f2051fbb0b81724ea707366bb78644a",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 38 to home/lower/Athletics."
+    },
+    {
+      "category": "claim",
+      "txHash": "0xced29afbc6361965f151e524526e2ed182e42bb155f040a0e2d3368a41bf14e6",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim controlled live taker winning position."
+    },
+    {
+      "category": "claim",
+      "txHash": "0x3b390155a59f1adc4e6b8f1172a591b4c36dbda2f9bbd51faec92c426f941e61",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim setup seed taker winning position."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "label": "setup_seed_fill",
+    "txHash": "0xd376002295b0071e5927b34ee42592a60171fb16a97cb58b8691523526a42365",
+    "blockNumber": "88732310",
+    "status": "0x1",
+    "gasUsed": 663574,
+    "effectiveGasPriceWei": 275563974344,
+    "gasPOL": 0.18285708871134548
+  },
+  {
+    "label": "controlled_live_fill",
+    "txHash": "0xabdd54e077b29c2d856d96a3071d53c88a163074e574dd141013de755ba3c114",
+    "blockNumber": "88748577",
+    "status": "0x1",
+    "gasUsed": 419821,
+    "effectiveGasPriceWei": 290954689270,
+    "gasPOL": 0.12214888860402068
+  },
+  {
+    "label": "score_contest_49",
+    "txHash": "0x3f08214754ccaab5f68797639b4380ceabced474a3883fa861e3f1ed905148c6",
+    "blockNumber": "88758630",
+    "status": "0x1",
+    "gasUsed": 664329,
+    "effectiveGasPriceWei": 128990878961,
+    "gasPOL": 0.08569238162928218
+  },
+  {
+    "label": "settle_speculation_38",
+    "txHash": "0x104282aab58b8f2d4ecbc0849f0dc1987f2051fbb0b81724ea707366bb78644a",
+    "blockNumber": "88758675",
+    "status": "0x1",
+    "gasUsed": 155619,
+    "effectiveGasPriceWei": 132748499099,
+    "gasPOL": 0.02065818868128728
+  },
+  {
+    "label": "claim_live_taker",
+    "txHash": "0xced29afbc6361965f151e524526e2ed182e42bb155f040a0e2d3368a41bf14e6",
+    "blockNumber": "88758720",
+    "status": "0x1",
+    "gasUsed": 127375,
+    "effectiveGasPriceWei": 129621458498,
+    "gasPOL": 0.01651053327618275
+  },
+  {
+    "label": "claim_seed_taker",
+    "txHash": "0x3b390155a59f1adc4e6b8f1172a591b4c36dbda2f9bbd51faec92c426f941e61",
+    "blockNumber": "88758724",
+    "status": "0x1",
+    "gasUsed": 127375,
+    "effectiveGasPriceWei": 129615143522,
+    "gasPOL": 0.01650972890611475
+  }
+]
