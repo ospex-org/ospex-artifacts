@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "cliVersion": "0.7.1",
+  "sdkVersion": "0.7.1",
+  "doctorSchemaVersion": 2,
+  "marketMakerHeadSha": "8389e11d53839941e998ad3686ca5eb05f50f905",
+  "packageSdkPin": "https://github.com/ospex-org/ospex-sdk/releases/download/v0.7.1/ospex-sdk-0.7.1.tgz",
+  "worktreeClean": true,
+  "latestRelease": "v0.7.1",
+  "buildEvidence": "MM worktree SHA/pins unchanged from setup handoff; prior yarn install/build/typecheck/test/smoke evidence reused and live doctor passed."
+}

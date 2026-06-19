@@ -1,0 +1,244 @@
+{
+  "artifactId": "2026-06-19-mlb-tor-chc-contest-50-v071-stage2a-capital-safety-canary",
+  "artifactPath": "runs/2026-06-19-mlb-tor-chc-contest-50-v071-stage2a-capital-safety-canary/",
+  "artifactType": "run",
+  "artifactStatus": "complete_verified_with_caveats",
+  "status": "complete_verified_with_caveats",
+  "capturedAtUtc": "2026-06-19T21:43:28Z",
+  "date": "2026-06-19",
+  "network": "polygon",
+  "chainId": 137,
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "The v0.7.1 TOR @ CHC Stage-2a capital-safety canary completed the full lifecycle: official final score Toronto Blue Jays 2, Chicago Cubs 16 was verified; contest 50 was scored; speculation 39 settled to home/lower/Chicago Cubs; the winning controlled live-fill and setup seed positions were claimed; final claim sweeps, public commitments/orderbook, and live-MM process checks are zero."
+  },
+  "artifactFiles": {
+    "evidence": "evidence.json",
+    "summary": "summary.md",
+    "scenarioMatrixJson": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "mveScorecardJson": "mve-scorecard.json",
+    "mveScorecardMarkdown": "mve-scorecard.md",
+    "raw": "raw/"
+  },
+  "coverage": {
+    "targetPreflight": "raw/target-preflight.sanitized.json",
+    "repoRuntime": "raw/release-runtime-matrix.sanitized.json",
+    "walletAuthBalance": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "boundedApprovals": "raw/bounded-approvals.sanitized.json",
+    "dryRun": "raw/mm-dryrun-summary.sanitized.json",
+    "liveCommitments": "raw/live-public-commitments-posted.sanitized.json",
+    "fill": "raw/live-fill.sanitized.json",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "finalContestShow": "raw/final-contest-show.sanitized.json"
+  },
+  "target": {
+    "game": "Toronto Blue Jays @ Chicago Cubs",
+    "gamePk": 824663,
+    "gameId": "2744a162-cea5-48f3-b227-d89ae49ac45c",
+    "slug": "tor-chc-2026-06-19",
+    "sport": "mlb",
+    "market": "moneyline",
+    "contestId": "50",
+    "speculationId": "39",
+    "awayTeam": "Toronto Blue Jays",
+    "homeTeam": "Chicago Cubs",
+    "contestStatusAtLiveWindow": "verified",
+    "speculationStatusAtLiveWindow": "open",
+    "startTimeUtc": "2026-06-19T18:20:00Z",
+    "startTimeCentral": "2026-06-19 13:20 CDT",
+    "teamIdentity": {
+      "away": {
+        "team": "Toronto Blue Jays",
+        "abbreviation": "TOR",
+        "positionType": "upper",
+        "role": "away",
+        "identity": "underdog",
+        "marketOddsAmerican": "+107"
+      },
+      "home": {
+        "team": "Chicago Cubs",
+        "abbreviation": "CHC",
+        "positionType": "lower",
+        "role": "home",
+        "identity": "favorite",
+        "marketOddsAmerican": "-119"
+      },
+      "winner": {
+        "team": "Chicago Cubs",
+        "role": "home",
+        "positionType": "lower"
+      }
+    },
+    "contestStatusAfterPostgame": "scored",
+    "speculationStatusAfterPostgame": "closed",
+    "postgameStatus": "complete",
+    "finalScore": {
+      "awayRuns": 2,
+      "homeRuns": 16,
+      "winner": "Chicago Cubs",
+      "winnerProtocolSide": "lower"
+    }
+  },
+  "wallets": {
+    "liveMaker": {
+      "alias": "mm-shakeout-maker-a",
+      "address": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2"
+    },
+    "controlledTaker": {
+      "alias": "mm-shakeout-flow-a",
+      "address": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494"
+    },
+    "setupSeedMaker": {
+      "alias": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    },
+    "setupSeedTaker": {
+      "alias": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    }
+  },
+  "liveWindow": {
+    "runId": "2026-06-19T15-38-46-356Z-65vj20",
+    "startedAtUtc": "2026-06-19T15:38:45Z",
+    "stoppedAtUtc": "2026-06-19T15:46:05Z",
+    "commitmentCount": 10,
+    "controlledFill": {
+      "commitmentHash": "0xdcee7fb35f7b0b62afbc41f18f3529fb51d85984ec4f3114ed8edd72b5fe8dd6",
+      "txHash": "0x89f09327ac9d51ea18ca7d4391ce3ee106d71bd27cf40dc2adf4a8d469c2ccbc",
+      "makerFilledRiskUSDC": "5.000000",
+      "takerRiskUSDC": "4.450000",
+      "makerWallet": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+      "takerWallet": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494"
+    },
+    "ownStateSseAssertions": {
+      "fillSource": "own-state-stream",
+      "fillEventCount": 1
+    },
+    "postStopZeroExposure": {
+      "checkedAtUtc": "2026-06-19T15:50:05Z",
+      "publicMakerVisibleCommitments": 0,
+      "publicContestSpecVisibleCommitments": 0,
+      "contestOrderbookCount": 0,
+      "orphanProcessCount": 0,
+      "targetActivePositions": {
+        "maker": 0,
+        "taker": 0,
+        "seedMaker": 0,
+        "seedTaker": 0
+      },
+      "targetClaimablePositions": {
+        "maker": 0,
+        "taker": 0,
+        "seedMaker": 0,
+        "seedTaker": 0
+      },
+      "targetPendingSettlePositions": {
+        "maker": 0,
+        "taker": 0,
+        "seedMaker": 0,
+        "seedTaker": 0
+      }
+    }
+  },
+  "release": {
+    "cliVersion": "0.7.1",
+    "sdkVersion": "0.7.1",
+    "marketMakerHeadSha": "8389e11d53839941e998ad3686ca5eb05f50f905",
+    "packageSdkPin": "https://github.com/ospex-org/ospex-sdk/releases/download/v0.7.1/ospex-sdk-0.7.1.tgz",
+    "runtimeGateNotes": "Run-local CLI and MM runtime gates passed before live; unchanged MM SHA/pins reused prior v0.7.1 build/test evidence."
+  },
+  "costs": {
+    "liveFillTakerRiskUSDC": "4.450000",
+    "liveFillMakerFilledRiskUSDC": "5.000000",
+    "maxOpenMakerRiskUSDC": "10.000000",
+    "maxActiveMakerRiskUSDC": "5.000000",
+    "maxCombinedOpenActiveMakerRiskUSDC": "15.000000",
+    "maxRiskPerContestUSDC": "25.000000",
+    "maxRiskPerSportUSDC": "25.000000",
+    "postgameGasPOL": "0.300305490600420749",
+    "allRecordedLifecycleGasPOL": "0.416168746386103369",
+    "controlledSpendWithinStage2aCaps": true,
+    "setupSeedTakerClaimUSDC": "0.100000",
+    "controlledMakerClaimUSDC": "9.450000"
+  },
+  "postgame": {
+    "schemaVersion": 1,
+    "target": {
+      "contestId": "50",
+      "speculationId": "39",
+      "gamePk": 824663,
+      "awayTeam": "Toronto Blue Jays",
+      "homeTeam": "Chicago Cubs"
+    },
+    "finalScore": {
+      "awayTeam": "Toronto Blue Jays",
+      "awayRuns": 2,
+      "homeTeam": "Chicago Cubs",
+      "homeRuns": 16,
+      "winner": "Chicago Cubs",
+      "winnerRole": "home",
+      "winnerProtocolSide": "lower"
+    },
+    "score": {
+      "requestTxHash": "0x5ac8afe5e0808de878151a5bb8a0c96e356d48b11eab3a63afaba95d70c5d524",
+      "receiptStatus": "0x1",
+      "requestId": "0xf1de01f001be8d1df990ac29cbc401c2d92edf508b35d9f72ed5c54a7e46ea86",
+      "contestStatus": "scored",
+      "awayScore": 2,
+      "homeScore": 16,
+      "scoredAt": "2026-06-19T21:35:10+00:00"
+    },
+    "settle": {
+      "txHash": "0xd4f4edf930c97b0b72e3e425da00dfa5f7307b25a285daef1c9e39564bc57e44",
+      "receiptStatus": "0x1",
+      "winSide": "home/lower/Chicago Cubs",
+      "speculationStatus": "closed"
+    },
+    "claims": [
+      {
+        "walletLabel": "mm-shakeout-maker-a",
+        "wallet": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+        "side": "lower / home / Chicago Cubs",
+        "source": "controlled live MM fill",
+        "commitmentHash": "0xdcee7fb35f7b0b62afbc41f18f3529fb51d85984ec4f3114ed8edd72b5fe8dd6",
+        "payoutWei6": "9450000",
+        "payoutUSDC": "9.450000",
+        "txHash": "0x4be831d50d2111ed14104c801a80c20d880c07506094f56568be4428a6554ae8",
+        "receiptStatus": "0x1"
+      },
+      {
+        "walletLabel": "ospex-flow-a",
+        "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "side": "lower / home / Chicago Cubs",
+        "source": "setup seed/open fill",
+        "commitmentHash": "0x6502b0a7ef6fd563c47ac2e88f4e5c08850e746f537c25c540c75c18b1e385c6",
+        "payoutWei6": "100000",
+        "payoutUSDC": "0.100000",
+        "txHash": "0xc0e73ae2d934eff9d03c491b6555016cc81a605d9d97b2fa6e6a3b2c50be1dbc",
+        "receiptStatus": "0x1"
+      }
+    ],
+    "noOps": [
+      {
+        "walletLabel": "mm-shakeout-flow-a",
+        "wallet": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494",
+        "side": "upper / away / Toronto Blue Jays",
+        "result": "lost",
+        "claimStatus": "not claimable"
+      },
+      {
+        "walletLabel": "ospex-stage-maker-b",
+        "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "side": "upper / away / Toronto Blue Jays",
+        "result": "lost",
+        "claimStatus": "not claimable"
+      }
+    ],
+    "finalClaimDryRunEntriesForSpec39": 0
+  }
+}

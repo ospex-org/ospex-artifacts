@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "target": {
+    "contestId": "50",
+    "speculationId": "39",
+    "gamePk": 824663,
+    "awayTeam": "Toronto Blue Jays",
+    "homeTeam": "Chicago Cubs"
+  },
+  "finalScore": {
+    "awayTeam": "Toronto Blue Jays",
+    "awayRuns": 2,
+    "homeTeam": "Chicago Cubs",
+    "homeRuns": 16,
+    "winner": "Chicago Cubs",
+    "winnerRole": "home",
+    "winnerProtocolSide": "lower"
+  },
+  "score": {
+    "requestTxHash": "0x5ac8afe5e0808de878151a5bb8a0c96e356d48b11eab3a63afaba95d70c5d524",
+    "receiptStatus": "0x1",
+    "requestId": "0xf1de01f001be8d1df990ac29cbc401c2d92edf508b35d9f72ed5c54a7e46ea86",
+    "contestStatus": "scored",
+    "awayScore": 2,
+    "homeScore": 16,
+    "scoredAt": "2026-06-19T21:35:10+00:00"
+  },
+  "settle": {
+    "txHash": "0xd4f4edf930c97b0b72e3e425da00dfa5f7307b25a285daef1c9e39564bc57e44",
+    "receiptStatus": "0x1",
+    "winSide": "home/lower/Chicago Cubs",
+    "speculationStatus": "closed"
+  },
+  "claims": [
+    {
+      "walletLabel": "mm-shakeout-maker-a",
+      "wallet": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+      "side": "lower / home / Chicago Cubs",
+      "source": "controlled live MM fill",
+      "commitmentHash": "0xdcee7fb35f7b0b62afbc41f18f3529fb51d85984ec4f3114ed8edd72b5fe8dd6",
+      "payoutWei6": "9450000",
+      "payoutUSDC": "9.450000",
+      "txHash": "0x4be831d50d2111ed14104c801a80c20d880c07506094f56568be4428a6554ae8",
+      "receiptStatus": "0x1"
+    },
+    {
+      "walletLabel": "ospex-flow-a",
+      "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "side": "lower / home / Chicago Cubs",
+      "source": "setup seed/open fill",
+      "commitmentHash": "0x6502b0a7ef6fd563c47ac2e88f4e5c08850e746f537c25c540c75c18b1e385c6",
+      "payoutWei6": "100000",
+      "payoutUSDC": "0.100000",
+      "txHash": "0xc0e73ae2d934eff9d03c491b6555016cc81a605d9d97b2fa6e6a3b2c50be1dbc",
+      "receiptStatus": "0x1"
+    }
+  ],
+  "noOps": [
+    {
+      "walletLabel": "mm-shakeout-flow-a",
+      "wallet": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494",
+      "side": "upper / away / Toronto Blue Jays",
+      "result": "lost",
+      "claimStatus": "not claimable"
+    },
+    {
+      "walletLabel": "ospex-stage-maker-b",
+      "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "side": "upper / away / Toronto Blue Jays",
+      "result": "lost",
+      "claimStatus": "not claimable"
+    }
+  ],
+  "finalClaimDryRunEntriesForSpec39": 0
+}

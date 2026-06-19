@@ -1,0 +1,163 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "2026-06-19-mlb-tor-chc-contest-50-v071-stage2a-capital-safety-canary",
+  "generatedAt": "2026-06-19T21:43:28Z",
+  "runClass": "mm-live-canary",
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "The v0.7.1 TOR @ CHC Stage-2a capital-safety canary completed the full lifecycle: official final score Toronto Blue Jays 2, Chicago Cubs 16 was verified; contest 50 was scored; speculation 39 settled to home/lower/Chicago Cubs; the winning controlled live-fill and setup seed positions were claimed; final claim sweeps, public commitments/orderbook, and live-MM process checks are zero."
+  },
+  "capabilities": [
+    {
+      "id": "target-preflight",
+      "capability": "Target preflight and allowlist",
+      "proof": "proven_live",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "notes": "TOR away @ CHC home contest 50/spec 39 passed official pre-game status, identity, allowlist, and quote-ready gates."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "capability": "Repo/runtime gates",
+      "proof": "proven_live",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "notes": "v0.7.1 CLI/SDK and MM SHA/pins verified; prior install/build/typecheck/test/smoke evidence reused because SHA and pins were unchanged."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "capability": "Wallet auth, balances, allowances",
+      "proof": "proven_live",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Reserved live maker and controlled taker were clean before start; balances/allowances were sufficient and bounded."
+    },
+    {
+      "id": "bounded-approvals",
+      "capability": "Bounded approvals / no unlimited approvals",
+      "proof": "proven_live",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "notes": "No unlimited approvals; live auto-approval stayed off; existing PositionModule allowances were bounded."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "capability": "Dry-run quote loop",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "notes": "Pre-live quote dry-run for contest 50 returned pipeline=computed and canQuote=true."
+    },
+    {
+      "id": "live-commitments-posted",
+      "capability": "Live commitments posted",
+      "proof": "proven_live",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "notes": "Live commitments posted under strict allowlist [50], all target 50/39 only."
+    },
+    {
+      "id": "live-fill",
+      "capability": "Controlled live fill",
+      "proof": "proven_live",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "Exactly one controlled fill succeeded against live-posted commitment 0xdcee7fb3\u2026 using mm-shakeout-flow-a."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "capability": "Own-state SSE canonical fill source",
+      "proof": "proven_live",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "Telemetry captured the fill with source own-state-stream."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "capability": "Exposure drained to zero",
+      "proof": "proven_live",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "Final public/API/MM visible-open exposure is zero and no orphan live MM process remained."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "capability": "Restart/cold-start safety",
+      "proof": "not_applicable",
+      "evidence": null,
+      "notes": "Not run for this Stage-2a live-window artifact; final zero-exposure and process checks were run instead."
+    },
+    {
+      "id": "postgame-score",
+      "capability": "Postgame score",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Official final score TOR 2, CHC 16 was verified and contest 50 scored."
+    },
+    {
+      "id": "postgame-settle",
+      "capability": "Postgame settle",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Speculation 39 settled to home/lower/Chicago Cubs."
+    },
+    {
+      "id": "postgame-claim",
+      "capability": "Postgame claim/no-op",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Winning lower/Chicago Cubs live-fill and setup seed positions were claimed; losing upper/TOR positions are no-op."
+    },
+    {
+      "id": "cost-within-cap",
+      "capability": "Cost within cap",
+      "proof": "proven_live",
+      "evidence": "raw/tx-receipts.summary.json",
+      "notes": "Tracked live maker risk and combined open+active maker risk stayed within Stage-2a caps; postgame gas recorded."
+    }
+  ],
+  "zeroExposure": {
+    "checkedAtUtc": "2026-06-19T21:38:20Z",
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "orphanProcessCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json"
+  },
+  "transactions": [
+    {
+      "category": "seed-match",
+      "txHash": "0xb2f8947c31e5f34f671006a6a96c2886f6d0f32351264bdaca930773cf4a81c3",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Setup seed/open fill for contest 50 before live canary."
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0x89f09327ac9d51ea18ca7d4391ce3ee106d71bd27cf40dc2adf4a8d469c2ccbc",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Exactly one controlled live fill against the live MM quote."
+    },
+    {
+      "category": "score-request",
+      "txHash": "0x5ac8afe5e0808de878151a5bb8a0c96e356d48b11eab3a63afaba95d70c5d524",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Score contest 50 after MLB final."
+    },
+    {
+      "category": "settle",
+      "txHash": "0xd4f4edf930c97b0b72e3e425da00dfa5f7307b25a285daef1c9e39564bc57e44",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 39 to home/lower/Chicago Cubs."
+    },
+    {
+      "category": "claim",
+      "txHash": "0x4be831d50d2111ed14104c801a80c20d880c07506094f56568be4428a6554ae8",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim controlled live maker winning position."
+    },
+    {
+      "category": "claim",
+      "txHash": "0xc0e73ae2d934eff9d03c491b6555016cc81a605d9d97b2fa6e6a3b2c50be1dbc",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim setup seed taker winning position."
+    }
+  ]
+}

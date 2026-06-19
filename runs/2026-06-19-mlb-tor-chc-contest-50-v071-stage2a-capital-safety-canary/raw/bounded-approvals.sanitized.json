@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "unlimitedApprovalsUsed": false,
+  "liveAutoApprove": false,
+  "newApprovalsDuringLiveOrPostgame": [],
+  "preExistingBoundedAllowancesUSDC": {
+    "liveMaker": "50",
+    "controlledTaker": "50",
+    "setupSeedMakerPosition": "9.6",
+    "setupSeedTakerPosition": "5"
+  }
+}

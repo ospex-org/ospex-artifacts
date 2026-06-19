@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-06-19T15-38-46-356Z-65vj20",
+  "contestId": "50",
+  "speculationId": "39",
+  "commitmentCount": 10,
+  "commitments": [
+    {
+      "hash": "0xdcee7fb35f7b0b62afbc41f18f3529fb51d85984ec4f3114ed8edd72b5fe8dd6",
+      "lifecycle": "filled",
+      "makerSide": "home",
+      "takerSide": "away",
+      "makerRiskUSDC": 5.0,
+      "filledMakerRiskUSDC": 5.0,
+      "expiryUtc": "2026-06-19T15:40:58Z"
+    },
+    {
+      "hash": "0x2cb4bf47da8f2bf0fbb4561517d71b5e5a275b68d4c5dc5201a728093250e0c3",
+      "lifecycle": "expired",
+      "makerSide": "away",
+      "takerSide": "home",
+      "makerRiskUSDC": 5.0,
+      "filledMakerRiskUSDC": 0.0,
+      "expiryUtc": "2026-06-19T15:40:58Z"
+    },
+    {
+      "hash": "0x410985552c94ebc6a234d1b1e62d2cb9e7f22f9161840607c9cefa77e1e7230c",
+      "lifecycle": "expired",
+      "makerSide": "home",
+      "takerSide": "away",
+      "makerRiskUSDC": 5.0,
+      "filledMakerRiskUSDC": 0.0,
+      "expiryUtc": "2026-06-19T15:41:54Z"
+    },
+    {
+      "hash": "0xb3f9eaca468b01226c858da2d1ea24e296540692be08a97c97f1adfdb85e31d9",
+      "lifecycle": "expired",
+      "makerSide": "away",
+      "takerSide": "home",
+      "makerRiskUSDC": 5.0,
+      "filledMakerRiskUSDC": 0.0,
+      "expiryUtc": "2026-06-19T15:41:54Z"
+    },
+    {
+      "hash": "0x7577d5eeac3ab3e6a7e5eddb11bda8a9ddaaa712d54acaa79a28e586787c9b80",
+      "lifecycle": "expired",
+      "makerSide": "home",
+      "takerSide": "away",
+      "makerRiskUSDC": 5.0,
+      "filledMakerRiskUSDC": 0.0,
+      "expiryUtc": "2026-06-19T15:43:12Z"
+    },
+    {
+      "hash": "0x1f27e4207f3b78329783845f58f755449512470296941fb5811e2cf26608afb6",
+      "lifecycle": "expired",
+      "makerSide": "away",
+      "takerSide": "home",
+      "makerRiskUSDC": 5.0,
+      "filledMakerRiskUSDC": 0.0,
+      "expiryUtc": "2026-06-19T15:43:58Z"
+    },
+    {
+      "hash": "0x9ae67262752166dc577725b699bf070b63672b7fe649467e7a61a132cb8e52e4",
+      "lifecycle": "softCancelled",
+      "makerSide": "home",
+      "takerSide": "away",
+      "makerRiskUSDC": 5.0,
+      "filledMakerRiskUSDC": 0.0,
+      "expiryUtc": "2026-06-19T15:45:28Z"
+    },
+    {
+      "hash": "0x91d75a190c4223b6e97bbfded57818c30ba99d4753ca769c716e5944db8e0d73",
+      "lifecycle": "softCancelled",
+      "makerSide": "away",
+      "takerSide": "home",
+      "makerRiskUSDC": 5.0,
+      "filledMakerRiskUSDC": 0.0,
+      "expiryUtc": "2026-06-19T15:45:28Z"
+    },
+    {
+      "hash": "0xd73616ad94dae81c78661e4c843386a02923307821b38e8eb919634226ec66c6",
+      "lifecycle": "softCancelled",
+      "makerSide": "home",
+      "takerSide": "away",
+      "makerRiskUSDC": 5.0,
+      "filledMakerRiskUSDC": 0.0,
+      "expiryUtc": "2026-06-19T15:46:24Z"
+    },
+    {
+      "hash": "0xfbfdb0aeb288e171f91c69ea5105c198ef0fba7f2ab51938af699d0fccf1e02d",
+      "lifecycle": "softCancelled",
+      "makerSide": "away",
+      "takerSide": "home",
+      "makerRiskUSDC": 5.0,
+      "filledMakerRiskUSDC": 0.0,
+      "expiryUtc": "2026-06-19T15:47:09Z"
+    }
+  ]
+}

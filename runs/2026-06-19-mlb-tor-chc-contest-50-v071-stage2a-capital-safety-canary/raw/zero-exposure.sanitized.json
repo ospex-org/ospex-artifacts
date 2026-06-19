@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-06-19T21:38:20Z",
+  "publicMakerVisibleCommitments": 0,
+  "publicContestSpecVisibleCommitments": 0,
+  "contestOrderbookCount": 0,
+  "orphanProcessCount": 0,
+  "claimDryRunSpec39Entries": 0,
+  "targetOpenOrClaimablePositions": 0,
+  "liveWindowZeroVisibleOpenAtShutdown": true
+}

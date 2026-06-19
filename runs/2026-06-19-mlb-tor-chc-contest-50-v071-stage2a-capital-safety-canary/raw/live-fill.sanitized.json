@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "result": {
+    "txHash": "0x89f09327ac9d51ea18ca7d4391ce3ee106d71bd27cf40dc2adf4a8d469c2ccbc",
+    "receiptStatus": "0x1",
+    "blockNumber": 88785733,
+    "contest": {
+      "contestId": "50",
+      "sport": "mlb",
+      "awayTeam": "Toronto Blue Jays",
+      "homeTeam": "Chicago Cubs"
+    },
+    "speculation": {
+      "speculationId": "39",
+      "marketType": "moneyline"
+    },
+    "commitment": {
+      "commitmentHash": "0xdcee7fb35f7b0b62afbc41f18f3529fb51d85984ec4f3114ed8edd72b5fe8dd6",
+      "contestId": "50",
+      "marketType": "moneyline",
+      "maker": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+      "makerSide": "home/lower/Chicago Cubs",
+      "takerSide": "away/upper/Toronto Blue Jays",
+      "makerRiskUSDC": "5.000000",
+      "takerRiskUSDC": "4.450000",
+      "makerOddsTick": 189,
+      "takerOddsTick": 212
+    },
+    "controlledTaker": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494"
+  }
+}
