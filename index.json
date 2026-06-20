@@ -1,10 +1,11 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-06-19T21:43:34Z",
+  "generatedAt": "2026-06-20T05:40:58Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
+      "runs/2026-06-19-mlb-wsh-tb-contest-51-v071-stage2a-repeat-capital-safety-canary/evidence.json",
       "runs/2026-06-19-mlb-tor-chc-contest-50-v071-stage2a-capital-safety-canary/evidence.json",
       "runs/2026-06-18-mlb-laa-ath-contest-49-v071-stage1b-capital-safety-canary/evidence.json",
       "runs/2026-06-18-mlb-bal-sea-contest-48-v071-mve-stage1-capital-safety-canary/evidence.json",
@@ -13,8 +14,7 @@
       "runs/2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary/evidence.json",
       "runs/2026-06-11-nhl-vgk-car-atl-cws-mm-alpha-multigame-rescue/evidence.json",
       "runs/2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary/evidence.json",
-      "runs/2026-06-11-mlb-hou-laa-contest-35-mm-live-canary/evidence.json",
-      "runs/2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate/evidence.json"
+      "runs/2026-06-11-mlb-hou-laa-contest-35-mm-live-canary/evidence.json"
     ],
     "release-acceptance": [
       "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.json"
@@ -22,6 +22,17 @@
     "daily-digest": []
   },
   "recentArtifacts": [
+    {
+      "artifactId": "2026-06-19-mlb-wsh-tb-contest-51-v071-stage2a-repeat-capital-safety-canary",
+      "artifactType": "run",
+      "dataPath": "runs/2026-06-19-mlb-wsh-tb-contest-51-v071-stage2a-repeat-capital-safety-canary/evidence.json",
+      "date": "2026-06-19",
+      "network": "polygon",
+      "rawPath": "runs/2026-06-19-mlb-wsh-tb-contest-51-v071-stage2a-repeat-capital-safety-canary/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-06-19-mlb-wsh-tb-contest-51-v071-stage2a-repeat-capital-safety-canary/summary.md",
+      "publishedAt": "2026-06-20T05:40:58Z"
+    },
     {
       "artifactId": "2026-06-19-mlb-tor-chc-contest-50-v071-stage2a-capital-safety-canary",
       "artifactType": "run",
@@ -322,9 +333,9 @@
       "scope": "year",
       "year": 2026,
       "path": "archive/2026/index.json",
-      "artifactCount": 26,
+      "artifactCount": 27,
       "oldestPublishedAt": "2026-05-20T02:48:35Z",
-      "newestPublishedAt": "2026-06-19T21:43:34Z"
+      "newestPublishedAt": "2026-06-20T05:40:58Z"
     }
   ]
 }

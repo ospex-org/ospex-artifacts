@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-06-19T22:10:59Z",
+  "configCaps": {
+    "contestAllowList": [
+      "51"
+    ],
+    "maxTrackedContests": 1,
+    "maxRealtimeChannels": 1,
+    "market": "moneyline",
+    "quoteBothSides": true,
+    "maxRiskPerCommitmentUSDC": "5.00",
+    "maxRiskPerContestUSDC": "25.00",
+    "maxRiskPerSportUSDC": "25.00",
+    "maxOpenCommitments": 4,
+    "logicalBankrollUSDC": "100",
+    "expirySeconds": 120,
+    "cancelMode": "offchain"
+  },
+  "quoteDryRun": {
+    "pipeline": "computed",
+    "canQuote": true,
+    "contestId": "51",
+    "speculationId": "40",
+    "awayTakerOddsTick": 243,
+    "homeTakerOddsTick": 170
+  }
+}

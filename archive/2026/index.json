@@ -1,13 +1,24 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-06-19T21:43:34Z",
+  "generatedAt": "2026-06-20T05:40:58Z",
   "repository": "ospex-org/ospex-artifacts",
   "archive": {
     "scope": "year",
     "year": 2026
   },
   "artifacts": [
+    {
+      "artifactId": "2026-06-19-mlb-wsh-tb-contest-51-v071-stage2a-repeat-capital-safety-canary",
+      "artifactType": "run",
+      "dataPath": "runs/2026-06-19-mlb-wsh-tb-contest-51-v071-stage2a-repeat-capital-safety-canary/evidence.json",
+      "date": "2026-06-19",
+      "network": "polygon",
+      "rawPath": "runs/2026-06-19-mlb-wsh-tb-contest-51-v071-stage2a-repeat-capital-safety-canary/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-06-19-mlb-wsh-tb-contest-51-v071-stage2a-repeat-capital-safety-canary/summary.md",
+      "publishedAt": "2026-06-20T05:40:58Z"
+    },
     {
       "artifactId": "2026-06-19-mlb-tor-chc-contest-50-v071-stage2a-capital-safety-canary",
       "artifactType": "run",

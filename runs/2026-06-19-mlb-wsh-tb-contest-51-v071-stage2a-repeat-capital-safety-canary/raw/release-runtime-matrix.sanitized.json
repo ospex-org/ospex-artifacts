@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-06-19T22:07:31Z",
+  "sdkCliRelease": {
+    "tag_name": "v0.7.1",
+    "published_at": "2026-06-17T14:59:02Z",
+    "asset_names": [
+      "ospex-cli-0.7.1.tgz",
+      "ospex-sdk-0.7.1.tgz"
+    ]
+  },
+  "localCliVersion": "0.7.1",
+  "doctor": {
+    "schemaVersion": 2,
+    "cliVersion": "0.7.1",
+    "sdkVersion": "0.7.1",
+    "ok": true,
+    "chainId": 137
+  },
+  "marketMaker": {
+    "headSha": "8389e11d53839941e998ad3686ca5eb05f50f905",
+    "targetShaAncestor": true,
+    "worktreeUnchanged": true,
+    "sdkTarballPin": "https://github.com/ospex-org/ospex-sdk/releases/download/v0.7.1/ospex-sdk-0.7.1.tgz",
+    "packagePinOk": true,
+    "yarnLockPinOk": true
+  },
+  "overallOk": true
+}

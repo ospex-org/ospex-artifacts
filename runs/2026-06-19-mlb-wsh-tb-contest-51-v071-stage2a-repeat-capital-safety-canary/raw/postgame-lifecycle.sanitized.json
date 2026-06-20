@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-06-20T05:32:41Z",
+  "finalScore": {
+    "awayTeam": "Washington Nationals",
+    "awayRuns": 2,
+    "homeTeam": "Tampa Bay Rays",
+    "homeRuns": 5,
+    "winner": "Tampa Bay Rays",
+    "winnerRole": "home",
+    "winnerProtocolSide": "lower"
+  },
+  "score": {
+    "requestTxHash": "0xbe83ef82861e19a8ba5b11d3c2741ef50e775d7cd68155d06492e9869928f533",
+    "requestId": "0xf225b6cc6936d1d76f37c7ef9082f0543e9176b0919267d4a67790a32d59d832",
+    "contestStatus": "scored",
+    "awayScore": 2,
+    "homeScore": 5,
+    "scoredAt": "2026-06-20T05:29:31+00:00"
+  },
+  "settle": {
+    "txHash": "0x27cbadf00abf69fa2c60e11d361dd38ac2ae64a4d18e4d3cab17e98ce8895f34",
+    "winSide": "home/lower/Tampa Bay Rays",
+    "speculationStatus": "closed"
+  },
+  "claims": [
+    {
+      "walletLabel": "mm-shakeout-flow-a",
+      "wallet": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494",
+      "side": "lower / home / Tampa Bay Rays",
+      "source": "controlled live MM fill",
+      "commitmentHash": "0x19a0faa4548a84a669744e76c8166cafb08e9f750d8db450335c4b7911912eb8",
+      "payoutWei6": "12150000",
+      "payoutUSDC": "12.150000",
+      "txHash": "0x5772910966d45e22ad85565bdda75ca304335ffc10bfea4857e521e4e6f1b89c",
+      "receiptStatus": "success"
+    },
+    {
+      "walletLabel": "ospex-flow-a",
+      "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "side": "lower / home / Tampa Bay Rays",
+      "source": "setup seed/open fill",
+      "commitmentHash": "0x7bd012e353f05740ed316439145816e32abd7288033423170023db30e64c096d",
+      "payoutWei6": "100000",
+      "payoutUSDC": "0.100000",
+      "txHash": "0xb282931729d2fca7256983cbb67307c2c2dd3c3b43851cfdc94d38188e2bc82a",
+      "receiptStatus": "success"
+    }
+  ],
+  "noOps": [
+    {
+      "walletLabel": "mm-shakeout-maker-a",
+      "wallet": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+      "side": "upper / away / Washington Nationals",
+      "result": "lost",
+      "claimStatus": "not claimable"
+    },
+    {
+      "walletLabel": "ospex-stage-maker-b",
+      "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "side": "upper / away / Washington Nationals",
+      "result": "lost",
+      "claimStatus": "not claimable"
+    }
+  ],
+  "finalClaimDryRunEntriesForSpec40": 0
+}

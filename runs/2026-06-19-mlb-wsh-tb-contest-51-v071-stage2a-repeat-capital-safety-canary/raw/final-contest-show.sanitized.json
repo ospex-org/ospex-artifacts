@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-06-20T05:32:41Z",
+  "contest": {
+    "contestId": "51",
+    "status": "scored",
+    "awayScore": 2,
+    "homeScore": 5,
+    "scoredAt": "2026-06-20T05:29:31+00:00",
+    "voidedAt": null,
+    "awayTeam": "Washington Nationals",
+    "homeTeam": "Tampa Bay Rays",
+    "jsonoddsId": "08f64e64-26d7-4781-9dc5-2192916222d1"
+  },
+  "speculation": {
+    "speculationId": "40",
+    "contestId": "51",
+    "type": "moneyline",
+    "lineTicks": 0,
+    "speculationStatus": 1,
+    "settledAt": null,
+    "winSide": null
+  },
+  "orderbookCount": 0
+}

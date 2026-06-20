@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-06-19T22:14:14.643Z",
+  "result": {
+    "contest": {
+      "contestId": "51",
+      "sport": "mlb",
+      "homeTeam": "Tampa Bay Rays",
+      "awayTeam": "Washington Nationals"
+    },
+    "speculation": {
+      "speculationId": "40",
+      "contestId": "51",
+      "type": "moneyline"
+    },
+    "commitment": {
+      "commitmentHash": "0x19a0faa4548a84a669744e76c8166cafb08e9f750d8db450335c4b7911912eb8",
+      "contestId": "51",
+      "marketType": "moneyline"
+    }
+  },
+  "commitmentHash": "0x19a0faa4548a84a669744e76c8166cafb08e9f750d8db450335c4b7911912eb8",
+  "txHash": "0x2b1734ebd1e77a064447a9df8b9b1d32c1aec895f11f7fa37c8729a9e22609e7",
+  "blockNumber": "88801506",
+  "maker": {
+    "alias": "mm-shakeout-maker-a",
+    "address": "0x46aebC238a200be9bf38E4ffdab1E94C4bfD74D2",
+    "side": "away / upper / Washington Nationals / WSH",
+    "riskUSDC": "5.000000"
+  },
+  "taker": {
+    "alias": "mm-shakeout-flow-a",
+    "address": "0x1De13292256fddCA9EeA1Ae53a79a83243CFD494",
+    "side": "home / lower / Tampa Bay Rays / TB",
+    "riskUSDC": "7.150000",
+    "profitUSDC": "5.000000"
+  },
+  "odds": {
+    "makerOddsTick": 243,
+    "takerOddsTick": 170
+  },
+  "fillability": {
+    "fillableNow": true,
+    "outcome": "fillable"
+  },
+  "txReceipt": {
+    "status": "success",
+    "gasCostPOL": "0.118191788285937086",
+    "gasUsed": 419821
+  }
+}
