@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-06-19T22:10:59Z",
+  "target": {
+    "game": "Washington Nationals @ Tampa Bay Rays",
+    "gamePk": 822966,
+    "gameId": "08f64e64-26d7-4781-9dc5-2192916222d1",
+    "slug": "wsh-tb-2026-06-19",
+    "sport": "mlb",
+    "contestId": "51",
+    "speculationId": "40",
+    "market": "moneyline",
+    "upper": {
+      "team": "Washington Nationals",
+      "abbreviation": "WSH",
+      "role": "away"
+    },
+    "lower": {
+      "team": "Tampa Bay Rays",
+      "abbreviation": "TB",
+      "role": "home"
+    }
+  },
+  "selectedTarget": {
+    "contestId": "51",
+    "sport": "mlb",
+    "homeTeam": "Tampa Bay Rays",
+    "awayTeam": "Washington Nationals",
+    "speculations": [
+      {
+        "speculationId": "40",
+        "contestId": "51",
+        "type": "moneyline"
+      }
+    ]
+  },
+  "mlbGate": {
+    "status": {
+      "abstractGameState": "Preview",
+      "detailedState": "Pre-Game",
+      "statusCode": "P"
+    },
+    "officialStartUtc": "2026-06-19T23:10:00Z",
+    "doubleHeader": "N",
+    "gameNumber": 1,
+    "actualPlayCount": 0,
+    "statusOnlyPseudoPlayObserved": true,
+    "caveat": null
+  },
+  "ospexGate": {
+    "contestStatus": "verified",
+    "contestGameId": "08f64e64-26d7-4781-9dc5-2192916222d1",
+    "speculationType": "moneyline",
+    "speculationStatus": 0,
+    "orderbookCountAtGate": 0
+  },
+  "quoteDryRun": {
+    "pipeline": "computed",
+    "canQuote": true,
+    "contestId": "51",
+    "awayTakerOddsTick": 243,
+    "homeTakerOddsTick": 170,
+    "awaySizeUSDC": 5,
+    "homeSizeUSDC": 5,
+    "referenceOdds": {
+      "awayAmerican": 136,
+      "homeAmerican": -155
+    }
+  },
+  "gate": {
+    "mlbIdentityOk": true,
+    "scheduledStartOk": true,
+    "pregameOrWarmupOk": true,
+    "noActualPlayOk": true,
+    "noDoubleheaderConfusion": true,
+    "noStatusCaveat": true,
+    "contestOk": true,
+    "teamSemanticsOk": true,
+    "speculationOpenMoneylineOk": true,
+    "quoteDryRunCanQuoteOk": true,
+    "candidateAllowlistOk": true,
+    "overallOk": true,
+    "note": "MLB feed had one pre-game game_advisory/status-change pseudo-play; counted as no actual first pitch/play because eventType=game_advisory and no pitch events."
+  }
+}

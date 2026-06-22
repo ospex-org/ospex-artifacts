@@ -1,0 +1,107 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/scenario-matrix.schema.json",
+  "schemaVersion": 2,
+  "artifactId": "2026-06-19-mlb-wsh-tb-contest-51-v071-stage2a-repeat-capital-safety-canary",
+  "generatedAt": "2026-06-20T05:35:00Z",
+  "runClass": "mm-live-canary",
+  "scenarios": [
+    {
+      "id": "target-preflight",
+      "scenario": "Target preflight and allowlist",
+      "status": "pass",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "notes": "WSH away @ TB home contest 51/spec 40 passed official pre-game status, identity, allowlist, and quote-ready gates."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "scenario": "Repo/runtime gates",
+      "status": "pass",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "notes": "v0.7.1 CLI/SDK and MM SHA/pins verified; prior install/build/typecheck/test/smoke evidence reused because SHA and pins were unchanged."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "scenario": "Wallet auth, balances, allowances",
+      "status": "pass",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Reserved live maker and controlled taker were clean before start after TOR/CHC cleanup; balances/allowances were sufficient and bounded."
+    },
+    {
+      "id": "bounded-approvals",
+      "scenario": "Bounded approvals / no unlimited approvals",
+      "status": "pass",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "notes": "No unlimited approvals; live auto-approval stayed off; existing PositionModule allowances were bounded."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "scenario": "Dry-run quote loop",
+      "status": "pass",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "notes": "Pre-live quote dry-run for contest 51 returned pipeline=computed and canQuote=true."
+    },
+    {
+      "id": "live-commitments-posted",
+      "scenario": "Live commitments posted",
+      "status": "pass",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "notes": "Live commitments posted under strict allowlist [51], all target 51/40 only."
+    },
+    {
+      "id": "live-fill",
+      "scenario": "Controlled live fill",
+      "status": "pass",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "Exactly one controlled fill succeeded against live-posted commitment 0x19a0faa4\u2026 using mm-shakeout-flow-a."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "scenario": "Own-state SSE canonical fill source",
+      "status": "pass",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "Telemetry captured the fill with source own-state-stream."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "scenario": "Exposure drained to zero",
+      "status": "pass",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "Final public/API/MM visible-open exposure is zero and no orphan live MM process remained."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "scenario": "Restart/cold-start safety",
+      "status": "not_applicable",
+      "evidence": null,
+      "notes": "Not run for this Stage-2a repeat live-window artifact; final zero-exposure and process checks were run instead."
+    },
+    {
+      "id": "postgame-score",
+      "scenario": "Postgame score",
+      "status": "pass",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Official final score WSH 2, TB 5 was verified and contest 51 scored."
+    },
+    {
+      "id": "postgame-settle",
+      "scenario": "Postgame settle",
+      "status": "pass",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Speculation 40 settled to home/lower/Tampa Bay Rays."
+    },
+    {
+      "id": "postgame-claim",
+      "scenario": "Postgame claim/no-op",
+      "status": "pass",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Winning lower/Tampa Bay Rays live-fill and setup seed positions were claimed; losing upper/WSH positions are no-op."
+    },
+    {
+      "id": "cost-within-cap",
+      "scenario": "Cost within cap",
+      "status": "pass",
+      "evidence": "raw/tx-receipts.summary.json",
+      "notes": "Tracked live maker risk and combined open+active maker risk stayed within Stage-2a caps; postgame gas recorded."
+    }
+  ]
+}

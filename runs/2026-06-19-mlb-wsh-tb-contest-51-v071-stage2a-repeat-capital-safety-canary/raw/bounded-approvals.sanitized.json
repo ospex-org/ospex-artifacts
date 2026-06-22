@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-06-20T05:32:41Z",
+  "liveRunApprovalChanges": [],
+  "unlimitedApprovalsUsed": false,
+  "autoApprove": false,
+  "boundedPositionAllowancesUSDC": {
+    "liveMakerPre": "45.00",
+    "controlledTakerPre": "45.55",
+    "liveMakerPostgame": "40",
+    "controlledTakerPostgame": "38.4"
+  },
+  "setupBoundedApprovalsFromPrep": [
+    {
+      "purpose": "reserved live maker Position USDC",
+      "amountUSDC": "50",
+      "txHash": "0x0f8641dc12aeeccc058c6182c302c2bc3d09b9efa11bd17f9879fb3f0b4ab60d"
+    },
+    {
+      "purpose": "controlled live taker Position USDC",
+      "amountUSDC": "50",
+      "txHash": "0x2138fa1d8529e512dcaba309267617b138692b15232cbf6115e1fa276c017e45"
+    }
+  ]
+}

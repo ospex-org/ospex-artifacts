@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-06-20T05:32:41Z",
+  "liveWindowFinal": {
+    "checkedAtUtc": "2026-06-19T22:24:54Z",
+    "publicOpenCounts": {
+      "contest51": 0,
+      "contest51Spec40": 0,
+      "makerAll": 0,
+      "makerContest51": 0,
+      "orderbookSpec40": 0
+    },
+    "state": {
+      "commitmentLifecycleCounts": {
+        "expired": 6,
+        "filled": 1,
+        "softCancelled": 4
+      },
+      "visibleOpen": 0,
+      "visibleOpenRiskWei6": "0",
+      "activeRiskWei6": "5000000"
+    },
+    "processScan": {
+      "orphanMmProcessCount": 0
+    },
+    "riskReplay": {
+      "maxVisibleOpenMakerRiskWei6": "10000000",
+      "maxVisibleOpenMakerRiskUSDC": "10.000000",
+      "maxActiveMakerRiskWei6": "5000000",
+      "maxActiveMakerRiskUSDC": "5.000000",
+      "maxCombinedVisibleOpenPlusActiveWei6": "15000000",
+      "maxCombinedVisibleOpenPlusActiveUSDC": "15.000000",
+      "finalVisibleOpenRiskWei6": "0",
+      "finalActiveRiskWei6": "5000000"
+    }
+  },
+  "postgameFinal": {
+    "publicOpenCounts": {
+      "contest51": 0,
+      "contest51Spec40": 0,
+      "liveMakerAll": 0,
+      "liveMakerContest51": 0,
+      "liveTakerMakerFilterAll": 0
+    },
+    "orderbookCount": 0,
+    "claimDryRunEntriesForSpec40": 0,
+    "liveMmOrMmCliCount": 0,
+    "scoreSettleClaimCount": 0,
+    "fullGreenGate": {
+      "contestScored5to2": true,
+      "settledHomeLower": true,
+      "liveTakerClaimed": true,
+      "setupSeedTakerClaimed": true,
+      "claimDryRunSpec40EmptyAllRoles": true,
+      "publicOpenZero": true,
+      "orderbookZero": true,
+      "noLiveMmOrScoreSettleClaimProcess": true,
+      "FULL_GREEN": true
+    }
+  }
+}

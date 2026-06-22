@@ -1,0 +1,163 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "2026-06-19-mlb-wsh-tb-contest-51-v071-stage2a-repeat-capital-safety-canary",
+  "generatedAt": "2026-06-20T05:35:00Z",
+  "runClass": "mm-live-canary",
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "The v0.7.1 WSH @ TB Stage-2a repeat capital-safety canary completed the full lifecycle: official final score Washington Nationals 2, Tampa Bay Rays 5 was verified; contest 51 was scored; speculation 40 settled to home/lower/Tampa Bay Rays; the winning controlled live-fill and setup seed positions were claimed; final claim sweeps, public commitments/orderbook, and live-MM process checks are zero."
+  },
+  "capabilities": [
+    {
+      "id": "target-preflight",
+      "capability": "Target preflight and allowlist",
+      "proof": "proven_live",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "notes": "WSH away @ TB home contest 51/spec 40 passed official pre-game status, identity, allowlist, and quote-ready gates."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "capability": "Repo/runtime gates",
+      "proof": "proven_live",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "notes": "v0.7.1 CLI/SDK and MM SHA/pins verified; prior install/build/typecheck/test/smoke evidence reused because SHA and pins were unchanged."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "capability": "Wallet auth, balances, allowances",
+      "proof": "proven_live",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Reserved live maker and controlled taker were clean before start after TOR/CHC cleanup; balances/allowances were sufficient and bounded."
+    },
+    {
+      "id": "bounded-approvals",
+      "capability": "Bounded approvals / no unlimited approvals",
+      "proof": "proven_live",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "notes": "No unlimited approvals; live auto-approval stayed off; existing PositionModule allowances were bounded."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "capability": "Dry-run quote loop",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "notes": "Pre-live quote dry-run for contest 51 returned pipeline=computed and canQuote=true."
+    },
+    {
+      "id": "live-commitments-posted",
+      "capability": "Live commitments posted",
+      "proof": "proven_live",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "notes": "Live commitments posted under strict allowlist [51], all target 51/40 only."
+    },
+    {
+      "id": "live-fill",
+      "capability": "Controlled live fill",
+      "proof": "proven_live",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "Exactly one controlled fill succeeded against live-posted commitment 0x19a0faa4\u2026 using mm-shakeout-flow-a."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "capability": "Own-state SSE canonical fill source",
+      "proof": "proven_live",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "Telemetry captured the fill with source own-state-stream."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "capability": "Exposure drained to zero",
+      "proof": "proven_live",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "Final public/API/MM visible-open exposure is zero and no orphan live MM process remained."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "capability": "Restart/cold-start safety",
+      "proof": "not_applicable",
+      "evidence": null,
+      "notes": "Not run for this Stage-2a repeat live-window artifact; final zero-exposure and process checks were run instead."
+    },
+    {
+      "id": "postgame-score",
+      "capability": "Postgame score",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Official final score WSH 2, TB 5 was verified and contest 51 scored."
+    },
+    {
+      "id": "postgame-settle",
+      "capability": "Postgame settle",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Speculation 40 settled to home/lower/Tampa Bay Rays."
+    },
+    {
+      "id": "postgame-claim",
+      "capability": "Postgame claim/no-op",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Winning lower/Tampa Bay Rays live-fill and setup seed positions were claimed; losing upper/WSH positions are no-op."
+    },
+    {
+      "id": "cost-within-cap",
+      "capability": "Cost within cap",
+      "proof": "proven_live",
+      "evidence": "raw/tx-receipts.summary.json",
+      "notes": "Tracked live maker risk and combined open+active maker risk stayed within Stage-2a caps; postgame gas recorded."
+    }
+  ],
+  "zeroExposure": {
+    "checkedAtUtc": "2026-06-20T05:32:41Z",
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "orphanProcessCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json"
+  },
+  "transactions": [
+    {
+      "category": "seed-match",
+      "txHash": "0x9c490581c1399c6cf059a2e5dc02348cf2277ca55504946069f034663f3f4e4e",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Setup seed/open fill for contest 51 before live canary."
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0x2b1734ebd1e77a064447a9df8b9b1d32c1aec895f11f7fa37c8729a9e22609e7",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Exactly one controlled live fill against the live MM quote."
+    },
+    {
+      "category": "score-request",
+      "txHash": "0xbe83ef82861e19a8ba5b11d3c2741ef50e775d7cd68155d06492e9869928f533",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Score contest 51 after MLB final."
+    },
+    {
+      "category": "settle",
+      "txHash": "0x27cbadf00abf69fa2c60e11d361dd38ac2ae64a4d18e4d3cab17e98ce8895f34",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 40 to home/lower/Tampa Bay Rays."
+    },
+    {
+      "category": "claim",
+      "txHash": "0x5772910966d45e22ad85565bdda75ca304335ffc10bfea4857e521e4e6f1b89c",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim controlled live taker winning position."
+    },
+    {
+      "category": "claim",
+      "txHash": "0xb282931729d2fca7256983cbb67307c2c2dd3c3b43851cfdc94d38188e2bc82a",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim setup seed taker winning position."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "source": "MLB Stats API",
+  "verifiedAtUtc": "2026-06-20T05:27:45Z",
+  "gamePk": 822966,
+  "game": "Washington Nationals @ Tampa Bay Rays",
+  "status": {
+    "abstractGameState": "Final",
+    "detailedState": "Final",
+    "statusCode": "F"
+  },
+  "score": {
+    "awayTeam": "Washington Nationals",
+    "awayRuns": 2,
+    "homeTeam": "Tampa Bay Rays",
+    "homeRuns": 5
+  },
+  "winner": {
+    "team": "Tampa Bay Rays",
+    "role": "home",
+    "positionType": "lower"
+  },
+  "doubleHeader": "N",
+  "gameNumber": 1,
+  "caveat": null
+}

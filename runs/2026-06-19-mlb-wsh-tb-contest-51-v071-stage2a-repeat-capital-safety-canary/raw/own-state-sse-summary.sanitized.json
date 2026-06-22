@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-06-19T22:24:54Z",
+  "runId": "2026-06-19T22-12-17-730Z-9qzd2y",
+  "sseConnections": {
+    "anonymousOdds": 1,
+    "ownerAuthOwnState": 1
+  },
+  "fillEvents": [
+    {
+      "ts": "2026-06-19T22:14:28.598Z",
+      "runId": "2026-06-19T22-12-17-730Z-9qzd2y",
+      "maker": "0x46aebc238a200be9bf38e4ffdab1e94c4bfd74d2",
+      "kind": "fill",
+      "source": "own-state-stream",
+      "commitmentHash": "0x19a0faa4548a84a669744e76c8166cafb08e9f750d8db450335c4b7911912eb8",
+      "speculationId": "40",
+      "contestId": "51",
+      "sport": "mlb",
+      "awayTeam": "Washington Nationals",
+      "homeTeam": "Tampa Bay Rays",
+      "takerSide": "home",
+      "makerSide": "away",
+      "positionType": 0,
+      "makerOddsTick": 243,
+      "newFillWei6": "5000000",
+      "cumulativeRiskWei6": "5000000"
+    }
+  ],
+  "fillEventCount": 1,
+  "errorsCount": 0,
+  "rateLimitEventsCount": 0,
+  "startupHolds": [
+    "stream-health-hold"
+  ]
+}
