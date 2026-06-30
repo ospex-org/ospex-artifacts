@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 2,
+  "ok": true,
+  "action": "claim-all",
+  "stage": "dry-run",
+  "network": "polygon",
+  "chainId": 137,
+  "generatedAt": "2026-06-30T04:23:55.568Z",
+  "cliVersion": "0.8.0",
+  "sdkVersion": "0.8.0",
+  "wallet": null,
+  "walletRole": "none",
+  "signer": null,
+  "requiresSignature": true,
+  "requiresTransaction": true,
+  "approvalRequirements": [],
+  "estimatedCosts": null,
+  "risk": null,
+  "payout": {
+    "profit": {
+      "wei6": "540000",
+      "usdc": "0.540000"
+    },
+    "totalReturn": {
+      "wei6": "540000",
+      "usdc": "0.540000"
+    }
+  },
+  "contest": null,
+  "speculation": null,
+  "commitment": null,
+  "sideSummary": null,
+  "warnings": [],
+  "errors": [],
+  "effects": [],
+  "nextCommands": [
+    {
+      "id": "complete-claim-all",
+      "description": "Execute the planned claim sweep.",
+      "suggestedFor": "complete",
+      "command": "ospex claim-all --address 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json",
+      "argv": [
+        "claim-all",
+        "--address",
+        "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "--json"
+      ],
+      "safeToAutoRun": false
+    }
+  ],
+  "payload": {
+    "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+    "dryRun": true,
+    "success": false,
+    "totals": {
+      "claimed": 1,
+      "failed": 0,
+      "claimedFresh": 0,
+      "alreadyClaimed": 0,
+      "recoveredAlreadyClaimed": 0,
+      "settledFresh": 0,
+      "alreadySettled": 0,
+      "recoveredAlreadySettled": 0,
+      "totalPayoutWei6": "540000",
+      "totalPayoutUSDC": 0.54
+    },
+    "entries": [
+      {
+        "positionId": "1_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+        "speculationId": "1",
+        "bucket": "pendingSettle",
+        "description": "Arizona Diamondbacks moneyline \u2014 Won (\u2248 $0.54, needs settle)",
+        "success": true,
+        "txHashes": [],
+        "steps": [],
+        "payoutUSDC": 0.54,
+        "payoutWei6": "540000",
+        "winSideContext": null
+      }
+    ]
+  }
+}

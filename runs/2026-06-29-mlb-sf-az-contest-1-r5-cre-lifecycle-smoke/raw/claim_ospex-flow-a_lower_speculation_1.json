@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 2,
+  "ok": true,
+  "action": "claim",
+  "stage": "execute",
+  "network": "polygon",
+  "chainId": 137,
+  "generatedAt": "2026-06-30T04:23:50.026Z",
+  "cliVersion": "0.8.0",
+  "sdkVersion": "0.8.0",
+  "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+  "walletRole": "signer",
+  "signer": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+  "requiresSignature": false,
+  "requiresTransaction": false,
+  "approvalRequirements": [],
+  "estimatedCosts": null,
+  "risk": null,
+  "payout": {
+    "profit": {
+      "wei6": "540000",
+      "usdc": "0.540000"
+    },
+    "totalReturn": {
+      "wei6": "540000",
+      "usdc": "0.540000"
+    }
+  },
+  "contest": null,
+  "speculation": null,
+  "commitment": null,
+  "sideSummary": null,
+  "warnings": [],
+  "errors": [],
+  "effects": [
+    {
+      "type": "transaction",
+      "purpose": "claim-position",
+      "ok": true,
+      "txHash": "0x98aa5123daae557c168bfb766572b4241b602b563593c224678205329fd90fa4",
+      "status": "confirmed",
+      "blockNumber": "89392289"
+    }
+  ],
+  "nextCommands": [
+    {
+      "id": "verify-position-status",
+      "description": "Verify position status after the claim / settle.",
+      "suggestedFor": "verify",
+      "command": "ospex positions status 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json",
+      "argv": [
+        "positions",
+        "status",
+        "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "--json"
+      ],
+      "safeToAutoRun": true
+    }
+  ],
+  "payload": {
+    "outcome": "claimed",
+    "txHash": "0x98aa5123daae557c168bfb766572b4241b602b563593c224678205329fd90fa4",
+    "blockNumber": "89392289",
+    "revertedTxHash": null,
+    "payoutWei6": "540000",
+    "payoutUSDC": 0.54,
+    "speculationId": "1",
+    "positionType": 1,
+    "positionSideContext": {
+      "side": "home",
+      "marketType": "moneyline",
+      "team": {
+        "name": "Arizona Diamondbacks",
+        "alignment": "home"
+      },
+      "role": "favorite",
+      "display": "home (Arizona Diamondbacks, favorite)",
+      "status": "complete",
+      "source": {
+        "team": "speculation-detail",
+        "role": "moneyline-odds"
+      }
+    }
+  }
+}

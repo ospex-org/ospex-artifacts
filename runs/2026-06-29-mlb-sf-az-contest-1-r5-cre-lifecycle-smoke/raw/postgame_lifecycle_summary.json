@@ -1,0 +1,281 @@
+{
+  "generatedAt": "2026-06-30T04:23:55Z",
+  "mlb": {
+    "gamePk": 825065,
+    "away": "San Francisco Giants",
+    "home": "Arizona Diamondbacks",
+    "gameDate": "2026-06-30T01:40:00Z",
+    "abstractGameState": "Final",
+    "detailedState": "Final",
+    "statusCode": "F",
+    "awayRuns": 4,
+    "homeRuns": 5,
+    "final": true
+  },
+  "contest": {
+    "contestId": "1",
+    "awayTeam": "San Francisco Giants",
+    "homeTeam": "Arizona Diamondbacks",
+    "status": "scored",
+    "awayScore": 4,
+    "homeScore": 5,
+    "scoredAt": "2026-06-30T04:23:23+00:00",
+    "voidedAt": null
+  },
+  "speculation": {
+    "speculationId": "1",
+    "contestId": "1",
+    "type": "moneyline",
+    "lineTicks": 0,
+    "speculationStatus": 0,
+    "settledAt": null,
+    "winSide": null
+  },
+  "score": {
+    "txHash": "0xeb3c5b51fdc15f879bfc351acab401b4796fa93f43f3b0e8e6d1a31dc0b1da6a",
+    "effects": [
+      {
+        "purpose": "score-contest",
+        "ok": true,
+        "txHash": "0xeb3c5b51fdc15f879bfc351acab401b4796fa93f43f3b0e8e6d1a31dc0b1da6a",
+        "blockNumber": "89392261",
+        "status": "confirmed"
+      }
+    ],
+    "polls": [
+      {
+        "poll": 1,
+        "status": "verified",
+        "scoredAt": null,
+        "awayScore": null,
+        "homeScore": null
+      },
+      {
+        "poll": 2,
+        "status": "verified",
+        "scoredAt": null,
+        "awayScore": null,
+        "homeScore": null
+      },
+      {
+        "poll": 3,
+        "status": "scored",
+        "scoredAt": "2026-06-30T04:23:23+00:00",
+        "awayScore": 4,
+        "homeScore": 5
+      }
+    ]
+  },
+  "settle": {
+    "txHash": "0xb759520a6198e4fa3627573ec6ade5c17bf9292a1ed291d14fdb07fd3ea2a7f2",
+    "effects": [
+      {
+        "purpose": "settle-speculation",
+        "ok": true,
+        "txHash": "0xb759520a6198e4fa3627573ec6ade5c17bf9292a1ed291d14fdb07fd3ea2a7f2",
+        "blockNumber": "89392286",
+        "status": "confirmed"
+      }
+    ],
+    "payload": {
+      "outcome": "settled",
+      "txHash": "0xb759520a6198e4fa3627573ec6ade5c17bf9292a1ed291d14fdb07fd3ea2a7f2",
+      "blockNumber": "89392286",
+      "revertedTxHash": null,
+      "winSide": "home",
+      "winSideContext": {
+        "side": "home",
+        "marketType": "moneyline",
+        "team": {
+          "name": "Arizona Diamondbacks",
+          "alignment": "home"
+        },
+        "role": "favorite",
+        "display": "home (Arizona Diamondbacks, favorite)",
+        "status": "complete",
+        "source": {
+          "team": "speculation-detail",
+          "role": "moneyline-odds"
+        }
+      },
+      "speculationId": "1"
+    }
+  },
+  "claim": {
+    "profile": "ospex-flow-a",
+    "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+    "type": "lower",
+    "team": "Arizona Diamondbacks",
+    "txHash": "0x98aa5123daae557c168bfb766572b4241b602b563593c224678205329fd90fa4",
+    "effects": [
+      {
+        "purpose": "claim-position",
+        "ok": true,
+        "txHash": "0x98aa5123daae557c168bfb766572b4241b602b563593c224678205329fd90fa4",
+        "blockNumber": "89392289",
+        "status": "confirmed"
+      }
+    ],
+    "payload": {
+      "outcome": "claimed",
+      "txHash": "0x98aa5123daae557c168bfb766572b4241b602b563593c224678205329fd90fa4",
+      "blockNumber": "89392289",
+      "revertedTxHash": null,
+      "payoutWei6": "540000",
+      "payoutUSDC": 0.54,
+      "speculationId": "1",
+      "positionType": 1,
+      "positionSideContext": {
+        "side": "home",
+        "marketType": "moneyline",
+        "team": {
+          "name": "Arizona Diamondbacks",
+          "alignment": "home"
+        },
+        "role": "favorite",
+        "display": "home (Arizona Diamondbacks, favorite)",
+        "status": "complete",
+        "source": {
+          "team": "speculation-detail",
+          "role": "moneyline-odds"
+        }
+      }
+    },
+    "payout": {
+      "profit": {
+        "wei6": "540000",
+        "usdc": "0.540000"
+      },
+      "totalReturn": {
+        "wei6": "540000",
+        "usdc": "0.540000"
+      }
+    }
+  },
+  "positions": {
+    "ospex-stage-maker-a": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      }
+    },
+    "ospex-flow-a": {
+      "active": 0,
+      "pendingSettle": 1,
+      "claimable": 0,
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 1,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0.54,
+        "pendingSettlePayoutWei6": "540000"
+      }
+    },
+    "ospex-stage-maker-b": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      }
+    }
+  },
+  "claimAllDryRuns": {
+    "ospex-stage-maker-a": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "dryRun": true,
+      "success": false,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "settledFresh": 0,
+        "alreadySettled": 0,
+        "recoveredAlreadySettled": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      },
+      "entries": []
+    },
+    "ospex-flow-a": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "dryRun": true,
+      "success": false,
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "settledFresh": 0,
+        "alreadySettled": 0,
+        "recoveredAlreadySettled": 0,
+        "totalPayoutWei6": "540000",
+        "totalPayoutUSDC": 0.54
+      },
+      "entries": [
+        {
+          "positionId": "1_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+          "speculationId": "1",
+          "bucket": "pendingSettle",
+          "description": "Arizona Diamondbacks moneyline — Won (≈ $0.54, needs settle)",
+          "success": true,
+          "txHashes": [],
+          "steps": [],
+          "payoutUSDC": 0.54,
+          "payoutWei6": "540000",
+          "winSideContext": null
+        }
+      ]
+    }
+  },
+  "gate": {
+    "mlbFinal": true,
+    "contestScored": true,
+    "scoresMatchMlb": true,
+    "settleOk": true,
+    "claimOk": true,
+    "overallPostgameOk": true
+  },
+  "projectionConvergence": {
+    "expectation": "After successful settle and claim, the winning wallet should have active=0, pendingSettle=0, claimable=0 for the target speculation once API/indexer projection catches up.",
+    "gates": [
+      {
+        "name": "post-claim positions.status convergence for ospex-flow-a",
+        "afterWrite": "claim-position tx 0x98aa5123daae557c168bfb766572b4241b602b563593c224678205329fd90fa4 confirmed at block 89392289",
+        "txConfirmed": true,
+        "waitTarget": "current_positions_status_ospex-flow-a.json captured after post-claim projection lag window",
+        "staleReadObserved": true,
+        "expectedFinalState": [
+          "active=0",
+          "pendingSettle=0",
+          "claimable=0"
+        ],
+        "observedFinalState": [
+          "active=0",
+          "pendingSettle=0",
+          "claimable=0"
+        ],
+        "converged": true
+      }
+    ]
+  }
+}

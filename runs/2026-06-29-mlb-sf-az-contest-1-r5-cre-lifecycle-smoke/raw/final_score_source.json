@@ -1,0 +1,14 @@
+{
+  "source": "MLB Stats API",
+  "capturedAtUtc": "2026-06-30T04:23:55Z",
+  "gamePk": 825065,
+  "gameDate": "2026-06-30T01:40:00Z",
+  "awayTeam": "San Francisco Giants",
+  "homeTeam": "Arizona Diamondbacks",
+  "abstractGameState": "Final",
+  "detailedState": "Final",
+  "statusCode": "F",
+  "awayRuns": 4,
+  "homeRuns": 5,
+  "final": true
+}

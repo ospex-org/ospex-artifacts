@@ -1,0 +1,62 @@
+{
+  "network": "polygon",
+  "chainId": 137,
+  "transactions": [
+    {
+      "category": "approve",
+      "txHash": "0x5a0e8c247befab036a825f2a177358421ca1148514bda94667bc4d23074ddad5",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "maker bounded USDC risk allowance"
+    },
+    {
+      "category": "approve",
+      "txHash": "0xb4ef9106e2cec071781dc7975395fb4596fcc16e4a7b5d9c49da046323b091d5",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "maker bounded USDC fee allowance"
+    },
+    {
+      "category": "approve",
+      "txHash": "0xf372f5bb2070dc00957912483a86b8b60e98a6c654f36876a95d34438807ac74",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "taker bounded USDC risk allowance"
+    },
+    {
+      "category": "approve",
+      "txHash": "0xcc44006610ee067d4f63414ec79b48d0b47acfe673c1ea3e0560e1dae12ca7d2",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "taker bounded USDC fee allowance"
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0xa7c75bcc5f1c991580e6eb0eb4abccab09df221741ead75ee8ac96fdca50e4af",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "controlled match/fill that lazily created moneyline speculation 1"
+    },
+    {
+      "category": "score-request",
+      "txHash": "0xeb3c5b51fdc15f879bfc351acab401b4796fa93f43f3b0e8e6d1a31dc0b1da6a",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "R5 CRE score request for contest 1"
+    },
+    {
+      "category": "settle",
+      "txHash": "0xb759520a6198e4fa3627573ec6ade5c17bf9292a1ed291d14fdb07fd3ea2a7f2",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "settle moneyline speculation 1 to home/lower"
+    },
+    {
+      "category": "claim",
+      "txHash": "0x98aa5123daae557c168bfb766572b4241b602b563593c224678205329fd90fa4",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "claim winning lower/home position for controlled taker"
+    }
+  ]
+}
