@@ -1,0 +1,186 @@
+{
+  "generatedAt": "2026-06-29T20:17:05Z",
+  "scope": {
+    "contestId": "1",
+    "market": "moneyline",
+    "makerProfile": "ospex-stage-maker-a",
+    "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "makerSide": "San Francisco Giants",
+    "makerOddsAmerican": "+116",
+    "makerRiskUSDC": "0.25",
+    "takerProfile": "ospex-flow-a",
+    "taker": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+    "expiry": "30m",
+    "boundedApprovalRiskUSDC": "1.00",
+    "boundedApprovalFeeUSDC": "0.50"
+  },
+  "commitmentHash": "0x6bd7976471b1d23de686a11cdef1dfd950108591516395256dcb952e9a525d33",
+  "speculationId": "1",
+  "submit": {
+    "ok": true,
+    "stage": "execute",
+    "effects": [],
+    "risk": {
+      "wei6": "250000",
+      "usdc": "0.250000"
+    },
+    "creationFee": {
+      "applies": true,
+      "condition": "if-first-match-at-execution",
+      "totalFeeWei6": "500000",
+      "totalFeeUSDC": "0.500000",
+      "takerShareWei6": "250000",
+      "takerShareUSDC": "0.250000",
+      "makerShareWei6": "250000",
+      "makerShareUSDC": "0.250000",
+      "viewerShareWei6": "250000",
+      "viewerShareUSDC": "0.250000",
+      "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C",
+      "spenderLabel": "TreasuryModule",
+      "approvalPurpose": "lazy-creation-fee",
+      "approvalNeeded": false,
+      "note": "Lazy creation: 0.500000 USDC fee split 50/50 — you pay 0.250000 USDC, counterparty pays 0.250000 USDC to TreasuryModule, IF this tx is still the first match at execution time."
+    }
+  },
+  "fillability": {
+    "commitmentHash": "0x6bd7976471b1d23de686a11cdef1dfd950108591516395256dcb952e9a525d33",
+    "fillableNow": true,
+    "outcome": "fillable",
+    "advisory": true,
+    "reasons": [],
+    "checkedAtBlock": "89372808",
+    "fill": {
+      "makerRiskWei6": "250000",
+      "takerRiskWei6": "290000",
+      "selfMatch": false
+    }
+  },
+  "match": {
+    "ok": true,
+    "txHash": "0xa7c75bcc5f1c991580e6eb0eb4abccab09df221741ead75ee8ac96fdca50e4af",
+    "effects": [
+      {
+        "purpose": "match-commitment",
+        "ok": true,
+        "txHash": "0xa7c75bcc5f1c991580e6eb0eb4abccab09df221741ead75ee8ac96fdca50e4af",
+        "blockNumber": "89372813",
+        "status": "confirmed"
+      }
+    ],
+    "risk": {
+      "wei6": "290000",
+      "usdc": "0.290000"
+    },
+    "payout": {
+      "profit": {
+        "wei6": "250000",
+        "usdc": "0.250000"
+      },
+      "totalReturn": {
+        "wei6": "540000",
+        "usdc": "0.540000"
+      }
+    },
+    "lazyCreationFeePreview": {
+      "applies": true,
+      "condition": "if-first-match-at-execution",
+      "totalFeeWei6": "500000",
+      "totalFeeUSDC": "0.500000",
+      "takerShareWei6": "250000",
+      "takerShareUSDC": "0.250000",
+      "makerShareWei6": "250000",
+      "makerShareUSDC": "0.250000",
+      "viewerShareWei6": "250000",
+      "viewerShareUSDC": "0.250000",
+      "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C",
+      "spenderLabel": "TreasuryModule",
+      "approvalPurpose": "lazy-creation-fee",
+      "approvalNeeded": false,
+      "note": "Lazy creation: 0.500000 USDC fee split 50/50 — you pay 0.250000 USDC, counterparty pays 0.250000 USDC to TreasuryModule, IF this tx is still the first match at execution time."
+    },
+    "result": {
+      "txHash": "0xa7c75bcc5f1c991580e6eb0eb4abccab09df221741ead75ee8ac96fdca50e4af",
+      "status": "success",
+      "blockNumber": "89372813",
+      "takerRiskWei6": "290000",
+      "fillMakerRiskWei6": "250000"
+    }
+  },
+  "receipt": {
+    "status": "0x1",
+    "blockNumber": "0x553b88d",
+    "gasUsed": "0xa60f6"
+  },
+  "finalSpeculation": {
+    "speculationId": "1",
+    "contestId": "1",
+    "type": "moneyline",
+    "lineTicks": 0,
+    "line": null,
+    "speculationStatus": 0,
+    "settledAt": null,
+    "winSide": null
+  },
+  "pollRecords": [
+    {
+      "poll": 1,
+      "speculationId": "1",
+      "specCount": 1
+    }
+  ],
+  "positions": {
+    "ospex-stage-maker-a": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "activeCount": 1,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "totals": {
+        "activeCount": 1,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      }
+    },
+    "ospex-flow-a": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "activeCount": 1,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "totals": {
+        "activeCount": 1,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      }
+    },
+    "ospex-stage-maker-b": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      }
+    }
+  },
+  "gate": {
+    "submitOk": true,
+    "fillabilityOk": true,
+    "matchOk": true,
+    "receiptSuccess": true,
+    "speculationCreated": true,
+    "overallLiveWindowOk": true
+  }
+}

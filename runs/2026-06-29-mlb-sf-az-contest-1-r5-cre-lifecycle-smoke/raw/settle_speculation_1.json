@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 2,
+  "ok": true,
+  "action": "settle",
+  "stage": "execute",
+  "network": "polygon",
+  "chainId": 137,
+  "generatedAt": "2026-06-30T04:23:44.385Z",
+  "cliVersion": "0.8.0",
+  "sdkVersion": "0.8.0",
+  "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+  "walletRole": "signer",
+  "signer": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+  "requiresSignature": false,
+  "requiresTransaction": false,
+  "approvalRequirements": [],
+  "estimatedCosts": null,
+  "risk": null,
+  "payout": null,
+  "contest": null,
+  "speculation": null,
+  "commitment": null,
+  "sideSummary": null,
+  "warnings": [],
+  "errors": [],
+  "effects": [
+    {
+      "type": "transaction",
+      "purpose": "settle-speculation",
+      "ok": true,
+      "txHash": "0xb759520a6198e4fa3627573ec6ade5c17bf9292a1ed291d14fdb07fd3ea2a7f2",
+      "status": "confirmed",
+      "blockNumber": "89392286"
+    }
+  ],
+  "nextCommands": [
+    {
+      "id": "verify-position-status",
+      "description": "Verify position status after the claim / settle.",
+      "suggestedFor": "verify",
+      "command": "ospex positions status 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482 --json",
+      "argv": [
+        "positions",
+        "status",
+        "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "--json"
+      ],
+      "safeToAutoRun": true
+    }
+  ],
+  "payload": {
+    "outcome": "settled",
+    "txHash": "0xb759520a6198e4fa3627573ec6ade5c17bf9292a1ed291d14fdb07fd3ea2a7f2",
+    "blockNumber": "89392286",
+    "revertedTxHash": null,
+    "winSide": "home",
+    "winSideContext": {
+      "side": "home",
+      "marketType": "moneyline",
+      "team": {
+        "name": "Arizona Diamondbacks",
+        "alignment": "home"
+      },
+      "role": "favorite",
+      "display": "home (Arizona Diamondbacks, favorite)",
+      "status": "complete",
+      "source": {
+        "team": "speculation-detail",
+        "role": "moneyline-odds"
+      }
+    },
+    "speculationId": "1"
+  }
+}

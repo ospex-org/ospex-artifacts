@@ -1,0 +1,296 @@
+{
+  "artifactId": "2026-06-29-mlb-sf-az-contest-1-r5-cre-lifecycle-smoke",
+  "artifactPath": "runs/2026-06-29-mlb-sf-az-contest-1-r5-cre-lifecycle-smoke/",
+  "artifactType": "run",
+  "artifactStatus": "complete_verified_with_caveats",
+  "status": "complete_verified_with_caveats",
+  "capturedAtUtc": "2026-06-30T05:26:20Z",
+  "date": "2026-06-29",
+  "network": "polygon",
+  "chainId": 137,
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "R5 CRE mainnet lifecycle smoke completed green: contest 1 was scored through CRE, speculation 1 settled to home/lower/Arizona Diamondbacks, and the winning controlled taker position was claimed. The run was a manual SDK/CLI controlled lifecycle, not a market-maker autonomous loop."
+  },
+  "artifactFiles": {
+    "evidence": "evidence.json",
+    "summary": "summary.md",
+    "raw": "raw/",
+    "liveCommitFillSummary": "raw/live_commit_fill_summary.json",
+    "postgameLifecycleSummary": "raw/postgame_lifecycle_summary.json",
+    "finalContestShow": "raw/final_contest_1_show.json",
+    "finalSpeculationShow": "raw/final_speculation_1_show.json",
+    "scoreContest": "raw/score_contest_1.json",
+    "settleSpeculation": "raw/settle_speculation_1.json",
+    "claimWinningPosition": "raw/claim_ospex-flow-a_lower_speculation_1.json",
+    "currentWinningWalletPositionStatus": "raw/current_positions_status_ospex-flow-a.json",
+    "immediatePostClaimDryRun": "raw/immediate_post_claim_dry_run_ospex-flow-a.json",
+    "currentClaimAllDryRun": "raw/current_claim_all_dry_run_ospex-flow-a.json",
+    "finalScoreSource": "raw/final_score_source.json",
+    "txReceipts": "raw/tx_receipts_summary.json"
+  },
+  "coverage": {
+    "liveCommitFill": "raw/live_commit_fill_summary.json",
+    "postgameLifecycle": "raw/postgame_lifecycle_summary.json",
+    "finalContestShow": "raw/final_contest_1_show.json",
+    "finalSpeculationShow": "raw/final_speculation_1_show.json",
+    "scoreContest": "raw/score_contest_1.json",
+    "settleSpeculation": "raw/settle_speculation_1.json",
+    "claimWinningPosition": "raw/claim_ospex-flow-a_lower_speculation_1.json",
+    "currentWinningWalletPositionStatus": "raw/current_positions_status_ospex-flow-a.json",
+    "projectionLagObservation": "raw/immediate_post_claim_dry_run_ospex-flow-a.json",
+    "finalScoreSource": "raw/final_score_source.json",
+    "txReceipts": "raw/tx_receipts_summary.json"
+  },
+  "target": {
+    "game": "San Francisco Giants @ Arizona Diamondbacks",
+    "gamePk": 825065,
+    "gameId": "ed048f80-e533-49eb-b9ff-211cc5fddaa8",
+    "slug": "sf-az-2026-06-29",
+    "sport": "mlb",
+    "market": "moneyline",
+    "contestId": "1",
+    "speculationId": "1",
+    "awayTeam": "San Francisco Giants",
+    "homeTeam": "Arizona Diamondbacks",
+    "startTimeUtc": "2026-06-30T01:40:00Z",
+    "teamIdentity": {
+      "away": {
+        "team": "San Francisco Giants",
+        "abbreviation": "SF",
+        "positionType": "upper",
+        "role": "away",
+        "identity": "underdog",
+        "marketOddsAmerican": "+116"
+      },
+      "home": {
+        "team": "Arizona Diamondbacks",
+        "abbreviation": "AZ",
+        "positionType": "lower",
+        "role": "home",
+        "identity": "favorite",
+        "marketOddsAmerican": "-116"
+      },
+      "winner": {
+        "team": "Arizona Diamondbacks",
+        "role": "home",
+        "positionType": "lower"
+      }
+    },
+    "contestStatusAtLiveWindow": "verified",
+    "speculationStatusAtLiveWindow": "open",
+    "contestStatusAfterPostgame": "scored",
+    "speculationStatusAfterPostgame": "closed",
+    "postgameStatus": "complete",
+    "finalScore": {
+      "awayRuns": 4,
+      "homeRuns": 5,
+      "winner": "Arizona Diamondbacks",
+      "winnerProtocolSide": "lower"
+    }
+  },
+  "wallets": {
+    "manualMaker": {
+      "alias": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    "controlledTaker": {
+      "alias": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    },
+    "scoreSettleOperator": {
+      "alias": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    }
+  },
+  "scope": {
+    "notMarketMakerAutonomousLoopTest": true,
+    "executionMode": "manual-sdk-cli-controlled-lifecycle",
+    "contestCount": 1,
+    "marketCount": 1,
+    "market": "moneyline",
+    "controlledFillCount": 1,
+    "tinyCapitalOnly": true,
+    "boundedApprovalsOnly": true
+  },
+  "liveWindow": {
+    "commitmentHash": "0x6bd7976471b1d23de686a11cdef1dfd950108591516395256dcb952e9a525d33",
+    "makerSide": "San Francisco Giants / away / upper",
+    "takerSide": "Arizona Diamondbacks / home / lower",
+    "makerRiskUSDC": "0.25",
+    "takerRiskUSDC": "0.290000",
+    "lazyCreationFeeUSDC": "0.500000",
+    "fillTxHash": "0xa7c75bcc5f1c991580e6eb0eb4abccab09df221741ead75ee8ac96fdca50e4af",
+    "fillBlockNumber": "89372813",
+    "fillReceiptStatus": "0x1",
+    "speculationCreated": true
+  },
+  "postgame": {
+    "finalScore": {
+      "awayTeam": "San Francisco Giants",
+      "awayRuns": 4,
+      "homeTeam": "Arizona Diamondbacks",
+      "homeRuns": 5,
+      "winner": "Arizona Diamondbacks",
+      "winnerRole": "home",
+      "winnerProtocolSide": "lower"
+    },
+    "score": {
+      "requestTxHash": "0xeb3c5b51fdc15f879bfc351acab401b4796fa93f43f3b0e8e6d1a31dc0b1da6a",
+      "contestStatus": "scored",
+      "awayScore": 4,
+      "homeScore": 5,
+      "scoredAt": "2026-06-30T04:23:23+00:00"
+    },
+    "settle": {
+      "txHash": "0xb759520a6198e4fa3627573ec6ade5c17bf9292a1ed291d14fdb07fd3ea2a7f2",
+      "winSide": "home/lower/Arizona Diamondbacks",
+      "speculationStatus": "closed"
+    },
+    "claim": {
+      "walletLabel": "ospex-flow-a",
+      "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "side": "lower / home / Arizona Diamondbacks",
+      "payoutWei6": "540000",
+      "payoutUSDC": "0.540000",
+      "txHash": "0x98aa5123daae557c168bfb766572b4241b602b563593c224678205329fd90fa4",
+      "receiptStatus": "confirmed"
+    },
+    "finalPositionStatus": {
+      "walletLabel": "ospex-flow-a",
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    }
+  },
+  "transactions": [
+    {
+      "category": "approve",
+      "txHash": "0x5a0e8c247befab036a825f2a177358421ca1148514bda94667bc4d23074ddad5",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "maker bounded USDC risk allowance"
+    },
+    {
+      "category": "approve",
+      "txHash": "0xb4ef9106e2cec071781dc7975395fb4596fcc16e4a7b5d9c49da046323b091d5",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "maker bounded USDC fee allowance"
+    },
+    {
+      "category": "approve",
+      "txHash": "0xf372f5bb2070dc00957912483a86b8b60e98a6c654f36876a95d34438807ac74",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "taker bounded USDC risk allowance"
+    },
+    {
+      "category": "approve",
+      "txHash": "0xcc44006610ee067d4f63414ec79b48d0b47acfe673c1ea3e0560e1dae12ca7d2",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "taker bounded USDC fee allowance"
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0xa7c75bcc5f1c991580e6eb0eb4abccab09df221741ead75ee8ac96fdca50e4af",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "controlled match/fill that lazily created moneyline speculation 1"
+    },
+    {
+      "category": "score-request",
+      "txHash": "0xeb3c5b51fdc15f879bfc351acab401b4796fa93f43f3b0e8e6d1a31dc0b1da6a",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "R5 CRE score request for contest 1"
+    },
+    {
+      "category": "settle",
+      "txHash": "0xb759520a6198e4fa3627573ec6ade5c17bf9292a1ed291d14fdb07fd3ea2a7f2",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "settle moneyline speculation 1 to home/lower"
+    },
+    {
+      "category": "claim",
+      "txHash": "0x98aa5123daae557c168bfb766572b4241b602b563593c224678205329fd90fa4",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "claim winning lower/home position for controlled taker"
+    }
+  ],
+  "projectionLagObservation": {
+    "observedLag": "Immediate post-claim dry-run briefly showed the winning position as pendingSettle due to projection lag.",
+    "convergedEvidence": "Follow-up CLI positions.status showed active=0, pendingSettle=0, claimable=0 for ospex-flow-a.",
+    "immediateDryRun": {
+      "entriesCount": 1,
+      "firstEntryBucket": "pendingSettle",
+      "totals": {
+        "claimed": 1,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "settledFresh": 0,
+        "alreadySettled": 0,
+        "recoveredAlreadySettled": 0,
+        "totalPayoutWei6": "540000",
+        "totalPayoutUSDC": 0.54
+      }
+    },
+    "followUpPositionsStatus": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      }
+    },
+    "followUpClaimAllDryRun": {
+      "entriesCount": 0,
+      "totals": {
+        "claimed": 0,
+        "failed": 0,
+        "claimedFresh": 0,
+        "alreadyClaimed": 0,
+        "recoveredAlreadyClaimed": 0,
+        "settledFresh": 0,
+        "alreadySettled": 0,
+        "recoveredAlreadySettled": 0,
+        "totalPayoutWei6": "0",
+        "totalPayoutUSDC": 0
+      }
+    }
+  },
+  "projectionConvergence": {
+    "expectation": "After score, settle, and claim, the winning wallet should converge to no active, pending-settle, or claimable target positions.",
+    "gates": [
+      {
+        "name": "post-claim positions.status convergence for ospex-flow-a",
+        "afterWrite": "claim-position tx 0x98aa5123daae557c168bfb766572b4241b602b563593c224678205329fd90fa4 confirmed at block 89392289",
+        "txConfirmed": true,
+        "waitTarget": "raw/current_positions_status_ospex-flow-a.json captured after post-claim projection lag window",
+        "staleReadObserved": true,
+        "expectedFinalState": [
+          "active=0",
+          "pendingSettle=0",
+          "claimable=0"
+        ],
+        "observedFinalState": [
+          "active=0",
+          "pendingSettle=0",
+          "claimable=0"
+        ],
+        "converged": true
+      }
+    ]
+  }
+}
