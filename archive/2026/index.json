@@ -1,13 +1,24 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-07-01T06:04:40Z",
+  "generatedAt": "2026-07-01T21:59:05Z",
   "repository": "ospex-org/ospex-artifacts",
   "archive": {
     "scope": "year",
     "year": 2026
   },
   "artifacts": [
+    {
+      "artifactId": "2026-07-01-mlb-sd-chc-contest-5-v090-all-markets-r5-cre-lifecycle",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-01-mlb-sd-chc-contest-5-v090-all-markets-r5-cre-lifecycle/evidence.json",
+      "date": "2026-07-01",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-01-mlb-sd-chc-contest-5-v090-all-markets-r5-cre-lifecycle/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-07-01-mlb-sd-chc-contest-5-v090-all-markets-r5-cre-lifecycle/summary.md",
+      "publishedAt": "2026-07-01T21:59:05Z"
+    },
     {
       "artifactId": "2026-06-30-mlb-cws-bal-contest-2-r5-cre-lifecycle-repeat",
       "artifactType": "run",

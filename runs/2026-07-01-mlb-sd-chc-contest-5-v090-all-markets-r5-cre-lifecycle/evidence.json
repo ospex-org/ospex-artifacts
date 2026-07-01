@@ -1,0 +1,776 @@
+{
+  "artifactId": "2026-07-01-mlb-sd-chc-contest-5-v090-all-markets-r5-cre-lifecycle",
+  "artifactPath": "runs/2026-07-01-mlb-sd-chc-contest-5-v090-all-markets-r5-cre-lifecycle/",
+  "artifactType": "run",
+  "artifactStatus": "complete_verified_with_caveats",
+  "status": "complete_verified_with_caveats",
+  "capturedAtUtc": "2026-07-01T21:45:00Z",
+  "date": "2026-07-01",
+  "network": "polygon",
+  "chainId": 137,
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "R5/CRE v0.9.0 all-market lifecycle completed green: contest 5 was created, verified, market-updated, filled across moneyline/spread/total with tiny controlled positions, scored through CRE after a bounded score-request retry, settled, claimed, and converged to zero contest-5 active/pending/claimable positions and zero open commitments."
+  },
+  "artifactFiles": {
+    "summary": "summary.md",
+    "evidence": "evidence.json",
+    "raw": "raw/",
+    "versionGate": "raw/version_gate.json",
+    "targetPreflight": "raw/target_preflight.json",
+    "walletPreflight": "raw/wallet_preflight_and_approvals_summary.json",
+    "contestCreate": "raw/contest_create_5.json",
+    "contestShowAfterVerify": "raw/contest_show_after_verify_5.json",
+    "marketUpdate": "raw/market_update_5.json",
+    "oddsSnapshot": "raw/odds_snapshot_5.json",
+    "liveAllMarketsSummary": "raw/live_all_markets_summary.json",
+    "finalPregameState": "raw/final_pregame_state.json",
+    "postgameLifecycleSummary": "raw/postgame_lifecycle_summary.json",
+    "finalScoreSource": "raw/final_score_source.json",
+    "finalContestShow": "raw/final_contest_5_show.json",
+    "finalCommitments": "raw/final_commitments_contest_5.json",
+    "txReceipts": "raw/tx_receipts_summary.json"
+  },
+  "coverage": {
+    "repoVersionGates": "raw/version_gate.json",
+    "targetPreflight": "raw/target_preflight.json",
+    "walletPreflight": "raw/wallet_preflight_and_approvals_summary.json",
+    "contestCreate": "raw/contest_create_5.json",
+    "verification": "raw/contest_show_after_verify_5.json",
+    "marketUpdate": "raw/market_update_5.json",
+    "oddsSnapshot": "raw/odds_snapshot_5.json",
+    "allMarketLiveFills": "raw/live_all_markets_summary.json",
+    "finalPregameState": "raw/final_pregame_state.json",
+    "postgameLifecycle": "raw/postgame_lifecycle_summary.json",
+    "finalScoreSource": "raw/final_score_source.json",
+    "finalContest": "raw/final_contest_5_show.json",
+    "txReceipts": "raw/tx_receipts_summary.json"
+  },
+  "target": {
+    "game": "San Diego Padres @ Chicago Cubs",
+    "gamePk": 824660,
+    "gameId": "4c765045-0786-4c12-a5e7-e2bc28412f7f",
+    "slug": "sd-chc-2026-07-01-1820",
+    "sport": "mlb",
+    "market": "moneyline",
+    "contestId": "5",
+    "speculationId": "7",
+    "awayTeam": "San Diego Padres",
+    "homeTeam": "Chicago Cubs",
+    "startTimeUtc": "2026-07-01T18:20:00Z",
+    "teamIdentity": {
+      "away": {
+        "team": "San Diego Padres",
+        "abbreviation": "SD",
+        "positionType": "upper",
+        "role": "away",
+        "identity": "underdog",
+        "marketOddsAmerican": "+106"
+      },
+      "home": {
+        "team": "Chicago Cubs",
+        "abbreviation": "CHC",
+        "positionType": "lower",
+        "role": "home",
+        "identity": "favorite",
+        "marketOddsAmerican": "-120"
+      },
+      "winner": {
+        "team": "Chicago Cubs",
+        "role": "home",
+        "positionType": "lower"
+      }
+    },
+    "contestStatusAfterCreateVerify": "verified",
+    "contestStatusAfterPostgame": "scored",
+    "postgameStatus": "complete",
+    "finalScore": {
+      "awayRuns": 3,
+      "homeRuns": 23,
+      "winner": "Chicago Cubs",
+      "winnerProtocolSide": "lower"
+    }
+  },
+  "wallets": {
+    "controlledTaker": {
+      "address": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+      "profile": "ospex-flow-a"
+    },
+    "creatorMarketUpdateScoreOperator": {
+      "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "profile": "ospex-stage-maker-b"
+    },
+    "manualMaker": {
+      "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+      "profile": "ospex-stage-maker-a"
+    },
+    "scoreSettleOperator": {
+      "profile": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    }
+  },
+  "scope": {
+    "notMarketMakerAutonomousLoopTest": true,
+    "executionMode": "manual-sdk-cli-controlled-lifecycle",
+    "contestCount": 1,
+    "marketCount": 3,
+    "markets": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "controlledFillCount": 3,
+    "tinyCapitalOnly": true,
+    "boundedApprovalsOnly": true,
+    "oldFunctionsLinkFlowUsed": false,
+    "broadMarketMakerRunUsed": false
+  },
+  "versions": {
+    "capturedAtUtc": "2026-07-01T16:34:00Z",
+    "sdkCli": {
+      "version": "0.9.0",
+      "repo": "ospex-sdk",
+      "head": "fd55bd1e7de0",
+      "expectedAtOrAfter": "fd55bd1"
+    },
+    "marketMaker": {
+      "repo": "ospex-market-maker",
+      "head": "e89eecbd4b53",
+      "installedSdkVersion": "0.9.0",
+      "typecheck": "pass",
+      "test": "pass",
+      "build": "pass",
+      "expectedAtOrAfter": "e89eecb"
+    },
+    "ancillaryRepos": {
+      "ospex-core-api": {
+        "head": "076f44d428fc",
+        "expectedAtOrAfter": "076f44d"
+      },
+      "ospex-indexer": {
+        "head": "75be9e76965b",
+        "expectedAtOrAfter": "75be9e7"
+      },
+      "ospex-cre": {
+        "head": "fed6e26e27e5",
+        "expectedAtOrAfter": "fed6e26"
+      }
+    },
+    "noLegacyVersionObserved": true
+  },
+  "liveWindow": {
+    "contestCreateTxHash": "0xa27b5b55c6790ac621819adb15b29378b1efc062b6c4875a353e3d4ebc9e780c",
+    "marketUpdateTxHash": "0x8239cc86e5f37c74c55c58b7663045f54e241db28b1ab4a8468fa6b761ced19a",
+    "oddsSnapshot": {
+      "moneyline": {
+        "market": "moneyline",
+        "awayOddsAmerican": 106,
+        "homeOddsAmerican": -120,
+        "upstreamLastUpdated": "2026-07-01T16:42:31+00:00",
+        "pollCapturedAt": "2026-07-01T16:49:13.191+00:00",
+        "changedAt": "2026-07-01T16:25:12.742+00:00"
+      },
+      "spread": {
+        "market": "spread",
+        "awayLine": 1.5,
+        "homeLine": -1.5,
+        "awayOddsAmerican": -175,
+        "homeOddsAmerican": 151,
+        "upstreamLastUpdated": "2026-07-01T16:42:31+00:00",
+        "pollCapturedAt": "2026-07-01T16:49:13.28+00:00",
+        "changedAt": "2026-07-01T16:25:12.872+00:00"
+      },
+      "total": {
+        "market": "total",
+        "line": 12,
+        "overOddsAmerican": -110,
+        "underOddsAmerican": -110,
+        "upstreamLastUpdated": "2026-07-01T16:42:31+00:00",
+        "pollCapturedAt": "2026-07-01T16:49:13.361+00:00",
+        "changedAt": "2026-07-01T13:00:03.96+00:00"
+      }
+    },
+    "markets": [
+      {
+        "market": "moneyline",
+        "speculationId": "7",
+        "commitmentHash": "0xb929a718c14172a8e6a411ee5dac69cc50de2a6da6a6c438eb4a0c74b5c2cc68",
+        "matchTxHash": "0x22f4170ff96dce03d50bdd73767c7dc2abcc033f7179b0d1a6052fbba80549d6",
+        "matchReceipt": {
+          "transactionHash": "0x22f4170ff96dce03d50bdd73767c7dc2abcc033f7179b0d1a6052fbba80549d6",
+          "blockNumber": "0x5555a63",
+          "status": "0x1",
+          "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+          "to": "0x46af20b6307aa0ec13de10ef58a02c5f1b5c9559",
+          "gasUsed": "0x9d4ce",
+          "effectiveGasPrice": "0x41778b0bfb"
+        },
+        "maker": {
+          "profile": "ospex-stage-maker-a",
+          "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "side": {
+            "positionType": 0,
+            "resolvedLabel": "San Diego Padres",
+            "role": "away"
+          },
+          "riskUSDC": "0.100000"
+        },
+        "taker": {
+          "profile": "ospex-flow-a",
+          "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+          "side": {
+            "positionType": 1,
+            "resolvedLabel": "Chicago Cubs",
+            "role": "home"
+          },
+          "riskUSDC": "0.106000"
+        },
+        "marketPreview": {
+          "type": "moneyline",
+          "lineTicks": 0,
+          "makerLineDisplay": null,
+          "takerLineDisplay": null
+        },
+        "economics": {
+          "oddsTick": 206,
+          "remainingMakerRiskWei6": "100000",
+          "remainingMakerRiskUSDC": "0.100000",
+          "takerDesiredRiskWei6": "106000",
+          "takerDesiredRiskUSDC": "0.106000",
+          "fillMakerRiskWei6": "100000",
+          "fillMakerRiskUSDC": "0.100000",
+          "takerRiskWei6": "106000",
+          "takerRiskUSDC": "0.106000",
+          "takerProfitOnWinUSDC": "0.100000",
+          "takerReturnOnWinUSDC": "0.206000"
+        },
+        "finalSpeculation": {
+          "speculationId": "7",
+          "contestId": "5",
+          "type": "moneyline",
+          "lineTicks": 0,
+          "line": null,
+          "speculationStatus": 1,
+          "settledAt": "2026-07-01T21:36:04+00:00",
+          "winSide": "home",
+          "voided": false
+        },
+        "teamIdentity": {
+          "away": {
+            "team": "San Diego Padres",
+            "abbreviation": "SD",
+            "positionType": "upper",
+            "role": "away",
+            "identity": "underdog",
+            "marketOddsAmerican": "+106"
+          },
+          "home": {
+            "team": "Chicago Cubs",
+            "abbreviation": "CHC",
+            "positionType": "lower",
+            "role": "home",
+            "identity": "favorite",
+            "marketOddsAmerican": "-120"
+          },
+          "makerSelection": {
+            "team": "San Diego Padres",
+            "role": "away",
+            "positionType": "upper",
+            "oddsAmerican": "+106"
+          },
+          "takerSelection": {
+            "team": "Chicago Cubs",
+            "role": "home",
+            "positionType": "lower"
+          },
+          "winner": {
+            "team": "Chicago Cubs",
+            "role": "home",
+            "positionType": "lower"
+          }
+        }
+      },
+      {
+        "market": "spread",
+        "speculationId": "8",
+        "commitmentHash": "0x1e232f4227a4fa0a1cbf56862801c462608a47e08151da3fe2d3198d8cb433ce",
+        "matchTxHash": "0x934a46c7f8665a36f8a751f830e18a48d07dea09a40c13e5162bc5d0ed34992e",
+        "matchReceipt": {
+          "transactionHash": "0x934a46c7f8665a36f8a751f830e18a48d07dea09a40c13e5162bc5d0ed34992e",
+          "blockNumber": "0x5555a9f",
+          "status": "0x1",
+          "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+          "to": "0x46af20b6307aa0ec13de10ef58a02c5f1b5c9559",
+          "gasUsed": "0x9ea9a",
+          "effectiveGasPrice": "0x41dfdd7c00"
+        },
+        "maker": {
+          "profile": "ospex-stage-maker-a",
+          "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "side": {
+            "positionType": 1,
+            "resolvedLabel": "Chicago Cubs",
+            "role": "home"
+          },
+          "riskUSDC": "0.100000"
+        },
+        "taker": {
+          "profile": "ospex-flow-a",
+          "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+          "side": {
+            "positionType": 0,
+            "resolvedLabel": "San Diego Padres",
+            "role": "away"
+          },
+          "riskUSDC": "0.151000"
+        },
+        "marketPreview": {
+          "type": "spread",
+          "lineTicks": 15,
+          "makerLineDisplay": "Chicago Cubs -1.5",
+          "takerLineDisplay": "San Diego Padres +1.5"
+        },
+        "economics": {
+          "oddsTick": 251,
+          "remainingMakerRiskWei6": "100000",
+          "remainingMakerRiskUSDC": "0.100000",
+          "takerDesiredRiskWei6": "151000",
+          "takerDesiredRiskUSDC": "0.151000",
+          "fillMakerRiskWei6": "100000",
+          "fillMakerRiskUSDC": "0.100000",
+          "takerRiskWei6": "151000",
+          "takerRiskUSDC": "0.151000",
+          "takerProfitOnWinUSDC": "0.100000",
+          "takerReturnOnWinUSDC": "0.251000"
+        },
+        "finalSpeculation": {
+          "speculationId": "8",
+          "contestId": "5",
+          "type": "spread",
+          "lineTicks": 15,
+          "line": 1.5,
+          "awayLine": 1.5,
+          "homeLine": -1.5,
+          "speculationStatus": 1,
+          "settledAt": "2026-07-01T21:36:19+00:00",
+          "winSide": "home",
+          "voided": false
+        },
+        "teamIdentity": {
+          "away": {
+            "team": "San Diego Padres",
+            "abbreviation": "SD",
+            "positionType": "upper",
+            "role": "away",
+            "selectedLine": "+1.5",
+            "identity": "underdog-by-line",
+            "referenceOddsAmerican": "-175"
+          },
+          "home": {
+            "team": "Chicago Cubs",
+            "abbreviation": "CHC",
+            "positionType": "lower",
+            "role": "home",
+            "selectedLine": "-1.5",
+            "identity": "favorite-by-line",
+            "referenceOddsAmerican": "+151"
+          },
+          "protocolLineTicks": 15,
+          "winner": {
+            "team": "Chicago Cubs",
+            "role": "home",
+            "positionType": "lower",
+            "reason": "Chicago won by 20 runs, covering -1.5"
+          }
+        },
+        "winLosePushSemantics": "Chicago Cubs -1.5 wins if Chicago wins by 2+; San Diego +1.5 wins if San Diego wins or loses by 1; no integer push at half-run line."
+      },
+      {
+        "market": "total",
+        "speculationId": "9",
+        "commitmentHash": "0x4c2c20403790253f6f3488819b11000a4783040d54d8d5a35150492f5727cddc",
+        "matchTxHash": "0xe412f37fdf0e59ac10586cfad94e061525c9179ac64080a51f666a86f049dedb",
+        "matchReceipt": {
+          "transactionHash": "0xe412f37fdf0e59ac10586cfad94e061525c9179ac64080a51f666a86f049dedb",
+          "blockNumber": "0x5555ace",
+          "status": "0x1",
+          "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+          "to": "0x46af20b6307aa0ec13de10ef58a02c5f1b5c9559",
+          "gasUsed": "0x9eb5c",
+          "effectiveGasPrice": "0x40b2401a81"
+        },
+        "maker": {
+          "profile": "ospex-stage-maker-a",
+          "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "side": {
+            "positionType": 0,
+            "resolvedLabel": "over",
+            "role": "over"
+          },
+          "riskUSDC": "0.100000"
+        },
+        "taker": {
+          "profile": "ospex-flow-a",
+          "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+          "side": {
+            "positionType": 1,
+            "resolvedLabel": "under",
+            "role": "under"
+          },
+          "riskUSDC": "0.091000"
+        },
+        "marketPreview": {
+          "type": "total",
+          "lineTicks": 120,
+          "makerLineDisplay": "Over 12.0",
+          "takerLineDisplay": "Under 12.0"
+        },
+        "economics": {
+          "oddsTick": 191,
+          "remainingMakerRiskWei6": "100000",
+          "remainingMakerRiskUSDC": "0.100000",
+          "takerDesiredRiskWei6": "91000",
+          "takerDesiredRiskUSDC": "0.091000",
+          "fillMakerRiskWei6": "100000",
+          "fillMakerRiskUSDC": "0.100000",
+          "takerRiskWei6": "91000",
+          "takerRiskUSDC": "0.091000",
+          "takerProfitOnWinUSDC": "0.100000",
+          "takerReturnOnWinUSDC": "0.191000"
+        },
+        "finalSpeculation": {
+          "speculationId": "9",
+          "contestId": "5",
+          "type": "total",
+          "lineTicks": 120,
+          "line": 12,
+          "speculationStatus": 1,
+          "settledAt": "2026-07-01T21:36:34+00:00",
+          "winSide": "over",
+          "voided": false
+        },
+        "totalIdentity": {
+          "line": 12,
+          "upper": {
+            "label": "over",
+            "selectedBy": "maker",
+            "profile": "ospex-stage-maker-a",
+            "oddsAmerican": "-110"
+          },
+          "lower": {
+            "label": "under",
+            "selectedBy": "taker",
+            "profile": "ospex-flow-a"
+          },
+          "winner": {
+            "label": "over",
+            "positionType": "upper",
+            "reason": "combined final score was 26"
+          }
+        },
+        "winLosePushSemantics": "13+ runs over wins; exactly 12 pushes both sides; 11 or fewer under wins."
+      }
+    ],
+    "finalPregameState": {
+      "contestStatus": "verified",
+      "openCommitments": 0,
+      "makerActiveContestPositions": 3,
+      "takerActiveContestPositions": 3,
+      "creatorActiveContestPositions": 0
+    }
+  },
+  "postgame": {
+    "finalScore": {
+      "source": "MLB Stats API",
+      "gamePk": 824660,
+      "awayTeam": "San Diego Padres",
+      "awayRuns": 3,
+      "homeTeam": "Chicago Cubs",
+      "homeRuns": 23,
+      "status": "Final"
+    },
+    "score": {
+      "attempts": [
+        {
+          "attempt": 1,
+          "ok": true,
+          "reason": "no prior score request",
+          "requestedAt": "2026-07-01T21:01:28Z",
+          "txHashes": [
+            "0xfcf9d669a02073ff03a0f399f93b5cbe846e9c5e3e5a8acd9ab20325f9e00d43"
+          ]
+        },
+        {
+          "attempt": 2,
+          "ok": true,
+          "reason": "callback pending; retry after 2035s",
+          "requestedAt": "2026-07-01T21:35:26Z",
+          "txHashes": [
+            "0xc7a4167c72ce8bffe9a035b51b04afa97d4f756855637dbb9327435dbc101d7a"
+          ]
+        }
+      ],
+      "contestStatus": "scored",
+      "awayScore": 3,
+      "homeScore": 23,
+      "scoredAt": "2026-07-01T21:35:47+00:00",
+      "retryCaveat": "First confirmed score request did not produce a callback before bounded retry; second request produced scored projection."
+    },
+    "settle": {
+      "7": {
+        "at": "2026-07-01T21:36:04Z",
+        "ok": true,
+        "txHashes": [
+          "0x60d476c048b80dbd8124f5dd82fafbf25c6d8806eadbbeaa2707778a246eaa6c"
+        ]
+      },
+      "8": {
+        "at": "2026-07-01T21:36:20Z",
+        "ok": true,
+        "txHashes": [
+          "0x4c3cbbe58e75d5660d813c6af93a4946b00b9b27f3706725bddf84854273acde"
+        ]
+      },
+      "9": {
+        "at": "2026-07-01T21:36:35Z",
+        "ok": true,
+        "txHashes": [
+          "0x2ba826a74f71cf57c1237bf624212d1fcd18b3b60b9d534dd74a901e147c269c"
+        ]
+      }
+    },
+    "claim": {
+      "7": {
+        "at": "2026-07-01T21:36:50Z",
+        "ok": true,
+        "reason": "moneyline Chicago home",
+        "txHashes": [
+          "0xd19a2d99ddf5b38f81680a13f2e04b143ba66d14df8f1775aebe226cfa657e32"
+        ]
+      },
+      "8": {
+        "at": "2026-07-01T21:36:53Z",
+        "ok": true,
+        "reason": "spread Chicago -1.5",
+        "txHashes": [
+          "0xc91b1787da42101959e285359924c2f3fb2f5ec9d5699cad0e676dc72b31b8c2"
+        ]
+      },
+      "9": {
+        "at": "2026-07-01T21:36:59Z",
+        "ok": true,
+        "reason": "total over 12",
+        "txHashes": [
+          "0x964abd8c1fa06f103cab250260feb122a8c5f3767973e8bc7bd1a20e81fba1d6"
+        ]
+      }
+    },
+    "finalPositionStatus": {
+      "ospex-stage-maker-a": {
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "contest5": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0
+        },
+        "globalTotals": {
+          "activeCount": 1,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettleCount": 0,
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      },
+      "ospex-flow-a": {
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "contest5": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0
+        },
+        "globalTotals": {
+          "activeCount": 1,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettleCount": 0,
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      },
+      "ospex-stage-maker-b": {
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "contest5": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0
+        },
+        "globalTotals": {
+          "activeCount": 1,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettleCount": 0,
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      }
+    },
+    "openCommitments": 0,
+    "openCommitmentsBySpec": {
+      "7": 0,
+      "8": 0,
+      "9": 0
+    }
+  },
+  "transactions": [
+    {
+      "category": "create-contest",
+      "txHash": "0xa27b5b55c6790ac621819adb15b29378b1efc062b6c4875a353e3d4ebc9e780c",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "create contest 5 for San Diego Padres @ Chicago Cubs",
+      "role": "ospex-stage-maker-b",
+      "blockNumber": "0x55559f9",
+      "receiptStatus": "0x1"
+    },
+    {
+      "category": "other",
+      "txHash": "0x8239cc86e5f37c74c55c58b7663045f54e241db28b1ab4a8468fa6b761ced19a",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "request market update for contest 5",
+      "role": "ospex-stage-maker-b",
+      "blockNumber": "0x5555a1d",
+      "receiptStatus": "0x1"
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0x22f4170ff96dce03d50bdd73767c7dc2abcc033f7179b0d1a6052fbba80549d6",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "controlled match/fill for moneyline speculation 7",
+      "role": "ospex-flow-a",
+      "blockNumber": "0x5555a63",
+      "receiptStatus": "0x1"
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0x934a46c7f8665a36f8a751f830e18a48d07dea09a40c13e5162bc5d0ed34992e",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "controlled match/fill for spread speculation 8",
+      "role": "ospex-flow-a",
+      "blockNumber": "0x5555a9f",
+      "receiptStatus": "0x1"
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0xe412f37fdf0e59ac10586cfad94e061525c9179ac64080a51f666a86f049dedb",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "controlled match/fill for total speculation 9",
+      "role": "ospex-flow-a",
+      "blockNumber": "0x5555ace",
+      "receiptStatus": "0x1"
+    },
+    {
+      "category": "score-request",
+      "txHash": "0xfcf9d669a02073ff03a0f399f93b5cbe846e9c5e3e5a8acd9ab20325f9e00d43",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "R5/CRE score request attempt 1 for contest 5",
+      "role": "ospex-stage-maker-b",
+      "blockNumber": "0x5558183",
+      "receiptStatus": "0x1"
+    },
+    {
+      "category": "score-request",
+      "txHash": "0xc7a4167c72ce8bffe9a035b51b04afa97d4f756855637dbb9327435dbc101d7a",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "R5/CRE score request attempt 2 for contest 5",
+      "role": "ospex-stage-maker-b",
+      "blockNumber": "0x55586d2",
+      "receiptStatus": "0x1"
+    },
+    {
+      "category": "settle",
+      "txHash": "0x60d476c048b80dbd8124f5dd82fafbf25c6d8806eadbbeaa2707778a246eaa6c",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "settle speculation 7",
+      "role": "ospex-stage-maker-b",
+      "blockNumber": "0x55586eb",
+      "receiptStatus": "0x1"
+    },
+    {
+      "category": "settle",
+      "txHash": "0x4c3cbbe58e75d5660d813c6af93a4946b00b9b27f3706725bddf84854273acde",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "settle speculation 8",
+      "role": "ospex-stage-maker-b",
+      "blockNumber": "0x55586f5",
+      "receiptStatus": "0x1"
+    },
+    {
+      "category": "settle",
+      "txHash": "0x2ba826a74f71cf57c1237bf624212d1fcd18b3b60b9d534dd74a901e147c269c",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "settle speculation 9",
+      "role": "ospex-stage-maker-b",
+      "blockNumber": "0x55586ff",
+      "receiptStatus": "0x1"
+    },
+    {
+      "category": "claim",
+      "txHash": "0xd19a2d99ddf5b38f81680a13f2e04b143ba66d14df8f1775aebe226cfa657e32",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "claim lower position for speculation 7",
+      "role": "ospex-flow-a",
+      "blockNumber": "0x5558709",
+      "receiptStatus": "0x1"
+    },
+    {
+      "category": "claim",
+      "txHash": "0xc91b1787da42101959e285359924c2f3fb2f5ec9d5699cad0e676dc72b31b8c2",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "claim lower position for speculation 8",
+      "role": "ospex-stage-maker-a",
+      "blockNumber": "0x555870c",
+      "receiptStatus": "0x1"
+    },
+    {
+      "category": "claim",
+      "txHash": "0x964abd8c1fa06f103cab250260feb122a8c5f3767973e8bc7bd1a20e81fba1d6",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "claim upper position for speculation 9",
+      "role": "ospex-stage-maker-a",
+      "blockNumber": "0x555870f",
+      "receiptStatus": "0x1"
+    }
+  ],
+  "observations": [
+    "The test intentionally used manual SDK/CLI controlled fills, not broad autonomous market-maker operation.",
+    "All three intended markets were created lazily at first match and then settled/claimed postgame.",
+    "Global wallet positions included earlier same-day contests, so final assertions filter to contest 5."
+  ],
+  "caveats": [
+    "First confirmed score request did not callback before bounded retry; second score request produced scored projection and postgame convergence.",
+    "An initial maker approval transaction timed out while waiting for receipt and was not found by receipt/allowance checks; bounded retry succeeded before live fills."
+  ],
+  "safety": {
+    "totalControlledMakerRiskUSDC": "0.300000",
+    "totalControlledTakerRiskUSDC": "0.348000",
+    "boundedApprovalsOnly": true,
+    "unlimitedApprovalsUsed": false,
+    "publicArtifactSanitization": "Raw signed envelopes, local paths, credential paths, RPC URLs, and unredacted logs are excluded."
+  }
+}

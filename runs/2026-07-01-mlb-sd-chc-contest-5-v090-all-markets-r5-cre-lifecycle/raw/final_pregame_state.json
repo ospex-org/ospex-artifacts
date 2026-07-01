@@ -1,0 +1,126 @@
+{
+  "contest": {
+    "contestId": "5",
+    "awayTeam": "San Diego Padres",
+    "homeTeam": "Chicago Cubs",
+    "sport": "mlb",
+    "sportId": 0,
+    "matchTime": "2026-07-01T18:20:00+00:00",
+    "status": "verified",
+    "speculations": [
+      {
+        "speculationId": "7",
+        "contestId": "5",
+        "type": "moneyline",
+        "lineTicks": 0,
+        "line": null,
+        "speculationStatus": 0,
+        "winSide": null,
+        "settledAt": null,
+        "voided": false,
+        "orderbook": []
+      },
+      {
+        "speculationId": "8",
+        "contestId": "5",
+        "type": "spread",
+        "lineTicks": 15,
+        "line": 1.5,
+        "speculationStatus": 0,
+        "winSide": null,
+        "settledAt": null,
+        "voided": false,
+        "awayLine": 1.5,
+        "homeLine": -1.5,
+        "orderbook": []
+      },
+      {
+        "speculationId": "9",
+        "contestId": "5",
+        "type": "total",
+        "lineTicks": 120,
+        "line": 12,
+        "speculationStatus": 0,
+        "winSide": null,
+        "settledAt": null,
+        "voided": false,
+        "orderbook": []
+      }
+    ],
+    "jsonoddsId": "4c765045-0786-4c12-a5e7-e2bc28412f7f",
+    "rundownId": "7487107c6cabb1f19a430629d31a60a5",
+    "sportspageId": "337268",
+    "contestCreator": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "leagueId": "mlb",
+    "awayScore": null,
+    "homeScore": null,
+    "contestCreatedAt": "2026-07-01T16:48:25+00:00",
+    "verifiedAt": "2026-07-01T16:48:40+00:00",
+    "scoredAt": null,
+    "voidedAt": null,
+    "awayTeamId": "f65196e3-2647-4d71-9914-dd17e7a90f1c",
+    "homeTeamId": "0e70b859-7c72-44b5-9359-ca6ec48a664a"
+  },
+  "speculations": [
+    {
+      "speculationId": "7",
+      "contestId": "5",
+      "type": "moneyline",
+      "lineTicks": 0,
+      "line": null,
+      "speculationStatus": 0,
+      "winSide": null,
+      "settledAt": null,
+      "voided": false
+    },
+    {
+      "speculationId": "8",
+      "contestId": "5",
+      "type": "spread",
+      "lineTicks": 15,
+      "line": 1.5,
+      "speculationStatus": 0,
+      "winSide": null,
+      "settledAt": null,
+      "voided": false,
+      "awayLine": 1.5,
+      "homeLine": -1.5
+    },
+    {
+      "speculationId": "9",
+      "contestId": "5",
+      "type": "total",
+      "lineTicks": 120,
+      "line": 12,
+      "speculationStatus": 0,
+      "winSide": null,
+      "settledAt": null,
+      "voided": false
+    }
+  ],
+  "commitments": {
+    "contestOpenCount": 0,
+    "bySpecOpenCount": {
+      "7": 0,
+      "8": 0,
+      "9": 0
+    }
+  },
+  "positionsByRoleContest5": {
+    "ospex-stage-maker-a": {
+      "activeCount": 3,
+      "claimableCount": 0,
+      "pendingSettleCount": 0
+    },
+    "ospex-flow-a": {
+      "activeCount": 3,
+      "claimableCount": 0,
+      "pendingSettleCount": 0
+    },
+    "ospex-stage-maker-b": {
+      "activeCount": 0,
+      "claimableCount": 0,
+      "pendingSettleCount": 0
+    }
+  }
+}

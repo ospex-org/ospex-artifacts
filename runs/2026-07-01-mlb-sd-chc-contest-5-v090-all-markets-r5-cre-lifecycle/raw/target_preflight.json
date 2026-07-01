@@ -1,0 +1,43 @@
+{
+  "selectedAtUtc": "2026-07-01T16:35:05Z",
+  "selectedTarget": {
+    "gameId": "4c765045-0786-4c12-a5e7-e2bc28412f7f",
+    "slug": "sd-chc-2026-07-01-1820",
+    "sport": "mlb",
+    "matchTime": "2026-07-01T18:20:00+00:00",
+    "status": "upcoming",
+    "homeTeam": "Chicago Cubs",
+    "homeAbbreviation": "CHC",
+    "awayTeam": "San Diego Padres",
+    "awayAbbreviation": "SD",
+    "hasOdds": true,
+    "contestCreatedBeforeRun": false,
+    "canCreateContest": true,
+    "contestId": "5",
+    "speculations": [
+      {
+        "speculationId": "7",
+        "contestId": "5",
+        "type": "moneyline"
+      },
+      {
+        "speculationId": "8",
+        "contestId": "5",
+        "type": "spread"
+      },
+      {
+        "speculationId": "9",
+        "contestId": "5",
+        "type": "total"
+      }
+    ]
+  },
+  "selectionGate": {
+    "enoughLeadTimeAtSelection": true,
+    "leadTimeMinutesApprox": 105,
+    "oddsAvailable": true,
+    "canCreateContest": true,
+    "statusUpcoming": true
+  },
+  "fallbackReason": "Earlier 13:10 ET target was already occupied/too tight in the live window; selected the later preferred target with sufficient lead time."
+}
