@@ -1,0 +1,289 @@
+{
+  "artifactId": "2026-06-30-mlb-cws-bal-contest-2-r5-cre-lifecycle-repeat",
+  "artifactPath": "runs/2026-06-30-mlb-cws-bal-contest-2-r5-cre-lifecycle-repeat/",
+  "artifactType": "run",
+  "artifactStatus": "complete_verified_with_caveats",
+  "status": "complete_verified_with_caveats",
+  "capturedAtUtc": "2026-07-01T04:08:24Z",
+  "date": "2026-06-30",
+  "network": "polygon",
+  "chainId": 137,
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "R5 CRE mainnet lifecycle repeat completed green: contest 2 was created, verified, market-updated, filled with one tiny controlled moneyline match, scored through CRE after a bounded score-request retry, settled, claimed by the winning controlled maker, and converged to zero active/pending/claimable positions."
+  },
+  "artifactFiles": {
+    "evidence": "evidence.json",
+    "summary": "summary.md",
+    "raw": "raw/",
+    "liveCommitFillSummary": "raw/live_commit_fill_summary.json",
+    "finalLiveWindowVerifySummary": "raw/final_live_window_verify_summary.json",
+    "contestCreate": "raw/contest_create_2.json",
+    "verificationWait": "raw/verification_wait_2.json",
+    "marketUpdate": "raw/market_update_2.json",
+    "oddsSnapshot": "raw/odds_snapshot_2.json",
+    "postgameLifecycleSummary": "raw/postgame_lifecycle_summary.json",
+    "scoreContestAttempt1": "raw/score_contest_2_attempt_1.json",
+    "scoreContestRetry2": "raw/score_contest_2_retry_2.json",
+    "settleSpeculation": "raw/settle_speculation_2.json",
+    "claimWinningPosition": "raw/claim_ospex-stage-maker-a_upper_speculation_2.json",
+    "finalContestShow": "raw/final_contest_2_show.json",
+    "finalSpeculationShow": "raw/final_speculation_2_show.json",
+    "currentWinningWalletPositionStatus": "raw/current_positions_status_ospex-stage-maker-a.json",
+    "currentTakerPositionStatus": "raw/current_positions_status_ospex-flow-a.json",
+    "currentCreatorPositionStatus": "raw/current_positions_status_ospex-stage-maker-b.json",
+    "currentClaimAllDryRun": "raw/current_claim_all_dry_run_ospex-stage-maker-a.json",
+    "finalScoreSource": "raw/final_score_source.json",
+    "txReceipts": "raw/tx_receipts_summary.json"
+  },
+  "coverage": {
+    "contestCreate": "raw/contest_create_2.json",
+    "verificationWait": "raw/verification_wait_2.json",
+    "marketUpdate": "raw/market_update_2.json",
+    "oddsSnapshot": "raw/odds_snapshot_2.json",
+    "liveCommitFill": "raw/live_commit_fill_summary.json",
+    "postgameLifecycle": "raw/postgame_lifecycle_summary.json",
+    "finalContestShow": "raw/final_contest_2_show.json",
+    "finalSpeculationShow": "raw/final_speculation_2_show.json",
+    "scoreContestAttempt1": "raw/score_contest_2_attempt_1.json",
+    "scoreContestRetry2": "raw/score_contest_2_retry_2.json",
+    "settleSpeculation": "raw/settle_speculation_2.json",
+    "claimWinningPosition": "raw/claim_ospex-stage-maker-a_upper_speculation_2.json",
+    "currentWinningWalletPositionStatus": "raw/current_positions_status_ospex-stage-maker-a.json",
+    "finalScoreSource": "raw/final_score_source.json",
+    "txReceipts": "raw/tx_receipts_summary.json"
+  },
+  "target": {
+    "game": "Chicago White Sox @ Baltimore Orioles",
+    "gamePk": 824819,
+    "gameId": "3ba71f62-0c5d-4f76-bd95-d05024c96c24",
+    "slug": "cws-bal-2026-06-30",
+    "sport": "mlb",
+    "market": "moneyline",
+    "contestId": "2",
+    "speculationId": "2",
+    "awayTeam": "Chicago White Sox",
+    "homeTeam": "Baltimore Orioles",
+    "startTimeUtc": "2026-06-30T22:35:00Z",
+    "teamIdentity": {
+      "away": {
+        "team": "Chicago White Sox",
+        "abbreviation": "CWS",
+        "positionType": "upper",
+        "role": "away",
+        "identity": "underdog",
+        "marketOddsAmerican": "+121"
+      },
+      "home": {
+        "team": "Baltimore Orioles",
+        "abbreviation": "BAL",
+        "positionType": "lower",
+        "role": "home",
+        "identity": "favorite",
+        "marketOddsAmerican": "-139"
+      },
+      "winner": {
+        "team": "Chicago White Sox",
+        "role": "away",
+        "positionType": "upper"
+      }
+    },
+    "contestStatusAfterCreateVerify": "verified",
+    "speculationStatusAtLiveWindow": "open",
+    "contestStatusAfterPostgame": "scored",
+    "speculationStatusAfterPostgame": "closed",
+    "postgameStatus": "complete",
+    "finalScore": {
+      "awayRuns": 9,
+      "homeRuns": 3,
+      "winner": "Chicago White Sox",
+      "winnerProtocolSide": "upper"
+    }
+  },
+  "wallets": {
+    "contestCreator": {
+      "profile": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    },
+    "manualMaker": {
+      "profile": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    "controlledTaker": {
+      "profile": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    },
+    "scoreSettleOperator": {
+      "profile": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    }
+  },
+  "scope": {
+    "notMarketMakerAutonomousLoopTest": true,
+    "executionMode": "manual-sdk-cli-controlled-lifecycle",
+    "contestCount": 1,
+    "marketCount": 1,
+    "market": "moneyline",
+    "controlledFillCount": 1,
+    "tinyCapitalOnly": true,
+    "boundedApprovalsOnly": true,
+    "oldFunctionsLinkFlowUsed": false
+  },
+  "liveWindow": {
+    "contestCreateTxHash": "0x8d779b0c8c13ab65aa9ce65ee4f5756285fff91eca267e27173253d6365391b9",
+    "marketUpdateTxHash": "0xe5b43015b8c33feb16011a606b4103cf559100fe3366710d32f515ecc30c0f39",
+    "commitmentHash": "0xd9715b7e7300ad559014e5ca92878fe7ff28dfbe83d41d9dcf12e3987372f088",
+    "makerSide": "Chicago White Sox / away / upper",
+    "takerSide": "Baltimore Orioles / home / lower",
+    "makerRiskUSDC": "0.25",
+    "takerRiskUSDC": "0.302500",
+    "lazyCreationFeeUSDC": "0.500000",
+    "fillTxHash": "0xd8fc81fa228d4b2b6fbef56e9546813ff210eaa68d6e275afc851c33e0834eda",
+    "fillBlockNumber": "89400929",
+    "fillReceiptStatus": "0x1",
+    "speculationCreated": true
+  },
+  "postgame": {
+    "finalScore": {
+      "awayTeam": "Chicago White Sox",
+      "awayRuns": 9,
+      "homeTeam": "Baltimore Orioles",
+      "homeRuns": 3,
+      "winner": "Chicago White Sox",
+      "winnerRole": "away",
+      "winnerProtocolSide": "upper"
+    },
+    "score": {
+      "requestTxHashes": [
+        "0xc3dd38ac986fa7ac4ec39add8cfc45e0e56ea984adb24ce1654bac5d43304945",
+        "0x979eb76ba0a39685e6cd6bede56ff9f0ffc6f5d90975a04003ca2b25797ea37e"
+      ],
+      "successfulRequestTxHash": "0x979eb76ba0a39685e6cd6bede56ff9f0ffc6f5d90975a04003ca2b25797ea37e",
+      "contestStatus": "scored",
+      "awayScore": 9,
+      "homeScore": 3,
+      "scoredAt": "2026-07-01T03:59:49+00:00",
+      "retryCaveat": "First confirmed score request did not produce a callback before bounded retry; second confirmed request produced scored projection."
+    },
+    "settle": {
+      "txHash": "0x6fd93bacfc0f50b40efedc88d8fc412b89de1fc9ff638177a9872c5f30ca262d",
+      "winSide": "away/upper/Chicago White Sox",
+      "speculationStatus": "closed"
+    },
+    "claim": {
+      "walletLabel": "ospex-stage-maker-a",
+      "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "side": "upper / away / Chicago White Sox",
+      "payoutWei6": "552500",
+      "payoutUSDC": "0.552500",
+      "txHash": "0xe713b2732b0e35f72afba4ea51c59272a17faf6d0bcb983a8ed5359edbb3b43d",
+      "receiptStatus": "confirmed"
+    },
+    "finalPositionStatus": {
+      "winningWalletLabel": "ospex-stage-maker-a",
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "takerWalletLabel": "ospex-flow-a",
+      "takerActive": 0,
+      "takerPendingSettle": 0,
+      "takerClaimable": 0
+    }
+  },
+  "transactions": [
+    {
+      "category": "create-contest",
+      "txHash": "0x8d779b0c8c13ab65aa9ce65ee4f5756285fff91eca267e27173253d6365391b9",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "create contest 2 for Chicago White Sox @ Baltimore Orioles",
+      "blockNumber": "89400799"
+    },
+    {
+      "category": "other",
+      "txHash": "0xe5b43015b8c33feb16011a606b4103cf559100fe3366710d32f515ecc30c0f39",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "request market update for contest 2",
+      "blockNumber": "89400814"
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0xd8fc81fa228d4b2b6fbef56e9546813ff210eaa68d6e275afc851c33e0834eda",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "controlled match/fill that lazily created moneyline speculation 2",
+      "blockNumber": "89400929"
+    },
+    {
+      "category": "score-request",
+      "txHash": "0xc3dd38ac986fa7ac4ec39add8cfc45e0e56ea984adb24ce1654bac5d43304945",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "first R5 CRE score request for contest 2; confirmed but did not produce callback before retry",
+      "blockNumber": "89442706",
+      "note": "First score request was confirmed, then later retried after official-final provider convergence because contest remained verified."
+    },
+    {
+      "category": "score-request",
+      "txHash": "0x979eb76ba0a39685e6cd6bede56ff9f0ffc6f5d90975a04003ca2b25797ea37e",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "second R5 CRE score request for contest 2; produced scored projection",
+      "blockNumber": "89448919"
+    },
+    {
+      "category": "settle",
+      "txHash": "0x6fd93bacfc0f50b40efedc88d8fc412b89de1fc9ff638177a9872c5f30ca262d",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "settle moneyline speculation 2 to away/upper",
+      "blockNumber": "89448946"
+    },
+    {
+      "category": "claim",
+      "txHash": "0xe713b2732b0e35f72afba4ea51c59272a17faf6d0bcb983a8ed5359edbb3b43d",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "claim winning upper/away position for controlled maker",
+      "blockNumber": "89449268"
+    }
+  ],
+  "caveats": [
+    "The first confirmed score-request transaction did not produce a callback before retry; bounded retry after official-final provider convergence produced the scored projection.",
+    "The speculation API read exposed speculationStatus=1 (closed) while settledAt/winSide projection fields were null; final positions/orderbook convergence still verified clean."
+  ],
+  "projectionConvergence": {
+    "expectation": "After score, settle, and claim, controlled wallets should converge to no active, pending-settle, or claimable target positions and no open orderbook commitments.",
+    "gates": [
+      {
+        "name": "post-claim positions.status convergence for winning maker, taker, and creator",
+        "afterWrite": "claim-position tx 0xe713b2732b0e35f72afba4ea51c59272a17faf6d0bcb983a8ed5359edbb3b43d confirmed at block 89449268",
+        "txConfirmed": true,
+        "waitTarget": "raw/postgame_lifecycle_summary.json finalReadOnlyState.positions plus raw/current_positions_status_*.json",
+        "staleReadObserved": true,
+        "expectedFinalState": [
+          "maker active=0",
+          "maker pendingSettle=0",
+          "maker claimable=0",
+          "taker active=0",
+          "taker pendingSettle=0",
+          "taker claimable=0",
+          "contestOpen=0",
+          "speculationOpen=0"
+        ],
+        "observedFinalState": [
+          "maker active=0",
+          "maker pendingSettle=0",
+          "maker claimable=0",
+          "taker active=0",
+          "taker pendingSettle=0",
+          "taker claimable=0",
+          "contestOpen=0",
+          "speculationOpen=0"
+        ],
+        "converged": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 2,
+  "ok": true,
+  "action": "odds.show",
+  "stage": "read",
+  "network": "polygon",
+  "chainId": 137,
+  "generatedAt": "2026-06-30T07:56:59.088Z",
+  "cliVersion": "0.8.0",
+  "sdkVersion": "0.8.0",
+  "wallet": null,
+  "walletRole": "none",
+  "signer": null,
+  "requiresSignature": "[redacted-signature]",
+  "requiresTransaction": false,
+  "approvalRequirements": [],
+  "estimatedCosts": null,
+  "risk": null,
+  "payout": null,
+  "contest": null,
+  "speculation": null,
+  "commitment": null,
+  "sideSummary": null,
+  "warnings": [],
+  "errors": [],
+  "effects": [],
+  "nextCommands": [],
+  "payload": {
+    "contest": {
+      "contestId": "2",
+      "awayTeam": "Chicago White Sox",
+      "homeTeam": "Baltimore Orioles",
+      "sport": "mlb",
+      "matchTime": "",
+      "jsonoddsId": "3ba71f62-0c5d-4f76-bd95-d05024c96c24"
+    },
+    "odds": {
+      "moneyline": {
+        "market": "moneyline",
+        "awayOddsAmerican": 121,
+        "homeOddsAmerican": -139,
+        "upstreamLastUpdated": "2026-06-30T07:53:17+00:00",
+        "pollCapturedAt": "2026-06-30T07:56:05.912+00:00",
+        "changedAt": "2026-06-30T07:35:05.151+00:00"
+      },
+      "spread": {
+        "market": "spread",
+        "awayLine": 1.5,
+        "homeLine": -1.5,
+        "awayOddsAmerican": -155,
+        "homeOddsAmerican": 134,
+        "upstreamLastUpdated": "2026-06-30T07:53:17+00:00",
+        "pollCapturedAt": "2026-06-30T07:56:05.978+00:00",
+        "changedAt": "2026-06-30T07:35:05.252+00:00"
+      },
+      "total": {
+        "market": "total",
+        "line": 10.5,
+        "overOddsAmerican": -108,
+        "underOddsAmerican": -112,
+        "upstreamLastUpdated": "2026-06-30T07:53:17+00:00",
+        "pollCapturedAt": "2026-06-30T07:56:06.032+00:00",
+        "changedAt": "2026-06-30T05:09:59.112+00:00"
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 2,
+  "ok": true,
+  "action": "settle",
+  "stage": "execute",
+  "network": "polygon",
+  "chainId": 137,
+  "generatedAt": "2026-07-01T04:00:14.975Z",
+  "cliVersion": "0.8.0",
+  "sdkVersion": "0.8.0",
+  "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+  "walletRole": "signer",
+  "signer": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+  "requiresSignature": "[redacted-signature]",
+  "requiresTransaction": false,
+  "approvalRequirements": [],
+  "estimatedCosts": null,
+  "risk": null,
+  "payout": null,
+  "contest": null,
+  "speculation": null,
+  "commitment": null,
+  "sideSummary": null,
+  "warnings": [],
+  "errors": [],
+  "effects": [
+    {
+      "type": "transaction",
+      "purpose": "settle-speculation",
+      "ok": true,
+      "txHash": "0x6fd93bacfc0f50b40efedc88d8fc412b89de1fc9ff638177a9872c5f30ca262d",
+      "status": "confirmed",
+      "blockNumber": "89448946"
+    }
+  ],
+  "nextCommands": [
+    {
+      "id": "verify-position-status",
+      "description": "Verify position status after the claim / settle.",
+      "suggestedFor": "verify",
+      "command": "ospex positions status 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482 --json",
+      "argv": [
+        "positions",
+        "status",
+        "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "--json"
+      ],
+      "safeToAutoRun": true
+    }
+  ],
+  "payload": {
+    "outcome": "settled",
+    "txHash": "0x6fd93bacfc0f50b40efedc88d8fc412b89de1fc9ff638177a9872c5f30ca262d",
+    "blockNumber": "89448946",
+    "revertedTxHash": null,
+    "winSide": "away",
+    "winSideContext": {
+      "side": "away",
+      "marketType": "moneyline",
+      "team": {
+        "name": "Chicago White Sox",
+        "alignment": "away"
+      },
+      "role": "underdog",
+      "display": "away (Chicago White Sox, underdog)",
+      "status": "complete",
+      "source": {
+        "team": "speculation-detail",
+        "role": "moneyline-odds"
+      }
+    },
+    "speculationId": "2"
+  }
+}

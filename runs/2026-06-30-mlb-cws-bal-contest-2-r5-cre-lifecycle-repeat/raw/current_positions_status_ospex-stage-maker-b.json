@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 2,
+  "ok": true,
+  "action": "positions.status",
+  "stage": "read",
+  "network": "polygon",
+  "chainId": 137,
+  "generatedAt": "2026-07-01T04:08:22.925Z",
+  "cliVersion": "0.8.0",
+  "sdkVersion": "0.8.0",
+  "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+  "walletRole": "subject",
+  "signer": null,
+  "requiresSignature": "[redacted-signature]",
+  "requiresTransaction": false,
+  "approvalRequirements": [],
+  "estimatedCosts": null,
+  "risk": null,
+  "payout": null,
+  "contest": null,
+  "speculation": null,
+  "commitment": null,
+  "sideSummary": null,
+  "warnings": [],
+  "errors": [],
+  "effects": [],
+  "nextCommands": [],
+  "payload": {
+    "active": [],
+    "pendingSettle": [],
+    "claimable": [],
+    "totals": {
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "estimatedPayoutUSDC": 0,
+      "estimatedPayoutWei6": "0",
+      "pendingSettlePayoutUSDC": 0,
+      "pendingSettlePayoutWei6": "0"
+    }
+  }
+}

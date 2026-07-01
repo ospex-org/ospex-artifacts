@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 2,
+  "ok": true,
+  "action": "claim-all",
+  "stage": "dry-run",
+  "network": "polygon",
+  "chainId": 137,
+  "generatedAt": "2026-07-01T04:09:38.389Z",
+  "cliVersion": "0.8.0",
+  "sdkVersion": "0.8.0",
+  "wallet": null,
+  "walletRole": "none",
+  "signer": null,
+  "requiresSignature": "[redacted-signature]",
+  "requiresTransaction": true,
+  "approvalRequirements": [],
+  "estimatedCosts": null,
+  "risk": null,
+  "payout": null,
+  "contest": null,
+  "speculation": null,
+  "commitment": null,
+  "sideSummary": null,
+  "warnings": [],
+  "errors": [],
+  "effects": [],
+  "nextCommands": [
+    {
+      "id": "complete-claim-all",
+      "description": "Execute the planned claim sweep.",
+      "suggestedFor": "complete",
+      "command": "ospex claim-all --address 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b --json",
+      "argv": [
+        "claim-all",
+        "--address",
+        "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "--json"
+      ],
+      "safeToAutoRun": false
+    }
+  ],
+  "payload": {
+    "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "dryRun": true,
+    "success": false,
+    "totals": {
+      "claimed": 0,
+      "failed": 0,
+      "claimedFresh": 0,
+      "alreadyClaimed": 0,
+      "recoveredAlreadyClaimed": 0,
+      "settledFresh": 0,
+      "alreadySettled": 0,
+      "recoveredAlreadySettled": 0,
+      "totalPayoutWei6": "0",
+      "totalPayoutUSDC": 0
+    },
+    "entries": []
+  }
+}

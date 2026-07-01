@@ -1,10 +1,11 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-06-30T05:32:38Z",
+  "generatedAt": "2026-07-01T06:04:40Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
+      "runs/2026-06-30-mlb-cws-bal-contest-2-r5-cre-lifecycle-repeat/evidence.json",
       "runs/2026-06-29-mlb-sf-az-contest-1-r5-cre-lifecycle-smoke/evidence.json",
       "runs/2026-06-19-mlb-wsh-tb-contest-51-v071-stage2a-repeat-capital-safety-canary/evidence.json",
       "runs/2026-06-19-mlb-tor-chc-contest-50-v071-stage2a-capital-safety-canary/evidence.json",
@@ -13,8 +14,7 @@
       "runs/2026-06-17-mlb-tor-bos-contest-46-v071-mm-repeatability-canary/evidence.json",
       "runs/2026-06-17-mlb-nym-cin-contest-44-v071-mm-live-canary/evidence.json",
       "runs/2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary/evidence.json",
-      "runs/2026-06-11-nhl-vgk-car-atl-cws-mm-alpha-multigame-rescue/evidence.json",
-      "runs/2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary/evidence.json"
+      "runs/2026-06-11-nhl-vgk-car-atl-cws-mm-alpha-multigame-rescue/evidence.json"
     ],
     "release-acceptance": [
       "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.json"
@@ -22,6 +22,17 @@
     "daily-digest": []
   },
   "recentArtifacts": [
+    {
+      "artifactId": "2026-06-30-mlb-cws-bal-contest-2-r5-cre-lifecycle-repeat",
+      "artifactType": "run",
+      "dataPath": "runs/2026-06-30-mlb-cws-bal-contest-2-r5-cre-lifecycle-repeat/evidence.json",
+      "date": "2026-06-30",
+      "network": "polygon",
+      "rawPath": "runs/2026-06-30-mlb-cws-bal-contest-2-r5-cre-lifecycle-repeat/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-06-30-mlb-cws-bal-contest-2-r5-cre-lifecycle-repeat/summary.md",
+      "publishedAt": "2026-07-01T06:04:40Z"
+    },
     {
       "artifactId": "2026-06-29-mlb-sf-az-contest-1-r5-cre-lifecycle-smoke",
       "artifactType": "run",
@@ -344,9 +355,9 @@
       "scope": "year",
       "year": 2026,
       "path": "archive/2026/index.json",
-      "artifactCount": 28,
+      "artifactCount": 29,
       "oldestPublishedAt": "2026-05-20T02:48:35Z",
-      "newestPublishedAt": "2026-06-30T05:32:38Z"
+      "newestPublishedAt": "2026-07-01T06:04:40Z"
     }
   ]
 }

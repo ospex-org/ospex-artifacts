@@ -1,0 +1,62 @@
+{
+  "generatedAt": "2026-07-01T04:08:24Z",
+  "transactions": [
+    {
+      "category": "create-contest",
+      "txHash": "0x8d779b0c8c13ab65aa9ce65ee4f5756285fff91eca267e27173253d6365391b9",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "create contest 2 for Chicago White Sox @ Baltimore Orioles",
+      "blockNumber": "89400799"
+    },
+    {
+      "category": "other",
+      "txHash": "0xe5b43015b8c33feb16011a606b4103cf559100fe3366710d32f515ecc30c0f39",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "request market update for contest 2",
+      "blockNumber": "89400814"
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0xd8fc81fa228d4b2b6fbef56e9546813ff210eaa68d6e275afc851c33e0834eda",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "controlled match/fill that lazily created moneyline speculation 2",
+      "blockNumber": "89400929"
+    },
+    {
+      "category": "score-request",
+      "txHash": "0xc3dd38ac986fa7ac4ec39add8cfc45e0e56ea984adb24ce1654bac5d43304945",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "first R5 CRE score request for contest 2; confirmed but did not produce callback before retry",
+      "blockNumber": "89442706",
+      "note": "First score request was confirmed, then later retried after official-final provider convergence because contest remained verified."
+    },
+    {
+      "category": "score-request",
+      "txHash": "0x979eb76ba0a39685e6cd6bede56ff9f0ffc6f5d90975a04003ca2b25797ea37e",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "second R5 CRE score request for contest 2; produced scored projection",
+      "blockNumber": "89448919"
+    },
+    {
+      "category": "settle",
+      "txHash": "0x6fd93bacfc0f50b40efedc88d8fc412b89de1fc9ff638177a9872c5f30ca262d",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "settle moneyline speculation 2 to away/upper",
+      "blockNumber": "89448946"
+    },
+    {
+      "category": "claim",
+      "txHash": "0xe713b2732b0e35f72afba4ea51c59272a17faf6d0bcb983a8ed5359edbb3b43d",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "claim winning upper/away position for controlled maker",
+      "blockNumber": "89449268"
+    }
+  ]
+}

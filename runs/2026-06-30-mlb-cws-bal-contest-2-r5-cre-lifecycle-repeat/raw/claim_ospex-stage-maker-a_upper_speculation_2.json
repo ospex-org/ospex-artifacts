@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 2,
+  "ok": true,
+  "action": "claim",
+  "stage": "execute",
+  "network": "polygon",
+  "chainId": 137,
+  "generatedAt": "2026-07-01T04:08:18.129Z",
+  "cliVersion": "0.8.0",
+  "sdkVersion": "0.8.0",
+  "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+  "walletRole": "signer",
+  "signer": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+  "requiresSignature": "[redacted-signature]",
+  "requiresTransaction": false,
+  "approvalRequirements": [],
+  "estimatedCosts": null,
+  "risk": null,
+  "payout": {
+    "profit": {
+      "wei6": "552500",
+      "usdc": "0.552500"
+    },
+    "totalReturn": {
+      "wei6": "552500",
+      "usdc": "0.552500"
+    }
+  },
+  "contest": null,
+  "speculation": null,
+  "commitment": null,
+  "sideSummary": null,
+  "warnings": [],
+  "errors": [],
+  "effects": [
+    {
+      "type": "transaction",
+      "purpose": "claim-position",
+      "ok": true,
+      "txHash": "0xe713b2732b0e35f72afba4ea51c59272a17faf6d0bcb983a8ed5359edbb3b43d",
+      "status": "confirmed",
+      "blockNumber": "89449268"
+    }
+  ],
+  "nextCommands": [
+    {
+      "id": "verify-position-status",
+      "description": "Verify position status after the claim / settle.",
+      "suggestedFor": "verify",
+      "command": "ospex positions status 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b --json",
+      "argv": [
+        "positions",
+        "status",
+        "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "--json"
+      ],
+      "safeToAutoRun": true
+    }
+  ],
+  "payload": {
+    "outcome": "claimed",
+    "txHash": "0xe713b2732b0e35f72afba4ea51c59272a17faf6d0bcb983a8ed5359edbb3b43d",
+    "blockNumber": "89449268",
+    "revertedTxHash": null,
+    "payoutWei6": "552500",
+    "payoutUSDC": 0.5525,
+    "speculationId": "2",
+    "positionType": 0,
+    "positionSideContext": {
+      "side": "away",
+      "marketType": "moneyline",
+      "team": {
+        "name": "Chicago White Sox",
+        "alignment": "away"
+      },
+      "role": "underdog",
+      "display": "away (Chicago White Sox, underdog)",
+      "status": "complete",
+      "source": {
+        "team": "speculation-detail",
+        "role": "moneyline-odds"
+      }
+    }
+  }
+}

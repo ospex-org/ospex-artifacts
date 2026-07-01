@@ -1,0 +1,13 @@
+{
+  "source": "MLB Stats API",
+  "capturedAtUtc": "2026-07-01T04:08:24Z",
+  "gamePk": 824819,
+  "gameDate": "2026-06-30T22:35:00Z",
+  "awayTeam": "Chicago White Sox",
+  "homeTeam": "Baltimore Orioles",
+  "status": "Final",
+  "statusCode": "F",
+  "awayRuns": 9,
+  "homeRuns": 3,
+  "final": true
+}

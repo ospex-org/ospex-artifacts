@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 2,
+  "ok": true,
+  "action": "contests.create",
+  "stage": "execute",
+  "network": "polygon",
+  "chainId": 137,
+  "generatedAt": "2026-06-30T07:56:33.767Z",
+  "cliVersion": "0.8.0",
+  "sdkVersion": "0.8.0",
+  "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+  "walletRole": "signer",
+  "signer": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+  "requiresSignature": "[redacted-signature]",
+  "requiresTransaction": false,
+  "approvalRequirements": [],
+  "estimatedCosts": null,
+  "risk": null,
+  "payout": null,
+  "contest": null,
+  "speculation": null,
+  "commitment": null,
+  "sideSummary": null,
+  "warnings": [],
+  "errors": [],
+  "effects": [
+    {
+      "type": "transaction",
+      "purpose": "create-contest",
+      "ok": true,
+      "txHash": "0x8d779b0c8c13ab65aa9ce65ee4f5756285fff91eca267e27173253d6365391b9",
+      "blockNumber": "89400799",
+      "status": "confirmed"
+    }
+  ],
+  "nextCommands": [
+    {
+      "id": "verify-contest",
+      "description": "Verify the contest detail (status, speculations, orderbook).",
+      "suggestedFor": "verify",
+      "command": "ospex contests show 2 --json",
+      "argv": [
+        "contests",
+        "show",
+        "2",
+        "--json"
+      ],
+      "safeToAutoRun": true
+    },
+    {
+      "id": "complete-contests-wait-verified",
+      "description": "Poll on-chain ContestModule.getContest until the contest reaches Verified.",
+      "suggestedFor": "complete",
+      "command": "ospex contests wait-verified 2 --json",
+      "argv": [
+        "contests",
+        "wait-verified",
+        "2",
+        "--json"
+      ],
+      "safeToAutoRun": false
+    }
+  ],
+  "payload": {
+    "contestId": "2",
+    "txHash": "0x8d779b0c8c13ab65aa9ce65ee4f5756285fff91eca267e27173253d6365391b9",
+    "status": "success",
+    "verification": null
+  }
+}
