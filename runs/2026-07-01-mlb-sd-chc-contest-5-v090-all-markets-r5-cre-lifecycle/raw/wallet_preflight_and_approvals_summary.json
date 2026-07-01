@@ -1,0 +1,39 @@
+{
+  "capturedAtUtc": "2026-07-01T16:39:00Z",
+  "roles": {
+    "controlledTaker": {
+      "address": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+      "profile": "ospex-flow-a"
+    },
+    "creatorMarketUpdateScoreOperator": {
+      "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "profile": "ospex-stage-maker-b"
+    },
+    "manualMaker": {
+      "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+      "profile": "ospex-stage-maker-a"
+    }
+  },
+  "boundedApprovals": {
+    "boundedOnly": true,
+    "caveat": "initial maker approval attempt timed out waiting for receipt; RPC receipt was null and allowances remained unchanged, so bounded retry succeeded",
+    "creatorFeeUSDC": "1.00",
+    "makerFeeUSDC": "1.00",
+    "makerRiskUSDC": "0.75",
+    "noUnlimitedApprovals": true,
+    "takerFeeUSDC": "1.00",
+    "takerRiskUSDC": "0.75"
+  },
+  "authChecks": {
+    "expectedAddressChecksUsed": true,
+    "profiles": [
+      "ospex-stage-maker-b",
+      "ospex-stage-maker-a",
+      "ospex-flow-a"
+    ]
+  },
+  "legacyFlowCheck": {
+    "oldFunctionsLinkFlowUsed": false,
+    "method": "R5/CRE CLI create/update/score command help scanned and live tx path used CreOracleReceiver commands."
+  }
+}

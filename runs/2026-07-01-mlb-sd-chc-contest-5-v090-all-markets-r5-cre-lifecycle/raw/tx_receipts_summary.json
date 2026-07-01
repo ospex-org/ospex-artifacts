@@ -1,0 +1,227 @@
+{
+  "network": "polygon",
+  "chainId": 137,
+  "transactions": [
+    {
+      "category": "create-contest",
+      "txHash": "0xa27b5b55c6790ac621819adb15b29378b1efc062b6c4875a353e3d4ebc9e780c",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "create contest 5 for San Diego Padres @ Chicago Cubs",
+      "role": "ospex-stage-maker-b",
+      "receipt": {
+        "transactionHash": "0xa27b5b55c6790ac621819adb15b29378b1efc062b6c4875a353e3d4ebc9e780c",
+        "blockNumber": "0x55559f9",
+        "status": "0x1",
+        "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "to": "0x06e3470012039797119ae30e1236169304f9220c",
+        "gasUsed": "0x58d5e",
+        "effectiveGasPrice": "0x42014f8b28"
+      }
+    },
+    {
+      "category": "other",
+      "txHash": "0x8239cc86e5f37c74c55c58b7663045f54e241db28b1ab4a8468fa6b761ced19a",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "request market update for contest 5",
+      "role": "ospex-stage-maker-b",
+      "receipt": {
+        "transactionHash": "0x8239cc86e5f37c74c55c58b7663045f54e241db28b1ab4a8468fa6b761ced19a",
+        "blockNumber": "0x5555a1d",
+        "status": "0x1",
+        "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "to": "0x06e3470012039797119ae30e1236169304f9220c",
+        "gasUsed": "0x1d868",
+        "effectiveGasPrice": "0x41812a60a6"
+      }
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0x22f4170ff96dce03d50bdd73767c7dc2abcc033f7179b0d1a6052fbba80549d6",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "controlled match/fill for moneyline speculation 7",
+      "role": "ospex-flow-a",
+      "receipt": {
+        "transactionHash": "0x22f4170ff96dce03d50bdd73767c7dc2abcc033f7179b0d1a6052fbba80549d6",
+        "blockNumber": "0x5555a63",
+        "status": "0x1",
+        "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "to": "0x46af20b6307aa0ec13de10ef58a02c5f1b5c9559",
+        "gasUsed": "0x9d4ce",
+        "effectiveGasPrice": "0x41778b0bfb"
+      }
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0x934a46c7f8665a36f8a751f830e18a48d07dea09a40c13e5162bc5d0ed34992e",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "controlled match/fill for spread speculation 8",
+      "role": "ospex-flow-a",
+      "receipt": {
+        "transactionHash": "0x934a46c7f8665a36f8a751f830e18a48d07dea09a40c13e5162bc5d0ed34992e",
+        "blockNumber": "0x5555a9f",
+        "status": "0x1",
+        "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "to": "0x46af20b6307aa0ec13de10ef58a02c5f1b5c9559",
+        "gasUsed": "0x9ea9a",
+        "effectiveGasPrice": "0x41dfdd7c00"
+      }
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0xe412f37fdf0e59ac10586cfad94e061525c9179ac64080a51f666a86f049dedb",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "controlled match/fill for total speculation 9",
+      "role": "ospex-flow-a",
+      "receipt": {
+        "transactionHash": "0xe412f37fdf0e59ac10586cfad94e061525c9179ac64080a51f666a86f049dedb",
+        "blockNumber": "0x5555ace",
+        "status": "0x1",
+        "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "to": "0x46af20b6307aa0ec13de10ef58a02c5f1b5c9559",
+        "gasUsed": "0x9eb5c",
+        "effectiveGasPrice": "0x40b2401a81"
+      }
+    },
+    {
+      "category": "score-request",
+      "txHash": "0xfcf9d669a02073ff03a0f399f93b5cbe846e9c5e3e5a8acd9ab20325f9e00d43",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "R5/CRE score request attempt 1 for contest 5",
+      "role": "ospex-stage-maker-b",
+      "receipt": {
+        "transactionHash": "0xfcf9d669a02073ff03a0f399f93b5cbe846e9c5e3e5a8acd9ab20325f9e00d43",
+        "blockNumber": "0x5558183",
+        "status": "0x1",
+        "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "to": "0x06e3470012039797119ae30e1236169304f9220c",
+        "gasUsed": "0x1ee67",
+        "effectiveGasPrice": "0x41a1bb739a"
+      }
+    },
+    {
+      "category": "score-request",
+      "txHash": "0xc7a4167c72ce8bffe9a035b51b04afa97d4f756855637dbb9327435dbc101d7a",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "R5/CRE score request attempt 2 for contest 5",
+      "role": "ospex-stage-maker-b",
+      "receipt": {
+        "transactionHash": "0xc7a4167c72ce8bffe9a035b51b04afa97d4f756855637dbb9327435dbc101d7a",
+        "blockNumber": "0x55586d2",
+        "status": "0x1",
+        "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "to": "0x06e3470012039797119ae30e1236169304f9220c",
+        "gasUsed": "0x1a0ab",
+        "effectiveGasPrice": "0x41b91fbe0c"
+      }
+    },
+    {
+      "category": "settle",
+      "txHash": "0x60d476c048b80dbd8124f5dd82fafbf25c6d8806eadbbeaa2707778a246eaa6c",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "settle speculation 7",
+      "role": "ospex-stage-maker-b",
+      "receipt": {
+        "transactionHash": "0x60d476c048b80dbd8124f5dd82fafbf25c6d8806eadbbeaa2707778a246eaa6c",
+        "blockNumber": "0x55586eb",
+        "status": "0x1",
+        "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "to": "0xea21b58e91edca41d0c42a8655234f8a64fa31bc",
+        "gasUsed": "0x21668",
+        "effectiveGasPrice": "0x4189435048"
+      }
+    },
+    {
+      "category": "settle",
+      "txHash": "0x4c3cbbe58e75d5660d813c6af93a4946b00b9b27f3706725bddf84854273acde",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "settle speculation 8",
+      "role": "ospex-stage-maker-b",
+      "receipt": {
+        "transactionHash": "0x4c3cbbe58e75d5660d813c6af93a4946b00b9b27f3706725bddf84854273acde",
+        "blockNumber": "0x55586f5",
+        "status": "0x1",
+        "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "to": "0xea21b58e91edca41d0c42a8655234f8a64fa31bc",
+        "gasUsed": "0x21778",
+        "effectiveGasPrice": "0x4152c589fd"
+      }
+    },
+    {
+      "category": "settle",
+      "txHash": "0x2ba826a74f71cf57c1237bf624212d1fcd18b3b60b9d534dd74a901e147c269c",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "settle speculation 9",
+      "role": "ospex-stage-maker-b",
+      "receipt": {
+        "transactionHash": "0x2ba826a74f71cf57c1237bf624212d1fcd18b3b60b9d534dd74a901e147c269c",
+        "blockNumber": "0x55586ff",
+        "status": "0x1",
+        "from": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "to": "0xea21b58e91edca41d0c42a8655234f8a64fa31bc",
+        "gasUsed": "0x216c8",
+        "effectiveGasPrice": "0x4095e34d68"
+      }
+    },
+    {
+      "category": "claim",
+      "txHash": "0xd19a2d99ddf5b38f81680a13f2e04b143ba66d14df8f1775aebe226cfa657e32",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "claim lower position for speculation 7",
+      "role": "ospex-flow-a",
+      "receipt": {
+        "transactionHash": "0xd19a2d99ddf5b38f81680a13f2e04b143ba66d14df8f1775aebe226cfa657e32",
+        "blockNumber": "0x5558709",
+        "status": "0x1",
+        "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "to": "0x3c71fdb8abf41487a512440e5ce6490158c26e56",
+        "gasUsed": "0x1f0c6",
+        "effectiveGasPrice": "0x415b2cdbdb"
+      }
+    },
+    {
+      "category": "claim",
+      "txHash": "0xc91b1787da42101959e285359924c2f3fb2f5ec9d5699cad0e676dc72b31b8c2",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "claim lower position for speculation 8",
+      "role": "ospex-stage-maker-a",
+      "receipt": {
+        "transactionHash": "0xc91b1787da42101959e285359924c2f3fb2f5ec9d5699cad0e676dc72b31b8c2",
+        "blockNumber": "0x555870c",
+        "status": "0x1",
+        "from": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "to": "0x3c71fdb8abf41487a512440e5ce6490158c26e56",
+        "gasUsed": "0x1f0c6",
+        "effectiveGasPrice": "0x40b05e971f"
+      }
+    },
+    {
+      "category": "claim",
+      "txHash": "0x964abd8c1fa06f103cab250260feb122a8c5f3767973e8bc7bd1a20e81fba1d6",
+      "status": "confirmed",
+      "operatorControlled": true,
+      "purpose": "claim upper position for speculation 9",
+      "role": "ospex-stage-maker-a",
+      "receipt": {
+        "transactionHash": "0x964abd8c1fa06f103cab250260feb122a8c5f3767973e8bc7bd1a20e81fba1d6",
+        "blockNumber": "0x555870f",
+        "status": "0x1",
+        "from": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "to": "0x3c71fdb8abf41487a512440e5ce6490158c26e56",
+        "gasUsed": "0x1f04f",
+        "effectiveGasPrice": "0x421dfe3296"
+      }
+    }
+  ]
+}

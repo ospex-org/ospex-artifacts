@@ -1,0 +1,33 @@
+{
+  "capturedAtUtc": "2026-07-01T16:34:00Z",
+  "sdkCli": {
+    "version": "0.9.0",
+    "repo": "ospex-sdk",
+    "head": "fd55bd1e7de0",
+    "expectedAtOrAfter": "fd55bd1"
+  },
+  "marketMaker": {
+    "repo": "ospex-market-maker",
+    "head": "e89eecbd4b53",
+    "installedSdkVersion": "0.9.0",
+    "typecheck": "pass",
+    "test": "pass",
+    "build": "pass",
+    "expectedAtOrAfter": "e89eecb"
+  },
+  "ancillaryRepos": {
+    "ospex-core-api": {
+      "head": "076f44d428fc",
+      "expectedAtOrAfter": "076f44d"
+    },
+    "ospex-indexer": {
+      "head": "75be9e76965b",
+      "expectedAtOrAfter": "75be9e7"
+    },
+    "ospex-cre": {
+      "head": "fed6e26e27e5",
+      "expectedAtOrAfter": "fed6e26"
+    }
+  },
+  "noLegacyVersionObserved": true
+}

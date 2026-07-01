@@ -1,0 +1,23 @@
+{
+  "role": "ospex-stage-maker-a",
+  "address": "",
+  "contestId": "5",
+  "active": [],
+  "pendingSettle": [],
+  "claimable": [],
+  "totalsForContest": {
+    "activeCount": 0,
+    "pendingSettleCount": 0,
+    "claimableCount": 0
+  },
+  "globalTotalsObserved": {
+    "activeCount": 1,
+    "claimableCount": 0,
+    "estimatedPayoutUSDC": 0,
+    "estimatedPayoutWei6": "0",
+    "pendingSettleCount": 0,
+    "pendingSettlePayoutUSDC": 0,
+    "pendingSettlePayoutWei6": "0"
+  },
+  "note": "Rows are filtered to contest 5; global totals are included only to show other runs may exist on the same wallets."
+}

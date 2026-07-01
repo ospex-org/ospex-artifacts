@@ -1,0 +1,24 @@
+{
+  "awayLine": 1.5,
+  "contest": {
+    "awayTeam": "San Diego Padres",
+    "awayTeamId": "f65196e3-2647-4d71-9914-dd17e7a90f1c",
+    "contestId": "5",
+    "homeTeam": "Chicago Cubs",
+    "homeTeamId": "0e70b859-7c72-44b5-9359-ca6ec48a664a",
+    "matchTime": "2026-07-01T18:20:00+00:00",
+    "sport": "mlb",
+    "status": "scored"
+  },
+  "contestId": "5",
+  "homeLine": -1.5,
+  "line": 1.5,
+  "lineTicks": 15,
+  "orderbook": [],
+  "settledAt": "2026-07-01T21:36:19+00:00",
+  "speculationId": "8",
+  "speculationStatus": 1,
+  "type": "spread",
+  "voided": false,
+  "winSide": "home"
+}

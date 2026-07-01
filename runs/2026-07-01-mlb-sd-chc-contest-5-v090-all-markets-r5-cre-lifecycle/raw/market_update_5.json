@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 2,
+  "ok": true,
+  "action": "contests.update-markets",
+  "stage": "execute",
+  "network": "polygon",
+  "chainId": 137,
+  "generatedAt": "2026-07-01T16:49:19.581Z",
+  "cliVersion": "0.9.0",
+  "sdkVersion": "0.9.0",
+  "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+  "walletRole": "signer",
+  "signer": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+  "requiresSignature": false,
+  "requiresTransaction": false,
+  "warnings": [],
+  "errors": [],
+  "effects": [
+    {
+      "type": "transaction",
+      "purpose": "market-update-contest",
+      "ok": true,
+      "txHash": "0x8239cc86e5f37c74c55c58b7663045f54e241db28b1ab4a8468fa6b761ced19a",
+      "blockNumber": "89479709",
+      "status": "confirmed"
+    }
+  ],
+  "payload": {
+    "contestId": "5",
+    "requestNonce": "1",
+    "txHash": "0x8239cc86e5f37c74c55c58b7663045f54e241db28b1ab4a8468fa6b761ced19a",
+    "status": "success"
+  }
+}

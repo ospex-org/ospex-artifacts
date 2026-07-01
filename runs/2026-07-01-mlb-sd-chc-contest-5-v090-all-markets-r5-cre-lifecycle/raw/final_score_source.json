@@ -1,0 +1,9 @@
+{
+  "source": "MLB Stats API",
+  "gamePk": 824660,
+  "awayTeam": "San Diego Padres",
+  "awayRuns": 3,
+  "homeTeam": "Chicago Cubs",
+  "homeRuns": 23,
+  "status": "Final"
+}

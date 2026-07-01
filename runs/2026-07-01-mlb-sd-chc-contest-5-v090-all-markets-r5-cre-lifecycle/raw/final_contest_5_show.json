@@ -1,0 +1,62 @@
+{
+  "awayScore": 3,
+  "awayTeam": "San Diego Padres",
+  "awayTeamId": "f65196e3-2647-4d71-9914-dd17e7a90f1c",
+  "contestCreatedAt": "2026-07-01T16:48:25+00:00",
+  "contestCreator": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+  "contestId": "5",
+  "homeScore": 23,
+  "homeTeam": "Chicago Cubs",
+  "homeTeamId": "0e70b859-7c72-44b5-9359-ca6ec48a664a",
+  "jsonoddsId": "4c765045-0786-4c12-a5e7-e2bc28412f7f",
+  "leagueId": "mlb",
+  "matchTime": "2026-07-01T18:20:00+00:00",
+  "rundownId": "7487107c6cabb1f19a430629d31a60a5",
+  "scoredAt": "2026-07-01T21:35:47+00:00",
+  "speculations": [
+    {
+      "contestId": "5",
+      "line": null,
+      "lineTicks": 0,
+      "orderbook": [],
+      "settledAt": "2026-07-01T21:36:04+00:00",
+      "speculationId": "7",
+      "speculationStatus": 1,
+      "type": "moneyline",
+      "voided": false,
+      "winSide": "home"
+    },
+    {
+      "awayLine": 1.5,
+      "contestId": "5",
+      "homeLine": -1.5,
+      "line": 1.5,
+      "lineTicks": 15,
+      "orderbook": [],
+      "settledAt": "2026-07-01T21:36:19+00:00",
+      "speculationId": "8",
+      "speculationStatus": 1,
+      "type": "spread",
+      "voided": false,
+      "winSide": "home"
+    },
+    {
+      "contestId": "5",
+      "line": 12,
+      "lineTicks": 120,
+      "orderbook": [],
+      "settledAt": "2026-07-01T21:36:34+00:00",
+      "speculationId": "9",
+      "speculationStatus": 1,
+      "type": "total",
+      "voided": false,
+      "winSide": "over"
+    }
+  ],
+  "sport": "mlb",
+  "sportId": 0,
+  "sportspageId": "337268",
+  "status": "scored",
+  "verifiedAt": "2026-07-01T16:48:40+00:00",
+  "voidedAt": null
+}

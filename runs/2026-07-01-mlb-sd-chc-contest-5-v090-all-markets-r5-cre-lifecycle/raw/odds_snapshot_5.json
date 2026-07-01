@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 2,
+  "capturedAtUtc": "2026-07-01T16:49:13.191+00:00",
+  "contest": {
+    "contestId": "5",
+    "awayTeam": "San Diego Padres",
+    "homeTeam": "Chicago Cubs",
+    "sport": "mlb",
+    "matchTime": "2026-07-01T18:20:00+00:00",
+    "jsonoddsId": "4c765045-0786-4c12-a5e7-e2bc28412f7f"
+  },
+  "odds": {
+    "moneyline": {
+      "market": "moneyline",
+      "awayOddsAmerican": 106,
+      "homeOddsAmerican": -120,
+      "upstreamLastUpdated": "2026-07-01T16:42:31+00:00",
+      "pollCapturedAt": "2026-07-01T16:49:13.191+00:00",
+      "changedAt": "2026-07-01T16:25:12.742+00:00"
+    },
+    "spread": {
+      "market": "spread",
+      "awayLine": 1.5,
+      "homeLine": -1.5,
+      "awayOddsAmerican": -175,
+      "homeOddsAmerican": 151,
+      "upstreamLastUpdated": "2026-07-01T16:42:31+00:00",
+      "pollCapturedAt": "2026-07-01T16:49:13.28+00:00",
+      "changedAt": "2026-07-01T16:25:12.872+00:00"
+    },
+    "total": {
+      "market": "total",
+      "line": 12,
+      "overOddsAmerican": -110,
+      "underOddsAmerican": -110,
+      "upstreamLastUpdated": "2026-07-01T16:42:31+00:00",
+      "pollCapturedAt": "2026-07-01T16:49:13.361+00:00",
+      "changedAt": "2026-07-01T13:00:03.96+00:00"
+    }
+  },
+  "oddsLabeling": "Reference/upstream odds snapshot; public artifact intentionally avoids naming a specific odds provider."
+}

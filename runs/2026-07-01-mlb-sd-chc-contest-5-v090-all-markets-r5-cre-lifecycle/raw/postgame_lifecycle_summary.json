@@ -1,0 +1,169 @@
+{
+  "officialFinal": {
+    "source": "MLB Stats API",
+    "gamePk": 824660,
+    "awayTeam": "San Diego Padres",
+    "awayRuns": 3,
+    "homeTeam": "Chicago Cubs",
+    "homeRuns": 23,
+    "status": "Final"
+  },
+  "score": {
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reason": "no prior score request",
+        "requestedAt": "2026-07-01T21:01:28Z",
+        "txHashes": [
+          "0xfcf9d669a02073ff03a0f399f93b5cbe846e9c5e3e5a8acd9ab20325f9e00d43"
+        ]
+      },
+      {
+        "attempt": 2,
+        "ok": true,
+        "reason": "callback pending; retry after 2035s",
+        "requestedAt": "2026-07-01T21:35:26Z",
+        "txHashes": [
+          "0xc7a4167c72ce8bffe9a035b51b04afa97d4f756855637dbb9327435dbc101d7a"
+        ]
+      }
+    ],
+    "contestStatus": "scored",
+    "awayScore": 3,
+    "homeScore": 23,
+    "scoredAt": "2026-07-01T21:35:47+00:00",
+    "retryCaveat": "First confirmed score request did not produce a callback before bounded retry; second request produced scored projection."
+  },
+  "settles": {
+    "7": {
+      "at": "2026-07-01T21:36:04Z",
+      "ok": true,
+      "txHashes": [
+        "0x60d476c048b80dbd8124f5dd82fafbf25c6d8806eadbbeaa2707778a246eaa6c"
+      ]
+    },
+    "8": {
+      "at": "2026-07-01T21:36:20Z",
+      "ok": true,
+      "txHashes": [
+        "0x4c3cbbe58e75d5660d813c6af93a4946b00b9b27f3706725bddf84854273acde"
+      ]
+    },
+    "9": {
+      "at": "2026-07-01T21:36:35Z",
+      "ok": true,
+      "txHashes": [
+        "0x2ba826a74f71cf57c1237bf624212d1fcd18b3b60b9d534dd74a901e147c269c"
+      ]
+    }
+  },
+  "claims": {
+    "7": {
+      "at": "2026-07-01T21:36:50Z",
+      "ok": true,
+      "reason": "moneyline Chicago home",
+      "txHashes": [
+        "0xd19a2d99ddf5b38f81680a13f2e04b143ba66d14df8f1775aebe226cfa657e32"
+      ]
+    },
+    "8": {
+      "at": "2026-07-01T21:36:53Z",
+      "ok": true,
+      "reason": "spread Chicago -1.5",
+      "txHashes": [
+        "0xc91b1787da42101959e285359924c2f3fb2f5ec9d5699cad0e676dc72b31b8c2"
+      ]
+    },
+    "9": {
+      "at": "2026-07-01T21:36:59Z",
+      "ok": true,
+      "reason": "total over 12",
+      "txHashes": [
+        "0x964abd8c1fa06f103cab250260feb122a8c5f3767973e8bc7bd1a20e81fba1d6"
+      ]
+    }
+  },
+  "claimPlan": [
+    [
+      "7",
+      "ospex-flow-a",
+      "lower",
+      "moneyline Chicago home"
+    ],
+    [
+      "8",
+      "ospex-stage-maker-a",
+      "lower",
+      "spread Chicago -1.5"
+    ],
+    [
+      "9",
+      "ospex-stage-maker-a",
+      "upper",
+      "total over 12"
+    ]
+  ],
+  "finalZeroState": {
+    "openCommitments": 0,
+    "openCommitmentsBySpec": {
+      "7": 0,
+      "8": 0,
+      "9": 0
+    },
+    "positions": {
+      "ospex-stage-maker-a": {
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "contest5": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0
+        },
+        "globalTotals": {
+          "activeCount": 1,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettleCount": 0,
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      },
+      "ospex-flow-a": {
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "contest5": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0
+        },
+        "globalTotals": {
+          "activeCount": 1,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettleCount": 0,
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      },
+      "ospex-stage-maker-b": {
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "contest5": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0
+        },
+        "globalTotals": {
+          "activeCount": 1,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettleCount": 0,
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      }
+    }
+  },
+  "verdict": "V090_ALL_MARKETS_POSTGAME_GREEN"
+}
