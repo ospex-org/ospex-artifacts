@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "ok": true,
+  "action": "contests.wait-verified",
+  "stage": "read",
+  "network": "polygon",
+  "chainId": 137,
+  "generatedAt": "2026-06-30T07:56:52.366Z",
+  "cliVersion": "0.8.0",
+  "sdkVersion": "0.8.0",
+  "wallet": null,
+  "walletRole": "none",
+  "signer": null,
+  "requiresSignature": "[redacted-signature]",
+  "requiresTransaction": false,
+  "approvalRequirements": [],
+  "estimatedCosts": null,
+  "risk": null,
+  "payout": null,
+  "contest": null,
+  "speculation": null,
+  "commitment": null,
+  "sideSummary": null,
+  "warnings": [],
+  "errors": [],
+  "effects": [],
+  "nextCommands": [],
+  "payload": {
+    "contestId": "2",
+    "status": "verified"
+  }
+}

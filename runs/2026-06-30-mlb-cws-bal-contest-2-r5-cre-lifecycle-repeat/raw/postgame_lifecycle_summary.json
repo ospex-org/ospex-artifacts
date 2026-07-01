@@ -1,0 +1,337 @@
+{
+  "generatedAt": "2026-07-01T04:08:24Z",
+  "mlb": {
+    "gamePk": 824819,
+    "away": "Chicago White Sox",
+    "home": "Baltimore Orioles",
+    "gameDate": "2026-06-30T22:35:00Z",
+    "abstractGameState": "Final",
+    "detailedState": "Final",
+    "statusCode": "F",
+    "awayRuns": 9,
+    "homeRuns": 3,
+    "final": true
+  },
+  "contestId": "2",
+  "speculationId": "2",
+  "profiles": {
+    "maker": {
+      "profile": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "side": "Chicago White Sox"
+    },
+    "taker": {
+      "profile": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "side": "Baltimore Orioles"
+    },
+    "creator": {
+      "profile": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    },
+    "scoreOperator": {
+      "profile": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    }
+  },
+  "officialFinalScore": {
+    "awayTeam": "Chicago White Sox",
+    "awayRuns": 9,
+    "homeTeam": "Baltimore Orioles",
+    "homeRuns": 3,
+    "gamePk": 824819,
+    "status": "Final"
+  },
+  "score": {
+    "txHash": "0x979eb76ba0a39685e6cd6bede56ff9f0ffc6f5d90975a04003ca2b25797ea37e",
+    "effects": [],
+    "polls": [
+      {
+        "poll": 1,
+        "status": "scored",
+        "scoredAt": "2026-07-01T03:59:49+00:00",
+        "awayScore": 9,
+        "homeScore": 3
+      }
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "txHash": "0xc3dd38ac986fa7ac4ec39add8cfc45e0e56ea984adb24ce1654bac5d43304945",
+        "requestedAt": "2026-07-01T01:24:14.161Z",
+        "source": "legacy-state"
+      },
+      {
+        "attempt": 2,
+        "txHash": "0x979eb76ba0a39685e6cd6bede56ff9f0ffc6f5d90975a04003ca2b25797ea37e",
+        "requestedAt": "2026-07-01T03:59:34Z",
+        "reason": "last score request is 9315s old",
+        "ok": true
+      }
+    ]
+  },
+  "settle": {
+    "txHash": "0x6fd93bacfc0f50b40efedc88d8fc412b89de1fc9ff638177a9872c5f30ca262d",
+    "effects": [],
+    "polls": [
+      {
+        "poll": 1,
+        "settledAt": null,
+        "winSide": null,
+        "speculationStatus": 1
+      }
+    ],
+    "settledSpeculation": {
+      "speculationId": "2",
+      "contestId": "2",
+      "type": "moneyline",
+      "lineTicks": 0,
+      "settledAt": null,
+      "winSide": null,
+      "speculationStatus": 1
+    }
+  },
+  "claim": {
+    "txHash": "0xe713b2732b0e35f72afba4ea51c59272a17faf6d0bcb983a8ed5359edbb3b43d",
+    "effects": [
+      {
+        "purpose": "claim-position",
+        "ok": true,
+        "txHash": "0xe713b2732b0e35f72afba4ea51c59272a17faf6d0bcb983a8ed5359edbb3b43d",
+        "blockNumber": "89449268",
+        "status": "confirmed"
+      }
+    ],
+    "profile": "ospex-stage-maker-a",
+    "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "type": "upper",
+    "payout": {
+      "profit": {
+        "wei6": "552500",
+        "usdc": "0.552500"
+      },
+      "totalReturn": {
+        "wei6": "552500",
+        "usdc": "0.552500"
+      }
+    }
+  },
+  "winningSideMapping": {
+    "officialWinner": "Chicago White Sox",
+    "winnerRole": "away",
+    "protocolSide": "upper",
+    "claimType": "upper",
+    "claimProfile": "ospex-stage-maker-a",
+    "claimAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "mapping": "Chicago White Sox away/upper -> maker (ospex-stage-maker-a)",
+    "makerSide": "Chicago White Sox",
+    "takerSide": "Baltimore Orioles"
+  },
+  "payout": {
+    "profit": {
+      "wei6": "552500",
+      "usdc": "0.552500"
+    },
+    "totalReturn": {
+      "wei6": "552500",
+      "usdc": "0.552500"
+    }
+  },
+  "finalReadOnlyState": {
+    "contest": {
+      "contestId": "2",
+      "awayTeam": "Chicago White Sox",
+      "homeTeam": "Baltimore Orioles",
+      "sport": "mlb",
+      "sportId": 0,
+      "matchTime": "2026-06-30T22:35:00+00:00",
+      "status": "scored",
+      "speculations": [
+        {
+          "speculationId": "2",
+          "contestId": "2",
+          "type": "moneyline",
+          "lineTicks": 0,
+          "line": null,
+          "speculationStatus": 1,
+          "orderbook": []
+        }
+      ],
+      "jsonoddsId": "3ba71f62-0c5d-4f76-bd95-d05024c96c24",
+      "rundownId": "087bc1224fc004ea6f72c3a2177092d7",
+      "sportspageId": "337265",
+      "contestCreator": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "leagueId": "mlb",
+      "awayScore": 9,
+      "homeScore": 3,
+      "contestCreatedAt": "2026-06-30T07:56:34+00:00",
+      "verifiedAt": "2026-06-30T07:56:49+00:00",
+      "scoredAt": "2026-07-01T03:59:49+00:00",
+      "voidedAt": null,
+      "awayTeamId": "07f8ab7c-83e9-4e76-8f17-1e80f238890a",
+      "homeTeamId": "0c8091ee-0c12-4dba-b9f5-ac5cdd55bbe9"
+    },
+    "speculation": {
+      "speculationId": "2",
+      "contestId": "2",
+      "type": "moneyline",
+      "lineTicks": 0,
+      "line": null,
+      "speculationStatus": 1,
+      "orderbook": [],
+      "contest": {
+        "contestId": "2",
+        "awayTeam": "Chicago White Sox",
+        "homeTeam": "Baltimore Orioles",
+        "awayTeamId": "07f8ab7c-83e9-4e76-8f17-1e80f238890a",
+        "homeTeamId": "0c8091ee-0c12-4dba-b9f5-ac5cdd55bbe9",
+        "sport": "mlb",
+        "matchTime": "2026-06-30T22:35:00+00:00",
+        "status": "scored"
+      }
+    },
+    "commitments": {
+      "contestOpenCount": 0,
+      "speculationOpenCount": 0,
+      "openByControlledMaker": {
+        "ospex-stage-maker-a": 0,
+        "ospex-flow-a": 0,
+        "ospex-stage-maker-b": 0
+      },
+      "contestRows": [],
+      "speculationRows": []
+    },
+    "positions": {
+      "ospex-stage-maker-a": {
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "totals": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        },
+        "raw": {
+          "active": [],
+          "pendingSettle": [],
+          "claimable": [],
+          "totals": {
+            "activeCount": 0,
+            "pendingSettleCount": 0,
+            "claimableCount": 0,
+            "estimatedPayoutUSDC": 0,
+            "estimatedPayoutWei6": "0",
+            "pendingSettlePayoutUSDC": 0,
+            "pendingSettlePayoutWei6": "0"
+          }
+        }
+      },
+      "ospex-flow-a": {
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "totals": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        },
+        "raw": {
+          "active": [],
+          "pendingSettle": [],
+          "claimable": [],
+          "totals": {
+            "activeCount": 0,
+            "pendingSettleCount": 0,
+            "claimableCount": 0,
+            "estimatedPayoutUSDC": 0,
+            "estimatedPayoutWei6": "0",
+            "pendingSettlePayoutUSDC": 0,
+            "pendingSettlePayoutWei6": "0"
+          }
+        }
+      },
+      "ospex-stage-maker-b": {
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "totals": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        },
+        "raw": {
+          "active": [],
+          "pendingSettle": [],
+          "claimable": [],
+          "totals": {
+            "activeCount": 0,
+            "pendingSettleCount": 0,
+            "claimableCount": 0,
+            "estimatedPayoutUSDC": 0,
+            "estimatedPayoutWei6": "0",
+            "pendingSettlePayoutUSDC": 0,
+            "pendingSettlePayoutWei6": "0"
+          }
+        }
+      }
+    }
+  },
+  "projectionConvergencePolls": [
+    {
+      "poll": 1,
+      "clean": true,
+      "positions": {
+        "ospex-stage-maker-a": {
+          "active": 0,
+          "pendingSettle": 0,
+          "claimable": 0
+        },
+        "ospex-flow-a": {
+          "active": 0,
+          "pendingSettle": 0,
+          "claimable": 0
+        },
+        "ospex-stage-maker-b": {
+          "active": 0,
+          "pendingSettle": 0,
+          "claimable": 0
+        }
+      },
+      "commitments": {
+        "contestOpen": 0,
+        "speculationOpen": 0,
+        "openByControlledMaker": {
+          "ospex-stage-maker-a": 0,
+          "ospex-flow-a": 0,
+          "ospex-stage-maker-b": 0
+        }
+      }
+    }
+  ],
+  "gate": {
+    "mlbFinal": true,
+    "scoreMatchesMlb": true,
+    "scoreTxKnownOrAlreadyScored": true,
+    "settleTxKnownOrAlreadySettled": true,
+    "claimTxKnownOrAlreadyClaimed": true,
+    "projectionClean": true,
+    "orderbookClean": true,
+    "positionsClean": true,
+    "overallPostgameGreen": true
+  }
+}

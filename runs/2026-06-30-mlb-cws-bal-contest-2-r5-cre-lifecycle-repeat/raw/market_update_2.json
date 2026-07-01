@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "ok": true,
+  "action": "contests.update-markets",
+  "stage": "execute",
+  "network": "polygon",
+  "chainId": 137,
+  "generatedAt": "2026-06-30T07:56:56.595Z",
+  "cliVersion": "0.8.0",
+  "sdkVersion": "0.8.0",
+  "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+  "walletRole": "signer",
+  "signer": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+  "requiresSignature": "[redacted-signature]",
+  "requiresTransaction": false,
+  "approvalRequirements": [],
+  "estimatedCosts": null,
+  "risk": null,
+  "payout": null,
+  "contest": null,
+  "speculation": null,
+  "commitment": null,
+  "sideSummary": null,
+  "warnings": [],
+  "errors": [],
+  "effects": [
+    {
+      "type": "transaction",
+      "purpose": "market-update-contest",
+      "ok": true,
+      "txHash": "0xe5b43015b8c33feb16011a606b4103cf559100fe3366710d32f515ecc30c0f39",
+      "blockNumber": "89400814",
+      "status": "confirmed"
+    }
+  ],
+  "nextCommands": [
+    {
+      "id": "verify-contest-odds",
+      "description": "Verify the refreshed upstream reference odds for the contest.",
+      "suggestedFor": "verify",
+      "command": "ospex odds show 2 --json",
+      "argv": [
+        "odds",
+        "show",
+        "2",
+        "--json"
+      ],
+      "safeToAutoRun": true
+    }
+  ],
+  "payload": {
+    "contestId": "2",
+    "requestNonce": "1",
+    "txHash": "0xe5b43015b8c33feb16011a606b4103cf559100fe3366710d32f515ecc30c0f39",
+    "status": "success"
+  }
+}

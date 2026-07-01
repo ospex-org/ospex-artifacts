@@ -1,0 +1,63 @@
+{
+  "generatedAt": "2026-06-30T08:01:03Z",
+  "contestStatus": "verified",
+  "contestId": "2",
+  "jsonoddsId": "3ba71f62-0c5d-4f76-bd95-d05024c96c24",
+  "speculationsCount": 1,
+  "speculationId": "2",
+  "speculationType": "moneyline",
+  "openCommitmentsForContest": 0,
+  "positions": {
+    "maker": {
+      "active": 1,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "totals": {
+        "activeCount": 1,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      }
+    },
+    "taker": {
+      "active": 1,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "totals": {
+        "activeCount": 1,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      }
+    },
+    "creator": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      }
+    }
+  },
+  "gate": {
+    "contestVerified": true,
+    "exactlyOneMoneylineSpeculation": true,
+    "noOpenCommitments": true,
+    "makerActiveOne": true,
+    "takerActiveOne": true,
+    "creatorActiveZero": true,
+    "finalVerifyOk": true
+  }
+}

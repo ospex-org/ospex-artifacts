@@ -1,0 +1,32 @@
+[
+  {
+    "poll": 1,
+    "clean": true,
+    "positions": {
+      "ospex-stage-maker-a": {
+        "active": 0,
+        "pendingSettle": 0,
+        "claimable": 0
+      },
+      "ospex-flow-a": {
+        "active": 0,
+        "pendingSettle": 0,
+        "claimable": 0
+      },
+      "ospex-stage-maker-b": {
+        "active": 0,
+        "pendingSettle": 0,
+        "claimable": 0
+      }
+    },
+    "commitments": {
+      "contestOpen": 0,
+      "speculationOpen": 0,
+      "openByControlledMaker": {
+        "ospex-stage-maker-a": 0,
+        "ospex-flow-a": 0,
+        "ospex-stage-maker-b": 0
+      }
+    }
+  }
+]

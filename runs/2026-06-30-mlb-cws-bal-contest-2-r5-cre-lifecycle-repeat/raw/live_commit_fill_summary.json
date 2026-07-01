@@ -1,0 +1,390 @@
+{
+  "generatedAt": "2026-06-30T08:00:15Z",
+  "selectedGame": {
+    "label": "primary",
+    "gameId": "3ba71f62-0c5d-4f76-bd95-d05024c96c24",
+    "awayTeam": "Chicago White Sox",
+    "homeTeam": "Baltimore Orioles",
+    "matchTime": "2026-06-30T22:35:00+00:00",
+    "scheduledET": "2026-06-30 18:35 ET"
+  },
+  "profiles": {
+    "creator": {
+      "profile": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    },
+    "marketOperator": {
+      "profile": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    },
+    "maker": {
+      "profile": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    "taker": {
+      "profile": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    }
+  },
+  "contestId": "2",
+  "speculationId": "2",
+  "market": {
+    "type": "moneyline",
+    "side": "Chicago White Sox",
+    "sideRole": "away",
+    "makerOddsAmerican": "+121",
+    "makerRiskUSDC": "0.25",
+    "takerRiskEstimateUSDC": "0.30",
+    "oddsSnapshot": {
+      "market": "moneyline",
+      "awayOddsAmerican": 121,
+      "homeOddsAmerican": -139,
+      "upstreamLastUpdated": "2026-06-30T07:53:17+00:00",
+      "pollCapturedAt": "2026-06-30T07:59:06.122+00:00",
+      "changedAt": "2026-06-30T07:35:05.151+00:00"
+    },
+    "makerRiskWei6": "250000",
+    "takerRiskWei6": "302500"
+  },
+  "contestCreate": {
+    "txHash": "0x8d779b0c8c13ab65aa9ce65ee4f5756285fff91eca267e27173253d6365391b9",
+    "effects": [
+      {
+        "purpose": "create-contest",
+        "ok": true,
+        "txHash": "0x8d779b0c8c13ab65aa9ce65ee4f5756285fff91eca267e27173253d6365391b9",
+        "blockNumber": "89400799",
+        "status": "confirmed"
+      }
+    ],
+    "receipt": {
+      "status": "0x1",
+      "blockNumber": "0x55425df",
+      "gasUsed": "0x58d5e",
+      "transactionHash": "0x8d779b0c8c13ab65aa9ce65ee4f5756285fff91eca267e27173253d6365391b9"
+    },
+    "envelopeOk": true
+  },
+  "verification": {
+    "waitPayload": {
+      "contestId": "2",
+      "status": "verified"
+    },
+    "contestStatusAfterVerify": "verified",
+    "verified": true
+  },
+  "marketUpdate": {
+    "txHash": "0xe5b43015b8c33feb16011a606b4103cf559100fe3366710d32f515ecc30c0f39",
+    "effects": [
+      {
+        "purpose": "market-update-contest",
+        "ok": true,
+        "txHash": "0xe5b43015b8c33feb16011a606b4103cf559100fe3366710d32f515ecc30c0f39",
+        "blockNumber": "89400814",
+        "status": "confirmed"
+      }
+    ],
+    "receipt": {
+      "status": "0x1",
+      "blockNumber": "0x55425ee",
+      "gasUsed": "0x1d868",
+      "transactionHash": "0xe5b43015b8c33feb16011a606b4103cf559100fe3366710d32f515ecc30c0f39"
+    },
+    "oddsVisible": true
+  },
+  "commitment": {
+    "hash": "0xd9715b7e7300ad559014e5ca92878fe7ff28dfbe83d41d9dcf12e3987372f088",
+    "submitOk": true,
+    "submitStage": "execute",
+    "submitRisk": {
+      "wei6": "250000",
+      "usdc": "0.250000"
+    },
+    "creationFee": {
+      "applies": true,
+      "condition": "if-first-match-at-execution",
+      "totalFeeWei6": "500000",
+      "totalFeeUSDC": "0.500000",
+      "takerShareWei6": "250000",
+      "takerShareUSDC": "0.250000",
+      "makerShareWei6": "250000",
+      "makerShareUSDC": "0.250000",
+      "viewerShareWei6": "250000",
+      "viewerShareUSDC": "0.250000",
+      "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C",
+      "spenderLabel": "TreasuryModule",
+      "approvalPurpose": "lazy-creation-fee",
+      "approvalNeeded": false,
+      "note": "Lazy creation: 0.500000 USDC fee split 50/50 \u2014 you pay 0.250000 USDC, counterparty pays 0.250000 USDC to TreasuryModule, IF this tx is still the first match at execution time."
+    },
+    "fillability": {
+      "commitmentHash": "0xd9715b7e7300ad559014e5ca92878fe7ff28dfbe83d41d9dcf12e3987372f088",
+      "fillableNow": true,
+      "outcome": "fillable",
+      "advisory": true,
+      "reasons": [],
+      "checkedAtBlock": "89400923",
+      "fill": {
+        "makerRiskWei6": "250000",
+        "takerRiskWei6": "302500",
+        "selfMatch": false
+      }
+    }
+  },
+  "match": {
+    "txHash": "0xd8fc81fa228d4b2b6fbef56e9546813ff210eaa68d6e275afc851c33e0834eda",
+    "effects": [
+      {
+        "purpose": "match-commitment",
+        "ok": true,
+        "txHash": "0xd8fc81fa228d4b2b6fbef56e9546813ff210eaa68d6e275afc851c33e0834eda",
+        "blockNumber": "89400929",
+        "status": "confirmed"
+      }
+    ],
+    "receipt": {
+      "status": "0x1",
+      "blockNumber": "0x5542661",
+      "gasUsed": "0xa1ae2",
+      "transactionHash": "0xd8fc81fa228d4b2b6fbef56e9546813ff210eaa68d6e275afc851c33e0834eda"
+    },
+    "ok": true,
+    "risk": {
+      "wei6": "302500",
+      "usdc": "0.302500"
+    },
+    "payout": {
+      "profit": {
+        "wei6": "250000",
+        "usdc": "0.250000"
+      },
+      "totalReturn": {
+        "wei6": "552500",
+        "usdc": "0.552500"
+      }
+    },
+    "result": {
+      "txHash": "0xd8fc81fa228d4b2b6fbef56e9546813ff210eaa68d6e275afc851c33e0834eda",
+      "status": "success",
+      "blockNumber": "89400929",
+      "takerRiskWei6": "302500",
+      "fillMakerRiskWei6": "250000"
+    },
+    "lazyCreationFeePreview": {
+      "applies": true,
+      "condition": "if-first-match-at-execution",
+      "totalFeeWei6": "500000",
+      "totalFeeUSDC": "0.500000",
+      "takerShareWei6": "250000",
+      "takerShareUSDC": "0.250000",
+      "makerShareWei6": "250000",
+      "makerShareUSDC": "0.250000",
+      "viewerShareWei6": "250000",
+      "viewerShareUSDC": "0.250000",
+      "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C",
+      "spenderLabel": "TreasuryModule",
+      "approvalPurpose": "lazy-creation-fee",
+      "approvalNeeded": false,
+      "note": "Lazy creation: 0.500000 USDC fee split 50/50 \u2014 you pay 0.250000 USDC, counterparty pays 0.250000 USDC to TreasuryModule, IF this tx is still the first match at execution time."
+    }
+  },
+  "finalState": {
+    "contest": {
+      "contestId": "2",
+      "awayTeam": "Chicago White Sox",
+      "homeTeam": "Baltimore Orioles",
+      "sport": "mlb",
+      "matchTime": "2026-06-30T22:35:00+00:00",
+      "status": "verified",
+      "jsonoddsId": "3ba71f62-0c5d-4f76-bd95-d05024c96c24",
+      "awayScore": null,
+      "homeScore": null,
+      "scoredAt": null,
+      "voidedAt": null
+    },
+    "speculation": {
+      "speculationId": "2",
+      "contestId": "2",
+      "type": "moneyline",
+      "lineTicks": 0,
+      "line": null,
+      "speculationStatus": 0,
+      "settledAt": null,
+      "winSide": null
+    },
+    "speculationsCount": 1,
+    "openCommitmentsForContest": 0,
+    "openCommitmentsForSpeculation": 0,
+    "openCommitmentsByControlledMaker": {
+      "ospex-stage-maker-a": 0,
+      "ospex-stage-maker-b": 0,
+      "ospex-flow-a": 0
+    },
+    "positions": {
+      "ospex-stage-maker-a": {
+        "activeCount": 1,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "totals": {
+          "activeCount": 1,
+          "pendingSettleCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      },
+      "ospex-flow-a": {
+        "activeCount": 1,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "totals": {
+          "activeCount": 1,
+          "pendingSettleCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      },
+      "ospex-stage-maker-b": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "totals": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      }
+    },
+    "postFillPolls": [
+      {
+        "poll": 1,
+        "contestStatus": "verified",
+        "speculationId": null,
+        "specCount": 0,
+        "openCommitments": 1
+      },
+      {
+        "poll": 2,
+        "contestStatus": "verified",
+        "speculationId": null,
+        "specCount": 0,
+        "openCommitments": 1
+      },
+      {
+        "poll": 3,
+        "contestStatus": "verified",
+        "speculationId": null,
+        "specCount": 0,
+        "openCommitments": 1
+      },
+      {
+        "poll": 4,
+        "contestStatus": "verified",
+        "speculationId": "2",
+        "specCount": 1,
+        "openCommitments": 0
+      }
+    ]
+  },
+  "commandReturns": [
+    {
+      "name": "continue_contest_show_pre_fill",
+      "profile": "ospex-stage-maker-a",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "name": "continue_odds_show_pre_fill",
+      "profile": "ospex-stage-maker-a",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "name": "continue_speculations_pre_fill",
+      "profile": "ospex-stage-maker-a",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "name": "continue_commitments_pre_fill",
+      "profile": "ospex-stage-maker-a",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "name": "continue_submit_preview_maker",
+      "profile": "ospex-stage-maker-a",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "name": "continue_submit_execute_maker",
+      "profile": "ospex-stage-maker-a",
+      "returncode": 0,
+      "stderr": "\nResolved commitment:\n  contest:      Chicago White Sox @ Baltimore Orioles, 2026-06-30 \u2014 MLB\n  market:       moneyline (lazy)\n  side:         Chicago White Sox (away)  [scorer=0x5955\u2026, source=exact]\n  odds:         2.21 decimal / +121 american  [oddsTick=221]\n  risk:         0.250000 USDC\n  to win:       0.302500 USDC  (return = 0.552500 USDC)\n  expiry:       2026-06-30 08:29:37 UTC  [unix=1782808177]  [source=user-relative]\n  speculation:  not yet created \u2014 lazily created on first match\n                speculationKey=0x66b58f3d73f8211836aa2b48ad1fffe57af7983b54401ff561f7766125fccef9\n                \u2192 trade + speculation creation IF your commitment is the first to match\n                your share (maker): 0.250000 USDC via TreasuryModule\n                counterparty (taker): 0.250000 USDC via TreasuryModule\n                (not pulled if a prior match has already created the speculation by match time)\n\nOutcomes:\n  Chicago White Sox wins \u2192 you win 0.302500 USDC\n  Baltimore Orioles wins \u2192 you lose 0.250000 USDC\n\n"
+    },
+    {
+      "name": "continue_post_submit_commitment_show",
+      "profile": "ospex-stage-maker-a",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "name": "continue_post_submit_commitments_contest",
+      "profile": "ospex-stage-maker-a",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "name": "continue_fillability_for_taker",
+      "profile": "ospex-flow-a",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "name": "continue_match_preview_taker",
+      "profile": "ospex-flow-a",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "name": "continue_match_execute_taker",
+      "profile": "ospex-flow-a",
+      "returncode": 0,
+      "stderr": "\nMatch preview:\n  contest:        Chicago White Sox @ Baltimore Orioles, 2026-06-30 \u2014 MLB\n  market:         moneyline (lazy)\n\n  You back:       Baltimore Orioles at -120  (decimal 1.83)\n  Counterparty:   Chicago White Sox at +121  (decimal 2.21)  \u2014 maker 0x5316\u20266a9b\n\n  Your risk:      0.302500 USDC\n  Your profit:    +0.250000 USDC  if Baltimore Orioles wins\n  Maker fill:     0.250000 USDC of 0.250000 USDC remaining  (full fill)\n\n  Speculation:    lazy \u2014 will be created on first match\n  Action:         trade + speculation creation (if still first at execution time)\n\n  Creation fee:   0.500000 USDC total, split 50/50\n                    your share (taker):     0.250000 USDC \u2192 TreasuryModule\n                    counterparty (maker):   0.250000 USDC \u2192 TreasuryModule\n                    your wallet exposure:   0.250000 USDC\n                    \u26a0 pulled only if this tx is still the first match at execution time\n\n  Expires:        2026-06-30 08:29:37 UTC  [unix=1782808177]\n\nOutcomes:\n  Baltimore Orioles wins \u2192 you win 0.250000 USDC\n  Chicago White Sox wins \u2192 you lose 0.302500 USDC\n\n  commitment:     0xd9715b7e7300ad559014e5ca92878fe7ff28dfbe83d41d9dcf12e3987372f088\n\n"
+    },
+    {
+      "name": "continue_final_speculation_show",
+      "profile": "ospex-stage-maker-a",
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "name": "continue_final_commitments_speculation",
+      "profile": "ospex-stage-maker-a",
+      "returncode": 0,
+      "stderr": ""
+    }
+  ],
+  "gate": {
+    "contestCreated": true,
+    "contestVerified": true,
+    "marketUpdateTxSucceeded": true,
+    "moneylineOddsAvailable": true,
+    "exactlyOneMoneylineSpeculation": true,
+    "matchTxSucceeded": true,
+    "noUnexpectedOpenCommitments": true,
+    "makerActiveExposure": true,
+    "takerActiveExposure": true,
+    "overallR5RepeatSetupOk": true
+  }
+}
