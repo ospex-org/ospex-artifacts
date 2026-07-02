@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "completedAtUtc": "2026-07-02T21:44:04Z",
+  "verdict": "POSTGAME_ZERO_STATE_GREEN",
+  "officialFinal": {
+    "schemaVersion": 1,
+    "source": "MLB Stats official feed/schedule",
+    "capturedAtUtc": "2026-07-02T21:43:13Z",
+    "gamePk": 823442,
+    "status": "Final",
+    "awayTeam": "Pittsburgh Pirates",
+    "awayRuns": 6,
+    "homeTeam": "Philadelphia Phillies",
+    "homeRuns": 1,
+    "winner": "Pittsburgh Pirates",
+    "winnerRole": "away",
+    "winnerProtocolSide": "upper"
+  },
+  "score": {
+    "requestTxHash": "0x2d0f65f8329a21cbaf34b143c6d8128536fa842f7d758f4cd687e1b863f25f51",
+    "requestObservedAtUtc": "2026-07-02T19:47:44Z",
+    "contestStatus": "scored",
+    "awayScore": 6,
+    "homeScore": 1,
+    "scoredAt": "2026-07-02T19:47:58+00:00",
+    "callbackTxHashCaptured": false,
+    "note": "The artifact claims the score request transaction and verified scored projection; it does not claim a separate callback transaction hash."
+  },
+  "settle": {
+    "txHash": "0xd64e9dbc2fa8f8c05b0e8ef1cb09e2534bab48529d6e418d130c6648155430ac",
+    "winSide": "away/upper/Pittsburgh Pirates",
+    "speculationStatus": "closed",
+    "settledAt": "2026-07-02T19:48:38+00:00"
+  },
+  "claims": [
+    {
+      "walletLabel": "ospex-stage-maker-a",
+      "wallet": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+      "side": "upper / away / Pittsburgh Pirates",
+      "source": "manual seed maker winning position",
+      "commitmentHash": "0x9c913c9426fe3e2f5a86e1f7496341b9d8ef07a9a6b7041597e565da94bd1da2",
+      "payoutWei6": "107000",
+      "payoutUSDC": "0.107000",
+      "txHash": "0x4d1b4e0c3ac8aa2132fbaa19567e4cbaff514ab255e5493432018a8bd8fe3998",
+      "receiptStatus": "success"
+    },
+    {
+      "walletLabel": "ospex-flow-a",
+      "wallet": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+      "side": "upper / away / Pittsburgh Pirates",
+      "source": "controlled live MM fill taker winning position",
+      "commitmentHash": "0x6d2a5bd0a364ca1f9c5584af8caa167f8d35e6bf7804f3e2e4fd4588d1b5698d",
+      "payoutWei6": "187000",
+      "payoutUSDC": "0.187000",
+      "txHash": "0x40219eac365362a2e1e9d784c753c86e03c94b77cd99a83508a089ab7d68f832",
+      "receiptStatus": "success"
+    }
+  ],
+  "noOps": [
+    {
+      "walletLabel": "ospex-stage-maker-b",
+      "wallet": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "side": "lower / home / Philadelphia Phillies",
+      "result": "lost",
+      "claimStatus": "not claimable"
+    },
+    {
+      "walletLabel": "ospex-flow-a",
+      "wallet": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+      "side": "lower / home / Philadelphia Phillies",
+      "result": "lost seed-taker position",
+      "claimStatus": "not claimable"
+    }
+  ],
+  "finalZeroState": {
+    "contestOpenCommitments": 0,
+    "specOpenCommitments": 0,
+    "targetActiveCount": 0,
+    "targetPendingSettleCount": 0,
+    "targetClaimableCount": 0,
+    "targetUnresolvedCount": 0
+  }
+}

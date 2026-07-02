@@ -1,13 +1,24 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-07-02T02:59:52Z",
+  "generatedAt": "2026-07-02T22:04:18Z",
   "repository": "ospex-org/ospex-artifacts",
   "archive": {
     "scope": "year",
     "year": 2026
   },
   "artifacts": [
+    {
+      "artifactId": "2026-07-02-mlb-pit-phi-contest-6-v090-latest-mm-moneyline-canary",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-02-mlb-pit-phi-contest-6-v090-latest-mm-moneyline-canary/evidence.json",
+      "date": "2026-07-02",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-02-mlb-pit-phi-contest-6-v090-latest-mm-moneyline-canary/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-07-02-mlb-pit-phi-contest-6-v090-latest-mm-moneyline-canary/summary.md",
+      "publishedAt": "2026-07-02T22:04:18Z"
+    },
     {
       "artifactId": "2026-07-01-mlb-pit-phi-contest-4-r5-cre-mve-reentry-with-tex-cle-phase-a",
       "artifactType": "run",

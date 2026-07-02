@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-07-02T15:05:43.017Z",
+  "result": {
+    "contest": {
+      "contestId": "6",
+      "sport": "mlb",
+      "homeTeam": "Philadelphia Phillies",
+      "awayTeam": "Pittsburgh Pirates"
+    },
+    "speculation": {
+      "speculationId": "10",
+      "contestId": "6",
+      "type": "moneyline"
+    },
+    "commitment": {
+      "commitmentHash": "0x6d2a5bd0a364ca1f9c5584af8caa167f8d35e6bf7804f3e2e4fd4588d1b5698d",
+      "contestId": "6",
+      "marketType": "moneyline"
+    }
+  },
+  "commitmentHash": "0x6d2a5bd0a364ca1f9c5584af8caa167f8d35e6bf7804f3e2e4fd4588d1b5698d",
+  "txHash": "0x0b5a1039703e491a548891ba68b8b569228858e57fa8370769328a26b8b29e8f",
+  "blockNumber": "89533165",
+  "maker": {
+    "alias": "ospex-stage-maker-b",
+    "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+    "side": "home / lower / Philadelphia Phillies / PHI",
+    "riskUSDC": "0.100000",
+    "profitUSDC": "0.087000"
+  },
+  "taker": {
+    "alias": "ospex-flow-a",
+    "address": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+    "side": "away / upper / Pittsburgh Pirates / PIT",
+    "riskUSDC": "0.087000",
+    "profitUSDC": "0.100000"
+  },
+  "odds": {
+    "makerOddsTick": 187,
+    "takerOddsTick": 187
+  },
+  "txReceipt": {
+    "status": "success",
+    "gasCostPOL": "0.118456099775412676",
+    "gasUsed": 418196,
+    "effectiveGasPriceWei": "283254980381"
+  }
+}

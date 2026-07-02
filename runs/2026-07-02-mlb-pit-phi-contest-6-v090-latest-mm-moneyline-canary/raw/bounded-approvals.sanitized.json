@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "boundedOnly": true,
+  "unlimitedApprovalsUsed": false,
+  "approvalTransactions": [
+    {
+      "walletLabel": "ospex-stage-maker-b",
+      "wallet": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "module": "TreasuryModule",
+      "token": "USDC",
+      "targetUSDC": "1.000000",
+      "txHash": "0x79ba21eb4c250efcb5b65d616848d21a4b80b4dfb4365549e8df340f7b5eaedc",
+      "status": "success"
+    }
+  ],
+  "skippedApprovals": [
+    {
+      "walletLabel": "ospex-stage-maker-b",
+      "module": "PositionModule",
+      "reason": "existing bounded allowance sufficient for tiny canary"
+    }
+  ]
+}

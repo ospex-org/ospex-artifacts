@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-07-02T15-03-57-975Z-u8h54b",
+  "fillSource": "own-state-stream",
+  "fillEventCount": 1,
+  "matchingCommitmentHash": "0x6d2a5bd0a364ca1f9c5584af8caa167f8d35e6bf7804f3e2e4fd4588d1b5698d",
+  "observedFillEvent": {
+    "ts": "2026-07-02T15:06:01.519Z",
+    "kind": "fill",
+    "commitmentHash": "0x6d2a5bd0a364ca1f9c5584af8caa167f8d35e6bf7804f3e2e4fd4588d1b5698d",
+    "contestId": "6",
+    "speculationId": "10",
+    "source": "own-state-stream"
+  },
+  "canonicalLegacySourceAbsent": true
+}
