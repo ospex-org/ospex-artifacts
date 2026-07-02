@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-07-01T14-35-21-607Z-51tskn",
+  "contestId": "4",
+  "speculationId": "6",
+  "postedCommitments": [
+    {
+      "commitmentHash": "0xa3ee7a32537f6ead7fe7e57ceed03a47dc7ebeadb4aa87c4818cc4822c6412b3",
+      "maker": "ospex-stage-maker-b",
+      "makerSide": "Philadelphia Phillies home/lower",
+      "makerOddsAmerican": "-122",
+      "riskUSDC": "0.100000",
+      "matchedByControlledTaker": true
+    },
+    {
+      "commitmentHash": "0x0d5a441f9d6a9ceb6b4ff734de908c2633a81d16dd90a447862baa60045a56e7",
+      "maker": "ospex-stage-maker-b",
+      "makerSide": "Philadelphia Phillies home/lower",
+      "riskUSDC": "0.100000",
+      "matchedByControlledTaker": false,
+      "cancelledOffchain": true
+    }
+  ],
+  "allowlistObserved": [
+    "4"
+  ],
+  "broadSlateLiveQuotingObserved": false
+}

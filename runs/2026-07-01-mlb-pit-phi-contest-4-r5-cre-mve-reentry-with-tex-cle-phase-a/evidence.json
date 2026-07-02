@@ -1,0 +1,498 @@
+{
+  "artifactId": "2026-07-01-mlb-pit-phi-contest-4-r5-cre-mve-reentry-with-tex-cle-phase-a",
+  "artifactPath": "runs/2026-07-01-mlb-pit-phi-contest-4-r5-cre-mve-reentry-with-tex-cle-phase-a/",
+  "artifactType": "run",
+  "artifactStatus": "complete_verified_with_caveats",
+  "status": "complete_verified_with_caveats",
+  "capturedAtUtc": "2026-07-02T02:10:32Z",
+  "date": "2026-07-01",
+  "network": "polygon",
+  "chainId": 137,
+  "verdict": {
+    "label": "FULL_GREEN",
+    "protocolVerdict": "POSTGAME_ZERO_STATE_GREEN",
+    "reason": "The combined R5/CRE MVE re-entry run completed: Phase A manual all-market setup filled moneyline, spread, and total on contest 3; Phase B strict-allowlist moneyline MM canary posted and filled one tiny controlled quote on contest 4; both contests were scored, all speculations settled, winning controlled positions claimed, and final commitments plus positions converged to zero state."
+  },
+  "artifactFiles": {
+    "summary": "summary.md",
+    "evidence": "evidence.json",
+    "scenarioMatrix": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "mveScorecard": "mve-scorecard.json",
+    "mveScorecardMarkdown": "mve-scorecard.md",
+    "releaseRuntimeMatrix": "raw/release-runtime-matrix.sanitized.json",
+    "targetPreflight": "raw/target-preflight.sanitized.json",
+    "walletAuthBalances": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "boundedApprovals": "raw/bounded-approvals.sanitized.json",
+    "earlyAllMarketsLifecycle": "raw/early-all-markets-lifecycle.sanitized.json",
+    "mmDryRun": "raw/mm-dryrun-summary.sanitized.json",
+    "liveCommitmentsPosted": "raw/live-public-commitments-posted.sanitized.json",
+    "liveFill": "raw/live-fill.sanitized.json",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "finalPositionsStatus": "raw/final-positions-status.sanitized.json",
+    "finalCommitmentsOrderbook": "raw/final-commitments-orderbook.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json"
+  },
+  "scope": {
+    "runClass": "mm-live-canary",
+    "combinedRun": true,
+    "phaseA": "manual all-market R5 lifecycle setup",
+    "phaseB": "strict-allowlist market-maker canary",
+    "broadMarketMakerRunUsed": false,
+    "tinyControlledCapitalOnly": true,
+    "boundedApprovalsOnly": true,
+    "oldFunctionsLinkFlowUsed": false
+  },
+  "target": {
+    "game": "Pittsburgh Pirates @ Philadelphia Phillies",
+    "gamePk": 823446,
+    "gameId": "3c87bd04-d95e-4eba-87bf-53fb4ab57285",
+    "slug": "pit-phi-2026-07-01-2240",
+    "sport": "mlb",
+    "market": "moneyline",
+    "contestId": "4",
+    "speculationId": "6",
+    "awayTeam": "Pittsburgh Pirates",
+    "homeTeam": "Philadelphia Phillies",
+    "startTimeUtc": "2026-07-01T22:40:00Z",
+    "teamIdentity": {
+      "away": {
+        "team": "Pittsburgh Pirates",
+        "abbreviation": "PIT",
+        "positionType": "upper",
+        "role": "away",
+        "identity": "underdog",
+        "marketOddsAmerican": "+120"
+      },
+      "home": {
+        "team": "Philadelphia Phillies",
+        "abbreviation": "PHI",
+        "positionType": "lower",
+        "role": "home",
+        "identity": "favorite",
+        "marketOddsAmerican": "-136"
+      },
+      "winner": {
+        "team": "Philadelphia Phillies",
+        "role": "home",
+        "positionType": "lower"
+      }
+    },
+    "contestStatusAfterCreateVerify": "verified",
+    "contestStatusAfterPostgame": "scored",
+    "postgameStatus": "complete",
+    "finalScore": {
+      "awayRuns": 6,
+      "homeRuns": 10,
+      "winner": "Philadelphia Phillies",
+      "winnerProtocolSide": "lower"
+    }
+  },
+  "relatedContests": [
+    {
+      "contestId": "3",
+      "phase": "EARLY_ALL_MARKETS",
+      "game": "Texas Rangers @ Cleveland Guardians",
+      "gamePk": 824419,
+      "finalScore": {
+        "awayRuns": 4,
+        "homeRuns": 9
+      },
+      "speculations": [
+        "3",
+        "4",
+        "5"
+      ]
+    }
+  ],
+  "wallets": {
+    "manualMaker": {
+      "profile": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B"
+    },
+    "controlledTaker": {
+      "profile": "ospex-flow-a",
+      "address": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30"
+    },
+    "operatorMmMaker": {
+      "profile": "ospex-stage-maker-b",
+      "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482"
+    }
+  },
+  "versions": {
+    "schemaVersion": 1,
+    "capturedAtUtc": "2026-07-01T14:17:00Z",
+    "setupAndLiveWindowSdkCli": {
+      "version": "0.8.0",
+      "repo": "ospex-sdk",
+      "head": "4c7af9106166",
+      "requiredAtOrAfter": "4c7af91",
+      "ok": true
+    },
+    "marketMaker": {
+      "repo": "ospex-market-maker",
+      "head": "aa43da8836f2",
+      "requiredAtOrAfter": "aa43da8",
+      "installedSdkVersion": "0.8.0",
+      "typecheck": "pass",
+      "test": "pass",
+      "build": "pass"
+    },
+    "ancillaryRepos": {
+      "ospex-core-api": {
+        "head": "ca9e68521c59",
+        "requiredAtOrAfter": "ca9e685",
+        "ok": true
+      },
+      "ospex-indexer": {
+        "head": "75be9e76965b",
+        "requiredAtOrAfter": "75be9e7",
+        "ok": true
+      },
+      "ospex-cre": {
+        "head": "fed6e26e27e5",
+        "requiredAtOrAfter": "fed6e26",
+        "ok": true
+      },
+      "ospex-contracts-v2": {
+        "head": "5483452e95c8",
+        "requiredAtOrAfter": "5483452",
+        "ok": true
+      }
+    },
+    "allRequiredOk": true,
+    "postgameExecutorObservation": {
+      "cliVersion": "0.9.0",
+      "sdkVersion": "0.9.0",
+      "observedInPostgameJson": true,
+      "note": "Setup/live gates were run at the requested v0.8.0. Postgame score, settle, claim, and read-only status commands were later executed by the same local CLI checkout after it had been updated to v0.9.0."
+    }
+  },
+  "phaseA": {
+    "schemaVersion": 1,
+    "phase": "EARLY_ALL_MARKETS",
+    "contest": {
+      "contestId": "3",
+      "game": "Texas Rangers @ Cleveland Guardians",
+      "gamePk": 824419,
+      "gameId": "52d8ea45-355f-4d86-8c80-805ac084761c",
+      "statusAfterVerify": "verified",
+      "statusAfterPostgame": "scored",
+      "finalScore": {
+        "awayRuns": 4,
+        "homeRuns": 9,
+        "winner": "Cleveland Guardians",
+        "winnerProtocolSide": "home/lower"
+      }
+    },
+    "transactions": {
+      "contestCreate": "0x2718cb65e739310ca6801f049a2dc16cd97a4c4610493182bcd41b0cac836e3e",
+      "marketUpdate": "0x7fd9cc5ebca4bca1c7e55bd4262d35340d4acbb9c6e88f510975870e0b4c1391",
+      "moneylineMatch": "0x8e3b1130a35bd617f910c3a9d6631517f741df73ff5de01a658ce4712b612629",
+      "spreadMatch": "0x5c174f334b58981f32fedecc23266cdf110caf5449b7b9157c373f29cea622e7",
+      "totalMatch": "0x415facb8078c7418eb9b6d9db737c90ee81ed2bba8d7b72eb6436fd9fc9d3613"
+    },
+    "oddsSnapshot": {
+      "moneyline": {
+        "away": "Texas Rangers",
+        "awayOddsAmerican": -104,
+        "home": "Cleveland Guardians",
+        "homeOddsAmerican": -109
+      },
+      "spread": {
+        "away": "Texas Rangers",
+        "awayLine": 1.5,
+        "awayOddsAmerican": -221,
+        "home": "Cleveland Guardians",
+        "homeLine": -1.5,
+        "homeOddsAmerican": 184
+      },
+      "total": {
+        "line": 8,
+        "overOddsAmerican": -105,
+        "underOddsAmerican": -115
+      }
+    },
+    "speculations": [
+      {
+        "market": "moneyline",
+        "speculationId": "3",
+        "maker": "ospex-stage-maker-a",
+        "makerSide": "Texas Rangers away/upper",
+        "makerOddsAmerican": "-104",
+        "makerRiskUSDC": "0.100000",
+        "taker": "ospex-flow-a",
+        "takerSide": "Cleveland Guardians home/lower",
+        "takerOddsAmerican": "+104",
+        "takerRiskUSDC": "0.096000",
+        "winningSide": "home/lower"
+      },
+      {
+        "market": "spread",
+        "speculationId": "4",
+        "line": "Cleveland Guardians -1.5 / Texas Rangers +1.5",
+        "maker": "ospex-stage-maker-a",
+        "makerSide": "Cleveland Guardians home/lower/favorite -1.5",
+        "makerOddsAmerican": "+184",
+        "makerRiskUSDC": "0.100000",
+        "taker": "ospex-flow-a",
+        "takerSide": "Texas Rangers away/upper/underdog +1.5",
+        "takerRiskUSDC": "0.184000",
+        "winningSide": "home/lower"
+      },
+      {
+        "market": "total",
+        "speculationId": "5",
+        "line": "8.0",
+        "maker": "ospex-stage-maker-a",
+        "makerSide": "Over/upper",
+        "makerOddsAmerican": "-105",
+        "makerRiskUSDC": "0.100000",
+        "taker": "ospex-flow-a",
+        "takerSide": "Under/lower",
+        "takerOddsAmerican": "+105",
+        "takerRiskUSDC": "0.095000",
+        "winningSide": "over/upper"
+      }
+    ],
+    "pregameState": {
+      "contestStatus": "verified",
+      "openCommitments": 0,
+      "makerActivePositions": 3,
+      "takerActivePositions": 3,
+      "creatorActivePositions": 0
+    },
+    "postgameState": {
+      "settledSpeculations": [
+        "3",
+        "4",
+        "5"
+      ],
+      "claimedWinningPositions": 3,
+      "openCommitments": 0
+    }
+  },
+  "phaseB": {
+    "contestId": "4",
+    "selectedGame": {
+      "contestId": "4",
+      "sport": "mlb",
+      "market": "moneyline",
+      "speculationId": "6",
+      "awayTeam": "Pittsburgh Pirates",
+      "homeTeam": "Philadelphia Phillies",
+      "gamePk": 823446,
+      "gameId": "3c87bd04-d95e-4eba-87bf-53fb4ab57285",
+      "scheduledUtc": "2026-07-01T22:40:00Z",
+      "selectionGates": {
+        "upcomingAtSelection": true,
+        "canCreateContest": true,
+        "oddsAvailable": true,
+        "sufficientLeadTime": true
+      },
+      "speculations": [
+        {
+          "contestId": "4",
+          "speculationId": "6",
+          "type": "moneyline"
+        }
+      ]
+    },
+    "oddsSnapshot": {
+      "moneyline": {
+        "awayOddsAmerican": 120,
+        "homeOddsAmerican": -136
+      },
+      "spread": {
+        "awayLine": 1.5,
+        "awayOddsAmerican": -175,
+        "homeLine": -1.5,
+        "homeOddsAmerican": 150
+      },
+      "total": {
+        "line": 8,
+        "overOddsAmerican": -108,
+        "underOddsAmerican": -111
+      }
+    },
+    "seedSpeculation": {
+      "speculationId": "6",
+      "maker": "ospex-stage-maker-a",
+      "makerSide": "Philadelphia Phillies home/lower",
+      "makerRiskUSDC": "0.050000",
+      "taker": "ospex-flow-a",
+      "takerSide": "Pittsburgh Pirates away/upper",
+      "takerRiskUSDC": "0.037000",
+      "matchTxHash": "0x9ca5849a3521435880ebb117bb1f38a0474335347fe3f30ffca8f9d8a74a1330"
+    },
+    "mmCanary": {
+      "runId": "2026-07-01T14-35-21-607Z-51tskn",
+      "dryRunGates": {
+        "doctorReady": true,
+        "targetContestQuoteReady": true,
+        "quoteCanQuote": true,
+        "dryRunTelemetryWouldSubmitOnlyAllowlistedContest": true,
+        "configSchemaErrors": 0,
+        "fundingAllowanceSolvencyHold": false
+      },
+      "liveControlledFill": {
+        "matchTxHash": "0x5b484dfa52d57073e437a9b36792eb650a331b70bed60f4a09a104adf9e96a35",
+        "maker": "ospex-stage-maker-b",
+        "makerSide": "Philadelphia Phillies home/lower",
+        "makerOddsAmerican": "-122",
+        "makerRiskUSDC": "0.100000",
+        "taker": "ospex-flow-a",
+        "takerSide": "Pittsburgh Pirates away/upper",
+        "takerOddsAmerican": "+122",
+        "takerRiskUSDC": "0.082000"
+      },
+      "remainingQuoteCancelledOffchain": "0x0d5a441f9d6a9ceb6b4ff734de908c2633a81d16dd90a447862baa60045a56e7",
+      "finalOpenCommitments": 0
+    }
+  },
+  "postgame": {
+    "schemaVersion": 1,
+    "completedAtUtc": "2026-07-02T02:10:32Z",
+    "verdict": "POSTGAME_ZERO_STATE_GREEN",
+    "officialFinals": [
+      {
+        "contestId": "3",
+        "phase": "EARLY_ALL_MARKETS",
+        "gamePk": 824419,
+        "awayTeam": "Texas Rangers",
+        "awayRuns": 4,
+        "homeTeam": "Cleveland Guardians",
+        "homeRuns": 9,
+        "status": "Final"
+      },
+      {
+        "contestId": "4",
+        "phase": "EVENING_MM_CANARY",
+        "gamePk": 823446,
+        "awayTeam": "Pittsburgh Pirates",
+        "awayRuns": 6,
+        "homeTeam": "Philadelphia Phillies",
+        "homeRuns": 10,
+        "status": "Game Over"
+      }
+    ],
+    "scoreRequests": {
+      "3": [
+        "0x06a07b8ef4bfda8bb9978abeb48e7d4e4e655cf716aca66a9f1dbe3f514daced"
+      ],
+      "4": [
+        "0xa1d32047f8890a86c5578b26cd2a786f84a23fd63d56c8451c92043b9e35bae6"
+      ]
+    },
+    "settles": {
+      "3": [
+        "0x963006827c0a86dd84c98bd10f34e622c2f4b5e6c6d54e1cdf1cdd5bbb81754e"
+      ],
+      "4": [
+        "0x4abfa09d79308956a828132ae92db4bca81da2446c90cc2d8d4dfeb832da162c"
+      ],
+      "5": [
+        "0xfef3934c514bb03c184241ede43f6e12add3227390c7a33a9425b21584ec64b5"
+      ],
+      "6": [
+        "0xc3d2411d969b2b47a5c6c27798f05f540ecdb2715e5071052d7660bf7a46e777"
+      ]
+    },
+    "claims": {
+      "3": [
+        {
+          "wallet": "ospex-flow-a",
+          "side": "lower/home",
+          "txHash": "0x1749cf2227a622febadc820aa00781733442f83e8a3d6e2e4360ec5bac4a7631"
+        }
+      ],
+      "4": [
+        {
+          "wallet": "ospex-stage-maker-a",
+          "side": "lower/home",
+          "txHash": "0x97641368afafd852e191db4cb0e4b74ea28d935a07d6aa19bd8f2f1652f49eb4"
+        }
+      ],
+      "5": [
+        {
+          "wallet": "ospex-stage-maker-a",
+          "side": "upper/over",
+          "txHash": "0xb7973c8fe665bfdef2993f2ba4ec85d6e9f35e81968c54622751418b6472e4d0"
+        }
+      ],
+      "6": [
+        {
+          "wallet": "ospex-stage-maker-a",
+          "side": "lower/home",
+          "txHash": "0x3f848021ab0b343612a03a598f2229921391c42a9cd9abbc5f6438f396ab62f4"
+        },
+        {
+          "wallet": "ospex-stage-maker-b",
+          "side": "lower/home",
+          "txHash": "0x8a6421e4c457281242398c5b21dc2f5332f020eb4e4763db50204632070188d9"
+        }
+      ]
+    },
+    "finalZeroState": {
+      "contestOpenCommitments": {
+        "3": 0,
+        "4": 0
+      },
+      "positions": {
+        "ospex-stage-maker-a": {
+          "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0
+        },
+        "ospex-flow-a": {
+          "address": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0
+        },
+        "ospex-stage-maker-b": {
+          "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0
+        }
+      }
+    }
+  },
+  "finalState": {
+    "contestOpenCommitments": {
+      "3": 0,
+      "4": 0
+    },
+    "positions": {
+      "ospex-stage-maker-a": {
+        "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0
+      },
+      "ospex-flow-a": {
+        "address": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0
+      },
+      "ospex-stage-maker-b": {
+        "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0
+      }
+    },
+    "verdict": "POSTGAME_ZERO_STATE_GREEN"
+  },
+  "caveats": [
+    "The live MM process was intentionally stopped after the first controlled fill to keep exposure bounded; the remaining visible quote was cancelled off-chain and final open commitments were zero.",
+    "The candidates command emitted non-allowlisted setup rows despite contestAllowList, but dry-run/live runner telemetry selected only contest 4; this is recorded as a CLI/reporting caveat, not broad live quoting.",
+    "Setup/live gates were run with SDK/CLI 0.8.0 as required for the first MVE re-entry request. Postgame score, settle, claim, and final status commands were later executed with the local CLI/SDK at 0.9.0 and converged successfully."
+  ]
+}

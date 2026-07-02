@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "capturedAtUtc": "2026-07-01T14:17:00Z",
+  "setupAndLiveWindowSdkCli": {
+    "version": "0.8.0",
+    "repo": "ospex-sdk",
+    "head": "4c7af9106166",
+    "requiredAtOrAfter": "4c7af91",
+    "ok": true
+  },
+  "marketMaker": {
+    "repo": "ospex-market-maker",
+    "head": "aa43da8836f2",
+    "requiredAtOrAfter": "aa43da8",
+    "installedSdkVersion": "0.8.0",
+    "typecheck": "pass",
+    "test": "pass",
+    "build": "pass"
+  },
+  "ancillaryRepos": {
+    "ospex-core-api": {
+      "head": "ca9e68521c59",
+      "requiredAtOrAfter": "ca9e685",
+      "ok": true
+    },
+    "ospex-indexer": {
+      "head": "75be9e76965b",
+      "requiredAtOrAfter": "75be9e7",
+      "ok": true
+    },
+    "ospex-cre": {
+      "head": "fed6e26e27e5",
+      "requiredAtOrAfter": "fed6e26",
+      "ok": true
+    },
+    "ospex-contracts-v2": {
+      "head": "5483452e95c8",
+      "requiredAtOrAfter": "5483452",
+      "ok": true
+    }
+  },
+  "allRequiredOk": true,
+  "postgameExecutorObservation": {
+    "cliVersion": "0.9.0",
+    "sdkVersion": "0.9.0",
+    "observedInPostgameJson": true,
+    "note": "Setup/live gates were run at the requested v0.8.0. Postgame score, settle, claim, and read-only status commands were later executed by the same local CLI checkout after it had been updated to v0.9.0."
+  }
+}
