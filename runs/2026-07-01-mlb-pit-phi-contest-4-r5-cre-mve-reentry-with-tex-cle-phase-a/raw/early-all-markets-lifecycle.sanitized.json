@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "phase": "EARLY_ALL_MARKETS",
+  "contest": {
+    "contestId": "3",
+    "game": "Texas Rangers @ Cleveland Guardians",
+    "gamePk": 824419,
+    "gameId": "52d8ea45-355f-4d86-8c80-805ac084761c",
+    "statusAfterVerify": "verified",
+    "statusAfterPostgame": "scored",
+    "finalScore": {
+      "awayRuns": 4,
+      "homeRuns": 9,
+      "winner": "Cleveland Guardians",
+      "winnerProtocolSide": "home/lower"
+    }
+  },
+  "transactions": {
+    "contestCreate": "0x2718cb65e739310ca6801f049a2dc16cd97a4c4610493182bcd41b0cac836e3e",
+    "marketUpdate": "0x7fd9cc5ebca4bca1c7e55bd4262d35340d4acbb9c6e88f510975870e0b4c1391",
+    "moneylineMatch": "0x8e3b1130a35bd617f910c3a9d6631517f741df73ff5de01a658ce4712b612629",
+    "spreadMatch": "0x5c174f334b58981f32fedecc23266cdf110caf5449b7b9157c373f29cea622e7",
+    "totalMatch": "0x415facb8078c7418eb9b6d9db737c90ee81ed2bba8d7b72eb6436fd9fc9d3613"
+  },
+  "oddsSnapshot": {
+    "moneyline": {
+      "away": "Texas Rangers",
+      "awayOddsAmerican": -104,
+      "home": "Cleveland Guardians",
+      "homeOddsAmerican": -109
+    },
+    "spread": {
+      "away": "Texas Rangers",
+      "awayLine": 1.5,
+      "awayOddsAmerican": -221,
+      "home": "Cleveland Guardians",
+      "homeLine": -1.5,
+      "homeOddsAmerican": 184
+    },
+    "total": {
+      "line": 8,
+      "overOddsAmerican": -105,
+      "underOddsAmerican": -115
+    }
+  },
+  "speculations": [
+    {
+      "market": "moneyline",
+      "speculationId": "3",
+      "maker": "ospex-stage-maker-a",
+      "makerSide": "Texas Rangers away/upper",
+      "makerOddsAmerican": "-104",
+      "makerRiskUSDC": "0.100000",
+      "taker": "ospex-flow-a",
+      "takerSide": "Cleveland Guardians home/lower",
+      "takerOddsAmerican": "+104",
+      "takerRiskUSDC": "0.096000",
+      "winningSide": "home/lower"
+    },
+    {
+      "market": "spread",
+      "speculationId": "4",
+      "line": "Cleveland Guardians -1.5 / Texas Rangers +1.5",
+      "maker": "ospex-stage-maker-a",
+      "makerSide": "Cleveland Guardians home/lower/favorite -1.5",
+      "makerOddsAmerican": "+184",
+      "makerRiskUSDC": "0.100000",
+      "taker": "ospex-flow-a",
+      "takerSide": "Texas Rangers away/upper/underdog +1.5",
+      "takerRiskUSDC": "0.184000",
+      "winningSide": "home/lower"
+    },
+    {
+      "market": "total",
+      "speculationId": "5",
+      "line": "8.0",
+      "maker": "ospex-stage-maker-a",
+      "makerSide": "Over/upper",
+      "makerOddsAmerican": "-105",
+      "makerRiskUSDC": "0.100000",
+      "taker": "ospex-flow-a",
+      "takerSide": "Under/lower",
+      "takerOddsAmerican": "+105",
+      "takerRiskUSDC": "0.095000",
+      "winningSide": "over/upper"
+    }
+  ],
+  "pregameState": {
+    "contestStatus": "verified",
+    "openCommitments": 0,
+    "makerActivePositions": 3,
+    "takerActivePositions": 3,
+    "creatorActivePositions": 0
+  },
+  "postgameState": {
+    "settledSpeculations": [
+      "3",
+      "4",
+      "5"
+    ],
+    "claimedWinningPositions": 3,
+    "openCommitments": 0
+  }
+}

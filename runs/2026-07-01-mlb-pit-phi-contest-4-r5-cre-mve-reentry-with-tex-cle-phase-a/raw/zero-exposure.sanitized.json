@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-07-02T02:10:32Z",
+  "publicMakerVisibleCommitments": 0,
+  "publicContestSpecVisibleCommitments": 0,
+  "contestOrderbookCount": 0,
+  "orphanProcessCount": 0,
+  "contestOpenCommitments": {
+    "3": 0,
+    "4": 0
+  },
+  "positions": {
+    "ospex-stage-maker-a": {
+      "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0
+    },
+    "ospex-flow-a": {
+      "address": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0
+    },
+    "ospex-stage-maker-b": {
+      "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0
+    }
+  },
+  "remainingMmQuoteCancelledOffchain": "0x0d5a441f9d6a9ceb6b4ff734de908c2633a81d16dd90a447862baa60045a56e7"
+}

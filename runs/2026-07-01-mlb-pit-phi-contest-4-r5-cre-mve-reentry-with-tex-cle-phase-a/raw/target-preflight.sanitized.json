@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "selectedTarget": {
+    "contestId": "4",
+    "sport": "mlb",
+    "market": "moneyline",
+    "speculationId": "6",
+    "awayTeam": "Pittsburgh Pirates",
+    "homeTeam": "Philadelphia Phillies",
+    "gamePk": 823446,
+    "gameId": "3c87bd04-d95e-4eba-87bf-53fb4ab57285",
+    "scheduledUtc": "2026-07-01T22:40:00Z",
+    "selectionGates": {
+      "upcomingAtSelection": true,
+      "canCreateContest": true,
+      "oddsAvailable": true,
+      "sufficientLeadTime": true
+    },
+    "speculations": [
+      {
+        "contestId": "4",
+        "speculationId": "6",
+        "type": "moneyline"
+      }
+    ]
+  },
+  "relatedPhaseA": {
+    "purpose": "manual all-market R5 setup before evening canary",
+    "contestId": "3",
+    "game": "Texas Rangers @ Cleveland Guardians",
+    "gamePk": 824419,
+    "speculations": [
+      {
+        "contestId": "3",
+        "speculationId": "3",
+        "type": "moneyline"
+      },
+      {
+        "contestId": "3",
+        "speculationId": "4",
+        "type": "spread"
+      },
+      {
+        "contestId": "3",
+        "speculationId": "5",
+        "type": "total"
+      }
+    ]
+  }
+}

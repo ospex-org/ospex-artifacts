@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "network": "polygon",
+  "chainId": 137,
+  "wallets": {
+    "manualMaker": {
+      "profile": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B"
+    },
+    "controlledTaker": {
+      "profile": "ospex-flow-a",
+      "address": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30"
+    },
+    "operatorMmMaker": {
+      "profile": "ospex-stage-maker-b",
+      "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482"
+    }
+  },
+  "expectedAddressChecks": {
+    "creatorMarketUpdateScoreOperator": "pass",
+    "manualMaker": "pass",
+    "controlledTaker": "pass",
+    "mmMaker": "pass"
+  },
+  "balancesAndAllowances": {
+    "sanitized": true,
+    "sufficientForTinyControlledRun": true,
+    "unlimitedApprovalsObserved": false,
+    "boundedApprovalsOnly": true
+  },
+  "legacyFlowScan": {
+    "oldFunctionsLinkPathUsed": false,
+    "notes": "R5/CRE path only; no old Chainlink Functions/LINK approval path used."
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "2026-07-01-mlb-pit-phi-contest-4-r5-cre-mve-reentry-with-tex-cle-phase-a",
+  "generatedAt": "2026-07-02T02:10:32Z",
+  "runClass": "mm-live-canary",
+  "verdict": {
+    "label": "FULL_GREEN",
+    "protocolVerdict": "POSTGAME_ZERO_STATE_GREEN",
+    "reason": "The combined R5/CRE MVE re-entry run completed: Phase A manual all-market setup filled moneyline, spread, and total on contest 3; Phase B strict-allowlist moneyline MM canary posted and filled one tiny controlled quote on contest 4; both contests were scored, all speculations settled, winning controlled positions claimed, and final commitments plus positions converged to zero state."
+  },
+  "capabilities": [
+    {
+      "id": "target-preflight",
+      "capability": "Target preflight and allowlist",
+      "proof": "proven_live",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "notes": "PIT @ PHI contest 4/spec 6 was strict-allowlisted for the evening moneyline canary; Phase A TEX @ CLE contest 3 is recorded as related setup evidence."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "capability": "Repo/runtime gates",
+      "proof": "proven_live",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "notes": "Setup/live gates used SDK/CLI 0.8.0, MM aa43da8 with installed @ospex/sdk 0.8.0, and required ancillary repo heads."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "capability": "Wallet auth, balances, allowances",
+      "proof": "proven_live",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Expected-address checks passed for operator/MM maker, manual maker, and controlled taker; balances/allowances were sufficient for tiny controlled exposure."
+    },
+    {
+      "id": "bounded-approvals",
+      "capability": "Bounded approvals / no unlimited approvals",
+      "proof": "proven_live",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "notes": "Bounded approvals only; live MM auto-approval stayed off."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "capability": "Dry-run quote loop",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "notes": "Candidates/quote/run dry-run gates passed for the allowlisted contest 4 moneyline canary."
+    },
+    {
+      "id": "live-commitments-posted",
+      "capability": "Live commitments posted",
+      "proof": "proven_live",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "notes": "The MM posted tiny moneyline commitments under allowlist [4]."
+    },
+    {
+      "id": "live-fill",
+      "capability": "Controlled live fill",
+      "proof": "proven_live",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "Controlled taker matched exactly one live MM quote on contest 4/spec 6."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "capability": "Own-state SSE canonical fill source",
+      "proof": "proven_live",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "Own-state stream telemetry observed the fill for commitment 0xa3ee7a32…"
+    },
+    {
+      "id": "exposure-drain-zero",
+      "capability": "Exposure drained to zero",
+      "proof": "proven_live",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "Final public commitments/orderbook, positions, and orphan-process checks are zero."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "capability": "Restart/cold-start safety",
+      "proof": "not_applicable",
+      "evidence": null,
+      "notes": "Not run for this bounded re-entry canary; process shutdown, lock cleanup, and zero-exposure checks were performed instead."
+    },
+    {
+      "id": "postgame-score",
+      "capability": "Postgame score",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Official finals were verified and contests 3 and 4 were scored through R5/CRE."
+    },
+    {
+      "id": "postgame-settle",
+      "capability": "Postgame settle",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Speculations 3, 4, 5, and 6 settled to the official winners."
+    },
+    {
+      "id": "postgame-claim",
+      "capability": "Postgame claim/no-op",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Controlled winning positions were claimed; final positions.status was active=0 pendingSettle=0 claimable=0 for all three roles."
+    },
+    {
+      "id": "cost-within-cap",
+      "capability": "Cost within cap",
+      "proof": "proven_live",
+      "evidence": "raw/tx-receipts.summary.json",
+      "notes": "Tiny controlled risk stayed below the $5 cap; live MM canary was stopped after first fill."
+    }
+  ],
+  "zeroExposure": {
+    "checkedAtUtc": "2026-07-02T02:10:32Z",
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "orphanProcessCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json"
+  },
+  "transactions": [
+    {
+      "category": "create-contest",
+      "txHash": "0x2718cb65e739310ca6801f049a2dc16cd97a4c4610493182bcd41b0cac836e3e",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Create Phase A manual all-market contest 3."
+    },
+    {
+      "category": "other",
+      "txHash": "0x7fd9cc5ebca4bca1c7e55bd4262d35340d4acbb9c6e88f510975870e0b4c1391",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Request market update for Phase A contest 3."
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0x8e3b1130a35bd617f910c3a9d6631517f741df73ff5de01a658ce4712b612629",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Controlled moneyline match for Phase A speculation 3."
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0x5c174f334b58981f32fedecc23266cdf110caf5449b7b9157c373f29cea622e7",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Controlled spread match for Phase A speculation 4."
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0x415facb8078c7418eb9b6d9db737c90ee81ed2bba8d7b72eb6436fd9fc9d3613",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Controlled total match for Phase A speculation 5."
+    },
+    {
+      "category": "create-contest",
+      "txHash": "0x828d6199810be2e2ffa58ac3f74f147a13a517d5cac0d715507f2509570435e3",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Create Phase B evening canary contest 4."
+    },
+    {
+      "category": "other",
+      "txHash": "0xeb5f9116bbc9145e2fb9dd115e7b7b3310fc6a422d44cc7e7fec77316a150ab9",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Request market update for Phase B contest 4."
+    },
+    {
+      "category": "seed-match",
+      "txHash": "0x9ca5849a3521435880ebb117bb1f38a0474335347fe3f30ffca8f9d8a74a1330",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Manual seed moneyline fill for speculation 6 before MM canary."
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0x5b484dfa52d57073e437a9b36792eb650a331b70bed60f4a09a104adf9e96a35",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Controlled taker matched one live MM quote on contest 4/speculation 6."
+    },
+    {
+      "category": "score-request",
+      "txHash": "0x06a07b8ef4bfda8bb9978abeb48e7d4e4e655cf716aca66a9f1dbe3f514daced",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Request R5/CRE score for contest 3."
+    },
+    {
+      "category": "settle",
+      "txHash": "0x963006827c0a86dd84c98bd10f34e622c2f4b5e6c6d54e1cdf1cdd5bbb81754e",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle Phase A moneyline speculation 3."
+    },
+    {
+      "category": "settle",
+      "txHash": "0x4abfa09d79308956a828132ae92db4bca81da2446c90cc2d8d4dfeb832da162c",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle Phase A spread speculation 4."
+    },
+    {
+      "category": "settle",
+      "txHash": "0xfef3934c514bb03c184241ede43f6e12add3227390c7a33a9425b21584ec64b5",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle Phase A total speculation 5."
+    },
+    {
+      "category": "claim",
+      "txHash": "0x1749cf2227a622febadc820aa00781733442f83e8a3d6e2e4360ec5bac4a7631",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim controlled winning lower/home position for speculation 3."
+    },
+    {
+      "category": "claim",
+      "txHash": "0x97641368afafd852e191db4cb0e4b74ea28d935a07d6aa19bd8f2f1652f49eb4",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim controlled winning lower/home position for speculation 4."
+    },
+    {
+      "category": "claim",
+      "txHash": "0xb7973c8fe665bfdef2993f2ba4ec85d6e9f35e81968c54622751418b6472e4d0",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim controlled winning upper/over position for speculation 5."
+    },
+    {
+      "category": "score-request",
+      "txHash": "0xa1d32047f8890a86c5578b26cd2a786f84a23fd63d56c8451c92043b9e35bae6",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Request R5/CRE score for contest 4."
+    },
+    {
+      "category": "settle",
+      "txHash": "0xc3d2411d969b2b47a5c6c27798f05f540ecdb2715e5071052d7660bf7a46e777",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle Phase B moneyline speculation 6."
+    },
+    {
+      "category": "claim",
+      "txHash": "0x3f848021ab0b343612a03a598f2229921391c42a9cd9abbc5f6438f396ab62f4",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim manual-maker winning lower/home seed position for speculation 6."
+    },
+    {
+      "category": "claim",
+      "txHash": "0x8a6421e4c457281242398c5b21dc2f5332f020eb4e4763db50204632070188d9",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim MM-maker winning lower/home live-fill position for speculation 6."
+    }
+  ]
+}

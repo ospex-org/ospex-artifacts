@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "result": {
+    "contest": {
+      "contestId": "4",
+      "sport": "mlb",
+      "awayTeam": "Pittsburgh Pirates",
+      "homeTeam": "Philadelphia Phillies"
+    },
+    "speculation": {
+      "speculationId": "6",
+      "contestId": "4",
+      "type": "moneyline"
+    },
+    "commitment": {
+      "commitmentHash": "0xa3ee7a32537f6ead7fe7e57ceed03a47dc7ebeadb4aa87c4818cc4822c6412b3",
+      "contestId": "4",
+      "marketType": "moneyline"
+    },
+    "fill": {
+      "matchTxHash": "0x5b484dfa52d57073e437a9b36792eb650a331b70bed60f4a09a104adf9e96a35",
+      "maker": "ospex-stage-maker-b",
+      "makerSide": "Philadelphia Phillies home/lower",
+      "makerOddsAmerican": "-122",
+      "makerRiskUSDC": "0.100000",
+      "taker": "ospex-flow-a",
+      "takerSide": "Pittsburgh Pirates away/upper",
+      "takerOddsAmerican": "+122",
+      "takerRiskUSDC": "0.082000"
+    }
+  }
+}

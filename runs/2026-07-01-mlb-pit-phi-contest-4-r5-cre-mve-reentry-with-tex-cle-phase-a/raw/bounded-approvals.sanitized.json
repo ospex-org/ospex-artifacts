@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "boundedApprovalsOnly": true,
+  "unlimitedApprovals": 0,
+  "autoApproveInLiveMm": false,
+  "budgetCapUSDC": "5.00",
+  "observedTinyRisksUSDC": {
+    "phaseAMakerTotalRisk": "0.300000",
+    "phaseATakerTotalRisk": "0.375000",
+    "phaseBManualSeedMakerRisk": "0.050000",
+    "phaseBControlledMmMakerRisk": "0.100000",
+    "phaseBControlledMmTakerRisk": "0.082000"
+  },
+  "approvalCaveats": [
+    "One live-window process was intentionally stopped after the first controlled fill to keep exposure bounded."
+  ]
+}

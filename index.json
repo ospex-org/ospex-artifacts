@@ -1,10 +1,11 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-07-01T21:59:05Z",
+  "generatedAt": "2026-07-02T02:59:52Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
+      "runs/2026-07-01-mlb-pit-phi-contest-4-r5-cre-mve-reentry-with-tex-cle-phase-a/evidence.json",
       "runs/2026-07-01-mlb-sd-chc-contest-5-v090-all-markets-r5-cre-lifecycle/evidence.json",
       "runs/2026-06-30-mlb-cws-bal-contest-2-r5-cre-lifecycle-repeat/evidence.json",
       "runs/2026-06-29-mlb-sf-az-contest-1-r5-cre-lifecycle-smoke/evidence.json",
@@ -13,8 +14,7 @@
       "runs/2026-06-18-mlb-laa-ath-contest-49-v071-stage1b-capital-safety-canary/evidence.json",
       "runs/2026-06-18-mlb-bal-sea-contest-48-v071-mve-stage1-capital-safety-canary/evidence.json",
       "runs/2026-06-17-mlb-tor-bos-contest-46-v071-mm-repeatability-canary/evidence.json",
-      "runs/2026-06-17-mlb-nym-cin-contest-44-v071-mm-live-canary/evidence.json",
-      "runs/2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary/evidence.json"
+      "runs/2026-06-17-mlb-nym-cin-contest-44-v071-mm-live-canary/evidence.json"
     ],
     "release-acceptance": [
       "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.json"
@@ -22,6 +22,17 @@
     "daily-digest": []
   },
   "recentArtifacts": [
+    {
+      "artifactId": "2026-07-01-mlb-pit-phi-contest-4-r5-cre-mve-reentry-with-tex-cle-phase-a",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-01-mlb-pit-phi-contest-4-r5-cre-mve-reentry-with-tex-cle-phase-a/evidence.json",
+      "date": "2026-07-01",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-01-mlb-pit-phi-contest-4-r5-cre-mve-reentry-with-tex-cle-phase-a/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-07-01-mlb-pit-phi-contest-4-r5-cre-mve-reentry-with-tex-cle-phase-a/summary.md",
+      "publishedAt": "2026-07-02T02:59:52Z"
+    },
     {
       "artifactId": "2026-07-01-mlb-sd-chc-contest-5-v090-all-markets-r5-cre-lifecycle",
       "artifactType": "run",
@@ -366,9 +377,9 @@
       "scope": "year",
       "year": 2026,
       "path": "archive/2026/index.json",
-      "artifactCount": 30,
+      "artifactCount": 31,
       "oldestPublishedAt": "2026-05-20T02:48:35Z",
-      "newestPublishedAt": "2026-07-01T21:59:05Z"
+      "newestPublishedAt": "2026-07-02T02:59:52Z"
     }
   ]
 }

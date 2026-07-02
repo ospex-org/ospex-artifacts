@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "phase": "EVENING_MM_CANARY",
+  "contestId": "4",
+  "config": {
+    "markets": [
+      "moneyline"
+    ],
+    "contestAllowList": [
+      "4"
+    ],
+    "seedSpeculations": false,
+    "riskMaxPerCommitmentUSDC": "0.10",
+    "riskMaxOpenCommitments": 2,
+    "pricingMode": "direct",
+    "spreadBps": 200,
+    "expirySeconds": 120,
+    "staleAfterSeconds": 90,
+    "cancelMode": "offchain",
+    "autoApprove": false
+  },
+  "gates": {
+    "doctorReady": true,
+    "targetContestQuoteReady": true,
+    "quoteCanQuote": true,
+    "dryRunTelemetryWouldSubmitOnlyAllowlistedContest": true,
+    "configSchemaErrors": 0,
+    "fundingAllowanceSolvencyHold": false
+  },
+  "caveat": "candidates JSON included non-allowlisted setup rows; dry-run and live runner telemetry selected only allowlisted contest 4."
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "source": "official MLB game feed",
+  "capturedAtUtc": "2026-07-02T02:10:32Z",
+  "games": [
+    {
+      "contestId": "3",
+      "phase": "EARLY_ALL_MARKETS",
+      "gamePk": 824419,
+      "awayTeam": "Texas Rangers",
+      "awayRuns": 4,
+      "homeTeam": "Cleveland Guardians",
+      "homeRuns": 9,
+      "status": "Final"
+    },
+    {
+      "contestId": "4",
+      "phase": "EVENING_MM_CANARY",
+      "gamePk": 823446,
+      "awayTeam": "Pittsburgh Pirates",
+      "awayRuns": 6,
+      "homeTeam": "Philadelphia Phillies",
+      "homeRuns": 10,
+      "status": "Game Over"
+    }
+  ]
+}
