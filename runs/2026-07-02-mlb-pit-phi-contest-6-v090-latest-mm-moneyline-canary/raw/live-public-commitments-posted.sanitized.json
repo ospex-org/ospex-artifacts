@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "observedAtUtc": "2026-07-02T15:05:06Z",
+  "runId": "2026-07-02T15-03-57-975Z-u8h54b",
+  "strictAllowlist": [
+    "6"
+  ],
+  "submittedCommitmentCount": 2,
+  "commitments": [
+    {
+      "commitmentHash": "0x22bdbbe177160ec08ac432e4afbe896e5aedd9e5c902b538d6685acd358a08e6",
+      "contestId": "6",
+      "speculationId": "10",
+      "marketType": "moneyline",
+      "maker": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "makerSide": "away / upper / Pittsburgh Pirates / PIT",
+      "positionType": 0,
+      "oddsTick": 223,
+      "riskUSDC": "0.100000",
+      "expiryUtc": "2026-07-02T15:07:00+00:00",
+      "statusAtObservation": "open"
+    },
+    {
+      "commitmentHash": "0x6d2a5bd0a364ca1f9c5584af8caa167f8d35e6bf7804f3e2e4fd4588d1b5698d",
+      "contestId": "6",
+      "speculationId": "10",
+      "marketType": "moneyline",
+      "maker": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "makerSide": "home / lower / Philadelphia Phillies / PHI",
+      "positionType": 1,
+      "oddsTick": 187,
+      "riskUSDC": "0.100000",
+      "expiryUtc": "2026-07-02T15:07:00+00:00",
+      "statusAtObservation": "open"
+    }
+  ],
+  "allTargetContestSpecMoneyline": true,
+  "noOffAllowlistCommitmentsObserved": true
+}

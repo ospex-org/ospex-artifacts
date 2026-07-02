@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-07-02T21:44:04Z",
+  "liveWindowFinal": {
+    "publicOpenCounts": {
+      "contest6": 0,
+      "contest6Spec10": 0,
+      "makerAll": 0,
+      "makerContest6": 0,
+      "orderbookSpec10": 0
+    },
+    "state": {
+      "visibleOpen": 0,
+      "visibleOpenRiskWei6": "0",
+      "nonTerminalCommitments": 0
+    },
+    "processScan": {
+      "orphanMmProcessCount": 0
+    },
+    "note": "Live-window expected filled-position exposure was resolved during postgame; public/open quote exposure was already zero after shutdown and expiry grace."
+  },
+  "postgameFinal": {
+    "publicOpenCounts": {
+      "contest6": 0,
+      "contest6Spec10": 0,
+      "liveMakerAll": 0
+    },
+    "orderbookCount": 0,
+    "targetPositionStatusOpenCounts": {
+      "ospex-flow-a": {
+        "active": 0,
+        "pendingSettle": 0,
+        "claimable": 0
+      },
+      "ospex-stage-maker-a": {
+        "active": 0,
+        "pendingSettle": 0,
+        "claimable": 0
+      },
+      "ospex-stage-maker-b": {
+        "active": 0,
+        "pendingSettle": 0,
+        "claimable": 0
+      }
+    },
+    "unresolvedTargetPositionCount": 0,
+    "liveMmOrMmCliCount": 0,
+    "fullGreenGate": {
+      "contestScored": true,
+      "settledAwayUpper": true,
+      "winningSeedPositionClaimed": true,
+      "winningLiveTakerPositionClaimed": true,
+      "publicOpenZero": true,
+      "orderbookZero": true,
+      "noOrphanMmProcess": true,
+      "FULL_GREEN": true
+    }
+  }
+}

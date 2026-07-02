@@ -1,0 +1,282 @@
+{
+  "artifactId": "2026-07-02-mlb-pit-phi-contest-6-v090-latest-mm-moneyline-canary",
+  "artifactPath": "runs/2026-07-02-mlb-pit-phi-contest-6-v090-latest-mm-moneyline-canary/",
+  "artifactType": "run",
+  "artifactStatus": "complete_verified_with_caveats",
+  "status": "complete_verified_with_caveats",
+  "capturedAtUtc": "2026-07-02T22:04:04Z",
+  "date": "2026-07-02",
+  "network": "polygon",
+  "chainId": 137,
+  "verdict": {
+    "label": "FULL_GREEN",
+    "protocolVerdict": "POSTGAME_ZERO_STATE_GREEN",
+    "reason": "The v0.9.0/R5 latest-main strict-allowlist moneyline MM canary for Pittsburgh Pirates @ Philadelphia Phillies completed the full lifecycle: pregame setup passed, contest 6 was created and verified, speculation 10 was seeded with zero residual seed exposure, the market maker posted two tiny live quotes under contest allowlist [6], one controlled quote was filled, remaining visible exposure drained to zero, official final score Pittsburgh Pirates 6 / Philadelphia Phillies 1 was verified, contest 6 was scored, speculation 10 settled to away/upper/Pittsburgh Pirates, winning controlled positions were claimed, and final target commitments plus active/pending/claimable positions are zero."
+  },
+  "artifactFiles": {
+    "summary": "summary.md",
+    "evidence": "evidence.json",
+    "scenarioMatrix": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "mveScorecard": "mve-scorecard.json",
+    "mveScorecardMarkdown": "mve-scorecard.md",
+    "releaseRuntimeMatrix": "raw/release-runtime-matrix.sanitized.json",
+    "targetPreflight": "raw/target-preflight.sanitized.json",
+    "walletAuthBalances": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "boundedApprovals": "raw/bounded-approvals.sanitized.json",
+    "mmDryRun": "raw/mm-dryrun-summary.sanitized.json",
+    "liveCommitmentsPosted": "raw/live-public-commitments-posted.sanitized.json",
+    "liveFill": "raw/live-fill.sanitized.json",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json",
+    "restartColdStartProbe": "raw/restart-cold-start-probe.sanitized.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "finalContestShow": "raw/final-contest-show.sanitized.json",
+    "finalPositionsStatus": "raw/final-positions-status.sanitized.json",
+    "finalCommitmentsOrderbook": "raw/final-commitments-orderbook.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json"
+  },
+  "scope": {
+    "runClass": "mm-live-canary",
+    "strictAllowlistOnly": true,
+    "broadMarketMakerRunUsed": false,
+    "markets": [
+      "moneyline"
+    ],
+    "tinyControlledCapitalOnly": true,
+    "boundedApprovalsOnly": true,
+    "oldFunctionsLinkFlowUsed": false,
+    "seedSpeculationsDuringMmRuntime": false
+  },
+  "target": {
+    "game": "Pittsburgh Pirates @ Philadelphia Phillies",
+    "gamePk": 823442,
+    "gameId": "dc5fca3b-e024-49e2-b5da-95988bc85ca7",
+    "slug": "pit-phi-2026-07-02",
+    "sport": "mlb",
+    "market": "moneyline",
+    "contestId": "6",
+    "speculationId": "10",
+    "awayTeam": "Pittsburgh Pirates",
+    "homeTeam": "Philadelphia Phillies",
+    "startTimeUtc": "2026-07-02T16:35:00Z",
+    "teamIdentity": {
+      "away": {
+        "team": "Pittsburgh Pirates",
+        "abbreviation": "PIT",
+        "positionType": "upper",
+        "role": "away",
+        "identity": "underdog",
+        "marketOddsAmerican": "+114"
+      },
+      "home": {
+        "team": "Philadelphia Phillies",
+        "abbreviation": "PHI",
+        "positionType": "lower",
+        "role": "home",
+        "identity": "favorite",
+        "marketOddsAmerican": "-126"
+      },
+      "winner": {
+        "team": "Pittsburgh Pirates",
+        "role": "away",
+        "positionType": "upper"
+      }
+    },
+    "contestStatusAfterCreateVerify": "verified",
+    "contestStatusAfterPostgame": "scored",
+    "postgameStatus": "complete",
+    "finalScore": {
+      "awayRuns": 6,
+      "homeRuns": 1,
+      "winner": "Pittsburgh Pirates",
+      "winnerProtocolSide": "upper"
+    }
+  },
+  "wallets": {
+    "manualSeedMaker": {
+      "profile": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B"
+    },
+    "controlledTaker": {
+      "profile": "ospex-flow-a",
+      "address": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30"
+    },
+    "operatorMmMaker": {
+      "profile": "ospex-stage-maker-b",
+      "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482"
+    }
+  },
+  "versions": {
+    "schemaVersion": 1,
+    "capturedAtUtc": "2026-07-02T14:58:00Z",
+    "node": "v22.22.0",
+    "yarn": "1.22.22",
+    "chainId": 137,
+    "sdkCli": {
+      "repo": "ospex-sdk",
+      "headSha": "fd55bd1e7de0",
+      "version": "0.9.0",
+      "requiredAtOrAfter": "fd55bd1",
+      "ok": true
+    },
+    "marketMaker": {
+      "repo": "ospex-market-maker",
+      "headSha": "6121a7325fb0",
+      "requiredAtOrAfter": "6121a73",
+      "installedSdkVersion": "0.9.0",
+      "typecheck": "pass",
+      "test": "pass (1059 tests)",
+      "build": "pass",
+      "allowlistOnlyFlagAvailable": true
+    },
+    "ancillaryRepos": {
+      "ospex-core-api": {
+        "headSha": "076f44d428fc",
+        "requiredAtOrAfter": "076f44d",
+        "ok": true
+      },
+      "ospex-indexer": {
+        "headSha": "75be9e76965b",
+        "requiredAtOrAfter": "75be9e7",
+        "ok": true
+      },
+      "ospex-cre": {
+        "headSha": "fed6e26e27e5",
+        "requiredAtOrAfter": "fed6e26",
+        "ok": true
+      }
+    },
+    "allRequiredOk": true
+  },
+  "setup": {
+    "contestCreateTx": "0x0fd8b518dd485ea11dbf4301ba2ff47a2f4aafd2423e10ee633008dbd30e4873",
+    "marketUpdateTx": "0x9ffb9adc1fc72385c67f3fa4f4a9eb9d190c6b91ed7502fb64255384e5c00188",
+    "manualSeedCommitmentHash": "0x9c913c9426fe3e2f5a86e1f7496341b9d8ef07a9a6b7041597e565da94bd1da2",
+    "manualSeedFillTx": "0xd7db6cbcba50ebf295461a790f53de8d5b50ac0c58f1474df766c44533afb1b6",
+    "seedOpenCommitmentsAfterConvergence": 0
+  },
+  "liveWindow": {
+    "runId": "2026-07-02T15-03-57-975Z-u8h54b",
+    "startedAtUtc": "2026-07-02T15:03:57Z",
+    "stoppedAtUtc": "2026-07-02T15:06:02Z",
+    "commitmentCount": 2,
+    "controlledFill": {
+      "commitmentHash": "0x6d2a5bd0a364ca1f9c5584af8caa167f8d35e6bf7804f3e2e4fd4588d1b5698d",
+      "txHash": "0x0b5a1039703e491a548891ba68b8b569228858e57fa8370769328a26b8b29e8f",
+      "makerFilledRiskUSDC": "0.100000",
+      "takerRiskUSDC": "0.087000",
+      "makerWallet": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "takerWallet": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30"
+    },
+    "ownStateSseAssertions": {
+      "fillSource": "own-state-stream",
+      "fillEventCount": 1
+    },
+    "postStopZeroExposure": {
+      "checkedAtUtc": "2026-07-02T15:14:11Z",
+      "publicMakerVisibleCommitments": 0,
+      "publicContestSpecVisibleCommitments": 0,
+      "contestOrderbookCount": 0,
+      "orphanProcessCount": 0
+    }
+  },
+  "postgame": {
+    "schemaVersion": 1,
+    "completedAtUtc": "2026-07-02T21:44:04Z",
+    "verdict": "POSTGAME_ZERO_STATE_GREEN",
+    "officialFinal": {
+      "schemaVersion": 1,
+      "source": "MLB Stats official feed/schedule",
+      "capturedAtUtc": "2026-07-02T21:43:13Z",
+      "gamePk": 823442,
+      "status": "Final",
+      "awayTeam": "Pittsburgh Pirates",
+      "awayRuns": 6,
+      "homeTeam": "Philadelphia Phillies",
+      "homeRuns": 1,
+      "winner": "Pittsburgh Pirates",
+      "winnerRole": "away",
+      "winnerProtocolSide": "upper"
+    },
+    "score": {
+      "requestTxHash": "0x2d0f65f8329a21cbaf34b143c6d8128536fa842f7d758f4cd687e1b863f25f51",
+      "requestObservedAtUtc": "2026-07-02T19:47:44Z",
+      "contestStatus": "scored",
+      "awayScore": 6,
+      "homeScore": 1,
+      "scoredAt": "2026-07-02T19:47:58+00:00",
+      "callbackTxHashCaptured": false,
+      "note": "The artifact claims the score request transaction and verified scored projection; it does not claim a separate callback transaction hash."
+    },
+    "settle": {
+      "txHash": "0xd64e9dbc2fa8f8c05b0e8ef1cb09e2534bab48529d6e418d130c6648155430ac",
+      "winSide": "away/upper/Pittsburgh Pirates",
+      "speculationStatus": "closed",
+      "settledAt": "2026-07-02T19:48:38+00:00"
+    },
+    "claims": [
+      {
+        "walletLabel": "ospex-stage-maker-a",
+        "wallet": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+        "side": "upper / away / Pittsburgh Pirates",
+        "source": "manual seed maker winning position",
+        "commitmentHash": "0x9c913c9426fe3e2f5a86e1f7496341b9d8ef07a9a6b7041597e565da94bd1da2",
+        "payoutWei6": "107000",
+        "payoutUSDC": "0.107000",
+        "txHash": "0x4d1b4e0c3ac8aa2132fbaa19567e4cbaff514ab255e5493432018a8bd8fe3998",
+        "receiptStatus": "success"
+      },
+      {
+        "walletLabel": "ospex-flow-a",
+        "wallet": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+        "side": "upper / away / Pittsburgh Pirates",
+        "source": "controlled live MM fill taker winning position",
+        "commitmentHash": "0x6d2a5bd0a364ca1f9c5584af8caa167f8d35e6bf7804f3e2e4fd4588d1b5698d",
+        "payoutWei6": "187000",
+        "payoutUSDC": "0.187000",
+        "txHash": "0x40219eac365362a2e1e9d784c753c86e03c94b77cd99a83508a089ab7d68f832",
+        "receiptStatus": "success"
+      }
+    ],
+    "noOps": [
+      {
+        "walletLabel": "ospex-stage-maker-b",
+        "wallet": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+        "side": "lower / home / Philadelphia Phillies",
+        "result": "lost",
+        "claimStatus": "not claimable"
+      },
+      {
+        "walletLabel": "ospex-flow-a",
+        "wallet": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+        "side": "lower / home / Philadelphia Phillies",
+        "result": "lost seed-taker position",
+        "claimStatus": "not claimable"
+      }
+    ],
+    "finalZeroState": {
+      "contestOpenCommitments": 0,
+      "specOpenCommitments": 0,
+      "targetActiveCount": 0,
+      "targetPendingSettleCount": 0,
+      "targetClaimableCount": 0,
+      "targetUnresolvedCount": 0
+    }
+  },
+  "costs": {
+    "manualSeedMakerRiskUSDC": "0.050000",
+    "manualSeedTakerRiskUSDC": "0.057000",
+    "liveFillMakerRiskUSDC": "0.100000",
+    "liveFillTakerRiskUSDC": "0.087000",
+    "maxOpenMakerRiskUSDC": "0.200000",
+    "recordedLifecycleGasPOL": "0.582256464973198817",
+    "controlledSpendWithinTinyCanaryCaps": true
+  },
+  "caveats": [
+    "The live shutdown attempted to cancel the already-filled quote and received an expected filled-quote refusal; the other visible quote was soft-cancelled and final public exposure is zero.",
+    "The Phase-6 dry cold-start probe wrote synthetic dry records into live state; they were backed up and removed before final state reporting.",
+    "The artifact lists the score request transaction plus verified scored projection and successful settle; it does not claim a separate score-callback transaction hash."
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-07-02T22:04:04Z",
+  "transactions": [
+    {
+      "category": "approve",
+      "purpose": "Bounded 1.000000 USDC TreasuryModule approval for setup fees",
+      "txHash": "0x79ba21eb4c250efcb5b65d616848d21a4b80b4dfb4365549e8df340f7b5eaedc",
+      "status": "success"
+    },
+    {
+      "category": "create-contest",
+      "purpose": "Create contest 6",
+      "txHash": "0x0fd8b518dd485ea11dbf4301ba2ff47a2f4aafd2423e10ee633008dbd30e4873",
+      "status": "success",
+      "blockNumber": 89532654,
+      "gasUsed": 363870,
+      "effectiveGasPriceWei": "281757104280",
+      "gasCostPOL": "0.1025229575343636"
+    },
+    {
+      "category": "other",
+      "purpose": "Request market update for contest 6",
+      "txHash": "0x9ffb9adc1fc72385c67f3fa4f4a9eb9d190c6b91ed7502fb64255384e5c00188",
+      "status": "success",
+      "blockNumber": 89532694,
+      "gasUsed": 120936,
+      "effectiveGasPriceWei": "281597009585",
+      "gasCostPOL": "0.03405521595117156"
+    },
+    {
+      "category": "seed-match",
+      "purpose": "Match tiny manual seed to create speculation 10",
+      "txHash": "0xd7db6cbcba50ebf295461a790f53de8d5b50ac0c58f1474df766c44533afb1b6",
+      "status": "success",
+      "blockNumber": 89532770,
+      "gasUsed": 654298,
+      "effectiveGasPriceWei": "281259316436",
+      "gasCostPOL": "0.184027408225441928"
+    },
+    {
+      "category": "match-commitment",
+      "purpose": "Controlled fill against live MM quote",
+      "txHash": "0x0b5a1039703e491a548891ba68b8b569228858e57fa8370769328a26b8b29e8f",
+      "status": "success",
+      "blockNumber": 89533165,
+      "gasUsed": 418196,
+      "effectiveGasPriceWei": "283254980381",
+      "gasCostPOL": "0.118456099775412676"
+    },
+    {
+      "category": "score-request",
+      "purpose": "Request R5 score for contest 6 after official final",
+      "txHash": "0x2d0f65f8329a21cbaf34b143c6d8128536fa842f7d758f4cd687e1b863f25f51",
+      "status": "success",
+      "blockNumber": 89544446,
+      "gasUsed": 126567,
+      "effectiveGasPriceWei": "280638725159",
+      "gasCostPOL": "0.035519601527199153"
+    },
+    {
+      "category": "settle",
+      "purpose": "Settle speculation 10 to away/upper/Pittsburgh Pirates",
+      "txHash": "0xd64e9dbc2fa8f8c05b0e8ef1cb09e2534bab48529d6e418d130c6648155430ac",
+      "status": "success",
+      "blockNumber": 89544482,
+      "gasUsed": 136792,
+      "effectiveGasPriceWei": "277759316604",
+      "gasCostPOL": "0.037995252436894368"
+    },
+    {
+      "category": "claim",
+      "purpose": "Claim manual seed maker winning upper/PIT position",
+      "txHash": "0x4d1b4e0c3ac8aa2132fbaa19567e4cbaff514ab255e5493432018a8bd8fe3998",
+      "status": "success",
+      "blockNumber": 89544493,
+      "gasUsed": 127004,
+      "effectiveGasPriceWei": "277433642735",
+      "gasCostPOL": "0.03523518236191594"
+    },
+    {
+      "category": "claim",
+      "purpose": "Claim controlled live-taker winning upper/PIT position",
+      "txHash": "0x40219eac365362a2e1e9d784c753c86e03c94b77cd99a83508a089ab7d68f832",
+      "status": "success",
+      "blockNumber": 89544496,
+      "gasUsed": 123044,
+      "effectiveGasPriceWei": "279938454218",
+      "gasCostPOL": "0.034444747160799592"
+    }
+  ],
+  "gas": {
+    "recordedGasPOL": "0.582256464973198817"
+  }
+}

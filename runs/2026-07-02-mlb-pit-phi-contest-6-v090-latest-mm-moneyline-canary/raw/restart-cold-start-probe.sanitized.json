@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-07-02T15:08:51Z",
+  "probeType": "fresh dry-run / cold-start observation",
+  "runIdsObserved": [
+    "2026-07-02T15-03-57-975Z-u8h54b",
+    "2026-07-02T15-08-17-517Z-376c9u"
+  ],
+  "result": "pass_with_caveats",
+  "caveat": "The dry-run probe wrote synthetic dry records into the live state; those synthetic records were backed up and removed before final state reporting.",
+  "orphanProcessCount": 0,
+  "targetScopePreserved": true
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-07-02T21:44:04Z",
+  "roles": {
+    "ospex-flow-a": {
+      "address": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+      "targetActiveCount": 0,
+      "targetPendingSettleCount": 0,
+      "targetClaimableCount": 0,
+      "unresolvedTargetPositionCount": 0
+    },
+    "ospex-stage-maker-a": {
+      "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+      "targetActiveCount": 0,
+      "targetPendingSettleCount": 0,
+      "targetClaimableCount": 0,
+      "unresolvedTargetPositionCount": 0
+    },
+    "ospex-stage-maker-b": {
+      "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "targetActiveCount": 0,
+      "targetPendingSettleCount": 0,
+      "targetClaimableCount": 0,
+      "unresolvedTargetPositionCount": 0
+    }
+  },
+  "note": "Historical losing rows can remain unclaimed; zero-state is judged by target active/pendingSettle/claimable and open commitments/orderbook."
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "source": "MLB Stats official feed/schedule",
+  "capturedAtUtc": "2026-07-02T21:43:13Z",
+  "gamePk": 823442,
+  "status": "Final",
+  "awayTeam": "Pittsburgh Pirates",
+  "awayRuns": 6,
+  "homeTeam": "Philadelphia Phillies",
+  "homeRuns": 1,
+  "winner": "Pittsburgh Pirates",
+  "winnerRole": "away",
+  "winnerProtocolSide": "upper"
+}

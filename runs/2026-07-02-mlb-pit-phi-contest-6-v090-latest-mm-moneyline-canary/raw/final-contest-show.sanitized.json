@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "contest": {
+    "contestId": "6",
+    "sport": "mlb",
+    "awayTeam": "Pittsburgh Pirates",
+    "homeTeam": "Philadelphia Phillies",
+    "matchTime": "2026-07-02T16:35:00Z",
+    "status": "scored",
+    "awayScore": 6,
+    "homeScore": 1,
+    "verifiedAt": "2026-07-02T14:53:14+00:00",
+    "scoredAt": "2026-07-02T19:47:58+00:00",
+    "speculations": [
+      {
+        "contestId": "6",
+        "speculationId": "10",
+        "type": "moneyline",
+        "status": "closed",
+        "winSide": "away",
+        "orderbookCount": 0
+      }
+    ]
+  }
+}

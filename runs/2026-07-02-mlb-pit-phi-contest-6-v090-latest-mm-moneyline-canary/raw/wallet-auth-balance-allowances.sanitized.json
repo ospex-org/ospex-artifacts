@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-07-02T14:52:00Z",
+  "wallets": {
+    "contestCreatorMarketUpdateAndLiveMaker": {
+      "profile": "ospex-stage-maker-b",
+      "address": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+      "expectedAddressChecked": true
+    },
+    "manualSeedMaker": {
+      "profile": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+      "expectedAddressChecked": true
+    },
+    "controlledTaker": {
+      "profile": "ospex-flow-a",
+      "address": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+      "expectedAddressChecked": true
+    }
+  },
+  "allowances": {
+    "boundedOnly": true,
+    "unlimitedApprovalsUsed": false,
+    "treasuryModuleApprovalUSDC": "1.000000",
+    "positionModuleExistingAllowanceUSDC": "0.650000"
+  },
+  "notes": "Public addresses only; local keystore and credential paths are intentionally excluded."
+}

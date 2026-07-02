@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-07-02T14:51:41.080Z",
+  "selectedTarget": {
+    "contestId": "6",
+    "sport": "mlb",
+    "market": "moneyline",
+    "speculationId": "10",
+    "awayTeam": "Pittsburgh Pirates",
+    "homeTeam": "Philadelphia Phillies",
+    "gamePk": 823442,
+    "gameId": "dc5fca3b-e024-49e2-b5da-95988bc85ca7",
+    "scheduledUtc": "2026-07-02T16:35:00Z",
+    "selectionGates": {
+      "upcomingAtSelection": true,
+      "officialPregame": true,
+      "canCreateContest": true,
+      "oddsAvailable": true,
+      "sufficientLeadTime": true,
+      "leadTimeMinutes": 103
+    },
+    "officialStatus": "Pre-Game",
+    "actualPitchEventsBeforeWrites": 0,
+    "statusOnlyPseudoPlayObserved": true,
+    "speculations": [
+      {
+        "contestId": "6",
+        "speculationId": "10",
+        "type": "moneyline"
+      }
+    ]
+  },
+  "fallbackNotUsed": {
+    "game": "Cincinnati Reds @ Milwaukee Brewers",
+    "gameId": "72d94c96-809b-4c48-ab29-47bb9044f0b4",
+    "reason": "primary remained pregame/safe with adequate lead time"
+  },
+  "preLiveRecheck": {
+    "checkedAtUtc": "2026-07-02T15:03:44.717Z",
+    "officialStatus": "Pre-Game",
+    "leadTimeMinutes": 91,
+    "pitchEvents": 0,
+    "safe": true
+  },
+  "teamIdentity": {
+    "away": {
+      "team": "Pittsburgh Pirates",
+      "abbreviation": "PIT",
+      "positionType": "upper",
+      "role": "away",
+      "identity": "underdog",
+      "marketOddsAmerican": "+114"
+    },
+    "home": {
+      "team": "Philadelphia Phillies",
+      "abbreviation": "PHI",
+      "positionType": "lower",
+      "role": "home",
+      "identity": "favorite",
+      "marketOddsAmerican": "-126"
+    }
+  }
+}

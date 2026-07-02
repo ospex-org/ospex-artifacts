@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-07-02T15:01:33Z",
+  "configSummary": {
+    "sports": [
+      "mlb"
+    ],
+    "markets": [
+      "moneyline"
+    ],
+    "contestAllowList": [
+      "6"
+    ],
+    "allowlistOnly": true,
+    "seedSpeculations": false,
+    "mode": "dry-run",
+    "riskPerCommitmentUSDC": "0.100000",
+    "maxOpenCommitments": 2,
+    "expirySeconds": 120,
+    "spreadBps": 175
+  },
+  "candidatesAllowlistOnly": {
+    "summary": {
+      "gamesAvailableToCreate": 0,
+      "quoteReady": 1,
+      "needsContest": 0,
+      "needsSpeculation": 0,
+      "needsVerification": 0,
+      "skipped": {}
+    },
+    "items": [
+      {
+        "kind": "quote_ready",
+        "contestId": "6",
+        "speculationId": "10",
+        "market": "moneyline",
+        "inContestAllowList": true
+      }
+    ]
+  },
+  "quoteDryRun": {
+    "pipeline": "computed",
+    "contestId": "6",
+    "canQuote": true,
+    "awayQuoteAmerican": 115,
+    "homeQuoteAmerican": -124,
+    "awaySizeUSDC": 0.1,
+    "homeSizeUSDC": 0.1,
+    "referenceOdds": {
+      "awayAmerican": 114,
+      "homeAmerican": -126
+    }
+  },
+  "runDryTelemetry": {
+    "eventCount": 14,
+    "byKind": {
+      "tick-start": 2,
+      "candidate": 1,
+      "quote-intent": 2,
+      "risk-verdict": 2,
+      "would-submit": 2,
+      "quote-competitiveness": 2,
+      "would-soft-cancel": 2,
+      "kill": 1
+    },
+    "wouldSubmitCount": 2,
+    "scopedToContestIds": [
+      "6"
+    ],
+    "scopedToSpeculationIds": [
+      "10"
+    ],
+    "offAllowlistEvents": 0
+  },
+  "gate": {
+    "allowlistOnlyScoped": true,
+    "quoteCanQuote": true,
+    "noBroadSlateBehavior": true,
+    "noFundingAllowanceOrSolvencyHold": true
+  }
+}
