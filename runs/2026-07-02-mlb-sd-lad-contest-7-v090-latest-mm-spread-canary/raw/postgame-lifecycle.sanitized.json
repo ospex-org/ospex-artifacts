@@ -72,6 +72,13 @@
       "claimStatus": "not claimable"
     },
     {
+      "walletLabel": "ospex-stage-maker-a",
+      "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "side": "upper / away / San Diego Padres +1.5",
+      "result": "lost seed-maker spread position",
+      "claimStatus": "not claimable"
+    },
+    {
       "walletLabel": "ospex-flow-a",
       "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
       "side": "upper / away / San Diego Padres moneyline",

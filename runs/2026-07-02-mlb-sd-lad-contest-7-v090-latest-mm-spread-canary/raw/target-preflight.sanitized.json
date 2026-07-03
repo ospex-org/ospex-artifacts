@@ -46,8 +46,8 @@
       "abbreviation": "SD",
       "positionType": "upper",
       "role": "away",
-      "identity": "favorite",
-      "marketOddsAmerican": "-125",
+      "identity": "underdog",
+      "marketOddsAmerican": "+170",
       "spreadLine": "+1.5"
     },
     "home": {
@@ -55,8 +55,8 @@
       "abbreviation": "LAD",
       "positionType": "lower",
       "role": "home",
-      "identity": "underdog",
-      "marketOddsAmerican": "+105",
+      "identity": "favorite",
+      "marketOddsAmerican": "-193",
       "spreadLine": "-1.5"
     },
     "winner": {
