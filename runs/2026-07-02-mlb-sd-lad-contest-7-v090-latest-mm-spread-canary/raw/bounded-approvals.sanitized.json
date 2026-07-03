@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-07-02T23:00:00Z",
+  "approvals": [
+    {
+      "wallet": "ospex-stage-maker-b",
+      "spenderModule": "TreasuryModule",
+      "targetUSDC": "1.000000",
+      "txHash": "0xc14dff472cf6eb2d71ac32fde0a687c0d5f5cdabb1aefc50b3471a08daa8dcaf",
+      "bounded": true
+    },
+    {
+      "wallet": "ospex-stage-maker-a",
+      "spenderModule": "TreasuryModule",
+      "targetUSDC": "0.500000",
+      "txHash": "0x3b2550daee3fb02459aab27abfcdb776002471cabcefee06a41fdbb14f33a686",
+      "bounded": true
+    },
+    {
+      "wallet": "ospex-flow-a",
+      "spenderModule": "TreasuryModule",
+      "targetUSDC": "0.500000",
+      "txHash": "0x92efd817f86bcce3aac81143e5cd4b53a515f2c338e0d3dfef44136df1b05ac9",
+      "bounded": true
+    }
+  ],
+  "unlimitedApprovalsUsed": false
+}

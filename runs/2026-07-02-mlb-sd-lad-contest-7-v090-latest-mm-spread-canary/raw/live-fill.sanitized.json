@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-07-02T23:15:52Z",
+  "result": {
+    "contest": {
+      "contestId": "7",
+      "sport": "mlb",
+      "homeTeam": "Los Angeles Dodgers",
+      "awayTeam": "San Diego Padres"
+    },
+    "speculation": {
+      "speculationId": "12",
+      "contestId": "7",
+      "type": "spread"
+    },
+    "commitment": {
+      "commitmentHash": "0xe09448186d54586f1aaaacb8b9673771f7d383e0270efc8bd9a0af74fe64eff7",
+      "contestId": "7",
+      "marketType": "spread"
+    }
+  },
+  "commitmentHash": "0xe09448186d54586f1aaaacb8b9673771f7d383e0270efc8bd9a0af74fe64eff7",
+  "txHash": "0x35765b4df1c1ddbaf9af79bcf4be349a01540a582f5637f5c7aca9a07fcb88ad",
+  "blockNumber": "89552765",
+  "maker": {
+    "alias": "ospex-stage-maker-b",
+    "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "side": "away / upper / San Diego Padres +1.5",
+    "riskUSDC": "0.050000",
+    "profitUSDC": "0.045000"
+  },
+  "taker": {
+    "alias": "ospex-flow-a",
+    "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+    "side": "home / lower / Los Angeles Dodgers -1.5",
+    "riskUSDC": "0.045000",
+    "profitUSDC": "0.050000"
+  },
+  "odds": {
+    "makerOddsTick": 190,
+    "takerOddsDecimal": "2.111111"
+  },
+  "txReceipt": {
+    "status": "success",
+    "gasCostPOL": "0.099558748652282504",
+    "gasUsed": 356434,
+    "effectiveGasPriceWei": "279318888356"
+  }
+}

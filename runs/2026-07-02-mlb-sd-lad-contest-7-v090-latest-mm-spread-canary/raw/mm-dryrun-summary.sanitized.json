@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-07-02T23:08:34Z",
+  "candidatesAllowlistOnly": {
+    "config": {
+      "sports": [
+        "mlb"
+      ],
+      "markets": [
+        "moneyline",
+        "spread"
+      ],
+      "hours": 6,
+      "contestsHours": 6,
+      "maxTrackedMarkets": 4,
+      "requireReferenceOdds": true,
+      "contestAllowListSize": 1,
+      "allowlistOnly": true
+    },
+    "summary": {
+      "gamesAvailableToCreate": 0,
+      "quoteReady": 2,
+      "needsContest": 0,
+      "needsSpeculation": 0,
+      "needsVerification": 0,
+      "skipped": {}
+    },
+    "items": [
+      {
+        "contestId": "7",
+        "market": "moneyline",
+        "speculationId": "11",
+        "kind": "quote_ready",
+        "inContestAllowList": true,
+        "referenceOdds": {
+          "market": "moneyline",
+          "awayOddsAmerican": 170,
+          "homeOddsAmerican": -193
+        }
+      },
+      {
+        "contestId": "7",
+        "market": "spread",
+        "speculationId": "12",
+        "kind": "quote_ready",
+        "inContestAllowList": true,
+        "referenceOdds": {
+          "market": "spread",
+          "awayLine": 1.5,
+          "homeLine": -1.5,
+          "awayOddsAmerican": -125,
+          "homeOddsAmerican": 105
+        }
+      }
+    ]
+  },
+  "dryRun": {
+    "runId": "2026-07-02T23-08-34-614Z-6xlfus",
+    "wouldSubmitCount": 4,
+    "markets": [
+      "moneyline",
+      "spread"
+    ]
+  },
+  "wouldSubmitMarkets": [
+    "moneyline",
+    "spread"
+  ],
+  "seedSpeculations": false,
+  "broadSlateBehaviorObserved": false
+}

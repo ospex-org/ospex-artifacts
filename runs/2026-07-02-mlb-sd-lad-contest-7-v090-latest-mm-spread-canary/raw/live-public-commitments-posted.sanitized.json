@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-07-02T23:16:00Z",
+  "runId": "2026-07-02T23-10-45-843Z-sx6qkp",
+  "strictAllowlist": [
+    "7"
+  ],
+  "seedSpeculations": false,
+  "submittedQuotes": [
+    {
+      "hash": "0xbfa3fa4499eb0cd9cf3f959ca1617d88e9431142806668fe6c08cf0b26d303d5",
+      "market": "moneyline",
+      "speculationId": "11"
+    },
+    {
+      "hash": "0xfdc63b06fbe1935ffbe359c0c9570806a987820c9d3b53828657e473516817f4",
+      "market": "moneyline",
+      "speculationId": "11"
+    },
+    {
+      "hash": "0x83d67f70402d1962e47a11af4934cd19d57818e15ce6d18f8666b74b5a0ce091",
+      "market": "spread",
+      "speculationId": "12"
+    },
+    {
+      "hash": "0x090eae1dc8610b31947e9382cfe65999cb968919cd65100d0b3116b776e4500b",
+      "market": "spread",
+      "speculationId": "12"
+    },
+    {
+      "hash": "0xc02f46c4763d7a4675cba713243d3cf88d66d10922c196e9500998dc5e8ead11",
+      "market": "moneyline",
+      "speculationId": "11"
+    },
+    {
+      "hash": "0x10ff76b3ebf94f83dda923262730ba66f299ec6a61e5622e816c44bcc2af04d3",
+      "market": "moneyline",
+      "speculationId": "11"
+    },
+    {
+      "hash": "0x50f7acb850d9cb65ea004fcdcebedff5780b8cb81507cc7d2fda500e0329151d",
+      "market": "spread",
+      "speculationId": "12"
+    },
+    {
+      "hash": "0xe09448186d54586f1aaaacb8b9673771f7d383e0270efc8bd9a0af74fe64eff7",
+      "market": "spread",
+      "speculationId": "12"
+    }
+  ],
+  "firstBatchExpiredBeforeControlledFill": true,
+  "filledQuoteHash": "0xe09448186d54586f1aaaacb8b9673771f7d383e0270efc8bd9a0af74fe64eff7"
+}

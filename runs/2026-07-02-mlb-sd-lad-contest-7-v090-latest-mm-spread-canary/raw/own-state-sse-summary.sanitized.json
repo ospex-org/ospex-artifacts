@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-07-02T23:15:52Z",
+  "runId": "2026-07-02T23-10-45-843Z-sx6qkp",
+  "fillEvents": [
+    {
+      "source": "own-state-stream",
+      "commitmentHash": "0xe09448186d54586f1aaaacb8b9673771f7d383e0270efc8bd9a0af74fe64eff7",
+      "speculationId": "12",
+      "contestId": "7",
+      "market": "spread",
+      "makerSide": "away",
+      "takerSide": "home",
+      "newFillWei6": "50000"
+    }
+  ],
+  "canonicalFillSource": "own-state-stream",
+  "canonicalLegacySourcesAbsent": true
+}

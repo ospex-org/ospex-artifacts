@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-07-03T05:57:10Z",
+  "postStop": {
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "orphanProcessCount": 0
+  },
+  "postgame": {
+    "contestOpenCommitments": 0,
+    "speculation11OpenCommitments": 0,
+    "speculation12OpenCommitments": 0,
+    "walletTargetCounts": {
+      "stage_maker_a": {
+        "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "targetCounts": {
+          "active": 0,
+          "pendingSettle": 0,
+          "claimable": 0
+        },
+        "targetRows": {
+          "active": [],
+          "pendingSettle": [],
+          "claimable": []
+        },
+        "totals": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      },
+      "stage_maker_b": {
+        "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "targetCounts": {
+          "active": 0,
+          "pendingSettle": 0,
+          "claimable": 0
+        },
+        "targetRows": {
+          "active": [],
+          "pendingSettle": [],
+          "claimable": []
+        },
+        "totals": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      },
+      "flow_a": {
+        "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "targetCounts": {
+          "active": 0,
+          "pendingSettle": 0,
+          "claimable": 0
+        },
+        "targetRows": {
+          "active": [],
+          "pendingSettle": [],
+          "claimable": []
+        },
+        "totals": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      }
+    },
+    "targetZero": true
+  },
+  "claimAllDryRunsEmpty": true
+}

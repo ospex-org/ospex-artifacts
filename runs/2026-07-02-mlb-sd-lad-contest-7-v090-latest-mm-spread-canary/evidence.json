@@ -1,0 +1,333 @@
+{
+  "artifactId": "2026-07-02-mlb-sd-lad-contest-7-v090-latest-mm-spread-canary",
+  "artifactPath": "runs/2026-07-02-mlb-sd-lad-contest-7-v090-latest-mm-spread-canary/",
+  "artifactType": "run",
+  "artifactStatus": "complete_verified_with_caveats",
+  "status": "complete_verified_with_caveats",
+  "capturedAtUtc": "2026-07-03T05:57:10Z",
+  "date": "2026-07-02",
+  "network": "polygon",
+  "chainId": 137,
+  "verdict": {
+    "label": "FULL_GREEN",
+    "protocolVerdict": "POSTGAME_ZERO_STATE_GREEN",
+    "reason": "The v0.9.0/R5 latest-main strict-allowlist moneyline+spread MM canary for San Diego Padres @ Los Angeles Dodgers completed the full lifecycle: pregame setup passed, contest 7 was created and verified, moneyline speculation 11 and spread speculation 12 were manually seeded/filled with zero residual seed exposure, the market maker posted tiny moneyline and spread live quotes under contest allowlist [7] with seedSpeculations=false, one controlled live spread quote was filled, visible/open exposure drained to zero, official final score San Diego Padres 7 / Los Angeles Dodgers 12 was verified, contest 7 was scored through R5/CRE, speculations 11 and 12 settled to home/lower/Los Angeles Dodgers, winning controlled positions were claimed, and final target commitments plus active/pending/claimable positions are zero."
+  },
+  "artifactFiles": {
+    "summary": "summary.md",
+    "evidence": "evidence.json",
+    "scenarioMatrix": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "mveScorecard": "mve-scorecard.json",
+    "mveScorecardMarkdown": "mve-scorecard.md",
+    "releaseRuntimeMatrix": "raw/release-runtime-matrix.sanitized.json",
+    "targetPreflight": "raw/target-preflight.sanitized.json",
+    "walletAuthBalances": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "boundedApprovals": "raw/bounded-approvals.sanitized.json",
+    "mmDryRun": "raw/mm-dryrun-summary.sanitized.json",
+    "liveCommitmentsPosted": "raw/live-public-commitments-posted.sanitized.json",
+    "liveFill": "raw/live-fill.sanitized.json",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json",
+    "restartColdStartProbe": "raw/restart-cold-start-probe.sanitized.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "finalContestShow": "raw/final-contest-show.sanitized.json",
+    "finalPositionsStatus": "raw/final-positions-status.sanitized.json",
+    "finalCommitmentsOrderbook": "raw/final-commitments-orderbook.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json"
+  },
+  "scope": {
+    "runClass": "mm-live-canary",
+    "strictAllowlistOnly": true,
+    "contestAllowList": [
+      "7"
+    ],
+    "broadMarketMakerRunUsed": false,
+    "markets": [
+      "moneyline",
+      "spread"
+    ],
+    "primaryArtifactTargetMarket": "spread",
+    "tinyControlledCapitalOnly": true,
+    "boundedApprovalsOnly": true,
+    "oldFunctionsLinkFlowUsed": false,
+    "seedSpeculationsDuringMmRuntime": false
+  },
+  "target": {
+    "game": "San Diego Padres @ Los Angeles Dodgers",
+    "gamePk": 823935,
+    "gameId": "6dae3a98-8011-4407-a87a-19b9cc764e3c",
+    "slug": "sd-lad-2026-07-03",
+    "sport": "mlb",
+    "market": "spread",
+    "marketsCovered": [
+      "moneyline",
+      "spread"
+    ],
+    "contestId": "7",
+    "speculationId": "12",
+    "companionSpeculations": {
+      "moneyline": "11",
+      "spread": "12"
+    },
+    "awayTeam": "San Diego Padres",
+    "homeTeam": "Los Angeles Dodgers",
+    "startTimeUtc": "2026-07-03T02:10:00Z",
+    "spreadLine": {
+      "awayLine": 1.5,
+      "homeLine": -1.5,
+      "lineTicks": 15
+    },
+    "referenceOdds": {
+      "moneyline": {
+        "awayOddsAmerican": 170,
+        "homeOddsAmerican": -193
+      },
+      "spread": {
+        "awayLine": 1.5,
+        "homeLine": -1.5,
+        "awayOddsAmerican": -125,
+        "homeOddsAmerican": 105
+      }
+    },
+    "teamIdentity": {
+      "away": {
+        "team": "San Diego Padres",
+        "abbreviation": "SD",
+        "positionType": "upper",
+        "role": "away",
+        "identity": "underdog",
+        "marketOddsAmerican": "+170",
+        "spreadLine": "+1.5"
+      },
+      "home": {
+        "team": "Los Angeles Dodgers",
+        "abbreviation": "LAD",
+        "positionType": "lower",
+        "role": "home",
+        "identity": "favorite",
+        "marketOddsAmerican": "-193",
+        "spreadLine": "-1.5"
+      },
+      "winner": {
+        "team": "Los Angeles Dodgers",
+        "role": "home",
+        "positionType": "lower"
+      }
+    },
+    "contestStatusAfterCreateVerify": "verified",
+    "contestStatusAfterPostgame": "scored",
+    "postgameStatus": "complete",
+    "finalScore": {
+      "awayRuns": 7,
+      "homeRuns": 12,
+      "winner": "Los Angeles Dodgers",
+      "winnerProtocolSide": "lower",
+      "spreadWinner": "Los Angeles Dodgers -1.5"
+    }
+  },
+  "wallets": {
+    "manualSeedMaker": {
+      "profile": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    "controlledTaker": {
+      "profile": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    },
+    "operatorMmMaker": {
+      "profile": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    }
+  },
+  "versions": {
+    "schemaVersion": 1,
+    "capturedAtUtc": "2026-07-02T22:52:20Z",
+    "node": "v22.22.0",
+    "yarn": "1.22.22",
+    "chainId": 137,
+    "sdkCli": {
+      "repo": "ospex-sdk",
+      "headSha": "fd55bd1e7de0",
+      "version": "0.9.0",
+      "requiredAtOrAfter": "fd55bd1",
+      "ok": true
+    },
+    "marketMaker": {
+      "repo": "ospex-market-maker",
+      "headSha": "4fcd489ef1ee",
+      "requiredAtOrAfter": "4fcd489",
+      "installedSdkVersion": "0.9.0",
+      "typecheck": "pass",
+      "test": "pass (1061 tests)",
+      "build": "pass",
+      "allowlistOnlyFlagAvailable": true,
+      "ownStateOrphanSafetyRegressionPresent": true
+    },
+    "ancillaryRepos": {
+      "ospex-core-api": {
+        "headSha": "076f44d428fc",
+        "requiredAtOrAfter": "076f44d",
+        "ok": true
+      },
+      "ospex-indexer": {
+        "headSha": "75be9e76965b",
+        "requiredAtOrAfter": "75be9e7",
+        "ok": true
+      },
+      "ospex-cre": {
+        "headSha": "fed6e26e27e5",
+        "requiredAtOrAfter": "fed6e26",
+        "ok": true
+      }
+    },
+    "allRequiredOk": true
+  },
+  "setup": {
+    "contestCreateTx": "0xb4769985b401180b43028e4a112ffa26acf7966be28aef61eb0e5e03e96829a1",
+    "marketUpdateTx": "0xe7dcde97bd0ff8a2b6bc0199b972b6d410d5dace4e828e535333bd2007958da0",
+    "manualSeedCommitmentHashes": {
+      "moneyline": "0x3ad956a21e6370300871744afd39daae6a7c0b30947c0dfb8760f7b7d54aa881",
+      "spread": "0xbc7dda5fd91924e2cccee227c6aea72c17927565bf9540ed405b9df49f95f8a9"
+    },
+    "manualSeedFillTxs": {
+      "moneyline": "0x1211ae528d566d1a3f98456bcea4a09ccecfed07e9f6eef028c1a3345c691490",
+      "spread": "0x88a8dfbc83cf0eca953adcc3e818666da595ad049ad4128f04d8b04def545c02"
+    },
+    "seedOpenCommitmentsAfterConvergence": 0
+  },
+  "liveWindow": {
+    "runId": "2026-07-02T23-10-45-843Z-sx6qkp",
+    "startedAtUtc": "2026-07-02T23:10:45Z",
+    "stoppedAtUtc": "2026-07-02T23:17:30Z",
+    "commitmentCount": 8,
+    "marketsPosted": [
+      "moneyline",
+      "spread"
+    ],
+    "controlledFill": {
+      "market": "spread",
+      "commitmentHash": "0xe09448186d54586f1aaaacb8b9673771f7d383e0270efc8bd9a0af74fe64eff7",
+      "txHash": "0x35765b4df1c1ddbaf9af79bcf4be349a01540a582f5637f5c7aca9a07fcb88ad",
+      "makerFilledRiskUSDC": "0.050000",
+      "takerRiskUSDC": "0.045000",
+      "makerWallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "takerWallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    },
+    "ownStateSseAssertions": {
+      "fillSource": "own-state-stream",
+      "fillEventCount": 1
+    },
+    "postStopZeroExposure": {
+      "checkedAtUtc": "2026-07-02T23:19:03Z",
+      "publicMakerVisibleCommitments": 0,
+      "publicContestSpecVisibleCommitments": 0,
+      "contestOrderbookCount": 0,
+      "orphanProcessCount": 0
+    }
+  },
+  "postgame": {
+    "schemaVersion": 1,
+    "completedAtUtc": "2026-07-03T05:57:10Z",
+    "verdict": "POSTGAME_ZERO_STATE_GREEN",
+    "officialFinal": {
+      "schemaVersion": 1,
+      "source": "MLB Stats official feed/schedule",
+      "capturedAtUtc": "2026-07-03T05:57:10Z",
+      "gamePk": 823935,
+      "status": "Final",
+      "awayTeam": "San Diego Padres",
+      "awayRuns": 7,
+      "homeTeam": "Los Angeles Dodgers",
+      "homeRuns": 12,
+      "winner": "Los Angeles Dodgers",
+      "winnerRole": "home",
+      "winnerProtocolSide": "lower"
+    },
+    "score": {
+      "requestTxHash": "0x8fc5217bd6d8d5ee3d2add6eddcaa2de61c69dc7608d2d4fc380222967567dfc",
+      "callbackTxHash": "0x777950c2fd4502472da0eb8b4f39e86d87b60dd86b75ca018bb32bd586a27bc8",
+      "contestStatus": "scored",
+      "awayScore": 7,
+      "homeScore": 12,
+      "scoredAt": "2026-07-03T05:51:55+00:00",
+      "retryNeeded": false
+    },
+    "settle": {
+      "moneyline": {
+        "txHash": "0x6cdd7310ddc7c42f9605e826e78d62a82aa8b770cd87ca98a93fe2caa930438a",
+        "winSide": "home/lower/Los Angeles Dodgers",
+        "speculationStatus": "closed",
+        "settledAt": "2026-07-03T05:54:10+00:00"
+      },
+      "spread": {
+        "txHash": "0x0316aabf6e6ec89fcb81859a586e65ec3ae21f6ca3a9eafedb1ed28840ffc671",
+        "winSide": "home/lower/Los Angeles Dodgers -1.5",
+        "speculationStatus": "closed",
+        "settledAt": "2026-07-03T05:54:14+00:00"
+      }
+    },
+    "claims": [
+      {
+        "walletLabel": "ospex-stage-maker-a",
+        "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "side": "lower / home / Los Angeles Dodgers",
+        "source": "manual seed maker winning moneyline position",
+        "commitmentHash": "0x3ad956a21e6370300871744afd39daae6a7c0b30947c0dfb8760f7b7d54aa881",
+        "payoutWei6": "76500",
+        "payoutUSDC": "0.076500",
+        "txHash": "0x8ba7fa93ab37d0898769fc1193b7a2630ffdb2aa627fe17d131be2a1bd30c7b9",
+        "receiptStatus": "success"
+      },
+      {
+        "walletLabel": "ospex-flow-a",
+        "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "side": "lower / home / Los Angeles Dodgers -1.5",
+        "source": "controlled spread taker winning positions (manual setup + live MM fill)",
+        "commitmentHash": "0xe09448186d54586f1aaaacb8b9673771f7d383e0270efc8bd9a0af74fe64eff7",
+        "payoutWei6": "185000",
+        "payoutUSDC": "0.185000",
+        "txHash": "0x5a29f4ad7eb6a1c54646f6651375e2e1999bb8e98b4335d358d9c0d6773dbb28",
+        "receiptStatus": "success"
+      }
+    ],
+    "noOps": [
+      {
+        "walletLabel": "ospex-stage-maker-b",
+        "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "side": "upper / away / San Diego Padres +1.5",
+        "result": "lost live MM spread maker position",
+        "claimStatus": "not claimable"
+      },
+      {
+        "walletLabel": "ospex-stage-maker-a",
+        "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "side": "upper / away / San Diego Padres +1.5",
+        "result": "lost seed-maker spread position",
+        "claimStatus": "not claimable"
+      },
+      {
+        "walletLabel": "ospex-flow-a",
+        "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "side": "upper / away / San Diego Padres moneyline",
+        "result": "lost seed-taker position",
+        "claimStatus": "not claimable"
+      }
+    ],
+    "finalZeroState": {
+      "contestOpenCommitments": 0,
+      "specOpenCommitments": 0,
+      "targetActiveCount": 0,
+      "targetPendingSettleCount": 0,
+      "targetClaimableCount": 0,
+      "targetUnresolvedCount": 0
+    }
+  },
+  "caveats": [
+    "The first live quote batch expired before the controlled fill; MM reposted and the controlled fill used the second spread batch.",
+    "The live cancel sweep found no remaining visible quotes because unfilled quotes had already expired/been hidden; public/API open commitments are zero.",
+    "A fresh dry-run/cold-start probe wrote synthetic dry records into the live state file; the synthetic records were backed up and removed before final state reporting.",
+    "A duplicate score request attempted after postgame completion reverted because contest 7 was already scored; it had no state effect and is not part of the artifact transaction set."
+  ]
+}

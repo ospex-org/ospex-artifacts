@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-07-03T05:57:10Z",
+  "contest": {
+    "contestId": "7",
+    "awayTeam": "San Diego Padres",
+    "homeTeam": "Los Angeles Dodgers",
+    "status": "scored",
+    "awayScore": 7,
+    "homeScore": 12,
+    "scoredAt": "2026-07-03T05:51:55+00:00"
+  },
+  "speculations": {
+    "11": {
+      "speculationId": "11",
+      "type": "moneyline",
+      "lineTicks": 0,
+      "speculationStatus": 1,
+      "winSide": "home",
+      "settledAt": "2026-07-03T05:54:10+00:00",
+      "voided": false,
+      "orderbookCount": 0
+    },
+    "12": {
+      "speculationId": "12",
+      "type": "spread",
+      "lineTicks": 15,
+      "speculationStatus": 1,
+      "winSide": "home",
+      "settledAt": "2026-07-03T05:54:14+00:00",
+      "voided": false,
+      "orderbookCount": 0
+    }
+  }
+}
