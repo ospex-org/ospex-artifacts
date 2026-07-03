@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-07-03T05:57:10Z",
+  "openCommitments": {
+    "speculation_11": 0,
+    "speculation_12": 0,
+    "contest_7": 0,
+    "stage_maker_a_contest_7": 0,
+    "stage_maker_b_contest_7": 0,
+    "flow_a_contest_7": 0
+  },
+  "orderbookCounts": {
+    "speculation11": 0,
+    "speculation12": 0
+  }
+}

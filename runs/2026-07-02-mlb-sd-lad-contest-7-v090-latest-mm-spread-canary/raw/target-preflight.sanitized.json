@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-07-02T22:52:12Z",
+  "selectedTarget": {
+    "contestId": "7",
+    "sport": "mlb",
+    "market": "spread",
+    "speculationId": "12",
+    "awayTeam": "San Diego Padres",
+    "homeTeam": "Los Angeles Dodgers",
+    "gamePk": 823935,
+    "gameId": "6dae3a98-8011-4407-a87a-19b9cc764e3c",
+    "scheduledUtc": "2026-07-03T02:10:00Z",
+    "selectionGates": {
+      "upcomingAtSelection": true,
+      "officialPregame": true,
+      "canCreateContest": true,
+      "oddsAvailable": true,
+      "sufficientLeadTime": true,
+      "leadTimeMinutes": 190
+    },
+    "officialStatus": "Pre-Game",
+    "speculations": [
+      {
+        "contestId": "7",
+        "speculationId": "11",
+        "type": "moneyline"
+      },
+      {
+        "contestId": "7",
+        "speculationId": "12",
+        "type": "spread",
+        "awayLine": 1.5,
+        "homeLine": -1.5
+      }
+    ]
+  },
+  "fallbackNotUsed": {
+    "game": "Los Angeles Angels @ Seattle Mariners",
+    "gameId": "ad3f6b2c-4678-43b7-b149-ac7ef2c510b3",
+    "reason": "primary remained pregame/safe with adequate lead time"
+  },
+  "teamIdentity": {
+    "away": {
+      "team": "San Diego Padres",
+      "abbreviation": "SD",
+      "positionType": "upper",
+      "role": "away",
+      "identity": "favorite",
+      "marketOddsAmerican": "-125",
+      "spreadLine": "+1.5"
+    },
+    "home": {
+      "team": "Los Angeles Dodgers",
+      "abbreviation": "LAD",
+      "positionType": "lower",
+      "role": "home",
+      "identity": "underdog",
+      "marketOddsAmerican": "+105",
+      "spreadLine": "-1.5"
+    },
+    "winner": {
+      "team": "Los Angeles Dodgers",
+      "role": "home",
+      "positionType": "lower"
+    }
+  },
+  "referenceOdds": {
+    "moneyline": {
+      "awayOddsAmerican": 170,
+      "homeOddsAmerican": -193
+    },
+    "spread": {
+      "awayLine": 1.5,
+      "homeLine": -1.5,
+      "awayOddsAmerican": -125,
+      "homeOddsAmerican": 105
+    }
+  }
+}

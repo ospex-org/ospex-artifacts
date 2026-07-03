@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "source": "MLB Stats official feed/schedule",
+  "capturedAtUtc": "2026-07-03T05:57:10Z",
+  "gamePk": 823935,
+  "status": "Final",
+  "awayTeam": "San Diego Padres",
+  "awayRuns": 7,
+  "homeTeam": "Los Angeles Dodgers",
+  "homeRuns": 12,
+  "winner": "Los Angeles Dodgers",
+  "winnerRole": "home",
+  "winnerProtocolSide": "lower"
+}

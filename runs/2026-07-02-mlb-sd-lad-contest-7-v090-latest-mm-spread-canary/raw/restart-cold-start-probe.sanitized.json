@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-07-02T23:19:03Z",
+  "probeType": "fresh dry-run/cold-start check against same allowlisted config/state",
+  "result": "pass_with_caveats",
+  "wouldSubmitMarkets": [
+    "moneyline",
+    "spread"
+  ],
+  "duplicateExposureObserved": false,
+  "untrackedVisibleCommitmentsObserved": false,
+  "drySyntheticRecordsWritten": 4,
+  "drySyntheticRecordsBackedUpAndRemoved": true,
+  "finalVisibleOpenAfterCleanup": 0
+}

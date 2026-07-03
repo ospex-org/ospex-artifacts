@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-07-03T05:57:10Z",
+  "transactions": [
+    {
+      "category": "approve",
+      "purpose": "Bounded 1.000000 USDC TreasuryModule approval for contest creation/setup fees",
+      "txHash": "0xc14dff472cf6eb2d71ac32fde0a687c0d5f5cdabb1aefc50b3471a08daa8dcaf",
+      "status": "success",
+      "operatorControlled": true,
+      "blockNumber": 89552128
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded 0.500000 USDC TreasuryModule approval for manual seed creation fee share",
+      "txHash": "0x3b2550daee3fb02459aab27abfcdb776002471cabcefee06a41fdbb14f33a686",
+      "status": "success",
+      "operatorControlled": true,
+      "blockNumber": 89552221
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded 0.500000 USDC TreasuryModule approval for controlled taker fee share",
+      "txHash": "0x92efd817f86bcce3aac81143e5cd4b53a515f2c338e0d3dfef44136df1b05ac9",
+      "status": "success",
+      "operatorControlled": true,
+      "blockNumber": 89552225
+    },
+    {
+      "category": "create-contest",
+      "purpose": "Create contest 7 for SD @ LAD",
+      "txHash": "0xb4769985b401180b43028e4a112ffa26acf7966be28aef61eb0e5e03e96829a1",
+      "status": "success",
+      "operatorControlled": true,
+      "blockNumber": 89552138,
+      "gasUsed": 363870,
+      "effectiveGasPriceWei": "283426823815",
+      "gasCostPOL": "0.10313051838156405"
+    },
+    {
+      "category": "other",
+      "purpose": "Request market update for contest 7",
+      "txHash": "0xe7dcde97bd0ff8a2b6bc0199b972b6d410d5dace4e828e535333bd2007958da0",
+      "status": "success",
+      "operatorControlled": true,
+      "blockNumber": 89552190,
+      "gasUsed": 120936,
+      "effectiveGasPriceWei": "281806886778",
+      "gasCostPOL": "0.034080597659384208"
+    },
+    {
+      "category": "seed-match",
+      "purpose": "Fully match tiny manual moneyline seed to create speculation 11",
+      "txHash": "0x1211ae528d566d1a3f98456bcea4a09ccecfed07e9f6eef028c1a3345c691490",
+      "status": "success",
+      "operatorControlled": true,
+      "blockNumber": 89552263,
+      "gasUsed": 662230,
+      "effectiveGasPriceWei": "278395735915",
+      "gasCostPOL": "0.18436200819499045"
+    },
+    {
+      "category": "seed-match",
+      "purpose": "Fully match tiny manual spread seed to create speculation 12",
+      "txHash": "0x88a8dfbc83cf0eca953adcc3e818666da595ad049ad4128f04d8b04def545c02",
+      "status": "success",
+      "operatorControlled": true,
+      "blockNumber": 89552329,
+      "gasUsed": 641914,
+      "effectiveGasPriceWei": "280837307555",
+      "gasCostPOL": "0.18027339944186027"
+    },
+    {
+      "category": "match-commitment",
+      "purpose": "Controlled fill against live MM spread quote",
+      "txHash": "0x35765b4df1c1ddbaf9af79bcf4be349a01540a582f5637f5c7aca9a07fcb88ad",
+      "status": "success",
+      "operatorControlled": true,
+      "blockNumber": 89552765,
+      "gasUsed": 356434,
+      "effectiveGasPriceWei": "279318888356",
+      "gasCostPOL": "0.099558748652282504"
+    },
+    {
+      "category": "score-request",
+      "purpose": "Request R5 score for contest 7 after official final",
+      "txHash": "0x8fc5217bd6d8d5ee3d2add6eddcaa2de61c69dc7608d2d4fc380222967567dfc",
+      "status": "success",
+      "operatorControlled": true,
+      "blockNumber": 89568603,
+      "gasUsed": 126567,
+      "effectiveGasPriceWei": "282374772821",
+      "gasCostPOL": "0.035739327871635507"
+    },
+    {
+      "category": "score-callback",
+      "purpose": "CRE report callback that set contest 7 scores",
+      "txHash": "0x777950c2fd4502472da0eb8b4f39e86d87b60dd86b75ca018bb32bd586a27bc8",
+      "status": "success",
+      "operatorControlled": false,
+      "blockNumber": 89568613,
+      "gasUsed": 207724,
+      "effectiveGasPriceWei": "450505079102",
+      "gasCostPOL": "0.093580717051383848"
+    },
+    {
+      "category": "settle",
+      "purpose": "Settle moneyline speculation 11 to home/lower/Los Angeles Dodgers",
+      "txHash": "0x6cdd7310ddc7c42f9605e826e78d62a82aa8b770cd87ca98a93fe2caa930438a",
+      "status": "success",
+      "operatorControlled": true,
+      "blockNumber": 89568703,
+      "gasUsed": 136808,
+      "effectiveGasPriceWei": "281010299370",
+      "gasCostPOL": "0.03844445703621096"
+    },
+    {
+      "category": "settle",
+      "purpose": "Settle spread speculation 12 to home/lower/Los Angeles Dodgers -1.5",
+      "txHash": "0x0316aabf6e6ec89fcb81859a586e65ec3ae21f6ca3a9eafedb1ed28840ffc671",
+      "status": "success",
+      "operatorControlled": true,
+      "blockNumber": 89568706,
+      "gasUsed": 137080,
+      "effectiveGasPriceWei": "280197707588",
+      "gasCostPOL": "0.03840950175616304"
+    },
+    {
+      "category": "claim",
+      "purpose": "Claim manual seed maker winning lower/Dodgers moneyline position",
+      "txHash": "0x8ba7fa93ab37d0898769fc1193b7a2630ffdb2aa627fe17d131be2a1bd30c7b9",
+      "status": "success",
+      "operatorControlled": true,
+      "blockNumber": 89568735,
+      "gasUsed": 127174,
+      "effectiveGasPriceWei": "288296565349",
+      "gasCostPOL": "0.036663827401693726"
+    },
+    {
+      "category": "claim",
+      "purpose": "Claim controlled flow-a winning lower/Dodgers spread position",
+      "txHash": "0x5a29f4ad7eb6a1c54646f6651375e2e1999bb8e98b4335d358d9c0d6773dbb28",
+      "status": "success",
+      "operatorControlled": true,
+      "blockNumber": 89568738,
+      "gasUsed": 123214,
+      "effectiveGasPriceWei": "283669760741",
+      "gasCostPOL": "0.034952085899941574"
+    }
+  ],
+  "gas": {
+    "recordedGasPOL": "0.879195189347110137"
+  }
+}
