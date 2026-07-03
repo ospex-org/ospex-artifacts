@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-07-03T15:17:15Z",
+  "selectedTarget": {
+    "contestId": "8",
+    "sport": "mlb",
+    "market": "total",
+    "speculationId": "14",
+    "awayTeam": "St. Louis Cardinals",
+    "homeTeam": "Chicago Cubs",
+    "gamePk": 824659,
+    "gameId": "d314ad0d-e77b-4d0a-a659-b130597754cc",
+    "scheduledUtc": "2026-07-03T20:05:00Z",
+    "selectionGates": {
+      "upcomingAtSelection": true,
+      "officialPregame": true,
+      "canCreateContest": true,
+      "oddsAvailable": true,
+      "sufficientLeadTime": true,
+      "leadTimeMinutes": 290
+    },
+    "officialStatus": "Pre-Game",
+    "speculations": [
+      {
+        "contestId": "8",
+        "speculationId": "13",
+        "type": "moneyline"
+      },
+      {
+        "contestId": "8",
+        "speculationId": "14",
+        "type": "total",
+        "line": 10.5,
+        "lineTicks": 105
+      }
+    ]
+  },
+  "fallbackNotUsed": {
+    "game": "Pittsburgh Pirates @ Washington Nationals",
+    "gameId": "c509d26d-ec58-4130-82aa-5bdb8716ae49",
+    "reason": "primary remained pregame/safe with adequate lead time"
+  },
+  "teamIdentity": {
+    "away": {
+      "team": "St. Louis Cardinals",
+      "abbreviation": "STL",
+      "positionType": "upper",
+      "role": "away",
+      "identity": "underdog",
+      "marketOddsAmerican": "+114"
+    },
+    "home": {
+      "team": "Chicago Cubs",
+      "abbreviation": "CHC",
+      "positionType": "lower",
+      "role": "home",
+      "identity": "favorite",
+      "marketOddsAmerican": "-129"
+    },
+    "winner": {
+      "team": "St. Louis Cardinals",
+      "role": "away",
+      "positionType": "upper"
+    },
+    "totalWinner": {
+      "side": "over",
+      "positionType": "upper",
+      "line": 10.5
+    }
+  },
+  "referenceOdds": {
+    "moneyline": {
+      "awayOddsAmerican": 114,
+      "homeOddsAmerican": -129
+    },
+    "total": {
+      "line": 10.5,
+      "overOddsAmerican": -120,
+      "underOddsAmerican": -100
+    }
+  }
+}

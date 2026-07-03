@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "targetScoped": {
+    "stageMakerA": {
+      "activeCount": 0,
+      "active": [],
+      "pendingSettleCount": 0,
+      "pendingSettle": [],
+      "claimableCount": 0,
+      "claimable": []
+    },
+    "stageMakerB": {
+      "activeCount": 0,
+      "active": [],
+      "pendingSettleCount": 0,
+      "pendingSettle": [],
+      "claimableCount": 0,
+      "claimable": []
+    },
+    "flowA": {
+      "activeCount": 0,
+      "active": [],
+      "pendingSettleCount": 0,
+      "pendingSettle": [],
+      "claimableCount": 0,
+      "claimable": []
+    }
+  },
+  "claimPlanEntriesAfterClaims": {
+    "stageMakerA": 0,
+    "stageMakerB": 0,
+    "flowA": 0
+  },
+  "notes": [
+    "Only target contest/spec positions are counted; unrelated historical wallet positions are out of scope if present."
+  ]
+}

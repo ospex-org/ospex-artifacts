@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "wallets": {
+    "manualSeedMaker": {
+      "profile": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    "controlledTaker": {
+      "profile": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    },
+    "operatorMmMaker": {
+      "profile": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    }
+  },
+  "expectedAddressChecks": "passed for all signing commands",
+  "readiness": {
+    "matchCommitments": true,
+    "submitCommitments": true
+  },
+  "notes": [
+    "Balances and public allowances were checked with CLI doctor/approvals commands before live actions."
+  ]
+}

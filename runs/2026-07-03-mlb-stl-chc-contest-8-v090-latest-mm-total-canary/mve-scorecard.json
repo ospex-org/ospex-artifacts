@@ -1,0 +1,297 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "2026-07-03-mlb-stl-chc-contest-8-v090-latest-mm-total-canary",
+  "generatedAt": "2026-07-03T23:46:07Z",
+  "runClass": "mm-live-canary",
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "The v0.9.0/R5 latest-main strict-allowlist moneyline+total MM canary for St. Louis Cardinals @ Chicago Cubs completed the full lifecycle: pregame setup passed, contest 8 was created and verified, moneyline speculation 13 and total speculation 14 were manually seeded/filled with zero residual seed exposure, the market maker posted tiny moneyline and total live quotes under contest allowlist [8] with seedSpeculations=false, one controlled live total quote was filled, visible/open exposure drained to zero, official final score St. Louis Cardinals 17 / Chicago Cubs 1 was verified, contest 8 was scored through R5/CRE on the first request, speculations 13 and 14 settled to away/upper/Cardinals and over/upper/over 10.5, winning controlled positions were claimed, and final target commitments plus active/pending/claimable positions are zero."
+  },
+  "capabilities": [
+    {
+      "id": "target-preflight",
+      "capability": "Target preflight and allowlist",
+      "proof": "proven_live",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "notes": "Primary STL away @ CHC home contest 8/spec 14 passed official pre-game status, identity, allowlist, odds, and lead-time gates."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "capability": "Repo/runtime gates",
+      "proof": "proven_live",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "notes": "SDK/CLI v0.9.0, MM head 4fcd489 with PR #145 own-state orphan safety tests, installed SDK v0.9.0, typecheck/test/build, and ancillary repo heads were verified."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "capability": "Wallet auth, balances, allowances",
+      "proof": "proven_live",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Expected-address checks passed for ospex-stage-maker-b, ospex-stage-maker-a, and ospex-flow-a; public allowances were bounded."
+    },
+    {
+      "id": "bounded-approvals",
+      "capability": "Bounded approvals / no unlimited approvals",
+      "proof": "proven_live",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "notes": "Only bounded USDC approvals were used; no unlimited approvals were sent."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "capability": "Dry-run quote loop",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "notes": "Candidates --allowlist-only returned contest 8 moneyline + total quote_ready; dry run would-submit remained target-scoped."
+    },
+    {
+      "id": "live-commitments-posted",
+      "capability": "Live commitments posted",
+      "proof": "proven_live",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "notes": "Tiny live moneyline and total commitments posted under strict allowlist [8], seedSpeculations=false."
+    },
+    {
+      "id": "live-fill",
+      "capability": "Controlled live fill",
+      "proof": "proven_live",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "Exactly one controlled live total fill succeeded against commitment 0x345624d363db\u2026 using ospex-flow-a."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "capability": "Own-state SSE canonical fill source",
+      "proof": "proven_live",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "Telemetry captured the fill with source own-state-stream for the filled total commitment hash."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "capability": "Exposure drained to zero",
+      "proof": "proven_live",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "Final public/API/MM visible-open exposure is zero, target active/pending/claimable positions are zero after postgame, and no orphan MM process remained."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "capability": "Restart/cold-start safety",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/restart-cold-start-probe.sanitized.json",
+      "notes": "A scratch-state dry-run/cold-start probe loaded state cleanly, rehydrated before quote decisions, and did not create duplicate live exposure."
+    },
+    {
+      "id": "postgame-score",
+      "capability": "Postgame score",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Official final score STL 17, CHC 1 was verified and contest 8 scored via R5/CRE on the first request."
+    },
+    {
+      "id": "postgame-settle",
+      "capability": "Postgame settle",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Moneyline speculation 13 settled to away/upper/St. Louis Cardinals; total speculation 14 settled to over/upper/over 10.5."
+    },
+    {
+      "id": "postgame-claim",
+      "capability": "Postgame claim/no-op",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Winning upper positions for stage-maker-a, flow-a, and stage-maker-b were claimed; losing positions are no-op/not claimable."
+    },
+    {
+      "id": "cost-within-cap",
+      "capability": "Cost within cap",
+      "proof": "proven_live",
+      "evidence": "raw/tx-receipts.summary.json",
+      "notes": "Tiny canary risk stayed within the requested caps; recorded lifecycle gas is summarized."
+    }
+  ],
+  "zeroExposure": {
+    "checkedAtUtc": "2026-07-03T23:38:56Z",
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "orphanProcessCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json"
+  },
+  "transactions": [
+    {
+      "category": "approve",
+      "purpose": "Bounded 1.000000 USDC TreasuryModule approval for contest creator / MM maker setup fees",
+      "txHash": "0x0f93298df966ff711d6eedc3c0e873bc091e5d93a19235e9657f69c89a451df0",
+      "operatorControlled": true,
+      "status": "success",
+      "blockNumber": 89591172,
+      "gasUsed": 66357,
+      "effectiveGasPriceWei": "285550650852",
+      "gasCostPOL": "0.018948284538586164"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded 1.000000 USDC TreasuryModule approval for manual seed-maker setup fees",
+      "txHash": "0xf634c0bb83e501992f7438f6a574f6b8dce334cbd79774abf490e60203af56e0",
+      "operatorControlled": true,
+      "status": "success",
+      "blockNumber": 89591175,
+      "gasUsed": 66357,
+      "effectiveGasPriceWei": "280579496547",
+      "gasCostPOL": "0.018618413652369279"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded 0.300000 USDC PositionModule approval for controlled taker risk",
+      "txHash": "0xd799d6870f007158f13b223380f8361719d17b400c760ae0b99c098d871f93f9",
+      "operatorControlled": true,
+      "status": "success",
+      "blockNumber": 89591179,
+      "gasUsed": 48417,
+      "effectiveGasPriceWei": "280091933067",
+      "gasCostPOL": "0.013561211123304939"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded 1.000000 USDC TreasuryModule approval for controlled taker setup fees",
+      "txHash": "0xc283824abf08126d9dfde53ec84b3a3d9bdb196e43d7f1b58c3723169b4f11b1",
+      "operatorControlled": true,
+      "status": "success",
+      "blockNumber": 89591270,
+      "gasUsed": 66357,
+      "effectiveGasPriceWei": "278676384545",
+      "gasCostPOL": "0.018492128849252565"
+    },
+    {
+      "category": "create-contest",
+      "purpose": "Create contest 8 for St. Louis Cardinals @ Chicago Cubs",
+      "txHash": "0xf1b722b316b95c6643279bb1db4a2c0d6778ad0187731d741ece7eca70d457c2",
+      "operatorControlled": true,
+      "status": "success",
+      "blockNumber": 89591189,
+      "gasUsed": 363870,
+      "effectiveGasPriceWei": "279810894086",
+      "gasCostPOL": "0.10181479003107282"
+    },
+    {
+      "category": "other",
+      "purpose": "Request market update for contest 8",
+      "txHash": "0x10d2bebab2f92ec7981c7a1f1dfe8129c4ba7babbb6af0ca384c29280fb00ff6",
+      "operatorControlled": true,
+      "status": "success",
+      "blockNumber": 89591213,
+      "gasUsed": 120936,
+      "effectiveGasPriceWei": "281643481817",
+      "gasCostPOL": "0.034060836117020712"
+    },
+    {
+      "category": "seed-match",
+      "purpose": "Fully match tiny manual moneyline seed to create speculation 13",
+      "txHash": "0x7ca3ad546038488d3f449f4f899a75baf28deabef878b566b8367f03a1191763",
+      "operatorControlled": true,
+      "status": "success",
+      "blockNumber": 89591305,
+      "gasUsed": 662206,
+      "effectiveGasPriceWei": "278645807424",
+      "gasCostPOL": "0.184520925551017344"
+    },
+    {
+      "category": "seed-match",
+      "purpose": "Fully match tiny manual total seed to create speculation 14",
+      "txHash": "0xb7ba5c920313587618129cc446ad079046709ece42dd054ba32008076728f5fa",
+      "operatorControlled": true,
+      "status": "success",
+      "blockNumber": 89591361,
+      "gasUsed": 650088,
+      "effectiveGasPriceWei": "282914860392",
+      "gasCostPOL": "0.183919555762514496"
+    },
+    {
+      "category": "match-commitment",
+      "purpose": "Controlled fill against live MM total quote",
+      "txHash": "0x718427d62e75dc2ca08ce928da9f2a9c8f6f52214f7d33fadc631cb56456cb61",
+      "operatorControlled": true,
+      "status": "success",
+      "blockNumber": 89591580,
+      "gasUsed": 418160,
+      "effectiveGasPriceWei": "279971968350",
+      "gasCostPOL": "0.117073078285236"
+    },
+    {
+      "category": "score-request",
+      "purpose": "Request R5 score for contest 8 after official final",
+      "txHash": "0x1105af3deeb023ef55d91f51c0cf743343a70ad3eefa449e1f4a1eff396d6736",
+      "operatorControlled": true,
+      "status": "success",
+      "blockNumber": 89611022,
+      "gasUsed": 126567,
+      "effectiveGasPriceWei": "278293950801",
+      "gasCostPOL": "0.035222830471030167"
+    },
+    {
+      "category": "score-callback",
+      "purpose": "CRE report callback that set contest 8 scores",
+      "txHash": "0x6f3fe51e994b0ba2f09b868a57ab29668c5c7339ad42bc901c22be5d5c211200",
+      "operatorControlled": false,
+      "status": "success",
+      "blockNumber": 89611031,
+      "gasUsed": 207724,
+      "effectiveGasPriceWei": "485022515913",
+      "gasCostPOL": "0.100750817095512012"
+    },
+    {
+      "category": "settle",
+      "purpose": "Settle moneyline speculation 13 to away/upper/St. Louis Cardinals",
+      "txHash": "0x1a86018d4c687446d7c3a836d330047b328da7cb9affd6a50c020f7e6094099f",
+      "operatorControlled": true,
+      "status": "success",
+      "blockNumber": 89611152,
+      "gasUsed": 136792,
+      "effectiveGasPriceWei": "280788303338",
+      "gasCostPOL": "0.038409593590211696"
+    },
+    {
+      "category": "settle",
+      "purpose": "Settle total speculation 14 to over/upper/over 10.5",
+      "txHash": "0xcb3685dc91be6f544cf5092b76fc2c6fc01d476b1cc1ae557cdd84bedfde8a11",
+      "operatorControlled": true,
+      "status": "success",
+      "blockNumber": 89611156,
+      "gasUsed": 136904,
+      "effectiveGasPriceWei": "284051464480",
+      "gasCostPOL": "0.03888778169316992"
+    },
+    {
+      "category": "claim",
+      "purpose": "Claim manual seed maker winning moneyline position",
+      "txHash": "0x00e20d725680e007f1f62a642e69be21aaa8cc188a47790e645e646cc3389749",
+      "operatorControlled": true,
+      "status": "success",
+      "blockNumber": 89611163,
+      "gasUsed": 127004,
+      "effectiveGasPriceWei": "285585023581",
+      "gasCostPOL": "0.036270440334881324"
+    },
+    {
+      "category": "claim",
+      "purpose": "Claim manual total seed taker winning over position",
+      "txHash": "0x225880d81b73580f274a8a3c42881c85c2f75e408106c29b624959c32b846854",
+      "operatorControlled": true,
+      "status": "success",
+      "blockNumber": 89611167,
+      "gasUsed": 127055,
+      "effectiveGasPriceWei": "280895884765",
+      "gasCostPOL": "0.035689226638817075"
+    },
+    {
+      "category": "claim",
+      "purpose": "Claim live MM maker winning total fill position",
+      "txHash": "0x07313f36969138c15101d24cda6f48f6832c140b92398955e58a3701c6d22100",
+      "operatorControlled": true,
+      "status": "success",
+      "blockNumber": 89611171,
+      "gasUsed": 123095,
+      "effectiveGasPriceWei": "278351932695",
+      "gasCostPOL": "0.034263731155091025"
+    }
+  ]
+}

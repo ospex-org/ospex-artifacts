@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "boundedApprovalsOnly": true,
+  "unlimitedApprovalsUsed": false,
+  "approvals": [
+    {
+      "wallet": "ospex-stage-maker-b",
+      "spenderModule": "treasuryModule",
+      "targetUSDC": "1.000000",
+      "txHash": "0x0f93298df966ff711d6eedc3c0e873bc091e5d93a19235e9657f69c89a451df0"
+    },
+    {
+      "wallet": "ospex-stage-maker-a",
+      "spenderModule": "treasuryModule",
+      "targetUSDC": "1.000000",
+      "txHash": "0xf634c0bb83e501992f7438f6a574f6b8dce334cbd79774abf490e60203af56e0"
+    },
+    {
+      "wallet": "ospex-flow-a",
+      "spenderModule": "positionModule",
+      "targetUSDC": "0.300000",
+      "txHash": "0xd799d6870f007158f13b223380f8361719d17b400c760ae0b99c098d871f93f9"
+    },
+    {
+      "wallet": "ospex-flow-a",
+      "spenderModule": "treasuryModule",
+      "targetUSDC": "1.000000",
+      "txHash": "0xc283824abf08126d9dfde53ec84b3a3d9bdb196e43d7f1b58c3723169b4f11b1"
+    }
+  ],
+  "finalAllowanceObservation": {
+    "stageMakerBPositionModuleUSDC": "0.45",
+    "stageMakerBTreasuryModuleUSDC": "0",
+    "noIsMaxAllowancesObserved": true
+  }
+}

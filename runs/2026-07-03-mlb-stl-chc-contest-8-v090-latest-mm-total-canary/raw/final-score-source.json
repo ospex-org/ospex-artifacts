@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "source": "MLB Stats official feed/live",
+  "capturedAtUtc": "2026-07-03T23:38:56Z",
+  "gamePk": 824659,
+  "status": "Final",
+  "awayTeam": "St. Louis Cardinals",
+  "awayRuns": 17,
+  "homeTeam": "Chicago Cubs",
+  "homeRuns": 1,
+  "winner": "St. Louis Cardinals",
+  "winnerRole": "away",
+  "totalRuns": 18
+}

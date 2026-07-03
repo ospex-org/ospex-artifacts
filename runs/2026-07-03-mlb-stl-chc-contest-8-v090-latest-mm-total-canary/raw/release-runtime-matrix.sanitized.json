@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "capturedAtUtc": "2026-07-03T15:32:00Z",
+  "node": "v22.22.0",
+  "yarn": "1.22.22",
+  "chainId": 137,
+  "sdkCli": {
+    "repo": "ospex-sdk",
+    "headSha": "fd55bd1e7de0",
+    "version": "0.9.0",
+    "requiredAtOrAfter": "fd55bd1",
+    "ok": true
+  },
+  "marketMaker": {
+    "repo": "ospex-market-maker",
+    "headSha": "4fcd489ef1ee",
+    "requiredAtOrAfter": "4fcd489",
+    "installedSdkVersion": "0.9.0",
+    "typecheck": "pass",
+    "test": "pass",
+    "build": "pass",
+    "allowlistOnlyFlagAvailable": true,
+    "ownStateOrphanSafetyRegressionPresent": true
+  },
+  "ancillaryRepos": {
+    "ospex-core-api": {
+      "headSha": "076f44d428fc",
+      "requiredAtOrAfter": "076f44d",
+      "ok": true
+    },
+    "ospex-indexer": {
+      "headSha": "75be9e76965b",
+      "requiredAtOrAfter": "75be9e7",
+      "ok": true
+    },
+    "ospex-cre": {
+      "headSha": "fed6e26e27e5",
+      "requiredAtOrAfter": "fed6e26",
+      "ok": true
+    }
+  },
+  "allRequiredOk": true
+}

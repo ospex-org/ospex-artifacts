@@ -1,13 +1,24 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-07-03T06:15:15Z",
+  "generatedAt": "2026-07-03T23:46:09Z",
   "repository": "ospex-org/ospex-artifacts",
   "archive": {
     "scope": "year",
     "year": 2026
   },
   "artifacts": [
+    {
+      "artifactId": "2026-07-03-mlb-stl-chc-contest-8-v090-latest-mm-total-canary",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-03-mlb-stl-chc-contest-8-v090-latest-mm-total-canary/evidence.json",
+      "date": "2026-07-03",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-03-mlb-stl-chc-contest-8-v090-latest-mm-total-canary/raw/",
+      "status": "complete_verified",
+      "summaryPath": "runs/2026-07-03-mlb-stl-chc-contest-8-v090-latest-mm-total-canary/summary.md",
+      "publishedAt": "2026-07-03T23:46:09Z"
+    },
     {
       "artifactId": "2026-07-02-mlb-sd-lad-contest-7-v090-latest-mm-spread-canary",
       "artifactType": "run",

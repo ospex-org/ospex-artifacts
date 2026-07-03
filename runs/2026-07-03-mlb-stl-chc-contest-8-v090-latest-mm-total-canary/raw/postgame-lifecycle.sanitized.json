@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "completedAtUtc": "2026-07-03T23:38:56Z",
+  "verdict": "POSTGAME_ZERO_STATE_GREEN",
+  "officialFinal": {
+    "source": "MLB Stats official feed/live",
+    "status": "Final",
+    "awayTeam": "St. Louis Cardinals",
+    "awayRuns": 17,
+    "homeTeam": "Chicago Cubs",
+    "homeRuns": 1,
+    "winner": "St. Louis Cardinals",
+    "winnerRole": "away",
+    "moneylineWinnerProtocolSide": "upper",
+    "totalRuns": 18,
+    "totalLine": 10.5,
+    "totalWinner": "over",
+    "totalWinnerProtocolSide": "upper"
+  },
+  "score": {
+    "requestTxHash": "0x1105af3deeb023ef55d91f51c0cf743343a70ad3eefa449e1f4a1eff396d6736",
+    "callbackTxHash": "0x6f3fe51e994b0ba2f09b868a57ab29668c5c7339ad42bc901c22be5d5c211200",
+    "retryNeeded": false,
+    "contestStatus": "scored",
+    "awayScore": 17,
+    "homeScore": 1,
+    "scoredAt": "2026-07-03T23:32:22+00:00"
+  },
+  "settle": {
+    "moneyline": {
+      "txHash": "0x1a86018d4c687446d7c3a836d330047b328da7cb9affd6a50c020f7e6094099f",
+      "winSide": "away/upper/St. Louis Cardinals",
+      "settledAt": "2026-07-03T23:35:23+00:00"
+    },
+    "total": {
+      "txHash": "0xcb3685dc91be6f544cf5092b76fc2c6fc01d476b1cc1ae557cdd84bedfde8a11",
+      "winSide": "over/upper/over 10.5",
+      "settledAt": "2026-07-03T23:35:29+00:00"
+    }
+  },
+  "claims": [
+    {
+      "walletLabel": "ospex-stage-maker-a",
+      "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "speculationId": "13",
+      "side": "upper / away / St. Louis Cardinals",
+      "source": "manual seed maker winning moneyline position",
+      "payoutWei6": "107000",
+      "payoutUSDC": "0.107000",
+      "txHash": "0x00e20d725680e007f1f62a642e69be21aaa8cc188a47790e645e646cc3389749"
+    },
+    {
+      "walletLabel": "ospex-flow-a",
+      "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "speculationId": "14",
+      "side": "upper / over / over 10.5",
+      "source": "manual total seed taker winning over position",
+      "payoutWei6": "100000",
+      "payoutUSDC": "0.100000",
+      "txHash": "0x225880d81b73580f274a8a3c42881c85c2f75e408106c29b624959c32b846854"
+    },
+    {
+      "walletLabel": "ospex-stage-maker-b",
+      "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "speculationId": "14",
+      "side": "upper / over / over 10.5",
+      "source": "live MM maker winning total fill position",
+      "payoutWei6": "98500",
+      "payoutUSDC": "0.098500",
+      "txHash": "0x07313f36969138c15101d24cda6f48f6832c140b92398955e58a3701c6d22100"
+    }
+  ],
+  "noOps": [
+    {
+      "walletLabel": "ospex-flow-a",
+      "speculationId": "13",
+      "side": "lower / home / Chicago Cubs",
+      "result": "lost moneyline taker position; not claimable"
+    },
+    {
+      "walletLabel": "ospex-stage-maker-a",
+      "speculationId": "14",
+      "side": "lower / under / under 10.5",
+      "result": "lost total seed-maker position; not claimable"
+    },
+    {
+      "walletLabel": "ospex-flow-a",
+      "speculationId": "14",
+      "side": "lower / under / under 10.5",
+      "result": "lost live total taker position; not claimable"
+    }
+  ],
+  "finalZeroState": {
+    "contestOpenCommitments": 0,
+    "moneylineOpenCommitments": 0,
+    "totalOpenCommitments": 0,
+    "moneylineOrderbookCount": 0,
+    "totalOrderbookCount": 0,
+    "targetActiveCount": 0,
+    "targetPendingSettleCount": 0,
+    "targetClaimableCount": 0,
+    "processScanEmpty": true,
+    "targetZeroState": true
+  }
+}

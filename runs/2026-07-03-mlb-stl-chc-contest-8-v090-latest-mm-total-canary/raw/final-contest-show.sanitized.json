@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "contestId": "8",
+  "status": "scored",
+  "awayTeam": "St. Louis Cardinals",
+  "homeTeam": "Chicago Cubs",
+  "sport": "mlb",
+  "matchTime": "2026-07-03T20:05:00+00:00",
+  "awayScore": 17,
+  "homeScore": 1,
+  "scoredAt": "2026-07-03T23:32:22+00:00",
+  "speculations": [
+    {
+      "speculationId": "13",
+      "contestId": "8",
+      "type": "moneyline",
+      "lineTicks": 0,
+      "line": null,
+      "speculationStatus": 1,
+      "winSide": "away",
+      "settledAt": "2026-07-03T23:35:23+00:00",
+      "voided": false,
+      "orderbook": []
+    },
+    {
+      "speculationId": "14",
+      "contestId": "8",
+      "type": "total",
+      "lineTicks": 105,
+      "line": 10.5,
+      "speculationStatus": 1,
+      "winSide": "over",
+      "settledAt": "2026-07-03T23:35:29+00:00",
+      "voided": false,
+      "orderbook": []
+    }
+  ]
+}

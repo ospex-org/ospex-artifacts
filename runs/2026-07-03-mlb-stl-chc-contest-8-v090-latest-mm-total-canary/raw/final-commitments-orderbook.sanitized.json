@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "contestId": "8",
+  "openCommitmentsContest": 0,
+  "openCommitmentsBySpeculation": {
+    "13": 0,
+    "14": 0
+  },
+  "orderbookCounts": {
+    "moneyline": 0,
+    "total": 0
+  },
+  "processScanEmpty": true
+}

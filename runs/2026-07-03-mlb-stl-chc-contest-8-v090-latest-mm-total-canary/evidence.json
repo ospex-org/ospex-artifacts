@@ -1,0 +1,345 @@
+{
+  "artifactId": "2026-07-03-mlb-stl-chc-contest-8-v090-latest-mm-total-canary",
+  "artifactPath": "runs/2026-07-03-mlb-stl-chc-contest-8-v090-latest-mm-total-canary/",
+  "artifactType": "run",
+  "artifactStatus": "complete_verified",
+  "status": "complete_verified",
+  "capturedAtUtc": "2026-07-03T23:46:07Z",
+  "date": "2026-07-03",
+  "network": "polygon",
+  "chainId": 137,
+  "verdict": {
+    "label": "FULL_GREEN",
+    "protocolVerdict": "POSTGAME_ZERO_STATE_GREEN",
+    "reason": "The v0.9.0/R5 latest-main strict-allowlist moneyline+total MM canary for St. Louis Cardinals @ Chicago Cubs completed the full lifecycle: pregame setup passed, contest 8 was created and verified, moneyline speculation 13 and total speculation 14 were manually seeded/filled with zero residual seed exposure, the market maker posted tiny moneyline and total live quotes under contest allowlist [8] with seedSpeculations=false, one controlled live total quote was filled, visible/open exposure drained to zero, official final score St. Louis Cardinals 17 / Chicago Cubs 1 was verified, contest 8 was scored through R5/CRE on the first request, speculations 13 and 14 settled to away/upper/Cardinals and over/upper/over 10.5, winning controlled positions were claimed, and final target commitments plus active/pending/claimable positions are zero."
+  },
+  "artifactFiles": {
+    "summary": "summary.md",
+    "evidence": "evidence.json",
+    "scenarioMatrix": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "mveScorecard": "mve-scorecard.json",
+    "mveScorecardMarkdown": "mve-scorecard.md",
+    "releaseRuntimeMatrix": "raw/release-runtime-matrix.sanitized.json",
+    "targetPreflight": "raw/target-preflight.sanitized.json",
+    "walletAuthBalances": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "boundedApprovals": "raw/bounded-approvals.sanitized.json",
+    "mmDryRun": "raw/mm-dryrun-summary.sanitized.json",
+    "liveCommitmentsPosted": "raw/live-public-commitments-posted.sanitized.json",
+    "liveFill": "raw/live-fill.sanitized.json",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json",
+    "restartColdStartProbe": "raw/restart-cold-start-probe.sanitized.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "finalContestShow": "raw/final-contest-show.sanitized.json",
+    "finalPositionsStatus": "raw/final-positions-status.sanitized.json",
+    "finalCommitmentsOrderbook": "raw/final-commitments-orderbook.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json"
+  },
+  "scope": {
+    "runClass": "mm-live-canary",
+    "strictAllowlistOnly": true,
+    "contestAllowList": [
+      "8"
+    ],
+    "broadMarketMakerRunUsed": false,
+    "markets": [
+      "moneyline",
+      "total"
+    ],
+    "primaryArtifactTargetMarket": "total",
+    "tinyControlledCapitalOnly": true,
+    "boundedApprovalsOnly": true,
+    "oldFunctionsLinkFlowUsed": false,
+    "seedSpeculationsDuringMmRuntime": false
+  },
+  "target": {
+    "game": "St. Louis Cardinals @ Chicago Cubs",
+    "gamePk": 824659,
+    "gameId": "d314ad0d-e77b-4d0a-a659-b130597754cc",
+    "slug": "stl-chc-2026-07-03",
+    "sport": "mlb",
+    "market": "total",
+    "marketsCovered": [
+      "moneyline",
+      "total"
+    ],
+    "contestId": "8",
+    "speculationId": "14",
+    "companionSpeculations": {
+      "moneyline": "13",
+      "total": "14"
+    },
+    "awayTeam": "St. Louis Cardinals",
+    "homeTeam": "Chicago Cubs",
+    "startTimeUtc": "2026-07-03T20:05:00Z",
+    "totalLine": {
+      "line": 10.5,
+      "lineTicks": 105,
+      "overPositionType": "upper",
+      "underPositionType": "lower"
+    },
+    "referenceOdds": {
+      "moneyline": {
+        "awayOddsAmerican": 114,
+        "homeOddsAmerican": -129
+      },
+      "total": {
+        "line": 10.5,
+        "overOddsAmerican": -120,
+        "underOddsAmerican": -100
+      }
+    },
+    "teamIdentity": {
+      "away": {
+        "team": "St. Louis Cardinals",
+        "abbreviation": "STL",
+        "positionType": "upper",
+        "role": "away",
+        "identity": "underdog",
+        "marketOddsAmerican": "+114"
+      },
+      "home": {
+        "team": "Chicago Cubs",
+        "abbreviation": "CHC",
+        "positionType": "lower",
+        "role": "home",
+        "identity": "favorite",
+        "marketOddsAmerican": "-129"
+      },
+      "winner": {
+        "team": "St. Louis Cardinals",
+        "role": "away",
+        "positionType": "upper"
+      },
+      "totalWinner": {
+        "side": "over",
+        "positionType": "upper",
+        "line": 10.5
+      }
+    },
+    "contestStatusAfterCreateVerify": "verified",
+    "contestStatusAfterPostgame": "scored",
+    "postgameStatus": "complete",
+    "finalScore": {
+      "awayRuns": 17,
+      "homeRuns": 1,
+      "winner": "St. Louis Cardinals",
+      "winnerProtocolSide": "upper",
+      "totalRuns": 18,
+      "totalWinner": "over 10.5",
+      "totalWinnerProtocolSide": "upper"
+    }
+  },
+  "wallets": {
+    "manualSeedMaker": {
+      "profile": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    "controlledTaker": {
+      "profile": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    },
+    "operatorMmMaker": {
+      "profile": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    }
+  },
+  "versions": {
+    "schemaVersion": 1,
+    "capturedAtUtc": "2026-07-03T15:32:00Z",
+    "node": "v22.22.0",
+    "yarn": "1.22.22",
+    "chainId": 137,
+    "sdkCli": {
+      "repo": "ospex-sdk",
+      "headSha": "fd55bd1e7de0",
+      "version": "0.9.0",
+      "requiredAtOrAfter": "fd55bd1",
+      "ok": true
+    },
+    "marketMaker": {
+      "repo": "ospex-market-maker",
+      "headSha": "4fcd489ef1ee",
+      "requiredAtOrAfter": "4fcd489",
+      "installedSdkVersion": "0.9.0",
+      "typecheck": "pass",
+      "test": "pass",
+      "build": "pass",
+      "allowlistOnlyFlagAvailable": true,
+      "ownStateOrphanSafetyRegressionPresent": true
+    },
+    "ancillaryRepos": {
+      "ospex-core-api": {
+        "headSha": "076f44d428fc",
+        "requiredAtOrAfter": "076f44d",
+        "ok": true
+      },
+      "ospex-indexer": {
+        "headSha": "75be9e76965b",
+        "requiredAtOrAfter": "75be9e7",
+        "ok": true
+      },
+      "ospex-cre": {
+        "headSha": "fed6e26e27e5",
+        "requiredAtOrAfter": "fed6e26",
+        "ok": true
+      }
+    },
+    "allRequiredOk": true
+  },
+  "setup": {
+    "contestCreateTx": "0xf1b722b316b95c6643279bb1db4a2c0d6778ad0187731d741ece7eca70d457c2",
+    "marketUpdateTx": "0x10d2bebab2f92ec7981c7a1f1dfe8129c4ba7babbb6af0ca384c29280fb00ff6",
+    "manualSeedCommitmentHashes": {
+      "moneyline": "0x7b56123c31751b85b981cca2f27eb0b9a7b2d499f26716f2870e331211b0a1df",
+      "total": "0x21396278af9097ec935de638cb6f060ec131483a9c7cd4ad0a8dfa8472ea559d"
+    },
+    "manualSeedFillTxs": {
+      "moneyline": "0x7ca3ad546038488d3f449f4f899a75baf28deabef878b566b8367f03a1191763",
+      "total": "0xb7ba5c920313587618129cc446ad079046709ece42dd054ba32008076728f5fa"
+    },
+    "seedOpenCommitmentsAfterConvergence": 0
+  },
+  "liveWindow": {
+    "runId": "2026-07-03T15-24-57-733Z-ws08tk",
+    "startedAtUtc": "2026-07-03T15:24:57Z",
+    "stoppedAtUtc": "2026-07-03T15:27:25Z",
+    "commitmentCount": 4,
+    "marketsPosted": [
+      "moneyline",
+      "total"
+    ],
+    "controlledFill": {
+      "market": "total",
+      "commitmentHash": "0x345624d363db80879bc97d9fa5224d061959d1a54f0fe31dd64e118ab8cd4e32",
+      "txHash": "0x718427d62e75dc2ca08ce928da9f2a9c8f6f52214f7d33fadc631cb56456cb61",
+      "makerFilledRiskUSDC": "0.050000",
+      "takerRiskUSDC": "0.048500",
+      "makerWallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "takerWallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    },
+    "ownStateSseAssertions": {
+      "fillSource": "own-state-stream",
+      "fillEventCount": 1
+    },
+    "postStopZeroExposure": {
+      "checkedAtUtc": "2026-07-03T15:28:55Z",
+      "publicMakerVisibleCommitments": 0,
+      "publicContestSpecVisibleCommitments": 0,
+      "contestOrderbookCount": 0,
+      "orphanProcessCount": 0
+    }
+  },
+  "postgame": {
+    "schemaVersion": 1,
+    "completedAtUtc": "2026-07-03T23:38:56Z",
+    "verdict": "POSTGAME_ZERO_STATE_GREEN",
+    "officialFinal": {
+      "source": "MLB Stats official feed/live",
+      "status": "Final",
+      "awayTeam": "St. Louis Cardinals",
+      "awayRuns": 17,
+      "homeTeam": "Chicago Cubs",
+      "homeRuns": 1,
+      "winner": "St. Louis Cardinals",
+      "winnerRole": "away",
+      "moneylineWinnerProtocolSide": "upper",
+      "totalRuns": 18,
+      "totalLine": 10.5,
+      "totalWinner": "over",
+      "totalWinnerProtocolSide": "upper"
+    },
+    "score": {
+      "requestTxHash": "0x1105af3deeb023ef55d91f51c0cf743343a70ad3eefa449e1f4a1eff396d6736",
+      "callbackTxHash": "0x6f3fe51e994b0ba2f09b868a57ab29668c5c7339ad42bc901c22be5d5c211200",
+      "retryNeeded": false,
+      "contestStatus": "scored",
+      "awayScore": 17,
+      "homeScore": 1,
+      "scoredAt": "2026-07-03T23:32:22+00:00"
+    },
+    "settle": {
+      "moneyline": {
+        "txHash": "0x1a86018d4c687446d7c3a836d330047b328da7cb9affd6a50c020f7e6094099f",
+        "winSide": "away/upper/St. Louis Cardinals",
+        "settledAt": "2026-07-03T23:35:23+00:00"
+      },
+      "total": {
+        "txHash": "0xcb3685dc91be6f544cf5092b76fc2c6fc01d476b1cc1ae557cdd84bedfde8a11",
+        "winSide": "over/upper/over 10.5",
+        "settledAt": "2026-07-03T23:35:29+00:00"
+      }
+    },
+    "claims": [
+      {
+        "walletLabel": "ospex-stage-maker-a",
+        "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "speculationId": "13",
+        "side": "upper / away / St. Louis Cardinals",
+        "source": "manual seed maker winning moneyline position",
+        "payoutWei6": "107000",
+        "payoutUSDC": "0.107000",
+        "txHash": "0x00e20d725680e007f1f62a642e69be21aaa8cc188a47790e645e646cc3389749"
+      },
+      {
+        "walletLabel": "ospex-flow-a",
+        "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "speculationId": "14",
+        "side": "upper / over / over 10.5",
+        "source": "manual total seed taker winning over position",
+        "payoutWei6": "100000",
+        "payoutUSDC": "0.100000",
+        "txHash": "0x225880d81b73580f274a8a3c42881c85c2f75e408106c29b624959c32b846854"
+      },
+      {
+        "walletLabel": "ospex-stage-maker-b",
+        "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "speculationId": "14",
+        "side": "upper / over / over 10.5",
+        "source": "live MM maker winning total fill position",
+        "payoutWei6": "98500",
+        "payoutUSDC": "0.098500",
+        "txHash": "0x07313f36969138c15101d24cda6f48f6832c140b92398955e58a3701c6d22100"
+      }
+    ],
+    "noOps": [
+      {
+        "walletLabel": "ospex-flow-a",
+        "speculationId": "13",
+        "side": "lower / home / Chicago Cubs",
+        "result": "lost moneyline taker position; not claimable"
+      },
+      {
+        "walletLabel": "ospex-stage-maker-a",
+        "speculationId": "14",
+        "side": "lower / under / under 10.5",
+        "result": "lost total seed-maker position; not claimable"
+      },
+      {
+        "walletLabel": "ospex-flow-a",
+        "speculationId": "14",
+        "side": "lower / under / under 10.5",
+        "result": "lost live total taker position; not claimable"
+      }
+    ],
+    "finalZeroState": {
+      "contestOpenCommitments": 0,
+      "moneylineOpenCommitments": 0,
+      "totalOpenCommitments": 0,
+      "moneylineOrderbookCount": 0,
+      "totalOrderbookCount": 0,
+      "targetActiveCount": 0,
+      "targetPendingSettleCount": 0,
+      "targetClaimableCount": 0,
+      "processScanEmpty": true,
+      "targetZeroState": true
+    }
+  },
+  "caveats": [
+    "Pre-contest CLI/API exposed game-level hasOdds; market-specific moneyline/total/spread were hard-gated after CRE market update via odds.show before seeding/MM.",
+    "Live telemetry emitted one OwnerPositionStatusForUnknownPosition advisory before own-state fill materialized; it then emitted the own-state-stream fill for the total hash and converged. PR #145 orphan-safety regression evidence was captured.",
+    "Power outage occurred after live-window setup; postgame was resumed manually from run-local handoffs and current on-chain/API state, and the scheduled postgame cron was removed after manual completion."
+  ]
+}

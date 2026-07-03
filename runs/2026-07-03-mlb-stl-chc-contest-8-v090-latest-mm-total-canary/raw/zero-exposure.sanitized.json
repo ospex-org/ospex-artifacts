@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-07-03T23:38:56Z",
+  "postStop": {
+    "publicOpenCommitmentsContest8": 0,
+    "mmLifecycle": {
+      "visibleOpen": 0,
+      "softCancelled": 3,
+      "partiallyFilled": 0,
+      "filled": 1,
+      "expired": 0,
+      "authoritativelyInvalidated": 0
+    },
+    "processScanEmpty": true
+  },
+  "postgameFinal": {
+    "contestOpenCommitments": 0,
+    "moneylineOpenCommitments": 0,
+    "totalOpenCommitments": 0,
+    "moneylineOrderbookCount": 0,
+    "totalOrderbookCount": 0,
+    "targetActiveCount": 0,
+    "targetPendingSettleCount": 0,
+    "targetClaimableCount": 0,
+    "processScanEmpty": true,
+    "targetZeroState": true
+  },
+  "targetPositions": {
+    "stageMakerA": {
+      "activeCount": 0,
+      "active": [],
+      "pendingSettleCount": 0,
+      "pendingSettle": [],
+      "claimableCount": 0,
+      "claimable": []
+    },
+    "stageMakerB": {
+      "activeCount": 0,
+      "active": [],
+      "pendingSettleCount": 0,
+      "pendingSettle": [],
+      "claimableCount": 0,
+      "claimable": []
+    },
+    "flowA": {
+      "activeCount": 0,
+      "active": [],
+      "pendingSettleCount": 0,
+      "pendingSettle": [],
+      "claimableCount": 0,
+      "claimable": []
+    }
+  },
+  "claimPlansEmptyForTarget": {
+    "stageMakerA": true,
+    "stageMakerB": true,
+    "flowA": true
+  },
+  "orphanProcessCount": 0
+}
