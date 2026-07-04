@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-07-04T15-26-02-389Z-3rh3tt",
+  "eventCounts": {
+    "approval": 1,
+    "tick-start": 4,
+    "candidate": 3,
+    "stream-health-hold": 2,
+    "quote-intent": 3,
+    "risk-verdict": 3,
+    "submit": 6,
+    "quote-competitiveness": 6,
+    "funding-hold": 1,
+    "soft-cancel": 6,
+    "fill": 2,
+    "kill": 1
+  },
+  "fills": [
+    {
+      "ts": "2026-07-04T15:27:50.655Z",
+      "source": "own-state-stream",
+      "commitmentHash": "0xd44aa5a2fdba2ddaaed16d2c33fdac876e0af62db54ea6719ff2f8608ab09ee9",
+      "speculationId": "19",
+      "contestId": "10",
+      "market": "spread",
+      "makerSide": "away",
+      "takerSide": "home",
+      "positionType": 0,
+      "makerOddsTick": 175,
+      "newFillWei6": "100000",
+      "cumulativeRiskWei6": "100000"
+    },
+    {
+      "ts": "2026-07-04T15:27:50.655Z",
+      "source": "own-state-stream",
+      "commitmentHash": "0x5cd5eb435cba9d3c4c929a528f6976d9e22eceb0e81b766e73d9de7b0021bbcf",
+      "speculationId": "20",
+      "contestId": "10",
+      "market": "total",
+      "makerSide": "away",
+      "takerSide": "home",
+      "positionType": 0,
+      "makerOddsTick": 199,
+      "newFillWei6": "100000",
+      "cumulativeRiskWei6": "100000"
+    }
+  ],
+  "streamHealthHoldEvents": [
+    {
+      "ts": "2026-07-04T15:26:09.694Z",
+      "state": "entered",
+      "severity": "low",
+      "exposureWei6": "0"
+    },
+    {
+      "ts": "2026-07-04T15:26:40.389Z",
+      "state": "cleared"
+    }
+  ],
+  "divergenceEvents": 0,
+  "unknownOwnFillEvents": 0,
+  "approvalHealFailedEvents": 0,
+  "errors": 0
+}

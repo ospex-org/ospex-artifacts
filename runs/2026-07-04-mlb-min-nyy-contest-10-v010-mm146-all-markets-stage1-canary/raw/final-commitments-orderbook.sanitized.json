@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "openCommitments": [],
+  "contestOrderbook": [
+    {
+      "speculationId": "18",
+      "contestId": "10",
+      "type": "moneyline",
+      "lineTicks": 0,
+      "line": null,
+      "speculationStatus": 1,
+      "winSide": "away",
+      "settledAt": "2026-07-04T22:05:37+00:00",
+      "voided": false,
+      "orderbook": []
+    },
+    {
+      "speculationId": "19",
+      "contestId": "10",
+      "type": "spread",
+      "lineTicks": 15,
+      "line": 1.5,
+      "speculationStatus": 1,
+      "winSide": "away",
+      "settledAt": "2026-07-04T22:05:43+00:00",
+      "voided": false,
+      "awayLine": 1.5,
+      "homeLine": -1.5,
+      "orderbook": []
+    },
+    {
+      "speculationId": "20",
+      "contestId": "10",
+      "type": "total",
+      "lineTicks": 100,
+      "line": 10,
+      "speculationStatus": 1,
+      "winSide": "over",
+      "settledAt": "2026-07-04T22:05:47+00:00",
+      "voided": false,
+      "orderbook": []
+    }
+  ]
+}

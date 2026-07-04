@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "source": "MLB Stats API schedule",
+  "queriedAtUtc": "2026-07-04T22:15:31.374988Z",
+  "gamePk": 823526,
+  "gameGuid": "467ae988-3a44-4b64-86a1-065c3de55420",
+  "status": {
+    "abstractGameCode": "F",
+    "abstractGameState": "Final",
+    "codedGameState": "F",
+    "detailedState": "Final",
+    "startTimeTBD": false,
+    "statusCode": "F"
+  },
+  "awayTeam": "Minnesota Twins",
+  "awayRuns": 11,
+  "homeTeam": "New York Yankees",
+  "homeRuns": 4,
+  "r5ScoreStatusAfter": {
+    "contestId": "10",
+    "status": "scored",
+    "scored": true,
+    "awayScore": 11,
+    "homeScore": 4
+  }
+}

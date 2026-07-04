@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-07-04T15-26-02-389Z-3rh3tt",
+  "contestAllowList": [
+    "10"
+  ],
+  "marketsPosted": [
+    "moneyline",
+    "spread",
+    "total"
+  ],
+  "seedSpeculationsDuringMmRuntime": false,
+  "commitmentCount": 6,
+  "submitted": [
+    {
+      "ts": "2026-07-04T15:26:41.153Z",
+      "commitmentHash": "0xf868b341decfd81d309dfbdf04508a23a52f8d1b21151b2d1de3dc0f706120b0",
+      "contestId": "10",
+      "speculationId": "18",
+      "takerSide": "away",
+      "makerSide": "home",
+      "positionType": 1,
+      "makerOddsTick": 175,
+      "takerOddsTick": 234,
+      "riskAmountWei6": "100000",
+      "expiryUnixSec": 1783178920
+    },
+    {
+      "ts": "2026-07-04T15:26:41.500Z",
+      "commitmentHash": "0x260b1cf91c066c67b76a4649d35789b3c4356a7556e16a787addbc7312415405",
+      "contestId": "10",
+      "speculationId": "18",
+      "takerSide": "home",
+      "makerSide": "away",
+      "positionType": 0,
+      "makerOddsTick": 243,
+      "takerOddsTick": 170,
+      "riskAmountWei6": "100000",
+      "expiryUnixSec": 1783178920
+    },
+    {
+      "ts": "2026-07-04T15:26:42.130Z",
+      "commitmentHash": "0xa81e171e5b061c761e901fbe5af6f011aa3b691a960be9ae045ba233d9356d41",
+      "contestId": "10",
+      "speculationId": "19",
+      "market": "spread",
+      "takerSide": "away",
+      "makerSide": "home",
+      "positionType": 1,
+      "makerOddsTick": 243,
+      "takerOddsTick": 170,
+      "riskAmountWei6": "100000",
+      "expiryUnixSec": 1783178920
+    },
+    {
+      "ts": "2026-07-04T15:26:42.431Z",
+      "commitmentHash": "0xd44aa5a2fdba2ddaaed16d2c33fdac876e0af62db54ea6719ff2f8608ab09ee9",
+      "contestId": "10",
+      "speculationId": "19",
+      "market": "spread",
+      "takerSide": "home",
+      "makerSide": "away",
+      "positionType": 0,
+      "makerOddsTick": 175,
+      "takerOddsTick": 234,
+      "riskAmountWei6": "100000",
+      "expiryUnixSec": 1783178920
+    },
+    {
+      "ts": "2026-07-04T15:26:42.918Z",
+      "commitmentHash": "0x23835202801f066732330aed3103f50493ae6aa770c0ef1e809877e11322dde9",
+      "contestId": "10",
+      "speculationId": "20",
+      "market": "total",
+      "takerSide": "away",
+      "makerSide": "home",
+      "positionType": 1,
+      "makerOddsTick": 208,
+      "takerOddsTick": 193,
+      "riskAmountWei6": "100000",
+      "expiryUnixSec": 1783178920
+    },
+    {
+      "ts": "2026-07-04T15:26:43.230Z",
+      "commitmentHash": "0x5cd5eb435cba9d3c4c929a528f6976d9e22eceb0e81b766e73d9de7b0021bbcf",
+      "contestId": "10",
+      "speculationId": "20",
+      "market": "total",
+      "takerSide": "home",
+      "makerSide": "away",
+      "positionType": 0,
+      "makerOddsTick": 199,
+      "takerOddsTick": 201,
+      "riskAmountWei6": "100000",
+      "expiryUnixSec": 1783178920
+    }
+  ],
+  "quoteHashesByMarket": {
+    "moneyline": [
+      "0xf868b341decfd81d309dfbdf04508a23a52f8d1b21151b2d1de3dc0f706120b0",
+      "0x260b1cf91c066c67b76a4649d35789b3c4356a7556e16a787addbc7312415405"
+    ],
+    "spread": [
+      "0xa81e171e5b061c761e901fbe5af6f011aa3b691a960be9ae045ba233d9356d41",
+      "0xd44aa5a2fdba2ddaaed16d2c33fdac876e0af62db54ea6719ff2f8608ab09ee9"
+    ],
+    "total": [
+      "0x23835202801f066732330aed3103f50493ae6aa770c0ef1e809877e11322dde9",
+      "0x5cd5eb435cba9d3c4c929a528f6976d9e22eceb0e81b766e73d9de7b0021bbcf"
+    ]
+  },
+  "softCancelledCount": 6,
+  "softCancelledHashes": [
+    "0xf868b341decfd81d309dfbdf04508a23a52f8d1b21151b2d1de3dc0f706120b0",
+    "0x260b1cf91c066c67b76a4649d35789b3c4356a7556e16a787addbc7312415405",
+    "0xa81e171e5b061c761e901fbe5af6f011aa3b691a960be9ae045ba233d9356d41",
+    "0xd44aa5a2fdba2ddaaed16d2c33fdac876e0af62db54ea6719ff2f8608ab09ee9",
+    "0x23835202801f066732330aed3103f50493ae6aa770c0ef1e809877e11322dde9",
+    "0x5cd5eb435cba9d3c4c929a528f6976d9e22eceb0e81b766e73d9de7b0021bbcf"
+  ],
+  "filledHashes": [
+    "0xd44aa5a2fdba2ddaaed16d2c33fdac876e0af62db54ea6719ff2f8608ab09ee9",
+    "0x5cd5eb435cba9d3c4c929a528f6976d9e22eceb0e81b766e73d9de7b0021bbcf"
+  ],
+  "fundingHolds": [
+    {
+      "ts": "2026-07-04T15:27:45.667Z",
+      "state": "entered",
+      "reason": "funding-shortfall",
+      "fundingWei6": "400001",
+      "requiredWei6": "600000",
+      "positionModuleAllowanceWei6": "400001"
+    }
+  ]
+}

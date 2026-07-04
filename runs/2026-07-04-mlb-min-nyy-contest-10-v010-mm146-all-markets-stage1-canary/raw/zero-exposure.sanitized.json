@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-07-04T22:09:27Z",
+  "publicMakerVisibleCommitments": 0,
+  "publicContestSpecVisibleCommitments": 0,
+  "contestOrderbookCount": 0,
+  "orphanProcessCount": 0,
+  "currentOpenCommitmentsPayload": {
+    "schemaVersion": 2,
+    "ok": true,
+    "action": "commitments.list",
+    "network": "polygon",
+    "chainId": 137,
+    "generatedAt": "2026-07-04T22:09:06.534Z",
+    "payload": []
+  },
+  "positions": {
+    "ospex-stage-maker-a": {
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "estimatedPayoutUSDC": 0,
+      "estimatedPayoutWei6": "0",
+      "pendingSettlePayoutUSDC": 0,
+      "pendingSettlePayoutWei6": "0"
+    },
+    "ospex-stage-maker-b": {
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "estimatedPayoutUSDC": 0,
+      "estimatedPayoutWei6": "0",
+      "pendingSettlePayoutUSDC": 0,
+      "pendingSettlePayoutWei6": "0"
+    },
+    "ospex-flow-a": {
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "estimatedPayoutUSDC": 0,
+      "estimatedPayoutWei6": "0",
+      "pendingSettlePayoutUSDC": 0,
+      "pendingSettlePayoutWei6": "0"
+    }
+  },
+  "mmStatusVisibleOpen": 0,
+  "mmStatusSoftCancelled": 6,
+  "mmStatusFilled": 2,
+  "processMatches": []
+}

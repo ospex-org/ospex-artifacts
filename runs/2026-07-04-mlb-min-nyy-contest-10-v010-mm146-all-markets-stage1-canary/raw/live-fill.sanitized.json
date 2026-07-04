@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "result": {
+    "txHash": "0x5b13af2a5cbfbad3dfe7f23dceb60f3dc3ae9cadc318c9cd11103b1bf4515a5a",
+    "contest": {
+      "contestId": "10",
+      "awayTeam": "Minnesota Twins",
+      "homeTeam": "New York Yankees",
+      "sport": "mlb",
+      "matchTime": "2026-07-04T17:35:00+00:00"
+    },
+    "speculation": {
+      "speculationId": "20",
+      "market": "total",
+      "line": 10,
+      "lineTicks": 100
+    },
+    "commitment": {
+      "commitmentHash": "0x5cd5eb435cba9d3c4c929a528f6976d9e22eceb0e81b766e73d9de7b0021bbcf",
+      "contestId": "10",
+      "marketType": "total",
+      "lineTicks": 100,
+      "positionType": 0,
+      "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "riskAmount": "100000",
+      "filledRiskAmount": "100000"
+    },
+    "makerSide": {
+      "positionType": 0,
+      "resolvedLabel": "over",
+      "role": "over"
+    },
+    "takerSide": {
+      "positionType": 1,
+      "resolvedLabel": "under",
+      "role": "under"
+    },
+    "makerFilledRiskUSDC": "0.100000",
+    "takerRiskUSDC": "0.099000",
+    "sideSummary": "Under 10.0",
+    "warnings": [
+      {
+        "code": "expires-soon",
+        "severity": "warning"
+      }
+    ]
+  },
+  "additionalControlledFillResults": [
+    {
+      "txHash": "0xdaa67fff4f3aded646ede65aae2e590445e7f6cf1e8ead76d8011cce7382891e",
+      "contest": {
+        "contestId": "10",
+        "awayTeam": "Minnesota Twins",
+        "homeTeam": "New York Yankees",
+        "sport": "mlb",
+        "matchTime": "2026-07-04T17:35:00+00:00"
+      },
+      "speculation": {
+        "speculationId": "19",
+        "market": "spread",
+        "line": 1.5,
+        "lineTicks": 15
+      },
+      "commitment": {
+        "commitmentHash": "0xd44aa5a2fdba2ddaaed16d2c33fdac876e0af62db54ea6719ff2f8608ab09ee9",
+        "contestId": "10",
+        "marketType": "spread",
+        "lineTicks": 15,
+        "positionType": 0,
+        "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "riskAmount": "100000",
+        "filledRiskAmount": "100000"
+      },
+      "makerSide": {
+        "positionType": 0,
+        "resolvedLabel": "away",
+        "role": "away"
+      },
+      "takerSide": {
+        "positionType": 1,
+        "resolvedLabel": "home",
+        "role": "home"
+      },
+      "makerFilledRiskUSDC": "0.100000",
+      "takerRiskUSDC": "0.075000",
+      "sideSummary": "New York Yankees -1.5",
+      "warnings": [
+        {
+          "code": "expires-soon",
+          "severity": "warning"
+        }
+      ]
+    }
+  ]
+}

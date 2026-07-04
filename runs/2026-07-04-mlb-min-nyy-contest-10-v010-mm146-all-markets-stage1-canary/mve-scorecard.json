@@ -1,0 +1,275 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "2026-07-04-mlb-min-nyy-contest-10-v010-mm146-all-markets-stage1-canary",
+  "generatedAt": "2026-07-04T22:19:04Z",
+  "runClass": "mm-live-canary",
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "The v0.10.0/R5 MM #146 strict-allowlist all-market Stage 1 canary for Minnesota Twins @ New York Yankees completed the full lifecycle: pregame setup passed, contest 10 was created and verified, moneyline speculation 18, spread speculation 19, and total speculation 20 were manually seeded/filled with zero residual seed exposure, the market maker posted tiny live moneyline, spread, and total quotes under contest allowlist [10] with seedSpeculations=false, two controlled live spread/total quotes were filled, visible quotes were soft-cancelled after a bounded funding-shortfall hold, final open exposure drained to zero, official final score Minnesota Twins 11 / New York Yankees 4 was verified, contest 10 was scored through R5/CRE, speculations 18/19/20 settled to away/upper/Minnesota Twins, away/upper/Minnesota Twins +1.5, and over/upper/over 10, winning controlled positions were claimed, and final target commitments plus active/pending/claimable positions are zero."
+  },
+  "capabilities": [
+    {
+      "id": "target-preflight",
+      "capability": "Target preflight and allowlist",
+      "proof": "proven_live",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "notes": "Primary MIN away @ NYY home contest 10/specs 18/19/20 passed pre-game status, identity, allowlist, odds, and lead-time gates."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "capability": "Repo/runtime gates",
+      "proof": "proven_live",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "notes": "SDK/CLI v0.10.0, MM head 6f3ccc1 with PR #146 approval self-heal and PR #145 own-state orphan safety coverage, installed SDK v0.9.0, typecheck/test/build, and ancillary repo heads were verified."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "capability": "Wallet auth, balances, allowances",
+      "proof": "proven_live",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Expected-address checks passed for ospex-stage-maker-b, ospex-stage-maker-a, and ospex-flow-a; public allowances were bounded."
+    },
+    {
+      "id": "bounded-approvals",
+      "capability": "Bounded approvals / no unlimited approvals",
+      "proof": "proven_live",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "notes": "Only bounded USDC approvals were used; live autoApprove used exact mode and raised PositionModule allowance from 0.400000 to 0.600001 USDC."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "capability": "Dry-run quote loop",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "notes": "Candidates --allowlist-only returned contest 10 moneyline, spread, and total quote_ready; dry run would-submit remained target-scoped."
+    },
+    {
+      "id": "live-commitments-posted",
+      "capability": "Live commitments posted",
+      "proof": "proven_live",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "notes": "Tiny live moneyline, spread, and total commitments posted under strict allowlist [10], seedSpeculations=false."
+    },
+    {
+      "id": "live-fill",
+      "capability": "Controlled live fill",
+      "proof": "proven_live",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "Two controlled live fills succeeded: spread commitment 0xd44aa5a2fdba\u2026 and total commitment 0x5cd5eb435cba\u2026 using ospex-flow-a."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "capability": "Own-state SSE canonical fill source",
+      "proof": "proven_live",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "Telemetry captured both fills with source own-state-stream for the filled spread and total commitment hashes."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "capability": "Exposure drained to zero",
+      "proof": "proven_live",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "Final public/API/MM visible-open exposure is zero, target active/pending/claimable positions are zero after postgame, and no orphan MM process remained."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "capability": "Restart/cold-start safety",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/restart-cold-start-probe.sanitized.json",
+      "notes": "A scratch-state dry-run/cold-start probe loaded state cleanly, expired copied stale records, and did not create duplicate live exposure."
+    },
+    {
+      "id": "postgame-score",
+      "capability": "Postgame score",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Official final score MIN 11, NYY 4 was verified and contest 10 scored via R5/CRE. Operator/watchdog caveat: The postgame cron/watchdog initially no-oped because core games API status still reported `upcoming` after MLB official final. Postgame was manually resumed after independent MLB Stats official-final verification; score/settle/claim completed successfully, and final zero-state was verified. This is an operator/watchdog methodology caveat, not a protocol/MM failure."
+    },
+    {
+      "id": "postgame-settle",
+      "capability": "Postgame settle",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Moneyline speculation 18 settled to away/upper/Minnesota Twins; spread 19 to away/upper/Minnesota Twins +1.5; total 20 to over/upper/over 10. Completed after manual resume from the operator/watchdog caveat documented under postgame-score."
+    },
+    {
+      "id": "postgame-claim",
+      "capability": "Postgame claim/no-op",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Winning upper positions for stage-maker-a and stage-maker-b were claimed; losing positions are no-op/not claimable, and final target positions are zero. Completed after manual resume from the operator/watchdog caveat documented under postgame-score."
+    },
+    {
+      "id": "cost-within-cap",
+      "capability": "Cost within cap",
+      "proof": "proven_live",
+      "evidence": "raw/tx-receipts.summary.json",
+      "notes": "Tiny canary risk plus protocol fees stayed within the requested cap; recorded lifecycle transactions are summarized."
+    }
+  ],
+  "zeroExposure": {
+    "checkedAtUtc": "2026-07-04T22:09:27Z",
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "orphanProcessCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json"
+  },
+  "transactions": [
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-stage-maker-b treasuryModule (1 USDC target)",
+      "txHash": "0xe460332add84e05feaa61d4315c415114ce85894ab763d3736a11b667259c3d8",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-stage-maker-a positionModule (0.2 USDC target)",
+      "txHash": "0xa65dfb38b57e101d052d6c10f1b6ca0c3d52c10b96c603c8340fb058a3458085",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-stage-maker-a treasuryModule (0.75 USDC target)",
+      "txHash": "0x883de91f585fa0c4a13d51bbb703ae095e73d4bc4134186aaa4a2992bef9d092",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-flow-a positionModule (0.5 USDC target)",
+      "txHash": "0x7227e19e6db85efe57c8430b94441e8d79dfe08167e33a80bdc1ad335eec195f",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-flow-a treasuryModule (0.75 USDC target)",
+      "txHash": "0x193dff126f88f3b0fd40e2aa2d0162d4d9420851b5e0fc033d0ddbe15259fd47",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-stage-maker-b positionModule (0.600001 USDC target)",
+      "txHash": "0x67a27e26c01c97167646b401f8dbd6112bf47ebc5fc266de465dec24a56b2224",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "create-contest",
+      "purpose": "Create contest 10 for Minnesota Twins @ New York Yankees",
+      "txHash": "0x83cad455f6ed5e54d46515813913de12fbc7a4f7ce245c6c44854c664e81fca3",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "other",
+      "purpose": "Request market update for contest 10",
+      "txHash": "0x7d7bb3134fd04eb02a6a239cdaf4dc3b421f4317e55152f842123c67bd0f367c",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "seed-match",
+      "purpose": "Fully match tiny manual moneyline seed to create speculation 18",
+      "txHash": "0x3e827495d1cec3d7054ebf7a8049d4fce22fc2100cd38be1148831300db4c925",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "seed-match",
+      "purpose": "Fully match tiny manual spread seed to create speculation 19",
+      "txHash": "0x4865b96750d084f5859330942df24ef803c148f37ca888b4916c89fc7af83248",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "seed-match",
+      "purpose": "Fully match tiny manual total seed to create speculation 20",
+      "txHash": "0x9f2e893be3704d7d77d69008f61d88bbe6a40f2ebdff3ec1c74b79c0c25b88e7",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "match-commitment",
+      "purpose": "Controlled fill against live MM spread quote",
+      "txHash": "0xdaa67fff4f3aded646ede65aae2e590445e7f6cf1e8ead76d8011cce7382891e",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "match-commitment",
+      "purpose": "Controlled fill against live MM total quote",
+      "txHash": "0x5b13af2a5cbfbad3dfe7f23dceb60f3dc3ae9cadc318c9cd11103b1bf4515a5a",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "score-request",
+      "purpose": "Request R5 score for contest 10 after official final",
+      "txHash": "0x34ad599c48765d1c93db336cf748972d9353a1dc87d15ffdf1990969d36b58dd",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "settle",
+      "purpose": "Settle moneyline speculation 18 to away/upper/Minnesota Twins",
+      "txHash": "0x9afc9fa30800ce57b8a6e9c4a3ab72cb29e5fe6a607d71d541bc370e933a6db2",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "settle",
+      "purpose": "Settle spread speculation 19 to away/upper/Minnesota Twins +1.5",
+      "txHash": "0x500946516ae886157abd1bafba18e3b79c205b69c87b234541d32f4cf50b50e6",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "settle",
+      "purpose": "Settle total speculation 20 to over/upper/over 10",
+      "txHash": "0xbf9ec03d9c76d72c2e6e212a24e3a4eb6554e3318d80cbb827522cfab444c090",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "claim",
+      "purpose": "manual seed maker: Minnesota Twins/away",
+      "txHash": "0x541b469913d374904261816dc48aa06c2c9428d0f0a93da4bc32c211dc3d72a6",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "claim",
+      "purpose": "manual seed maker: Minnesota Twins +1.5",
+      "txHash": "0x8103f472b1b6c3b2c37498dace4e50558697ea8c523bb00020c3d0d51aa7c971",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "claim",
+      "purpose": "manual seed maker: Over 10",
+      "txHash": "0x4a707455d75939be1cdcaed9084695ddbba6dbfe1b7e89a7579e9ae56c9d1606",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "claim",
+      "purpose": "MM live maker: Minnesota Twins +1.5",
+      "txHash": "0x6755511b40f2d324a5151456ce4743388fb50e695fa8cfd4eebd5fa6e9057c32",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "claim",
+      "purpose": "MM live maker: Over 10",
+      "txHash": "0xe158c082888471525912b1dc7f076232bd5ac4d6a9fe5f163de183a49aacba2c",
+      "operatorControlled": true,
+      "status": "success"
+    }
+  ]
+}

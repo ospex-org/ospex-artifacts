@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "approvals": [
+    {
+      "profile": "ospex-stage-maker-b",
+      "spenderModule": "treasuryModule",
+      "purpose": "protocol fees",
+      "targetRaw": "1000000",
+      "targetUSDC": "1",
+      "targetIsMax": false,
+      "txHash": "0xe460332add84e05feaa61d4315c415114ce85894ab763d3736a11b667259c3d8",
+      "blockNumber": "89648722",
+      "status": "success"
+    },
+    {
+      "profile": "ospex-stage-maker-a",
+      "spenderModule": "positionModule",
+      "purpose": "bet risk",
+      "targetRaw": "200000",
+      "targetUSDC": "0.2",
+      "targetIsMax": false,
+      "txHash": "0xa65dfb38b57e101d052d6c10f1b6ca0c3d52c10b96c603c8340fb058a3458085",
+      "blockNumber": "89648832",
+      "status": "success"
+    },
+    {
+      "profile": "ospex-stage-maker-a",
+      "spenderModule": "treasuryModule",
+      "purpose": "protocol fees",
+      "targetRaw": "750000",
+      "targetUSDC": "0.75",
+      "targetIsMax": false,
+      "txHash": "0x883de91f585fa0c4a13d51bbb703ae095e73d4bc4134186aaa4a2992bef9d092",
+      "blockNumber": "89648834",
+      "status": "success"
+    },
+    {
+      "profile": "ospex-flow-a",
+      "spenderModule": "positionModule",
+      "purpose": "bet risk",
+      "targetRaw": "500000",
+      "targetUSDC": "0.5",
+      "targetIsMax": false,
+      "txHash": "0x7227e19e6db85efe57c8430b94441e8d79dfe08167e33a80bdc1ad335eec195f",
+      "blockNumber": "89648837",
+      "status": "success"
+    },
+    {
+      "profile": "ospex-flow-a",
+      "spenderModule": "treasuryModule",
+      "purpose": "protocol fees",
+      "targetRaw": "750000",
+      "targetUSDC": "0.75",
+      "targetIsMax": false,
+      "txHash": "0x193dff126f88f3b0fd40e2aa2d0162d4d9420851b5e0fc033d0ddbe15259fd47",
+      "blockNumber": "89648839",
+      "status": "success"
+    },
+    {
+      "profile": "ospex-stage-maker-b",
+      "spenderModule": "positionModule",
+      "purpose": "MM exact autoApprove for aggregate live risk cap",
+      "currentRaw": "400000",
+      "targetRaw": "600001",
+      "targetUSDC": "0.600001",
+      "targetIsMax": false,
+      "txHash": "0x67a27e26c01c97167646b401f8dbd6112bf47ebc5fc266de465dec24a56b2224",
+      "blockNumber": null,
+      "status": "success"
+    }
+  ],
+  "unlimitedApprovalsUsed": false
+}

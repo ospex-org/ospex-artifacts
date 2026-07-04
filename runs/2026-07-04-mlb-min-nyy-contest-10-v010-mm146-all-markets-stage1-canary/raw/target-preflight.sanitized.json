@@ -1,0 +1,84 @@
+{
+  "checkedAtUtc": "2026-07-04T15:16:19Z",
+  "apiHealth": {
+    "healthzOk": true,
+    "readyzOk": true,
+    "network": "polygon",
+    "chainId": 137
+  },
+  "selectedTarget": {
+    "selection": "primary",
+    "game": "Minnesota Twins @ New York Yankees",
+    "gamePk": 823526,
+    "gameId": "1f043f5a-8eef-4613-b518-8220afdb0b0f",
+    "slug": "min-nyy-2026-07-04",
+    "sport": "mlb",
+    "awayTeam": "Minnesota Twins",
+    "awayAbbreviation": "MIN",
+    "homeTeam": "New York Yankees",
+    "homeAbbreviation": "NYY",
+    "matchTime": "2026-07-04T17:35:00+00:00",
+    "statusAtPreflight": "upcoming",
+    "hasOdds": true,
+    "canCreateContestBeforeRun": true,
+    "contestCreatedBeforeRun": false,
+    "contestId": "10",
+    "contestStatusAfterCreateVerify": "verified",
+    "speculations": [
+      {
+        "market": "moneyline",
+        "type": "moneyline",
+        "contestId": "10",
+        "speculationId": "18"
+      },
+      {
+        "market": "spread",
+        "type": "spread",
+        "contestId": "10",
+        "speculationId": "19",
+        "line": 1.5,
+        "lineTicks": 15
+      },
+      {
+        "market": "total",
+        "type": "total",
+        "contestId": "10",
+        "speculationId": "20",
+        "line": 10,
+        "lineTicks": 100
+      }
+    ],
+    "referenceOdds": {
+      "moneyline": {
+        "market": "moneyline",
+        "awayOddsAmerican": 132,
+        "homeOddsAmerican": -146,
+        "upstreamLastUpdated": "2026-07-04T15:13:44+00:00",
+        "pollCapturedAt": "2026-07-04T15:16:05.571+00:00",
+        "changedAt": "2026-07-04T15:15:05.742+00:00"
+      },
+      "spread": {
+        "market": "spread",
+        "awayLine": 1.5,
+        "homeLine": -1.5,
+        "awayOddsAmerican": -150,
+        "homeOddsAmerican": 130,
+        "upstreamLastUpdated": "2026-07-04T15:13:44+00:00",
+        "pollCapturedAt": "2026-07-04T15:16:05.663+00:00",
+        "changedAt": "2026-07-04T14:35:04.221+00:00"
+      },
+      "total": {
+        "market": "total",
+        "line": 10,
+        "overOddsAmerican": -115,
+        "underOddsAmerican": -105,
+        "upstreamLastUpdated": "2026-07-04T15:13:44+00:00",
+        "pollCapturedAt": "2026-07-04T15:16:05.743+00:00",
+        "changedAt": "2026-07-04T14:40:04.859+00:00"
+      }
+    },
+    "oldFunctionsLinkFlowObserved": false,
+    "identityGate": "pass"
+  },
+  "stopConditionsTriggered": []
+}
