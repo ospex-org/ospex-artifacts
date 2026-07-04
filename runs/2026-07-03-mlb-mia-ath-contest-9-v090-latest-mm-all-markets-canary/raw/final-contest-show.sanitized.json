@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "contest": {
+    "contestId": "9",
+    "awayTeam": "Miami Marlins",
+    "homeTeam": "Athletics",
+    "sport": "mlb",
+    "sportId": 0,
+    "matchTime": "2026-07-04T01:40:00+00:00",
+    "status": "scored",
+    "speculations": [
+      {
+        "speculationId": "15",
+        "contestId": "9",
+        "type": "moneyline",
+        "lineTicks": 0,
+        "line": null,
+        "speculationStatus": 1,
+        "winSide": "away",
+        "settledAt": "2026-07-04T04:52:08+00:00",
+        "voided": false,
+        "orderbook": []
+      },
+      {
+        "speculationId": "16",
+        "contestId": "9",
+        "type": "spread",
+        "lineTicks": 15,
+        "line": 1.5,
+        "speculationStatus": 1,
+        "winSide": "away",
+        "settledAt": "2026-07-04T04:52:14+00:00",
+        "voided": false,
+        "awayLine": 1.5,
+        "homeLine": -1.5,
+        "orderbook": []
+      },
+      {
+        "speculationId": "17",
+        "contestId": "9",
+        "type": "total",
+        "lineTicks": 105,
+        "line": 10.5,
+        "speculationStatus": 1,
+        "winSide": "over",
+        "settledAt": "2026-07-04T04:52:20+00:00",
+        "voided": false,
+        "orderbook": []
+      }
+    ],
+    "jsonoddsId": "7ecd358d-14b6-420a-8155-df9a92b67ef3",
+    "rundownId": "4cbc6adfa0e0d1af8d8cd23fabddcab8",
+    "sportspageId": "337310",
+    "contestCreator": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "leagueId": "mlb",
+    "awayScore": 12,
+    "homeScore": 5,
+    "contestCreatedAt": "2026-07-04T00:44:07+00:00",
+    "verifiedAt": "2026-07-04T00:44:22+00:00",
+    "scoredAt": "2026-07-04T04:51:55+00:00",
+    "voidedAt": null,
+    "awayTeamId": "afcd554d-4f04-4342-ad04-9a5ee0851b4a",
+    "homeTeamId": "ec4f4011-a96b-46fd-82cf-568d06878eed"
+  }
+}

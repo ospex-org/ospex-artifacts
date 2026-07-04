@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "result": {
+    "txHash": "0xe6b352524b30556331054006bcba741574520ea8f4b50d5124ad76e9f1f882c8",
+    "contest": {
+      "contestId": "9",
+      "awayTeam": "Miami Marlins",
+      "homeTeam": "Athletics",
+      "sport": "mlb",
+      "matchTime": "2026-07-04T01:40:00+00:00"
+    },
+    "speculation": {
+      "speculationId": "17",
+      "market": "total",
+      "line": 10.5,
+      "lineTicks": 105
+    },
+    "commitment": {
+      "commitmentHash": "0xdf1762d2ce6a5f0e3b46cc677500a90bef79d131b361c10cc302b9c3535cfcce",
+      "contestId": "9",
+      "marketType": "total",
+      "lineTicks": 105,
+      "positionType": 0,
+      "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "riskAmount": "50000",
+      "filledRiskAmount": "50000"
+    },
+    "makerSide": {
+      "positionType": 0,
+      "resolvedLabel": "over",
+      "role": "over"
+    },
+    "takerSide": {
+      "positionType": 1,
+      "resolvedLabel": "under",
+      "role": "under"
+    },
+    "makerFilledRiskUSDC": "0.050000",
+    "takerRiskUSDC": "0.049500",
+    "sideSummary": "Under 10.5",
+    "warnings": [
+      {
+        "code": "expires-soon",
+        "severity": "warning"
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-07-04T00:47:00Z",
+  "expectedAddressChecks": [
+    {
+      "profile": "ospex-stage-maker-b",
+      "expectedAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "ok": true,
+      "roles": [
+        "contest creator",
+        "market update operator",
+        "score operator",
+        "MM live maker"
+      ]
+    },
+    {
+      "profile": "ospex-stage-maker-a",
+      "expectedAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "ok": true,
+      "roles": [
+        "manual seed maker"
+      ]
+    },
+    {
+      "profile": "ospex-flow-a",
+      "expectedAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "ok": true,
+      "roles": [
+        "controlled taker"
+      ]
+    }
+  ],
+  "boundedAllowancesOnly": true,
+  "unlimitedApprovalsObserved": false,
+  "broadSlateOrMultigameMmObserved": false
+}

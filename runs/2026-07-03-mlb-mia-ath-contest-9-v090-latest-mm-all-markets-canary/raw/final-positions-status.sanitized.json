@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "positions": {
+    "ospex-stage-maker-a": {
+      "active": [],
+      "pendingSettle": [],
+      "claimable": [],
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      }
+    },
+    "ospex-stage-maker-b": {
+      "active": [],
+      "pendingSettle": [],
+      "claimable": [],
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      }
+    },
+    "ospex-flow-a": {
+      "active": [],
+      "pendingSettle": [],
+      "claimable": [],
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      }
+    }
+  }
+}

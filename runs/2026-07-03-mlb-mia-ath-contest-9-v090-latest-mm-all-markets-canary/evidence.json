@@ -1,0 +1,414 @@
+{
+  "artifactId": "2026-07-03-mlb-mia-ath-contest-9-v090-latest-mm-all-markets-canary",
+  "artifactPath": "runs/2026-07-03-mlb-mia-ath-contest-9-v090-latest-mm-all-markets-canary/",
+  "artifactType": "run",
+  "artifactStatus": "complete_verified_with_caveats",
+  "status": "complete_verified_with_caveats",
+  "capturedAtUtc": "2026-07-04T05:09:25Z",
+  "date": "2026-07-03",
+  "network": "polygon",
+  "chainId": 137,
+  "verdict": {
+    "label": "FULL_GREEN",
+    "protocolVerdict": "V090_LATEST_MM_ALL_MARKETS_SINGLE_GAME_GREEN",
+    "reason": "The v0.9.0/R5 latest-main strict-allowlist all-market MM canary for Miami Marlins @ Athletics completed the full lifecycle: pregame setup passed, contest 9 was created and verified, moneyline speculation 15, spread speculation 16, and total speculation 17 were manually seeded/filled with zero residual seed exposure, the market maker posted tiny live moneyline, spread, and total quotes under contest allowlist [9] with seedSpeculations=false, one controlled live total quote was filled, remaining visible quotes were soft-cancelled/expired, final open exposure drained to zero, official final score Miami Marlins 12 / Athletics 5 was verified, contest 9 was scored through R5/CRE on the first request, speculations 15/16/17 settled to away/upper/Miami Marlins, away/upper/Miami Marlins +1.5, and over/upper/over 10.5, winning controlled positions were claimed, and final target commitments plus active/pending/claimable positions are zero."
+  },
+  "artifactFiles": {
+    "summary": "summary.md",
+    "evidence": "evidence.json",
+    "scenarioMatrix": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "mveScorecard": "mve-scorecard.json",
+    "mveScorecardMarkdown": "mve-scorecard.md",
+    "releaseRuntimeMatrix": "raw/release-runtime-matrix.sanitized.json",
+    "targetPreflight": "raw/target-preflight.sanitized.json",
+    "walletAuthBalances": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "boundedApprovals": "raw/bounded-approvals.sanitized.json",
+    "mmDryRun": "raw/mm-dryrun-summary.sanitized.json",
+    "liveCommitmentsPosted": "raw/live-public-commitments-posted.sanitized.json",
+    "liveFill": "raw/live-fill.sanitized.json",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json",
+    "restartColdStartProbe": "raw/restart-cold-start-probe.sanitized.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "finalContestShow": "raw/final-contest-show.sanitized.json",
+    "finalPositionsStatus": "raw/final-positions-status.sanitized.json",
+    "finalCommitmentsOrderbook": "raw/final-commitments-orderbook.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json"
+  },
+  "scope": {
+    "runClass": "mm-live-canary",
+    "strictAllowlistOnly": true,
+    "contestAllowList": [
+      "9"
+    ],
+    "broadMarketMakerRunUsed": false,
+    "markets": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "primaryArtifactTargetMarket": "total",
+    "tinyControlledCapitalOnly": true,
+    "boundedApprovalsOnly": true,
+    "oldFunctionsLinkFlowUsed": false,
+    "seedSpeculationsDuringMmRuntime": false,
+    "controlledLiveFillCount": 1,
+    "controlledLiveFilledMarkets": [
+      "total"
+    ]
+  },
+  "target": {
+    "game": "Miami Marlins @ Athletics",
+    "gamePk": 824982,
+    "gameId": "7ecd358d-14b6-420a-8155-df9a92b67ef3",
+    "slug": "mia-ath-2026-07-04",
+    "sport": "mlb",
+    "market": "total",
+    "marketsCovered": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "contestId": "9",
+    "speculationId": "17",
+    "companionSpeculations": {
+      "moneyline": "15",
+      "spread": "16",
+      "total": "17"
+    },
+    "awayTeam": "Miami Marlins",
+    "homeTeam": "Athletics",
+    "startTimeUtc": "2026-07-04T01:40:00Z",
+    "spreadLine": {
+      "awayLine": 1.5,
+      "homeLine": -1.5,
+      "lineTicks": 15,
+      "awayPositionType": "upper",
+      "homePositionType": "lower"
+    },
+    "totalLine": {
+      "line": 10.5,
+      "lineTicks": 105,
+      "overPositionType": "upper",
+      "underPositionType": "lower"
+    },
+    "referenceOdds": {
+      "moneyline": {
+        "awayOddsAmerican": 125,
+        "homeOddsAmerican": -138
+      },
+      "spread": {
+        "awayLine": 1.5,
+        "homeLine": -1.5,
+        "awayOddsAmerican": -165,
+        "homeOddsAmerican": 140
+      },
+      "total": {
+        "line": 10.5,
+        "overOddsAmerican": -115,
+        "underOddsAmerican": -105
+      }
+    },
+    "teamIdentity": {
+      "away": {
+        "team": "Miami Marlins",
+        "abbreviation": "MIA",
+        "positionType": "upper",
+        "role": "away",
+        "identity": "underdog",
+        "marketOddsAmerican": "+125"
+      },
+      "home": {
+        "team": "Athletics",
+        "abbreviation": "ATH",
+        "positionType": "lower",
+        "role": "home",
+        "identity": "favorite",
+        "marketOddsAmerican": "-138"
+      },
+      "winner": {
+        "team": "Miami Marlins",
+        "role": "away",
+        "positionType": "upper"
+      },
+      "spreadWinner": {
+        "team": "Miami Marlins",
+        "role": "away",
+        "positionType": "upper",
+        "line": 1.5
+      },
+      "totalWinner": {
+        "side": "over",
+        "positionType": "upper",
+        "line": 10.5
+      }
+    },
+    "contestStatusAfterCreateVerify": "verified",
+    "contestStatusAfterPostgame": "scored",
+    "postgameStatus": "complete",
+    "finalScore": {
+      "awayRuns": 12,
+      "homeRuns": 5,
+      "winner": "Miami Marlins",
+      "winnerProtocolSide": "upper",
+      "totalRuns": 17,
+      "totalWinner": "over 10.5",
+      "totalWinnerProtocolSide": "upper",
+      "spreadWinner": "Miami Marlins +1.5",
+      "spreadWinnerProtocolSide": "upper"
+    }
+  },
+  "wallets": {
+    "manualSeedMaker": {
+      "profile": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    "controlledTaker": {
+      "profile": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    },
+    "operatorMmMaker": {
+      "profile": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    }
+  },
+  "versions": {
+    "schemaVersion": 1,
+    "capturedAtUtc": "2026-07-04T00:36:38Z",
+    "node": "v22.22.0",
+    "yarn": "1.22.22",
+    "chainId": 137,
+    "sdkCli": {
+      "repo": "ospex-sdk",
+      "headSha": "fd55bd1e7de0",
+      "version": "0.9.0",
+      "requiredAtOrAfter": "fd55bd1",
+      "install": "pass",
+      "sdkBuild": "pass",
+      "cliBuild": "pass",
+      "ok": true
+    },
+    "marketMaker": {
+      "repo": "ospex-market-maker",
+      "headSha": "4fcd489ef1ee",
+      "requiredAtOrAfter": "4fcd489",
+      "installedSdkVersion": "0.9.0",
+      "typecheck": "pass",
+      "test": "pass",
+      "testCount": "1061 passed",
+      "build": "pass",
+      "allowlistOnlyFlagAvailable": true,
+      "ownStateOrphanSafetyRegressionPresent": true
+    },
+    "ancillaryRepos": {
+      "ospex-core-api": {
+        "headSha": "076f44d428fc",
+        "requiredAtOrAfter": "076f44d",
+        "ok": true
+      },
+      "ospex-indexer": {
+        "headSha": "75be9e76965b",
+        "requiredAtOrAfter": "75be9e7",
+        "ok": true
+      },
+      "ospex-cre": {
+        "headSha": "fed6e26e27e5",
+        "requiredAtOrAfter": "fed6e26",
+        "ok": true
+      }
+    },
+    "allRequiredOk": true
+  },
+  "setup": {
+    "contestCreateTx": "0xc8aec13c184cda258124ff05cfd7e0c95034daa635ab8a1438ab7d0ae057871e",
+    "marketUpdateTx": "0xd0137e5409943beaa074d6630404acc0bc937f005b7c35db54d41babbffb5695",
+    "manualSeedCommitmentHashes": {
+      "moneyline": "0x90090b61045c1abf19dbe47a916aae22564d8a3b39b46996f2a02fc3defd9750",
+      "spread": "0x173f46449388bc59d6ea7012c815a87c1c8ad190e43b6cc8972c93b3dcd75daf",
+      "total": "0xaaa947662dd6719be075403c9425577a508184027996376326cdbf7fce6ea77f"
+    },
+    "manualSeedFillTxs": {
+      "moneyline": "0xb1b1eeea9a05ec33822b1c48a27e30566adb8c559d7b661086b86487e39daffb",
+      "spread": "0x0827410b27c5409bf914a9620548270a85eb310fb565b9ab32ad2a349f3acbac",
+      "total": "0xfeb2d5789e831820bd8fda64948b0677d8f1663aaf9b08f42b4b4ff59d043c64"
+    },
+    "seedOpenCommitmentsAfterConvergence": 0
+  },
+  "liveWindow": {
+    "runId": "2026-07-04T00-56-11-474Z-fdbngj",
+    "startedAtUtc": "2026-07-04T00:56:12.586Z",
+    "stoppedAtUtc": "2026-07-04T00:59:21.111Z",
+    "commitmentCount": 6,
+    "marketsPosted": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "controlledFill": {
+      "market": "total",
+      "commitmentHash": "0xdf1762d2ce6a5f0e3b46cc677500a90bef79d131b361c10cc302b9c3535cfcce",
+      "txHash": "0xe6b352524b30556331054006bcba741574520ea8f4b50d5124ad76e9f1f882c8",
+      "makerFilledRiskUSDC": "0.050000",
+      "takerRiskUSDC": "0.049500",
+      "makerWallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "takerWallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    },
+    "ownStateSseAssertions": {
+      "fillSource": "own-state-stream",
+      "fillEventCount": 1
+    },
+    "postStopZeroExposure": {
+      "checkedAtUtc": "2026-07-04T05:00:39Z",
+      "publicMakerVisibleCommitments": 0,
+      "publicContestSpecVisibleCommitments": 0,
+      "contestOrderbookCount": 0,
+      "orphanProcessCount": 0
+    }
+  },
+  "postgame": {
+    "schemaVersion": 1,
+    "completedAtUtc": "2026-07-04T04:52:46.628890+00:00",
+    "officialFinal": {
+      "source": "MLB Stats official feed/live",
+      "status": "Final",
+      "awayTeam": "Miami Marlins",
+      "awayRuns": 12,
+      "homeTeam": "Athletics",
+      "homeRuns": 5,
+      "winner": "Miami Marlins",
+      "winnerRole": "away",
+      "moneylineWinnerProtocolSide": "upper",
+      "totalRuns": 17,
+      "totalLine": 10.5,
+      "totalWinner": "over",
+      "totalWinnerProtocolSide": "upper",
+      "spreadLine": 1.5,
+      "spreadWinner": "Miami Marlins +1.5",
+      "spreadWinnerProtocolSide": "upper"
+    },
+    "score": {
+      "requestTxHash": "0xdab2872fc1534d4ff67bbec6f7597ea41620522e0ebc4aaf127d005b590b6fc5",
+      "retryNeeded": false,
+      "contestStatus": "scored",
+      "awayScore": 12,
+      "homeScore": 5
+    },
+    "settle": {
+      "moneyline": [
+        "0x381464bf7c5b9ee712a4d9c65e16835232731741e537b601064e1699d6d1601d"
+      ],
+      "spread": [
+        "0x8e659384c56701b5236c497f4d0269743c3c9ee379df2c95d907a0318f5e47de"
+      ],
+      "total": [
+        "0x7d052bf4455f7245f5cc606082ad7e2227016d00318c822b1567ee2880e2f6d0"
+      ]
+    },
+    "claim": {
+      "claim-moneyline-15-upper-stage_a-20260704T045220Z": {
+        "note": "manual seed maker: Miami Marlins/away",
+        "ok": true,
+        "txHashes": [
+          "0xe4c27c09e158c4d0afbce476da8bbb15b21ed298e724bf0f8e2665fc5d449dbf"
+        ]
+      },
+      "claim-spread-16-upper-stage_a-20260704T045226Z": {
+        "note": "manual seed maker: Miami Marlins +1.5",
+        "ok": true,
+        "txHashes": [
+          "0xd888fb97afc037bc3384798ac6030fd862f6df3b6304e5b9fcd84c3044ccdb2b"
+        ]
+      },
+      "claim-total-17-upper-stage_a-20260704T045232Z": {
+        "note": "manual seed maker: Over 10.5",
+        "ok": true,
+        "txHashes": [
+          "0x20ab5bce6c3053c1bb5af5835589176c24d255ff2d25eb43cda5dc15e8e7a47a"
+        ]
+      },
+      "claim-total-17-upper-stage_b-20260704T045236Z": {
+        "note": "MM live maker: Over 10.5",
+        "ok": true,
+        "txHashes": [
+          "0x6532a21ed4ad0265266787979135191d3dde8a6b495dc4b8402cf44cf0876833"
+        ]
+      }
+    },
+    "winnerSides": {
+      "moneyline": "upper",
+      "spread": "upper",
+      "total": "upper"
+    },
+    "finalZeroStateVerifiedAtUtc": "2026-07-04T05:00:39Z",
+    "finalTargetPositions": {
+      "ospex-stage-maker-a": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      },
+      "ospex-stage-maker-b": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      },
+      "ospex-flow-a": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      }
+    },
+    "openCommitments": 0
+  },
+  "finalState": {
+    "contestStatus": "scored",
+    "openCommitments": 0,
+    "positions": {
+      "ospex-stage-maker-a": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      },
+      "ospex-stage-maker-b": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      },
+      "ospex-flow-a": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      }
+    }
+  },
+  "caveats": [
+    "Exactly one controlled live fill was executed; it was a non-moneyline total quote, satisfying the acceptable gate because all three markets posted under the strict allowlist and all-market dry-run evidence was clean.",
+    "An initial controlled live fill attempt used the wrong inherited signer environment and failed before any transaction; the retried ospex-flow-a fill succeeded.",
+    "The live runner briefly entered a zero-exposure own-state health hold at boot and cleared it before posting quotes."
+  ]
+}

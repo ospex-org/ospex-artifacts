@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-07-04T00-56-11-474Z-fdbngj",
+  "contestAllowList": [
+    "9"
+  ],
+  "marketsPosted": [
+    "moneyline",
+    "spread",
+    "total"
+  ],
+  "seedSpeculationsDuringMmRuntime": false,
+  "commitmentCount": 6,
+  "submitted": [
+    {
+      "ts": "2026-07-04T00:57:16.039Z",
+      "commitmentHash": "0x61ad59245c7d8bfafd433e4a0b4edb573f5649cbb67f5c37a674568e77c8bafc",
+      "contestId": "9",
+      "speculationId": "15",
+      "market": "moneyline",
+      "takerSide": "away",
+      "makerSide": "home",
+      "positionType": 1,
+      "makerOddsTick": 179,
+      "takerOddsTick": 226,
+      "riskAmountWei6": "50000",
+      "expiryUnixSec": 1783126755
+    },
+    {
+      "ts": "2026-07-04T00:57:16.395Z",
+      "commitmentHash": "0x2d8bdfee288eeeacdeeea3b2196ea257ab767783fae1ab7d2581a8870d9e6010",
+      "contestId": "9",
+      "speculationId": "15",
+      "market": "moneyline",
+      "takerSide": "home",
+      "makerSide": "away",
+      "positionType": 0,
+      "makerOddsTick": 235,
+      "takerOddsTick": 174,
+      "riskAmountWei6": "50000",
+      "expiryUnixSec": 1783126755
+    },
+    {
+      "ts": "2026-07-04T00:57:16.902Z",
+      "commitmentHash": "0x9009206b921b6b7c58416b513127e5b2c9e5e25d8ec4afe82977c0ea54dd42de",
+      "contestId": "9",
+      "speculationId": "16",
+      "market": "spread",
+      "takerSide": "away",
+      "makerSide": "home",
+      "positionType": 1,
+      "makerOddsTick": 254,
+      "takerOddsTick": 165,
+      "riskAmountWei6": "50000",
+      "expiryUnixSec": 1783126755
+    },
+    {
+      "ts": "2026-07-04T00:57:17.204Z",
+      "commitmentHash": "0xd61a25f88c197f99d6992a10f8e1aff005298dc1bfdb38d933bb4047c2498945",
+      "contestId": "9",
+      "speculationId": "16",
+      "market": "spread",
+      "takerSide": "home",
+      "makerSide": "away",
+      "positionType": 0,
+      "makerOddsTick": 169,
+      "takerOddsTick": 244,
+      "riskAmountWei6": "50000",
+      "expiryUnixSec": 1783126755
+    },
+    {
+      "ts": "2026-07-04T00:57:17.699Z",
+      "commitmentHash": "0x8a2edae969fde29ae73bc7f3d063c320bc7ee631e63cd638aacfc9d01404b18c",
+      "contestId": "9",
+      "speculationId": "17",
+      "market": "total",
+      "takerSide": "away",
+      "makerSide": "home",
+      "positionType": 1,
+      "makerOddsTick": 209,
+      "takerOddsTick": 192,
+      "riskAmountWei6": "50000",
+      "expiryUnixSec": 1783126755
+    },
+    {
+      "ts": "2026-07-04T00:57:17.984Z",
+      "commitmentHash": "0xdf1762d2ce6a5f0e3b46cc677500a90bef79d131b361c10cc302b9c3535cfcce",
+      "contestId": "9",
+      "speculationId": "17",
+      "market": "total",
+      "takerSide": "home",
+      "makerSide": "away",
+      "positionType": 0,
+      "makerOddsTick": 199,
+      "takerOddsTick": 201,
+      "riskAmountWei6": "50000",
+      "expiryUnixSec": 1783126755
+    }
+  ],
+  "quoteHashesByMarket": {
+    "moneyline": [
+      "0x61ad59245c7d8bfafd433e4a0b4edb573f5649cbb67f5c37a674568e77c8bafc",
+      "0x2d8bdfee288eeeacdeeea3b2196ea257ab767783fae1ab7d2581a8870d9e6010"
+    ],
+    "spread": [
+      "0x9009206b921b6b7c58416b513127e5b2c9e5e25d8ec4afe82977c0ea54dd42de",
+      "0xd61a25f88c197f99d6992a10f8e1aff005298dc1bfdb38d933bb4047c2498945"
+    ],
+    "total": [
+      "0x8a2edae969fde29ae73bc7f3d063c320bc7ee631e63cd638aacfc9d01404b18c",
+      "0xdf1762d2ce6a5f0e3b46cc677500a90bef79d131b361c10cc302b9c3535cfcce"
+    ]
+  },
+  "softCancelledCount": 5,
+  "softCancelledHashes": [
+    "0x61ad59245c7d8bfafd433e4a0b4edb573f5649cbb67f5c37a674568e77c8bafc",
+    "0x2d8bdfee288eeeacdeeea3b2196ea257ab767783fae1ab7d2581a8870d9e6010",
+    "0x9009206b921b6b7c58416b513127e5b2c9e5e25d8ec4afe82977c0ea54dd42de",
+    "0xd61a25f88c197f99d6992a10f8e1aff005298dc1bfdb38d933bb4047c2498945",
+    "0x8a2edae969fde29ae73bc7f3d063c320bc7ee631e63cd638aacfc9d01404b18c"
+  ],
+  "filledHashes": [
+    "0xdf1762d2ce6a5f0e3b46cc677500a90bef79d131b361c10cc302b9c3535cfcce"
+  ]
+}
