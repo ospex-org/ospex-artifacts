@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-07-03T15-24-57-733Z-ws08tk",
+  "fillSource": "own-state-stream",
+  "fillEventCount": 1,
+  "filledCommitmentHash": "0x345624d363db80879bc97d9fa5224d061959d1a54f0fe31dd64e118ab8cd4e32",
+  "filledSpeculationId": "14",
+  "filledContestId": "8",
+  "market": "total",
+  "notes": [
+    "One transient OwnerPositionStatusForUnknownPosition advisory was captured before own-state fill convergence; the canonical fill event then arrived and state converged."
+  ]
+}

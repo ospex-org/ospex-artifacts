@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-07-03T15:26:10Z",
+  "result": {
+    "contest": {
+      "contestId": "8",
+      "sport": "mlb",
+      "homeTeam": "Chicago Cubs",
+      "awayTeam": "St. Louis Cardinals"
+    },
+    "speculation": {
+      "speculationId": "14",
+      "contestId": "8",
+      "type": "total"
+    },
+    "commitment": {
+      "commitmentHash": "0x345624d363db80879bc97d9fa5224d061959d1a54f0fe31dd64e118ab8cd4e32",
+      "contestId": "8",
+      "marketType": "total"
+    }
+  },
+  "commitmentHash": "0x345624d363db80879bc97d9fa5224d061959d1a54f0fe31dd64e118ab8cd4e32",
+  "txHash": "0x718427d62e75dc2ca08ce928da9f2a9c8f6f52214f7d33fadc631cb56456cb61",
+  "maker": {
+    "alias": "ospex-stage-maker-b",
+    "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "side": "over / upper / over 10.5",
+    "riskUSDC": "0.050000",
+    "profitUSDC": "0.048500"
+  },
+  "taker": {
+    "alias": "ospex-flow-a",
+    "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+    "side": "under / lower / under 10.5",
+    "riskUSDC": "0.048500",
+    "profitUSDC": "0.050000"
+  },
+  "odds": {
+    "makerOddsTick": 197,
+    "takerOddsDecimal": "2.030928"
+  },
+  "txReceipt": {
+    "status": "success",
+    "gasCostPOL": "0.117073078285236",
+    "gasUsed": 418160,
+    "effectiveGasPriceWei": "279971968350"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-07-03T15-24-57-733Z-ws08tk",
+  "commitmentHashes": [
+    "0xd0ee5771fb2fc9000a7ec396c58c727fea51f9e69a3e5c8f9d4a4a56d68f2e52",
+    "0xabb8e9cb67052eaada2b40e3879ad1e142c06f7f0a36602c468663e8de25c811",
+    "0x6cd1ccda48af553d6c12f83f5682937348c119ca037f712fcb5a41b811fdc06e",
+    "0x345624d363db80879bc97d9fa5224d061959d1a54f0fe31dd64e118ab8cd4e32"
+  ],
+  "marketsPosted": [
+    "moneyline",
+    "total"
+  ],
+  "totalQuoteHashes": [
+    "0x6cd1ccda48af553d6c12f83f5682937348c119ca037f712fcb5a41b811fdc06e",
+    "0x345624d363db80879bc97d9fa5224d061959d1a54f0fe31dd64e118ab8cd4e32"
+  ],
+  "riskPerCommitmentUSDC": "0.050000",
+  "allowlist": [
+    "8"
+  ],
+  "seedSpeculationsDuringMmRuntime": false,
+  "softCancelledHashes": [
+    "0xd0ee5771fb2fc9000a7ec396c58c727fea51f9e69a3e5c8f9d4a4a56d68f2e52",
+    "0xabb8e9cb67052eaada2b40e3879ad1e142c06f7f0a36602c468663e8de25c811",
+    "0x6cd1ccda48af553d6c12f83f5682937348c119ca037f712fcb5a41b811fdc06e"
+  ],
+  "eventCounts": {
+    "tick-start": 3,
+    "candidate": 2,
+    "fair-value": 0,
+    "risk-verdict": 2,
+    "quote-intent": 2,
+    "quote-competitiveness": 4,
+    "competitiveness-unavailable": 0,
+    "submit": 4,
+    "would-submit": 0,
+    "soft-cancel": 3,
+    "would-soft-cancel": 0,
+    "replace": 0,
+    "would-replace": 0,
+    "onchain-cancel": 0,
+    "cancel-blocked-missing-payload": 0,
+    "nonce-floor-raise": 0,
+    "expire": 0,
+    "approval": 0,
+    "funding-hold": 0,
+    "fill": 1,
+    "position-transition": 0,
+    "settle": 0,
+    "claim": 0,
+    "degraded": 0,
+    "stream-health-degraded": 0,
+    "stream-would-hold": 0,
+    "stream-cold-restart": 0,
+    "stream-health-hold": 2,
+    "divergence": 0,
+    "unknown-own-fill": 0,
+    "owner-mapping-failed": 0,
+    "foreign-maker-commitments": 0,
+    "position-allowance-short": 0,
+    "error": 1,
+    "kill": 1
+  }
+}

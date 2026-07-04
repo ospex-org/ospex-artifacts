@@ -1,10 +1,11 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-07-03T06:15:15Z",
+  "generatedAt": "2026-07-03T23:46:09Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
+      "runs/2026-07-03-mlb-stl-chc-contest-8-v090-latest-mm-total-canary/evidence.json",
       "runs/2026-07-02-mlb-sd-lad-contest-7-v090-latest-mm-spread-canary/evidence.json",
       "runs/2026-07-02-mlb-pit-phi-contest-6-v090-latest-mm-moneyline-canary/evidence.json",
       "runs/2026-07-01-mlb-pit-phi-contest-4-r5-cre-mve-reentry-with-tex-cle-phase-a/evidence.json",
@@ -13,8 +14,7 @@
       "runs/2026-06-29-mlb-sf-az-contest-1-r5-cre-lifecycle-smoke/evidence.json",
       "runs/2026-06-19-mlb-wsh-tb-contest-51-v071-stage2a-repeat-capital-safety-canary/evidence.json",
       "runs/2026-06-19-mlb-tor-chc-contest-50-v071-stage2a-capital-safety-canary/evidence.json",
-      "runs/2026-06-18-mlb-laa-ath-contest-49-v071-stage1b-capital-safety-canary/evidence.json",
-      "runs/2026-06-18-mlb-bal-sea-contest-48-v071-mve-stage1-capital-safety-canary/evidence.json"
+      "runs/2026-06-18-mlb-laa-ath-contest-49-v071-stage1b-capital-safety-canary/evidence.json"
     ],
     "release-acceptance": [
       "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.json"
@@ -22,6 +22,17 @@
     "daily-digest": []
   },
   "recentArtifacts": [
+    {
+      "artifactId": "2026-07-03-mlb-stl-chc-contest-8-v090-latest-mm-total-canary",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-03-mlb-stl-chc-contest-8-v090-latest-mm-total-canary/evidence.json",
+      "date": "2026-07-03",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-03-mlb-stl-chc-contest-8-v090-latest-mm-total-canary/raw/",
+      "status": "complete_verified",
+      "summaryPath": "runs/2026-07-03-mlb-stl-chc-contest-8-v090-latest-mm-total-canary/summary.md",
+      "publishedAt": "2026-07-03T23:46:09Z"
+    },
     {
       "artifactId": "2026-07-02-mlb-sd-lad-contest-7-v090-latest-mm-spread-canary",
       "artifactType": "run",
@@ -399,9 +410,9 @@
       "scope": "year",
       "year": 2026,
       "path": "archive/2026/index.json",
-      "artifactCount": 33,
+      "artifactCount": 34,
       "oldestPublishedAt": "2026-05-20T02:48:35Z",
-      "newestPublishedAt": "2026-07-03T06:15:15Z"
+      "newestPublishedAt": "2026-07-03T23:46:09Z"
     }
   ]
 }

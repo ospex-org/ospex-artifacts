@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "candidatesAllowlistOnly": {
+    "gamesAvailableToCreate": 0,
+    "quoteReady": 2,
+    "needsContest": 0,
+    "needsSpeculation": 0,
+    "needsVerification": 0,
+    "skipped": {}
+  },
+  "candidateContestIds": [
+    "8"
+  ],
+  "candidateMarkets": [
+    "moneyline",
+    "total"
+  ],
+  "dryRun": {
+    "runId": "2026-07-03T15-22-39-407Z-9v0m0g",
+    "wouldSubmitCount": 4,
+    "contestIds": [
+      "8"
+    ],
+    "markets": [
+      "moneyline",
+      "total"
+    ],
+    "riskDenied": []
+  },
+  "passGate": true,
+  "configSummary": {
+    "strictAllowlistOnly": true,
+    "contestAllowList": [
+      "8"
+    ],
+    "markets": [
+      "moneyline",
+      "total"
+    ],
+    "seedSpeculations": false,
+    "dryRun": true,
+    "maxRiskPerCommitmentUSDC": "0.05",
+    "maxOpenCommitments": 4,
+    "expirySeconds": 120
+  }
+}
