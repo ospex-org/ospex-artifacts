@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "run",
+  "artifactId": "2026-07-04-mlb-min-nyy-contest-10-v010-mm146-all-markets-stage1-canary",
+  "status": "complete_verified_with_caveats",
+  "publishedAt": "2026-07-04T22:19:04Z",
+  "generatedAt": "2026-07-04T22:19:04Z",
+  "network": "polygon",
+  "date": "2026-07-04",
+  "runClass": "mm-live-canary",
+  "summaryPath": "summary.md",
+  "dataPath": "evidence.json",
+  "rawPath": "raw/",
+  "target": {
+    "game": "Minnesota Twins @ New York Yankees",
+    "gamePk": 823526,
+    "gameId": "1f043f5a-8eef-4613-b518-8220afdb0b0f",
+    "slug": "min-nyy-2026-07-04",
+    "sport": "mlb",
+    "market": "total",
+    "marketsCovered": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "contestId": "10",
+    "speculationId": "20",
+    "companionSpeculations": {
+      "moneyline": "18",
+      "spread": "19",
+      "total": "20"
+    },
+    "awayTeam": "Minnesota Twins",
+    "homeTeam": "New York Yankees",
+    "startTimeUtc": "2026-07-04T17:35:00Z",
+    "spreadLine": {
+      "awayLine": 1.5,
+      "homeLine": -1.5,
+      "lineTicks": 15,
+      "awayPositionType": "upper",
+      "homePositionType": "lower"
+    },
+    "totalLine": {
+      "line": 10,
+      "lineTicks": 100,
+      "overPositionType": "upper",
+      "underPositionType": "lower"
+    },
+    "referenceOdds": {
+      "moneyline": {
+        "awayOddsAmerican": 132,
+        "homeOddsAmerican": -146
+      },
+      "spread": {
+        "awayLine": 1.5,
+        "homeLine": -1.5,
+        "awayOddsAmerican": -150,
+        "homeOddsAmerican": 130
+      },
+      "total": {
+        "line": 10,
+        "overOddsAmerican": -115,
+        "underOddsAmerican": -105
+      }
+    },
+    "teamIdentity": {
+      "away": {
+        "team": "Minnesota Twins",
+        "abbreviation": "MIN",
+        "positionType": "upper",
+        "role": "away",
+        "identity": "underdog",
+        "marketOddsAmerican": "+132"
+      },
+      "home": {
+        "team": "New York Yankees",
+        "abbreviation": "NYY",
+        "positionType": "lower",
+        "role": "home",
+        "identity": "favorite",
+        "marketOddsAmerican": "-146"
+      },
+      "winner": {
+        "team": "Minnesota Twins",
+        "role": "away",
+        "positionType": "upper"
+      },
+      "spreadWinner": {
+        "team": "Minnesota Twins",
+        "role": "away",
+        "positionType": "upper",
+        "line": 1.5
+      },
+      "totalWinner": {
+        "side": "over",
+        "positionType": "upper",
+        "line": 10
+      }
+    },
+    "contestStatusAfterCreateVerify": "verified",
+    "contestStatusAfterPostgame": "scored",
+    "postgameStatus": "complete",
+    "finalScore": {
+      "awayRuns": 11,
+      "homeRuns": 4,
+      "winner": "Minnesota Twins",
+      "winnerProtocolSide": "upper",
+      "totalRuns": 15,
+      "totalWinner": "over 10",
+      "totalWinnerProtocolSide": "upper",
+      "spreadWinner": "Minnesota Twins +1.5",
+      "spreadWinnerProtocolSide": "upper"
+    }
+  },
+  "verdict": {
+    "label": "FULL_GREEN",
+    "protocolVerdict": "V010_CLI_MM146_ALL_MARKETS_STAGE1_SINGLE_GAME_GREEN_WITH_CAVEATS",
+    "reason": "The v0.10.0/R5 MM #146 strict-allowlist all-market Stage 1 canary for Minnesota Twins @ New York Yankees completed the full lifecycle: pregame setup passed, contest 10 was created and verified, moneyline speculation 18, spread speculation 19, and total speculation 20 were manually seeded/filled with zero residual seed exposure, the market maker posted tiny live moneyline, spread, and total quotes under contest allowlist [10] with seedSpeculations=false, two controlled live spread/total quotes were filled, visible quotes were soft-cancelled after a bounded funding-shortfall hold, final open exposure drained to zero, official final score Minnesota Twins 11 / New York Yankees 4 was verified, contest 10 was scored through R5/CRE, speculations 18/19/20 settled to away/upper/Minnesota Twins, away/upper/Minnesota Twins +1.5, and over/upper/over 10, winning controlled positions were claimed, and final target commitments plus active/pending/claimable positions are zero."
+  },
+  "wallets": {
+    "manualSeedMaker": {
+      "profile": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    "controlledTaker": {
+      "profile": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    },
+    "operatorMmMaker": {
+      "profile": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    }
+  },
+  "versions": {
+    "schemaVersion": 1,
+    "capturedAtUtc": "2026-07-04T15:39:27Z",
+    "node": "v22.22.0",
+    "yarn": "1.22.22",
+    "chainId": 137,
+    "sdkCli": {
+      "repo": "ospex-sdk",
+      "headSha": "3fa399a",
+      "version": "0.10.0",
+      "requiredAtOrAfter": "3fa399a",
+      "install": "pass",
+      "sdkBuild": "pass",
+      "cliBuild": "pass",
+      "ok": true
+    },
+    "marketMaker": {
+      "repo": "ospex-market-maker",
+      "headSha": "6f3ccc1",
+      "requiredAtOrAfter": "6f3ccc1",
+      "installedSdkVersion": "0.9.0",
+      "typecheck": "pass",
+      "test": "pass",
+      "testCount": "1070 passed",
+      "build": "pass",
+      "allowlistOnlyFlagAvailable": true,
+      "approvalSelfHealRegressionPresent": true,
+      "ownStateOrphanSafetyRegressionPresent": true
+    },
+    "ancillaryRepos": {
+      "ospex-core-api": {
+        "headSha": "076f44d",
+        "ok": true
+      },
+      "ospex-indexer": {
+        "headSha": "75be9e7",
+        "ok": true
+      },
+      "ospex-cre": {
+        "headSha": "fed6e26",
+        "ok": true
+      }
+    },
+    "allRequiredOk": true
+  },
+  "artifactFiles": {
+    "summary": "summary.md",
+    "evidence": "evidence.json",
+    "scenarioMatrix": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "mveScorecard": "mve-scorecard.json",
+    "mveScorecardMarkdown": "mve-scorecard.md",
+    "releaseRuntimeMatrix": "raw/release-runtime-matrix.sanitized.json",
+    "targetPreflight": "raw/target-preflight.sanitized.json",
+    "walletAuthBalances": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "boundedApprovals": "raw/bounded-approvals.sanitized.json",
+    "mmDryRun": "raw/mm-dryrun-summary.sanitized.json",
+    "liveCommitmentsPosted": "raw/live-public-commitments-posted.sanitized.json",
+    "liveFill": "raw/live-fill.sanitized.json",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json",
+    "restartColdStartProbe": "raw/restart-cold-start-probe.sanitized.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "finalContestShow": "raw/final-contest-show.sanitized.json",
+    "finalPositionsStatus": "raw/final-positions-status.sanitized.json",
+    "finalCommitmentsOrderbook": "raw/final-commitments-orderbook.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json"
+  },
+  "caveats": [
+    "Live MM correctly entered a bounded funding-shortfall hold after the controlled fills and soft-cancelled visible quotes; final visible exposure was zero.",
+    "The market-maker repository still installed @ospex/sdk 0.9.0 while the operator CLI for this run was 0.10.0; this was recorded and did not block the tested flow."
+  ]
+}

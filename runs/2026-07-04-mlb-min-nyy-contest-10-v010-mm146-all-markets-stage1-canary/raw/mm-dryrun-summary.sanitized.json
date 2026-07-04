@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "candidateAllowlistOnly": {
+    "contestAllowList": [
+      "10"
+    ],
+    "summary": {
+      "gamesAvailableToCreate": 0,
+      "quoteReady": 3,
+      "needsContest": 0,
+      "needsSpeculation": 0,
+      "needsVerification": 0,
+      "skipped": {}
+    },
+    "items": [
+      {
+        "gameId": "1f043f5a-8eef-4613-b518-8220afdb0b0f",
+        "slug": "min-nyy-2026-07-04",
+        "sport": "mlb",
+        "awayTeam": "Minnesota Twins",
+        "homeTeam": "New York Yankees",
+        "matchTime": "2026-07-04T17:35:00+00:00",
+        "status": "upcoming",
+        "hasOdds": true,
+        "canCreateContest": false,
+        "contestCreated": true,
+        "contestId": "10",
+        "market": "moneyline",
+        "speculationId": "18",
+        "kind": "quote_ready",
+        "recommendedAction": "quote",
+        "contestStatus": "verified",
+        "referenceOdds": {
+          "market": "moneyline",
+          "awayOddsAmerican": 132,
+          "homeOddsAmerican": -146
+        },
+        "inContestAllowList": true
+      },
+      {
+        "gameId": "1f043f5a-8eef-4613-b518-8220afdb0b0f",
+        "slug": "min-nyy-2026-07-04",
+        "sport": "mlb",
+        "awayTeam": "Minnesota Twins",
+        "homeTeam": "New York Yankees",
+        "matchTime": "2026-07-04T17:35:00+00:00",
+        "status": "upcoming",
+        "hasOdds": true,
+        "canCreateContest": false,
+        "contestCreated": true,
+        "contestId": "10",
+        "market": "spread",
+        "speculationId": "19",
+        "kind": "quote_ready",
+        "recommendedAction": "quote",
+        "contestStatus": "verified",
+        "referenceOdds": {
+          "market": "spread",
+          "awayLine": 1.5,
+          "homeLine": -1.5,
+          "awayOddsAmerican": -150,
+          "homeOddsAmerican": 130
+        },
+        "inContestAllowList": true
+      },
+      {
+        "gameId": "1f043f5a-8eef-4613-b518-8220afdb0b0f",
+        "slug": "min-nyy-2026-07-04",
+        "sport": "mlb",
+        "awayTeam": "Minnesota Twins",
+        "homeTeam": "New York Yankees",
+        "matchTime": "2026-07-04T17:35:00+00:00",
+        "status": "upcoming",
+        "hasOdds": true,
+        "canCreateContest": false,
+        "contestCreated": true,
+        "contestId": "10",
+        "market": "total",
+        "speculationId": "20",
+        "kind": "quote_ready",
+        "recommendedAction": "quote",
+        "contestStatus": "verified",
+        "referenceOdds": {
+          "market": "total",
+          "line": 10,
+          "overOddsAmerican": -115,
+          "underOddsAmerican": -105
+        },
+        "inContestAllowList": true
+      }
+    ]
+  },
+  "dryRun": {
+    "runId": "2026-07-04T15-22-26-341Z-v7g8xk",
+    "eventCounts": {
+      "tick-start": 4,
+      "candidate": 3,
+      "quote-intent": 6,
+      "risk-verdict": 6,
+      "would-submit": 6,
+      "quote-competitiveness": 6,
+      "would-soft-cancel": 6,
+      "kill": 1
+    },
+    "wouldSubmit": 6,
+    "submitted": 0,
+    "errors": 0,
+    "trackedMarkets": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "allowlistOnly": true,
+    "seedSpeculations": false
+  }
+}

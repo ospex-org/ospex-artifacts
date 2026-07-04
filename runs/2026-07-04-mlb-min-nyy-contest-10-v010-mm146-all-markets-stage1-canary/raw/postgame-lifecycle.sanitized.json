@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "completedAtUtc": "2026-07-04T22:09:27Z",
+  "officialFinal": {
+    "source": "MLB Stats API schedule",
+    "status": "Final",
+    "awayTeam": "Minnesota Twins",
+    "awayRuns": 11,
+    "homeTeam": "New York Yankees",
+    "homeRuns": 4,
+    "winner": "Minnesota Twins",
+    "winnerRole": "away",
+    "moneylineWinnerProtocolSide": "upper",
+    "totalRuns": 15,
+    "totalLine": 10,
+    "totalWinner": "over",
+    "totalWinnerProtocolSide": "upper",
+    "spreadLine": 1.5,
+    "spreadWinner": "Minnesota Twins +1.5",
+    "spreadWinnerProtocolSide": "upper"
+  },
+  "score": {
+    "requestTxHash": "0x34ad599c48765d1c93db336cf748972d9353a1dc87d15ffdf1990969d36b58dd",
+    "retryNeeded": false,
+    "contestStatus": "scored",
+    "awayScore": 11,
+    "homeScore": 4
+  },
+  "settle": {
+    "moneyline": [
+      "0x9afc9fa30800ce57b8a6e9c4a3ab72cb29e5fe6a607d71d541bc370e933a6db2"
+    ],
+    "spread": [
+      "0x500946516ae886157abd1bafba18e3b79c205b69c87b234541d32f4cf50b50e6"
+    ],
+    "total": [
+      "0xbf9ec03d9c76d72c2e6e212a24e3a4eb6554e3318d80cbb827522cfab444c090"
+    ]
+  },
+  "claim": {
+    "claim-moneyline-18-upper-stage_a": {
+      "note": "manual seed maker: Minnesota Twins/away",
+      "ok": true,
+      "txHashes": [
+        "0x541b469913d374904261816dc48aa06c2c9428d0f0a93da4bc32c211dc3d72a6"
+      ]
+    },
+    "claim-spread-19-upper-stage_a": {
+      "note": "manual seed maker: Minnesota Twins +1.5",
+      "ok": true,
+      "txHashes": [
+        "0x8103f472b1b6c3b2c37498dace4e50558697ea8c523bb00020c3d0d51aa7c971"
+      ]
+    },
+    "claim-total-20-upper-stage_a": {
+      "note": "manual seed maker: Over 10",
+      "ok": true,
+      "txHashes": [
+        "0x4a707455d75939be1cdcaed9084695ddbba6dbfe1b7e89a7579e9ae56c9d1606"
+      ]
+    },
+    "claim-spread-19-upper-stage_b": {
+      "note": "MM live maker: Minnesota Twins +1.5",
+      "ok": true,
+      "txHashes": [
+        "0x6755511b40f2d324a5151456ce4743388fb50e695fa8cfd4eebd5fa6e9057c32"
+      ]
+    },
+    "claim-total-20-upper-stage_b": {
+      "note": "MM live maker: Over 10",
+      "ok": true,
+      "txHashes": [
+        "0xe158c082888471525912b1dc7f076232bd5ac4d6a9fe5f163de183a49aacba2c"
+      ]
+    }
+  },
+  "winnerSides": {
+    "moneyline": "upper",
+    "spread": "upper",
+    "total": "upper"
+  },
+  "finalZeroStateVerifiedAtUtc": "2026-07-04T22:09:27Z",
+  "finalTargetPositions": {
+    "ospex-stage-maker-a": {
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "estimatedPayoutUSDC": 0,
+      "estimatedPayoutWei6": "0",
+      "pendingSettlePayoutUSDC": 0,
+      "pendingSettlePayoutWei6": "0"
+    },
+    "ospex-stage-maker-b": {
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "estimatedPayoutUSDC": 0,
+      "estimatedPayoutWei6": "0",
+      "pendingSettlePayoutUSDC": 0,
+      "pendingSettlePayoutWei6": "0"
+    },
+    "ospex-flow-a": {
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "estimatedPayoutUSDC": 0,
+      "estimatedPayoutWei6": "0",
+      "pendingSettlePayoutUSDC": 0,
+      "pendingSettlePayoutWei6": "0"
+    }
+  },
+  "openCommitments": 0
+}

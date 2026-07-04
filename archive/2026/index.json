@@ -1,13 +1,24 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-07-04T05:09:37Z",
+  "generatedAt": "2026-07-04T22:19:04Z",
   "repository": "ospex-org/ospex-artifacts",
   "archive": {
     "scope": "year",
     "year": 2026
   },
   "artifacts": [
+    {
+      "artifactId": "2026-07-04-mlb-min-nyy-contest-10-v010-mm146-all-markets-stage1-canary",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-04-mlb-min-nyy-contest-10-v010-mm146-all-markets-stage1-canary/evidence.json",
+      "date": "2026-07-04",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-04-mlb-min-nyy-contest-10-v010-mm146-all-markets-stage1-canary/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-07-04-mlb-min-nyy-contest-10-v010-mm146-all-markets-stage1-canary/summary.md",
+      "publishedAt": "2026-07-04T22:19:04Z"
+    },
     {
       "artifactId": "2026-07-03-mlb-mia-ath-contest-9-v090-latest-mm-all-markets-canary",
       "artifactType": "run",

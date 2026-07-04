@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "payload": {
+    "contestId": "10",
+    "awayTeam": "Minnesota Twins",
+    "homeTeam": "New York Yankees",
+    "sport": "mlb",
+    "sportId": 0,
+    "matchTime": "2026-07-04T17:35:00+00:00",
+    "status": "scored",
+    "speculations": [
+      {
+        "speculationId": "18",
+        "contestId": "10",
+        "type": "moneyline",
+        "lineTicks": 0,
+        "line": null,
+        "speculationStatus": 1,
+        "winSide": "away",
+        "settledAt": "2026-07-04T22:05:37+00:00",
+        "voided": false,
+        "orderbook": []
+      },
+      {
+        "speculationId": "19",
+        "contestId": "10",
+        "type": "spread",
+        "lineTicks": 15,
+        "line": 1.5,
+        "speculationStatus": 1,
+        "winSide": "away",
+        "settledAt": "2026-07-04T22:05:43+00:00",
+        "voided": false,
+        "awayLine": 1.5,
+        "homeLine": -1.5,
+        "orderbook": []
+      },
+      {
+        "speculationId": "20",
+        "contestId": "10",
+        "type": "total",
+        "lineTicks": 100,
+        "line": 10,
+        "speculationStatus": 1,
+        "winSide": "over",
+        "settledAt": "2026-07-04T22:05:47+00:00",
+        "voided": false,
+        "orderbook": []
+      }
+    ],
+    "jsonoddsId": "1f043f5a-8eef-4613-b518-8220afdb0b0f",
+    "rundownId": "6213fb8b2b34b34a70b1a90cfda1c397",
+    "sportspageId": "337319",
+    "contestCreator": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+    "leagueId": "mlb",
+    "awayScore": 11,
+    "homeScore": 4,
+    "contestCreatedAt": "2026-07-04T15:14:55+00:00",
+    "verifiedAt": "2026-07-04T15:15:44+00:00",
+    "scoredAt": "2026-07-04T22:05:32+00:00",
+    "voidedAt": null,
+    "awayTeamId": "b7a65afb-1041-42b7-9ebc-8596a196178d",
+    "homeTeamId": "aaa26964-9f51-420e-b2f8-de3f09ce57d5"
+  }
+}

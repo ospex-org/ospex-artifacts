@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-07-04T15-32-36-207Z-j4h7li",
+  "mode": "scratch-state dry-run probe",
+  "eventCounts": {
+    "tick-start": 3,
+    "candidate": 3,
+    "quote-intent": 3,
+    "risk-verdict": 3,
+    "would-submit": 6,
+    "quote-competitiveness": 6,
+    "expire": 4,
+    "kill": 1
+  },
+  "wouldSubmit": 6,
+  "submitted": 0,
+  "expired": 4,
+  "errors": 0,
+  "notes": "Scratch-state dry run loaded copied state, expired copied stale soft-cancelled records, and did not touch live state."
+}

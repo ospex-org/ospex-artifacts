@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-07-04T15:17:36Z",
+  "wallets": {
+    "manualSeedMaker": {
+      "profile": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "expectedAddressCheck": "pass"
+    },
+    "controlledTaker": {
+      "profile": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "expectedAddressCheck": "pass"
+    },
+    "operatorMmMaker": {
+      "profile": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "expectedAddressCheck": "pass"
+    }
+  },
+  "approvalModel": "bounded",
+  "unlimitedApprovalsUsed": false
+}
