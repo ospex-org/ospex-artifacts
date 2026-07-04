@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-07-04T05:00:39Z",
+  "source": "MLB Stats official feed/live",
+  "status": "Final",
+  "awayTeam": "Miami Marlins",
+  "awayRuns": 12,
+  "homeTeam": "Athletics",
+  "homeRuns": 5,
+  "gamePk": 824982,
+  "gameId": "7ecd358d-14b6-420a-8155-df9a92b67ef3"
+}

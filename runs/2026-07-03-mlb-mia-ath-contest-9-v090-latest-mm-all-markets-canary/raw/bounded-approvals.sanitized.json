@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "boundedApprovalsOnly": true,
+  "unlimitedApprovalsObserved": false,
+  "approvals": [
+    {
+      "category": "approve",
+      "purpose": "Bounded 1.000000 USDC TreasuryModule approval for contest creator / MM maker setup fees",
+      "txHash": "0xeba9015bcca9f8b9e2d7bd619b71cae1bc81f97c3ce468164e55a082787a581a",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded 1.000000 USDC TreasuryModule approval for manual seed-maker setup fees",
+      "txHash": "0x26cd93f456ace97a6b372e33d6c1fe1566d212ff6083623baac40beb672ec93b",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded 0.500000 USDC PositionModule approval for controlled taker risk",
+      "txHash": "0xda0838ccec29fb0dd5c62f716e66997a0519465570e9453ca1c07bf4403e2faa",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded 1.000000 USDC TreasuryModule approval for controlled taker setup fees",
+      "txHash": "0x9b53c19fd19133e8bb4f68252e79fcea620272048c6ec7c388fb3e948c4534b8",
+      "operatorControlled": true,
+      "status": "success"
+    }
+  ],
+  "notes": "Approvals were bounded to small USDC amounts for setup fees and controlled taker risk; no max/unlimited approval was sent."
+}

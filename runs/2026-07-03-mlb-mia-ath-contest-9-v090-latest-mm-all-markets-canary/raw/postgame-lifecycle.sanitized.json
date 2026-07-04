@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "completedAtUtc": "2026-07-04T04:52:46.628890+00:00",
+  "officialFinal": {
+    "source": "MLB Stats official feed/live",
+    "status": "Final",
+    "awayTeam": "Miami Marlins",
+    "awayRuns": 12,
+    "homeTeam": "Athletics",
+    "homeRuns": 5,
+    "winner": "Miami Marlins",
+    "winnerRole": "away",
+    "moneylineWinnerProtocolSide": "upper",
+    "totalRuns": 17,
+    "totalLine": 10.5,
+    "totalWinner": "over",
+    "totalWinnerProtocolSide": "upper",
+    "spreadLine": 1.5,
+    "spreadWinner": "Miami Marlins +1.5",
+    "spreadWinnerProtocolSide": "upper"
+  },
+  "score": {
+    "requestTxHash": "0xdab2872fc1534d4ff67bbec6f7597ea41620522e0ebc4aaf127d005b590b6fc5",
+    "retryNeeded": false,
+    "contestStatus": "scored",
+    "awayScore": 12,
+    "homeScore": 5
+  },
+  "settle": {
+    "moneyline": [
+      "0x381464bf7c5b9ee712a4d9c65e16835232731741e537b601064e1699d6d1601d"
+    ],
+    "spread": [
+      "0x8e659384c56701b5236c497f4d0269743c3c9ee379df2c95d907a0318f5e47de"
+    ],
+    "total": [
+      "0x7d052bf4455f7245f5cc606082ad7e2227016d00318c822b1567ee2880e2f6d0"
+    ]
+  },
+  "claim": {
+    "claim-moneyline-15-upper-stage_a-20260704T045220Z": {
+      "note": "manual seed maker: Miami Marlins/away",
+      "ok": true,
+      "txHashes": [
+        "0xe4c27c09e158c4d0afbce476da8bbb15b21ed298e724bf0f8e2665fc5d449dbf"
+      ]
+    },
+    "claim-spread-16-upper-stage_a-20260704T045226Z": {
+      "note": "manual seed maker: Miami Marlins +1.5",
+      "ok": true,
+      "txHashes": [
+        "0xd888fb97afc037bc3384798ac6030fd862f6df3b6304e5b9fcd84c3044ccdb2b"
+      ]
+    },
+    "claim-total-17-upper-stage_a-20260704T045232Z": {
+      "note": "manual seed maker: Over 10.5",
+      "ok": true,
+      "txHashes": [
+        "0x20ab5bce6c3053c1bb5af5835589176c24d255ff2d25eb43cda5dc15e8e7a47a"
+      ]
+    },
+    "claim-total-17-upper-stage_b-20260704T045236Z": {
+      "note": "MM live maker: Over 10.5",
+      "ok": true,
+      "txHashes": [
+        "0x6532a21ed4ad0265266787979135191d3dde8a6b495dc4b8402cf44cf0876833"
+      ]
+    }
+  },
+  "winnerSides": {
+    "moneyline": "upper",
+    "spread": "upper",
+    "total": "upper"
+  },
+  "finalZeroStateVerifiedAtUtc": "2026-07-04T05:00:39Z",
+  "finalTargetPositions": {
+    "ospex-stage-maker-a": {
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "estimatedPayoutUSDC": 0,
+      "estimatedPayoutWei6": "0",
+      "pendingSettlePayoutUSDC": 0,
+      "pendingSettlePayoutWei6": "0"
+    },
+    "ospex-stage-maker-b": {
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "estimatedPayoutUSDC": 0,
+      "estimatedPayoutWei6": "0",
+      "pendingSettlePayoutUSDC": 0,
+      "pendingSettlePayoutWei6": "0"
+    },
+    "ospex-flow-a": {
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "estimatedPayoutUSDC": 0,
+      "estimatedPayoutWei6": "0",
+      "pendingSettlePayoutUSDC": 0,
+      "pendingSettlePayoutWei6": "0"
+    }
+  },
+  "openCommitments": 0
+}

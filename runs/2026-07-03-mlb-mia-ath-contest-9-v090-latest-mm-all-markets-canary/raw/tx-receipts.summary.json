@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "network": "polygon",
+  "chainId": 137,
+  "costSummary": {
+    "protocolFeesAndActiveRiskUSDC": "2.8860",
+    "withinRequestedFiveUsdcCap": true,
+    "gasCostsExcludedFromUsdcBudget": true
+  },
+  "transactions": [
+    {
+      "category": "approve",
+      "purpose": "Bounded 1.000000 USDC TreasuryModule approval for contest creator / MM maker setup fees",
+      "txHash": "0xeba9015bcca9f8b9e2d7bd619b71cae1bc81f97c3ce468164e55a082787a581a",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded 1.000000 USDC TreasuryModule approval for manual seed-maker setup fees",
+      "txHash": "0x26cd93f456ace97a6b372e33d6c1fe1566d212ff6083623baac40beb672ec93b",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded 0.500000 USDC PositionModule approval for controlled taker risk",
+      "txHash": "0xda0838ccec29fb0dd5c62f716e66997a0519465570e9453ca1c07bf4403e2faa",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded 1.000000 USDC TreasuryModule approval for controlled taker setup fees",
+      "txHash": "0x9b53c19fd19133e8bb4f68252e79fcea620272048c6ec7c388fb3e948c4534b8",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "create-contest",
+      "purpose": "Create contest 9 for Miami Marlins @ Athletics",
+      "txHash": "0xc8aec13c184cda258124ff05cfd7e0c95034daa635ab8a1438ab7d0ae057871e",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "other",
+      "purpose": "Request market update for contest 9",
+      "txHash": "0xd0137e5409943beaa074d6630404acc0bc937f005b7c35db54d41babbffb5695",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "seed-match",
+      "purpose": "Fully match tiny manual moneyline seed to create speculation 15",
+      "txHash": "0xb1b1eeea9a05ec33822b1c48a27e30566adb8c559d7b661086b86487e39daffb",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "seed-match",
+      "purpose": "Fully match tiny manual spread seed to create speculation 16",
+      "txHash": "0x0827410b27c5409bf914a9620548270a85eb310fb565b9ab32ad2a349f3acbac",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "seed-match",
+      "purpose": "Fully match tiny manual total seed to create speculation 17",
+      "txHash": "0xfeb2d5789e831820bd8fda64948b0677d8f1663aaf9b08f42b4b4ff59d043c64",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "match-commitment",
+      "purpose": "Controlled fill against live MM total quote",
+      "txHash": "0xe6b352524b30556331054006bcba741574520ea8f4b50d5124ad76e9f1f882c8",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "score-request",
+      "purpose": "Request R5 score for contest 9 after official final",
+      "txHash": "0xdab2872fc1534d4ff67bbec6f7597ea41620522e0ebc4aaf127d005b590b6fc5",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "settle",
+      "purpose": "Settle moneyline speculation 15 to away/upper/Miami Marlins",
+      "txHash": "0x381464bf7c5b9ee712a4d9c65e16835232731741e537b601064e1699d6d1601d",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "settle",
+      "purpose": "Settle spread speculation 16 to away/upper/Miami Marlins +1.5",
+      "txHash": "0x8e659384c56701b5236c497f4d0269743c3c9ee379df2c95d907a0318f5e47de",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "settle",
+      "purpose": "Settle total speculation 17 to over/upper/over 10.5",
+      "txHash": "0x7d052bf4455f7245f5cc606082ad7e2227016d00318c822b1567ee2880e2f6d0",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "claim",
+      "purpose": "manual seed maker: Miami Marlins/away",
+      "txHash": "0xe4c27c09e158c4d0afbce476da8bbb15b21ed298e724bf0f8e2665fc5d449dbf",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "claim",
+      "purpose": "manual seed maker: Miami Marlins +1.5",
+      "txHash": "0xd888fb97afc037bc3384798ac6030fd862f6df3b6304e5b9fcd84c3044ccdb2b",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "claim",
+      "purpose": "manual seed maker: Over 10.5",
+      "txHash": "0x20ab5bce6c3053c1bb5af5835589176c24d255ff2d25eb43cda5dc15e8e7a47a",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "claim",
+      "purpose": "MM live maker: Over 10.5",
+      "txHash": "0x6532a21ed4ad0265266787979135191d3dde8a6b495dc4b8402cf44cf0876833",
+      "operatorControlled": true,
+      "status": "success"
+    }
+  ]
+}

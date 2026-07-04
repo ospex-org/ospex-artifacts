@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "candidatesAllowlistOnly": {
+    "generatedAt": "2026-07-04T00:52:16.174Z",
+    "contestAllowList": [
+      "9"
+    ],
+    "markets": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "allowlistOnly": true,
+    "summary": {
+      "gamesAvailableToCreate": 0,
+      "quoteReady": 3,
+      "needsContest": 0,
+      "needsSpeculation": 0,
+      "needsVerification": 0,
+      "skipped": {}
+    },
+    "items": [
+      {
+        "gameId": "7ecd358d-14b6-420a-8155-df9a92b67ef3",
+        "slug": "mia-ath-2026-07-04",
+        "sport": "mlb",
+        "awayTeam": "Miami Marlins",
+        "homeTeam": "Athletics",
+        "matchTime": "2026-07-04T01:40:00+00:00",
+        "status": "upcoming",
+        "hasOdds": true,
+        "canCreateContest": false,
+        "contestCreated": true,
+        "contestId": "9",
+        "market": "moneyline",
+        "speculationId": "15",
+        "kind": "quote_ready",
+        "recommendedAction": "quote",
+        "contestStatus": "verified",
+        "inContestAllowList": true,
+        "referenceOdds": {
+          "market": "moneyline",
+          "awayOddsAmerican": 125,
+          "homeOddsAmerican": -138
+        }
+      },
+      {
+        "gameId": "7ecd358d-14b6-420a-8155-df9a92b67ef3",
+        "slug": "mia-ath-2026-07-04",
+        "sport": "mlb",
+        "awayTeam": "Miami Marlins",
+        "homeTeam": "Athletics",
+        "matchTime": "2026-07-04T01:40:00+00:00",
+        "status": "upcoming",
+        "hasOdds": true,
+        "canCreateContest": false,
+        "contestCreated": true,
+        "contestId": "9",
+        "market": "spread",
+        "speculationId": "16",
+        "kind": "quote_ready",
+        "recommendedAction": "quote",
+        "contestStatus": "verified",
+        "inContestAllowList": true,
+        "referenceOdds": {
+          "market": "spread",
+          "awayLine": 1.5,
+          "homeLine": -1.5,
+          "awayOddsAmerican": -165,
+          "homeOddsAmerican": 140
+        }
+      },
+      {
+        "gameId": "7ecd358d-14b6-420a-8155-df9a92b67ef3",
+        "slug": "mia-ath-2026-07-04",
+        "sport": "mlb",
+        "awayTeam": "Miami Marlins",
+        "homeTeam": "Athletics",
+        "matchTime": "2026-07-04T01:40:00+00:00",
+        "status": "upcoming",
+        "hasOdds": true,
+        "canCreateContest": false,
+        "contestCreated": true,
+        "contestId": "9",
+        "market": "total",
+        "speculationId": "17",
+        "kind": "quote_ready",
+        "recommendedAction": "quote",
+        "contestStatus": "verified",
+        "inContestAllowList": true,
+        "referenceOdds": {
+          "market": "total",
+          "line": 10.5,
+          "overOddsAmerican": -115,
+          "underOddsAmerican": -105
+        }
+      }
+    ],
+    "offAllowlistRows": 0
+  },
+  "dryRun": {
+    "runIds": [
+      "2026-07-04T00-52-55-885Z-6rvf3q"
+    ],
+    "firstEventAt": "2026-07-04T00:52:55.890Z",
+    "lastEventAt": "2026-07-04T00:54:58.946Z",
+    "wouldSubmit": 6,
+    "candidateTracked": 3,
+    "eventCounts": {
+      "would-submit": 6,
+      "error": 0,
+      "funding-hold": 0,
+      "stream-health-hold": 0
+    },
+    "errors": {
+      "total": 0,
+      "byPhase": {}
+    },
+    "marketsObserved": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "allowlistScopedOnly": true,
+    "fundingAllowanceSolvencyHold": false,
+    "seedSpeculationsBehaviorObserved": false
+  }
+}
