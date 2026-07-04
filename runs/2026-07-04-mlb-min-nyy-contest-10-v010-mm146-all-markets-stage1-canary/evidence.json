@@ -202,6 +202,7 @@
   },
   "caveats": [
     "Live MM correctly entered a bounded funding-shortfall hold after the controlled fills and soft-cancelled visible quotes; final visible exposure was zero.",
-    "The market-maker repository still installed @ospex/sdk 0.9.0 while the operator CLI for this run was 0.10.0; this was recorded and did not block the tested flow."
+    "The market-maker repository still installed @ospex/sdk 0.9.0 while the operator CLI for this run was 0.10.0; this was recorded and did not block the tested flow.",
+    "The postgame cron/watchdog initially no-oped because core games API status still reported `upcoming` after MLB official final. Postgame was manually resumed after independent MLB Stats official-final verification; score/settle/claim completed successfully, and final zero-state was verified. This is an operator/watchdog methodology caveat, not a protocol/MM failure."
   ]
 }

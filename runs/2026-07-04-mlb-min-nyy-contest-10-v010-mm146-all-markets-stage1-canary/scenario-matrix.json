@@ -78,23 +78,23 @@
     {
       "id": "postgame-score",
       "scenario": "Postgame score",
-      "status": "pass",
+      "status": "pass_with_caveats",
       "evidence": "raw/postgame-lifecycle.sanitized.json",
-      "notes": "Official final score MIN 11, NYY 4 was verified and contest 10 scored via R5/CRE."
+      "notes": "Official final score MIN 11, NYY 4 was verified and contest 10 scored via R5/CRE. Operator/watchdog caveat: The postgame cron/watchdog initially no-oped because core games API status still reported `upcoming` after MLB official final. Postgame was manually resumed after independent MLB Stats official-final verification; score/settle/claim completed successfully, and final zero-state was verified. This is an operator/watchdog methodology caveat, not a protocol/MM failure."
     },
     {
       "id": "postgame-settle",
       "scenario": "Postgame settle",
       "status": "pass",
       "evidence": "raw/postgame-lifecycle.sanitized.json",
-      "notes": "Moneyline speculation 18 settled to away/upper/Minnesota Twins; spread 19 to away/upper/Minnesota Twins +1.5; total 20 to over/upper/over 10."
+      "notes": "Moneyline speculation 18 settled to away/upper/Minnesota Twins; spread 19 to away/upper/Minnesota Twins +1.5; total 20 to over/upper/over 10. Completed after manual resume from the operator/watchdog caveat documented under postgame-score."
     },
     {
       "id": "postgame-claim",
       "scenario": "Postgame claim/no-op",
       "status": "pass",
       "evidence": "raw/postgame-lifecycle.sanitized.json",
-      "notes": "Winning upper positions for stage-maker-a and stage-maker-b were claimed; losing positions are no-op/not claimable, and final target positions are zero."
+      "notes": "Winning upper positions for stage-maker-a and stage-maker-b were claimed; losing positions are no-op/not claimable, and final target positions are zero. Completed after manual resume from the operator/watchdog caveat documented under postgame-score."
     },
     {
       "id": "cost-within-cap",

@@ -109,5 +109,6 @@
       "pendingSettlePayoutWei6": "0"
     }
   },
-  "openCommitments": 0
+  "openCommitments": 0,
+  "operatorWatchdogCaveat": "The postgame cron/watchdog initially no-oped because core games API status still reported `upcoming` after MLB official final. Postgame was manually resumed after independent MLB Stats official-final verification; score/settle/claim completed successfully, and final zero-state was verified. This is an operator/watchdog methodology caveat, not a protocol/MM failure."
 }

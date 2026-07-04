@@ -27,6 +27,12 @@
 - Claim txs: stage-maker-a `0x541b469913d374904261816dc48aa06c2c9428d0f0a93da4bc32c211dc3d72a6`, `0x8103f472b1b6c3b2c37498dace4e50558697ea8c523bb00020c3d0d51aa7c971`, `0x4a707455d75939be1cdcaed9084695ddbba6dbfe1b7e89a7579e9ae56c9d1606`; stage-maker-b `0x6755511b40f2d324a5151456ce4743388fb50e695fa8cfd4eebd5fa6e9057c32`, `0xe158c082888471525912b1dc7f076232bd5ac4d6a9fe5f163de183a49aacba2c`
 - Final open commitments: `0`; final active/pending/claimable target positions: `0` for stage-maker-a, stage-maker-b, and flow-a.
 
+## Caveats
+
+- The postgame cron/watchdog initially no-oped because core games API status still reported `upcoming` after MLB official final. Postgame was manually resumed after independent MLB Stats official-final verification; score/settle/claim completed successfully, and final zero-state was verified. This is an operator/watchdog methodology caveat, not a protocol/MM failure.
+- Live MM correctly entered a bounded funding-shortfall hold after the controlled fills and soft-cancelled visible quotes; final visible exposure was zero.
+- The market-maker repository still installed @ospex/sdk 0.9.0 while the operator CLI for this run was 0.10.0; this was recorded and did not block the tested flow.
+
 ## Evidence
 
 - `evidence.json`
