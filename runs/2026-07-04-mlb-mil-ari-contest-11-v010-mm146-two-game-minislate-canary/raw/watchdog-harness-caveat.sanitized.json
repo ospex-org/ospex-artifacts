@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "classification": "operator_harness_filename_bug",
+  "affectedComponent": "operator watchdog harness, not ospex protocol repositories",
+  "bug": "Bash filename construction used `${profile-before-claim}` as if it were string concatenation; Bash treated it as parameter expansion on `profile` and omitted the literal `-before-claim` suffix when `profile` was set.",
+  "symptom": "Postgame error alerts reported a missing per-profile before-claim status artifact even though the corresponding status artifact had been written.",
+  "fixApplied": "The filename construction was changed to concatenate `${profile}` with the literal `-before-claim` suffix.",
+  "impact": "Some failed alert ticks occurred after official-final score/settle work had begun but before claim planning completed. After patching the harness, claims completed; one immediate post-claim read observed projection/indexer lag, and the next verification read reached zero active/pending/claimable positions.",
+  "notAttributedTo": [
+    "ospex-sdk",
+    "ospex-market-maker",
+    "ospex-core-api",
+    "ospex-indexer",
+    "ospex-cre",
+    "contracts/protocol"
+  ]
+}

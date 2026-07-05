@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "run",
+  "artifactId": "2026-07-04-mlb-mil-ari-contest-11-v010-mm146-two-game-minislate-canary",
+  "status": "complete_verified_with_caveats",
+  "publishedAt": "2026-07-05T05:15:00Z",
+  "generatedAt": "2026-07-05T05:15:00Z",
+  "network": "polygon",
+  "date": "2026-07-04",
+  "runClass": "mm-live-canary",
+  "summaryPath": "summary.md",
+  "dataPath": "evidence.json",
+  "rawPath": "raw/",
+  "target": {
+    "game": "Milwaukee Brewers @ Arizona Diamondbacks",
+    "gamePk": 825063,
+    "gameId": "f6f7f37a-32e8-4668-8a5f-39183d6ea6dc",
+    "slug": "mil-ari-2026-07-05-0140",
+    "sport": "mlb",
+    "market": "spread",
+    "marketsCovered": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "contestId": "11",
+    "speculationId": "22",
+    "companionSpeculations": {
+      "moneyline": "21",
+      "spread": "22",
+      "total": "23"
+    },
+    "awayTeam": "Milwaukee Brewers",
+    "homeTeam": "Arizona Diamondbacks",
+    "startTimeUtc": "2026-07-05T01:40:00Z",
+    "spreadLine": {
+      "awayLine": -1.5,
+      "homeLine": 1.5,
+      "lineTicks": -15,
+      "awayPositionType": "upper",
+      "homePositionType": "lower"
+    },
+    "totalLine": {
+      "line": 9.5,
+      "lineTicks": 95,
+      "overPositionType": "upper",
+      "underPositionType": "lower"
+    },
+    "referenceOdds": {
+      "moneyline": {
+        "market": "moneyline",
+        "awayOddsAmerican": -160,
+        "homeOddsAmerican": 140,
+        "upstreamLastUpdated": "2026-07-04T23:17:47+00:00",
+        "pollCapturedAt": "2026-07-04T23:20:26.932+00:00",
+        "changedAt": "2026-07-04T23:14:26.763+00:00"
+      },
+      "spread": {
+        "market": "spread",
+        "awayLine": -1.5,
+        "homeLine": 1.5,
+        "awayOddsAmerican": -102,
+        "homeOddsAmerican": -118,
+        "upstreamLastUpdated": "2026-07-04T23:17:47+00:00",
+        "pollCapturedAt": "2026-07-04T23:20:26.993+00:00",
+        "changedAt": "2026-07-04T23:14:26.839+00:00"
+      },
+      "total": {
+        "market": "total",
+        "line": 9.5,
+        "overOddsAmerican": -103,
+        "underOddsAmerican": -117,
+        "upstreamLastUpdated": "2026-07-04T23:17:47+00:00",
+        "pollCapturedAt": "2026-07-04T23:20:27.054+00:00",
+        "changedAt": "2026-07-04T22:59:27.383+00:00"
+      }
+    },
+    "teamIdentity": {
+      "away": {
+        "team": "Milwaukee Brewers",
+        "abbreviation": "MIL",
+        "positionType": "upper",
+        "role": "away",
+        "identity": "favorite",
+        "marketOddsAmerican": "-160"
+      },
+      "home": {
+        "team": "Arizona Diamondbacks",
+        "abbreviation": "ARI",
+        "positionType": "lower",
+        "role": "home",
+        "identity": "underdog",
+        "marketOddsAmerican": "+140"
+      },
+      "winner": {
+        "team": "Arizona Diamondbacks",
+        "role": "home",
+        "positionType": "lower"
+      },
+      "spreadWinner": {
+        "team": "Arizona Diamondbacks",
+        "role": "home",
+        "positionType": "lower",
+        "line": 1.5
+      },
+      "totalWinner": {
+        "side": "under",
+        "positionType": "lower",
+        "line": 9.5
+      }
+    },
+    "contestStatusAfterCreateVerify": "verified",
+    "contestStatusAfterPostgame": "scored",
+    "postgameStatus": "complete",
+    "finalScore": {
+      "awayRuns": 3,
+      "homeRuns": 4,
+      "winner": "Arizona Diamondbacks",
+      "winnerRole": "home",
+      "winnerProtocolSide": "lower",
+      "totalRuns": 7,
+      "totalLine": 9.5,
+      "totalWinner": "under",
+      "totalWinnerProtocolSide": "lower",
+      "spreadWinner": "Arizona Diamondbacks +1.5",
+      "spreadWinnerProtocolSide": "lower"
+    }
+  },
+  "verdict": {
+    "label": "FULL_GREEN",
+    "protocolVerdict": "V010_CLI_MM146_TWO_GAME_MINISLATE_FULL_GREEN_WITH_OPERATOR_HARNESS_CAVEAT",
+    "reason": "The v0.10.0/R5 MM #146 strict-allowlist all-market two-game mini-slate canary for Milwaukee Brewers @ Arizona Diamondbacks completed the full lifecycle: pregame setup passed, contest 11 was created and verified, moneyline/spec 21, spread/spec 22, and total/spec 23 were manually seeded/filled with zero residual seed exposure, the market maker posted tiny live moneyline/spread/total quotes under strict contest allowlist [11,12] with seedSpeculations=false, a controlled live spread quote was filled, visible quotes were soft-cancelled or expired after a bounded funding-shortfall hold, final visible exposure drained to zero, official final score Milwaukee Brewers 3 / Arizona Diamondbacks 4 was verified, contest 11 was scored through R5/CRE, all three companion speculations settled to the lower winning side where applicable, winning controlled positions were claimed, and final target commitments plus active/pending/claimable positions are zero. The only issue observed was an operator watchdog harness filename bug in the postgame cron; it was fixed and is documented as a methodology caveat, not a protocol/MM/codebase failure."
+  },
+  "wallets": {
+    "manualSeedMaker": {
+      "profile": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    "controlledTaker": {
+      "profile": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    },
+    "operatorMmMaker": {
+      "profile": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    }
+  },
+  "versions": {
+    "schemaVersion": 1,
+    "capturedAtUtc": "2026-07-04T23:00:44Z",
+    "node": "v22.22.0",
+    "yarn": "1.22.22",
+    "chainId": 137,
+    "sdkCli": {
+      "repo": "ospex-sdk",
+      "headSha": "3fa399a",
+      "version": "0.10.0",
+      "requiredAtOrAfter": "3fa399a",
+      "install": "pass",
+      "sdkBuild": "pass",
+      "cliBuild": "pass",
+      "ok": true
+    },
+    "marketMaker": {
+      "repo": "ospex-market-maker",
+      "headSha": "6f3ccc1",
+      "requiredAtOrAfter": "6f3ccc1",
+      "installedSdkVersion": "0.9.0",
+      "typecheck": "pass",
+      "test": "pass",
+      "testCount": "1070 passed",
+      "build": "pass",
+      "allowlistOnlyFlagAvailable": true,
+      "approvalSelfHealRegressionPresent": true,
+      "ownStateOrphanSafetyRegressionPresent": true
+    },
+    "ancillaryRepos": {
+      "ospex-core-api": {
+        "headSha": "076f44d",
+        "ok": true
+      },
+      "ospex-indexer": {
+        "headSha": "75be9e7",
+        "ok": true
+      },
+      "ospex-cre": {
+        "headSha": "fed6e26",
+        "ok": true
+      }
+    },
+    "allRequiredOk": true
+  },
+  "artifactFiles": {
+    "summary": "summary.md",
+    "evidence": "evidence.json",
+    "scenarioMatrix": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "mveScorecard": "mve-scorecard.json",
+    "mveScorecardMarkdown": "mve-scorecard.md",
+    "releaseRuntimeMatrix": "raw/release-runtime-matrix.sanitized.json",
+    "targetPreflight": "raw/target-preflight.sanitized.json",
+    "walletAuthBalances": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "boundedApprovals": "raw/bounded-approvals.sanitized.json",
+    "mmDryRun": "raw/mm-dryrun-summary.sanitized.json",
+    "liveCommitmentsPosted": "raw/live-public-commitments-posted.sanitized.json",
+    "liveFill": "raw/live-fill.sanitized.json",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json",
+    "restartColdStartProbe": "raw/restart-cold-start-probe.sanitized.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "watchdogHarnessCaveat": "raw/watchdog-harness-caveat.sanitized.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "finalContestShow": "raw/final-contest-show.sanitized.json",
+    "finalPositionsStatus": "raw/final-positions-status.sanitized.json",
+    "finalCommitmentsOrderbook": "raw/final-commitments-orderbook.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json"
+  },
+  "caveats": [
+    "Live MM correctly entered a bounded funding-shortfall hold after the controlled fills and soft-cancelled or let visible quotes expire; final visible exposure was zero.",
+    "The market-maker repository still installed @ospex/sdk 0.9.0 while the operator CLI for this run was 0.10.0; this was recorded and did not block the tested flow.",
+    "The postgame error alerts were caused by an operator watchdog harness filename bug (${profile-before-claim} omitted the literal suffix in a Bash parameter expansion), not by ospex-sdk, ospex-market-maker, core-api, indexer, CRE, or protocol code. After patching the harness, score/settle/claim completed and final zero-state was verified."
+  ]
+}

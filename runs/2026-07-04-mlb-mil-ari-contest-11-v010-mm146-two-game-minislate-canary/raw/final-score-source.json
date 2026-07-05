@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "source": "MLB Stats API schedule",
+  "checkedAt": "2026-07-05T05:11:46Z",
+  "allOfficialFinal": true,
+  "game": {
+    "gamePk": 825063,
+    "label": "MIL@ARI",
+    "awayTeam": "Milwaukee Brewers",
+    "homeTeam": "Arizona Diamondbacks",
+    "awayScore": 3,
+    "homeScore": 4,
+    "status": "Final",
+    "isOfficialFinal": true
+  }
+}

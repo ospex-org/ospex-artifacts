@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "result": {
+    "txHash": "0x8034be5ecc0f977a7c57357aa5584fa58c66e198ccb665dca88adde4f4a83184",
+    "contest": {
+      "contestId": "11",
+      "awayTeam": "Milwaukee Brewers",
+      "homeTeam": "Arizona Diamondbacks",
+      "sport": "mlb",
+      "matchTime": "2026-07-05T01:40:00+00:00"
+    },
+    "speculation": {
+      "speculationId": "22",
+      "market": "spread",
+      "line": -1.5,
+      "lineTicks": -15
+    },
+    "commitment": {
+      "commitmentHash": "0x7bb033719aa369ae938941660df36cf624992dd274b0ee033c4abd51b60682fa",
+      "contestId": "11",
+      "marketType": "spread",
+      "lineTicks": -15,
+      "positionType": 1,
+      "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "riskAmount": "50000",
+      "filledRiskAmount": "50000"
+    },
+    "sideSummary": "Milwaukee Brewers -1.5",
+    "risk": {
+      "wei6": "47000",
+      "usdc": "0.047000"
+    },
+    "payout": {
+      "profit": {
+        "wei6": "50000",
+        "usdc": "0.050000"
+      },
+      "totalReturn": {
+        "wei6": "97000",
+        "usdc": "0.097000"
+      }
+    },
+    "note": "A controlled taker filled the MM spread quote: Milwaukee Brewers -1.5. The final score made Arizona Diamondbacks +1.5 the winning lower side, so this controlled live-fill position lost and the MM maker lower-side position was claimable."
+  }
+}

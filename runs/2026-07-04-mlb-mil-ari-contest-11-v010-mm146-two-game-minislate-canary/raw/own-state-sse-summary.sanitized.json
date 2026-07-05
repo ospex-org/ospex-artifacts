@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "source": "own-state-stream",
+  "fillEvents": 2,
+  "unknownOwnFill": 0,
+  "divergence": 0,
+  "ownerMappingFailed": 0,
+  "notes": "Counts are slate-wide across contests 11 and 12; controlled live fills were observed through own-state telemetry.",
+  "scope": "slate-wide across contests 11 and 12"
+}

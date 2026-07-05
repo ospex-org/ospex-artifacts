@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "contestId": "11",
+  "status": "scored",
+  "awayTeam": "Milwaukee Brewers",
+  "homeTeam": "Arizona Diamondbacks",
+  "awayScore": 3,
+  "homeScore": 4,
+  "speculations": {
+    "moneyline": "21",
+    "spread": "22",
+    "total": "23"
+  }
+}

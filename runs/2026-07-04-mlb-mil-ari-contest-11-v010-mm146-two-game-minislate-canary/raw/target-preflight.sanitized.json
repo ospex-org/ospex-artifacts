@@ -1,0 +1,84 @@
+{
+  "checkedAtUtc": "2026-07-04T23:20:44Z",
+  "apiHealth": {
+    "healthzOk": true,
+    "readyzOk": true,
+    "network": "polygon",
+    "chainId": 137
+  },
+  "selectedTarget": {
+    "selection": "primary",
+    "game": "Milwaukee Brewers @ Arizona Diamondbacks",
+    "gamePk": 825063,
+    "gameId": "f6f7f37a-32e8-4668-8a5f-39183d6ea6dc",
+    "slug": "mil-ari-2026-07-05-0140",
+    "sport": "mlb",
+    "awayTeam": "Milwaukee Brewers",
+    "awayAbbreviation": "MIL",
+    "homeTeam": "Arizona Diamondbacks",
+    "homeAbbreviation": "ARI",
+    "matchTime": "2026-07-05T01:40:00+00:00",
+    "statusAtPreflight": "upcoming",
+    "hasOdds": true,
+    "canCreateContestBeforeRun": true,
+    "contestCreatedBeforeRun": false,
+    "contestId": "11",
+    "contestStatusAfterCreateVerify": "verified",
+    "speculations": [
+      {
+        "market": "moneyline",
+        "type": "moneyline",
+        "contestId": "11",
+        "speculationId": "21"
+      },
+      {
+        "market": "spread",
+        "type": "spread",
+        "contestId": "11",
+        "speculationId": "22",
+        "line": -1.5,
+        "lineTicks": -15
+      },
+      {
+        "market": "total",
+        "type": "total",
+        "contestId": "11",
+        "speculationId": "23",
+        "line": 9.5,
+        "lineTicks": 95
+      }
+    ],
+    "referenceOdds": {
+      "moneyline": {
+        "market": "moneyline",
+        "awayOddsAmerican": -160,
+        "homeOddsAmerican": 140,
+        "upstreamLastUpdated": "2026-07-04T23:17:47+00:00",
+        "pollCapturedAt": "2026-07-04T23:20:26.932+00:00",
+        "changedAt": "2026-07-04T23:14:26.763+00:00"
+      },
+      "spread": {
+        "market": "spread",
+        "awayLine": -1.5,
+        "homeLine": 1.5,
+        "awayOddsAmerican": -102,
+        "homeOddsAmerican": -118,
+        "upstreamLastUpdated": "2026-07-04T23:17:47+00:00",
+        "pollCapturedAt": "2026-07-04T23:20:26.993+00:00",
+        "changedAt": "2026-07-04T23:14:26.839+00:00"
+      },
+      "total": {
+        "market": "total",
+        "line": 9.5,
+        "overOddsAmerican": -103,
+        "underOddsAmerican": -117,
+        "upstreamLastUpdated": "2026-07-04T23:17:47+00:00",
+        "pollCapturedAt": "2026-07-04T23:20:27.054+00:00",
+        "changedAt": "2026-07-04T22:59:27.383+00:00"
+      }
+    },
+    "oldFunctionsLinkFlowObserved": false,
+    "identityGate": "pass"
+  },
+  "stopConditionsTriggered": []
+}

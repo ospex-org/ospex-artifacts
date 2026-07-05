@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "result": {
+    "txHash": "0x5b51dba40cb56d39948c09539609b4d1b30da40e005748143bc2c05c576e044e",
+    "contest": {
+      "contestId": "12",
+      "awayTeam": "San Diego Padres",
+      "homeTeam": "Los Angeles Dodgers",
+      "sport": "mlb",
+      "matchTime": "2026-07-05T02:10:00+00:00"
+    },
+    "speculation": {
+      "speculationId": "24",
+      "market": "moneyline"
+    },
+    "commitment": {
+      "commitmentHash": "0x3127d59cc4fa676beb71643b8661dda1acede13a4d398c14586494848956c6f3",
+      "contestId": "12",
+      "marketType": "moneyline",
+      "lineTicks": 0,
+      "positionType": 0,
+      "maker": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "riskAmount": "50000",
+      "filledRiskAmount": "50000"
+    },
+    "sideSummary": "Los Angeles Dodgers",
+    "risk": {
+      "wei6": "113500",
+      "usdc": "0.113500"
+    },
+    "payout": {
+      "profit": {
+        "wei6": "50000",
+        "usdc": "0.050000"
+      },
+      "totalReturn": {
+        "wei6": "163500",
+        "usdc": "0.163500"
+      }
+    },
+    "note": "A controlled taker filled the MM moneyline quote on Los Angeles Dodgers. The final score made Los Angeles Dodgers/home/lower the winning side, so this controlled live-fill position was claimed."
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "2026-07-04-mlb-mil-ari-contest-11-v010-mm146-two-game-minislate-canary",
+  "generatedAt": "2026-07-05T05:15:00Z",
+  "runClass": "mm-live-canary",
+  "verdict": {
+    "label": "FULL_GREEN",
+    "protocolVerdict": "V010_CLI_MM146_TWO_GAME_MINISLATE_FULL_GREEN_WITH_OPERATOR_HARNESS_CAVEAT",
+    "reason": "The v0.10.0/R5 MM #146 strict-allowlist all-market two-game mini-slate canary for Milwaukee Brewers @ Arizona Diamondbacks completed the full lifecycle: pregame setup passed, contest 11 was created and verified, moneyline/spec 21, spread/spec 22, and total/spec 23 were manually seeded/filled with zero residual seed exposure, the market maker posted tiny live moneyline/spread/total quotes under strict contest allowlist [11,12] with seedSpeculations=false, a controlled live spread quote was filled, visible quotes were soft-cancelled or expired after a bounded funding-shortfall hold, final visible exposure drained to zero, official final score Milwaukee Brewers 3 / Arizona Diamondbacks 4 was verified, contest 11 was scored through R5/CRE, all three companion speculations settled to the lower winning side where applicable, winning controlled positions were claimed, and final target commitments plus active/pending/claimable positions are zero. The only issue observed was an operator watchdog harness filename bug in the postgame cron; it was fixed and is documented as a methodology caveat, not a protocol/MM/codebase failure."
+  },
+  "capabilities": [
+    {
+      "id": "target-preflight",
+      "capability": "Target preflight and allowlist",
+      "proof": "proven_live",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "notes": "Milwaukee Brewers @ Arizona Diamondbacks contest 11 and specs 21/22/23 passed pre-game status, identity, allowlist, odds, and lead-time gates."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "capability": "Repo/runtime gates",
+      "proof": "proven_live",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "notes": "SDK/CLI v0.10.0, MM head 6f3ccc1 with PR #146 approval self-heal and own-state safety coverage, installed SDK v0.9.0, typecheck/test/build, and ancillary repo heads were verified."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "capability": "Wallet auth, balances, allowances",
+      "proof": "proven_live",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Expected-address checks passed for ospex-stage-maker-b, ospex-stage-maker-a, and ospex-flow-a; public balances/allowances were bounded."
+    },
+    {
+      "id": "bounded-approvals",
+      "capability": "Bounded approvals / no unlimited approvals",
+      "proof": "proven_live",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "notes": "Only bounded USDC approvals were used; no unlimited approvals were created."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "capability": "Dry-run quote loop",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "notes": "Candidates --allowlist-only returned six quote-ready rows across contests 11 and 12; dry run stayed target-scoped."
+    },
+    {
+      "id": "live-commitments-posted",
+      "capability": "Live commitments posted",
+      "proof": "proven_live",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "notes": "Tiny live moneyline, spread, and total commitments posted under strict allowlist [11,12], including contest 11, seedSpeculations=false."
+    },
+    {
+      "id": "live-fill",
+      "capability": "Controlled live fill",
+      "proof": "proven_live",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "A controlled taker filled the MM spread quote: Milwaukee Brewers -1.5. The final score made Arizona Diamondbacks +1.5 the winning lower side, so this controlled live-fill position lost and the MM maker lower-side position was claimable."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "capability": "Own-state SSE canonical fill source",
+      "proof": "proven_live",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "Telemetry captured the controlled fills with source own-state-stream and no unknown-own-fill/divergence safety event."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "capability": "Exposure drained to zero",
+      "proof": "proven_live",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "Final public/API/MM visible-open exposure is zero, target active/pending/claimable positions are zero after postgame, and no orphan MM process remained."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "capability": "Restart/cold-start safety",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/restart-cold-start-probe.sanitized.json",
+      "notes": "A scratch-state dry-run/cold-start probe loaded state cleanly, expired copied stale records, and did not create duplicate live exposure."
+    },
+    {
+      "id": "postgame-score",
+      "capability": "Postgame score",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Official final score Milwaukee Brewers 3, Arizona Diamondbacks 4 was verified and contest 11 scored via R5/CRE. Operator watchdog caveat documented separately."
+    },
+    {
+      "id": "postgame-settle",
+      "capability": "Postgame settle",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Moneyline, spread, and total speculations for contest 11 settled to the expected lower winning sides where applicable."
+    },
+    {
+      "id": "postgame-claim",
+      "capability": "Postgame claim/no-op",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Winning controlled positions were claimed, losing positions were no-op/not claimable, and final target positions are zero. One immediate post-claim read lagged; the next verification read was zero."
+    },
+    {
+      "id": "cost-within-cap",
+      "capability": "Cost within cap",
+      "proof": "proven_live",
+      "evidence": "raw/tx-receipts.summary.json",
+      "notes": "Tiny canary risk plus protocol fees stayed within the approved $10 hard cap; recorded lifecycle transactions are summarized."
+    }
+  ],
+  "zeroExposure": {
+    "checkedAtUtc": "2026-07-05T05:11:45Z",
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "orphanProcessCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json"
+  },
+  "transactions": [
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-stage-maker-b treasuryModule (2 USDC target)",
+      "txHash": "0x1fcbdb7b8047b26110271c03d964a16e5ba5ae9ac8457b7e949cbbc4302bb3dd",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-stage-maker-a positionModule (0.48 USDC target)",
+      "txHash": "0x6515084c9f427656199ac8801483758a22ea988fe39d87a93cd9f0350c3290e5",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-stage-maker-a treasuryModule (1.5 USDC target)",
+      "txHash": "0x2ee81d167d73db723787e6a6639ea80abf4035ba34f5a4fc0cf25fea1144f654",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-flow-a positionModule (0.48 USDC target)",
+      "txHash": "0x756c0f121b5350a305987a91ddada7a833cc9567c060b1564fe6647275677021",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-flow-a treasuryModule (1.5 USDC target)",
+      "txHash": "0x1d27580a05c43131f8118459107d847de96ea99cb847c231deaf0b1687cb9406",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "create-contest",
+      "purpose": "Create contest 11 for Milwaukee Brewers @ Arizona Diamondbacks",
+      "txHash": "0xe535b8cfc9596c0ef71a14817f86401ec06e92d8755494f00e1378783542b98c",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "other",
+      "purpose": "Request market update for contest 11",
+      "txHash": "0x61e2b32ca9b49c79e14bbeb4727226237dec20fc65d46d6159fb9234ea996575",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "seed-match",
+      "purpose": "Fully match tiny manual moneyline seed to create speculation 21 for contest 11",
+      "txHash": "0xf0ddf65272ea877bfb03460fc0a235d4df115af4ff71eccb316c7daf6bfa4f8d",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "seed-match",
+      "purpose": "Fully match tiny manual spread seed to create speculation 22 for contest 11",
+      "txHash": "0x94c16b1a8d90552adb5e7ac4658d16c384255bd00e5d6755ac624a02608f98e9",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "seed-match",
+      "purpose": "Fully match tiny manual total seed to create speculation 23 for contest 11",
+      "txHash": "0x3620b5fc3ae9cd909027d9e0b210f2a1fab4c1bd47ee125078b9dcf1b7f3a0f3",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "match-commitment",
+      "purpose": "Controlled fill against live MM spread quote for contest 11",
+      "txHash": "0x8034be5ecc0f977a7c57357aa5584fa58c66e198ccb665dca88adde4f4a83184",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "score-request",
+      "purpose": "Request R5 score for contest 11 after official final",
+      "txHash": "0x1e4283e064ee83cc8dd38618b8e340a1715d82efc26741a712f45bd80017aa2f",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "settle",
+      "purpose": "Settle speculation 21 to lower winning side for contest 11",
+      "txHash": "0x2a2b7b7099ce8082ad4dbcfdb87acea88cc1408aca332fb82b67a50665a068a0",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "settle",
+      "purpose": "Settle speculation 22 to lower winning side for contest 11",
+      "txHash": "0x516afa30813f11723fb51219fa9d45b078225ebdf1dd42208ed62d1f1b7fc997",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "settle",
+      "purpose": "Settle speculation 23 to lower winning side for contest 11",
+      "txHash": "0x7b183bfa4c47ff691d9fdfb7f07e81b9324f4357ccb0bd0d449d847b6c1dc72c",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "claim",
+      "purpose": "Claim winning controlled position for speculation 21 (home (Arizona Diamondbacks, underdog))",
+      "txHash": "0x468193fa7f97bef3dcf7da12588141b33b30243ab9e9b18b50834918b40d8911",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "claim",
+      "purpose": "Claim winning controlled position for speculation 22 (home (Arizona Diamondbacks, underdog))",
+      "txHash": "0xabfb98eaa1643d0b12f4ca85111a8600ff225af7562a4c829d9a0171a975bf0a",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "claim",
+      "purpose": "Claim winning controlled position for speculation 23 (under 9.5 (total; no team))",
+      "txHash": "0x35d03b868c917e89300dd00ea2f7a0a29a646c5a644fb6a0f10f06708d4d5a43",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "claim",
+      "purpose": "Claim winning controlled position for speculation 22 (home (Arizona Diamondbacks, underdog))",
+      "txHash": "0x6f00c684039d9570994c8e4b16d361242b00cc3cfab34ed84d5014f15d91b28e",
+      "operatorControlled": true,
+      "status": "success"
+    }
+  ]
+}

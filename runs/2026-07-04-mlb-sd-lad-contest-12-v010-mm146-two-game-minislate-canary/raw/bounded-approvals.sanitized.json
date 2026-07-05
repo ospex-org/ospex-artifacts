@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "approvalTransactions": [
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-stage-maker-b treasuryModule (2 USDC target)",
+      "txHash": "0x1fcbdb7b8047b26110271c03d964a16e5ba5ae9ac8457b7e949cbbc4302bb3dd",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-stage-maker-a positionModule (0.48 USDC target)",
+      "txHash": "0x6515084c9f427656199ac8801483758a22ea988fe39d87a93cd9f0350c3290e5",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-stage-maker-a treasuryModule (1.5 USDC target)",
+      "txHash": "0x2ee81d167d73db723787e6a6639ea80abf4035ba34f5a4fc0cf25fea1144f654",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-flow-a positionModule (0.48 USDC target)",
+      "txHash": "0x756c0f121b5350a305987a91ddada7a833cc9567c060b1564fe6647275677021",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-flow-a treasuryModule (1.5 USDC target)",
+      "txHash": "0x1d27580a05c43131f8118459107d847de96ea99cb847c231deaf0b1687cb9406",
+      "operatorControlled": true,
+      "status": "success"
+    }
+  ],
+  "unlimitedApprovalsCreated": false
+}

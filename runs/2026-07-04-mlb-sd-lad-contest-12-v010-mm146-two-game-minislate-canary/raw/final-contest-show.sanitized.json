@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "contestId": "12",
+  "status": "scored",
+  "awayTeam": "San Diego Padres",
+  "homeTeam": "Los Angeles Dodgers",
+  "awayScore": 0,
+  "homeScore": 3,
+  "speculations": {
+    "moneyline": "24",
+    "spread": "25",
+    "total": "26"
+  }
+}

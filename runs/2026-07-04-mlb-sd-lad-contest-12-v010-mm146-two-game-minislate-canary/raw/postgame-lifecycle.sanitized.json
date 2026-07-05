@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "completedAtUtc": "2026-07-05T05:11:45Z",
+  "officialFinal": {
+    "source": "MLB Stats API schedule",
+    "status": "Final",
+    "awayRuns": 0,
+    "homeRuns": 3,
+    "winner": "Los Angeles Dodgers",
+    "winnerRole": "home",
+    "winnerProtocolSide": "lower",
+    "totalRuns": 3,
+    "totalLine": 8.5,
+    "totalWinner": "under",
+    "totalWinnerProtocolSide": "lower",
+    "spreadWinner": "Los Angeles Dodgers -1.5",
+    "spreadWinnerProtocolSide": "lower"
+  },
+  "score": {
+    "requestTxHash": "0xa2b35d9419697ddb841795f6f022200ebfeff00fb393c4bb7945ec4e08d65cfe",
+    "contestStatus": "scored",
+    "awayScore": 0,
+    "homeScore": 3
+  },
+  "settle": {
+    "24": "0xb33e72a25c96757fc25e75431ec164aabbab3ec04849641859fe69195640b2ff",
+    "25": "0x225e805884367e02cc7472942f845fdfd5b625a39b45fa90d07e2d648c25d4b6",
+    "26": "0x547e2b447ee9778447faa580201b26bb7932e0f449332a74a076f28ab3621c17"
+  },
+  "claim": [
+    {
+      "speculationId": "24",
+      "positionType": 1,
+      "display": "home (Los Angeles Dodgers, favorite)",
+      "txHash": "0x78afcc16d06fb00e152541b1b2a8122571b1f7ae8d9f3d22438732be2996da5a",
+      "payoutUSDC": 0.2562
+    },
+    {
+      "speculationId": "25",
+      "positionType": 1,
+      "display": "home (Los Angeles Dodgers, favorite)",
+      "txHash": "0x0c92ea56d8091e0cf34995f2d4d9427c8d18cd3232261cbe371894455ee59637",
+      "payoutUSDC": 0.1
+    },
+    {
+      "speculationId": "26",
+      "positionType": 1,
+      "display": "under 8.5 (total; no team)",
+      "txHash": "0x74fecff0f8a9b614dc48022ad3424dac481e05276219e632fe0e6f3936e4e72d",
+      "payoutUSDC": 0.0935
+    }
+  ],
+  "winnerSides": {
+    "moneyline": "lower",
+    "spread": "lower",
+    "total": "lower"
+  },
+  "finalZeroStateVerifiedAtUtc": "2026-07-05T05:11:45Z",
+  "finalTargetPositions": {
+    "ospex-stage-maker-a": {
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "estimatedPayoutUSDC": 0,
+      "estimatedPayoutWei6": "0",
+      "pendingSettlePayoutUSDC": 0,
+      "pendingSettlePayoutWei6": "0"
+    },
+    "ospex-stage-maker-b": {
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "estimatedPayoutUSDC": 0,
+      "estimatedPayoutWei6": "0",
+      "pendingSettlePayoutUSDC": 0,
+      "pendingSettlePayoutWei6": "0"
+    },
+    "ospex-flow-a": {
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0,
+      "estimatedPayoutUSDC": 0,
+      "estimatedPayoutWei6": "0",
+      "pendingSettlePayoutUSDC": 0,
+      "pendingSettlePayoutWei6": "0"
+    }
+  },
+  "openCommitments": 0,
+  "operatorWatchdogCaveat": "The first failed ticks had already reached official-final score/settle work, then crashed before/inside claim planning. After the harness fix, claims completed; one immediate post-claim read observed projection/indexer lag, and the next verification read reached zero active/pending/claimable positions. The cron was removed after manual final verification."
+}

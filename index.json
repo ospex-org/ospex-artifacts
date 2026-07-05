@@ -1,10 +1,12 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-07-04T22:19:19Z",
+  "generatedAt": "2026-07-05T05:21:54Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
+      "runs/2026-07-04-mlb-sd-lad-contest-12-v010-mm146-two-game-minislate-canary/evidence.json",
+      "runs/2026-07-04-mlb-mil-ari-contest-11-v010-mm146-two-game-minislate-canary/evidence.json",
       "runs/2026-07-04-mlb-min-nyy-contest-10-v010-mm146-all-markets-stage1-canary/evidence.json",
       "runs/2026-07-03-mlb-mia-ath-contest-9-v090-latest-mm-all-markets-canary/evidence.json",
       "runs/2026-07-03-mlb-stl-chc-contest-8-v090-latest-mm-total-canary/evidence.json",
@@ -12,9 +14,7 @@
       "runs/2026-07-02-mlb-pit-phi-contest-6-v090-latest-mm-moneyline-canary/evidence.json",
       "runs/2026-07-01-mlb-pit-phi-contest-4-r5-cre-mve-reentry-with-tex-cle-phase-a/evidence.json",
       "runs/2026-07-01-mlb-sd-chc-contest-5-v090-all-markets-r5-cre-lifecycle/evidence.json",
-      "runs/2026-06-30-mlb-cws-bal-contest-2-r5-cre-lifecycle-repeat/evidence.json",
-      "runs/2026-06-29-mlb-sf-az-contest-1-r5-cre-lifecycle-smoke/evidence.json",
-      "runs/2026-06-19-mlb-wsh-tb-contest-51-v071-stage2a-repeat-capital-safety-canary/evidence.json"
+      "runs/2026-06-30-mlb-cws-bal-contest-2-r5-cre-lifecycle-repeat/evidence.json"
     ],
     "release-acceptance": [
       "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.json"
@@ -22,6 +22,28 @@
     "daily-digest": []
   },
   "recentArtifacts": [
+    {
+      "artifactId": "2026-07-04-mlb-sd-lad-contest-12-v010-mm146-two-game-minislate-canary",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-04-mlb-sd-lad-contest-12-v010-mm146-two-game-minislate-canary/evidence.json",
+      "date": "2026-07-04",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-04-mlb-sd-lad-contest-12-v010-mm146-two-game-minislate-canary/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-07-04-mlb-sd-lad-contest-12-v010-mm146-two-game-minislate-canary/summary.md",
+      "publishedAt": "2026-07-05T05:15:00Z"
+    },
+    {
+      "artifactId": "2026-07-04-mlb-mil-ari-contest-11-v010-mm146-two-game-minislate-canary",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-04-mlb-mil-ari-contest-11-v010-mm146-two-game-minislate-canary/evidence.json",
+      "date": "2026-07-04",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-04-mlb-mil-ari-contest-11-v010-mm146-two-game-minislate-canary/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-07-04-mlb-mil-ari-contest-11-v010-mm146-two-game-minislate-canary/summary.md",
+      "publishedAt": "2026-07-05T05:15:00Z"
+    },
     {
       "artifactId": "2026-07-04-mlb-min-nyy-contest-10-v010-mm146-all-markets-stage1-canary",
       "artifactType": "run",
@@ -432,9 +454,9 @@
       "scope": "year",
       "year": 2026,
       "path": "archive/2026/index.json",
-      "artifactCount": 36,
+      "artifactCount": 38,
       "oldestPublishedAt": "2026-05-20T02:48:35Z",
-      "newestPublishedAt": "2026-07-04T22:19:04Z"
+      "newestPublishedAt": "2026-07-05T05:15:00Z"
     }
   ]
 }

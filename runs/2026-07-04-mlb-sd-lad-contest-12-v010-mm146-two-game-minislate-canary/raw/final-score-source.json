@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "source": "MLB Stats API schedule",
+  "checkedAt": "2026-07-05T05:11:46Z",
+  "allOfficialFinal": true,
+  "game": {
+    "gamePk": 825067,
+    "label": "SD@LAD",
+    "awayTeam": "San Diego Padres",
+    "homeTeam": "Los Angeles Dodgers",
+    "awayScore": 0,
+    "homeScore": 3,
+    "status": "Final",
+    "isOfficialFinal": true
+  }
+}
