@@ -1,0 +1,40 @@
+{
+  "result": {
+    "blockNumber": "89705642",
+    "commitment": {
+      "commitmentHash": "0xacec44a376c7a30885a6913a5efba3bd881ff53d598fd6cb3549a30ee44383e8",
+      "contestId": "14",
+      "lineTicks": 15,
+      "marketType": "spread",
+      "oddsTick": 167,
+      "positionType": 0,
+      "riskAmount": "80000"
+    },
+    "contest": {
+      "awayTeam": "Pittsburgh Pirates",
+      "contestId": "14",
+      "homeTeam": "Washington Nationals",
+      "sport": "mlb"
+    },
+    "payout": {
+      "profit": {
+        "usdc": "0.080000",
+        "wei6": "80000"
+      },
+      "totalReturn": {
+        "usdc": "0.133600",
+        "wei6": "133600"
+      }
+    },
+    "risk": {
+      "usdc": "0.053600",
+      "wei6": "53600"
+    },
+    "sideSummary": "Washington Nationals -1.5",
+    "speculation": {
+      "market": "spread",
+      "speculationId": "31"
+    },
+    "txHash": "0x93368b1340e88a05179477ab07cb62d4018f4a00575968ce9eed72577a1ec196"
+  }
+}

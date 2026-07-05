@@ -1,0 +1,19 @@
+{
+  "positionCounts": {
+    "ospex-flow-a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "ospex-stage-maker-a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "ospex-stage-maker-b": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    }
+  }
+}

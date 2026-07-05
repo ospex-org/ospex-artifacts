@@ -1,0 +1,21 @@
+{
+  "byMarket": {
+    "moneyline": 8,
+    "spread": 8,
+    "total": 9
+  },
+  "runId": "2026-07-05T14-53-31-261Z-vn1zdm",
+  "seedSpeculations": false,
+  "strictAllowlist": [
+    "13",
+    "14"
+  ],
+  "submittedQuoteEvents": 25,
+  "targetContest": "13",
+  "visibleOpenAfterStop": {
+    "allOpen": [],
+    "allOpenCount": 0,
+    "mmOpen": [],
+    "mmOpenCount": 0
+  }
+}

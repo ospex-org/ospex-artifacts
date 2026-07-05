@@ -1,0 +1,49 @@
+{
+  "apiHealth": "ok",
+  "budgetPolicy": "target total new fees + controlled risk <=15 USDC; hard stop >25 USDC; bounded approvals only",
+  "oddsMarketsPresent": {
+    "moneyline": true,
+    "spread": true,
+    "total": true
+  },
+  "selectedTarget": {
+    "allowlistContestIds": [
+      "13",
+      "14"
+    ],
+    "awayTeam": "Pittsburgh Pirates",
+    "contestId": "14",
+    "contestStatusAfterCreateVerify": "verified",
+    "game": "Pittsburgh Pirates @ Washington Nationals",
+    "gameId": "b2cca67c-2701-4722-8b9c-c9316ba625b3",
+    "homeTeam": "Washington Nationals",
+    "marketsCovered": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "matchTime": "2026-07-05T17:00:00+00:00",
+    "speculations": [
+      {
+        "contestId": "14",
+        "speculationId": "30",
+        "type": "moneyline"
+      },
+      {
+        "contestId": "14",
+        "line": 1.5,
+        "lineTicks": 15,
+        "speculationId": "31",
+        "type": "spread"
+      },
+      {
+        "contestId": "14",
+        "line": 9.5,
+        "lineTicks": 95,
+        "speculationId": "32",
+        "type": "total"
+      }
+    ],
+    "sport": "mlb"
+  }
+}

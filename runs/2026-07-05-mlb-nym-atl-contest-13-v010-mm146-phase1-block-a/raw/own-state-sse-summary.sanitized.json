@@ -1,0 +1,44 @@
+{
+  "divergence": 0,
+  "fillEvents": 2,
+  "ownerMappingFailed": 0,
+  "targetLiveFill": {
+    "blockNumber": "89705638",
+    "commitment": {
+      "commitmentHash": "0x1879f298908f808878895576060d9f0cbc07fd8c33ae2917b7a3dd1441fe6afb",
+      "contestId": "13",
+      "lineTicks": 90,
+      "marketType": "total",
+      "oddsTick": 214,
+      "positionType": 0,
+      "riskAmount": "80000"
+    },
+    "contest": {
+      "awayTeam": "New York Mets",
+      "contestId": "13",
+      "homeTeam": "Atlanta Braves",
+      "sport": "mlb"
+    },
+    "payout": {
+      "profit": {
+        "usdc": "0.080000",
+        "wei6": "80000"
+      },
+      "totalReturn": {
+        "usdc": "0.171200",
+        "wei6": "171200"
+      }
+    },
+    "risk": {
+      "usdc": "0.091200",
+      "wei6": "91200"
+    },
+    "sideSummary": "Under 9.0",
+    "speculation": {
+      "market": "total",
+      "speculationId": "29"
+    },
+    "txHash": "0x51e2dea37d595ab589be2db96a9707a6875605505b5f3fb26f35db83c46dd112"
+  },
+  "unknownOwnFill": 0
+}

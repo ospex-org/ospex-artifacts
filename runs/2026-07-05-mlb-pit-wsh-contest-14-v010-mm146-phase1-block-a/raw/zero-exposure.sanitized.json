@@ -1,0 +1,29 @@
+{
+  "checkedAtUtc": "2026-07-05T21:44:12.621617Z",
+  "contestOrderbookCount": 0,
+  "openCommitmentCounts": {
+    "13": 0,
+    "14": 0
+  },
+  "orphanProcessCount": 0,
+  "publicContestSpecVisibleCommitments": 0,
+  "publicMakerVisibleCommitments": 0,
+  "targetContest": "14",
+  "targetPositionCounts": {
+    "ospex-flow-a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "ospex-stage-maker-a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "ospex-stage-maker-b": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    }
+  }
+}

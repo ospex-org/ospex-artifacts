@@ -1,0 +1,229 @@
+{
+  "artifactFiles": {
+    "boundedApprovals": "raw/bounded-approvals.sanitized.json",
+    "evidence": "evidence.json",
+    "finalCommitmentsOrderbook": "raw/final-commitments-orderbook.sanitized.json",
+    "finalContestShow": "raw/final-contest-show.sanitized.json",
+    "finalPositionsStatus": "raw/final-positions-status.sanitized.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "liveCommitmentsPosted": "raw/live-public-commitments-posted.sanitized.json",
+    "liveFill": "raw/live-fill.sanitized.json",
+    "mmDryRun": "raw/mm-dryrun-summary.sanitized.json",
+    "mveScorecard": "mve-scorecard.json",
+    "mveScorecardMarkdown": "mve-scorecard.md",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "releaseRuntimeMatrix": "raw/release-runtime-matrix.sanitized.json",
+    "restartColdStartProbe": "raw/restart-cold-start-probe.sanitized.json",
+    "scenarioMatrix": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "summary": "summary.md",
+    "targetPreflight": "raw/target-preflight.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json",
+    "walletAuthBalances": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json"
+  },
+  "artifactId": "2026-07-05-mlb-pit-wsh-contest-14-v010-mm146-phase1-block-a",
+  "artifactType": "run",
+  "caveats": [],
+  "dataPath": "evidence.json",
+  "date": "2026-07-05",
+  "generatedAt": "2026-07-05T21:44:23Z",
+  "network": "polygon",
+  "pairedBlock": {
+    "block": "MVE Phase 1 Block A",
+    "pairedArtifactContestIds": [
+      "13",
+      "14"
+    ],
+    "pairedContestAllowList": [
+      "13",
+      "14"
+    ]
+  },
+  "publishedAt": "2026-07-05T21:44:23Z",
+  "rawPath": "raw/",
+  "runClass": "mm-live-canary",
+  "schemaVersion": 1,
+  "status": "complete_verified",
+  "summaryPath": "summary.md",
+  "target": {
+    "awayTeam": "Pittsburgh Pirates",
+    "companionSpeculations": {
+      "moneyline": "30",
+      "spread": "31",
+      "total": "32"
+    },
+    "contestId": "14",
+    "contestStatusAfterCreateVerify": "verified",
+    "contestStatusAfterPostgame": "scored",
+    "finalScore": {
+      "awayRuns": 11,
+      "homeRuns": 5,
+      "spreadWinner": "Pittsburgh Pirates +1.5",
+      "spreadWinnerProtocolSide": "upper",
+      "totalLine": 9.5,
+      "totalRuns": 16,
+      "totalWinner": "over 9.5",
+      "totalWinnerProtocolSide": "upper",
+      "winner": "Pittsburgh Pirates",
+      "winnerProtocolSide": "upper",
+      "winnerRole": "away"
+    },
+    "game": "Pittsburgh Pirates @ Washington Nationals",
+    "gameId": "b2cca67c-2701-4722-8b9c-c9316ba625b3",
+    "gamePk": 822715,
+    "homeTeam": "Washington Nationals",
+    "market": "spread",
+    "marketsCovered": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "postgameStatus": "complete",
+    "referenceOdds": {
+      "moneyline": {
+        "awayOddsAmerican": 115,
+        "changedAt": "2026-07-05T14:29:53.116+00:00",
+        "homeOddsAmerican": -130,
+        "market": "moneyline",
+        "pollCapturedAt": "2026-07-05T14:43:53.865+00:00",
+        "upstreamLastUpdated": "2026-07-05T14:36:42+00:00"
+      },
+      "spread": {
+        "awayLine": 1.5,
+        "awayOddsAmerican": -170,
+        "changedAt": "2026-07-05T14:29:53.211+00:00",
+        "homeLine": -1.5,
+        "homeOddsAmerican": 148,
+        "market": "spread",
+        "pollCapturedAt": "2026-07-05T14:43:53.926+00:00",
+        "upstreamLastUpdated": "2026-07-05T14:36:42+00:00"
+      },
+      "total": {
+        "changedAt": "2026-07-05T13:49:51.551+00:00",
+        "line": 9.5,
+        "market": "total",
+        "overOddsAmerican": -105,
+        "pollCapturedAt": "2026-07-05T14:43:53.988+00:00",
+        "underOddsAmerican": -115,
+        "upstreamLastUpdated": "2026-07-05T14:36:42+00:00"
+      }
+    },
+    "slug": "pit-wsh-2026-07-05",
+    "speculationId": "31",
+    "sport": "mlb",
+    "spreadLine": {
+      "awayLine": 1.5,
+      "awayPositionType": "upper",
+      "homeLine": -1.5,
+      "homePositionType": "lower",
+      "lineTicks": 15
+    },
+    "startTimeUtc": "2026-07-05T17:00:00Z",
+    "teamIdentity": {
+      "away": {
+        "abbreviation": "PIT",
+        "identity": "underdog",
+        "marketOddsAmerican": "+115",
+        "positionType": "upper",
+        "role": "away",
+        "team": "Pittsburgh Pirates"
+      },
+      "home": {
+        "abbreviation": "WSH",
+        "identity": "favorite",
+        "marketOddsAmerican": "-130",
+        "positionType": "lower",
+        "role": "home",
+        "team": "Washington Nationals"
+      },
+      "spreadWinner": {
+        "line": 1.5,
+        "positionType": "upper",
+        "role": "away",
+        "team": "Pittsburgh Pirates"
+      },
+      "totalWinner": {
+        "line": 9.5,
+        "positionType": "upper",
+        "side": "over"
+      },
+      "winner": {
+        "positionType": "upper",
+        "role": "away",
+        "team": "Pittsburgh Pirates"
+      }
+    },
+    "totalLine": {
+      "line": 9.5,
+      "lineTicks": 95,
+      "overPositionType": "upper",
+      "underPositionType": "lower"
+    }
+  },
+  "verdict": {
+    "label": "FULL_GREEN",
+    "protocolVerdict": "MVE_PHASE1_BLOCK_A_GREEN",
+    "reason": "The v0.10.0/R5 MM #146 strict-allowlist Phase 1 Block A two-contest MVE for Pittsburgh Pirates @ Washington Nationals completed the full lifecycle: contest 14 was created and verified; moneyline, spread, and total speculations 30/31/32 were manually seeded and filled with zero residual seed exposure; the market maker posted tiny live quotes under strict contest allowlist [13,14] with seedSpeculations=false; one controlled live spread quote was filled; visible quotes were soft-cancelled or expired; final open commitments were zero; official final score Pittsburgh Pirates 11 / Washington Nationals 5 was verified; contest 14 was scored through R5/CRE; target speculations were settled, winning controlled positions were claimed, and final target active/pending/claimable positions are zero."
+  },
+  "versions": {
+    "allRequiredOk": true,
+    "ancillaryRepos": {
+      "ospex-core-api": {
+        "headSha": "076f44d",
+        "ok": true
+      },
+      "ospex-cre": {
+        "headSha": "fed6e26",
+        "ok": true
+      },
+      "ospex-indexer": {
+        "headSha": "75be9e7",
+        "ok": true
+      }
+    },
+    "capturedAtUtc": "2026-07-05T15:12:44.063088Z",
+    "chainId": 137,
+    "marketMaker": {
+      "allowlistOnlyFlagAvailable": true,
+      "approvalSelfHealRegressionPresent": true,
+      "build": "pass",
+      "headSha": "6f3ccc1",
+      "installedSdkVersion": "0.9.0",
+      "ownStateOrphanSafetyRegressionPresent": true,
+      "repo": "ospex-market-maker",
+      "requiredAtOrAfter": "6f3ccc1",
+      "test": "pass",
+      "testCount": "1070 passed",
+      "typecheck": "pass"
+    },
+    "node": "v22.22.0",
+    "schemaVersion": 1,
+    "sdkCli": {
+      "cliBuild": "pass",
+      "headSha": "3fa399a",
+      "install": "pass",
+      "ok": true,
+      "repo": "ospex-sdk",
+      "requiredAtOrAfter": "3fa399a",
+      "sdkBuild": "pass",
+      "version": "0.10.0"
+    },
+    "yarn": "1.22.22"
+  },
+  "wallets": {
+    "controlledTaker": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "profile": "ospex-flow-a"
+    },
+    "manualSeedMaker": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "profile": "ospex-stage-maker-a"
+    },
+    "operatorMmMaker": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "profile": "ospex-stage-maker-b"
+    }
+  }
+}

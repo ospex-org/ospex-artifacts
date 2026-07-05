@@ -1,0 +1,261 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "artifactId": "2026-07-05-mlb-pit-wsh-contest-14-v010-mm146-phase1-block-a",
+  "capabilities": [
+    {
+      "capability": "Target preflight and allowlist",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "id": "target-preflight",
+      "notes": "Pittsburgh Pirates @ Washington Nationals contest 14 and specs 30/31/32 passed target identity, allowlist, odds, and runway gates.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Repo/runtime gates",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "id": "repo-runtime-gates",
+      "notes": "SDK/CLI v0.10.0, MM head 6f3ccc1 with strict allowlist / own-state / bounded-approval coverage, installed MM SDK v0.9.0, and ancillary repo heads were verified.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Wallet auth, balances, allowances",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "id": "wallet-auth-balances",
+      "notes": "Expected-address checks passed for ospex-stage-maker-b, ospex-stage-maker-a, and ospex-flow-a; public allowances were bounded.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Bounded approvals / no unlimited approvals",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "id": "bounded-approvals",
+      "notes": "Only bounded USDC approvals were used; no unlimited approvals were created.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Dry-run quote loop",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "id": "dry-run-quote-loop",
+      "notes": "Candidates --allowlist-only returned quote-ready rows for both allowlisted contests and all seeded markets; dry run stayed target-scoped.",
+      "proof": "proven_synthetic_only"
+    },
+    {
+      "capability": "Live commitments posted",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "id": "live-commitments-posted",
+      "notes": "Tiny live moneyline, spread, and total commitments posted under strict allowlist [13,14], including contest 14, seedSpeculations=false.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Controlled live fill",
+      "evidence": "raw/live-fill.sanitized.json",
+      "id": "live-fill",
+      "notes": "A controlled taker filled the MM spread quote for contest 14; tx 0x93368b1340\u2026.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Own-state SSE canonical fill source",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "id": "own-state-sse-canonical-fill",
+      "notes": "Telemetry captured the controlled fills without unknown-own-fill, owner-mapping, or divergence safety events.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Exposure drained to zero",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "id": "exposure-drain-zero",
+      "notes": "Final public/API/MM visible-open exposure is zero, target active/pending/claimable positions are zero after postgame, and no orphan MM process remained.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Restart/cold-start safety",
+      "evidence": "raw/restart-cold-start-probe.sanitized.json",
+      "id": "restart-cold-start-safety",
+      "notes": "A scratch-state dry-run/cold-start probe loaded state cleanly and did not create duplicate live exposure; live CLI reads remained zero-open.",
+      "proof": "proven_synthetic_only"
+    },
+    {
+      "capability": "Postgame score",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "id": "postgame-score",
+      "notes": "Official final score Pittsburgh Pirates 11, Washington Nationals 5 was verified and contest 14 scored via R5/CRE.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Postgame settle",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "id": "postgame-settle",
+      "notes": "Moneyline, spread, and total speculations 30/31/32 settled to the expected winning sides or push semantics.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Postgame claim/no-op",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "id": "postgame-claim",
+      "notes": "Winning controlled positions were claimed, losing positions were no-op/not claimable, and final target positions are zero.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Cost within cap",
+      "evidence": "raw/tx-receipts.summary.json",
+      "id": "cost-within-cap",
+      "notes": "Tiny manual/live risk plus protocol fees stayed within the Phase 1 low-cap budget; lifecycle transactions are summarized.",
+      "proof": "proven_live"
+    }
+  ],
+  "generatedAt": "2026-07-05T21:44:23Z",
+  "runClass": "mm-live-canary",
+  "schemaVersion": 1,
+  "transactions": [
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for ospex-flow-a: approve-usdc",
+      "status": "success",
+      "txHash": "0x3fccdf195914eab6df320938fffab6277cc46fae2f1ea1bc2cfda8dfeb8896c9"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for ospex-flow-a: approve-usdc",
+      "status": "success",
+      "txHash": "0xa0bf4cc4e07112d1cfb5cc82ae682cfb110bc63eaf9581e12da5a51194754d81"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for ospex-stage-maker-a: approve-usdc",
+      "status": "success",
+      "txHash": "0x520ba57619243acaec20851f09d03b91b847cf77f3b1809bf4370f4b9c9f46e8"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for ospex-stage-maker-a: approve-usdc",
+      "status": "success",
+      "txHash": "0xa69b09c291504d498be7755c96ac16aaea6d7967d16018571fa2a77148210a3e"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for ospex-stage-maker-b: approve-usdc",
+      "status": "success",
+      "txHash": "0x7450693317fde211bf721a401b4a6eaf0af125f6e5967c5a3c12d4d6f3d7d6d8"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for ospex-stage-maker-b: approve-usdc",
+      "status": "success",
+      "txHash": "0xd5f4ad3475022dfd02e8589192c173a3d12cecfc2a05c92126d0beb9ee57465e"
+    },
+    {
+      "category": "create-contest",
+      "operatorControlled": true,
+      "purpose": "Create contest 14 for Pittsburgh Pirates @ Washington Nationals",
+      "status": "success",
+      "txHash": "0x80aa7e36d8ceabf3db22d53195250c5af80f643cc73b1bff305a207b8d0a91ae"
+    },
+    {
+      "category": "other",
+      "operatorControlled": true,
+      "purpose": "Request market update for contest 14",
+      "status": "success",
+      "txHash": "0x5be252254f1c92dd2fff151afa763e0e2d9dbe7a7927c0327e238853ce0c7961"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual moneyline seed for contest 14 speculation 30",
+      "status": "success",
+      "txHash": "0xddf8d52507451680c6f19a287529c4d29f7811fed5cab2ead083ee83f134b2fd"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual spread seed for contest 14 speculation 31",
+      "status": "success",
+      "txHash": "0x8ae222297f115b71556dd37102a71f79fc3973b86ac1d10054baba9a7ca27a06"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual total seed for contest 14 speculation 32",
+      "status": "success",
+      "txHash": "0x8ef4a9f8bdd7ff77047a156aef4cfe2dcf9d281eabbb6b779b097fb80a15878e"
+    },
+    {
+      "category": "match-commitment",
+      "operatorControlled": true,
+      "purpose": "Controlled fill against live MM spread quote on contest 14",
+      "status": "success",
+      "txHash": "0x93368b1340e88a05179477ab07cb62d4018f4a00575968ce9eed72577a1ec196"
+    },
+    {
+      "category": "score-request",
+      "operatorControlled": true,
+      "purpose": "Request R5 score for contest 14 after MLB official final",
+      "status": "success",
+      "txHash": "0x55343bdb4506264bbee96a7d0b0b8c3731a9f6bd88a010476d22e2e79e5362a0"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle contest 14 moneyline speculation 30",
+      "status": "success",
+      "txHash": "0x059f44137f53cc51fc566aebc8cf7c18cfec557a87533e9a67bc332931d9f818"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle contest 14 spread speculation 31",
+      "status": "success",
+      "txHash": "0xb11ba4eae38fd60f0ffa5f88c6a0b985f701dd577157a751aeff586a8efea66d"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle contest 14 total speculation 32",
+      "status": "success",
+      "txHash": "0x7e2f805597aea2af0002915ed63e32995bd7a0c941cac2475c75cb13f14d4a77"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim ospex-stage-maker-a winning position for speculation 30 side upper",
+      "status": "success",
+      "txHash": "0x130e3bef155faa5f77eddd6d75faecead32bdca5fa4ecc91406341d4d6d31af2"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim ospex-stage-maker-a winning position for speculation 31 side upper",
+      "status": "success",
+      "txHash": "0x88b0862c3cff36cbd04d4c6c94714f436c4316a6eb75065d9d2e458253f5ec28"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim ospex-stage-maker-a winning position for speculation 32 side upper",
+      "status": "success",
+      "txHash": "0x85c3bd1db496b4d2051aea59207d997f2e534ce2d99b0d5ce3a4b2f2aef59fd0"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim ospex-stage-maker-b winning position for speculation 31 side upper",
+      "status": "success",
+      "txHash": "0x7ef599c551294ce66718745638f1c971b036c2e86290d3a0ecbef5b891167caf"
+    }
+  ],
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "The v0.10.0/R5 MM #146 strict-allowlist Phase 1 Block A two-contest MVE for Pittsburgh Pirates @ Washington Nationals completed the full lifecycle: contest 14 was created and verified; moneyline, spread, and total speculations 30/31/32 were manually seeded and filled with zero residual seed exposure; the market maker posted tiny live quotes under strict contest allowlist [13,14] with seedSpeculations=false; one controlled live spread quote was filled; visible quotes were soft-cancelled or expired; final open commitments were zero; official final score Pittsburgh Pirates 11 / Washington Nationals 5 was verified; contest 14 was scored through R5/CRE; target speculations were settled, winning controlled positions were claimed, and final target active/pending/claimable positions are zero."
+  },
+  "zeroExposure": {
+    "checkedAtUtc": "2026-07-05T21:44:12.621617Z",
+    "contestOrderbookCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json",
+    "orphanProcessCount": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "publicMakerVisibleCommitments": 0
+  }
+}

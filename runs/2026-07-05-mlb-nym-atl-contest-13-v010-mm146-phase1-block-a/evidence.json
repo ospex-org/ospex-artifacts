@@ -1,0 +1,229 @@
+{
+  "artifactFiles": {
+    "boundedApprovals": "raw/bounded-approvals.sanitized.json",
+    "evidence": "evidence.json",
+    "finalCommitmentsOrderbook": "raw/final-commitments-orderbook.sanitized.json",
+    "finalContestShow": "raw/final-contest-show.sanitized.json",
+    "finalPositionsStatus": "raw/final-positions-status.sanitized.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "liveCommitmentsPosted": "raw/live-public-commitments-posted.sanitized.json",
+    "liveFill": "raw/live-fill.sanitized.json",
+    "mmDryRun": "raw/mm-dryrun-summary.sanitized.json",
+    "mveScorecard": "mve-scorecard.json",
+    "mveScorecardMarkdown": "mve-scorecard.md",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "releaseRuntimeMatrix": "raw/release-runtime-matrix.sanitized.json",
+    "restartColdStartProbe": "raw/restart-cold-start-probe.sanitized.json",
+    "scenarioMatrix": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "summary": "summary.md",
+    "targetPreflight": "raw/target-preflight.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json",
+    "walletAuthBalances": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json"
+  },
+  "artifactId": "2026-07-05-mlb-nym-atl-contest-13-v010-mm146-phase1-block-a",
+  "artifactType": "run",
+  "caveats": [],
+  "dataPath": "evidence.json",
+  "date": "2026-07-05",
+  "generatedAt": "2026-07-05T21:44:23Z",
+  "network": "polygon",
+  "pairedBlock": {
+    "block": "MVE Phase 1 Block A",
+    "pairedArtifactContestIds": [
+      "13",
+      "14"
+    ],
+    "pairedContestAllowList": [
+      "13",
+      "14"
+    ]
+  },
+  "publishedAt": "2026-07-05T21:44:23Z",
+  "rawPath": "raw/",
+  "runClass": "mm-live-canary",
+  "schemaVersion": 1,
+  "status": "complete_verified",
+  "summaryPath": "summary.md",
+  "target": {
+    "awayTeam": "New York Mets",
+    "companionSpeculations": {
+      "moneyline": "27",
+      "spread": "28",
+      "total": "29"
+    },
+    "contestId": "13",
+    "contestStatusAfterCreateVerify": "verified",
+    "contestStatusAfterPostgame": "scored",
+    "finalScore": {
+      "awayRuns": 10,
+      "homeRuns": 9,
+      "spreadWinner": "New York Mets +1.5",
+      "spreadWinnerProtocolSide": "upper",
+      "totalLine": 9.0,
+      "totalRuns": 19,
+      "totalWinner": "over 9",
+      "totalWinnerProtocolSide": "upper",
+      "winner": "New York Mets",
+      "winnerProtocolSide": "upper",
+      "winnerRole": "away"
+    },
+    "game": "New York Mets @ Atlanta Braves",
+    "gameId": "df53b526-88b4-4061-80a5-57c8a1e649b8",
+    "gamePk": 824902,
+    "homeTeam": "Atlanta Braves",
+    "market": "total",
+    "marketsCovered": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "postgameStatus": "complete",
+    "referenceOdds": {
+      "moneyline": {
+        "awayOddsAmerican": 102,
+        "changedAt": "2026-07-05T14:29:52.765+00:00",
+        "homeOddsAmerican": -115,
+        "market": "moneyline",
+        "pollCapturedAt": "2026-07-05T14:43:53.614+00:00",
+        "upstreamLastUpdated": "2026-07-05T14:36:42+00:00"
+      },
+      "spread": {
+        "awayLine": 1.5,
+        "awayOddsAmerican": -187,
+        "changedAt": "2026-07-05T14:29:52.885+00:00",
+        "homeLine": -1.5,
+        "homeOddsAmerican": 163,
+        "market": "spread",
+        "pollCapturedAt": "2026-07-05T14:43:53.689+00:00",
+        "upstreamLastUpdated": "2026-07-05T14:36:42+00:00"
+      },
+      "total": {
+        "changedAt": "2026-07-05T13:59:52.003+00:00",
+        "line": 9,
+        "market": "total",
+        "overOddsAmerican": -100,
+        "pollCapturedAt": "2026-07-05T14:43:53.763+00:00",
+        "underOddsAmerican": -120,
+        "upstreamLastUpdated": "2026-07-05T14:36:42+00:00"
+      }
+    },
+    "slug": "nym-atl-2026-07-05",
+    "speculationId": "29",
+    "sport": "mlb",
+    "spreadLine": {
+      "awayLine": 1.5,
+      "awayPositionType": "upper",
+      "homeLine": -1.5,
+      "homePositionType": "lower",
+      "lineTicks": 15
+    },
+    "startTimeUtc": "2026-07-05T16:30:00Z",
+    "teamIdentity": {
+      "away": {
+        "abbreviation": "NYM",
+        "identity": "underdog",
+        "marketOddsAmerican": "+102",
+        "positionType": "upper",
+        "role": "away",
+        "team": "New York Mets"
+      },
+      "home": {
+        "abbreviation": "ATL",
+        "identity": "favorite",
+        "marketOddsAmerican": "-115",
+        "positionType": "lower",
+        "role": "home",
+        "team": "Atlanta Braves"
+      },
+      "spreadWinner": {
+        "line": 1.5,
+        "positionType": "upper",
+        "role": "away",
+        "team": "New York Mets"
+      },
+      "totalWinner": {
+        "line": 9.0,
+        "positionType": "upper",
+        "side": "over"
+      },
+      "winner": {
+        "positionType": "upper",
+        "role": "away",
+        "team": "New York Mets"
+      }
+    },
+    "totalLine": {
+      "line": 9,
+      "lineTicks": 90,
+      "overPositionType": "upper",
+      "underPositionType": "lower"
+    }
+  },
+  "verdict": {
+    "label": "FULL_GREEN",
+    "protocolVerdict": "MVE_PHASE1_BLOCK_A_GREEN",
+    "reason": "The v0.10.0/R5 MM #146 strict-allowlist Phase 1 Block A two-contest MVE for New York Mets @ Atlanta Braves completed the full lifecycle: contest 13 was created and verified; moneyline, spread, and total speculations 27/28/29 were manually seeded and filled with zero residual seed exposure; the market maker posted tiny live quotes under strict contest allowlist [13,14] with seedSpeculations=false; one controlled live total quote was filled; visible quotes were soft-cancelled or expired; final open commitments were zero; official final score New York Mets 10 / Atlanta Braves 9 was verified; contest 13 was scored through R5/CRE; target speculations were settled, winning controlled positions were claimed, and final target active/pending/claimable positions are zero."
+  },
+  "versions": {
+    "allRequiredOk": true,
+    "ancillaryRepos": {
+      "ospex-core-api": {
+        "headSha": "076f44d",
+        "ok": true
+      },
+      "ospex-cre": {
+        "headSha": "fed6e26",
+        "ok": true
+      },
+      "ospex-indexer": {
+        "headSha": "75be9e7",
+        "ok": true
+      }
+    },
+    "capturedAtUtc": "2026-07-05T15:12:44.063088Z",
+    "chainId": 137,
+    "marketMaker": {
+      "allowlistOnlyFlagAvailable": true,
+      "approvalSelfHealRegressionPresent": true,
+      "build": "pass",
+      "headSha": "6f3ccc1",
+      "installedSdkVersion": "0.9.0",
+      "ownStateOrphanSafetyRegressionPresent": true,
+      "repo": "ospex-market-maker",
+      "requiredAtOrAfter": "6f3ccc1",
+      "test": "pass",
+      "testCount": "1070 passed",
+      "typecheck": "pass"
+    },
+    "node": "v22.22.0",
+    "schemaVersion": 1,
+    "sdkCli": {
+      "cliBuild": "pass",
+      "headSha": "3fa399a",
+      "install": "pass",
+      "ok": true,
+      "repo": "ospex-sdk",
+      "requiredAtOrAfter": "3fa399a",
+      "sdkBuild": "pass",
+      "version": "0.10.0"
+    },
+    "yarn": "1.22.22"
+  },
+  "wallets": {
+    "controlledTaker": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "profile": "ospex-flow-a"
+    },
+    "manualSeedMaker": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "profile": "ospex-stage-maker-a"
+    },
+    "operatorMmMaker": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "profile": "ospex-stage-maker-b"
+    }
+  }
+}

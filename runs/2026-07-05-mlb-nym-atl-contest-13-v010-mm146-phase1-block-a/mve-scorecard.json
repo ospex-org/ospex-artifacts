@@ -1,0 +1,268 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "artifactId": "2026-07-05-mlb-nym-atl-contest-13-v010-mm146-phase1-block-a",
+  "capabilities": [
+    {
+      "capability": "Target preflight and allowlist",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "id": "target-preflight",
+      "notes": "New York Mets @ Atlanta Braves contest 13 and specs 27/28/29 passed target identity, allowlist, odds, and runway gates.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Repo/runtime gates",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "id": "repo-runtime-gates",
+      "notes": "SDK/CLI v0.10.0, MM head 6f3ccc1 with strict allowlist / own-state / bounded-approval coverage, installed MM SDK v0.9.0, and ancillary repo heads were verified.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Wallet auth, balances, allowances",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "id": "wallet-auth-balances",
+      "notes": "Expected-address checks passed for ospex-stage-maker-b, ospex-stage-maker-a, and ospex-flow-a; public allowances were bounded.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Bounded approvals / no unlimited approvals",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "id": "bounded-approvals",
+      "notes": "Only bounded USDC approvals were used; no unlimited approvals were created.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Dry-run quote loop",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "id": "dry-run-quote-loop",
+      "notes": "Candidates --allowlist-only returned quote-ready rows for both allowlisted contests and all seeded markets; dry run stayed target-scoped.",
+      "proof": "proven_synthetic_only"
+    },
+    {
+      "capability": "Live commitments posted",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "id": "live-commitments-posted",
+      "notes": "Tiny live moneyline, spread, and total commitments posted under strict allowlist [13,14], including contest 13, seedSpeculations=false.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Controlled live fill",
+      "evidence": "raw/live-fill.sanitized.json",
+      "id": "live-fill",
+      "notes": "A controlled taker filled the MM total quote for contest 13; tx 0x51e2dea37d\u2026.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Own-state SSE canonical fill source",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "id": "own-state-sse-canonical-fill",
+      "notes": "Telemetry captured the controlled fills without unknown-own-fill, owner-mapping, or divergence safety events.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Exposure drained to zero",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "id": "exposure-drain-zero",
+      "notes": "Final public/API/MM visible-open exposure is zero, target active/pending/claimable positions are zero after postgame, and no orphan MM process remained.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Restart/cold-start safety",
+      "evidence": "raw/restart-cold-start-probe.sanitized.json",
+      "id": "restart-cold-start-safety",
+      "notes": "A scratch-state dry-run/cold-start probe loaded state cleanly and did not create duplicate live exposure; live CLI reads remained zero-open.",
+      "proof": "proven_synthetic_only"
+    },
+    {
+      "capability": "Postgame score",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "id": "postgame-score",
+      "notes": "Official final score New York Mets 10, Atlanta Braves 9 was verified and contest 13 scored via R5/CRE.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Postgame settle",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "id": "postgame-settle",
+      "notes": "Moneyline, spread, and total speculations 27/28/29 settled to the expected winning sides or push semantics.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Postgame claim/no-op",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "id": "postgame-claim",
+      "notes": "Winning controlled positions were claimed, losing positions were no-op/not claimable, and final target positions are zero.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Cost within cap",
+      "evidence": "raw/tx-receipts.summary.json",
+      "id": "cost-within-cap",
+      "notes": "Tiny manual/live risk plus protocol fees stayed within the Phase 1 low-cap budget; lifecycle transactions are summarized.",
+      "proof": "proven_live"
+    }
+  ],
+  "generatedAt": "2026-07-05T21:44:23Z",
+  "runClass": "mm-live-canary",
+  "schemaVersion": 1,
+  "transactions": [
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for ospex-flow-a: approve-usdc",
+      "status": "success",
+      "txHash": "0x3fccdf195914eab6df320938fffab6277cc46fae2f1ea1bc2cfda8dfeb8896c9"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for ospex-flow-a: approve-usdc",
+      "status": "success",
+      "txHash": "0xa0bf4cc4e07112d1cfb5cc82ae682cfb110bc63eaf9581e12da5a51194754d81"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for ospex-stage-maker-a: approve-usdc",
+      "status": "success",
+      "txHash": "0x520ba57619243acaec20851f09d03b91b847cf77f3b1809bf4370f4b9c9f46e8"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for ospex-stage-maker-a: approve-usdc",
+      "status": "success",
+      "txHash": "0xa69b09c291504d498be7755c96ac16aaea6d7967d16018571fa2a77148210a3e"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for ospex-stage-maker-b: approve-usdc",
+      "status": "success",
+      "txHash": "0x7450693317fde211bf721a401b4a6eaf0af125f6e5967c5a3c12d4d6f3d7d6d8"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for ospex-stage-maker-b: approve-usdc",
+      "status": "success",
+      "txHash": "0xd5f4ad3475022dfd02e8589192c173a3d12cecfc2a05c92126d0beb9ee57465e"
+    },
+    {
+      "category": "create-contest",
+      "operatorControlled": true,
+      "purpose": "Create contest 13 for New York Mets @ Atlanta Braves",
+      "status": "success",
+      "txHash": "0x85870be65151556be902ba8d38861bb21fdcca407e41b53fe82dda991be156b4"
+    },
+    {
+      "category": "other",
+      "operatorControlled": true,
+      "purpose": "Request market update for contest 13",
+      "status": "success",
+      "txHash": "0x703ce2d1a6dbe6e0a80d82064038c11fdfcf6c30a1ced3880361c3c8f316c3c6"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual moneyline seed for contest 13 speculation 27",
+      "status": "success",
+      "txHash": "0x420cc0a5e0efa4cde09486d2ee4e731b3baebe6f65604499fa7acb8b29ef9fc7"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual spread seed for contest 13 speculation 28",
+      "status": "success",
+      "txHash": "0x69a4f94d36d0e1a660b4de3404ece55833b1cb59655a823c6f78e6f78f4295db"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual total seed for contest 13 speculation 29",
+      "status": "success",
+      "txHash": "0x66450153ee202f6b8b6636a9175259eb8ed0eb0b1ed8a76bd12b716a89d825e8"
+    },
+    {
+      "category": "match-commitment",
+      "operatorControlled": true,
+      "purpose": "Controlled fill against live MM total quote on contest 13",
+      "status": "success",
+      "txHash": "0x51e2dea37d595ab589be2db96a9707a6875605505b5f3fb26f35db83c46dd112"
+    },
+    {
+      "category": "score-request",
+      "operatorControlled": true,
+      "purpose": "Request R5 score for contest 13 after MLB official final",
+      "status": "success",
+      "txHash": "0x9fb26a15fbf3c4c46157261b964b035e49f45c889402d88d2a601eebc4410fd4"
+    },
+    {
+      "category": "score-request",
+      "operatorControlled": true,
+      "purpose": "Request R5 score for contest 13 after MLB official final",
+      "status": "success",
+      "txHash": "0xc58564eb53e041f2f1f1b06a6c283dfd825057784c57346b7756f629b9a640a4"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle contest 13 moneyline speculation 27",
+      "status": "success",
+      "txHash": "0x098a9057c15d8eaa319896fbce83bcfa5a45eacbc6c9d27845b3eba21b37f840"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle contest 13 spread speculation 28",
+      "status": "success",
+      "txHash": "0xe45cc72e32873278f9ad8b9dfdd5764866a5fdcf18272180b7c446ed184b1fd3"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle contest 13 total speculation 29",
+      "status": "success",
+      "txHash": "0x3593725e665847f77438583c2f7778636dde5b1048a6ae40f2dd7d88c2156892"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim ospex-stage-maker-a winning position for speculation 27 side upper",
+      "status": "success",
+      "txHash": "0x76587b336f3bc4c410f06653f479f5afd2c6f30d673fdf0030f92a5d97696966"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim ospex-stage-maker-a winning position for speculation 28 side upper",
+      "status": "success",
+      "txHash": "0x2fa29cf1c1bfaba58b8db95ec545a1d36e592caccdf27adc0dc0a52fcd752eb5"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim ospex-stage-maker-a winning position for speculation 29 side upper",
+      "status": "success",
+      "txHash": "0x3d038a02ba863e2e96a9eb35bfcc1e839533a31e2a964218ace1393a1672753e"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim ospex-stage-maker-b winning position for speculation 29 side upper",
+      "status": "success",
+      "txHash": "0x873b1d649a8973b814db00951a8fd9b9d4ce765d351aea6e97d345c77fe4b7f4"
+    }
+  ],
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "The v0.10.0/R5 MM #146 strict-allowlist Phase 1 Block A two-contest MVE for New York Mets @ Atlanta Braves completed the full lifecycle: contest 13 was created and verified; moneyline, spread, and total speculations 27/28/29 were manually seeded and filled with zero residual seed exposure; the market maker posted tiny live quotes under strict contest allowlist [13,14] with seedSpeculations=false; one controlled live total quote was filled; visible quotes were soft-cancelled or expired; final open commitments were zero; official final score New York Mets 10 / Atlanta Braves 9 was verified; contest 13 was scored through R5/CRE; target speculations were settled, winning controlled positions were claimed, and final target active/pending/claimable positions are zero."
+  },
+  "zeroExposure": {
+    "checkedAtUtc": "2026-07-05T21:44:12.621617Z",
+    "contestOrderbookCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json",
+    "orphanProcessCount": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "publicMakerVisibleCommitments": 0
+  }
+}

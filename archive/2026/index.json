@@ -1,13 +1,35 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-07-05T05:21:54Z",
+  "generatedAt": "2026-07-05T21:44:23Z",
   "repository": "ospex-org/ospex-artifacts",
   "archive": {
     "scope": "year",
     "year": 2026
   },
   "artifacts": [
+    {
+      "artifactId": "2026-07-05-mlb-pit-wsh-contest-14-v010-mm146-phase1-block-a",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-05-mlb-pit-wsh-contest-14-v010-mm146-phase1-block-a/evidence.json",
+      "date": "2026-07-05",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-05-mlb-pit-wsh-contest-14-v010-mm146-phase1-block-a/raw/",
+      "status": "complete_verified",
+      "summaryPath": "runs/2026-07-05-mlb-pit-wsh-contest-14-v010-mm146-phase1-block-a/summary.md",
+      "publishedAt": "2026-07-05T21:44:23Z"
+    },
+    {
+      "artifactId": "2026-07-05-mlb-nym-atl-contest-13-v010-mm146-phase1-block-a",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-05-mlb-nym-atl-contest-13-v010-mm146-phase1-block-a/evidence.json",
+      "date": "2026-07-05",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-05-mlb-nym-atl-contest-13-v010-mm146-phase1-block-a/raw/",
+      "status": "complete_verified",
+      "summaryPath": "runs/2026-07-05-mlb-nym-atl-contest-13-v010-mm146-phase1-block-a/summary.md",
+      "publishedAt": "2026-07-05T21:44:23Z"
+    },
     {
       "artifactId": "2026-07-04-mlb-sd-lad-contest-12-v010-mm146-two-game-minislate-canary",
       "artifactType": "run",
