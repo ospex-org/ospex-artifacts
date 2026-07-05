@@ -1,0 +1,48 @@
+{
+  "bounded": true,
+  "noUnlimitedApprovals": true,
+  "transactions": [
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for ospex-flow-a: approve-usdc",
+      "status": "success",
+      "txHash": "0x3fccdf195914eab6df320938fffab6277cc46fae2f1ea1bc2cfda8dfeb8896c9"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for ospex-flow-a: approve-usdc",
+      "status": "success",
+      "txHash": "0xa0bf4cc4e07112d1cfb5cc82ae682cfb110bc63eaf9581e12da5a51194754d81"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for ospex-stage-maker-a: approve-usdc",
+      "status": "success",
+      "txHash": "0x520ba57619243acaec20851f09d03b91b847cf77f3b1809bf4370f4b9c9f46e8"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for ospex-stage-maker-a: approve-usdc",
+      "status": "success",
+      "txHash": "0xa69b09c291504d498be7755c96ac16aaea6d7967d16018571fa2a77148210a3e"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for ospex-stage-maker-b: approve-usdc",
+      "status": "success",
+      "txHash": "0x7450693317fde211bf721a401b4a6eaf0af125f6e5967c5a3c12d4d6f3d7d6d8"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for ospex-stage-maker-b: approve-usdc",
+      "status": "success",
+      "txHash": "0xd5f4ad3475022dfd02e8589192c173a3d12cecfc2a05c92126d0beb9ee57465e"
+    }
+  ]
+}

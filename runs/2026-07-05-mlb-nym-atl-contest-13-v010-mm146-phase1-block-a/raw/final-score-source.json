@@ -1,0 +1,287 @@
+{
+  "source": "MLB Stats API schedule hydrate=team,linescore",
+  "targetGame": {
+    "away": "New York Mets",
+    "contestId": "13",
+    "gameDate": "2026-07-05T16:30:00Z",
+    "gamePk": 824902,
+    "home": "Atlanta Braves",
+    "isOfficialFinal": true,
+    "label": "NYM @ ATL",
+    "linescore": {
+      "balls": 2,
+      "currentInning": 9,
+      "currentInningOrdinal": "9th",
+      "defense": {
+        "batter": {
+          "fullName": "Tyrone Taylor",
+          "id": 621438,
+          "link": "/api/v1/people/621438"
+        },
+        "battingOrder": 6,
+        "catcher": {
+          "fullName": "Luis Torrens",
+          "id": 620443,
+          "link": "/api/v1/people/620443"
+        },
+        "center": {
+          "fullName": "A.J. Ewing",
+          "id": 805999,
+          "link": "/api/v1/people/805999"
+        },
+        "first": {
+          "fullName": "Jared Young",
+          "id": 676724,
+          "link": "/api/v1/people/676724"
+        },
+        "inHole": {
+          "fullName": "Luis Torrens",
+          "id": 620443,
+          "link": "/api/v1/people/620443"
+        },
+        "left": {
+          "fullName": "Tyrone Taylor",
+          "id": 621438,
+          "link": "/api/v1/people/621438"
+        },
+        "onDeck": {
+          "fullName": "A.J. Ewing",
+          "id": 805999,
+          "link": "/api/v1/people/805999"
+        },
+        "pitcher": {
+          "fullName": "Devin Williams",
+          "id": 642207,
+          "link": "/api/v1/people/642207"
+        },
+        "right": {
+          "fullName": "Carson Benge",
+          "id": 701807,
+          "link": "/api/v1/people/701807"
+        },
+        "second": {
+          "fullName": "Brett Baty",
+          "id": 683146,
+          "link": "/api/v1/people/683146"
+        },
+        "shortstop": {
+          "fullName": "Francisco Lindor",
+          "id": 596019,
+          "link": "/api/v1/people/596019"
+        },
+        "team": {
+          "id": 121,
+          "link": "/api/v1/teams/121",
+          "name": "New York Mets"
+        },
+        "third": {
+          "fullName": "Bo Bichette",
+          "id": 666182,
+          "link": "/api/v1/people/666182"
+        }
+      },
+      "inningHalf": "Bottom",
+      "inningState": "Bottom",
+      "innings": [
+        {
+          "away": {
+            "errors": 1,
+            "hits": 2,
+            "leftOnBase": 2,
+            "runs": 1
+          },
+          "home": {
+            "errors": 1,
+            "hits": 3,
+            "leftOnBase": 0,
+            "runs": 3
+          },
+          "num": 1,
+          "ordinalNum": "1st"
+        },
+        {
+          "away": {
+            "errors": 0,
+            "hits": 4,
+            "leftOnBase": 0,
+            "runs": 4
+          },
+          "home": {
+            "errors": 0,
+            "hits": 1,
+            "leftOnBase": 2,
+            "runs": 0
+          },
+          "num": 2,
+          "ordinalNum": "2nd"
+        },
+        {
+          "away": {
+            "errors": 0,
+            "hits": 0,
+            "leftOnBase": 0,
+            "runs": 0
+          },
+          "home": {
+            "errors": 0,
+            "hits": 0,
+            "leftOnBase": 0,
+            "runs": 0
+          },
+          "num": 3,
+          "ordinalNum": "3rd"
+        },
+        {
+          "away": {
+            "errors": 0,
+            "hits": 0,
+            "leftOnBase": 0,
+            "runs": 0
+          },
+          "home": {
+            "errors": 0,
+            "hits": 0,
+            "leftOnBase": 0,
+            "runs": 0
+          },
+          "num": 4,
+          "ordinalNum": "4th"
+        },
+        {
+          "away": {
+            "errors": 1,
+            "hits": 0,
+            "leftOnBase": 0,
+            "runs": 0
+          },
+          "home": {
+            "errors": 0,
+            "hits": 0,
+            "leftOnBase": 1,
+            "runs": 0
+          },
+          "num": 5,
+          "ordinalNum": "5th"
+        },
+        {
+          "away": {
+            "errors": 0,
+            "hits": 1,
+            "leftOnBase": 1,
+            "runs": 0
+          },
+          "home": {
+            "errors": 0,
+            "hits": 0,
+            "leftOnBase": 0,
+            "runs": 0
+          },
+          "num": 6,
+          "ordinalNum": "6th"
+        },
+        {
+          "away": {
+            "errors": 0,
+            "hits": 0,
+            "leftOnBase": 0,
+            "runs": 0
+          },
+          "home": {
+            "errors": 0,
+            "hits": 1,
+            "leftOnBase": 1,
+            "runs": 0
+          },
+          "num": 7,
+          "ordinalNum": "7th"
+        },
+        {
+          "away": {
+            "errors": 0,
+            "hits": 1,
+            "leftOnBase": 0,
+            "runs": 0
+          },
+          "home": {
+            "errors": 0,
+            "hits": 0,
+            "leftOnBase": 0,
+            "runs": 0
+          },
+          "num": 8,
+          "ordinalNum": "8th"
+        },
+        {
+          "away": {
+            "errors": 1,
+            "hits": 4,
+            "leftOnBase": 1,
+            "runs": 5
+          },
+          "home": {
+            "errors": 0,
+            "hits": 7,
+            "leftOnBase": 2,
+            "runs": 6
+          },
+          "num": 9,
+          "ordinalNum": "9th"
+        }
+      ],
+      "isTopInning": false,
+      "offense": {
+        "batter": {
+          "fullName": "Dominic Smith",
+          "id": 642086,
+          "link": "/api/v1/people/642086"
+        },
+        "battingOrder": 6,
+        "inHole": {
+          "fullName": "Eli White",
+          "id": 642201,
+          "link": "/api/v1/people/642201"
+        },
+        "onDeck": {
+          "fullName": "Austin Riley",
+          "id": 663586,
+          "link": "/api/v1/people/663586"
+        },
+        "pitcher": {
+          "fullName": "Carlos Carrasco",
+          "id": 471911,
+          "link": "/api/v1/people/471911"
+        },
+        "team": {
+          "id": 144,
+          "link": "/api/v1/teams/144",
+          "name": "Atlanta Braves"
+        }
+      },
+      "outs": 3,
+      "scheduledInnings": 9,
+      "strikes": 3,
+      "teams": {
+        "away": {
+          "errors": 3,
+          "hits": 12,
+          "leftOnBase": 4,
+          "runs": 10
+        },
+        "home": {
+          "errors": 1,
+          "hits": 12,
+          "leftOnBase": 6,
+          "runs": 9
+        }
+      }
+    },
+    "status": {
+      "abstractGameCode": "F",
+      "abstractGameState": "Final",
+      "codedGameState": "O",
+      "detailedState": "Game Over",
+      "startTimeTBD": false,
+      "statusCode": "O"
+    }
+  }
+}

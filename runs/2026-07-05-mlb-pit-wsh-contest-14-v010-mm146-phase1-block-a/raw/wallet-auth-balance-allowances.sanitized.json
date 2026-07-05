@@ -1,0 +1,86 @@
+{
+  "allowanceAfterSetup": {
+    "ospex-flow-a": {
+      "chainId": 137,
+      "owner": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "usdc": {
+        "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+        "allowances": {
+          "positionModule": {
+            "formatted": "1",
+            "isMax": false,
+            "raw": "1000000",
+            "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+          },
+          "treasuryModule": {
+            "formatted": "1.6",
+            "isMax": false,
+            "raw": "1600000",
+            "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+          }
+        },
+        "decimals": 6
+      }
+    },
+    "ospex-stage-maker-a": {
+      "chainId": 137,
+      "owner": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "usdc": {
+        "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+        "allowances": {
+          "positionModule": {
+            "formatted": "0.6",
+            "isMax": false,
+            "raw": "600000",
+            "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+          },
+          "treasuryModule": {
+            "formatted": "1.6",
+            "isMax": false,
+            "raw": "1600000",
+            "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+          }
+        },
+        "decimals": 6
+      }
+    },
+    "ospex-stage-maker-b": {
+      "chainId": 137,
+      "owner": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "usdc": {
+        "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+        "allowances": {
+          "positionModule": {
+            "formatted": "1.2",
+            "isMax": false,
+            "raw": "1200000",
+            "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+          },
+          "treasuryModule": {
+            "formatted": "2.1",
+            "isMax": false,
+            "raw": "2100000",
+            "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+          }
+        },
+        "decimals": 6
+      }
+    }
+  },
+  "boundedApprovalsOnly": true,
+  "noUnlimitedApprovals": true,
+  "wallets": {
+    "controlledTaker": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "profile": "ospex-flow-a"
+    },
+    "manualSeedMaker": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "profile": "ospex-stage-maker-a"
+    },
+    "operatorMmMaker": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "profile": "ospex-stage-maker-b"
+    }
+  }
+}

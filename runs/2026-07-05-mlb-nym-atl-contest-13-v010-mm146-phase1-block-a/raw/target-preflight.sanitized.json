@@ -1,0 +1,49 @@
+{
+  "apiHealth": "ok",
+  "budgetPolicy": "target total new fees + controlled risk <=15 USDC; hard stop >25 USDC; bounded approvals only",
+  "oddsMarketsPresent": {
+    "moneyline": true,
+    "spread": true,
+    "total": true
+  },
+  "selectedTarget": {
+    "allowlistContestIds": [
+      "13",
+      "14"
+    ],
+    "awayTeam": "New York Mets",
+    "contestId": "13",
+    "contestStatusAfterCreateVerify": "verified",
+    "game": "New York Mets @ Atlanta Braves",
+    "gameId": "df53b526-88b4-4061-80a5-57c8a1e649b8",
+    "homeTeam": "Atlanta Braves",
+    "marketsCovered": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "matchTime": "2026-07-05T16:30:00+00:00",
+    "speculations": [
+      {
+        "contestId": "13",
+        "speculationId": "27",
+        "type": "moneyline"
+      },
+      {
+        "contestId": "13",
+        "line": 1.5,
+        "lineTicks": 15,
+        "speculationId": "28",
+        "type": "spread"
+      },
+      {
+        "contestId": "13",
+        "line": 9,
+        "lineTicks": 90,
+        "speculationId": "29",
+        "type": "total"
+      }
+    ],
+    "sport": "mlb"
+  }
+}

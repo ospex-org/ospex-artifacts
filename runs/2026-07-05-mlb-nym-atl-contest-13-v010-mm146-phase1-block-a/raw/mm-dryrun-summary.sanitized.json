@@ -1,0 +1,194 @@
+{
+  "allowlistOnly": true,
+  "candidates": {
+    "config": {
+      "allowlistOnly": true,
+      "contestAllowListSize": 2,
+      "contestsHours": 8,
+      "hours": 8,
+      "markets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "maxTrackedMarkets": 6,
+      "requireReferenceOdds": true,
+      "sports": [
+        "mlb"
+      ]
+    },
+    "generatedAt": "2026-07-05T14:51:11.219Z",
+    "items": [
+      {
+        "awayTeam": "New York Mets",
+        "canCreateContest": false,
+        "contestCreated": true,
+        "contestId": "13",
+        "contestStatus": "verified",
+        "gameId": "df53b526-88b4-4061-80a5-57c8a1e649b8",
+        "hasOdds": true,
+        "homeTeam": "Atlanta Braves",
+        "inContestAllowList": true,
+        "kind": "quote_ready",
+        "market": "moneyline",
+        "matchTime": "2026-07-05T16:30:00+00:00",
+        "recommendedAction": "quote",
+        "referenceOdds": {
+          "awayOddsAmerican": 101,
+          "homeOddsAmerican": -115,
+          "market": "moneyline"
+        },
+        "slug": "nym-atl-2026-07-05-1630",
+        "speculationId": "27",
+        "sport": "mlb",
+        "status": "upcoming"
+      },
+      {
+        "awayTeam": "New York Mets",
+        "canCreateContest": false,
+        "contestCreated": true,
+        "contestId": "13",
+        "contestStatus": "verified",
+        "gameId": "df53b526-88b4-4061-80a5-57c8a1e649b8",
+        "hasOdds": true,
+        "homeTeam": "Atlanta Braves",
+        "inContestAllowList": true,
+        "kind": "quote_ready",
+        "market": "spread",
+        "matchTime": "2026-07-05T16:30:00+00:00",
+        "recommendedAction": "quote",
+        "referenceOdds": {
+          "awayLine": 1.5,
+          "awayOddsAmerican": -187,
+          "homeLine": -1.5,
+          "homeOddsAmerican": 163,
+          "market": "spread"
+        },
+        "slug": "nym-atl-2026-07-05-1630",
+        "speculationId": "28",
+        "sport": "mlb",
+        "status": "upcoming"
+      },
+      {
+        "awayTeam": "New York Mets",
+        "canCreateContest": false,
+        "contestCreated": true,
+        "contestId": "13",
+        "contestStatus": "verified",
+        "gameId": "df53b526-88b4-4061-80a5-57c8a1e649b8",
+        "hasOdds": true,
+        "homeTeam": "Atlanta Braves",
+        "inContestAllowList": true,
+        "kind": "quote_ready",
+        "market": "total",
+        "matchTime": "2026-07-05T16:30:00+00:00",
+        "recommendedAction": "quote",
+        "referenceOdds": {
+          "line": 9,
+          "market": "total",
+          "overOddsAmerican": -100,
+          "underOddsAmerican": -120
+        },
+        "slug": "nym-atl-2026-07-05-1630",
+        "speculationId": "29",
+        "sport": "mlb",
+        "status": "upcoming"
+      },
+      {
+        "awayTeam": "Pittsburgh Pirates",
+        "canCreateContest": false,
+        "contestCreated": true,
+        "contestId": "14",
+        "contestStatus": "verified",
+        "gameId": "b2cca67c-2701-4722-8b9c-c9316ba625b3",
+        "hasOdds": true,
+        "homeTeam": "Washington Nationals",
+        "inContestAllowList": true,
+        "kind": "quote_ready",
+        "market": "moneyline",
+        "matchTime": "2026-07-05T17:00:00+00:00",
+        "recommendedAction": "quote",
+        "referenceOdds": {
+          "awayOddsAmerican": 115,
+          "homeOddsAmerican": -130,
+          "market": "moneyline"
+        },
+        "slug": "pit-wsh-2026-07-05",
+        "speculationId": "30",
+        "sport": "mlb",
+        "status": "upcoming"
+      },
+      {
+        "awayTeam": "Pittsburgh Pirates",
+        "canCreateContest": false,
+        "contestCreated": true,
+        "contestId": "14",
+        "contestStatus": "verified",
+        "gameId": "b2cca67c-2701-4722-8b9c-c9316ba625b3",
+        "hasOdds": true,
+        "homeTeam": "Washington Nationals",
+        "inContestAllowList": true,
+        "kind": "quote_ready",
+        "market": "spread",
+        "matchTime": "2026-07-05T17:00:00+00:00",
+        "recommendedAction": "quote",
+        "referenceOdds": {
+          "awayLine": 1.5,
+          "awayOddsAmerican": -170,
+          "homeLine": -1.5,
+          "homeOddsAmerican": 148,
+          "market": "spread"
+        },
+        "slug": "pit-wsh-2026-07-05",
+        "speculationId": "31",
+        "sport": "mlb",
+        "status": "upcoming"
+      },
+      {
+        "awayTeam": "Pittsburgh Pirates",
+        "canCreateContest": false,
+        "contestCreated": true,
+        "contestId": "14",
+        "contestStatus": "verified",
+        "gameId": "b2cca67c-2701-4722-8b9c-c9316ba625b3",
+        "hasOdds": true,
+        "homeTeam": "Washington Nationals",
+        "inContestAllowList": true,
+        "kind": "quote_ready",
+        "market": "total",
+        "matchTime": "2026-07-05T17:00:00+00:00",
+        "recommendedAction": "quote",
+        "referenceOdds": {
+          "line": 9.5,
+          "market": "total",
+          "overOddsAmerican": -105,
+          "underOddsAmerican": -115
+        },
+        "slug": "pit-wsh-2026-07-05",
+        "speculationId": "32",
+        "sport": "mlb",
+        "status": "upcoming"
+      }
+    ],
+    "summary": {
+      "gamesAvailableToCreate": 0,
+      "needsContest": 0,
+      "needsSpeculation": 0,
+      "needsVerification": 0,
+      "quoteReady": 6,
+      "skipped": {}
+    },
+    "truncated": false
+  },
+  "contestAllowList": [
+    "13",
+    "14"
+  ],
+  "dryRun": {
+    "eventCounts": null,
+    "runIds": null,
+    "wouldSubmit": null
+  },
+  "seedSpeculations": false,
+  "targetContest": "13"
+}

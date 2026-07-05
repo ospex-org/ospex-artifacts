@@ -1,0 +1,1091 @@
+{
+  "claims": {
+    "ospex-flow-a": {
+      "claimCommands": [],
+      "finalCounts": {
+        "active": 0,
+        "claimable": 0,
+        "pendingSettle": 0
+      }
+    },
+    "ospex-stage-maker-a": {
+      "claimCommands": [
+        {
+          "request": {
+            "contestId": "13",
+            "estimatedPayoutWei6": "101000",
+            "market": "moneyline",
+            "positionId": "27_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_0",
+            "result": "won",
+            "speculationId": "27",
+            "type": "upper"
+          },
+          "result": {
+            "action": "claim",
+            "approvalRequirements": [],
+            "chainId": 137,
+            "cliVersion": "0.10.0",
+            "commitment": null,
+            "contest": null,
+            "effects": [
+              {
+                "blockNumber": "89721836",
+                "ok": true,
+                "purpose": "claim-position",
+                "status": "confirmed",
+                "txHash": "0x76587b336f3bc4c410f06653f479f5afd2c6f30d673fdf0030f92a5d97696966",
+                "type": "transaction"
+              }
+            ],
+            "errors": [],
+            "estimatedCosts": null,
+            "generatedAt": "2026-07-05T21:42:30.042Z",
+            "network": "polygon",
+            "nextCommands": [
+              {
+                "argv": [
+                  "positions",
+                  "status",
+                  "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+                  "--json"
+                ],
+                "command": "ospex positions status 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b --json",
+                "description": "Verify position status after the claim / settle.",
+                "id": "verify-position-status",
+                "safeToAutoRun": true,
+                "suggestedFor": "verify"
+              }
+            ],
+            "ok": true,
+            "payload": {
+              "blockNumber": "89721836",
+              "outcome": "claimed",
+              "payoutUSDC": 0.101,
+              "payoutWei6": "101000",
+              "positionSideContext": {
+                "display": "away (New York Mets, favorite)",
+                "marketType": "moneyline",
+                "role": "favorite",
+                "side": "away",
+                "source": {
+                  "role": "moneyline-odds",
+                  "team": "speculation-detail"
+                },
+                "status": "complete",
+                "team": {
+                  "alignment": "away",
+                  "name": "New York Mets"
+                }
+              },
+              "positionType": 0,
+              "revertedTxHash": null,
+              "speculationId": "27",
+              "txHash": "0x76587b336f3bc4c410f06653f479f5afd2c6f30d673fdf0030f92a5d97696966"
+            },
+            "payout": {
+              "profit": {
+                "usdc": "0.101000",
+                "wei6": "101000"
+              },
+              "totalReturn": {
+                "usdc": "0.101000",
+                "wei6": "101000"
+              }
+            },
+            "requiresSignature": false,
+            "requiresTransaction": false,
+            "risk": null,
+            "schemaVersion": 2,
+            "sdkVersion": "0.10.0",
+            "sideSummary": null,
+            "signer": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+            "speculation": null,
+            "stage": "execute",
+            "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+            "walletRole": "signer",
+            "warnings": []
+          },
+          "source": "corrective-stage-maker-a-claim-after-projection-lag"
+        },
+        {
+          "request": {
+            "contestId": "13",
+            "estimatedPayoutWei6": "76500",
+            "market": "spread",
+            "positionId": "28_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_0",
+            "result": "won",
+            "speculationId": "28",
+            "type": "upper"
+          },
+          "result": {
+            "action": "claim",
+            "approvalRequirements": [],
+            "chainId": 137,
+            "cliVersion": "0.10.0",
+            "commitment": null,
+            "contest": null,
+            "effects": [
+              {
+                "blockNumber": "89721839",
+                "ok": true,
+                "purpose": "claim-position",
+                "status": "confirmed",
+                "txHash": "0x2fa29cf1c1bfaba58b8db95ec545a1d36e592caccdf27adc0dc0a52fcd752eb5",
+                "type": "transaction"
+              }
+            ],
+            "errors": [],
+            "estimatedCosts": null,
+            "generatedAt": "2026-07-05T21:42:35.130Z",
+            "network": "polygon",
+            "nextCommands": [
+              {
+                "argv": [
+                  "positions",
+                  "status",
+                  "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+                  "--json"
+                ],
+                "command": "ospex positions status 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b --json",
+                "description": "Verify position status after the claim / settle.",
+                "id": "verify-position-status",
+                "safeToAutoRun": true,
+                "suggestedFor": "verify"
+              }
+            ],
+            "ok": true,
+            "payload": {
+              "blockNumber": "89721839",
+              "outcome": "claimed",
+              "payoutUSDC": 0.0765,
+              "payoutWei6": "76500",
+              "positionSideContext": {
+                "display": "away (New York Mets, underdog)",
+                "marketType": "spread",
+                "role": "underdog",
+                "side": "away",
+                "source": {
+                  "role": "spread-line",
+                  "team": "speculation-detail"
+                },
+                "status": "complete",
+                "team": {
+                  "alignment": "away",
+                  "name": "New York Mets"
+                }
+              },
+              "positionType": 0,
+              "revertedTxHash": null,
+              "speculationId": "28",
+              "txHash": "0x2fa29cf1c1bfaba58b8db95ec545a1d36e592caccdf27adc0dc0a52fcd752eb5"
+            },
+            "payout": {
+              "profit": {
+                "usdc": "0.076500",
+                "wei6": "76500"
+              },
+              "totalReturn": {
+                "usdc": "0.076500",
+                "wei6": "76500"
+              }
+            },
+            "requiresSignature": false,
+            "requiresTransaction": false,
+            "risk": null,
+            "schemaVersion": 2,
+            "sdkVersion": "0.10.0",
+            "sideSummary": null,
+            "signer": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+            "speculation": null,
+            "stage": "execute",
+            "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+            "walletRole": "signer",
+            "warnings": []
+          },
+          "source": "corrective-stage-maker-a-claim-after-projection-lag"
+        },
+        {
+          "request": {
+            "contestId": "13",
+            "estimatedPayoutWei6": "100000",
+            "market": "total",
+            "positionId": "29_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_0",
+            "result": "won",
+            "speculationId": "29",
+            "type": "upper"
+          },
+          "result": {
+            "action": "claim",
+            "approvalRequirements": [],
+            "chainId": 137,
+            "cliVersion": "0.10.0",
+            "commitment": null,
+            "contest": null,
+            "effects": [
+              {
+                "blockNumber": "89721842",
+                "ok": true,
+                "purpose": "claim-position",
+                "status": "confirmed",
+                "txHash": "0x3d038a02ba863e2e96a9eb35bfcc1e839533a31e2a964218ace1393a1672753e",
+                "type": "transaction"
+              }
+            ],
+            "errors": [],
+            "estimatedCosts": null,
+            "generatedAt": "2026-07-05T21:42:39.473Z",
+            "network": "polygon",
+            "nextCommands": [
+              {
+                "argv": [
+                  "positions",
+                  "status",
+                  "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+                  "--json"
+                ],
+                "command": "ospex positions status 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b --json",
+                "description": "Verify position status after the claim / settle.",
+                "id": "verify-position-status",
+                "safeToAutoRun": true,
+                "suggestedFor": "verify"
+              }
+            ],
+            "ok": true,
+            "payload": {
+              "blockNumber": "89721842",
+              "outcome": "claimed",
+              "payoutUSDC": 0.1,
+              "payoutWei6": "100000",
+              "positionSideContext": {
+                "display": "over 9 (total; no team)",
+                "marketType": "total",
+                "role": "not_applicable",
+                "side": "over",
+                "source": {
+                  "role": "not_applicable",
+                  "team": "not_applicable"
+                },
+                "status": "not_applicable",
+                "team": null
+              },
+              "positionType": 0,
+              "revertedTxHash": null,
+              "speculationId": "29",
+              "txHash": "0x3d038a02ba863e2e96a9eb35bfcc1e839533a31e2a964218ace1393a1672753e"
+            },
+            "payout": {
+              "profit": {
+                "usdc": "0.100000",
+                "wei6": "100000"
+              },
+              "totalReturn": {
+                "usdc": "0.100000",
+                "wei6": "100000"
+              }
+            },
+            "requiresSignature": false,
+            "requiresTransaction": false,
+            "risk": null,
+            "schemaVersion": 2,
+            "sdkVersion": "0.10.0",
+            "sideSummary": null,
+            "signer": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+            "speculation": null,
+            "stage": "execute",
+            "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+            "walletRole": "signer",
+            "warnings": []
+          },
+          "source": "corrective-stage-maker-a-claim-after-projection-lag"
+        }
+      ],
+      "finalCounts": {
+        "active": 0,
+        "claimable": 0,
+        "pendingSettle": 0
+      }
+    },
+    "ospex-stage-maker-b": {
+      "claimCommands": [
+        {
+          "request": {
+            "position": {
+              "awayTeam": "New York Mets",
+              "contestId": "13",
+              "counterpartyRiskWei6": "91200",
+              "estimatedPayoutUSDC": 0.1712,
+              "estimatedPayoutWei6": "171200",
+              "homeTeam": "Atlanta Braves",
+              "market": "total",
+              "oddsDecimal": 2.1399999999999997,
+              "opponent": "Atlanta Braves",
+              "positionId": "29_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_0",
+              "positionType": 0,
+              "profitAmountUSDC": 0.0912,
+              "result": "won",
+              "riskAmountUSDC": 0.08,
+              "riskAmountWei6": "80000",
+              "speculationId": "29",
+              "sport": "mlb",
+              "team": "New York Mets",
+              "updatedAtUnixSec": 1783286828
+            },
+            "speculationId": "29",
+            "type": "upper"
+          },
+          "result": {
+            "action": "claim",
+            "approvalRequirements": [],
+            "chainId": 137,
+            "cliVersion": "0.10.0",
+            "commitment": null,
+            "contest": null,
+            "effects": [
+              {
+                "blockNumber": "89721293",
+                "ok": true,
+                "purpose": "claim-position",
+                "status": "confirmed",
+                "txHash": "0x873b1d649a8973b814db00951a8fd9b9d4ce765d351aea6e97d345c77fe4b7f4",
+                "type": "transaction"
+              }
+            ],
+            "errors": [],
+            "estimatedCosts": null,
+            "generatedAt": "2026-07-05T21:28:54.970Z",
+            "network": "polygon",
+            "nextCommands": [
+              {
+                "argv": [
+                  "positions",
+                  "status",
+                  "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+                  "--json"
+                ],
+                "command": "ospex positions status 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482 --json",
+                "description": "Verify position status after the claim / settle.",
+                "id": "verify-position-status",
+                "safeToAutoRun": true,
+                "suggestedFor": "verify"
+              }
+            ],
+            "ok": true,
+            "payload": {
+              "blockNumber": "89721293",
+              "outcome": "claimed",
+              "payoutUSDC": 0.1712,
+              "payoutWei6": "171200",
+              "positionSideContext": {
+                "display": "over 9 (total; no team)",
+                "marketType": "total",
+                "role": "not_applicable",
+                "side": "over",
+                "source": {
+                  "role": "not_applicable",
+                  "team": "not_applicable"
+                },
+                "status": "not_applicable",
+                "team": null
+              },
+              "positionType": 0,
+              "revertedTxHash": null,
+              "speculationId": "29",
+              "txHash": "0x873b1d649a8973b814db00951a8fd9b9d4ce765d351aea6e97d345c77fe4b7f4"
+            },
+            "payout": {
+              "profit": {
+                "usdc": "0.171200",
+                "wei6": "171200"
+              },
+              "totalReturn": {
+                "usdc": "0.171200",
+                "wei6": "171200"
+              }
+            },
+            "requiresSignature": false,
+            "requiresTransaction": false,
+            "risk": null,
+            "schemaVersion": 2,
+            "sdkVersion": "0.10.0",
+            "sideSummary": null,
+            "signer": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+            "speculation": null,
+            "stage": "execute",
+            "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+            "walletRole": "signer",
+            "warnings": []
+          }
+        }
+      ],
+      "finalCounts": {
+        "active": 0,
+        "claimable": 0,
+        "pendingSettle": 0
+      }
+    }
+  },
+  "finalVerification": {
+    "openCommitmentCounts": {
+      "13": 0,
+      "14": 0
+    },
+    "positionCounts": {
+      "ospex-flow-a": {
+        "active": 0,
+        "claimable": 0,
+        "pendingSettle": 0
+      },
+      "ospex-stage-maker-a": {
+        "active": 0,
+        "claimable": 0,
+        "pendingSettle": 0
+      },
+      "ospex-stage-maker-b": {
+        "active": 0,
+        "claimable": 0,
+        "pendingSettle": 0
+      }
+    }
+  },
+  "officialFinal": {
+    "contestId": "13",
+    "gamePk": 824902,
+    "linescore": {
+      "balls": 2,
+      "currentInning": 9,
+      "currentInningOrdinal": "9th",
+      "defense": {
+        "batter": {
+          "fullName": "Tyrone Taylor",
+          "id": 621438,
+          "link": "/api/v1/people/621438"
+        },
+        "battingOrder": 6,
+        "catcher": {
+          "fullName": "Luis Torrens",
+          "id": 620443,
+          "link": "/api/v1/people/620443"
+        },
+        "center": {
+          "fullName": "A.J. Ewing",
+          "id": 805999,
+          "link": "/api/v1/people/805999"
+        },
+        "first": {
+          "fullName": "Jared Young",
+          "id": 676724,
+          "link": "/api/v1/people/676724"
+        },
+        "inHole": {
+          "fullName": "Luis Torrens",
+          "id": 620443,
+          "link": "/api/v1/people/620443"
+        },
+        "left": {
+          "fullName": "Tyrone Taylor",
+          "id": 621438,
+          "link": "/api/v1/people/621438"
+        },
+        "onDeck": {
+          "fullName": "A.J. Ewing",
+          "id": 805999,
+          "link": "/api/v1/people/805999"
+        },
+        "pitcher": {
+          "fullName": "Devin Williams",
+          "id": 642207,
+          "link": "/api/v1/people/642207"
+        },
+        "right": {
+          "fullName": "Carson Benge",
+          "id": 701807,
+          "link": "/api/v1/people/701807"
+        },
+        "second": {
+          "fullName": "Brett Baty",
+          "id": 683146,
+          "link": "/api/v1/people/683146"
+        },
+        "shortstop": {
+          "fullName": "Francisco Lindor",
+          "id": 596019,
+          "link": "/api/v1/people/596019"
+        },
+        "team": {
+          "id": 121,
+          "link": "/api/v1/teams/121",
+          "name": "New York Mets"
+        },
+        "third": {
+          "fullName": "Bo Bichette",
+          "id": 666182,
+          "link": "/api/v1/people/666182"
+        }
+      },
+      "inningHalf": "Bottom",
+      "inningState": "Bottom",
+      "innings": [
+        {
+          "away": {
+            "errors": 1,
+            "hits": 2,
+            "leftOnBase": 2,
+            "runs": 1
+          },
+          "home": {
+            "errors": 1,
+            "hits": 3,
+            "leftOnBase": 0,
+            "runs": 3
+          },
+          "num": 1,
+          "ordinalNum": "1st"
+        },
+        {
+          "away": {
+            "errors": 0,
+            "hits": 4,
+            "leftOnBase": 0,
+            "runs": 4
+          },
+          "home": {
+            "errors": 0,
+            "hits": 1,
+            "leftOnBase": 2,
+            "runs": 0
+          },
+          "num": 2,
+          "ordinalNum": "2nd"
+        },
+        {
+          "away": {
+            "errors": 0,
+            "hits": 0,
+            "leftOnBase": 0,
+            "runs": 0
+          },
+          "home": {
+            "errors": 0,
+            "hits": 0,
+            "leftOnBase": 0,
+            "runs": 0
+          },
+          "num": 3,
+          "ordinalNum": "3rd"
+        },
+        {
+          "away": {
+            "errors": 0,
+            "hits": 0,
+            "leftOnBase": 0,
+            "runs": 0
+          },
+          "home": {
+            "errors": 0,
+            "hits": 0,
+            "leftOnBase": 0,
+            "runs": 0
+          },
+          "num": 4,
+          "ordinalNum": "4th"
+        },
+        {
+          "away": {
+            "errors": 1,
+            "hits": 0,
+            "leftOnBase": 0,
+            "runs": 0
+          },
+          "home": {
+            "errors": 0,
+            "hits": 0,
+            "leftOnBase": 1,
+            "runs": 0
+          },
+          "num": 5,
+          "ordinalNum": "5th"
+        },
+        {
+          "away": {
+            "errors": 0,
+            "hits": 1,
+            "leftOnBase": 1,
+            "runs": 0
+          },
+          "home": {
+            "errors": 0,
+            "hits": 0,
+            "leftOnBase": 0,
+            "runs": 0
+          },
+          "num": 6,
+          "ordinalNum": "6th"
+        },
+        {
+          "away": {
+            "errors": 0,
+            "hits": 0,
+            "leftOnBase": 0,
+            "runs": 0
+          },
+          "home": {
+            "errors": 0,
+            "hits": 1,
+            "leftOnBase": 1,
+            "runs": 0
+          },
+          "num": 7,
+          "ordinalNum": "7th"
+        },
+        {
+          "away": {
+            "errors": 0,
+            "hits": 1,
+            "leftOnBase": 0,
+            "runs": 0
+          },
+          "home": {
+            "errors": 0,
+            "hits": 0,
+            "leftOnBase": 0,
+            "runs": 0
+          },
+          "num": 8,
+          "ordinalNum": "8th"
+        },
+        {
+          "away": {
+            "errors": 1,
+            "hits": 4,
+            "leftOnBase": 1,
+            "runs": 5
+          },
+          "home": {
+            "errors": 0,
+            "hits": 7,
+            "leftOnBase": 2,
+            "runs": 6
+          },
+          "num": 9,
+          "ordinalNum": "9th"
+        }
+      ],
+      "isTopInning": false,
+      "offense": {
+        "batter": {
+          "fullName": "Dominic Smith",
+          "id": 642086,
+          "link": "/api/v1/people/642086"
+        },
+        "battingOrder": 6,
+        "inHole": {
+          "fullName": "Eli White",
+          "id": 642201,
+          "link": "/api/v1/people/642201"
+        },
+        "onDeck": {
+          "fullName": "Austin Riley",
+          "id": 663586,
+          "link": "/api/v1/people/663586"
+        },
+        "pitcher": {
+          "fullName": "Carlos Carrasco",
+          "id": 471911,
+          "link": "/api/v1/people/471911"
+        },
+        "team": {
+          "id": 144,
+          "link": "/api/v1/teams/144",
+          "name": "Atlanta Braves"
+        }
+      },
+      "outs": 3,
+      "scheduledInnings": 9,
+      "strikes": 3,
+      "teams": {
+        "away": {
+          "errors": 3,
+          "hits": 12,
+          "leftOnBase": 4,
+          "runs": 10
+        },
+        "home": {
+          "errors": 1,
+          "hits": 12,
+          "leftOnBase": 6,
+          "runs": 9
+        }
+      }
+    },
+    "status": {
+      "abstractGameCode": "F",
+      "abstractGameState": "Final",
+      "codedGameState": "O",
+      "detailedState": "Game Over",
+      "startTimeTBD": false,
+      "statusCode": "O"
+    }
+  },
+  "score": {
+    "after": {
+      "action": "contests.score-status",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.10.0",
+      "commitment": null,
+      "contest": null,
+      "effects": [],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-07-05T21:26:24.024Z",
+      "network": "polygon",
+      "nextCommands": [],
+      "ok": true,
+      "payload": {
+        "awayScore": 10,
+        "contestId": "13",
+        "homeScore": 9,
+        "scored": true,
+        "status": "scored"
+      },
+      "payout": null,
+      "requiresSignature": false,
+      "requiresTransaction": false,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.10.0",
+      "sideSummary": null,
+      "signer": null,
+      "speculation": null,
+      "stage": "read",
+      "wallet": null,
+      "walletRole": "none",
+      "warnings": []
+    },
+    "before": {
+      "action": "contests.score-status",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.10.0",
+      "commitment": null,
+      "contest": null,
+      "effects": [],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-07-05T21:23:04.163Z",
+      "network": "polygon",
+      "nextCommands": [],
+      "ok": true,
+      "payload": {
+        "awayScore": null,
+        "contestId": "13",
+        "homeScore": null,
+        "scored": false,
+        "status": "verified"
+      },
+      "payout": null,
+      "requiresSignature": false,
+      "requiresTransaction": false,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.10.0",
+      "sideSummary": null,
+      "signer": null,
+      "speculation": null,
+      "stage": "read",
+      "wallet": null,
+      "walletRole": "none",
+      "warnings": []
+    },
+    "scoreCommand": {
+      "action": "contests.score",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.10.0",
+      "commitment": null,
+      "contest": null,
+      "effects": [
+        {
+          "blockNumber": "89721061",
+          "ok": true,
+          "purpose": "score-contest",
+          "status": "confirmed",
+          "txHash": "0x9fb26a15fbf3c4c46157261b964b035e49f45c889402d88d2a601eebc4410fd4",
+          "type": "transaction"
+        },
+        {
+          "blockNumber": "89721183",
+          "ok": true,
+          "purpose": "score-contest",
+          "status": "confirmed",
+          "txHash": "0xc58564eb53e041f2f1f1b06a6c283dfd825057784c57346b7756f629b9a640a4",
+          "type": "transaction"
+        }
+      ],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-07-05T21:26:23.437Z",
+      "network": "polygon",
+      "nextCommands": [
+        {
+          "argv": [
+            "contests",
+            "show",
+            "13",
+            "--json"
+          ],
+          "command": "ospex contests show 13 --json",
+          "description": "Verify the contest detail (status, speculations, orderbook).",
+          "id": "verify-contest",
+          "safeToAutoRun": true,
+          "suggestedFor": "verify"
+        }
+      ],
+      "ok": true,
+      "payload": {
+        "contestId": "13",
+        "scoring": {
+          "awayScore": 10,
+          "homeScore": 9,
+          "status": "scored"
+        },
+        "status": "success",
+        "txHash": "0x9fb26a15fbf3c4c46157261b964b035e49f45c889402d88d2a601eebc4410fd4"
+      },
+      "payout": null,
+      "requiresSignature": false,
+      "requiresTransaction": false,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.10.0",
+      "sideSummary": null,
+      "signer": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "speculation": null,
+      "stage": "execute",
+      "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "walletRole": "signer",
+      "warnings": []
+    }
+  },
+  "settle": {
+    "27": {
+      "action": "settle",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.10.0",
+      "commitment": null,
+      "contest": null,
+      "effects": [
+        {
+          "blockNumber": "89721209",
+          "ok": true,
+          "purpose": "settle-speculation",
+          "status": "confirmed",
+          "txHash": "0x098a9057c15d8eaa319896fbce83bcfa5a45eacbc6c9d27845b3eba21b37f840",
+          "type": "transaction"
+        }
+      ],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-07-05T21:26:49.092Z",
+      "network": "polygon",
+      "nextCommands": [
+        {
+          "argv": [
+            "positions",
+            "status",
+            "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+            "--json"
+          ],
+          "command": "ospex positions status 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482 --json",
+          "description": "Verify position status after the claim / settle.",
+          "id": "verify-position-status",
+          "safeToAutoRun": true,
+          "suggestedFor": "verify"
+        }
+      ],
+      "ok": true,
+      "payload": {
+        "blockNumber": "89721209",
+        "outcome": "settled",
+        "revertedTxHash": null,
+        "speculationId": "27",
+        "txHash": "0x098a9057c15d8eaa319896fbce83bcfa5a45eacbc6c9d27845b3eba21b37f840",
+        "winSide": "away",
+        "winSideContext": {
+          "display": "away (New York Mets, favorite)",
+          "marketType": "moneyline",
+          "role": "favorite",
+          "side": "away",
+          "source": {
+            "role": "moneyline-odds",
+            "team": "speculation-detail"
+          },
+          "status": "complete",
+          "team": {
+            "alignment": "away",
+            "name": "New York Mets"
+          }
+        }
+      },
+      "payout": null,
+      "requiresSignature": false,
+      "requiresTransaction": false,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.10.0",
+      "sideSummary": null,
+      "signer": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "speculation": null,
+      "stage": "execute",
+      "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "walletRole": "signer",
+      "warnings": []
+    },
+    "28": {
+      "action": "settle",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.10.0",
+      "commitment": null,
+      "contest": null,
+      "effects": [
+        {
+          "blockNumber": "89721211",
+          "ok": true,
+          "purpose": "settle-speculation",
+          "status": "confirmed",
+          "txHash": "0xe45cc72e32873278f9ad8b9dfdd5764866a5fdcf18272180b7c446ed184b1fd3",
+          "type": "transaction"
+        }
+      ],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-07-05T21:26:52.969Z",
+      "network": "polygon",
+      "nextCommands": [
+        {
+          "argv": [
+            "positions",
+            "status",
+            "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+            "--json"
+          ],
+          "command": "ospex positions status 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482 --json",
+          "description": "Verify position status after the claim / settle.",
+          "id": "verify-position-status",
+          "safeToAutoRun": true,
+          "suggestedFor": "verify"
+        }
+      ],
+      "ok": true,
+      "payload": {
+        "blockNumber": "89721211",
+        "outcome": "settled",
+        "revertedTxHash": null,
+        "speculationId": "28",
+        "txHash": "0xe45cc72e32873278f9ad8b9dfdd5764866a5fdcf18272180b7c446ed184b1fd3",
+        "winSide": "away",
+        "winSideContext": {
+          "display": "away (New York Mets, underdog)",
+          "marketType": "spread",
+          "role": "underdog",
+          "side": "away",
+          "source": {
+            "role": "spread-line",
+            "team": "speculation-detail"
+          },
+          "status": "complete",
+          "team": {
+            "alignment": "away",
+            "name": "New York Mets"
+          }
+        }
+      },
+      "payout": null,
+      "requiresSignature": false,
+      "requiresTransaction": false,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.10.0",
+      "sideSummary": null,
+      "signer": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "speculation": null,
+      "stage": "execute",
+      "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "walletRole": "signer",
+      "warnings": []
+    },
+    "29": {
+      "action": "settle",
+      "approvalRequirements": [],
+      "chainId": 137,
+      "cliVersion": "0.10.0",
+      "commitment": null,
+      "contest": null,
+      "effects": [
+        {
+          "blockNumber": "89721214",
+          "ok": true,
+          "purpose": "settle-speculation",
+          "status": "confirmed",
+          "txHash": "0x3593725e665847f77438583c2f7778636dde5b1048a6ae40f2dd7d88c2156892",
+          "type": "transaction"
+        }
+      ],
+      "errors": [],
+      "estimatedCosts": null,
+      "generatedAt": "2026-07-05T21:26:56.300Z",
+      "network": "polygon",
+      "nextCommands": [
+        {
+          "argv": [
+            "positions",
+            "status",
+            "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+            "--json"
+          ],
+          "command": "ospex positions status 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482 --json",
+          "description": "Verify position status after the claim / settle.",
+          "id": "verify-position-status",
+          "safeToAutoRun": true,
+          "suggestedFor": "verify"
+        }
+      ],
+      "ok": true,
+      "payload": {
+        "blockNumber": "89721214",
+        "outcome": "settled",
+        "revertedTxHash": null,
+        "speculationId": "29",
+        "txHash": "0x3593725e665847f77438583c2f7778636dde5b1048a6ae40f2dd7d88c2156892",
+        "winSide": "over",
+        "winSideContext": {
+          "display": "over 9 (total; no team)",
+          "marketType": "total",
+          "role": "not_applicable",
+          "side": "over",
+          "source": {
+            "role": "not_applicable",
+            "team": "not_applicable"
+          },
+          "status": "not_applicable",
+          "team": null
+        }
+      },
+      "payout": null,
+      "requiresSignature": false,
+      "requiresTransaction": false,
+      "risk": null,
+      "schemaVersion": 2,
+      "sdkVersion": "0.10.0",
+      "sideSummary": null,
+      "signer": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "speculation": null,
+      "stage": "execute",
+      "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "walletRole": "signer",
+      "warnings": []
+    }
+  }
+}
