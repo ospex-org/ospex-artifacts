@@ -5,5 +5,6 @@
   "unknownOwnFill": 0,
   "divergence": 0,
   "ownerMappingFailed": 0,
-  "notes": "Controlled live fills were observed through own-state telemetry."
+  "notes": "Counts are slate-wide across contests 11 and 12; controlled live fills were observed through own-state telemetry.",
+  "scope": "slate-wide across contests 11 and 12"
 }

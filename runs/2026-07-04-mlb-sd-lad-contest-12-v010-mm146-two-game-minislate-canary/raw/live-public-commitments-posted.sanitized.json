@@ -50,5 +50,6 @@
     "total": 2
   },
   "fundingHoldObserved": true,
-  "badSafetyEvents": []
+  "badSafetyEvents": [],
+  "scope": "slate-wide across contests 11 and 12"
 }

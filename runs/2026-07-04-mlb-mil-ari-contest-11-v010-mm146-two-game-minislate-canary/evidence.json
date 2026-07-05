@@ -218,6 +218,6 @@
   "caveats": [
     "Live MM correctly entered a bounded funding-shortfall hold after the controlled fills and soft-cancelled or let visible quotes expire; final visible exposure was zero.",
     "The market-maker repository still installed @ospex/sdk 0.9.0 while the operator CLI for this run was 0.10.0; this was recorded and did not block the tested flow.",
-    "The postgame Slack POSTGAME_ERROR messages were caused by an operator watchdog harness filename bug (${profile-before-claim} omitted the literal suffix in a Bash parameter expansion), not by ospex-sdk, ospex-market-maker, core-api, indexer, CRE, or protocol code. After patching the harness, score/settle/claim completed and final zero-state was verified."
+    "The postgame error alerts were caused by an operator watchdog harness filename bug (${profile-before-claim} omitted the literal suffix in a Bash parameter expansion), not by ospex-sdk, ospex-market-maker, core-api, indexer, CRE, or protocol code. After patching the harness, score/settle/claim completed and final zero-state was verified."
   ]
 }

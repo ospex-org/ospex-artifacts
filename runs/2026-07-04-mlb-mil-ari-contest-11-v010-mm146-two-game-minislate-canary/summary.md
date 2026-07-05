@@ -19,6 +19,6 @@
 
 ## Caveat / issue classification
 
-The Slack `POSTGAME_ERROR` messages were caused by the Hermes/operator watchdog harness, not the Ospex codebase. The script used `${profile-before-claim}` in a filename; Bash treated that as parameter expansion on `profile` and dropped the literal `-before-claim` suffix. The CLI had written `positions-status-<profile>-before-claim-<timestamp>.json`, but the Python claim-planning step attempted to read `positions-status-<profile>-<timestamp>.json`. The harness was patched and the final postgame verification is green.
+The postgame error alerts were caused by an operator watchdog harness filename bug (`${profile-before-claim}` omitted the literal suffix in a Bash parameter expansion), not by ospex-sdk, ospex-market-maker, core-api, indexer, CRE, or protocol code. After patching the harness, score/settle/claim completed and final zero-state was verified.
 
 See `raw/watchdog-harness-caveat.sanitized.json` for the exact classification.
