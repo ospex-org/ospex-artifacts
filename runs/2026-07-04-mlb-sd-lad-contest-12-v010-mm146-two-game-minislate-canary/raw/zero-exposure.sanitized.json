@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-07-05T05:11:45Z",
+  "openCommitments": {
+    "11": 0,
+    "12": 0
+  },
+  "targetPositionCounts": {
+    "flow-a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "stage-maker-a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "stage-maker-b": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    }
+  },
+  "orphanProcessCount": 0,
+  "publicMakerVisibleCommitments": 0,
+  "publicContestSpecVisibleCommitments": 0,
+  "contestOrderbookCount": 0
+}

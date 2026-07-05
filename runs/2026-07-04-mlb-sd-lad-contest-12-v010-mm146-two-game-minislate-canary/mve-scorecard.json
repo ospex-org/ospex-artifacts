@@ -1,0 +1,248 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "2026-07-04-mlb-sd-lad-contest-12-v010-mm146-two-game-minislate-canary",
+  "generatedAt": "2026-07-05T05:15:00Z",
+  "runClass": "mm-live-canary",
+  "verdict": {
+    "label": "FULL_GREEN",
+    "protocolVerdict": "V010_CLI_MM146_TWO_GAME_MINISLATE_FULL_GREEN_WITH_OPERATOR_HARNESS_CAVEAT",
+    "reason": "The v0.10.0/R5 MM #146 strict-allowlist all-market two-game mini-slate canary for San Diego Padres @ Los Angeles Dodgers completed the full lifecycle: pregame setup passed, contest 12 was created and verified, moneyline/spec 24, spread/spec 25, and total/spec 26 were manually seeded/filled with zero residual seed exposure, the market maker posted tiny live moneyline/spread/total quotes under strict contest allowlist [11,12] with seedSpeculations=false, a controlled live moneyline quote was filled, visible quotes were soft-cancelled or expired after a bounded funding-shortfall hold, final visible exposure drained to zero, official final score San Diego Padres 0 / Los Angeles Dodgers 3 was verified, contest 12 was scored through R5/CRE, all three companion speculations settled to the lower winning side where applicable, winning controlled positions were claimed, and final target commitments plus active/pending/claimable positions are zero. The only issue observed was an operator watchdog harness filename bug in the postgame cron; it was fixed and is documented as a methodology caveat, not a protocol/MM/codebase failure."
+  },
+  "capabilities": [
+    {
+      "id": "target-preflight",
+      "capability": "Target preflight and allowlist",
+      "proof": "proven_live",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "notes": "San Diego Padres @ Los Angeles Dodgers contest 12 and specs 24/25/26 passed pre-game status, identity, allowlist, odds, and lead-time gates."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "capability": "Repo/runtime gates",
+      "proof": "proven_live",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "notes": "SDK/CLI v0.10.0, MM head 6f3ccc1 with PR #146 approval self-heal and own-state safety coverage, installed SDK v0.9.0, typecheck/test/build, and ancillary repo heads were verified."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "capability": "Wallet auth, balances, allowances",
+      "proof": "proven_live",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Expected-address checks passed for ospex-stage-maker-b, ospex-stage-maker-a, and ospex-flow-a; public balances/allowances were bounded."
+    },
+    {
+      "id": "bounded-approvals",
+      "capability": "Bounded approvals / no unlimited approvals",
+      "proof": "proven_live",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "notes": "Only bounded USDC approvals were used; no unlimited approvals were created."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "capability": "Dry-run quote loop",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "notes": "Candidates --allowlist-only returned six quote-ready rows across contests 11 and 12; dry run stayed target-scoped."
+    },
+    {
+      "id": "live-commitments-posted",
+      "capability": "Live commitments posted",
+      "proof": "proven_live",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "notes": "Tiny live moneyline, spread, and total commitments posted under strict allowlist [11,12], including contest 12, seedSpeculations=false."
+    },
+    {
+      "id": "live-fill",
+      "capability": "Controlled live fill",
+      "proof": "proven_live",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "A controlled taker filled the MM moneyline quote on Los Angeles Dodgers. The final score made Los Angeles Dodgers/home/lower the winning side, so this controlled live-fill position was claimed."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "capability": "Own-state SSE canonical fill source",
+      "proof": "proven_live",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "Telemetry captured the controlled fills with source own-state-stream and no unknown-own-fill/divergence safety event."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "capability": "Exposure drained to zero",
+      "proof": "proven_live",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "Final public/API/MM visible-open exposure is zero, target active/pending/claimable positions are zero after postgame, and no orphan MM process remained."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "capability": "Restart/cold-start safety",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/restart-cold-start-probe.sanitized.json",
+      "notes": "A scratch-state dry-run/cold-start probe loaded state cleanly, expired copied stale records, and did not create duplicate live exposure."
+    },
+    {
+      "id": "postgame-score",
+      "capability": "Postgame score",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Official final score San Diego Padres 0, Los Angeles Dodgers 3 was verified and contest 12 scored via R5/CRE. Operator watchdog caveat documented separately."
+    },
+    {
+      "id": "postgame-settle",
+      "capability": "Postgame settle",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Moneyline, spread, and total speculations for contest 12 settled to the expected lower winning sides where applicable."
+    },
+    {
+      "id": "postgame-claim",
+      "capability": "Postgame claim/no-op",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Winning controlled positions were claimed, losing positions were no-op/not claimable, and final target positions are zero. One immediate post-claim read lagged; the next verification read was zero."
+    },
+    {
+      "id": "cost-within-cap",
+      "capability": "Cost within cap",
+      "proof": "proven_live",
+      "evidence": "raw/tx-receipts.summary.json",
+      "notes": "Tiny canary risk plus protocol fees stayed within the approved $10 hard cap; recorded lifecycle transactions are summarized."
+    }
+  ],
+  "zeroExposure": {
+    "checkedAtUtc": "2026-07-05T05:11:45Z",
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "orphanProcessCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json"
+  },
+  "transactions": [
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-stage-maker-b treasuryModule (2 USDC target)",
+      "txHash": "0x1fcbdb7b8047b26110271c03d964a16e5ba5ae9ac8457b7e949cbbc4302bb3dd",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-stage-maker-a positionModule (0.48 USDC target)",
+      "txHash": "0x6515084c9f427656199ac8801483758a22ea988fe39d87a93cd9f0350c3290e5",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-stage-maker-a treasuryModule (1.5 USDC target)",
+      "txHash": "0x2ee81d167d73db723787e6a6639ea80abf4035ba34f5a4fc0cf25fea1144f654",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-flow-a positionModule (0.48 USDC target)",
+      "txHash": "0x756c0f121b5350a305987a91ddada7a833cc9567c060b1564fe6647275677021",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "approve",
+      "purpose": "Bounded USDC approval for ospex-flow-a treasuryModule (1.5 USDC target)",
+      "txHash": "0x1d27580a05c43131f8118459107d847de96ea99cb847c231deaf0b1687cb9406",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "create-contest",
+      "purpose": "Create contest 12 for San Diego Padres @ Los Angeles Dodgers",
+      "txHash": "0x88109ae49a41b75239046854e1b42b020462c40c5638f176e82a0470fa7291d8",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "other",
+      "purpose": "Request market update for contest 12",
+      "txHash": "0x0c92c97fcc302414cbcca1fb9706cf83af00753ae00b232be5bf6713a6a4f9bc",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "seed-match",
+      "purpose": "Fully match tiny manual moneyline seed to create speculation 24 for contest 12",
+      "txHash": "0x5ece0a0dd7a33ae51639395b2677c02a1e738766fdcdbef6588efa5ddb77abe7",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "seed-match",
+      "purpose": "Fully match tiny manual spread seed to create speculation 25 for contest 12",
+      "txHash": "0x8015ab38f0ef8a37351fcc1fe7f1a721eba760443d0e4f64267241219a71adf3",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "seed-match",
+      "purpose": "Fully match tiny manual total seed to create speculation 26 for contest 12",
+      "txHash": "0x96c2fbba04cec7c37e1d1c61eba2123e3ae6f0ef6e084368e81dbc34f26cc7b0",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "match-commitment",
+      "purpose": "Controlled fill against live MM moneyline quote for contest 12",
+      "txHash": "0x5b51dba40cb56d39948c09539609b4d1b30da40e005748143bc2c05c576e044e",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "score-request",
+      "purpose": "Request R5 score for contest 12 after official final",
+      "txHash": "0xa2b35d9419697ddb841795f6f022200ebfeff00fb393c4bb7945ec4e08d65cfe",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "settle",
+      "purpose": "Settle speculation 24 to lower winning side for contest 12",
+      "txHash": "0xb33e72a25c96757fc25e75431ec164aabbab3ec04849641859fe69195640b2ff",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "settle",
+      "purpose": "Settle speculation 25 to lower winning side for contest 12",
+      "txHash": "0x225e805884367e02cc7472942f845fdfd5b625a39b45fa90d07e2d648c25d4b6",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "settle",
+      "purpose": "Settle speculation 26 to lower winning side for contest 12",
+      "txHash": "0x547e2b447ee9778447faa580201b26bb7932e0f449332a74a076f28ab3621c17",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "claim",
+      "purpose": "Claim winning controlled position for speculation 24 (home (Los Angeles Dodgers, favorite))",
+      "txHash": "0x78afcc16d06fb00e152541b1b2a8122571b1f7ae8d9f3d22438732be2996da5a",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "claim",
+      "purpose": "Claim winning controlled position for speculation 25 (home (Los Angeles Dodgers, favorite))",
+      "txHash": "0x0c92ea56d8091e0cf34995f2d4d9427c8d18cd3232261cbe371894455ee59637",
+      "operatorControlled": true,
+      "status": "success"
+    },
+    {
+      "category": "claim",
+      "purpose": "Claim winning controlled position for speculation 26 (under 8.5 (total; no team))",
+      "txHash": "0x74fecff0f8a9b614dc48022ad3424dac481e05276219e632fe0e6f3936e4e72d",
+      "operatorControlled": true,
+      "status": "success"
+    }
+  ]
+}

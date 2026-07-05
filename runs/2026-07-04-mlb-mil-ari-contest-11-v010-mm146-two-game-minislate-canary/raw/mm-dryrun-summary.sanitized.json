@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "allowlistOnly": true,
+  "contestAllowlist": [
+    "11",
+    "12"
+  ],
+  "quoteReady": 6,
+  "trackedCandidates": 6,
+  "wouldSubmit": 8,
+  "errors": {
+    "byPhase": {},
+    "total": 0
+  },
+  "badSafetyEvents": []
+}

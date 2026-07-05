@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "classification": "operator_harness_cron_script_bug",
+  "affectedComponent": "Hermes cron/watchdog script, not ospex protocol repositories",
+  "bug": "Bash path construction used ${profile-before-claim}, which Bash interprets as ${profile:-before-claim} style parameter expansion and therefore omitted the literal -before-claim suffix when profile was set.",
+  "symptom": "Cron POSTGAME_ERROR FileNotFoundError for positions-status-stage-maker-a-<timestamp>.json even though status_for_profile wrote positions-status-stage-maker-a-before-claim-<timestamp>.json.",
+  "fixApplied": "Changed the script to pass \"${profile}-before-claim\" and read positions-status-${profile}-before-claim-${TS}.json.",
+  "impact": "The first failed ticks had already reached official-final score/settle work, then crashed before/inside claim planning. After the harness fix, claims completed; one immediate post-claim read observed projection/indexer lag, and the next verification read reached zero active/pending/claimable positions. The cron was removed after manual final verification.",
+  "notAttributedTo": [
+    "ospex-sdk",
+    "ospex-market-maker",
+    "ospex-core-api",
+    "ospex-indexer",
+    "ospex-cre",
+    "contracts/protocol"
+  ],
+  "evidence": {
+    "cronJobId": "f0b6f0c032f1",
+    "scriptPathSanitized": "Hermes watchdog script ospex-postgame-watch-20260704-two-game.sh",
+    "finalManualVerification": "raw/postgame-final-verification-20260705T051145Z.json"
+  }
+}

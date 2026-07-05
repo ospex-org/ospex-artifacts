@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "scratchOnly": true,
+  "stateIntegrity": "loaded",
+  "stateLossAssessment": {
+    "holdQuoting": false,
+    "reason": "state loaded cleanly"
+  },
+  "errors": {
+    "byPhase": {},
+    "total": 0
+  },
+  "eventCounts": {
+    "approval": 0,
+    "approval-heal-failed": 0,
+    "cancel-blocked-missing-payload": 0,
+    "candidate": 6,
+    "claim": 0,
+    "competitiveness-unavailable": 0,
+    "degraded": 0,
+    "divergence": 0,
+    "error": 0,
+    "expire": 6,
+    "fair-value": 0,
+    "fill": 0,
+    "foreign-maker-commitments": 0,
+    "funding-hold": 0,
+    "kill": 1,
+    "nonce-floor-raise": 0,
+    "onchain-cancel": 0,
+    "owner-mapping-failed": 0,
+    "position-allowance-short": 0,
+    "position-transition": 0,
+    "quote-competitiveness": 8,
+    "quote-intent": 6,
+    "replace": 0,
+    "risk-verdict": 6,
+    "settle": 0,
+    "soft-cancel": 0,
+    "stream-cold-restart": 0,
+    "stream-health-degraded": 0,
+    "stream-health-hold": 0,
+    "stream-would-hold": 0,
+    "submit": 0,
+    "tick-start": 3,
+    "unknown-own-fill": 0,
+    "would-replace": 0,
+    "would-soft-cancel": 0,
+    "would-submit": 8
+  },
+  "notes": "Cold-start probe used copied scratch state/config and performed no live writes."
+}
