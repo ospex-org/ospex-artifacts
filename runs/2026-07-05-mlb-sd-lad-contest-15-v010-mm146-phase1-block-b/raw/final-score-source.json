@@ -1,0 +1,18 @@
+{
+  "awayScore": 5,
+  "awayTeam": "San Diego Padres",
+  "gameDate": "2026-07-05T23:20:00Z",
+  "gamePk": 823931,
+  "homeScore": 2,
+  "homeTeam": "Los Angeles Dodgers",
+  "source": "MLB Stats API schedule endpoint",
+  "sourceUrl": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-07-05&hydrate=team,linescore",
+  "status": {
+    "abstractGameCode": "F",
+    "abstractGameState": "Final",
+    "codedGameState": "F",
+    "detailedState": "Final",
+    "startTimeTBD": false,
+    "statusCode": "F"
+  }
+}

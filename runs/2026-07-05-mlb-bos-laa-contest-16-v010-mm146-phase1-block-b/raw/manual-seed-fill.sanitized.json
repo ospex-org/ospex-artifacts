@@ -1,0 +1,64 @@
+{
+  "contestId": "16",
+  "finalOpenCommitments": 0,
+  "markets": {
+    "moneyline": {
+      "hash": "0x6c4aefc10e64c67f40d0c10fa8d4cda873c115aa157fdb825d2f6dc716c582c0",
+      "maker_risk": {
+        "usdc": "0.030000",
+        "wei6": "30000"
+      },
+      "maker_side": "Boston Red Sox",
+      "match_ok": true,
+      "match_txs": [
+        "0x2ae3bc5e8297f5eba0c7d128f884de4d2f629c4a83b5636cedac341919416531"
+      ],
+      "speculation_key": "0x299e2b4ac149c5193d2533738656016c5363c3871141b26c35b23d3f4e154a89",
+      "submit_ok": true,
+      "taker_risk": {
+        "usdc": "0.019200",
+        "wei6": "19200"
+      },
+      "taker_side": "Los Angeles Angels"
+    },
+    "spread": {
+      "hash": "0x342eb95867cb021ec43f2fa4c3f2b0659ea50d10b9beccaf98b29786dad43496",
+      "maker_risk": {
+        "usdc": "0.030000",
+        "wei6": "30000"
+      },
+      "maker_side": "Boston Red Sox -1.5",
+      "match_ok": true,
+      "match_txs": [
+        "0x0e1b80647208e833086470dbe78436a41bc22657784de3f74fc6e27d285bb085"
+      ],
+      "speculation_key": "0x0dc453d1d8dc1ff7bc79b32e2f694be6551053fb69333d1d59f2b1c1209e11db",
+      "submit_ok": true,
+      "taker_risk": {
+        "usdc": "0.032100",
+        "wei6": "32100"
+      },
+      "taker_side": "Los Angeles Angels +1.5"
+    },
+    "total": {
+      "hash": "0x08c9de9e96fb48ac05408af9d7df92f8d491d3e2134813763ea16dac7561e6a1",
+      "maker_risk": {
+        "usdc": "0.030000",
+        "wei6": "30000"
+      },
+      "maker_side": "Over 8.0",
+      "match_ok": true,
+      "match_txs": [
+        "0xed9013dede718ee6f34987d6611d041bc0dd2ae2c21a26eb058bc3466611fa50"
+      ],
+      "speculation_key": "0x33d1d0377cc65bd3893946d5f000b1a0e3c7f105c3a47a5ade85103bf2157052",
+      "submit_ok": true,
+      "taker_risk": {
+        "usdc": "0.027300",
+        "wei6": "27300"
+      },
+      "taker_side": "Under 8.0"
+    }
+  },
+  "schemaVersion": 1
+}

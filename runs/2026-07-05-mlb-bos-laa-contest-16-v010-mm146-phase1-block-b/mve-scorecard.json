@@ -1,0 +1,254 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "artifactId": "2026-07-05-mlb-bos-laa-contest-16-v010-mm146-phase1-block-b",
+  "capabilities": [
+    {
+      "capability": "Target preflight and allowlist",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "id": "target-preflight",
+      "notes": "Boston Red Sox @ Los Angeles Angels contest 16 and specs 36/37/38 passed target identity, allowlist, odds, and runway gates.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Repo/runtime gates",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "id": "repo-runtime-gates",
+      "notes": "SDK/CLI v0.10.0, MM head 6f3ccc1 with strict allowlist / own-state / bounded-approval coverage, installed MM SDK v0.9.0, and ancillary repo heads were verified.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Wallet auth, balances, allowances",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "id": "wallet-auth-balances",
+      "notes": "Expected-address checks passed for ospex-stage-maker-b, ospex-stage-maker-a, and ospex-flow-a; public balances were sufficient and allowances were bounded.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Bounded approvals / no unlimited approvals",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "id": "bounded-approvals",
+      "notes": "Only bounded USDC approvals were used; no unlimited approvals were created.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Dry-run quote loop",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "id": "dry-run-quote-loop",
+      "notes": "Candidates --allowlist-only returned quote-ready rows for contest 16 and all seeded markets; dry run stayed target-scoped with seedSpeculations=false.",
+      "proof": "proven_synthetic_only"
+    },
+    {
+      "capability": "Live commitments posted",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "id": "live-commitments-posted",
+      "notes": "Tiny live moneyline, spread, and total commitments posted under strict contest allowlist [16], seedSpeculations=false.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Controlled live fill",
+      "evidence": "raw/live-fill.sanitized.json",
+      "id": "live-fill",
+      "notes": "A controlled taker filled one live MM spread quote for contest 16.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Own-state SSE canonical fill source",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "id": "own-state-sse-canonical-fill",
+      "notes": "Telemetry captured the controlled fill without unknown-own-fill, owner-mapping, or divergence safety events; a startup stream-health hold cleared before controlled fill.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Exposure drained to zero",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "id": "exposure-drain-zero",
+      "notes": "Final public/API/MM visible-open exposure is zero, target active/pending/claimable positions are zero after postgame, and no orphan MM process remained.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Restart/cold-start safety",
+      "evidence": "raw/restart-cold-start-probe.sanitized.json",
+      "id": "restart-cold-start-safety",
+      "notes": "A scratch-state dry-run/cold-start probe loaded state cleanly and did not create duplicate live exposure; live CLI reads remained zero-open.",
+      "proof": "proven_synthetic_only"
+    },
+    {
+      "capability": "Postgame score",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "id": "postgame-score",
+      "notes": "Official final score was verified and contest 16 scored via R5/CRE using CLI v0.10.0 score --wait.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Postgame settle",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "id": "postgame-settle",
+      "notes": "Moneyline, spread, and total speculations 36/37/38 settled to expected winning sides.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Postgame claim/no-op",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "id": "postgame-claim",
+      "notes": "Winning controlled positions were claimed, losing positions were no-op/not claimable, and final target positions are zero.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Cost within cap",
+      "evidence": "raw/tx-receipts.summary.json",
+      "id": "cost-within-cap",
+      "notes": "Tiny manual/live risk plus protocol fees stayed within the Phase 1 Block B low-cap budget; lifecycle transactions are summarized.",
+      "proof": "proven_live"
+    }
+  ],
+  "generatedAt": "2026-07-06T13:54:49Z",
+  "runClass": "mm-live-canary",
+  "schemaVersion": 1,
+  "transactions": [
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for stage-maker-b",
+      "status": "success",
+      "txHash": "0x569d73eefa654bb6c28a00e63c075b9b0f536d07cb2e7148f088c526b2457b2d"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for stage-maker-a",
+      "status": "success",
+      "txHash": "0x1b94371dc34b461c1c91023c109a0cb5950152b3d7279838ecb370803dbd567d"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for stage-maker-a",
+      "status": "success",
+      "txHash": "0x445baeec1b5e02a9170b584e949837da5469f73778cc38576098d3b5fd57e810"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for flow-a",
+      "status": "success",
+      "txHash": "0x49dee292838be9264e2f6766206fe23f087c0d01db4bcdb914d0a2338679c0e8"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for flow-a",
+      "status": "success",
+      "txHash": "0xc78bf9263b4e552e7cf6b41d1457acf90214883dcdb178af133330241ded67f8"
+    },
+    {
+      "category": "create-contest",
+      "operatorControlled": true,
+      "purpose": "Create contest 16 for Boston Red Sox @ Los Angeles Angels",
+      "status": "success",
+      "txHash": "0x6719bf6e9394a9498914cfd555eb75ccb2f1df4c8c161241e8e9ce3ee60fbcd3"
+    },
+    {
+      "category": "other",
+      "operatorControlled": true,
+      "purpose": "Request market update for contest 16",
+      "status": "success",
+      "txHash": "0xc8ad26efbe4522cf61824c916bbebb611321b71af9c6ac4b8e74ae5c17b40a19"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual moneyline seed for contest 16 speculation 36",
+      "status": "success",
+      "txHash": "0x2ae3bc5e8297f5eba0c7d128f884de4d2f629c4a83b5636cedac341919416531"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual spread seed for contest 16 speculation 37",
+      "status": "success",
+      "txHash": "0x0e1b80647208e833086470dbe78436a41bc22657784de3f74fc6e27d285bb085"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual total seed for contest 16 speculation 38",
+      "status": "success",
+      "txHash": "0xed9013dede718ee6f34987d6611d041bc0dd2ae2c21a26eb058bc3466611fa50"
+    },
+    {
+      "category": "match-commitment",
+      "operatorControlled": true,
+      "purpose": "Controlled fill against live MM spread quote on contest 16",
+      "status": "success",
+      "txHash": "0x3dd818dac10fb9f81897b027f7f0f4d9e6a0ccf3695f1af6c7d083af966353a2"
+    },
+    {
+      "category": "score-request",
+      "operatorControlled": true,
+      "purpose": "Request R5 score for contest 16 after MLB official final",
+      "status": "success",
+      "txHash": "0x2a59a10a259248d7b8900f654d8bc6a30b48e23122392938743cec5382503d2c"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle contest 16 moneyline speculation 36",
+      "status": "success",
+      "txHash": "0xbbe83002821cc7e2ca5e34fead7da3e1ee40d607a19fa8e227bf00da08b0f7ce"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle contest 16 spread speculation 37",
+      "status": "success",
+      "txHash": "0xc5cdc8869b303e9bff406f157af90ac0a0db2e17d74de3d3df0e87b6841a29fd"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle contest 16 total speculation 38",
+      "status": "success",
+      "txHash": "0xe961fe2d130ac8b2e0715035887338c2968f1945075995f7384765ad9085cef2"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim stage-maker-a winning position for speculation 36 side upper",
+      "status": "success",
+      "txHash": "0xcdf353340c2f57ee6c650f8cc277c19c1a5d045f4c4975aa2bd17bc03291d66a"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim stage-maker-a winning position for speculation 37 side upper",
+      "status": "success",
+      "txHash": "0x8297cb693e36ffe8b26be2e1a63e3ebd83d12244d2a1c92940b7bcbcc4ac2e34"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim stage-maker-a winning position for speculation 38 side upper",
+      "status": "success",
+      "txHash": "0x464717958a1912b11470ebddd4871c294694ed17b5250511df73f87902ecc394"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim stage-maker-b winning position for speculation 37 side upper",
+      "status": "success",
+      "txHash": "0xbb459fe5971dae63433e8981ee9d88576e2b387155f25c002ca74ccd2dece845"
+    }
+  ],
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "The v0.10.0/R5 MM #146 strict-allowlist Phase 1 Block B run for Boston Red Sox @ Los Angeles Angels completed the full lifecycle: contest 16 was created and verified; moneyline, spread, and total speculations 36/37/38 were manually seeded and fully filled with zero residual seed exposure; the market maker posted tiny live quotes under strict contest allowlist [16] with seedSpeculations=false; one controlled live spread quote was filled; visible quotes were soft-cancelled or expired; final open commitments were zero; official final score Boston Red Sox 7 / Los Angeles Angels 5 was verified; contest 16 was scored through R5/CRE; target speculations were settled, winning controlled positions were claimed, and final target active/pending/claimable positions are zero. Caveat: startup own-state stream-health hold cleared before controlled fill and left zero residual exposure."
+  },
+  "zeroExposure": {
+    "checkedAtUtc": "2026-07-06T04:46:09.775814+00:00",
+    "contestOrderbookCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json",
+    "orphanProcessCount": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "publicMakerVisibleCommitments": 0
+  }
+}

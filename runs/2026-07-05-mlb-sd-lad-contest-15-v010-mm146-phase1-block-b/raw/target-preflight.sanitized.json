@@ -1,0 +1,57 @@
+{
+  "apiHealth": "ok",
+  "apiReady": "ok",
+  "budgetPolicy": "target total new fees + controlled risk <=15 USDC; hard stop >25 USDC; bounded approvals only",
+  "oddsMarketsPresent": {
+    "moneyline": true,
+    "spread": true,
+    "total": true
+  },
+  "selectedTarget": {
+    "allowlistContestIds": [
+      "15"
+    ],
+    "awayTeam": "San Diego Padres",
+    "blockContestIds": [
+      "15",
+      "16"
+    ],
+    "contestId": "15",
+    "contestStatusAfterCreateVerify": "verified",
+    "game": "San Diego Padres @ Los Angeles Dodgers",
+    "gameId": "7c435517-5e18-48f8-8fdf-177fb24d6d07",
+    "homeTeam": "Los Angeles Dodgers",
+    "marketsCovered": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "matchTime": "2026-07-05T23:20:00+00:00",
+    "speculations": [
+      {
+        "contestId": "15",
+        "line": null,
+        "lineTicks": 0,
+        "speculationId": "33",
+        "type": "moneyline"
+      },
+      {
+        "awayLine": 1.5,
+        "contestId": "15",
+        "homeLine": -1.5,
+        "line": 1.5,
+        "lineTicks": 15,
+        "speculationId": "34",
+        "type": "spread"
+      },
+      {
+        "contestId": "15",
+        "line": 10,
+        "lineTicks": 100,
+        "speculationId": "35",
+        "type": "total"
+      }
+    ],
+    "sport": "mlb"
+  }
+}

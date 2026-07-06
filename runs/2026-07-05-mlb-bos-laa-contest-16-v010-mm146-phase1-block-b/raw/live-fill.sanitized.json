@@ -1,0 +1,40 @@
+{
+  "result": {
+    "blockNumber": "89730039",
+    "commitment": {
+      "commitmentHash": "0xadeca7eed534884b47da0d654fa0e9d74641ca0d80bb6857740e5287ae0ebaa1",
+      "contestId": "16",
+      "lineTicks": -15,
+      "marketType": "spread",
+      "oddsTick": 215,
+      "positionType": 0,
+      "riskAmount": "50000"
+    },
+    "contest": {
+      "awayTeam": "Boston Red Sox",
+      "contestId": "16",
+      "homeTeam": "Los Angeles Angels",
+      "sport": "mlb"
+    },
+    "payout": {
+      "profit": {
+        "usdc": "0.050000",
+        "wei6": "50000"
+      },
+      "totalReturn": {
+        "usdc": "0.107500",
+        "wei6": "107500"
+      }
+    },
+    "risk": {
+      "usdc": "0.057500",
+      "wei6": "57500"
+    },
+    "sideSummary": "Los Angeles Angels +1.5",
+    "speculation": {
+      "market": "spread",
+      "speculationId": "37"
+    },
+    "txHash": "0x3dd818dac10fb9f81897b027f7f0f4d9e6a0ccf3695f1af6c7d083af966353a2"
+  }
+}

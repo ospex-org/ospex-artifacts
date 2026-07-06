@@ -1,0 +1,302 @@
+{
+  "candidatesAllowlistOnly": {
+    "config": {
+      "allowlistOnly": true,
+      "contestAllowListSize": 1,
+      "contestsHours": 2,
+      "hours": 2,
+      "markets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "maxTrackedMarkets": 3,
+      "requireReferenceOdds": true,
+      "sports": [
+        "mlb"
+      ]
+    },
+    "generatedAt": "2026-07-05T22:39:55.940Z",
+    "items": [
+      {
+        "awayTeam": "San Diego Padres",
+        "canCreateContest": false,
+        "contestCreated": true,
+        "contestId": "15",
+        "contestStatus": "verified",
+        "gameId": "7c435517-5e18-48f8-8fdf-177fb24d6d07",
+        "hasOdds": true,
+        "homeTeam": "Los Angeles Dodgers",
+        "inContestAllowList": true,
+        "kind": "quote_ready",
+        "market": "moneyline",
+        "matchTime": "2026-07-05T23:20:00+00:00",
+        "recommendedAction": "quote",
+        "referenceOdds": {
+          "awayOddsAmerican": 194,
+          "homeOddsAmerican": -226,
+          "market": "moneyline"
+        },
+        "slug": "sd-lad-2026-07-05-2320",
+        "speculationId": "33",
+        "sport": "mlb",
+        "status": "upcoming"
+      },
+      {
+        "awayTeam": "San Diego Padres",
+        "canCreateContest": false,
+        "contestCreated": true,
+        "contestId": "15",
+        "contestStatus": "verified",
+        "gameId": "7c435517-5e18-48f8-8fdf-177fb24d6d07",
+        "hasOdds": true,
+        "homeTeam": "Los Angeles Dodgers",
+        "inContestAllowList": true,
+        "kind": "quote_ready",
+        "market": "spread",
+        "matchTime": "2026-07-05T23:20:00+00:00",
+        "recommendedAction": "quote",
+        "referenceOdds": {
+          "awayLine": 1.5,
+          "awayOddsAmerican": -105,
+          "homeLine": -1.5,
+          "homeOddsAmerican": -115,
+          "market": "spread"
+        },
+        "slug": "sd-lad-2026-07-05-2320",
+        "speculationId": "34",
+        "sport": "mlb",
+        "status": "upcoming"
+      },
+      {
+        "awayTeam": "San Diego Padres",
+        "canCreateContest": false,
+        "contestCreated": true,
+        "contestId": "15",
+        "contestStatus": "verified",
+        "gameId": "7c435517-5e18-48f8-8fdf-177fb24d6d07",
+        "hasOdds": true,
+        "homeTeam": "Los Angeles Dodgers",
+        "inContestAllowList": true,
+        "kind": "quote_ready",
+        "market": "total",
+        "matchTime": "2026-07-05T23:20:00+00:00",
+        "recommendedAction": "quote",
+        "referenceOdds": {
+          "line": 10,
+          "market": "total",
+          "overOddsAmerican": -110,
+          "underOddsAmerican": -110
+        },
+        "slug": "sd-lad-2026-07-05-2320",
+        "speculationId": "35",
+        "sport": "mlb",
+        "status": "upcoming"
+      }
+    ],
+    "summary": {
+      "gamesAvailableToCreate": 0,
+      "needsContest": 0,
+      "needsSpeculation": 0,
+      "needsVerification": 0,
+      "quoteReady": 3,
+      "skipped": {}
+    },
+    "truncated": false
+  },
+  "dryRun": {
+    "schemaVersion": 1,
+    "summary": {
+      "candidates": {
+        "skipReasons": {},
+        "total": 3,
+        "tracked": 3
+      },
+      "degradedByReason": {},
+      "errors": {
+        "byPhase": {},
+        "total": 0
+      },
+      "eventCounts": {
+        "approval": 0,
+        "approval-heal-failed": 0,
+        "cancel-blocked-missing-payload": 0,
+        "candidate": 3,
+        "claim": 0,
+        "competitiveness-unavailable": 0,
+        "degraded": 0,
+        "divergence": 0,
+        "error": 0,
+        "expire": 0,
+        "fair-value": 0,
+        "fill": 0,
+        "foreign-maker-commitments": 0,
+        "funding-hold": 0,
+        "kill": 1,
+        "nonce-floor-raise": 0,
+        "onchain-cancel": 0,
+        "owner-mapping-failed": 0,
+        "position-allowance-short": 0,
+        "position-transition": 0,
+        "quote-competitiveness": 6,
+        "quote-intent": 3,
+        "replace": 0,
+        "risk-verdict": 3,
+        "settle": 0,
+        "soft-cancel": 0,
+        "stream-cold-restart": 0,
+        "stream-health-degraded": 0,
+        "stream-health-hold": 0,
+        "stream-would-hold": 0,
+        "submit": 0,
+        "tick-start": 2,
+        "unknown-own-fill": 0,
+        "would-replace": 0,
+        "would-soft-cancel": 0,
+        "would-submit": 6
+      },
+      "expired": 0,
+      "firstEventAt": "2026-07-05T22:40:07.728Z",
+      "generatedAt": "2026-07-05T22:42:23.575Z",
+      "kill": {
+        "reason": "kill-file",
+        "ticks": 2
+      },
+      "lastEventAt": "2026-07-05T22:42:10.383Z",
+      "latentExposurePeakWei6": "300000",
+      "lines": 24,
+      "liveMetrics": {
+        "fills": {
+          "byMarket": {
+            "moneyline": {
+              "fillRate": null,
+              "filledUsdcWei6": "0",
+              "quotedUsdcWei6": "0"
+            },
+            "spread": {
+              "fillRate": null,
+              "filledUsdcWei6": "0",
+              "quotedUsdcWei6": "0"
+            },
+            "total": {
+              "fillRate": null,
+              "filledUsdcWei6": "0",
+              "quotedUsdcWei6": "0"
+            }
+          },
+          "fillRate": null,
+          "filledUsdcWei6": "0",
+          "quotedUsdcWei6": "0"
+        },
+        "gas": {
+          "byKind": {
+            "approval": "0",
+            "claim": "0",
+            "onchainCancel": "0",
+            "settle": "0"
+          },
+          "totalPolWei": "0",
+          "totalUsdcEquivWei6": "0"
+        },
+        "realizedPnl": {
+          "alreadyClaimedCount": 0,
+          "byMarket": {
+            "moneyline": {
+              "alreadyClaimedCount": 0,
+              "claimedProfitUsdcWei6": "0",
+              "lostCount": 0,
+              "netUsdcWei6": "0",
+              "pushCount": 0,
+              "realizedLossUsdcWei6": "0",
+              "unsettledCount": 0,
+              "wonCount": 0,
+              "wonUnclaimedCount": 0
+            },
+            "spread": {
+              "alreadyClaimedCount": 0,
+              "claimedProfitUsdcWei6": "0",
+              "lostCount": 0,
+              "netUsdcWei6": "0",
+              "pushCount": 0,
+              "realizedLossUsdcWei6": "0",
+              "unsettledCount": 0,
+              "wonCount": 0,
+              "wonUnclaimedCount": 0
+            },
+            "total": {
+              "alreadyClaimedCount": 0,
+              "claimedProfitUsdcWei6": "0",
+              "lostCount": 0,
+              "netUsdcWei6": "0",
+              "pushCount": 0,
+              "realizedLossUsdcWei6": "0",
+              "unsettledCount": 0,
+              "wonCount": 0,
+              "wonUnclaimedCount": 0
+            }
+          },
+          "claimedProfitUsdcWei6": "0",
+          "lostCount": 0,
+          "netUsdcWei6": "0",
+          "pushCount": 0,
+          "realizedLossUsdcWei6": "0",
+          "unsettledCount": 0,
+          "wonCount": 0,
+          "wonUnclaimedCount": 0
+        },
+        "settlements": {
+          "claimCount": 0,
+          "settleCount": 0,
+          "totalClaimedPayoutWei6": "0"
+        },
+        "totalFeeUsdcWei6": "0"
+      },
+      "malformedLines": 0,
+      "quoteAgeSeconds": null,
+      "quoteCompetitiveness": {
+        "atOrInsideBookCount": 6,
+        "atOrInsideBookRate": 1,
+        "samples": 6,
+        "unavailable": 0,
+        "vsReferenceTicks": {
+          "max": 6,
+          "mean": 4.666666666666667,
+          "min": 2,
+          "p50": 5
+        }
+      },
+      "quoteIntents": {
+        "canQuote": 3,
+        "refused": 0,
+        "total": 3
+      },
+      "runIds": [
+        "2026-07-05T22-40-07-723Z-owl0q9"
+      ],
+      "schemaVersion": 1,
+      "sources": [
+        "run-2026-07-05T22-40-07-723Z-owl0q9.ndjson"
+      ],
+      "staleQuoteIncidents": 0,
+      "ticks": 2,
+      "wouldReplace": {
+        "byReason": {},
+        "total": 0
+      },
+      "wouldSoftCancel": {
+        "byReason": {},
+        "total": 0
+      },
+      "wouldSubmit": 6
+    }
+  },
+  "gates": {
+    "allowlistOnly": true,
+    "approvalHealFailed": 0,
+    "errors": 0,
+    "fundingHold": 0,
+    "offAllowlistRows": 0,
+    "seedSpeculations": false
+  },
+  "schemaVersion": 1
+}

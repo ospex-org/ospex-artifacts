@@ -1,0 +1,28 @@
+{
+  "checkedAtUtc": "2026-07-06T02:43:21.699554+00:00",
+  "contestOrderbookCount": 0,
+  "openCommitmentCounts": {
+    "15": 0
+  },
+  "orphanProcessCount": 0,
+  "publicContestSpecVisibleCommitments": 0,
+  "publicMakerVisibleCommitments": 0,
+  "targetContest": "15",
+  "targetPositionCounts": {
+    "flow_a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "stage_maker_a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "stage_maker_b": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    }
+  }
+}

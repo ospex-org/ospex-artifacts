@@ -1,0 +1,72 @@
+{
+  "badEventCounts": {
+    "approval-heal-failed": 0,
+    "divergence": 0,
+    "error": 0,
+    "foreign-maker-commitments": 0,
+    "funding-hold": 0,
+    "owner-mapping-failed": 0,
+    "unknown-own-fill": 0
+  },
+  "canonicalFillObserved": true,
+  "caveat": "startup stream-health hold cleared before controlled fill; final exposure checks were zero",
+  "divergence": 0,
+  "eventCounts": {
+    "approval": 0,
+    "approval-heal-failed": 0,
+    "cancel-blocked-missing-payload": 0,
+    "candidate": 3,
+    "claim": 0,
+    "competitiveness-unavailable": 0,
+    "degraded": 0,
+    "divergence": 0,
+    "error": 0,
+    "expire": 0,
+    "fair-value": 0,
+    "fill": 1,
+    "foreign-maker-commitments": 0,
+    "funding-hold": 0,
+    "kill": 1,
+    "nonce-floor-raise": 0,
+    "onchain-cancel": 0,
+    "owner-mapping-failed": 0,
+    "position-allowance-short": 0,
+    "position-transition": 0,
+    "quote-competitiveness": 6,
+    "quote-intent": 3,
+    "replace": 0,
+    "risk-verdict": 3,
+    "settle": 0,
+    "soft-cancel": 5,
+    "stream-cold-restart": 0,
+    "stream-health-degraded": 0,
+    "stream-health-hold": 2,
+    "stream-would-hold": 0,
+    "submit": 6,
+    "tick-start": 3,
+    "unknown-own-fill": 0,
+    "would-replace": 0,
+    "would-soft-cancel": 0,
+    "would-submit": 0
+  },
+  "ownerMappingFailed": 0,
+  "runIds": [
+    "2026-07-05T22-43-13-519Z-24m292"
+  ],
+  "schemaVersion": 1,
+  "streamHealthHoldEvents": [
+    {
+      "exposureWei6": "0",
+      "runId": "2026-07-05T22-43-13-519Z-24m292",
+      "severity": "low",
+      "state": "entered",
+      "ts": "2026-07-05T22:43:15.983Z"
+    },
+    {
+      "runId": "2026-07-05T22-43-13-519Z-24m292",
+      "state": "cleared",
+      "ts": "2026-07-05T22:44:16.729Z"
+    }
+  ],
+  "unknownOwnFill": 0
+}

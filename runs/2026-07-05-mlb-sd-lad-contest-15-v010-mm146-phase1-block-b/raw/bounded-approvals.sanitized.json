@@ -1,0 +1,72 @@
+{
+  "allUnlimitedApprovals": false,
+  "approvals": {
+    "flow_a": {
+      "allowances": {
+        "positionModule": {
+          "formatted": "0.8",
+          "isMax": false,
+          "raw": "800000",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "treasuryModule": {
+          "formatted": "1.5",
+          "isMax": false,
+          "raw": "1500000",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      },
+      "execute_ok": true,
+      "requirements": [],
+      "txs": [
+        "0x49dee292838be9264e2f6766206fe23f087c0d01db4bcdb914d0a2338679c0e8",
+        "0xc78bf9263b4e552e7cf6b41d1457acf90214883dcdb178af133330241ded67f8"
+      ]
+    },
+    "stage_maker_a": {
+      "allowances": {
+        "positionModule": {
+          "formatted": "0.5",
+          "isMax": false,
+          "raw": "500000",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "treasuryModule": {
+          "formatted": "1.5",
+          "isMax": false,
+          "raw": "1500000",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      },
+      "execute_ok": true,
+      "requirements": [],
+      "txs": [
+        "0x1b94371dc34b461c1c91023c109a0cb5950152b3d7279838ecb370803dbd567d",
+        "0x445baeec1b5e02a9170b584e949837da5469f73778cc38576098d3b5fd57e810"
+      ]
+    },
+    "stage_maker_b": {
+      "allowances": {
+        "positionModule": {
+          "formatted": "1.04",
+          "isMax": false,
+          "raw": "1040000",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "treasuryModule": {
+          "formatted": "2",
+          "isMax": false,
+          "raw": "2000000",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      },
+      "execute_ok": true,
+      "requirements": [],
+      "txs": [
+        "0x569d73eefa654bb6c28a00e63c075b9b0f536d07cb2e7148f088c526b2457b2d"
+      ]
+    }
+  },
+  "policy": "bounded approvals only; no unlimited approvals",
+  "schemaVersion": 1
+}

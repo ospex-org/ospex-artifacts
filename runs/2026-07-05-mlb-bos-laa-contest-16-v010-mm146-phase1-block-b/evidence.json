@@ -1,0 +1,226 @@
+{
+  "artifactFiles": {
+    "boundedApprovals": "raw/bounded-approvals.sanitized.json",
+    "evidence": "evidence.json",
+    "finalCommitmentsOrderbook": "raw/final-commitments-orderbook.sanitized.json",
+    "finalContestShow": "raw/final-contest-show.sanitized.json",
+    "finalPositionsStatus": "raw/final-positions-status.sanitized.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "liveCommitmentsPosted": "raw/live-public-commitments-posted.sanitized.json",
+    "liveFill": "raw/live-fill.sanitized.json",
+    "manualSeedFill": "raw/manual-seed-fill.sanitized.json",
+    "mmDryRun": "raw/mm-dryrun-summary.sanitized.json",
+    "mveScorecard": "mve-scorecard.json",
+    "mveScorecardMarkdown": "mve-scorecard.md",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "releaseRuntimeMatrix": "raw/release-runtime-matrix.sanitized.json",
+    "restartColdStartProbe": "raw/restart-cold-start-probe.sanitized.json",
+    "scenarioMatrix": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "summary": "summary.md",
+    "targetPreflight": "raw/target-preflight.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json",
+    "walletAuthBalances": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json"
+  },
+  "artifactId": "2026-07-05-mlb-bos-laa-contest-16-v010-mm146-phase1-block-b",
+  "artifactType": "run",
+  "caveats": [
+    "MM entered a startup own-state stream-health hold and cleared before controlled fill; no unknown-own-fill, owner-mapping, divergence, funding-hold, approval-heal-failed, duplicate exposure, orphan process, or residual open commitment remained."
+  ],
+  "dataPath": "evidence.json",
+  "date": "2026-07-05",
+  "generatedAt": "2026-07-06T13:54:49Z",
+  "network": "polygon",
+  "pairedBlock": {
+    "block": "MVE Phase 1 Block B",
+    "pairedArtifactContestIds": [
+      "15",
+      "16"
+    ],
+    "pairedContestAllowList": [
+      "15",
+      "16"
+    ],
+    "separateLiveWindows": true
+  },
+  "publishedAt": "2026-07-06T13:54:49Z",
+  "rawPath": "raw/",
+  "runClass": "mm-live-canary",
+  "schemaVersion": 1,
+  "sourceRunId": "20260705T222809Z-mve-phase1-block-b-sd-lad-bos-laa",
+  "status": "complete_verified_with_caveats",
+  "summaryPath": "summary.md",
+  "target": {
+    "awayTeam": "Boston Red Sox",
+    "companionSpeculations": {
+      "moneyline": "36",
+      "spread": "37",
+      "total": "38"
+    },
+    "contestId": "16",
+    "contestStatusAfterCreateVerify": "verified",
+    "contestStatusAfterPostgame": "scored",
+    "finalScore": {
+      "awayRuns": 7,
+      "homeRuns": 5,
+      "spreadWinner": "Boston Red Sox -1.5",
+      "spreadWinnerProtocolSide": "upper",
+      "totalLine": 8,
+      "totalRuns": 12,
+      "totalWinner": "over 8",
+      "totalWinnerProtocolSide": "upper",
+      "winner": "Boston Red Sox",
+      "winnerProtocolSide": "upper",
+      "winnerRole": "away"
+    },
+    "game": "Boston Red Sox @ Los Angeles Angels",
+    "gameId": "7f730aee-f196-4ac5-a01e-fb441785806f",
+    "gamePk": 824010,
+    "homeTeam": "Los Angeles Angels",
+    "market": "spread",
+    "marketsCovered": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "postgameStatus": "complete",
+    "referenceOdds": {
+      "moneyline": {
+        "awayOddsAmerican": -162,
+        "homeOddsAmerican": 145,
+        "market": "moneyline"
+      },
+      "spread": {
+        "awayLine": -1.5,
+        "awayOddsAmerican": 102,
+        "homeLine": 1.5,
+        "homeOddsAmerican": -122,
+        "market": "spread"
+      },
+      "total": {
+        "line": 8,
+        "market": "total",
+        "overOddsAmerican": -110,
+        "underOddsAmerican": -110
+      }
+    },
+    "slug": "bos-laa-2026-07-05",
+    "speculationId": "37",
+    "sport": "mlb",
+    "spreadLine": {
+      "awayLine": -1.5,
+      "awayPositionType": "upper",
+      "homeLine": 1.5,
+      "homePositionType": "lower",
+      "lineTicks": -15
+    },
+    "startTimeUtc": "2026-07-06T01:30:00Z",
+    "teamIdentity": {
+      "away": {
+        "abbreviation": "BOS",
+        "identity": "favorite",
+        "marketOddsAmerican": "-162",
+        "positionType": "upper",
+        "role": "away",
+        "team": "Boston Red Sox"
+      },
+      "home": {
+        "abbreviation": "LAA",
+        "identity": "underdog",
+        "marketOddsAmerican": "+145",
+        "positionType": "lower",
+        "role": "home",
+        "team": "Los Angeles Angels"
+      },
+      "spreadWinner": {
+        "line": -1.5,
+        "positionType": "upper",
+        "role": "away",
+        "team": "Boston Red Sox"
+      },
+      "totalWinner": {
+        "line": 8,
+        "positionType": "upper",
+        "side": "over"
+      },
+      "winner": {
+        "positionType": "upper",
+        "role": "away",
+        "team": "Boston Red Sox"
+      }
+    },
+    "totalLine": {
+      "line": 8,
+      "lineTicks": 80,
+      "overPositionType": "upper",
+      "underPositionType": "lower"
+    }
+  },
+  "verdict": {
+    "label": "FULL_GREEN",
+    "protocolVerdict": "MVE_PHASE1_BLOCK_B_GREEN_WITH_CAVEATS",
+    "reason": "The v0.10.0/R5 MM #146 strict-allowlist Phase 1 Block B run for Boston Red Sox @ Los Angeles Angels completed the full lifecycle: contest 16 was created and verified; moneyline, spread, and total speculations 36/37/38 were manually seeded and fully filled with zero residual seed exposure; the market maker posted tiny live quotes under strict contest allowlist [16] with seedSpeculations=false; one controlled live spread quote was filled; visible quotes were soft-cancelled or expired; final open commitments were zero; official final score Boston Red Sox 7 / Los Angeles Angels 5 was verified; contest 16 was scored through R5/CRE; target speculations were settled, winning controlled positions were claimed, and final target active/pending/claimable positions are zero. Caveat: startup own-state stream-health hold cleared before controlled fill and left zero residual exposure."
+  },
+  "versions": {
+    "allRequiredOk": true,
+    "ancillaryRepos": {
+      "ospex-core-api": {
+        "headSha": "076f44d",
+        "ok": true
+      },
+      "ospex-cre": {
+        "headSha": "fed6e26",
+        "ok": true
+      },
+      "ospex-indexer": {
+        "headSha": "75be9e7",
+        "ok": true
+      }
+    },
+    "capturedAtUtc": "2026-07-05T23:05:00Z",
+    "chainId": 137,
+    "marketMaker": {
+      "allowlistOnlyFlagAvailable": true,
+      "approvalSelfHealRegressionPresent": true,
+      "build": "pass",
+      "headSha": "6f3ccc1",
+      "installedSdkVersion": "0.9.0",
+      "ownStateOrphanSafetyRegressionPresent": true,
+      "repo": "ospex-market-maker",
+      "requiredAtOrAfter": "6f3ccc1",
+      "test": "pass",
+      "testCount": "1070 passed",
+      "typecheck": "pass"
+    },
+    "node": "v22.22.0",
+    "note": "MM internal @ospex/sdk remained v0.9.0 as allowed by Block B brief; operator CLI used v0.10.0.",
+    "schemaVersion": 1,
+    "sdkCli": {
+      "cliBuild": "pass",
+      "headSha": "3fa399a",
+      "install": "pass",
+      "ok": true,
+      "repo": "ospex-sdk",
+      "requiredAtOrAfter": "3fa399a",
+      "sdkBuild": "pass",
+      "version": "0.10.0"
+    },
+    "yarn": "1.22.22"
+  },
+  "wallets": {
+    "controlledTaker": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "profile": "ospex-flow-a"
+    },
+    "manualSeedMaker": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "profile": "ospex-stage-maker-a"
+    },
+    "operatorMmMaker": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "profile": "ospex-stage-maker-b"
+    }
+  }
+}

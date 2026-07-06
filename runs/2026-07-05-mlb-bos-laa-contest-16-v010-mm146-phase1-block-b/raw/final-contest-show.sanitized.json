@@ -1,0 +1,56 @@
+{
+  "payload": {
+    "awayScore": 7,
+    "awayTeam": "Boston Red Sox",
+    "contestCreatedAt": "2026-07-05T22:47:32+00:00",
+    "contestId": "16",
+    "homeScore": 5,
+    "homeTeam": "Los Angeles Angels",
+    "matchTime": "2026-07-06T01:30:00+00:00",
+    "scoredAt": "2026-07-06T04:44:26+00:00",
+    "speculations": [
+      {
+        "contestId": "16",
+        "line": null,
+        "lineTicks": 0,
+        "orderbookCount": 0,
+        "settledAt": "2026-07-06T04:44:31+00:00",
+        "speculationId": "36",
+        "speculationStatus": 1,
+        "type": "moneyline",
+        "voided": false,
+        "winSide": "away"
+      },
+      {
+        "contestId": "16",
+        "line": 8,
+        "lineTicks": 80,
+        "orderbookCount": 0,
+        "settledAt": "2026-07-06T04:44:41+00:00",
+        "speculationId": "38",
+        "speculationStatus": 1,
+        "type": "total",
+        "voided": false,
+        "winSide": "over"
+      },
+      {
+        "awayLine": -1.5,
+        "contestId": "16",
+        "homeLine": 1.5,
+        "line": -1.5,
+        "lineTicks": -15,
+        "orderbookCount": 0,
+        "settledAt": "2026-07-06T04:44:35+00:00",
+        "speculationId": "37",
+        "speculationStatus": 1,
+        "type": "spread",
+        "voided": false,
+        "winSide": "away"
+      }
+    ],
+    "sport": "mlb",
+    "status": "scored",
+    "verifiedAt": "2026-07-05T22:47:47+00:00"
+  },
+  "schemaVersion": 1
+}
