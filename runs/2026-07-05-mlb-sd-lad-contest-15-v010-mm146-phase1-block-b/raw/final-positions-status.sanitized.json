@@ -1,0 +1,26 @@
+{
+  "contestId": "15",
+  "schemaVersion": 1,
+  "targetSpeculations": [
+    "33",
+    "34",
+    "35"
+  ],
+  "wallets": {
+    "flow_a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "stage_maker_a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "stage_maker_b": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    }
+  }
+}

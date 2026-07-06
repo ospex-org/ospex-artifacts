@@ -1,0 +1,57 @@
+{
+  "apiHealth": "ok",
+  "apiReady": "ok",
+  "budgetPolicy": "target total new fees + controlled risk <=15 USDC; hard stop >25 USDC; bounded approvals only",
+  "oddsMarketsPresent": {
+    "moneyline": true,
+    "spread": true,
+    "total": true
+  },
+  "selectedTarget": {
+    "allowlistContestIds": [
+      "16"
+    ],
+    "awayTeam": "Boston Red Sox",
+    "blockContestIds": [
+      "15",
+      "16"
+    ],
+    "contestId": "16",
+    "contestStatusAfterCreateVerify": "verified",
+    "game": "Boston Red Sox @ Los Angeles Angels",
+    "gameId": "7f730aee-f196-4ac5-a01e-fb441785806f",
+    "homeTeam": "Los Angeles Angels",
+    "marketsCovered": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "matchTime": "2026-07-06T01:30:00+00:00",
+    "speculations": [
+      {
+        "contestId": "16",
+        "line": null,
+        "lineTicks": 0,
+        "speculationId": "36",
+        "type": "moneyline"
+      },
+      {
+        "awayLine": -1.5,
+        "contestId": "16",
+        "homeLine": 1.5,
+        "line": -1.5,
+        "lineTicks": -15,
+        "speculationId": "37",
+        "type": "spread"
+      },
+      {
+        "contestId": "16",
+        "line": 8,
+        "lineTicks": 80,
+        "speculationId": "38",
+        "type": "total"
+      }
+    ],
+    "sport": "mlb"
+  }
+}

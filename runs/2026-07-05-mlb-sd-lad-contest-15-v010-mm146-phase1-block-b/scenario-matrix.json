@@ -1,0 +1,107 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/scenario-matrix.schema.json",
+  "artifactId": "2026-07-05-mlb-sd-lad-contest-15-v010-mm146-phase1-block-b",
+  "generatedAt": "2026-07-06T13:54:49Z",
+  "runClass": "mm-live-canary",
+  "scenarios": [
+    {
+      "evidence": "raw/target-preflight.sanitized.json",
+      "id": "target-preflight",
+      "notes": "San Diego Padres @ Los Angeles Dodgers contest 15 and specs 33/34/35 passed target identity, allowlist, odds, and runway gates.",
+      "scenario": "Target preflight and allowlist",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "id": "repo-runtime-gates",
+      "notes": "SDK/CLI v0.10.0, MM head 6f3ccc1 with strict allowlist / own-state / bounded-approval coverage, installed MM SDK v0.9.0, and ancillary repo heads were verified.",
+      "scenario": "Repo/runtime gates",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "id": "wallet-auth-balances",
+      "notes": "Expected-address checks passed for ospex-stage-maker-b, ospex-stage-maker-a, and ospex-flow-a; public balances were sufficient and allowances were bounded.",
+      "scenario": "Wallet auth, balances, allowances",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "id": "bounded-approvals",
+      "notes": "Only bounded USDC approvals were used; no unlimited approvals were created.",
+      "scenario": "Bounded approvals / no unlimited approvals",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "id": "dry-run-quote-loop",
+      "notes": "Candidates --allowlist-only returned quote-ready rows for contest 15 and all seeded markets; dry run stayed target-scoped with seedSpeculations=false.",
+      "scenario": "Dry-run quote loop",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "id": "live-commitments-posted",
+      "notes": "Tiny live moneyline, spread, and total commitments posted under strict contest allowlist [15], seedSpeculations=false.",
+      "scenario": "Live commitments posted",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/live-fill.sanitized.json",
+      "id": "live-fill",
+      "notes": "A controlled taker filled one live MM total quote for contest 15.",
+      "scenario": "Controlled live fill",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "id": "own-state-sse-canonical-fill",
+      "notes": "Telemetry captured the controlled fill without unknown-own-fill, owner-mapping, or divergence safety events; a startup stream-health hold cleared before controlled fill.",
+      "scenario": "Own-state SSE canonical fill source",
+      "status": "pass_with_caveats"
+    },
+    {
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "id": "exposure-drain-zero",
+      "notes": "Final public/API/MM visible-open exposure is zero, target active/pending/claimable positions are zero after postgame, and no orphan MM process remained.",
+      "scenario": "Exposure drained to zero",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/restart-cold-start-probe.sanitized.json",
+      "id": "restart-cold-start-safety",
+      "notes": "A scratch-state dry-run/cold-start probe loaded state cleanly and did not create duplicate live exposure; live CLI reads remained zero-open.",
+      "scenario": "Restart/cold-start safety",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "id": "postgame-score",
+      "notes": "Official final score was verified and contest 15 scored via R5/CRE using CLI v0.10.0 score --wait.",
+      "scenario": "Postgame score",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "id": "postgame-settle",
+      "notes": "Moneyline, spread, and total speculations 33/34/35 settled to expected winning sides.",
+      "scenario": "Postgame settle",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "id": "postgame-claim",
+      "notes": "Winning controlled positions were claimed, losing positions were no-op/not claimable, and final target positions are zero.",
+      "scenario": "Postgame claim/no-op",
+      "status": "pass"
+    },
+    {
+      "evidence": "raw/tx-receipts.summary.json",
+      "id": "cost-within-cap",
+      "notes": "Tiny manual/live risk plus protocol fees stayed within the Phase 1 Block B low-cap budget; lifecycle transactions are summarized.",
+      "scenario": "Cost within cap",
+      "status": "pass"
+    }
+  ],
+  "schemaVersion": 2
+}

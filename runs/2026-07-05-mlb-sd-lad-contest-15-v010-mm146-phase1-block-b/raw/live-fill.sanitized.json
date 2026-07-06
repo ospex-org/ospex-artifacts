@@ -1,0 +1,40 @@
+{
+  "result": {
+    "blockNumber": "89724348",
+    "commitment": {
+      "commitmentHash": "0xd5b9f52be5d66a229463f597610a91dc83c9e8c95e6b9094e052e1b39feff2ef",
+      "contestId": "15",
+      "lineTicks": 100,
+      "marketType": "total",
+      "oddsTick": 203,
+      "positionType": 0,
+      "riskAmount": "50000"
+    },
+    "contest": {
+      "awayTeam": "San Diego Padres",
+      "contestId": "15",
+      "homeTeam": "Los Angeles Dodgers",
+      "sport": "mlb"
+    },
+    "payout": {
+      "profit": {
+        "usdc": "0.050000",
+        "wei6": "50000"
+      },
+      "totalReturn": {
+        "usdc": "0.101500",
+        "wei6": "101500"
+      }
+    },
+    "risk": {
+      "usdc": "0.051500",
+      "wei6": "51500"
+    },
+    "sideSummary": "Under 10.0",
+    "speculation": {
+      "market": "total",
+      "speculationId": "35"
+    },
+    "txHash": "0x313abcbe4f4bf046a8ee8c699476fe023a86df0a3e02763a2d33780425bdb652"
+  }
+}

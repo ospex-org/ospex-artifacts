@@ -1,0 +1,111 @@
+{
+  "claims": [
+    {
+      "sourceFile": "postgame-B-claim-stage_maker_a-spec-36-upper-attempt-2.json",
+      "speculationId": "36",
+      "txHash": "0xcdf353340c2f57ee6c650f8cc277c19c1a5d045f4c4975aa2bd17bc03291d66a",
+      "type": "upper",
+      "wallet": "stage-maker-a"
+    },
+    {
+      "sourceFile": "postgame-B-claim-stage_maker_a-spec-37-upper-attempt-2.json",
+      "speculationId": "37",
+      "txHash": "0x8297cb693e36ffe8b26be2e1a63e3ebd83d12244d2a1c92940b7bcbcc4ac2e34",
+      "type": "upper",
+      "wallet": "stage-maker-a"
+    },
+    {
+      "sourceFile": "postgame-B-claim-stage_maker_a-spec-38-upper-attempt-3.json",
+      "speculationId": "38",
+      "txHash": "0x464717958a1912b11470ebddd4871c294694ed17b5250511df73f87902ecc394",
+      "type": "upper",
+      "wallet": "stage-maker-a"
+    },
+    {
+      "sourceFile": "postgame-B-claim-stage_maker_b-spec-37-upper-attempt-1.json",
+      "speculationId": "37",
+      "txHash": "0xbb459fe5971dae63433e8981ee9d88576e2b387155f25c002ca74ccd2dece845",
+      "type": "upper",
+      "wallet": "stage-maker-b"
+    }
+  ],
+  "contestFinal": {
+    "awayScore": 7,
+    "contestId": "16",
+    "homeScore": 5,
+    "scoredAt": "2026-07-06T04:44:26+00:00",
+    "status": "scored"
+  },
+  "finalOpenCommitments": 0,
+  "finalTargetPositions": {
+    "flow_a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "stage_maker_a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "stage_maker_b": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    }
+  },
+  "officialFinal": {
+    "awayScore": 7,
+    "awayTeam": "Boston Red Sox",
+    "gameDate": "2026-07-06T01:30:00Z",
+    "gamePk": 824010,
+    "homeScore": 5,
+    "homeTeam": "Los Angeles Angels",
+    "source": "MLB Stats API schedule endpoint",
+    "sourceUrl": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-07-05&hydrate=team,linescore",
+    "status": {
+      "abstractGameCode": "F",
+      "abstractGameState": "Final",
+      "codedGameState": "F",
+      "detailedState": "Final",
+      "startTimeTBD": false,
+      "statusCode": "F"
+    }
+  },
+  "schemaVersion": 1,
+  "scoreStatusAfter": {
+    "awayScore": 7,
+    "contestId": "16",
+    "homeScore": 5,
+    "scored": true,
+    "status": "scored"
+  },
+  "scoreStatusBefore": {
+    "awayScore": null,
+    "contestId": "16",
+    "homeScore": null,
+    "scored": false,
+    "status": "verified"
+  },
+  "scoreWait": {
+    "autoReRequestUsed": false,
+    "txHash": "0x2a59a10a259248d7b8900f654d8bc6a30b48e23122392938743cec5382503d2c"
+  },
+  "settledSpecs": [
+    {
+      "market": "moneyline",
+      "speculationId": "36",
+      "txHash": "0xbbe83002821cc7e2ca5e34fead7da3e1ee40d607a19fa8e227bf00da08b0f7ce"
+    },
+    {
+      "market": "spread",
+      "speculationId": "37",
+      "txHash": "0xc5cdc8869b303e9bff406f157af90ac0a0db2e17d74de3d3df0e87b6841a29fd"
+    },
+    {
+      "market": "total",
+      "speculationId": "38",
+      "txHash": "0xe961fe2d130ac8b2e0715035887338c2968f1945075995f7384765ad9085cef2"
+    }
+  ]
+}

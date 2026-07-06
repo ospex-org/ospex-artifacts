@@ -1,0 +1,151 @@
+{
+  "budget": {
+    "boundedApprovalsOnly": true,
+    "hardStopUSDC": "25",
+    "targetCapUSDC": "15"
+  },
+  "controlledLiveFillRiskUSDC": "0.051500",
+  "manualSeedFillRisksUSDC": {
+    "moneyline": {
+      "maker": "0.030000",
+      "taker": "0.058200"
+    },
+    "spread": {
+      "maker": "0.030000",
+      "taker": "0.028500"
+    },
+    "total": {
+      "maker": "0.030000",
+      "taker": "0.027300"
+    }
+  },
+  "schemaVersion": 1,
+  "transactions": [
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for stage-maker-b",
+      "status": "success",
+      "txHash": "0x569d73eefa654bb6c28a00e63c075b9b0f536d07cb2e7148f088c526b2457b2d"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for stage-maker-a",
+      "status": "success",
+      "txHash": "0x1b94371dc34b461c1c91023c109a0cb5950152b3d7279838ecb370803dbd567d"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for stage-maker-a",
+      "status": "success",
+      "txHash": "0x445baeec1b5e02a9170b584e949837da5469f73778cc38576098d3b5fd57e810"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for flow-a",
+      "status": "success",
+      "txHash": "0x49dee292838be9264e2f6766206fe23f087c0d01db4bcdb914d0a2338679c0e8"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded USDC approval for flow-a",
+      "status": "success",
+      "txHash": "0xc78bf9263b4e552e7cf6b41d1457acf90214883dcdb178af133330241ded67f8"
+    },
+    {
+      "category": "create-contest",
+      "operatorControlled": true,
+      "purpose": "Create contest 15 for San Diego Padres @ Los Angeles Dodgers",
+      "status": "success",
+      "txHash": "0x8a7bb884a8ffadfba94d559a480b9104a64a06f1b2916cb840e61b443a5842a7"
+    },
+    {
+      "category": "other",
+      "operatorControlled": true,
+      "purpose": "Request market update for contest 15",
+      "status": "success",
+      "txHash": "0x8c7c38999b22b2d5359a6360a1679a5d7c417180442d813cf98bb92a131145df"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual moneyline seed for contest 15 speculation 33",
+      "status": "success",
+      "txHash": "0x9875c82cbb7c5ddb52ca004ba78234d63044c46b328af28b13cf5be9ac465344"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual spread seed for contest 15 speculation 34",
+      "status": "success",
+      "txHash": "0xebfb9e5ad778b8b9c0cdb9955206ece352db146e3415f40777bb75928c7f3b8d"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual total seed for contest 15 speculation 35",
+      "status": "success",
+      "txHash": "0xac1ddbb56bdc3ae1aa437a90a4c2c113fb6308625d0222b06fcda8af642a6d24"
+    },
+    {
+      "category": "match-commitment",
+      "operatorControlled": true,
+      "purpose": "Controlled fill against live MM total quote on contest 15",
+      "status": "success",
+      "txHash": "0x313abcbe4f4bf046a8ee8c699476fe023a86df0a3e02763a2d33780425bdb652"
+    },
+    {
+      "category": "score-request",
+      "operatorControlled": true,
+      "purpose": "Request R5 score for contest 15 after MLB official final",
+      "status": "success",
+      "txHash": "0xac4d213e42e101ec0c08712ee7817b606abf29e3cae194b9828a8d3d0428abf9"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle contest 15 moneyline speculation 33",
+      "status": "success",
+      "txHash": "0x04c5197854a84520c9487c6b688b168b96fbac4bf7ed989db465e06c166e248f"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle contest 15 spread speculation 34",
+      "status": "success",
+      "txHash": "0x6a889598ffa7f22a76bf05d0a4a2e93338b327c418de9630afe346058ab61461"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle contest 15 total speculation 35",
+      "status": "success",
+      "txHash": "0x72df871e31fdd101d3b555bc0a9b4abbf05cc6a737952576f92fc3db7a196fe1"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim flow-a winning position for speculation 35 side lower",
+      "status": "success",
+      "txHash": "0xba28566fe106749f5e056d3661ee416b89d8283dd17f108bad51ad4af8fc2852"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim stage-maker-a winning position for speculation 33 side upper",
+      "status": "success",
+      "txHash": "0x896e489aed79928ddf3d1a2b495e4b059e85465b34c899ae794ce4a6bc99607f"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim stage-maker-a winning position for speculation 34 side upper",
+      "status": "success",
+      "txHash": "0x29e8e0abc0522020b1f50ac9398b5123cc67cc8d1d401335c2646ca39a3c50b1"
+    }
+  ]
+}

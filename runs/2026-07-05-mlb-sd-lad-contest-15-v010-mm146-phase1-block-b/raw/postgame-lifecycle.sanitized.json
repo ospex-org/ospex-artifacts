@@ -1,0 +1,104 @@
+{
+  "claims": [
+    {
+      "sourceFile": "postgame-A-claim-flow_a-spec-35-lower-attempt-1.json",
+      "speculationId": "35",
+      "txHash": "0xba28566fe106749f5e056d3661ee416b89d8283dd17f108bad51ad4af8fc2852",
+      "type": "lower",
+      "wallet": "flow-a"
+    },
+    {
+      "sourceFile": "postgame-A-claim-stage_maker_a-spec-33-upper-attempt-1.json",
+      "speculationId": "33",
+      "txHash": "0x896e489aed79928ddf3d1a2b495e4b059e85465b34c899ae794ce4a6bc99607f",
+      "type": "upper",
+      "wallet": "stage-maker-a"
+    },
+    {
+      "sourceFile": "postgame-A-claim-stage_maker_a-spec-34-upper-attempt-1.json",
+      "speculationId": "34",
+      "txHash": "0x29e8e0abc0522020b1f50ac9398b5123cc67cc8d1d401335c2646ca39a3c50b1",
+      "type": "upper",
+      "wallet": "stage-maker-a"
+    }
+  ],
+  "contestFinal": {
+    "awayScore": 5,
+    "contestId": "15",
+    "homeScore": 2,
+    "scoredAt": "2026-07-06T02:42:26+00:00",
+    "status": "scored"
+  },
+  "finalOpenCommitments": 0,
+  "finalTargetPositions": {
+    "flow_a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "stage_maker_a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "stage_maker_b": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    }
+  },
+  "officialFinal": {
+    "awayScore": 5,
+    "awayTeam": "San Diego Padres",
+    "gameDate": "2026-07-05T23:20:00Z",
+    "gamePk": 823931,
+    "homeScore": 2,
+    "homeTeam": "Los Angeles Dodgers",
+    "source": "MLB Stats API schedule endpoint",
+    "sourceUrl": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-07-05&hydrate=team,linescore",
+    "status": {
+      "abstractGameCode": "F",
+      "abstractGameState": "Final",
+      "codedGameState": "F",
+      "detailedState": "Final",
+      "startTimeTBD": false,
+      "statusCode": "F"
+    }
+  },
+  "schemaVersion": 1,
+  "scoreStatusAfter": {
+    "awayScore": 5,
+    "contestId": "15",
+    "homeScore": 2,
+    "scored": true,
+    "status": "scored"
+  },
+  "scoreStatusBefore": {
+    "awayScore": null,
+    "contestId": "15",
+    "homeScore": null,
+    "scored": false,
+    "status": "verified"
+  },
+  "scoreWait": {
+    "autoReRequestUsed": false,
+    "txHash": "0xac4d213e42e101ec0c08712ee7817b606abf29e3cae194b9828a8d3d0428abf9"
+  },
+  "settledSpecs": [
+    {
+      "market": "moneyline",
+      "speculationId": "33",
+      "txHash": "0x04c5197854a84520c9487c6b688b168b96fbac4bf7ed989db465e06c166e248f"
+    },
+    {
+      "market": "spread",
+      "speculationId": "34",
+      "txHash": "0x6a889598ffa7f22a76bf05d0a4a2e93338b327c418de9630afe346058ab61461"
+    },
+    {
+      "market": "total",
+      "speculationId": "35",
+      "txHash": "0x72df871e31fdd101d3b555bc0a9b4abbf05cc6a737952576f92fc3db7a196fe1"
+    }
+  ]
+}

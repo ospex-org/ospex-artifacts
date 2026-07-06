@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "walletRoles": {
+    "controlledTaker": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "profile": "ospex-flow-a"
+    },
+    "manualSeedMaker": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "profile": "ospex-stage-maker-a"
+    },
+    "operatorMmMaker": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "profile": "ospex-stage-maker-b"
+    }
+  },
+  "wallets": {
+    "flow_a": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "allowances": {
+        "positionModule": {
+          "formatted": "0.5932",
+          "isMax": false,
+          "raw": "593200",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "treasuryModule": {
+          "formatted": "0.1",
+          "isMax": false,
+          "raw": "100000",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      },
+      "approvalsOk": true,
+      "authOk": true,
+      "nativeBalancePOL": "7.435366",
+      "profile": "ospex-flow-a",
+      "usdcBalance": "3.654813"
+    },
+    "stage_maker_a": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "allowances": {
+        "positionModule": {
+          "formatted": "0.3",
+          "isMax": false,
+          "raw": "300000",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "treasuryModule": {
+          "formatted": "0.1",
+          "isMax": false,
+          "raw": "100000",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      },
+      "approvalsOk": true,
+      "authOk": true,
+      "nativeBalancePOL": "21.11103",
+      "profile": "ospex-stage-maker-a",
+      "usdcBalance": "17.55691"
+    },
+    "stage_maker_b": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "allowances": {
+        "positionModule": {
+          "formatted": "1.04",
+          "isMax": false,
+          "raw": "1040000",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "treasuryModule": {
+          "formatted": "0.1",
+          "isMax": false,
+          "raw": "100000",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      },
+      "approvalsOk": true,
+      "authOk": true,
+      "nativeBalancePOL": "6.397873",
+      "profile": "ospex-stage-maker-b",
+      "usdcBalance": "11.886501"
+    }
+  }
+}

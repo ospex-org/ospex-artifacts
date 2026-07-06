@@ -1,0 +1,18 @@
+{
+  "awayScore": 7,
+  "awayTeam": "Boston Red Sox",
+  "gameDate": "2026-07-06T01:30:00Z",
+  "gamePk": 824010,
+  "homeScore": 5,
+  "homeTeam": "Los Angeles Angels",
+  "source": "MLB Stats API schedule endpoint",
+  "sourceUrl": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-07-05&hydrate=team,linescore",
+  "status": {
+    "abstractGameCode": "F",
+    "abstractGameState": "Final",
+    "codedGameState": "F",
+    "detailedState": "Final",
+    "startTimeTBD": false,
+    "statusCode": "F"
+  }
+}

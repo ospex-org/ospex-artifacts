@@ -1,0 +1,226 @@
+{
+  "artifactFiles": {
+    "boundedApprovals": "raw/bounded-approvals.sanitized.json",
+    "evidence": "evidence.json",
+    "finalCommitmentsOrderbook": "raw/final-commitments-orderbook.sanitized.json",
+    "finalContestShow": "raw/final-contest-show.sanitized.json",
+    "finalPositionsStatus": "raw/final-positions-status.sanitized.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "liveCommitmentsPosted": "raw/live-public-commitments-posted.sanitized.json",
+    "liveFill": "raw/live-fill.sanitized.json",
+    "manualSeedFill": "raw/manual-seed-fill.sanitized.json",
+    "mmDryRun": "raw/mm-dryrun-summary.sanitized.json",
+    "mveScorecard": "mve-scorecard.json",
+    "mveScorecardMarkdown": "mve-scorecard.md",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "releaseRuntimeMatrix": "raw/release-runtime-matrix.sanitized.json",
+    "restartColdStartProbe": "raw/restart-cold-start-probe.sanitized.json",
+    "scenarioMatrix": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "summary": "summary.md",
+    "targetPreflight": "raw/target-preflight.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json",
+    "walletAuthBalances": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json"
+  },
+  "artifactId": "2026-07-05-mlb-sd-lad-contest-15-v010-mm146-phase1-block-b",
+  "artifactType": "run",
+  "caveats": [
+    "MM entered a startup own-state stream-health hold and cleared before controlled fill; no unknown-own-fill, owner-mapping, divergence, funding-hold, approval-heal-failed, duplicate exposure, orphan process, or residual open commitment remained."
+  ],
+  "dataPath": "evidence.json",
+  "date": "2026-07-05",
+  "generatedAt": "2026-07-06T13:54:49Z",
+  "network": "polygon",
+  "pairedBlock": {
+    "block": "MVE Phase 1 Block B",
+    "pairedArtifactContestIds": [
+      "15",
+      "16"
+    ],
+    "pairedContestAllowList": [
+      "15",
+      "16"
+    ],
+    "separateLiveWindows": true
+  },
+  "publishedAt": "2026-07-06T13:54:49Z",
+  "rawPath": "raw/",
+  "runClass": "mm-live-canary",
+  "schemaVersion": 1,
+  "sourceRunId": "20260705T222809Z-mve-phase1-block-b-sd-lad-bos-laa",
+  "status": "complete_verified_with_caveats",
+  "summaryPath": "summary.md",
+  "target": {
+    "awayTeam": "San Diego Padres",
+    "companionSpeculations": {
+      "moneyline": "33",
+      "spread": "34",
+      "total": "35"
+    },
+    "contestId": "15",
+    "contestStatusAfterCreateVerify": "verified",
+    "contestStatusAfterPostgame": "scored",
+    "finalScore": {
+      "awayRuns": 5,
+      "homeRuns": 2,
+      "spreadWinner": "San Diego Padres +1.5",
+      "spreadWinnerProtocolSide": "upper",
+      "totalLine": 10,
+      "totalRuns": 7,
+      "totalWinner": "under 10",
+      "totalWinnerProtocolSide": "lower",
+      "winner": "San Diego Padres",
+      "winnerProtocolSide": "upper",
+      "winnerRole": "away"
+    },
+    "game": "San Diego Padres @ Los Angeles Dodgers",
+    "gameId": "7c435517-5e18-48f8-8fdf-177fb24d6d07",
+    "gamePk": 823931,
+    "homeTeam": "Los Angeles Dodgers",
+    "market": "total",
+    "marketsCovered": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "postgameStatus": "complete",
+    "referenceOdds": {
+      "moneyline": {
+        "awayOddsAmerican": 194,
+        "homeOddsAmerican": -226,
+        "market": "moneyline"
+      },
+      "spread": {
+        "awayLine": 1.5,
+        "awayOddsAmerican": -105,
+        "homeLine": -1.5,
+        "homeOddsAmerican": -115,
+        "market": "spread"
+      },
+      "total": {
+        "line": 10,
+        "market": "total",
+        "overOddsAmerican": -110,
+        "underOddsAmerican": -110
+      }
+    },
+    "slug": "sd-lad-2026-07-05",
+    "speculationId": "35",
+    "sport": "mlb",
+    "spreadLine": {
+      "awayLine": 1.5,
+      "awayPositionType": "upper",
+      "homeLine": -1.5,
+      "homePositionType": "lower",
+      "lineTicks": 15
+    },
+    "startTimeUtc": "2026-07-05T23:20:00Z",
+    "teamIdentity": {
+      "away": {
+        "abbreviation": "SD",
+        "identity": "underdog",
+        "marketOddsAmerican": "+194",
+        "positionType": "upper",
+        "role": "away",
+        "team": "San Diego Padres"
+      },
+      "home": {
+        "abbreviation": "LAD",
+        "identity": "favorite",
+        "marketOddsAmerican": "-226",
+        "positionType": "lower",
+        "role": "home",
+        "team": "Los Angeles Dodgers"
+      },
+      "spreadWinner": {
+        "line": 1.5,
+        "positionType": "upper",
+        "role": "away",
+        "team": "San Diego Padres"
+      },
+      "totalWinner": {
+        "line": 10,
+        "positionType": "lower",
+        "side": "under"
+      },
+      "winner": {
+        "positionType": "upper",
+        "role": "away",
+        "team": "San Diego Padres"
+      }
+    },
+    "totalLine": {
+      "line": 10,
+      "lineTicks": 100,
+      "overPositionType": "upper",
+      "underPositionType": "lower"
+    }
+  },
+  "verdict": {
+    "label": "FULL_GREEN",
+    "protocolVerdict": "MVE_PHASE1_BLOCK_B_GREEN_WITH_CAVEATS",
+    "reason": "The v0.10.0/R5 MM #146 strict-allowlist Phase 1 Block B run for San Diego Padres @ Los Angeles Dodgers completed the full lifecycle: contest 15 was created and verified; moneyline, spread, and total speculations 33/34/35 were manually seeded and fully filled with zero residual seed exposure; the market maker posted tiny live quotes under strict contest allowlist [15] with seedSpeculations=false; one controlled live total quote was filled; visible quotes were soft-cancelled or expired; final open commitments were zero; official final score San Diego Padres 5 / Los Angeles Dodgers 2 was verified; contest 15 was scored through R5/CRE; target speculations were settled, winning controlled positions were claimed, and final target active/pending/claimable positions are zero. Caveat: startup own-state stream-health hold cleared before controlled fill and left zero residual exposure."
+  },
+  "versions": {
+    "allRequiredOk": true,
+    "ancillaryRepos": {
+      "ospex-core-api": {
+        "headSha": "076f44d",
+        "ok": true
+      },
+      "ospex-cre": {
+        "headSha": "fed6e26",
+        "ok": true
+      },
+      "ospex-indexer": {
+        "headSha": "75be9e7",
+        "ok": true
+      }
+    },
+    "capturedAtUtc": "2026-07-05T23:05:00Z",
+    "chainId": 137,
+    "marketMaker": {
+      "allowlistOnlyFlagAvailable": true,
+      "approvalSelfHealRegressionPresent": true,
+      "build": "pass",
+      "headSha": "6f3ccc1",
+      "installedSdkVersion": "0.9.0",
+      "ownStateOrphanSafetyRegressionPresent": true,
+      "repo": "ospex-market-maker",
+      "requiredAtOrAfter": "6f3ccc1",
+      "test": "pass",
+      "testCount": "1070 passed",
+      "typecheck": "pass"
+    },
+    "node": "v22.22.0",
+    "note": "MM internal @ospex/sdk remained v0.9.0 as allowed by Block B brief; operator CLI used v0.10.0.",
+    "schemaVersion": 1,
+    "sdkCli": {
+      "cliBuild": "pass",
+      "headSha": "3fa399a",
+      "install": "pass",
+      "ok": true,
+      "repo": "ospex-sdk",
+      "requiredAtOrAfter": "3fa399a",
+      "sdkBuild": "pass",
+      "version": "0.10.0"
+    },
+    "yarn": "1.22.22"
+  },
+  "wallets": {
+    "controlledTaker": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "profile": "ospex-flow-a"
+    },
+    "manualSeedMaker": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "profile": "ospex-stage-maker-a"
+    },
+    "operatorMmMaker": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "profile": "ospex-stage-maker-b"
+    }
+  }
+}

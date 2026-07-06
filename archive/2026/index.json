@@ -1,13 +1,35 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-07-05T21:44:23Z",
+  "generatedAt": "2026-07-06T13:54:55Z",
   "repository": "ospex-org/ospex-artifacts",
   "archive": {
     "scope": "year",
     "year": 2026
   },
   "artifacts": [
+    {
+      "artifactId": "2026-07-05-mlb-sd-lad-contest-15-v010-mm146-phase1-block-b",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-05-mlb-sd-lad-contest-15-v010-mm146-phase1-block-b/evidence.json",
+      "date": "2026-07-05",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-05-mlb-sd-lad-contest-15-v010-mm146-phase1-block-b/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-07-05-mlb-sd-lad-contest-15-v010-mm146-phase1-block-b/summary.md",
+      "publishedAt": "2026-07-06T13:54:49Z"
+    },
+    {
+      "artifactId": "2026-07-05-mlb-bos-laa-contest-16-v010-mm146-phase1-block-b",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-05-mlb-bos-laa-contest-16-v010-mm146-phase1-block-b/evidence.json",
+      "date": "2026-07-05",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-05-mlb-bos-laa-contest-16-v010-mm146-phase1-block-b/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-07-05-mlb-bos-laa-contest-16-v010-mm146-phase1-block-b/summary.md",
+      "publishedAt": "2026-07-06T13:54:49Z"
+    },
     {
       "artifactId": "2026-07-05-mlb-pit-wsh-contest-14-v010-mm146-phase1-block-a",
       "artifactType": "run",

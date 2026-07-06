@@ -1,0 +1,64 @@
+{
+  "contestId": "15",
+  "finalOpenCommitments": 0,
+  "markets": {
+    "moneyline": {
+      "hash": "0x10e167d6d49409b85df188ea12e68d84c3397874a88385b3509c90e182c65eec",
+      "maker_risk": {
+        "usdc": "0.030000",
+        "wei6": "30000"
+      },
+      "maker_side": "San Diego Padres",
+      "match_ok": true,
+      "match_txs": [
+        "0x9875c82cbb7c5ddb52ca004ba78234d63044c46b328af28b13cf5be9ac465344"
+      ],
+      "speculation_key": "0x82f691399931c73a9514debd8727db4286ec0ffa03e148dcb93564e36fa3c68a",
+      "submit_ok": true,
+      "taker_risk": {
+        "usdc": "0.058200",
+        "wei6": "58200"
+      },
+      "taker_side": "Los Angeles Dodgers"
+    },
+    "spread": {
+      "hash": "0x5169798acf329b151f798302dc4bc3fcbeb1243428281e97b421307e2aee0e9c",
+      "maker_risk": {
+        "usdc": "0.030000",
+        "wei6": "30000"
+      },
+      "maker_side": "San Diego Padres +1.5",
+      "match_ok": true,
+      "match_txs": [
+        "0xebfb9e5ad778b8b9c0cdb9955206ece352db146e3415f40777bb75928c7f3b8d"
+      ],
+      "speculation_key": "0xbbb270427efccb4bec659f8b0e753b198d74f700e1b4e793efcb3bbb1cc45a34",
+      "submit_ok": true,
+      "taker_risk": {
+        "usdc": "0.028500",
+        "wei6": "28500"
+      },
+      "taker_side": "Los Angeles Dodgers -1.5"
+    },
+    "total": {
+      "hash": "0x6d5a8820229412a1aa4bc6903d3ebe93e2d499e246abf0c1127680173a9753c9",
+      "maker_risk": {
+        "usdc": "0.030000",
+        "wei6": "30000"
+      },
+      "maker_side": "Over 10.0",
+      "match_ok": true,
+      "match_txs": [
+        "0xac1ddbb56bdc3ae1aa437a90a4c2c113fb6308625d0222b06fcda8af642a6d24"
+      ],
+      "speculation_key": "0xea9d3070ce3b346d6d64ffeeca35b3dba4545a2f125dee658d5ed60d5520ffe3",
+      "submit_ok": true,
+      "taker_risk": {
+        "usdc": "0.027300",
+        "wei6": "27300"
+      },
+      "taker_side": "Under 10.0"
+    }
+  },
+  "schemaVersion": 1
+}
