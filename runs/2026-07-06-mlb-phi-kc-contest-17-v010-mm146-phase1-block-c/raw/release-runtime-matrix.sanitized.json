@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "capturedAtUtc": "2026-07-06T14:21:12Z",
+  "chainId": 137,
+  "sdkCli": {
+    "repo": "ospex-sdk",
+    "version": "0.10.0",
+    "headSha": "3fa399a",
+    "requiredAtOrAfter": "3fa399a",
+    "ok": true
+  },
+  "marketMaker": {
+    "repo": "ospex-market-maker",
+    "headSha": "6f3ccc1",
+    "requiredAtOrAfter": "6f3ccc1",
+    "installedSdkVersion": "0.9.0",
+    "allowlistOnlyFlagAvailable": true,
+    "approvalSelfHealRegressionPresent": true,
+    "ownStateOrphanSafetyRegressionPresent": true,
+    "ok": true
+  },
+  "ancillaryRepos": {
+    "ospex-core-api": {
+      "headSha": "076f44d",
+      "requiredAtOrAfter": "076f44d",
+      "ok": true
+    },
+    "ospex-indexer": {
+      "headSha": "75be9e7",
+      "requiredAtOrAfter": "75be9e7",
+      "ok": true
+    },
+    "ospex-cre": {
+      "headSha": "fed6e26",
+      "requiredAtOrAfter": "fed6e26",
+      "ok": true
+    }
+  },
+  "note": "MM internal @ospex/sdk remained v0.9.0 as allowed by the Block C brief; operator CLI used v0.10.0.",
+  "allRequiredOk": true
+}

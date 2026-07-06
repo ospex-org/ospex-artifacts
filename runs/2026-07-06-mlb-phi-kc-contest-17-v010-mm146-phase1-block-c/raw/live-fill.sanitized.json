@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-06T14:37:38Z",
+  "result": {
+    "contest": {
+      "contestId": "17",
+      "sport": "mlb",
+      "awayTeam": "Philadelphia Phillies",
+      "homeTeam": "Kansas City Royals"
+    },
+    "speculation": {
+      "speculationId": "40",
+      "type": "spread",
+      "line": -1.5,
+      "lineTicks": -15
+    },
+    "commitment": {
+      "contestId": "17",
+      "marketType": "spread",
+      "commitmentHash": "0x8092bbfa63cd49f3c9139d4650e635a24f39893036b298496bbe5f7a75de19a9"
+    },
+    "sideSummary": "Kansas City Royals +1.5",
+    "riskUSDC": "0.043500",
+    "transaction": {
+      "txHash": "0xa914cb66bdbf3d152c123947eaf6ea3d9b81bcfb31e0bcf0fba1ac1cedecc5f5",
+      "blockNumber": "89762442"
+    }
+  }
+}

@@ -1,0 +1,219 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "2026-07-06-mlb-phi-kc-contest-17-v010-mm146-phase1-block-c",
+  "generatedAt": "2026-07-06T21:38:31Z",
+  "runClass": "mm-live-canary",
+  "verdict": {
+    "label": "FULL_GREEN",
+    "protocolVerdict": "MVE_PHASE1_BLOCK_C_GREEN_WITH_CAVEATS",
+    "reason": "The v0.10.0/R5 strict-allowlist Phase 1 Block C run for Philadelphia Phillies @ Kansas City Royals completed the full lifecycle: contest 17 was created and verified; moneyline, spread, and total speculations 39/40/41 were manually seeded and fully filled with zero residual seed exposure; the market maker posted tiny live quotes under strict contest allowlist [17] with seedSpeculations=false; a controlled live spread quote was filled; remaining visible quotes were soft-cancelled or expired; final open commitments were zero; official final score Philadelphia Phillies 1 / Kansas City Royals 15 was verified; contest 17 was scored through R5/CRE; target speculations were settled, winning controlled positions were claimed, and final target active/pending/claimable positions are zero. Caveats: startup own-state stream-health hold cleared before fill, a single own-state-stream projection-ordering error preceded the canonical fill, and live total was skipped after a reference-line mismatch."
+  },
+  "capabilities": [
+    {
+      "id": "target-preflight",
+      "capability": "Target preflight and allowlist",
+      "proof": "proven_live",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "notes": "PHI @ KC contest 17 and specs 39/40/41 passed target identity, allowlist, odds, and runway gates."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "capability": "Repo/runtime gates",
+      "proof": "proven_live",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "notes": "SDK/CLI v0.10.0, MM head 6f3ccc1, installed MM SDK v0.9.0, and required ancillary repo heads were verified."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "capability": "Wallet auth, balances, allowances",
+      "proof": "proven_live",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Expected-address checks passed for ospex-stage-maker-b, ospex-stage-maker-a, and ospex-flow-a; public balances were sufficient and allowances were bounded."
+    },
+    {
+      "id": "bounded-approvals",
+      "capability": "Bounded approvals / no unlimited approvals",
+      "proof": "proven_live",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "notes": "Only bounded USDC approvals were used; no unlimited approvals were created."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "capability": "Dry-run quote loop",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "notes": "Candidates --allowlist-only returned quote-ready rows for contest 17 and all three seeded markets; dry run stayed target-scoped with seedSpeculations=false."
+    },
+    {
+      "id": "live-commitments-posted",
+      "capability": "Live commitments posted",
+      "proof": "proven_live",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "notes": "Tiny live moneyline and spread commitments posted under strict contest allowlist [17], seedSpeculations=false; total skipped live after a reference-line mismatch."
+    },
+    {
+      "id": "live-fill",
+      "capability": "Controlled live fill",
+      "proof": "proven_live",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "A controlled taker filled one live MM spread quote for contest 17."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "capability": "Own-state SSE canonical fill source",
+      "proof": "proven_live",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "Telemetry captured eventCounts.fill=1 with canonicalFillObserved=true; startup stream-health hold cleared before fill and bad own-state counters stayed zero."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "capability": "Exposure drained to zero",
+      "proof": "proven_live",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "Final public/API/MM visible-open exposure is zero, target active/pending/claimable positions are zero after postgame, and no orphan MM process remained."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "capability": "Restart/cold-start safety",
+      "proof": "not_applicable",
+      "notes": "Block C brief did not require a separate scratch cold-start probe; zero-open and no-orphan shutdown proofs were captured."
+    },
+    {
+      "id": "postgame-score",
+      "capability": "Postgame score",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Official final score was verified and contest 17 scored via R5/CRE using CLI v0.10.0 score --wait."
+    },
+    {
+      "id": "postgame-settle",
+      "capability": "Postgame settle",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Moneyline, spread, and total speculations 39/40/41 carried settledAt values after scoring; explicit settle commands returned alreadySettled."
+    },
+    {
+      "id": "postgame-claim",
+      "capability": "Postgame claim/no-op",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Winning controlled positions were claimed and final target positions are zero."
+    },
+    {
+      "id": "cost-within-cap",
+      "capability": "Cost within cap",
+      "proof": "proven_live",
+      "evidence": "raw/tx-receipts.summary.json",
+      "notes": "Tiny manual/live risk plus protocol fees stayed within the Phase 1 Block C low-cap budget."
+    }
+  ],
+  "zeroExposure": {
+    "checkedAtUtc": "2026-07-06T21:28:31Z",
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "orphanProcessCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json"
+  },
+  "transactions": [
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded 1.00 USDC approval for ospex-stage-maker-b",
+      "status": "success",
+      "txHash": "0x512d42d21262346056b174366a26b6dad2cc6b3805a422aef3d3b1e662606318"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded 0.75 USDC approval for ospex-stage-maker-a",
+      "status": "success",
+      "txHash": "0x1aa16ac218975d9cfea5702838a7b8f330edb88754dfacfbdd7b488212edbe7f"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded 0.75 USDC approval for ospex-flow-a",
+      "status": "success",
+      "txHash": "0xf047d6ce2618078ff1d30fc949600f1ddf3bd902eeeece1d5ebf44cdca551590"
+    },
+    {
+      "category": "create-contest",
+      "operatorControlled": true,
+      "purpose": "Create contest 17 for Philadelphia Phillies @ Kansas City Royals",
+      "status": "success",
+      "txHash": "0x73ea9ddf06d3c996597064510bcee5b2fdb5aafe083c9d88a5e3ae99de058351"
+    },
+    {
+      "category": "other",
+      "operatorControlled": true,
+      "purpose": "Request market update for contest 17",
+      "status": "success",
+      "txHash": "0xf392a6032d6454dc8d96496c0d55719879568b83945e94700648aecca79e408e"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual moneyline seed for contest 17 speculation 39",
+      "status": "success",
+      "txHash": "0x7babd74b8664375515836ebf5b29b3b6a89b5aedc55ba452743e0a114b325ca8"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual spread seed for contest 17 speculation 40",
+      "status": "success",
+      "txHash": "0xade949e53a9c26591173ae098cf9cb25ad38a19c12ff5edaf644c37ea4fbb7ee"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual total seed for contest 17 speculation 41",
+      "status": "success",
+      "txHash": "0x44cfca00f6949c35e159ce37752058b9bf1dab636c80932f88b6869c250ea0a1"
+    },
+    {
+      "category": "match-commitment",
+      "operatorControlled": true,
+      "purpose": "Controlled fill against live MM spread quote on contest 17",
+      "status": "success",
+      "txHash": "0xa914cb66bdbf3d152c123947eaf6ea3d9b81bcfb31e0bcf0fba1ac1cedecc5f5"
+    },
+    {
+      "category": "score-request",
+      "operatorControlled": true,
+      "purpose": "Request R5 score for contest 17 after MLB official final",
+      "status": "success",
+      "txHash": "0x717735007648afc33932ccd03b6ccf5740647963a193e8d5f1bf4fbcd99a539c"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Score transaction produced settled target speculations 39/40/41; explicit settle commands then returned alreadySettled",
+      "status": "success",
+      "txHash": "0x717735007648afc33932ccd03b6ccf5740647963a193e8d5f1bf4fbcd99a539c"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim stage-maker-a winning moneyline position for speculation 39 side lower",
+      "status": "success",
+      "txHash": "0x4cdbd6a250b19a2422ac9069b80d947316f71af7c94f2ee45f33d718b7c46c31"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim stage-maker-a winning total position for speculation 41 side upper",
+      "status": "success",
+      "txHash": "0x06c816e17f0ecf41fb1ec343661bfa629c5070e8700f022d27c1445fd3ebefdf"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim flow-a winning spread position for speculation 40 side lower",
+      "status": "success",
+      "txHash": "0x08a98a4e5136b5d419e214cf7cfd3c5900c09429dfd82bbd4e7573a7aba8393d"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-06T21:38:31Z",
+  "network": "polygon",
+  "chainId": 137,
+  "transactions": [
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded 1.00 USDC approval for ospex-stage-maker-b",
+      "status": "success",
+      "txHash": "0x512d42d21262346056b174366a26b6dad2cc6b3805a422aef3d3b1e662606318"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded 0.75 USDC approval for ospex-stage-maker-a",
+      "status": "success",
+      "txHash": "0x1aa16ac218975d9cfea5702838a7b8f330edb88754dfacfbdd7b488212edbe7f"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded 0.75 USDC approval for ospex-flow-a",
+      "status": "success",
+      "txHash": "0xf047d6ce2618078ff1d30fc949600f1ddf3bd902eeeece1d5ebf44cdca551590"
+    },
+    {
+      "category": "create-contest",
+      "operatorControlled": true,
+      "purpose": "Create contest 17 for Philadelphia Phillies @ Kansas City Royals",
+      "status": "success",
+      "txHash": "0x73ea9ddf06d3c996597064510bcee5b2fdb5aafe083c9d88a5e3ae99de058351"
+    },
+    {
+      "category": "other",
+      "operatorControlled": true,
+      "purpose": "Request market update for contest 17",
+      "status": "success",
+      "txHash": "0xf392a6032d6454dc8d96496c0d55719879568b83945e94700648aecca79e408e"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual moneyline seed for contest 17 speculation 39",
+      "status": "success",
+      "txHash": "0x7babd74b8664375515836ebf5b29b3b6a89b5aedc55ba452743e0a114b325ca8"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual spread seed for contest 17 speculation 40",
+      "status": "success",
+      "txHash": "0xade949e53a9c26591173ae098cf9cb25ad38a19c12ff5edaf644c37ea4fbb7ee"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual total seed for contest 17 speculation 41",
+      "status": "success",
+      "txHash": "0x44cfca00f6949c35e159ce37752058b9bf1dab636c80932f88b6869c250ea0a1"
+    },
+    {
+      "category": "match-commitment",
+      "operatorControlled": true,
+      "purpose": "Controlled fill against live MM spread quote on contest 17",
+      "status": "success",
+      "txHash": "0xa914cb66bdbf3d152c123947eaf6ea3d9b81bcfb31e0bcf0fba1ac1cedecc5f5"
+    },
+    {
+      "category": "score-request",
+      "operatorControlled": true,
+      "purpose": "Request R5 score for contest 17 after MLB official final",
+      "status": "success",
+      "txHash": "0x717735007648afc33932ccd03b6ccf5740647963a193e8d5f1bf4fbcd99a539c"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Score transaction produced settled target speculations 39/40/41; explicit settle commands then returned alreadySettled",
+      "status": "success",
+      "txHash": "0x717735007648afc33932ccd03b6ccf5740647963a193e8d5f1bf4fbcd99a539c"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim stage-maker-a winning moneyline position for speculation 39 side lower",
+      "status": "success",
+      "txHash": "0x4cdbd6a250b19a2422ac9069b80d947316f71af7c94f2ee45f33d718b7c46c31"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim stage-maker-a winning total position for speculation 41 side upper",
+      "status": "success",
+      "txHash": "0x06c816e17f0ecf41fb1ec343661bfa629c5070e8700f022d27c1445fd3ebefdf"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim flow-a winning spread position for speculation 40 side lower",
+      "status": "success",
+      "txHash": "0x08a98a4e5136b5d419e214cf7cfd3c5900c09429dfd82bbd4e7573a7aba8393d"
+    }
+  ],
+  "budget": {
+    "targetFeesAndRiskUSDC": "<= 10",
+    "forecastFeesAndRiskUSDC": "~3.4 plus small gas",
+    "hardStopUSDC": 15,
+    "withinCap": true
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "checkedAtUtc": "2026-07-06T21:28:31Z",
+  "finalOpenCommitments": 0,
+  "publicMakerVisibleCommitments": 0,
+  "publicContestSpecVisibleCommitments": 0,
+  "contestOrderbookCount": 0,
+  "orphanProcessCount": 0,
+  "mmStateAfterStop": {
+    "visibleOpen": 0,
+    "softCancelled": 3,
+    "partiallyFilled": 0,
+    "filled": 1,
+    "expired": 0,
+    "authoritativelyInvalidated": 0
+  },
+  "finalTargetPositions": {
+    "stage_maker_a": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    },
+    "stage_maker_b": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    },
+    "flow_a": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    }
+  }
+}

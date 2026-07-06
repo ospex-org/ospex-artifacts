@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-06T21:28:31Z",
+  "officialFinalSource": {
+    "source": "MLB Stats API",
+    "status": "Final/Game Over",
+    "awayScore": 1,
+    "homeScore": 15
+  },
+  "scoreStatusBefore": {
+    "contestId": "17",
+    "status": "scored",
+    "scored": true,
+    "awayScore": 1,
+    "homeScore": 15
+  },
+  "scoreStatusAfter": {
+    "contestId": "17",
+    "status": "scored",
+    "scored": true,
+    "awayScore": 1,
+    "homeScore": 15
+  },
+  "scoreTx": {
+    "txHash": "0x717735007648afc33932ccd03b6ccf5740647963a193e8d5f1bf4fbcd99a539c",
+    "blockNumber": "89778809"
+  },
+  "settledSpecs": [
+    {
+      "speculationId": "39",
+      "market": "moneyline",
+      "winSide": "home",
+      "settledAt": "2026-07-06T21:27:10+00:00"
+    },
+    {
+      "speculationId": "40",
+      "market": "spread",
+      "winSide": "home",
+      "settledAt": "2026-07-06T21:27:16+00:00"
+    },
+    {
+      "speculationId": "41",
+      "market": "total",
+      "winSide": "over",
+      "settledAt": "2026-07-06T21:27:20+00:00"
+    }
+  ],
+  "explicitSettleCommands": [
+    {
+      "speculationId": "39",
+      "outcome": "alreadySettled"
+    },
+    {
+      "speculationId": "40",
+      "outcome": "alreadySettled"
+    },
+    {
+      "speculationId": "41",
+      "outcome": "alreadySettled"
+    }
+  ],
+  "claims": [
+    {
+      "wallet": "ospex-stage-maker-a",
+      "speculationId": "39",
+      "side": "lower",
+      "outcome": "claimed",
+      "txHash": "0x4cdbd6a250b19a2422ac9069b80d947316f71af7c94f2ee45f33d718b7c46c31",
+      "payoutUSDC": "0.139"
+    },
+    {
+      "wallet": "ospex-stage-maker-a",
+      "speculationId": "41",
+      "side": "upper",
+      "outcome": "claimed",
+      "txHash": "0x06c816e17f0ecf41fb1ec343661bfa629c5070e8700f022d27c1445fd3ebefdf",
+      "payoutUSDC": "0.100"
+    },
+    {
+      "wallet": "ospex-flow-a",
+      "speculationId": "40",
+      "side": "lower",
+      "outcome": "claimed",
+      "txHash": "0x08a98a4e5136b5d419e214cf7cfd3c5900c09429dfd82bbd4e7573a7aba8393d",
+      "payoutUSDC": "0.182"
+    }
+  ],
+  "finalTargetPositions": {
+    "stage_maker_a": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    },
+    "stage_maker_b": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    },
+    "flow_a": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    }
+  },
+  "finalOpenCommitments": 0
+}

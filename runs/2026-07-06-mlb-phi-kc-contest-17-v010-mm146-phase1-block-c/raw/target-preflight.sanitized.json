@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-06T14:27:52Z",
+  "selectedTarget": {
+    "gameId": "a77bd811-af62-4790-b60e-5f3f62db3ee4",
+    "slug": "phi-kc-2026-07-06",
+    "sport": "mlb",
+    "contestId": "17",
+    "awayTeam": "Philadelphia Phillies",
+    "homeTeam": "Kansas City Royals",
+    "matchTime": "2026-07-06T18:10:00Z",
+    "statusAtPreflight": "upcoming",
+    "contestStatus": "verified",
+    "hasOdds": true,
+    "canCreateContestBeforeWrite": true,
+    "speculations": [
+      {
+        "speculationId": "39",
+        "contestId": "17",
+        "type": "moneyline",
+        "line": null,
+        "lineTicks": 0
+      },
+      {
+        "speculationId": "40",
+        "contestId": "17",
+        "type": "spread",
+        "line": -1.5,
+        "lineTicks": -15
+      },
+      {
+        "speculationId": "41",
+        "contestId": "17",
+        "type": "total",
+        "line": 8.5,
+        "lineTicks": 85
+      }
+    ],
+    "referenceOdds": {
+      "moneyline": {
+        "upstreamLastUpdated": "2026-07-06T14:21:44+00:00",
+        "pollCapturedAt": "2026-07-06T14:27:52.614+00:00",
+        "changedAt": "2026-07-06T14:24:52.532+00:00",
+        "market": "moneyline",
+        "awayOddsAmerican": -206,
+        "homeOddsAmerican": 178
+      },
+      "spread": {
+        "upstreamLastUpdated": "2026-07-06T14:21:44+00:00",
+        "pollCapturedAt": "2026-07-06T14:27:52.717+00:00",
+        "changedAt": "2026-07-06T14:24:52.649+00:00",
+        "market": "spread",
+        "awayLine": -1.5,
+        "homeLine": 1.5,
+        "awayOddsAmerican": -130,
+        "homeOddsAmerican": 110
+      },
+      "total": {
+        "upstreamLastUpdated": "2026-07-06T14:21:44+00:00",
+        "pollCapturedAt": "2026-07-06T14:27:52.795+00:00",
+        "changedAt": "2026-07-06T13:59:51.564+00:00",
+        "market": "total",
+        "line": 8.5,
+        "overOddsAmerican": -100,
+        "underOddsAmerican": -120
+      }
+    }
+  },
+  "apiHealth": {
+    "healthz": true,
+    "readyz": true
+  },
+  "safeToCreateAtPreflight": true
+}

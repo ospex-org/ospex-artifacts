@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-06T14:35:19.006Z",
+  "allowlistOnly": true,
+  "contestAllowList": [
+    "17"
+  ],
+  "seedSpeculations": false,
+  "markets": [
+    "moneyline",
+    "spread",
+    "total"
+  ],
+  "candidatesSummary": {
+    "gamesAvailableToCreate": 0,
+    "quoteReady": 3,
+    "needsContest": 0,
+    "needsSpeculation": 0,
+    "needsVerification": 0,
+    "skipped": {}
+  },
+  "candidateItems": [
+    {
+      "contestId": "17",
+      "market": "moneyline",
+      "speculationId": "39",
+      "kind": "quote_ready",
+      "recommendedAction": "quote",
+      "inContestAllowList": true
+    },
+    {
+      "contestId": "17",
+      "market": "spread",
+      "speculationId": "40",
+      "kind": "quote_ready",
+      "recommendedAction": "quote",
+      "inContestAllowList": true
+    },
+    {
+      "contestId": "17",
+      "market": "total",
+      "speculationId": "41",
+      "kind": "quote_ready",
+      "recommendedAction": "quote",
+      "inContestAllowList": true
+    }
+  ],
+  "eventCounts": {
+    "tick-start": 2,
+    "candidate": 3,
+    "fair-value": 0,
+    "risk-verdict": 3,
+    "quote-intent": 3,
+    "quote-competitiveness": 6,
+    "competitiveness-unavailable": 0,
+    "submit": 0,
+    "would-submit": 6,
+    "soft-cancel": 0,
+    "would-soft-cancel": 0,
+    "replace": 0,
+    "would-replace": 0,
+    "onchain-cancel": 0,
+    "cancel-blocked-missing-payload": 0,
+    "nonce-floor-raise": 0,
+    "expire": 0,
+    "approval": 0,
+    "funding-hold": 0,
+    "fill": 0,
+    "position-transition": 0,
+    "settle": 0,
+    "claim": 0,
+    "degraded": 0,
+    "stream-health-degraded": 0,
+    "stream-would-hold": 0,
+    "stream-cold-restart": 0,
+    "stream-health-hold": 0,
+    "divergence": 0,
+    "unknown-own-fill": 0,
+    "owner-mapping-failed": 0,
+    "foreign-maker-commitments": 0,
+    "position-allowance-short": 0,
+    "approval-heal-failed": 0,
+    "error": 0,
+    "kill": 1
+  },
+  "quoteIntents": {
+    "total": 3,
+    "canQuote": 3,
+    "refused": 0
+  },
+  "wouldSubmit": 6,
+  "errors": {
+    "total": 0,
+    "byPhase": {}
+  },
+  "offAllowlistQuotes": 0,
+  "broadSlateBehaviorObserved": false,
+  "approvalHealFailed": 0
+}
