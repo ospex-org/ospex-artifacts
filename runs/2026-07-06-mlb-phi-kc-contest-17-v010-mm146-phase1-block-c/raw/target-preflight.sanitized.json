@@ -64,6 +64,41 @@
         "overOddsAmerican": -100,
         "underOddsAmerican": -120
       }
+    },
+    "gamePk": 824089,
+    "teamIdentity": {
+      "away": {
+        "team": "Philadelphia Phillies",
+        "abbreviation": "PHI",
+        "role": "away",
+        "identity": "favorite",
+        "marketOddsAmerican": "-206",
+        "positionType": "upper"
+      },
+      "home": {
+        "team": "Kansas City Royals",
+        "abbreviation": "KC",
+        "role": "home",
+        "identity": "underdog",
+        "marketOddsAmerican": "+178",
+        "positionType": "lower"
+      },
+      "winner": {
+        "team": "Kansas City Royals",
+        "role": "home",
+        "positionType": "lower"
+      },
+      "spreadWinner": {
+        "team": "Kansas City Royals",
+        "role": "home",
+        "line": 1.5,
+        "positionType": "lower"
+      },
+      "totalWinner": {
+        "side": "over",
+        "line": 8.5,
+        "positionType": "upper"
+      }
     }
   },
   "apiHealth": {

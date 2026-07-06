@@ -114,7 +114,42 @@
       "totalWinner": "over 8.5",
       "totalWinnerProtocolSide": "upper"
     },
-    "postgameStatus": "complete"
+    "postgameStatus": "complete",
+    "gamePk": 824089,
+    "teamIdentity": {
+      "away": {
+        "team": "Philadelphia Phillies",
+        "abbreviation": "PHI",
+        "role": "away",
+        "identity": "favorite",
+        "marketOddsAmerican": "-206",
+        "positionType": "upper"
+      },
+      "home": {
+        "team": "Kansas City Royals",
+        "abbreviation": "KC",
+        "role": "home",
+        "identity": "underdog",
+        "marketOddsAmerican": "+178",
+        "positionType": "lower"
+      },
+      "winner": {
+        "team": "Kansas City Royals",
+        "role": "home",
+        "positionType": "lower"
+      },
+      "spreadWinner": {
+        "team": "Kansas City Royals",
+        "role": "home",
+        "line": 1.5,
+        "positionType": "lower"
+      },
+      "totalWinner": {
+        "side": "over",
+        "line": 8.5,
+        "positionType": "upper"
+      }
+    }
   },
   "versions": {
     "schemaVersion": 1,
@@ -125,7 +160,10 @@
       "version": "0.10.0",
       "headSha": "3fa399a",
       "requiredAtOrAfter": "3fa399a",
-      "ok": true
+      "ok": true,
+      "cliBuild": "pass",
+      "install": "pass",
+      "sdkBuild": "pass"
     },
     "marketMaker": {
       "repo": "ospex-market-maker",
@@ -135,7 +173,11 @@
       "allowlistOnlyFlagAvailable": true,
       "approvalSelfHealRegressionPresent": true,
       "ownStateOrphanSafetyRegressionPresent": true,
-      "ok": true
+      "ok": true,
+      "build": "pass",
+      "typecheck": "pass",
+      "test": "pass",
+      "testCount": "1070 passed"
     },
     "ancillaryRepos": {
       "ospex-core-api": {
@@ -155,7 +197,9 @@
       }
     },
     "note": "MM internal @ospex/sdk remained v0.9.0 as allowed by the Block C brief; operator CLI used v0.10.0.",
-    "allRequiredOk": true
+    "allRequiredOk": true,
+    "node": "v22.22.0",
+    "yarn": "1.22.22"
   },
   "wallets": {
     "operatorMmMaker": {

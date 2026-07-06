@@ -2,7 +2,7 @@
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/scenario-matrix.schema.json",
   "schemaVersion": 2,
   "artifactId": "2026-07-06-mlb-phi-kc-contest-17-v010-mm146-phase1-block-c",
-  "generatedAt": "2026-07-06T21:38:31Z",
+  "generatedAt": "2026-07-06T22:00:15Z",
   "runClass": "mm-live-canary",
   "scenarios": [
     {
@@ -59,7 +59,7 @@
       "scenario": "Own-state SSE canonical fill source",
       "status": "pass_with_caveats",
       "evidence": "raw/own-state-sse-summary.sanitized.json",
-      "notes": "Telemetry captured eventCounts.fill=1 with canonicalFillObserved=true; startup stream-health hold cleared before fill and bad own-state counters stayed zero."
+      "notes": "Telemetry captured eventCounts.fill=1 with canonicalFillObserved=true; startup stream-health hold cleared before fill, bad own-state counters stayed zero, and the single own-state-stream error was OwnerPositionStatusForUnknownPosition."
     },
     {
       "id": "exposure-drain-zero",

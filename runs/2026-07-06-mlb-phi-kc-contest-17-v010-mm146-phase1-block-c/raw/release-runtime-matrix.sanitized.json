@@ -7,7 +7,10 @@
     "version": "0.10.0",
     "headSha": "3fa399a",
     "requiredAtOrAfter": "3fa399a",
-    "ok": true
+    "ok": true,
+    "cliBuild": "pass",
+    "install": "pass",
+    "sdkBuild": "pass"
   },
   "marketMaker": {
     "repo": "ospex-market-maker",
@@ -17,7 +20,11 @@
     "allowlistOnlyFlagAvailable": true,
     "approvalSelfHealRegressionPresent": true,
     "ownStateOrphanSafetyRegressionPresent": true,
-    "ok": true
+    "ok": true,
+    "build": "pass",
+    "typecheck": "pass",
+    "test": "pass",
+    "testCount": "1070 passed"
   },
   "ancillaryRepos": {
     "ospex-core-api": {
@@ -37,5 +44,7 @@
     }
   },
   "note": "MM internal @ospex/sdk remained v0.9.0 as allowed by the Block C brief; operator CLI used v0.10.0.",
-  "allRequiredOk": true
+  "allRequiredOk": true,
+  "node": "v22.22.0",
+  "yarn": "1.22.22"
 }
