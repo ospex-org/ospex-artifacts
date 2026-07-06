@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-06T14:25:30Z",
+  "approvalMode": "bounded_exact_only",
+  "unlimitedApprovalsCreated": false,
+  "approvals": [
+    {
+      "wallet": "ospex-stage-maker-b",
+      "amountUSDC": "1.00",
+      "txHash": "0x512d42d21262346056b174366a26b6dad2cc6b3805a422aef3d3b1e662606318",
+      "blockNumber": "89761984"
+    },
+    {
+      "wallet": "ospex-stage-maker-a",
+      "amountUSDC": "0.75",
+      "txHash": "0x1aa16ac218975d9cfea5702838a7b8f330edb88754dfacfbdd7b488212edbe7f",
+      "blockNumber": "89761988"
+    },
+    {
+      "wallet": "ospex-flow-a",
+      "amountUSDC": "0.75",
+      "txHash": "0xf047d6ce2618078ff1d30fc949600f1ddf3bd902eeeece1d5ebf44cdca551590",
+      "blockNumber": "89761991"
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-07-06-mlb-phi-kc-contest-17-v010-mm146-phase1-block-c",
+  "artifactType": "run",
+  "runClass": "mm-live-canary",
+  "date": "2026-07-06",
+  "generatedAt": "2026-07-06T21:38:31Z",
+  "publishedAt": "2026-07-06T21:38:31Z",
+  "network": "polygon",
+  "status": "complete_verified_with_caveats",
+  "sourceRunId": "20260706T142112Z-mve-phase1-block-c-phi-kc",
+  "rawPath": "raw/",
+  "summaryPath": "summary.md",
+  "dataPath": "evidence.json",
+  "artifactFiles": {
+    "evidence": "evidence.json",
+    "summary": "summary.md",
+    "scenarioMatrix": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "mveScorecard": "mve-scorecard.json",
+    "mveScorecardMarkdown": "mve-scorecard.md",
+    "targetPreflight": "raw/target-preflight.sanitized.json",
+    "releaseRuntimeMatrix": "raw/release-runtime-matrix.sanitized.json",
+    "walletAuthBalances": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "boundedApprovals": "raw/bounded-approvals.sanitized.json",
+    "manualSeedFill": "raw/manual-seed-fill.sanitized.json",
+    "mmDryRun": "raw/mm-dryrun-summary.sanitized.json",
+    "liveCommitmentsPosted": "raw/live-public-commitments-posted.sanitized.json",
+    "liveFill": "raw/live-fill.sanitized.json",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "finalContestShow": "raw/final-contest-show.sanitized.json",
+    "finalCommitmentsOrderbook": "raw/final-commitments-orderbook.sanitized.json",
+    "finalPositionsStatus": "raw/final-positions-status.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json"
+  },
+  "target": {
+    "slug": "phi-kc-2026-07-06",
+    "game": "Philadelphia Phillies @ Kansas City Royals",
+    "gameId": "a77bd811-af62-4790-b60e-5f3f62db3ee4",
+    "sport": "mlb",
+    "contestId": "17",
+    "contestStatusAfterCreateVerify": "verified",
+    "contestStatusAfterPostgame": "scored",
+    "awayTeam": "Philadelphia Phillies",
+    "homeTeam": "Kansas City Royals",
+    "startTimeUtc": "2026-07-06T18:10:00Z",
+    "market": "spread",
+    "speculationId": "40",
+    "companionSpeculations": {
+      "moneyline": "39",
+      "spread": "40",
+      "total": "41"
+    },
+    "marketsCovered": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "referenceOdds": {
+      "moneyline": {
+        "upstreamLastUpdated": "2026-07-06T14:21:44+00:00",
+        "pollCapturedAt": "2026-07-06T14:27:52.614+00:00",
+        "changedAt": "2026-07-06T14:24:52.532+00:00",
+        "market": "moneyline",
+        "awayOddsAmerican": -206,
+        "homeOddsAmerican": 178
+      },
+      "spread": {
+        "upstreamLastUpdated": "2026-07-06T14:21:44+00:00",
+        "pollCapturedAt": "2026-07-06T14:27:52.717+00:00",
+        "changedAt": "2026-07-06T14:24:52.649+00:00",
+        "market": "spread",
+        "awayLine": -1.5,
+        "homeLine": 1.5,
+        "awayOddsAmerican": -130,
+        "homeOddsAmerican": 110
+      },
+      "total": {
+        "upstreamLastUpdated": "2026-07-06T14:21:44+00:00",
+        "pollCapturedAt": "2026-07-06T14:27:52.795+00:00",
+        "changedAt": "2026-07-06T13:59:51.564+00:00",
+        "market": "total",
+        "line": 8.5,
+        "overOddsAmerican": -100,
+        "underOddsAmerican": -120
+      }
+    },
+    "spreadLine": {
+      "awayLine": -1.5,
+      "awayPositionType": "upper",
+      "homeLine": 1.5,
+      "homePositionType": "lower",
+      "lineTicks": -15
+    },
+    "totalLine": {
+      "line": 8.5,
+      "lineTicks": 85,
+      "overPositionType": "upper",
+      "underPositionType": "lower"
+    },
+    "finalScore": {
+      "awayRuns": 1,
+      "homeRuns": 15,
+      "winner": "Kansas City Royals",
+      "winnerRole": "home",
+      "winnerProtocolSide": "lower",
+      "spreadWinner": "Kansas City Royals +1.5",
+      "spreadWinnerProtocolSide": "lower",
+      "totalRuns": 16,
+      "totalLine": 8.5,
+      "totalWinner": "over 8.5",
+      "totalWinnerProtocolSide": "upper"
+    },
+    "postgameStatus": "complete",
+    "gamePk": 824089,
+    "teamIdentity": {
+      "away": {
+        "team": "Philadelphia Phillies",
+        "abbreviation": "PHI",
+        "role": "away",
+        "identity": "favorite",
+        "marketOddsAmerican": "-206",
+        "positionType": "upper"
+      },
+      "home": {
+        "team": "Kansas City Royals",
+        "abbreviation": "KC",
+        "role": "home",
+        "identity": "underdog",
+        "marketOddsAmerican": "+178",
+        "positionType": "lower"
+      },
+      "winner": {
+        "team": "Kansas City Royals",
+        "role": "home",
+        "positionType": "lower"
+      },
+      "spreadWinner": {
+        "team": "Kansas City Royals",
+        "role": "home",
+        "line": 1.5,
+        "positionType": "lower"
+      },
+      "totalWinner": {
+        "side": "over",
+        "line": 8.5,
+        "positionType": "upper"
+      }
+    }
+  },
+  "versions": {
+    "schemaVersion": 1,
+    "capturedAtUtc": "2026-07-06T14:21:12Z",
+    "chainId": 137,
+    "sdkCli": {
+      "repo": "ospex-sdk",
+      "version": "0.10.0",
+      "headSha": "3fa399a",
+      "requiredAtOrAfter": "3fa399a",
+      "ok": true,
+      "cliBuild": "pass",
+      "install": "pass",
+      "sdkBuild": "pass"
+    },
+    "marketMaker": {
+      "repo": "ospex-market-maker",
+      "headSha": "6f3ccc1",
+      "requiredAtOrAfter": "6f3ccc1",
+      "installedSdkVersion": "0.9.0",
+      "allowlistOnlyFlagAvailable": true,
+      "approvalSelfHealRegressionPresent": true,
+      "ownStateOrphanSafetyRegressionPresent": true,
+      "ok": true,
+      "build": "pass",
+      "typecheck": "pass",
+      "test": "pass",
+      "testCount": "1070 passed"
+    },
+    "ancillaryRepos": {
+      "ospex-core-api": {
+        "headSha": "076f44d",
+        "requiredAtOrAfter": "076f44d",
+        "ok": true
+      },
+      "ospex-indexer": {
+        "headSha": "75be9e7",
+        "requiredAtOrAfter": "75be9e7",
+        "ok": true
+      },
+      "ospex-cre": {
+        "headSha": "fed6e26",
+        "requiredAtOrAfter": "fed6e26",
+        "ok": true
+      }
+    },
+    "note": "MM internal @ospex/sdk remained v0.9.0 as allowed by the Block C brief; operator CLI used v0.10.0.",
+    "allRequiredOk": true,
+    "node": "v22.22.0",
+    "yarn": "1.22.22"
+  },
+  "wallets": {
+    "operatorMmMaker": {
+      "profile": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    },
+    "manualSeedMaker": {
+      "profile": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    "controlledTaker": {
+      "profile": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    }
+  },
+  "verdict": {
+    "label": "FULL_GREEN",
+    "protocolVerdict": "MVE_PHASE1_BLOCK_C_GREEN_WITH_CAVEATS",
+    "reason": "The v0.10.0/R5 strict-allowlist Phase 1 Block C run for Philadelphia Phillies @ Kansas City Royals completed the full lifecycle: contest 17 was created and verified; moneyline, spread, and total speculations 39/40/41 were manually seeded and fully filled with zero residual seed exposure; the market maker posted tiny live quotes under strict contest allowlist [17] with seedSpeculations=false; a controlled live spread quote was filled; remaining visible quotes were soft-cancelled or expired; final open commitments were zero; official final score Philadelphia Phillies 1 / Kansas City Royals 15 was verified; contest 17 was scored through R5/CRE; target speculations were settled, winning controlled positions were claimed, and final target active/pending/claimable positions are zero. Caveats: startup own-state stream-health hold cleared before fill, a single own-state-stream projection-ordering error preceded the canonical fill, and live total was skipped after a reference-line mismatch."
+  },
+  "caveats": [
+    "Startup own-state stream-health hold entered with zero exposure and cleared before controlled fill; no bad own-state event counts remained.",
+    "One own-state-stream OwnerPositionStatusForUnknownPosition telemetry error occurred immediately before the canonical fill event, but eventCounts.fill=1, canonicalFillObserved=true, unknown-own-fill=0, owner-mapping-failed=0, and divergence=0.",
+    "Live total market skipped with reference-line-mismatch after candidates/dry-run had total quote-ready; strict allowlist and zero-open guarantees held.",
+    "Explicit post-score settle commands returned alreadySettled no-op because target speculations already carried settledAt values after the R5 score transaction."
+  ]
+}

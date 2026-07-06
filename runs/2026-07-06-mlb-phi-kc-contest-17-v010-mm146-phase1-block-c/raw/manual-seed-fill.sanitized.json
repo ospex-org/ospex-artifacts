@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-06T14:31:28Z",
+  "contestId": "17",
+  "seedSpeculations": [
+    {
+      "market": "moneyline",
+      "speculationId": "39",
+      "maker": "ospex-stage-maker-a",
+      "taker": "ospex-flow-a",
+      "txHash": "0x7babd74b8664375515836ebf5b29b3b6a89b5aedc55ba452743e0a114b325ca8",
+      "riskUSDC": "0.089000"
+    },
+    {
+      "market": "spread",
+      "speculationId": "40",
+      "maker": "ospex-stage-maker-a",
+      "taker": "ospex-flow-a",
+      "txHash": "0xade949e53a9c26591173ae098cf9cb25ad38a19c12ff5edaf644c37ea4fbb7ee",
+      "riskUSDC": "0.038500"
+    },
+    {
+      "market": "total",
+      "speculationId": "41",
+      "maker": "ospex-stage-maker-a",
+      "taker": "ospex-flow-a",
+      "txHash": "0x44cfca00f6949c35e159ce37752058b9bf1dab636c80932f88b6869c250ea0a1",
+      "riskUSDC": "0.050000"
+    }
+  ],
+  "openCommitmentsBeforeMM": 0,
+  "proof": "manual seed commitments were fully filled before MM gates"
+}

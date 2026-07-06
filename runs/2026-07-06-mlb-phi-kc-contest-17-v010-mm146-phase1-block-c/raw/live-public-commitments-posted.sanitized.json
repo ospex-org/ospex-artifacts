@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-06T14:38:23.945Z",
+  "runIds": [
+    "2026-07-06T14-35-54-630Z-idgviw"
+  ],
+  "contestAllowList": [
+    "17"
+  ],
+  "seedSpeculations": false,
+  "marketsRequested": [
+    "moneyline",
+    "spread",
+    "total"
+  ],
+  "livePrestartCandidatesSummary": {
+    "gamesAvailableToCreate": 0,
+    "quoteReady": 3,
+    "needsContest": 0,
+    "needsSpeculation": 0,
+    "needsVerification": 0,
+    "skipped": {}
+  },
+  "eventCounts": {
+    "tick-start": 2,
+    "candidate": 4,
+    "fair-value": 0,
+    "risk-verdict": 2,
+    "quote-intent": 2,
+    "quote-competitiveness": 4,
+    "competitiveness-unavailable": 0,
+    "submit": 4,
+    "would-submit": 0,
+    "soft-cancel": 3,
+    "would-soft-cancel": 0,
+    "replace": 0,
+    "would-replace": 0,
+    "onchain-cancel": 0,
+    "cancel-blocked-missing-payload": 0,
+    "nonce-floor-raise": 0,
+    "expire": 0,
+    "approval": 0,
+    "funding-hold": 0,
+    "fill": 1,
+    "position-transition": 0,
+    "settle": 0,
+    "claim": 0,
+    "degraded": 0,
+    "stream-health-degraded": 0,
+    "stream-would-hold": 0,
+    "stream-cold-restart": 0,
+    "stream-health-hold": 2,
+    "divergence": 0,
+    "unknown-own-fill": 0,
+    "owner-mapping-failed": 0,
+    "foreign-maker-commitments": 0,
+    "position-allowance-short": 0,
+    "approval-heal-failed": 0,
+    "error": 1,
+    "kill": 1
+  },
+  "submittedCommitments": [
+    {
+      "market": "moneyline",
+      "speculationId": "39",
+      "side": "Philadelphia Phillies",
+      "commitmentHash": "0x95305e672aa6282232fb0adbcc70c200349f7ad966a0baacbe1beddc274a893d",
+      "outcome": "soft_cancelled_on_shutdown"
+    },
+    {
+      "market": "moneyline",
+      "speculationId": "39",
+      "side": "Kansas City Royals",
+      "commitmentHash": "0x4a55ede8756ac7890743965b1cfd11f0280ac30a4a1739bd1a074092de4df9ab",
+      "outcome": "soft_cancelled_on_shutdown"
+    },
+    {
+      "market": "spread",
+      "speculationId": "40",
+      "side": "Philadelphia Phillies -1.5",
+      "commitmentHash": "0xfba5207311cb3aa7d68d4c0a22d18bca474365ce9a7c1329a3a26b0785798903",
+      "outcome": "soft_cancelled_on_shutdown"
+    },
+    {
+      "market": "spread",
+      "speculationId": "40",
+      "side": "Kansas City Royals +1.5",
+      "commitmentHash": "0x8092bbfa63cd49f3c9139d4650e635a24f39893036b298496bbe5f7a75de19a9",
+      "outcome": "filled_by_controlled_taker"
+    }
+  ],
+  "liveMarketCaveat": {
+    "market": "total",
+    "reason": "reference-line-mismatch",
+    "submitted": 0
+  },
+  "softCancelledOnShutdown": 3,
+  "filled": 1
+}

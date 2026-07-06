@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-06T21:28:30Z",
+  "wallets": {
+    "stage_maker_a": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    },
+    "stage_maker_b": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    },
+    "flow_a": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    }
+  }
+}
