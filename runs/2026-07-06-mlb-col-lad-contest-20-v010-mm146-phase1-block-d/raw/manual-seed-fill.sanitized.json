@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "maker": "ospex-stage-maker-a",
+  "taker": "ospex-flow-a",
+  "riskUSDC": "0.03 per seed",
+  "items": [
+    {
+      "label": "COL_LAD_moneyline_LAD",
+      "contestId": "20",
+      "market": "moneyline",
+      "side": "Los Angeles Dodgers",
+      "line": null,
+      "odds": "-236",
+      "submitOk": true,
+      "commitmentHash": "0x121d73da731b86cf0971ee1b44f4f5f984867e34a3a571785658fa53650e8554",
+      "matchPreviewOk": true,
+      "matchExecuteOk": true,
+      "matchTxHashes": [
+        "0xfa5e93a18aa1d9440d251c6e4b1e5669320c3254fd8581baf3852400a39b2be9"
+      ],
+      "openCommitmentsOnContestAfterMatch": 1,
+      "showAfterMatchOk": true
+    },
+    {
+      "label": "COL_LAD_spread_COL_plus_1_5",
+      "contestId": "20",
+      "market": "spread",
+      "side": "Colorado Rockies",
+      "line": "1.5",
+      "odds": "-100",
+      "submitOk": true,
+      "commitmentHash": "0x3a669ea973e589e2ea5bd1f06434583b359d80806dffb436c6c51a38b74b7e8b",
+      "matchPreviewOk": true,
+      "matchExecuteOk": true,
+      "matchTxHashes": [
+        "0xa305788f22b84e78d2ed9c32e30285e0e34d1730b4440c9aae8c3ae1787a26a5"
+      ],
+      "openCommitmentsOnContestAfterMatch": 1,
+      "showAfterMatchOk": true
+    },
+    {
+      "label": "COL_LAD_total_over_9_5",
+      "contestId": "20",
+      "market": "total",
+      "side": "over",
+      "line": "9.5",
+      "odds": "-123",
+      "submitOk": true,
+      "commitmentHash": "0x3794a695046d6810f18f60d0d63381665d197a9fb9532780d3049c0041788628",
+      "matchPreviewOk": true,
+      "matchExecuteOk": true,
+      "matchTxHashes": [
+        "0xd74ce89bd88b2522971e103ddc38bd34e579d62b6a1a434b374a9e9ba2ea84b0"
+      ],
+      "openCommitmentsOnContestAfterMatch": 2,
+      "showAfterMatchOk": true
+    }
+  ],
+  "contestOpenCommitmentsAfterManualSeed": 0
+}

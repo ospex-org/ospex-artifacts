@@ -1,13 +1,46 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-07-06T21:38:47Z",
+  "generatedAt": "2026-07-07T06:07:11Z",
   "repository": "ospex-org/ospex-artifacts",
   "archive": {
     "scope": "year",
     "year": 2026
   },
   "artifacts": [
+    {
+      "artifactId": "2026-07-06-mlb-tor-sf-contest-19-v010-mm146-phase1-block-d",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-06-mlb-tor-sf-contest-19-v010-mm146-phase1-block-d/evidence.json",
+      "date": "2026-07-06",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-06-mlb-tor-sf-contest-19-v010-mm146-phase1-block-d/raw/",
+      "status": "partial",
+      "summaryPath": "runs/2026-07-06-mlb-tor-sf-contest-19-v010-mm146-phase1-block-d/summary.md",
+      "publishedAt": "2026-07-07T06:07:11Z"
+    },
+    {
+      "artifactId": "2026-07-06-mlb-col-lad-contest-20-v010-mm146-phase1-block-d",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-06-mlb-col-lad-contest-20-v010-mm146-phase1-block-d/evidence.json",
+      "date": "2026-07-06",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-06-mlb-col-lad-contest-20-v010-mm146-phase1-block-d/raw/",
+      "status": "partial",
+      "summaryPath": "runs/2026-07-06-mlb-col-lad-contest-20-v010-mm146-phase1-block-d/summary.md",
+      "publishedAt": "2026-07-07T06:07:11Z"
+    },
+    {
+      "artifactId": "2026-07-06-mlb-ari-sd-contest-18-v010-mm146-phase1-block-d",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-06-mlb-ari-sd-contest-18-v010-mm146-phase1-block-d/evidence.json",
+      "date": "2026-07-06",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-06-mlb-ari-sd-contest-18-v010-mm146-phase1-block-d/raw/",
+      "status": "partial",
+      "summaryPath": "runs/2026-07-06-mlb-ari-sd-contest-18-v010-mm146-phase1-block-d/summary.md",
+      "publishedAt": "2026-07-07T06:07:11Z"
+    },
     {
       "artifactId": "2026-07-06-mlb-phi-kc-contest-17-v010-mm146-phase1-block-c",
       "artifactType": "run",

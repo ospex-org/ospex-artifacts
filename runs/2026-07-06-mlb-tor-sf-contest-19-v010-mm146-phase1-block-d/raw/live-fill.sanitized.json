@@ -1,0 +1,5 @@
+{
+  "status": "not_run",
+  "controlledFillTx": null,
+  "reason": "live MM was not started after prelive dry-run gate failed; no stale quote was forced"
+}

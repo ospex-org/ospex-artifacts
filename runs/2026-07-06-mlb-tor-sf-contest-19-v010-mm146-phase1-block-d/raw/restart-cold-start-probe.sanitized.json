@@ -1,0 +1,4 @@
+{
+  "status": "not_applicable",
+  "reason": "live MM was not started; no live state existed for scratch cold-start probe"
+}

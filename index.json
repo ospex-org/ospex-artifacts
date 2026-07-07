@@ -1,20 +1,20 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-07-06T21:38:47Z",
+  "generatedAt": "2026-07-07T06:07:11Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
+      "runs/2026-07-06-mlb-tor-sf-contest-19-v010-mm146-phase1-block-d/evidence.json",
+      "runs/2026-07-06-mlb-col-lad-contest-20-v010-mm146-phase1-block-d/evidence.json",
+      "runs/2026-07-06-mlb-ari-sd-contest-18-v010-mm146-phase1-block-d/evidence.json",
       "runs/2026-07-06-mlb-phi-kc-contest-17-v010-mm146-phase1-block-c/evidence.json",
       "runs/2026-07-05-mlb-sd-lad-contest-15-v010-mm146-phase1-block-b/evidence.json",
       "runs/2026-07-05-mlb-bos-laa-contest-16-v010-mm146-phase1-block-b/evidence.json",
       "runs/2026-07-05-mlb-pit-wsh-contest-14-v010-mm146-phase1-block-a/evidence.json",
       "runs/2026-07-05-mlb-nym-atl-contest-13-v010-mm146-phase1-block-a/evidence.json",
       "runs/2026-07-04-mlb-sd-lad-contest-12-v010-mm146-two-game-minislate-canary/evidence.json",
-      "runs/2026-07-04-mlb-mil-ari-contest-11-v010-mm146-two-game-minislate-canary/evidence.json",
-      "runs/2026-07-04-mlb-min-nyy-contest-10-v010-mm146-all-markets-stage1-canary/evidence.json",
-      "runs/2026-07-03-mlb-mia-ath-contest-9-v090-latest-mm-all-markets-canary/evidence.json",
-      "runs/2026-07-03-mlb-stl-chc-contest-8-v090-latest-mm-total-canary/evidence.json"
+      "runs/2026-07-04-mlb-mil-ari-contest-11-v010-mm146-two-game-minislate-canary/evidence.json"
     ],
     "release-acceptance": [
       "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.json"
@@ -22,6 +22,39 @@
     "daily-digest": []
   },
   "recentArtifacts": [
+    {
+      "artifactId": "2026-07-06-mlb-tor-sf-contest-19-v010-mm146-phase1-block-d",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-06-mlb-tor-sf-contest-19-v010-mm146-phase1-block-d/evidence.json",
+      "date": "2026-07-06",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-06-mlb-tor-sf-contest-19-v010-mm146-phase1-block-d/raw/",
+      "status": "partial",
+      "summaryPath": "runs/2026-07-06-mlb-tor-sf-contest-19-v010-mm146-phase1-block-d/summary.md",
+      "publishedAt": "2026-07-07T06:07:11Z"
+    },
+    {
+      "artifactId": "2026-07-06-mlb-col-lad-contest-20-v010-mm146-phase1-block-d",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-06-mlb-col-lad-contest-20-v010-mm146-phase1-block-d/evidence.json",
+      "date": "2026-07-06",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-06-mlb-col-lad-contest-20-v010-mm146-phase1-block-d/raw/",
+      "status": "partial",
+      "summaryPath": "runs/2026-07-06-mlb-col-lad-contest-20-v010-mm146-phase1-block-d/summary.md",
+      "publishedAt": "2026-07-07T06:07:11Z"
+    },
+    {
+      "artifactId": "2026-07-06-mlb-ari-sd-contest-18-v010-mm146-phase1-block-d",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-06-mlb-ari-sd-contest-18-v010-mm146-phase1-block-d/evidence.json",
+      "date": "2026-07-06",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-06-mlb-ari-sd-contest-18-v010-mm146-phase1-block-d/raw/",
+      "status": "partial",
+      "summaryPath": "runs/2026-07-06-mlb-ari-sd-contest-18-v010-mm146-phase1-block-d/summary.md",
+      "publishedAt": "2026-07-07T06:07:11Z"
+    },
     {
       "artifactId": "2026-07-06-mlb-phi-kc-contest-17-v010-mm146-phase1-block-c",
       "artifactType": "run",
@@ -509,9 +542,9 @@
       "scope": "year",
       "year": 2026,
       "path": "archive/2026/index.json",
-      "artifactCount": 43,
+      "artifactCount": 46,
       "oldestPublishedAt": "2026-05-20T02:48:35Z",
-      "newestPublishedAt": "2026-07-06T21:38:31Z"
+      "newestPublishedAt": "2026-07-07T06:07:11Z"
     }
   ]
 }

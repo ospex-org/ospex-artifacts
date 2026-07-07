@@ -1,0 +1,473 @@
+{
+  "officialFinal": {
+    "found": true,
+    "final": true,
+    "gamePk": 823282,
+    "status": {
+      "abstractGameState": "Final",
+      "codedGameState": "F",
+      "detailedState": "Final",
+      "statusCode": "F",
+      "startTimeTBD": false,
+      "abstractGameCode": "F"
+    },
+    "away": "Arizona Diamondbacks",
+    "home": "San Diego Padres",
+    "linescore": {
+      "currentInning": 9,
+      "currentInningOrdinal": "9th",
+      "inningState": "Bottom",
+      "inningHalf": "Bottom",
+      "isTopInning": false,
+      "scheduledInnings": 9,
+      "innings": [
+        {
+          "num": 1,
+          "ordinalNum": "1st",
+          "home": {
+            "runs": 0,
+            "hits": 1,
+            "errors": 2,
+            "leftOnBase": 1
+          },
+          "away": {
+            "runs": 2,
+            "hits": 2,
+            "errors": 0,
+            "leftOnBase": 2
+          }
+        },
+        {
+          "num": 2,
+          "ordinalNum": "2nd",
+          "home": {
+            "runs": 0,
+            "hits": 1,
+            "errors": 0,
+            "leftOnBase": 1
+          },
+          "away": {
+            "runs": 0,
+            "hits": 0,
+            "errors": 0,
+            "leftOnBase": 0
+          }
+        },
+        {
+          "num": 3,
+          "ordinalNum": "3rd",
+          "home": {
+            "runs": 0,
+            "hits": 1,
+            "errors": 0,
+            "leftOnBase": 1
+          },
+          "away": {
+            "runs": 4,
+            "hits": 4,
+            "errors": 0,
+            "leftOnBase": 0
+          }
+        },
+        {
+          "num": 4,
+          "ordinalNum": "4th",
+          "home": {
+            "runs": 0,
+            "hits": 1,
+            "errors": 0,
+            "leftOnBase": 1
+          },
+          "away": {
+            "runs": 1,
+            "hits": 1,
+            "errors": 0,
+            "leftOnBase": 0
+          }
+        },
+        {
+          "num": 5,
+          "ordinalNum": "5th",
+          "home": {
+            "runs": 0,
+            "hits": 0,
+            "errors": 0,
+            "leftOnBase": 0
+          },
+          "away": {
+            "runs": 0,
+            "hits": 0,
+            "errors": 0,
+            "leftOnBase": 0
+          }
+        },
+        {
+          "num": 6,
+          "ordinalNum": "6th",
+          "home": {
+            "runs": 0,
+            "hits": 1,
+            "errors": 0,
+            "leftOnBase": 1
+          },
+          "away": {
+            "runs": 1,
+            "hits": 1,
+            "errors": 0,
+            "leftOnBase": 0
+          }
+        },
+        {
+          "num": 7,
+          "ordinalNum": "7th",
+          "home": {
+            "runs": 0,
+            "hits": 1,
+            "errors": 0,
+            "leftOnBase": 1
+          },
+          "away": {
+            "runs": 0,
+            "hits": 1,
+            "errors": 0,
+            "leftOnBase": 1
+          }
+        },
+        {
+          "num": 8,
+          "ordinalNum": "8th",
+          "home": {
+            "runs": 0,
+            "hits": 1,
+            "errors": 0,
+            "leftOnBase": 1
+          },
+          "away": {
+            "runs": 0,
+            "hits": 0,
+            "errors": 0,
+            "leftOnBase": 0
+          }
+        },
+        {
+          "num": 9,
+          "ordinalNum": "9th",
+          "home": {
+            "runs": 0,
+            "hits": 1,
+            "errors": 0,
+            "leftOnBase": 1
+          },
+          "away": {
+            "runs": 0,
+            "hits": 2,
+            "errors": 0,
+            "leftOnBase": 2
+          }
+        }
+      ],
+      "teams": {
+        "home": {
+          "runs": 0,
+          "hits": 8,
+          "errors": 2,
+          "leftOnBase": 8
+        },
+        "away": {
+          "runs": 8,
+          "hits": 11,
+          "errors": 0,
+          "leftOnBase": 5
+        }
+      },
+      "defense": {
+        "pitcher": {
+          "id": 686753,
+          "fullName": "Drey Jameson",
+          "link": "/api/v1/people/686753"
+        },
+        "catcher": {
+          "id": 672515,
+          "fullName": "Gabriel Moreno",
+          "link": "/api/v1/people/672515"
+        },
+        "first": {
+          "id": 656976,
+          "fullName": "Pavin Smith",
+          "link": "/api/v1/people/656976"
+        },
+        "second": {
+          "id": 545121,
+          "fullName": "Ildemaro Vargas",
+          "link": "/api/v1/people/545121"
+        },
+        "third": {
+          "id": 571448,
+          "fullName": "Nolan Arenado",
+          "link": "/api/v1/people/571448"
+        },
+        "shortstop": {
+          "id": 672695,
+          "fullName": "Geraldo Perdomo",
+          "link": "/api/v1/people/672695"
+        },
+        "left": {
+          "id": 596146,
+          "fullName": "Max Kepler",
+          "link": "/api/v1/people/596146"
+        },
+        "center": {
+          "id": 694371,
+          "fullName": "Tommy Troy",
+          "link": "/api/v1/people/694371"
+        },
+        "right": {
+          "id": 678489,
+          "fullName": "Jorge Barrosa",
+          "link": "/api/v1/people/678489"
+        },
+        "batter": {
+          "id": 666971,
+          "fullName": "Lourdes Gurriel Jr.",
+          "link": "/api/v1/people/666971"
+        },
+        "onDeck": {
+          "id": 596146,
+          "fullName": "Max Kepler",
+          "link": "/api/v1/people/596146"
+        },
+        "inHole": {
+          "id": 571448,
+          "fullName": "Nolan Arenado",
+          "link": "/api/v1/people/571448"
+        },
+        "battingOrder": 5,
+        "team": {
+          "id": 109,
+          "name": "Arizona Diamondbacks",
+          "link": "/api/v1/teams/109"
+        }
+      },
+      "offense": {
+        "batter": {
+          "id": 823550,
+          "fullName": "Sung-Mun Song",
+          "link": "/api/v1/people/823550"
+        },
+        "onDeck": {
+          "id": 660710,
+          "fullName": "Rodolfo Dur\u00e1n",
+          "link": "/api/v1/people/660710"
+        },
+        "inHole": {
+          "id": 687749,
+          "fullName": "Jase Bowen",
+          "link": "/api/v1/people/687749"
+        },
+        "pitcher": {
+          "id": 676760,
+          "fullName": "Ron Marinaccio",
+          "link": "/api/v1/people/676760"
+        },
+        "battingOrder": 8,
+        "team": {
+          "id": 135,
+          "name": "San Diego Padres",
+          "link": "/api/v1/teams/135"
+        }
+      },
+      "balls": 0,
+      "strikes": 1,
+      "outs": 3
+    }
+  },
+  "score": {
+    "txHashes": [
+      "0xf3a7ea54d4681d860e3c908b25fd96f05b241c84ec8b6ba8abdd5ef6e56b9c80"
+    ],
+    "before": {
+      "schemaVersion": 2,
+      "ok": true,
+      "action": "contests.score-status",
+      "stage": "read",
+      "network": "polygon",
+      "chainId": 137,
+      "generatedAt": "2026-07-07T05:37:27.252Z",
+      "cliVersion": "0.10.0",
+      "sdkVersion": "0.10.0",
+      "wallet": null,
+      "walletRole": "none",
+      "signer": null,
+      "requiresSignature": false,
+      "requiresTransaction": false,
+      "approvalRequirements": [],
+      "estimatedCosts": null,
+      "risk": null,
+      "payout": null,
+      "contest": null,
+      "speculation": null,
+      "commitment": null,
+      "sideSummary": null,
+      "warnings": [],
+      "errors": [],
+      "effects": [],
+      "nextCommands": [],
+      "payload": {
+        "contestId": "18",
+        "status": "verified",
+        "scored": false,
+        "awayScore": null,
+        "homeScore": null
+      }
+    },
+    "after": {
+      "schemaVersion": 2,
+      "ok": true,
+      "action": "contests.score-status",
+      "stage": "read",
+      "network": "polygon",
+      "chainId": 137,
+      "generatedAt": "2026-07-07T05:37:47.906Z",
+      "cliVersion": "0.10.0",
+      "sdkVersion": "0.10.0",
+      "wallet": null,
+      "walletRole": "none",
+      "signer": null,
+      "requiresSignature": false,
+      "requiresTransaction": false,
+      "approvalRequirements": [],
+      "estimatedCosts": null,
+      "risk": null,
+      "payout": null,
+      "contest": null,
+      "speculation": null,
+      "commitment": null,
+      "sideSummary": null,
+      "warnings": [],
+      "errors": [],
+      "effects": [],
+      "nextCommands": [],
+      "payload": {
+        "contestId": "18",
+        "status": "scored",
+        "scored": true,
+        "awayScore": 8,
+        "homeScore": 0
+      }
+    }
+  },
+  "settle": {
+    "42": {
+      "market": "moneyline",
+      "txHashes": [
+        "0x90def208a52cf8b5fe13188beba74186a9c4bc18f5483a43676c7e3b3d82f28c"
+      ]
+    },
+    "43": {
+      "market": "spread",
+      "txHashes": [
+        "0x2ab8942862bd4d1180f34c875928044823b252c7ebade6730b0ed898dc288a7b"
+      ]
+    },
+    "44": {
+      "market": "total",
+      "txHashes": [
+        "0x7374f0fc6743642b364caae9e1b276cbb11b49e8312a82c17723290dad8ad5b9"
+      ]
+    }
+  },
+  "claims": [
+    {
+      "role": "stage_maker_a",
+      "speculationId": "43",
+      "type": "upper",
+      "txHashes": [
+        "0xaa898c7413fc1bde7b21f95a71d684260fd4833c9a3ac6d6053bb2b1fd31a0fa"
+      ]
+    },
+    {
+      "role": "stage_maker_a",
+      "speculationId": "42",
+      "type": "upper",
+      "txHashes": [
+        "0x7178ef894281ce3175f379b83e83f34e27f10dcaf84e3ced9455d6e0a32ed4b2"
+      ]
+    },
+    {
+      "role": "flow_a",
+      "speculationId": "44",
+      "type": "lower",
+      "txHashes": [
+        "0xd883f8984bcbb3d6d091de7985148f32f1454cc4728a4a43aa7be28e95a66212"
+      ]
+    }
+  ],
+  "watcherInitialOk": false,
+  "watcherInitialZeroState": {
+    "wallets": {
+      "stage_maker_a": {
+        "targetCounts": {
+          "active": 0,
+          "pendingSettle": 1,
+          "claimable": 5
+        },
+        "ok": false
+      },
+      "stage_maker_b": {
+        "targetCounts": {
+          "active": 0,
+          "pendingSettle": 0,
+          "claimable": 0
+        },
+        "ok": true
+      },
+      "flow_a": {
+        "targetCounts": {
+          "active": 0,
+          "pendingSettle": 0,
+          "claimable": 3
+        },
+        "ok": false
+      }
+    },
+    "openCommitments": {
+      "ARI_SD": 0,
+      "TOR_SF": 0,
+      "COL_LAD": 0
+    },
+    "ok": false
+  },
+  "manualRemediation": {
+    "checkedAtUtc": "2026-07-07T06:07:11Z",
+    "walletTargetCounts": {
+      "stage_maker_a": {
+        "active": 0,
+        "pendingSettle": 0,
+        "claimable": 0
+      },
+      "stage_maker_b": {
+        "active": 0,
+        "pendingSettle": 0,
+        "claimable": 0
+      },
+      "flow_a": {
+        "active": 0,
+        "pendingSettle": 0,
+        "claimable": 0
+      }
+    },
+    "openCommitments": {
+      "18": 0,
+      "19": 0,
+      "20": 0
+    },
+    "orphanProcessCount": 0,
+    "manualRemediationClaims": {
+      "stage_maker_a_spec_50_upper": "0x9b60abba61788fe3ebf988175862120be94d3bb82b3347e29f98ec1e1091dd70",
+      "stage_maker_a_spec_49_upper": "0x10fbc85c8f809396b88dbc59132e16f327b7323e750cd6dd3b4b460446e98264",
+      "stage_maker_a_spec_48_lower": "0xe7d8d5ae2978976a2cdddea42a34dd589d8cd04c829f6033735c9d8c4acde830"
+    },
+    "ok": true
+  },
+  "finalZeroStateOk": true
+}

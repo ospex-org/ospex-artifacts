@@ -1,0 +1,199 @@
+{
+  "initialCandidatesAllowlistOnly": "pass",
+  "initialDryRun": "pass",
+  "initialDryRunSummary": {
+    "wouldSubmitCount": 18,
+    "byContestMarket": {
+      "18:moneyline": 2,
+      "18:spread": 2,
+      "18:total": 2,
+      "19:moneyline": 2,
+      "19:spread": 2,
+      "19:total": 2,
+      "20:moneyline": 2,
+      "20:spread": 2,
+      "20:total": 2
+    },
+    "badEvents": [],
+    "offAllowlistWouldSubmit": []
+  },
+  "preliveCandidatesAllowlistOnly": "pass",
+  "preliveDryRun": "fail",
+  "preliveDryRunGate": {
+    "ok": false,
+    "wouldSubmitCount": 16,
+    "byContestMarket": {
+      "18:moneyline": 2,
+      "18:spread": 2,
+      "18:total": 2,
+      "19:moneyline": 2,
+      "19:spread": 2,
+      "19:total": 2,
+      "20:moneyline": 2,
+      "20:spread": 2
+    },
+    "badEvents": [],
+    "offAllowlist": [],
+    "utc": "2026-07-07T01:31:03.968894Z"
+  },
+  "targetCandidateRows": [
+    {
+      "gameId": "c36c01af-9207-45c3-9d2e-a69c3736b225",
+      "slug": "ari-sd-2026-07-07",
+      "sport": "mlb",
+      "awayTeam": "Arizona Diamondbacks",
+      "homeTeam": "San Diego Padres",
+      "matchTime": "2026-07-07T01:40:00+00:00",
+      "status": "upcoming",
+      "hasOdds": true,
+      "canCreateContest": false,
+      "contestCreated": true,
+      "contestId": "18",
+      "market": "moneyline",
+      "speculationId": "42",
+      "kind": "quote_ready",
+      "recommendedAction": "quote",
+      "contestStatus": "verified",
+      "referenceOdds": {
+        "market": "moneyline",
+        "awayOddsAmerican": 111,
+        "homeOddsAmerican": -125
+      },
+      "inContestAllowList": true
+    },
+    {
+      "gameId": "c36c01af-9207-45c3-9d2e-a69c3736b225",
+      "slug": "ari-sd-2026-07-07",
+      "sport": "mlb",
+      "awayTeam": "Arizona Diamondbacks",
+      "homeTeam": "San Diego Padres",
+      "matchTime": "2026-07-07T01:40:00+00:00",
+      "status": "upcoming",
+      "hasOdds": true,
+      "canCreateContest": false,
+      "contestCreated": true,
+      "contestId": "18",
+      "market": "spread",
+      "speculationId": "43",
+      "kind": "quote_ready",
+      "recommendedAction": "quote",
+      "contestStatus": "verified",
+      "referenceOdds": {
+        "market": "spread",
+        "awayLine": 1.5,
+        "homeLine": -1.5,
+        "awayOddsAmerican": -195,
+        "homeOddsAmerican": 170
+      },
+      "inContestAllowList": true
+    },
+    {
+      "gameId": "c36c01af-9207-45c3-9d2e-a69c3736b225",
+      "slug": "ari-sd-2026-07-07",
+      "sport": "mlb",
+      "awayTeam": "Arizona Diamondbacks",
+      "homeTeam": "San Diego Padres",
+      "matchTime": "2026-07-07T01:40:00+00:00",
+      "status": "upcoming",
+      "hasOdds": true,
+      "canCreateContest": false,
+      "contestCreated": true,
+      "contestId": "18",
+      "market": "total",
+      "speculationId": "44",
+      "kind": "quote_ready",
+      "recommendedAction": "quote",
+      "contestStatus": "verified",
+      "referenceOdds": {
+        "market": "total",
+        "line": 8.5,
+        "overOddsAmerican": -110,
+        "underOddsAmerican": -110
+      },
+      "inContestAllowList": true
+    }
+  ],
+  "preliveTargetCandidateRows": [
+    {
+      "gameId": "c36c01af-9207-45c3-9d2e-a69c3736b225",
+      "slug": "ari-sd-2026-07-07",
+      "sport": "mlb",
+      "awayTeam": "Arizona Diamondbacks",
+      "homeTeam": "San Diego Padres",
+      "matchTime": "2026-07-07T01:40:00+00:00",
+      "status": "upcoming",
+      "hasOdds": true,
+      "canCreateContest": false,
+      "contestCreated": true,
+      "contestId": "18",
+      "market": "moneyline",
+      "speculationId": "42",
+      "kind": "quote_ready",
+      "recommendedAction": "quote",
+      "contestStatus": "verified",
+      "referenceOdds": {
+        "market": "moneyline",
+        "awayOddsAmerican": 110,
+        "homeOddsAmerican": -125
+      },
+      "inContestAllowList": true
+    },
+    {
+      "gameId": "c36c01af-9207-45c3-9d2e-a69c3736b225",
+      "slug": "ari-sd-2026-07-07",
+      "sport": "mlb",
+      "awayTeam": "Arizona Diamondbacks",
+      "homeTeam": "San Diego Padres",
+      "matchTime": "2026-07-07T01:40:00+00:00",
+      "status": "upcoming",
+      "hasOdds": true,
+      "canCreateContest": false,
+      "contestCreated": true,
+      "contestId": "18",
+      "market": "spread",
+      "speculationId": "43",
+      "kind": "quote_ready",
+      "recommendedAction": "quote",
+      "contestStatus": "verified",
+      "referenceOdds": {
+        "market": "spread",
+        "awayLine": 1.5,
+        "homeLine": -1.5,
+        "awayOddsAmerican": -195,
+        "homeOddsAmerican": 165
+      },
+      "inContestAllowList": true
+    },
+    {
+      "gameId": "c36c01af-9207-45c3-9d2e-a69c3736b225",
+      "slug": "ari-sd-2026-07-07",
+      "sport": "mlb",
+      "awayTeam": "Arizona Diamondbacks",
+      "homeTeam": "San Diego Padres",
+      "matchTime": "2026-07-07T01:40:00+00:00",
+      "status": "upcoming",
+      "hasOdds": true,
+      "canCreateContest": false,
+      "contestCreated": true,
+      "contestId": "18",
+      "market": "total",
+      "speculationId": "44",
+      "kind": "quote_ready",
+      "recommendedAction": "quote",
+      "contestStatus": "verified",
+      "referenceOdds": {
+        "market": "total",
+        "line": 8.5,
+        "overOddsAmerican": -110,
+        "underOddsAmerican": -110
+      },
+      "inContestAllowList": true
+    }
+  ],
+  "seedSpeculations": false,
+  "contestAllowList": [
+    "18",
+    "19",
+    "20"
+  ]
+}

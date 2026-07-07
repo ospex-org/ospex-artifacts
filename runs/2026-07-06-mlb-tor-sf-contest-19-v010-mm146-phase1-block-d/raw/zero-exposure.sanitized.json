@@ -1,0 +1,56 @@
+{
+  "checkedAtUtc": "2026-07-07T06:07:11Z",
+  "publicMakerVisibleCommitments": 0,
+  "publicContestSpecVisibleCommitments": 0,
+  "contestOrderbookCount": 0,
+  "orphanProcessCount": 0,
+  "targetWalletCounts": {
+    "stage_maker_a": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    },
+    "stage_maker_b": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    },
+    "flow_a": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    }
+  },
+  "sourceZeroProof": {
+    "checkedAtUtc": "2026-07-07T06:07:11Z",
+    "walletTargetCounts": {
+      "stage_maker_a": {
+        "active": 0,
+        "pendingSettle": 0,
+        "claimable": 0
+      },
+      "stage_maker_b": {
+        "active": 0,
+        "pendingSettle": 0,
+        "claimable": 0
+      },
+      "flow_a": {
+        "active": 0,
+        "pendingSettle": 0,
+        "claimable": 0
+      }
+    },
+    "openCommitments": {
+      "18": 0,
+      "19": 0,
+      "20": 0
+    },
+    "orphanProcessCount": 0,
+    "manualRemediationClaims": {
+      "stage_maker_a_spec_50_upper": "0x9b60abba61788fe3ebf988175862120be94d3bb82b3347e29f98ec1e1091dd70",
+      "stage_maker_a_spec_49_upper": "0x10fbc85c8f809396b88dbc59132e16f327b7323e750cd6dd3b4b460446e98264",
+      "stage_maker_a_spec_48_lower": "0xe7d8d5ae2978976a2cdddea42a34dd589d8cd04c829f6033735c9d8c4acde830"
+    },
+    "ok": true
+  }
+}

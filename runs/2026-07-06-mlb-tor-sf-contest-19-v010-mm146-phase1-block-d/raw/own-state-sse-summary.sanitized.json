@@ -1,0 +1,11 @@
+{
+  "status": "not_applicable",
+  "canonicalFillObserved": false,
+  "eventCounts": {
+    "fill": 0,
+    "unknown-own-fill": 0,
+    "owner-mapping-failed": 0,
+    "divergence": 0
+  },
+  "reason": "no live MM/fill window started after prelive gate halt"
+}

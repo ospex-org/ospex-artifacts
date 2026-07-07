@@ -50,6 +50,7 @@
           "enum": [
             "FULL_GREEN",
             "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED",
+            "AMBER_PRELIVE_GATE_HALT",
             "AMBER_QUOTED_NO_FILL",
             "AMBER_TOKEN_TOPUP_NEEDED"
           ]
