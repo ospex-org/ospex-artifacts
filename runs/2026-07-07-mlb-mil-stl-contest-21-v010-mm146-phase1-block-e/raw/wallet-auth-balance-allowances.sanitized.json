@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-07T21:14:56Z",
+  "wallets": {
+    "ospex-stage-maker-b": {
+      "role": "operatorMmMaker",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    },
+    "ospex-stage-maker-a": {
+      "role": "manualSeedMaker",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    "ospex-flow-a": {
+      "role": "controlledTaker",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    }
+  },
+  "authChecksPassed": true,
+  "balancesSufficientForBudget": true,
+  "allowancesBounded": true
+}

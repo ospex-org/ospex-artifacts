@@ -1,0 +1,580 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-07-07-mlb-mil-stl-contest-21-v010-mm146-phase1-block-e",
+  "artifactType": "run",
+  "runClass": "mm-live-canary",
+  "date": "2026-07-07",
+  "generatedAt": "2026-07-07T21:14:56Z",
+  "publishedAt": "2026-07-07T21:14:56Z",
+  "network": "polygon",
+  "status": "complete_verified_with_caveats",
+  "sourceRunId": "20260707T152105Z-mve-phase1-block-e-mil-stl-early",
+  "rawPath": "raw/",
+  "summaryPath": "summary.md",
+  "dataPath": "evidence.json",
+  "artifactFiles": {
+    "evidence": "evidence.json",
+    "summary": "summary.md",
+    "scenarioMatrix": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "mveScorecard": "mve-scorecard.json",
+    "mveScorecardMarkdown": "mve-scorecard.md",
+    "targetPreflight": "raw/target-preflight.sanitized.json",
+    "releaseRuntimeMatrix": "raw/release-runtime-matrix.sanitized.json",
+    "walletAuthBalances": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "boundedApprovals": "raw/bounded-approvals.sanitized.json",
+    "manualSeedFill": "raw/manual-seed-fill.sanitized.json",
+    "mmDryRun": "raw/mm-dryrun-summary.sanitized.json",
+    "liveCommitmentsPosted": "raw/live-public-commitments-posted.sanitized.json",
+    "liveFill": "raw/live-fill.sanitized.json",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "finalContestShow": "raw/final-contest-show.sanitized.json",
+    "finalCommitmentsOrderbook": "raw/final-commitments-orderbook.sanitized.json",
+    "finalPositionsStatus": "raw/final-positions-status.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json"
+  },
+  "target": {
+    "slug": "mil-stl-2026-07-07",
+    "game": "Milwaukee Brewers @ St. Louis Cardinals",
+    "gameId": "596b9d68-e888-4872-b995-f99d7cda7519",
+    "gamePk": 823062,
+    "sport": "mlb",
+    "contestId": "21",
+    "contestStatusAfterCreateVerify": "verified",
+    "contestStatusAfterPostgame": "scored",
+    "awayTeam": "Milwaukee Brewers",
+    "homeTeam": "St. Louis Cardinals",
+    "startTimeUtc": "2026-07-07T18:15:00Z",
+    "market": "spread",
+    "speculationId": "53",
+    "companionSpeculations": {
+      "moneyline": "52",
+      "spread": "53",
+      "total": "51"
+    },
+    "marketsCovered": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "referenceOdds": {
+      "moneyline": {
+        "awayOddsAmerican": -200,
+        "changedAt": "2026-07-07T15:24:31.463+00:00",
+        "homeOddsAmerican": 173,
+        "market": "moneyline",
+        "pollCapturedAt": "2026-07-07T15:27:31.542+00:00",
+        "upstreamLastUpdated": "2026-07-07T15:22:25+00:00"
+      },
+      "spread": {
+        "awayLine": -1.5,
+        "awayOddsAmerican": -118,
+        "changedAt": "2026-07-07T15:24:31.591+00:00",
+        "homeLine": 1.5,
+        "homeOddsAmerican": -102,
+        "market": "spread",
+        "pollCapturedAt": "2026-07-07T15:27:31.682+00:00",
+        "upstreamLastUpdated": "2026-07-07T15:22:25+00:00"
+      },
+      "total": {
+        "changedAt": "2026-07-07T12:04:23.702+00:00",
+        "line": 7.5,
+        "market": "total",
+        "overOddsAmerican": -115,
+        "pollCapturedAt": "2026-07-07T15:27:31.751+00:00",
+        "underOddsAmerican": -105,
+        "upstreamLastUpdated": "2026-07-07T15:22:25+00:00"
+      }
+    },
+    "spreadLine": {
+      "awayLine": -1.5,
+      "awayPositionType": "upper",
+      "homeLine": 1.5,
+      "homePositionType": "lower",
+      "lineTicks": -15
+    },
+    "totalLine": {
+      "line": 7.5,
+      "lineTicks": 75,
+      "overPositionType": "upper",
+      "underPositionType": "lower"
+    },
+    "finalScore": {
+      "awayRuns": 4,
+      "homeRuns": 3,
+      "winner": "Milwaukee Brewers",
+      "winnerRole": "away",
+      "winnerProtocolSide": "upper",
+      "spreadWinner": "St. Louis Cardinals +1.5",
+      "spreadWinnerProtocolSide": "lower",
+      "totalRuns": 7,
+      "totalLine": 7.5,
+      "totalWinner": "under 7.5",
+      "totalWinnerProtocolSide": "lower"
+    },
+    "postgameStatus": "complete",
+    "teamIdentity": {
+      "away": {
+        "team": "Milwaukee Brewers",
+        "abbreviation": "MIL",
+        "role": "away",
+        "identity": "favorite",
+        "marketOddsAmerican": "-200",
+        "positionType": "upper"
+      },
+      "home": {
+        "team": "St. Louis Cardinals",
+        "abbreviation": "STL",
+        "role": "home",
+        "identity": "underdog",
+        "marketOddsAmerican": "+173",
+        "positionType": "lower"
+      },
+      "winner": {
+        "team": "Milwaukee Brewers",
+        "role": "away",
+        "positionType": "upper"
+      },
+      "spreadWinner": {
+        "team": "St. Louis Cardinals",
+        "role": "home",
+        "line": 1.5,
+        "positionType": "lower"
+      },
+      "totalWinner": {
+        "side": "under",
+        "line": 7.5,
+        "positionType": "lower"
+      }
+    }
+  },
+  "versions": {
+    "schemaVersion": 1,
+    "generatedAt": "2026-07-07T21:14:56Z",
+    "chainId": 137,
+    "sdkCli": {
+      "repo": "ospex-sdk",
+      "version": "0.10.0",
+      "headSha": "3fa399a",
+      "requiredAtOrAfter": "3fa399a",
+      "ok": true,
+      "note": "operator CLI used v0.10.0"
+    },
+    "marketMaker": {
+      "repo": "ospex-market-maker",
+      "headSha": "6f3ccc1",
+      "requiredAtOrAfter": "6f3ccc1",
+      "installedSdkVersion": "0.9.0",
+      "ok": true,
+      "note": "MM internal @ospex/sdk remained v0.9.0 as allowed by Block E brief; not repinned."
+    },
+    "ancillaryRepos": {
+      "ospex-core-api": {
+        "headSha": "076f44d",
+        "requiredAtOrAfter": "076f44d",
+        "ok": true
+      },
+      "ospex-indexer": {
+        "headSha": "75be9e7",
+        "requiredAtOrAfter": "75be9e7",
+        "ok": true
+      },
+      "ospex-cre": {
+        "headSha": "fed6e26",
+        "requiredAtOrAfter": "fed6e26",
+        "ok": true
+      }
+    },
+    "allRequiredOk": true
+  },
+  "wallets": {
+    "ospex-stage-maker-b": {
+      "role": "operatorMmMaker",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    },
+    "ospex-stage-maker-a": {
+      "role": "manualSeedMaker",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    "ospex-flow-a": {
+      "role": "controlledTaker",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    }
+  },
+  "verdict": {
+    "label": "FULL_GREEN",
+    "protocolVerdict": "MVE_PHASE1_BLOCK_E_GREEN_WITH_CAVEATS",
+    "reason": "The v0.10.0/R5 Phase 1 Block E run for Milwaukee Brewers @ St. Louis Cardinals completed the full lifecycle: contest 21 was created and verified; moneyline, spread, and total speculations 52/53/51 were manually seeded and fully filled with zero residual seed exposure; candidates --allowlist-only and dry-run passed with strict contest allowlist [21] and seedSpeculations=false; the market maker posted six tiny live quotes across moneyline, spread, and total; a controlled live spread quote was filled; the five remaining visible quotes were soft-cancelled on clean shutdown; final open commitments were zero; official final score Milwaukee Brewers 4 / St. Louis Cardinals 3 was verified; contest 21 was scored through R5/CRE; target speculations were settled, winning controlled positions were claimed, and final target active/pending/claimable positions are zero after manual remediation claims. Caveats: startup own-state stream-health hold cleared before posting/fill, the controlled fill preview warned expires-soon because quote expiry was short, initial manual moneyline/spread operator commands required no-write shell-quoting retries, and the no-agent postgame watcher surfaced residual claimables before manual remediation completed zero-state."
+  },
+  "caveats": [
+    "Startup own-state stream-health hold entered with zero exposure and cleared before posting/fill.",
+    "Controlled spread fill preview warned expires-soon because quote expiry was short.",
+    "Initial manual moneyline/spread execute attempts failed locally due shell argument quoting; no writes occurred before successful retries.",
+    "The no-agent postgame watcher emitted a nonzero target-state completion before projection/claim remediation; manual remediation claims for spread lower completed final zero-state."
+  ],
+  "budget": {
+    "feesPlusControlledRiskEnvelope": 3.23,
+    "hardStop": 15,
+    "targetCap": 10
+  },
+  "mmGates": {
+    "schemaVersion": 1,
+    "generatedAt": "2026-07-07T21:14:56Z",
+    "config": {
+      "contestAllowList": [
+        "21"
+      ],
+      "seedSpeculations": false,
+      "allowlistOnly": true,
+      "markets": [
+        "moneyline",
+        "spread",
+        "total"
+      ]
+    },
+    "candidates": {
+      "quoteReadyRows": 3,
+      "skippedRows": {},
+      "offAllowlistRows": 0
+    },
+    "dryRun": {
+      "verdict": "PASS",
+      "wouldSubmitCount": 6,
+      "wouldSubmitByContestMarket": {
+        "21/moneyline": 2,
+        "21/spread": 2,
+        "21/total": 2
+      },
+      "badEventCount": 0
+    },
+    "criticalGateRuleApplied": "per-market/per-contest pre-live gate; no benign skipped markets occurred in Block E"
+  },
+  "live": {
+    "runIds": [
+      "2026-07-07T15-38-40-995Z-e0remr"
+    ],
+    "quoteHashes": [
+      {
+        "hash": "0x5c09c249973c960c0b1bdd36db62dfb423bc9ba6dc466d66022f631d8fab6fe6",
+        "makerSide": "home",
+        "market": "moneyline",
+        "speculationId": "52",
+        "takerSide": "away"
+      },
+      {
+        "hash": "0x06801259e21e7b2be7446a29f04032279a42f59117f3a3e33d60dcebf4af04cf",
+        "makerSide": "away",
+        "market": "moneyline",
+        "speculationId": "52",
+        "takerSide": "home"
+      },
+      {
+        "hash": "0xb576e1a1466e2d5333f861a708dc1c90b93a5cb063018be713320479e72a7c97",
+        "makerSide": "home",
+        "market": "spread",
+        "speculationId": "53",
+        "takerSide": "away"
+      },
+      {
+        "hash": "0x61a41a1bd62c7d64007442201743d844cb583c3d7b17c80a75584bcfb8688c4e",
+        "makerSide": "away",
+        "market": "spread",
+        "speculationId": "53",
+        "takerSide": "home"
+      },
+      {
+        "hash": "0x749c60851d6bc47339a494f8dc3ea3145b22ca05d34a29bf871a383475b1cc1d",
+        "makerSide": "home",
+        "market": "total",
+        "speculationId": "51",
+        "takerSide": "away"
+      },
+      {
+        "hash": "0xd1cb3ba4ec4ebb96a7038eba41aa1e9cce5e449026107bb43c1af4bcbf73acbd",
+        "makerSide": "away",
+        "market": "total",
+        "speculationId": "51",
+        "takerSide": "home"
+      }
+    ],
+    "controlledFill": {
+      "hash": "0x61a41a1bd62c7d64007442201743d844cb583c3d7b17c80a75584bcfb8688c4e",
+      "market": "spread",
+      "risk": {
+        "usdc": "0.038400",
+        "wei6": "38400"
+      },
+      "sideSummary": "St. Louis Cardinals +1.5",
+      "txs": [
+        "0x8b767a11cc988b2af28eb1c82309549764015fb69f6d20064f3aa527a8e0e85c"
+      ],
+      "warnings": [
+        {
+          "code": "expires-soon",
+          "message": "Commitment expires soon (within the 5-minute window).",
+          "severity": "warning"
+        }
+      ]
+    },
+    "streamHealthHoldEvents": [
+      {
+        "exposureWei6": "0",
+        "severity": "low",
+        "state": "entered",
+        "ts": "2026-07-07T15:38:43.766Z"
+      },
+      {
+        "exposureWei6": null,
+        "severity": null,
+        "state": "cleared",
+        "ts": "2026-07-07T15:39:14.440Z"
+      }
+    ],
+    "badOwnStateCounts": {
+      "unknown-own-fill": 0,
+      "owner-mapping-failed": 0,
+      "divergence": 0,
+      "OwnerPositionStatusForUnknownPosition": 0
+    },
+    "finalOpenCommitments": 0,
+    "noOrphanProcess": true
+  },
+  "postgame": {
+    "schemaVersion": 1,
+    "generatedAt": "2026-07-07T21:14:56Z",
+    "contestId": "21",
+    "finalScore": {
+      "awayRuns": 4,
+      "homeRuns": 3,
+      "winner": "Milwaukee Brewers",
+      "winnerRole": "away",
+      "winnerProtocolSide": "upper",
+      "spreadWinner": "St. Louis Cardinals +1.5",
+      "spreadWinnerProtocolSide": "lower",
+      "totalRuns": 7,
+      "totalLine": 7.5,
+      "totalWinner": "under 7.5",
+      "totalWinnerProtocolSide": "lower"
+    },
+    "score": {
+      "txHash": "0x8aaac163b8970dcc38548a8c610f5d53a199a823a1319c381c7b55f2aac1ffe8",
+      "statusAfter": "scored"
+    },
+    "settles": {
+      "total": {
+        "speculationId": "51",
+        "txHash": "0x66f293138384013400855506a909b3c5df5bc7266db353e68fdea5a72e42de9b"
+      },
+      "moneyline": {
+        "speculationId": "52",
+        "txHash": "0x105ccdde7064ede7422871a90317888c04b3ce529f563d0311e4f36c366e7c98"
+      },
+      "spread": {
+        "speculationId": "53",
+        "txHash": "0xfd5d2651fc3b07848e5ed7272271df2802dfc93b05aa7b996facc43a26ffac28"
+      }
+    },
+    "claims": {
+      "flow-a-total-lower": {
+        "speculationId": "51",
+        "side": "lower",
+        "txHash": "0x205b2dbc608eeb97a25b54a2243b8f72f2b8e3b7152f7c1b3edb94b8bf70ab51"
+      },
+      "flow-a-moneyline-upper": {
+        "speculationId": "52",
+        "side": "upper",
+        "txHash": "0x6cae0c08c230fc163e249c9a340b229f76be6682b1e15305f342bf0c743d0a9d"
+      },
+      "stage-maker-a-spread-lower-remediation": {
+        "speculationId": "53",
+        "side": "lower",
+        "txHash": "0x8219398a1899bc2b48c4c6c1913768d5d171c709ff59f891066a2fe88a351246"
+      },
+      "flow-a-spread-lower-remediation": {
+        "speculationId": "53",
+        "side": "lower",
+        "txHash": "0x0b0f411a414a2afc9b56a21ab63e63bbef17f2890db73838d923b8056966cbe2"
+      }
+    },
+    "initialWatcherZeroState": {
+      "wallets": {
+        "stage_maker_a": {
+          "targetCounts": {
+            "active": 0,
+            "pendingSettle": 1,
+            "claimable": 0
+          },
+          "ok": false
+        },
+        "stage_maker_b": {
+          "targetCounts": {
+            "active": 0,
+            "pendingSettle": 0,
+            "claimable": 0
+          },
+          "ok": true
+        },
+        "flow_a": {
+          "targetCounts": {
+            "active": 0,
+            "pendingSettle": 1,
+            "claimable": 2
+          },
+          "ok": false
+        }
+      },
+      "openCommitments": {
+        "MIL_STL": 0
+      },
+      "ok": false
+    },
+    "manualRemediation": {
+      "claims": {
+        "manual-remediation-claim-flow_a-spec-53-lower": {
+          "effects": [
+            {
+              "blockNumber": "89835614",
+              "ok": true,
+              "purpose": "claim-position",
+              "status": "confirmed",
+              "txHash": "0x0b0f411a414a2afc9b56a21ab63e63bbef17f2890db73838d923b8056966cbe2",
+              "type": "transaction"
+            }
+          ],
+          "errors": [],
+          "ok": true,
+          "txHashes": [
+            "0x0b0f411a414a2afc9b56a21ab63e63bbef17f2890db73838d923b8056966cbe2"
+          ],
+          "warnings": []
+        },
+        "manual-remediation-claim-stage_maker_a-spec-53-lower": {
+          "effects": [
+            {
+              "blockNumber": "89835612",
+              "ok": true,
+              "purpose": "claim-position",
+              "status": "confirmed",
+              "txHash": "0x8219398a1899bc2b48c4c6c1913768d5d171c709ff59f891066a2fe88a351246",
+              "type": "transaction"
+            }
+          ],
+          "errors": [],
+          "ok": true,
+          "txHashes": [
+            "0x8219398a1899bc2b48c4c6c1913768d5d171c709ff59f891066a2fe88a351246"
+          ],
+          "warnings": []
+        }
+      },
+      "latestPoll": 2,
+      "ok": true,
+      "zeroState": {
+        "openCommitments": 0,
+        "walletTargetCounts": {
+          "flow_a": {
+            "active": 0,
+            "claimable": 0,
+            "pendingSettle": 0
+          },
+          "stage_maker_a": {
+            "active": 0,
+            "claimable": 0,
+            "pendingSettle": 0
+          },
+          "stage_maker_b": {
+            "active": 0,
+            "claimable": 0,
+            "pendingSettle": 0
+          }
+        },
+        "walletTargetRows": {
+          "flow_a": {
+            "active": [],
+            "claimable": [],
+            "pendingSettle": []
+          },
+          "stage_maker_a": {
+            "active": [],
+            "claimable": [],
+            "pendingSettle": []
+          },
+          "stage_maker_b": {
+            "active": [],
+            "claimable": [],
+            "pendingSettle": []
+          }
+        }
+      }
+    },
+    "finalZeroState": {
+      "openCommitments": 0,
+      "walletTargetCounts": {
+        "flow_a": {
+          "active": 0,
+          "claimable": 0,
+          "pendingSettle": 0
+        },
+        "stage_maker_a": {
+          "active": 0,
+          "claimable": 0,
+          "pendingSettle": 0
+        },
+        "stage_maker_b": {
+          "active": 0,
+          "claimable": 0,
+          "pendingSettle": 0
+        }
+      }
+    },
+    "projectionConvergence": {
+      "expectation": "tx confirmed; waiting for API projection before final assertions",
+      "gates": [
+        {
+          "name": "postClaim",
+          "afterWrite": "claim",
+          "txConfirmed": true,
+          "waitTarget": "target wallet active=0 pendingSettle=0 claimable=0 and open commitments=0",
+          "expectedFinalState": [
+            "active=0",
+            "pendingSettle=0",
+            "claimable=0",
+            "openCommitments=0"
+          ],
+          "observedFinalState": [
+            "manual remediation poll 2 active=0 pendingSettle=0 claimable=0 for stage-maker-a, stage-maker-b, flow-a",
+            "openCommitments=0"
+          ],
+          "converged": true,
+          "staleReadObserved": true
+        }
+      ]
+    }
+  },
+  "projectionConvergence": {
+    "expectation": "tx confirmed; waiting for API projection before final assertions",
+    "gates": [
+      {
+        "name": "postClaim",
+        "afterWrite": "claim",
+        "txConfirmed": true,
+        "waitTarget": "target wallet active=0 pendingSettle=0 claimable=0 and open commitments=0",
+        "expectedFinalState": [
+          "active=0",
+          "pendingSettle=0",
+          "claimable=0",
+          "openCommitments=0"
+        ],
+        "observedFinalState": [
+          "manual remediation poll 2 active=0 pendingSettle=0 claimable=0 for stage-maker-a, stage-maker-b, flow-a",
+          "openCommitments=0"
+        ],
+        "converged": true,
+        "staleReadObserved": true
+      }
+    ]
+  }
+}

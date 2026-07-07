@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-07T21:14:56Z",
+  "result": {
+    "contest": {
+      "contestId": "21",
+      "sport": "mlb",
+      "awayTeam": "Milwaukee Brewers",
+      "homeTeam": "St. Louis Cardinals"
+    },
+    "speculation": {
+      "speculationId": "53",
+      "type": "spread",
+      "awayLine": -1.5,
+      "homeLine": 1.5,
+      "lineTicks": -15
+    },
+    "commitment": {
+      "contestId": "21",
+      "marketType": "spread",
+      "commitmentHash": "0x61a41a1bd62c7d64007442201743d844cb583c3d7b17c80a75584bcfb8688c4e"
+    },
+    "sideSummary": "St. Louis Cardinals +1.5",
+    "riskUSDC": "0.038400",
+    "transaction": {
+      "txHash": "0x8b767a11cc988b2af28eb1c82309549764015fb69f6d20064f3aa527a8e0e85c"
+    },
+    "warnings": [
+      {
+        "code": "expires-soon",
+        "message": "Commitment expires soon (within the 5-minute window).",
+        "severity": "warning"
+      }
+    ]
+  }
+}

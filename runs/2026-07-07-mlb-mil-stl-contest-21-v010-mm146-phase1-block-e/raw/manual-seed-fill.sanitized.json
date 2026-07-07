@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-07T21:14:56Z",
+  "contestId": "21",
+  "speculationsByMarket": {
+    "moneyline": "52",
+    "spread": "53",
+    "total": "51"
+  },
+  "items": [
+    {
+      "label": "MIL_STL_moneyline_STL_retry",
+      "market": "moneyline",
+      "commitmentHash": "0x07e98c714af800afef455153484bf7a8b9cd82163cf5f06f4034662ce21dae9a",
+      "submitOk": true,
+      "matchOk": true,
+      "matchTxHashes": [
+        "0x71b7eb4d2b6d94402162059465dd316fa4603ba99c24b5c56ea6bea7e7d10b88"
+      ]
+    },
+    {
+      "label": "MIL_STL_spread_STL_plus_1_5_retry",
+      "market": "spread",
+      "commitmentHash": "0x1ea95acc06cdc3f5c0cefbc1afc0b6c90d98fa90ae33f5520de9a42d1d81a43a",
+      "submitOk": true,
+      "matchOk": true,
+      "matchTxHashes": [
+        "0x975e3d7c9baefb4d9ab19adae031a61fe500a88bd4da9a0bafbe38a9cc81a1f6"
+      ]
+    },
+    {
+      "label": "MIL_STL_total_over_7_5",
+      "market": "total",
+      "commitmentHash": "0xc6aacc09568ec1335d4e1f3a93981a4cb819676f6a63b583035e8da007a2e9db",
+      "submitOk": true,
+      "matchOk": true,
+      "matchTxHashes": [
+        "0x316faecfe9abf694069910f8f42cb7697b8f80c28ed6d9889b6fef83bbb661c1"
+      ]
+    }
+  ],
+  "finalOpenCommitments": 0,
+  "caveat": "first moneyline/spread execute attempts failed locally due shell argument quoting; no writes; retried successfully"
+}

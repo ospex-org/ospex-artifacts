@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-07T21:14:56Z",
+  "contestId": "21",
+  "openCommitments": 0,
+  "publicMakerVisibleCommitments": 0,
+  "publicContestSpecVisibleCommitments": 0,
+  "contestOrderbookCount": 0,
+  "orphanProcessCount": 0,
+  "noOrphanProcess": true,
+  "walletTargetCounts": {
+    "flow_a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "stage_maker_a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "stage_maker_b": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    }
+  },
+  "projectionConvergence": {
+    "expectation": "tx confirmed; waiting for API projection before final assertions",
+    "gates": [
+      {
+        "name": "postClaim",
+        "afterWrite": "claim",
+        "txConfirmed": true,
+        "waitTarget": "target wallet active=0 pendingSettle=0 claimable=0 and open commitments=0",
+        "expectedFinalState": [
+          "active=0",
+          "pendingSettle=0",
+          "claimable=0",
+          "openCommitments=0"
+        ],
+        "observedFinalState": [
+          "manual remediation poll 2 active=0 pendingSettle=0 claimable=0 for stage-maker-a, stage-maker-b, flow-a",
+          "openCommitments=0"
+        ],
+        "converged": true,
+        "staleReadObserved": true
+      }
+    ]
+  }
+}

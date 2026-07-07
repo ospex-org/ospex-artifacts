@@ -1,0 +1,106 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/scenario-matrix.schema.json",
+  "schemaVersion": 2,
+  "artifactId": "2026-07-07-mlb-mil-stl-contest-21-v010-mm146-phase1-block-e",
+  "generatedAt": "2026-07-07T21:14:56Z",
+  "runClass": "mm-live-canary",
+  "scenarios": [
+    {
+      "id": "target-preflight",
+      "scenario": "Target preflight and allowlist",
+      "status": "pass",
+      "notes": "MIL @ STL contest 21 and specs 52/53/51 passed target identity, allowlist, odds, and runway gates.",
+      "evidence": "raw/target-preflight.sanitized.json"
+    },
+    {
+      "id": "repo-runtime-gates",
+      "scenario": "Repo/runtime gates",
+      "status": "pass",
+      "notes": "SDK/CLI v0.10.0, MM head 6f3ccc1, installed MM SDK v0.9.0, and required ancillary repo heads were verified.",
+      "evidence": "raw/release-runtime-matrix.sanitized.json"
+    },
+    {
+      "id": "wallet-auth-balances",
+      "scenario": "Wallet auth, balances, allowances",
+      "status": "pass",
+      "notes": "Expected-address checks passed for ospex-stage-maker-b, ospex-stage-maker-a, and ospex-flow-a; public balances were sufficient and allowances were bounded.",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json"
+    },
+    {
+      "id": "bounded-approvals",
+      "scenario": "Bounded approvals / no unlimited approvals",
+      "status": "pass",
+      "notes": "Only bounded USDC approvals were used; no unlimited approvals were created.",
+      "evidence": "raw/bounded-approvals.sanitized.json"
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "scenario": "Dry-run quote loop",
+      "status": "pass",
+      "notes": "Candidates --allowlist-only returned quote-ready rows for contest 21 and all three seeded markets; dry run stayed target-scoped with seedSpeculations=false and wouldSubmitCount=6.",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json"
+    },
+    {
+      "id": "live-commitments-posted",
+      "scenario": "Live commitments posted",
+      "status": "pass_with_caveats",
+      "notes": "Tiny live moneyline, spread, and total commitments posted under strict contest allowlist [21], seedSpeculations=false.",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json"
+    },
+    {
+      "id": "live-fill",
+      "scenario": "Controlled live fill",
+      "status": "pass_with_caveats",
+      "notes": "A controlled taker filled exactly one live MM spread quote for contest 21; preview carried an expires-soon warning.",
+      "evidence": "raw/live-fill.sanitized.json"
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "scenario": "Own-state SSE canonical fill source",
+      "status": "pass_with_caveats",
+      "notes": "Telemetry captured eventCounts.fill=1 with canonicalFillObserved=true; startup stream-health hold entered with zero exposure and cleared before posting/fill; bad own-state counters stayed zero.",
+      "evidence": "raw/own-state-sse-summary.sanitized.json"
+    },
+    {
+      "id": "exposure-drain-zero",
+      "scenario": "Exposure drained to zero",
+      "status": "pass",
+      "notes": "Final public/API/MM visible-open exposure is zero, target active/pending/claimable positions are zero after postgame remediation, and no orphan MM process remained.",
+      "evidence": "raw/zero-exposure.sanitized.json"
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "scenario": "Restart/cold-start safety",
+      "status": "not_applicable",
+      "notes": "Block E brief did not require a separate scratch cold-start probe; zero-open and no-orphan shutdown proofs were captured."
+    },
+    {
+      "id": "postgame-score",
+      "scenario": "Postgame score",
+      "status": "pass",
+      "notes": "Official final score was verified and contest 21 scored via R5/CRE using CLI v0.10.0 score --wait.",
+      "evidence": "raw/postgame-lifecycle.sanitized.json"
+    },
+    {
+      "id": "postgame-settle",
+      "scenario": "Postgame settle",
+      "status": "pass",
+      "notes": "Moneyline, spread, and total speculations 52/53/51 were explicitly settled after scoring.",
+      "evidence": "raw/postgame-lifecycle.sanitized.json"
+    },
+    {
+      "id": "postgame-claim",
+      "scenario": "Postgame claim/no-op",
+      "status": "pass_with_caveats",
+      "notes": "Winning controlled positions were claimed; manual remediation claims completed final target zero-state.",
+      "evidence": "raw/postgame-lifecycle.sanitized.json"
+    },
+    {
+      "id": "cost-within-cap",
+      "scenario": "Cost within cap",
+      "status": "pass",
+      "notes": "Tiny manual/live risk plus protocol fees stayed within the Phase 1 Block E 10 USDC target budget and below the 15 USDC ask threshold.",
+      "evidence": "raw/tx-receipts.summary.json"
+    }
+  ]
+}
