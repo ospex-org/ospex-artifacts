@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-07T21:14:56Z",
+  "contestId": "21",
+  "sport": "mlb",
+  "awayTeam": "Milwaukee Brewers",
+  "homeTeam": "St. Louis Cardinals",
+  "status": "scored",
+  "awayScore": 4,
+  "homeScore": 3,
+  "scoredAt": "2026-07-07T21:00:58+00:00"
+}

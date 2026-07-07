@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-07T21:14:56Z",
+  "contestId": "21",
+  "finalScore": {
+    "awayRuns": 4,
+    "homeRuns": 3,
+    "winner": "Milwaukee Brewers",
+    "winnerRole": "away",
+    "winnerProtocolSide": "upper",
+    "spreadWinner": "St. Louis Cardinals +1.5",
+    "spreadWinnerProtocolSide": "lower",
+    "totalRuns": 7,
+    "totalLine": 7.5,
+    "totalWinner": "under 7.5",
+    "totalWinnerProtocolSide": "lower"
+  },
+  "score": {
+    "txHash": "0x8aaac163b8970dcc38548a8c610f5d53a199a823a1319c381c7b55f2aac1ffe8",
+    "statusAfter": "scored"
+  },
+  "settles": {
+    "total": {
+      "speculationId": "51",
+      "txHash": "0x66f293138384013400855506a909b3c5df5bc7266db353e68fdea5a72e42de9b"
+    },
+    "moneyline": {
+      "speculationId": "52",
+      "txHash": "0x105ccdde7064ede7422871a90317888c04b3ce529f563d0311e4f36c366e7c98"
+    },
+    "spread": {
+      "speculationId": "53",
+      "txHash": "0xfd5d2651fc3b07848e5ed7272271df2802dfc93b05aa7b996facc43a26ffac28"
+    }
+  },
+  "claims": {
+    "flow-a-total-lower": {
+      "speculationId": "51",
+      "side": "lower",
+      "txHash": "0x205b2dbc608eeb97a25b54a2243b8f72f2b8e3b7152f7c1b3edb94b8bf70ab51"
+    },
+    "flow-a-moneyline-upper": {
+      "speculationId": "52",
+      "side": "upper",
+      "txHash": "0x6cae0c08c230fc163e249c9a340b229f76be6682b1e15305f342bf0c743d0a9d"
+    },
+    "stage-maker-a-spread-lower-remediation": {
+      "speculationId": "53",
+      "side": "lower",
+      "txHash": "0x8219398a1899bc2b48c4c6c1913768d5d171c709ff59f891066a2fe88a351246"
+    },
+    "flow-a-spread-lower-remediation": {
+      "speculationId": "53",
+      "side": "lower",
+      "txHash": "0x0b0f411a414a2afc9b56a21ab63e63bbef17f2890db73838d923b8056966cbe2"
+    }
+  },
+  "initialWatcherZeroState": {
+    "wallets": {
+      "stage_maker_a": {
+        "targetCounts": {
+          "active": 0,
+          "pendingSettle": 1,
+          "claimable": 0
+        },
+        "ok": false
+      },
+      "stage_maker_b": {
+        "targetCounts": {
+          "active": 0,
+          "pendingSettle": 0,
+          "claimable": 0
+        },
+        "ok": true
+      },
+      "flow_a": {
+        "targetCounts": {
+          "active": 0,
+          "pendingSettle": 1,
+          "claimable": 2
+        },
+        "ok": false
+      }
+    },
+    "openCommitments": {
+      "MIL_STL": 0
+    },
+    "ok": false
+  },
+  "manualRemediation": {
+    "claims": {
+      "manual-remediation-claim-flow_a-spec-53-lower": {
+        "effects": [
+          {
+            "blockNumber": "89835614",
+            "ok": true,
+            "purpose": "claim-position",
+            "status": "confirmed",
+            "txHash": "0x0b0f411a414a2afc9b56a21ab63e63bbef17f2890db73838d923b8056966cbe2",
+            "type": "transaction"
+          }
+        ],
+        "errors": [],
+        "ok": true,
+        "txHashes": [
+          "0x0b0f411a414a2afc9b56a21ab63e63bbef17f2890db73838d923b8056966cbe2"
+        ],
+        "warnings": []
+      },
+      "manual-remediation-claim-stage_maker_a-spec-53-lower": {
+        "effects": [
+          {
+            "blockNumber": "89835612",
+            "ok": true,
+            "purpose": "claim-position",
+            "status": "confirmed",
+            "txHash": "0x8219398a1899bc2b48c4c6c1913768d5d171c709ff59f891066a2fe88a351246",
+            "type": "transaction"
+          }
+        ],
+        "errors": [],
+        "ok": true,
+        "txHashes": [
+          "0x8219398a1899bc2b48c4c6c1913768d5d171c709ff59f891066a2fe88a351246"
+        ],
+        "warnings": []
+      }
+    },
+    "latestPoll": 2,
+    "ok": true,
+    "zeroState": {
+      "openCommitments": 0,
+      "walletTargetCounts": {
+        "flow_a": {
+          "active": 0,
+          "claimable": 0,
+          "pendingSettle": 0
+        },
+        "stage_maker_a": {
+          "active": 0,
+          "claimable": 0,
+          "pendingSettle": 0
+        },
+        "stage_maker_b": {
+          "active": 0,
+          "claimable": 0,
+          "pendingSettle": 0
+        }
+      },
+      "walletTargetRows": {
+        "flow_a": {
+          "active": [],
+          "claimable": [],
+          "pendingSettle": []
+        },
+        "stage_maker_a": {
+          "active": [],
+          "claimable": [],
+          "pendingSettle": []
+        },
+        "stage_maker_b": {
+          "active": [],
+          "claimable": [],
+          "pendingSettle": []
+        }
+      }
+    }
+  },
+  "finalZeroState": {
+    "openCommitments": 0,
+    "walletTargetCounts": {
+      "flow_a": {
+        "active": 0,
+        "claimable": 0,
+        "pendingSettle": 0
+      },
+      "stage_maker_a": {
+        "active": 0,
+        "claimable": 0,
+        "pendingSettle": 0
+      },
+      "stage_maker_b": {
+        "active": 0,
+        "claimable": 0,
+        "pendingSettle": 0
+      }
+    }
+  },
+  "projectionConvergence": {
+    "expectation": "tx confirmed; waiting for API projection before final assertions",
+    "gates": [
+      {
+        "name": "postClaim",
+        "afterWrite": "claim",
+        "txConfirmed": true,
+        "waitTarget": "target wallet active=0 pendingSettle=0 claimable=0 and open commitments=0",
+        "expectedFinalState": [
+          "active=0",
+          "pendingSettle=0",
+          "claimable=0",
+          "openCommitments=0"
+        ],
+        "observedFinalState": [
+          "manual remediation poll 2 active=0 pendingSettle=0 claimable=0 for stage-maker-a, stage-maker-b, flow-a",
+          "openCommitments=0"
+        ],
+        "converged": true,
+        "staleReadObserved": true
+      }
+    ]
+  }
+}

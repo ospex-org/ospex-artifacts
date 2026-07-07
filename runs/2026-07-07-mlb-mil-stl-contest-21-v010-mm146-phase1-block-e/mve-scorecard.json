@@ -1,0 +1,254 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "2026-07-07-mlb-mil-stl-contest-21-v010-mm146-phase1-block-e",
+  "generatedAt": "2026-07-07T21:14:56Z",
+  "runClass": "mm-live-canary",
+  "verdict": {
+    "label": "FULL_GREEN",
+    "protocolVerdict": "MVE_PHASE1_BLOCK_E_GREEN_WITH_CAVEATS",
+    "reason": "The v0.10.0/R5 Phase 1 Block E run for Milwaukee Brewers @ St. Louis Cardinals completed the full lifecycle: contest 21 was created and verified; moneyline, spread, and total speculations 52/53/51 were manually seeded and fully filled with zero residual seed exposure; candidates --allowlist-only and dry-run passed with strict contest allowlist [21] and seedSpeculations=false; the market maker posted six tiny live quotes across moneyline, spread, and total; a controlled live spread quote was filled; the five remaining visible quotes were soft-cancelled on clean shutdown; final open commitments were zero; official final score Milwaukee Brewers 4 / St. Louis Cardinals 3 was verified; contest 21 was scored through R5/CRE; target speculations were settled, winning controlled positions were claimed, and final target active/pending/claimable positions are zero after manual remediation claims. Caveats: startup own-state stream-health hold cleared before posting/fill, the controlled fill preview warned expires-soon because quote expiry was short, initial manual moneyline/spread operator commands required no-write shell-quoting retries, and the no-agent postgame watcher surfaced residual claimables before manual remediation completed zero-state."
+  },
+  "capabilities": [
+    {
+      "id": "target-preflight",
+      "capability": "Target preflight and allowlist",
+      "proof": "proven_live",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "notes": "MIL @ STL contest 21 and specs 52/53/51 passed target identity, allowlist, odds, and runway gates."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "capability": "Repo/runtime gates",
+      "proof": "proven_live",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "notes": "SDK/CLI v0.10.0, MM head 6f3ccc1, installed MM SDK v0.9.0, and required ancillary repo heads were verified."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "capability": "Wallet auth, balances, allowances",
+      "proof": "proven_live",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Expected-address checks passed for ospex-stage-maker-b, ospex-stage-maker-a, and ospex-flow-a; public balances were sufficient and allowances were bounded."
+    },
+    {
+      "id": "bounded-approvals",
+      "capability": "Bounded approvals / no unlimited approvals",
+      "proof": "proven_live",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "notes": "Only bounded USDC approvals were used; no unlimited approvals were created."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "capability": "Dry-run quote loop",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "notes": "Candidates --allowlist-only returned quote-ready rows for contest 21 and all three seeded markets; dry run stayed target-scoped with seedSpeculations=false and wouldSubmitCount=6."
+    },
+    {
+      "id": "live-commitments-posted",
+      "capability": "Live commitments posted",
+      "proof": "proven_live",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "notes": "Tiny live moneyline, spread, and total commitments posted under strict contest allowlist [21], seedSpeculations=false."
+    },
+    {
+      "id": "live-fill",
+      "capability": "Controlled live fill",
+      "proof": "proven_live",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "A controlled taker filled exactly one live MM spread quote for contest 21; preview carried an expires-soon warning."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "capability": "Own-state SSE canonical fill source",
+      "proof": "proven_live",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "Telemetry captured eventCounts.fill=1 with canonicalFillObserved=true; startup stream-health hold entered with zero exposure and cleared before posting/fill; bad own-state counters stayed zero."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "capability": "Exposure drained to zero",
+      "proof": "proven_live",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "Final public/API/MM visible-open exposure is zero, target active/pending/claimable positions are zero after postgame remediation, and no orphan MM process remained."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "capability": "Restart/cold-start safety",
+      "proof": "not_applicable",
+      "notes": "Block E brief did not require a separate scratch cold-start probe; zero-open and no-orphan shutdown proofs were captured."
+    },
+    {
+      "id": "postgame-score",
+      "capability": "Postgame score",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Official final score was verified and contest 21 scored via R5/CRE using CLI v0.10.0 score --wait."
+    },
+    {
+      "id": "postgame-settle",
+      "capability": "Postgame settle",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Moneyline, spread, and total speculations 52/53/51 were explicitly settled after scoring."
+    },
+    {
+      "id": "postgame-claim",
+      "capability": "Postgame claim/no-op",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Winning controlled positions were claimed; manual remediation claims completed final target zero-state."
+    },
+    {
+      "id": "cost-within-cap",
+      "capability": "Cost within cap",
+      "proof": "proven_live",
+      "evidence": "raw/tx-receipts.summary.json",
+      "notes": "Tiny manual/live risk plus protocol fees stayed within the Phase 1 Block E 10 USDC target budget and below the 15 USDC ask threshold."
+    }
+  ],
+  "zeroExposure": {
+    "checkedAtUtc": "2026-07-07T21:14:56Z",
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "orphanProcessCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json"
+  },
+  "transactions": [
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded approval for ospex-stage-maker-b Block E operation",
+      "status": "success",
+      "txHash": "0x538841e7ad828e1f25998d2b0a26a3b4b1cd4d35303e71faf268bedb9d628e7e"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded approval for ospex-stage-maker-a Block E operation",
+      "status": "success",
+      "txHash": "0xf69967cb6595b31e91a79ae21b0189ba3fb3bc7b14cc80d28bf85e5538b477ae"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded approval for ospex-stage-maker-a Block E operation",
+      "status": "success",
+      "txHash": "0xfd75e336281a84f7cf1db875e2647c206956673da044cc0a0e47ac6e578f75bd"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded approval for ospex-flow-a Block E operation",
+      "status": "success",
+      "txHash": "0x37aaf207afa6e75ea9c84697455a77744e36038df6b555f959fdf0a3bee5feb1"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded approval for ospex-flow-a Block E operation",
+      "status": "success",
+      "txHash": "0x8366f86449fc1806026c5449162879a1b158d265ba07c68db27ad4942fd744eb"
+    },
+    {
+      "category": "create-contest",
+      "operatorControlled": true,
+      "purpose": "Create contest 21 for Milwaukee Brewers @ St. Louis Cardinals",
+      "status": "success",
+      "txHash": "0x518f7f67a3a9ff053c290e1e5e7d3d518c89dc03299d71ef4c6429f0abc1083e"
+    },
+    {
+      "category": "other",
+      "operatorControlled": true,
+      "purpose": "Request market update for contest 21",
+      "status": "success",
+      "txHash": "0x0919d5a4f68f2e62c5768456e58ec3e8f9a18cc3bbcaffdcc5d22f3e1b4ad541"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual moneyline seed for contest 21 speculation 52",
+      "status": "success",
+      "txHash": "0x71b7eb4d2b6d94402162059465dd316fa4603ba99c24b5c56ea6bea7e7d10b88"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual spread seed for contest 21 speculation 53",
+      "status": "success",
+      "txHash": "0x975e3d7c9baefb4d9ab19adae031a61fe500a88bd4da9a0bafbe38a9cc81a1f6"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual total seed for contest 21 speculation 51",
+      "status": "success",
+      "txHash": "0x316faecfe9abf694069910f8f42cb7697b8f80c28ed6d9889b6fef83bbb661c1"
+    },
+    {
+      "category": "match-commitment",
+      "operatorControlled": true,
+      "purpose": "Controlled fill against live MM spread quote on contest 21",
+      "status": "success",
+      "txHash": "0x8b767a11cc988b2af28eb1c82309549764015fb69f6d20064f3aa527a8e0e85c"
+    },
+    {
+      "category": "score-request",
+      "operatorControlled": true,
+      "purpose": "Request R5/CRE score for contest 21",
+      "status": "success",
+      "txHash": "0x8aaac163b8970dcc38548a8c610f5d53a199a823a1319c381c7b55f2aac1ffe8"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle total speculation 51",
+      "status": "success",
+      "txHash": "0x66f293138384013400855506a909b3c5df5bc7266db353e68fdea5a72e42de9b"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle moneyline speculation 52",
+      "status": "success",
+      "txHash": "0x105ccdde7064ede7422871a90317888c04b3ce529f563d0311e4f36c366e7c98"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle spread speculation 53",
+      "status": "success",
+      "txHash": "0xfd5d2651fc3b07848e5ed7272271df2802dfc93b05aa7b996facc43a26ffac28"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim flow a total lower speculation 51 side lower",
+      "status": "success",
+      "txHash": "0x205b2dbc608eeb97a25b54a2243b8f72f2b8e3b7152f7c1b3edb94b8bf70ab51"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim flow a moneyline upper speculation 52 side upper",
+      "status": "success",
+      "txHash": "0x6cae0c08c230fc163e249c9a340b229f76be6682b1e15305f342bf0c743d0a9d"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim stage maker a spread lower remediation speculation 53 side lower",
+      "status": "success",
+      "txHash": "0x8219398a1899bc2b48c4c6c1913768d5d171c709ff59f891066a2fe88a351246"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim flow a spread lower remediation speculation 53 side lower",
+      "status": "success",
+      "txHash": "0x0b0f411a414a2afc9b56a21ab63e63bbef17f2890db73838d923b8056966cbe2"
+    }
+  ]
+}

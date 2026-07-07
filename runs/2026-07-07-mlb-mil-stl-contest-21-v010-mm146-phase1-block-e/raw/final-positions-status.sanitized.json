@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-07T21:14:56Z",
+  "contestId": "21",
+  "walletTargetCounts": {
+    "flow_a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "stage_maker_a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "stage_maker_b": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    }
+  },
+  "walletTargetRows": {
+    "flow_a": {
+      "active": [],
+      "claimable": [],
+      "pendingSettle": []
+    },
+    "stage_maker_a": {
+      "active": [],
+      "claimable": [],
+      "pendingSettle": []
+    },
+    "stage_maker_b": {
+      "active": [],
+      "claimable": [],
+      "pendingSettle": []
+    }
+  }
+}

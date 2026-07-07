@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-07T21:14:56Z",
+  "config": {
+    "contestAllowList": [
+      "21"
+    ],
+    "seedSpeculations": false,
+    "allowlistOnly": true,
+    "markets": [
+      "moneyline",
+      "spread",
+      "total"
+    ]
+  },
+  "candidates": {
+    "quoteReadyRows": 3,
+    "skippedRows": {},
+    "offAllowlistRows": 0
+  },
+  "dryRun": {
+    "verdict": "PASS",
+    "wouldSubmitCount": 6,
+    "wouldSubmitByContestMarket": {
+      "21/moneyline": 2,
+      "21/spread": 2,
+      "21/total": 2
+    },
+    "badEventCount": 0
+  },
+  "criticalGateRuleApplied": "per-market/per-contest pre-live gate; no benign skipped markets occurred in Block E"
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-07T21:14:56Z",
+  "mode": "exact/bounded",
+  "noUnlimitedApprovals": true,
+  "approvals": {
+    "stage-maker-b": {
+      "TreasuryModuleUSDC": "1.25",
+      "PositionModuleUSDC": "existing 0.89",
+      "txHashes": [
+        "0x538841e7ad828e1f25998d2b0a26a3b4b1cd4d35303e71faf268bedb9d628e7e"
+      ]
+    },
+    "stage-maker-a": {
+      "TreasuryModuleUSDC": "1.00",
+      "PositionModuleUSDC": "0.50",
+      "txHashes": [
+        "0xf69967cb6595b31e91a79ae21b0189ba3fb3bc7b14cc80d28bf85e5538b477ae",
+        "0xfd75e336281a84f7cf1db875e2647c206956673da044cc0a0e47ac6e578f75bd"
+      ]
+    },
+    "flow-a": {
+      "TreasuryModuleUSDC": "1.00",
+      "PositionModuleUSDC": "0.75",
+      "txHashes": [
+        "0x37aaf207afa6e75ea9c84697455a77744e36038df6b555f959fdf0a3bee5feb1",
+        "0x8366f86449fc1806026c5449162879a1b158d265ba07c68db27ad4942fd744eb"
+      ]
+    }
+  }
+}

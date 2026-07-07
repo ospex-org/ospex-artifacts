@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-07T21:14:56Z",
+  "contestId": "21",
+  "runIds": [
+    "2026-07-07T15-38-40-995Z-e0remr"
+  ],
+  "config": {
+    "contestAllowList": [
+      "21"
+    ],
+    "seedSpeculations": false,
+    "markets": [
+      "moneyline",
+      "spread",
+      "total"
+    ]
+  },
+  "submittedCommitments": [
+    {
+      "hash": "0x5c09c249973c960c0b1bdd36db62dfb423bc9ba6dc466d66022f631d8fab6fe6",
+      "makerSide": "home",
+      "market": "moneyline",
+      "speculationId": "52",
+      "takerSide": "away"
+    },
+    {
+      "hash": "0x06801259e21e7b2be7446a29f04032279a42f59117f3a3e33d60dcebf4af04cf",
+      "makerSide": "away",
+      "market": "moneyline",
+      "speculationId": "52",
+      "takerSide": "home"
+    },
+    {
+      "hash": "0xb576e1a1466e2d5333f861a708dc1c90b93a5cb063018be713320479e72a7c97",
+      "makerSide": "home",
+      "market": "spread",
+      "speculationId": "53",
+      "takerSide": "away"
+    },
+    {
+      "hash": "0x61a41a1bd62c7d64007442201743d844cb583c3d7b17c80a75584bcfb8688c4e",
+      "makerSide": "away",
+      "market": "spread",
+      "speculationId": "53",
+      "takerSide": "home"
+    },
+    {
+      "hash": "0x749c60851d6bc47339a494f8dc3ea3145b22ca05d34a29bf871a383475b1cc1d",
+      "makerSide": "home",
+      "market": "total",
+      "speculationId": "51",
+      "takerSide": "away"
+    },
+    {
+      "hash": "0xd1cb3ba4ec4ebb96a7038eba41aa1e9cce5e449026107bb43c1af4bcbf73acbd",
+      "makerSide": "away",
+      "market": "total",
+      "speculationId": "51",
+      "takerSide": "home"
+    }
+  ],
+  "submitCount": 6,
+  "softCancels": [
+    {
+      "hash": "0x5c09c249973c960c0b1bdd36db62dfb423bc9ba6dc466d66022f631d8fab6fe6",
+      "market": "moneyline",
+      "reason": "shutdown"
+    },
+    {
+      "hash": "0x06801259e21e7b2be7446a29f04032279a42f59117f3a3e33d60dcebf4af04cf",
+      "market": "moneyline",
+      "reason": "shutdown"
+    },
+    {
+      "hash": "0xb576e1a1466e2d5333f861a708dc1c90b93a5cb063018be713320479e72a7c97",
+      "market": "spread",
+      "reason": "shutdown"
+    },
+    {
+      "hash": "0x749c60851d6bc47339a494f8dc3ea3145b22ca05d34a29bf871a383475b1cc1d",
+      "market": "total",
+      "reason": "shutdown"
+    },
+    {
+      "hash": "0xd1cb3ba4ec4ebb96a7038eba41aa1e9cce5e449026107bb43c1af4bcbf73acbd",
+      "market": "total",
+      "reason": "shutdown"
+    }
+  ],
+  "finalOpenCommitments": 0
+}

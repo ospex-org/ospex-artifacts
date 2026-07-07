@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-07T21:14:56Z",
+  "finalScoreSource": {
+    "source": "MLB Stats API schedule endpoint",
+    "capturedAtUtc": "2026-07-07T21:14:56Z",
+    "gamePk": 823062,
+    "gameDate": "2026-07-07T18:15:00Z",
+    "status": {
+      "abstractGameState": "Final",
+      "codedGameState": "O",
+      "detailedState": "Game Over",
+      "statusCode": "O",
+      "startTimeTBD": false,
+      "abstractGameCode": "F"
+    },
+    "away": {
+      "team": "Milwaukee Brewers",
+      "abbreviation": "MIL",
+      "runs": 4,
+      "isWinner": true
+    },
+    "home": {
+      "team": "St. Louis Cardinals",
+      "abbreviation": "STL",
+      "runs": 3,
+      "isWinner": false
+    },
+    "linescoreTeams": {
+      "home": {
+        "runs": 3,
+        "hits": 5,
+        "errors": 0,
+        "leftOnBase": 4
+      },
+      "away": {
+        "runs": 4,
+        "hits": 10,
+        "errors": 0,
+        "leftOnBase": 9
+      }
+    }
+  }
+}

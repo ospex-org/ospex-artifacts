@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-07T21:14:56Z",
+  "selectedTarget": {
+    "contestId": "21",
+    "sport": "mlb",
+    "gameId": "596b9d68-e888-4872-b995-f99d7cda7519",
+    "gamePk": 823062,
+    "awayTeam": "Milwaukee Brewers",
+    "homeTeam": "St. Louis Cardinals",
+    "scheduledUtc": "2026-07-07T18:15:00Z",
+    "statusBeforeCreate": "upcoming",
+    "contestStatusAfterCreateVerify": "verified",
+    "contestStatusAfterPostgame": "scored",
+    "speculations": [
+      {
+        "contestId": "21",
+        "speculationId": "52",
+        "type": "moneyline"
+      },
+      {
+        "contestId": "21",
+        "speculationId": "53",
+        "type": "spread",
+        "awayLine": -1.5,
+        "homeLine": 1.5,
+        "lineTicks": -15
+      },
+      {
+        "contestId": "21",
+        "speculationId": "51",
+        "type": "total",
+        "line": 7.5,
+        "lineTicks": 75
+      }
+    ],
+    "referenceOdds": {
+      "moneyline": {
+        "awayOddsAmerican": -200,
+        "changedAt": "2026-07-07T15:24:31.463+00:00",
+        "homeOddsAmerican": 173,
+        "market": "moneyline",
+        "pollCapturedAt": "2026-07-07T15:27:31.542+00:00",
+        "upstreamLastUpdated": "2026-07-07T15:22:25+00:00"
+      },
+      "spread": {
+        "awayLine": -1.5,
+        "awayOddsAmerican": -118,
+        "changedAt": "2026-07-07T15:24:31.591+00:00",
+        "homeLine": 1.5,
+        "homeOddsAmerican": -102,
+        "market": "spread",
+        "pollCapturedAt": "2026-07-07T15:27:31.682+00:00",
+        "upstreamLastUpdated": "2026-07-07T15:22:25+00:00"
+      },
+      "total": {
+        "changedAt": "2026-07-07T12:04:23.702+00:00",
+        "line": 7.5,
+        "market": "total",
+        "overOddsAmerican": -115,
+        "pollCapturedAt": "2026-07-07T15:27:31.751+00:00",
+        "underOddsAmerican": -105,
+        "upstreamLastUpdated": "2026-07-07T15:22:25+00:00"
+      }
+    }
+  },
+  "apiHealth": {
+    "healthz": "ok",
+    "readyz": "ok"
+  },
+  "exactGameIdConfirmed": true,
+  "upcomingSafeAtSetup": true,
+  "contestCreate": {
+    "txHash": "0x518f7f67a3a9ff053c290e1e5e7d3d518c89dc03299d71ef4c6429f0abc1083e",
+    "verified": true
+  },
+  "marketUpdate": {
+    "txHash": "0x0919d5a4f68f2e62c5768456e58ec3e8f9a18cc3bbcaffdcc5d22f3e1b4ad541",
+    "ok": true
+  }
+}
