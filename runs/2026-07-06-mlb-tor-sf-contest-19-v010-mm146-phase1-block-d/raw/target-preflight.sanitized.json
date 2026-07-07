@@ -1,0 +1,53 @@
+{
+  "selectedTarget": {
+    "contestId": "19",
+    "sport": "mlb",
+    "game": "Toronto Blue Jays @ San Francisco Giants",
+    "gameId": "9f4a5688-085b-4e94-917e-8a3ba13e684b",
+    "gamePk": 823205,
+    "awayTeam": "Toronto Blue Jays",
+    "homeTeam": "San Francisco Giants",
+    "matchTime": "2026-07-07T01:45:00Z",
+    "contestStatusAfterCreateVerify": "verified",
+    "allowlistContestIds": [
+      "18",
+      "19",
+      "20"
+    ],
+    "marketsCovered": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "speculations": [
+      {
+        "contestId": "19",
+        "speculationId": "45",
+        "type": "moneyline"
+      },
+      {
+        "contestId": "19",
+        "speculationId": "46",
+        "type": "spread",
+        "line": -1.5,
+        "lineTicks": -15,
+        "awayLine": -1.5,
+        "homeLine": 1.5
+      },
+      {
+        "contestId": "19",
+        "speculationId": "47",
+        "type": "total",
+        "line": 7.5,
+        "lineTicks": 75
+      }
+    ]
+  },
+  "apiHealth": "ok",
+  "oddsMarketsPresent": [
+    "moneyline",
+    "spread",
+    "total"
+  ],
+  "budgetPolicy": "target total new fees + controlled risk <=25 USDC; hard stop >35 USDC; bounded approvals only"
+}

@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-07-06-mlb-ari-sd-contest-18-v010-mm146-phase1-block-d",
+  "artifactType": "run",
+  "runClass": "mm-live-canary",
+  "date": "2026-07-06",
+  "generatedAt": "2026-07-07T06:07:11Z",
+  "publishedAt": "2026-07-07T06:07:11Z",
+  "network": "polygon",
+  "status": "partial",
+  "sourceRunId": "20260706T221252Z-mve-phase1-block-d-late-3game-ari-sd-tor-sf-col-lad",
+  "rawPath": "raw/",
+  "summaryPath": "summary.md",
+  "dataPath": "evidence.json",
+  "artifactFiles": {
+    "evidence": "evidence.json",
+    "summary": "summary.md",
+    "scenarioMatrix": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "mveScorecard": "mve-scorecard.json",
+    "mveScorecardMarkdown": "mve-scorecard.md",
+    "targetPreflight": "raw/target-preflight.sanitized.json",
+    "releaseRuntimeMatrix": "raw/release-runtime-matrix.sanitized.json",
+    "walletAuthBalances": "raw/wallet-auth-balance-allowances.sanitized.json",
+    "boundedApprovals": "raw/bounded-approvals.sanitized.json",
+    "manualSeedFill": "raw/manual-seed-fill.sanitized.json",
+    "mmDryRun": "raw/mm-dryrun-summary.sanitized.json",
+    "liveCommitmentsPosted": "raw/live-public-commitments-posted.sanitized.json",
+    "liveFill": "raw/live-fill.sanitized.json",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json",
+    "restartColdStartProbe": "raw/restart-cold-start-probe.sanitized.json",
+    "finalScoreSource": "raw/final-score-source.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "finalContestShow": "raw/final-contest-show.sanitized.json",
+    "finalCommitmentsOrderbook": "raw/final-commitments-orderbook.sanitized.json",
+    "finalPositionsStatus": "raw/final-positions-status.sanitized.json",
+    "txReceipts": "raw/tx-receipts.summary.json"
+  },
+  "pairedBlock": {
+    "block": "MVE Phase 1 Block D",
+    "pairedArtifactContestIds": [
+      "18",
+      "19",
+      "20"
+    ],
+    "pairedContestAllowList": [
+      "18",
+      "19",
+      "20"
+    ],
+    "liveWindowStarted": false
+  },
+  "target": {
+    "slug": "ari-sd-2026-07-06",
+    "game": "Arizona Diamondbacks @ San Diego Padres",
+    "gameId": "c36c01af-9207-45c3-9d2e-a69c3736b225",
+    "gamePk": 823282,
+    "sport": "mlb",
+    "contestId": "18",
+    "contestStatusAfterCreateVerify": "verified",
+    "contestStatusAfterPostgame": "scored",
+    "awayTeam": "Arizona Diamondbacks",
+    "homeTeam": "San Diego Padres",
+    "startTimeUtc": "2026-07-07T01:40:00Z",
+    "market": "moneyline",
+    "speculationId": "42",
+    "companionSpeculations": {
+      "moneyline": "42",
+      "spread": "43",
+      "total": "44"
+    },
+    "marketsCovered": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "referenceOdds": {
+      "moneyline": {
+        "market": "moneyline",
+        "awayOddsAmerican": 111,
+        "homeOddsAmerican": -125,
+        "upstreamLastUpdated": "2026-07-06T22:23:47+00:00",
+        "pollCapturedAt": "2026-07-06T22:25:14.137+00:00",
+        "changedAt": "2026-07-06T21:20:11.732+00:00"
+      },
+      "spread": {
+        "market": "spread",
+        "awayLine": 1.5,
+        "homeLine": -1.5,
+        "awayOddsAmerican": -195,
+        "homeOddsAmerican": 170,
+        "upstreamLastUpdated": "2026-07-06T22:23:47+00:00",
+        "pollCapturedAt": "2026-07-06T22:25:14.209+00:00",
+        "changedAt": "2026-07-06T21:20:11.821+00:00"
+      },
+      "total": {
+        "market": "total",
+        "line": 8.5,
+        "overOddsAmerican": -110,
+        "underOddsAmerican": -110,
+        "upstreamLastUpdated": "2026-07-06T22:23:47+00:00",
+        "pollCapturedAt": "2026-07-06T22:25:14.281+00:00",
+        "changedAt": "2026-07-06T20:10:08.308+00:00"
+      }
+    },
+    "postgameStatus": "complete",
+    "finalScore": {
+      "awayRuns": 8,
+      "homeRuns": 0,
+      "winner": "Arizona Diamondbacks",
+      "winnerRole": "away",
+      "winnerProtocolSide": "upper",
+      "spreadWinner": "Arizona Diamondbacks +1.5",
+      "spreadWinnerProtocolSide": "upper",
+      "totalRuns": 8,
+      "totalLine": 8.5,
+      "totalWinner": "under 8.5",
+      "totalWinnerProtocolSide": "lower"
+    },
+    "spreadLine": {
+      "awayLine": 1.5,
+      "awayPositionType": "upper",
+      "homeLine": -1.5,
+      "homePositionType": "lower",
+      "lineTicks": 15
+    },
+    "totalLine": {
+      "line": 8.5,
+      "lineTicks": 85,
+      "overPositionType": "upper",
+      "underPositionType": "lower"
+    },
+    "teamIdentity": {
+      "away": {
+        "team": "Arizona Diamondbacks",
+        "abbreviation": "ARI",
+        "role": "away",
+        "positionType": "upper",
+        "marketOddsAmerican": "+111",
+        "identity": "underdog"
+      },
+      "home": {
+        "team": "San Diego Padres",
+        "abbreviation": "SD",
+        "role": "home",
+        "positionType": "lower",
+        "marketOddsAmerican": "-125",
+        "identity": "favorite"
+      },
+      "winner": {
+        "team": "Arizona Diamondbacks",
+        "role": "away",
+        "positionType": "upper"
+      },
+      "spreadWinner": {
+        "team": "Arizona Diamondbacks",
+        "role": "away",
+        "line": 1.5,
+        "positionType": "upper"
+      },
+      "totalWinner": {
+        "side": "under",
+        "line": 8.5,
+        "positionType": "lower"
+      }
+    }
+  },
+  "versions": {
+    "schemaVersion": 1,
+    "capturedAtUtc": "2026-07-07T06:07:11Z",
+    "chainId": 137,
+    "sdkCli": {
+      "repo": "ospex-sdk",
+      "version": "0.10.0",
+      "headSha": "3fa399a",
+      "requiredAtOrAfter": "3fa399a",
+      "ok": true,
+      "note": "operator CLI used v0.10.0"
+    },
+    "marketMaker": {
+      "repo": "ospex-market-maker",
+      "headSha": "6f3ccc1",
+      "requiredAtOrAfter": "6f3ccc1",
+      "installedSdkVersion": "0.9.0",
+      "ok": true,
+      "note": "MM internal @ospex/sdk remained v0.9.0 as allowed by Block D brief"
+    },
+    "ancillaryRepos": {
+      "ospex-core-api": {
+        "headSha": "076f44d",
+        "requiredAtOrAfter": "076f44d"
+      },
+      "ospex-indexer": {
+        "headSha": "75be9e7",
+        "requiredAtOrAfter": "75be9e7"
+      },
+      "ospex-cre": {
+        "headSha": "fed6e26",
+        "requiredAtOrAfter": "fed6e26"
+      }
+    },
+    "allRequiredOk": true
+  },
+  "wallets": {
+    "manualSeedMaker": {
+      "profile": "ospex-stage-maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    "operatorMmMaker": {
+      "profile": "ospex-stage-maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    },
+    "controlledTaker": {
+      "profile": "ospex-flow-a",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    }
+  },
+  "verdict": {
+    "label": "AMBER_PRELIVE_GATE_HALT",
+    "protocolVerdict": "MVE_PHASE1_BLOCK_D_AMBER",
+    "reason": "MVE Phase 1 Block D for Arizona Diamondbacks @ San Diego Padres reached setup/postgame completion but not the live MM write: contest 18 was created/verified, all three specs were manually seeded and fully matched with zero open commitments, candidates and the initial strict allowlist dry-run passed, but the scheduled pre-live dry-run gate stopped the live MM before posting because the 3-game loop produced only 16 would-submit rows and COL/LAD total was absent. Official final scoring, settlement, manual remediation claims, and final target zero-state then completed. Verdict is amber due pre-live gate halt, not unsafe exposure."
+  },
+  "caveats": [
+    "Scheduled live MM was halted by the pre-live dry-run gate before any live quote was posted; no stale quoting was forced.",
+    "Pre-live candidates were still allowlist-only and quote-ready, but pre-live dry-run would-submit count was 16 rather than 18 because COL/LAD total was absent from would-submit rows.",
+    "The no-agent postgame watcher initially left some target claimables; manual remediation claims completed final zero-state and are preserved in postgame lifecycle evidence."
+  ]
+}

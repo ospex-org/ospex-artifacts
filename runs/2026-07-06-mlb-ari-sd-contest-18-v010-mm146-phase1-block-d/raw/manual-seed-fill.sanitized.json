@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "maker": "ospex-stage-maker-a",
+  "taker": "ospex-flow-a",
+  "riskUSDC": "0.03 per seed",
+  "items": [
+    {
+      "label": "ARI_SD_moneyline_ARI",
+      "contestId": "18",
+      "market": "moneyline",
+      "side": "Arizona Diamondbacks",
+      "line": null,
+      "odds": "+111",
+      "submitOk": true,
+      "commitmentHash": "0x6e02b13551775c46ea9ee084728170b29f1e09d6bf8f7b4fe6268cfa1989eb06",
+      "matchPreviewOk": true,
+      "matchExecuteOk": true,
+      "matchTxHashes": [
+        "0xc1b7a38f4f040401563859ee838a398f9ed9e9687c462c023b771288c29bd96d"
+      ],
+      "openCommitmentsOnContestAfterMatch": 1,
+      "showAfterMatchOk": true
+    },
+    {
+      "label": "ARI_SD_spread_ARI_plus_1_5",
+      "contestId": "18",
+      "market": "spread",
+      "side": "Arizona Diamondbacks",
+      "line": "1.5",
+      "odds": "-195",
+      "submitOk": true,
+      "commitmentHash": "0x2cae45df058d6c9104b8ef3d1bd79bf9dc7f11f14d181231efd96f723d18a779",
+      "matchPreviewOk": true,
+      "matchExecuteOk": true,
+      "matchTxHashes": [
+        "0x96a5356e1cee3d355e92e916d9070fb9c8a75908f92e6f0b9b2f00229439f49c"
+      ],
+      "openCommitmentsOnContestAfterMatch": 1,
+      "showAfterMatchOk": true
+    },
+    {
+      "label": "ARI_SD_total_over_8_5",
+      "contestId": "18",
+      "market": "total",
+      "side": "over",
+      "line": "8.5",
+      "odds": "-110",
+      "submitOk": true,
+      "commitmentHash": "0xe58e6d6bc3ddd66acd5fdfde0777738b487b511cc3bf2d60a403448f44059b32",
+      "matchPreviewOk": true,
+      "matchExecuteOk": true,
+      "matchTxHashes": [
+        "0x73bd95f77c3c77cabe794996553c9cce0fd58cf9c2933319db563b3a6812f1e2"
+      ],
+      "openCommitmentsOnContestAfterMatch": 1,
+      "showAfterMatchOk": true
+    }
+  ],
+  "contestOpenCommitmentsAfterManualSeed": 0
+}

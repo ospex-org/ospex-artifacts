@@ -1,0 +1,53 @@
+{
+  "selectedTarget": {
+    "contestId": "18",
+    "sport": "mlb",
+    "game": "Arizona Diamondbacks @ San Diego Padres",
+    "gameId": "c36c01af-9207-45c3-9d2e-a69c3736b225",
+    "gamePk": 823282,
+    "awayTeam": "Arizona Diamondbacks",
+    "homeTeam": "San Diego Padres",
+    "matchTime": "2026-07-07T01:40:00Z",
+    "contestStatusAfterCreateVerify": "verified",
+    "allowlistContestIds": [
+      "18",
+      "19",
+      "20"
+    ],
+    "marketsCovered": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "speculations": [
+      {
+        "contestId": "18",
+        "speculationId": "42",
+        "type": "moneyline"
+      },
+      {
+        "contestId": "18",
+        "speculationId": "43",
+        "type": "spread",
+        "line": 1.5,
+        "lineTicks": 15,
+        "awayLine": 1.5,
+        "homeLine": -1.5
+      },
+      {
+        "contestId": "18",
+        "speculationId": "44",
+        "type": "total",
+        "line": 8.5,
+        "lineTicks": 85
+      }
+    ]
+  },
+  "apiHealth": "ok",
+  "oddsMarketsPresent": [
+    "moneyline",
+    "spread",
+    "total"
+  ],
+  "budgetPolicy": "target total new fees + controlled risk <=25 USDC; hard stop >35 USDC; bounded approvals only"
+}

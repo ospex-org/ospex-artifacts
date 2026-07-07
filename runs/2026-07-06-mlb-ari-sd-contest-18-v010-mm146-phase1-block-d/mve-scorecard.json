@@ -1,0 +1,184 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "2026-07-06-mlb-ari-sd-contest-18-v010-mm146-phase1-block-d",
+  "generatedAt": "2026-07-07T06:07:11Z",
+  "runClass": "mm-live-canary",
+  "verdict": {
+    "label": "AMBER_PRELIVE_GATE_HALT",
+    "reason": "MVE Phase 1 Block D for Arizona Diamondbacks @ San Diego Padres reached setup/postgame completion but not the live MM write: contest 18 was created/verified, all three specs were manually seeded and fully matched with zero open commitments, candidates and the initial strict allowlist dry-run passed, but the scheduled pre-live dry-run gate stopped the live MM before posting because the 3-game loop produced only 16 would-submit rows and COL/LAD total was absent. Official final scoring, settlement, manual remediation claims, and final target zero-state then completed. Verdict is amber due pre-live gate halt, not unsafe exposure."
+  },
+  "capabilities": [
+    {
+      "id": "target-preflight",
+      "capability": "Target preflight and allowlist",
+      "proof": "proven_live",
+      "notes": "ARI @ SD contest 18 and specs 42, 43, 44 passed identity, verification, odds, and allowlist gates.",
+      "evidence": "raw/target-preflight.sanitized.json"
+    },
+    {
+      "id": "repo-runtime-gates",
+      "capability": "Repo/runtime gates",
+      "proof": "proven_live",
+      "notes": "SDK/CLI v0.10.0 and required MM/API/indexer/CRE heads were verified before writes.",
+      "evidence": "raw/release-runtime-matrix.sanitized.json"
+    },
+    {
+      "id": "wallet-auth-balances",
+      "capability": "Wallet auth, balances, allowances",
+      "proof": "proven_live",
+      "notes": "Controlled wallets passed expected-address/balance/allowance checks; only public balances/allowances are published.",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json"
+    },
+    {
+      "id": "bounded-approvals",
+      "capability": "Bounded approvals / no unlimited approvals",
+      "proof": "proven_live",
+      "notes": "Bounded approvals were used; no unlimited approval was created.",
+      "evidence": "raw/bounded-approvals.sanitized.json"
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "capability": "Dry-run quote loop",
+      "proof": "proven_synthetic_only",
+      "notes": "Initial candidates and strict allowlist dry-run passed; scheduled pre-live dry-run failed safely with 16 would-submit rows before live writes.",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json"
+    },
+    {
+      "id": "live-commitments-posted",
+      "capability": "Live commitments posted",
+      "proof": "failed",
+      "notes": "No live public commitments were posted because the pre-live dry-run gate failed before starting live MM.",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json"
+    },
+    {
+      "id": "live-fill",
+      "capability": "Controlled live fill",
+      "proof": "deferred",
+      "notes": "No controlled live fill was attempted because live MM was not started.",
+      "evidence": "raw/live-fill.sanitized.json"
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "capability": "Own-state SSE canonical fill source",
+      "proof": "not_applicable",
+      "notes": "Not applicable: no live fill occurred.",
+      "evidence": "raw/own-state-sse-summary.sanitized.json"
+    },
+    {
+      "id": "exposure-drain-zero",
+      "capability": "Exposure drained to zero",
+      "proof": "proven_live",
+      "notes": "Open commitments are zero, final target positions are zero after manual remediation claims, and no orphan MM process was present.",
+      "evidence": "raw/zero-exposure.sanitized.json"
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "capability": "Restart/cold-start safety",
+      "proof": "not_applicable",
+      "notes": "Not applicable because no live MM state was created.",
+      "evidence": "raw/restart-cold-start-probe.sanitized.json"
+    },
+    {
+      "id": "postgame-score",
+      "capability": "Postgame score",
+      "proof": "proven_live",
+      "notes": "MLB Stats API official final was captured and R5/CRE score --wait completed.",
+      "evidence": "raw/postgame-lifecycle.sanitized.json"
+    },
+    {
+      "id": "postgame-settle",
+      "capability": "Postgame settle",
+      "proof": "proven_live",
+      "notes": "All target speculations for the contest were explicitly settled.",
+      "evidence": "raw/postgame-lifecycle.sanitized.json"
+    },
+    {
+      "id": "postgame-claim",
+      "capability": "Postgame claim/no-op",
+      "proof": "proven_live",
+      "notes": "Winning controlled positions were claimed; manual remediation completed final target zero-state.",
+      "evidence": "raw/postgame-lifecycle.sanitized.json"
+    },
+    {
+      "id": "cost-within-cap",
+      "capability": "Cost within cap",
+      "proof": "proven_live",
+      "notes": "Manual seed/fill risk and postgame transactions remained inside the Phase 1 Block D cap; no live MM risk was posted.",
+      "evidence": "raw/tx-receipts.summary.json"
+    }
+  ],
+  "zeroExposure": {
+    "checkedAtUtc": "2026-07-07T06:07:11Z",
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "orphanProcessCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json"
+  },
+  "transactions": [
+    {
+      "category": "create-contest",
+      "txHash": "0x267f4ee191ef948a59747ee04667e3cda19ab0b5d1e311dae36839b6e47a25e4",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Create contest 18 for Arizona Diamondbacks @ San Diego Padres"
+    },
+    {
+      "category": "other",
+      "txHash": "0xf8055a8245e1c9bf6f940adef4f9e37a88e2a481b3ccc454bbae90475c163bd5",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Request market update for contest 18"
+    },
+    {
+      "category": "score-request",
+      "txHash": "0xf3a7ea54d4681d860e3c908b25fd96f05b241c84ec8b6ba8abdd5ef6e56b9c80",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Request R5 score for contest 18"
+    },
+    {
+      "category": "settle",
+      "txHash": "0x90def208a52cf8b5fe13188beba74186a9c4bc18f5483a43676c7e3b3d82f28c",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle moneyline speculation 42"
+    },
+    {
+      "category": "settle",
+      "txHash": "0x2ab8942862bd4d1180f34c875928044823b252c7ebade6730b0ed898dc288a7b",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle spread speculation 43"
+    },
+    {
+      "category": "settle",
+      "txHash": "0x7374f0fc6743642b364caae9e1b276cbb11b49e8312a82c17723290dad8ad5b9",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle total speculation 44"
+    },
+    {
+      "category": "claim",
+      "txHash": "0xaa898c7413fc1bde7b21f95a71d684260fd4833c9a3ac6d6053bb2b1fd31a0fa",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim stage_maker_a position for speculation 43 side upper"
+    },
+    {
+      "category": "claim",
+      "txHash": "0x7178ef894281ce3175f379b83e83f34e27f10dcaf84e3ced9455d6e0a32ed4b2",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim stage_maker_a position for speculation 42 side upper"
+    },
+    {
+      "category": "claim",
+      "txHash": "0xd883f8984bcbb3d6d091de7985148f32f1454cc4728a4a43aa7be28e95a66212",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim flow_a position for speculation 44 side lower"
+    }
+  ]
+}

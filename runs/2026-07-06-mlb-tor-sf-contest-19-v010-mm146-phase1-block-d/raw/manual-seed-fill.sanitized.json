@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "maker": "ospex-stage-maker-a",
+  "taker": "ospex-flow-a",
+  "riskUSDC": "0.03 per seed",
+  "items": [
+    {
+      "label": "TOR_SF_moneyline_TOR",
+      "contestId": "19",
+      "market": "moneyline",
+      "side": "Toronto Blue Jays",
+      "line": null,
+      "odds": "-107",
+      "submitOk": true,
+      "commitmentHash": "0x77e1913e4105ebd00a5f5a9bb320cdb5d7aff456bd6bb9055dc22703380e1458",
+      "matchPreviewOk": true,
+      "matchExecuteOk": true,
+      "matchTxHashes": [
+        "0x92cae355e815c67ad4984679bb0f36a6818f40460fe29058a78093cd89ebed5b"
+      ],
+      "openCommitmentsOnContestAfterMatch": 1,
+      "showAfterMatchOk": true
+    },
+    {
+      "label": "TOR_SF_spread_SF_plus_1_5",
+      "contestId": "19",
+      "market": "spread",
+      "side": "San Francisco Giants",
+      "line": "1.5",
+      "odds": "-178",
+      "submitOk": true,
+      "commitmentHash": "0x2bc9f50d86b4e00f22167b42d41c06aeac7f766cc9e47f914a942ac03aca65f8",
+      "matchPreviewOk": true,
+      "matchExecuteOk": true,
+      "matchTxHashes": [
+        "0x4dc2ab35acf05a289f8a1b86177921fa1b82992b33e0b941b3751ad52d5df600"
+      ],
+      "openCommitmentsOnContestAfterMatch": 1,
+      "showAfterMatchOk": true
+    },
+    {
+      "label": "TOR_SF_total_under_7_5",
+      "contestId": "19",
+      "market": "total",
+      "side": "under",
+      "line": "7.5",
+      "odds": "-100",
+      "submitOk": true,
+      "commitmentHash": "0x1b64d30f68e80a0eb4ee8a3f1a8a4fcade02b122a0f0650fb56b25a0412afd28",
+      "matchPreviewOk": true,
+      "matchExecuteOk": true,
+      "matchTxHashes": [
+        "0xd8f16d6ad2264ad22355d69c328dddbf89c2eba0a050833e81bf3f55421f66cd"
+      ],
+      "openCommitmentsOnContestAfterMatch": 1,
+      "showAfterMatchOk": true
+    }
+  ],
+  "contestOpenCommitmentsAfterManualSeed": 0
+}

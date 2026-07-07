@@ -73,6 +73,7 @@ PROVEN_LEVELS = {"proven_live", "proven_synthetic_only"}
 VERDICT_LABELS = {
     "FULL_GREEN",
     "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED",
+    "AMBER_PRELIVE_GATE_HALT",
     "AMBER_QUOTED_NO_FILL",
     "AMBER_TOKEN_TOPUP_NEEDED",
     "RED_SAFETY_HALT",
@@ -82,6 +83,7 @@ UNPUBLISHABLE_VERDICTS = {"RED_SAFETY_HALT"}
 RUN_STATUS_BY_VERDICT = {
     "FULL_GREEN": {"complete_verified", "complete_verified_with_caveats"},
     "GREEN_LIVE_WINDOW_POSTGAME_DEFERRED": {"partial"},
+    "AMBER_PRELIVE_GATE_HALT": {"partial", "complete_verified_with_caveats"},
     "AMBER_QUOTED_NO_FILL": {"partial", "complete_verified_with_caveats"},
     "AMBER_TOKEN_TOPUP_NEEDED": {"partial", "complete_verified_with_caveats"},
 }
@@ -1314,6 +1316,16 @@ def validate_mve_scorecard(path: Path, doc: Any, docs: dict[Path, Any], errors: 
                 errors.append(
                     f"{context}: verdict AMBER_QUOTED_NO_FILL requires own-state-sse-canonical-fill to be "
                     "deferred, failed, or not_applicable — a proven canonical fill implies a fill occurred"
+                )
+        if verdict_label == "AMBER_PRELIVE_GATE_HALT":
+            attempted_live_ids = {"live-commitments-posted", "live-fill"}
+            missing_halt = sorted(
+                cid for cid in attempted_live_ids if cid in proof_by_id and proof_by_id[cid] not in {"deferred", "failed"}
+            )
+            if missing_halt:
+                errors.append(
+                    f"{context}: verdict AMBER_PRELIVE_GATE_HALT requires live-window capabilities to be "
+                    "deferred or failed; not halted: " + ", ".join(missing_halt)
                 )
         if verdict_label == "AMBER_TOKEN_TOPUP_NEEDED":
             if proof_by_id and not any(proof in {"deferred", "failed"} for proof in proof_by_id.values()):

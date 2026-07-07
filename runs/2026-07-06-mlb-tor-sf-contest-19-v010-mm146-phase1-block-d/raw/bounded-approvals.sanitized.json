@@ -1,0 +1,59 @@
+{
+  "bounded": true,
+  "noUnlimitedApprovals": true,
+  "allowanceSummary": {
+    "stage_maker_a": {
+      "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "doctor_ok": false,
+      "doctor_fail_ids": [
+        "signer.resolved"
+      ],
+      "pol_balance": "20.755506",
+      "usdc_balance": "12.53121",
+      "position_allowance": "0.5",
+      "treasury_allowance": "2.5"
+    },
+    "stage_maker_b": {
+      "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "doctor_ok": false,
+      "doctor_fail_ids": [
+        "signer.resolved"
+      ],
+      "pol_balance": "5.448144",
+      "usdc_balance": "8.844001",
+      "position_allowance": "0.89",
+      "treasury_allowance": "3.5"
+    },
+    "flow_a": {
+      "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "doctor_ok": false,
+      "doctor_fail_ids": [
+        "signer.resolved"
+      ],
+      "pol_balance": "5.34453",
+      "usdc_balance": "4.223013",
+      "position_allowance": "0.75",
+      "treasury_allowance": "2.5"
+    }
+  },
+  "transactions": [
+    {
+      "profile": "stage-maker-b",
+      "txHash": "0x04c85cd2cf0e77fc0dd44a699d8778c51eb50780569067ae1790888458aa1e0d",
+      "status": "success",
+      "bounded": true
+    },
+    {
+      "profile": "stage-maker-a",
+      "txHash": "0xf0113b7d3a251949c12a98e823c409a9f7804b7756844f76bede21140a84d9e7",
+      "status": "success",
+      "bounded": true
+    },
+    {
+      "profile": "flow-a",
+      "txHash": "0xb05965e80832b567d888b6207b38c02dbad028360087242f80ad4ff0745bfcc4",
+      "status": "success",
+      "bounded": true
+    }
+  ]
+}

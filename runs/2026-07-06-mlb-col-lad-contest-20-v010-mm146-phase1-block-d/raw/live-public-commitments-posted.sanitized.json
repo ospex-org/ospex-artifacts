@@ -1,0 +1,32 @@
+{
+  "status": "not_started",
+  "commitmentsPosted": 0,
+  "runId": null,
+  "gateFailure": "prelive dry-run gate failed before live write; wouldSubmitCount=16 and COL/LAD total was absent from would-submit rows",
+  "liveRunError": {
+    "ok": false,
+    "phase": "live",
+    "error": "prelive dry-run gate failed",
+    "context": {
+      "ok": false,
+      "wouldSubmitCount": 16,
+      "byContestMarket": {
+        "18:moneyline": 2,
+        "18:spread": 2,
+        "18:total": 2,
+        "19:moneyline": 2,
+        "19:spread": 2,
+        "19:total": 2,
+        "20:moneyline": 2,
+        "20:spread": 2
+      },
+      "badEvents": [],
+      "offAllowlist": [],
+      "utc": "2026-07-07T01:31:03.968894Z"
+    },
+    "runDir": "<local-path-redacted>",
+    "utc": "2026-07-07T01:31:03.969359Z"
+  },
+  "offAllowlist": [],
+  "seedSpeculationsObserved": false
+}

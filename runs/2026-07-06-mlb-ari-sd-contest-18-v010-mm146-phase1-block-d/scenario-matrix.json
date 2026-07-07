@@ -1,0 +1,107 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/scenario-matrix.schema.json",
+  "schemaVersion": 2,
+  "artifactId": "2026-07-06-mlb-ari-sd-contest-18-v010-mm146-phase1-block-d",
+  "generatedAt": "2026-07-07T06:07:11Z",
+  "runClass": "mm-live-canary",
+  "scenarios": [
+    {
+      "id": "target-preflight",
+      "scenario": "Target preflight and allowlist",
+      "status": "pass",
+      "notes": "ARI @ SD contest 18 and specs 42, 43, 44 passed identity, verification, odds, and allowlist gates.",
+      "evidence": "raw/target-preflight.sanitized.json"
+    },
+    {
+      "id": "repo-runtime-gates",
+      "scenario": "Repo/runtime gates",
+      "status": "pass",
+      "notes": "SDK/CLI v0.10.0 and required MM/API/indexer/CRE heads were verified before writes.",
+      "evidence": "raw/release-runtime-matrix.sanitized.json"
+    },
+    {
+      "id": "wallet-auth-balances",
+      "scenario": "Wallet auth, balances, allowances",
+      "status": "pass",
+      "notes": "Controlled wallets passed expected-address/balance/allowance checks; only public balances/allowances are published.",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json"
+    },
+    {
+      "id": "bounded-approvals",
+      "scenario": "Bounded approvals / no unlimited approvals",
+      "status": "pass",
+      "notes": "Bounded approvals were used; no unlimited approval was created.",
+      "evidence": "raw/bounded-approvals.sanitized.json"
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "scenario": "Dry-run quote loop",
+      "status": "pass_with_caveats",
+      "notes": "Initial candidates and strict allowlist dry-run passed; scheduled pre-live dry-run failed safely with 16 would-submit rows before live writes.",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json"
+    },
+    {
+      "id": "live-commitments-posted",
+      "scenario": "Live commitments posted",
+      "status": "fail",
+      "notes": "No live public commitments were posted because the pre-live dry-run gate failed before starting live MM.",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json"
+    },
+    {
+      "id": "live-fill",
+      "scenario": "Controlled live fill",
+      "status": "deferred",
+      "notes": "No controlled live fill was attempted because live MM was not started.",
+      "evidence": "raw/live-fill.sanitized.json"
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "scenario": "Own-state SSE canonical fill source",
+      "status": "not_applicable",
+      "notes": "Not applicable: no live fill occurred.",
+      "evidence": "raw/own-state-sse-summary.sanitized.json"
+    },
+    {
+      "id": "exposure-drain-zero",
+      "scenario": "Exposure drained to zero",
+      "status": "pass",
+      "notes": "Open commitments are zero, final target positions are zero after manual remediation claims, and no orphan MM process was present.",
+      "evidence": "raw/zero-exposure.sanitized.json"
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "scenario": "Restart/cold-start safety",
+      "status": "not_applicable",
+      "notes": "Not applicable because no live MM state was created.",
+      "evidence": "raw/restart-cold-start-probe.sanitized.json"
+    },
+    {
+      "id": "postgame-score",
+      "scenario": "Postgame score",
+      "status": "pass",
+      "notes": "MLB Stats API official final was captured and R5/CRE score --wait completed.",
+      "evidence": "raw/postgame-lifecycle.sanitized.json"
+    },
+    {
+      "id": "postgame-settle",
+      "scenario": "Postgame settle",
+      "status": "pass",
+      "notes": "All target speculations for the contest were explicitly settled.",
+      "evidence": "raw/postgame-lifecycle.sanitized.json"
+    },
+    {
+      "id": "postgame-claim",
+      "scenario": "Postgame claim/no-op",
+      "status": "pass",
+      "notes": "Winning controlled positions were claimed; manual remediation completed final target zero-state.",
+      "evidence": "raw/postgame-lifecycle.sanitized.json"
+    },
+    {
+      "id": "cost-within-cap",
+      "scenario": "Cost within cap",
+      "status": "pass",
+      "notes": "Manual seed/fill risk and postgame transactions remained inside the Phase 1 Block D cap; no live MM risk was posted.",
+      "evidence": "raw/tx-receipts.summary.json"
+    }
+  ]
+}

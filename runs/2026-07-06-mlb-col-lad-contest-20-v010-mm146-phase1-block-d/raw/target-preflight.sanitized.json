@@ -1,0 +1,53 @@
+{
+  "selectedTarget": {
+    "contestId": "20",
+    "sport": "mlb",
+    "game": "Colorado Rockies @ Los Angeles Dodgers",
+    "gameId": "7a756132-e8da-423c-8891-e178d62cb545",
+    "gamePk": 823930,
+    "awayTeam": "Colorado Rockies",
+    "homeTeam": "Los Angeles Dodgers",
+    "matchTime": "2026-07-07T02:10:00Z",
+    "contestStatusAfterCreateVerify": "verified",
+    "allowlistContestIds": [
+      "18",
+      "19",
+      "20"
+    ],
+    "marketsCovered": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "speculations": [
+      {
+        "contestId": "20",
+        "speculationId": "48",
+        "type": "moneyline"
+      },
+      {
+        "contestId": "20",
+        "speculationId": "49",
+        "type": "spread",
+        "line": 1.5,
+        "lineTicks": 15,
+        "awayLine": 1.5,
+        "homeLine": -1.5
+      },
+      {
+        "contestId": "20",
+        "speculationId": "50",
+        "type": "total",
+        "line": 9.5,
+        "lineTicks": 95
+      }
+    ]
+  },
+  "apiHealth": "ok",
+  "oddsMarketsPresent": [
+    "moneyline",
+    "spread",
+    "total"
+  ],
+  "budgetPolicy": "target total new fees + controlled risk <=25 USDC; hard stop >35 USDC; bounded approvals only"
+}

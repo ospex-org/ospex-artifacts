@@ -1,0 +1,184 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "2026-07-06-mlb-tor-sf-contest-19-v010-mm146-phase1-block-d",
+  "generatedAt": "2026-07-07T06:07:11Z",
+  "runClass": "mm-live-canary",
+  "verdict": {
+    "label": "AMBER_PRELIVE_GATE_HALT",
+    "reason": "MVE Phase 1 Block D for Toronto Blue Jays @ San Francisco Giants reached setup/postgame completion but not the live MM write: contest 19 was created/verified, all three specs were manually seeded and fully matched with zero open commitments, candidates and the initial strict allowlist dry-run passed, but the scheduled pre-live dry-run gate stopped the live MM before posting because the 3-game loop produced only 16 would-submit rows and COL/LAD total was absent. Official final scoring, settlement, manual remediation claims, and final target zero-state then completed. Verdict is amber due pre-live gate halt, not unsafe exposure."
+  },
+  "capabilities": [
+    {
+      "id": "target-preflight",
+      "capability": "Target preflight and allowlist",
+      "proof": "proven_live",
+      "notes": "TOR @ SF contest 19 and specs 45, 46, 47 passed identity, verification, odds, and allowlist gates.",
+      "evidence": "raw/target-preflight.sanitized.json"
+    },
+    {
+      "id": "repo-runtime-gates",
+      "capability": "Repo/runtime gates",
+      "proof": "proven_live",
+      "notes": "SDK/CLI v0.10.0 and required MM/API/indexer/CRE heads were verified before writes.",
+      "evidence": "raw/release-runtime-matrix.sanitized.json"
+    },
+    {
+      "id": "wallet-auth-balances",
+      "capability": "Wallet auth, balances, allowances",
+      "proof": "proven_live",
+      "notes": "Controlled wallets passed expected-address/balance/allowance checks; only public balances/allowances are published.",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json"
+    },
+    {
+      "id": "bounded-approvals",
+      "capability": "Bounded approvals / no unlimited approvals",
+      "proof": "proven_live",
+      "notes": "Bounded approvals were used; no unlimited approval was created.",
+      "evidence": "raw/bounded-approvals.sanitized.json"
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "capability": "Dry-run quote loop",
+      "proof": "proven_synthetic_only",
+      "notes": "Initial candidates and strict allowlist dry-run passed; scheduled pre-live dry-run failed safely with 16 would-submit rows before live writes.",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json"
+    },
+    {
+      "id": "live-commitments-posted",
+      "capability": "Live commitments posted",
+      "proof": "failed",
+      "notes": "No live public commitments were posted because the pre-live dry-run gate failed before starting live MM.",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json"
+    },
+    {
+      "id": "live-fill",
+      "capability": "Controlled live fill",
+      "proof": "deferred",
+      "notes": "No controlled live fill was attempted because live MM was not started.",
+      "evidence": "raw/live-fill.sanitized.json"
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "capability": "Own-state SSE canonical fill source",
+      "proof": "not_applicable",
+      "notes": "Not applicable: no live fill occurred.",
+      "evidence": "raw/own-state-sse-summary.sanitized.json"
+    },
+    {
+      "id": "exposure-drain-zero",
+      "capability": "Exposure drained to zero",
+      "proof": "proven_live",
+      "notes": "Open commitments are zero, final target positions are zero after manual remediation claims, and no orphan MM process was present.",
+      "evidence": "raw/zero-exposure.sanitized.json"
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "capability": "Restart/cold-start safety",
+      "proof": "not_applicable",
+      "notes": "Not applicable because no live MM state was created.",
+      "evidence": "raw/restart-cold-start-probe.sanitized.json"
+    },
+    {
+      "id": "postgame-score",
+      "capability": "Postgame score",
+      "proof": "proven_live",
+      "notes": "MLB Stats API official final was captured and R5/CRE score --wait completed.",
+      "evidence": "raw/postgame-lifecycle.sanitized.json"
+    },
+    {
+      "id": "postgame-settle",
+      "capability": "Postgame settle",
+      "proof": "proven_live",
+      "notes": "All target speculations for the contest were explicitly settled.",
+      "evidence": "raw/postgame-lifecycle.sanitized.json"
+    },
+    {
+      "id": "postgame-claim",
+      "capability": "Postgame claim/no-op",
+      "proof": "proven_live",
+      "notes": "Winning controlled positions were claimed; manual remediation completed final target zero-state.",
+      "evidence": "raw/postgame-lifecycle.sanitized.json"
+    },
+    {
+      "id": "cost-within-cap",
+      "capability": "Cost within cap",
+      "proof": "proven_live",
+      "notes": "Manual seed/fill risk and postgame transactions remained inside the Phase 1 Block D cap; no live MM risk was posted.",
+      "evidence": "raw/tx-receipts.summary.json"
+    }
+  ],
+  "zeroExposure": {
+    "checkedAtUtc": "2026-07-07T06:07:11Z",
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "orphanProcessCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json"
+  },
+  "transactions": [
+    {
+      "category": "create-contest",
+      "txHash": "0x910bcad367aeaf7622ec91aa67bcdb0871202e01287b1fed4600b5d253326f35",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Create contest 19 for Toronto Blue Jays @ San Francisco Giants"
+    },
+    {
+      "category": "other",
+      "txHash": "0x9de30a68bae91278bffa06c7c1c42215e7057530e885c84889f058207275c287",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Request market update for contest 19"
+    },
+    {
+      "category": "score-request",
+      "txHash": "0x5e1ed8fb7ceb620c26a127d45ae00802f5e43f8ac170694d60b04031f1b7f454",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Request R5 score for contest 19"
+    },
+    {
+      "category": "settle",
+      "txHash": "0xa7cd531a9e378d34eff5ecde924412989f6a93da1fde90097933fe16d136c87f",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle moneyline speculation 45"
+    },
+    {
+      "category": "settle",
+      "txHash": "0x305ac7facbbed4e6322cc6c8aba099e4225c8d58c4b9e355fa1ee2d3488ba437",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle spread speculation 46"
+    },
+    {
+      "category": "settle",
+      "txHash": "0x143fcc49abceed3b994bcd1163985442f49ebb11e3974f3fc7e0015875f40d40",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle total speculation 47"
+    },
+    {
+      "category": "claim",
+      "txHash": "0x04478a22e546ac5a29d2f528287e0fc25fbfb61a930e453d865152e01ffe9688",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim stage_maker_a position for speculation 46 side lower"
+    },
+    {
+      "category": "claim",
+      "txHash": "0x4d68a21c75df5372380d6ad6449bf8b35aaba19239a952d57bb6b3529bc57c51",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim flow_a position for speculation 47 side upper"
+    },
+    {
+      "category": "claim",
+      "txHash": "0x1361c1ebd25c0f5db1b4b250f2e3df9442e9e6bbddb09ee4886abc8d78f651bb",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim flow_a position for speculation 45 side lower"
+    }
+  ]
+}

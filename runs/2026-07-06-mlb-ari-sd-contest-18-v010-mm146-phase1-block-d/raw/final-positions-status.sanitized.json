@@ -1,0 +1,148 @@
+{
+  "wallets": {
+    "stage_maker_a": {
+      "schemaVersion": 2,
+      "ok": true,
+      "action": "positions.status",
+      "stage": "read",
+      "network": "polygon",
+      "chainId": 137,
+      "generatedAt": "2026-07-07T05:58:10.146Z",
+      "cliVersion": "0.10.0",
+      "sdkVersion": "0.10.0",
+      "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "walletRole": "subject",
+      "signer": null,
+      "requiresSignature": false,
+      "requiresTransaction": false,
+      "approvalRequirements": [],
+      "estimatedCosts": null,
+      "risk": null,
+      "payout": null,
+      "contest": null,
+      "speculation": null,
+      "commitment": null,
+      "sideSummary": null,
+      "warnings": [],
+      "errors": [],
+      "effects": [],
+      "nextCommands": [],
+      "payload": {
+        "active": [],
+        "pendingSettle": [],
+        "claimable": [],
+        "totals": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      }
+    },
+    "stage_maker_b": {
+      "schemaVersion": 2,
+      "ok": true,
+      "action": "positions.status",
+      "stage": "read",
+      "network": "polygon",
+      "chainId": 137,
+      "generatedAt": "2026-07-07T05:57:54.150Z",
+      "cliVersion": "0.10.0",
+      "sdkVersion": "0.10.0",
+      "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "walletRole": "subject",
+      "signer": null,
+      "requiresSignature": false,
+      "requiresTransaction": false,
+      "approvalRequirements": [],
+      "estimatedCosts": null,
+      "risk": null,
+      "payout": null,
+      "contest": null,
+      "speculation": null,
+      "commitment": null,
+      "sideSummary": null,
+      "warnings": [],
+      "errors": [],
+      "effects": [],
+      "nextCommands": [],
+      "payload": {
+        "active": [],
+        "pendingSettle": [],
+        "claimable": [],
+        "totals": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      }
+    },
+    "flow_a": {
+      "schemaVersion": 2,
+      "ok": true,
+      "action": "positions.status",
+      "stage": "read",
+      "network": "polygon",
+      "chainId": 137,
+      "generatedAt": "2026-07-07T05:57:54.837Z",
+      "cliVersion": "0.10.0",
+      "sdkVersion": "0.10.0",
+      "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "walletRole": "subject",
+      "signer": null,
+      "requiresSignature": false,
+      "requiresTransaction": false,
+      "approvalRequirements": [],
+      "estimatedCosts": null,
+      "risk": null,
+      "payout": null,
+      "contest": null,
+      "speculation": null,
+      "commitment": null,
+      "sideSummary": null,
+      "warnings": [],
+      "errors": [],
+      "effects": [],
+      "nextCommands": [],
+      "payload": {
+        "active": [],
+        "pendingSettle": [],
+        "claimable": [],
+        "totals": {
+          "activeCount": 0,
+          "pendingSettleCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      }
+    }
+  },
+  "targetCounts": {
+    "stage_maker_a": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    },
+    "stage_maker_b": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    },
+    "flow_a": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    }
+  },
+  "ok": true
+}

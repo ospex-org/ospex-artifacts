@@ -1,0 +1,199 @@
+{
+  "initialCandidatesAllowlistOnly": "pass",
+  "initialDryRun": "pass",
+  "initialDryRunSummary": {
+    "wouldSubmitCount": 18,
+    "byContestMarket": {
+      "18:moneyline": 2,
+      "18:spread": 2,
+      "18:total": 2,
+      "19:moneyline": 2,
+      "19:spread": 2,
+      "19:total": 2,
+      "20:moneyline": 2,
+      "20:spread": 2,
+      "20:total": 2
+    },
+    "badEvents": [],
+    "offAllowlistWouldSubmit": []
+  },
+  "preliveCandidatesAllowlistOnly": "pass",
+  "preliveDryRun": "fail",
+  "preliveDryRunGate": {
+    "ok": false,
+    "wouldSubmitCount": 16,
+    "byContestMarket": {
+      "18:moneyline": 2,
+      "18:spread": 2,
+      "18:total": 2,
+      "19:moneyline": 2,
+      "19:spread": 2,
+      "19:total": 2,
+      "20:moneyline": 2,
+      "20:spread": 2
+    },
+    "badEvents": [],
+    "offAllowlist": [],
+    "utc": "2026-07-07T01:31:03.968894Z"
+  },
+  "targetCandidateRows": [
+    {
+      "gameId": "7a756132-e8da-423c-8891-e178d62cb545",
+      "slug": "col-lad-2026-07-07",
+      "sport": "mlb",
+      "awayTeam": "Colorado Rockies",
+      "homeTeam": "Los Angeles Dodgers",
+      "matchTime": "2026-07-07T02:10:00+00:00",
+      "status": "upcoming",
+      "hasOdds": true,
+      "canCreateContest": false,
+      "contestCreated": true,
+      "contestId": "20",
+      "market": "moneyline",
+      "speculationId": "48",
+      "kind": "quote_ready",
+      "recommendedAction": "quote",
+      "contestStatus": "verified",
+      "referenceOdds": {
+        "market": "moneyline",
+        "awayOddsAmerican": 200,
+        "homeOddsAmerican": -236
+      },
+      "inContestAllowList": true
+    },
+    {
+      "gameId": "7a756132-e8da-423c-8891-e178d62cb545",
+      "slug": "col-lad-2026-07-07",
+      "sport": "mlb",
+      "awayTeam": "Colorado Rockies",
+      "homeTeam": "Los Angeles Dodgers",
+      "matchTime": "2026-07-07T02:10:00+00:00",
+      "status": "upcoming",
+      "hasOdds": true,
+      "canCreateContest": false,
+      "contestCreated": true,
+      "contestId": "20",
+      "market": "spread",
+      "speculationId": "49",
+      "kind": "quote_ready",
+      "recommendedAction": "quote",
+      "contestStatus": "verified",
+      "referenceOdds": {
+        "market": "spread",
+        "awayLine": 1.5,
+        "homeLine": -1.5,
+        "awayOddsAmerican": -100,
+        "homeOddsAmerican": -120
+      },
+      "inContestAllowList": true
+    },
+    {
+      "gameId": "7a756132-e8da-423c-8891-e178d62cb545",
+      "slug": "col-lad-2026-07-07",
+      "sport": "mlb",
+      "awayTeam": "Colorado Rockies",
+      "homeTeam": "Los Angeles Dodgers",
+      "matchTime": "2026-07-07T02:10:00+00:00",
+      "status": "upcoming",
+      "hasOdds": true,
+      "canCreateContest": false,
+      "contestCreated": true,
+      "contestId": "20",
+      "market": "total",
+      "speculationId": "50",
+      "kind": "quote_ready",
+      "recommendedAction": "quote",
+      "contestStatus": "verified",
+      "referenceOdds": {
+        "market": "total",
+        "line": 9.5,
+        "overOddsAmerican": -123,
+        "underOddsAmerican": 104
+      },
+      "inContestAllowList": true
+    }
+  ],
+  "preliveTargetCandidateRows": [
+    {
+      "gameId": "7a756132-e8da-423c-8891-e178d62cb545",
+      "slug": "col-lad-2026-07-07",
+      "sport": "mlb",
+      "awayTeam": "Colorado Rockies",
+      "homeTeam": "Los Angeles Dodgers",
+      "matchTime": "2026-07-07T02:10:00+00:00",
+      "status": "upcoming",
+      "hasOdds": true,
+      "canCreateContest": false,
+      "contestCreated": true,
+      "contestId": "20",
+      "market": "moneyline",
+      "speculationId": "48",
+      "kind": "quote_ready",
+      "recommendedAction": "quote",
+      "contestStatus": "verified",
+      "referenceOdds": {
+        "market": "moneyline",
+        "awayOddsAmerican": 206,
+        "homeOddsAmerican": -244
+      },
+      "inContestAllowList": true
+    },
+    {
+      "gameId": "7a756132-e8da-423c-8891-e178d62cb545",
+      "slug": "col-lad-2026-07-07",
+      "sport": "mlb",
+      "awayTeam": "Colorado Rockies",
+      "homeTeam": "Los Angeles Dodgers",
+      "matchTime": "2026-07-07T02:10:00+00:00",
+      "status": "upcoming",
+      "hasOdds": true,
+      "canCreateContest": false,
+      "contestCreated": true,
+      "contestId": "20",
+      "market": "spread",
+      "speculationId": "49",
+      "kind": "quote_ready",
+      "recommendedAction": "quote",
+      "contestStatus": "verified",
+      "referenceOdds": {
+        "market": "spread",
+        "awayLine": 1.5,
+        "homeLine": -1.5,
+        "awayOddsAmerican": 105,
+        "homeOddsAmerican": -125
+      },
+      "inContestAllowList": true
+    },
+    {
+      "gameId": "7a756132-e8da-423c-8891-e178d62cb545",
+      "slug": "col-lad-2026-07-07",
+      "sport": "mlb",
+      "awayTeam": "Colorado Rockies",
+      "homeTeam": "Los Angeles Dodgers",
+      "matchTime": "2026-07-07T02:10:00+00:00",
+      "status": "upcoming",
+      "hasOdds": true,
+      "canCreateContest": false,
+      "contestCreated": true,
+      "contestId": "20",
+      "market": "total",
+      "speculationId": "50",
+      "kind": "quote_ready",
+      "recommendedAction": "quote",
+      "contestStatus": "verified",
+      "referenceOdds": {
+        "market": "total",
+        "line": 10,
+        "overOddsAmerican": -105,
+        "underOddsAmerican": -115
+      },
+      "inContestAllowList": true
+    }
+  ],
+  "seedSpeculations": false,
+  "contestAllowList": [
+    "18",
+    "19",
+    "20"
+  ]
+}

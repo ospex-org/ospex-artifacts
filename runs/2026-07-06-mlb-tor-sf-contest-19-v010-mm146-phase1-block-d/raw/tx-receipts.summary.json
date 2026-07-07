@@ -1,0 +1,109 @@
+{
+  "transactions": [
+    {
+      "category": "approve",
+      "txHash": "0x04c85cd2cf0e77fc0dd44a699d8778c51eb50780569067ae1790888458aa1e0d",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Bounded fee approval for ospex-stage-maker-b"
+    },
+    {
+      "category": "approve",
+      "txHash": "0xf0113b7d3a251949c12a98e823c409a9f7804b7756844f76bede21140a84d9e7",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Bounded risk/fee approval for ospex-stage-maker-a"
+    },
+    {
+      "category": "approve",
+      "txHash": "0xb05965e80832b567d888b6207b38c02dbad028360087242f80ad4ff0745bfcc4",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Bounded risk/fee approval for ospex-flow-a"
+    },
+    {
+      "category": "create-contest",
+      "txHash": "0x910bcad367aeaf7622ec91aa67bcdb0871202e01287b1fed4600b5d253326f35",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Create contest 19 for Toronto Blue Jays @ San Francisco Giants"
+    },
+    {
+      "category": "other",
+      "txHash": "0x9de30a68bae91278bffa06c7c1c42215e7057530e885c84889f058207275c287",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Request market update for contest 19"
+    },
+    {
+      "category": "seed-match",
+      "txHash": "0x92cae355e815c67ad4984679bb0f36a6818f40460fe29058a78093cd89ebed5b",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual moneyline seed for contest 19"
+    },
+    {
+      "category": "seed-match",
+      "txHash": "0x4dc2ab35acf05a289f8a1b86177921fa1b82992b33e0b941b3751ad52d5df600",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual spread seed for contest 19"
+    },
+    {
+      "category": "seed-match",
+      "txHash": "0xd8f16d6ad2264ad22355d69c328dddbf89c2eba0a050833e81bf3f55421f66cd",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual total seed for contest 19"
+    },
+    {
+      "category": "score-request",
+      "txHash": "0x5e1ed8fb7ceb620c26a127d45ae00802f5e43f8ac170694d60b04031f1b7f454",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Request R5 score for contest 19"
+    },
+    {
+      "category": "settle",
+      "txHash": "0xa7cd531a9e378d34eff5ecde924412989f6a93da1fde90097933fe16d136c87f",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle moneyline speculation 45"
+    },
+    {
+      "category": "settle",
+      "txHash": "0x305ac7facbbed4e6322cc6c8aba099e4225c8d58c4b9e355fa1ee2d3488ba437",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle spread speculation 46"
+    },
+    {
+      "category": "settle",
+      "txHash": "0x143fcc49abceed3b994bcd1163985442f49ebb11e3974f3fc7e0015875f40d40",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle total speculation 47"
+    },
+    {
+      "category": "claim",
+      "txHash": "0x04478a22e546ac5a29d2f528287e0fc25fbfb61a930e453d865152e01ffe9688",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim stage_maker_a position for speculation 46 side lower"
+    },
+    {
+      "category": "claim",
+      "txHash": "0x4d68a21c75df5372380d6ad6449bf8b35aaba19239a952d57bb6b3529bc57c51",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim flow_a position for speculation 47 side upper"
+    },
+    {
+      "category": "claim",
+      "txHash": "0x1361c1ebd25c0f5db1b4b250f2e3df9442e9e6bbddb09ee4886abc8d78f651bb",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim flow_a position for speculation 45 side lower"
+    }
+  ]
+}
