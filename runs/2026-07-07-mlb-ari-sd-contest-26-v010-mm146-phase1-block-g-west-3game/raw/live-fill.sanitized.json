@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "result": {
+    "contest": {
+      "contestId": "26",
+      "sport": "mlb",
+      "awayTeam": "Arizona Diamondbacks",
+      "homeTeam": "San Diego Padres"
+    },
+    "speculation": {
+      "speculationId": "66",
+      "marketType": "moneyline"
+    },
+    "commitment": {
+      "contestId": "26",
+      "marketType": "moneyline",
+      "commitmentHash": "0x8dda5e2eab0f9ee87ad85f013bd6311cb7f30f11a112973aae6643cd93bbd367"
+    },
+    "fill": {
+      "txHash": "0xd6548da7751e7c493cb2bc258f7a9e16b3479bc383144143b5fc129e4c9d5e6a",
+      "riskUSDC": "0.001000",
+      "sideSummary": "San Diego Padres",
+      "previewRetries": [
+        {
+          "hash": "0x8dda5e2eab0f9ee87ad85f013bd6311cb7f30f11a112973aae6643cd93bbd367",
+          "risk": "0.002000",
+          "errors": [
+            {
+              "code": "VALIDATION_ERROR",
+              "message": "Match would revert: fillMakerRisk=1700 not in (0, remaining=1000]. Choose a different takerDesiredRiskWei6.",
+              "details": {
+                "field": "takerDesiredRiskWei6"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "allControlledFills": [
+    {
+      "label": "A_ARI_SD",
+      "contestId": "26",
+      "market": "moneyline",
+      "speculationId": "66",
+      "commitmentHash": "0x8dda5e2eab0f9ee87ad85f013bd6311cb7f30f11a112973aae6643cd93bbd367",
+      "riskUSDC": "0.001000",
+      "previewSideSummary": "San Diego Padres",
+      "txHashes": [
+        "0xd6548da7751e7c493cb2bc258f7a9e16b3479bc383144143b5fc129e4c9d5e6a"
+      ],
+      "substitution": null,
+      "previewRetries": [
+        {
+          "hash": "0x8dda5e2eab0f9ee87ad85f013bd6311cb7f30f11a112973aae6643cd93bbd367",
+          "risk": "0.002000",
+          "errors": [
+            {
+              "code": "VALIDATION_ERROR",
+              "message": "Match would revert: fillMakerRisk=1700 not in (0, remaining=1000]. Choose a different takerDesiredRiskWei6.",
+              "details": {
+                "field": "takerDesiredRiskWei6"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "B_TOR_SF",
+      "contestId": "27",
+      "market": "spread",
+      "speculationId": "70",
+      "commitmentHash": "0x68066630e6ab670e205b98bae7f4944f801520937470a8d6859ed4201a625e60",
+      "riskUSDC": "0.001000",
+      "previewSideSummary": "San Francisco Giants +1.5",
+      "txHashes": [
+        "0xf7421f6d3ffe2c9d4df39a65982b38232b65959fa3e5acfc3e5f4b63444ea6c1"
+      ],
+      "substitution": null,
+      "previewRetries": [
+        {
+          "hash": "0x68066630e6ab670e205b98bae7f4944f801520937470a8d6859ed4201a625e60",
+          "risk": "0.002000",
+          "errors": [
+            {
+              "code": "VALIDATION_ERROR",
+              "message": "Match would revert: fillMakerRisk=1200 not in (0, remaining=1000]. Choose a different takerDesiredRiskWei6.",
+              "details": {
+                "field": "takerDesiredRiskWei6"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "C_COL_LAD",
+      "contestId": "28",
+      "market": "total",
+      "speculationId": "74",
+      "commitmentHash": "0x39d58581ae692c776779998bbd1f9c85aca146cd98020bc467ebebc54fb1451b",
+      "riskUSDC": "0.001000",
+      "previewSideSummary": "Under 9.5",
+      "txHashes": [
+        "0x2d8a3304129b7a93abc2f92481dfc0b8a7e6b08b888f44721474247764415905"
+      ],
+      "substitution": null,
+      "previewRetries": [
+        {
+          "hash": "0x39d58581ae692c776779998bbd1f9c85aca146cd98020bc467ebebc54fb1451b",
+          "risk": "0.002000",
+          "errors": [
+            {
+              "code": "VALIDATION_ERROR",
+              "message": "Match would revert: fillMakerRisk=1800 not in (0, remaining=1000]. Choose a different takerDesiredRiskWei6.",
+              "details": {
+                "field": "takerDesiredRiskWei6"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "telemetryFills": [
+    {
+      "ts": "2026-07-07T23:51:22.504Z",
+      "runId": "2026-07-07T23-50-14-611Z-nibqef",
+      "kind": "fill",
+      "source": "own-state-stream",
+      "commitmentHash": "0x8dda5e2eab0f9ee87ad85f013bd6311cb7f30f11a112973aae6643cd93bbd367",
+      "speculationId": "66",
+      "contestId": "26",
+      "sport": "mlb",
+      "awayTeam": "Arizona Diamondbacks",
+      "homeTeam": "San Diego Padres",
+      "takerSide": "home",
+      "makerSide": "away",
+      "positionType": 0,
+      "makerOddsTick": 215,
+      "newFillWei6": "800",
+      "cumulativeRiskWei6": "800",
+      "market": null
+    },
+    {
+      "ts": "2026-07-07T23:51:37.462Z",
+      "runId": "2026-07-07T23-50-14-611Z-nibqef",
+      "kind": "fill",
+      "source": "own-state-stream",
+      "commitmentHash": "0x68066630e6ab670e205b98bae7f4944f801520937470a8d6859ed4201a625e60",
+      "speculationId": "70",
+      "contestId": "27",
+      "sport": "mlb",
+      "awayTeam": "Toronto Blue Jays",
+      "homeTeam": "San Francisco Giants",
+      "takerSide": "home",
+      "makerSide": "away",
+      "positionType": 0,
+      "makerOddsTick": 261,
+      "newFillWei6": "600",
+      "cumulativeRiskWei6": "600",
+      "market": "spread"
+    },
+    {
+      "ts": "2026-07-07T23:51:52.468Z",
+      "runId": "2026-07-07T23-50-14-611Z-nibqef",
+      "kind": "fill",
+      "source": "own-state-stream",
+      "commitmentHash": "0x39d58581ae692c776779998bbd1f9c85aca146cd98020bc467ebebc54fb1451b",
+      "speculationId": "74",
+      "contestId": "28",
+      "sport": "mlb",
+      "awayTeam": "Colorado Rockies",
+      "homeTeam": "Los Angeles Dodgers",
+      "takerSide": "home",
+      "makerSide": "away",
+      "positionType": 0,
+      "makerOddsTick": 209,
+      "newFillWei6": "900",
+      "cumulativeRiskWei6": "1000",
+      "market": "total"
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-07-07T23-50-14-611Z-nibqef",
+  "quoteCount": 18,
+  "quoteHashes": [
+    {
+      "ts": "2026-07-07T23:50:50.821Z",
+      "contestId": "26",
+      "speculationId": "66",
+      "market": null,
+      "commitmentHash": "0xf8d82840f87895873fdd183dc535d77670f5b3b67d3a174444e262f5c73b890a",
+      "makerSide": "home",
+      "takerSide": "away",
+      "riskAmountWei6": "1000"
+    },
+    {
+      "ts": "2026-07-07T23:50:51.124Z",
+      "contestId": "26",
+      "speculationId": "66",
+      "market": null,
+      "commitmentHash": "0x8dda5e2eab0f9ee87ad85f013bd6311cb7f30f11a112973aae6643cd93bbd367",
+      "makerSide": "away",
+      "takerSide": "home",
+      "riskAmountWei6": "1000"
+    },
+    {
+      "ts": "2026-07-07T23:50:51.642Z",
+      "contestId": "26",
+      "speculationId": "67",
+      "market": "spread",
+      "commitmentHash": "0x830c856c96ca13de907ef765280c005cbb7d9c35fbc660800a142813446707cf",
+      "makerSide": "home",
+      "takerSide": "away",
+      "riskAmountWei6": "1000"
+    },
+    {
+      "ts": "2026-07-07T23:50:51.973Z",
+      "contestId": "26",
+      "speculationId": "67",
+      "market": "spread",
+      "commitmentHash": "0x20f7368411f87de17302104552c8994c5306120c98005add79b72063321d952d",
+      "makerSide": "away",
+      "takerSide": "home",
+      "riskAmountWei6": "1000"
+    },
+    {
+      "ts": "2026-07-07T23:50:52.489Z",
+      "contestId": "26",
+      "speculationId": "68",
+      "market": "total",
+      "commitmentHash": "0x55a6c2ce53ef63a3e443a284ce7a0bdaf2c1f162725fda7157ad598a0033ab81",
+      "makerSide": "home",
+      "takerSide": "away",
+      "riskAmountWei6": "1000"
+    },
+    {
+      "ts": "2026-07-07T23:50:52.793Z",
+      "contestId": "26",
+      "speculationId": "68",
+      "market": "total",
+      "commitmentHash": "0xb06776c1384bff23ec9631662e8ff6cad157be7c3f906f30630be0e97504f31b",
+      "makerSide": "away",
+      "takerSide": "home",
+      "riskAmountWei6": "1000"
+    },
+    {
+      "ts": "2026-07-07T23:50:53.609Z",
+      "contestId": "27",
+      "speculationId": "69",
+      "market": null,
+      "commitmentHash": "0x20eea538f654bfa5b588914c2ebcd4cf691225306eda641e5e94ecbfbb34fd07",
+      "makerSide": "home",
+      "takerSide": "away",
+      "riskAmountWei6": "1000"
+    },
+    {
+      "ts": "2026-07-07T23:50:53.901Z",
+      "contestId": "27",
+      "speculationId": "69",
+      "market": null,
+      "commitmentHash": "0xe26afd06bca31da5ffdc4e9a2971a8779a0c7fda355bd2c4ffca3bb1b9becc79",
+      "makerSide": "away",
+      "takerSide": "home",
+      "riskAmountWei6": "1000"
+    },
+    {
+      "ts": "2026-07-07T23:50:54.372Z",
+      "contestId": "27",
+      "speculationId": "70",
+      "market": "spread",
+      "commitmentHash": "0x1b9d7b823a5a7e27c4227b741f273a7863e9d4d38a8e53a7303630cca11826a7",
+      "makerSide": "home",
+      "takerSide": "away",
+      "riskAmountWei6": "1000"
+    },
+    {
+      "ts": "2026-07-07T23:50:54.663Z",
+      "contestId": "27",
+      "speculationId": "70",
+      "market": "spread",
+      "commitmentHash": "0x68066630e6ab670e205b98bae7f4944f801520937470a8d6859ed4201a625e60",
+      "makerSide": "away",
+      "takerSide": "home",
+      "riskAmountWei6": "1000"
+    },
+    {
+      "ts": "2026-07-07T23:50:55.182Z",
+      "contestId": "27",
+      "speculationId": "71",
+      "market": "total",
+      "commitmentHash": "0x741ea1335a939ff00f38dec3e7d441c7661df14e2c0b96eb44e5837e39dce201",
+      "makerSide": "home",
+      "takerSide": "away",
+      "riskAmountWei6": "1000"
+    },
+    {
+      "ts": "2026-07-07T23:50:55.513Z",
+      "contestId": "27",
+      "speculationId": "71",
+      "market": "total",
+      "commitmentHash": "0xea9276f7a188cbfcc3c6d4b78560e02d14191fa43687e433987fadb7634dc844",
+      "makerSide": "away",
+      "takerSide": "home",
+      "riskAmountWei6": "1000"
+    },
+    {
+      "ts": "2026-07-07T23:50:56.275Z",
+      "contestId": "28",
+      "speculationId": "72",
+      "market": null,
+      "commitmentHash": "0xcb816f976ae6aabf3d2b5dd76e2b340e1fcc9691e5f13472ffbb123f73614788",
+      "makerSide": "home",
+      "takerSide": "away",
+      "riskAmountWei6": "1000"
+    },
+    {
+      "ts": "2026-07-07T23:50:56.564Z",
+      "contestId": "28",
+      "speculationId": "72",
+      "market": null,
+      "commitmentHash": "0xa6bda5d40ad3228668474a42c4f311f0f00b822624fcbe7ca8902ab227da0f1c",
+      "makerSide": "away",
+      "takerSide": "home",
+      "riskAmountWei6": "1000"
+    },
+    {
+      "ts": "2026-07-07T23:50:57.061Z",
+      "contestId": "28",
+      "speculationId": "73",
+      "market": "spread",
+      "commitmentHash": "0x93a5271ba887eb945fb7beea85fc06fb298d86c1392813c140ea1237f812b2a6",
+      "makerSide": "home",
+      "takerSide": "away",
+      "riskAmountWei6": "1000"
+    },
+    {
+      "ts": "2026-07-07T23:50:57.645Z",
+      "contestId": "28",
+      "speculationId": "73",
+      "market": "spread",
+      "commitmentHash": "0xf1cf0915eada5e137987d9cba4d955aa06b16327f46b8ecf46b257e7fcad47b2",
+      "makerSide": "away",
+      "takerSide": "home",
+      "riskAmountWei6": "1000"
+    },
+    {
+      "ts": "2026-07-07T23:50:58.148Z",
+      "contestId": "28",
+      "speculationId": "74",
+      "market": "total",
+      "commitmentHash": "0x8d112a156adee75daa3d4518909fa0b993613d4011bc8c29dcdd3aa11592ed5c",
+      "makerSide": "home",
+      "takerSide": "away",
+      "riskAmountWei6": "1000"
+    },
+    {
+      "ts": "2026-07-07T23:50:58.452Z",
+      "contestId": "28",
+      "speculationId": "74",
+      "market": "total",
+      "commitmentHash": "0x39d58581ae692c776779998bbd1f9c85aca146cd98020bc467ebebc54fb1451b",
+      "makerSide": "away",
+      "takerSide": "home",
+      "riskAmountWei6": "1000"
+    }
+  ],
+  "eventCounts": {
+    "tick-start": 3,
+    "candidate": 13,
+    "stream-health-hold": 2,
+    "quote-intent": 12,
+    "risk-verdict": 12,
+    "submit": 18,
+    "quote-competitiveness": 18,
+    "fill": 3,
+    "soft-cancel": 15,
+    "kill": 1
+  },
+  "cancelResult": [
+    {
+      "label": "A_ARI_SD",
+      "hash": "0x8dda5e2eab0f9ee87ad85f013bd6311cb7f30f11a112973aae6643cd93bbd367",
+      "ok": false,
+      "errors": [
+        {
+          "code": "API_ERROR",
+          "message": "Commitment is partially_filled; off-chain cancel is not allowed once a match exists. Use MatchingModule.cancelCommitment(c) on chain.",
+          "details": {
+            "apiCode": "COMMITMENT_MATCHED",
+            "status": 409,
+            "path": "/v1/commitments/0x8dda5e2eab0f9ee87ad85f013bd6311cb7f30f11a112973aae6643cd93bbd367"
+          }
+        }
+      ]
+    },
+    {
+      "label": "B_TOR_SF",
+      "hash": "0x68066630e6ab670e205b98bae7f4944f801520937470a8d6859ed4201a625e60",
+      "ok": false,
+      "errors": [
+        {
+          "code": "API_ERROR",
+          "message": "Commitment is partially_filled; off-chain cancel is not allowed once a match exists. Use MatchingModule.cancelCommitment(c) on chain.",
+          "details": {
+            "apiCode": "COMMITMENT_MATCHED",
+            "status": 409,
+            "path": "/v1/commitments/0x68066630e6ab670e205b98bae7f4944f801520937470a8d6859ed4201a625e60"
+          }
+        }
+      ]
+    },
+    {
+      "label": "C_COL_LAD",
+      "hash": "0x39d58581ae692c776779998bbd1f9c85aca146cd98020bc467ebebc54fb1451b",
+      "ok": false,
+      "errors": [
+        {
+          "code": "API_ERROR",
+          "message": "Commitment is partially_filled; off-chain cancel is not allowed once a match exists. Use MatchingModule.cancelCommitment(c) on chain.",
+          "details": {
+            "apiCode": "COMMITMENT_MATCHED",
+            "status": 409,
+            "path": "/v1/commitments/0x39d58581ae692c776779998bbd1f9c85aca146cd98020bc467ebebc54fb1451b"
+          }
+        }
+      ]
+    }
+  ]
+}

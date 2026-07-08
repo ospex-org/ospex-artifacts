@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "plannedBoundedApprovalsUSDC": {
+    "fresh_user_fee": "2.750000",
+    "fresh_user_risk": "0.050000",
+    "stage_maker_b_fee": "1.500000",
+    "stage_maker_b_risk": "0.050000",
+    "stage_maker_a_fee": "2.000000",
+    "stage_maker_a_risk": "0.500000",
+    "flow_a_fee": "1.250000",
+    "flow_a_risk": "0.500000"
+  },
+  "approvalTransactions": [
+    {
+      "walletLabel": "flow-a",
+      "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "spenderModule": "treasuryModule",
+      "status": "success",
+      "txHash": "0xa69b301735236a590d6b44acd413506b84527f4e6dcef63a4eddcd5b76bb3adb",
+      "blockNumber": "89841162"
+    },
+    {
+      "walletLabel": "fresh-user",
+      "wallet": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "spenderModule": "positionModule",
+      "status": "success",
+      "txHash": "0xb5bf9ee82794e5cd5770497910d365702128dedcd3e2082361fe6c8954b068ca",
+      "blockNumber": "89841152"
+    },
+    {
+      "walletLabel": "fresh-user",
+      "wallet": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "spenderModule": "treasuryModule",
+      "status": "success",
+      "txHash": "0x88a85f4bd670a2ec80c28a218956352d9a394b1e0362d74cf31691e26bc44119",
+      "blockNumber": "89841153"
+    },
+    {
+      "walletLabel": "stage-maker-a",
+      "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "spenderModule": "treasuryModule",
+      "status": "success",
+      "txHash": "0x32425af5b3b264c83ff36e4e8a1ecd67bec99598ad37d023159bf06bb1b2e604",
+      "blockNumber": "89841159"
+    },
+    {
+      "walletLabel": "stage-maker-b",
+      "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "spenderModule": "treasuryModule",
+      "status": "success",
+      "txHash": "0x458c8956240f8bd94337ef8b4d5341037c59f9911fbdb19db09c5a88dafe3310",
+      "blockNumber": "89841156"
+    }
+  ],
+  "unlimitedApprovalsCreated": false
+}

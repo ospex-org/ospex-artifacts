@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "attemptRunId": "2026-07-07T23-45-26-158Z-o7ow3r",
+  "liveRunError": {
+    "ok": false,
+    "phase": "live",
+    "error": "live quotes did not become visible before timeout",
+    "context": {
+      "expectedByLabel": {
+        "A_ARI_SD": [
+          "moneyline",
+          "spread",
+          "total"
+        ],
+        "B_TOR_SF": [
+          "moneyline",
+          "spread",
+          "total"
+        ],
+        "C_COL_LAD": [
+          "moneyline",
+          "spread",
+          "total"
+        ]
+      },
+      "lastCounts": {
+        "A_ARI_SD": 0,
+        "B_TOR_SF": 0,
+        "C_COL_LAD": 0
+      },
+      "lastMarkets": {
+        "A_ARI_SD": [],
+        "B_TOR_SF": [],
+        "C_COL_LAD": []
+      }
+    },
+    "utc": "2026-07-07T23:48:38.056156Z"
+  },
+  "eventCounts": {
+    "tick-start": 6,
+    "candidate": 9,
+    "stream-health-hold": 2,
+    "quote-intent": 18,
+    "risk-verdict": 18,
+    "kill": 1
+  },
+  "quotePostedCount": 0,
+  "riskRefusalNote": "bankroll exposure ceiling at 0.24/0.15 USDC worst-case; no quotes posted",
+  "riskCapsAfterRetry": {
+    "maxRiskPerCommitmentUSDC": "0.001",
+    "maxRiskPerSportUSDC": "0.285"
+  },
+  "streamHealthHoldEvents": [
+    {
+      "ts": "2026-07-07T23:45:31.466Z",
+      "runId": "2026-07-07T23-45-26-158Z-o7ow3r",
+      "kind": "stream-health-hold",
+      "state": "entered",
+      "severity": "high",
+      "exposureWei6": "242000"
+    },
+    {
+      "ts": "2026-07-07T23:46:01.992Z",
+      "runId": "2026-07-07T23-45-26-158Z-o7ow3r",
+      "kind": "stream-health-hold",
+      "state": "cleared",
+      "severity": null,
+      "exposureWei6": null
+    }
+  ],
+  "sampleRefusals": [
+    {
+      "ts": "2026-07-07T23:46:02.592Z",
+      "runId": "2026-07-07T23-45-26-158Z-o7ow3r",
+      "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "kind": "quote-intent",
+      "contestId": "26",
+      "speculationId": "66",
+      "sport": "mlb",
+      "awayTeam": "Arizona Diamondbacks",
+      "homeTeam": "San Diego Padres",
+      "canQuote": false,
+      "away": null,
+      "home": null,
+      "notes": [
+        "REFUSE: at the bankroll exposure ceiling (0.24 / 0.15 USDC worst-case)"
+      ]
+    },
+    {
+      "ts": "2026-07-07T23:46:02.593Z",
+      "runId": "2026-07-07T23-45-26-158Z-o7ow3r",
+      "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "kind": "risk-verdict",
+      "contestId": "26",
+      "speculationId": "66",
+      "sport": "mlb",
+      "awayTeam": "Arizona Diamondbacks",
+      "homeTeam": "San Diego Padres",
+      "allowed": false,
+      "awayOffer": {
+        "allowed": false,
+        "sizeUSDC": 0,
+        "headroomUSDC": 0
+      },
+      "homeOffer": {
+        "allowed": false,
+        "sizeUSDC": 0,
+        "headroomUSDC": 0
+      },
+      "notes": [
+        "REFUSE: at the bankroll exposure ceiling (0.24 / 0.15 USDC worst-case)"
+      ]
+    },
+    {
+      "ts": "2026-07-07T23:46:02.762Z",
+      "runId": "2026-07-07T23-45-26-158Z-o7ow3r",
+      "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "kind": "quote-intent",
+      "contestId": "26",
+      "speculationId": "67",
+      "sport": "mlb",
+      "awayTeam": "Arizona Diamondbacks",
+      "homeTeam": "San Diego Padres",
+      "canQuote": false,
+      "away": null,
+      "home": null,
+      "notes": [
+        "REFUSE: at the bankroll exposure ceiling (0.24 / 0.15 USDC worst-case)"
+      ]
+    },
+    {
+      "ts": "2026-07-07T23:46:02.762Z",
+      "runId": "2026-07-07T23-45-26-158Z-o7ow3r",
+      "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "kind": "risk-verdict",
+      "contestId": "26",
+      "speculationId": "67",
+      "sport": "mlb",
+      "awayTeam": "Arizona Diamondbacks",
+      "homeTeam": "San Diego Padres",
+      "allowed": false,
+      "awayOffer": {
+        "allowed": false,
+        "sizeUSDC": 0,
+        "headroomUSDC": 0
+      },
+      "homeOffer": {
+        "allowed": false,
+        "sizeUSDC": 0,
+        "headroomUSDC": 0
+      },
+      "notes": [
+        "REFUSE: at the bankroll exposure ceiling (0.24 / 0.15 USDC worst-case)"
+      ]
+    },
+    {
+      "ts": "2026-07-07T23:46:02.946Z",
+      "runId": "2026-07-07T23-45-26-158Z-o7ow3r",
+      "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "kind": "quote-intent",
+      "contestId": "26",
+      "speculationId": "68",
+      "sport": "mlb",
+      "awayTeam": "Arizona Diamondbacks",
+      "homeTeam": "San Diego Padres",
+      "canQuote": false,
+      "away": null,
+      "home": null,
+      "notes": [
+        "REFUSE: at the bankroll exposure ceiling (0.24 / 0.15 USDC worst-case)"
+      ]
+    },
+    {
+      "ts": "2026-07-07T23:46:02.946Z",
+      "runId": "2026-07-07T23-45-26-158Z-o7ow3r",
+      "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "kind": "risk-verdict",
+      "contestId": "26",
+      "speculationId": "68",
+      "sport": "mlb",
+      "awayTeam": "Arizona Diamondbacks",
+      "homeTeam": "San Diego Padres",
+      "allowed": false,
+      "awayOffer": {
+        "allowed": false,
+        "sizeUSDC": 0,
+        "headroomUSDC": 0
+      },
+      "homeOffer": {
+        "allowed": false,
+        "sizeUSDC": 0,
+        "headroomUSDC": 0
+      },
+      "notes": [
+        "REFUSE: at the bankroll exposure ceiling (0.24 / 0.15 USDC worst-case)"
+      ]
+    },
+    {
+      "ts": "2026-07-07T23:46:03.129Z",
+      "runId": "2026-07-07T23-45-26-158Z-o7ow3r",
+      "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "kind": "quote-intent",
+      "contestId": "27",
+      "speculationId": "69",
+      "sport": "mlb",
+      "awayTeam": "Toronto Blue Jays",
+      "homeTeam": "San Francisco Giants",
+      "canQuote": false,
+      "away": null,
+      "home": null,
+      "notes": [
+        "REFUSE: at the bankroll exposure ceiling (0.24 / 0.15 USDC worst-case)"
+      ]
+    },
+    {
+      "ts": "2026-07-07T23:46:03.129Z",
+      "runId": "2026-07-07T23-45-26-158Z-o7ow3r",
+      "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "kind": "risk-verdict",
+      "contestId": "27",
+      "speculationId": "69",
+      "sport": "mlb",
+      "awayTeam": "Toronto Blue Jays",
+      "homeTeam": "San Francisco Giants",
+      "allowed": false,
+      "awayOffer": {
+        "allowed": false,
+        "sizeUSDC": 0,
+        "headroomUSDC": 0
+      },
+      "homeOffer": {
+        "allowed": false,
+        "sizeUSDC": 0,
+        "headroomUSDC": 0
+      },
+      "notes": [
+        "REFUSE: at the bankroll exposure ceiling (0.24 / 0.15 USDC worst-case)"
+      ]
+    },
+    {
+      "ts": "2026-07-07T23:46:03.305Z",
+      "runId": "2026-07-07T23-45-26-158Z-o7ow3r",
+      "maker": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "kind": "quote-intent",
+      "contestId": "27",
+      "speculationId": "70",
+      "sport": "mlb",
+      "awayTeam": "Toronto Blue Jays",
+      "homeTeam": "San Francisco Giants",
+      "canQuote": false,
+      "away": null,
+      "home": null,
+      "notes": [
+        "REFUSE: at the bankroll exposure ceiling (0.24 / 0.15 USDC worst-case)"
+      ]
+    }
+  ]
+}

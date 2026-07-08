@@ -1,0 +1,75 @@
+{
+  "apiHealth": {
+    "healthz": {
+      "status": 200,
+      "body": {
+        "ok": true,
+        "service": "ospex-core-api",
+        "network": "polygon",
+        "chainId": 137,
+        "uptimeSeconds": 19733,
+        "timestamp": "2026-07-07T23:22:00.752Z"
+      }
+    },
+    "readyz": {
+      "status": 200,
+      "body": {
+        "ok": true,
+        "service": "ospex-core-api",
+        "network": "polygon",
+        "chainId": 137,
+        "supabase": {
+          "connected": true
+        },
+        "commitments": {
+          "configured": true
+        },
+        "uptimeSeconds": 19733,
+        "timestamp": "2026-07-07T23:22:01.077Z"
+      }
+    }
+  },
+  "budgetForecast": {
+    "selectedGames": 3,
+    "intendedMarkets": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "feeForecastUSDC": {
+      "contestCreation": 3.0,
+      "lazySpecCreation": 4.5,
+      "totalProtocolFees": 7.5
+    },
+    "controlledRiskEnvelopeUSDC": {
+      "manualTinySeedTargetPerSpec": 0.001,
+      "manualTinySeedApproxTotal": 0.05,
+      "liveQuoteEnvelopeTarget": 0.15,
+      "controlledFillEnvelopeTarget": 0.03
+    },
+    "totalFeesPlusControlledRiskEnvelopeUSDC": 7.73,
+    "policy": {
+      "targetCapUSDC": 25,
+      "hardStopUSDC": 35,
+      "withinTarget": true,
+      "withinHardStop": true
+    },
+    "walletReality": {
+      "note": "Current total USDC across stage-maker-a, stage-maker-b, flow-a, fresh-user is enough only with very small manual/live risks and tight distribution; no extra crypto requested yet, but setup will stop and ask if any balance/allowance preflight fails."
+    },
+    "plannedBoundedApprovalsUSDC": {
+      "fresh_user_fee": "2.750000",
+      "fresh_user_risk": "0.050000",
+      "stage_maker_b_fee": "1.500000",
+      "stage_maker_b_risk": "0.050000",
+      "stage_maker_a_fee": "2.000000",
+      "stage_maker_a_risk": "0.500000",
+      "flow_a_fee": "1.250000",
+      "flow_a_risk": "0.500000"
+    },
+    "notes": [
+      "Bounded approvals only; no unlimited approvals.",
+      "Will use corrected fill sizing (start small, preview, retry smaller/different quote if needed)."
+    ]
+  }
+}

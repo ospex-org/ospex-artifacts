@@ -1,0 +1,106 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/scenario-matrix.schema.json",
+  "schemaVersion": 2,
+  "artifactId": "2026-07-07-mlb-ari-sd-contest-26-v010-mm146-phase1-block-g-west-3game",
+  "generatedAt": "2026-07-08T06:02:24Z",
+  "runClass": "mm-live-canary",
+  "scenarios": [
+    {
+      "id": "target-preflight",
+      "scenario": "Target preflight and allowlist",
+      "status": "pass",
+      "notes": "A/B/C target games, contests 26-28, and specs 66-74 passed allowlist, odds, status, and quote-ready gates.",
+      "evidence": "raw/target-preflight.sanitized.json"
+    },
+    {
+      "id": "repo-runtime-gates",
+      "scenario": "Repo/runtime gates",
+      "status": "pass",
+      "notes": "SDK/CLI v0.10.0, MM head 6f3ccc1, MM internal SDK v0.9.0, and ancillary repo heads were recorded.",
+      "evidence": "raw/release-runtime-matrix.sanitized.json"
+    },
+    {
+      "id": "wallet-auth-balances",
+      "scenario": "Wallet auth, balances, allowances",
+      "status": "pass",
+      "notes": "Expected-address/auth checks and public balances/allowances were captured; secret paths/signatures were omitted.",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json"
+    },
+    {
+      "id": "bounded-approvals",
+      "scenario": "Bounded approvals / no unlimited approvals",
+      "status": "pass",
+      "notes": "Only bounded USDC approvals were used; no unlimited approval was recorded.",
+      "evidence": "raw/bounded-approvals.sanitized.json"
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "scenario": "Dry-run quote loop",
+      "status": "pass",
+      "notes": "Dry run wouldSubmitCount=18 across nine contest/market pairs with strict allowlist [26,27,28], seedSpeculations=false, no bad events.",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json"
+    },
+    {
+      "id": "live-commitments-posted",
+      "scenario": "Live commitments posted",
+      "status": "pass_with_caveats",
+      "notes": "Retry live run posted 18 tiny live quotes across moneyline, spread, and total for contests 26-28.",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json"
+    },
+    {
+      "id": "live-fill",
+      "scenario": "Controlled live fill",
+      "status": "pass_with_caveats",
+      "notes": "Controlled fills landed on A moneyline, B spread, and C total; primary binding is A moneyline contest 26/spec 66.",
+      "evidence": "raw/live-fill.sanitized.json"
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "scenario": "Own-state SSE canonical fill source",
+      "status": "pass_with_caveats",
+      "notes": "Telemetry recorded three own-state-stream fill events; bad own-state and OwnerPositionStatusForUnknownPosition counts were zero.",
+      "evidence": "raw/own-state-sse-summary.sanitized.json"
+    },
+    {
+      "id": "exposure-drain-zero",
+      "scenario": "Exposure drained to zero",
+      "status": "pass",
+      "notes": "Final open commitments are zero and final target wallet active/pending/claimable counts are zero.",
+      "evidence": "raw/zero-exposure.sanitized.json"
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "scenario": "Restart/cold-start safety",
+      "status": "not_applicable",
+      "notes": "Block G did not include a separate scratch cold-start probe; zero-open and no-orphan process checks were captured."
+    },
+    {
+      "id": "postgame-score",
+      "scenario": "Postgame score",
+      "status": "pass_with_caveats",
+      "notes": "Official finals were verified and score request/callback evidence exists for contests 26-28.",
+      "evidence": "raw/postgame-lifecycle.sanitized.json"
+    },
+    {
+      "id": "postgame-settle",
+      "scenario": "Postgame settle",
+      "status": "pass",
+      "notes": "SPECULATION_SETTLED events exist for specs 66-74.",
+      "evidence": "raw/postgame-lifecycle.sanitized.json"
+    },
+    {
+      "id": "postgame-claim",
+      "scenario": "Postgame claim/no-op",
+      "status": "pass_with_caveats",
+      "notes": "Winning positions were claimed; final target wallet counts are zero.",
+      "evidence": "raw/postgame-lifecycle.sanitized.json"
+    },
+    {
+      "id": "cost-within-cap",
+      "scenario": "Cost within cap",
+      "status": "pass",
+      "notes": "Budget forecast total fees plus controlled risk envelope was 7.73 USDC, within 25 USDC target and 35 USDC hard stop.",
+      "evidence": "raw/tx-receipts.summary.json"
+    }
+  ]
+}

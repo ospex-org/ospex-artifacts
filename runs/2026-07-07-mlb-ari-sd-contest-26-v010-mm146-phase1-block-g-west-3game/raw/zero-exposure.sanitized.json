@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "liveZeroOpen": {
+    "ok": true,
+    "counts": {
+      "A_ARI_SD": 0,
+      "B_TOR_SF": 0,
+      "C_COL_LAD": 0
+    },
+    "rows": {
+      "A_ARI_SD": [],
+      "B_TOR_SF": [],
+      "C_COL_LAD": []
+    },
+    "utc": "2026-07-07T23:52:59.351458Z"
+  },
+  "postgameZeroState": {
+    "wallets": {
+      "stage_maker_a": {
+        "targetCounts": {
+          "active": 0,
+          "pendingSettle": 0,
+          "claimable": 0
+        },
+        "ok": true
+      },
+      "stage_maker_b": {
+        "targetCounts": {
+          "active": 0,
+          "pendingSettle": 0,
+          "claimable": 0
+        },
+        "ok": true
+      },
+      "flow_a": {
+        "targetCounts": {
+          "active": 0,
+          "pendingSettle": 0,
+          "claimable": 0
+        },
+        "ok": true
+      },
+      "fresh_user": {
+        "targetCounts": {
+          "active": 0,
+          "pendingSettle": 0,
+          "claimable": 0
+        },
+        "ok": true
+      }
+    },
+    "openCommitments": {
+      "A_ARI_SD": 0,
+      "B_TOR_SF": 0,
+      "C_COL_LAD": 0
+    },
+    "ok": true
+  },
+  "processCheck": {
+    "ok": true,
+    "raw": ""
+  },
+  "finalOpenCommitmentsByContest": {
+    "A_ARI_SD": 0,
+    "B_TOR_SF": 0,
+    "C_COL_LAD": 0
+  },
+  "finalOpenCommitmentsTotal": 0
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "sdkCliVersion": "0.10.0",
+  "mmInternalSdkVersion": "0.9.0",
+  "repoHeads": [
+    {
+      "repo": "ospex-sdk",
+      "branch": "main",
+      "headSha": "3fa399a",
+      "subject": "Merge pull request #173 from ospex-org/chore/release-v0.10.0"
+    },
+    {
+      "repo": "ospex-market-maker",
+      "branch": "main",
+      "headSha": "6f3ccc1",
+      "subject": "Merge pull request #146 from ospex-org/feature/approval-self-heal"
+    },
+    {
+      "repo": "ospex-core-api",
+      "branch": "main",
+      "headSha": "076f44d",
+      "subject": "Merge pull request #41 from ospex-org/fix/speculation-winner-projection"
+    },
+    {
+      "repo": "ospex-indexer",
+      "branch": "main",
+      "headSha": "75be9e7",
+      "subject": "docs(canonicality): R4 -> R5 + correct the off-chain submission relay (#47)"
+    },
+    {
+      "repo": "ospex-cre",
+      "branch": "main",
+      "headSha": "fed6e26",
+      "subject": "Merge pull request #7 from ospex-org/docs/readme-mainnet-live-r5"
+    },
+    {
+      "repo": "ospex-contracts-v2",
+      "branch": "HEAD",
+      "headSha": "514864f",
+      "subject": "docs(deployment): add R5 registry provenance record (exactly-12 proof)"
+    },
+    {
+      "repo": "ospex-artifacts",
+      "branch": "artifacts/mve-phase1-block-e-mil-stl-contest-21",
+      "headSha": "bfa8d04",
+      "subject": "Add MVE Phase 1 Block E artifact"
+    }
+  ],
+  "allRequiredOk": true,
+  "notes": [
+    "SDK/CLI v0.10.0 and MM head 6f3ccc1 were used; MM internal @ospex/sdk remained 0.9.0 as recorded in the sanitized run."
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "positionStatusSummaries": {
+    "stage_maker_a_before_claim": {
+      "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "generatedAt": "2026-07-08T04:55:25.993Z",
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      },
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0
+    },
+    "stage_maker_a_after_claim": {
+      "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "generatedAt": "2026-07-08T04:55:26.722Z",
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      },
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0
+    },
+    "stage_maker_b_before_claim": {
+      "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "generatedAt": "2026-07-08T04:55:27.417Z",
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      },
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0
+    },
+    "stage_maker_b_after_claim": {
+      "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "generatedAt": "2026-07-08T04:55:28.054Z",
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      },
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0
+    },
+    "flow_a_before_claim": {
+      "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "generatedAt": "2026-07-08T04:55:28.679Z",
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      },
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0
+    },
+    "flow_a_after_claim": {
+      "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "generatedAt": "2026-07-08T04:55:29.361Z",
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      },
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0
+    },
+    "fresh_user_before_claim": {
+      "wallet": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "generatedAt": "2026-07-08T04:55:30.004Z",
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      },
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0
+    },
+    "fresh_user_after_claim": {
+      "wallet": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "generatedAt": "2026-07-08T04:55:30.649Z",
+      "totals": {
+        "activeCount": 0,
+        "pendingSettleCount": 0,
+        "claimableCount": 0,
+        "estimatedPayoutUSDC": 0,
+        "estimatedPayoutWei6": "0",
+        "pendingSettlePayoutUSDC": 0,
+        "pendingSettlePayoutWei6": "0"
+      },
+      "activeCount": 0,
+      "pendingSettleCount": 0,
+      "claimableCount": 0
+    }
+  },
+  "zeroStateWallets": {
+    "stage_maker_a": {
+      "targetCounts": {
+        "active": 0,
+        "pendingSettle": 0,
+        "claimable": 0
+      },
+      "ok": true
+    },
+    "stage_maker_b": {
+      "targetCounts": {
+        "active": 0,
+        "pendingSettle": 0,
+        "claimable": 0
+      },
+      "ok": true
+    },
+    "flow_a": {
+      "targetCounts": {
+        "active": 0,
+        "pendingSettle": 0,
+        "claimable": 0
+      },
+      "ok": true
+    },
+    "fresh_user": {
+      "targetCounts": {
+        "active": 0,
+        "pendingSettle": 0,
+        "claimable": 0
+      },
+      "ok": true
+    }
+  }
+}
