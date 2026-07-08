@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "runId": "2026-07-07T23-50-14-611Z-nibqef",
+  "eventCounts": {
+    "tick-start": 3,
+    "candidate": 13,
+    "stream-health-hold": 2,
+    "quote-intent": 12,
+    "risk-verdict": 12,
+    "submit": 18,
+    "quote-competitiveness": 18,
+    "fill": 3,
+    "soft-cancel": 15,
+    "kill": 1
+  },
+  "streamHealthHoldEvents": [
+    {
+      "ts": "2026-07-07T23:50:19.403Z",
+      "runId": "2026-07-07T23-50-14-611Z-nibqef",
+      "kind": "stream-health-hold",
+      "state": "entered",
+      "severity": "high",
+      "exposureWei6": "242000"
+    },
+    {
+      "ts": "2026-07-07T23:50:49.973Z",
+      "runId": "2026-07-07T23-50-14-611Z-nibqef",
+      "kind": "stream-health-hold",
+      "state": "cleared",
+      "severity": null,
+      "exposureWei6": null
+    }
+  ],
+  "fillCount": 3,
+  "canonicalFillSource": "own-state-stream",
+  "badOwnStateEvents": [],
+  "OwnerPositionStatusForUnknownPositionEvents": [],
+  "badOwnStateCounts": {
+    "unknown-own-fill": 0,
+    "owner-mapping-failed": 0,
+    "divergence": 0,
+    "OwnerPositionStatusForUnknownPosition": 0
+  }
+}

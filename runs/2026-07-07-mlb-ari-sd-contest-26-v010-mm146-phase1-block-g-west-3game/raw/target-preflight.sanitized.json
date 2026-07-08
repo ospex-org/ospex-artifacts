@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "sourceRunId": "20260707T232101Z-mve-phase1-block-g-west-3game",
+  "selectedTarget": {
+    "label": "A_ARI_SD",
+    "gameId": "0a8828ee-719d-4fb5-9954-ffd73e40b70e",
+    "slug": "ari-sd-2026-07-08",
+    "sport": "mlb",
+    "awayTeam": "Arizona Diamondbacks",
+    "homeTeam": "San Diego Padres",
+    "matchTime": "2026-07-08T01:40:00+00:00",
+    "contestId": "26",
+    "market": "moneyline",
+    "speculationId": "66",
+    "speculations": [
+      {
+        "contestId": "26",
+        "speculationId": "66",
+        "type": "moneyline",
+        "kind": "quote_ready",
+        "recommendedAction": "quote",
+        "inContestAllowList": true
+      },
+      {
+        "contestId": "26",
+        "speculationId": "67",
+        "type": "spread",
+        "kind": "quote_ready",
+        "recommendedAction": "quote",
+        "inContestAllowList": true
+      },
+      {
+        "contestId": "26",
+        "speculationId": "68",
+        "type": "total",
+        "kind": "quote_ready",
+        "recommendedAction": "quote",
+        "inContestAllowList": true
+      }
+    ],
+    "referenceOdds": {
+      "moneyline": {
+        "market": "moneyline",
+        "awayOddsAmerican": 105,
+        "homeOddsAmerican": -117
+      },
+      "spread": {
+        "market": "spread",
+        "awayLine": 1.5,
+        "homeLine": -1.5,
+        "awayOddsAmerican": -196,
+        "homeOddsAmerican": 168
+      },
+      "total": {
+        "market": "total",
+        "line": 9,
+        "overOddsAmerican": -110,
+        "underOddsAmerican": -110
+      }
+    }
+  },
+  "allTargets": [
+    {
+      "label": "A_ARI_SD",
+      "gameId": "0a8828ee-719d-4fb5-9954-ffd73e40b70e",
+      "slug": "ari-sd-2026-07-08",
+      "sport": "mlb",
+      "awayTeam": "Arizona Diamondbacks",
+      "homeTeam": "San Diego Padres",
+      "matchTime": "2026-07-08T01:40:00+00:00",
+      "contestId": "26",
+      "contestStatus": "verified",
+      "statusAtPreflight": "upcoming",
+      "speculations": [
+        {
+          "contestId": "26",
+          "speculationId": "66",
+          "type": "moneyline",
+          "kind": "quote_ready",
+          "recommendedAction": "quote",
+          "inContestAllowList": true
+        },
+        {
+          "contestId": "26",
+          "speculationId": "67",
+          "type": "spread",
+          "kind": "quote_ready",
+          "recommendedAction": "quote",
+          "inContestAllowList": true
+        },
+        {
+          "contestId": "26",
+          "speculationId": "68",
+          "type": "total",
+          "kind": "quote_ready",
+          "recommendedAction": "quote",
+          "inContestAllowList": true
+        }
+      ],
+      "referenceOdds": {
+        "moneyline": {
+          "market": "moneyline",
+          "awayOddsAmerican": 105,
+          "homeOddsAmerican": -117
+        },
+        "spread": {
+          "market": "spread",
+          "awayLine": 1.5,
+          "homeLine": -1.5,
+          "awayOddsAmerican": -196,
+          "homeOddsAmerican": 168
+        },
+        "total": {
+          "market": "total",
+          "line": 9,
+          "overOddsAmerican": -110,
+          "underOddsAmerican": -110
+        }
+      }
+    },
+    {
+      "label": "B_TOR_SF",
+      "gameId": "37b00083-b36a-4767-8ee4-49c2ba21ab66",
+      "slug": "tor-sf-2026-07-08-0145",
+      "sport": "mlb",
+      "awayTeam": "Toronto Blue Jays",
+      "homeTeam": "San Francisco Giants",
+      "matchTime": "2026-07-08T01:45:00+00:00",
+      "contestId": "27",
+      "contestStatus": "verified",
+      "statusAtPreflight": "upcoming",
+      "speculations": [
+        {
+          "contestId": "27",
+          "speculationId": "69",
+          "type": "moneyline",
+          "kind": "quote_ready",
+          "recommendedAction": "quote",
+          "inContestAllowList": true
+        },
+        {
+          "contestId": "27",
+          "speculationId": "70",
+          "type": "spread",
+          "kind": "quote_ready",
+          "recommendedAction": "quote",
+          "inContestAllowList": true
+        },
+        {
+          "contestId": "27",
+          "speculationId": "71",
+          "type": "total",
+          "kind": "quote_ready",
+          "recommendedAction": "quote",
+          "inContestAllowList": true
+        }
+      ],
+      "referenceOdds": {
+        "moneyline": {
+          "market": "moneyline",
+          "awayOddsAmerican": -114,
+          "homeOddsAmerican": 100
+        },
+        "spread": {
+          "market": "spread",
+          "awayLine": -1.5,
+          "homeLine": 1.5,
+          "awayOddsAmerican": 145,
+          "homeOddsAmerican": -170
+        },
+        "total": {
+          "market": "total",
+          "line": 8,
+          "overOddsAmerican": -105,
+          "underOddsAmerican": -115
+        }
+      }
+    },
+    {
+      "label": "C_COL_LAD",
+      "gameId": "23d307e5-8e02-4872-9e80-a4d24d928bcc",
+      "slug": "col-lad-2026-07-08",
+      "sport": "mlb",
+      "awayTeam": "Colorado Rockies",
+      "homeTeam": "Los Angeles Dodgers",
+      "matchTime": "2026-07-08T02:10:00+00:00",
+      "contestId": "28",
+      "contestStatus": "verified",
+      "statusAtPreflight": "upcoming",
+      "speculations": [
+        {
+          "contestId": "28",
+          "speculationId": "72",
+          "type": "moneyline",
+          "kind": "quote_ready",
+          "recommendedAction": "quote",
+          "inContestAllowList": true
+        },
+        {
+          "contestId": "28",
+          "speculationId": "73",
+          "type": "spread",
+          "kind": "quote_ready",
+          "recommendedAction": "quote",
+          "inContestAllowList": true
+        },
+        {
+          "contestId": "28",
+          "speculationId": "74",
+          "type": "total",
+          "kind": "quote_ready",
+          "recommendedAction": "quote",
+          "inContestAllowList": true
+        }
+      ],
+      "referenceOdds": {
+        "moneyline": {
+          "market": "moneyline",
+          "awayOddsAmerican": 256,
+          "homeOddsAmerican": -309
+        },
+        "spread": {
+          "market": "spread",
+          "awayLine": 1.5,
+          "homeLine": -1.5,
+          "awayOddsAmerican": 130,
+          "homeOddsAmerican": -150
+        },
+        "total": {
+          "market": "total",
+          "line": 9.5,
+          "overOddsAmerican": -105,
+          "underOddsAmerican": -115
+        }
+      }
+    }
+  ],
+  "allowlist": [
+    "26",
+    "27",
+    "28"
+  ],
+  "perMarketSkippedRows": {},
+  "quoteReadyRows": 9,
+  "offAllowlist": []
+}

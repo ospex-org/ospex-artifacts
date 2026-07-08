@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "wallets": {
+    "stage-maker-a": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "doctorExit": 1,
+      "authExit": 0,
+      "unlockSucceeded": true,
+      "expectedAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "passwordFilePermissions": {
+        "checked": true,
+        "platformSkipped": false,
+        "octal": "600",
+        "loose": false
+      },
+      "balances": {
+        "native": {
+          "raw": "17670721590640004085",
+          "formatted": "17.670721",
+          "decimals": 18,
+          "symbol": "POL"
+        },
+        "usdc": {
+          "raw": "2301310",
+          "formatted": "2.30131",
+          "decimals": 6,
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+        }
+      },
+      "allowances": {
+        "usdcPositionModule": {
+          "raw": "1758400",
+          "formatted": "1.7584",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "usdcTreasuryModule": {
+          "raw": "250000",
+          "formatted": "0.25",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      }
+    },
+    "stage-maker-b": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "doctorExit": 1,
+      "authExit": 0,
+      "unlockSucceeded": true,
+      "expectedAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "passwordFilePermissions": {
+        "checked": true,
+        "platformSkipped": false,
+        "octal": "600",
+        "loose": false
+      },
+      "balances": {
+        "native": {
+          "raw": "4273803014093496577",
+          "formatted": "4.273803",
+          "decimals": 18,
+          "symbol": "POL"
+        },
+        "usdc": {
+          "raw": "1564001",
+          "formatted": "1.564001",
+          "decimals": 6,
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+        }
+      },
+      "allowances": {
+        "usdcPositionModule": {
+          "raw": "610000",
+          "formatted": "0.61",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "usdcTreasuryModule": {
+          "raw": "250000",
+          "formatted": "0.25",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      }
+    },
+    "flow-a": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "doctorExit": 1,
+      "authExit": 0,
+      "unlockSucceeded": true,
+      "expectedAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "passwordFilePermissions": {
+        "checked": true,
+        "platformSkipped": false,
+        "octal": "600",
+        "loose": false
+      },
+      "balances": {
+        "native": {
+          "raw": "2779949789216058308",
+          "formatted": "2.779949",
+          "decimals": 18,
+          "symbol": "POL"
+        },
+        "usdc": {
+          "raw": "1251313",
+          "formatted": "1.251313",
+          "decimals": 6,
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+        }
+      },
+      "allowances": {
+        "usdcPositionModule": {
+          "raw": "750000",
+          "formatted": "0.75",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "usdcTreasuryModule": {
+          "raw": "250000",
+          "formatted": "0.25",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      }
+    },
+    "fresh-user": {
+      "address": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+      "balances": {
+        "native": {
+          "raw": "17551717390675321064",
+          "formatted": "17.551717",
+          "decimals": 18,
+          "symbol": "POL"
+        },
+        "usdc": {
+          "raw": "19257",
+          "formatted": "0.019257",
+          "decimals": 6,
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+        }
+      },
+      "allowances": {
+        "usdcPositionModule": {
+          "raw": "49281",
+          "formatted": "0.049281",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "usdcTreasuryModule": {
+          "raw": "0",
+          "formatted": "0",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      }
+    }
+  },
+  "redactions": [
+    "keystore paths omitted",
+    "password-file paths omitted",
+    "challenge signatures omitted"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "finalOpenCommitmentsByContest": {
+    "A_ARI_SD": 0,
+    "B_TOR_SF": 0,
+    "C_COL_LAD": 0
+  },
+  "orderbookCountsBySpec": {
+    "A_ARI_SD": {
+      "66": 0,
+      "67": 0,
+      "68": 0
+    },
+    "B_TOR_SF": {
+      "69": 0,
+      "70": 0,
+      "71": 0
+    },
+    "C_COL_LAD": {
+      "72": 0,
+      "73": 0,
+      "74": 0
+    }
+  }
+}

@@ -1,13 +1,24 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-07-07T21:15:08Z",
+  "generatedAt": "2026-07-08T06:03:10Z",
   "repository": "ospex-org/ospex-artifacts",
   "archive": {
     "scope": "year",
     "year": 2026
   },
   "artifacts": [
+    {
+      "artifactId": "2026-07-07-mlb-ari-sd-contest-26-v010-mm146-phase1-block-g-west-3game",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-07-mlb-ari-sd-contest-26-v010-mm146-phase1-block-g-west-3game/evidence.json",
+      "date": "2026-07-07",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-07-mlb-ari-sd-contest-26-v010-mm146-phase1-block-g-west-3game/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-07-07-mlb-ari-sd-contest-26-v010-mm146-phase1-block-g-west-3game/summary.md",
+      "publishedAt": "2026-07-08T06:02:24Z"
+    },
     {
       "artifactId": "2026-07-07-mlb-mil-stl-contest-21-v010-mm146-phase1-block-e",
       "artifactType": "run",

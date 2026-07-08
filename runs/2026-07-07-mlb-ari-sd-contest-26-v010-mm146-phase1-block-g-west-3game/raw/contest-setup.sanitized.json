@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 1,
+  "contestCreates": {
+    "A": {
+      "wallet": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "warnings": [],
+      "errors": [],
+      "effects": [
+        {
+          "type": "transaction",
+          "purpose": "create-contest",
+          "ok": true,
+          "txHash": "0xcd09c2ed70f1e47ba146b6629a514f1818db3d578b0989dda66dc6f20498d662",
+          "blockNumber": "89841188",
+          "status": "confirmed"
+        }
+      ],
+      "contestIds": [
+        "26",
+        "26"
+      ],
+      "txHashes": [
+        "0xcd09c2ed70f1e47ba146b6629a514f1818db3d578b0989dda66dc6f20498d662",
+        "0xcd09c2ed70f1e47ba146b6629a514f1818db3d578b0989dda66dc6f20498d662"
+      ]
+    },
+    "B": {
+      "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "warnings": [],
+      "errors": [],
+      "effects": [
+        {
+          "type": "transaction",
+          "purpose": "create-contest",
+          "ok": true,
+          "txHash": "0x5fe57a8f9e5698e52b0929a52cedf9a469adbf548c04459eb9640cecaf593b5f",
+          "blockNumber": "89841202",
+          "status": "confirmed"
+        }
+      ],
+      "contestIds": [
+        "27",
+        "27"
+      ],
+      "txHashes": [
+        "0x5fe57a8f9e5698e52b0929a52cedf9a469adbf548c04459eb9640cecaf593b5f",
+        "0x5fe57a8f9e5698e52b0929a52cedf9a469adbf548c04459eb9640cecaf593b5f"
+      ]
+    },
+    "C": {
+      "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "warnings": [],
+      "errors": [],
+      "effects": [
+        {
+          "type": "transaction",
+          "purpose": "create-contest",
+          "ok": true,
+          "txHash": "0x805ca2e32348004dbf989ada378e45bae5ba655c748e2b4c68113f7b8a3720fa",
+          "blockNumber": "89841216",
+          "status": "confirmed"
+        }
+      ],
+      "contestIds": [
+        "28",
+        "28"
+      ],
+      "txHashes": [
+        "0x805ca2e32348004dbf989ada378e45bae5ba655c748e2b4c68113f7b8a3720fa",
+        "0x805ca2e32348004dbf989ada378e45bae5ba655c748e2b4c68113f7b8a3720fa"
+      ]
+    }
+  },
+  "marketUpdates": {
+    "A": {
+      "contestId": "26",
+      "updateEffects": [
+        {
+          "type": "transaction",
+          "purpose": "market-update-contest",
+          "ok": true,
+          "txHash": "0xbd9adc63d669f2dcf43ead59ef4636577d2d53dc721ac632eb1361b1c061c9a4",
+          "blockNumber": "89841254",
+          "status": "confirmed"
+        }
+      ],
+      "odds": {
+        "moneyline": {
+          "market": "moneyline",
+          "awayOddsAmerican": 105,
+          "homeOddsAmerican": -117,
+          "upstreamLastUpdated": "2026-07-07T23:22:21+00:00",
+          "pollCapturedAt": "2026-07-07T23:27:51.605+00:00",
+          "changedAt": "2026-07-07T21:34:49.074+00:00"
+        },
+        "spread": {
+          "market": "spread",
+          "awayLine": 1.5,
+          "homeLine": -1.5,
+          "awayOddsAmerican": -196,
+          "homeOddsAmerican": 168,
+          "upstreamLastUpdated": "2026-07-07T23:22:21+00:00",
+          "pollCapturedAt": "2026-07-07T23:27:51.658+00:00",
+          "changedAt": "2026-07-07T20:44:48.004+00:00"
+        },
+        "total": {
+          "market": "total",
+          "line": 9,
+          "overOddsAmerican": -110,
+          "underOddsAmerican": -110,
+          "upstreamLastUpdated": "2026-07-07T23:22:21+00:00",
+          "pollCapturedAt": "2026-07-07T23:27:51.718+00:00",
+          "changedAt": "2026-07-07T23:19:51.861+00:00"
+        }
+      },
+      "contest": {
+        "contestId": "26",
+        "awayTeam": "Arizona Diamondbacks",
+        "homeTeam": "San Diego Padres",
+        "sport": "mlb",
+        "matchTime": "2026-07-08T01:40:00+00:00",
+        "jsonoddsId": "0a8828ee-719d-4fb5-9954-ffd73e40b70e"
+      }
+    },
+    "B": {
+      "contestId": "27",
+      "updateEffects": [
+        {
+          "type": "transaction",
+          "purpose": "market-update-contest",
+          "ok": true,
+          "txHash": "0xb62bf9994514c682f597daa6ce3fe43b88044095ccf16d1ad40e1f84b089de70",
+          "blockNumber": "89841257",
+          "status": "confirmed"
+        }
+      ],
+      "odds": {
+        "moneyline": {
+          "market": "moneyline",
+          "awayOddsAmerican": -114,
+          "homeOddsAmerican": 100,
+          "upstreamLastUpdated": "2026-07-07T23:22:21+00:00",
+          "pollCapturedAt": "2026-07-07T23:27:51.799+00:00",
+          "changedAt": "2026-07-07T23:04:52.101+00:00"
+        },
+        "spread": {
+          "market": "spread",
+          "awayLine": -1.5,
+          "homeLine": 1.5,
+          "awayOddsAmerican": 145,
+          "homeOddsAmerican": -170,
+          "upstreamLastUpdated": "2026-07-07T23:22:21+00:00",
+          "pollCapturedAt": "2026-07-07T23:27:51.88+00:00",
+          "changedAt": "2026-07-07T20:14:47.155+00:00"
+        },
+        "total": {
+          "market": "total",
+          "line": 8,
+          "overOddsAmerican": -105,
+          "underOddsAmerican": -115,
+          "upstreamLastUpdated": "2026-07-07T23:22:21+00:00",
+          "pollCapturedAt": "2026-07-07T23:27:51.967+00:00",
+          "changedAt": "2026-07-07T18:04:41.857+00:00"
+        }
+      },
+      "contest": {
+        "contestId": "27",
+        "awayTeam": "Toronto Blue Jays",
+        "homeTeam": "San Francisco Giants",
+        "sport": "mlb",
+        "matchTime": "2026-07-08T01:45:00+00:00",
+        "jsonoddsId": "37b00083-b36a-4767-8ee4-49c2ba21ab66"
+      }
+    },
+    "C": {
+      "contestId": "28",
+      "updateEffects": [
+        {
+          "type": "transaction",
+          "purpose": "market-update-contest",
+          "ok": true,
+          "txHash": "0xc680fde8d0f5e19b433251562b35819fa6f148371eb1417960b04adaf25ff219",
+          "blockNumber": "89841261",
+          "status": "confirmed"
+        }
+      ],
+      "odds": {
+        "moneyline": {
+          "market": "moneyline",
+          "awayOddsAmerican": 242,
+          "homeOddsAmerican": -290,
+          "upstreamLastUpdated": "2026-07-07T23:22:21+00:00",
+          "pollCapturedAt": "2026-07-07T23:27:52.091+00:00",
+          "changedAt": "2026-07-07T22:59:52.112+00:00"
+        },
+        "spread": {
+          "market": "spread",
+          "awayLine": 1.5,
+          "homeLine": -1.5,
+          "awayOddsAmerican": 120,
+          "homeOddsAmerican": -140,
+          "upstreamLastUpdated": "2026-07-07T23:22:21+00:00",
+          "pollCapturedAt": "2026-07-07T23:27:52.176+00:00",
+          "changedAt": "2026-07-07T18:29:42.7+00:00"
+        },
+        "total": {
+          "market": "total",
+          "line": 9.5,
+          "overOddsAmerican": -110,
+          "underOddsAmerican": -110,
+          "upstreamLastUpdated": "2026-07-07T23:22:21+00:00",
+          "pollCapturedAt": "2026-07-07T23:27:52.249+00:00",
+          "changedAt": "2026-07-07T13:44:31.459+00:00"
+        }
+      },
+      "contest": {
+        "contestId": "28",
+        "awayTeam": "Colorado Rockies",
+        "homeTeam": "Los Angeles Dodgers",
+        "sport": "mlb",
+        "matchTime": "2026-07-08T02:10:00+00:00",
+        "jsonoddsId": "23d307e5-8e02-4872-9e80-a4d24d928bcc"
+      }
+    }
+  },
+  "speculationsByContestMarket": {
+    "A": {
+      "contestId": "26",
+      "attempt": 1,
+      "specCount": 3,
+      "openCommitmentCount": 0,
+      "speculationsByMarket": {
+        "moneyline": {
+          "speculationId": "66",
+          "line": 0,
+          "status": null
+        },
+        "spread": {
+          "speculationId": "67",
+          "line": 1.5,
+          "status": null
+        },
+        "total": {
+          "speculationId": "68",
+          "line": 9,
+          "status": null
+        }
+      }
+    },
+    "B": {
+      "contestId": "27",
+      "attempt": 1,
+      "specCount": 3,
+      "openCommitmentCount": 0,
+      "speculationsByMarket": {
+        "moneyline": {
+          "speculationId": "69",
+          "line": 0,
+          "status": null
+        },
+        "spread": {
+          "speculationId": "70",
+          "line": -1.5,
+          "status": null
+        },
+        "total": {
+          "speculationId": "71",
+          "line": 8,
+          "status": null
+        }
+      }
+    },
+    "C": {
+      "contestId": "28",
+      "attempt": 1,
+      "specCount": 3,
+      "openCommitmentCount": 0,
+      "speculationsByMarket": {
+        "moneyline": {
+          "speculationId": "72",
+          "line": 0,
+          "status": null
+        },
+        "spread": {
+          "speculationId": "73",
+          "line": 1.5,
+          "status": null
+        },
+        "total": {
+          "speculationId": "74",
+          "line": 9.5,
+          "status": null
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,539 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "2026-07-07-mlb-ari-sd-contest-26-v010-mm146-phase1-block-g-west-3game",
+  "generatedAt": "2026-07-08T06:02:24Z",
+  "runClass": "mm-live-canary",
+  "verdict": {
+    "label": "FULL_GREEN",
+    "protocolVerdict": "MVE_PHASE1_BLOCK_G_GREEN_WITH_CAVEATS",
+    "reason": "Block G west three-game Phase 1 run completed setup, live, and postgame lifecycle with caveats: contests 26, 27, and 28 were created/verified; moneyline/spread/total speculations 66-74 were seeded; candidates and dry-run passed with strict allowlist [26,27,28]; the first live attempt posted no quotes because risk refused at the 0.24/0.15 USDC bankroll exposure ceiling; risk caps were reduced to 0.001 USDC per quote and 0.285 USDC sport/team before retry; the retry posted 18 tiny live quotes and controlled fills landed on A moneyline, B spread, and C total; stream-health holds entered and cleared before quote posting; OwnerPositionStatusForUnknownPosition/bad own-state counts were zero; open commitments ended at zero for contests 26-28; official final scores were verified; score requests/callbacks, settlement events for specs 66-74, and claim txs completed; final target wallets active/pendingSettle/claimable counts were zero."
+  },
+  "capabilities": [
+    {
+      "id": "target-preflight",
+      "capability": "Target preflight and allowlist",
+      "proof": "proven_live",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "notes": "A/B/C target games, contests 26-28, and specs 66-74 passed allowlist, odds, status, and quote-ready gates."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "capability": "Repo/runtime gates",
+      "proof": "proven_live",
+      "evidence": "raw/release-runtime-matrix.sanitized.json",
+      "notes": "SDK/CLI v0.10.0, MM head 6f3ccc1, MM internal SDK v0.9.0, and ancillary repo heads were recorded."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "capability": "Wallet auth, balances, allowances",
+      "proof": "proven_live",
+      "evidence": "raw/wallet-auth-balance-allowances.sanitized.json",
+      "notes": "Expected-address/auth checks and public balances/allowances were captured; secret paths/signatures were omitted."
+    },
+    {
+      "id": "bounded-approvals",
+      "capability": "Bounded approvals / no unlimited approvals",
+      "proof": "proven_live",
+      "evidence": "raw/bounded-approvals.sanitized.json",
+      "notes": "Only bounded USDC approvals were used; no unlimited approval was recorded."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "capability": "Dry-run quote loop",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/mm-dryrun-summary.sanitized.json",
+      "notes": "Dry run wouldSubmitCount=18 across nine contest/market pairs with strict allowlist [26,27,28], seedSpeculations=false, no bad events."
+    },
+    {
+      "id": "live-commitments-posted",
+      "capability": "Live commitments posted",
+      "proof": "proven_live",
+      "evidence": "raw/live-public-commitments-posted.sanitized.json",
+      "notes": "Retry live run posted 18 tiny live quotes across moneyline, spread, and total for contests 26-28."
+    },
+    {
+      "id": "live-fill",
+      "capability": "Controlled live fill",
+      "proof": "proven_live",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "Controlled fills landed on A moneyline, B spread, and C total; primary binding is A moneyline contest 26/spec 66."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "capability": "Own-state SSE canonical fill source",
+      "proof": "proven_live",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "Telemetry recorded three own-state-stream fill events; bad own-state and OwnerPositionStatusForUnknownPosition counts were zero."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "capability": "Exposure drained to zero",
+      "proof": "proven_live",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "Final open commitments are zero and final target wallet active/pending/claimable counts are zero."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "capability": "Restart/cold-start safety",
+      "proof": "not_applicable",
+      "notes": "Block G did not include a separate scratch cold-start probe; zero-open and no-orphan process checks were captured."
+    },
+    {
+      "id": "postgame-score",
+      "capability": "Postgame score",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Official finals were verified and score request/callback evidence exists for contests 26-28."
+    },
+    {
+      "id": "postgame-settle",
+      "capability": "Postgame settle",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "SPECULATION_SETTLED events exist for specs 66-74."
+    },
+    {
+      "id": "postgame-claim",
+      "capability": "Postgame claim/no-op",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Winning positions were claimed; final target wallet counts are zero."
+    },
+    {
+      "id": "cost-within-cap",
+      "capability": "Cost within cap",
+      "proof": "proven_live",
+      "evidence": "raw/tx-receipts.summary.json",
+      "notes": "Budget forecast total fees plus controlled risk envelope was 7.73 USDC, within 25 USDC target and 35 USDC hard stop."
+    }
+  ],
+  "zeroExposure": {
+    "checkedAtUtc": "2026-07-08T04:55:34.755951Z",
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "orphanProcessCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json"
+  },
+  "transactions": [
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded treasuryModule approval for flow-a",
+      "status": "success",
+      "txHash": "0xa69b301735236a590d6b44acd413506b84527f4e6dcef63a4eddcd5b76bb3adb",
+      "blockNumber": "89841162"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded positionModule approval for fresh-user",
+      "status": "success",
+      "txHash": "0xb5bf9ee82794e5cd5770497910d365702128dedcd3e2082361fe6c8954b068ca",
+      "blockNumber": "89841152"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded treasuryModule approval for fresh-user",
+      "status": "success",
+      "txHash": "0x88a85f4bd670a2ec80c28a218956352d9a394b1e0362d74cf31691e26bc44119",
+      "blockNumber": "89841153"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded treasuryModule approval for stage-maker-a",
+      "status": "success",
+      "txHash": "0x32425af5b3b264c83ff36e4e8a1ecd67bec99598ad37d023159bf06bb1b2e604",
+      "blockNumber": "89841159"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded treasuryModule approval for stage-maker-b",
+      "status": "success",
+      "txHash": "0x458c8956240f8bd94337ef8b4d5341037c59f9911fbdb19db09c5a88dafe3310",
+      "blockNumber": "89841156"
+    },
+    {
+      "category": "create-contest",
+      "operatorControlled": true,
+      "purpose": "Create contest 26 for A_ARI_SD",
+      "status": "success",
+      "txHash": "0xcd09c2ed70f1e47ba146b6629a514f1818db3d578b0989dda66dc6f20498d662"
+    },
+    {
+      "category": "create-contest",
+      "operatorControlled": true,
+      "purpose": "Create contest 27 for B_TOR_SF",
+      "status": "success",
+      "txHash": "0x5fe57a8f9e5698e52b0929a52cedf9a469adbf548c04459eb9640cecaf593b5f"
+    },
+    {
+      "category": "create-contest",
+      "operatorControlled": true,
+      "purpose": "Create contest 28 for C_COL_LAD",
+      "status": "success",
+      "txHash": "0x805ca2e32348004dbf989ada378e45bae5ba655c748e2b4c68113f7b8a3720fa"
+    },
+    {
+      "category": "other",
+      "operatorControlled": true,
+      "purpose": "Request market update for contest 26 (A_ARI_SD)",
+      "status": "success",
+      "txHash": "0xbd9adc63d669f2dcf43ead59ef4636577d2d53dc721ac632eb1361b1c061c9a4",
+      "blockNumber": "89841254"
+    },
+    {
+      "category": "other",
+      "operatorControlled": true,
+      "purpose": "Request market update for contest 27 (B_TOR_SF)",
+      "status": "success",
+      "txHash": "0xb62bf9994514c682f597daa6ce3fe43b88044095ccf16d1ad40e1f84b089de70",
+      "blockNumber": "89841257"
+    },
+    {
+      "category": "other",
+      "operatorControlled": true,
+      "purpose": "Request market update for contest 28 (C_COL_LAD)",
+      "status": "success",
+      "txHash": "0xc680fde8d0f5e19b433251562b35819fa6f148371eb1417960b04adaf25ff219",
+      "blockNumber": "89841261"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual moneyline seed for contest 26",
+      "status": "success",
+      "txHash": "0x8b8a64dded39ee035b0c85bf7824c4c4a430633bf544cb62b699bfb20da1852f",
+      "blockNumber": "89841317"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual spread seed for contest 26",
+      "status": "success",
+      "txHash": "0x8ba7d0d9f93ec6308ed53f00bde30b1d7a52028aa2be1e7392904115ec6b5096",
+      "blockNumber": "89841325"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual total seed for contest 26",
+      "status": "success",
+      "txHash": "0x7e9200b554168654340948d2107cc8c66df6a60f6bf219a23f2e82fc995f9e5a",
+      "blockNumber": "89841334"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual moneyline seed for contest 27",
+      "status": "success",
+      "txHash": "0x0e4fd91f8fb65bb27abeeeec15d0ab0ea82bb7cd904347d9a25ce1de27d4103a",
+      "blockNumber": "89841343"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual spread seed for contest 27",
+      "status": "success",
+      "txHash": "0xfffeeb3b32293b155c828353d27278dfb4a0ecbafe73bc4653a66b5e620574e5",
+      "blockNumber": "89841352"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual total seed for contest 27",
+      "status": "success",
+      "txHash": "0x19fa971c08c93df6d2b38728bc6f63d8895d4e953d2da448dee873c0b3f105f6",
+      "blockNumber": "89841361"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual moneyline seed for contest 28",
+      "status": "success",
+      "txHash": "0x2a8e554935f998fe09a24952322746984a2c60a1cda84aeeb287d8ff6b72a868",
+      "blockNumber": "89841369"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual spread seed for contest 28",
+      "status": "success",
+      "txHash": "0x32d2dfcef67115ee32b19c06a9d52af70ec80b0975113582c63cc84f31679982",
+      "blockNumber": "89841377"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual total seed for contest 28",
+      "status": "success",
+      "txHash": "0x46a6c17d7d3f6c6d8b0ccd46ab2f5747ebb9ac23173d193667236a5577766d87",
+      "blockNumber": "89841385"
+    },
+    {
+      "category": "match-commitment",
+      "operatorControlled": true,
+      "purpose": "Controlled fill against live MM moneyline quote for A_ARI_SD speculation 66",
+      "status": "success",
+      "txHash": "0xd6548da7751e7c493cb2bc258f7a9e16b3479bc383144143b5fc129e4c9d5e6a"
+    },
+    {
+      "category": "match-commitment",
+      "operatorControlled": true,
+      "purpose": "Controlled fill against live MM spread quote for B_TOR_SF speculation 70",
+      "status": "success",
+      "txHash": "0xf7421f6d3ffe2c9d4df39a65982b38232b65959fa3e5acfc3e5f4b63444ea6c1"
+    },
+    {
+      "category": "match-commitment",
+      "operatorControlled": true,
+      "purpose": "Controlled fill against live MM total quote for C_COL_LAD speculation 74",
+      "status": "success",
+      "txHash": "0x2d8a3304129b7a93abc2f92481dfc0b8a7e6b08b888f44721474247764415905"
+    },
+    {
+      "category": "score-request",
+      "operatorControlled": true,
+      "purpose": "Request R5/CRE score for contest 26",
+      "status": "success",
+      "txHash": "0xc5b0e796843ee90565c02e43c9c40ba4ff66c3c818314b277c1da440f6a00238",
+      "blockNumber": "89853810",
+      "blockTime": "2026-07-08T04:41:50Z"
+    },
+    {
+      "category": "score-callback",
+      "operatorControlled": false,
+      "purpose": "R5/CRE score callback set scores for contest 26",
+      "status": "success",
+      "txHash": "0xece6c045cd6581ebe25e4f0b19c97a124bd169e4943fa923f8b4861be6ba06ca",
+      "blockNumber": "89853820",
+      "blockTime": "2026-07-08T04:42:05Z"
+    },
+    {
+      "category": "score-request",
+      "operatorControlled": true,
+      "purpose": "Request R5/CRE score for contest 27",
+      "status": "success",
+      "txHash": "0xdbbc10202e240852b15a3eb04247fd43b14ccd3ee117432ad3bd08c79b107896",
+      "blockNumber": "89853824",
+      "blockTime": "2026-07-08T04:42:11Z"
+    },
+    {
+      "category": "score-callback",
+      "operatorControlled": false,
+      "purpose": "R5/CRE score callback set scores for contest 27",
+      "status": "success",
+      "txHash": "0x46cc586bf55339b3ff845efebc502c1bf5dc39828d0be2e616cdf3e6c1374d45",
+      "blockNumber": "89853834",
+      "blockTime": "2026-07-08T04:42:26Z"
+    },
+    {
+      "category": "score-request",
+      "operatorControlled": true,
+      "purpose": "Request R5/CRE score for contest 28",
+      "status": "success",
+      "txHash": "0x1d7d10f8c7b479d43c93dd8a7d94ad74d50115abbc3ef526fdc5c49325172bcd",
+      "blockNumber": "89853839",
+      "blockTime": "2026-07-08T04:42:34Z"
+    },
+    {
+      "category": "score-request",
+      "operatorControlled": true,
+      "purpose": "Request R5/CRE score for contest 28",
+      "status": "success",
+      "txHash": "0x13ace809622ffd37da9e14ea6a9bfafd28e3ef413d52dd9f437d9b1d98846e39",
+      "blockNumber": "89853920",
+      "blockTime": "2026-07-08T04:44:35Z"
+    },
+    {
+      "category": "score-callback",
+      "operatorControlled": false,
+      "purpose": "R5/CRE score callback set scores for contest 28",
+      "status": "success",
+      "txHash": "0x75e306af0131020506a2834c64df9e6ec82fd3926c8a0983a1e398e672ab2a4b",
+      "blockNumber": "89853931",
+      "blockTime": "2026-07-08T04:44:52Z"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 66",
+      "status": "success",
+      "txHash": "0x63799eab581b35599039dcd80829b4aea09ae711b6c6c3ed8f840d96efce8e90",
+      "blockNumber": "89853934",
+      "blockTime": "2026-07-08T04:44:56Z"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 67",
+      "status": "success",
+      "txHash": "0xbe18a670da6613f32cfb5457f2a41b9e9e072de7d3aedb06f98c86b4ef501eb0",
+      "blockNumber": "89853937",
+      "blockTime": "2026-07-08T04:45:01Z"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 68",
+      "status": "success",
+      "txHash": "0xdac8fe2bc2cfc21b7181e0d6c53deb19c9fea17dbb796d86cd40843cd03eee12",
+      "blockNumber": "89853940",
+      "blockTime": "2026-07-08T04:45:05Z"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 69",
+      "status": "success",
+      "txHash": "0xeb5367145a23fc32be82c60fca475ff74762e92759150fd94ea309a26eb89efa",
+      "blockNumber": "89853943",
+      "blockTime": "2026-07-08T04:45:10Z"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 70",
+      "status": "success",
+      "txHash": "0x371e5120f66d9e83e64984f28bf876d5d61ff5791f3bcc898d184f25e4e6e366",
+      "blockNumber": "89853946",
+      "blockTime": "2026-07-08T04:45:14Z"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 71",
+      "status": "success",
+      "txHash": "0xf8ace55a50cf61af4695bbe9e658a3e20df2d0794f40a37177f839e241ac82c4",
+      "blockNumber": "89853949",
+      "blockTime": "2026-07-08T04:45:19Z"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 72",
+      "status": "success",
+      "txHash": "0x5ed3721f44fbda706a70cf793027c7f3511b1652bb4874894441a01e6cc2d7dd",
+      "blockNumber": "89853952",
+      "blockTime": "2026-07-08T04:45:23Z"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 73",
+      "status": "success",
+      "txHash": "0x6263b8aa98bf1d646c57d85e3169f553dc14a457e0c5048f38bc38243bacb9ab",
+      "blockNumber": "89853955",
+      "blockTime": "2026-07-08T04:45:28Z"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 74",
+      "status": "success",
+      "txHash": "0x1df20d04d3aee8081c330dd90b5587ba57c944d70ac69d1633a3d7100bfefd64",
+      "blockNumber": "89853958",
+      "blockTime": "2026-07-08T04:45:32Z"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 68 side under for wallet 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "status": "success",
+      "txHash": "0x1333102efebd5f0bd037fc4c1b90764b69efbce16bc53056c038e8d27cb73de7",
+      "blockNumber": "89853981"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 72 side away for wallet 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "status": "success",
+      "txHash": "0xdd6ef96e2716a26a7a62799a9a8b9efa63a0e1234e1cfed4343668f871acbc51",
+      "blockNumber": "89853978"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 73 side away for wallet 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "status": "success",
+      "txHash": "0x1c48134e10e751049be57e49c2ec1b89383a75cf04d894977947d82159c03bbf",
+      "blockNumber": "89853976"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 66 side home for wallet 0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "status": "success",
+      "txHash": "0x9dda2e48fc48d9c10f9347d36d397b5542a9a53008eff19c2782d02c11444c6b",
+      "blockNumber": "89853993"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 67 side home for wallet 0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "status": "success",
+      "txHash": "0x9d0d92e739240c18eba26d3368f8c88b0cea508686e54895d9450e974ae3f046",
+      "blockNumber": "89853988"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 74 side under for wallet 0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "status": "success",
+      "txHash": "0xe87a59243a10629a7c809c1ed601a513f611a43982f4b7283934e7c1409353ef",
+      "blockNumber": "89853985"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 70 side away for wallet 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "status": "success",
+      "txHash": "0x5e2b60360d69ba01443994bd905360933e24f0322ead775e023f863fabcedc48",
+      "blockNumber": "89853962"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 71 side over for wallet 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "status": "success",
+      "txHash": "0xdbe62b75f6c11bf8998e07fe4a7ea98107103abd2506af657d835bef99a034db",
+      "blockNumber": "89854219"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 66 side home for wallet 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "status": "success",
+      "txHash": "0x3f1f2e738187e3db61e47c4e7e8ee68ab3c00c0c0bc2bf01e4a63a7434f4d303",
+      "blockNumber": "89853966"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 69 side away for wallet 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "status": "success",
+      "txHash": "0xd28c3d0d93ca486e2a3f0c7aee77549c5a9e60b9856d19a0cb4960c29ba73cd5",
+      "blockNumber": "89853972"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 70 side away for wallet 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "status": "success",
+      "txHash": "0x82a9ad2102cd90b24bba4c402078e56c9af3eb2ad785d254a4a229669b9f477d",
+      "blockNumber": "89853969"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 74 side under for wallet 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "status": "success",
+      "txHash": "0x51df7ff46006016879908621912e2a4cf1162cfdea1d62015622082f71b0e7c5",
+      "blockNumber": "89854224"
+    }
+  ]
+}

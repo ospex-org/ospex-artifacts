@@ -1,0 +1,862 @@
+{
+  "schemaVersion": 1,
+  "transactions": [
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded treasuryModule approval for flow-a",
+      "status": "success",
+      "txHash": "0xa69b301735236a590d6b44acd413506b84527f4e6dcef63a4eddcd5b76bb3adb",
+      "blockNumber": "89841162"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded positionModule approval for fresh-user",
+      "status": "success",
+      "txHash": "0xb5bf9ee82794e5cd5770497910d365702128dedcd3e2082361fe6c8954b068ca",
+      "blockNumber": "89841152"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded treasuryModule approval for fresh-user",
+      "status": "success",
+      "txHash": "0x88a85f4bd670a2ec80c28a218956352d9a394b1e0362d74cf31691e26bc44119",
+      "blockNumber": "89841153"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded treasuryModule approval for stage-maker-a",
+      "status": "success",
+      "txHash": "0x32425af5b3b264c83ff36e4e8a1ecd67bec99598ad37d023159bf06bb1b2e604",
+      "blockNumber": "89841159"
+    },
+    {
+      "category": "approve",
+      "operatorControlled": true,
+      "purpose": "Bounded treasuryModule approval for stage-maker-b",
+      "status": "success",
+      "txHash": "0x458c8956240f8bd94337ef8b4d5341037c59f9911fbdb19db09c5a88dafe3310",
+      "blockNumber": "89841156"
+    },
+    {
+      "category": "create-contest",
+      "operatorControlled": true,
+      "purpose": "Create contest 26 for A_ARI_SD",
+      "status": "success",
+      "txHash": "0xcd09c2ed70f1e47ba146b6629a514f1818db3d578b0989dda66dc6f20498d662"
+    },
+    {
+      "category": "create-contest",
+      "operatorControlled": true,
+      "purpose": "Create contest 27 for B_TOR_SF",
+      "status": "success",
+      "txHash": "0x5fe57a8f9e5698e52b0929a52cedf9a469adbf548c04459eb9640cecaf593b5f"
+    },
+    {
+      "category": "create-contest",
+      "operatorControlled": true,
+      "purpose": "Create contest 28 for C_COL_LAD",
+      "status": "success",
+      "txHash": "0x805ca2e32348004dbf989ada378e45bae5ba655c748e2b4c68113f7b8a3720fa"
+    },
+    {
+      "category": "other",
+      "operatorControlled": true,
+      "purpose": "Request market update for contest 26 (A_ARI_SD)",
+      "status": "success",
+      "txHash": "0xbd9adc63d669f2dcf43ead59ef4636577d2d53dc721ac632eb1361b1c061c9a4",
+      "blockNumber": "89841254"
+    },
+    {
+      "category": "other",
+      "operatorControlled": true,
+      "purpose": "Request market update for contest 27 (B_TOR_SF)",
+      "status": "success",
+      "txHash": "0xb62bf9994514c682f597daa6ce3fe43b88044095ccf16d1ad40e1f84b089de70",
+      "blockNumber": "89841257"
+    },
+    {
+      "category": "other",
+      "operatorControlled": true,
+      "purpose": "Request market update for contest 28 (C_COL_LAD)",
+      "status": "success",
+      "txHash": "0xc680fde8d0f5e19b433251562b35819fa6f148371eb1417960b04adaf25ff219",
+      "blockNumber": "89841261"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual moneyline seed for contest 26",
+      "status": "success",
+      "txHash": "0x8b8a64dded39ee035b0c85bf7824c4c4a430633bf544cb62b699bfb20da1852f",
+      "blockNumber": "89841317"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual spread seed for contest 26",
+      "status": "success",
+      "txHash": "0x8ba7d0d9f93ec6308ed53f00bde30b1d7a52028aa2be1e7392904115ec6b5096",
+      "blockNumber": "89841325"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual total seed for contest 26",
+      "status": "success",
+      "txHash": "0x7e9200b554168654340948d2107cc8c66df6a60f6bf219a23f2e82fc995f9e5a",
+      "blockNumber": "89841334"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual moneyline seed for contest 27",
+      "status": "success",
+      "txHash": "0x0e4fd91f8fb65bb27abeeeec15d0ab0ea82bb7cd904347d9a25ce1de27d4103a",
+      "blockNumber": "89841343"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual spread seed for contest 27",
+      "status": "success",
+      "txHash": "0xfffeeb3b32293b155c828353d27278dfb4a0ecbafe73bc4653a66b5e620574e5",
+      "blockNumber": "89841352"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual total seed for contest 27",
+      "status": "success",
+      "txHash": "0x19fa971c08c93df6d2b38728bc6f63d8895d4e953d2da448dee873c0b3f105f6",
+      "blockNumber": "89841361"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual moneyline seed for contest 28",
+      "status": "success",
+      "txHash": "0x2a8e554935f998fe09a24952322746984a2c60a1cda84aeeb287d8ff6b72a868",
+      "blockNumber": "89841369"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual spread seed for contest 28",
+      "status": "success",
+      "txHash": "0x32d2dfcef67115ee32b19c06a9d52af70ec80b0975113582c63cc84f31679982",
+      "blockNumber": "89841377"
+    },
+    {
+      "category": "seed-match",
+      "operatorControlled": true,
+      "purpose": "Fully match tiny manual total seed for contest 28",
+      "status": "success",
+      "txHash": "0x46a6c17d7d3f6c6d8b0ccd46ab2f5747ebb9ac23173d193667236a5577766d87",
+      "blockNumber": "89841385"
+    },
+    {
+      "category": "match-commitment",
+      "operatorControlled": true,
+      "purpose": "Controlled fill against live MM moneyline quote for A_ARI_SD speculation 66",
+      "status": "success",
+      "txHash": "0xd6548da7751e7c493cb2bc258f7a9e16b3479bc383144143b5fc129e4c9d5e6a"
+    },
+    {
+      "category": "match-commitment",
+      "operatorControlled": true,
+      "purpose": "Controlled fill against live MM spread quote for B_TOR_SF speculation 70",
+      "status": "success",
+      "txHash": "0xf7421f6d3ffe2c9d4df39a65982b38232b65959fa3e5acfc3e5f4b63444ea6c1"
+    },
+    {
+      "category": "match-commitment",
+      "operatorControlled": true,
+      "purpose": "Controlled fill against live MM total quote for C_COL_LAD speculation 74",
+      "status": "success",
+      "txHash": "0x2d8a3304129b7a93abc2f92481dfc0b8a7e6b08b888f44721474247764415905"
+    },
+    {
+      "category": "score-request",
+      "operatorControlled": true,
+      "purpose": "Request R5/CRE score for contest 26",
+      "status": "success",
+      "txHash": "0xc5b0e796843ee90565c02e43c9c40ba4ff66c3c818314b277c1da440f6a00238",
+      "blockNumber": "89853810",
+      "blockTime": "2026-07-08T04:41:50Z"
+    },
+    {
+      "category": "score-callback",
+      "operatorControlled": false,
+      "purpose": "R5/CRE score callback set scores for contest 26",
+      "status": "success",
+      "txHash": "0xece6c045cd6581ebe25e4f0b19c97a124bd169e4943fa923f8b4861be6ba06ca",
+      "blockNumber": "89853820",
+      "blockTime": "2026-07-08T04:42:05Z"
+    },
+    {
+      "category": "score-request",
+      "operatorControlled": true,
+      "purpose": "Request R5/CRE score for contest 27",
+      "status": "success",
+      "txHash": "0xdbbc10202e240852b15a3eb04247fd43b14ccd3ee117432ad3bd08c79b107896",
+      "blockNumber": "89853824",
+      "blockTime": "2026-07-08T04:42:11Z"
+    },
+    {
+      "category": "score-callback",
+      "operatorControlled": false,
+      "purpose": "R5/CRE score callback set scores for contest 27",
+      "status": "success",
+      "txHash": "0x46cc586bf55339b3ff845efebc502c1bf5dc39828d0be2e616cdf3e6c1374d45",
+      "blockNumber": "89853834",
+      "blockTime": "2026-07-08T04:42:26Z"
+    },
+    {
+      "category": "score-request",
+      "operatorControlled": true,
+      "purpose": "Request R5/CRE score for contest 28",
+      "status": "success",
+      "txHash": "0x1d7d10f8c7b479d43c93dd8a7d94ad74d50115abbc3ef526fdc5c49325172bcd",
+      "blockNumber": "89853839",
+      "blockTime": "2026-07-08T04:42:34Z"
+    },
+    {
+      "category": "score-request",
+      "operatorControlled": true,
+      "purpose": "Request R5/CRE score for contest 28",
+      "status": "success",
+      "txHash": "0x13ace809622ffd37da9e14ea6a9bfafd28e3ef413d52dd9f437d9b1d98846e39",
+      "blockNumber": "89853920",
+      "blockTime": "2026-07-08T04:44:35Z"
+    },
+    {
+      "category": "score-callback",
+      "operatorControlled": false,
+      "purpose": "R5/CRE score callback set scores for contest 28",
+      "status": "success",
+      "txHash": "0x75e306af0131020506a2834c64df9e6ec82fd3926c8a0983a1e398e672ab2a4b",
+      "blockNumber": "89853931",
+      "blockTime": "2026-07-08T04:44:52Z"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 66",
+      "status": "success",
+      "txHash": "0x63799eab581b35599039dcd80829b4aea09ae711b6c6c3ed8f840d96efce8e90",
+      "blockNumber": "89853934",
+      "blockTime": "2026-07-08T04:44:56Z"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 67",
+      "status": "success",
+      "txHash": "0xbe18a670da6613f32cfb5457f2a41b9e9e072de7d3aedb06f98c86b4ef501eb0",
+      "blockNumber": "89853937",
+      "blockTime": "2026-07-08T04:45:01Z"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 68",
+      "status": "success",
+      "txHash": "0xdac8fe2bc2cfc21b7181e0d6c53deb19c9fea17dbb796d86cd40843cd03eee12",
+      "blockNumber": "89853940",
+      "blockTime": "2026-07-08T04:45:05Z"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 69",
+      "status": "success",
+      "txHash": "0xeb5367145a23fc32be82c60fca475ff74762e92759150fd94ea309a26eb89efa",
+      "blockNumber": "89853943",
+      "blockTime": "2026-07-08T04:45:10Z"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 70",
+      "status": "success",
+      "txHash": "0x371e5120f66d9e83e64984f28bf876d5d61ff5791f3bcc898d184f25e4e6e366",
+      "blockNumber": "89853946",
+      "blockTime": "2026-07-08T04:45:14Z"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 71",
+      "status": "success",
+      "txHash": "0xf8ace55a50cf61af4695bbe9e658a3e20df2d0794f40a37177f839e241ac82c4",
+      "blockNumber": "89853949",
+      "blockTime": "2026-07-08T04:45:19Z"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 72",
+      "status": "success",
+      "txHash": "0x5ed3721f44fbda706a70cf793027c7f3511b1652bb4874894441a01e6cc2d7dd",
+      "blockNumber": "89853952",
+      "blockTime": "2026-07-08T04:45:23Z"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 73",
+      "status": "success",
+      "txHash": "0x6263b8aa98bf1d646c57d85e3169f553dc14a457e0c5048f38bc38243bacb9ab",
+      "blockNumber": "89853955",
+      "blockTime": "2026-07-08T04:45:28Z"
+    },
+    {
+      "category": "settle",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 74",
+      "status": "success",
+      "txHash": "0x1df20d04d3aee8081c330dd90b5587ba57c944d70ac69d1633a3d7100bfefd64",
+      "blockNumber": "89853958",
+      "blockTime": "2026-07-08T04:45:32Z"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 68 side under for wallet 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "status": "success",
+      "txHash": "0x1333102efebd5f0bd037fc4c1b90764b69efbce16bc53056c038e8d27cb73de7",
+      "blockNumber": "89853981"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 72 side away for wallet 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "status": "success",
+      "txHash": "0xdd6ef96e2716a26a7a62799a9a8b9efa63a0e1234e1cfed4343668f871acbc51",
+      "blockNumber": "89853978"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 73 side away for wallet 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "status": "success",
+      "txHash": "0x1c48134e10e751049be57e49c2ec1b89383a75cf04d894977947d82159c03bbf",
+      "blockNumber": "89853976"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 66 side home for wallet 0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "status": "success",
+      "txHash": "0x9dda2e48fc48d9c10f9347d36d397b5542a9a53008eff19c2782d02c11444c6b",
+      "blockNumber": "89853993"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 67 side home for wallet 0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "status": "success",
+      "txHash": "0x9d0d92e739240c18eba26d3368f8c88b0cea508686e54895d9450e974ae3f046",
+      "blockNumber": "89853988"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 74 side under for wallet 0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+      "status": "success",
+      "txHash": "0xe87a59243a10629a7c809c1ed601a513f611a43982f4b7283934e7c1409353ef",
+      "blockNumber": "89853985"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 70 side away for wallet 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "status": "success",
+      "txHash": "0x5e2b60360d69ba01443994bd905360933e24f0322ead775e023f863fabcedc48",
+      "blockNumber": "89853962"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 71 side over for wallet 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "status": "success",
+      "txHash": "0xdbe62b75f6c11bf8998e07fe4a7ea98107103abd2506af657d835bef99a034db",
+      "blockNumber": "89854219"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 66 side home for wallet 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "status": "success",
+      "txHash": "0x3f1f2e738187e3db61e47c4e7e8ee68ab3c00c0c0bc2bf01e4a63a7434f4d303",
+      "blockNumber": "89853966"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 69 side away for wallet 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "status": "success",
+      "txHash": "0xd28c3d0d93ca486e2a3f0c7aee77549c5a9e60b9856d19a0cb4960c29ba73cd5",
+      "blockNumber": "89853972"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 70 side away for wallet 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "status": "success",
+      "txHash": "0x82a9ad2102cd90b24bba4c402078e56c9af3eb2ad785d254a4a229669b9f477d",
+      "blockNumber": "89853969"
+    },
+    {
+      "category": "claim",
+      "operatorControlled": true,
+      "purpose": "Claim speculation 74 side under for wallet 0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "status": "success",
+      "txHash": "0x51df7ff46006016879908621912e2a4cf1162cfdea1d62015622082f71b0e7c5",
+      "blockNumber": "89854224"
+    }
+  ],
+  "scoreEvents": [
+    {
+      "blockTime": "2026-07-08T04:41:50Z",
+      "blockNumber": "89853810",
+      "txHash": "0xc5b0e796843ee90565c02e43c9c40ba4ff66c3c818314b277c1da440f6a00238",
+      "eventName": "ORACLE_REQUESTED",
+      "entityType": "oracle",
+      "entityId": "26",
+      "payload": {
+        "contestId": "26",
+        "rundownId": "ede8ea232881d3523b14e182f49a29d2",
+        "jsonoddsId": "0a8828ee-719d-4fb5-9954-ffd73e40b70e",
+        "requestType": "2",
+        "requestNonce": "0",
+        "sportspageId": "337366"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:42:05Z",
+      "blockNumber": "89853820",
+      "txHash": "0xece6c045cd6581ebe25e4f0b19c97a124bd169e4943fa923f8b4861be6ba06ca",
+      "eventName": "CONTEST_SCORES_SET",
+      "entityType": "contest",
+      "entityId": "26",
+      "payload": {
+        "awayScore": "1",
+        "contestId": "26",
+        "homeScore": "4"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:42:05Z",
+      "blockNumber": "89853820",
+      "txHash": "0xece6c045cd6581ebe25e4f0b19c97a124bd169e4943fa923f8b4861be6ba06ca",
+      "eventName": "ORACLE_REPORT_PROCESSED",
+      "entityType": "contest",
+      "entityId": "26",
+      "payload": {
+        "contestId": "26",
+        "reportKey": "0x36264bd0830ad84f5c69b188b6a159e8a98659df5c95ba14accf9e17afcb1ee9",
+        "requestType": "2",
+        "requestNonce": "0",
+        "workflowVersion": "1"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:42:11Z",
+      "blockNumber": "89853824",
+      "txHash": "0xdbbc10202e240852b15a3eb04247fd43b14ccd3ee117432ad3bd08c79b107896",
+      "eventName": "ORACLE_REQUESTED",
+      "entityType": "oracle",
+      "entityId": "27",
+      "payload": {
+        "contestId": "27",
+        "rundownId": "0574fa661ea69aa8d209e5d24f6f19a4",
+        "jsonoddsId": "37b00083-b36a-4767-8ee4-49c2ba21ab66",
+        "requestType": "2",
+        "requestNonce": "0",
+        "sportspageId": "337368"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:42:26Z",
+      "blockNumber": "89853834",
+      "txHash": "0x46cc586bf55339b3ff845efebc502c1bf5dc39828d0be2e616cdf3e6c1374d45",
+      "eventName": "CONTEST_SCORES_SET",
+      "entityType": "contest",
+      "entityId": "27",
+      "payload": {
+        "awayScore": "9",
+        "contestId": "27",
+        "homeScore": "3"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:42:26Z",
+      "blockNumber": "89853834",
+      "txHash": "0x46cc586bf55339b3ff845efebc502c1bf5dc39828d0be2e616cdf3e6c1374d45",
+      "eventName": "ORACLE_REPORT_PROCESSED",
+      "entityType": "contest",
+      "entityId": "27",
+      "payload": {
+        "contestId": "27",
+        "reportKey": "0x3484ab86d8ed819e2240d7aab9edcaf8bbc5a2fbe77250e5b608d1a6707661ad",
+        "requestType": "2",
+        "requestNonce": "0",
+        "workflowVersion": "1"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:42:34Z",
+      "blockNumber": "89853839",
+      "txHash": "0x1d7d10f8c7b479d43c93dd8a7d94ad74d50115abbc3ef526fdc5c49325172bcd",
+      "eventName": "ORACLE_REQUESTED",
+      "entityType": "oracle",
+      "entityId": "28",
+      "payload": {
+        "contestId": "28",
+        "rundownId": "3300b02c051082a54e566c168e47a0b4",
+        "jsonoddsId": "23d307e5-8e02-4872-9e80-a4d24d928bcc",
+        "requestType": "2",
+        "requestNonce": "0",
+        "sportspageId": "337346"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:44:35Z",
+      "blockNumber": "89853920",
+      "txHash": "0x13ace809622ffd37da9e14ea6a9bfafd28e3ef413d52dd9f437d9b1d98846e39",
+      "eventName": "ORACLE_REQUESTED",
+      "entityType": "oracle",
+      "entityId": "28",
+      "payload": {
+        "contestId": "28",
+        "rundownId": "3300b02c051082a54e566c168e47a0b4",
+        "jsonoddsId": "23d307e5-8e02-4872-9e80-a4d24d928bcc",
+        "requestType": "2",
+        "requestNonce": "0",
+        "sportspageId": "337346"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:44:52Z",
+      "blockNumber": "89853931",
+      "txHash": "0x75e306af0131020506a2834c64df9e6ec82fd3926c8a0983a1e398e672ab2a4b",
+      "eventName": "CONTEST_SCORES_SET",
+      "entityType": "contest",
+      "entityId": "28",
+      "payload": {
+        "awayScore": "4",
+        "contestId": "28",
+        "homeScore": "3"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:44:52Z",
+      "blockNumber": "89853931",
+      "txHash": "0x75e306af0131020506a2834c64df9e6ec82fd3926c8a0983a1e398e672ab2a4b",
+      "eventName": "ORACLE_REPORT_PROCESSED",
+      "entityType": "contest",
+      "entityId": "28",
+      "payload": {
+        "contestId": "28",
+        "reportKey": "0x034d7a3495cacc0c963fe5c963f515ade7c2c62027b85e53a5a2482b69b6b71b",
+        "requestType": "2",
+        "requestNonce": "0",
+        "workflowVersion": "1"
+      }
+    }
+  ],
+  "settleEvents": [
+    {
+      "blockTime": "2026-07-08T04:44:56Z",
+      "blockNumber": "89853934",
+      "txHash": "0x63799eab581b35599039dcd80829b4aea09ae711b6c6c3ed8f840d96efce8e90",
+      "eventName": "SPECULATION_SETTLED",
+      "entityType": "speculation",
+      "entityId": "66",
+      "payload": {
+        "scorer": "0x59555106D4B5f1A797f3552f60ac418Eb6B6f6BD",
+        "winSideValue": "2",
+        "speculationId": "66"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:45:01Z",
+      "blockNumber": "89853937",
+      "txHash": "0xbe18a670da6613f32cfb5457f2a41b9e9e072de7d3aedb06f98c86b4ef501eb0",
+      "eventName": "SPECULATION_SETTLED",
+      "entityType": "speculation",
+      "entityId": "67",
+      "payload": {
+        "scorer": "0x8f293da716164d5A32dc087A85e5164D929ae9D4",
+        "winSideValue": "2",
+        "speculationId": "67"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:45:05Z",
+      "blockNumber": "89853940",
+      "txHash": "0xdac8fe2bc2cfc21b7181e0d6c53deb19c9fea17dbb796d86cd40843cd03eee12",
+      "eventName": "SPECULATION_SETTLED",
+      "entityType": "speculation",
+      "entityId": "68",
+      "payload": {
+        "scorer": "0xB4B1E2A2a75C34e9E4C5D3BB8A432aff973DaDa0",
+        "winSideValue": "4",
+        "speculationId": "68"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:45:10Z",
+      "blockNumber": "89853943",
+      "txHash": "0xeb5367145a23fc32be82c60fca475ff74762e92759150fd94ea309a26eb89efa",
+      "eventName": "SPECULATION_SETTLED",
+      "entityType": "speculation",
+      "entityId": "69",
+      "payload": {
+        "scorer": "0x59555106D4B5f1A797f3552f60ac418Eb6B6f6BD",
+        "winSideValue": "1",
+        "speculationId": "69"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:45:14Z",
+      "blockNumber": "89853946",
+      "txHash": "0x371e5120f66d9e83e64984f28bf876d5d61ff5791f3bcc898d184f25e4e6e366",
+      "eventName": "SPECULATION_SETTLED",
+      "entityType": "speculation",
+      "entityId": "70",
+      "payload": {
+        "scorer": "0x8f293da716164d5A32dc087A85e5164D929ae9D4",
+        "winSideValue": "1",
+        "speculationId": "70"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:45:19Z",
+      "blockNumber": "89853949",
+      "txHash": "0xf8ace55a50cf61af4695bbe9e658a3e20df2d0794f40a37177f839e241ac82c4",
+      "eventName": "SPECULATION_SETTLED",
+      "entityType": "speculation",
+      "entityId": "71",
+      "payload": {
+        "scorer": "0xB4B1E2A2a75C34e9E4C5D3BB8A432aff973DaDa0",
+        "winSideValue": "3",
+        "speculationId": "71"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:45:23Z",
+      "blockNumber": "89853952",
+      "txHash": "0x5ed3721f44fbda706a70cf793027c7f3511b1652bb4874894441a01e6cc2d7dd",
+      "eventName": "SPECULATION_SETTLED",
+      "entityType": "speculation",
+      "entityId": "72",
+      "payload": {
+        "scorer": "0x59555106D4B5f1A797f3552f60ac418Eb6B6f6BD",
+        "winSideValue": "1",
+        "speculationId": "72"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:45:28Z",
+      "blockNumber": "89853955",
+      "txHash": "0x6263b8aa98bf1d646c57d85e3169f553dc14a457e0c5048f38bc38243bacb9ab",
+      "eventName": "SPECULATION_SETTLED",
+      "entityType": "speculation",
+      "entityId": "73",
+      "payload": {
+        "scorer": "0x8f293da716164d5A32dc087A85e5164D929ae9D4",
+        "winSideValue": "1",
+        "speculationId": "73"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:45:32Z",
+      "blockNumber": "89853958",
+      "txHash": "0x1df20d04d3aee8081c330dd90b5587ba57c944d70ac69d1633a3d7100bfefd64",
+      "eventName": "SPECULATION_SETTLED",
+      "entityType": "speculation",
+      "entityId": "74",
+      "payload": {
+        "scorer": "0xB4B1E2A2a75C34e9E4C5D3BB8A432aff973DaDa0",
+        "winSideValue": "4",
+        "speculationId": "74"
+      }
+    }
+  ],
+  "claimEvents": [
+    {
+      "blockTime": "2026-07-08T04:45:38Z",
+      "blockNumber": "89853962",
+      "txHash": "0x5e2b60360d69ba01443994bd905360933e24f0322ead775e023f863fabcedc48",
+      "eventName": "POSITION_CLAIMED",
+      "entityType": "position",
+      "entityId": "70",
+      "payload": {
+        "user": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+        "payout": "1566",
+        "positionType": "0",
+        "speculationId": "70"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:45:44Z",
+      "blockNumber": "89853966",
+      "txHash": "0x3f1f2e738187e3db61e47c4e7e8ee68ab3c00c0c0bc2bf01e4a63a7434f4d303",
+      "eventName": "POSITION_CLAIMED",
+      "entityType": "position",
+      "entityId": "66",
+      "payload": {
+        "user": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+        "payout": "1720",
+        "positionType": "1",
+        "speculationId": "66"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:45:49Z",
+      "blockNumber": "89853969",
+      "txHash": "0x82a9ad2102cd90b24bba4c402078e56c9af3eb2ad785d254a4a229669b9f477d",
+      "eventName": "POSITION_CLAIMED",
+      "entityType": "position",
+      "entityId": "70",
+      "payload": {
+        "user": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+        "payout": "245",
+        "positionType": "0",
+        "speculationId": "70"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:45:53Z",
+      "blockNumber": "89853972",
+      "txHash": "0xd28c3d0d93ca486e2a3f0c7aee77549c5a9e60b9856d19a0cb4960c29ba73cd5",
+      "eventName": "POSITION_CLAIMED",
+      "entityType": "position",
+      "entityId": "69",
+      "payload": {
+        "user": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+        "payout": "188",
+        "positionType": "0",
+        "speculationId": "69"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:45:59Z",
+      "blockNumber": "89853976",
+      "txHash": "0x1c48134e10e751049be57e49c2ec1b89383a75cf04d894977947d82159c03bbf",
+      "eventName": "POSITION_CLAIMED",
+      "entityType": "position",
+      "entityId": "73",
+      "payload": {
+        "user": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+        "payout": "171",
+        "positionType": "0",
+        "speculationId": "73"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:46:02Z",
+      "blockNumber": "89853978",
+      "txHash": "0xdd6ef96e2716a26a7a62799a9a8b9efa63a0e1234e1cfed4343668f871acbc51",
+      "eventName": "POSITION_CLAIMED",
+      "entityType": "position",
+      "entityId": "72",
+      "payload": {
+        "user": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+        "payout": "134",
+        "positionType": "0",
+        "speculationId": "72"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:46:07Z",
+      "blockNumber": "89853981",
+      "txHash": "0x1333102efebd5f0bd037fc4c1b90764b69efbce16bc53056c038e8d27cb73de7",
+      "eventName": "POSITION_CLAIMED",
+      "entityType": "position",
+      "entityId": "68",
+      "payload": {
+        "user": "0x16Dc5D67D080a5521ef2c79680dBfC2aBf724D30",
+        "payout": "191",
+        "positionType": "1",
+        "speculationId": "68"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:46:13Z",
+      "blockNumber": "89853985",
+      "txHash": "0xe87a59243a10629a7c809c1ed601a513f611a43982f4b7283934e7c1409353ef",
+      "eventName": "POSITION_CLAIMED",
+      "entityType": "position",
+      "entityId": "74",
+      "payload": {
+        "user": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+        "payout": "191",
+        "positionType": "1",
+        "speculationId": "74"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:46:17Z",
+      "blockNumber": "89853988",
+      "txHash": "0x9d0d92e739240c18eba26d3368f8c88b0cea508686e54895d9450e974ae3f046",
+      "eventName": "POSITION_CLAIMED",
+      "entityType": "position",
+      "entityId": "67",
+      "payload": {
+        "user": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+        "payout": "268",
+        "positionType": "1",
+        "speculationId": "67"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:46:25Z",
+      "blockNumber": "89853993",
+      "txHash": "0x9dda2e48fc48d9c10f9347d36d397b5542a9a53008eff19c2782d02c11444c6b",
+      "eventName": "POSITION_CLAIMED",
+      "entityType": "position",
+      "entityId": "66",
+      "payload": {
+        "user": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+        "payout": "185",
+        "positionType": "1",
+        "speculationId": "66"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:52:04Z",
+      "blockNumber": "89854219",
+      "txHash": "0xdbe62b75f6c11bf8998e07fe4a7ea98107103abd2506af657d835bef99a034db",
+      "eventName": "POSITION_CLAIMED",
+      "entityType": "position",
+      "entityId": "71",
+      "payload": {
+        "user": "0x5316fa54c170D1927F30d1a497aC9E85E3826A9B",
+        "payout": "195",
+        "positionType": "0",
+        "speculationId": "71"
+      }
+    },
+    {
+      "blockTime": "2026-07-08T04:52:11Z",
+      "blockNumber": "89854224",
+      "txHash": "0x51df7ff46006016879908621912e2a4cf1162cfdea1d62015622082f71b0e7c5",
+      "eventName": "POSITION_CLAIMED",
+      "entityType": "position",
+      "entityId": "74",
+      "payload": {
+        "user": "0x4fA0a5Aa3187517EFC320AAC7d33CD6115cC7482",
+        "payout": "1881",
+        "positionType": "1",
+        "speculationId": "74"
+      }
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "source": "MLB schedule final-status summary captured by Block G postgame harness",
+  "officialFinalStatus": {
+    "A_ARI_SD": {
+      "found": true,
+      "final": true,
+      "gamePk": 823280,
+      "gameDate": "2026-07-08T01:40:00Z",
+      "status": {
+        "abstractGameState": "Final",
+        "codedGameState": "F",
+        "detailedState": "Final",
+        "statusCode": "F",
+        "startTimeTBD": false,
+        "abstractGameCode": "F"
+      },
+      "away": "Arizona Diamondbacks",
+      "home": "San Diego Padres",
+      "awayRuns": 1,
+      "homeRuns": 4
+    },
+    "B_TOR_SF": {
+      "found": true,
+      "final": true,
+      "gamePk": 823203,
+      "gameDate": "2026-07-08T01:45:00Z",
+      "status": {
+        "abstractGameState": "Final",
+        "codedGameState": "F",
+        "detailedState": "Final",
+        "statusCode": "F",
+        "startTimeTBD": false,
+        "abstractGameCode": "F"
+      },
+      "away": "Toronto Blue Jays",
+      "home": "San Francisco Giants",
+      "awayRuns": 9,
+      "homeRuns": 3
+    },
+    "C_COL_LAD": {
+      "found": true,
+      "final": true,
+      "gamePk": 823929,
+      "gameDate": "2026-07-08T02:10:00Z",
+      "status": {
+        "abstractGameState": "Final",
+        "codedGameState": "F",
+        "detailedState": "Final",
+        "statusCode": "F",
+        "startTimeTBD": false,
+        "abstractGameCode": "F"
+      },
+      "away": "Colorado Rockies",
+      "home": "Los Angeles Dodgers",
+      "awayRuns": 4,
+      "homeRuns": 3
+    }
+  },
+  "finalContestReadbacks": {
+    "A_ARI_SD": {
+      "contestId": "26",
+      "awayTeam": "Arizona Diamondbacks",
+      "homeTeam": "San Diego Padres",
+      "sport": "mlb",
+      "matchTime": "2026-07-08T01:40:00+00:00",
+      "status": "scored",
+      "awayScore": 1,
+      "homeScore": 4,
+      "scoredAt": "2026-07-08T04:42:05+00:00",
+      "jsonoddsId": "0a8828ee-719d-4fb5-9954-ffd73e40b70e",
+      "speculations": [
+        {
+          "speculationId": "66",
+          "type": "moneyline",
+          "line": null,
+          "winSide": "home",
+          "settledAt": "2026-07-08T04:44:56+00:00",
+          "voided": false,
+          "speculationStatus": 1,
+          "orderbookCount": 0
+        },
+        {
+          "speculationId": "67",
+          "type": "spread",
+          "line": 1.5,
+          "winSide": "home",
+          "settledAt": "2026-07-08T04:45:01+00:00",
+          "voided": false,
+          "speculationStatus": 1,
+          "orderbookCount": 0
+        },
+        {
+          "speculationId": "68",
+          "type": "total",
+          "line": 9,
+          "winSide": "under",
+          "settledAt": "2026-07-08T04:45:05+00:00",
+          "voided": false,
+          "speculationStatus": 1,
+          "orderbookCount": 0
+        }
+      ]
+    },
+    "B_TOR_SF": {
+      "contestId": "27",
+      "awayTeam": "Toronto Blue Jays",
+      "homeTeam": "San Francisco Giants",
+      "sport": "mlb",
+      "matchTime": "2026-07-08T01:45:00+00:00",
+      "status": "scored",
+      "awayScore": 9,
+      "homeScore": 3,
+      "scoredAt": "2026-07-08T04:42:26+00:00",
+      "jsonoddsId": "37b00083-b36a-4767-8ee4-49c2ba21ab66",
+      "speculations": [
+        {
+          "speculationId": "69",
+          "type": "moneyline",
+          "line": null,
+          "winSide": "away",
+          "settledAt": "2026-07-08T04:45:10+00:00",
+          "voided": false,
+          "speculationStatus": 1,
+          "orderbookCount": 0
+        },
+        {
+          "speculationId": "70",
+          "type": "spread",
+          "line": -1.5,
+          "winSide": "away",
+          "settledAt": "2026-07-08T04:45:14+00:00",
+          "voided": false,
+          "speculationStatus": 1,
+          "orderbookCount": 0
+        },
+        {
+          "speculationId": "71",
+          "type": "total",
+          "line": 8,
+          "winSide": "over",
+          "settledAt": "2026-07-08T04:45:19+00:00",
+          "voided": false,
+          "speculationStatus": 1,
+          "orderbookCount": 0
+        }
+      ]
+    },
+    "C_COL_LAD": {
+      "contestId": "28",
+      "awayTeam": "Colorado Rockies",
+      "homeTeam": "Los Angeles Dodgers",
+      "sport": "mlb",
+      "matchTime": "2026-07-08T02:10:00+00:00",
+      "status": "scored",
+      "awayScore": 4,
+      "homeScore": 3,
+      "scoredAt": "2026-07-08T04:44:52+00:00",
+      "jsonoddsId": "23d307e5-8e02-4872-9e80-a4d24d928bcc",
+      "speculations": [
+        {
+          "speculationId": "72",
+          "type": "moneyline",
+          "line": null,
+          "winSide": "away",
+          "settledAt": "2026-07-08T04:45:23+00:00",
+          "voided": false,
+          "speculationStatus": 1,
+          "orderbookCount": 0
+        },
+        {
+          "speculationId": "73",
+          "type": "spread",
+          "line": 1.5,
+          "winSide": "away",
+          "settledAt": "2026-07-08T04:45:28+00:00",
+          "voided": false,
+          "speculationStatus": 1,
+          "orderbookCount": 0
+        },
+        {
+          "speculationId": "74",
+          "type": "total",
+          "line": 9.5,
+          "winSide": "under",
+          "settledAt": "2026-07-08T04:45:32+00:00",
+          "voided": false,
+          "speculationStatus": 1,
+          "orderbookCount": 0
+        }
+      ]
+    }
+  }
+}
