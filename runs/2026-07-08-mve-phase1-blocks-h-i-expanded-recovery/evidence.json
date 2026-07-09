@@ -10,7 +10,9 @@
     "block-i-setup-summary": "raw/block-i-setup-summary.json",
     "block-i-split-dry-gates": "raw/block-i-split-dry-gates.json",
     "evidence": "evidence.json",
+    "postgame-complete": "raw/postgame-complete.json",
     "postgame-last-status": "raw/postgame-last-status.json",
+    "postgame-state": "raw/postgame-state.json",
     "summary": "summary.md"
   },
   "artifactId": "2026-07-08-mve-phase1-blocks-h-i-expanded-recovery",
@@ -505,83 +507,83 @@
     },
     "postgameStatusByLabel": {
       "A": {
-        "final": false,
+        "final": true,
         "found": true,
         "gamePk": 824815,
         "linescore": {
-          "balls": 3,
-          "currentInning": 5,
-          "currentInningOrdinal": "5th",
+          "balls": 1,
+          "currentInning": 9,
+          "currentInningOrdinal": "9th",
           "defense": {
             "batter": {
-              "fullName": "Jackson Holliday",
-              "id": 702616,
-              "link": "/api/v1/people/702616"
+              "fullName": "Seiya Suzuki",
+              "id": 673548,
+              "link": "/api/v1/people/673548"
             },
-            "battingOrder": 9,
+            "battingOrder": 4,
             "catcher": {
-              "fullName": "Adley Rutschman",
-              "id": 668939,
-              "link": "/api/v1/people/668939"
+              "fullName": "Carson Kelly",
+              "id": 608348,
+              "link": "/api/v1/people/608348"
             },
             "center": {
-              "fullName": "Colton Cowser",
-              "id": 681297,
-              "link": "/api/v1/people/681297"
+              "fullName": "Pete Crow-Armstrong",
+              "id": 691718,
+              "link": "/api/v1/people/691718"
             },
             "first": {
-              "fullName": "Pete Alonso",
-              "id": 624413,
-              "link": "/api/v1/people/624413"
+              "fullName": "Michael Busch",
+              "id": 683737,
+              "link": "/api/v1/people/683737"
             },
             "inHole": {
-              "fullName": "Adley Rutschman",
-              "id": 668939,
-              "link": "/api/v1/people/668939"
+              "fullName": "Nico Hoerner",
+              "id": 663538,
+              "link": "/api/v1/people/663538"
             },
             "left": {
-              "fullName": "Taylor Ward",
-              "id": 621493,
-              "link": "/api/v1/people/621493"
+              "fullName": "Ian Happ",
+              "id": 664023,
+              "link": "/api/v1/people/664023"
             },
             "onDeck": {
-              "fullName": "Gunnar Henderson",
-              "id": 683002,
-              "link": "/api/v1/people/683002"
+              "fullName": "Ian Happ",
+              "id": 664023,
+              "link": "/api/v1/people/664023"
             },
             "pitcher": {
-              "fullName": "Dean Kremer",
-              "id": 665152,
-              "link": "/api/v1/people/665152"
+              "fullName": "Jacob Webb",
+              "id": 657097,
+              "link": "/api/v1/people/657097"
             },
             "right": {
-              "fullName": "Dylan Beavers",
-              "id": 687637,
-              "link": "/api/v1/people/687637"
+              "fullName": "Justin Dean",
+              "id": 681909,
+              "link": "/api/v1/people/681909"
             },
             "second": {
-              "fullName": "Jackson Holliday",
-              "id": 702616,
-              "link": "/api/v1/people/702616"
+              "fullName": "Nico Hoerner",
+              "id": 663538,
+              "link": "/api/v1/people/663538"
             },
             "shortstop": {
-              "fullName": "Gunnar Henderson",
-              "id": 683002,
-              "link": "/api/v1/people/683002"
+              "fullName": "Dansby Swanson",
+              "id": 621020,
+              "link": "/api/v1/people/621020"
             },
             "team": {
-              "id": 110,
-              "link": "/api/v1/teams/110",
-              "name": "Baltimore Orioles"
+              "id": 112,
+              "link": "/api/v1/teams/112",
+              "name": "Chicago Cubs"
             },
             "third": {
-              "fullName": "Blaze Alexander",
-              "id": 677942,
-              "link": "/api/v1/people/677942"
+              "fullName": "Alex Bregman",
+              "id": 608324,
+              "link": "/api/v1/people/608324"
             }
           },
-          "inningHalf": "Top",
-          "inningState": "Top",
+          "inningHalf": "Bottom",
+          "inningState": "Bottom",
           "innings": [
             {
               "away": {
@@ -656,93 +658,158 @@
               },
               "home": {
                 "errors": 0,
-                "hits": 0,
-                "leftOnBase": 0
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
               },
               "num": 5,
               "ordinalNum": "5th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 6,
+              "ordinalNum": "6th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 0,
+                "runs": 5
+              },
+              "home": {
+                "errors": 0,
+                "hits": 4,
+                "leftOnBase": 2,
+                "runs": 2
+              },
+              "num": 7,
+              "ordinalNum": "7th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "home": {
+                "errors": 1,
+                "hits": 3,
+                "leftOnBase": 1,
+                "runs": 2
+              },
+              "num": 8,
+              "ordinalNum": "8th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 9,
+              "ordinalNum": "9th"
             }
           ],
-          "isTopInning": true,
+          "isTopInning": false,
           "offense": {
             "batter": {
-              "fullName": "Alex Bregman",
-              "id": 608324,
-              "link": "/api/v1/people/608324"
+              "fullName": "Pete Alonso",
+              "id": 624413,
+              "link": "/api/v1/people/624413"
             },
-            "battingOrder": 2,
+            "battingOrder": 4,
             "inHole": {
-              "fullName": "Seiya Suzuki",
-              "id": 673548,
-              "link": "/api/v1/people/673548"
+              "fullName": "Leody Taveras",
+              "id": 665750,
+              "link": "/api/v1/people/665750"
             },
             "onDeck": {
-              "fullName": "Michael Busch",
-              "id": 683737,
-              "link": "/api/v1/people/683737"
+              "fullName": "Samuel Basallo",
+              "id": 694212,
+              "link": "/api/v1/people/694212"
             },
             "pitcher": {
-              "fullName": "Colin Rea",
-              "id": 607067,
-              "link": "/api/v1/people/607067"
+              "fullName": "Tyler Wells",
+              "id": 669330,
+              "link": "/api/v1/people/669330"
             },
             "team": {
-              "id": 112,
-              "link": "/api/v1/teams/112",
-              "name": "Chicago Cubs"
+              "id": 110,
+              "link": "/api/v1/teams/110",
+              "name": "Baltimore Orioles"
             }
           },
-          "outs": 2,
+          "outs": 3,
           "scheduledInnings": 9,
-          "strikes": 1,
+          "strikes": 2,
           "teams": {
             "away": {
               "errors": 0,
-              "hits": 6,
-              "leftOnBase": 2,
-              "runs": 4
+              "hits": 8,
+              "leftOnBase": 3,
+              "runs": 9
             },
             "home": {
-              "errors": 0,
-              "hits": 6,
-              "leftOnBase": 2,
-              "runs": 3
+              "errors": 1,
+              "hits": 14,
+              "leftOnBase": 6,
+              "runs": 7
             }
           }
         },
         "status": {
-          "abstractGameCode": "L",
-          "abstractGameState": "Live",
-          "codedGameState": "I",
-          "detailedState": "In Progress",
+          "abstractGameCode": "F",
+          "abstractGameState": "Final",
+          "codedGameState": "F",
+          "detailedState": "Final",
           "startTimeTBD": false,
-          "statusCode": "I"
+          "statusCode": "F"
         }
       },
       "B": {
-        "final": false,
+        "final": true,
         "found": true,
         "gamePk": 824253,
         "linescore": {
-          "balls": 0,
-          "currentInning": 5,
-          "currentInningOrdinal": "5th",
+          "balls": 3,
+          "currentInning": 9,
+          "currentInningOrdinal": "9th",
           "defense": {
             "batter": {
-              "fullName": "Matt Vierling",
-              "id": 663837,
-              "link": "/api/v1/people/663837"
+              "fullName": "Jake Rogers",
+              "id": 668670,
+              "link": "/api/v1/people/668670"
             },
-            "battingOrder": 10,
+            "battingOrder": 2,
             "catcher": {
               "fullName": "Jake Rogers",
               "id": 668670,
               "link": "/api/v1/people/668670"
             },
             "center": {
-              "fullName": "Matt Vierling",
-              "id": 663837,
-              "link": "/api/v1/people/663837"
+              "fullName": "James Outman",
+              "id": 681546,
+              "link": "/api/v1/people/681546"
             },
             "first": {
               "fullName": "Spencer Torkelson",
@@ -750,9 +817,9 @@
               "link": "/api/v1/people/679529"
             },
             "inHole": {
-              "fullName": "Kevin McGonigle",
-              "id": 805808,
-              "link": "/api/v1/people/805808"
+              "fullName": "Spencer Torkelson",
+              "id": 679529,
+              "link": "/api/v1/people/679529"
             },
             "left": {
               "fullName": "Riley Greene",
@@ -760,29 +827,29 @@
               "link": "/api/v1/people/682985"
             },
             "onDeck": {
-              "fullName": "Jake Rogers",
-              "id": 668670,
-              "link": "/api/v1/people/668670"
+              "fullName": "Kevin McGonigle",
+              "id": 805808,
+              "link": "/api/v1/people/805808"
             },
             "pitcher": {
-              "fullName": "Troy Melton",
-              "id": 675512,
-              "link": "/api/v1/people/675512"
+              "fullName": "Beau Brieske",
+              "id": 689225,
+              "link": "/api/v1/people/689225"
             },
             "right": {
-              "fullName": "Ben Malgeri",
-              "id": 701162,
-              "link": "/api/v1/people/701162"
+              "fullName": "Matt Vierling",
+              "id": 663837,
+              "link": "/api/v1/people/663837"
             },
             "second": {
-              "fullName": "Hao-Yu Lee",
-              "id": 701678,
-              "link": "/api/v1/people/701678"
-            },
-            "shortstop": {
               "fullName": "Zach McKinstry",
               "id": 656716,
               "link": "/api/v1/people/656716"
+            },
+            "shortstop": {
+              "fullName": "Kevin McGonigle",
+              "id": 805808,
+              "link": "/api/v1/people/805808"
             },
             "team": {
               "id": 116,
@@ -790,9 +857,9 @@
               "name": "Detroit Tigers"
             },
             "third": {
-              "fullName": "Kevin McGonigle",
-              "id": 805808,
-              "link": "/api/v1/people/805808"
+              "fullName": "Colt Keith",
+              "id": 690993,
+              "link": "/api/v1/people/690993"
             }
           },
           "inningHalf": "Top",
@@ -866,39 +933,104 @@
               "away": {
                 "errors": 0,
                 "hits": 0,
-                "leftOnBase": 0
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 3,
+                "leftOnBase": 1,
+                "runs": 3
+              },
+              "num": 5,
+              "ordinalNum": "5th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 2,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 2,
+                "runs": 0
+              },
+              "num": 6,
+              "ordinalNum": "6th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 2,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "num": 7,
+              "ordinalNum": "7th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 8,
+              "ordinalNum": "8th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
               },
               "home": {
                 "errors": 0,
                 "hits": 0,
                 "leftOnBase": 0
               },
-              "num": 5,
-              "ordinalNum": "5th"
+              "num": 9,
+              "ordinalNum": "9th"
             }
           ],
           "isTopInning": true,
           "offense": {
             "batter": {
-              "fullName": "Jeff McNeil",
-              "id": 643446,
-              "link": "/api/v1/people/643446"
+              "fullName": "Zack Gelof",
+              "id": 680869,
+              "link": "/api/v1/people/680869"
             },
-            "battingOrder": 2,
+            "battingOrder": 1,
             "inHole": {
-              "fullName": "Tyler Soderstrom",
-              "id": 691016,
-              "link": "/api/v1/people/691016"
-            },
-            "onDeck": {
               "fullName": "Shea Langeliers",
               "id": 669127,
               "link": "/api/v1/people/669127"
             },
+            "onDeck": {
+              "fullName": "Jeff McNeil",
+              "id": 643446,
+              "link": "/api/v1/people/643446"
+            },
             "pitcher": {
-              "fullName": "Jeffrey Springs",
-              "id": 605488,
-              "link": "/api/v1/people/605488"
+              "fullName": "Jos\u00e9 Suarez",
+              "id": 660761,
+              "link": "/api/v1/people/660761"
             },
             "team": {
               "id": 133,
@@ -906,48 +1038,48 @@
               "name": "Athletics"
             }
           },
-          "outs": 2,
+          "outs": 3,
           "scheduledInnings": 9,
-          "strikes": 0,
+          "strikes": 1,
           "teams": {
             "away": {
               "errors": 1,
-              "hits": 4,
-              "leftOnBase": 4,
+              "hits": 7,
+              "leftOnBase": 9,
               "runs": 1
             },
             "home": {
               "errors": 1,
-              "hits": 3,
-              "leftOnBase": 3,
-              "runs": 3
+              "hits": 7,
+              "leftOnBase": 7,
+              "runs": 6
             }
           }
         },
         "status": {
-          "abstractGameCode": "L",
-          "abstractGameState": "Live",
-          "codedGameState": "I",
-          "detailedState": "In Progress",
+          "abstractGameCode": "F",
+          "abstractGameState": "Final",
+          "codedGameState": "F",
+          "detailedState": "Final",
           "startTimeTBD": false,
-          "statusCode": "I"
+          "statusCode": "F"
         }
       },
       "C": {
-        "final": false,
+        "final": true,
         "found": true,
         "gamePk": 823360,
         "linescore": {
-          "balls": 2,
-          "currentInning": 5,
-          "currentInningOrdinal": "5th",
+          "balls": 1,
+          "currentInning": 9,
+          "currentInningOrdinal": "9th",
           "defense": {
             "batter": {
-              "fullName": "Mike Yastrzemski",
-              "id": 573262,
-              "link": "/api/v1/people/573262"
+              "fullName": "Austin Riley",
+              "id": 663586,
+              "link": "/api/v1/people/663586"
             },
-            "battingOrder": 7,
+            "battingOrder": 6,
             "catcher": {
               "fullName": "Joey Bart",
               "id": 663698,
@@ -964,9 +1096,9 @@
               "link": "/api/v1/people/621566"
             },
             "inHole": {
-              "fullName": "Jorge Mateo",
-              "id": 622761,
-              "link": "/api/v1/people/622761"
+              "fullName": "Joey Bart",
+              "id": 663698,
+              "link": "/api/v1/people/663698"
             },
             "left": {
               "fullName": "Mauricio Dub\u00f3n",
@@ -974,14 +1106,14 @@
               "link": "/api/v1/people/643289"
             },
             "onDeck": {
-              "fullName": "Joey Bart",
-              "id": 663698,
-              "link": "/api/v1/people/663698"
+              "fullName": "Mike Yastrzemski",
+              "id": 573262,
+              "link": "/api/v1/people/573262"
             },
             "pitcher": {
-              "fullName": "Grant Holmes",
-              "id": 656550,
-              "link": "/api/v1/people/656550"
+              "fullName": "Raisel Iglesias",
+              "id": 628452,
+              "link": "/api/v1/people/628452"
             },
             "right": {
               "fullName": "Mike Yastrzemski",
@@ -1086,34 +1218,99 @@
               "home": {
                 "errors": 0,
                 "hits": 0,
-                "leftOnBase": 0
+                "leftOnBase": 0,
+                "runs": 0
               },
               "num": 5,
               "ordinalNum": "5th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "num": 6,
+              "ordinalNum": "6th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 7,
+              "ordinalNum": "7th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 0,
+                "runs": 2
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 8,
+              "ordinalNum": "8th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 1,
+                "runs": 1
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "num": 9,
+              "ordinalNum": "9th"
             }
           ],
           "isTopInning": false,
           "offense": {
             "batter": {
-              "fullName": "Jake Mangum",
-              "id": 663968,
-              "link": "/api/v1/people/663968"
+              "fullName": "Marcell Ozuna",
+              "id": 542303,
+              "link": "/api/v1/people/542303"
             },
-            "battingOrder": 1,
+            "battingOrder": 7,
             "inHole": {
-              "fullName": "Bryan Reynolds",
-              "id": 668804,
-              "link": "/api/v1/people/668804"
+              "fullName": "Henry Davis",
+              "id": 680779,
+              "link": "/api/v1/people/680779"
             },
             "onDeck": {
-              "fullName": "Brandon Lowe",
-              "id": 664040,
-              "link": "/api/v1/people/664040"
+              "fullName": "Jared Triolo",
+              "id": 669707,
+              "link": "/api/v1/people/669707"
             },
             "pitcher": {
-              "fullName": "Jared Jones",
-              "id": 683003,
-              "link": "/api/v1/people/683003"
+              "fullName": "Isaac Mattson",
+              "id": 676755,
+              "link": "/api/v1/people/676755"
             },
             "team": {
               "id": 134,
@@ -1121,48 +1318,48 @@
               "name": "Pittsburgh Pirates"
             }
           },
-          "outs": 1,
+          "outs": 3,
           "scheduledInnings": 9,
-          "strikes": 2,
+          "strikes": 3,
           "teams": {
             "away": {
               "errors": 0,
-              "hits": 0,
-              "leftOnBase": 0,
-              "runs": 0
+              "hits": 5,
+              "leftOnBase": 2,
+              "runs": 3
             },
             "home": {
               "errors": 0,
-              "hits": 3,
-              "leftOnBase": 5,
+              "hits": 4,
+              "leftOnBase": 7,
               "runs": 0
             }
           }
         },
         "status": {
-          "abstractGameCode": "L",
-          "abstractGameState": "Live",
-          "codedGameState": "I",
-          "detailedState": "In Progress",
+          "abstractGameCode": "F",
+          "abstractGameState": "Final",
+          "codedGameState": "F",
+          "detailedState": "Final",
           "startTimeTBD": false,
-          "statusCode": "I"
+          "statusCode": "F"
         }
       },
       "D": {
-        "final": false,
+        "final": true,
         "found": true,
         "gamePk": 822957,
         "linescore": {
-          "balls": 0,
-          "currentInning": 6,
-          "currentInningOrdinal": "6th",
+          "balls": 2,
+          "currentInning": 9,
+          "currentInningOrdinal": "9th",
           "defense": {
             "batter": {
-              "fullName": "Jonny DeLuca",
-              "id": 676356,
-              "link": "/api/v1/people/676356"
+              "fullName": "Ben Williamson",
+              "id": 810938,
+              "link": "/api/v1/people/810938"
             },
-            "battingOrder": 5,
+            "battingOrder": 7,
             "catcher": {
               "fullName": "Nick Fortes",
               "id": 663743,
@@ -1179,9 +1376,9 @@
               "link": "/api/v1/people/666018"
             },
             "inHole": {
-              "fullName": "Ben Williamson",
-              "id": 810938,
-              "link": "/api/v1/people/810938"
+              "fullName": "Nick Fortes",
+              "id": 663743,
+              "link": "/api/v1/people/663743"
             },
             "left": {
               "fullName": "Chandler Simpson",
@@ -1189,14 +1386,14 @@
               "link": "/api/v1/people/802415"
             },
             "onDeck": {
-              "fullName": "Chandler Simpson",
-              "id": 802415,
-              "link": "/api/v1/people/802415"
+              "fullName": "Taylor Walls",
+              "id": 670764,
+              "link": "/api/v1/people/670764"
             },
             "pitcher": {
-              "fullName": "Shane McClanahan",
-              "id": 663556,
-              "link": "/api/v1/people/663556"
+              "fullName": "Bryan Baker",
+              "id": 641329,
+              "link": "/api/v1/people/641329"
             },
             "right": {
               "fullName": "Jonny DeLuca",
@@ -1310,40 +1507,89 @@
             {
               "away": {
                 "errors": 0,
+                "hits": 1,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
                 "hits": 0,
-                "leftOnBase": 0
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 6,
+              "ordinalNum": "6th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 2,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 1
+              },
+              "num": 7,
+              "ordinalNum": "7th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 8,
+              "ordinalNum": "8th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
               },
               "home": {
                 "errors": 0,
                 "hits": 0,
                 "leftOnBase": 0
               },
-              "num": 6,
-              "ordinalNum": "6th"
+              "num": 9,
+              "ordinalNum": "9th"
             }
           ],
           "isTopInning": true,
           "offense": {
             "batter": {
-              "fullName": "Jos\u00e9 Caballero",
-              "id": 676609,
-              "link": "/api/v1/people/676609"
+              "fullName": "Jasson Dom\u00ednguez",
+              "id": 691176,
+              "link": "/api/v1/people/691176"
             },
-            "battingOrder": 9,
+            "battingOrder": 5,
             "inHole": {
-              "fullName": "Ben Rice",
-              "id": 700250,
-              "link": "/api/v1/people/700250"
+              "fullName": "Trent Grisham",
+              "id": 663757,
+              "link": "/api/v1/people/663757"
             },
             "onDeck": {
-              "fullName": "Paul Goldschmidt",
-              "id": 502671,
-              "link": "/api/v1/people/502671"
+              "fullName": "Anthony Volpe",
+              "id": 683011,
+              "link": "/api/v1/people/683011"
             },
             "pitcher": {
-              "fullName": "Gerrit Cole",
-              "id": 543037,
-              "link": "/api/v1/people/543037"
+              "fullName": "Angel Chivilli",
+              "id": 683409,
+              "link": "/api/v1/people/683409"
             },
             "team": {
               "id": 147,
@@ -1351,111 +1597,111 @@
               "name": "New York Yankees"
             }
           },
-          "outs": 0,
+          "outs": 3,
           "scheduledInnings": 9,
-          "strikes": 1,
+          "strikes": 3,
           "teams": {
             "away": {
               "errors": 0,
-              "hits": 2,
-              "leftOnBase": 2,
+              "hits": 6,
+              "leftOnBase": 5,
               "runs": 0
             },
             "home": {
               "errors": 0,
-              "hits": 7,
-              "leftOnBase": 5,
-              "runs": 2
+              "hits": 8,
+              "leftOnBase": 6,
+              "runs": 3
             }
           }
         },
         "status": {
-          "abstractGameCode": "L",
-          "abstractGameState": "Live",
-          "codedGameState": "I",
-          "detailedState": "In Progress",
+          "abstractGameCode": "F",
+          "abstractGameState": "Final",
+          "codedGameState": "F",
+          "detailedState": "Final",
           "startTimeTBD": false,
-          "statusCode": "I"
+          "statusCode": "F"
         }
       },
       "E": {
-        "final": false,
+        "final": true,
         "found": true,
         "gamePk": 823848,
         "linescore": {
-          "balls": 0,
-          "currentInning": 5,
-          "currentInningOrdinal": "5th",
+          "balls": 2,
+          "currentInning": 9,
+          "currentInningOrdinal": "9th",
           "defense": {
             "batter": {
-              "fullName": "Cal Raleigh",
-              "id": 663728,
-              "link": "/api/v1/people/663728"
+              "fullName": "Kyle Stowers",
+              "id": 669065,
+              "link": "/api/v1/people/669065"
             },
             "battingOrder": 4,
             "catcher": {
-              "fullName": "Cal Raleigh",
-              "id": 663728,
-              "link": "/api/v1/people/663728"
+              "fullName": "Joe Mack",
+              "id": 691788,
+              "link": "/api/v1/people/691788"
             },
             "center": {
-              "fullName": "Victor Robles",
-              "id": 645302,
-              "link": "/api/v1/people/645302"
+              "fullName": "Jakob Marsee",
+              "id": 805300,
+              "link": "/api/v1/people/805300"
             },
             "first": {
-              "fullName": "Josh Naylor",
-              "id": 647304,
-              "link": "/api/v1/people/647304"
+              "fullName": "Kyle Stowers",
+              "id": 669065,
+              "link": "/api/v1/people/669065"
             },
             "inHole": {
-              "fullName": "Luke Raley",
-              "id": 670042,
-              "link": "/api/v1/people/670042"
+              "fullName": "Heriberto Hern\u00e1ndez",
+              "id": 681715,
+              "link": "/api/v1/people/681715"
             },
             "left": {
-              "fullName": "Randy Arozarena",
-              "id": 668227,
-              "link": "/api/v1/people/668227"
+              "fullName": "Heriberto Hern\u00e1ndez",
+              "id": 681715,
+              "link": "/api/v1/people/681715"
             },
             "onDeck": {
-              "fullName": "Josh Naylor",
-              "id": 647304,
-              "link": "/api/v1/people/647304"
+              "fullName": "Griffin Conine",
+              "id": 665052,
+              "link": "/api/v1/people/665052"
             },
             "pitcher": {
-              "fullName": "George Kirby",
-              "id": 669923,
-              "link": "/api/v1/people/669923"
+              "fullName": "Pete Fairbanks",
+              "id": 664126,
+              "link": "/api/v1/people/664126"
             },
             "right": {
-              "fullName": "Luke Raley",
-              "id": 670042,
-              "link": "/api/v1/people/670042"
+              "fullName": "Griffin Conine",
+              "id": 665052,
+              "link": "/api/v1/people/665052"
             },
             "second": {
-              "fullName": "Cole Young",
-              "id": 702284,
-              "link": "/api/v1/people/702284"
+              "fullName": "Xavier Edwards",
+              "id": 669364,
+              "link": "/api/v1/people/669364"
             },
             "shortstop": {
-              "fullName": "Colt Emerson",
-              "id": 806068,
-              "link": "/api/v1/people/806068"
+              "fullName": "Otto Lopez",
+              "id": 672640,
+              "link": "/api/v1/people/672640"
             },
             "team": {
-              "id": 136,
-              "link": "/api/v1/teams/136",
-              "name": "Seattle Mariners"
+              "id": 146,
+              "link": "/api/v1/teams/146",
+              "name": "Miami Marlins"
             },
             "third": {
-              "fullName": "J.P. Crawford",
-              "id": 641487,
-              "link": "/api/v1/people/641487"
+              "fullName": "Javier Sanoja",
+              "id": 691594,
+              "link": "/api/v1/people/691594"
             }
           },
           "inningHalf": "Top",
-          "inningState": "Middle",
+          "inningState": "Top",
           "innings": [
             {
               "away": {
@@ -1530,84 +1776,148 @@
               },
               "home": {
                 "errors": 0,
-                "hits": 0,
-                "leftOnBase": 0
+                "hits": 2,
+                "leftOnBase": 1,
+                "runs": 0
               },
               "num": 5,
               "ordinalNum": "5th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 6,
+              "ordinalNum": "6th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 7,
+              "ordinalNum": "7th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 8,
+              "ordinalNum": "8th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0
+              },
+              "num": 9,
+              "ordinalNum": "9th"
             }
           ],
           "isTopInning": true,
           "offense": {
             "batter": {
-              "fullName": "Javier Sanoja",
-              "id": 691594,
-              "link": "/api/v1/people/691594"
+              "fullName": "Cole Young",
+              "id": 702284,
+              "link": "/api/v1/people/702284"
             },
-            "battingOrder": 9,
+            "battingOrder": 7,
             "inHole": {
-              "fullName": "Otto Lopez",
-              "id": 672640,
-              "link": "/api/v1/people/672640"
+              "fullName": "Colt Emerson",
+              "id": 806068,
+              "link": "/api/v1/people/806068"
             },
             "onDeck": {
-              "fullName": "Liam Hicks",
-              "id": 689414,
-              "link": "/api/v1/people/689414"
+              "fullName": "Victor Robles",
+              "id": 645302,
+              "link": "/api/v1/people/645302"
             },
             "pitcher": {
-              "fullName": "Tyler Phillips",
-              "id": 663969,
-              "link": "/api/v1/people/663969"
+              "fullName": "Nick Davila",
+              "id": 689546,
+              "link": "/api/v1/people/689546"
             },
             "team": {
-              "id": 146,
-              "link": "/api/v1/teams/146",
-              "name": "Miami Marlins"
+              "id": 136,
+              "link": "/api/v1/teams/136",
+              "name": "Seattle Mariners"
             }
           },
           "outs": 3,
           "scheduledInnings": 9,
-          "strikes": 0,
+          "strikes": 3,
           "teams": {
             "away": {
               "errors": 0,
-              "hits": 4,
-              "leftOnBase": 6,
+              "hits": 5,
+              "leftOnBase": 7,
               "runs": 0
             },
             "home": {
               "errors": 0,
-              "hits": 6,
-              "leftOnBase": 3,
+              "hits": 8,
+              "leftOnBase": 4,
               "runs": 2
             }
           }
         },
         "status": {
-          "abstractGameCode": "L",
-          "abstractGameState": "Live",
-          "codedGameState": "I",
-          "detailedState": "In Progress",
+          "abstractGameCode": "F",
+          "abstractGameState": "Final",
+          "codedGameState": "F",
+          "detailedState": "Final",
           "startTimeTBD": false,
-          "statusCode": "I"
+          "statusCode": "F"
         }
       },
       "F": {
-        "final": false,
+        "final": true,
         "found": true,
         "gamePk": 822710,
         "linescore": {
-          "balls": 0,
-          "currentInning": 4,
-          "currentInningOrdinal": "4th",
+          "balls": 2,
+          "currentInning": 9,
+          "currentInningOrdinal": "9th",
           "defense": {
             "batter": {
-              "fullName": "CJ Abrams",
-              "id": 682928,
-              "link": "/api/v1/people/682928"
+              "fullName": "Jos\u00e9 Tena",
+              "id": 677588,
+              "link": "/api/v1/people/677588"
             },
-            "battingOrder": 4,
+            "battingOrder": 8,
             "catcher": {
               "fullName": "Keibert Ruiz",
               "id": 660688,
@@ -1624,9 +1934,9 @@
               "link": "/api/v1/people/671277"
             },
             "inHole": {
-              "fullName": "Dylan Crews",
-              "id": 686611,
-              "link": "/api/v1/people/686611"
+              "fullName": "James Wood",
+              "id": 695578,
+              "link": "/api/v1/people/695578"
             },
             "left": {
               "fullName": "Daylen Lile",
@@ -1634,14 +1944,14 @@
               "link": "/api/v1/people/695734"
             },
             "onDeck": {
-              "fullName": "Daylen Lile",
-              "id": 695734,
-              "link": "/api/v1/people/695734"
+              "fullName": "Keibert Ruiz",
+              "id": 660688,
+              "link": "/api/v1/people/660688"
             },
             "pitcher": {
-              "fullName": "Foster Griffin",
-              "id": 656492,
-              "link": "/api/v1/people/656492"
+              "fullName": "Justin Lawrence",
+              "id": 664875,
+              "link": "/api/v1/people/664875"
             },
             "right": {
               "fullName": "James Wood",
@@ -1669,8 +1979,8 @@
               "link": "/api/v1/people/678554"
             }
           },
-          "inningHalf": "Bottom",
-          "inningState": "End",
+          "inningHalf": "Top",
+          "inningState": "Top",
           "innings": [
             {
               "away": {
@@ -1735,30 +2045,109 @@
               },
               "num": 4,
               "ordinalNum": "4th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 1,
+                "runs": 1
+              },
+              "home": {
+                "errors": 0,
+                "hits": 3,
+                "leftOnBase": 1,
+                "runs": 3
+              },
+              "num": 5,
+              "ordinalNum": "5th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 2,
+                "runs": 0
+              },
+              "num": 6,
+              "ordinalNum": "6th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "num": 7,
+              "ordinalNum": "7th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 1,
+                "runs": 1
+              },
+              "home": {
+                "errors": 1,
+                "hits": 1,
+                "leftOnBase": 3,
+                "runs": 0
+              },
+              "num": 8,
+              "ordinalNum": "8th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0
+              },
+              "num": 9,
+              "ordinalNum": "9th"
             }
           ],
-          "isTopInning": false,
+          "isTopInning": true,
           "offense": {
             "batter": {
-              "fullName": "Yainer Diaz",
-              "id": 673237,
-              "link": "/api/v1/people/673237"
-            },
-            "battingOrder": 6,
-            "inHole": {
-              "fullName": "Zach Dezenzo",
-              "id": 701305,
-              "link": "/api/v1/people/701305"
-            },
-            "onDeck": {
               "fullName": "Brice Matthews",
               "id": 694728,
               "link": "/api/v1/people/694728"
             },
+            "battingOrder": 7,
+            "inHole": {
+              "fullName": "Nick Allen",
+              "id": 669397,
+              "link": "/api/v1/people/669397"
+            },
+            "onDeck": {
+              "fullName": "Zach Dezenzo",
+              "id": 701305,
+              "link": "/api/v1/people/701305"
+            },
             "pitcher": {
-              "fullName": "Spencer Arrighetti",
-              "id": 681293,
-              "link": "/api/v1/people/681293"
+              "fullName": "Cristian Javier",
+              "id": 664299,
+              "link": "/api/v1/people/664299"
             },
             "team": {
               "id": 117,
@@ -1768,29 +2157,29 @@
           },
           "outs": 3,
           "scheduledInnings": 9,
-          "strikes": 1,
+          "strikes": 2,
           "teams": {
             "away": {
               "errors": 0,
-              "hits": 2,
-              "leftOnBase": 2,
-              "runs": 0
+              "hits": 8,
+              "leftOnBase": 5,
+              "runs": 2
             },
             "home": {
-              "errors": 0,
-              "hits": 4,
-              "leftOnBase": 4,
-              "runs": 5
+              "errors": 1,
+              "hits": 9,
+              "leftOnBase": 11,
+              "runs": 8
             }
           }
         },
         "status": {
-          "abstractGameCode": "L",
-          "abstractGameState": "Live",
-          "codedGameState": "I",
-          "detailedState": "In Progress",
+          "abstractGameCode": "F",
+          "abstractGameState": "Final",
+          "codedGameState": "F",
+          "detailedState": "Final",
           "startTimeTBD": false,
-          "statusCode": "I"
+          "statusCode": "F"
         }
       }
     },
@@ -1807,31 +2196,66 @@
   },
   "dataPath": "evidence.json",
   "date": "2026-07-08",
-  "generatedAt": "2026-07-09T00:11:16Z",
+  "generatedAt": "2026-07-09T03:18:59Z",
   "network": "polygon",
   "postgame": {
-    "artifactUpdatePlan": "The guarded publisher job 525111bc1891 is scheduled to update this branch/PR after postgame zero-state is clean.",
-    "completeMarkerPresent": false,
-    "finalLabels": [
-      "H"
-    ],
-    "pendingLabels": [
-      "A",
-      "B",
-      "C",
-      "D",
-      "E",
-      "F"
-    ],
-    "state": "pending",
-    "watcherJobId": "8629ab6e6847"
+    "completedAt": "2026-07-09T03:11:44.996339Z",
+    "ok": true,
+    "state": "complete",
+    "watcherJobId": "8629ab6e6847",
+    "zeroState": {
+      "ok": true,
+      "openCommitments": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "H": 0
+      },
+      "wallets": {
+        "flow_a": {
+          "ok": true,
+          "targetCounts": {
+            "active": 0,
+            "claimable": 0,
+            "pendingSettle": 0
+          }
+        },
+        "fresh_user": {
+          "ok": true,
+          "targetCounts": {
+            "active": 0,
+            "claimable": 0,
+            "pendingSettle": 0
+          }
+        },
+        "stage_maker_a": {
+          "ok": true,
+          "targetCounts": {
+            "active": 0,
+            "claimable": 0,
+            "pendingSettle": 0
+          }
+        },
+        "stage_maker_b": {
+          "ok": true,
+          "targetCounts": {
+            "active": 0,
+            "claimable": 0,
+            "pendingSettle": 0
+          }
+        }
+      }
+    }
   },
-  "publishedAt": "2026-07-09T00:11:16Z",
+  "publishedAt": "2026-07-09T03:18:59Z",
   "rawPath": "raw/",
-  "runClass": "mm-live-canary",
+  "runClass": "mm-live-canary-multiblock-facts-only",
   "schemaVersion": 1,
-  "scorecardStatus": "not_published_for_pre_postgame_partial_artifact",
-  "scorecardStatusReason": "The schema-backed mve-scorecard contract is single-target and postgame/zero-exposure oriented; this partial multi-block artifact intentionally publishes only facts/summary/raw evidence before final postgame zero-state.",
+  "scorecardStatus": "not_published_for_multiblock_partial_artifact",
+  "scorecardStatusReason": "The schema-backed mve-scorecard contract is single-target; this is a multi-block facts-only partial/amber artifact.",
   "sourceRunIds": {
     "blockH": "20260708T184140Z-mve-phase1-block-h-tor-sf-harness-drill",
     "blockI": "20260708T181153Z-mve-phase1-block-i-evening-6game-expanded"
@@ -1840,6 +2264,6 @@
   "summaryPath": "summary.md",
   "verdict": {
     "label": "AMBER_PRELIVE_GATE_HALT",
-    "reason": "Block H completed the live harness drill and zero-open shutdown; Block I setup/manual evidence completed but expanded live MM halted before quotes/fills because the operator harness used an all-or-nothing prelive dry gate. Postgame score/settle/claim remains pending for in-progress Block I games at publication time."
+    "reason": "Block H completed the live harness drill and combined postgame zero-state; Block I setup/manual evidence completed but expanded live MM halted before quotes/fills because the operator harness used an all-or-nothing prelive dry gate. Combined postgame score/settle/claim/zero-state completed before this update."
   }
 }
