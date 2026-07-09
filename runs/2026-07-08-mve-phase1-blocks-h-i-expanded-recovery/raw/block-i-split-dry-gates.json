@@ -1,0 +1,72 @@
+{
+  "ok": true,
+  "splits": {
+    "p1": {
+      "ok": true,
+      "quoteReady": 9,
+      "wouldSubmitCount": 18,
+      "byContestMarket": {
+        "29:moneyline": 2,
+        "29:spread": 2,
+        "29:total": 2,
+        "30:moneyline": 2,
+        "30:spread": 2,
+        "30:total": 2,
+        "31:moneyline": 2,
+        "31:spread": 2,
+        "31:total": 2
+      },
+      "missingPairs": [],
+      "badEvents": [],
+      "offAllowlist": [],
+      "eventCounts": {
+        "tick-start": 1,
+        "candidate": 9,
+        "quote-intent": 9,
+        "risk-verdict": 9,
+        "would-submit": 18,
+        "quote-competitiveness": 18,
+        "kill": 1
+      },
+      "stdoutTail": "warning ../../../package.json: No license field\n[run] maker wallet: 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b\n[runner] starting run 2026-07-08T18-39-13-889Z-qgisk3 \u2014 chain 137, api https://api.ospex.org, mode dry-run\n[runner] SSE budget: this instance uses 10 connections (9 anonymous odds + 1 owner-auth own-state). The core-api per-IP cap is per HOST and split \u2014 odds share 13 anonymous slots, own-state uses the owner reserve. Co-locating N instances needs N*9 <= MAX_STREAM_CONNECTIONS_PER_IP - RESERVED_STREAM_CONNECTIONS_PER_IP_OWNER for the odds streams (and N*10 <= MAX_STREAM_CONNECTIONS_PER_IP overall), or run each on its own egress IP. See DESIGN \"SSE connection budget\".\n",
+      "telemetryFiles": [
+        "/home/vince/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/logs/mm-p1-dry-telemetry/run-2026-07-08T18-39-13-889Z-qgisk3.ndjson"
+      ],
+      "utc": "2026-07-08T18:39:49.648427Z"
+    },
+    "p2": {
+      "ok": true,
+      "quoteReady": 9,
+      "wouldSubmitCount": 18,
+      "byContestMarket": {
+        "32:moneyline": 2,
+        "32:spread": 2,
+        "32:total": 2,
+        "33:moneyline": 2,
+        "33:spread": 2,
+        "33:total": 2,
+        "34:moneyline": 2,
+        "34:spread": 2,
+        "34:total": 2
+      },
+      "missingPairs": [],
+      "badEvents": [],
+      "offAllowlist": [],
+      "eventCounts": {
+        "tick-start": 1,
+        "candidate": 9,
+        "quote-intent": 9,
+        "risk-verdict": 9,
+        "would-submit": 18,
+        "quote-competitiveness": 18,
+        "kill": 1
+      },
+      "stdoutTail": "warning ../../../package.json: No license field\n[run] maker wallet: 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b\n[runner] starting run 2026-07-08T18-39-53-167Z-ifdmrr \u2014 chain 137, api https://api.ospex.org, mode dry-run\n[runner] SSE budget: this instance uses 10 connections (9 anonymous odds + 1 owner-auth own-state). The core-api per-IP cap is per HOST and split \u2014 odds share 13 anonymous slots, own-state uses the owner reserve. Co-locating N instances needs N*9 <= MAX_STREAM_CONNECTIONS_PER_IP - RESERVED_STREAM_CONNECTIONS_PER_IP_OWNER for the odds streams (and N*10 <= MAX_STREAM_CONNECTIONS_PER_IP overall), or run each on its own egress IP. See DESIGN \"SSE connection budget\".\n",
+      "telemetryFiles": [
+        "/home/vince/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/logs/mm-p2-dry-telemetry/run-2026-07-08T18-39-53-167Z-ifdmrr.ndjson"
+      ],
+      "utc": "2026-07-08T18:40:28.648729Z"
+    }
+  },
+  "utc": "2026-07-08T18:40:28.649180Z"
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "artifactId": "2026-07-08-mve-phase1-blocks-h-i-expanded-recovery",
+  "capabilities": [
+    {
+      "capability": "Block H strict-allowlist live MM posts and controlled fills",
+      "evidence": "raw/block-h-live-summary.json",
+      "id": "block-h-live-mm",
+      "notes": "Two controlled live fills completed with preview/retry path and zero-open shutdown.",
+      "proof": "proven_live"
+    },
+    {
+      "capability": "Block I six-contest setup/manual seed and fill path",
+      "evidence": "raw/block-i-manual-seed-fill.json",
+      "id": "block-i-setup-manual",
+      "notes": "18 tiny setup/manual fills completed across A-F moneyline/spread/total.",
+      "proof": "proven_synthetic_only"
+    },
+    {
+      "capability": "Block I expanded live MM quoting/filling",
+      "evidence": "raw/block-i-live-classification.json",
+      "id": "block-i-expanded-live",
+      "notes": "No live quotes/fills; prelive gate halted because harness required full theoretical count.",
+      "proof": "failed"
+    },
+    {
+      "capability": "Fixed harness treats moved total lines as benign per-market skips",
+      "evidence": "raw/block-i-prelive-replay.json",
+      "id": "block-i-fixed-replay",
+      "notes": "Replay result GO_WITH_CAVEATS for expected 18 / actual 14 / two reference-line-mismatch skips / zero fatal events.",
+      "proof": "proven_synthetic_only"
+    },
+    {
+      "capability": "Score, settle, claim, final zero-state for H/I",
+      "evidence": "raw/postgame-last-status.json",
+      "id": "postgame-zero-state",
+      "notes": "Combined postgame watcher remains active; Block I games were in progress at partial publication time.",
+      "proof": "deferred"
+    }
+  ],
+  "generatedAt": "2026-07-09T00:11:16.150530Z",
+  "runClass": "mm-live-canary",
+  "schemaVersion": 1,
+  "transactions": {
+    "blockHLiveFills": [
+      "0xd8571934499442fcf949122d0b85d8cbf8d50adfb3a2eb625d7af6d2cfbb80af",
+      "0x8e1ea4caba4de69a8c7b010c927df9df03087f9bc4cf2f13a6743305cd038950"
+    ],
+    "blockILiveTxSent": false
+  },
+  "verdict": {
+    "label": "AMBER_PRELIVE_GATE_HALT",
+    "reason": "Block I expanded live halted prelive due operator harness full-count gate; fixed replay classifies the evidence as GO_WITH_CAVEATS. Postgame zero-state is deferred/pending at this partial publication."
+  },
+  "zeroExposure": {
+    "notes": "Live Block I exposure was zero; final target position/claim zero-state pending watcher completion.",
+    "ok": null,
+    "status": "postgame_pending"
+  }
+}

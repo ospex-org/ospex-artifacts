@@ -1,0 +1,167 @@
+{
+  "actualWouldSubmitRows": 14,
+  "benignSkipCount": 2,
+  "benignSkips": [
+    {
+      "contestId": "29",
+      "label": "A",
+      "market": "total",
+      "reason": "reference-line-mismatch",
+      "speculationId": "77",
+      "wouldSubmitRows": 0
+    },
+    {
+      "contestId": "31",
+      "label": "C",
+      "market": "total",
+      "reason": "reference-line-mismatch",
+      "speculationId": "83",
+      "wouldSubmitRows": 0
+    }
+  ],
+  "eventCounts": {
+    "candidate": 11,
+    "kill": 1,
+    "quote-competitiveness": 14,
+    "quote-intent": 7,
+    "risk-verdict": 7,
+    "tick-start": 1,
+    "would-submit": 14
+  },
+  "expectedTargetCount": 9,
+  "expectedWouldSubmitRows": 18,
+  "fatalEventCount": 0,
+  "fatalEvents": [],
+  "healthyTargetCount": 7,
+  "healthyTargets": [
+    {
+      "contestId": "29",
+      "label": "A",
+      "makerSides": [
+        "away",
+        "home"
+      ],
+      "market": "moneyline",
+      "speculationId": "75",
+      "takerSides": [
+        "away",
+        "home"
+      ],
+      "wouldSubmitRows": 2
+    },
+    {
+      "contestId": "29",
+      "label": "A",
+      "makerSides": [
+        "away",
+        "home"
+      ],
+      "market": "spread",
+      "speculationId": "76",
+      "takerSides": [
+        "away",
+        "home"
+      ],
+      "wouldSubmitRows": 2
+    },
+    {
+      "contestId": "30",
+      "label": "B",
+      "makerSides": [
+        "away",
+        "home"
+      ],
+      "market": "moneyline",
+      "speculationId": "78",
+      "takerSides": [
+        "away",
+        "home"
+      ],
+      "wouldSubmitRows": 2
+    },
+    {
+      "contestId": "30",
+      "label": "B",
+      "makerSides": [
+        "away",
+        "home"
+      ],
+      "market": "spread",
+      "speculationId": "79",
+      "takerSides": [
+        "away",
+        "home"
+      ],
+      "wouldSubmitRows": 2
+    },
+    {
+      "contestId": "30",
+      "label": "B",
+      "makerSides": [
+        "away",
+        "home"
+      ],
+      "market": "total",
+      "speculationId": "80",
+      "takerSides": [
+        "away",
+        "home"
+      ],
+      "wouldSubmitRows": 2
+    },
+    {
+      "contestId": "31",
+      "label": "C",
+      "makerSides": [
+        "away",
+        "home"
+      ],
+      "market": "moneyline",
+      "speculationId": "81",
+      "takerSides": [
+        "away",
+        "home"
+      ],
+      "wouldSubmitRows": 2
+    },
+    {
+      "contestId": "31",
+      "label": "C",
+      "makerSides": [
+        "away",
+        "home"
+      ],
+      "market": "spread",
+      "speculationId": "82",
+      "takerSides": [
+        "away",
+        "home"
+      ],
+      "wouldSubmitRows": 2
+    }
+  ],
+  "missingTargets": [],
+  "ok": true,
+  "replay": {
+    "checkedAt": "2026-07-08T23:53:56.882565Z",
+    "name": "block-i-p1-reference-line-mismatch-regression",
+    "requiredExpectation": "expected 18, actual 14, two reference-line-mismatch total skips, zero bad events => GO_WITH_CAVEATS",
+    "sourceTelemetry": "/home/vince/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/logs/mm-p1-prelive-dry-telemetry"
+  },
+  "targetsByContest": {
+    "29": [
+      "moneyline",
+      "spread"
+    ],
+    "30": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "31": [
+      "moneyline",
+      "spread"
+    ]
+  },
+  "verdict": "GO_WITH_CAVEATS"
+}

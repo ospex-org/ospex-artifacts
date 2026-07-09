@@ -1,23 +1,31 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json",
-  "schemaVersion": 1,
-  "generatedAt": "2026-07-08T06:03:10Z",
-  "repository": "ospex-org/ospex-artifacts",
   "archive": {
     "scope": "year",
     "year": 2026
   },
   "artifacts": [
     {
+      "artifactId": "2026-07-08-mve-phase1-blocks-h-i-expanded-recovery",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-08-mve-phase1-blocks-h-i-expanded-recovery/evidence.json",
+      "date": "2026-07-08",
+      "network": "polygon",
+      "publishedAt": "2026-07-09T00:11:16.150530Z",
+      "rawPath": "runs/2026-07-08-mve-phase1-blocks-h-i-expanded-recovery/raw/",
+      "status": "partial",
+      "summaryPath": "runs/2026-07-08-mve-phase1-blocks-h-i-expanded-recovery/summary.md"
+    },
+    {
       "artifactId": "2026-07-07-mlb-ari-sd-contest-26-v010-mm146-phase1-block-g-west-3game",
       "artifactType": "run",
       "dataPath": "runs/2026-07-07-mlb-ari-sd-contest-26-v010-mm146-phase1-block-g-west-3game/evidence.json",
       "date": "2026-07-07",
       "network": "polygon",
+      "publishedAt": "2026-07-08T06:02:24Z",
       "rawPath": "runs/2026-07-07-mlb-ari-sd-contest-26-v010-mm146-phase1-block-g-west-3game/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-07-07-mlb-ari-sd-contest-26-v010-mm146-phase1-block-g-west-3game/summary.md",
-      "publishedAt": "2026-07-08T06:02:24Z"
+      "summaryPath": "runs/2026-07-07-mlb-ari-sd-contest-26-v010-mm146-phase1-block-g-west-3game/summary.md"
     },
     {
       "artifactId": "2026-07-07-mlb-mil-stl-contest-21-v010-mm146-phase1-block-e",
@@ -25,10 +33,10 @@
       "dataPath": "runs/2026-07-07-mlb-mil-stl-contest-21-v010-mm146-phase1-block-e/evidence.json",
       "date": "2026-07-07",
       "network": "polygon",
+      "publishedAt": "2026-07-07T21:14:56Z",
       "rawPath": "runs/2026-07-07-mlb-mil-stl-contest-21-v010-mm146-phase1-block-e/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-07-07-mlb-mil-stl-contest-21-v010-mm146-phase1-block-e/summary.md",
-      "publishedAt": "2026-07-07T21:14:56Z"
+      "summaryPath": "runs/2026-07-07-mlb-mil-stl-contest-21-v010-mm146-phase1-block-e/summary.md"
     },
     {
       "artifactId": "2026-07-06-mlb-tor-sf-contest-19-v010-mm146-phase1-block-d",
@@ -36,10 +44,10 @@
       "dataPath": "runs/2026-07-06-mlb-tor-sf-contest-19-v010-mm146-phase1-block-d/evidence.json",
       "date": "2026-07-06",
       "network": "polygon",
+      "publishedAt": "2026-07-07T06:07:11Z",
       "rawPath": "runs/2026-07-06-mlb-tor-sf-contest-19-v010-mm146-phase1-block-d/raw/",
       "status": "partial",
-      "summaryPath": "runs/2026-07-06-mlb-tor-sf-contest-19-v010-mm146-phase1-block-d/summary.md",
-      "publishedAt": "2026-07-07T06:07:11Z"
+      "summaryPath": "runs/2026-07-06-mlb-tor-sf-contest-19-v010-mm146-phase1-block-d/summary.md"
     },
     {
       "artifactId": "2026-07-06-mlb-col-lad-contest-20-v010-mm146-phase1-block-d",
@@ -47,10 +55,10 @@
       "dataPath": "runs/2026-07-06-mlb-col-lad-contest-20-v010-mm146-phase1-block-d/evidence.json",
       "date": "2026-07-06",
       "network": "polygon",
+      "publishedAt": "2026-07-07T06:07:11Z",
       "rawPath": "runs/2026-07-06-mlb-col-lad-contest-20-v010-mm146-phase1-block-d/raw/",
       "status": "partial",
-      "summaryPath": "runs/2026-07-06-mlb-col-lad-contest-20-v010-mm146-phase1-block-d/summary.md",
-      "publishedAt": "2026-07-07T06:07:11Z"
+      "summaryPath": "runs/2026-07-06-mlb-col-lad-contest-20-v010-mm146-phase1-block-d/summary.md"
     },
     {
       "artifactId": "2026-07-06-mlb-ari-sd-contest-18-v010-mm146-phase1-block-d",
@@ -58,10 +66,10 @@
       "dataPath": "runs/2026-07-06-mlb-ari-sd-contest-18-v010-mm146-phase1-block-d/evidence.json",
       "date": "2026-07-06",
       "network": "polygon",
+      "publishedAt": "2026-07-07T06:07:11Z",
       "rawPath": "runs/2026-07-06-mlb-ari-sd-contest-18-v010-mm146-phase1-block-d/raw/",
       "status": "partial",
-      "summaryPath": "runs/2026-07-06-mlb-ari-sd-contest-18-v010-mm146-phase1-block-d/summary.md",
-      "publishedAt": "2026-07-07T06:07:11Z"
+      "summaryPath": "runs/2026-07-06-mlb-ari-sd-contest-18-v010-mm146-phase1-block-d/summary.md"
     },
     {
       "artifactId": "2026-07-06-mlb-phi-kc-contest-17-v010-mm146-phase1-block-c",
@@ -69,10 +77,10 @@
       "dataPath": "runs/2026-07-06-mlb-phi-kc-contest-17-v010-mm146-phase1-block-c/evidence.json",
       "date": "2026-07-06",
       "network": "polygon",
+      "publishedAt": "2026-07-06T21:38:31Z",
       "rawPath": "runs/2026-07-06-mlb-phi-kc-contest-17-v010-mm146-phase1-block-c/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-07-06-mlb-phi-kc-contest-17-v010-mm146-phase1-block-c/summary.md",
-      "publishedAt": "2026-07-06T21:38:31Z"
+      "summaryPath": "runs/2026-07-06-mlb-phi-kc-contest-17-v010-mm146-phase1-block-c/summary.md"
     },
     {
       "artifactId": "2026-07-05-mlb-sd-lad-contest-15-v010-mm146-phase1-block-b",
@@ -80,10 +88,10 @@
       "dataPath": "runs/2026-07-05-mlb-sd-lad-contest-15-v010-mm146-phase1-block-b/evidence.json",
       "date": "2026-07-05",
       "network": "polygon",
+      "publishedAt": "2026-07-06T13:54:49Z",
       "rawPath": "runs/2026-07-05-mlb-sd-lad-contest-15-v010-mm146-phase1-block-b/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-07-05-mlb-sd-lad-contest-15-v010-mm146-phase1-block-b/summary.md",
-      "publishedAt": "2026-07-06T13:54:49Z"
+      "summaryPath": "runs/2026-07-05-mlb-sd-lad-contest-15-v010-mm146-phase1-block-b/summary.md"
     },
     {
       "artifactId": "2026-07-05-mlb-bos-laa-contest-16-v010-mm146-phase1-block-b",
@@ -91,10 +99,10 @@
       "dataPath": "runs/2026-07-05-mlb-bos-laa-contest-16-v010-mm146-phase1-block-b/evidence.json",
       "date": "2026-07-05",
       "network": "polygon",
+      "publishedAt": "2026-07-06T13:54:49Z",
       "rawPath": "runs/2026-07-05-mlb-bos-laa-contest-16-v010-mm146-phase1-block-b/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-07-05-mlb-bos-laa-contest-16-v010-mm146-phase1-block-b/summary.md",
-      "publishedAt": "2026-07-06T13:54:49Z"
+      "summaryPath": "runs/2026-07-05-mlb-bos-laa-contest-16-v010-mm146-phase1-block-b/summary.md"
     },
     {
       "artifactId": "2026-07-05-mlb-pit-wsh-contest-14-v010-mm146-phase1-block-a",
@@ -102,10 +110,10 @@
       "dataPath": "runs/2026-07-05-mlb-pit-wsh-contest-14-v010-mm146-phase1-block-a/evidence.json",
       "date": "2026-07-05",
       "network": "polygon",
+      "publishedAt": "2026-07-05T21:44:23Z",
       "rawPath": "runs/2026-07-05-mlb-pit-wsh-contest-14-v010-mm146-phase1-block-a/raw/",
       "status": "complete_verified",
-      "summaryPath": "runs/2026-07-05-mlb-pit-wsh-contest-14-v010-mm146-phase1-block-a/summary.md",
-      "publishedAt": "2026-07-05T21:44:23Z"
+      "summaryPath": "runs/2026-07-05-mlb-pit-wsh-contest-14-v010-mm146-phase1-block-a/summary.md"
     },
     {
       "artifactId": "2026-07-05-mlb-nym-atl-contest-13-v010-mm146-phase1-block-a",
@@ -113,10 +121,10 @@
       "dataPath": "runs/2026-07-05-mlb-nym-atl-contest-13-v010-mm146-phase1-block-a/evidence.json",
       "date": "2026-07-05",
       "network": "polygon",
+      "publishedAt": "2026-07-05T21:44:23Z",
       "rawPath": "runs/2026-07-05-mlb-nym-atl-contest-13-v010-mm146-phase1-block-a/raw/",
       "status": "complete_verified",
-      "summaryPath": "runs/2026-07-05-mlb-nym-atl-contest-13-v010-mm146-phase1-block-a/summary.md",
-      "publishedAt": "2026-07-05T21:44:23Z"
+      "summaryPath": "runs/2026-07-05-mlb-nym-atl-contest-13-v010-mm146-phase1-block-a/summary.md"
     },
     {
       "artifactId": "2026-07-04-mlb-sd-lad-contest-12-v010-mm146-two-game-minislate-canary",
@@ -124,10 +132,10 @@
       "dataPath": "runs/2026-07-04-mlb-sd-lad-contest-12-v010-mm146-two-game-minislate-canary/evidence.json",
       "date": "2026-07-04",
       "network": "polygon",
+      "publishedAt": "2026-07-05T05:15:00Z",
       "rawPath": "runs/2026-07-04-mlb-sd-lad-contest-12-v010-mm146-two-game-minislate-canary/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-07-04-mlb-sd-lad-contest-12-v010-mm146-two-game-minislate-canary/summary.md",
-      "publishedAt": "2026-07-05T05:15:00Z"
+      "summaryPath": "runs/2026-07-04-mlb-sd-lad-contest-12-v010-mm146-two-game-minislate-canary/summary.md"
     },
     {
       "artifactId": "2026-07-04-mlb-mil-ari-contest-11-v010-mm146-two-game-minislate-canary",
@@ -135,10 +143,10 @@
       "dataPath": "runs/2026-07-04-mlb-mil-ari-contest-11-v010-mm146-two-game-minislate-canary/evidence.json",
       "date": "2026-07-04",
       "network": "polygon",
+      "publishedAt": "2026-07-05T05:15:00Z",
       "rawPath": "runs/2026-07-04-mlb-mil-ari-contest-11-v010-mm146-two-game-minislate-canary/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-07-04-mlb-mil-ari-contest-11-v010-mm146-two-game-minislate-canary/summary.md",
-      "publishedAt": "2026-07-05T05:15:00Z"
+      "summaryPath": "runs/2026-07-04-mlb-mil-ari-contest-11-v010-mm146-two-game-minislate-canary/summary.md"
     },
     {
       "artifactId": "2026-07-04-mlb-min-nyy-contest-10-v010-mm146-all-markets-stage1-canary",
@@ -146,10 +154,10 @@
       "dataPath": "runs/2026-07-04-mlb-min-nyy-contest-10-v010-mm146-all-markets-stage1-canary/evidence.json",
       "date": "2026-07-04",
       "network": "polygon",
+      "publishedAt": "2026-07-04T22:19:04Z",
       "rawPath": "runs/2026-07-04-mlb-min-nyy-contest-10-v010-mm146-all-markets-stage1-canary/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-07-04-mlb-min-nyy-contest-10-v010-mm146-all-markets-stage1-canary/summary.md",
-      "publishedAt": "2026-07-04T22:19:04Z"
+      "summaryPath": "runs/2026-07-04-mlb-min-nyy-contest-10-v010-mm146-all-markets-stage1-canary/summary.md"
     },
     {
       "artifactId": "2026-07-03-mlb-mia-ath-contest-9-v090-latest-mm-all-markets-canary",
@@ -157,10 +165,10 @@
       "dataPath": "runs/2026-07-03-mlb-mia-ath-contest-9-v090-latest-mm-all-markets-canary/evidence.json",
       "date": "2026-07-03",
       "network": "polygon",
+      "publishedAt": "2026-07-04T05:09:37Z",
       "rawPath": "runs/2026-07-03-mlb-mia-ath-contest-9-v090-latest-mm-all-markets-canary/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-07-03-mlb-mia-ath-contest-9-v090-latest-mm-all-markets-canary/summary.md",
-      "publishedAt": "2026-07-04T05:09:37Z"
+      "summaryPath": "runs/2026-07-03-mlb-mia-ath-contest-9-v090-latest-mm-all-markets-canary/summary.md"
     },
     {
       "artifactId": "2026-07-03-mlb-stl-chc-contest-8-v090-latest-mm-total-canary",
@@ -168,10 +176,10 @@
       "dataPath": "runs/2026-07-03-mlb-stl-chc-contest-8-v090-latest-mm-total-canary/evidence.json",
       "date": "2026-07-03",
       "network": "polygon",
+      "publishedAt": "2026-07-03T23:46:09Z",
       "rawPath": "runs/2026-07-03-mlb-stl-chc-contest-8-v090-latest-mm-total-canary/raw/",
       "status": "complete_verified",
-      "summaryPath": "runs/2026-07-03-mlb-stl-chc-contest-8-v090-latest-mm-total-canary/summary.md",
-      "publishedAt": "2026-07-03T23:46:09Z"
+      "summaryPath": "runs/2026-07-03-mlb-stl-chc-contest-8-v090-latest-mm-total-canary/summary.md"
     },
     {
       "artifactId": "2026-07-02-mlb-sd-lad-contest-7-v090-latest-mm-spread-canary",
@@ -179,10 +187,10 @@
       "dataPath": "runs/2026-07-02-mlb-sd-lad-contest-7-v090-latest-mm-spread-canary/evidence.json",
       "date": "2026-07-02",
       "network": "polygon",
+      "publishedAt": "2026-07-03T06:15:15Z",
       "rawPath": "runs/2026-07-02-mlb-sd-lad-contest-7-v090-latest-mm-spread-canary/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-07-02-mlb-sd-lad-contest-7-v090-latest-mm-spread-canary/summary.md",
-      "publishedAt": "2026-07-03T06:15:15Z"
+      "summaryPath": "runs/2026-07-02-mlb-sd-lad-contest-7-v090-latest-mm-spread-canary/summary.md"
     },
     {
       "artifactId": "2026-07-02-mlb-pit-phi-contest-6-v090-latest-mm-moneyline-canary",
@@ -190,10 +198,10 @@
       "dataPath": "runs/2026-07-02-mlb-pit-phi-contest-6-v090-latest-mm-moneyline-canary/evidence.json",
       "date": "2026-07-02",
       "network": "polygon",
+      "publishedAt": "2026-07-02T22:04:18Z",
       "rawPath": "runs/2026-07-02-mlb-pit-phi-contest-6-v090-latest-mm-moneyline-canary/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-07-02-mlb-pit-phi-contest-6-v090-latest-mm-moneyline-canary/summary.md",
-      "publishedAt": "2026-07-02T22:04:18Z"
+      "summaryPath": "runs/2026-07-02-mlb-pit-phi-contest-6-v090-latest-mm-moneyline-canary/summary.md"
     },
     {
       "artifactId": "2026-07-01-mlb-pit-phi-contest-4-r5-cre-mve-reentry-with-tex-cle-phase-a",
@@ -201,10 +209,10 @@
       "dataPath": "runs/2026-07-01-mlb-pit-phi-contest-4-r5-cre-mve-reentry-with-tex-cle-phase-a/evidence.json",
       "date": "2026-07-01",
       "network": "polygon",
+      "publishedAt": "2026-07-02T02:59:52Z",
       "rawPath": "runs/2026-07-01-mlb-pit-phi-contest-4-r5-cre-mve-reentry-with-tex-cle-phase-a/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-07-01-mlb-pit-phi-contest-4-r5-cre-mve-reentry-with-tex-cle-phase-a/summary.md",
-      "publishedAt": "2026-07-02T02:59:52Z"
+      "summaryPath": "runs/2026-07-01-mlb-pit-phi-contest-4-r5-cre-mve-reentry-with-tex-cle-phase-a/summary.md"
     },
     {
       "artifactId": "2026-07-01-mlb-sd-chc-contest-5-v090-all-markets-r5-cre-lifecycle",
@@ -212,10 +220,10 @@
       "dataPath": "runs/2026-07-01-mlb-sd-chc-contest-5-v090-all-markets-r5-cre-lifecycle/evidence.json",
       "date": "2026-07-01",
       "network": "polygon",
+      "publishedAt": "2026-07-01T21:59:05Z",
       "rawPath": "runs/2026-07-01-mlb-sd-chc-contest-5-v090-all-markets-r5-cre-lifecycle/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-07-01-mlb-sd-chc-contest-5-v090-all-markets-r5-cre-lifecycle/summary.md",
-      "publishedAt": "2026-07-01T21:59:05Z"
+      "summaryPath": "runs/2026-07-01-mlb-sd-chc-contest-5-v090-all-markets-r5-cre-lifecycle/summary.md"
     },
     {
       "artifactId": "2026-06-30-mlb-cws-bal-contest-2-r5-cre-lifecycle-repeat",
@@ -223,10 +231,10 @@
       "dataPath": "runs/2026-06-30-mlb-cws-bal-contest-2-r5-cre-lifecycle-repeat/evidence.json",
       "date": "2026-06-30",
       "network": "polygon",
+      "publishedAt": "2026-07-01T06:04:40Z",
       "rawPath": "runs/2026-06-30-mlb-cws-bal-contest-2-r5-cre-lifecycle-repeat/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-06-30-mlb-cws-bal-contest-2-r5-cre-lifecycle-repeat/summary.md",
-      "publishedAt": "2026-07-01T06:04:40Z"
+      "summaryPath": "runs/2026-06-30-mlb-cws-bal-contest-2-r5-cre-lifecycle-repeat/summary.md"
     },
     {
       "artifactId": "2026-06-29-mlb-sf-az-contest-1-r5-cre-lifecycle-smoke",
@@ -234,10 +242,10 @@
       "dataPath": "runs/2026-06-29-mlb-sf-az-contest-1-r5-cre-lifecycle-smoke/evidence.json",
       "date": "2026-06-29",
       "network": "polygon",
+      "publishedAt": "2026-06-30T05:32:38Z",
       "rawPath": "runs/2026-06-29-mlb-sf-az-contest-1-r5-cre-lifecycle-smoke/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-06-29-mlb-sf-az-contest-1-r5-cre-lifecycle-smoke/summary.md",
-      "publishedAt": "2026-06-30T05:32:38Z"
+      "summaryPath": "runs/2026-06-29-mlb-sf-az-contest-1-r5-cre-lifecycle-smoke/summary.md"
     },
     {
       "artifactId": "2026-06-19-mlb-wsh-tb-contest-51-v071-stage2a-repeat-capital-safety-canary",
@@ -245,10 +253,10 @@
       "dataPath": "runs/2026-06-19-mlb-wsh-tb-contest-51-v071-stage2a-repeat-capital-safety-canary/evidence.json",
       "date": "2026-06-19",
       "network": "polygon",
+      "publishedAt": "2026-06-20T05:40:58Z",
       "rawPath": "runs/2026-06-19-mlb-wsh-tb-contest-51-v071-stage2a-repeat-capital-safety-canary/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-06-19-mlb-wsh-tb-contest-51-v071-stage2a-repeat-capital-safety-canary/summary.md",
-      "publishedAt": "2026-06-20T05:40:58Z"
+      "summaryPath": "runs/2026-06-19-mlb-wsh-tb-contest-51-v071-stage2a-repeat-capital-safety-canary/summary.md"
     },
     {
       "artifactId": "2026-06-19-mlb-tor-chc-contest-50-v071-stage2a-capital-safety-canary",
@@ -256,10 +264,10 @@
       "dataPath": "runs/2026-06-19-mlb-tor-chc-contest-50-v071-stage2a-capital-safety-canary/evidence.json",
       "date": "2026-06-19",
       "network": "polygon",
+      "publishedAt": "2026-06-19T21:43:34Z",
       "rawPath": "runs/2026-06-19-mlb-tor-chc-contest-50-v071-stage2a-capital-safety-canary/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-06-19-mlb-tor-chc-contest-50-v071-stage2a-capital-safety-canary/summary.md",
-      "publishedAt": "2026-06-19T21:43:34Z"
+      "summaryPath": "runs/2026-06-19-mlb-tor-chc-contest-50-v071-stage2a-capital-safety-canary/summary.md"
     },
     {
       "artifactId": "2026-06-18-mlb-laa-ath-contest-49-v071-stage1b-capital-safety-canary",
@@ -267,10 +275,10 @@
       "dataPath": "runs/2026-06-18-mlb-laa-ath-contest-49-v071-stage1b-capital-safety-canary/evidence.json",
       "date": "2026-06-18",
       "network": "polygon",
+      "publishedAt": "2026-06-19T04:39:52Z",
       "rawPath": "runs/2026-06-18-mlb-laa-ath-contest-49-v071-stage1b-capital-safety-canary/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-06-18-mlb-laa-ath-contest-49-v071-stage1b-capital-safety-canary/summary.md",
-      "publishedAt": "2026-06-19T04:39:52Z"
+      "summaryPath": "runs/2026-06-18-mlb-laa-ath-contest-49-v071-stage1b-capital-safety-canary/summary.md"
     },
     {
       "artifactId": "2026-06-18-mlb-bal-sea-contest-48-v071-mve-stage1-capital-safety-canary",
@@ -278,10 +286,10 @@
       "dataPath": "runs/2026-06-18-mlb-bal-sea-contest-48-v071-mve-stage1-capital-safety-canary/evidence.json",
       "date": "2026-06-18",
       "network": "polygon",
+      "publishedAt": "2026-06-18T23:05:25Z",
       "rawPath": "runs/2026-06-18-mlb-bal-sea-contest-48-v071-mve-stage1-capital-safety-canary/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-06-18-mlb-bal-sea-contest-48-v071-mve-stage1-capital-safety-canary/summary.md",
-      "publishedAt": "2026-06-18T23:05:25Z"
+      "summaryPath": "runs/2026-06-18-mlb-bal-sea-contest-48-v071-mve-stage1-capital-safety-canary/summary.md"
     },
     {
       "artifactId": "2026-06-17-mlb-tor-bos-contest-46-v071-mm-repeatability-canary",
@@ -289,10 +297,10 @@
       "dataPath": "runs/2026-06-17-mlb-tor-bos-contest-46-v071-mm-repeatability-canary/evidence.json",
       "date": "2026-06-17",
       "network": "polygon",
+      "publishedAt": "2026-06-18T09:27:04Z",
       "rawPath": "runs/2026-06-17-mlb-tor-bos-contest-46-v071-mm-repeatability-canary/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-06-17-mlb-tor-bos-contest-46-v071-mm-repeatability-canary/summary.md",
-      "publishedAt": "2026-06-18T09:27:04Z"
+      "summaryPath": "runs/2026-06-17-mlb-tor-bos-contest-46-v071-mm-repeatability-canary/summary.md"
     },
     {
       "artifactId": "2026-06-17-mlb-nym-cin-contest-44-v071-mm-live-canary",
@@ -300,10 +308,10 @@
       "dataPath": "runs/2026-06-17-mlb-nym-cin-contest-44-v071-mm-live-canary/evidence.json",
       "date": "2026-06-17",
       "network": "polygon",
+      "publishedAt": "2026-06-17T16:26:56Z",
       "rawPath": "runs/2026-06-17-mlb-nym-cin-contest-44-v071-mm-live-canary/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-06-17-mlb-nym-cin-contest-44-v071-mm-live-canary/summary.md",
-      "publishedAt": "2026-06-17T16:26:56Z"
+      "summaryPath": "runs/2026-06-17-mlb-nym-cin-contest-44-v071-mm-live-canary/summary.md"
     },
     {
       "artifactId": "2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary",
@@ -311,10 +319,10 @@
       "dataPath": "runs/2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary/evidence.json",
       "date": "2026-06-12",
       "network": "polygon",
+      "publishedAt": "2026-06-13T04:48:09Z",
       "rawPath": "runs/2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary/summary.md",
-      "publishedAt": "2026-06-13T04:48:09Z"
+      "summaryPath": "runs/2026-06-12-mlb-nyy-tor-contest-41-mm-live-canary/summary.md"
     },
     {
       "artifactId": "2026-06-11-nhl-vgk-car-atl-cws-mm-alpha-multigame-rescue",
@@ -322,11 +330,11 @@
       "dataPath": "runs/2026-06-11-nhl-vgk-car-atl-cws-mm-alpha-multigame-rescue/evidence.json",
       "date": "2026-06-11",
       "network": "polygon",
+      "publishedAt": "2026-06-11T23:38:07Z",
       "rawPath": "runs/2026-06-11-nhl-vgk-car-atl-cws-mm-alpha-multigame-rescue/raw/",
       "release": "ospex-org/ospex-market-maker v0.1.0-alpha.1",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-06-11-nhl-vgk-car-atl-cws-mm-alpha-multigame-rescue/summary.md",
-      "publishedAt": "2026-06-11T23:38:07Z"
+      "summaryPath": "runs/2026-06-11-nhl-vgk-car-atl-cws-mm-alpha-multigame-rescue/summary.md"
     },
     {
       "artifactId": "2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary",
@@ -334,11 +342,11 @@
       "dataPath": "runs/2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary/evidence.json",
       "date": "2026-06-11",
       "network": "polygon",
+      "publishedAt": "2026-06-11T16:27:27Z",
       "rawPath": "runs/2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary/raw/",
       "release": "ospex-org/ospex-market-maker v0.1.0-alpha.1",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary/summary.md",
-      "publishedAt": "2026-06-11T16:27:27Z"
+      "summaryPath": "runs/2026-06-11-mlb-stl-nym-contest-36-mm-alpha-release-repeatability-canary/summary.md"
     },
     {
       "artifactId": "2026-06-11-mlb-hou-laa-contest-35-mm-live-canary",
@@ -346,10 +354,10 @@
       "dataPath": "runs/2026-06-11-mlb-hou-laa-contest-35-mm-live-canary/evidence.json",
       "date": "2026-06-11",
       "network": "polygon",
+      "publishedAt": "2026-06-11T01:32:02Z",
       "rawPath": "runs/2026-06-11-mlb-hou-laa-contest-35-mm-live-canary/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-06-11-mlb-hou-laa-contest-35-mm-live-canary/summary.md",
-      "publishedAt": "2026-06-11T01:32:02Z"
+      "summaryPath": "runs/2026-06-11-mlb-hou-laa-contest-35-mm-live-canary/summary.md"
     },
     {
       "artifactId": "2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate",
@@ -357,10 +365,10 @@
       "dataPath": "runs/2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate/evidence.json",
       "date": "2026-06-09",
       "network": "polygon",
+      "publishedAt": "2026-06-09T21:40:04Z",
       "rawPath": "runs/2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate/summary.md",
-      "publishedAt": "2026-06-09T21:40:04Z"
+      "summaryPath": "runs/2026-06-09-mlb-mil-ath-contest-33-v062-ownstate-sse-retirement-gate/summary.md"
     },
     {
       "artifactId": "2026-06-08-mlb-sea-bal-contest-32-v054-ownstate-sse-repeatability",
@@ -368,11 +376,11 @@
       "dataPath": "runs/2026-06-08-mlb-sea-bal-contest-32-v054-ownstate-sse-repeatability/evidence.json",
       "date": "2026-06-08",
       "network": "polygon",
+      "publishedAt": "2026-06-08T19:26:10Z",
       "rawPath": "runs/2026-06-08-mlb-sea-bal-contest-32-v054-ownstate-sse-repeatability/raw/",
       "release": "ospex-org/ospex-sdk v0.5.4",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-06-08-mlb-sea-bal-contest-32-v054-ownstate-sse-repeatability/summary.md",
-      "publishedAt": "2026-06-08T19:26:10Z"
+      "summaryPath": "runs/2026-06-08-mlb-sea-bal-contest-32-v054-ownstate-sse-repeatability/summary.md"
     },
     {
       "artifactId": "2026-06-08-mlb-sf-chc-v054-ownstate-sse-repeatability-canary",
@@ -380,11 +388,11 @@
       "dataPath": "runs/2026-06-08-mlb-sf-chc-v054-ownstate-sse-repeatability-canary/evidence.json",
       "date": "2026-06-08",
       "network": "polygon",
+      "publishedAt": "2026-06-07T23:20:20Z",
       "rawPath": "runs/2026-06-08-mlb-sf-chc-v054-ownstate-sse-repeatability-canary/raw/",
       "release": "ospex-org/ospex-sdk v0.5.4",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-06-08-mlb-sf-chc-v054-ownstate-sse-repeatability-canary/summary.md",
-      "publishedAt": "2026-06-07T23:20:20Z"
+      "summaryPath": "runs/2026-06-08-mlb-sf-chc-v054-ownstate-sse-repeatability-canary/summary.md"
     },
     {
       "artifactId": "2026-06-07-mlb-pit-atl-contest-30-v054-ownstate-sse-green-candidate",
@@ -392,11 +400,11 @@
       "dataPath": "runs/2026-06-07-mlb-pit-atl-contest-30-v054-ownstate-sse-green-candidate/evidence.json",
       "date": "2026-06-07",
       "network": "polygon",
+      "publishedAt": "2026-06-07T16:24:37Z",
       "rawPath": "runs/2026-06-07-mlb-pit-atl-contest-30-v054-ownstate-sse-green-candidate/raw/",
       "release": "ospex-org/ospex-sdk v0.5.4",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-06-07-mlb-pit-atl-contest-30-v054-ownstate-sse-green-candidate/summary.md",
-      "publishedAt": "2026-06-07T16:24:37Z"
+      "summaryPath": "runs/2026-06-07-mlb-pit-atl-contest-30-v054-ownstate-sse-green-candidate/summary.md"
     },
     {
       "artifactId": "2026-06-06-mlb-mil-col-contest-29-v054-ownstate-sse-soak",
@@ -404,10 +412,10 @@
       "dataPath": "runs/2026-06-06-mlb-mil-col-contest-29-v054-ownstate-sse-soak/evidence.json",
       "date": "2026-06-06",
       "network": "polygon",
+      "publishedAt": "2026-06-07T06:14:09Z",
       "rawPath": "runs/2026-06-06-mlb-mil-col-contest-29-v054-ownstate-sse-soak/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-06-06-mlb-mil-col-contest-29-v054-ownstate-sse-soak/summary.md",
-      "publishedAt": "2026-06-07T06:14:09Z"
+      "summaryPath": "runs/2026-06-06-mlb-mil-col-contest-29-v054-ownstate-sse-soak/summary.md"
     },
     {
       "artifactId": "2026-05-28-mlb-tor-bal-contest-28-v048-mm-acceptance",
@@ -415,10 +423,10 @@
       "dataPath": "runs/2026-05-28-mlb-tor-bal-contest-28-v048-mm-acceptance/evidence.json",
       "date": "2026-05-28",
       "network": "polygon",
+      "publishedAt": "2026-05-29T02:29:38Z",
       "rawPath": "runs/2026-05-28-mlb-tor-bal-contest-28-v048-mm-acceptance/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-05-28-mlb-tor-bal-contest-28-v048-mm-acceptance/summary.md",
-      "publishedAt": "2026-05-29T02:29:38Z"
+      "summaryPath": "runs/2026-05-28-mlb-tor-bal-contest-28-v048-mm-acceptance/summary.md"
     },
     {
       "artifactId": "2026-05-28-mlb-col-lad-contest-27-d2-solvency-lifecycle",
@@ -426,10 +434,10 @@
       "dataPath": "runs/2026-05-28-mlb-col-lad-contest-27-d2-solvency-lifecycle/evidence.json",
       "date": "2026-05-28",
       "network": "polygon",
+      "publishedAt": "2026-05-28T06:08:32Z",
       "rawPath": "runs/2026-05-28-mlb-col-lad-contest-27-d2-solvency-lifecycle/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-05-28-mlb-col-lad-contest-27-d2-solvency-lifecycle/summary.md",
-      "publishedAt": "2026-05-28T06:08:32Z"
+      "summaryPath": "runs/2026-05-28-mlb-col-lad-contest-27-d2-solvency-lifecycle/summary.md"
     },
     {
       "artifactId": "2026-05-25-mlb-min-cws-contest-25-v042-mm-acceptance",
@@ -437,11 +445,11 @@
       "dataPath": "runs/2026-05-25-mlb-min-cws-contest-25-v042-mm-acceptance/evidence.json",
       "date": "2026-05-25",
       "network": "polygon",
+      "publishedAt": "2026-05-25T21:29:54Z",
       "rawPath": "runs/2026-05-25-mlb-min-cws-contest-25-v042-mm-acceptance/raw/",
       "release": "ospex-org/ospex-sdk v0.4.2",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-05-25-mlb-min-cws-contest-25-v042-mm-acceptance/summary.md",
-      "publishedAt": "2026-05-25T21:29:54Z"
+      "summaryPath": "runs/2026-05-25-mlb-min-cws-contest-25-v042-mm-acceptance/summary.md"
     },
     {
       "artifactId": "2026-05-24-mlb-tex-laa-contest-24-v040-mm-acceptance",
@@ -449,11 +457,11 @@
       "dataPath": "runs/2026-05-24-mlb-tex-laa-contest-24-v040-mm-acceptance/evidence.json",
       "date": "2026-05-24",
       "network": "polygon",
+      "publishedAt": "2026-05-25T04:26:48Z",
       "rawPath": "runs/2026-05-24-mlb-tex-laa-contest-24-v040-mm-acceptance/raw/",
       "release": "ospex-org/ospex-sdk v0.4.0",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-05-24-mlb-tex-laa-contest-24-v040-mm-acceptance/summary.md",
-      "publishedAt": "2026-05-25T04:26:48Z"
+      "summaryPath": "runs/2026-05-24-mlb-tex-laa-contest-24-v040-mm-acceptance/summary.md"
     },
     {
       "artifactId": "2026-05-24-mlb-pit-tor-contest-22-mm-early1",
@@ -461,10 +469,10 @@
       "dataPath": "runs/2026-05-24-mlb-pit-tor-contest-22-mm-early1/evidence.json",
       "date": "2026-05-24",
       "network": "polygon",
+      "publishedAt": "2026-05-24T21:53:35Z",
       "rawPath": "runs/2026-05-24-mlb-pit-tor-contest-22-mm-early1/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-05-24-mlb-pit-tor-contest-22-mm-early1/summary.md",
-      "publishedAt": "2026-05-24T21:53:35Z"
+      "summaryPath": "runs/2026-05-24-mlb-pit-tor-contest-22-mm-early1/summary.md"
     },
     {
       "artifactId": "2026-05-24-mlb-min-bos-contest-23-mm-early2-softcancel-recovery",
@@ -472,10 +480,10 @@
       "dataPath": "runs/2026-05-24-mlb-min-bos-contest-23-mm-early2-softcancel-recovery/evidence.json",
       "date": "2026-05-24",
       "network": "polygon",
+      "publishedAt": "2026-05-24T21:53:35Z",
       "rawPath": "runs/2026-05-24-mlb-min-bos-contest-23-mm-early2-softcancel-recovery/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-05-24-mlb-min-bos-contest-23-mm-early2-softcancel-recovery/summary.md",
-      "publishedAt": "2026-05-24T21:53:35Z"
+      "summaryPath": "runs/2026-05-24-mlb-min-bos-contest-23-mm-early2-softcancel-recovery/summary.md"
     },
     {
       "artifactId": "2026-05-24-mlb-tex-laa-contest-21-mm-partial-smoke",
@@ -483,10 +491,10 @@
       "dataPath": "runs/2026-05-24-mlb-tex-laa-contest-21-mm-partial-smoke/evidence.json",
       "date": "2026-05-24",
       "network": "polygon",
+      "publishedAt": "2026-05-24T06:04:49Z",
       "rawPath": "runs/2026-05-24-mlb-tex-laa-contest-21-mm-partial-smoke/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-05-24-mlb-tex-laa-contest-21-mm-partial-smoke/summary.md",
-      "publishedAt": "2026-05-24T06:04:49Z"
+      "summaryPath": "runs/2026-05-24-mlb-tex-laa-contest-21-mm-partial-smoke/summary.md"
     },
     {
       "artifactId": "2026-05-23-mlb-hou-chc-contest-19-mm-smoke",
@@ -494,10 +502,10 @@
       "dataPath": "runs/2026-05-23-mlb-hou-chc-contest-19-mm-smoke/evidence.json",
       "date": "2026-05-23",
       "network": "polygon",
+      "publishedAt": "2026-05-23T22:09:42Z",
       "rawPath": "runs/2026-05-23-mlb-hou-chc-contest-19-mm-smoke/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-05-23-mlb-hou-chc-contest-19-mm-smoke/summary.md",
-      "publishedAt": "2026-05-23T22:09:42Z"
+      "summaryPath": "runs/2026-05-23-mlb-hou-chc-contest-19-mm-smoke/summary.md"
     },
     {
       "artifactId": "2026-05-22-mlb-lad-mil-contest-18-controlled-lifecycle",
@@ -505,10 +513,10 @@
       "dataPath": "runs/2026-05-22-mlb-lad-mil-contest-18-controlled-lifecycle/evidence.json",
       "date": "2026-05-22",
       "network": "polygon",
+      "publishedAt": "2026-05-23T02:56:42Z",
       "rawPath": "runs/2026-05-22-mlb-lad-mil-contest-18-controlled-lifecycle/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-05-22-mlb-lad-mil-contest-18-controlled-lifecycle/summary.md",
-      "publishedAt": "2026-05-23T02:56:42Z"
+      "summaryPath": "runs/2026-05-22-mlb-lad-mil-contest-18-controlled-lifecycle/summary.md"
     },
     {
       "artifactId": "2026-05-22-mlb-hou-chc-release-acceptance",
@@ -516,11 +524,11 @@
       "dataPath": "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.json",
       "date": "2026-05-22",
       "network": "polygon",
+      "publishedAt": "2026-05-22T18:18:26Z",
       "rawPath": "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/raw/",
       "release": "ospex-org/ospex-sdk v0.3.0",
       "status": "stage0_green",
-      "summaryPath": "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.md",
-      "publishedAt": "2026-05-22T18:18:26Z"
+      "summaryPath": "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.md"
     },
     {
       "artifactId": "2026-05-20-mlb-three-game-mm-shakeout-contests-14-16",
@@ -528,10 +536,10 @@
       "dataPath": "runs/2026-05-20-mlb-three-game-mm-shakeout-contests-14-16/evidence.json",
       "date": "2026-05-20",
       "network": "polygon",
+      "publishedAt": "2026-05-21T08:28:46Z",
       "rawPath": "runs/2026-05-20-mlb-three-game-mm-shakeout-contests-14-16/raw/",
       "status": "complete_verified_with_caveats",
-      "summaryPath": "runs/2026-05-20-mlb-three-game-mm-shakeout-contests-14-16/summary.md",
-      "publishedAt": "2026-05-21T08:28:46Z"
+      "summaryPath": "runs/2026-05-20-mlb-three-game-mm-shakeout-contests-14-16/summary.md"
     },
     {
       "artifactId": "2026-05-19-mlb-atl-mia-contest-13",
@@ -539,10 +547,13 @@
       "dataPath": "runs/2026-05-19-mlb-atl-mia-contest-13/evidence.json",
       "date": "2026-05-19",
       "network": "polygon",
+      "publishedAt": "2026-05-20T02:48:35Z",
       "rawPath": "runs/2026-05-19-mlb-atl-mia-contest-13/raw/",
       "status": "complete_verified",
-      "summaryPath": "runs/2026-05-19-mlb-atl-mia-contest-13/summary.md",
-      "publishedAt": "2026-05-20T02:48:35Z"
+      "summaryPath": "runs/2026-05-19-mlb-atl-mia-contest-13/summary.md"
     }
-  ]
+  ],
+  "generatedAt": "2026-07-09T00:11:16.150530Z",
+  "repository": "ospex-org/ospex-artifacts",
+  "schemaVersion": 1
 }

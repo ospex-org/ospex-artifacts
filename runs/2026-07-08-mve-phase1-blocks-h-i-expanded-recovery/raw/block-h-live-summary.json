@@ -1,0 +1,87 @@
+{
+  "ok": true,
+  "utc": "2026-07-08T19:19:12.454901Z",
+  "contestId": "35",
+  "fills": [
+    {
+      "market": "moneyline",
+      "hash": "0x1d391b86d0a0e9d5c3a153d36847e3e3eda7062a93ff7e6af330d9d1be68c3ef",
+      "riskUSDC": "0.100000",
+      "txHashes": [
+        "0xd8571934499442fcf949122d0b85d8cbf8d50adfb3a2eb625d7af6d2cfbb80af"
+      ],
+      "previewRetries": [
+        {
+          "hash": "0x1d391b86d0a0e9d5c3a153d36847e3e3eda7062a93ff7e6af330d9d1be68c3ef",
+          "risk": "0.500000",
+          "errors": [
+            {
+              "code": "VALIDATION_ERROR",
+              "message": "Match would revert: fillMakerRisk=574700 not in (0, remaining=250000]. Choose a different takerDesiredRiskWei6.",
+              "details": {
+                "field": "takerDesiredRiskWei6"
+              }
+            }
+          ]
+        },
+        {
+          "hash": "0x1d391b86d0a0e9d5c3a153d36847e3e3eda7062a93ff7e6af330d9d1be68c3ef",
+          "risk": "0.250000",
+          "errors": [
+            {
+              "code": "VALIDATION_ERROR",
+              "message": "Match would revert: fillMakerRisk=287300 not in (0, remaining=250000]. Choose a different takerDesiredRiskWei6.",
+              "details": {
+                "field": "takerDesiredRiskWei6"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "market": "total",
+      "hash": "0x696e77b45b45032537ced6206d148ad6a2190ae2ee44018cde043aaf2f36dd16",
+      "riskUSDC": "0.250000",
+      "txHashes": [
+        "0x8e1ea4caba4de69a8c7b010c927df9df03087f9bc4cf2f13a6743305cd038950"
+      ],
+      "previewRetries": [
+        {
+          "hash": "0x696e77b45b45032537ced6206d148ad6a2190ae2ee44018cde043aaf2f36dd16",
+          "risk": "0.500000",
+          "errors": [
+            {
+              "code": "VALIDATION_ERROR",
+              "message": "Match would revert: fillMakerRisk=485400 not in (0, remaining=250000]. Choose a different takerDesiredRiskWei6.",
+              "details": {
+                "field": "takerDesiredRiskWei6"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "zeroOpen": {
+    "ok": true,
+    "cancelCount": 1
+  },
+  "eventCounts": {
+    "tick-start": 2,
+    "candidate": 4,
+    "stream-health-hold": 2,
+    "quote-intent": 3,
+    "risk-verdict": 3,
+    "submit": 6,
+    "quote-competitiveness": 6,
+    "fill": 1,
+    "soft-cancel": 5,
+    "kill": 1
+  },
+  "badOwnStateEvents": [],
+  "telemetryFiles": [
+    "/home/vince/.ospex/runs/20260708T184140Z-mve-phase1-block-h-tor-sf-harness-drill/logs/mm-live-telemetry/run-2026-07-08T19-16-35-333Z-863033.ndjson"
+  ],
+  "runDir": "/home/vince/.ospex/runs/20260708T184140Z-mve-phase1-block-h-tor-sf-harness-drill"
+}
