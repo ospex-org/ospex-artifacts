@@ -1,0 +1,2269 @@
+{
+  "artifactFiles": {
+    "block-h-live-summary": "raw/block-h-live-summary.json",
+    "block-h-live-zero-open": "raw/block-h-live-zero-open.json",
+    "block-h-manual-seed-fill": "raw/block-h-manual-seed-fill.json",
+    "block-i-live-classification": "raw/block-i-live-classification.json",
+    "block-i-live-error": "raw/block-i-live-error.json",
+    "block-i-manual-seed-fill": "raw/block-i-manual-seed-fill.json",
+    "block-i-prelive-replay": "raw/block-i-prelive-replay.json",
+    "block-i-setup-summary": "raw/block-i-setup-summary.json",
+    "block-i-split-dry-gates": "raw/block-i-split-dry-gates.json",
+    "evidence": "evidence.json",
+    "postgame-complete": "raw/postgame-complete.json",
+    "postgame-last-status": "raw/postgame-last-status.json",
+    "postgame-state": "raw/postgame-state.json",
+    "summary": "summary.md"
+  },
+  "artifactId": "2026-07-08-mve-phase1-blocks-h-i-expanded-recovery",
+  "artifactType": "run",
+  "blockH": {
+    "contestId": "35",
+    "controlledLiveFills": [
+      {
+        "hash": "0x1d391b86d0a0e9d5c3a153d36847e3e3eda7062a93ff7e6af330d9d1be68c3ef",
+        "market": "moneyline",
+        "previewRetries": [
+          {
+            "errors": [
+              {
+                "code": "VALIDATION_ERROR",
+                "details": {
+                  "field": "takerDesiredRiskWei6"
+                },
+                "message": "Match would revert: fillMakerRisk=574700 not in (0, remaining=250000]. Choose a different takerDesiredRiskWei6."
+              }
+            ],
+            "hash": "0x1d391b86d0a0e9d5c3a153d36847e3e3eda7062a93ff7e6af330d9d1be68c3ef",
+            "risk": "0.500000"
+          },
+          {
+            "errors": [
+              {
+                "code": "VALIDATION_ERROR",
+                "details": {
+                  "field": "takerDesiredRiskWei6"
+                },
+                "message": "Match would revert: fillMakerRisk=287300 not in (0, remaining=250000]. Choose a different takerDesiredRiskWei6."
+              }
+            ],
+            "hash": "0x1d391b86d0a0e9d5c3a153d36847e3e3eda7062a93ff7e6af330d9d1be68c3ef",
+            "risk": "0.250000"
+          }
+        ],
+        "riskUSDC": "0.100000",
+        "txHashes": [
+          "0xd8571934499442fcf949122d0b85d8cbf8d50adfb3a2eb625d7af6d2cfbb80af"
+        ]
+      },
+      {
+        "hash": "0x696e77b45b45032537ced6206d148ad6a2190ae2ee44018cde043aaf2f36dd16",
+        "market": "total",
+        "previewRetries": [
+          {
+            "errors": [
+              {
+                "code": "VALIDATION_ERROR",
+                "details": {
+                  "field": "takerDesiredRiskWei6"
+                },
+                "message": "Match would revert: fillMakerRisk=485400 not in (0, remaining=250000]. Choose a different takerDesiredRiskWei6."
+              }
+            ],
+            "hash": "0x696e77b45b45032537ced6206d148ad6a2190ae2ee44018cde043aaf2f36dd16",
+            "risk": "0.500000"
+          }
+        ],
+        "riskUSDC": "0.250000",
+        "txHashes": [
+          "0x8e1ea4caba4de69a8c7b010c927df9df03087f9bc4cf2f13a6743305cd038950"
+        ]
+      }
+    ],
+    "liveQuotesPostedEventCount": 6,
+    "liveZeroOpen": {
+      "cancelCount": 1,
+      "ok": true
+    },
+    "manualSeedFills": {
+      "count": 3,
+      "marketsByLabel": {
+        "H": [
+          "moneyline",
+          "spread",
+          "total"
+        ]
+      },
+      "txHashes": [
+        "0xae3591926f22ac735d913fe8dd322220cb5243838623be556c41ee16caf20ebd",
+        "0xcf2322118557d119246e98d52b3c97c7e66f6ba758d6f1e1d46f3ddf001b45fb",
+        "0xe9362583d72b1c252ee0f2634ce59ad3df977cc5340fd1593e38e66bed9b8e73"
+      ]
+    },
+    "postgameStatus": {
+      "final": true,
+      "found": true,
+      "gamePk": 823202,
+      "linescore": {
+        "balls": 1,
+        "currentInning": 9,
+        "currentInningOrdinal": "9th",
+        "defense": {
+          "batter": {
+            "fullName": "Andr\u00e9s Gim\u00e9nez",
+            "id": 665926,
+            "link": "/api/v1/people/665926"
+          },
+          "battingOrder": 9,
+          "catcher": {
+            "fullName": "Alejandro Kirk",
+            "id": 672386,
+            "link": "/api/v1/people/672386"
+          },
+          "center": {
+            "fullName": "Daulton Varsho",
+            "id": 662139,
+            "link": "/api/v1/people/662139"
+          },
+          "first": {
+            "fullName": "Vladimir Guerrero Jr.",
+            "id": 665489,
+            "link": "/api/v1/people/665489"
+          },
+          "inHole": {
+            "fullName": "Nathan Lukes",
+            "id": 664770,
+            "link": "/api/v1/people/664770"
+          },
+          "left": {
+            "fullName": "Myles Straw",
+            "id": 664702,
+            "link": "/api/v1/people/664702"
+          },
+          "onDeck": {
+            "fullName": "Ernie Clement",
+            "id": 676391,
+            "link": "/api/v1/people/676391"
+          },
+          "pitcher": {
+            "fullName": "Tyler Rogers",
+            "id": 643511,
+            "link": "/api/v1/people/643511"
+          },
+          "right": {
+            "fullName": "Nathan Lukes",
+            "id": 664770,
+            "link": "/api/v1/people/664770"
+          },
+          "second": {
+            "fullName": "Ernie Clement",
+            "id": 676391,
+            "link": "/api/v1/people/676391"
+          },
+          "shortstop": {
+            "fullName": "Andr\u00e9s Gim\u00e9nez",
+            "id": 665926,
+            "link": "/api/v1/people/665926"
+          },
+          "team": {
+            "id": 141,
+            "link": "/api/v1/teams/141",
+            "name": "Toronto Blue Jays"
+          },
+          "third": {
+            "fullName": "Kazuma Okamoto",
+            "id": 672960,
+            "link": "/api/v1/people/672960"
+          }
+        },
+        "inningHalf": "Bottom",
+        "inningState": "Bottom",
+        "innings": [
+          {
+            "away": {
+              "errors": 0,
+              "hits": 4,
+              "leftOnBase": 0,
+              "runs": 5
+            },
+            "home": {
+              "errors": 0,
+              "hits": 0,
+              "leftOnBase": 0,
+              "runs": 0
+            },
+            "num": 1,
+            "ordinalNum": "1st"
+          },
+          {
+            "away": {
+              "errors": 0,
+              "hits": 0,
+              "leftOnBase": 0,
+              "runs": 0
+            },
+            "home": {
+              "errors": 0,
+              "hits": 0,
+              "leftOnBase": 0,
+              "runs": 0
+            },
+            "num": 2,
+            "ordinalNum": "2nd"
+          },
+          {
+            "away": {
+              "errors": 0,
+              "hits": 0,
+              "leftOnBase": 0,
+              "runs": 0
+            },
+            "home": {
+              "errors": 0,
+              "hits": 0,
+              "leftOnBase": 0,
+              "runs": 0
+            },
+            "num": 3,
+            "ordinalNum": "3rd"
+          },
+          {
+            "away": {
+              "errors": 0,
+              "hits": 0,
+              "leftOnBase": 0,
+              "runs": 0
+            },
+            "home": {
+              "errors": 0,
+              "hits": 0,
+              "leftOnBase": 0,
+              "runs": 0
+            },
+            "num": 4,
+            "ordinalNum": "4th"
+          },
+          {
+            "away": {
+              "errors": 0,
+              "hits": 1,
+              "leftOnBase": 2,
+              "runs": 0
+            },
+            "home": {
+              "errors": 1,
+              "hits": 0,
+              "leftOnBase": 1,
+              "runs": 0
+            },
+            "num": 5,
+            "ordinalNum": "5th"
+          },
+          {
+            "away": {
+              "errors": 0,
+              "hits": 0,
+              "leftOnBase": 1,
+              "runs": 0
+            },
+            "home": {
+              "errors": 0,
+              "hits": 0,
+              "leftOnBase": 1,
+              "runs": 0
+            },
+            "num": 6,
+            "ordinalNum": "6th"
+          },
+          {
+            "away": {
+              "errors": 0,
+              "hits": 0,
+              "leftOnBase": 1,
+              "runs": 0
+            },
+            "home": {
+              "errors": 1,
+              "hits": 0,
+              "leftOnBase": 1,
+              "runs": 0
+            },
+            "num": 7,
+            "ordinalNum": "7th"
+          },
+          {
+            "away": {
+              "errors": 0,
+              "hits": 3,
+              "leftOnBase": 2,
+              "runs": 2
+            },
+            "home": {
+              "errors": 1,
+              "hits": 0,
+              "leftOnBase": 0,
+              "runs": 0
+            },
+            "num": 8,
+            "ordinalNum": "8th"
+          },
+          {
+            "away": {
+              "errors": 0,
+              "hits": 3,
+              "leftOnBase": 1,
+              "runs": 3
+            },
+            "home": {
+              "errors": 0,
+              "hits": 1,
+              "leftOnBase": 1,
+              "runs": 0
+            },
+            "num": 9,
+            "ordinalNum": "9th"
+          }
+        ],
+        "isTopInning": false,
+        "offense": {
+          "batter": {
+            "fullName": "Rafael Devers",
+            "id": 646240,
+            "link": "/api/v1/people/646240"
+          },
+          "battingOrder": 4,
+          "inHole": {
+            "fullName": "Willy Adames",
+            "id": 642715,
+            "link": "/api/v1/people/642715"
+          },
+          "onDeck": {
+            "fullName": "Jung Hoo Lee",
+            "id": 808982,
+            "link": "/api/v1/people/808982"
+          },
+          "pitcher": {
+            "fullName": "Ryan Walker",
+            "id": 676254,
+            "link": "/api/v1/people/676254"
+          },
+          "team": {
+            "id": 137,
+            "link": "/api/v1/teams/137",
+            "name": "San Francisco Giants"
+          }
+        },
+        "outs": 3,
+        "scheduledInnings": 9,
+        "strikes": 0,
+        "teams": {
+          "away": {
+            "errors": 0,
+            "hits": 11,
+            "leftOnBase": 7,
+            "runs": 10
+          },
+          "home": {
+            "errors": 3,
+            "hits": 1,
+            "leftOnBase": 4,
+            "runs": 0
+          }
+        }
+      },
+      "status": {
+        "abstractGameCode": "F",
+        "abstractGameState": "Final",
+        "codedGameState": "F",
+        "detailedState": "Final",
+        "startTimeTBD": false,
+        "statusCode": "F"
+      }
+    }
+  },
+  "blockI": {
+    "classification": {
+      "block": "MVE Phase 1 Block I",
+      "harnessFix": {
+        "module": "<local-home>/.hermes/scripts/ospex_expanded_live_harness.py",
+        "replay": "<local-home>/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/sanitized/harness-replay-block-i-p1.json",
+        "replayMarker": "<local-home>/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/state/expanded-live-harness-replay-block-i-p1.json"
+      },
+      "lateRecovery": {
+        "cancelled": true,
+        "reason": "User cancelled late recovery; do not rush remaining late games."
+      },
+      "liveMm": {
+        "controlledFills": 0,
+        "quotesPosted": 0,
+        "txSent": false
+      },
+      "liveVerdict": "AMBER_PRELIVE_GATE_HALT",
+      "ok": true,
+      "postgameWatcher": {
+        "active": true,
+        "jobId": "8629ab6e6847",
+        "script": "ospex_blocks_h_i_postgame_20260708.py"
+      },
+      "protocolVerdict": "MVE_PHASE1_BLOCK_I_AMBER",
+      "reason": "Live expanded-MM was halted by the operator harness before posting live quotes because the prelive dry-run gate incorrectly required full theoretical count. Block I p1 had expected 18 would-submit rows, actual 14 healthy rows, two benign reference-line-mismatch total skips (contest 29 total and contest 31 total), and zero bad events. Correct behavior would have been GO_WITH_CAVEATS for healthy targets; no late recovery will be rushed.",
+      "setupManualFills": {
+        "count": 18,
+        "note": "Microscopic setup/manual seed fills completed for all six contests/18 markets; not live-MM fill evidence."
+      },
+      "utc": "2026-07-08T23:54:18.495681Z"
+    },
+    "contestIds": {
+      "A": "29",
+      "B": "30",
+      "C": "31",
+      "D": "32",
+      "E": "33",
+      "F": "34"
+    },
+    "fixedHarnessReplay": {
+      "actualWouldSubmitRows": 14,
+      "benignSkips": [
+        {
+          "contestId": "29",
+          "label": "A",
+          "market": "total",
+          "reason": "reference-line-mismatch",
+          "speculationId": "77",
+          "wouldSubmitRows": 0
+        },
+        {
+          "contestId": "31",
+          "label": "C",
+          "market": "total",
+          "reason": "reference-line-mismatch",
+          "speculationId": "83",
+          "wouldSubmitRows": 0
+        }
+      ],
+      "expectedWouldSubmitRows": 18,
+      "fatalEventCount": 0,
+      "verdict": "GO_WITH_CAVEATS"
+    },
+    "liveMm": {
+      "controlledFills": 0,
+      "quotesPosted": 0,
+      "txSent": false
+    },
+    "manualSeedFills": {
+      "count": 18,
+      "marketsByLabel": {
+        "A": [
+          "moneyline",
+          "spread",
+          "total"
+        ],
+        "B": [
+          "moneyline",
+          "spread",
+          "total"
+        ],
+        "C": [
+          "moneyline",
+          "spread",
+          "total"
+        ],
+        "D": [
+          "moneyline",
+          "spread",
+          "total"
+        ],
+        "E": [
+          "moneyline",
+          "spread",
+          "total"
+        ],
+        "F": [
+          "moneyline",
+          "spread",
+          "total"
+        ]
+      },
+      "txHashes": [
+        "0x91be559b8f3cfb6d4080762b73cbd2000c7a1df7e30a9c8bddeb94c1ef3ad924",
+        "0x3e6b7e8cee4108c434d54de088c34e091ac72313cbc6ddd6ec20f3acc4dbb54b",
+        "0x0028848e711d9f875181b0d35b5796aeb59b7c7477f41411139faacd5f2d7ddb",
+        "0xe29f1d2a023f6a9adba9babb9078eb101524e1eed6598f99908c9ec30464a6af",
+        "0x31402267dc70527a4c430ddcbe1d59ed6ae9e501bd2fb9ca5b26e6d0ce3ae626",
+        "0xb9daf6e4cdb9e6c75688ad84602fa67b0457203fd4fbcc49be52bc394ce0c649",
+        "0x2baac7520c66ba5a860b855570d4f0df7b7676528685ff72c3f1d6ba3d3362c8",
+        "0x17b245d5accfc3c902f354c13e54fef1ec6f06f4661146e1b83ae30cd405214d",
+        "0x34b415ec21c3875d1a4a67005f56ac87e2b12d31441615cd98afc57aad0ba40c",
+        "0xae9858c09d17ec40a2649f8da15e8bbc25a36cfa74bae4fd195df83701b9ee31",
+        "0x0df18f8e0e8f8bfd0b130f0d1e27f757dd2e05011732d6fbb2c3c461d395e01a",
+        "0x473ad75f2e3a3e1bb58b08e2644b3fbc7856a227316e18df33abaaf55e2c64d0",
+        "0x114e2776935c107c4eb6113c77320f18be8722d77f3a0529945ff456ecabdd50",
+        "0xe1f1f3e7bf4a0f4edf12ff4ec00fd2ee8e5ef9e61ffb7892e14011f6e49baa90",
+        "0x77746e0e6aa1a010a729a9a2060e06d999f84bae996aa06dce6ebb4f318f7021",
+        "0x957e5996ebcd177004837749b3f505f14f4cca01c44c0ba7081c7ba4f5abdd47",
+        "0xbad8e4bb5434aa8d1d6b86bc790de3fc615b10998a50588b26dc24be56fa108d",
+        "0x07cf2c0bef516665e446455042b2bd91f039ce4ec722c5266fb95c5843ae2f16"
+      ]
+    },
+    "postgameStatusByLabel": {
+      "A": {
+        "final": true,
+        "found": true,
+        "gamePk": 824815,
+        "linescore": {
+          "balls": 1,
+          "currentInning": 9,
+          "currentInningOrdinal": "9th",
+          "defense": {
+            "batter": {
+              "fullName": "Seiya Suzuki",
+              "id": 673548,
+              "link": "/api/v1/people/673548"
+            },
+            "battingOrder": 4,
+            "catcher": {
+              "fullName": "Carson Kelly",
+              "id": 608348,
+              "link": "/api/v1/people/608348"
+            },
+            "center": {
+              "fullName": "Pete Crow-Armstrong",
+              "id": 691718,
+              "link": "/api/v1/people/691718"
+            },
+            "first": {
+              "fullName": "Michael Busch",
+              "id": 683737,
+              "link": "/api/v1/people/683737"
+            },
+            "inHole": {
+              "fullName": "Nico Hoerner",
+              "id": 663538,
+              "link": "/api/v1/people/663538"
+            },
+            "left": {
+              "fullName": "Ian Happ",
+              "id": 664023,
+              "link": "/api/v1/people/664023"
+            },
+            "onDeck": {
+              "fullName": "Ian Happ",
+              "id": 664023,
+              "link": "/api/v1/people/664023"
+            },
+            "pitcher": {
+              "fullName": "Jacob Webb",
+              "id": 657097,
+              "link": "/api/v1/people/657097"
+            },
+            "right": {
+              "fullName": "Justin Dean",
+              "id": 681909,
+              "link": "/api/v1/people/681909"
+            },
+            "second": {
+              "fullName": "Nico Hoerner",
+              "id": 663538,
+              "link": "/api/v1/people/663538"
+            },
+            "shortstop": {
+              "fullName": "Dansby Swanson",
+              "id": 621020,
+              "link": "/api/v1/people/621020"
+            },
+            "team": {
+              "id": 112,
+              "link": "/api/v1/teams/112",
+              "name": "Chicago Cubs"
+            },
+            "third": {
+              "fullName": "Alex Bregman",
+              "id": 608324,
+              "link": "/api/v1/people/608324"
+            }
+          },
+          "inningHalf": "Bottom",
+          "inningState": "Bottom",
+          "innings": [
+            {
+              "away": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "num": 1,
+              "ordinalNum": "1st"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 2,
+              "ordinalNum": "2nd"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 0,
+                "runs": 1
+              },
+              "home": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 0,
+                "runs": 1
+              },
+              "num": 3,
+              "ordinalNum": "3rd"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 3,
+                "leftOnBase": 1,
+                "runs": 2
+              },
+              "num": 4,
+              "ordinalNum": "4th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 3,
+                "leftOnBase": 0,
+                "runs": 3
+              },
+              "home": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "num": 5,
+              "ordinalNum": "5th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 6,
+              "ordinalNum": "6th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 0,
+                "runs": 5
+              },
+              "home": {
+                "errors": 0,
+                "hits": 4,
+                "leftOnBase": 2,
+                "runs": 2
+              },
+              "num": 7,
+              "ordinalNum": "7th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "home": {
+                "errors": 1,
+                "hits": 3,
+                "leftOnBase": 1,
+                "runs": 2
+              },
+              "num": 8,
+              "ordinalNum": "8th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 9,
+              "ordinalNum": "9th"
+            }
+          ],
+          "isTopInning": false,
+          "offense": {
+            "batter": {
+              "fullName": "Pete Alonso",
+              "id": 624413,
+              "link": "/api/v1/people/624413"
+            },
+            "battingOrder": 4,
+            "inHole": {
+              "fullName": "Leody Taveras",
+              "id": 665750,
+              "link": "/api/v1/people/665750"
+            },
+            "onDeck": {
+              "fullName": "Samuel Basallo",
+              "id": 694212,
+              "link": "/api/v1/people/694212"
+            },
+            "pitcher": {
+              "fullName": "Tyler Wells",
+              "id": 669330,
+              "link": "/api/v1/people/669330"
+            },
+            "team": {
+              "id": 110,
+              "link": "/api/v1/teams/110",
+              "name": "Baltimore Orioles"
+            }
+          },
+          "outs": 3,
+          "scheduledInnings": 9,
+          "strikes": 2,
+          "teams": {
+            "away": {
+              "errors": 0,
+              "hits": 8,
+              "leftOnBase": 3,
+              "runs": 9
+            },
+            "home": {
+              "errors": 1,
+              "hits": 14,
+              "leftOnBase": 6,
+              "runs": 7
+            }
+          }
+        },
+        "status": {
+          "abstractGameCode": "F",
+          "abstractGameState": "Final",
+          "codedGameState": "F",
+          "detailedState": "Final",
+          "startTimeTBD": false,
+          "statusCode": "F"
+        }
+      },
+      "B": {
+        "final": true,
+        "found": true,
+        "gamePk": 824253,
+        "linescore": {
+          "balls": 3,
+          "currentInning": 9,
+          "currentInningOrdinal": "9th",
+          "defense": {
+            "batter": {
+              "fullName": "Jake Rogers",
+              "id": 668670,
+              "link": "/api/v1/people/668670"
+            },
+            "battingOrder": 2,
+            "catcher": {
+              "fullName": "Jake Rogers",
+              "id": 668670,
+              "link": "/api/v1/people/668670"
+            },
+            "center": {
+              "fullName": "James Outman",
+              "id": 681546,
+              "link": "/api/v1/people/681546"
+            },
+            "first": {
+              "fullName": "Spencer Torkelson",
+              "id": 679529,
+              "link": "/api/v1/people/679529"
+            },
+            "inHole": {
+              "fullName": "Spencer Torkelson",
+              "id": 679529,
+              "link": "/api/v1/people/679529"
+            },
+            "left": {
+              "fullName": "Riley Greene",
+              "id": 682985,
+              "link": "/api/v1/people/682985"
+            },
+            "onDeck": {
+              "fullName": "Kevin McGonigle",
+              "id": 805808,
+              "link": "/api/v1/people/805808"
+            },
+            "pitcher": {
+              "fullName": "Beau Brieske",
+              "id": 689225,
+              "link": "/api/v1/people/689225"
+            },
+            "right": {
+              "fullName": "Matt Vierling",
+              "id": 663837,
+              "link": "/api/v1/people/663837"
+            },
+            "second": {
+              "fullName": "Zach McKinstry",
+              "id": 656716,
+              "link": "/api/v1/people/656716"
+            },
+            "shortstop": {
+              "fullName": "Kevin McGonigle",
+              "id": 805808,
+              "link": "/api/v1/people/805808"
+            },
+            "team": {
+              "id": 116,
+              "link": "/api/v1/teams/116",
+              "name": "Detroit Tigers"
+            },
+            "third": {
+              "fullName": "Colt Keith",
+              "id": 690993,
+              "link": "/api/v1/people/690993"
+            }
+          },
+          "inningHalf": "Top",
+          "inningState": "Top",
+          "innings": [
+            {
+              "away": {
+                "errors": 1,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 3,
+                "runs": 1
+              },
+              "num": 1,
+              "ordinalNum": "1st"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 2,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 0,
+                "runs": 2
+              },
+              "num": 2,
+              "ordinalNum": "2nd"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 3,
+              "ordinalNum": "3rd"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 2,
+                "runs": 1
+              },
+              "home": {
+                "errors": 1,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 4,
+              "ordinalNum": "4th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 3,
+                "leftOnBase": 1,
+                "runs": 3
+              },
+              "num": 5,
+              "ordinalNum": "5th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 2,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 2,
+                "runs": 0
+              },
+              "num": 6,
+              "ordinalNum": "6th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 2,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "num": 7,
+              "ordinalNum": "7th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 8,
+              "ordinalNum": "8th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0
+              },
+              "num": 9,
+              "ordinalNum": "9th"
+            }
+          ],
+          "isTopInning": true,
+          "offense": {
+            "batter": {
+              "fullName": "Zack Gelof",
+              "id": 680869,
+              "link": "/api/v1/people/680869"
+            },
+            "battingOrder": 1,
+            "inHole": {
+              "fullName": "Shea Langeliers",
+              "id": 669127,
+              "link": "/api/v1/people/669127"
+            },
+            "onDeck": {
+              "fullName": "Jeff McNeil",
+              "id": 643446,
+              "link": "/api/v1/people/643446"
+            },
+            "pitcher": {
+              "fullName": "Jos\u00e9 Suarez",
+              "id": 660761,
+              "link": "/api/v1/people/660761"
+            },
+            "team": {
+              "id": 133,
+              "link": "/api/v1/teams/133",
+              "name": "Athletics"
+            }
+          },
+          "outs": 3,
+          "scheduledInnings": 9,
+          "strikes": 1,
+          "teams": {
+            "away": {
+              "errors": 1,
+              "hits": 7,
+              "leftOnBase": 9,
+              "runs": 1
+            },
+            "home": {
+              "errors": 1,
+              "hits": 7,
+              "leftOnBase": 7,
+              "runs": 6
+            }
+          }
+        },
+        "status": {
+          "abstractGameCode": "F",
+          "abstractGameState": "Final",
+          "codedGameState": "F",
+          "detailedState": "Final",
+          "startTimeTBD": false,
+          "statusCode": "F"
+        }
+      },
+      "C": {
+        "final": true,
+        "found": true,
+        "gamePk": 823360,
+        "linescore": {
+          "balls": 1,
+          "currentInning": 9,
+          "currentInningOrdinal": "9th",
+          "defense": {
+            "batter": {
+              "fullName": "Austin Riley",
+              "id": 663586,
+              "link": "/api/v1/people/663586"
+            },
+            "battingOrder": 6,
+            "catcher": {
+              "fullName": "Joey Bart",
+              "id": 663698,
+              "link": "/api/v1/people/663698"
+            },
+            "center": {
+              "fullName": "Michael Harris II",
+              "id": 671739,
+              "link": "/api/v1/people/671739"
+            },
+            "first": {
+              "fullName": "Matt Olson",
+              "id": 621566,
+              "link": "/api/v1/people/621566"
+            },
+            "inHole": {
+              "fullName": "Joey Bart",
+              "id": 663698,
+              "link": "/api/v1/people/663698"
+            },
+            "left": {
+              "fullName": "Mauricio Dub\u00f3n",
+              "id": 643289,
+              "link": "/api/v1/people/643289"
+            },
+            "onDeck": {
+              "fullName": "Mike Yastrzemski",
+              "id": 573262,
+              "link": "/api/v1/people/573262"
+            },
+            "pitcher": {
+              "fullName": "Raisel Iglesias",
+              "id": 628452,
+              "link": "/api/v1/people/628452"
+            },
+            "right": {
+              "fullName": "Mike Yastrzemski",
+              "id": 573262,
+              "link": "/api/v1/people/573262"
+            },
+            "second": {
+              "fullName": "Ozzie Albies",
+              "id": 645277,
+              "link": "/api/v1/people/645277"
+            },
+            "shortstop": {
+              "fullName": "Jorge Mateo",
+              "id": 622761,
+              "link": "/api/v1/people/622761"
+            },
+            "team": {
+              "id": 144,
+              "link": "/api/v1/teams/144",
+              "name": "Atlanta Braves"
+            },
+            "third": {
+              "fullName": "Austin Riley",
+              "id": 663586,
+              "link": "/api/v1/people/663586"
+            }
+          },
+          "inningHalf": "Bottom",
+          "inningState": "Bottom",
+          "innings": [
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "num": 1,
+              "ordinalNum": "1st"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "num": 2,
+              "ordinalNum": "2nd"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 2,
+                "runs": 0
+              },
+              "num": 3,
+              "ordinalNum": "3rd"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "num": 4,
+              "ordinalNum": "4th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 5,
+              "ordinalNum": "5th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "num": 6,
+              "ordinalNum": "6th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 7,
+              "ordinalNum": "7th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 0,
+                "runs": 2
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 8,
+              "ordinalNum": "8th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 1,
+                "runs": 1
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "num": 9,
+              "ordinalNum": "9th"
+            }
+          ],
+          "isTopInning": false,
+          "offense": {
+            "batter": {
+              "fullName": "Marcell Ozuna",
+              "id": 542303,
+              "link": "/api/v1/people/542303"
+            },
+            "battingOrder": 7,
+            "inHole": {
+              "fullName": "Henry Davis",
+              "id": 680779,
+              "link": "/api/v1/people/680779"
+            },
+            "onDeck": {
+              "fullName": "Jared Triolo",
+              "id": 669707,
+              "link": "/api/v1/people/669707"
+            },
+            "pitcher": {
+              "fullName": "Isaac Mattson",
+              "id": 676755,
+              "link": "/api/v1/people/676755"
+            },
+            "team": {
+              "id": 134,
+              "link": "/api/v1/teams/134",
+              "name": "Pittsburgh Pirates"
+            }
+          },
+          "outs": 3,
+          "scheduledInnings": 9,
+          "strikes": 3,
+          "teams": {
+            "away": {
+              "errors": 0,
+              "hits": 5,
+              "leftOnBase": 2,
+              "runs": 3
+            },
+            "home": {
+              "errors": 0,
+              "hits": 4,
+              "leftOnBase": 7,
+              "runs": 0
+            }
+          }
+        },
+        "status": {
+          "abstractGameCode": "F",
+          "abstractGameState": "Final",
+          "codedGameState": "F",
+          "detailedState": "Final",
+          "startTimeTBD": false,
+          "statusCode": "F"
+        }
+      },
+      "D": {
+        "final": true,
+        "found": true,
+        "gamePk": 822957,
+        "linescore": {
+          "balls": 2,
+          "currentInning": 9,
+          "currentInningOrdinal": "9th",
+          "defense": {
+            "batter": {
+              "fullName": "Ben Williamson",
+              "id": 810938,
+              "link": "/api/v1/people/810938"
+            },
+            "battingOrder": 7,
+            "catcher": {
+              "fullName": "Nick Fortes",
+              "id": 663743,
+              "link": "/api/v1/people/663743"
+            },
+            "center": {
+              "fullName": "Cedric Mullins",
+              "id": 656775,
+              "link": "/api/v1/people/656775"
+            },
+            "first": {
+              "fullName": "Jonathan Aranda",
+              "id": 666018,
+              "link": "/api/v1/people/666018"
+            },
+            "inHole": {
+              "fullName": "Nick Fortes",
+              "id": 663743,
+              "link": "/api/v1/people/663743"
+            },
+            "left": {
+              "fullName": "Chandler Simpson",
+              "id": 802415,
+              "link": "/api/v1/people/802415"
+            },
+            "onDeck": {
+              "fullName": "Taylor Walls",
+              "id": 670764,
+              "link": "/api/v1/people/670764"
+            },
+            "pitcher": {
+              "fullName": "Bryan Baker",
+              "id": 641329,
+              "link": "/api/v1/people/641329"
+            },
+            "right": {
+              "fullName": "Jonny DeLuca",
+              "id": 676356,
+              "link": "/api/v1/people/676356"
+            },
+            "second": {
+              "fullName": "Ben Williamson",
+              "id": 810938,
+              "link": "/api/v1/people/810938"
+            },
+            "shortstop": {
+              "fullName": "Taylor Walls",
+              "id": 670764,
+              "link": "/api/v1/people/670764"
+            },
+            "team": {
+              "id": 139,
+              "link": "/api/v1/teams/139",
+              "name": "Tampa Bay Rays"
+            },
+            "third": {
+              "fullName": "Junior Caminero",
+              "id": 691406,
+              "link": "/api/v1/people/691406"
+            }
+          },
+          "inningHalf": "Top",
+          "inningState": "Top",
+          "innings": [
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "num": 1,
+              "ordinalNum": "1st"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 2,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "num": 2,
+              "ordinalNum": "2nd"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 1,
+                "runs": 1
+              },
+              "num": 3,
+              "ordinalNum": "3rd"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 4,
+              "ordinalNum": "4th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 3,
+                "leftOnBase": 2,
+                "runs": 1
+              },
+              "num": 5,
+              "ordinalNum": "5th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 6,
+              "ordinalNum": "6th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 2,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 1
+              },
+              "num": 7,
+              "ordinalNum": "7th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 8,
+              "ordinalNum": "8th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0
+              },
+              "num": 9,
+              "ordinalNum": "9th"
+            }
+          ],
+          "isTopInning": true,
+          "offense": {
+            "batter": {
+              "fullName": "Jasson Dom\u00ednguez",
+              "id": 691176,
+              "link": "/api/v1/people/691176"
+            },
+            "battingOrder": 5,
+            "inHole": {
+              "fullName": "Trent Grisham",
+              "id": 663757,
+              "link": "/api/v1/people/663757"
+            },
+            "onDeck": {
+              "fullName": "Anthony Volpe",
+              "id": 683011,
+              "link": "/api/v1/people/683011"
+            },
+            "pitcher": {
+              "fullName": "Angel Chivilli",
+              "id": 683409,
+              "link": "/api/v1/people/683409"
+            },
+            "team": {
+              "id": 147,
+              "link": "/api/v1/teams/147",
+              "name": "New York Yankees"
+            }
+          },
+          "outs": 3,
+          "scheduledInnings": 9,
+          "strikes": 3,
+          "teams": {
+            "away": {
+              "errors": 0,
+              "hits": 6,
+              "leftOnBase": 5,
+              "runs": 0
+            },
+            "home": {
+              "errors": 0,
+              "hits": 8,
+              "leftOnBase": 6,
+              "runs": 3
+            }
+          }
+        },
+        "status": {
+          "abstractGameCode": "F",
+          "abstractGameState": "Final",
+          "codedGameState": "F",
+          "detailedState": "Final",
+          "startTimeTBD": false,
+          "statusCode": "F"
+        }
+      },
+      "E": {
+        "final": true,
+        "found": true,
+        "gamePk": 823848,
+        "linescore": {
+          "balls": 2,
+          "currentInning": 9,
+          "currentInningOrdinal": "9th",
+          "defense": {
+            "batter": {
+              "fullName": "Kyle Stowers",
+              "id": 669065,
+              "link": "/api/v1/people/669065"
+            },
+            "battingOrder": 4,
+            "catcher": {
+              "fullName": "Joe Mack",
+              "id": 691788,
+              "link": "/api/v1/people/691788"
+            },
+            "center": {
+              "fullName": "Jakob Marsee",
+              "id": 805300,
+              "link": "/api/v1/people/805300"
+            },
+            "first": {
+              "fullName": "Kyle Stowers",
+              "id": 669065,
+              "link": "/api/v1/people/669065"
+            },
+            "inHole": {
+              "fullName": "Heriberto Hern\u00e1ndez",
+              "id": 681715,
+              "link": "/api/v1/people/681715"
+            },
+            "left": {
+              "fullName": "Heriberto Hern\u00e1ndez",
+              "id": 681715,
+              "link": "/api/v1/people/681715"
+            },
+            "onDeck": {
+              "fullName": "Griffin Conine",
+              "id": 665052,
+              "link": "/api/v1/people/665052"
+            },
+            "pitcher": {
+              "fullName": "Pete Fairbanks",
+              "id": 664126,
+              "link": "/api/v1/people/664126"
+            },
+            "right": {
+              "fullName": "Griffin Conine",
+              "id": 665052,
+              "link": "/api/v1/people/665052"
+            },
+            "second": {
+              "fullName": "Xavier Edwards",
+              "id": 669364,
+              "link": "/api/v1/people/669364"
+            },
+            "shortstop": {
+              "fullName": "Otto Lopez",
+              "id": 672640,
+              "link": "/api/v1/people/672640"
+            },
+            "team": {
+              "id": 146,
+              "link": "/api/v1/teams/146",
+              "name": "Miami Marlins"
+            },
+            "third": {
+              "fullName": "Javier Sanoja",
+              "id": 691594,
+              "link": "/api/v1/people/691594"
+            }
+          },
+          "inningHalf": "Top",
+          "inningState": "Top",
+          "innings": [
+            {
+              "away": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 2,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 1,
+              "ordinalNum": "1st"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 1,
+                "runs": 1
+              },
+              "num": 2,
+              "ordinalNum": "2nd"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 3,
+                "leftOnBase": 1,
+                "runs": 1
+              },
+              "num": 3,
+              "ordinalNum": "3rd"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 2,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "num": 4,
+              "ordinalNum": "4th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "num": 5,
+              "ordinalNum": "5th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 6,
+              "ordinalNum": "6th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 7,
+              "ordinalNum": "7th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "num": 8,
+              "ordinalNum": "8th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0
+              },
+              "num": 9,
+              "ordinalNum": "9th"
+            }
+          ],
+          "isTopInning": true,
+          "offense": {
+            "batter": {
+              "fullName": "Cole Young",
+              "id": 702284,
+              "link": "/api/v1/people/702284"
+            },
+            "battingOrder": 7,
+            "inHole": {
+              "fullName": "Colt Emerson",
+              "id": 806068,
+              "link": "/api/v1/people/806068"
+            },
+            "onDeck": {
+              "fullName": "Victor Robles",
+              "id": 645302,
+              "link": "/api/v1/people/645302"
+            },
+            "pitcher": {
+              "fullName": "Nick Davila",
+              "id": 689546,
+              "link": "/api/v1/people/689546"
+            },
+            "team": {
+              "id": 136,
+              "link": "/api/v1/teams/136",
+              "name": "Seattle Mariners"
+            }
+          },
+          "outs": 3,
+          "scheduledInnings": 9,
+          "strikes": 3,
+          "teams": {
+            "away": {
+              "errors": 0,
+              "hits": 5,
+              "leftOnBase": 7,
+              "runs": 0
+            },
+            "home": {
+              "errors": 0,
+              "hits": 8,
+              "leftOnBase": 4,
+              "runs": 2
+            }
+          }
+        },
+        "status": {
+          "abstractGameCode": "F",
+          "abstractGameState": "Final",
+          "codedGameState": "F",
+          "detailedState": "Final",
+          "startTimeTBD": false,
+          "statusCode": "F"
+        }
+      },
+      "F": {
+        "final": true,
+        "found": true,
+        "gamePk": 822710,
+        "linescore": {
+          "balls": 2,
+          "currentInning": 9,
+          "currentInningOrdinal": "9th",
+          "defense": {
+            "batter": {
+              "fullName": "Jos\u00e9 Tena",
+              "id": 677588,
+              "link": "/api/v1/people/677588"
+            },
+            "battingOrder": 8,
+            "catcher": {
+              "fullName": "Keibert Ruiz",
+              "id": 660688,
+              "link": "/api/v1/people/660688"
+            },
+            "center": {
+              "fullName": "Dylan Crews",
+              "id": 686611,
+              "link": "/api/v1/people/686611"
+            },
+            "first": {
+              "fullName": "Luis Garc\u00eda Jr.",
+              "id": 671277,
+              "link": "/api/v1/people/671277"
+            },
+            "inHole": {
+              "fullName": "James Wood",
+              "id": 695578,
+              "link": "/api/v1/people/695578"
+            },
+            "left": {
+              "fullName": "Daylen Lile",
+              "id": 695734,
+              "link": "/api/v1/people/695734"
+            },
+            "onDeck": {
+              "fullName": "Keibert Ruiz",
+              "id": 660688,
+              "link": "/api/v1/people/660688"
+            },
+            "pitcher": {
+              "fullName": "Justin Lawrence",
+              "id": 664875,
+              "link": "/api/v1/people/664875"
+            },
+            "right": {
+              "fullName": "James Wood",
+              "id": 695578,
+              "link": "/api/v1/people/695578"
+            },
+            "second": {
+              "fullName": "Jorbit Vivas",
+              "id": 678391,
+              "link": "/api/v1/people/678391"
+            },
+            "shortstop": {
+              "fullName": "CJ Abrams",
+              "id": 682928,
+              "link": "/api/v1/people/682928"
+            },
+            "team": {
+              "id": 120,
+              "link": "/api/v1/teams/120",
+              "name": "Washington Nationals"
+            },
+            "third": {
+              "fullName": "Curtis Mead",
+              "id": 678554,
+              "link": "/api/v1/people/678554"
+            }
+          },
+          "inningHalf": "Top",
+          "inningState": "Top",
+          "innings": [
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 2,
+                "runs": 0
+              },
+              "num": 1,
+              "ordinalNum": "1st"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "num": 2,
+              "ordinalNum": "2nd"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 2
+              },
+              "num": 3,
+              "ordinalNum": "3rd"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 0,
+                "runs": 3
+              },
+              "num": 4,
+              "ordinalNum": "4th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 1,
+                "runs": 1
+              },
+              "home": {
+                "errors": 0,
+                "hits": 3,
+                "leftOnBase": 1,
+                "runs": 3
+              },
+              "num": 5,
+              "ordinalNum": "5th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 2,
+                "runs": 0
+              },
+              "num": 6,
+              "ordinalNum": "6th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "num": 7,
+              "ordinalNum": "7th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 2,
+                "leftOnBase": 1,
+                "runs": 1
+              },
+              "home": {
+                "errors": 1,
+                "hits": 1,
+                "leftOnBase": 3,
+                "runs": 0
+              },
+              "num": 8,
+              "ordinalNum": "8th"
+            },
+            {
+              "away": {
+                "errors": 0,
+                "hits": 1,
+                "leftOnBase": 1,
+                "runs": 0
+              },
+              "home": {
+                "errors": 0,
+                "hits": 0,
+                "leftOnBase": 0
+              },
+              "num": 9,
+              "ordinalNum": "9th"
+            }
+          ],
+          "isTopInning": true,
+          "offense": {
+            "batter": {
+              "fullName": "Brice Matthews",
+              "id": 694728,
+              "link": "/api/v1/people/694728"
+            },
+            "battingOrder": 7,
+            "inHole": {
+              "fullName": "Nick Allen",
+              "id": 669397,
+              "link": "/api/v1/people/669397"
+            },
+            "onDeck": {
+              "fullName": "Zach Dezenzo",
+              "id": 701305,
+              "link": "/api/v1/people/701305"
+            },
+            "pitcher": {
+              "fullName": "Cristian Javier",
+              "id": 664299,
+              "link": "/api/v1/people/664299"
+            },
+            "team": {
+              "id": 117,
+              "link": "/api/v1/teams/117",
+              "name": "Houston Astros"
+            }
+          },
+          "outs": 3,
+          "scheduledInnings": 9,
+          "strikes": 2,
+          "teams": {
+            "away": {
+              "errors": 0,
+              "hits": 8,
+              "leftOnBase": 5,
+              "runs": 2
+            },
+            "home": {
+              "errors": 1,
+              "hits": 9,
+              "leftOnBase": 11,
+              "runs": 8
+            }
+          }
+        },
+        "status": {
+          "abstractGameCode": "F",
+          "abstractGameState": "Final",
+          "codedGameState": "F",
+          "detailedState": "Final",
+          "startTimeTBD": false,
+          "statusCode": "F"
+        }
+      }
+    },
+    "preliveFailure": {
+      "context": {
+        "bad": [],
+        "rc": 0,
+        "stdoutTail": "warning ../../../package.json: No license field\n[run] maker wallet: 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b\n[runner] starting run 2026-07-08T22-06-03-244Z-ncuwnw \u2014 chain 137, api https://api.ospex.org, mode dry-run\n[runner] SSE budget: this instance uses 10 connections (9 anonymous odds + 1 owner-auth own-state). The core-api per-IP cap is per HOST and split \u2014 odds share 13 anonymous slots, own-state uses the owner reserve. Co-locating N instances needs N*9 <= MAX_STREAM_CONNECTIONS_PER_IP - RESERVED_STREAM_CONNECTIONS_PER_IP_OWNER for the odds streams (and N*10 <= MAX_STREAM_CONNECTIONS_PER_IP overall), or run each on its own egress IP. See DESIGN \"SSE connection budget\".\n",
+        "tag": "p1",
+        "wouldSubmit": 14
+      },
+      "error": "prelive dry gate failed"
+    }
+  },
+  "dataPath": "evidence.json",
+  "date": "2026-07-08",
+  "generatedAt": "2026-07-09T03:18:59Z",
+  "network": "polygon",
+  "postgame": {
+    "completedAt": "2026-07-09T03:11:44.996339Z",
+    "ok": true,
+    "state": "complete",
+    "watcherJobId": "8629ab6e6847",
+    "zeroState": {
+      "ok": true,
+      "openCommitments": {
+        "A": 0,
+        "B": 0,
+        "C": 0,
+        "D": 0,
+        "E": 0,
+        "F": 0,
+        "H": 0
+      },
+      "wallets": {
+        "flow_a": {
+          "ok": true,
+          "targetCounts": {
+            "active": 0,
+            "claimable": 0,
+            "pendingSettle": 0
+          }
+        },
+        "fresh_user": {
+          "ok": true,
+          "targetCounts": {
+            "active": 0,
+            "claimable": 0,
+            "pendingSettle": 0
+          }
+        },
+        "stage_maker_a": {
+          "ok": true,
+          "targetCounts": {
+            "active": 0,
+            "claimable": 0,
+            "pendingSettle": 0
+          }
+        },
+        "stage_maker_b": {
+          "ok": true,
+          "targetCounts": {
+            "active": 0,
+            "claimable": 0,
+            "pendingSettle": 0
+          }
+        }
+      }
+    }
+  },
+  "publishedAt": "2026-07-09T03:18:59Z",
+  "rawPath": "raw/",
+  "runClass": "mm-live-canary-multiblock-facts-only",
+  "schemaVersion": 1,
+  "scorecardStatus": "not_published_for_multiblock_partial_artifact",
+  "scorecardStatusReason": "The schema-backed mve-scorecard contract is single-target; this is a multi-block facts-only partial/amber artifact.",
+  "sourceRunIds": {
+    "blockH": "20260708T184140Z-mve-phase1-block-h-tor-sf-harness-drill",
+    "blockI": "20260708T181153Z-mve-phase1-block-i-evening-6game-expanded"
+  },
+  "status": "partial",
+  "summaryPath": "summary.md",
+  "verdict": {
+    "label": "AMBER_PRELIVE_GATE_HALT",
+    "reason": "Block H completed the live harness drill and combined postgame zero-state; Block I setup/manual evidence completed but expanded live MM halted before quotes/fills because the operator harness used an all-or-nothing prelive dry gate. Combined postgame score/settle/claim/zero-state completed before this update."
+  }
+}

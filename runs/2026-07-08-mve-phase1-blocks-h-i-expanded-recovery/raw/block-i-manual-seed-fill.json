@@ -1,0 +1,290 @@
+[
+  {
+    "label": "A",
+    "contestId": "29",
+    "market": "moneyline",
+    "side": "Baltimore Orioles",
+    "maker": "fresh-user",
+    "taker": "flow-a",
+    "commitmentHash": "0xaae4c0105a1fef75487026eda686b89454b7746e6f61497d3a73e39029e0b02d",
+    "submitOk": true,
+    "matchOk": true,
+    "matchTxHashes": [
+      "0x91be559b8f3cfb6d4080762b73cbd2000c7a1df7e30a9c8bddeb94c1ef3ad924"
+    ],
+    "speculationId": null,
+    "previewRisk": "0.000810"
+  },
+  {
+    "label": "A",
+    "contestId": "29",
+    "market": "spread",
+    "side": "Baltimore Orioles -1.5",
+    "maker": "fresh-user",
+    "taker": "stage-maker-b",
+    "commitmentHash": "0x1748a17b5c153733a6ab17791977af5c7335493fb6dfaab17b04c1fbf02f7b46",
+    "submitOk": true,
+    "matchOk": true,
+    "matchTxHashes": [
+      "0x3e6b7e8cee4108c434d54de088c34e091ac72313cbc6ddd6ec20f3acc4dbb54b"
+    ],
+    "speculationId": null,
+    "previewRisk": "0.001570"
+  },
+  {
+    "label": "A",
+    "contestId": "29",
+    "market": "total",
+    "side": "over 9.5",
+    "maker": "fresh-user",
+    "taker": "flow-a",
+    "commitmentHash": "0xc22f2977350fe732ef284102d98cb37fdae426d242b1a0b3369c7ddee3283e83",
+    "submitOk": true,
+    "matchOk": true,
+    "matchTxHashes": [
+      "0x0028848e711d9f875181b0d35b5796aeb59b7c7477f41411139faacd5f2d7ddb"
+    ],
+    "speculationId": null,
+    "previewRisk": "0.000800"
+  },
+  {
+    "label": "B",
+    "contestId": "30",
+    "market": "moneyline",
+    "side": "Detroit Tigers",
+    "maker": "fresh-user",
+    "taker": "stage-maker-b",
+    "commitmentHash": "0xfa7c1085da3909d5403a28d2480819fafeaa9668af8047b89d78c2d4d60325e7",
+    "submitOk": true,
+    "matchOk": true,
+    "matchTxHashes": [
+      "0xe29f1d2a023f6a9adba9babb9078eb101524e1eed6598f99908c9ec30464a6af"
+    ],
+    "speculationId": null,
+    "previewRisk": "0.000750"
+  },
+  {
+    "label": "B",
+    "contestId": "30",
+    "market": "spread",
+    "side": "Detroit Tigers -1.5",
+    "maker": "fresh-user",
+    "taker": "flow-a",
+    "commitmentHash": "0x547c020bce1bb73e45b6d8068ddd6668ffc0185995ecf0b5759d548fc740aec5",
+    "submitOk": true,
+    "matchOk": true,
+    "matchTxHashes": [
+      "0x31402267dc70527a4c430ddcbe1d59ed6ae9e501bd2fb9ca5b26e6d0ce3ae626"
+    ],
+    "speculationId": null,
+    "previewRisk": "0.001430"
+  },
+  {
+    "label": "B",
+    "contestId": "30",
+    "market": "total",
+    "side": "over 9",
+    "maker": "fresh-user",
+    "taker": "stage-maker-b",
+    "commitmentHash": "0xd431cd98aabbfbb3269e751e7715d2f34b03edfbbc484e624bf1a14e32210f34",
+    "submitOk": true,
+    "matchOk": true,
+    "matchTxHashes": [
+      "0xb9daf6e4cdb9e6c75688ad84602fa67b0457203fd4fbcc49be52bc394ce0c649"
+    ],
+    "speculationId": null,
+    "previewRisk": "0.000830"
+  },
+  {
+    "label": "C",
+    "contestId": "31",
+    "market": "moneyline",
+    "side": "Pittsburgh Pirates",
+    "maker": "fresh-user",
+    "taker": "flow-a",
+    "commitmentHash": "0xd4988f2880b915bc82858fb02788e5accc93455e8c38009ae1409193fd2e4cc5",
+    "submitOk": true,
+    "matchOk": true,
+    "matchTxHashes": [
+      "0x2baac7520c66ba5a860b855570d4f0df7b7676528685ff72c3f1d6ba3d3362c8"
+    ],
+    "speculationId": null,
+    "previewRisk": "0.000860"
+  },
+  {
+    "label": "C",
+    "contestId": "31",
+    "market": "spread",
+    "side": "Pittsburgh Pirates -1.5",
+    "maker": "fresh-user",
+    "taker": "stage-maker-b",
+    "commitmentHash": "0x4b029a869ec5f30c54e68b51571f5e74139a00318d10fbefc424dc32f65d1500",
+    "submitOk": true,
+    "matchOk": true,
+    "matchTxHashes": [
+      "0x17b245d5accfc3c902f354c13e54fef1ec6f06f4661146e1b83ae30cd405214d"
+    ],
+    "speculationId": null,
+    "previewRisk": "0.001700"
+  },
+  {
+    "label": "C",
+    "contestId": "31",
+    "market": "total",
+    "side": "over 9",
+    "maker": "fresh-user",
+    "taker": "flow-a",
+    "commitmentHash": "0x72c7dac4c2b467bcf74e2c2f3a3863dd2bdd7167b4a2b3701ba86516ac0a42f4",
+    "submitOk": true,
+    "matchOk": true,
+    "matchTxHashes": [
+      "0x34b415ec21c3875d1a4a67005f56ac87e2b12d31441615cd98afc57aad0ba40c"
+    ],
+    "speculationId": null,
+    "previewRisk": "0.000830"
+  },
+  {
+    "label": "D",
+    "contestId": "32",
+    "market": "moneyline",
+    "side": "Tampa Bay Rays",
+    "maker": "fresh-user",
+    "taker": "stage-maker-b",
+    "commitmentHash": "0xf275073b71f1890bd35bf3d26a5d0047611c7a234fff2d07ff2499a6ca3c0bd8",
+    "submitOk": true,
+    "matchOk": true,
+    "matchTxHashes": [
+      "0xae9858c09d17ec40a2649f8da15e8bbc25a36cfa74bae4fd195df83701b9ee31"
+    ],
+    "speculationId": null,
+    "previewRisk": "0.000880"
+  },
+  {
+    "label": "D",
+    "contestId": "32",
+    "market": "spread",
+    "side": "Tampa Bay Rays -1.5",
+    "maker": "fresh-user",
+    "taker": "flow-a",
+    "commitmentHash": "0x88cd44798ea934b16236677ca0e558b5ac6c416a7289d472e9aa5ba29eabf712",
+    "submitOk": true,
+    "matchOk": true,
+    "matchTxHashes": [
+      "0x0df18f8e0e8f8bfd0b130f0d1e27f757dd2e05011732d6fbb2c3c461d395e01a"
+    ],
+    "speculationId": null,
+    "previewRisk": "0.001760"
+  },
+  {
+    "label": "D",
+    "contestId": "32",
+    "market": "total",
+    "side": "over 7.5",
+    "maker": "fresh-user",
+    "taker": "stage-maker-b",
+    "commitmentHash": "0x52758d40e544759438aecc01fb0b3824093216f3c0fcd03d7b57612cd969e56a",
+    "submitOk": true,
+    "matchOk": true,
+    "matchTxHashes": [
+      "0x473ad75f2e3a3e1bb58b08e2644b3fbc7856a227316e18df33abaaf55e2c64d0"
+    ],
+    "speculationId": null,
+    "previewRisk": "0.001000"
+  },
+  {
+    "label": "E",
+    "contestId": "33",
+    "market": "moneyline",
+    "side": "Miami Marlins",
+    "maker": "fresh-user",
+    "taker": "flow-a",
+    "commitmentHash": "0x91c12da519e3ac43c138d339d6ba5b93550048555fb89285cfba61a5c9a94249",
+    "submitOk": true,
+    "matchOk": true,
+    "matchTxHashes": [
+      "0x114e2776935c107c4eb6113c77320f18be8722d77f3a0529945ff456ecabdd50"
+    ],
+    "speculationId": null,
+    "previewRisk": "0.001110"
+  },
+  {
+    "label": "E",
+    "contestId": "33",
+    "market": "spread",
+    "side": "Miami Marlins 1.5",
+    "maker": "fresh-user",
+    "taker": "stage-maker-b",
+    "commitmentHash": "0xe5ea80fdb2d2a053dba41780e89df785968dbc5c6c2452c78fef7c7eda131739",
+    "submitOk": true,
+    "matchOk": true,
+    "matchTxHashes": [
+      "0xe1f1f3e7bf4a0f4edf12ff4ec00fd2ee8e5ef9e61ffb7892e14011f6e49baa90"
+    ],
+    "speculationId": null,
+    "previewRisk": "0.000670"
+  },
+  {
+    "label": "E",
+    "contestId": "33",
+    "market": "total",
+    "side": "over 8.5",
+    "maker": "fresh-user",
+    "taker": "flow-a",
+    "commitmentHash": "0x27e96ea704f48c1f350c2fc8b8f07704372c13df2741ad06d224d0ce69e030f2",
+    "submitOk": true,
+    "matchOk": true,
+    "matchTxHashes": [
+      "0x77746e0e6aa1a010a729a9a2060e06d999f84bae996aa06dce6ebb4f318f7021"
+    ],
+    "speculationId": null,
+    "previewRisk": "0.000800"
+  },
+  {
+    "label": "F",
+    "contestId": "34",
+    "market": "moneyline",
+    "side": "Washington Nationals",
+    "maker": "fresh-user",
+    "taker": "stage-maker-b",
+    "commitmentHash": "0x3586eb7c4f5ef254ae9be80639941d35c6ae8055a888957f0f463792020f1000",
+    "submitOk": true,
+    "matchOk": true,
+    "matchTxHashes": [
+      "0x957e5996ebcd177004837749b3f505f14f4cca01c44c0ba7081c7ba4f5abdd47"
+    ],
+    "speculationId": null,
+    "previewRisk": "0.000740"
+  },
+  {
+    "label": "F",
+    "contestId": "34",
+    "market": "spread",
+    "side": "Washington Nationals -1.5",
+    "maker": "fresh-user",
+    "taker": "flow-a",
+    "commitmentHash": "0x8ddee560755b54134522db8343d4994e8f45c58bac2787fddcbabe802662bef5",
+    "submitOk": true,
+    "matchOk": true,
+    "matchTxHashes": [
+      "0xbad8e4bb5434aa8d1d6b86bc790de3fc615b10998a50588b26dc24be56fa108d"
+    ],
+    "speculationId": null,
+    "previewRisk": "0.001450"
+  },
+  {
+    "label": "F",
+    "contestId": "34",
+    "market": "total",
+    "side": "over 9.5",
+    "maker": "fresh-user",
+    "taker": "stage-maker-b",
+    "commitmentHash": "0x8ec9cfeaf655d008b594bbcabd255be1d87c0f09b1aa8841ab559f95568f0177",
+    "submitOk": true,
+    "matchOk": true,
+    "matchTxHashes": [
+      "0x07cf2c0bef516665e446455042b2bd91f039ce4ec722c5266fb95c5843ae2f16"
+    ],
+    "speculationId": null,
+    "previewRisk": "0.000830"
+  }
+]

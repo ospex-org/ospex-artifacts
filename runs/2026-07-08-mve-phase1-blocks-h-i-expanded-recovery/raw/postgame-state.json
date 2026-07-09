@@ -1,0 +1,3410 @@
+{
+  "ok": true,
+  "utc": "2026-07-09T03:11:44.996339Z",
+  "officialFinalStatus": {
+    "H": {
+      "found": true,
+      "final": true,
+      "gamePk": 823202,
+      "status": {
+        "abstractGameState": "Final",
+        "codedGameState": "F",
+        "detailedState": "Final",
+        "statusCode": "F",
+        "startTimeTBD": false,
+        "abstractGameCode": "F"
+      },
+      "linescore": {
+        "currentInning": 9,
+        "currentInningOrdinal": "9th",
+        "inningState": "Bottom",
+        "inningHalf": "Bottom",
+        "isTopInning": false,
+        "scheduledInnings": 9,
+        "innings": [
+          {
+            "num": 1,
+            "ordinalNum": "1st",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 5,
+              "hits": 4,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 2,
+            "ordinalNum": "2nd",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 3,
+            "ordinalNum": "3rd",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 4,
+            "ordinalNum": "4th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 5,
+            "ordinalNum": "5th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 1,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 2
+            }
+          },
+          {
+            "num": 6,
+            "ordinalNum": "6th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 1
+            }
+          },
+          {
+            "num": 7,
+            "ordinalNum": "7th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 1,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 1
+            }
+          },
+          {
+            "num": 8,
+            "ordinalNum": "8th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 1,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 2,
+              "hits": 3,
+              "errors": 0,
+              "leftOnBase": 2
+            }
+          },
+          {
+            "num": 9,
+            "ordinalNum": "9th",
+            "home": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 3,
+              "hits": 3,
+              "errors": 0,
+              "leftOnBase": 1
+            }
+          }
+        ],
+        "teams": {
+          "home": {
+            "runs": 0,
+            "hits": 1,
+            "errors": 3,
+            "leftOnBase": 4
+          },
+          "away": {
+            "runs": 10,
+            "hits": 11,
+            "errors": 0,
+            "leftOnBase": 7
+          }
+        },
+        "defense": {
+          "pitcher": {
+            "id": 643511,
+            "fullName": "Tyler Rogers",
+            "link": "/api/v1/people/643511"
+          },
+          "catcher": {
+            "id": 672386,
+            "fullName": "Alejandro Kirk",
+            "link": "/api/v1/people/672386"
+          },
+          "first": {
+            "id": 665489,
+            "fullName": "Vladimir Guerrero Jr.",
+            "link": "/api/v1/people/665489"
+          },
+          "second": {
+            "id": 676391,
+            "fullName": "Ernie Clement",
+            "link": "/api/v1/people/676391"
+          },
+          "third": {
+            "id": 672960,
+            "fullName": "Kazuma Okamoto",
+            "link": "/api/v1/people/672960"
+          },
+          "shortstop": {
+            "id": 665926,
+            "fullName": "Andr\u00e9s Gim\u00e9nez",
+            "link": "/api/v1/people/665926"
+          },
+          "left": {
+            "id": 664702,
+            "fullName": "Myles Straw",
+            "link": "/api/v1/people/664702"
+          },
+          "center": {
+            "id": 662139,
+            "fullName": "Daulton Varsho",
+            "link": "/api/v1/people/662139"
+          },
+          "right": {
+            "id": 664770,
+            "fullName": "Nathan Lukes",
+            "link": "/api/v1/people/664770"
+          },
+          "batter": {
+            "id": 665926,
+            "fullName": "Andr\u00e9s Gim\u00e9nez",
+            "link": "/api/v1/people/665926"
+          },
+          "onDeck": {
+            "id": 676391,
+            "fullName": "Ernie Clement",
+            "link": "/api/v1/people/676391"
+          },
+          "inHole": {
+            "id": 664770,
+            "fullName": "Nathan Lukes",
+            "link": "/api/v1/people/664770"
+          },
+          "battingOrder": 9,
+          "team": {
+            "id": 141,
+            "name": "Toronto Blue Jays",
+            "link": "/api/v1/teams/141"
+          }
+        },
+        "offense": {
+          "batter": {
+            "id": 646240,
+            "fullName": "Rafael Devers",
+            "link": "/api/v1/people/646240"
+          },
+          "onDeck": {
+            "id": 808982,
+            "fullName": "Jung Hoo Lee",
+            "link": "/api/v1/people/808982"
+          },
+          "inHole": {
+            "id": 642715,
+            "fullName": "Willy Adames",
+            "link": "/api/v1/people/642715"
+          },
+          "pitcher": {
+            "id": 676254,
+            "fullName": "Ryan Walker",
+            "link": "/api/v1/people/676254"
+          },
+          "battingOrder": 4,
+          "team": {
+            "id": 137,
+            "name": "San Francisco Giants",
+            "link": "/api/v1/teams/137"
+          }
+        },
+        "balls": 1,
+        "strikes": 0,
+        "outs": 3
+      }
+    },
+    "A": {
+      "found": true,
+      "final": true,
+      "gamePk": 824815,
+      "status": {
+        "abstractGameState": "Final",
+        "codedGameState": "F",
+        "detailedState": "Final",
+        "statusCode": "F",
+        "startTimeTBD": false,
+        "abstractGameCode": "F"
+      },
+      "linescore": {
+        "currentInning": 9,
+        "currentInningOrdinal": "9th",
+        "inningState": "Bottom",
+        "inningHalf": "Bottom",
+        "isTopInning": false,
+        "scheduledInnings": 9,
+        "innings": [
+          {
+            "num": 1,
+            "ordinalNum": "1st",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            }
+          },
+          {
+            "num": 2,
+            "ordinalNum": "2nd",
+            "home": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 1
+            }
+          },
+          {
+            "num": 3,
+            "ordinalNum": "3rd",
+            "home": {
+              "runs": 1,
+              "hits": 2,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 1,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 4,
+            "ordinalNum": "4th",
+            "home": {
+              "runs": 2,
+              "hits": 3,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 5,
+            "ordinalNum": "5th",
+            "home": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 3,
+              "hits": 3,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 6,
+            "ordinalNum": "6th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 7,
+            "ordinalNum": "7th",
+            "home": {
+              "runs": 2,
+              "hits": 4,
+              "errors": 0,
+              "leftOnBase": 2
+            },
+            "away": {
+              "runs": 5,
+              "hits": 2,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 8,
+            "ordinalNum": "8th",
+            "home": {
+              "runs": 2,
+              "hits": 3,
+              "errors": 1,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 1
+            }
+          },
+          {
+            "num": 9,
+            "ordinalNum": "9th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          }
+        ],
+        "teams": {
+          "home": {
+            "runs": 7,
+            "hits": 14,
+            "errors": 1,
+            "leftOnBase": 6
+          },
+          "away": {
+            "runs": 9,
+            "hits": 8,
+            "errors": 0,
+            "leftOnBase": 3
+          }
+        },
+        "defense": {
+          "pitcher": {
+            "id": 657097,
+            "fullName": "Jacob Webb",
+            "link": "/api/v1/people/657097"
+          },
+          "catcher": {
+            "id": 608348,
+            "fullName": "Carson Kelly",
+            "link": "/api/v1/people/608348"
+          },
+          "first": {
+            "id": 683737,
+            "fullName": "Michael Busch",
+            "link": "/api/v1/people/683737"
+          },
+          "second": {
+            "id": 663538,
+            "fullName": "Nico Hoerner",
+            "link": "/api/v1/people/663538"
+          },
+          "third": {
+            "id": 608324,
+            "fullName": "Alex Bregman",
+            "link": "/api/v1/people/608324"
+          },
+          "shortstop": {
+            "id": 621020,
+            "fullName": "Dansby Swanson",
+            "link": "/api/v1/people/621020"
+          },
+          "left": {
+            "id": 664023,
+            "fullName": "Ian Happ",
+            "link": "/api/v1/people/664023"
+          },
+          "center": {
+            "id": 691718,
+            "fullName": "Pete Crow-Armstrong",
+            "link": "/api/v1/people/691718"
+          },
+          "right": {
+            "id": 681909,
+            "fullName": "Justin Dean",
+            "link": "/api/v1/people/681909"
+          },
+          "batter": {
+            "id": 673548,
+            "fullName": "Seiya Suzuki",
+            "link": "/api/v1/people/673548"
+          },
+          "onDeck": {
+            "id": 664023,
+            "fullName": "Ian Happ",
+            "link": "/api/v1/people/664023"
+          },
+          "inHole": {
+            "id": 663538,
+            "fullName": "Nico Hoerner",
+            "link": "/api/v1/people/663538"
+          },
+          "battingOrder": 4,
+          "team": {
+            "id": 112,
+            "name": "Chicago Cubs",
+            "link": "/api/v1/teams/112"
+          }
+        },
+        "offense": {
+          "batter": {
+            "id": 624413,
+            "fullName": "Pete Alonso",
+            "link": "/api/v1/people/624413"
+          },
+          "onDeck": {
+            "id": 694212,
+            "fullName": "Samuel Basallo",
+            "link": "/api/v1/people/694212"
+          },
+          "inHole": {
+            "id": 665750,
+            "fullName": "Leody Taveras",
+            "link": "/api/v1/people/665750"
+          },
+          "pitcher": {
+            "id": 669330,
+            "fullName": "Tyler Wells",
+            "link": "/api/v1/people/669330"
+          },
+          "battingOrder": 4,
+          "team": {
+            "id": 110,
+            "name": "Baltimore Orioles",
+            "link": "/api/v1/teams/110"
+          }
+        },
+        "balls": 1,
+        "strikes": 2,
+        "outs": 3
+      }
+    },
+    "B": {
+      "found": true,
+      "final": true,
+      "gamePk": 824253,
+      "status": {
+        "abstractGameState": "Final",
+        "codedGameState": "F",
+        "detailedState": "Final",
+        "statusCode": "F",
+        "startTimeTBD": false,
+        "abstractGameCode": "F"
+      },
+      "linescore": {
+        "currentInning": 9,
+        "currentInningOrdinal": "9th",
+        "inningState": "Top",
+        "inningHalf": "Top",
+        "isTopInning": true,
+        "scheduledInnings": 9,
+        "innings": [
+          {
+            "num": 1,
+            "ordinalNum": "1st",
+            "home": {
+              "runs": 1,
+              "hits": 2,
+              "errors": 0,
+              "leftOnBase": 3
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 1,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 2,
+            "ordinalNum": "2nd",
+            "home": {
+              "runs": 2,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 2,
+              "errors": 0,
+              "leftOnBase": 2
+            }
+          },
+          {
+            "num": 3,
+            "ordinalNum": "3rd",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 4,
+            "ordinalNum": "4th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 1,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 1,
+              "hits": 2,
+              "errors": 0,
+              "leftOnBase": 2
+            }
+          },
+          {
+            "num": 5,
+            "ordinalNum": "5th",
+            "home": {
+              "runs": 3,
+              "hits": 3,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 6,
+            "ordinalNum": "6th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 2
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 2
+            }
+          },
+          {
+            "num": 7,
+            "ordinalNum": "7th",
+            "home": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 2,
+              "errors": 0,
+              "leftOnBase": 2
+            }
+          },
+          {
+            "num": 8,
+            "ordinalNum": "8th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 9,
+            "ordinalNum": "9th",
+            "home": {
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            }
+          }
+        ],
+        "teams": {
+          "home": {
+            "runs": 6,
+            "hits": 7,
+            "errors": 1,
+            "leftOnBase": 7
+          },
+          "away": {
+            "runs": 1,
+            "hits": 7,
+            "errors": 1,
+            "leftOnBase": 9
+          }
+        },
+        "defense": {
+          "pitcher": {
+            "id": 689225,
+            "fullName": "Beau Brieske",
+            "link": "/api/v1/people/689225"
+          },
+          "catcher": {
+            "id": 668670,
+            "fullName": "Jake Rogers",
+            "link": "/api/v1/people/668670"
+          },
+          "first": {
+            "id": 679529,
+            "fullName": "Spencer Torkelson",
+            "link": "/api/v1/people/679529"
+          },
+          "second": {
+            "id": 656716,
+            "fullName": "Zach McKinstry",
+            "link": "/api/v1/people/656716"
+          },
+          "third": {
+            "id": 690993,
+            "fullName": "Colt Keith",
+            "link": "/api/v1/people/690993"
+          },
+          "shortstop": {
+            "id": 805808,
+            "fullName": "Kevin McGonigle",
+            "link": "/api/v1/people/805808"
+          },
+          "left": {
+            "id": 682985,
+            "fullName": "Riley Greene",
+            "link": "/api/v1/people/682985"
+          },
+          "center": {
+            "id": 681546,
+            "fullName": "James Outman",
+            "link": "/api/v1/people/681546"
+          },
+          "right": {
+            "id": 663837,
+            "fullName": "Matt Vierling",
+            "link": "/api/v1/people/663837"
+          },
+          "batter": {
+            "id": 668670,
+            "fullName": "Jake Rogers",
+            "link": "/api/v1/people/668670"
+          },
+          "onDeck": {
+            "id": 805808,
+            "fullName": "Kevin McGonigle",
+            "link": "/api/v1/people/805808"
+          },
+          "inHole": {
+            "id": 679529,
+            "fullName": "Spencer Torkelson",
+            "link": "/api/v1/people/679529"
+          },
+          "battingOrder": 2,
+          "team": {
+            "id": 116,
+            "name": "Detroit Tigers",
+            "link": "/api/v1/teams/116"
+          }
+        },
+        "offense": {
+          "batter": {
+            "id": 680869,
+            "fullName": "Zack Gelof",
+            "link": "/api/v1/people/680869"
+          },
+          "onDeck": {
+            "id": 643446,
+            "fullName": "Jeff McNeil",
+            "link": "/api/v1/people/643446"
+          },
+          "inHole": {
+            "id": 669127,
+            "fullName": "Shea Langeliers",
+            "link": "/api/v1/people/669127"
+          },
+          "pitcher": {
+            "id": 660761,
+            "fullName": "Jos\u00e9 Suarez",
+            "link": "/api/v1/people/660761"
+          },
+          "battingOrder": 1,
+          "team": {
+            "id": 133,
+            "name": "Athletics",
+            "link": "/api/v1/teams/133"
+          }
+        },
+        "balls": 3,
+        "strikes": 1,
+        "outs": 3
+      }
+    },
+    "C": {
+      "found": true,
+      "final": true,
+      "gamePk": 823360,
+      "status": {
+        "abstractGameState": "Final",
+        "codedGameState": "F",
+        "detailedState": "Final",
+        "statusCode": "F",
+        "startTimeTBD": false,
+        "abstractGameCode": "F"
+      },
+      "linescore": {
+        "currentInning": 9,
+        "currentInningOrdinal": "9th",
+        "inningState": "Bottom",
+        "inningHalf": "Bottom",
+        "isTopInning": false,
+        "scheduledInnings": 9,
+        "innings": [
+          {
+            "num": 1,
+            "ordinalNum": "1st",
+            "home": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 2,
+            "ordinalNum": "2nd",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 3,
+            "ordinalNum": "3rd",
+            "home": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 2
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 4,
+            "ordinalNum": "4th",
+            "home": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 5,
+            "ordinalNum": "5th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 6,
+            "ordinalNum": "6th",
+            "home": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 7,
+            "ordinalNum": "7th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            }
+          },
+          {
+            "num": 8,
+            "ordinalNum": "8th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 2,
+              "hits": 2,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 9,
+            "ordinalNum": "9th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 1,
+              "hits": 2,
+              "errors": 0,
+              "leftOnBase": 1
+            }
+          }
+        ],
+        "teams": {
+          "home": {
+            "runs": 0,
+            "hits": 4,
+            "errors": 0,
+            "leftOnBase": 7
+          },
+          "away": {
+            "runs": 3,
+            "hits": 5,
+            "errors": 0,
+            "leftOnBase": 2
+          }
+        },
+        "defense": {
+          "pitcher": {
+            "id": 628452,
+            "fullName": "Raisel Iglesias",
+            "link": "/api/v1/people/628452"
+          },
+          "catcher": {
+            "id": 663698,
+            "fullName": "Joey Bart",
+            "link": "/api/v1/people/663698"
+          },
+          "first": {
+            "id": 621566,
+            "fullName": "Matt Olson",
+            "link": "/api/v1/people/621566"
+          },
+          "second": {
+            "id": 645277,
+            "fullName": "Ozzie Albies",
+            "link": "/api/v1/people/645277"
+          },
+          "third": {
+            "id": 663586,
+            "fullName": "Austin Riley",
+            "link": "/api/v1/people/663586"
+          },
+          "shortstop": {
+            "id": 622761,
+            "fullName": "Jorge Mateo",
+            "link": "/api/v1/people/622761"
+          },
+          "left": {
+            "id": 643289,
+            "fullName": "Mauricio Dub\u00f3n",
+            "link": "/api/v1/people/643289"
+          },
+          "center": {
+            "id": 671739,
+            "fullName": "Michael Harris II",
+            "link": "/api/v1/people/671739"
+          },
+          "right": {
+            "id": 573262,
+            "fullName": "Mike Yastrzemski",
+            "link": "/api/v1/people/573262"
+          },
+          "batter": {
+            "id": 663586,
+            "fullName": "Austin Riley",
+            "link": "/api/v1/people/663586"
+          },
+          "onDeck": {
+            "id": 573262,
+            "fullName": "Mike Yastrzemski",
+            "link": "/api/v1/people/573262"
+          },
+          "inHole": {
+            "id": 663698,
+            "fullName": "Joey Bart",
+            "link": "/api/v1/people/663698"
+          },
+          "battingOrder": 6,
+          "team": {
+            "id": 144,
+            "name": "Atlanta Braves",
+            "link": "/api/v1/teams/144"
+          }
+        },
+        "offense": {
+          "batter": {
+            "id": 542303,
+            "fullName": "Marcell Ozuna",
+            "link": "/api/v1/people/542303"
+          },
+          "onDeck": {
+            "id": 669707,
+            "fullName": "Jared Triolo",
+            "link": "/api/v1/people/669707"
+          },
+          "inHole": {
+            "id": 680779,
+            "fullName": "Henry Davis",
+            "link": "/api/v1/people/680779"
+          },
+          "pitcher": {
+            "id": 676755,
+            "fullName": "Isaac Mattson",
+            "link": "/api/v1/people/676755"
+          },
+          "battingOrder": 7,
+          "team": {
+            "id": 134,
+            "name": "Pittsburgh Pirates",
+            "link": "/api/v1/teams/134"
+          }
+        },
+        "balls": 1,
+        "strikes": 3,
+        "outs": 3
+      }
+    },
+    "D": {
+      "found": true,
+      "final": true,
+      "gamePk": 822957,
+      "status": {
+        "abstractGameState": "Final",
+        "codedGameState": "F",
+        "detailedState": "Final",
+        "statusCode": "F",
+        "startTimeTBD": false,
+        "abstractGameCode": "F"
+      },
+      "linescore": {
+        "currentInning": 9,
+        "currentInningOrdinal": "9th",
+        "inningState": "Top",
+        "inningHalf": "Top",
+        "isTopInning": true,
+        "scheduledInnings": 9,
+        "innings": [
+          {
+            "num": 1,
+            "ordinalNum": "1st",
+            "home": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 2,
+            "ordinalNum": "2nd",
+            "home": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 2,
+              "errors": 0,
+              "leftOnBase": 2
+            }
+          },
+          {
+            "num": 3,
+            "ordinalNum": "3rd",
+            "home": {
+              "runs": 1,
+              "hits": 2,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 4,
+            "ordinalNum": "4th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 5,
+            "ordinalNum": "5th",
+            "home": {
+              "runs": 1,
+              "hits": 3,
+              "errors": 0,
+              "leftOnBase": 2
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 6,
+            "ordinalNum": "6th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 7,
+            "ordinalNum": "7th",
+            "home": {
+              "runs": 1,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 2,
+              "errors": 0,
+              "leftOnBase": 2
+            }
+          },
+          {
+            "num": 8,
+            "ordinalNum": "8th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 9,
+            "ordinalNum": "9th",
+            "home": {
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            }
+          }
+        ],
+        "teams": {
+          "home": {
+            "runs": 3,
+            "hits": 8,
+            "errors": 0,
+            "leftOnBase": 6
+          },
+          "away": {
+            "runs": 0,
+            "hits": 6,
+            "errors": 0,
+            "leftOnBase": 5
+          }
+        },
+        "defense": {
+          "pitcher": {
+            "id": 641329,
+            "fullName": "Bryan Baker",
+            "link": "/api/v1/people/641329"
+          },
+          "catcher": {
+            "id": 663743,
+            "fullName": "Nick Fortes",
+            "link": "/api/v1/people/663743"
+          },
+          "first": {
+            "id": 666018,
+            "fullName": "Jonathan Aranda",
+            "link": "/api/v1/people/666018"
+          },
+          "second": {
+            "id": 810938,
+            "fullName": "Ben Williamson",
+            "link": "/api/v1/people/810938"
+          },
+          "third": {
+            "id": 691406,
+            "fullName": "Junior Caminero",
+            "link": "/api/v1/people/691406"
+          },
+          "shortstop": {
+            "id": 670764,
+            "fullName": "Taylor Walls",
+            "link": "/api/v1/people/670764"
+          },
+          "left": {
+            "id": 802415,
+            "fullName": "Chandler Simpson",
+            "link": "/api/v1/people/802415"
+          },
+          "center": {
+            "id": 656775,
+            "fullName": "Cedric Mullins",
+            "link": "/api/v1/people/656775"
+          },
+          "right": {
+            "id": 676356,
+            "fullName": "Jonny DeLuca",
+            "link": "/api/v1/people/676356"
+          },
+          "batter": {
+            "id": 810938,
+            "fullName": "Ben Williamson",
+            "link": "/api/v1/people/810938"
+          },
+          "onDeck": {
+            "id": 670764,
+            "fullName": "Taylor Walls",
+            "link": "/api/v1/people/670764"
+          },
+          "inHole": {
+            "id": 663743,
+            "fullName": "Nick Fortes",
+            "link": "/api/v1/people/663743"
+          },
+          "battingOrder": 7,
+          "team": {
+            "id": 139,
+            "name": "Tampa Bay Rays",
+            "link": "/api/v1/teams/139"
+          }
+        },
+        "offense": {
+          "batter": {
+            "id": 691176,
+            "fullName": "Jasson Dom\u00ednguez",
+            "link": "/api/v1/people/691176"
+          },
+          "onDeck": {
+            "id": 683011,
+            "fullName": "Anthony Volpe",
+            "link": "/api/v1/people/683011"
+          },
+          "inHole": {
+            "id": 663757,
+            "fullName": "Trent Grisham",
+            "link": "/api/v1/people/663757"
+          },
+          "pitcher": {
+            "id": 683409,
+            "fullName": "Angel Chivilli",
+            "link": "/api/v1/people/683409"
+          },
+          "battingOrder": 5,
+          "team": {
+            "id": 147,
+            "name": "New York Yankees",
+            "link": "/api/v1/teams/147"
+          }
+        },
+        "balls": 2,
+        "strikes": 3,
+        "outs": 3
+      }
+    },
+    "E": {
+      "found": true,
+      "final": true,
+      "gamePk": 823848,
+      "status": {
+        "abstractGameState": "Final",
+        "codedGameState": "F",
+        "detailedState": "Final",
+        "statusCode": "F",
+        "startTimeTBD": false,
+        "abstractGameCode": "F"
+      },
+      "linescore": {
+        "currentInning": 9,
+        "currentInningOrdinal": "9th",
+        "inningState": "Top",
+        "inningHalf": "Top",
+        "isTopInning": true,
+        "scheduledInnings": 9,
+        "innings": [
+          {
+            "num": 1,
+            "ordinalNum": "1st",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 2,
+              "errors": 0,
+              "leftOnBase": 2
+            }
+          },
+          {
+            "num": 2,
+            "ordinalNum": "2nd",
+            "home": {
+              "runs": 1,
+              "hits": 2,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            }
+          },
+          {
+            "num": 3,
+            "ordinalNum": "3rd",
+            "home": {
+              "runs": 1,
+              "hits": 3,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            }
+          },
+          {
+            "num": 4,
+            "ordinalNum": "4th",
+            "home": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 2
+            }
+          },
+          {
+            "num": 5,
+            "ordinalNum": "5th",
+            "home": {
+              "runs": 0,
+              "hits": 2,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 6,
+            "ordinalNum": "6th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 7,
+            "ordinalNum": "7th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 8,
+            "ordinalNum": "8th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 9,
+            "ordinalNum": "9th",
+            "home": {
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            }
+          }
+        ],
+        "teams": {
+          "home": {
+            "runs": 2,
+            "hits": 8,
+            "errors": 0,
+            "leftOnBase": 4
+          },
+          "away": {
+            "runs": 0,
+            "hits": 5,
+            "errors": 0,
+            "leftOnBase": 7
+          }
+        },
+        "defense": {
+          "pitcher": {
+            "id": 664126,
+            "fullName": "Pete Fairbanks",
+            "link": "/api/v1/people/664126"
+          },
+          "catcher": {
+            "id": 691788,
+            "fullName": "Joe Mack",
+            "link": "/api/v1/people/691788"
+          },
+          "first": {
+            "id": 669065,
+            "fullName": "Kyle Stowers",
+            "link": "/api/v1/people/669065"
+          },
+          "second": {
+            "id": 669364,
+            "fullName": "Xavier Edwards",
+            "link": "/api/v1/people/669364"
+          },
+          "third": {
+            "id": 691594,
+            "fullName": "Javier Sanoja",
+            "link": "/api/v1/people/691594"
+          },
+          "shortstop": {
+            "id": 672640,
+            "fullName": "Otto Lopez",
+            "link": "/api/v1/people/672640"
+          },
+          "left": {
+            "id": 681715,
+            "fullName": "Heriberto Hern\u00e1ndez",
+            "link": "/api/v1/people/681715"
+          },
+          "center": {
+            "id": 805300,
+            "fullName": "Jakob Marsee",
+            "link": "/api/v1/people/805300"
+          },
+          "right": {
+            "id": 665052,
+            "fullName": "Griffin Conine",
+            "link": "/api/v1/people/665052"
+          },
+          "batter": {
+            "id": 669065,
+            "fullName": "Kyle Stowers",
+            "link": "/api/v1/people/669065"
+          },
+          "onDeck": {
+            "id": 665052,
+            "fullName": "Griffin Conine",
+            "link": "/api/v1/people/665052"
+          },
+          "inHole": {
+            "id": 681715,
+            "fullName": "Heriberto Hern\u00e1ndez",
+            "link": "/api/v1/people/681715"
+          },
+          "battingOrder": 4,
+          "team": {
+            "id": 146,
+            "name": "Miami Marlins",
+            "link": "/api/v1/teams/146"
+          }
+        },
+        "offense": {
+          "batter": {
+            "id": 702284,
+            "fullName": "Cole Young",
+            "link": "/api/v1/people/702284"
+          },
+          "onDeck": {
+            "id": 645302,
+            "fullName": "Victor Robles",
+            "link": "/api/v1/people/645302"
+          },
+          "inHole": {
+            "id": 806068,
+            "fullName": "Colt Emerson",
+            "link": "/api/v1/people/806068"
+          },
+          "pitcher": {
+            "id": 689546,
+            "fullName": "Nick Davila",
+            "link": "/api/v1/people/689546"
+          },
+          "battingOrder": 7,
+          "team": {
+            "id": 136,
+            "name": "Seattle Mariners",
+            "link": "/api/v1/teams/136"
+          }
+        },
+        "balls": 2,
+        "strikes": 3,
+        "outs": 3
+      }
+    },
+    "F": {
+      "found": true,
+      "final": true,
+      "gamePk": 822710,
+      "status": {
+        "abstractGameState": "Final",
+        "codedGameState": "F",
+        "detailedState": "Final",
+        "statusCode": "F",
+        "startTimeTBD": false,
+        "abstractGameCode": "F"
+      },
+      "linescore": {
+        "currentInning": 9,
+        "currentInningOrdinal": "9th",
+        "inningState": "Top",
+        "inningHalf": "Top",
+        "isTopInning": true,
+        "scheduledInnings": 9,
+        "innings": [
+          {
+            "num": 1,
+            "ordinalNum": "1st",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 2
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 2,
+            "ordinalNum": "2nd",
+            "home": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 3,
+            "ordinalNum": "3rd",
+            "home": {
+              "runs": 2,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            }
+          },
+          {
+            "num": 4,
+            "ordinalNum": "4th",
+            "home": {
+              "runs": 3,
+              "hits": 2,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            }
+          },
+          {
+            "num": 5,
+            "ordinalNum": "5th",
+            "home": {
+              "runs": 3,
+              "hits": 3,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 1,
+              "hits": 2,
+              "errors": 0,
+              "leftOnBase": 1
+            }
+          },
+          {
+            "num": 6,
+            "ordinalNum": "6th",
+            "home": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 2
+            },
+            "away": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 7,
+            "ordinalNum": "7th",
+            "home": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 1
+            },
+            "away": {
+              "runs": 0,
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            }
+          },
+          {
+            "num": 8,
+            "ordinalNum": "8th",
+            "home": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 1,
+              "leftOnBase": 3
+            },
+            "away": {
+              "runs": 1,
+              "hits": 2,
+              "errors": 0,
+              "leftOnBase": 1
+            }
+          },
+          {
+            "num": 9,
+            "ordinalNum": "9th",
+            "home": {
+              "hits": 0,
+              "errors": 0,
+              "leftOnBase": 0
+            },
+            "away": {
+              "runs": 0,
+              "hits": 1,
+              "errors": 0,
+              "leftOnBase": 1
+            }
+          }
+        ],
+        "teams": {
+          "home": {
+            "runs": 8,
+            "hits": 9,
+            "errors": 1,
+            "leftOnBase": 11
+          },
+          "away": {
+            "runs": 2,
+            "hits": 8,
+            "errors": 0,
+            "leftOnBase": 5
+          }
+        },
+        "defense": {
+          "pitcher": {
+            "id": 664875,
+            "fullName": "Justin Lawrence",
+            "link": "/api/v1/people/664875"
+          },
+          "catcher": {
+            "id": 660688,
+            "fullName": "Keibert Ruiz",
+            "link": "/api/v1/people/660688"
+          },
+          "first": {
+            "id": 671277,
+            "fullName": "Luis Garc\u00eda Jr.",
+            "link": "/api/v1/people/671277"
+          },
+          "second": {
+            "id": 678391,
+            "fullName": "Jorbit Vivas",
+            "link": "/api/v1/people/678391"
+          },
+          "third": {
+            "id": 678554,
+            "fullName": "Curtis Mead",
+            "link": "/api/v1/people/678554"
+          },
+          "shortstop": {
+            "id": 682928,
+            "fullName": "CJ Abrams",
+            "link": "/api/v1/people/682928"
+          },
+          "left": {
+            "id": 695734,
+            "fullName": "Daylen Lile",
+            "link": "/api/v1/people/695734"
+          },
+          "center": {
+            "id": 686611,
+            "fullName": "Dylan Crews",
+            "link": "/api/v1/people/686611"
+          },
+          "right": {
+            "id": 695578,
+            "fullName": "James Wood",
+            "link": "/api/v1/people/695578"
+          },
+          "batter": {
+            "id": 677588,
+            "fullName": "Jos\u00e9 Tena",
+            "link": "/api/v1/people/677588"
+          },
+          "onDeck": {
+            "id": 660688,
+            "fullName": "Keibert Ruiz",
+            "link": "/api/v1/people/660688"
+          },
+          "inHole": {
+            "id": 695578,
+            "fullName": "James Wood",
+            "link": "/api/v1/people/695578"
+          },
+          "battingOrder": 8,
+          "team": {
+            "id": 120,
+            "name": "Washington Nationals",
+            "link": "/api/v1/teams/120"
+          }
+        },
+        "offense": {
+          "batter": {
+            "id": 694728,
+            "fullName": "Brice Matthews",
+            "link": "/api/v1/people/694728"
+          },
+          "onDeck": {
+            "id": 701305,
+            "fullName": "Zach Dezenzo",
+            "link": "/api/v1/people/701305"
+          },
+          "inHole": {
+            "id": 669397,
+            "fullName": "Nick Allen",
+            "link": "/api/v1/people/669397"
+          },
+          "pitcher": {
+            "id": 664299,
+            "fullName": "Cristian Javier",
+            "link": "/api/v1/people/664299"
+          },
+          "battingOrder": 7,
+          "team": {
+            "id": 117,
+            "name": "Houston Astros",
+            "link": "/api/v1/teams/117"
+          }
+        },
+        "balls": 2,
+        "strikes": 2,
+        "outs": 3
+      }
+    }
+  },
+  "postgame": {
+    "scoreStatus": {
+      "H": {
+        "schemaVersion": 2,
+        "ok": true,
+        "action": "contests.score-status",
+        "stage": "read",
+        "network": "polygon",
+        "chainId": 137,
+        "generatedAt": "2026-07-09T03:11:03.204Z",
+        "cliVersion": "0.10.0",
+        "sdkVersion": "0.10.0",
+        "wallet": null,
+        "walletRole": "none",
+        "signer": null,
+        "requiresSignature": false,
+        "requiresTransaction": false,
+        "approvalRequirements": [],
+        "estimatedCosts": null,
+        "risk": null,
+        "payout": null,
+        "contest": null,
+        "speculation": null,
+        "commitment": null,
+        "sideSummary": null,
+        "warnings": [],
+        "errors": [],
+        "effects": [],
+        "nextCommands": [],
+        "payload": {
+          "contestId": "35",
+          "status": "scored",
+          "scored": true,
+          "awayScore": 10,
+          "homeScore": 0
+        }
+      },
+      "A": {
+        "schemaVersion": 2,
+        "ok": true,
+        "action": "contests.score-status",
+        "stage": "read",
+        "network": "polygon",
+        "chainId": 137,
+        "generatedAt": "2026-07-09T03:11:03.700Z",
+        "cliVersion": "0.10.0",
+        "sdkVersion": "0.10.0",
+        "wallet": null,
+        "walletRole": "none",
+        "signer": null,
+        "requiresSignature": false,
+        "requiresTransaction": false,
+        "approvalRequirements": [],
+        "estimatedCosts": null,
+        "risk": null,
+        "payout": null,
+        "contest": null,
+        "speculation": null,
+        "commitment": null,
+        "sideSummary": null,
+        "warnings": [],
+        "errors": [],
+        "effects": [],
+        "nextCommands": [],
+        "payload": {
+          "contestId": "29",
+          "status": "scored",
+          "scored": true,
+          "awayScore": 9,
+          "homeScore": 7
+        }
+      },
+      "B": {
+        "schemaVersion": 2,
+        "ok": true,
+        "action": "contests.score-status",
+        "stage": "read",
+        "network": "polygon",
+        "chainId": 137,
+        "generatedAt": "2026-07-09T03:11:04.283Z",
+        "cliVersion": "0.10.0",
+        "sdkVersion": "0.10.0",
+        "wallet": null,
+        "walletRole": "none",
+        "signer": null,
+        "requiresSignature": false,
+        "requiresTransaction": false,
+        "approvalRequirements": [],
+        "estimatedCosts": null,
+        "risk": null,
+        "payout": null,
+        "contest": null,
+        "speculation": null,
+        "commitment": null,
+        "sideSummary": null,
+        "warnings": [],
+        "errors": [],
+        "effects": [],
+        "nextCommands": [],
+        "payload": {
+          "contestId": "30",
+          "status": "scored",
+          "scored": true,
+          "awayScore": 1,
+          "homeScore": 6
+        }
+      },
+      "C": {
+        "schemaVersion": 2,
+        "ok": true,
+        "action": "contests.score-status",
+        "stage": "read",
+        "network": "polygon",
+        "chainId": 137,
+        "generatedAt": "2026-07-09T03:11:04.843Z",
+        "cliVersion": "0.10.0",
+        "sdkVersion": "0.10.0",
+        "wallet": null,
+        "walletRole": "none",
+        "signer": null,
+        "requiresSignature": false,
+        "requiresTransaction": false,
+        "approvalRequirements": [],
+        "estimatedCosts": null,
+        "risk": null,
+        "payout": null,
+        "contest": null,
+        "speculation": null,
+        "commitment": null,
+        "sideSummary": null,
+        "warnings": [],
+        "errors": [],
+        "effects": [],
+        "nextCommands": [],
+        "payload": {
+          "contestId": "31",
+          "status": "scored",
+          "scored": true,
+          "awayScore": 3,
+          "homeScore": 0
+        }
+      },
+      "D": {
+        "schemaVersion": 2,
+        "ok": true,
+        "action": "contests.score-status",
+        "stage": "read",
+        "network": "polygon",
+        "chainId": 137,
+        "generatedAt": "2026-07-09T03:11:05.623Z",
+        "cliVersion": "0.10.0",
+        "sdkVersion": "0.10.0",
+        "wallet": null,
+        "walletRole": "none",
+        "signer": null,
+        "requiresSignature": false,
+        "requiresTransaction": false,
+        "approvalRequirements": [],
+        "estimatedCosts": null,
+        "risk": null,
+        "payout": null,
+        "contest": null,
+        "speculation": null,
+        "commitment": null,
+        "sideSummary": null,
+        "warnings": [],
+        "errors": [],
+        "effects": [],
+        "nextCommands": [],
+        "payload": {
+          "contestId": "32",
+          "status": "scored",
+          "scored": true,
+          "awayScore": 0,
+          "homeScore": 3
+        }
+      },
+      "E": {
+        "schemaVersion": 2,
+        "ok": true,
+        "action": "contests.score-status",
+        "stage": "read",
+        "network": "polygon",
+        "chainId": 137,
+        "generatedAt": "2026-07-09T03:11:06.157Z",
+        "cliVersion": "0.10.0",
+        "sdkVersion": "0.10.0",
+        "wallet": null,
+        "walletRole": "none",
+        "signer": null,
+        "requiresSignature": false,
+        "requiresTransaction": false,
+        "approvalRequirements": [],
+        "estimatedCosts": null,
+        "risk": null,
+        "payout": null,
+        "contest": null,
+        "speculation": null,
+        "commitment": null,
+        "sideSummary": null,
+        "warnings": [],
+        "errors": [],
+        "effects": [],
+        "nextCommands": [],
+        "payload": {
+          "contestId": "33",
+          "status": "scored",
+          "scored": true,
+          "awayScore": 0,
+          "homeScore": 2
+        }
+      },
+      "F": {
+        "schemaVersion": 2,
+        "ok": true,
+        "action": "contests.score-status",
+        "stage": "read",
+        "network": "polygon",
+        "chainId": 137,
+        "generatedAt": "2026-07-09T03:11:06.741Z",
+        "cliVersion": "0.10.0",
+        "sdkVersion": "0.10.0",
+        "wallet": null,
+        "walletRole": "none",
+        "signer": null,
+        "requiresSignature": false,
+        "requiresTransaction": false,
+        "approvalRequirements": [],
+        "estimatedCosts": null,
+        "risk": null,
+        "payout": null,
+        "contest": null,
+        "speculation": null,
+        "commitment": null,
+        "sideSummary": null,
+        "warnings": [],
+        "errors": [],
+        "effects": [],
+        "nextCommands": [],
+        "payload": {
+          "contestId": "34",
+          "status": "scored",
+          "scored": true,
+          "awayScore": 2,
+          "homeScore": 8
+        }
+      }
+    },
+    "scoreRequests": {
+      "H": {
+        "skipped": "already_scored"
+      },
+      "A": {
+        "skipped": "already_scored"
+      },
+      "B": {
+        "skipped": "already_scored"
+      },
+      "C": {
+        "skipped": "already_scored"
+      },
+      "D": {
+        "skipped": "already_scored"
+      },
+      "E": {
+        "skipped": "already_scored"
+      },
+      "F": {
+        "skipped": "already_scored"
+      }
+    },
+    "settles": {
+      "75": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      },
+      "76": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      },
+      "77": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      },
+      "78": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      },
+      "79": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      },
+      "80": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      },
+      "81": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      },
+      "82": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      },
+      "83": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      },
+      "84": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      },
+      "85": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      },
+      "86": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      },
+      "87": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      },
+      "88": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      },
+      "89": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      },
+      "90": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      },
+      "91": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      },
+      "92": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      },
+      "93": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      },
+      "94": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      },
+      "95": {
+        "rc": 0,
+        "txHashes": [],
+        "stderrTail": ""
+      }
+    },
+    "claims": {
+      "stage_maker_a": [],
+      "stage_maker_b": [],
+      "flow_a": [],
+      "fresh_user": []
+    },
+    "positions": {
+      "stage_maker_a_before_claim": {
+        "schemaVersion": 2,
+        "ok": true,
+        "action": "positions.status",
+        "stage": "read",
+        "network": "polygon",
+        "chainId": 137,
+        "generatedAt": "2026-07-09T03:11:34.249Z",
+        "cliVersion": "0.10.0",
+        "sdkVersion": "0.10.0",
+        "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "walletRole": "subject",
+        "signer": null,
+        "requiresSignature": false,
+        "requiresTransaction": false,
+        "approvalRequirements": [],
+        "estimatedCosts": null,
+        "risk": null,
+        "payout": null,
+        "contest": null,
+        "speculation": null,
+        "commitment": null,
+        "sideSummary": null,
+        "warnings": [],
+        "errors": [],
+        "effects": [],
+        "nextCommands": [],
+        "payload": {
+          "active": [
+            {
+              "positionId": "100_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_0",
+              "speculationId": "100",
+              "positionType": 0,
+              "team": "Arizona Diamondbacks",
+              "opponent": "San Diego Padres",
+              "market": "spread",
+              "oddsDecimal": 1.6600000000000001,
+              "riskAmountUSDC": 0.0075,
+              "profitAmountUSDC": 0.00495,
+              "contestId": "37",
+              "sport": "mlb",
+              "awayTeam": "Arizona Diamondbacks",
+              "homeTeam": "San Diego Padres",
+              "riskAmountWei6": "7500",
+              "counterpartyRiskWei6": "4950",
+              "updatedAtUnixSec": 1783558541
+            },
+            {
+              "positionId": "96_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_0",
+              "speculationId": "96",
+              "positionType": 0,
+              "team": "Colorado Rockies",
+              "opponent": "Los Angeles Dodgers",
+              "market": "moneyline",
+              "oddsDecimal": 3.44,
+              "riskAmountUSDC": 0.002,
+              "profitAmountUSDC": 0.00488,
+              "contestId": "36",
+              "sport": "mlb",
+              "awayTeam": "Colorado Rockies",
+              "homeTeam": "Los Angeles Dodgers",
+              "riskAmountWei6": "2000",
+              "counterpartyRiskWei6": "4880",
+              "updatedAtUnixSec": 1783558526
+            }
+          ],
+          "pendingSettle": [],
+          "claimable": [],
+          "totals": {
+            "activeCount": 2,
+            "pendingSettleCount": 0,
+            "claimableCount": 0,
+            "estimatedPayoutUSDC": 0,
+            "estimatedPayoutWei6": "0",
+            "pendingSettlePayoutUSDC": 0,
+            "pendingSettlePayoutWei6": "0"
+          }
+        }
+      },
+      "stage_maker_a_after_claim": {
+        "schemaVersion": 2,
+        "ok": true,
+        "action": "positions.status",
+        "stage": "read",
+        "network": "polygon",
+        "chainId": 137,
+        "generatedAt": "2026-07-09T03:11:34.940Z",
+        "cliVersion": "0.10.0",
+        "sdkVersion": "0.10.0",
+        "wallet": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "walletRole": "subject",
+        "signer": null,
+        "requiresSignature": false,
+        "requiresTransaction": false,
+        "approvalRequirements": [],
+        "estimatedCosts": null,
+        "risk": null,
+        "payout": null,
+        "contest": null,
+        "speculation": null,
+        "commitment": null,
+        "sideSummary": null,
+        "warnings": [],
+        "errors": [],
+        "effects": [],
+        "nextCommands": [],
+        "payload": {
+          "active": [
+            {
+              "positionId": "100_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_0",
+              "speculationId": "100",
+              "positionType": 0,
+              "team": "Arizona Diamondbacks",
+              "opponent": "San Diego Padres",
+              "market": "spread",
+              "oddsDecimal": 1.6600000000000001,
+              "riskAmountUSDC": 0.0075,
+              "profitAmountUSDC": 0.00495,
+              "contestId": "37",
+              "sport": "mlb",
+              "awayTeam": "Arizona Diamondbacks",
+              "homeTeam": "San Diego Padres",
+              "riskAmountWei6": "7500",
+              "counterpartyRiskWei6": "4950",
+              "updatedAtUnixSec": 1783558541
+            },
+            {
+              "positionId": "96_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_0",
+              "speculationId": "96",
+              "positionType": 0,
+              "team": "Colorado Rockies",
+              "opponent": "Los Angeles Dodgers",
+              "market": "moneyline",
+              "oddsDecimal": 3.44,
+              "riskAmountUSDC": 0.002,
+              "profitAmountUSDC": 0.00488,
+              "contestId": "36",
+              "sport": "mlb",
+              "awayTeam": "Colorado Rockies",
+              "homeTeam": "Los Angeles Dodgers",
+              "riskAmountWei6": "2000",
+              "counterpartyRiskWei6": "4880",
+              "updatedAtUnixSec": 1783558526
+            }
+          ],
+          "pendingSettle": [],
+          "claimable": [],
+          "totals": {
+            "activeCount": 2,
+            "pendingSettleCount": 0,
+            "claimableCount": 0,
+            "estimatedPayoutUSDC": 0,
+            "estimatedPayoutWei6": "0",
+            "pendingSettlePayoutUSDC": 0,
+            "pendingSettlePayoutWei6": "0"
+          }
+        }
+      },
+      "stage_maker_b_before_claim": {
+        "schemaVersion": 2,
+        "ok": true,
+        "action": "positions.status",
+        "stage": "read",
+        "network": "polygon",
+        "chainId": 137,
+        "generatedAt": "2026-07-09T03:11:35.664Z",
+        "cliVersion": "0.10.0",
+        "sdkVersion": "0.10.0",
+        "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "walletRole": "subject",
+        "signer": null,
+        "requiresSignature": false,
+        "requiresTransaction": false,
+        "approvalRequirements": [],
+        "estimatedCosts": null,
+        "risk": null,
+        "payout": null,
+        "contest": null,
+        "speculation": null,
+        "commitment": null,
+        "sideSummary": null,
+        "warnings": [],
+        "errors": [],
+        "effects": [],
+        "nextCommands": [],
+        "payload": {
+          "active": [
+            {
+              "positionId": "100_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_1",
+              "speculationId": "100",
+              "positionType": 1,
+              "team": "San Diego Padres",
+              "opponent": "Arizona Diamondbacks",
+              "market": "spread",
+              "oddsDecimal": 2.515151515151515,
+              "riskAmountUSDC": 0.00495,
+              "profitAmountUSDC": 0.0075,
+              "contestId": "37",
+              "sport": "mlb",
+              "awayTeam": "Arizona Diamondbacks",
+              "homeTeam": "San Diego Padres",
+              "riskAmountWei6": "4950",
+              "counterpartyRiskWei6": "7500",
+              "updatedAtUnixSec": 1783558541
+            },
+            {
+              "positionId": "96_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_1",
+              "speculationId": "96",
+              "positionType": 1,
+              "team": "Los Angeles Dodgers",
+              "opponent": "Colorado Rockies",
+              "market": "moneyline",
+              "oddsDecimal": 1.4098360655737705,
+              "riskAmountUSDC": 0.00488,
+              "profitAmountUSDC": 0.002,
+              "contestId": "36",
+              "sport": "mlb",
+              "awayTeam": "Colorado Rockies",
+              "homeTeam": "Los Angeles Dodgers",
+              "riskAmountWei6": "4880",
+              "counterpartyRiskWei6": "2000",
+              "updatedAtUnixSec": 1783558526
+            },
+            {
+              "positionId": "101_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_1",
+              "speculationId": "101",
+              "positionType": 1,
+              "team": "San Diego Padres",
+              "opponent": "Arizona Diamondbacks",
+              "market": "total",
+              "oddsDecimal": 2.075268817204301,
+              "riskAmountUSDC": 0.00093,
+              "profitAmountUSDC": 0.001,
+              "contestId": "37",
+              "sport": "mlb",
+              "awayTeam": "Arizona Diamondbacks",
+              "homeTeam": "San Diego Padres",
+              "riskAmountWei6": "930",
+              "counterpartyRiskWei6": "1000",
+              "updatedAtUnixSec": 1783557693
+            },
+            {
+              "positionId": "99_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_0",
+              "speculationId": "99",
+              "positionType": 0,
+              "team": "Arizona Diamondbacks",
+              "opponent": "San Diego Padres",
+              "market": "moneyline",
+              "oddsDecimal": 2.388888888888889,
+              "riskAmountUSDC": 0.00072,
+              "profitAmountUSDC": 0.001,
+              "contestId": "37",
+              "sport": "mlb",
+              "awayTeam": "Arizona Diamondbacks",
+              "homeTeam": "San Diego Padres",
+              "riskAmountWei6": "720",
+              "counterpartyRiskWei6": "1000",
+              "updatedAtUnixSec": 1783557662
+            },
+            {
+              "positionId": "97_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_0",
+              "speculationId": "97",
+              "positionType": 0,
+              "team": "Colorado Rockies",
+              "opponent": "Los Angeles Dodgers",
+              "market": "spread",
+              "oddsDecimal": 2.3513513513513513,
+              "riskAmountUSDC": 0.00074,
+              "profitAmountUSDC": 0.001,
+              "contestId": "36",
+              "sport": "mlb",
+              "awayTeam": "Colorado Rockies",
+              "homeTeam": "Los Angeles Dodgers",
+              "riskAmountWei6": "740",
+              "counterpartyRiskWei6": "1000",
+              "updatedAtUnixSec": 1783557631
+            }
+          ],
+          "pendingSettle": [],
+          "claimable": [],
+          "totals": {
+            "activeCount": 5,
+            "pendingSettleCount": 0,
+            "claimableCount": 0,
+            "estimatedPayoutUSDC": 0,
+            "estimatedPayoutWei6": "0",
+            "pendingSettlePayoutUSDC": 0,
+            "pendingSettlePayoutWei6": "0"
+          }
+        }
+      },
+      "stage_maker_b_after_claim": {
+        "schemaVersion": 2,
+        "ok": true,
+        "action": "positions.status",
+        "stage": "read",
+        "network": "polygon",
+        "chainId": 137,
+        "generatedAt": "2026-07-09T03:11:36.320Z",
+        "cliVersion": "0.10.0",
+        "sdkVersion": "0.10.0",
+        "wallet": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "walletRole": "subject",
+        "signer": null,
+        "requiresSignature": false,
+        "requiresTransaction": false,
+        "approvalRequirements": [],
+        "estimatedCosts": null,
+        "risk": null,
+        "payout": null,
+        "contest": null,
+        "speculation": null,
+        "commitment": null,
+        "sideSummary": null,
+        "warnings": [],
+        "errors": [],
+        "effects": [],
+        "nextCommands": [],
+        "payload": {
+          "active": [
+            {
+              "positionId": "100_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_1",
+              "speculationId": "100",
+              "positionType": 1,
+              "team": "San Diego Padres",
+              "opponent": "Arizona Diamondbacks",
+              "market": "spread",
+              "oddsDecimal": 2.515151515151515,
+              "riskAmountUSDC": 0.00495,
+              "profitAmountUSDC": 0.0075,
+              "contestId": "37",
+              "sport": "mlb",
+              "awayTeam": "Arizona Diamondbacks",
+              "homeTeam": "San Diego Padres",
+              "riskAmountWei6": "4950",
+              "counterpartyRiskWei6": "7500",
+              "updatedAtUnixSec": 1783558541
+            },
+            {
+              "positionId": "96_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_1",
+              "speculationId": "96",
+              "positionType": 1,
+              "team": "Los Angeles Dodgers",
+              "opponent": "Colorado Rockies",
+              "market": "moneyline",
+              "oddsDecimal": 1.4098360655737705,
+              "riskAmountUSDC": 0.00488,
+              "profitAmountUSDC": 0.002,
+              "contestId": "36",
+              "sport": "mlb",
+              "awayTeam": "Colorado Rockies",
+              "homeTeam": "Los Angeles Dodgers",
+              "riskAmountWei6": "4880",
+              "counterpartyRiskWei6": "2000",
+              "updatedAtUnixSec": 1783558526
+            },
+            {
+              "positionId": "101_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_1",
+              "speculationId": "101",
+              "positionType": 1,
+              "team": "San Diego Padres",
+              "opponent": "Arizona Diamondbacks",
+              "market": "total",
+              "oddsDecimal": 2.075268817204301,
+              "riskAmountUSDC": 0.00093,
+              "profitAmountUSDC": 0.001,
+              "contestId": "37",
+              "sport": "mlb",
+              "awayTeam": "Arizona Diamondbacks",
+              "homeTeam": "San Diego Padres",
+              "riskAmountWei6": "930",
+              "counterpartyRiskWei6": "1000",
+              "updatedAtUnixSec": 1783557693
+            },
+            {
+              "positionId": "99_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_0",
+              "speculationId": "99",
+              "positionType": 0,
+              "team": "Arizona Diamondbacks",
+              "opponent": "San Diego Padres",
+              "market": "moneyline",
+              "oddsDecimal": 2.388888888888889,
+              "riskAmountUSDC": 0.00072,
+              "profitAmountUSDC": 0.001,
+              "contestId": "37",
+              "sport": "mlb",
+              "awayTeam": "Arizona Diamondbacks",
+              "homeTeam": "San Diego Padres",
+              "riskAmountWei6": "720",
+              "counterpartyRiskWei6": "1000",
+              "updatedAtUnixSec": 1783557662
+            },
+            {
+              "positionId": "97_0x4fa0a5aa3187517efc320aac7d33cd6115cc7482_0",
+              "speculationId": "97",
+              "positionType": 0,
+              "team": "Colorado Rockies",
+              "opponent": "Los Angeles Dodgers",
+              "market": "spread",
+              "oddsDecimal": 2.3513513513513513,
+              "riskAmountUSDC": 0.00074,
+              "profitAmountUSDC": 0.001,
+              "contestId": "36",
+              "sport": "mlb",
+              "awayTeam": "Colorado Rockies",
+              "homeTeam": "Los Angeles Dodgers",
+              "riskAmountWei6": "740",
+              "counterpartyRiskWei6": "1000",
+              "updatedAtUnixSec": 1783557631
+            }
+          ],
+          "pendingSettle": [],
+          "claimable": [],
+          "totals": {
+            "activeCount": 5,
+            "pendingSettleCount": 0,
+            "claimableCount": 0,
+            "estimatedPayoutUSDC": 0,
+            "estimatedPayoutWei6": "0",
+            "pendingSettlePayoutUSDC": 0,
+            "pendingSettlePayoutWei6": "0"
+          }
+        }
+      },
+      "flow_a_before_claim": {
+        "schemaVersion": 2,
+        "ok": true,
+        "action": "positions.status",
+        "stage": "read",
+        "network": "polygon",
+        "chainId": 137,
+        "generatedAt": "2026-07-09T03:11:37.057Z",
+        "cliVersion": "0.10.0",
+        "sdkVersion": "0.10.0",
+        "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "walletRole": "subject",
+        "signer": null,
+        "requiresSignature": false,
+        "requiresTransaction": false,
+        "approvalRequirements": [],
+        "estimatedCosts": null,
+        "risk": null,
+        "payout": null,
+        "contest": null,
+        "speculation": null,
+        "commitment": null,
+        "sideSummary": null,
+        "warnings": [],
+        "errors": [],
+        "effects": [],
+        "nextCommands": [],
+        "payload": {
+          "active": [
+            {
+              "positionId": "100_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+              "speculationId": "100",
+              "positionType": 0,
+              "team": "Arizona Diamondbacks",
+              "opponent": "San Diego Padres",
+              "market": "spread",
+              "oddsDecimal": 1.6756756756756757,
+              "riskAmountUSDC": 0.00148,
+              "profitAmountUSDC": 0.001,
+              "contestId": "37",
+              "sport": "mlb",
+              "awayTeam": "Arizona Diamondbacks",
+              "homeTeam": "San Diego Padres",
+              "riskAmountWei6": "1480",
+              "counterpartyRiskWei6": "1000",
+              "updatedAtUnixSec": 1783557678
+            },
+            {
+              "positionId": "98_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+              "speculationId": "98",
+              "positionType": 1,
+              "team": "Los Angeles Dodgers",
+              "opponent": "Colorado Rockies",
+              "market": "total",
+              "oddsDecimal": 2.052631578947368,
+              "riskAmountUSDC": 0.00095,
+              "profitAmountUSDC": 0.001,
+              "contestId": "36",
+              "sport": "mlb",
+              "awayTeam": "Colorado Rockies",
+              "homeTeam": "Los Angeles Dodgers",
+              "riskAmountWei6": "950",
+              "counterpartyRiskWei6": "1000",
+              "updatedAtUnixSec": 1783557647
+            },
+            {
+              "positionId": "96_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+              "speculationId": "96",
+              "positionType": 0,
+              "team": "Colorado Rockies",
+              "opponent": "Los Angeles Dodgers",
+              "market": "moneyline",
+              "oddsDecimal": 3.6315789473684212,
+              "riskAmountUSDC": 0.00038,
+              "profitAmountUSDC": 0.001,
+              "contestId": "36",
+              "sport": "mlb",
+              "awayTeam": "Colorado Rockies",
+              "homeTeam": "Los Angeles Dodgers",
+              "riskAmountWei6": "380",
+              "counterpartyRiskWei6": "1000",
+              "updatedAtUnixSec": 1783557616
+            }
+          ],
+          "pendingSettle": [],
+          "claimable": [],
+          "totals": {
+            "activeCount": 3,
+            "pendingSettleCount": 0,
+            "claimableCount": 0,
+            "estimatedPayoutUSDC": 0,
+            "estimatedPayoutWei6": "0",
+            "pendingSettlePayoutUSDC": 0,
+            "pendingSettlePayoutWei6": "0"
+          }
+        }
+      },
+      "flow_a_after_claim": {
+        "schemaVersion": 2,
+        "ok": true,
+        "action": "positions.status",
+        "stage": "read",
+        "network": "polygon",
+        "chainId": 137,
+        "generatedAt": "2026-07-09T03:11:37.762Z",
+        "cliVersion": "0.10.0",
+        "sdkVersion": "0.10.0",
+        "wallet": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "walletRole": "subject",
+        "signer": null,
+        "requiresSignature": false,
+        "requiresTransaction": false,
+        "approvalRequirements": [],
+        "estimatedCosts": null,
+        "risk": null,
+        "payout": null,
+        "contest": null,
+        "speculation": null,
+        "commitment": null,
+        "sideSummary": null,
+        "warnings": [],
+        "errors": [],
+        "effects": [],
+        "nextCommands": [],
+        "payload": {
+          "active": [
+            {
+              "positionId": "100_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+              "speculationId": "100",
+              "positionType": 0,
+              "team": "Arizona Diamondbacks",
+              "opponent": "San Diego Padres",
+              "market": "spread",
+              "oddsDecimal": 1.6756756756756757,
+              "riskAmountUSDC": 0.00148,
+              "profitAmountUSDC": 0.001,
+              "contestId": "37",
+              "sport": "mlb",
+              "awayTeam": "Arizona Diamondbacks",
+              "homeTeam": "San Diego Padres",
+              "riskAmountWei6": "1480",
+              "counterpartyRiskWei6": "1000",
+              "updatedAtUnixSec": 1783557678
+            },
+            {
+              "positionId": "98_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+              "speculationId": "98",
+              "positionType": 1,
+              "team": "Los Angeles Dodgers",
+              "opponent": "Colorado Rockies",
+              "market": "total",
+              "oddsDecimal": 2.052631578947368,
+              "riskAmountUSDC": 0.00095,
+              "profitAmountUSDC": 0.001,
+              "contestId": "36",
+              "sport": "mlb",
+              "awayTeam": "Colorado Rockies",
+              "homeTeam": "Los Angeles Dodgers",
+              "riskAmountWei6": "950",
+              "counterpartyRiskWei6": "1000",
+              "updatedAtUnixSec": 1783557647
+            },
+            {
+              "positionId": "96_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+              "speculationId": "96",
+              "positionType": 0,
+              "team": "Colorado Rockies",
+              "opponent": "Los Angeles Dodgers",
+              "market": "moneyline",
+              "oddsDecimal": 3.6315789473684212,
+              "riskAmountUSDC": 0.00038,
+              "profitAmountUSDC": 0.001,
+              "contestId": "36",
+              "sport": "mlb",
+              "awayTeam": "Colorado Rockies",
+              "homeTeam": "Los Angeles Dodgers",
+              "riskAmountWei6": "380",
+              "counterpartyRiskWei6": "1000",
+              "updatedAtUnixSec": 1783557616
+            }
+          ],
+          "pendingSettle": [],
+          "claimable": [],
+          "totals": {
+            "activeCount": 3,
+            "pendingSettleCount": 0,
+            "claimableCount": 0,
+            "estimatedPayoutUSDC": 0,
+            "estimatedPayoutWei6": "0",
+            "pendingSettlePayoutUSDC": 0,
+            "pendingSettlePayoutWei6": "0"
+          }
+        }
+      },
+      "fresh_user_before_claim": {
+        "schemaVersion": 2,
+        "ok": true,
+        "action": "positions.status",
+        "stage": "read",
+        "network": "polygon",
+        "chainId": 137,
+        "generatedAt": "2026-07-09T03:11:38.493Z",
+        "cliVersion": "0.10.0",
+        "sdkVersion": "0.10.0",
+        "wallet": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "walletRole": "subject",
+        "signer": null,
+        "requiresSignature": false,
+        "requiresTransaction": false,
+        "approvalRequirements": [],
+        "estimatedCosts": null,
+        "risk": null,
+        "payout": null,
+        "contest": null,
+        "speculation": null,
+        "commitment": null,
+        "sideSummary": null,
+        "warnings": [],
+        "errors": [],
+        "effects": [],
+        "nextCommands": [],
+        "payload": {
+          "active": [
+            {
+              "positionId": "101_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_0",
+              "speculationId": "101",
+              "positionType": 0,
+              "team": "Arizona Diamondbacks",
+              "opponent": "San Diego Padres",
+              "market": "total",
+              "oddsDecimal": 1.9300000000000002,
+              "riskAmountUSDC": 0.001,
+              "profitAmountUSDC": 0.00093,
+              "contestId": "37",
+              "sport": "mlb",
+              "awayTeam": "Arizona Diamondbacks",
+              "homeTeam": "San Diego Padres",
+              "riskAmountWei6": "1000",
+              "counterpartyRiskWei6": "930",
+              "updatedAtUnixSec": 1783557693
+            },
+            {
+              "positionId": "100_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+              "speculationId": "100",
+              "positionType": 1,
+              "team": "San Diego Padres",
+              "opponent": "Arizona Diamondbacks",
+              "market": "spread",
+              "oddsDecimal": 2.48,
+              "riskAmountUSDC": 0.001,
+              "profitAmountUSDC": 0.00148,
+              "contestId": "37",
+              "sport": "mlb",
+              "awayTeam": "Arizona Diamondbacks",
+              "homeTeam": "San Diego Padres",
+              "riskAmountWei6": "1000",
+              "counterpartyRiskWei6": "1480",
+              "updatedAtUnixSec": 1783557678
+            },
+            {
+              "positionId": "99_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+              "speculationId": "99",
+              "positionType": 1,
+              "team": "San Diego Padres",
+              "opponent": "Arizona Diamondbacks",
+              "market": "moneyline",
+              "oddsDecimal": 1.72,
+              "riskAmountUSDC": 0.001,
+              "profitAmountUSDC": 0.00072,
+              "contestId": "37",
+              "sport": "mlb",
+              "awayTeam": "Arizona Diamondbacks",
+              "homeTeam": "San Diego Padres",
+              "riskAmountWei6": "1000",
+              "counterpartyRiskWei6": "720",
+              "updatedAtUnixSec": 1783557662
+            },
+            {
+              "positionId": "98_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_0",
+              "speculationId": "98",
+              "positionType": 0,
+              "team": "Colorado Rockies",
+              "opponent": "Los Angeles Dodgers",
+              "market": "total",
+              "oddsDecimal": 1.95,
+              "riskAmountUSDC": 0.001,
+              "profitAmountUSDC": 0.00095,
+              "contestId": "36",
+              "sport": "mlb",
+              "awayTeam": "Colorado Rockies",
+              "homeTeam": "Los Angeles Dodgers",
+              "riskAmountWei6": "1000",
+              "counterpartyRiskWei6": "950",
+              "updatedAtUnixSec": 1783557647
+            },
+            {
+              "positionId": "97_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+              "speculationId": "97",
+              "positionType": 1,
+              "team": "Los Angeles Dodgers",
+              "opponent": "Colorado Rockies",
+              "market": "spread",
+              "oddsDecimal": 1.74,
+              "riskAmountUSDC": 0.001,
+              "profitAmountUSDC": 0.00074,
+              "contestId": "36",
+              "sport": "mlb",
+              "awayTeam": "Colorado Rockies",
+              "homeTeam": "Los Angeles Dodgers",
+              "riskAmountWei6": "1000",
+              "counterpartyRiskWei6": "740",
+              "updatedAtUnixSec": 1783557631
+            },
+            {
+              "positionId": "96_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+              "speculationId": "96",
+              "positionType": 1,
+              "team": "Los Angeles Dodgers",
+              "opponent": "Colorado Rockies",
+              "market": "moneyline",
+              "oddsDecimal": 1.38,
+              "riskAmountUSDC": 0.001,
+              "profitAmountUSDC": 0.00038,
+              "contestId": "36",
+              "sport": "mlb",
+              "awayTeam": "Colorado Rockies",
+              "homeTeam": "Los Angeles Dodgers",
+              "riskAmountWei6": "1000",
+              "counterpartyRiskWei6": "380",
+              "updatedAtUnixSec": 1783557616
+            }
+          ],
+          "pendingSettle": [],
+          "claimable": [],
+          "totals": {
+            "activeCount": 6,
+            "pendingSettleCount": 0,
+            "claimableCount": 0,
+            "estimatedPayoutUSDC": 0,
+            "estimatedPayoutWei6": "0",
+            "pendingSettlePayoutUSDC": 0,
+            "pendingSettlePayoutWei6": "0"
+          }
+        }
+      },
+      "fresh_user_after_claim": {
+        "schemaVersion": 2,
+        "ok": true,
+        "action": "positions.status",
+        "stage": "read",
+        "network": "polygon",
+        "chainId": 137,
+        "generatedAt": "2026-07-09T03:11:39.234Z",
+        "cliVersion": "0.10.0",
+        "sdkVersion": "0.10.0",
+        "wallet": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+        "walletRole": "subject",
+        "signer": null,
+        "requiresSignature": false,
+        "requiresTransaction": false,
+        "approvalRequirements": [],
+        "estimatedCosts": null,
+        "risk": null,
+        "payout": null,
+        "contest": null,
+        "speculation": null,
+        "commitment": null,
+        "sideSummary": null,
+        "warnings": [],
+        "errors": [],
+        "effects": [],
+        "nextCommands": [],
+        "payload": {
+          "active": [
+            {
+              "positionId": "101_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_0",
+              "speculationId": "101",
+              "positionType": 0,
+              "team": "Arizona Diamondbacks",
+              "opponent": "San Diego Padres",
+              "market": "total",
+              "oddsDecimal": 1.9300000000000002,
+              "riskAmountUSDC": 0.001,
+              "profitAmountUSDC": 0.00093,
+              "contestId": "37",
+              "sport": "mlb",
+              "awayTeam": "Arizona Diamondbacks",
+              "homeTeam": "San Diego Padres",
+              "riskAmountWei6": "1000",
+              "counterpartyRiskWei6": "930",
+              "updatedAtUnixSec": 1783557693
+            },
+            {
+              "positionId": "100_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+              "speculationId": "100",
+              "positionType": 1,
+              "team": "San Diego Padres",
+              "opponent": "Arizona Diamondbacks",
+              "market": "spread",
+              "oddsDecimal": 2.48,
+              "riskAmountUSDC": 0.001,
+              "profitAmountUSDC": 0.00148,
+              "contestId": "37",
+              "sport": "mlb",
+              "awayTeam": "Arizona Diamondbacks",
+              "homeTeam": "San Diego Padres",
+              "riskAmountWei6": "1000",
+              "counterpartyRiskWei6": "1480",
+              "updatedAtUnixSec": 1783557678
+            },
+            {
+              "positionId": "99_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+              "speculationId": "99",
+              "positionType": 1,
+              "team": "San Diego Padres",
+              "opponent": "Arizona Diamondbacks",
+              "market": "moneyline",
+              "oddsDecimal": 1.72,
+              "riskAmountUSDC": 0.001,
+              "profitAmountUSDC": 0.00072,
+              "contestId": "37",
+              "sport": "mlb",
+              "awayTeam": "Arizona Diamondbacks",
+              "homeTeam": "San Diego Padres",
+              "riskAmountWei6": "1000",
+              "counterpartyRiskWei6": "720",
+              "updatedAtUnixSec": 1783557662
+            },
+            {
+              "positionId": "98_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_0",
+              "speculationId": "98",
+              "positionType": 0,
+              "team": "Colorado Rockies",
+              "opponent": "Los Angeles Dodgers",
+              "market": "total",
+              "oddsDecimal": 1.95,
+              "riskAmountUSDC": 0.001,
+              "profitAmountUSDC": 0.00095,
+              "contestId": "36",
+              "sport": "mlb",
+              "awayTeam": "Colorado Rockies",
+              "homeTeam": "Los Angeles Dodgers",
+              "riskAmountWei6": "1000",
+              "counterpartyRiskWei6": "950",
+              "updatedAtUnixSec": 1783557647
+            },
+            {
+              "positionId": "97_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+              "speculationId": "97",
+              "positionType": 1,
+              "team": "Los Angeles Dodgers",
+              "opponent": "Colorado Rockies",
+              "market": "spread",
+              "oddsDecimal": 1.74,
+              "riskAmountUSDC": 0.001,
+              "profitAmountUSDC": 0.00074,
+              "contestId": "36",
+              "sport": "mlb",
+              "awayTeam": "Colorado Rockies",
+              "homeTeam": "Los Angeles Dodgers",
+              "riskAmountWei6": "1000",
+              "counterpartyRiskWei6": "740",
+              "updatedAtUnixSec": 1783557631
+            },
+            {
+              "positionId": "96_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+              "speculationId": "96",
+              "positionType": 1,
+              "team": "Los Angeles Dodgers",
+              "opponent": "Colorado Rockies",
+              "market": "moneyline",
+              "oddsDecimal": 1.38,
+              "riskAmountUSDC": 0.001,
+              "profitAmountUSDC": 0.00038,
+              "contestId": "36",
+              "sport": "mlb",
+              "awayTeam": "Colorado Rockies",
+              "homeTeam": "Los Angeles Dodgers",
+              "riskAmountWei6": "1000",
+              "counterpartyRiskWei6": "380",
+              "updatedAtUnixSec": 1783557616
+            }
+          ],
+          "pendingSettle": [],
+          "claimable": [],
+          "totals": {
+            "activeCount": 6,
+            "pendingSettleCount": 0,
+            "claimableCount": 0,
+            "estimatedPayoutUSDC": 0,
+            "estimatedPayoutWei6": "0",
+            "pendingSettlePayoutUSDC": 0,
+            "pendingSettlePayoutWei6": "0"
+          }
+        }
+      }
+    },
+    "openCommitments": {
+      "H": 0,
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0,
+      "F": 0
+    }
+  },
+  "zeroState": {
+    "wallets": {
+      "stage_maker_a": {
+        "targetCounts": {
+          "active": 0,
+          "pendingSettle": 0,
+          "claimable": 0
+        },
+        "ok": true
+      },
+      "stage_maker_b": {
+        "targetCounts": {
+          "active": 0,
+          "pendingSettle": 0,
+          "claimable": 0
+        },
+        "ok": true
+      },
+      "flow_a": {
+        "targetCounts": {
+          "active": 0,
+          "pendingSettle": 0,
+          "claimable": 0
+        },
+        "ok": true
+      },
+      "fresh_user": {
+        "targetCounts": {
+          "active": 0,
+          "pendingSettle": 0,
+          "claimable": 0
+        },
+        "ok": true
+      }
+    },
+    "openCommitments": {
+      "H": 0,
+      "A": 0,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "E": 0,
+      "F": 0
+    },
+    "ok": true
+  },
+  "targets": {
+    "H": {
+      "runDir": "<local-home>/.ospex/runs/20260708T184140Z-mve-phase1-block-h-tor-sf-harness-drill",
+      "contestId": "35",
+      "teams": "Toronto Blue Jays @ San Francisco Giants",
+      "gameId": "cc5e42ac-0ce2-47fb-af24-bea96f9ef9ca",
+      "gamePk": 823202,
+      "speculations": [
+        "93",
+        "94",
+        "95"
+      ]
+    },
+    "A": {
+      "runDir": "<local-home>/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded",
+      "contestId": "29",
+      "teams": "Chicago Cubs @ Baltimore Orioles",
+      "gameId": "8f70d605-ae34-44ee-b461-bc4de7be111d",
+      "gamePk": 824815,
+      "speculations": [
+        "75",
+        "76",
+        "77"
+      ]
+    },
+    "B": {
+      "runDir": "<local-home>/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded",
+      "contestId": "30",
+      "teams": "Athletics @ Detroit Tigers",
+      "gameId": "b35322b5-9078-48e1-8a7a-e8ad540b1e1d",
+      "gamePk": 824253,
+      "speculations": [
+        "78",
+        "79",
+        "80"
+      ]
+    },
+    "C": {
+      "runDir": "<local-home>/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded",
+      "contestId": "31",
+      "teams": "Atlanta Braves @ Pittsburgh Pirates",
+      "gameId": "72e69898-551c-4b19-97d2-cdf46500d6e2",
+      "gamePk": 823360,
+      "speculations": [
+        "81",
+        "82",
+        "83"
+      ]
+    },
+    "D": {
+      "runDir": "<local-home>/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded",
+      "contestId": "32",
+      "teams": "New York Yankees @ Tampa Bay Rays",
+      "gameId": "20b1dd8c-bf29-4b8c-94c8-f18ddd0833e7",
+      "gamePk": 822957,
+      "speculations": [
+        "84",
+        "85",
+        "86"
+      ]
+    },
+    "E": {
+      "runDir": "<local-home>/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded",
+      "contestId": "33",
+      "teams": "Seattle Mariners @ Miami Marlins",
+      "gameId": "e40160ff-8ef2-46ee-9135-afb18d11cc3d",
+      "gamePk": 823848,
+      "speculations": [
+        "87",
+        "88",
+        "89"
+      ]
+    },
+    "F": {
+      "runDir": "<local-home>/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded",
+      "contestId": "34",
+      "teams": "Houston Astros @ Washington Nationals",
+      "gameId": "9fa921b1-ab07-4b29-9558-3b305ce6f04b",
+      "gamePk": 822710,
+      "speculations": [
+        "90",
+        "91",
+        "92"
+      ]
+    }
+  }
+}

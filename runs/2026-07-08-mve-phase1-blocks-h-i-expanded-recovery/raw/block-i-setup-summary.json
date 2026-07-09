@@ -1,0 +1,500 @@
+{
+  "ok": true,
+  "utc": "2026-07-08T18:31:03.568881Z",
+  "runDir": "<local-home>/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded",
+  "contestSummary": [
+    {
+      "label": "A",
+      "teams": "Chicago Cubs @ Baltimore Orioles",
+      "gameId": "8f70d605-ae34-44ee-b461-bc4de7be111d",
+      "contestId": "29",
+      "matchTime": "2026-07-08T22:35:00+00:00",
+      "status": "upcoming",
+      "create": {
+        "ok": null,
+        "txHashes": [],
+        "skipped": "existing-games-list"
+      },
+      "wait": {
+        "contestId": "29",
+        "status": "verified"
+      },
+      "marketUpdateTxs": [
+        "0xceb280d0bc091316e5488c79ee585c81edea62278095c84c790040e4d12ca7f6"
+      ],
+      "oddsMarkets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "odds": {
+        "moneyline": {
+          "market": "moneyline",
+          "awayOddsAmerican": 110,
+          "homeOddsAmerican": -124,
+          "upstreamLastUpdated": "2026-07-08T18:18:04+00:00",
+          "pollCapturedAt": "2026-07-08T18:19:55.024+00:00",
+          "changedAt": "2026-07-08T17:09:52.458+00:00"
+        },
+        "spread": {
+          "market": "spread",
+          "awayLine": 1.5,
+          "homeLine": -1.5,
+          "awayOddsAmerican": -180,
+          "homeOddsAmerican": 157,
+          "upstreamLastUpdated": "2026-07-08T18:18:04+00:00",
+          "pollCapturedAt": "2026-07-08T18:19:55.089+00:00",
+          "changedAt": "2026-07-08T15:54:48.695+00:00"
+        },
+        "total": {
+          "market": "total",
+          "line": 9.5,
+          "overOddsAmerican": -125,
+          "underOddsAmerican": 105,
+          "upstreamLastUpdated": "2026-07-08T18:18:04+00:00",
+          "pollCapturedAt": "2026-07-08T18:19:55.155+00:00",
+          "changedAt": "2026-07-08T12:59:41.631+00:00"
+        }
+      }
+    },
+    {
+      "label": "B",
+      "teams": "Athletics @ Detroit Tigers",
+      "gameId": "b35322b5-9078-48e1-8a7a-e8ad540b1e1d",
+      "contestId": "30",
+      "matchTime": "2026-07-08T22:40:00+00:00",
+      "status": "upcoming",
+      "create": {
+        "ok": true,
+        "txHashes": [
+          "0x31bc47a6b79e65d7ba8b47454b7900a7e5ae9250da3acc0170bc14bb52a30271"
+        ],
+        "skipped": null
+      },
+      "wait": {
+        "contestId": "30",
+        "status": "verified"
+      },
+      "marketUpdateTxs": [
+        "0xe406495a9f8d0cfa696cb501bf58631f7a68ef05afafeacaa5378be36d74d2ed"
+      ],
+      "oddsMarkets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "odds": {
+        "moneyline": {
+          "market": "moneyline",
+          "awayOddsAmerican": 117,
+          "homeOddsAmerican": -133,
+          "upstreamLastUpdated": "2026-07-08T18:18:04+00:00",
+          "pollCapturedAt": "2026-07-08T18:19:55.762+00:00",
+          "changedAt": "2026-07-08T17:49:54.42+00:00"
+        },
+        "spread": {
+          "market": "spread",
+          "awayLine": 1.5,
+          "homeLine": -1.5,
+          "awayOddsAmerican": -170,
+          "homeOddsAmerican": 143,
+          "upstreamLastUpdated": "2026-07-08T18:18:04+00:00",
+          "pollCapturedAt": "2026-07-08T18:19:55.838+00:00",
+          "changedAt": "2026-07-08T17:44:54.751+00:00"
+        },
+        "total": {
+          "market": "total",
+          "line": 9,
+          "overOddsAmerican": -120,
+          "underOddsAmerican": -100,
+          "upstreamLastUpdated": "2026-07-08T18:18:04+00:00",
+          "pollCapturedAt": "2026-07-08T18:19:55.903+00:00",
+          "changedAt": "2026-07-08T13:04:42.023+00:00"
+        }
+      }
+    },
+    {
+      "label": "C",
+      "teams": "Atlanta Braves @ Pittsburgh Pirates",
+      "gameId": "72e69898-551c-4b19-97d2-cdf46500d6e2",
+      "contestId": "31",
+      "matchTime": "2026-07-08T22:40:00+00:00",
+      "status": "upcoming",
+      "create": {
+        "ok": true,
+        "txHashes": [
+          "0x34fb98d01bbcdbc324cc4beeab84615b8beafe391cd0555d4b963057af7c598d"
+        ],
+        "skipped": null
+      },
+      "wait": {
+        "contestId": "31",
+        "status": "verified"
+      },
+      "marketUpdateTxs": [
+        "0xbaaea37cc50d3aaa0adc984af467fde3c80c35aec8631e9e3b5a24da73b2a7c1"
+      ],
+      "oddsMarkets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "odds": {
+        "moneyline": {
+          "market": "moneyline",
+          "awayOddsAmerican": 103,
+          "homeOddsAmerican": -116,
+          "upstreamLastUpdated": "2026-07-08T18:18:04+00:00",
+          "pollCapturedAt": "2026-07-08T18:20:55.653+00:00",
+          "changedAt": "2026-07-08T17:29:53.111+00:00"
+        },
+        "spread": {
+          "market": "spread",
+          "awayLine": 1.5,
+          "homeLine": -1.5,
+          "awayOddsAmerican": -195,
+          "homeOddsAmerican": 170,
+          "upstreamLastUpdated": "2026-07-08T18:18:04+00:00",
+          "pollCapturedAt": "2026-07-08T18:20:55.718+00:00",
+          "changedAt": "2026-07-08T17:25:00.129+00:00"
+        },
+        "total": {
+          "market": "total",
+          "line": 9,
+          "overOddsAmerican": -120,
+          "underOddsAmerican": -100,
+          "upstreamLastUpdated": "2026-07-08T18:18:04+00:00",
+          "pollCapturedAt": "2026-07-08T18:20:55.849+00:00",
+          "changedAt": "2026-07-08T12:44:41.294+00:00"
+        }
+      }
+    },
+    {
+      "label": "D",
+      "teams": "New York Yankees @ Tampa Bay Rays",
+      "gameId": "20b1dd8c-bf29-4b8c-94c8-f18ddd0833e7",
+      "contestId": "32",
+      "matchTime": "2026-07-08T22:40:00+00:00",
+      "status": "upcoming",
+      "create": {
+        "ok": true,
+        "txHashes": [
+          "0x4571b8ba3c470790a4cf61950a2e93b14707e40e05cc293a905757410373189d"
+        ],
+        "skipped": null
+      },
+      "wait": {
+        "contestId": "32",
+        "status": "verified"
+      },
+      "marketUpdateTxs": [
+        "0xaf69e67e81e9d34d63f52faa22dd315e03cbf76eeee12905107fc15323e78271"
+      ],
+      "oddsMarkets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "odds": {
+        "moneyline": {
+          "market": "moneyline",
+          "awayOddsAmerican": -100,
+          "homeOddsAmerican": -113,
+          "upstreamLastUpdated": "2026-07-08T18:18:04+00:00",
+          "pollCapturedAt": "2026-07-08T18:20:55.402+00:00",
+          "changedAt": "2026-07-08T17:49:53.956+00:00"
+        },
+        "spread": {
+          "market": "spread",
+          "awayLine": 1.5,
+          "homeLine": -1.5,
+          "awayOddsAmerican": -200,
+          "homeOddsAmerican": 176,
+          "upstreamLastUpdated": "2026-07-08T18:18:04+00:00",
+          "pollCapturedAt": "2026-07-08T18:20:55.487+00:00",
+          "changedAt": "2026-07-08T17:29:52.918+00:00"
+        },
+        "total": {
+          "market": "total",
+          "line": 7.5,
+          "overOddsAmerican": -100,
+          "underOddsAmerican": -120,
+          "upstreamLastUpdated": "2026-07-08T18:18:04+00:00",
+          "pollCapturedAt": "2026-07-08T18:20:55.557+00:00",
+          "changedAt": "2026-07-08T17:24:59.921+00:00"
+        }
+      }
+    },
+    {
+      "label": "E",
+      "teams": "Seattle Mariners @ Miami Marlins",
+      "gameId": "e40160ff-8ef2-46ee-9135-afb18d11cc3d",
+      "contestId": "33",
+      "matchTime": "2026-07-08T22:40:00+00:00",
+      "status": "upcoming",
+      "create": {
+        "ok": true,
+        "txHashes": [
+          "0x924b8091f8962bb51a70c7153e6da16505a868b0f12818f0271d13f372b29cc8"
+        ],
+        "skipped": null
+      },
+      "wait": {
+        "contestId": "33",
+        "status": "verified"
+      },
+      "marketUpdateTxs": [
+        "0x637bf5e29d3780467704515f6ef859a4f49095accb9b89f19f00b0af6ed172e2"
+      ],
+      "oddsMarkets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "odds": {
+        "moneyline": {
+          "market": "moneyline",
+          "awayOddsAmerican": -126,
+          "homeOddsAmerican": 111,
+          "upstreamLastUpdated": "2026-07-08T18:18:04+00:00",
+          "pollCapturedAt": "2026-07-08T18:21:55.712+00:00",
+          "changedAt": "2026-07-08T18:19:56.034+00:00"
+        },
+        "spread": {
+          "market": "spread",
+          "awayLine": -1.5,
+          "homeLine": 1.5,
+          "awayOddsAmerican": 130,
+          "homeOddsAmerican": -150,
+          "upstreamLastUpdated": "2026-07-08T18:18:04+00:00",
+          "pollCapturedAt": "2026-07-08T18:21:55.788+00:00",
+          "changedAt": "2026-07-08T16:09:50.587+00:00"
+        },
+        "total": {
+          "market": "total",
+          "line": 8.5,
+          "overOddsAmerican": -125,
+          "underOddsAmerican": 105,
+          "upstreamLastUpdated": "2026-07-08T18:18:04+00:00",
+          "pollCapturedAt": "2026-07-08T18:21:55.866+00:00",
+          "changedAt": "2026-07-08T18:19:56.211+00:00"
+        }
+      }
+    },
+    {
+      "label": "F",
+      "teams": "Houston Astros @ Washington Nationals",
+      "gameId": "9fa921b1-ab07-4b29-9558-3b305ce6f04b",
+      "contestId": "34",
+      "matchTime": "2026-07-08T22:45:00+00:00",
+      "status": "upcoming",
+      "create": {
+        "ok": true,
+        "txHashes": [
+          "0x174f03821b7a9ca0a8c3dfa5ff453eeaefc924d4540dea4051db473df1340d4b"
+        ],
+        "skipped": null
+      },
+      "wait": {
+        "contestId": "34",
+        "status": "verified"
+      },
+      "marketUpdateTxs": [
+        "0x45a07ebeb4adfa97c7c409a0ac24e766dc6bc6717f0c7b0384ba62f7bfee76e9"
+      ],
+      "oddsMarkets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "odds": {
+        "moneyline": {
+          "market": "moneyline",
+          "awayOddsAmerican": 119,
+          "homeOddsAmerican": -136,
+          "upstreamLastUpdated": "2026-07-08T18:18:04+00:00",
+          "pollCapturedAt": "2026-07-08T18:21:55.997+00:00",
+          "changedAt": "2026-07-08T17:25:00.886+00:00"
+        },
+        "spread": {
+          "market": "spread",
+          "awayLine": 1.5,
+          "homeLine": -1.5,
+          "awayOddsAmerican": -170,
+          "homeOddsAmerican": 145,
+          "upstreamLastUpdated": "2026-07-08T18:18:04+00:00",
+          "pollCapturedAt": "2026-07-08T18:21:56.068+00:00",
+          "changedAt": "2026-07-08T15:59:50.397+00:00"
+        },
+        "total": {
+          "market": "total",
+          "line": 9.5,
+          "overOddsAmerican": -120,
+          "underOddsAmerican": -100,
+          "upstreamLastUpdated": "2026-07-08T18:18:04+00:00",
+          "pollCapturedAt": "2026-07-08T18:21:56.131+00:00",
+          "changedAt": "2026-07-08T12:39:41.277+00:00"
+        }
+      }
+    }
+  ],
+  "manualSeedFillCount": 18,
+  "speculationsByContestMarket": {
+    "A": {
+      "moneyline": "75",
+      "spread": "76",
+      "total": "77"
+    },
+    "B": {
+      "moneyline": "78",
+      "spread": "79",
+      "total": "80"
+    },
+    "C": {
+      "moneyline": "81",
+      "spread": "82",
+      "total": "83"
+    },
+    "D": {
+      "moneyline": "84",
+      "spread": "85",
+      "total": "86"
+    },
+    "E": {
+      "moneyline": "87",
+      "spread": "88",
+      "total": "89"
+    },
+    "F": {
+      "moneyline": "90",
+      "spread": "91",
+      "total": "92"
+    }
+  },
+  "manualSeedZeroOpen": {
+    "A": 0,
+    "B": 0,
+    "C": 0,
+    "D": 0,
+    "E": 0,
+    "F": 0
+  },
+  "walletAfter": {
+    "fresh-user": {
+      "rc": 1,
+      "balances": {
+        "native": {
+          "raw": "16578575616980291692",
+          "formatted": "16.578575",
+          "decimals": 18,
+          "symbol": "POL"
+        },
+        "usdc": {
+          "raw": "89501901",
+          "formatted": "89.501901",
+          "decimals": 6,
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+        }
+      },
+      "allowances": {
+        "usdcPositionModule": {
+          "raw": "982000",
+          "formatted": "0.982",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "usdcTreasuryModule": {
+          "raw": "2500000",
+          "formatted": "2.5",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      }
+    },
+    "flow-a": {
+      "rc": 1,
+      "balances": {
+        "native": {
+          "raw": "40102616783536962678",
+          "formatted": "40.102616",
+          "decimals": 18,
+          "symbol": "POL"
+        },
+        "usdc": {
+          "raw": "297741510",
+          "formatted": "297.74151",
+          "decimals": 6,
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+        }
+      },
+      "allowances": {
+        "usdcPositionModule": {
+          "raw": "1990150",
+          "formatted": "1.99015",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "usdcTreasuryModule": {
+          "raw": "750000",
+          "formatted": "0.75",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      }
+    },
+    "stage-maker-b": {
+      "rc": 1,
+      "balances": {
+        "native": {
+          "raw": "620518929664836669",
+          "formatted": "0.620518",
+          "decimals": 18,
+          "symbol": "POL"
+        },
+        "usdc": {
+          "raw": "298129998",
+          "formatted": "298.129998",
+          "decimals": 6,
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+        }
+      },
+      "allowances": {
+        "usdcPositionModule": {
+          "raw": "9991030",
+          "formatted": "9.99103",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "usdcTreasuryModule": {
+          "raw": "750000",
+          "formatted": "0.75",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      }
+    },
+    "stage-maker-a": {
+      "rc": 1,
+      "balances": {
+        "native": {
+          "raw": "17294513123913518613",
+          "formatted": "17.294513",
+          "decimals": 18,
+          "symbol": "POL"
+        },
+        "usdc": {
+          "raw": "300457971",
+          "formatted": "300.457971",
+          "decimals": 6,
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359"
+        }
+      },
+      "allowances": {
+        "usdcPositionModule": {
+          "raw": "25000000",
+          "formatted": "25",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "usdcTreasuryModule": {
+          "raw": "0",
+          "formatted": "0",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      }
+    }
+  }
+}

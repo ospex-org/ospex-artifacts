@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "utc": "2026-07-08T23:54:18.495681Z",
+  "block": "MVE Phase 1 Block I",
+  "liveVerdict": "AMBER_PRELIVE_GATE_HALT",
+  "protocolVerdict": "MVE_PHASE1_BLOCK_I_AMBER",
+  "reason": "Live expanded-MM was halted by the operator harness before posting live quotes because the prelive dry-run gate incorrectly required full theoretical count. Block I p1 had expected 18 would-submit rows, actual 14 healthy rows, two benign reference-line-mismatch total skips (contest 29 total and contest 31 total), and zero bad events. Correct behavior would have been GO_WITH_CAVEATS for healthy targets; no late recovery will be rushed.",
+  "lateRecovery": {
+    "cancelled": true,
+    "reason": "User cancelled late recovery; do not rush remaining late games."
+  },
+  "liveMm": {
+    "quotesPosted": 0,
+    "controlledFills": 0,
+    "txSent": false
+  },
+  "setupManualFills": {
+    "count": 18,
+    "note": "Microscopic setup/manual seed fills completed for all six contests/18 markets; not live-MM fill evidence."
+  },
+  "postgameWatcher": {
+    "jobId": "8629ab6e6847",
+    "active": true,
+    "script": "ospex_blocks_h_i_postgame_20260708.py"
+  },
+  "harnessFix": {
+    "module": "<local-home>/.hermes/scripts/ospex_expanded_live_harness.py",
+    "replay": "<local-home>/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/sanitized/harness-replay-block-i-p1.json",
+    "replayMarker": "<local-home>/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/state/expanded-live-harness-replay-block-i-p1.json"
+  }
+}
