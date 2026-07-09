@@ -81,7 +81,7 @@
   },
   "badOwnStateEvents": [],
   "telemetryFiles": [
-    "/home/vince/.ospex/runs/20260708T184140Z-mve-phase1-block-h-tor-sf-harness-drill/logs/mm-live-telemetry/run-2026-07-08T19-16-35-333Z-863033.ndjson"
+    "<local-home>/.ospex/runs/20260708T184140Z-mve-phase1-block-h-tor-sf-harness-drill/logs/mm-live-telemetry/run-2026-07-08T19-16-35-333Z-863033.ndjson"
   ],
-  "runDir": "/home/vince/.ospex/runs/20260708T184140Z-mve-phase1-block-h-tor-sf-harness-drill"
+  "runDir": "<local-home>/.ospex/runs/20260708T184140Z-mve-phase1-block-h-tor-sf-harness-drill"
 }

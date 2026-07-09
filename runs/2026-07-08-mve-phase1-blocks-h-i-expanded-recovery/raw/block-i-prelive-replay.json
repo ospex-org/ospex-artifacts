@@ -146,7 +146,7 @@
     "checkedAt": "2026-07-08T23:53:56.882565Z",
     "name": "block-i-p1-reference-line-mismatch-regression",
     "requiredExpectation": "expected 18, actual 14, two reference-line-mismatch total skips, zero bad events => GO_WITH_CAVEATS",
-    "sourceTelemetry": "/home/vince/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/logs/mm-p1-prelive-dry-telemetry"
+    "sourceTelemetry": "<local-home>/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/logs/mm-p1-prelive-dry-telemetry"
   },
   "targetsByContest": {
     "29": [

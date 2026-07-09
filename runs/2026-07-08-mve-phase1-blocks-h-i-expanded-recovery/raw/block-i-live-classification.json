@@ -24,8 +24,8 @@
     "script": "ospex_blocks_h_i_postgame_20260708.py"
   },
   "harnessFix": {
-    "module": "/home/vince/.hermes/scripts/ospex_expanded_live_harness.py",
-    "replay": "/home/vince/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/sanitized/harness-replay-block-i-p1.json",
-    "replayMarker": "/home/vince/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/state/expanded-live-harness-replay-block-i-p1.json"
+    "module": "<local-home>/.hermes/scripts/ospex_expanded_live_harness.py",
+    "replay": "<local-home>/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/sanitized/harness-replay-block-i-p1.json",
+    "replayMarker": "<local-home>/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/state/expanded-live-harness-replay-block-i-p1.json"
   }
 }

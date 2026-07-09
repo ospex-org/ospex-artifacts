@@ -10,8 +10,6 @@
     "block-i-setup-summary": "raw/block-i-setup-summary.json",
     "block-i-split-dry-gates": "raw/block-i-split-dry-gates.json",
     "evidence": "evidence.json",
-    "mveScorecard": "mve-scorecard.json",
-    "mveScorecardMarkdown": "mve-scorecard.md",
     "postgame-last-status": "raw/postgame-last-status.json",
     "summary": "summary.md"
   },
@@ -385,9 +383,9 @@
     "classification": {
       "block": "MVE Phase 1 Block I",
       "harnessFix": {
-        "module": "/home/vince/.hermes/scripts/ospex_expanded_live_harness.py",
-        "replay": "/home/vince/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/sanitized/harness-replay-block-i-p1.json",
-        "replayMarker": "/home/vince/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/state/expanded-live-harness-replay-block-i-p1.json"
+        "module": "<local-home>/.hermes/scripts/ospex_expanded_live_harness.py",
+        "replay": "<local-home>/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/sanitized/harness-replay-block-i-p1.json",
+        "replayMarker": "<local-home>/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/state/expanded-live-harness-replay-block-i-p1.json"
       },
       "lateRecovery": {
         "cancelled": true,
@@ -1809,7 +1807,7 @@
   },
   "dataPath": "evidence.json",
   "date": "2026-07-08",
-  "generatedAt": "2026-07-09T00:11:16.150530Z",
+  "generatedAt": "2026-07-09T00:11:16Z",
   "network": "polygon",
   "postgame": {
     "artifactUpdatePlan": "The guarded publisher job 525111bc1891 is scheduled to update this branch/PR after postgame zero-state is clean.",
@@ -1828,10 +1826,12 @@
     "state": "pending",
     "watcherJobId": "8629ab6e6847"
   },
-  "publishedAt": "2026-07-09T00:11:16.150530Z",
+  "publishedAt": "2026-07-09T00:11:16Z",
   "rawPath": "raw/",
   "runClass": "mm-live-canary",
   "schemaVersion": 1,
+  "scorecardStatus": "not_published_for_pre_postgame_partial_artifact",
+  "scorecardStatusReason": "The schema-backed mve-scorecard contract is single-target and postgame/zero-exposure oriented; this partial multi-block artifact intentionally publishes only facts/summary/raw evidence before final postgame zero-state.",
   "sourceRunIds": {
     "blockH": "20260708T184140Z-mve-phase1-block-h-tor-sf-harness-drill",
     "blockI": "20260708T181153Z-mve-phase1-block-i-evening-6game-expanded"

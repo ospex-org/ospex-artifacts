@@ -30,7 +30,7 @@
       },
       "stdoutTail": "warning ../../../package.json: No license field\n[run] maker wallet: 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b\n[runner] starting run 2026-07-08T18-39-13-889Z-qgisk3 \u2014 chain 137, api https://api.ospex.org, mode dry-run\n[runner] SSE budget: this instance uses 10 connections (9 anonymous odds + 1 owner-auth own-state). The core-api per-IP cap is per HOST and split \u2014 odds share 13 anonymous slots, own-state uses the owner reserve. Co-locating N instances needs N*9 <= MAX_STREAM_CONNECTIONS_PER_IP - RESERVED_STREAM_CONNECTIONS_PER_IP_OWNER for the odds streams (and N*10 <= MAX_STREAM_CONNECTIONS_PER_IP overall), or run each on its own egress IP. See DESIGN \"SSE connection budget\".\n",
       "telemetryFiles": [
-        "/home/vince/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/logs/mm-p1-dry-telemetry/run-2026-07-08T18-39-13-889Z-qgisk3.ndjson"
+        "<local-home>/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/logs/mm-p1-dry-telemetry/run-2026-07-08T18-39-13-889Z-qgisk3.ndjson"
       ],
       "utc": "2026-07-08T18:39:49.648427Z"
     },
@@ -63,7 +63,7 @@
       },
       "stdoutTail": "warning ../../../package.json: No license field\n[run] maker wallet: 0x5316fa54c170d1927f30d1a497ac9e85e3826a9b\n[runner] starting run 2026-07-08T18-39-53-167Z-ifdmrr \u2014 chain 137, api https://api.ospex.org, mode dry-run\n[runner] SSE budget: this instance uses 10 connections (9 anonymous odds + 1 owner-auth own-state). The core-api per-IP cap is per HOST and split \u2014 odds share 13 anonymous slots, own-state uses the owner reserve. Co-locating N instances needs N*9 <= MAX_STREAM_CONNECTIONS_PER_IP - RESERVED_STREAM_CONNECTIONS_PER_IP_OWNER for the odds streams (and N*10 <= MAX_STREAM_CONNECTIONS_PER_IP overall), or run each on its own egress IP. See DESIGN \"SSE connection budget\".\n",
       "telemetryFiles": [
-        "/home/vince/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/logs/mm-p2-dry-telemetry/run-2026-07-08T18-39-53-167Z-ifdmrr.ndjson"
+        "<local-home>/.ospex/runs/20260708T181153Z-mve-phase1-block-i-evening-6game-expanded/logs/mm-p2-dry-telemetry/run-2026-07-08T18-39-53-167Z-ifdmrr.ndjson"
       ],
       "utc": "2026-07-08T18:40:28.648729Z"
     }

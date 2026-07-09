@@ -1,6 +1,6 @@
 # Ospex MVE Phase 1 Blocks H/I — 2026-07-08 partial artifact
 
-Generated: 2026-07-09T00:11:16.150530Z
+Generated: 2026-07-09T00:11:16Z
 
 This is a facts-only **partial** artifact published before the combined H/I postgame zero-state marker exists. It documents the live-window result and the harness failure/fix so the day is not lost; the same PR is expected to be updated after score/settle/claim/zero-state completes.
 
