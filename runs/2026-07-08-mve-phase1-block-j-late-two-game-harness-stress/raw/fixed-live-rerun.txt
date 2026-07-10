@@ -1,0 +1,142 @@
+✅ Block J harness live window completed; postgame pending
+{
+  "ok": true,
+  "contestIds": {
+    "A": "36",
+    "B": "37"
+  },
+  "liveQuotesPostedCount": 12,
+  "controlledFillCount": 2,
+  "fills": [
+    {
+      "label": "A",
+      "contestId": "36",
+      "market": "moneyline",
+      "speculationId": "96",
+      "commitmentHash": "0x0f4f82ceec2372a1f038d1c8d4d8505a7d668e36fad2d302925848ba940cbf8c",
+      "riskUSDC": "0.005000",
+      "previewSideSummary": "Los Angeles Dodgers",
+      "txHashes": [
+        "0x9a52eba1b1657191495f81a8798f177a2737edc53c23b9b10fcd7e34a7b6f8f1"
+      ],
+      "substitution": null,
+      "previewRetries": [
+        {
+          "hash": "0x0f4f82ceec2372a1f038d1c8d4d8505a7d668e36fad2d302925848ba940cbf8c",
+          "risk": "0.500000",
+          "classification": {
+            "recommendedAction": "REDUCE_SIZE_AND_RETRY",
+            "noTxSent": true,
+            "fatalEvents": [],
+            "reason": "preview-too-large-before-tx"
+          },
+          "errors": [
+            {
+              "code": "VALIDATION_ERROR",
+              "message": "Match would revert: fillMakerRisk=204900 not in (0, remaining=50000]. Choose a different takerDesiredRiskWei6.",
+              "details": {
+                "field": "takerDesiredRiskWei6"
+              }
+            }
+          ],
+          "ok": false
+        }
+      ],
+      "oversizePreview": {
+        "hash": "0x0f4f82ceec2372a1f038d1c8d4d8505a7d668e36fad2d302925848ba940cbf8c",
+        "risk": "0.500000",
+        "classification": {
+          "recommendedAction": "REDUCE_SIZE_AND_RETRY",
+          "noTxSent": true,
+          "fatalEvents": [],
+          "reason": "preview-too-large-before-tx"
+        },
+        "errors": [
+          {
+            "code": "VALIDATION_ERROR",
+            "message": "Match would revert: fillMakerRisk=204900 not in (0, remaining=50000]. Choose a different takerDesiredRiskWei6.",
+            "details": {
+              "field": "takerDesiredRiskWei6"
+            }
+          }
+        ],
+        "ok": false
+      }
+    },
+    {
+      "label": "B",
+      "contestId": "37",
+      "market": "spread",
+      "speculationId": "100",
+      "commitmentHash": "0xeb586d9c5801ba05891910ca36b395137d4600aad3ab93b2d6a7d893c0571984",
+      "riskUSDC": "0.005000",
+      "previewSideSummary": "San Diego Padres -1.5",
+      "txHashes": [
+        "0xb7d7fe81ef347ef107f1635de9be2c9d04252982b71ed33cee945aed9f1f8315"
+      ],
+      "substitution": null,
+      "previewRetries": [
+        {
+          "hash": "0xeb586d9c5801ba05891910ca36b395137d4600aad3ab93b2d6a7d893c0571984",
+          "risk": "0.500000",
+          "classification": {
+            "recommendedAction": "REDUCE_SIZE_AND_RETRY",
+            "noTxSent": true,
+            "fatalEvents": [],
+            "reason": "preview-too-large-before-tx"
+          },
+          "errors": [
+            {
+              "code": "VALIDATION_ERROR",
+              "message": "Match would revert: fillMakerRisk=757500 not in (0, remaining=50000]. Choose a different takerDesiredRiskWei6.",
+              "details": {
+                "field": "takerDesiredRiskWei6"
+              }
+            }
+          ],
+          "ok": false
+        }
+      ],
+      "oversizePreview": {
+        "hash": "0xeb586d9c5801ba05891910ca36b395137d4600aad3ab93b2d6a7d893c0571984",
+        "risk": "0.500000",
+        "classification": {
+          "recommendedAction": "REDUCE_SIZE_AND_RETRY",
+          "noTxSent": true,
+          "fatalEvents": [],
+          "reason": "preview-too-large-before-tx"
+        },
+        "errors": [
+          {
+            "code": "VALIDATION_ERROR",
+            "message": "Match would revert: fillMakerRisk=757500 not in (0, remaining=50000]. Choose a different takerDesiredRiskWei6.",
+            "details": {
+              "field": "takerDesiredRiskWei6"
+            }
+          }
+        ],
+        "ok": false
+      }
+    }
+  ],
+  "eventCounts": {
+    "tick-start": 2,
+    "candidate": 7,
+    "stream-health-hold": 2,
+    "quote-intent": 6,
+    "risk-verdict": 6,
+    "submit": 12,
+    "quote-competitiveness": 12,
+    "fill": 1,
+    "soft-cancel": 11,
+    "kill": 1
+  },
+  "zeroOpenCounts": {
+    "A": 0,
+    "B": 0
+  },
+  "badOwnStateCount": 0,
+  "ownerUnknownCount": 0,
+  "caveatCount": 2,
+  "runDir": "<local-home>/.ospex/runs/20260709T003326Z-mve-phase1-block-j-late-two-game-harness-stress"
+}

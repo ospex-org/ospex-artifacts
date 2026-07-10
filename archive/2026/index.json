@@ -1,13 +1,24 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-07-09T00:11:16.150530Z",
+  "generatedAt": "2026-07-10T19:35:04Z",
   "repository": "ospex-org/ospex-artifacts",
   "archive": {
     "scope": "year",
     "year": 2026
   },
   "artifacts": [
+    {
+      "artifactId": "2026-07-08-mve-phase1-block-j-late-two-game-harness-stress",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-08-mve-phase1-block-j-late-two-game-harness-stress/evidence.json",
+      "date": "2026-07-08",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-08-mve-phase1-block-j-late-two-game-harness-stress/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-07-08-mve-phase1-block-j-late-two-game-harness-stress/summary.md",
+      "publishedAt": "2026-07-10T19:34:44Z"
+    },
     {
       "artifactId": "2026-07-08-mve-phase1-blocks-h-i-expanded-recovery",
       "artifactType": "run",

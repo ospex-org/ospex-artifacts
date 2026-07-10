@@ -1,0 +1,50 @@
+{
+  "benignSkips": [],
+  "checkedAtUtc": "2026-07-09T01:40:39Z",
+  "dryRunExitCode": 0,
+  "fatalEvents": [],
+  "healthyTargets": [
+    {
+      "contestId": "36",
+      "market": "moneyline",
+      "sides": 2
+    },
+    {
+      "contestId": "36",
+      "market": "spread",
+      "sides": 2
+    },
+    {
+      "contestId": "36",
+      "market": "total",
+      "sides": 2
+    },
+    {
+      "contestId": "37",
+      "market": "moneyline",
+      "sides": 2
+    },
+    {
+      "contestId": "37",
+      "market": "spread",
+      "sides": 2
+    },
+    {
+      "contestId": "37",
+      "market": "total",
+      "sides": 2
+    }
+  ],
+  "humanFirstLine": "\u2705 Block J final drift dry-run: gates green; proceeding with strict allowlist.",
+  "noTxSent": true,
+  "openCommitmentsAfter": {
+    "36": 0,
+    "37": 0
+  },
+  "openCommitmentsBefore": {
+    "36": 0,
+    "37": 0
+  },
+  "recommendedAction": "GO",
+  "wouldSubmit": 12
+}

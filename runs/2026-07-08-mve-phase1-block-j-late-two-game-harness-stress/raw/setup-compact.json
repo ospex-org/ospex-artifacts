@@ -1,0 +1,141 @@
+{
+  "approvalTxHashes": [],
+  "boundedExactApprovalsOnly": true,
+  "completedAt": "2026-07-09T00:41:44.917232Z",
+  "contests": {
+    "A": {
+      "contestCreate": {
+        "ok": true,
+        "skipped": null,
+        "txHashes": [
+          "0x1e9fc78599fa553c4ae9dfe295f288d008b8072ab8111dfe76886b1e39bad30d"
+        ]
+      },
+      "contestId": "36",
+      "gameId": "b14eb3ed-8fe1-41bd-9edb-21c8b7c94fc0",
+      "gamePk": 823928,
+      "marketUpdateTxHashes": [
+        "0x2d659780e702faf6d16e73ab563f280650735f10bbbf632fa27839b51874a225"
+      ],
+      "scheduledUtc": "2026-07-09T02:10:00Z",
+      "speculations": {
+        "moneyline": "96",
+        "spread": "97",
+        "total": "98"
+      },
+      "teams": "Colorado Rockies @ Los Angeles Dodgers"
+    },
+    "B": {
+      "contestCreate": {
+        "ok": true,
+        "skipped": null,
+        "txHashes": [
+          "0xee45b6e11ffeaa6b446960e5341a6338f82bf8e41f1eeb4284a79d6c6bb073ec"
+        ]
+      },
+      "contestId": "37",
+      "gameId": "9c3489da-5456-45d4-af52-838f857f82f9",
+      "gamePk": 823279,
+      "marketUpdateTxHashes": [
+        "0x03d35645a0e9d51241577e3971b6b397c59cfe5c57bfd7440515f156def20e2f"
+      ],
+      "scheduledUtc": "2026-07-09T02:10:00Z",
+      "speculations": {
+        "moneyline": "99",
+        "spread": "100",
+        "total": "101"
+      },
+      "teams": "Arizona Diamondbacks @ San Diego Padres"
+    }
+  },
+  "extraCryptoRequired": false,
+  "manualSeedFills": {
+    "count": 6,
+    "matches": [
+      {
+        "commitmentHash": "0xfca38b54142390771a02758afafd580042cdcdeeef31e4a704ff04ed84ff4a9e",
+        "contestId": "36",
+        "label": "A",
+        "makerRole": "fresh-user",
+        "market": "moneyline",
+        "matchTxHashes": [
+          "0x1e49f4ce12cf11b16469ff19be6c2b43019b80f054881710feab0acae7f95df0"
+        ],
+        "previewRiskUSDC": "0.000380",
+        "side": "Los Angeles Dodgers",
+        "takerRole": "flow-a"
+      },
+      {
+        "commitmentHash": "0x68dd8f3fb5f17f9eabad7e9e7cf88c204ed0d20caf96e54bfe010c66a5fbec52",
+        "contestId": "36",
+        "label": "A",
+        "makerRole": "fresh-user",
+        "market": "spread",
+        "matchTxHashes": [
+          "0x64f7a79b81d6290f959ae050698a5f7ecf7fc512c09f99083304afe3271bfdf7"
+        ],
+        "previewRiskUSDC": "0.000740",
+        "side": "Los Angeles Dodgers -1.5",
+        "takerRole": "stage-maker-b"
+      },
+      {
+        "commitmentHash": "0x55ead490ecf6c608d6318ed03841a5e23d6d703c3e564aa0d26de268ec4dd1e1",
+        "contestId": "36",
+        "label": "A",
+        "makerRole": "fresh-user",
+        "market": "total",
+        "matchTxHashes": [
+          "0x60790736c1aeebcae0545039e57ce7705492d05b381e157a0f3053bd1af50462"
+        ],
+        "previewRiskUSDC": "0.000950",
+        "side": "over 10",
+        "takerRole": "flow-a"
+      },
+      {
+        "commitmentHash": "0x305d11ddb48ce0430aa44a63acac4358c5877da4bffe22b71d7f7289c35997a1",
+        "contestId": "37",
+        "label": "B",
+        "makerRole": "fresh-user",
+        "market": "moneyline",
+        "matchTxHashes": [
+          "0x46d202436d1bc70f7d672562d1b8cd55f52267e82e951c6cbf4d4ae0aa825cd5"
+        ],
+        "previewRiskUSDC": "0.000720",
+        "side": "San Diego Padres",
+        "takerRole": "stage-maker-b"
+      },
+      {
+        "commitmentHash": "0xa242ec8aee6f7c9f1be753954162de29fbc96103c8a8575ae58940b848d39774",
+        "contestId": "37",
+        "label": "B",
+        "makerRole": "fresh-user",
+        "market": "spread",
+        "matchTxHashes": [
+          "0xda5b01a74dc52377b06808404fbcae8fa7a908caa4bf07a0c04743579cad138b"
+        ],
+        "previewRiskUSDC": "0.001480",
+        "side": "San Diego Padres -1.5",
+        "takerRole": "flow-a"
+      },
+      {
+        "commitmentHash": "0x2dad02763ada3495557143c15856e9a4277ffec7f2659b7a2fdb9e5d9326c4b7",
+        "contestId": "37",
+        "label": "B",
+        "makerRole": "fresh-user",
+        "market": "total",
+        "matchTxHashes": [
+          "0x3b0e166458393f73ad40dfdab871af56bb02b02067148f1e868fcea29e9bc67f"
+        ],
+        "previewRiskUSDC": "0.000930",
+        "side": "over 8.5",
+        "takerRole": "stage-maker-b"
+      }
+    ],
+    "openCommitmentsAfter": {
+      "A": 0,
+      "B": 0
+    },
+    "riskPreviewSumUSDC": "0.005200"
+  },
+  "ok": true
+}

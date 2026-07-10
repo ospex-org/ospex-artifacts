@@ -1,0 +1,212 @@
+{
+  "generatedAt": "2026-07-09T00:44:22Z",
+  "ok": true,
+  "profiles": {
+    "cap-dry": {
+      "benignSkips": [
+        {
+          "contestId": "36",
+          "index": 22,
+          "market": "moneyline",
+          "reason": "cap-hit"
+        },
+        {
+          "contestId": "36",
+          "index": 24,
+          "market": "spread",
+          "reason": "cap-hit"
+        },
+        {
+          "contestId": "36",
+          "index": 26,
+          "market": "total",
+          "reason": "cap-hit"
+        },
+        {
+          "contestId": "37",
+          "index": 20,
+          "market": "total",
+          "reason": "cap-hit"
+        }
+      ],
+      "exitCode": 0,
+      "fatalEvents": [],
+      "healthyTargets": [
+        {
+          "contestId": "37",
+          "market": "moneyline",
+          "sides": 2
+        },
+        {
+          "contestId": "37",
+          "market": "spread",
+          "sides": 2
+        }
+      ],
+      "humanFirstLine": "\u26a0\ufe0f Block J cap-dry continuing with caveats: 4 benign market skip(s), 2 healthy target market(s) remain.",
+      "recommendedAction": "GO_WITH_CAVEATS",
+      "wouldSubmit": 4
+    },
+    "normal-dry": {
+      "benignSkips": [],
+      "exitCode": 0,
+      "fatalEvents": [],
+      "healthyTargets": [
+        {
+          "contestId": "36",
+          "market": "moneyline",
+          "sides": 2
+        },
+        {
+          "contestId": "36",
+          "market": "spread",
+          "sides": 2
+        },
+        {
+          "contestId": "36",
+          "market": "total",
+          "sides": 2
+        },
+        {
+          "contestId": "37",
+          "market": "moneyline",
+          "sides": 2
+        },
+        {
+          "contestId": "37",
+          "market": "spread",
+          "sides": 2
+        },
+        {
+          "contestId": "37",
+          "market": "total",
+          "sides": 2
+        }
+      ],
+      "humanFirstLine": "\u2705 Block J normal-dry: gates green; proceeding with strict allowlist.",
+      "recommendedAction": "GO",
+      "wouldSubmit": 12
+    },
+    "seed-dry": {
+      "benignSkips": [],
+      "exitCode": 0,
+      "fatalEvents": [],
+      "healthyTargets": [
+        {
+          "contestId": "36",
+          "market": "moneyline",
+          "sides": 2
+        },
+        {
+          "contestId": "36",
+          "market": "spread",
+          "sides": 2
+        },
+        {
+          "contestId": "36",
+          "market": "total",
+          "sides": 2
+        },
+        {
+          "contestId": "37",
+          "market": "moneyline",
+          "sides": 2
+        },
+        {
+          "contestId": "37",
+          "market": "spread",
+          "sides": 2
+        },
+        {
+          "contestId": "37",
+          "market": "total",
+          "sides": 2
+        }
+      ],
+      "humanFirstLine": "\u2705 Block J seed-dry: gates green; proceeding with strict allowlist.",
+      "recommendedAction": "GO",
+      "wouldSubmit": 12
+    }
+  },
+  "seedSpeculationsDistinction": {
+    "normalProfile": {
+      "benignSkips": [],
+      "candidateCount": 0,
+      "fatalEvents": [
+        {
+          "count": 1,
+          "examples": [
+            {
+              "contestId": "36",
+              "index": 0,
+              "kind": "would-seed"
+            }
+          ],
+          "type": "seedSpeculations-unexpected"
+        }
+      ],
+      "healthyTargets": [],
+      "minimumCoverage": {
+        "actualHealthyMarketsTotal": 0,
+        "minHealthyMarketsTotal": 1,
+        "requireNoOffAllowlist": true
+      },
+      "recommendedAction": "STOP",
+      "seedExpected": false,
+      "seedSeenCount": 1,
+      "wouldSubmit": 0
+    },
+    "seedProfile": {
+      "benignSkips": [],
+      "candidateCount": 0,
+      "fatalEvents": [],
+      "healthyTargets": [],
+      "minimumCoverage": {
+        "actualHealthyMarketsTotal": 0,
+        "minHealthyMarketsTotal": 1,
+        "requireNoOffAllowlist": true
+      },
+      "recommendedAction": "SALVAGE",
+      "seedExpected": true,
+      "seedSeenCount": 1,
+      "wouldSubmit": 0
+    }
+  },
+  "strictAllowlistCandidates": {
+    "offAllowlistCount": 0,
+    "quoteReady": 6
+  },
+  "syntheticReferenceLineMismatch": {
+    "benignSkips": [
+      {
+        "contestId": "36",
+        "index": 6,
+        "market": "total",
+        "reason": "reference-line-mismatch"
+      }
+    ],
+    "candidateCount": 3,
+    "fatalEvents": [],
+    "healthyTargets": [
+      {
+        "contestId": "36",
+        "market": "moneyline",
+        "sides": 2
+      },
+      {
+        "contestId": "36",
+        "market": "spread",
+        "sides": 2
+      }
+    ],
+    "minimumCoverage": {
+      "actualHealthyMarketsTotal": 2,
+      "minHealthyMarketsTotal": 2,
+      "requireNoOffAllowlist": true
+    },
+    "recommendedAction": "GO_WITH_CAVEATS",
+    "seedExpected": false,
+    "seedSeenCount": 0,
+    "wouldSubmit": 4
+  }
+}

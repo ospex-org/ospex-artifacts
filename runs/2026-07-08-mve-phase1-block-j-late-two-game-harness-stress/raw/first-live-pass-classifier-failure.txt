@@ -1,0 +1,87 @@
+✅ Block J harness live window completed; postgame pending
+{
+  "ok": true,
+  "contestIds": {
+    "A": "36",
+    "B": "37"
+  },
+  "liveQuotesPostedCount": 12,
+  "controlledFillCount": 0,
+  "fills": [
+    {
+      "label": "A",
+      "skipped": true,
+      "reason": "oversize preview classified as fatal/unsafe",
+      "context": {
+        "hash": "0x49490deb1c0c4788c672dde11ba2ffb0601ca8e2e689cc0181ebf18786297b34",
+        "risk": "0.500000",
+        "classification": {
+          "recommendedAction": "STOP",
+          "noTxSent": false,
+          "fatalEvents": [
+            {
+              "type": "possible-tx-sent-with-preview-refusal"
+            }
+          ]
+        },
+        "errors": [
+          {
+            "code": "VALIDATION_ERROR",
+            "message": "Match would revert: fillMakerRisk=204900 not in (0, remaining=50000]. Choose a different takerDesiredRiskWei6.",
+            "details": {
+              "field": "takerDesiredRiskWei6"
+            }
+          }
+        ],
+        "ok": false
+      }
+    },
+    {
+      "label": "B",
+      "skipped": true,
+      "reason": "oversize preview classified as fatal/unsafe",
+      "context": {
+        "hash": "0x6f13ff5163eb7f70ab7ec88795c3d000fb8d07fa924b3bb36c1cdfce48d62418",
+        "risk": "0.500000",
+        "classification": {
+          "recommendedAction": "STOP",
+          "noTxSent": false,
+          "fatalEvents": [
+            {
+              "type": "possible-tx-sent-with-preview-refusal"
+            }
+          ]
+        },
+        "errors": [
+          {
+            "code": "VALIDATION_ERROR",
+            "message": "Match would revert: fillMakerRisk=757500 not in (0, remaining=50000]. Choose a different takerDesiredRiskWei6.",
+            "details": {
+              "field": "takerDesiredRiskWei6"
+            }
+          }
+        ],
+        "ok": false
+      }
+    }
+  ],
+  "eventCounts": {
+    "tick-start": 2,
+    "candidate": 6,
+    "stream-health-hold": 2,
+    "quote-intent": 6,
+    "risk-verdict": 6,
+    "submit": 12,
+    "quote-competitiveness": 12,
+    "soft-cancel": 12,
+    "kill": 1
+  },
+  "zeroOpenCounts": {
+    "A": 0,
+    "B": 0
+  },
+  "badOwnStateCount": 0,
+  "ownerUnknownCount": 0,
+  "caveatCount": 2,
+  "runDir": "<local-home>/.ospex/runs/20260709T003326Z-mve-phase1-block-j-late-two-game-harness-stress"
+}

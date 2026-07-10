@@ -1,0 +1,125 @@
+{
+  "blockIReplay": {
+    "benignSkips": [
+      {
+        "contestId": "29",
+        "index": 22,
+        "market": "total",
+        "reason": "reference-line-mismatch"
+      },
+      {
+        "contestId": "31",
+        "index": 53,
+        "market": "total",
+        "reason": "reference-line-mismatch"
+      }
+    ],
+    "fatalEvents": [],
+    "healthyTargets": [
+      {
+        "contestId": "29",
+        "market": "moneyline",
+        "sides": 2
+      },
+      {
+        "contestId": "29",
+        "market": "spread",
+        "sides": 2
+      },
+      {
+        "contestId": "30",
+        "market": "moneyline",
+        "sides": 2
+      },
+      {
+        "contestId": "30",
+        "market": "spread",
+        "sides": 2
+      },
+      {
+        "contestId": "30",
+        "market": "total",
+        "sides": 2
+      },
+      {
+        "contestId": "31",
+        "market": "moneyline",
+        "sides": 2
+      },
+      {
+        "contestId": "31",
+        "market": "spread",
+        "sides": 2
+      }
+    ],
+    "recommendedAction": "GO_WITH_CAVEATS",
+    "wouldSubmit": 14
+  },
+  "generatedAt": "2026-07-09T00:53:22Z",
+  "humanAlertBranches": [
+    {
+      "action": "GO_WITH_CAVEATS",
+      "firstLine": "\u26a0\ufe0f Block J harness continuing with caveats: 2 benign market skip(s), 7 healthy target market(s) remain."
+    },
+    {
+      "action": "STOP",
+      "firstLine": "\u274c Block J harness stopped before tx: off-allowlist detected. No tx sent. Open commitments check pending."
+    },
+    {
+      "action": "REDUCE_SIZE_AND_RETRY",
+      "firstLine": "\u26a0\ufe0f Block J harness: preview size too large; no tx sent. Reducing size and retrying."
+    },
+    {
+      "action": "POSTGAME_ONLY_OR_ABORT_LIVE",
+      "firstLine": "\u26a0\ufe0f Block J harness not starting new live writes: current time is after latest safe retry but before first pitch."
+    },
+    {
+      "action": "SALVAGE",
+      "firstLine": "\u26a0\ufe0f Block J harness entering salvage mode: minimum coverage not met; no unsafe tx sent."
+    },
+    {
+      "action": "STOP",
+      "firstLine": "\u274c Block J harness stopped before tx: owner-mapping-failed detected. No tx sent. Open commitments check pending."
+    }
+  ],
+  "ok": true,
+  "previewTooLarge": {
+    "fatalEvents": [],
+    "noTxSent": true,
+    "reason": "preview-too-large-before-tx",
+    "recommendedAction": "REDUCE_SIZE_AND_RETRY"
+  },
+  "syntheticOffAllowlist": {
+    "benignSkips": [],
+    "candidateCount": 1,
+    "fatalEvents": [
+      {
+        "contestId": "NOT_ALLOWED",
+        "index": 1,
+        "kind": "would-submit",
+        "type": "off-allowlist"
+      }
+    ],
+    "healthyTargets": [
+      {
+        "contestId": "NOT_ALLOWED",
+        "market": "moneyline",
+        "sides": 1
+      }
+    ],
+    "minimumCoverage": {
+      "actualHealthyMarketsTotal": 1,
+      "minHealthyMarketsTotal": 1,
+      "requireNoOffAllowlist": true
+    },
+    "recommendedAction": "STOP",
+    "seedExpected": false,
+    "seedSeenCount": 0,
+    "wouldSubmit": 1
+  },
+  "timeWindow": {
+    "humanMessage": "\u26a0\ufe0f Block J harness not starting new live writes: current time is after latest safe retry but before first pitch.",
+    "noNewLiveWrites": true,
+    "recommendedAction": "POSTGAME_ONLY_OR_ABORT_LIVE"
+  }
+}

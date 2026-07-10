@@ -1,0 +1,648 @@
+{
+  "artifactFiles": {
+    "brief": "raw/brief.md",
+    "classifierRemediation": "raw/classifier-remediation.json",
+    "dryRunStressMatrix": "raw/dry-run-stress-matrix-compact.json",
+    "evidence": "evidence.json",
+    "finalDrift": "raw/final-drift-dry-run-compact.json",
+    "finalDriftTelemetry": "raw/final-drift-telemetry.ndjson",
+    "firstLivePass": "raw/first-live-pass-classifier-failure.txt",
+    "fixedLiveRerun": "raw/fixed-live-rerun.txt",
+    "harnessSelfTests": "raw/harness-selftests-compact.json",
+    "liveRun": "raw/live-run-compact.json",
+    "liveTelemetry": "raw/live-telemetry.ndjson",
+    "postgame": "raw/postgame-complete-compact.json",
+    "setup": "raw/setup-compact.json",
+    "summary": "summary.md"
+  },
+  "artifactId": "2026-07-08-mve-phase1-block-j-late-two-game-harness-stress",
+  "artifactType": "run",
+  "classifierRemediation": {
+    "classification": "harness-classifier failure",
+    "firstLivePass": {
+      "result": "quotes posted and cleaned up, controlled fills skipped",
+      "rootCause": "The local preview classifier treated any 0x-prefixed value in a preview response\u2014including commitment hashes and module addresses\u2014as evidence that a transaction had been sent.",
+      "safetyImpact": "No unsafe transaction was sent. Oversize previews correctly failed before transaction submission; the first pass then stopped the fill branch and cleaned all quotes to zero open."
+    },
+    "fix": "Transaction evidence now requires an explicit txHash/transactionHash/transaction_hash field or txSent:true. Commitment hashes and addresses do not count.",
+    "verification": {
+      "liveRerunControlledFillCount": 2,
+      "liveRerunOversizeClassifications": [
+        {
+          "fatalEvents": [],
+          "noTxSent": true,
+          "reason": "preview-too-large-before-tx",
+          "recommendedAction": "REDUCE_SIZE_AND_RETRY"
+        },
+        {
+          "fatalEvents": [],
+          "noTxSent": true,
+          "reason": "preview-too-large-before-tx",
+          "recommendedAction": "REDUCE_SIZE_AND_RETRY"
+        }
+      ],
+      "selfTestPreviewBranch": {
+        "fatalEvents": [],
+        "noTxSent": true,
+        "reason": "preview-too-large-before-tx",
+        "recommendedAction": "REDUCE_SIZE_AND_RETRY"
+      },
+      "zeroOpenAfterRerun": {
+        "counts": {
+          "A": 0,
+          "B": 0
+        },
+        "ok": true,
+        "rows": {
+          "A": [],
+          "B": []
+        },
+        "utc": "2026-07-09T00:57:03Z"
+      }
+    }
+  },
+  "dataPath": "evidence.json",
+  "date": "2026-07-08",
+  "dryRunStress": {
+    "capPressure": {
+      "benignSkips": [
+        {
+          "contestId": "36",
+          "index": 22,
+          "market": "moneyline",
+          "reason": "cap-hit"
+        },
+        {
+          "contestId": "36",
+          "index": 24,
+          "market": "spread",
+          "reason": "cap-hit"
+        },
+        {
+          "contestId": "36",
+          "index": 26,
+          "market": "total",
+          "reason": "cap-hit"
+        },
+        {
+          "contestId": "37",
+          "index": 20,
+          "market": "total",
+          "reason": "cap-hit"
+        }
+      ],
+      "exitCode": 0,
+      "fatalEvents": [],
+      "healthyTargets": [
+        {
+          "contestId": "37",
+          "market": "moneyline",
+          "sides": 2
+        },
+        {
+          "contestId": "37",
+          "market": "spread",
+          "sides": 2
+        }
+      ],
+      "humanFirstLine": "\u26a0\ufe0f Block J cap-dry continuing with caveats: 4 benign market skip(s), 2 healthy target market(s) remain.",
+      "recommendedAction": "GO_WITH_CAVEATS",
+      "wouldSubmit": 4
+    },
+    "normal": {
+      "benignSkips": [],
+      "exitCode": 0,
+      "fatalEvents": [],
+      "healthyTargets": [
+        {
+          "contestId": "36",
+          "market": "moneyline",
+          "sides": 2
+        },
+        {
+          "contestId": "36",
+          "market": "spread",
+          "sides": 2
+        },
+        {
+          "contestId": "36",
+          "market": "total",
+          "sides": 2
+        },
+        {
+          "contestId": "37",
+          "market": "moneyline",
+          "sides": 2
+        },
+        {
+          "contestId": "37",
+          "market": "spread",
+          "sides": 2
+        },
+        {
+          "contestId": "37",
+          "market": "total",
+          "sides": 2
+        }
+      ],
+      "humanFirstLine": "\u2705 Block J normal-dry: gates green; proceeding with strict allowlist.",
+      "recommendedAction": "GO",
+      "wouldSubmit": 12
+    },
+    "seedDryOnly": {
+      "benignSkips": [],
+      "exitCode": 0,
+      "fatalEvents": [],
+      "healthyTargets": [
+        {
+          "contestId": "36",
+          "market": "moneyline",
+          "sides": 2
+        },
+        {
+          "contestId": "36",
+          "market": "spread",
+          "sides": 2
+        },
+        {
+          "contestId": "36",
+          "market": "total",
+          "sides": 2
+        },
+        {
+          "contestId": "37",
+          "market": "moneyline",
+          "sides": 2
+        },
+        {
+          "contestId": "37",
+          "market": "spread",
+          "sides": 2
+        },
+        {
+          "contestId": "37",
+          "market": "total",
+          "sides": 2
+        }
+      ],
+      "humanFirstLine": "\u2705 Block J seed-dry: gates green; proceeding with strict allowlist.",
+      "recommendedAction": "GO",
+      "wouldSubmit": 12
+    },
+    "syntheticReferenceLineMismatch": {
+      "benignSkips": [
+        {
+          "contestId": "36",
+          "index": 6,
+          "market": "total",
+          "reason": "reference-line-mismatch"
+        }
+      ],
+      "candidateCount": 3,
+      "fatalEvents": [],
+      "healthyTargets": [
+        {
+          "contestId": "36",
+          "market": "moneyline",
+          "sides": 2
+        },
+        {
+          "contestId": "36",
+          "market": "spread",
+          "sides": 2
+        }
+      ],
+      "minimumCoverage": {
+        "actualHealthyMarketsTotal": 2,
+        "minHealthyMarketsTotal": 2,
+        "requireNoOffAllowlist": true
+      },
+      "recommendedAction": "GO_WITH_CAVEATS",
+      "seedExpected": false,
+      "seedSeenCount": 0,
+      "wouldSubmit": 4
+    }
+  },
+  "finalReadOnlyDrift": {
+    "benignSkips": [],
+    "checkedAtUtc": "2026-07-09T01:40:39Z",
+    "dryRunExitCode": 0,
+    "fatalEvents": [],
+    "healthyTargets": [
+      {
+        "contestId": "36",
+        "market": "moneyline",
+        "sides": 2
+      },
+      {
+        "contestId": "36",
+        "market": "spread",
+        "sides": 2
+      },
+      {
+        "contestId": "36",
+        "market": "total",
+        "sides": 2
+      },
+      {
+        "contestId": "37",
+        "market": "moneyline",
+        "sides": 2
+      },
+      {
+        "contestId": "37",
+        "market": "spread",
+        "sides": 2
+      },
+      {
+        "contestId": "37",
+        "market": "total",
+        "sides": 2
+      }
+    ],
+    "humanFirstLine": "\u2705 Block J final drift dry-run: gates green; proceeding with strict allowlist.",
+    "noTxSent": true,
+    "openCommitmentsAfter": {
+      "36": 0,
+      "37": 0
+    },
+    "openCommitmentsBefore": {
+      "36": 0,
+      "37": 0
+    },
+    "recommendedAction": "GO",
+    "wouldSubmit": 12
+  },
+  "generatedAt": "2026-07-10T19:34:44Z",
+  "harnessSelfTests": {
+    "blockIReplay": {
+      "benignSkips": [
+        {
+          "contestId": "29",
+          "index": 22,
+          "market": "total",
+          "reason": "reference-line-mismatch"
+        },
+        {
+          "contestId": "31",
+          "index": 53,
+          "market": "total",
+          "reason": "reference-line-mismatch"
+        }
+      ],
+      "fatalEvents": [],
+      "healthyTargets": [
+        {
+          "contestId": "29",
+          "market": "moneyline",
+          "sides": 2
+        },
+        {
+          "contestId": "29",
+          "market": "spread",
+          "sides": 2
+        },
+        {
+          "contestId": "30",
+          "market": "moneyline",
+          "sides": 2
+        },
+        {
+          "contestId": "30",
+          "market": "spread",
+          "sides": 2
+        },
+        {
+          "contestId": "30",
+          "market": "total",
+          "sides": 2
+        },
+        {
+          "contestId": "31",
+          "market": "moneyline",
+          "sides": 2
+        },
+        {
+          "contestId": "31",
+          "market": "spread",
+          "sides": 2
+        }
+      ],
+      "recommendedAction": "GO_WITH_CAVEATS",
+      "wouldSubmit": 14
+    },
+    "humanAlertFormatPassed": true,
+    "offAllowlistRecommendedAction": "STOP",
+    "ok": true,
+    "previewTooLarge": {
+      "fatalEvents": [],
+      "noTxSent": true,
+      "reason": "preview-too-large-before-tx",
+      "recommendedAction": "REDUCE_SIZE_AND_RETRY"
+    },
+    "timeWindow": {
+      "humanMessage": "\u26a0\ufe0f Block J harness not starting new live writes: current time is after latest safe retry but before first pitch.",
+      "noNewLiveWrites": true,
+      "recommendedAction": "POSTGAME_ONLY_OR_ABORT_LIVE"
+    }
+  },
+  "limitations": [
+    "All counterparties were controlled wallets and risk was intentionally microscopic.",
+    "The real late drift check remained GO with all six target markets healthy; moved-market behavior was proven through the Block I replay and synthetic branch fixtures rather than a real Block J line mismatch.",
+    "This artifact is harness-stress evidence, not proof of organic market demand or production-scale liquidity."
+  ],
+  "liveHarnessStress": {
+    "controlledFillCount": 2,
+    "controlledTakerRiskUSDC": "0.010000",
+    "fatalOwnStateEvents": 0,
+    "fills": [
+      {
+        "commitmentHash": "0x0f4f82ceec2372a1f038d1c8d4d8505a7d668e36fad2d302925848ba940cbf8c",
+        "contestId": "36",
+        "label": "A",
+        "market": "moneyline",
+        "oversizePreview": {
+          "classification": {
+            "fatalEvents": [],
+            "noTxSent": true,
+            "reason": "preview-too-large-before-tx",
+            "recommendedAction": "REDUCE_SIZE_AND_RETRY"
+          },
+          "errors": [
+            {
+              "code": "VALIDATION_ERROR",
+              "details": {
+                "field": "takerDesiredRiskWei6"
+              },
+              "message": "Match would revert: fillMakerRisk=204900 not in (0, remaining=50000]. Choose a different takerDesiredRiskWei6."
+            }
+          ],
+          "ok": false,
+          "riskUSDC": "0.500000"
+        },
+        "riskUSDC": "0.005000",
+        "speculationId": "96",
+        "substitution": null,
+        "txHashes": [
+          "0x9a52eba1b1657191495f81a8798f177a2737edc53c23b9b10fcd7e34a7b6f8f1"
+        ]
+      },
+      {
+        "commitmentHash": "0xeb586d9c5801ba05891910ca36b395137d4600aad3ab93b2d6a7d893c0571984",
+        "contestId": "37",
+        "label": "B",
+        "market": "spread",
+        "oversizePreview": {
+          "classification": {
+            "fatalEvents": [],
+            "noTxSent": true,
+            "reason": "preview-too-large-before-tx",
+            "recommendedAction": "REDUCE_SIZE_AND_RETRY"
+          },
+          "errors": [
+            {
+              "code": "VALIDATION_ERROR",
+              "details": {
+                "field": "takerDesiredRiskWei6"
+              },
+              "message": "Match would revert: fillMakerRisk=757500 not in (0, remaining=50000]. Choose a different takerDesiredRiskWei6."
+            }
+          ],
+          "ok": false,
+          "riskUSDC": "0.500000"
+        },
+        "riskUSDC": "0.005000",
+        "speculationId": "100",
+        "substitution": null,
+        "txHashes": [
+          "0xb7d7fe81ef347ef107f1635de9be2c9d04252982b71ed33cee945aed9f1f8315"
+        ]
+      }
+    ],
+    "noOrphanProcess": true,
+    "quotesPosted": 12,
+    "streamHealthHolds": 2,
+    "zeroOpen": {
+      "counts": {
+        "A": 0,
+        "B": 0
+      },
+      "ok": true,
+      "rows": {
+        "A": [],
+        "B": []
+      },
+      "utc": "2026-07-09T00:57:03Z"
+    }
+  },
+  "network": "polygon",
+  "objective": "Break/prove the operator harness before the next expanded live block, prioritizing the Block I replay and dry-run branch classification before any live writes.",
+  "postgame": {
+    "claims": {
+      "flow_a": [],
+      "fresh_user": [],
+      "stage_maker_a": [],
+      "stage_maker_b": []
+    },
+    "completedAt": "2026-07-09T05:47:20Z",
+    "officialFinalStatus": {
+      "A": {
+        "final": true,
+        "gamePk": 823928,
+        "status": {
+          "abstractGameCode": "F",
+          "abstractGameState": "Final",
+          "codedGameState": "F",
+          "detailedState": "Final",
+          "startTimeTBD": false,
+          "statusCode": "F"
+        }
+      },
+      "B": {
+        "final": true,
+        "gamePk": 823279,
+        "status": {
+          "abstractGameCode": "F",
+          "abstractGameState": "Final",
+          "codedGameState": "F",
+          "detailedState": "Final",
+          "startTimeTBD": false,
+          "statusCode": "F"
+        }
+      }
+    },
+    "ok": true,
+    "scoreRequests": {
+      "A": {
+        "skipped": "already_scored"
+      },
+      "B": {
+        "skipped": "already_scored"
+      }
+    },
+    "scoreStatus": {
+      "A": {
+        "awayScore": 3,
+        "contestId": "36",
+        "homeScore": 4,
+        "scored": true,
+        "status": "scored"
+      },
+      "B": {
+        "awayScore": 4,
+        "contestId": "37",
+        "homeScore": 10,
+        "scored": true,
+        "status": "scored"
+      }
+    },
+    "settlements": {
+      "100": {
+        "rc": 0,
+        "stderrTail": "",
+        "txHashes": []
+      },
+      "101": {
+        "rc": 0,
+        "stderrTail": "",
+        "txHashes": []
+      },
+      "96": {
+        "rc": 0,
+        "stderrTail": "",
+        "txHashes": []
+      },
+      "97": {
+        "rc": 0,
+        "stderrTail": "",
+        "txHashes": []
+      },
+      "98": {
+        "rc": 0,
+        "stderrTail": "",
+        "txHashes": []
+      },
+      "99": {
+        "rc": 0,
+        "stderrTail": "",
+        "txHashes": []
+      }
+    },
+    "zeroState": {
+      "ok": true,
+      "openCommitments": {
+        "A": 0,
+        "B": 0
+      },
+      "wallets": {
+        "flow_a": {
+          "ok": true,
+          "targetCounts": {
+            "active": 0,
+            "claimable": 0,
+            "pendingSettle": 0
+          }
+        },
+        "fresh_user": {
+          "ok": true,
+          "targetCounts": {
+            "active": 0,
+            "claimable": 0,
+            "pendingSettle": 0
+          }
+        },
+        "stage_maker_a": {
+          "ok": true,
+          "targetCounts": {
+            "active": 0,
+            "claimable": 0,
+            "pendingSettle": 0
+          }
+        },
+        "stage_maker_b": {
+          "ok": true,
+          "targetCounts": {
+            "active": 0,
+            "claimable": 0,
+            "pendingSettle": 0
+          }
+        }
+      }
+    }
+  },
+  "publishedAt": "2026-07-10T19:34:44Z",
+  "rawPath": "raw/",
+  "runClass": "harness-stress-facts-only",
+  "schemaVersion": 1,
+  "scorecardStatus": "not_published_for_multi-contest_harness_stress",
+  "scorecardStatusReason": "The schema-backed mve-scorecard contract is a single-target canary shape; Block J is a two-contest operator-harness stress drill.",
+  "setup": {
+    "boundedExactApprovalsOnly": true,
+    "extraCryptoRequired": false,
+    "manualSeedFillCount": 6,
+    "manualSeedOpenCommitmentsAfter": {
+      "A": 0,
+      "B": 0
+    },
+    "manualSeedRiskPreviewSumUSDC": "0.005200"
+  },
+  "sourceRunId": "20260709T003326Z-mve-phase1-block-j-late-two-game-harness-stress",
+  "status": "complete_verified_with_caveats",
+  "summaryPath": "summary.md",
+  "targets": {
+    "A": {
+      "contestCreate": {
+        "ok": true,
+        "skipped": null,
+        "txHashes": [
+          "0x1e9fc78599fa553c4ae9dfe295f288d008b8072ab8111dfe76886b1e39bad30d"
+        ]
+      },
+      "contestId": "36",
+      "gameId": "b14eb3ed-8fe1-41bd-9edb-21c8b7c94fc0",
+      "gamePk": 823928,
+      "marketUpdateTxHashes": [
+        "0x2d659780e702faf6d16e73ab563f280650735f10bbbf632fa27839b51874a225"
+      ],
+      "scheduledUtc": "2026-07-09T02:10:00Z",
+      "speculations": {
+        "moneyline": "96",
+        "spread": "97",
+        "total": "98"
+      },
+      "teams": "Colorado Rockies @ Los Angeles Dodgers"
+    },
+    "B": {
+      "contestCreate": {
+        "ok": true,
+        "skipped": null,
+        "txHashes": [
+          "0xee45b6e11ffeaa6b446960e5341a6338f82bf8e41f1eeb4284a79d6c6bb073ec"
+        ]
+      },
+      "contestId": "37",
+      "gameId": "9c3489da-5456-45d4-af52-838f857f82f9",
+      "gamePk": 823279,
+      "marketUpdateTxHashes": [
+        "0x03d35645a0e9d51241577e3971b6b397c59cfe5c57bfd7440515f156def20e2f"
+      ],
+      "scheduledUtc": "2026-07-09T02:10:00Z",
+      "speculations": {
+        "moneyline": "99",
+        "spread": "100",
+        "total": "101"
+      },
+      "teams": "Arizona Diamondbacks @ San Diego Padres"
+    }
+  },
+  "verdict": {
+    "label": "MVE_PHASE1_BLOCK_J_HARNESS_STRESS_GREEN_WITH_CAVEATS",
+    "notClaimed": [
+      "normal MVE-green volume result",
+      "organic user demand",
+      "uncontrolled counterparty activity"
+    ],
+    "reason": "The run proved the corrected per-market classifier, cap/mismatch/fatal/time/alert branches, bounded live quote/fill behavior, late drift, cleanup, and postgame zero-state. A real preview-classifier bug was found on the first live pass, fixed, and verified by self-test plus a successful live rerun.",
+    "scope": "operator harness behavior and bounded live branch proof"
+  }
+}
