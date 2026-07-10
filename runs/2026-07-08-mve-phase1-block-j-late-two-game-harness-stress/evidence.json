@@ -1,6 +1,5 @@
 {
   "artifactFiles": {
-    "brief": "raw/brief.md",
     "classifierRemediation": "raw/classifier-remediation.json",
     "dryRunStressMatrix": "raw/dry-run-stress-matrix-compact.json",
     "evidence": "evidence.json",
