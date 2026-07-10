@@ -1,0 +1,44 @@
+{
+  "classification": "harness-classifier failure",
+  "firstLivePass": {
+    "result": "quotes posted and cleaned up, controlled fills skipped",
+    "rootCause": "The local preview classifier treated any 0x-prefixed value in a preview response\u2014including commitment hashes and module addresses\u2014as evidence that a transaction had been sent.",
+    "safetyImpact": "No unsafe transaction was sent. Oversize previews correctly failed before transaction submission; the first pass then stopped the fill branch and cleaned all quotes to zero open."
+  },
+  "fix": "Transaction evidence now requires an explicit txHash/transactionHash/transaction_hash field or txSent:true. Commitment hashes and addresses do not count.",
+  "verification": {
+    "liveRerunControlledFillCount": 2,
+    "liveRerunOversizeClassifications": [
+      {
+        "fatalEvents": [],
+        "noTxSent": true,
+        "reason": "preview-too-large-before-tx",
+        "recommendedAction": "REDUCE_SIZE_AND_RETRY"
+      },
+      {
+        "fatalEvents": [],
+        "noTxSent": true,
+        "reason": "preview-too-large-before-tx",
+        "recommendedAction": "REDUCE_SIZE_AND_RETRY"
+      }
+    ],
+    "selfTestPreviewBranch": {
+      "fatalEvents": [],
+      "noTxSent": true,
+      "reason": "preview-too-large-before-tx",
+      "recommendedAction": "REDUCE_SIZE_AND_RETRY"
+    },
+    "zeroOpenAfterRerun": {
+      "counts": {
+        "A": 0,
+        "B": 0
+      },
+      "ok": true,
+      "rows": {
+        "A": [],
+        "B": []
+      },
+      "utc": "2026-07-09T00:57:03Z"
+    }
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "claims": {
+    "flow_a": [],
+    "fresh_user": [],
+    "stage_maker_a": [],
+    "stage_maker_b": []
+  },
+  "completedAt": "2026-07-09T05:47:20Z",
+  "officialFinalStatus": {
+    "A": {
+      "final": true,
+      "gamePk": 823928,
+      "status": {
+        "abstractGameCode": "F",
+        "abstractGameState": "Final",
+        "codedGameState": "F",
+        "detailedState": "Final",
+        "startTimeTBD": false,
+        "statusCode": "F"
+      }
+    },
+    "B": {
+      "final": true,
+      "gamePk": 823279,
+      "status": {
+        "abstractGameCode": "F",
+        "abstractGameState": "Final",
+        "codedGameState": "F",
+        "detailedState": "Final",
+        "startTimeTBD": false,
+        "statusCode": "F"
+      }
+    }
+  },
+  "ok": true,
+  "scoreRequests": {
+    "A": {
+      "skipped": "already_scored"
+    },
+    "B": {
+      "skipped": "already_scored"
+    }
+  },
+  "scoreStatus": {
+    "A": {
+      "awayScore": 3,
+      "contestId": "36",
+      "homeScore": 4,
+      "scored": true,
+      "status": "scored"
+    },
+    "B": {
+      "awayScore": 4,
+      "contestId": "37",
+      "homeScore": 10,
+      "scored": true,
+      "status": "scored"
+    }
+  },
+  "settlements": {
+    "100": {
+      "rc": 0,
+      "stderrTail": "",
+      "txHashes": []
+    },
+    "101": {
+      "rc": 0,
+      "stderrTail": "",
+      "txHashes": []
+    },
+    "96": {
+      "rc": 0,
+      "stderrTail": "",
+      "txHashes": []
+    },
+    "97": {
+      "rc": 0,
+      "stderrTail": "",
+      "txHashes": []
+    },
+    "98": {
+      "rc": 0,
+      "stderrTail": "",
+      "txHashes": []
+    },
+    "99": {
+      "rc": 0,
+      "stderrTail": "",
+      "txHashes": []
+    }
+  },
+  "zeroState": {
+    "ok": true,
+    "openCommitments": {
+      "A": 0,
+      "B": 0
+    },
+    "wallets": {
+      "flow_a": {
+        "ok": true,
+        "targetCounts": {
+          "active": 0,
+          "claimable": 0,
+          "pendingSettle": 0
+        }
+      },
+      "fresh_user": {
+        "ok": true,
+        "targetCounts": {
+          "active": 0,
+          "claimable": 0,
+          "pendingSettle": 0
+        }
+      },
+      "stage_maker_a": {
+        "ok": true,
+        "targetCounts": {
+          "active": 0,
+          "claimable": 0,
+          "pendingSettle": 0
+        }
+      },
+      "stage_maker_b": {
+        "ok": true,
+        "targetCounts": {
+          "active": 0,
+          "claimable": 0,
+          "pendingSettle": 0
+        }
+      }
+    }
+  }
+}
