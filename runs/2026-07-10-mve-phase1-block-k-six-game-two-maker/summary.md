@@ -31,9 +31,11 @@ Verdict: `AMBER_LIVE_CAVEATS_FINAL_ZERO_CLEAN`
 
 ## Findings
 
-- Protocol/code: no blocker is claimed unless recorded in the live summaries.
+- Protocol/code: serious own-state events were recorded in Wave A moneyline/spread and remain visible in the live evidence; the immediate trigger was dual-use of active maker wallets as model takers.
 - Docs/footgun: stale local module addresses were corrected; stale allowances ended at zero.
 - Harness/operator: the measured SSE cap required target-scoped subruns rather than an unsafe all-nine-pair launch.
+- Harness/operator: Wave B failed closed before transactions because the aggregate gate rejected two matching `GO_WITH_CAVEATS` five-of-six manifests after a benign reference-line mismatch.
+- Harness/operator: five postgame attempts hit a deterministic setup-manifest schema mismatch before writes; the parser, clean-environment preflight, receipt polling, and retry classifier were repaired before terminal reconciliation.
 - Agent/frontend integration: four model IDs/signers are evidenced, but the configured route was one provider and no frontend registry adapter is claimed.
 
 ## Final rule

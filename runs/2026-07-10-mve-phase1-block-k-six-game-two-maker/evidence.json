@@ -21,6 +21,7 @@
     "model-wave-b-input": "raw/model-wave-b-input.json",
     "postgame-action-ledger": "raw/postgame-action-ledger.json",
     "postgame-complete": "raw/postgame-complete.json",
+    "postgame-incident-resolution": "raw/postgame-incident-resolution.json",
     "setup-summary": "raw/setup-summary.json",
     "stale-module-revocation": "raw/stale-module-revocation.json",
     "summary": "summary.md",
@@ -354,6 +355,18 @@
       {
         "finding": "live API SSE cap made an all-nine-pair concurrent two-maker wave unsafe",
         "result": "capacity-safe, target-scoped subruns preserved same healthy targets and later games"
+      },
+      {
+        "finding": "Wave B aggregate pre-live wrapper required all six theoretical targets even though both lanes independently returned GO_WITH_CAVEATS with the same five healthy targets after a benign reference-line mismatch",
+        "result": "both Wave B launchers failed closed; no Wave B live transaction was sent"
+      },
+      {
+        "finding": "active maker wallets were also used as model takers during Wave A moneyline/spread",
+        "result": "conservative unknown-own-fill health holds were emitted; cleanup reached zero but the live subrun remained red under the strict gate"
+      },
+      {
+        "finding": "postgame target parser expected legacy awayTeam/homeTeam and nested speculationIds fields",
+        "result": "five attempts stopped before writes; schema adapter, clean-environment preflight, bounded receipt polling, and deterministic-error halt were added before successful reconciliation"
       }
     ],
     "protocolCode": [

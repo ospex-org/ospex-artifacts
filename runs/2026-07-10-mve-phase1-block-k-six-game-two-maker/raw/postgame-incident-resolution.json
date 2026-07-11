@@ -1,0 +1,42 @@
+{
+  "detectedAtUtc": "2026-07-11T06:45:37Z",
+  "effectOfOriginalFiveAttempts": {
+    "reason": "Each attempt failed while parsing targets, before official-status collection inside the runner and before score, settle, claim, or approval-revocation commands.",
+    "transactionWrites": 0
+  },
+  "evidence": {
+    "artifactPullRequest": "https://github.com/ospex-org/ospex-artifacts/pull/49",
+    "postgameActionLedger": "block-k-postgame-action-ledger.json",
+    "postgameComplete": "block-k-postgame-complete-summary.json"
+  },
+  "incident": "Block K postgame watchdog deterministic manifest-schema failure",
+  "layer": "operator postgame runner",
+  "location": "scripts/postgame_runner_k.py targets()",
+  "originalError": "KeyError: 'awayTeam'",
+  "reconciledAtUtc": "2026-07-11T07:17:11Z",
+  "repairs": [
+    "Added a schema-tolerant target adapter and strict six-contest/18-speculation identity assertions.",
+    "Ran the target, official-final, closing-line, API, process, commitment, position, and allowance preflight under a clean systemd-like environment.",
+    "Added unattended closing-line evidence fallback to the pre-action database capture because the user systemd manager intentionally does not inherit the database connection string.",
+    "Added bounded transaction-receipt polling after one transient RPC null-receipt response.",
+    "Changed the watchdog to halt early on deterministic schema/code/config fingerprints instead of replaying them five times."
+  ],
+  "rootCause": "The postgame runner expected contest fields awayTeam/homeTeam and nested speculationIds, while setup-complete-pre-mm-summary.json uses away/home and a top-level speculations map.",
+  "terminalResult": {
+    "allPostgameTransactionsSuccessful": true,
+    "allSixOfficialFinal": true,
+    "allowanceRevocations": 4,
+    "allowancesZero": true,
+    "claims": 23,
+    "commitmentsZero": true,
+    "contestsScored": 6,
+    "locksZero": true,
+    "overallRunVerdict": "AMBER_LIVE_CAVEATS_FINAL_ZERO_CLEAN",
+    "positionsZero": true,
+    "postgameTransactions": 51,
+    "postgameVerdict": "GREEN",
+    "processesZero": true,
+    "speculationsSettled": 18
+  },
+  "watchdogBehavior": "The watchdog treated absence of a terminal summary as retryable and replayed the same deterministic error five times before its bounded stop."
+}
