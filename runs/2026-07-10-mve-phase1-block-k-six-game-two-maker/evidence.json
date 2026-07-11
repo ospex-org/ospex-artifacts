@@ -371,8 +371,10 @@
     ],
     "protocolCode": [
       {
+        "classification": "harness role-isolation defect; protocol failed closed as designed",
         "evidence": "live subrun summaries",
-        "finding": "serious own-state events observed"
+        "finding": "serious own-state events observed",
+        "result": "All recorded events were conservative unknown-own-fill holds caused by dual-use of active maker wallets as model takers; the same-maker control subrun without model takers recorded zero serious events."
       }
     ]
   },
@@ -1918,7 +1920,7 @@
   },
   "sourcePins": {
     "coreApi": {
-      "commit": "5442af704561a5c9137352a1d9fcf48cda8b913c",
+      "commit": "5442bee7ed23ed959cd171c8904105c0b2dca870",
       "release": "v46"
     },
     "marketMaker": {
@@ -1941,6 +1943,7 @@
       "twoMakerCompetitionAllSubruns": false
     },
     "label": "AMBER_LIVE_CAVEATS_FINAL_ZERO_CLEAN",
-    "note": "GREEN is never assigned without postgame and final-zero evidence."
+    "note": "GREEN is never assigned without postgame and final-zero evidence.",
+    "reason": "Two of four planned live subruns executed with real on-chain fills, and all six contests reached verified terminal postgame/final-zero state. Wave B was transparently fail-closed by the aggregate-gate false-negative, so the artifact is complete with caveats rather than partial or fully green."
   }
 }

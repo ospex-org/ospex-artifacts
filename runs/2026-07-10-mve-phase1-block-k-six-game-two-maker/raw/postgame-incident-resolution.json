@@ -6,8 +6,8 @@
   },
   "evidence": {
     "artifactPullRequest": "https://github.com/ospex-org/ospex-artifacts/pull/49",
-    "postgameActionLedger": "block-k-postgame-action-ledger.json",
-    "postgameComplete": "block-k-postgame-complete-summary.json"
+    "postgameActionLedger": "postgame-action-ledger.json",
+    "postgameComplete": "postgame-complete.json"
   },
   "incident": "Block K postgame watchdog deterministic manifest-schema failure",
   "layer": "operator postgame runner",
@@ -21,7 +21,7 @@
     "Added bounded transaction-receipt polling after one transient RPC null-receipt response.",
     "Changed the watchdog to halt early on deterministic schema/code/config fingerprints instead of replaying them five times."
   ],
-  "rootCause": "The postgame runner expected contest fields awayTeam/homeTeam and nested speculationIds, while setup-complete-pre-mm-summary.json uses away/home and a top-level speculations map.",
+  "rootCause": "The postgame runner expected contest fields awayTeam/homeTeam and nested speculationIds, while setup-summary.json uses away/home and a top-level speculations map.",
   "terminalResult": {
     "allPostgameTransactionsSuccessful": true,
     "allSixOfficialFinal": true,

@@ -2,7 +2,7 @@
 
 Generated: 2026-07-11T07:13:38Z
 
-Status: `complete_verified_with_caveats`  
+Status: `complete_verified_with_caveats`
 Verdict: `AMBER_LIVE_CAVEATS_FINAL_ZERO_CLEAN`
 
 ## Scope

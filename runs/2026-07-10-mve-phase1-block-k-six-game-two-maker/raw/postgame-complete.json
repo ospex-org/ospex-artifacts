@@ -2240,7 +2240,7 @@
       "score": 6,
       "settle": 18
     },
-    "evidenceFile": "block-k-postgame-action-ledger.json",
+    "evidenceFile": "postgame-action-ledger.json",
     "uniqueTransactionCount": 51
   },
   "processesAfter": [],
