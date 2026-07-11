@@ -2232,6 +2232,17 @@
     }
   },
   "ok": true,
+  "postgameActionReceipts": {
+    "allSuccessful": true,
+    "counts": {
+      "allowance-revoke": 4,
+      "claim": 23,
+      "score": 6,
+      "settle": 18
+    },
+    "evidenceFile": "block-k-postgame-action-ledger.json",
+    "uniqueTransactionCount": 51
+  },
   "processesAfter": [],
   "runDir": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker",
   "scoreStatus": {
@@ -2271,6 +2282,7 @@
       {
         "attempt": 1,
         "returnCode": 0,
+        "stderrTail": "",
         "txHashes": []
       }
     ],
@@ -2278,6 +2290,7 @@
       {
         "attempt": 1,
         "returnCode": 0,
+        "stderrTail": "",
         "txHashes": []
       }
     ],
@@ -2285,6 +2298,7 @@
       {
         "attempt": 1,
         "returnCode": 0,
+        "stderrTail": "",
         "txHashes": []
       }
     ],
@@ -2292,6 +2306,7 @@
       {
         "attempt": 1,
         "returnCode": 0,
+        "stderrTail": "",
         "txHashes": []
       }
     ],
@@ -2299,6 +2314,7 @@
       {
         "attempt": 1,
         "returnCode": 0,
+        "stderrTail": "",
         "txHashes": []
       }
     ],
@@ -2306,6 +2322,7 @@
       {
         "attempt": 1,
         "returnCode": 0,
+        "stderrTail": "",
         "txHashes": []
       }
     ],
@@ -2313,6 +2330,7 @@
       {
         "attempt": 1,
         "returnCode": 0,
+        "stderrTail": "",
         "txHashes": []
       }
     ],
@@ -2320,6 +2338,7 @@
       {
         "attempt": 1,
         "returnCode": 0,
+        "stderrTail": "",
         "txHashes": []
       }
     ],
@@ -2327,6 +2346,7 @@
       {
         "attempt": 1,
         "returnCode": 0,
+        "stderrTail": "",
         "txHashes": []
       }
     ],
@@ -2334,6 +2354,7 @@
       {
         "attempt": 1,
         "returnCode": 0,
+        "stderrTail": "",
         "txHashes": []
       }
     ],
@@ -2341,6 +2362,7 @@
       {
         "attempt": 1,
         "returnCode": 0,
+        "stderrTail": "",
         "txHashes": []
       }
     ],
@@ -2348,6 +2370,7 @@
       {
         "attempt": 1,
         "returnCode": 0,
+        "stderrTail": "",
         "txHashes": []
       }
     ],
@@ -2355,6 +2378,7 @@
       {
         "attempt": 1,
         "returnCode": 0,
+        "stderrTail": "",
         "txHashes": []
       }
     ],
@@ -2362,6 +2386,7 @@
       {
         "attempt": 1,
         "returnCode": 0,
+        "stderrTail": "",
         "txHashes": []
       }
     ],
@@ -2369,6 +2394,7 @@
       {
         "attempt": 1,
         "returnCode": 0,
+        "stderrTail": "",
         "txHashes": []
       }
     ],
@@ -2376,6 +2402,7 @@
       {
         "attempt": 1,
         "returnCode": 0,
+        "stderrTail": "",
         "txHashes": []
       }
     ],
@@ -2383,6 +2410,7 @@
       {
         "attempt": 1,
         "returnCode": 0,
+        "stderrTail": "",
         "txHashes": []
       }
     ],
@@ -2390,6 +2418,7 @@
       {
         "attempt": 1,
         "returnCode": 0,
+        "stderrTail": "",
         "txHashes": []
       }
     ]

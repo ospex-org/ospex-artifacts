@@ -21,6 +21,7 @@ Verdict: `AMBER_LIVE_CAVEATS_FINAL_ZERO_CLEAN`
 - All live subruns safe: `False`.
 - Two-maker competition achieved in every subrun: `False`.
 - Postgame/final zero clean: `True`.
+- Postgame receipts: `51/51` successful (6 score, 18 settle, 23 claim, 4 allowance-revoke transactions).
 
 ## Economic boundary
 

@@ -19,6 +19,7 @@
     "model-wave-a-input": "raw/model-wave-a-input.json",
     "model-wave-b-decisions": "raw/model-wave-b-decisions.json",
     "model-wave-b-input": "raw/model-wave-b-input.json",
+    "postgame-action-ledger": "raw/postgame-action-ledger.json",
     "postgame-complete": "raw/postgame-complete.json",
     "setup-summary": "raw/setup-summary.json",
     "stale-module-revocation": "raw/stale-module-revocation.json",
@@ -1818,6 +1819,17 @@
   },
   "network": "polygon",
   "postgame": {
+    "actionReceipts": {
+      "allSuccessful": true,
+      "counts": {
+        "allowance-revoke": 4,
+        "claim": 23,
+        "score": 6,
+        "settle": 18
+      },
+      "evidence": "raw/postgame-action-ledger.json",
+      "uniqueTransactionCount": 51
+    },
     "completedAtUtc": "2026-07-11T07:13:37Z",
     "finalOpenCommitments": {
       "A1": 0,
