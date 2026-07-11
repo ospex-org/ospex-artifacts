@@ -1,0 +1,1949 @@
+{
+  "approvals": {
+    "exactCurrentModulePlanApplied": null,
+    "noUnlimitedApprovals": true,
+    "staleModuleRevocationActionCount": 4,
+    "staleModulesZero": true
+  },
+  "artifactFiles": {
+    "approval-summary": "raw/approval-summary.json",
+    "evidence": "evidence.json",
+    "live-wave-a-ms": "raw/live-wave-a-ms.json",
+    "live-wave-a-total": "raw/live-wave-a-total.json",
+    "live-wave-b-late": "raw/live-wave-b-late.json",
+    "live-wave-b-tor": "raw/live-wave-b-tor.json",
+    "mm-config-summary": "raw/mm-config-summary.json",
+    "model-cohort": "raw/model-cohort.json",
+    "model-execution-ledger": "raw/model-execution-ledger.json",
+    "model-wave-a-decisions": "raw/model-wave-a-decisions.json",
+    "model-wave-a-input": "raw/model-wave-a-input.json",
+    "model-wave-b-decisions": "raw/model-wave-b-decisions.json",
+    "model-wave-b-input": "raw/model-wave-b-input.json",
+    "postgame-action-ledger": "raw/postgame-action-ledger.json",
+    "postgame-complete": "raw/postgame-complete.json",
+    "postgame-incident-resolution": "raw/postgame-incident-resolution.json",
+    "setup-summary": "raw/setup-summary.json",
+    "stale-module-revocation": "raw/stale-module-revocation.json",
+    "summary": "summary.md",
+    "two-maker-dry-regression": "raw/two-maker-dry-regression.json"
+  },
+  "artifactId": "2026-07-10-mve-phase1-block-k-six-game-two-maker",
+  "artifactType": "run",
+  "cancellationComparison": {
+    "wave-a-ms": {
+      "makerA": {
+        "eventCount": 10,
+        "strategy": "bulk-nonce"
+      },
+      "makerB": {
+        "eventCount": 22,
+        "strategy": "per-commitment"
+      }
+    },
+    "wave-a-total": {
+      "makerA": {
+        "eventCount": 6,
+        "strategy": "bulk-nonce"
+      },
+      "makerB": {
+        "eventCount": 12,
+        "strategy": "per-commitment"
+      }
+    },
+    "wave-b-late": {
+      "makerA": {
+        "eventCount": 0,
+        "strategy": "bulk-nonce"
+      },
+      "makerB": {
+        "eventCount": 0,
+        "strategy": "per-commitment"
+      }
+    },
+    "wave-b-tor": {
+      "makerA": {
+        "eventCount": 0,
+        "strategy": "bulk-nonce"
+      },
+      "makerB": {
+        "eventCount": 0,
+        "strategy": "per-commitment"
+      }
+    }
+  },
+  "capacityPlan": {
+    "allSubrunsFit": true,
+    "anonymousOddsConnectionCapPerIp": 13,
+    "apiMaxConnectionsPerIp": 16,
+    "apiReservedOwnerConnectionsPerIp": 3,
+    "reasonForWaveASplit": "Two makers \u00d7 nine odds pairs would require 18 anonymous streams, above the live cap of 13. wave-a-ms uses 12 anonymous + 2 owner streams; wave-a-total uses 6 anonymous + 2 owner streams.",
+    "twoMakerOwnerConnections": 2
+  },
+  "chainId": 137,
+  "closingLines": {
+    "apiClosingPresentCount": 18,
+    "apiRows": [
+      {
+        "closing": {
+          "awayDecimal": 1.79486,
+          "estimated": false,
+          "homeDecimal": 2.25809,
+          "line": null
+        },
+        "label": "A1",
+        "line": null,
+        "market": "moneyline",
+        "speculationId": "102"
+      },
+      {
+        "closing": {
+          "awayDecimal": 2.33163,
+          "estimated": false,
+          "homeDecimal": 1.75096,
+          "line": 1.5
+        },
+        "label": "A1",
+        "line": -1.5,
+        "market": "spread",
+        "speculationId": "103"
+      },
+      {
+        "closing": {
+          "awayDecimal": 1.91666,
+          "estimated": false,
+          "homeDecimal": 2.09091,
+          "line": 8.5
+        },
+        "label": "A1",
+        "line": 8.5,
+        "market": "total",
+        "speculationId": "104"
+      },
+      {
+        "closing": {
+          "awayDecimal": 2.44421,
+          "estimated": false,
+          "homeDecimal": 1.69242,
+          "line": null
+        },
+        "label": "A2",
+        "line": null,
+        "market": "moneyline",
+        "speculationId": "105"
+      },
+      {
+        "closing": {
+          "awayDecimal": 1.7097,
+          "estimated": false,
+          "homeDecimal": 2.40906,
+          "line": -1.5
+        },
+        "label": "A2",
+        "line": 1.5,
+        "market": "spread",
+        "speculationId": "106"
+      },
+      {
+        "closing": {
+          "awayDecimal": 2.04429,
+          "estimated": false,
+          "homeDecimal": 1.95759,
+          "line": 9.5
+        },
+        "label": "A2",
+        "line": 9.5,
+        "market": "total",
+        "speculationId": "107"
+      },
+      {
+        "closing": {
+          "awayDecimal": 1.69242,
+          "estimated": false,
+          "homeDecimal": 2.44421,
+          "line": null
+        },
+        "label": "A3",
+        "line": null,
+        "market": "moneyline",
+        "speculationId": "108"
+      },
+      {
+        "closing": {
+          "awayDecimal": 2.13889,
+          "estimated": false,
+          "homeDecimal": 1.87805,
+          "line": 1.5
+        },
+        "label": "A3",
+        "line": -1.5,
+        "market": "spread",
+        "speculationId": "109"
+      },
+      {
+        "closing": {
+          "awayDecimal": 1.95759,
+          "estimated": false,
+          "homeDecimal": 2.04429,
+          "line": 8
+        },
+        "label": "A3",
+        "line": 8,
+        "market": "total",
+        "speculationId": "110"
+      },
+      {
+        "closing": {
+          "awayDecimal": 2.14306,
+          "estimated": false,
+          "homeDecimal": 1.87484,
+          "line": null
+        },
+        "label": "B1",
+        "line": null,
+        "market": "moneyline",
+        "speculationId": "111"
+      },
+      {
+        "closing": {
+          "awayDecimal": 1.55463,
+          "estimated": false,
+          "homeDecimal": 2.80299,
+          "line": -1.5
+        },
+        "label": "B1",
+        "line": 1.5,
+        "market": "spread",
+        "speculationId": "112"
+      },
+      {
+        "closing": {
+          "awayDecimal": 1.95759,
+          "estimated": false,
+          "homeDecimal": 2.04429,
+          "line": 8.5
+        },
+        "label": "B1",
+        "line": 8.5,
+        "market": "total",
+        "speculationId": "113"
+      },
+      {
+        "closing": {
+          "awayDecimal": 2.83271,
+          "estimated": false,
+          "homeDecimal": 1.54564,
+          "line": null
+        },
+        "label": "B2",
+        "line": null,
+        "market": "moneyline",
+        "speculationId": "114"
+      },
+      {
+        "closing": {
+          "awayDecimal": 1.94106,
+          "estimated": false,
+          "homeDecimal": 2.06264,
+          "line": -1.5
+        },
+        "label": "B2",
+        "line": 1.5,
+        "market": "spread",
+        "speculationId": "115"
+      },
+      {
+        "closing": {
+          "awayDecimal": null,
+          "estimated": false,
+          "homeDecimal": null,
+          "line": 9
+        },
+        "label": "B2",
+        "line": 8.5,
+        "market": "total",
+        "speculationId": "116"
+      },
+      {
+        "closing": {
+          "awayDecimal": 2.36288,
+          "estimated": false,
+          "homeDecimal": 1.73374,
+          "line": null
+        },
+        "label": "B3",
+        "line": null,
+        "market": "moneyline",
+        "speculationId": "117"
+      },
+      {
+        "closing": {
+          "awayDecimal": 1.67708,
+          "estimated": false,
+          "homeDecimal": 2.47692,
+          "line": -1.5
+        },
+        "label": "B3",
+        "line": 1.5,
+        "market": "spread",
+        "speculationId": "118"
+      },
+      {
+        "closing": {
+          "awayDecimal": 2.07721,
+          "estimated": false,
+          "homeDecimal": 1.92833,
+          "line": 8.5
+        },
+        "label": "B3",
+        "line": 8.5,
+        "market": "total",
+        "speculationId": "119"
+      }
+    ],
+    "apiSpeculationCount": 18,
+    "dbExpectedMarketsPresent": true,
+    "dbRowCount": 36,
+    "freshDbRowCount": 36,
+    "lineMismatchNullClvCount": 1
+  },
+  "dataPath": "evidence.json",
+  "date": "2026-07-10",
+  "dryRegression": {
+    "ok": true,
+    "subruns": {
+      "wave-a-ms": {
+        "makerA": "GO",
+        "makerB": "GO",
+        "setsEqual": true,
+        "sharedHealthyTargetCount": 6
+      },
+      "wave-a-total": {
+        "makerA": "GO",
+        "makerB": "GO",
+        "setsEqual": true,
+        "sharedHealthyTargetCount": 3
+      },
+      "wave-b-late": {
+        "makerA": "GO",
+        "makerB": "GO",
+        "setsEqual": true,
+        "sharedHealthyTargetCount": 6
+      },
+      "wave-b-tor": {
+        "makerA": "GO",
+        "makerB": "GO",
+        "setsEqual": true,
+        "sharedHealthyTargetCount": 3
+      }
+    }
+  },
+  "findings": {
+    "agentFrontendIntegration": [
+      {
+        "caveat": "same configured provider route; no real frontend registry adapter claim",
+        "finding": "four distinct model IDs and signer mappings exercised",
+        "shadowOnlyCount": 0
+      }
+    ],
+    "docsFootguns": [
+      {
+        "finding": "local module-address configuration was stale",
+        "result": "current module addresses restored and every stale-module allowance revoked to zero"
+      }
+    ],
+    "harnessOperator": [
+      {
+        "finding": "live API SSE cap made an all-nine-pair concurrent two-maker wave unsafe",
+        "result": "capacity-safe, target-scoped subruns preserved same healthy targets and later games"
+      },
+      {
+        "finding": "Wave B aggregate pre-live wrapper required all six theoretical targets even though both lanes independently returned GO_WITH_CAVEATS with the same five healthy targets after a benign reference-line mismatch",
+        "result": "both Wave B launchers failed closed; no Wave B live transaction was sent"
+      },
+      {
+        "finding": "active maker wallets were also used as model takers during Wave A moneyline/spread",
+        "result": "conservative unknown-own-fill health holds were emitted; cleanup reached zero but the live subrun remained red under the strict gate"
+      },
+      {
+        "finding": "postgame target parser expected legacy awayTeam/homeTeam and nested speculationIds fields",
+        "result": "five attempts stopped before writes; schema adapter, clean-environment preflight, bounded receipt polling, and deterministic-error halt were added before successful reconciliation"
+      }
+    ],
+    "protocolCode": [
+      {
+        "classification": "harness role-isolation defect; protocol failed closed as designed",
+        "evidence": "live subrun summaries",
+        "finding": "serious own-state events observed",
+        "result": "All recorded events were conservative unknown-own-fill holds caused by dual-use of active maker wallets as model takers; the same-maker control subrun without model takers recorded zero serious events."
+      }
+    ]
+  },
+  "generatedAt": "2026-07-11T07:13:38Z",
+  "liveSubruns": {
+    "wave-a-ms": {
+      "completedAtUtc": "2026-07-10T23:24:26Z",
+      "contestIds": {
+        "A1": "38",
+        "A2": "39",
+        "A3": "40"
+      },
+      "error": null,
+      "harnessResults": [
+        {
+          "actualTakerRiskUSDC": "0.009869",
+          "attempts": [
+            {
+              "commitmentHash": "0xbad43d9cae59a5e1ee1904676b5e0b73f0f1d3690bc5883d2874bfd06ecd7911",
+              "errors": [],
+              "riskUSDC": "0.010000",
+              "safe": true
+            }
+          ],
+          "commitmentHash": "0xbad43d9cae59a5e1ee1904676b5e0b73f0f1d3690bc5883d2874bfd06ecd7911",
+          "contestId": "38",
+          "currentLine": {
+            "lineTicks": -15,
+            "makerLineDisplay": "Houston Astros -1.5",
+            "takerLineDisplay": "Texas Rangers +1.5",
+            "type": "spread"
+          },
+          "executedAtUtc": "2026-07-10T23:23:25Z",
+          "fillMakerRiskUSDC": "0.007100",
+          "kind": "harness",
+          "label": "A1",
+          "makerAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "market": "spread",
+          "odds": {
+            "makerAmerican": "+139",
+            "makerDecimal": "2.39",
+            "oddsTick": 239,
+            "takerAmerican": "-139",
+            "takerDecimal": "1.72",
+            "takerOddsTick": 172
+          },
+          "participantId": "harness-A1",
+          "requestedTakerRiskUSDC": "0.010000",
+          "selfMatch": false,
+          "signerAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+          "signerRole": "flow-a",
+          "speculationId": "103",
+          "subrunId": "wave-a-ms",
+          "takerProfitOnWinUSDC": "0.007100",
+          "takerReturnOnWinUSDC": "0.016969",
+          "takerSide": {
+            "positionType": 1,
+            "resolvedLabel": "Texas Rangers",
+            "role": "home"
+          },
+          "txHashes": [
+            "0xa5dc5ef00c906aa731a65002feb379a4a09e6ef7c9462b51da0784e44343df42"
+          ],
+          "wave": "A"
+        }
+      ],
+      "healthyLanes": [
+        "maker-a",
+        "maker-b"
+      ],
+      "markets": [
+        "moneyline",
+        "spread"
+      ],
+      "modelResults": [
+        {
+          "actualTakerRiskUSDC": "0.249977",
+          "attributionStatus": "run-scoped-validated",
+          "bundleSha256": "1250e9e3960cc4a3b27e7e308b511cad578b55523fcbb3a4019972247c3fc826",
+          "commitmentHash": "0xf22df5ce69274bc026801a45612f2c3ad0decb187f307b6828744034e522674b",
+          "contestId": "40",
+          "currentLine": {
+            "lineTicks": -15,
+            "makerLineDisplay": "St. Louis Cardinals +1.5",
+            "takerLineDisplay": "Atlanta Braves -1.5",
+            "type": "spread"
+          },
+          "decisionRank": "primary",
+          "executedAtUtc": "2026-07-10T23:22:47Z",
+          "fillMakerRiskUSDC": "0.274700",
+          "frozenPick": {
+            "confidence": 0.61,
+            "contestId": "40",
+            "contestLabel": "A3",
+            "line": -1.5,
+            "market": "spread",
+            "observedOddsAmerican": "+105",
+            "rationale": "Atlanta combines the wave's best record with the strongest listed pitching matchup, and plus money supports taking the favorite on the run line.",
+            "side": "Atlanta Braves"
+          },
+          "kind": "model",
+          "makerAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "market": "spread",
+          "modelDecisionTimestampUtc": "2026-07-10T22:50:49Z",
+          "modelId": "gpt-5.6-sol",
+          "odds": {
+            "makerAmerican": "-110",
+            "makerDecimal": "1.91",
+            "oddsTick": 191,
+            "takerAmerican": "+110",
+            "takerDecimal": "2.10",
+            "takerOddsTick": 210
+          },
+          "participantId": "block-k-model-1",
+          "promptSha256": "81f37b6b13f9f83e962890b1562146b71214e21b302315e4ad31ae16f48b36dd",
+          "provider": "openai-codex",
+          "requestedTakerRiskUSDC": "0.250000",
+          "selfMatch": false,
+          "signerAddress": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+          "signerRole": "fresh-user",
+          "speculationId": "109",
+          "subrunId": "wave-a-ms",
+          "takerProfitOnWinUSDC": "0.274700",
+          "takerReturnOnWinUSDC": "0.524677",
+          "takerSide": {
+            "positionType": 0,
+            "resolvedLabel": "Atlanta Braves",
+            "role": "away"
+          },
+          "txHashes": [
+            "0xdc0af041a768adf11de1ba2b0ce206c3722f74a06c6290738e8a14df4d4cb10f"
+          ],
+          "wave": "A"
+        },
+        {
+          "actualTakerRiskUSDC": "0.249873",
+          "attributionStatus": "run-scoped-validated",
+          "bundleSha256": "1250e9e3960cc4a3b27e7e308b511cad578b55523fcbb3a4019972247c3fc826",
+          "commitmentHash": "0xbfa2ee84c4ff12348529ce8294c91e9b64012e0afc9929fd2d456eeeccbe684d",
+          "contestId": "40",
+          "currentLine": {
+            "lineTicks": 0,
+            "makerLineDisplay": null,
+            "takerLineDisplay": null,
+            "type": "moneyline"
+          },
+          "decisionRank": "primary",
+          "executedAtUtc": "2026-07-10T23:22:57Z",
+          "fillMakerRiskUSDC": "0.167700",
+          "frozenPick": {
+            "confidence": 0.61,
+            "contestId": "40",
+            "contestLabel": "A3",
+            "line": null,
+            "market": "moneyline",
+            "observedOddsAmerican": "-156",
+            "rationale": "Atlanta enters with the stronger 54-38 record versus St. Louis at 48-44, and the listed starter matchup favors Atlanta. The available lineup and pre-game status support a straightforward moneyline selection.",
+            "side": "Atlanta Braves"
+          },
+          "kind": "model",
+          "makerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+          "market": "moneyline",
+          "modelDecisionTimestampUtc": "2026-07-10T22:50:49Z",
+          "modelId": "gpt-5.6-terra",
+          "odds": {
+            "makerAmerican": "+149",
+            "makerDecimal": "2.49",
+            "oddsTick": 249,
+            "takerAmerican": "-149",
+            "takerDecimal": "1.67",
+            "takerOddsTick": 167
+          },
+          "participantId": "block-k-model-2",
+          "promptSha256": "81f37b6b13f9f83e962890b1562146b71214e21b302315e4ad31ae16f48b36dd",
+          "provider": "openai-codex",
+          "requestedTakerRiskUSDC": "0.250000",
+          "selfMatch": false,
+          "signerAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+          "signerRole": "flow-a",
+          "speculationId": "108",
+          "subrunId": "wave-a-ms",
+          "takerProfitOnWinUSDC": "0.167700",
+          "takerReturnOnWinUSDC": "0.417573",
+          "takerSide": {
+            "positionType": 0,
+            "resolvedLabel": "Atlanta Braves",
+            "role": "away"
+          },
+          "txHashes": [
+            "0x758a6fe9303ed71d76a0092abce831dcd27839e8a516031b734af80553c2b80b"
+          ],
+          "wave": "A"
+        },
+        {
+          "actualTakerRiskUSDC": "0.249873",
+          "attributionStatus": "run-scoped-validated",
+          "bundleSha256": "1250e9e3960cc4a3b27e7e308b511cad578b55523fcbb3a4019972247c3fc826",
+          "commitmentHash": "0x699d5067e7fae57204fe47717848e9df46307dcbcba957322f204f0d43e55699",
+          "contestId": "39",
+          "currentLine": {
+            "lineTicks": 0,
+            "makerLineDisplay": null,
+            "takerLineDisplay": null,
+            "type": "moneyline"
+          },
+          "decisionRank": "primary",
+          "executedAtUtc": "2026-07-10T23:23:05Z",
+          "fillMakerRiskUSDC": "0.167700",
+          "frozenPick": {
+            "confidence": 0.62,
+            "contestId": "39",
+            "contestLabel": "A2",
+            "line": null,
+            "market": "moneyline",
+            "observedOddsAmerican": "-156",
+            "rationale": "Minnesota has the stronger season record and home-field advantage against Los Angeles, supporting the moneyline selection.",
+            "side": "Minnesota Twins"
+          },
+          "kind": "model",
+          "makerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+          "market": "moneyline",
+          "modelDecisionTimestampUtc": "2026-07-10T22:50:49Z",
+          "modelId": "gpt-5.6-luna",
+          "odds": {
+            "makerAmerican": "+149",
+            "makerDecimal": "2.49",
+            "oddsTick": 249,
+            "takerAmerican": "-149",
+            "takerDecimal": "1.67",
+            "takerOddsTick": 167
+          },
+          "participantId": "block-k-model-3",
+          "promptSha256": "81f37b6b13f9f83e962890b1562146b71214e21b302315e4ad31ae16f48b36dd",
+          "provider": "openai-codex",
+          "requestedTakerRiskUSDC": "0.250000",
+          "selfMatch": false,
+          "signerAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "signerRole": "stage-maker-a",
+          "speculationId": "105",
+          "subrunId": "wave-a-ms",
+          "takerProfitOnWinUSDC": "0.167700",
+          "takerReturnOnWinUSDC": "0.417573",
+          "takerSide": {
+            "positionType": 1,
+            "resolvedLabel": "Minnesota Twins",
+            "role": "home"
+          },
+          "txHashes": [
+            "0xa9f7e5848e4ea7f52c39d7e857ae3fb9487977dd256d5de2dd9f6af5d52184fe"
+          ],
+          "wave": "A"
+        },
+        {
+          "actualTakerRiskUSDC": "0.249873",
+          "attributionStatus": "run-scoped-validated",
+          "bundleSha256": "1250e9e3960cc4a3b27e7e308b511cad578b55523fcbb3a4019972247c3fc826",
+          "commitmentHash": "0x22a953e0cd6761243cc4daeda9143304540645fb17912105399459b420f83953",
+          "contestId": "40",
+          "currentLine": {
+            "lineTicks": 0,
+            "makerLineDisplay": null,
+            "takerLineDisplay": null,
+            "type": "moneyline"
+          },
+          "decisionRank": "primary",
+          "executedAtUtc": "2026-07-10T23:23:14Z",
+          "fillMakerRiskUSDC": "0.167700",
+          "frozenPick": {
+            "confidence": 0.59,
+            "contestId": "40",
+            "contestLabel": "A3",
+            "line": null,
+            "market": "moneyline",
+            "observedOddsAmerican": "-156",
+            "rationale": "Atlanta enters with the stronger record in the frozen bundle, posted lineup confirmation, and a clear reference-odds favorite profile behind Chris Sale in a game with only light wind noted.",
+            "side": "Atlanta Braves"
+          },
+          "kind": "model",
+          "makerAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "market": "moneyline",
+          "modelDecisionTimestampUtc": "2026-07-10T22:50:49Z",
+          "modelId": "gpt-5.5",
+          "odds": {
+            "makerAmerican": "+149",
+            "makerDecimal": "2.49",
+            "oddsTick": 249,
+            "takerAmerican": "-149",
+            "takerDecimal": "1.67",
+            "takerOddsTick": 167
+          },
+          "participantId": "block-k-model-4",
+          "promptSha256": "81f37b6b13f9f83e962890b1562146b71214e21b302315e4ad31ae16f48b36dd",
+          "provider": "openai-codex",
+          "requestedTakerRiskUSDC": "0.250000",
+          "selfMatch": false,
+          "signerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+          "signerRole": "stage-maker-b",
+          "speculationId": "108",
+          "subrunId": "wave-a-ms",
+          "takerProfitOnWinUSDC": "0.167700",
+          "takerReturnOnWinUSDC": "0.417573",
+          "takerSide": {
+            "positionType": 0,
+            "resolvedLabel": "Atlanta Braves",
+            "role": "away"
+          },
+          "txHashes": [
+            "0x08d2a243ea69de7f06b4c2c94871592459f69de7667bb862c172ebcb13371be8"
+          ],
+          "wave": "A"
+        }
+      ],
+      "ok": false,
+      "postCleanupFillability": {
+        "maker-a": {
+          "checked": true,
+          "commitmentHash": "0x12aaceff4aefc9f05dbc70274d84f1bc5dbbb38cfecfccc2d5ecb14389d28192",
+          "errors": [],
+          "ok": true,
+          "verdict": {
+            "advisory": true,
+            "commitmentHash": "0x12aaceff4aefc9f05dbc70274d84f1bc5dbbb38cfecfccc2d5ecb14389d28192",
+            "fillableNow": false,
+            "outcome": "not-fillable",
+            "reasons": [
+              {
+                "code": "COMMITMENT_REDACTED"
+              }
+            ]
+          }
+        },
+        "maker-b": {
+          "checked": true,
+          "commitmentHash": "0x2fb40beea5cee5dc17e92eec0927ab2239d159c6540f84fcf50639c93ee18af1",
+          "errors": [],
+          "ok": true,
+          "verdict": {
+            "advisory": true,
+            "commitmentHash": "0x2fb40beea5cee5dc17e92eec0927ab2239d159c6540f84fcf50639c93ee18af1",
+            "fillableNow": false,
+            "outcome": "not-fillable",
+            "reasons": [
+              {
+                "code": "COMMITMENT_REDACTED"
+              }
+            ]
+          }
+        }
+      },
+      "processReturnCodes": {
+        "maker-a": 0,
+        "maker-b": 0
+      },
+      "seriousOwnStateEvents": [
+        {
+          "commitmentHash": "0x699d5067e7fae57204fe47717848e9df46307dcbcba957322f204f0d43e55699",
+          "kind": "unknown-own-fill",
+          "speculationId": "105",
+          "ts": "2026-07-10T23:23:11.134Z",
+          "txHash": "0xa9f7e5848e4ea7f52c39d7e857ae3fb9487977dd256d5de2dd9f6af5d52184fe"
+        },
+        {
+          "kind": "error",
+          "speculationId": "105",
+          "ts": "2026-07-10T23:23:11.135Z"
+        },
+        {
+          "commitmentHash": "0x699d5067e7fae57204fe47717848e9df46307dcbcba957322f204f0d43e55699",
+          "kind": "unknown-own-fill",
+          "speculationId": "105",
+          "ts": "2026-07-10T23:23:13.937Z",
+          "txHash": "0xa9f7e5848e4ea7f52c39d7e857ae3fb9487977dd256d5de2dd9f6af5d52184fe"
+        },
+        {
+          "commitmentHash": "0x699d5067e7fae57204fe47717848e9df46307dcbcba957322f204f0d43e55699",
+          "kind": "unknown-own-fill",
+          "speculationId": "105",
+          "ts": "2026-07-10T23:23:16.658Z",
+          "txHash": "0xa9f7e5848e4ea7f52c39d7e857ae3fb9487977dd256d5de2dd9f6af5d52184fe"
+        },
+        {
+          "commitmentHash": "0x699d5067e7fae57204fe47717848e9df46307dcbcba957322f204f0d43e55699",
+          "kind": "unknown-own-fill",
+          "speculationId": "105",
+          "ts": "2026-07-10T23:23:19.222Z",
+          "txHash": "0xa9f7e5848e4ea7f52c39d7e857ae3fb9487977dd256d5de2dd9f6af5d52184fe"
+        },
+        {
+          "commitmentHash": "0x699d5067e7fae57204fe47717848e9df46307dcbcba957322f204f0d43e55699",
+          "kind": "unknown-own-fill",
+          "speculationId": "105",
+          "ts": "2026-07-10T23:23:21.761Z",
+          "txHash": "0xa9f7e5848e4ea7f52c39d7e857ae3fb9487977dd256d5de2dd9f6af5d52184fe"
+        },
+        {
+          "commitmentHash": "0x699d5067e7fae57204fe47717848e9df46307dcbcba957322f204f0d43e55699",
+          "kind": "unknown-own-fill",
+          "speculationId": "105",
+          "ts": "2026-07-10T23:23:24.338Z",
+          "txHash": "0xa9f7e5848e4ea7f52c39d7e857ae3fb9487977dd256d5de2dd9f6af5d52184fe"
+        },
+        {
+          "commitmentHash": "0x699d5067e7fae57204fe47717848e9df46307dcbcba957322f204f0d43e55699",
+          "kind": "unknown-own-fill",
+          "speculationId": "105",
+          "ts": "2026-07-10T23:23:26.850Z",
+          "txHash": "0xa9f7e5848e4ea7f52c39d7e857ae3fb9487977dd256d5de2dd9f6af5d52184fe"
+        },
+        {
+          "commitmentHash": "0x699d5067e7fae57204fe47717848e9df46307dcbcba957322f204f0d43e55699",
+          "kind": "unknown-own-fill",
+          "speculationId": "105",
+          "ts": "2026-07-10T23:23:29.455Z",
+          "txHash": "0xa9f7e5848e4ea7f52c39d7e857ae3fb9487977dd256d5de2dd9f6af5d52184fe"
+        },
+        {
+          "commitmentHash": "0x22a953e0cd6761243cc4daeda9143304540645fb17912105399459b420f83953",
+          "kind": "unknown-own-fill",
+          "speculationId": "108",
+          "ts": "2026-07-10T23:23:26.049Z",
+          "txHash": "0x08d2a243ea69de7f06b4c2c94871592459f69de7667bb862c172ebcb13371be8"
+        },
+        {
+          "kind": "error",
+          "speculationId": "108",
+          "ts": "2026-07-10T23:23:26.050Z"
+        },
+        {
+          "commitmentHash": "0x22a953e0cd6761243cc4daeda9143304540645fb17912105399459b420f83953",
+          "kind": "unknown-own-fill",
+          "speculationId": "108",
+          "ts": "2026-07-10T23:23:28.824Z",
+          "txHash": "0x08d2a243ea69de7f06b4c2c94871592459f69de7667bb862c172ebcb13371be8"
+        }
+      ],
+      "subrunId": "wave-a-ms",
+      "telemetry": {
+        "maker-a": {
+          "cancellationEvents": [
+            {
+              "commitmentHash": "0x12aaceff4aefc9f05dbc70274d84f1bc5dbbb38cfecfccc2d5ecb14389d28192",
+              "contestId": "38",
+              "kind": "soft-cancel",
+              "reason": "shutdown",
+              "speculationId": "102",
+              "ts": "2026-07-10T23:23:30.964Z"
+            },
+            {
+              "commitmentHash": "0x82b2cda39f3476e7d18872824a1177356d4ef9193b1b6fcb1b427f5bd2106fc7",
+              "contestId": "38",
+              "kind": "soft-cancel",
+              "reason": "shutdown",
+              "speculationId": "102",
+              "ts": "2026-07-10T23:23:31.116Z"
+            },
+            {
+              "commitmentHash": "0x92014e00bc56096871aab790e0086f1b0566dea8bc00a011e626b41218c1684f",
+              "contestId": "38",
+              "kind": "soft-cancel",
+              "market": "spread",
+              "reason": "shutdown",
+              "speculationId": "103",
+              "ts": "2026-07-10T23:23:31.265Z"
+            },
+            {
+              "commitmentHash": "0xbad43d9cae59a5e1ee1904676b5e0b73f0f1d3690bc5883d2874bfd06ecd7911",
+              "contestId": "38",
+              "kind": "soft-cancel",
+              "market": "spread",
+              "reason": "shutdown",
+              "speculationId": "103",
+              "ts": "2026-07-10T23:23:31.555Z"
+            },
+            {
+              "commitmentHash": "0x8efcb0f187fd41bc4cd2ce9d2ae3aec84ff15acc166f8366058a7bbaa140f0dd",
+              "contestId": "39",
+              "kind": "soft-cancel",
+              "reason": "shutdown",
+              "speculationId": "105",
+              "ts": "2026-07-10T23:23:31.819Z"
+            },
+            {
+              "commitmentHash": "0x596c6d543b99778991fc78febdc9187f545b8929fd42cb6661c443fcd9d0940d",
+              "contestId": "39",
+              "kind": "soft-cancel",
+              "reason": "shutdown",
+              "speculationId": "105",
+              "ts": "2026-07-10T23:23:32.143Z"
+            },
+            {
+              "commitmentHash": "0x7ab9f1d7d14f5de7c38831bab12678ce73c1724695b055ff93a651ae93c149cf",
+              "contestId": "39",
+              "kind": "soft-cancel",
+              "market": "spread",
+              "reason": "shutdown",
+              "speculationId": "106",
+              "ts": "2026-07-10T23:23:32.639Z"
+            },
+            {
+              "commitmentHash": "0xb1dfeee7f2efb8e36a861d913c73ce7a5c73054cf2084f6a58765e4f3060b983",
+              "contestId": "39",
+              "kind": "soft-cancel",
+              "market": "spread",
+              "reason": "shutdown",
+              "speculationId": "106",
+              "ts": "2026-07-10T23:23:32.967Z"
+            },
+            {
+              "commitmentHash": "0x3c6bf34e609bfc2812d51d7851367569ad6bf40891505a2860abcd5856cce029",
+              "contestId": "40",
+              "kind": "soft-cancel",
+              "reason": "shutdown",
+              "speculationId": "108",
+              "ts": "2026-07-10T23:23:33.287Z"
+            },
+            {
+              "commitmentHash": "0x5e486519dcdabe0c05d404df959a34fd1cb70621fb53329e61ef6369a40f1805",
+              "contestId": "40",
+              "kind": "soft-cancel",
+              "market": "spread",
+              "reason": "shutdown",
+              "speculationId": "109",
+              "ts": "2026-07-10T23:23:33.591Z"
+            }
+          ],
+          "commitmentHashes": [
+            "0x12aaceff4aefc9f05dbc70274d84f1bc5dbbb38cfecfccc2d5ecb14389d28192",
+            "0x82b2cda39f3476e7d18872824a1177356d4ef9193b1b6fcb1b427f5bd2106fc7",
+            "0x92014e00bc56096871aab790e0086f1b0566dea8bc00a011e626b41218c1684f",
+            "0xbad43d9cae59a5e1ee1904676b5e0b73f0f1d3690bc5883d2874bfd06ecd7911",
+            "0x8efcb0f187fd41bc4cd2ce9d2ae3aec84ff15acc166f8366058a7bbaa140f0dd",
+            "0x596c6d543b99778991fc78febdc9187f545b8929fd42cb6661c443fcd9d0940d",
+            "0x7ab9f1d7d14f5de7c38831bab12678ce73c1724695b055ff93a651ae93c149cf",
+            "0xb1dfeee7f2efb8e36a861d913c73ce7a5c73054cf2084f6a58765e4f3060b983",
+            "0x22a953e0cd6761243cc4daeda9143304540645fb17912105399459b420f83953",
+            "0x3c6bf34e609bfc2812d51d7851367569ad6bf40891505a2860abcd5856cce029",
+            "0xf22df5ce69274bc026801a45612f2c3ad0decb187f307b6828744034e522674b",
+            "0x5e486519dcdabe0c05d404df959a34fd1cb70621fb53329e61ef6369a40f1805",
+            "0x699d5067e7fae57204fe47717848e9df46307dcbcba957322f204f0d43e55699"
+          ],
+          "eventCounts": {
+            "candidate": 8,
+            "error": 1,
+            "fill": 8,
+            "kill": 1,
+            "nonce-floor-raise": 6,
+            "quote-competitiveness": 16,
+            "quote-intent": 8,
+            "risk-verdict": 8,
+            "soft-cancel": 10,
+            "stream-health-hold": 2,
+            "submit": 12,
+            "tick-start": 3,
+            "unknown-own-fill": 8
+          },
+          "seriousEvents": [
+            {
+              "commitmentHash": "0x699d5067e7fae57204fe47717848e9df46307dcbcba957322f204f0d43e55699",
+              "kind": "unknown-own-fill",
+              "speculationId": "105",
+              "ts": "2026-07-10T23:23:11.134Z",
+              "txHash": "0xa9f7e5848e4ea7f52c39d7e857ae3fb9487977dd256d5de2dd9f6af5d52184fe"
+            },
+            {
+              "kind": "error",
+              "speculationId": "105",
+              "ts": "2026-07-10T23:23:11.135Z"
+            },
+            {
+              "commitmentHash": "0x699d5067e7fae57204fe47717848e9df46307dcbcba957322f204f0d43e55699",
+              "kind": "unknown-own-fill",
+              "speculationId": "105",
+              "ts": "2026-07-10T23:23:13.937Z",
+              "txHash": "0xa9f7e5848e4ea7f52c39d7e857ae3fb9487977dd256d5de2dd9f6af5d52184fe"
+            },
+            {
+              "commitmentHash": "0x699d5067e7fae57204fe47717848e9df46307dcbcba957322f204f0d43e55699",
+              "kind": "unknown-own-fill",
+              "speculationId": "105",
+              "ts": "2026-07-10T23:23:16.658Z",
+              "txHash": "0xa9f7e5848e4ea7f52c39d7e857ae3fb9487977dd256d5de2dd9f6af5d52184fe"
+            },
+            {
+              "commitmentHash": "0x699d5067e7fae57204fe47717848e9df46307dcbcba957322f204f0d43e55699",
+              "kind": "unknown-own-fill",
+              "speculationId": "105",
+              "ts": "2026-07-10T23:23:19.222Z",
+              "txHash": "0xa9f7e5848e4ea7f52c39d7e857ae3fb9487977dd256d5de2dd9f6af5d52184fe"
+            },
+            {
+              "commitmentHash": "0x699d5067e7fae57204fe47717848e9df46307dcbcba957322f204f0d43e55699",
+              "kind": "unknown-own-fill",
+              "speculationId": "105",
+              "ts": "2026-07-10T23:23:21.761Z",
+              "txHash": "0xa9f7e5848e4ea7f52c39d7e857ae3fb9487977dd256d5de2dd9f6af5d52184fe"
+            },
+            {
+              "commitmentHash": "0x699d5067e7fae57204fe47717848e9df46307dcbcba957322f204f0d43e55699",
+              "kind": "unknown-own-fill",
+              "speculationId": "105",
+              "ts": "2026-07-10T23:23:24.338Z",
+              "txHash": "0xa9f7e5848e4ea7f52c39d7e857ae3fb9487977dd256d5de2dd9f6af5d52184fe"
+            },
+            {
+              "commitmentHash": "0x699d5067e7fae57204fe47717848e9df46307dcbcba957322f204f0d43e55699",
+              "kind": "unknown-own-fill",
+              "speculationId": "105",
+              "ts": "2026-07-10T23:23:26.850Z",
+              "txHash": "0xa9f7e5848e4ea7f52c39d7e857ae3fb9487977dd256d5de2dd9f6af5d52184fe"
+            },
+            {
+              "commitmentHash": "0x699d5067e7fae57204fe47717848e9df46307dcbcba957322f204f0d43e55699",
+              "kind": "unknown-own-fill",
+              "speculationId": "105",
+              "ts": "2026-07-10T23:23:29.455Z",
+              "txHash": "0xa9f7e5848e4ea7f52c39d7e857ae3fb9487977dd256d5de2dd9f6af5d52184fe"
+            }
+          ]
+        },
+        "maker-b": {
+          "cancellationEvents": [
+            {
+              "commitmentHash": "0x2fb40beea5cee5dc17e92eec0927ab2239d159c6540f84fcf50639c93ee18af1",
+              "contestId": "38",
+              "kind": "soft-cancel",
+              "reason": "shutdown",
+              "speculationId": "102",
+              "ts": "2026-07-10T23:23:31.084Z"
+            },
+            {
+              "commitmentHash": "0x03b98a1b048a87c7c66728310b259ae36b7e77d363f25cbd935a40d7df9a8d94",
+              "contestId": "38",
+              "kind": "soft-cancel",
+              "reason": "shutdown",
+              "speculationId": "102",
+              "ts": "2026-07-10T23:23:31.224Z"
+            },
+            {
+              "commitmentHash": "0xf091c53629c6ac688e53ea454bd3c4b82e60785a8795e78148987888fe9ff909",
+              "contestId": "38",
+              "kind": "soft-cancel",
+              "market": "spread",
+              "reason": "shutdown",
+              "speculationId": "103",
+              "ts": "2026-07-10T23:23:31.395Z"
+            },
+            {
+              "commitmentHash": "0x21c5a1e5a25d9489c51425b0a2d6c680d0d2f2f79e2223c3e020afddd398762b",
+              "contestId": "38",
+              "kind": "soft-cancel",
+              "market": "spread",
+              "reason": "shutdown",
+              "speculationId": "103",
+              "ts": "2026-07-10T23:23:31.659Z"
+            },
+            {
+              "commitmentHash": "0x629ce4a78b1a15413564be798f801473165becc590e8c2b8c7c36a636df9e10e",
+              "contestId": "39",
+              "kind": "soft-cancel",
+              "reason": "shutdown",
+              "speculationId": "105",
+              "ts": "2026-07-10T23:23:31.979Z"
+            },
+            {
+              "commitmentHash": "0x26054750134bdf6baa85704490a3b712502b96926f650b0050a55f74b80b9086",
+              "contestId": "39",
+              "kind": "soft-cancel",
+              "market": "spread",
+              "reason": "shutdown",
+              "speculationId": "106",
+              "ts": "2026-07-10T23:23:32.323Z"
+            },
+            {
+              "commitmentHash": "0xdf8465fb6777fb7d59ac02d09f67bfdec1cec5b65f82b0dad1d46062c3b6670c",
+              "contestId": "39",
+              "kind": "soft-cancel",
+              "market": "spread",
+              "reason": "shutdown",
+              "speculationId": "106",
+              "ts": "2026-07-10T23:23:32.639Z"
+            },
+            {
+              "commitmentHash": "0x6e5ec9c9e9b2b3ab35c1747fbf12f595591b43f3498559b9d425a152e034fdb5",
+              "contestId": "40",
+              "kind": "soft-cancel",
+              "reason": "shutdown",
+              "speculationId": "108",
+              "ts": "2026-07-10T23:23:32.967Z"
+            },
+            {
+              "commitmentHash": "0x5b1a09da1c07662d778c90979ae477b9d48e2c5b4ffd1697c1d46a0e6554dfe7",
+              "contestId": "40",
+              "kind": "soft-cancel",
+              "market": "spread",
+              "reason": "shutdown",
+              "speculationId": "109",
+              "ts": "2026-07-10T23:23:33.296Z"
+            },
+            {
+              "commitmentHash": "0xea8bd1a6030516b779e1e34aeb85f6a6cd275a3897aa0f330653dc425d602ded",
+              "contestId": "40",
+              "kind": "soft-cancel",
+              "market": "spread",
+              "reason": "shutdown",
+              "speculationId": "109",
+              "ts": "2026-07-10T23:23:33.600Z"
+            },
+            {
+              "commitmentHash": "0x2fb40beea5cee5dc17e92eec0927ab2239d159c6540f84fcf50639c93ee18af1",
+              "contestId": "38",
+              "kind": "onchain-cancel",
+              "speculationId": "102",
+              "ts": "2026-07-10T23:23:37.538Z",
+              "txHash": "0xbf44c1cbcf62cde6dc2b4f4cea403d33638d8f489f931aea81600bbfde3235a1"
+            },
+            {
+              "commitmentHash": "0x03b98a1b048a87c7c66728310b259ae36b7e77d363f25cbd935a40d7df9a8d94",
+              "contestId": "38",
+              "kind": "onchain-cancel",
+              "speculationId": "102",
+              "ts": "2026-07-10T23:23:39.055Z",
+              "txHash": "0x52825a10d40eee7e383892045b1d879da3e9cb96ac6af28689a0457a9dd18b6d"
+            },
+            {
+              "commitmentHash": "0xf091c53629c6ac688e53ea454bd3c4b82e60785a8795e78148987888fe9ff909",
+              "contestId": "38",
+              "kind": "onchain-cancel",
+              "speculationId": "103",
+              "ts": "2026-07-10T23:23:40.668Z",
+              "txHash": "0x101ebb76d9aaa0c70d4feb5ad361ede4dd1ddc2ef5aa38b882e40ac8bd563138"
+            },
+            {
+              "commitmentHash": "0x21c5a1e5a25d9489c51425b0a2d6c680d0d2f2f79e2223c3e020afddd398762b",
+              "contestId": "38",
+              "kind": "onchain-cancel",
+              "speculationId": "103",
+              "ts": "2026-07-10T23:23:43.395Z",
+              "txHash": "0x9325376596baa64d53f5f67fddb71b61d127c173a4773fe0d8632875487bf935"
+            },
+            {
+              "commitmentHash": "0x629ce4a78b1a15413564be798f801473165becc590e8c2b8c7c36a636df9e10e",
+              "contestId": "39",
+              "kind": "onchain-cancel",
+              "speculationId": "105",
+              "ts": "2026-07-10T23:23:45.095Z",
+              "txHash": "0x29ebd9bac052d55c801812e17b43d47ab8a7c4deb671fcfa38817cbc481b8728"
+            },
+            {
+              "commitmentHash": "0x26054750134bdf6baa85704490a3b712502b96926f650b0050a55f74b80b9086",
+              "contestId": "39",
+              "kind": "onchain-cancel",
+              "speculationId": "106",
+              "ts": "2026-07-10T23:23:47.756Z",
+              "txHash": "0x2bed1ce9acdd1993e59e5d185a9bf694ed689c1a89b28d23c062dda8bd933273"
+            },
+            {
+              "commitmentHash": "0xdf8465fb6777fb7d59ac02d09f67bfdec1cec5b65f82b0dad1d46062c3b6670c",
+              "contestId": "39",
+              "kind": "onchain-cancel",
+              "speculationId": "106",
+              "ts": "2026-07-10T23:23:51.559Z",
+              "txHash": "0xe828219f066d36adf37487dbf765d52bca93c2c02e044339aa077986699dea3b"
+            },
+            {
+              "commitmentHash": "0x6e5ec9c9e9b2b3ab35c1747fbf12f595591b43f3498559b9d425a152e034fdb5",
+              "contestId": "40",
+              "kind": "onchain-cancel",
+              "speculationId": "108",
+              "ts": "2026-07-10T23:23:55.335Z",
+              "txHash": "0x619751bbe26e35a725298169a23ff9110ce24a4acfd054cb22a0449641d6b7aa"
+            },
+            {
+              "commitmentHash": "0x5b1a09da1c07662d778c90979ae477b9d48e2c5b4ffd1697c1d46a0e6554dfe7",
+              "contestId": "40",
+              "kind": "onchain-cancel",
+              "speculationId": "109",
+              "ts": "2026-07-10T23:23:56.994Z",
+              "txHash": "0xa7bfd1a96d758b3303710603f51a18e386369f1a4a72aa618b8e4384a1b9586d"
+            },
+            {
+              "commitmentHash": "0xea8bd1a6030516b779e1e34aeb85f6a6cd275a3897aa0f330653dc425d602ded",
+              "contestId": "40",
+              "kind": "onchain-cancel",
+              "speculationId": "109",
+              "ts": "2026-07-10T23:23:58.640Z",
+              "txHash": "0x9c114c19ca27ee25fa611eda34680a18e56fecaf90c71299a32d2a0432487007"
+            },
+            {
+              "commitmentHash": "0xbfa2ee84c4ff12348529ce8294c91e9b64012e0afc9929fd2d456eeeccbe684d",
+              "contestId": "40",
+              "kind": "onchain-cancel",
+              "speculationId": "108",
+              "ts": "2026-07-10T23:24:01.286Z",
+              "txHash": "0x6f0e41afa95dccfa8f2d2cf6907a49a4073597fba5f9db15c198136441a2961b"
+            },
+            {
+              "commitmentHash": "0x699d5067e7fae57204fe47717848e9df46307dcbcba957322f204f0d43e55699",
+              "contestId": "39",
+              "kind": "onchain-cancel",
+              "speculationId": "105",
+              "ts": "2026-07-10T23:24:03.924Z",
+              "txHash": "0x1099b0ee744b75304c7d9c31ace37ea831f31536c24c58367e3cfca89d933bff"
+            }
+          ],
+          "commitmentHashes": [
+            "0x2fb40beea5cee5dc17e92eec0927ab2239d159c6540f84fcf50639c93ee18af1",
+            "0x03b98a1b048a87c7c66728310b259ae36b7e77d363f25cbd935a40d7df9a8d94",
+            "0xf091c53629c6ac688e53ea454bd3c4b82e60785a8795e78148987888fe9ff909",
+            "0x21c5a1e5a25d9489c51425b0a2d6c680d0d2f2f79e2223c3e020afddd398762b",
+            "0x629ce4a78b1a15413564be798f801473165becc590e8c2b8c7c36a636df9e10e",
+            "0x699d5067e7fae57204fe47717848e9df46307dcbcba957322f204f0d43e55699",
+            "0x26054750134bdf6baa85704490a3b712502b96926f650b0050a55f74b80b9086",
+            "0xdf8465fb6777fb7d59ac02d09f67bfdec1cec5b65f82b0dad1d46062c3b6670c",
+            "0xbfa2ee84c4ff12348529ce8294c91e9b64012e0afc9929fd2d456eeeccbe684d",
+            "0x6e5ec9c9e9b2b3ab35c1747fbf12f595591b43f3498559b9d425a152e034fdb5",
+            "0x5b1a09da1c07662d778c90979ae477b9d48e2c5b4ffd1697c1d46a0e6554dfe7",
+            "0xea8bd1a6030516b779e1e34aeb85f6a6cd275a3897aa0f330653dc425d602ded",
+            "0x22a953e0cd6761243cc4daeda9143304540645fb17912105399459b420f83953"
+          ],
+          "eventCounts": {
+            "candidate": 8,
+            "error": 1,
+            "fill": 4,
+            "kill": 1,
+            "onchain-cancel": 12,
+            "quote-competitiveness": 12,
+            "quote-intent": 6,
+            "risk-verdict": 6,
+            "soft-cancel": 10,
+            "stream-health-hold": 2,
+            "submit": 12,
+            "tick-start": 3,
+            "unknown-own-fill": 2
+          },
+          "seriousEvents": [
+            {
+              "commitmentHash": "0x22a953e0cd6761243cc4daeda9143304540645fb17912105399459b420f83953",
+              "kind": "unknown-own-fill",
+              "speculationId": "108",
+              "ts": "2026-07-10T23:23:26.049Z",
+              "txHash": "0x08d2a243ea69de7f06b4c2c94871592459f69de7667bb862c172ebcb13371be8"
+            },
+            {
+              "kind": "error",
+              "speculationId": "108",
+              "ts": "2026-07-10T23:23:26.050Z"
+            },
+            {
+              "commitmentHash": "0x22a953e0cd6761243cc4daeda9143304540645fb17912105399459b420f83953",
+              "kind": "unknown-own-fill",
+              "speculationId": "108",
+              "ts": "2026-07-10T23:23:28.824Z",
+              "txHash": "0x08d2a243ea69de7f06b4c2c94871592459f69de7667bb862c172ebcb13371be8"
+            }
+          ]
+        }
+      },
+      "twoMakerCompetitionAchieved": true,
+      "verdictSoFar": "LIVE_SUBRUN_RED_POSTGAME_PENDING",
+      "wave": "A",
+      "waveCoverageLabelsSoFar": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "zeroOpen": {
+        "allPublicZero": true,
+        "checkedAtUtc": "2026-07-10T23:24:25Z",
+        "ok": true,
+        "ownCounts": {
+          "A1": {
+            "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482": 0,
+            "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b": 0
+          },
+          "A2": {
+            "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482": 0,
+            "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b": 0
+          },
+          "A3": {
+            "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482": 0,
+            "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b": 0
+          },
+          "B1": {
+            "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482": 0,
+            "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b": 0
+          },
+          "B2": {
+            "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482": 0,
+            "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b": 0
+          },
+          "B3": {
+            "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482": 0,
+            "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b": 0
+          }
+        },
+        "publicCounts": {
+          "A1": 0,
+          "A2": 0,
+          "A3": 0,
+          "B1": 0,
+          "B2": 0,
+          "B3": 0
+        }
+      }
+    },
+    "wave-a-total": {
+      "completedAtUtc": "2026-07-10T23:37:50Z",
+      "contestIds": {
+        "A1": "38",
+        "A2": "39",
+        "A3": "40"
+      },
+      "error": null,
+      "harnessResults": [],
+      "healthyLanes": [
+        "maker-a",
+        "maker-b"
+      ],
+      "markets": [
+        "total"
+      ],
+      "modelResults": [],
+      "ok": true,
+      "postCleanupFillability": {
+        "maker-a": {
+          "checked": true,
+          "commitmentHash": "0xaf07e167c622acaa6499fd6430457194b72d1ffae6c25100492f56655db16c43",
+          "errors": [],
+          "ok": true,
+          "verdict": {
+            "advisory": true,
+            "commitmentHash": "0xaf07e167c622acaa6499fd6430457194b72d1ffae6c25100492f56655db16c43",
+            "fillableNow": false,
+            "outcome": "not-fillable",
+            "reasons": [
+              {
+                "code": "COMMITMENT_REDACTED"
+              }
+            ]
+          }
+        },
+        "maker-b": {
+          "checked": true,
+          "commitmentHash": "0xf9b2b2f1636c760e58a70cca78e385cb2921bb2158cc57dd5496d4e52abb6f6e",
+          "errors": [],
+          "ok": true,
+          "verdict": {
+            "advisory": true,
+            "commitmentHash": "0xf9b2b2f1636c760e58a70cca78e385cb2921bb2158cc57dd5496d4e52abb6f6e",
+            "fillableNow": false,
+            "outcome": "not-fillable",
+            "reasons": [
+              {
+                "code": "COMMITMENT_REDACTED"
+              }
+            ]
+          }
+        }
+      },
+      "processReturnCodes": {
+        "maker-a": 0,
+        "maker-b": 0
+      },
+      "seriousOwnStateEvents": [],
+      "subrunId": "wave-a-total",
+      "telemetry": {
+        "maker-a": {
+          "cancellationEvents": [
+            {
+              "commitmentHash": "0xaf07e167c622acaa6499fd6430457194b72d1ffae6c25100492f56655db16c43",
+              "contestId": "38",
+              "kind": "soft-cancel",
+              "market": "total",
+              "reason": "shutdown",
+              "speculationId": "104",
+              "ts": "2026-07-10T23:37:25.895Z"
+            },
+            {
+              "commitmentHash": "0x4c742a9742a430e855010114379f61b8b6f8508a88c8e79a2d1fffbdf4db87a1",
+              "contestId": "38",
+              "kind": "soft-cancel",
+              "market": "total",
+              "reason": "shutdown",
+              "speculationId": "104",
+              "ts": "2026-07-10T23:37:26.044Z"
+            },
+            {
+              "commitmentHash": "0xfbca169678faaafc790b411c588b482f574bbffcf0cac6ec36e4cc289b41095f",
+              "contestId": "39",
+              "kind": "soft-cancel",
+              "market": "total",
+              "reason": "shutdown",
+              "speculationId": "107",
+              "ts": "2026-07-10T23:37:26.393Z"
+            },
+            {
+              "commitmentHash": "0x82eb2d5a3d17e6c26aeff47abdfe6f482dc81d0738421baf4d849d8fc1569934",
+              "contestId": "39",
+              "kind": "soft-cancel",
+              "market": "total",
+              "reason": "shutdown",
+              "speculationId": "107",
+              "ts": "2026-07-10T23:37:26.708Z"
+            },
+            {
+              "commitmentHash": "0x5e5e9d34565983c912fb8917e7509055c5f551529d7d2f8117f5d2add51d6dbe",
+              "contestId": "40",
+              "kind": "soft-cancel",
+              "market": "total",
+              "reason": "shutdown",
+              "speculationId": "110",
+              "ts": "2026-07-10T23:37:27.046Z"
+            },
+            {
+              "commitmentHash": "0xe093fc466665b554db85f92b31099ee410ddd09ecafe58083ff2a5015a17d2e4",
+              "contestId": "40",
+              "kind": "soft-cancel",
+              "market": "total",
+              "reason": "shutdown",
+              "speculationId": "110",
+              "ts": "2026-07-10T23:37:27.375Z"
+            }
+          ],
+          "commitmentHashes": [
+            "0xaf07e167c622acaa6499fd6430457194b72d1ffae6c25100492f56655db16c43",
+            "0x4c742a9742a430e855010114379f61b8b6f8508a88c8e79a2d1fffbdf4db87a1",
+            "0xfbca169678faaafc790b411c588b482f574bbffcf0cac6ec36e4cc289b41095f",
+            "0x82eb2d5a3d17e6c26aeff47abdfe6f482dc81d0738421baf4d849d8fc1569934",
+            "0x5e5e9d34565983c912fb8917e7509055c5f551529d7d2f8117f5d2add51d6dbe",
+            "0xe093fc466665b554db85f92b31099ee410ddd09ecafe58083ff2a5015a17d2e4"
+          ],
+          "eventCounts": {
+            "candidate": 3,
+            "kill": 1,
+            "nonce-floor-raise": 3,
+            "quote-competitiveness": 6,
+            "quote-intent": 3,
+            "risk-verdict": 3,
+            "soft-cancel": 6,
+            "stream-health-hold": 2,
+            "submit": 6,
+            "tick-start": 2
+          },
+          "seriousEvents": []
+        },
+        "maker-b": {
+          "cancellationEvents": [
+            {
+              "commitmentHash": "0xf9b2b2f1636c760e58a70cca78e385cb2921bb2158cc57dd5496d4e52abb6f6e",
+              "contestId": "38",
+              "kind": "soft-cancel",
+              "market": "total",
+              "reason": "shutdown",
+              "speculationId": "104",
+              "ts": "2026-07-10T23:37:26.082Z"
+            },
+            {
+              "commitmentHash": "0x7014eff8596fe0ce91bb10448000134c9e9b9be3dd2dda0fc6b2987c46e88cde",
+              "contestId": "38",
+              "kind": "soft-cancel",
+              "market": "total",
+              "reason": "shutdown",
+              "speculationId": "104",
+              "ts": "2026-07-10T23:37:26.236Z"
+            },
+            {
+              "commitmentHash": "0xd4c690f16e245a29a03b07f16b743e9879291e6d855a3ac465b2d94d97ae0589",
+              "contestId": "39",
+              "kind": "soft-cancel",
+              "market": "total",
+              "reason": "shutdown",
+              "speculationId": "107",
+              "ts": "2026-07-10T23:37:26.585Z"
+            },
+            {
+              "commitmentHash": "0x3abfbef3116f44a8916256af69461467999e5446361509bfa12800309bc28ce6",
+              "contestId": "39",
+              "kind": "soft-cancel",
+              "market": "total",
+              "reason": "shutdown",
+              "speculationId": "107",
+              "ts": "2026-07-10T23:37:26.932Z"
+            },
+            {
+              "commitmentHash": "0x648612c0444b50ddd381816c51327cb46fb3b83d447bff4c001efc88ed0acc61",
+              "contestId": "40",
+              "kind": "soft-cancel",
+              "market": "total",
+              "reason": "shutdown",
+              "speculationId": "110",
+              "ts": "2026-07-10T23:37:27.295Z"
+            },
+            {
+              "commitmentHash": "0x6a6800ee34a0c584aa919f9f5ad1e0942322fe9466f9f95f968cea1eab816bc8",
+              "contestId": "40",
+              "kind": "soft-cancel",
+              "market": "total",
+              "reason": "shutdown",
+              "speculationId": "110",
+              "ts": "2026-07-10T23:37:27.598Z"
+            },
+            {
+              "commitmentHash": "0xf9b2b2f1636c760e58a70cca78e385cb2921bb2158cc57dd5496d4e52abb6f6e",
+              "contestId": "38",
+              "kind": "onchain-cancel",
+              "speculationId": "104",
+              "ts": "2026-07-10T23:37:31.617Z",
+              "txHash": "0xb3c60146d284835b40a33bc3a221ce0bb115cf30c43fec93550698fb099f8b9e"
+            },
+            {
+              "commitmentHash": "0x7014eff8596fe0ce91bb10448000134c9e9b9be3dd2dda0fc6b2987c46e88cde",
+              "contestId": "38",
+              "kind": "onchain-cancel",
+              "speculationId": "104",
+              "ts": "2026-07-10T23:37:33.295Z",
+              "txHash": "0xf9c62f778cb43d66b807337ba2e92b2aa0fc3428e36a03088061376e3cfcf492"
+            },
+            {
+              "commitmentHash": "0xd4c690f16e245a29a03b07f16b743e9879291e6d855a3ac465b2d94d97ae0589",
+              "contestId": "39",
+              "kind": "onchain-cancel",
+              "speculationId": "107",
+              "ts": "2026-07-10T23:37:36.031Z",
+              "txHash": "0x33593b50bab2e961012126b6bb2e753f88accf3dc3fc01c11ce305e242237c36"
+            },
+            {
+              "commitmentHash": "0x3abfbef3116f44a8916256af69461467999e5446361509bfa12800309bc28ce6",
+              "contestId": "39",
+              "kind": "onchain-cancel",
+              "speculationId": "107",
+              "ts": "2026-07-10T23:37:37.700Z",
+              "txHash": "0xd99ce6ef49da5d8d35db5d9841e98eaf11cefc1bf6dc34cf9575d5e97223ca5e"
+            },
+            {
+              "commitmentHash": "0x648612c0444b50ddd381816c51327cb46fb3b83d447bff4c001efc88ed0acc61",
+              "contestId": "40",
+              "kind": "onchain-cancel",
+              "speculationId": "110",
+              "ts": "2026-07-10T23:37:40.464Z",
+              "txHash": "0x7f1fe8ee13cac02837d50269f47e658be01a8ba56d840de9003354f94f3e14c0"
+            },
+            {
+              "commitmentHash": "0x6a6800ee34a0c584aa919f9f5ad1e0942322fe9466f9f95f968cea1eab816bc8",
+              "contestId": "40",
+              "kind": "onchain-cancel",
+              "speculationId": "110",
+              "ts": "2026-07-10T23:37:42.166Z",
+              "txHash": "0xef8a49bed4fa90f94e21ea5a6de3b65ad6459314af7186b058ed09d0589fad4e"
+            }
+          ],
+          "commitmentHashes": [
+            "0xf9b2b2f1636c760e58a70cca78e385cb2921bb2158cc57dd5496d4e52abb6f6e",
+            "0x7014eff8596fe0ce91bb10448000134c9e9b9be3dd2dda0fc6b2987c46e88cde",
+            "0xd4c690f16e245a29a03b07f16b743e9879291e6d855a3ac465b2d94d97ae0589",
+            "0x3abfbef3116f44a8916256af69461467999e5446361509bfa12800309bc28ce6",
+            "0x648612c0444b50ddd381816c51327cb46fb3b83d447bff4c001efc88ed0acc61",
+            "0x6a6800ee34a0c584aa919f9f5ad1e0942322fe9466f9f95f968cea1eab816bc8"
+          ],
+          "eventCounts": {
+            "candidate": 3,
+            "kill": 1,
+            "onchain-cancel": 6,
+            "quote-competitiveness": 6,
+            "quote-intent": 3,
+            "risk-verdict": 3,
+            "soft-cancel": 6,
+            "stream-health-hold": 2,
+            "submit": 6,
+            "tick-start": 2
+          },
+          "seriousEvents": []
+        }
+      },
+      "twoMakerCompetitionAchieved": true,
+      "verdictSoFar": "LIVE_SUBRUN_GREEN_POSTGAME_PENDING",
+      "wave": "A",
+      "waveCoverageLabelsSoFar": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "zeroOpen": {
+        "allPublicZero": true,
+        "checkedAtUtc": "2026-07-10T23:37:49Z",
+        "ok": true,
+        "ownCounts": {
+          "A1": {
+            "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482": 0,
+            "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b": 0
+          },
+          "A2": {
+            "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482": 0,
+            "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b": 0
+          },
+          "A3": {
+            "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482": 0,
+            "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b": 0
+          },
+          "B1": {
+            "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482": 0,
+            "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b": 0
+          },
+          "B2": {
+            "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482": 0,
+            "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b": 0
+          },
+          "B3": {
+            "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482": 0,
+            "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b": 0
+          }
+        },
+        "publicCounts": {
+          "A1": 0,
+          "A2": 0,
+          "A3": 0,
+          "B1": 0,
+          "B2": 0,
+          "B3": 0
+        }
+      }
+    },
+    "wave-b-late": {
+      "completedAtUtc": null,
+      "contestIds": null,
+      "error": null,
+      "harnessResults": null,
+      "healthyLanes": null,
+      "markets": null,
+      "modelResults": null,
+      "ok": null,
+      "postCleanupFillability": null,
+      "processReturnCodes": {},
+      "seriousOwnStateEvents": null,
+      "subrunId": null,
+      "telemetry": {},
+      "twoMakerCompetitionAchieved": null,
+      "verdictSoFar": null,
+      "wave": null,
+      "waveCoverageLabelsSoFar": null,
+      "zeroOpen": null
+    },
+    "wave-b-tor": {
+      "completedAtUtc": null,
+      "contestIds": null,
+      "error": null,
+      "harnessResults": null,
+      "healthyLanes": null,
+      "markets": null,
+      "modelResults": null,
+      "ok": null,
+      "postCleanupFillability": null,
+      "processReturnCodes": {},
+      "seriousOwnStateEvents": null,
+      "subrunId": null,
+      "telemetry": {},
+      "twoMakerCompetitionAchieved": null,
+      "verdictSoFar": null,
+      "wave": null,
+      "waveCoverageLabelsSoFar": null,
+      "zeroOpen": null
+    }
+  },
+  "modelPilot": {
+    "cohortId": "block-k-20260710-four-model-pilot-v1",
+    "distinctModelIds": [
+      "gpt-5.6-sol",
+      "gpt-5.6-terra",
+      "gpt-5.6-luna",
+      "gpt-5.5"
+    ],
+    "distinctSignerMappings": [
+      {
+        "participantId": "block-k-model-1",
+        "signerAddress": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+        "signerRole": "fresh-user"
+      },
+      {
+        "participantId": "block-k-model-2",
+        "signerAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "signerRole": "flow-a"
+      },
+      {
+        "participantId": "block-k-model-3",
+        "signerAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "signerRole": "stage-maker-a"
+      },
+      {
+        "participantId": "block-k-model-4",
+        "signerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "signerRole": "stage-maker-b"
+      }
+    ],
+    "executionCount": 4,
+    "frontendRegistryAdapterClaimed": false,
+    "providerDiversity": "single configured provider route; no heterogeneous-provider claim",
+    "scorecard": {
+      "averageClvDecimalRatio": "-0.01448105906349611100431820415",
+      "beatCloseCount": 0,
+      "clvMeasurableSampleSize": 4,
+      "entries": [
+        {
+          "beatClose": false,
+          "bundleSha256": "1250e9e3960cc4a3b27e7e308b511cad578b55523fcbb3a4019972247c3fc826",
+          "closing": {
+            "awayDecimal": 2.13889,
+            "estimated": false,
+            "homeDecimal": 1.87805,
+            "line": 1.5
+          },
+          "clvDecimalRatio": "-0.0181823282169723548195559379",
+          "contestId": "40",
+          "decisionTimestampUtc": "2026-07-10T22:50:49Z",
+          "executionTimestampUtc": "2026-07-10T23:22:47Z",
+          "market": "spread",
+          "modelConfidence": 0.61,
+          "modelId": "gpt-5.6-sol",
+          "outcome": "loss",
+          "participantId": "block-k-model-1",
+          "pnlUSDC": "-0.249977",
+          "promptSha256": "81f37b6b13f9f83e962890b1562146b71214e21b302315e4ad31ae16f48b36dd",
+          "provider": "openai-codex",
+          "rationale": "Atlanta combines the wave's best record with the strongest listed pitching matchup, and plus money supports taking the favorite on the run line.",
+          "riskUSDC": "0.249977",
+          "side": {
+            "positionType": 0,
+            "resolvedLabel": "Atlanta Braves",
+            "role": "away"
+          },
+          "signerAddress": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+          "signerRole": "fresh-user",
+          "speculationId": "109",
+          "takenDecimal": "2.10",
+          "txHashes": [
+            "0xdc0af041a768adf11de1ba2b0ce206c3722f74a06c6290738e8a14df4d4cb10f"
+          ],
+          "wave": "A"
+        },
+        {
+          "beatClose": false,
+          "bundleSha256": "1250e9e3960cc4a3b27e7e308b511cad578b55523fcbb3a4019972247c3fc826",
+          "closing": {
+            "awayDecimal": 1.69242,
+            "estimated": false,
+            "homeDecimal": 2.44421,
+            "line": null
+          },
+          "clvDecimalRatio": "-0.0132473026790040297325722929",
+          "contestId": "40",
+          "decisionTimestampUtc": "2026-07-10T22:50:49Z",
+          "executionTimestampUtc": "2026-07-10T23:22:57Z",
+          "market": "moneyline",
+          "modelConfidence": 0.61,
+          "modelId": "gpt-5.6-terra",
+          "outcome": "loss",
+          "participantId": "block-k-model-2",
+          "pnlUSDC": "-0.249873",
+          "promptSha256": "81f37b6b13f9f83e962890b1562146b71214e21b302315e4ad31ae16f48b36dd",
+          "provider": "openai-codex",
+          "rationale": "Atlanta enters with the stronger 54-38 record versus St. Louis at 48-44, and the listed starter matchup favors Atlanta. The available lineup and pre-game status support a straightforward moneyline selection.",
+          "riskUSDC": "0.249873",
+          "side": {
+            "positionType": 0,
+            "resolvedLabel": "Atlanta Braves",
+            "role": "away"
+          },
+          "signerAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+          "signerRole": "flow-a",
+          "speculationId": "108",
+          "takenDecimal": "1.67",
+          "txHashes": [
+            "0x758a6fe9303ed71d76a0092abce831dcd27839e8a516031b734af80553c2b80b"
+          ],
+          "wave": "A"
+        },
+        {
+          "beatClose": false,
+          "bundleSha256": "1250e9e3960cc4a3b27e7e308b511cad578b55523fcbb3a4019972247c3fc826",
+          "closing": {
+            "awayDecimal": 2.44421,
+            "estimated": false,
+            "homeDecimal": 1.69242,
+            "line": null
+          },
+          "clvDecimalRatio": "-0.0132473026790040297325722929",
+          "contestId": "39",
+          "decisionTimestampUtc": "2026-07-10T22:50:49Z",
+          "executionTimestampUtc": "2026-07-10T23:23:05Z",
+          "market": "moneyline",
+          "modelConfidence": 0.62,
+          "modelId": "gpt-5.6-luna",
+          "outcome": "loss",
+          "participantId": "block-k-model-3",
+          "pnlUSDC": "-0.249873",
+          "promptSha256": "81f37b6b13f9f83e962890b1562146b71214e21b302315e4ad31ae16f48b36dd",
+          "provider": "openai-codex",
+          "rationale": "Minnesota has the stronger season record and home-field advantage against Los Angeles, supporting the moneyline selection.",
+          "riskUSDC": "0.249873",
+          "side": {
+            "positionType": 1,
+            "resolvedLabel": "Minnesota Twins",
+            "role": "home"
+          },
+          "signerAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+          "signerRole": "stage-maker-a",
+          "speculationId": "105",
+          "takenDecimal": "1.67",
+          "txHashes": [
+            "0xa9f7e5848e4ea7f52c39d7e857ae3fb9487977dd256d5de2dd9f6af5d52184fe"
+          ],
+          "wave": "A"
+        },
+        {
+          "beatClose": false,
+          "bundleSha256": "1250e9e3960cc4a3b27e7e308b511cad578b55523fcbb3a4019972247c3fc826",
+          "closing": {
+            "awayDecimal": 1.69242,
+            "estimated": false,
+            "homeDecimal": 2.44421,
+            "line": null
+          },
+          "clvDecimalRatio": "-0.0132473026790040297325722929",
+          "contestId": "40",
+          "decisionTimestampUtc": "2026-07-10T22:50:49Z",
+          "executionTimestampUtc": "2026-07-10T23:23:14Z",
+          "market": "moneyline",
+          "modelConfidence": 0.59,
+          "modelId": "gpt-5.5",
+          "outcome": "loss",
+          "participantId": "block-k-model-4",
+          "pnlUSDC": "-0.249873",
+          "promptSha256": "81f37b6b13f9f83e962890b1562146b71214e21b302315e4ad31ae16f48b36dd",
+          "provider": "openai-codex",
+          "rationale": "Atlanta enters with the stronger record in the frozen bundle, posted lineup confirmation, and a clear reference-odds favorite profile behind Chris Sale in a game with only light wind noted.",
+          "riskUSDC": "0.249873",
+          "side": {
+            "positionType": 0,
+            "resolvedLabel": "Atlanta Braves",
+            "role": "away"
+          },
+          "signerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+          "signerRole": "stage-maker-b",
+          "speculationId": "108",
+          "takenDecimal": "1.67",
+          "txHashes": [
+            "0x08d2a243ea69de7f06b4c2c94871592459f69de7667bb862c172ebcb13371be8"
+          ],
+          "wave": "A"
+        }
+      ],
+      "pnlUSDC": "-0.999596",
+      "roi": "-1",
+      "sampleSize": 4,
+      "scope": "run-scoped executions only, decision timestamp forward; historical wallet performance excluded",
+      "totalRiskUSDC": "0.999596"
+    },
+    "shadowOnlyCount": 0
+  },
+  "network": "polygon",
+  "postgame": {
+    "actionReceipts": {
+      "allSuccessful": true,
+      "counts": {
+        "allowance-revoke": 4,
+        "claim": 23,
+        "score": 6,
+        "settle": 18
+      },
+      "evidence": "raw/postgame-action-ledger.json",
+      "uniqueTransactionCount": 51
+    },
+    "completedAtUtc": "2026-07-11T07:13:37Z",
+    "finalOpenCommitments": {
+      "A1": 0,
+      "A2": 0,
+      "A3": 0,
+      "B1": 0,
+      "B2": 0,
+      "B3": 0
+    },
+    "finalTargetPositionCounts": {
+      "flow-a": {
+        "active": 0,
+        "claimable": 0,
+        "pendingSettle": 0
+      },
+      "fresh-user": {
+        "active": 0,
+        "claimable": 0,
+        "pendingSettle": 0
+      },
+      "stage-maker-a": {
+        "active": 0,
+        "claimable": 0,
+        "pendingSettle": 0
+      },
+      "stage-maker-b": {
+        "active": 0,
+        "claimable": 0,
+        "pendingSettle": 0
+      }
+    },
+    "finalVerdict": "GREEN",
+    "speculationsClosed": true,
+    "zeroState": {
+      "allowancesZero": true,
+      "commitmentsZero": true,
+      "locksZero": true,
+      "positionsZero": true,
+      "processesZero": true
+    }
+  },
+  "publicSafety": {
+    "localPathsSanitized": true,
+    "secretsPublished": false,
+    "upstreamProviderNamesPublished": false
+  },
+  "publishedAt": "2026-07-11T07:13:38Z",
+  "rawPath": "raw/",
+  "runClass": "mve-phase1-six-game-two-maker-model-pilot",
+  "schemaVersion": 1,
+  "scorecardStatus": "model-only run-scoped scorecard embedded; single-target MVE readiness schema not adopted for this six-contest aggregate artifact",
+  "setup": {
+    "completedAtUtc": "2026-07-10T20:07:59Z",
+    "contestIds": null,
+    "costs": {
+      "approvalGasPOLAttempt1Actual": "0.145591912563107911",
+      "approvalGasPOLRemediationActual": "0.128641730314805858",
+      "briefPlannedEconomicScopeUSDC": "39.0",
+      "contestCreationFeesUSDC": "6.0",
+      "hardCeilingUSDC": "40.0",
+      "plannedMakerExposureCapsUSDC": "20.0",
+      "plannedModelTakerRiskMaxUSDC": "4.0",
+      "protocolCreationFeesUSDC": "15.0",
+      "scopeIncludingActualSetupMicroCollateralUSDC": "39.035670",
+      "setupGasPOLActual": "4.081460759611167610",
+      "setupMicroCollateralUSDC": "0.035670",
+      "speculationCreationFeesUSDC": "9.0",
+      "withinHardCeiling": true
+    },
+    "manualSeedFillCount": 18,
+    "openCounts": null,
+    "speculationIds": null
+  },
+  "sourcePins": {
+    "coreApi": {
+      "commit": "5442bee7ed23ed959cd171c8904105c0b2dca870",
+      "release": "v46"
+    },
+    "marketMaker": {
+      "commit": "14db79b754214ca0e2e99842521337595b0dbfdc",
+      "tests": "28 files / 1084 tests passed"
+    },
+    "sdk": {
+      "commit": "3fa399a57b8fc8e228e94364b861cb216071f0c1",
+      "tag": "v0.10.0",
+      "tests": "54 files / 883 tests passed"
+    }
+  },
+  "sourceRunId": "20260710T193208Z-block-k-six-game-two-maker",
+  "status": "complete_verified_with_caveats",
+  "summaryPath": "summary.md",
+  "verdict": {
+    "greenRequirements": {
+      "allLiveSubrunsSafe": false,
+      "postgameAndFinalZeroClean": true,
+      "twoMakerCompetitionAllSubruns": false
+    },
+    "label": "AMBER_LIVE_CAVEATS_FINAL_ZERO_CLEAN",
+    "note": "GREEN is never assigned without postgame and final-zero evidence.",
+    "reason": "Two of four planned live subruns executed with real on-chain fills, and all six contests reached verified terminal postgame/final-zero state. Wave B was transparently fail-closed by the aggregate-gate false-negative, so the artifact is complete with caveats rather than partial or fully green."
+  }
+}

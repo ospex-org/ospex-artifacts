@@ -1,0 +1,527 @@
+{
+  "capacityPlan": {
+    "allSubrunsFit": true,
+    "anonymousOddsConnectionCapPerIp": 13,
+    "apiMaxConnectionsPerIp": 16,
+    "apiReservedOwnerConnectionsPerIp": 3,
+    "reasonForWaveASplit": "Two makers \u00d7 nine odds pairs would require 18 anonymous streams, above the live cap of 13. wave-a-ms uses 12 anonymous + 2 owner streams; wave-a-total uses 6 anonymous + 2 owner streams.",
+    "twoMakerOwnerConnections": 2
+  },
+  "invariants": {
+    "boundedExactPositionAllowanceUSDCPerMaker": "10.000000",
+    "noUnlimitedApprovals": true,
+    "oneWriterPerWallet": true,
+    "replaceOnLineMoveTicks": 0,
+    "sameHealthyTargetsBothMakersPerSubrun": true,
+    "seedSpeculations": false,
+    "separateConfigStateTelemetryKillLockPaths": true,
+    "staleAfterLessThanExpiry": true
+  },
+  "ok": true,
+  "profiles": [
+    {
+      "authoritativeShutdown": false,
+      "configPath": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/config/mm-wave-a-ms-maker-a-dry.yaml",
+      "contestAllowList": [
+        "38",
+        "39",
+        "40"
+      ],
+      "dryRun": true,
+      "expectedWouldSubmitRows": 12,
+      "expirySeconds": 180,
+      "globalMakerCapUSDC": "10.000000",
+      "maker": "maker-a",
+      "markets": [
+        "moneyline",
+        "spread"
+      ],
+      "maxOpenCommitments": 18,
+      "maxRiskPerCommitmentUSDC": "0.500000",
+      "maxRiskPerContestUSDC": "3.000000",
+      "name": "wave-a-ms-maker-a-dry",
+      "onchainCancelStrategy": "bulk-nonce",
+      "seedSpeculations": false,
+      "staleAfterSeconds": 90,
+      "subrunId": "wave-a-ms",
+      "targetPairCount": 6,
+      "wave": "A"
+    },
+    {
+      "authoritativeShutdown": true,
+      "configPath": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/config/mm-wave-a-ms-maker-a-live.yaml",
+      "contestAllowList": [
+        "38",
+        "39",
+        "40"
+      ],
+      "dryRun": false,
+      "expectedWouldSubmitRows": 12,
+      "expirySeconds": 180,
+      "globalMakerCapUSDC": "10.000000",
+      "maker": "maker-a",
+      "markets": [
+        "moneyline",
+        "spread"
+      ],
+      "maxOpenCommitments": 18,
+      "maxRiskPerCommitmentUSDC": "0.500000",
+      "maxRiskPerContestUSDC": "3.000000",
+      "name": "wave-a-ms-maker-a-live",
+      "onchainCancelStrategy": "bulk-nonce",
+      "seedSpeculations": false,
+      "staleAfterSeconds": 90,
+      "subrunId": "wave-a-ms",
+      "targetPairCount": 6,
+      "wave": "A"
+    },
+    {
+      "authoritativeShutdown": false,
+      "configPath": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/config/mm-wave-a-ms-maker-b-dry.yaml",
+      "contestAllowList": [
+        "38",
+        "39",
+        "40"
+      ],
+      "dryRun": true,
+      "expectedWouldSubmitRows": 12,
+      "expirySeconds": 180,
+      "globalMakerCapUSDC": "10.000000",
+      "maker": "maker-b",
+      "markets": [
+        "moneyline",
+        "spread"
+      ],
+      "maxOpenCommitments": 18,
+      "maxRiskPerCommitmentUSDC": "0.500000",
+      "maxRiskPerContestUSDC": "3.000000",
+      "name": "wave-a-ms-maker-b-dry",
+      "onchainCancelStrategy": "per-commitment",
+      "seedSpeculations": false,
+      "staleAfterSeconds": 90,
+      "subrunId": "wave-a-ms",
+      "targetPairCount": 6,
+      "wave": "A"
+    },
+    {
+      "authoritativeShutdown": true,
+      "configPath": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/config/mm-wave-a-ms-maker-b-live.yaml",
+      "contestAllowList": [
+        "38",
+        "39",
+        "40"
+      ],
+      "dryRun": false,
+      "expectedWouldSubmitRows": 12,
+      "expirySeconds": 180,
+      "globalMakerCapUSDC": "10.000000",
+      "maker": "maker-b",
+      "markets": [
+        "moneyline",
+        "spread"
+      ],
+      "maxOpenCommitments": 18,
+      "maxRiskPerCommitmentUSDC": "0.500000",
+      "maxRiskPerContestUSDC": "3.000000",
+      "name": "wave-a-ms-maker-b-live",
+      "onchainCancelStrategy": "per-commitment",
+      "seedSpeculations": false,
+      "staleAfterSeconds": 90,
+      "subrunId": "wave-a-ms",
+      "targetPairCount": 6,
+      "wave": "A"
+    },
+    {
+      "authoritativeShutdown": false,
+      "configPath": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/config/mm-wave-a-total-maker-a-dry.yaml",
+      "contestAllowList": [
+        "38",
+        "39",
+        "40"
+      ],
+      "dryRun": true,
+      "expectedWouldSubmitRows": 6,
+      "expirySeconds": 180,
+      "globalMakerCapUSDC": "10.000000",
+      "maker": "maker-a",
+      "markets": [
+        "total"
+      ],
+      "maxOpenCommitments": 18,
+      "maxRiskPerCommitmentUSDC": "0.500000",
+      "maxRiskPerContestUSDC": "3.000000",
+      "name": "wave-a-total-maker-a-dry",
+      "onchainCancelStrategy": "bulk-nonce",
+      "seedSpeculations": false,
+      "staleAfterSeconds": 90,
+      "subrunId": "wave-a-total",
+      "targetPairCount": 3,
+      "wave": "A"
+    },
+    {
+      "authoritativeShutdown": true,
+      "configPath": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/config/mm-wave-a-total-maker-a-live.yaml",
+      "contestAllowList": [
+        "38",
+        "39",
+        "40"
+      ],
+      "dryRun": false,
+      "expectedWouldSubmitRows": 6,
+      "expirySeconds": 180,
+      "globalMakerCapUSDC": "10.000000",
+      "maker": "maker-a",
+      "markets": [
+        "total"
+      ],
+      "maxOpenCommitments": 18,
+      "maxRiskPerCommitmentUSDC": "0.500000",
+      "maxRiskPerContestUSDC": "3.000000",
+      "name": "wave-a-total-maker-a-live",
+      "onchainCancelStrategy": "bulk-nonce",
+      "seedSpeculations": false,
+      "staleAfterSeconds": 90,
+      "subrunId": "wave-a-total",
+      "targetPairCount": 3,
+      "wave": "A"
+    },
+    {
+      "authoritativeShutdown": false,
+      "configPath": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/config/mm-wave-a-total-maker-b-dry.yaml",
+      "contestAllowList": [
+        "38",
+        "39",
+        "40"
+      ],
+      "dryRun": true,
+      "expectedWouldSubmitRows": 6,
+      "expirySeconds": 180,
+      "globalMakerCapUSDC": "10.000000",
+      "maker": "maker-b",
+      "markets": [
+        "total"
+      ],
+      "maxOpenCommitments": 18,
+      "maxRiskPerCommitmentUSDC": "0.500000",
+      "maxRiskPerContestUSDC": "3.000000",
+      "name": "wave-a-total-maker-b-dry",
+      "onchainCancelStrategy": "per-commitment",
+      "seedSpeculations": false,
+      "staleAfterSeconds": 90,
+      "subrunId": "wave-a-total",
+      "targetPairCount": 3,
+      "wave": "A"
+    },
+    {
+      "authoritativeShutdown": true,
+      "configPath": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/config/mm-wave-a-total-maker-b-live.yaml",
+      "contestAllowList": [
+        "38",
+        "39",
+        "40"
+      ],
+      "dryRun": false,
+      "expectedWouldSubmitRows": 6,
+      "expirySeconds": 180,
+      "globalMakerCapUSDC": "10.000000",
+      "maker": "maker-b",
+      "markets": [
+        "total"
+      ],
+      "maxOpenCommitments": 18,
+      "maxRiskPerCommitmentUSDC": "0.500000",
+      "maxRiskPerContestUSDC": "3.000000",
+      "name": "wave-a-total-maker-b-live",
+      "onchainCancelStrategy": "per-commitment",
+      "seedSpeculations": false,
+      "staleAfterSeconds": 90,
+      "subrunId": "wave-a-total",
+      "targetPairCount": 3,
+      "wave": "A"
+    },
+    {
+      "authoritativeShutdown": false,
+      "configPath": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/config/mm-wave-b-tor-maker-a-dry.yaml",
+      "contestAllowList": [
+        "41"
+      ],
+      "dryRun": true,
+      "expectedWouldSubmitRows": 6,
+      "expirySeconds": 180,
+      "globalMakerCapUSDC": "10.000000",
+      "maker": "maker-a",
+      "markets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "maxOpenCommitments": 18,
+      "maxRiskPerCommitmentUSDC": "0.500000",
+      "maxRiskPerContestUSDC": "3.000000",
+      "name": "wave-b-tor-maker-a-dry",
+      "onchainCancelStrategy": "bulk-nonce",
+      "seedSpeculations": false,
+      "staleAfterSeconds": 90,
+      "subrunId": "wave-b-tor",
+      "targetPairCount": 3,
+      "wave": "B"
+    },
+    {
+      "authoritativeShutdown": true,
+      "configPath": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/config/mm-wave-b-tor-maker-a-live.yaml",
+      "contestAllowList": [
+        "41"
+      ],
+      "dryRun": false,
+      "expectedWouldSubmitRows": 6,
+      "expirySeconds": 180,
+      "globalMakerCapUSDC": "10.000000",
+      "maker": "maker-a",
+      "markets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "maxOpenCommitments": 18,
+      "maxRiskPerCommitmentUSDC": "0.500000",
+      "maxRiskPerContestUSDC": "3.000000",
+      "name": "wave-b-tor-maker-a-live",
+      "onchainCancelStrategy": "bulk-nonce",
+      "seedSpeculations": false,
+      "staleAfterSeconds": 90,
+      "subrunId": "wave-b-tor",
+      "targetPairCount": 3,
+      "wave": "B"
+    },
+    {
+      "authoritativeShutdown": false,
+      "configPath": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/config/mm-wave-b-tor-maker-b-dry.yaml",
+      "contestAllowList": [
+        "41"
+      ],
+      "dryRun": true,
+      "expectedWouldSubmitRows": 6,
+      "expirySeconds": 180,
+      "globalMakerCapUSDC": "10.000000",
+      "maker": "maker-b",
+      "markets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "maxOpenCommitments": 18,
+      "maxRiskPerCommitmentUSDC": "0.500000",
+      "maxRiskPerContestUSDC": "3.000000",
+      "name": "wave-b-tor-maker-b-dry",
+      "onchainCancelStrategy": "per-commitment",
+      "seedSpeculations": false,
+      "staleAfterSeconds": 90,
+      "subrunId": "wave-b-tor",
+      "targetPairCount": 3,
+      "wave": "B"
+    },
+    {
+      "authoritativeShutdown": true,
+      "configPath": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/config/mm-wave-b-tor-maker-b-live.yaml",
+      "contestAllowList": [
+        "41"
+      ],
+      "dryRun": false,
+      "expectedWouldSubmitRows": 6,
+      "expirySeconds": 180,
+      "globalMakerCapUSDC": "10.000000",
+      "maker": "maker-b",
+      "markets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "maxOpenCommitments": 18,
+      "maxRiskPerCommitmentUSDC": "0.500000",
+      "maxRiskPerContestUSDC": "3.000000",
+      "name": "wave-b-tor-maker-b-live",
+      "onchainCancelStrategy": "per-commitment",
+      "seedSpeculations": false,
+      "staleAfterSeconds": 90,
+      "subrunId": "wave-b-tor",
+      "targetPairCount": 3,
+      "wave": "B"
+    },
+    {
+      "authoritativeShutdown": false,
+      "configPath": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/config/mm-wave-b-late-maker-a-dry.yaml",
+      "contestAllowList": [
+        "42",
+        "43"
+      ],
+      "dryRun": true,
+      "expectedWouldSubmitRows": 12,
+      "expirySeconds": 180,
+      "globalMakerCapUSDC": "10.000000",
+      "maker": "maker-a",
+      "markets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "maxOpenCommitments": 18,
+      "maxRiskPerCommitmentUSDC": "0.500000",
+      "maxRiskPerContestUSDC": "3.000000",
+      "name": "wave-b-late-maker-a-dry",
+      "onchainCancelStrategy": "bulk-nonce",
+      "seedSpeculations": false,
+      "staleAfterSeconds": 90,
+      "subrunId": "wave-b-late",
+      "targetPairCount": 6,
+      "wave": "B"
+    },
+    {
+      "authoritativeShutdown": true,
+      "configPath": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/config/mm-wave-b-late-maker-a-live.yaml",
+      "contestAllowList": [
+        "42",
+        "43"
+      ],
+      "dryRun": false,
+      "expectedWouldSubmitRows": 12,
+      "expirySeconds": 180,
+      "globalMakerCapUSDC": "10.000000",
+      "maker": "maker-a",
+      "markets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "maxOpenCommitments": 18,
+      "maxRiskPerCommitmentUSDC": "0.500000",
+      "maxRiskPerContestUSDC": "3.000000",
+      "name": "wave-b-late-maker-a-live",
+      "onchainCancelStrategy": "bulk-nonce",
+      "seedSpeculations": false,
+      "staleAfterSeconds": 90,
+      "subrunId": "wave-b-late",
+      "targetPairCount": 6,
+      "wave": "B"
+    },
+    {
+      "authoritativeShutdown": false,
+      "configPath": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/config/mm-wave-b-late-maker-b-dry.yaml",
+      "contestAllowList": [
+        "42",
+        "43"
+      ],
+      "dryRun": true,
+      "expectedWouldSubmitRows": 12,
+      "expirySeconds": 180,
+      "globalMakerCapUSDC": "10.000000",
+      "maker": "maker-b",
+      "markets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "maxOpenCommitments": 18,
+      "maxRiskPerCommitmentUSDC": "0.500000",
+      "maxRiskPerContestUSDC": "3.000000",
+      "name": "wave-b-late-maker-b-dry",
+      "onchainCancelStrategy": "per-commitment",
+      "seedSpeculations": false,
+      "staleAfterSeconds": 90,
+      "subrunId": "wave-b-late",
+      "targetPairCount": 6,
+      "wave": "B"
+    },
+    {
+      "authoritativeShutdown": true,
+      "configPath": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/config/mm-wave-b-late-maker-b-live.yaml",
+      "contestAllowList": [
+        "42",
+        "43"
+      ],
+      "dryRun": false,
+      "expectedWouldSubmitRows": 12,
+      "expirySeconds": 180,
+      "globalMakerCapUSDC": "10.000000",
+      "maker": "maker-b",
+      "markets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "maxOpenCommitments": 18,
+      "maxRiskPerCommitmentUSDC": "0.500000",
+      "maxRiskPerContestUSDC": "3.000000",
+      "name": "wave-b-late-maker-b-live",
+      "onchainCancelStrategy": "per-commitment",
+      "seedSpeculations": false,
+      "staleAfterSeconds": 90,
+      "subrunId": "wave-b-late",
+      "targetPairCount": 6,
+      "wave": "B"
+    }
+  ],
+  "subruns": [
+    {
+      "id": "wave-a-ms",
+      "labels": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "latestSafeEt": "19:55",
+      "markets": [
+        "moneyline",
+        "spread"
+      ],
+      "primaryStartEt": "19:20",
+      "purpose": "all Wave A contests, capacity-safe moneyline+spread competition",
+      "wave": "A"
+    },
+    {
+      "id": "wave-a-total",
+      "labels": [
+        "A1",
+        "A2",
+        "A3"
+      ],
+      "latestSafeEt": "19:55",
+      "markets": [
+        "total"
+      ],
+      "primaryStartEt": "after wave-a-ms cleanup (~19:32)",
+      "purpose": "all Wave A totals after authoritative cleanup of first subrun",
+      "wave": "A"
+    },
+    {
+      "id": "wave-b-tor",
+      "labels": [
+        "B1"
+      ],
+      "latestSafeEt": "21:30",
+      "markets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "primaryStartEt": "20:55",
+      "purpose": "TOR@SD isolated so cleanup cannot kill later coverage",
+      "wave": "B"
+    },
+    {
+      "id": "wave-b-late",
+      "labels": [
+        "B2",
+        "B3"
+      ],
+      "latestSafeEt": "22:00",
+      "markets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "primaryStartEt": "after wave-b-tor cleanup (~21:08)",
+      "purpose": "ARI@LAD and COL@SF non-overlapping later subrun",
+      "wave": "B"
+    }
+  ]
+}

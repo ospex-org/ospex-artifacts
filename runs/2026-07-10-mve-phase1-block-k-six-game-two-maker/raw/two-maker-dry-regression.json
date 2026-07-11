@@ -1,0 +1,1635 @@
+{
+  "blockIReplay": {
+    "benignSkips": [
+      {
+        "contestId": "29",
+        "index": 22,
+        "market": "total",
+        "reason": "reference-line-mismatch"
+      },
+      {
+        "contestId": "31",
+        "index": 53,
+        "market": "total",
+        "reason": "reference-line-mismatch"
+      }
+    ],
+    "candidateCount": 11,
+    "fatalEvents": [],
+    "healthyTargets": [
+      {
+        "contestId": "29",
+        "market": "moneyline",
+        "sides": 2
+      },
+      {
+        "contestId": "29",
+        "market": "spread",
+        "sides": 2
+      },
+      {
+        "contestId": "30",
+        "market": "moneyline",
+        "sides": 2
+      },
+      {
+        "contestId": "30",
+        "market": "spread",
+        "sides": 2
+      },
+      {
+        "contestId": "30",
+        "market": "total",
+        "sides": 2
+      },
+      {
+        "contestId": "31",
+        "market": "moneyline",
+        "sides": 2
+      },
+      {
+        "contestId": "31",
+        "market": "spread",
+        "sides": 2
+      }
+    ],
+    "minimumCoverage": {
+      "actualHealthyMarketsTotal": 7,
+      "minHealthyMarketsTotal": 2,
+      "requireNoOffAllowlist": true
+    },
+    "recommendedAction": "GO_WITH_CAVEATS",
+    "seedExpected": false,
+    "seedSeenCount": 0,
+    "wouldSubmit": 14
+  },
+  "candidates": {
+    "wave-a-ms:maker-a": {
+      "offAllowlist": [],
+      "quoteReadyCount": 6,
+      "rows": [
+        {
+          "awayTeam": "Houston Astros",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "38",
+          "contestStatus": "verified",
+          "gameId": "c9273471-9dac-4f13-83f4-6f0ea852d2d3",
+          "hasOdds": true,
+          "homeTeam": "Texas Rangers",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "moneyline",
+          "matchTime": "2026-07-11T00:05:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayOddsAmerican": -136,
+            "homeOddsAmerican": 123,
+            "market": "moneyline"
+          },
+          "slug": "hou-tex-2026-07-11",
+          "speculationId": "102",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Houston Astros",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "38",
+          "contestStatus": "verified",
+          "gameId": "c9273471-9dac-4f13-83f4-6f0ea852d2d3",
+          "hasOdds": true,
+          "homeTeam": "Texas Rangers",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "spread",
+          "matchTime": "2026-07-11T00:05:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayLine": -1.5,
+            "awayOddsAmerican": 120,
+            "homeLine": 1.5,
+            "homeOddsAmerican": -140,
+            "market": "spread"
+          },
+          "slug": "hou-tex-2026-07-11",
+          "speculationId": "103",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Los Angeles Angels",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "39",
+          "contestStatus": "verified",
+          "gameId": "2027e9a2-a3a6-446b-9527-88a1842d9549",
+          "hasOdds": true,
+          "homeTeam": "Minnesota Twins",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "moneyline",
+          "matchTime": "2026-07-11T00:10:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayOddsAmerican": 128,
+            "homeOddsAmerican": -144,
+            "market": "moneyline"
+          },
+          "slug": "laa-min-2026-07-11",
+          "speculationId": "105",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Los Angeles Angels",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "39",
+          "contestStatus": "verified",
+          "gameId": "2027e9a2-a3a6-446b-9527-88a1842d9549",
+          "hasOdds": true,
+          "homeTeam": "Minnesota Twins",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "spread",
+          "matchTime": "2026-07-11T00:10:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayLine": 1.5,
+            "awayOddsAmerican": -165,
+            "homeLine": -1.5,
+            "homeOddsAmerican": 140,
+            "market": "spread"
+          },
+          "slug": "laa-min-2026-07-11",
+          "speculationId": "106",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Atlanta Braves",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "40",
+          "contestStatus": "verified",
+          "gameId": "de4b8e68-47f7-44f6-960a-da9ac886c147",
+          "hasOdds": true,
+          "homeTeam": "St. Louis Cardinals",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "moneyline",
+          "matchTime": "2026-07-11T00:15:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayOddsAmerican": -160,
+            "homeOddsAmerican": 141,
+            "market": "moneyline"
+          },
+          "slug": "atl-stl-2026-07-11-0015",
+          "speculationId": "108",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Atlanta Braves",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "40",
+          "contestStatus": "verified",
+          "gameId": "de4b8e68-47f7-44f6-960a-da9ac886c147",
+          "hasOdds": true,
+          "homeTeam": "St. Louis Cardinals",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "spread",
+          "matchTime": "2026-07-11T00:15:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayLine": -1.5,
+            "awayOddsAmerican": 105,
+            "homeLine": 1.5,
+            "homeOddsAmerican": -125,
+            "market": "spread"
+          },
+          "slug": "atl-stl-2026-07-11-0015",
+          "speculationId": "109",
+          "sport": "mlb",
+          "status": "upcoming"
+        }
+      ]
+    },
+    "wave-a-ms:maker-b": {
+      "offAllowlist": [],
+      "quoteReadyCount": 6,
+      "rows": [
+        {
+          "awayTeam": "Houston Astros",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "38",
+          "contestStatus": "verified",
+          "gameId": "c9273471-9dac-4f13-83f4-6f0ea852d2d3",
+          "hasOdds": true,
+          "homeTeam": "Texas Rangers",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "moneyline",
+          "matchTime": "2026-07-11T00:05:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayOddsAmerican": -136,
+            "homeOddsAmerican": 123,
+            "market": "moneyline"
+          },
+          "slug": "hou-tex-2026-07-11",
+          "speculationId": "102",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Houston Astros",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "38",
+          "contestStatus": "verified",
+          "gameId": "c9273471-9dac-4f13-83f4-6f0ea852d2d3",
+          "hasOdds": true,
+          "homeTeam": "Texas Rangers",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "spread",
+          "matchTime": "2026-07-11T00:05:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayLine": -1.5,
+            "awayOddsAmerican": 120,
+            "homeLine": 1.5,
+            "homeOddsAmerican": -140,
+            "market": "spread"
+          },
+          "slug": "hou-tex-2026-07-11",
+          "speculationId": "103",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Los Angeles Angels",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "39",
+          "contestStatus": "verified",
+          "gameId": "2027e9a2-a3a6-446b-9527-88a1842d9549",
+          "hasOdds": true,
+          "homeTeam": "Minnesota Twins",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "moneyline",
+          "matchTime": "2026-07-11T00:10:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayOddsAmerican": 128,
+            "homeOddsAmerican": -144,
+            "market": "moneyline"
+          },
+          "slug": "laa-min-2026-07-11",
+          "speculationId": "105",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Los Angeles Angels",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "39",
+          "contestStatus": "verified",
+          "gameId": "2027e9a2-a3a6-446b-9527-88a1842d9549",
+          "hasOdds": true,
+          "homeTeam": "Minnesota Twins",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "spread",
+          "matchTime": "2026-07-11T00:10:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayLine": 1.5,
+            "awayOddsAmerican": -165,
+            "homeLine": -1.5,
+            "homeOddsAmerican": 140,
+            "market": "spread"
+          },
+          "slug": "laa-min-2026-07-11",
+          "speculationId": "106",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Atlanta Braves",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "40",
+          "contestStatus": "verified",
+          "gameId": "de4b8e68-47f7-44f6-960a-da9ac886c147",
+          "hasOdds": true,
+          "homeTeam": "St. Louis Cardinals",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "moneyline",
+          "matchTime": "2026-07-11T00:15:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayOddsAmerican": -160,
+            "homeOddsAmerican": 141,
+            "market": "moneyline"
+          },
+          "slug": "atl-stl-2026-07-11-0015",
+          "speculationId": "108",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Atlanta Braves",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "40",
+          "contestStatus": "verified",
+          "gameId": "de4b8e68-47f7-44f6-960a-da9ac886c147",
+          "hasOdds": true,
+          "homeTeam": "St. Louis Cardinals",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "spread",
+          "matchTime": "2026-07-11T00:15:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayLine": -1.5,
+            "awayOddsAmerican": 105,
+            "homeLine": 1.5,
+            "homeOddsAmerican": -125,
+            "market": "spread"
+          },
+          "slug": "atl-stl-2026-07-11-0015",
+          "speculationId": "109",
+          "sport": "mlb",
+          "status": "upcoming"
+        }
+      ]
+    },
+    "wave-a-total:maker-a": {
+      "offAllowlist": [],
+      "quoteReadyCount": 3,
+      "rows": [
+        {
+          "awayTeam": "Houston Astros",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "38",
+          "contestStatus": "verified",
+          "gameId": "c9273471-9dac-4f13-83f4-6f0ea852d2d3",
+          "hasOdds": true,
+          "homeTeam": "Texas Rangers",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "total",
+          "matchTime": "2026-07-11T00:05:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "line": 8.5,
+            "market": "total",
+            "overOddsAmerican": -105,
+            "underOddsAmerican": -115
+          },
+          "slug": "hou-tex-2026-07-11",
+          "speculationId": "104",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Los Angeles Angels",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "39",
+          "contestStatus": "verified",
+          "gameId": "2027e9a2-a3a6-446b-9527-88a1842d9549",
+          "hasOdds": true,
+          "homeTeam": "Minnesota Twins",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "total",
+          "matchTime": "2026-07-11T00:10:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "line": 9.5,
+            "market": "total",
+            "overOddsAmerican": -105,
+            "underOddsAmerican": -115
+          },
+          "slug": "laa-min-2026-07-11",
+          "speculationId": "107",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Atlanta Braves",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "40",
+          "contestStatus": "verified",
+          "gameId": "de4b8e68-47f7-44f6-960a-da9ac886c147",
+          "hasOdds": true,
+          "homeTeam": "St. Louis Cardinals",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "total",
+          "matchTime": "2026-07-11T00:15:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "line": 8,
+            "market": "total",
+            "overOddsAmerican": -110,
+            "underOddsAmerican": -110
+          },
+          "slug": "atl-stl-2026-07-11-0015",
+          "speculationId": "110",
+          "sport": "mlb",
+          "status": "upcoming"
+        }
+      ]
+    },
+    "wave-a-total:maker-b": {
+      "offAllowlist": [],
+      "quoteReadyCount": 3,
+      "rows": [
+        {
+          "awayTeam": "Houston Astros",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "38",
+          "contestStatus": "verified",
+          "gameId": "c9273471-9dac-4f13-83f4-6f0ea852d2d3",
+          "hasOdds": true,
+          "homeTeam": "Texas Rangers",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "total",
+          "matchTime": "2026-07-11T00:05:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "line": 8.5,
+            "market": "total",
+            "overOddsAmerican": -105,
+            "underOddsAmerican": -115
+          },
+          "slug": "hou-tex-2026-07-11",
+          "speculationId": "104",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Los Angeles Angels",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "39",
+          "contestStatus": "verified",
+          "gameId": "2027e9a2-a3a6-446b-9527-88a1842d9549",
+          "hasOdds": true,
+          "homeTeam": "Minnesota Twins",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "total",
+          "matchTime": "2026-07-11T00:10:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "line": 9.5,
+            "market": "total",
+            "overOddsAmerican": -105,
+            "underOddsAmerican": -115
+          },
+          "slug": "laa-min-2026-07-11",
+          "speculationId": "107",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Atlanta Braves",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "40",
+          "contestStatus": "verified",
+          "gameId": "de4b8e68-47f7-44f6-960a-da9ac886c147",
+          "hasOdds": true,
+          "homeTeam": "St. Louis Cardinals",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "total",
+          "matchTime": "2026-07-11T00:15:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "line": 8,
+            "market": "total",
+            "overOddsAmerican": -110,
+            "underOddsAmerican": -110
+          },
+          "slug": "atl-stl-2026-07-11-0015",
+          "speculationId": "110",
+          "sport": "mlb",
+          "status": "upcoming"
+        }
+      ]
+    },
+    "wave-b-late:maker-a": {
+      "offAllowlist": [],
+      "quoteReadyCount": 6,
+      "rows": [
+        {
+          "awayTeam": "Arizona Diamondbacks",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "42",
+          "contestStatus": "verified",
+          "gameId": "9eec2102-066d-40f7-8861-dcc175c6bfb8",
+          "hasOdds": true,
+          "homeTeam": "Los Angeles Dodgers",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "moneyline",
+          "matchTime": "2026-07-11T02:10:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayOddsAmerican": 215,
+            "homeOddsAmerican": -260,
+            "market": "moneyline"
+          },
+          "slug": "ari-lad-2026-07-11",
+          "speculationId": "114",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Arizona Diamondbacks",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "42",
+          "contestStatus": "verified",
+          "gameId": "9eec2102-066d-40f7-8861-dcc175c6bfb8",
+          "hasOdds": true,
+          "homeTeam": "Los Angeles Dodgers",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "spread",
+          "matchTime": "2026-07-11T02:10:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayLine": 1.5,
+            "awayOddsAmerican": 103,
+            "homeLine": -1.5,
+            "homeOddsAmerican": -123,
+            "market": "spread"
+          },
+          "slug": "ari-lad-2026-07-11",
+          "speculationId": "115",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Arizona Diamondbacks",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "42",
+          "contestStatus": "verified",
+          "gameId": "9eec2102-066d-40f7-8861-dcc175c6bfb8",
+          "hasOdds": true,
+          "homeTeam": "Los Angeles Dodgers",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "total",
+          "matchTime": "2026-07-11T02:10:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "line": 8.5,
+            "market": "total",
+            "overOddsAmerican": -110,
+            "underOddsAmerican": -110
+          },
+          "slug": "ari-lad-2026-07-11",
+          "speculationId": "116",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Colorado Rockies",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "43",
+          "contestStatus": "verified",
+          "gameId": "708d74c1-4b68-4893-a8ea-2b2ae75e7007",
+          "hasOdds": true,
+          "homeTeam": "San Francisco Giants",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "moneyline",
+          "matchTime": "2026-07-11T02:15:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayOddsAmerican": 130,
+            "homeOddsAmerican": -148,
+            "market": "moneyline"
+          },
+          "slug": "col-sf-2026-07-11-0215",
+          "speculationId": "117",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Colorado Rockies",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "43",
+          "contestStatus": "verified",
+          "gameId": "708d74c1-4b68-4893-a8ea-2b2ae75e7007",
+          "hasOdds": true,
+          "homeTeam": "San Francisco Giants",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "spread",
+          "matchTime": "2026-07-11T02:15:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayLine": 1.5,
+            "awayOddsAmerican": -160,
+            "homeLine": -1.5,
+            "homeOddsAmerican": 140,
+            "market": "spread"
+          },
+          "slug": "col-sf-2026-07-11-0215",
+          "speculationId": "118",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Colorado Rockies",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "43",
+          "contestStatus": "verified",
+          "gameId": "708d74c1-4b68-4893-a8ea-2b2ae75e7007",
+          "hasOdds": true,
+          "homeTeam": "San Francisco Giants",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "total",
+          "matchTime": "2026-07-11T02:15:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "line": 8.5,
+            "market": "total",
+            "overOddsAmerican": -100,
+            "underOddsAmerican": -120
+          },
+          "slug": "col-sf-2026-07-11-0215",
+          "speculationId": "119",
+          "sport": "mlb",
+          "status": "upcoming"
+        }
+      ]
+    },
+    "wave-b-late:maker-b": {
+      "offAllowlist": [],
+      "quoteReadyCount": 6,
+      "rows": [
+        {
+          "awayTeam": "Arizona Diamondbacks",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "42",
+          "contestStatus": "verified",
+          "gameId": "9eec2102-066d-40f7-8861-dcc175c6bfb8",
+          "hasOdds": true,
+          "homeTeam": "Los Angeles Dodgers",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "moneyline",
+          "matchTime": "2026-07-11T02:10:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayOddsAmerican": 215,
+            "homeOddsAmerican": -260,
+            "market": "moneyline"
+          },
+          "slug": "ari-lad-2026-07-11",
+          "speculationId": "114",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Arizona Diamondbacks",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "42",
+          "contestStatus": "verified",
+          "gameId": "9eec2102-066d-40f7-8861-dcc175c6bfb8",
+          "hasOdds": true,
+          "homeTeam": "Los Angeles Dodgers",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "spread",
+          "matchTime": "2026-07-11T02:10:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayLine": 1.5,
+            "awayOddsAmerican": 103,
+            "homeLine": -1.5,
+            "homeOddsAmerican": -123,
+            "market": "spread"
+          },
+          "slug": "ari-lad-2026-07-11",
+          "speculationId": "115",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Arizona Diamondbacks",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "42",
+          "contestStatus": "verified",
+          "gameId": "9eec2102-066d-40f7-8861-dcc175c6bfb8",
+          "hasOdds": true,
+          "homeTeam": "Los Angeles Dodgers",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "total",
+          "matchTime": "2026-07-11T02:10:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "line": 8.5,
+            "market": "total",
+            "overOddsAmerican": -110,
+            "underOddsAmerican": -110
+          },
+          "slug": "ari-lad-2026-07-11",
+          "speculationId": "116",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Colorado Rockies",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "43",
+          "contestStatus": "verified",
+          "gameId": "708d74c1-4b68-4893-a8ea-2b2ae75e7007",
+          "hasOdds": true,
+          "homeTeam": "San Francisco Giants",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "moneyline",
+          "matchTime": "2026-07-11T02:15:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayOddsAmerican": 130,
+            "homeOddsAmerican": -148,
+            "market": "moneyline"
+          },
+          "slug": "col-sf-2026-07-11-0215",
+          "speculationId": "117",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Colorado Rockies",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "43",
+          "contestStatus": "verified",
+          "gameId": "708d74c1-4b68-4893-a8ea-2b2ae75e7007",
+          "hasOdds": true,
+          "homeTeam": "San Francisco Giants",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "spread",
+          "matchTime": "2026-07-11T02:15:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayLine": 1.5,
+            "awayOddsAmerican": -160,
+            "homeLine": -1.5,
+            "homeOddsAmerican": 140,
+            "market": "spread"
+          },
+          "slug": "col-sf-2026-07-11-0215",
+          "speculationId": "118",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Colorado Rockies",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "43",
+          "contestStatus": "verified",
+          "gameId": "708d74c1-4b68-4893-a8ea-2b2ae75e7007",
+          "hasOdds": true,
+          "homeTeam": "San Francisco Giants",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "total",
+          "matchTime": "2026-07-11T02:15:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "line": 8.5,
+            "market": "total",
+            "overOddsAmerican": -100,
+            "underOddsAmerican": -120
+          },
+          "slug": "col-sf-2026-07-11-0215",
+          "speculationId": "119",
+          "sport": "mlb",
+          "status": "upcoming"
+        }
+      ]
+    },
+    "wave-b-tor:maker-a": {
+      "offAllowlist": [],
+      "quoteReadyCount": 3,
+      "rows": [
+        {
+          "awayTeam": "Toronto Blue Jays",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "41",
+          "contestStatus": "verified",
+          "gameId": "9874dec0-d553-410e-a87b-b6534d7dbcb4",
+          "hasOdds": true,
+          "homeTeam": "San Diego Padres",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "moneyline",
+          "matchTime": "2026-07-11T01:40:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayOddsAmerican": 106,
+            "homeOddsAmerican": -120,
+            "market": "moneyline"
+          },
+          "slug": "tor-sd-2026-07-11",
+          "speculationId": "111",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Toronto Blue Jays",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "41",
+          "contestStatus": "verified",
+          "gameId": "9874dec0-d553-410e-a87b-b6534d7dbcb4",
+          "hasOdds": true,
+          "homeTeam": "San Diego Padres",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "spread",
+          "matchTime": "2026-07-11T01:40:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayLine": 1.5,
+            "awayOddsAmerican": -200,
+            "homeLine": -1.5,
+            "homeOddsAmerican": 170,
+            "market": "spread"
+          },
+          "slug": "tor-sd-2026-07-11",
+          "speculationId": "112",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Toronto Blue Jays",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "41",
+          "contestStatus": "verified",
+          "gameId": "9874dec0-d553-410e-a87b-b6534d7dbcb4",
+          "hasOdds": true,
+          "homeTeam": "San Diego Padres",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "total",
+          "matchTime": "2026-07-11T01:40:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "line": 8.5,
+            "market": "total",
+            "overOddsAmerican": -110,
+            "underOddsAmerican": -110
+          },
+          "slug": "tor-sd-2026-07-11",
+          "speculationId": "113",
+          "sport": "mlb",
+          "status": "upcoming"
+        }
+      ]
+    },
+    "wave-b-tor:maker-b": {
+      "offAllowlist": [],
+      "quoteReadyCount": 3,
+      "rows": [
+        {
+          "awayTeam": "Toronto Blue Jays",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "41",
+          "contestStatus": "verified",
+          "gameId": "9874dec0-d553-410e-a87b-b6534d7dbcb4",
+          "hasOdds": true,
+          "homeTeam": "San Diego Padres",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "moneyline",
+          "matchTime": "2026-07-11T01:40:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayOddsAmerican": 106,
+            "homeOddsAmerican": -120,
+            "market": "moneyline"
+          },
+          "slug": "tor-sd-2026-07-11",
+          "speculationId": "111",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Toronto Blue Jays",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "41",
+          "contestStatus": "verified",
+          "gameId": "9874dec0-d553-410e-a87b-b6534d7dbcb4",
+          "hasOdds": true,
+          "homeTeam": "San Diego Padres",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "spread",
+          "matchTime": "2026-07-11T01:40:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "awayLine": 1.5,
+            "awayOddsAmerican": -200,
+            "homeLine": -1.5,
+            "homeOddsAmerican": 170,
+            "market": "spread"
+          },
+          "slug": "tor-sd-2026-07-11",
+          "speculationId": "112",
+          "sport": "mlb",
+          "status": "upcoming"
+        },
+        {
+          "awayTeam": "Toronto Blue Jays",
+          "canCreateContest": false,
+          "contestCreated": true,
+          "contestId": "41",
+          "contestStatus": "verified",
+          "gameId": "9874dec0-d553-410e-a87b-b6534d7dbcb4",
+          "hasOdds": true,
+          "homeTeam": "San Diego Padres",
+          "inContestAllowList": true,
+          "kind": "quote_ready",
+          "market": "total",
+          "matchTime": "2026-07-11T01:40:00+00:00",
+          "recommendedAction": "quote",
+          "referenceOdds": {
+            "line": 8.5,
+            "market": "total",
+            "overOddsAmerican": -110,
+            "underOddsAmerican": -110
+          },
+          "slug": "tor-sd-2026-07-11",
+          "speculationId": "113",
+          "sport": "mlb",
+          "status": "upcoming"
+        }
+      ]
+    }
+  },
+  "configValidation": {
+    "wave-a-ms:maker-a": {
+      "configLoaded": true,
+      "invariantsInText": true,
+      "returnCode": 0
+    },
+    "wave-a-ms:maker-b": {
+      "configLoaded": true,
+      "invariantsInText": true,
+      "returnCode": 0
+    },
+    "wave-a-total:maker-a": {
+      "configLoaded": true,
+      "invariantsInText": true,
+      "returnCode": 0
+    },
+    "wave-a-total:maker-b": {
+      "configLoaded": true,
+      "invariantsInText": true,
+      "returnCode": 0
+    },
+    "wave-b-late:maker-a": {
+      "configLoaded": true,
+      "invariantsInText": true,
+      "returnCode": 0
+    },
+    "wave-b-late:maker-b": {
+      "configLoaded": true,
+      "invariantsInText": true,
+      "returnCode": 0
+    },
+    "wave-b-tor:maker-a": {
+      "configLoaded": true,
+      "invariantsInText": true,
+      "returnCode": 0
+    },
+    "wave-b-tor:maker-b": {
+      "configLoaded": true,
+      "invariantsInText": true,
+      "returnCode": 0
+    }
+  },
+  "generatedAt": "2026-07-10T20:10:59Z",
+  "humanFirstLine": "\u2705 Block K two-maker dry/regression gates passed; strict shared target manifests are ready.",
+  "invalidConfigRegression": {
+    "commandExitCode": 1,
+    "mentionsExpirySeconds": true,
+    "mentionsStaleAfterSeconds": true,
+    "messageTail": "\nwarning ../../../../../package.json: No license field\nospex-mm: failed to load config from <local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/fixtures/invalid-fixed-seconds-stale-ge-expiry.yaml: config: `orders.staleAfterSeconds` (120) must be less than `orders.expirySeconds` (120) under `expiryMode: fixed-seconds` \u2014 a quote is rolled forward once it ages past `staleAfterSeconds`, so it must outlive that to be refreshed before it expires; otherwise it lapses on chain and leaves a gap in visible liquidity\n",
+    "ok": true,
+    "rejectedAtLoad": true
+  },
+  "ok": true,
+  "subruns": {
+    "wave-a-ms": {
+      "expectedTargets": [
+        {
+          "contestId": "38",
+          "market": "moneyline"
+        },
+        {
+          "contestId": "38",
+          "market": "spread"
+        },
+        {
+          "contestId": "39",
+          "market": "moneyline"
+        },
+        {
+          "contestId": "39",
+          "market": "spread"
+        },
+        {
+          "contestId": "40",
+          "market": "moneyline"
+        },
+        {
+          "contestId": "40",
+          "market": "spread"
+        }
+      ],
+      "maker-a": {
+        "classification": {
+          "benignSkips": [],
+          "candidateCount": 6,
+          "fatalEvents": [],
+          "healthyTargets": [
+            {
+              "contestId": "38",
+              "market": "moneyline",
+              "sides": 2
+            },
+            {
+              "contestId": "38",
+              "market": "spread",
+              "sides": 2
+            },
+            {
+              "contestId": "39",
+              "market": "moneyline",
+              "sides": 2
+            },
+            {
+              "contestId": "39",
+              "market": "spread",
+              "sides": 2
+            },
+            {
+              "contestId": "40",
+              "market": "moneyline",
+              "sides": 2
+            },
+            {
+              "contestId": "40",
+              "market": "spread",
+              "sides": 2
+            }
+          ],
+          "minimumCoverage": {
+            "actualHealthyMarketsTotal": 6,
+            "minHealthyMarketsTotal": 1,
+            "requireNoOffAllowlist": true
+          },
+          "recommendedAction": "GO",
+          "seedExpected": false,
+          "seedSeenCount": 0,
+          "wouldSubmit": 12
+        },
+        "humanFirstLine": "\u2705 Block K wave-a-ms maker-a concurrent dry gate: gates green; proceeding with strict allowlist.",
+        "returnCode": 0,
+        "stdoutLog": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/logs/mm-wave-a-ms-maker-a-dry-loop.log"
+      },
+      "maker-b": {
+        "classification": {
+          "benignSkips": [],
+          "candidateCount": 6,
+          "fatalEvents": [],
+          "healthyTargets": [
+            {
+              "contestId": "38",
+              "market": "moneyline",
+              "sides": 2
+            },
+            {
+              "contestId": "38",
+              "market": "spread",
+              "sides": 2
+            },
+            {
+              "contestId": "39",
+              "market": "moneyline",
+              "sides": 2
+            },
+            {
+              "contestId": "39",
+              "market": "spread",
+              "sides": 2
+            },
+            {
+              "contestId": "40",
+              "market": "moneyline",
+              "sides": 2
+            },
+            {
+              "contestId": "40",
+              "market": "spread",
+              "sides": 2
+            }
+          ],
+          "minimumCoverage": {
+            "actualHealthyMarketsTotal": 6,
+            "minHealthyMarketsTotal": 1,
+            "requireNoOffAllowlist": true
+          },
+          "recommendedAction": "GO",
+          "seedExpected": false,
+          "seedSeenCount": 0,
+          "wouldSubmit": 12
+        },
+        "humanFirstLine": "\u2705 Block K wave-a-ms maker-b concurrent dry gate: gates green; proceeding with strict allowlist.",
+        "returnCode": 0,
+        "stdoutLog": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/logs/mm-wave-a-ms-maker-b-dry-loop.log"
+      },
+      "makerHealthySetsEqual": true,
+      "minimumSharedCoverageByContest": {
+        "38": [
+          "moneyline",
+          "spread"
+        ],
+        "39": [
+          "moneyline",
+          "spread"
+        ],
+        "40": [
+          "moneyline",
+          "spread"
+        ]
+      },
+      "sharedHealthyTargets": [
+        {
+          "contestId": "38",
+          "market": "moneyline"
+        },
+        {
+          "contestId": "38",
+          "market": "spread"
+        },
+        {
+          "contestId": "39",
+          "market": "moneyline"
+        },
+        {
+          "contestId": "39",
+          "market": "spread"
+        },
+        {
+          "contestId": "40",
+          "market": "moneyline"
+        },
+        {
+          "contestId": "40",
+          "market": "spread"
+        }
+      ]
+    },
+    "wave-a-total": {
+      "expectedTargets": [
+        {
+          "contestId": "38",
+          "market": "total"
+        },
+        {
+          "contestId": "39",
+          "market": "total"
+        },
+        {
+          "contestId": "40",
+          "market": "total"
+        }
+      ],
+      "maker-a": {
+        "classification": {
+          "benignSkips": [],
+          "candidateCount": 3,
+          "fatalEvents": [],
+          "healthyTargets": [
+            {
+              "contestId": "38",
+              "market": "total",
+              "sides": 2
+            },
+            {
+              "contestId": "39",
+              "market": "total",
+              "sides": 2
+            },
+            {
+              "contestId": "40",
+              "market": "total",
+              "sides": 2
+            }
+          ],
+          "minimumCoverage": {
+            "actualHealthyMarketsTotal": 3,
+            "minHealthyMarketsTotal": 1,
+            "requireNoOffAllowlist": true
+          },
+          "recommendedAction": "GO",
+          "seedExpected": false,
+          "seedSeenCount": 0,
+          "wouldSubmit": 6
+        },
+        "humanFirstLine": "\u2705 Block K wave-a-total maker-a concurrent dry gate: gates green; proceeding with strict allowlist.",
+        "returnCode": 0,
+        "stdoutLog": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/logs/mm-wave-a-total-maker-a-dry-loop.log"
+      },
+      "maker-b": {
+        "classification": {
+          "benignSkips": [],
+          "candidateCount": 3,
+          "fatalEvents": [],
+          "healthyTargets": [
+            {
+              "contestId": "38",
+              "market": "total",
+              "sides": 2
+            },
+            {
+              "contestId": "39",
+              "market": "total",
+              "sides": 2
+            },
+            {
+              "contestId": "40",
+              "market": "total",
+              "sides": 2
+            }
+          ],
+          "minimumCoverage": {
+            "actualHealthyMarketsTotal": 3,
+            "minHealthyMarketsTotal": 1,
+            "requireNoOffAllowlist": true
+          },
+          "recommendedAction": "GO",
+          "seedExpected": false,
+          "seedSeenCount": 0,
+          "wouldSubmit": 6
+        },
+        "humanFirstLine": "\u2705 Block K wave-a-total maker-b concurrent dry gate: gates green; proceeding with strict allowlist.",
+        "returnCode": 0,
+        "stdoutLog": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/logs/mm-wave-a-total-maker-b-dry-loop.log"
+      },
+      "makerHealthySetsEqual": true,
+      "minimumSharedCoverageByContest": {
+        "38": [
+          "total"
+        ],
+        "39": [
+          "total"
+        ],
+        "40": [
+          "total"
+        ]
+      },
+      "sharedHealthyTargets": [
+        {
+          "contestId": "38",
+          "market": "total"
+        },
+        {
+          "contestId": "39",
+          "market": "total"
+        },
+        {
+          "contestId": "40",
+          "market": "total"
+        }
+      ]
+    },
+    "wave-b-late": {
+      "expectedTargets": [
+        {
+          "contestId": "42",
+          "market": "moneyline"
+        },
+        {
+          "contestId": "42",
+          "market": "spread"
+        },
+        {
+          "contestId": "42",
+          "market": "total"
+        },
+        {
+          "contestId": "43",
+          "market": "moneyline"
+        },
+        {
+          "contestId": "43",
+          "market": "spread"
+        },
+        {
+          "contestId": "43",
+          "market": "total"
+        }
+      ],
+      "maker-a": {
+        "classification": {
+          "benignSkips": [],
+          "candidateCount": 6,
+          "fatalEvents": [],
+          "healthyTargets": [
+            {
+              "contestId": "42",
+              "market": "moneyline",
+              "sides": 2
+            },
+            {
+              "contestId": "42",
+              "market": "spread",
+              "sides": 2
+            },
+            {
+              "contestId": "42",
+              "market": "total",
+              "sides": 2
+            },
+            {
+              "contestId": "43",
+              "market": "moneyline",
+              "sides": 2
+            },
+            {
+              "contestId": "43",
+              "market": "spread",
+              "sides": 2
+            },
+            {
+              "contestId": "43",
+              "market": "total",
+              "sides": 2
+            }
+          ],
+          "minimumCoverage": {
+            "actualHealthyMarketsTotal": 6,
+            "minHealthyMarketsTotal": 1,
+            "requireNoOffAllowlist": true
+          },
+          "recommendedAction": "GO",
+          "seedExpected": false,
+          "seedSeenCount": 0,
+          "wouldSubmit": 12
+        },
+        "humanFirstLine": "\u2705 Block K wave-b-late maker-a concurrent dry gate: gates green; proceeding with strict allowlist.",
+        "returnCode": 0,
+        "stdoutLog": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/logs/mm-wave-b-late-maker-a-dry-loop.log"
+      },
+      "maker-b": {
+        "classification": {
+          "benignSkips": [],
+          "candidateCount": 6,
+          "fatalEvents": [],
+          "healthyTargets": [
+            {
+              "contestId": "42",
+              "market": "moneyline",
+              "sides": 2
+            },
+            {
+              "contestId": "42",
+              "market": "spread",
+              "sides": 2
+            },
+            {
+              "contestId": "42",
+              "market": "total",
+              "sides": 2
+            },
+            {
+              "contestId": "43",
+              "market": "moneyline",
+              "sides": 2
+            },
+            {
+              "contestId": "43",
+              "market": "spread",
+              "sides": 2
+            },
+            {
+              "contestId": "43",
+              "market": "total",
+              "sides": 2
+            }
+          ],
+          "minimumCoverage": {
+            "actualHealthyMarketsTotal": 6,
+            "minHealthyMarketsTotal": 1,
+            "requireNoOffAllowlist": true
+          },
+          "recommendedAction": "GO",
+          "seedExpected": false,
+          "seedSeenCount": 0,
+          "wouldSubmit": 12
+        },
+        "humanFirstLine": "\u2705 Block K wave-b-late maker-b concurrent dry gate: gates green; proceeding with strict allowlist.",
+        "returnCode": 0,
+        "stdoutLog": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/logs/mm-wave-b-late-maker-b-dry-loop.log"
+      },
+      "makerHealthySetsEqual": true,
+      "minimumSharedCoverageByContest": {
+        "42": [
+          "moneyline",
+          "spread",
+          "total"
+        ],
+        "43": [
+          "moneyline",
+          "spread",
+          "total"
+        ]
+      },
+      "sharedHealthyTargets": [
+        {
+          "contestId": "42",
+          "market": "moneyline"
+        },
+        {
+          "contestId": "42",
+          "market": "spread"
+        },
+        {
+          "contestId": "42",
+          "market": "total"
+        },
+        {
+          "contestId": "43",
+          "market": "moneyline"
+        },
+        {
+          "contestId": "43",
+          "market": "spread"
+        },
+        {
+          "contestId": "43",
+          "market": "total"
+        }
+      ]
+    },
+    "wave-b-tor": {
+      "expectedTargets": [
+        {
+          "contestId": "41",
+          "market": "moneyline"
+        },
+        {
+          "contestId": "41",
+          "market": "spread"
+        },
+        {
+          "contestId": "41",
+          "market": "total"
+        }
+      ],
+      "maker-a": {
+        "classification": {
+          "benignSkips": [],
+          "candidateCount": 3,
+          "fatalEvents": [],
+          "healthyTargets": [
+            {
+              "contestId": "41",
+              "market": "moneyline",
+              "sides": 2
+            },
+            {
+              "contestId": "41",
+              "market": "spread",
+              "sides": 2
+            },
+            {
+              "contestId": "41",
+              "market": "total",
+              "sides": 2
+            }
+          ],
+          "minimumCoverage": {
+            "actualHealthyMarketsTotal": 3,
+            "minHealthyMarketsTotal": 1,
+            "requireNoOffAllowlist": true
+          },
+          "recommendedAction": "GO",
+          "seedExpected": false,
+          "seedSeenCount": 0,
+          "wouldSubmit": 6
+        },
+        "humanFirstLine": "\u2705 Block K wave-b-tor maker-a concurrent dry gate: gates green; proceeding with strict allowlist.",
+        "returnCode": 0,
+        "stdoutLog": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/logs/mm-wave-b-tor-maker-a-dry-loop.log"
+      },
+      "maker-b": {
+        "classification": {
+          "benignSkips": [],
+          "candidateCount": 3,
+          "fatalEvents": [],
+          "healthyTargets": [
+            {
+              "contestId": "41",
+              "market": "moneyline",
+              "sides": 2
+            },
+            {
+              "contestId": "41",
+              "market": "spread",
+              "sides": 2
+            },
+            {
+              "contestId": "41",
+              "market": "total",
+              "sides": 2
+            }
+          ],
+          "minimumCoverage": {
+            "actualHealthyMarketsTotal": 3,
+            "minHealthyMarketsTotal": 1,
+            "requireNoOffAllowlist": true
+          },
+          "recommendedAction": "GO",
+          "seedExpected": false,
+          "seedSeenCount": 0,
+          "wouldSubmit": 6
+        },
+        "humanFirstLine": "\u2705 Block K wave-b-tor maker-b concurrent dry gate: gates green; proceeding with strict allowlist.",
+        "returnCode": 0,
+        "stdoutLog": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/logs/mm-wave-b-tor-maker-b-dry-loop.log"
+      },
+      "makerHealthySetsEqual": true,
+      "minimumSharedCoverageByContest": {
+        "41": [
+          "moneyline",
+          "spread",
+          "total"
+        ]
+      },
+      "sharedHealthyTargets": [
+        {
+          "contestId": "41",
+          "market": "moneyline"
+        },
+        {
+          "contestId": "41",
+          "market": "spread"
+        },
+        {
+          "contestId": "41",
+          "market": "total"
+        }
+      ]
+    }
+  }
+}

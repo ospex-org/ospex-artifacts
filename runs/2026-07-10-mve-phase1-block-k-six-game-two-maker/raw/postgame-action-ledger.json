@@ -1,0 +1,321 @@
+{
+  "allSuccessful": true,
+  "counts": {
+    "allowance-revoke": 4,
+    "claim": 23,
+    "score": 6,
+    "settle": 18
+  },
+  "entries": [
+    {
+      "evidenceName": "postgame-score-A1-1-receipt.json",
+      "kind": "score",
+      "success": true,
+      "txHash": "0xba963934794316fbfbcf1e0bd293c9ef785e7a59f037488897f3b5989138fcd8"
+    },
+    {
+      "evidenceName": "postgame-score-A2-1-receipt.json",
+      "kind": "score",
+      "success": true,
+      "txHash": "0x488eaedb7322c6d1feb06b2169aac77c98af3e56fa907af2f3e5dd10eeb9f66c"
+    },
+    {
+      "evidenceName": "postgame-score-A3-1-receipt.json",
+      "kind": "score",
+      "success": true,
+      "txHash": "0xcae21ca848b903481b3023f201221310df10df4fc0970d85a1cb8c8506e99f06"
+    },
+    {
+      "evidenceName": "postgame-score-B1-1-receipt.json",
+      "kind": "score",
+      "success": true,
+      "txHash": "0xbef7132fa5d8e5dd30c0a208275e9d61390c97048dd890700632e2dd970b6fa0"
+    },
+    {
+      "evidenceName": "postgame-score-B2-1-receipt.json",
+      "kind": "score",
+      "success": true,
+      "txHash": "0x2cc0323fb9e5fac91e02811dd5094eece5cf784766479930b438d66ef7be5c51"
+    },
+    {
+      "evidenceName": "postgame-score-B3-1-receipt.json",
+      "kind": "score",
+      "success": true,
+      "txHash": "0x43b4b68a8bc428df611d6abdca21ee4b37653c8e494eb597bca0114d6ba5bc55"
+    },
+    {
+      "evidenceName": "postgame-settle-102-attempt-1-1-receipt.json",
+      "kind": "settle",
+      "success": true,
+      "txHash": "0x262da77fcd8976574d987f72a7e09801bfbb7f4e32cf1912866c8bade2d8a9db"
+    },
+    {
+      "evidenceName": "postgame-settle-103-attempt-1-1-receipt.json",
+      "kind": "settle",
+      "success": true,
+      "txHash": "0x2105aaad4a1657d77d44ac7939e3151f89658051b887afb78a521f6d2fcdeab2"
+    },
+    {
+      "evidenceName": "postgame-settle-104-attempt-1-1-receipt.json",
+      "kind": "settle",
+      "success": true,
+      "txHash": "0x6f1b4fcdae83d1f52aadb2314512034a28f3d35ddfe68dc726caa78d97d627f6"
+    },
+    {
+      "evidenceName": "postgame-settle-105-attempt-1-1-receipt.json",
+      "kind": "settle",
+      "success": true,
+      "txHash": "0x2b4eebad9b351f203473456e4d28d7134bdd2d2d5a6bf219c3c83a0257b1c77e"
+    },
+    {
+      "evidenceName": "postgame-settle-106-attempt-1-1-receipt.json",
+      "kind": "settle",
+      "success": true,
+      "txHash": "0xd5144887a0a20a476339e8dd546362d55128dc388154dbe6cc05477462c2aa5e"
+    },
+    {
+      "evidenceName": "postgame-settle-107-attempt-1-1-receipt.json",
+      "kind": "settle",
+      "success": true,
+      "txHash": "0xb543fb382aef3d517306f8f1d589ee9b27a28154ea3464d89265afdbaaaa9191"
+    },
+    {
+      "evidenceName": "postgame-settle-108-attempt-1-1-receipt.json",
+      "kind": "settle",
+      "success": true,
+      "txHash": "0x51faa42c95c20845e66ee85b01ae7113dbbba77a2f21b78034d600ec19340c64"
+    },
+    {
+      "evidenceName": "postgame-settle-109-attempt-1-1-receipt.json",
+      "kind": "settle",
+      "success": true,
+      "txHash": "0xad63f65673c389220cdfe5502ed864c5a5c34e2cdf141870653b11078bb9da48"
+    },
+    {
+      "evidenceName": "postgame-settle-110-attempt-1-1-receipt.json",
+      "kind": "settle",
+      "success": true,
+      "txHash": "0xf00298d065a9d33dad8cbc67de28ee31dcaec27ed75b4e81820f667fae0541de"
+    },
+    {
+      "evidenceName": "postgame-settle-111-attempt-1-1-receipt.json",
+      "kind": "settle",
+      "success": true,
+      "txHash": "0x3ce31218ab570578203365b70fac07da54d0773f152ada78d61a432069be3dc7"
+    },
+    {
+      "evidenceName": "postgame-settle-112-attempt-1-1-receipt.json",
+      "kind": "settle",
+      "success": true,
+      "txHash": "0xdb5fc06f550372ce207a345259ae311ab1d1afa00445c8c5994b78ffdd502e7d"
+    },
+    {
+      "evidenceName": "postgame-settle-113-attempt-1-1-receipt.json",
+      "kind": "settle",
+      "success": true,
+      "txHash": "0xb0ee9a1f1f4dd4b7bb87bf70e13fead95c72788605495605b934a0ec9f8f3bdf"
+    },
+    {
+      "evidenceName": "postgame-settle-114-attempt-1-1-receipt.json",
+      "kind": "settle",
+      "success": true,
+      "txHash": "0x92b5431c321a17bcd3960c788c876c47781c0baa277562c4ae5d06d0bbe8974a"
+    },
+    {
+      "evidenceName": "postgame-settle-115-attempt-1-1-receipt.json",
+      "kind": "settle",
+      "success": true,
+      "txHash": "0x98c3e0b049303a0cbe6ecde1e09e5ef3d70ae6479619ceab1a3e1d46462d1196"
+    },
+    {
+      "evidenceName": "postgame-settle-116-attempt-1-1-receipt.json",
+      "kind": "settle",
+      "success": true,
+      "txHash": "0x7d3da5c2b3ec5298af93b3da92d9652c24426037aaad68dbe41f96b4e8c8cb38"
+    },
+    {
+      "evidenceName": "postgame-settle-117-attempt-1-1-receipt.json",
+      "kind": "settle",
+      "success": true,
+      "txHash": "0x6f2fc4d3c50476fb3830b9a39967325fc29c29bae454e7d4d1ba36d17b4fac30"
+    },
+    {
+      "evidenceName": "postgame-settle-118-attempt-1-1-receipt.json",
+      "kind": "settle",
+      "success": true,
+      "txHash": "0x3826be08263ad2f786b0e3bb110a9c3062d6ba9f2858b5a24e66e7eee9febb36"
+    },
+    {
+      "evidenceName": "postgame-settle-119-attempt-1-1-receipt.json",
+      "kind": "settle",
+      "success": true,
+      "txHash": "0xdd0646d55b74f462f1ac762275905423de8d7afb78473c82c97c0c097ebc0716"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-flow-a-103-lower-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0x481be1ba5eeae32f79fab702c5c8332ae6a9a5d40f5f2cd14391304ab265a40a"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-flow-a-105-upper-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0x2d17a28d3490adb702c63711949ba621683743a6a9a762150017c6c3567e048c"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-flow-a-106-upper-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0x174f41040e8a5d255768487b562ecadab7be94d48b02be55e4727dd5e8218ec7"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-flow-a-107-lower-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0x2d0d1474c3a54575e3e3130bc8f74d2651bc396a85da31171eb1f988c5d7eb81"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-flow-a-110-lower-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0x8a409f1a8cea795248289575717db423bd49b14765e6b14bc00e0fec4953814e"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-flow-a-111-upper-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0x56ce60059df2958096849489acc021adcc72469684519bd2af12a417e5f8d5a9"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-flow-a-112-upper-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0xa78c2260624ba5755d24c4a14979241f054031c5b46707ad08f9b5c325d3fa97"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-flow-a-113-lower-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0xe6e3ee2fa0fb30073ce41818af1670700b1ed7c49fc12534045f602456b49417"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-flow-a-114-upper-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0x101617e58bd165668bb139a57fc5bd0f4d9bda019209496a2831238c414a4ae0"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-flow-a-115-upper-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0xcee22428fc3dffb9d74c7f9ffa7ca08e9565062decfb6756b05292fc8397ea2f"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-flow-a-117-upper-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0x05ff6dfeee2ab6a6c3a9b48b3a07618913d63a7c88fe4f26a292ca3cdba4b88c"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-flow-a-118-upper-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0xe066691bc6a6d9135477ca59b0b54f9195493ff2e0a5118e055b48b2940fa2ac"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-flow-a-119-lower-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0x1f3fabad5be4d247a1df2281d66f939b6e4bee6cc731941d9af56e8ddb87d401"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-fresh-user-102-lower-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0x2d397217abcda77633eabba5d6a176b71737f106612116bdfb6038dc08a6eb76"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-fresh-user-103-lower-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0xa41a4914c891d9d83b3bd30fbd9b90602e990ae41a5c45cab7282abeb513ad24"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-fresh-user-104-upper-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0x5999dce41410b1e96e5464758a521b96e54bce05c670e3ba1a671f31641aa894"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-fresh-user-108-lower-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0xaad83cae02474b0f8b3c7fc41e6503d5da1a9e687d6809b2c6b17dcb72594d98"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-fresh-user-109-lower-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0xa9945a33ca16e882cc1b7ad5cd6f6bca45d9cdd7798f913e4b3e64b0aae77702"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-fresh-user-116-upper-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0x513444aef10476a25be3aabf11f3d51c8c8f8846f8070d0f73c47581a9885379"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-stage-maker-a-108-lower-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0x235c7b6a15b785a5ba4d4cb90b99bb4a0528c4e40e55f2c5d3f727005fe5c083"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-stage-maker-a-109-lower-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0xba567f875b49f6e00d8e604e8050ab2653626ef74b301bee7773155484033778"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-stage-maker-b-105-upper-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0x5d50ae61f33fefc6dc6645f00279a343ed235431e21241504c17d0f3517aa9b2"
+    },
+    {
+      "evidenceName": "postgame-claim-pass-1-stage-maker-b-108-lower-1-receipt.json",
+      "kind": "claim",
+      "success": true,
+      "txHash": "0x213f5daba69d2086a4b0102fc1924ada9565d2a2dbc9aad080ee489ec987bd19"
+    },
+    {
+      "evidenceName": "postgame-allowance-revoke-flow-a-positionModule.json",
+      "kind": "allowance-revoke",
+      "success": true,
+      "txHash": "0xbe12fa7cb106ee655dc947e371f0982d0ed58be5f76204fe755c6c3e0d18bdf5"
+    },
+    {
+      "evidenceName": "postgame-allowance-revoke-fresh-user-positionModule.json",
+      "kind": "allowance-revoke",
+      "success": true,
+      "txHash": "0x85010842d3ba37db1939d04d6d1a42629028b687663d1a0db37bbf621c99a181"
+    },
+    {
+      "evidenceName": "postgame-allowance-revoke-stage-maker-a-positionModule.json",
+      "kind": "allowance-revoke",
+      "success": true,
+      "txHash": "0x70051c70c6989f7edbd4e3286e2a598be04fea0316b04cbccbda4aa89991ba0a"
+    },
+    {
+      "evidenceName": "postgame-allowance-revoke-stage-maker-b-positionModule.json",
+      "kind": "allowance-revoke",
+      "success": true,
+      "txHash": "0x92492ea058f61d8af684fa33338c91814fd2f44eedfec3a6f28a99fd8941417d"
+    }
+  ],
+  "generatedAtUtc": "2026-07-11T07:15:21Z",
+  "schemaVersion": 1,
+  "scope": "Block K postgame transactions only; each entry is backed by a mined receipt or mined cast-send response",
+  "uniqueTransactionCount": 51
+}

@@ -1,0 +1,1768 @@
+{
+  "completedAtUtc": "2026-07-10T20:07:59Z",
+  "contests": [
+    {
+      "away": "Houston Astros",
+      "awayAbbr": "HOU",
+      "contestId": "38",
+      "create": {
+        "contestId": "38",
+        "skipped": null,
+        "txHashes": [
+          "0x337cd5ba9a80a3c374c0de14bc1917cf66f7fb387d5885fe0f5781d588c4e2a2"
+        ]
+      },
+      "gameId": "c9273471-9dac-4f13-83f4-6f0ea852d2d3",
+      "gamePk": 822878,
+      "home": "Texas Rangers",
+      "homeAbbr": "TEX",
+      "label": "A1",
+      "marketUpdateTxHashes": [
+        "0xb6dac68d45e737c5c84c08414140d7a5bfc782d69d8b7fc9318ed2ea4386ca42"
+      ],
+      "matchTime": "2026-07-11T00:05:00+00:00",
+      "oddsMarkets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "teams": "Houston Astros @ Texas Rangers",
+      "verified": true,
+      "wave": "A"
+    },
+    {
+      "away": "Los Angeles Angels",
+      "awayAbbr": "LAA",
+      "contestId": "39",
+      "create": {
+        "contestId": "39",
+        "skipped": null,
+        "txHashes": [
+          "0xc749bb071e56823866d4eea0f09a1e0ceba7b90356ddd8a2199cb2d8b6b19043"
+        ]
+      },
+      "gameId": "2027e9a2-a3a6-446b-9527-88a1842d9549",
+      "gamePk": 823685,
+      "home": "Minnesota Twins",
+      "homeAbbr": "MIN",
+      "label": "A2",
+      "marketUpdateTxHashes": [
+        "0xfe295f5bd197a6fbf1319c1e8a582c405c16ace9078fdecddbe86d97be8974f4"
+      ],
+      "matchTime": "2026-07-11T00:10:00+00:00",
+      "oddsMarkets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "teams": "Los Angeles Angels @ Minnesota Twins",
+      "verified": true,
+      "wave": "A"
+    },
+    {
+      "away": "Atlanta Braves",
+      "awayAbbr": "ATL",
+      "contestId": "40",
+      "create": {
+        "contestId": "40",
+        "skipped": null,
+        "txHashes": [
+          "0x8c2f2aee23bfc458935d8b975e08104dda968865df77f050f715ae518cd2f454"
+        ]
+      },
+      "gameId": "de4b8e68-47f7-44f6-960a-da9ac886c147",
+      "gamePk": 823033,
+      "home": "St. Louis Cardinals",
+      "homeAbbr": "STL",
+      "label": "A3",
+      "marketUpdateTxHashes": [
+        "0x5b4a589aecefa5a772738ab9efd5c90bd1193949a17614224047866874195410"
+      ],
+      "matchTime": "2026-07-11T00:15:00+00:00",
+      "oddsMarkets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "teams": "Atlanta Braves @ St. Louis Cardinals",
+      "verified": true,
+      "wave": "A"
+    },
+    {
+      "away": "Toronto Blue Jays",
+      "awayAbbr": "TOR",
+      "contestId": "41",
+      "create": {
+        "contestId": "41",
+        "skipped": null,
+        "txHashes": [
+          "0xbdf9bb8956659e4c10a0cbd4f10d066fcfbd4332f066d94f86dc231bce38e26b"
+        ]
+      },
+      "gameId": "9874dec0-d553-410e-a87b-b6534d7dbcb4",
+      "gamePk": 823278,
+      "home": "San Diego Padres",
+      "homeAbbr": "SD",
+      "label": "B1",
+      "marketUpdateTxHashes": [
+        "0x60d9f91567af46c14f28a84251955361d552375d2d5fab429c549bc4b52a3259"
+      ],
+      "matchTime": "2026-07-11T01:40:00+00:00",
+      "oddsMarkets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "teams": "Toronto Blue Jays @ San Diego Padres",
+      "verified": true,
+      "wave": "B"
+    },
+    {
+      "away": "Arizona Diamondbacks",
+      "awayAbbr": "ARI",
+      "contestId": "42",
+      "create": {
+        "contestId": "42",
+        "skipped": null,
+        "txHashes": [
+          "0x1d7872019cef7c0da0f80238f6cc4ea299a6d157d5decc6318f78f9599f8fd1c"
+        ]
+      },
+      "gameId": "9eec2102-066d-40f7-8861-dcc175c6bfb8",
+      "gamePk": 823927,
+      "home": "Los Angeles Dodgers",
+      "homeAbbr": "LAD",
+      "label": "B2",
+      "marketUpdateTxHashes": [
+        "0x8300e3fadb2e17291aba52010acb22acb0777fb857787f03c9449159604422f0"
+      ],
+      "matchTime": "2026-07-11T02:10:00+00:00",
+      "oddsMarkets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "teams": "Arizona Diamondbacks @ Los Angeles Dodgers",
+      "verified": true,
+      "wave": "B"
+    },
+    {
+      "away": "Colorado Rockies",
+      "awayAbbr": "COL",
+      "contestId": "43",
+      "create": {
+        "contestId": "43",
+        "skipped": null,
+        "txHashes": [
+          "0x9677ea190c74600229f9cbe13956cd80573629a884e9cde1b8194d969ccee2fa"
+        ]
+      },
+      "gameId": "708d74c1-4b68-4893-a8ea-2b2ae75e7007",
+      "gamePk": 823200,
+      "home": "San Francisco Giants",
+      "homeAbbr": "SF",
+      "label": "B3",
+      "marketUpdateTxHashes": [
+        "0x4cad34baeeb4fad1af9b6be1cf4dd7ff5c97ce87eec17b8468ebfbaae779e163"
+      ],
+      "matchTime": "2026-07-11T02:15:00+00:00",
+      "oddsMarkets": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "teams": "Colorado Rockies @ San Francisco Giants",
+      "verified": true,
+      "wave": "B"
+    }
+  ],
+  "costs": {
+    "approvalGasPOLAttempt1Actual": "0.145591912563107911",
+    "approvalGasPOLRemediationActual": "0.128641730314805858",
+    "briefPlannedEconomicScopeUSDC": "39.0",
+    "contestCreationFeesUSDC": "6.0",
+    "hardCeilingUSDC": "40.0",
+    "plannedMakerExposureCapsUSDC": "20.0",
+    "plannedModelTakerRiskMaxUSDC": "4.0",
+    "protocolCreationFeesUSDC": "15.0",
+    "scopeIncludingActualSetupMicroCollateralUSDC": "39.035670",
+    "setupGasPOLActual": "4.081460759611167610",
+    "setupMicroCollateralUSDC": "0.035670",
+    "speculationCreationFeesUSDC": "9.0",
+    "withinHardCeiling": true
+  },
+  "manualSeedFillCount": 18,
+  "manualSeedFills": [
+    {
+      "commitmentHash": "0x9d20bef0f16b79f6f8c40c5f346dd9f87f941bc0813746cf69e1c208f4b8d4f3",
+      "contestId": "38",
+      "label": "A1",
+      "lineSemantics": {
+        "line": null,
+        "makerOddsAmerican": "+123",
+        "makerSide": "Texas Rangers",
+        "market": "moneyline"
+      },
+      "makerRiskUSDC": "0.001000",
+      "market": "moneyline",
+      "matchTxHashes": [
+        "0x8565beb9fb47eb99fba2bd1ab6cb39f486b589ed2047156f470f17ee08e5c848"
+      ],
+      "seedMaker": "fresh-user",
+      "seedTaker": "flow-a",
+      "selfMatch": false,
+      "speculationId": null,
+      "takerRiskUSDC": "0.001230",
+      "wave": "A"
+    },
+    {
+      "commitmentHash": "0xdccc6cbf492d2d08d1c5247cece177a82f0830adb6a14d9844fc392abd545bc6",
+      "contestId": "38",
+      "label": "A1",
+      "lineSemantics": {
+        "line": "1.5",
+        "makerOddsAmerican": "-140",
+        "makerSide": "Texas Rangers",
+        "market": "spread"
+      },
+      "makerRiskUSDC": "0.001000",
+      "market": "spread",
+      "matchTxHashes": [
+        "0xd7d3b64d7eb1200ea5b04b943878e05441fdbdd192d9ce0e1742b71d28bc3742"
+      ],
+      "seedMaker": "fresh-user",
+      "seedTaker": "flow-a",
+      "selfMatch": false,
+      "speculationId": null,
+      "takerRiskUSDC": "0.000710",
+      "wave": "A"
+    },
+    {
+      "commitmentHash": "0x4a62493c3f7927c7b938e2bf1c1fa4e57ffffe5f9daf636fbf786efa35035d9c",
+      "contestId": "38",
+      "label": "A1",
+      "lineSemantics": {
+        "line": "8.5",
+        "makerOddsAmerican": "-105",
+        "makerSide": "over",
+        "market": "total"
+      },
+      "makerRiskUSDC": "0.001000",
+      "market": "total",
+      "matchTxHashes": [
+        "0xea5b224824cec24597a041ff0e7e1f177d94f6eca5ed9418eb1b6a58258276e6"
+      ],
+      "seedMaker": "fresh-user",
+      "seedTaker": "flow-a",
+      "selfMatch": false,
+      "speculationId": null,
+      "takerRiskUSDC": "0.000950",
+      "wave": "A"
+    },
+    {
+      "commitmentHash": "0xb973a8b85e576e606640fb8aeb605aaf66b7efcbd83d4361f0b4770e1202f759",
+      "contestId": "39",
+      "label": "A2",
+      "lineSemantics": {
+        "line": null,
+        "makerOddsAmerican": "-144",
+        "makerSide": "Minnesota Twins",
+        "market": "moneyline"
+      },
+      "makerRiskUSDC": "0.001000",
+      "market": "moneyline",
+      "matchTxHashes": [
+        "0xa93c2a85e65bbc882ed13c193e6f3d45acf6884e14d51beeb7736934174435ec"
+      ],
+      "seedMaker": "fresh-user",
+      "seedTaker": "flow-a",
+      "selfMatch": false,
+      "speculationId": null,
+      "takerRiskUSDC": "0.000690",
+      "wave": "A"
+    },
+    {
+      "commitmentHash": "0x6c75c7a64c3b41cb06b33ab4ecb7b6645dc7342e9b0bfcc4d2cd5a05635cb48e",
+      "contestId": "39",
+      "label": "A2",
+      "lineSemantics": {
+        "line": "-1.5",
+        "makerOddsAmerican": "+140",
+        "makerSide": "Minnesota Twins",
+        "market": "spread"
+      },
+      "makerRiskUSDC": "0.001000",
+      "market": "spread",
+      "matchTxHashes": [
+        "0x30f0174831f57c221a2223f8dbd04cf69e276065cdd598b056343650faeebf27"
+      ],
+      "seedMaker": "fresh-user",
+      "seedTaker": "flow-a",
+      "selfMatch": false,
+      "speculationId": null,
+      "takerRiskUSDC": "0.001400",
+      "wave": "A"
+    },
+    {
+      "commitmentHash": "0x9a7ffcc421c6bfefb677d5b60f32c3bcdbde62b133e8b46da88e57ab6418918d",
+      "contestId": "39",
+      "label": "A2",
+      "lineSemantics": {
+        "line": "9.5",
+        "makerOddsAmerican": "-105",
+        "makerSide": "over",
+        "market": "total"
+      },
+      "makerRiskUSDC": "0.001000",
+      "market": "total",
+      "matchTxHashes": [
+        "0x851bd8aff812ee325d0d5defaa84297ef09a1b9a7f12aa16b35c76d7e9f37f5b"
+      ],
+      "seedMaker": "fresh-user",
+      "seedTaker": "flow-a",
+      "selfMatch": false,
+      "speculationId": null,
+      "takerRiskUSDC": "0.000950",
+      "wave": "A"
+    },
+    {
+      "commitmentHash": "0xa8c0b93cf60de354327168dca5867ade7b8256f9788de7f4f6e36085e10ac75f",
+      "contestId": "40",
+      "label": "A3",
+      "lineSemantics": {
+        "line": null,
+        "makerOddsAmerican": "+141",
+        "makerSide": "St. Louis Cardinals",
+        "market": "moneyline"
+      },
+      "makerRiskUSDC": "0.001000",
+      "market": "moneyline",
+      "matchTxHashes": [
+        "0xc46e74b68bd82f815a59a1af2e8f0869477188fc44123b5eebca7a364a26ba45"
+      ],
+      "seedMaker": "fresh-user",
+      "seedTaker": "flow-a",
+      "selfMatch": false,
+      "speculationId": null,
+      "takerRiskUSDC": "0.001410",
+      "wave": "A"
+    },
+    {
+      "commitmentHash": "0xd314643ff2978995141c5ea4295ec3e3d08039b9fcdbe0254ef9614645711e8b",
+      "contestId": "40",
+      "label": "A3",
+      "lineSemantics": {
+        "line": "1.5",
+        "makerOddsAmerican": "-125",
+        "makerSide": "St. Louis Cardinals",
+        "market": "spread"
+      },
+      "makerRiskUSDC": "0.001000",
+      "market": "spread",
+      "matchTxHashes": [
+        "0xfe05cde7c0453644129111e6b5947b84fd75728edd8254bb18ca73e11088af01"
+      ],
+      "seedMaker": "fresh-user",
+      "seedTaker": "flow-a",
+      "selfMatch": false,
+      "speculationId": null,
+      "takerRiskUSDC": "0.000800",
+      "wave": "A"
+    },
+    {
+      "commitmentHash": "0x21165b88d10e23120335388ac9202dde751a105f468ac9b45aaef4d89cded8cb",
+      "contestId": "40",
+      "label": "A3",
+      "lineSemantics": {
+        "line": "8",
+        "makerOddsAmerican": "-110",
+        "makerSide": "over",
+        "market": "total"
+      },
+      "makerRiskUSDC": "0.001000",
+      "market": "total",
+      "matchTxHashes": [
+        "0xd66505330dae12cadb463d27a67276ff19361b18de921700d63073530aed8916"
+      ],
+      "seedMaker": "fresh-user",
+      "seedTaker": "flow-a",
+      "selfMatch": false,
+      "speculationId": null,
+      "takerRiskUSDC": "0.000910",
+      "wave": "A"
+    },
+    {
+      "commitmentHash": "0x6c22f6d42b5d82be3ba3c249c73941d10c405cde8e59579919167b34cb46c9a0",
+      "contestId": "41",
+      "label": "B1",
+      "lineSemantics": {
+        "line": null,
+        "makerOddsAmerican": "-120",
+        "makerSide": "San Diego Padres",
+        "market": "moneyline"
+      },
+      "makerRiskUSDC": "0.001000",
+      "market": "moneyline",
+      "matchTxHashes": [
+        "0x4def41bc6126abe77203eed99dfdc815e50dc299cafdaa84d768bde65e02d1c7"
+      ],
+      "seedMaker": "fresh-user",
+      "seedTaker": "flow-a",
+      "selfMatch": false,
+      "speculationId": null,
+      "takerRiskUSDC": "0.000830",
+      "wave": "B"
+    },
+    {
+      "commitmentHash": "0x3b74426dac62e9f1336dc0c525f26e355a2bc07cef16a40480cd67a89e7260e7",
+      "contestId": "41",
+      "label": "B1",
+      "lineSemantics": {
+        "line": "-1.5",
+        "makerOddsAmerican": "+170",
+        "makerSide": "San Diego Padres",
+        "market": "spread"
+      },
+      "makerRiskUSDC": "0.001000",
+      "market": "spread",
+      "matchTxHashes": [
+        "0x8f51e6149854a8e5319853364c84f7aa5d2f9523830c417a1bcab72c485ed66a"
+      ],
+      "seedMaker": "fresh-user",
+      "seedTaker": "flow-a",
+      "selfMatch": false,
+      "speculationId": null,
+      "takerRiskUSDC": "0.001700",
+      "wave": "B"
+    },
+    {
+      "commitmentHash": "0xcc6c6bad81828c2c680f17023ee06c88ee28d59213183957d7de566f9bcade69",
+      "contestId": "41",
+      "label": "B1",
+      "lineSemantics": {
+        "line": "8.5",
+        "makerOddsAmerican": "-110",
+        "makerSide": "over",
+        "market": "total"
+      },
+      "makerRiskUSDC": "0.001000",
+      "market": "total",
+      "matchTxHashes": [
+        "0xd410a32963c9f3115a27abcfab69af07e2ae8e984c18f570a92e4cded4ac1e0a"
+      ],
+      "seedMaker": "fresh-user",
+      "seedTaker": "flow-a",
+      "selfMatch": false,
+      "speculationId": null,
+      "takerRiskUSDC": "0.000910",
+      "wave": "B"
+    },
+    {
+      "commitmentHash": "0xb243c384747b5be2a0ad7331a96ad761a2f12d5e6cb6838ce122600533e45a84",
+      "contestId": "42",
+      "label": "B2",
+      "lineSemantics": {
+        "line": null,
+        "makerOddsAmerican": "-260",
+        "makerSide": "Los Angeles Dodgers",
+        "market": "moneyline"
+      },
+      "makerRiskUSDC": "0.001000",
+      "market": "moneyline",
+      "matchTxHashes": [
+        "0xe5bdd99f2ec4bede0c858f7cd4579b80bd13d1084d9d05015be4e7ba872755df"
+      ],
+      "seedMaker": "fresh-user",
+      "seedTaker": "flow-a",
+      "selfMatch": false,
+      "speculationId": null,
+      "takerRiskUSDC": "0.000380",
+      "wave": "B"
+    },
+    {
+      "commitmentHash": "0xea7ed76bef95aac0939f44cdd22e499bf5d9cb2873816717d97c750fd7e3ae46",
+      "contestId": "42",
+      "label": "B2",
+      "lineSemantics": {
+        "line": "-1.5",
+        "makerOddsAmerican": "-123",
+        "makerSide": "Los Angeles Dodgers",
+        "market": "spread"
+      },
+      "makerRiskUSDC": "0.001000",
+      "market": "spread",
+      "matchTxHashes": [
+        "0x3ba2d7e67a20993d0e026261cb7bef0987a59e8e3600f8933c66b8770ea59ba6"
+      ],
+      "seedMaker": "fresh-user",
+      "seedTaker": "flow-a",
+      "selfMatch": false,
+      "speculationId": null,
+      "takerRiskUSDC": "0.000810",
+      "wave": "B"
+    },
+    {
+      "commitmentHash": "0x378cbf3ddf164be24a452767b2e2a13a85d1e1ea4be311ab766f0fe68889078e",
+      "contestId": "42",
+      "label": "B2",
+      "lineSemantics": {
+        "line": "8.5",
+        "makerOddsAmerican": "-110",
+        "makerSide": "over",
+        "market": "total"
+      },
+      "makerRiskUSDC": "0.001000",
+      "market": "total",
+      "matchTxHashes": [
+        "0xacddb3277f497e8c1179e40f27ed3ce1fb75b2438bcafa65172217c4a25bfef2"
+      ],
+      "seedMaker": "fresh-user",
+      "seedTaker": "flow-a",
+      "selfMatch": false,
+      "speculationId": null,
+      "takerRiskUSDC": "0.000910",
+      "wave": "B"
+    },
+    {
+      "commitmentHash": "0xb829dfa0160a74f186f144a8899f523e09bc8c62a4a15edca019159c60fc1482",
+      "contestId": "43",
+      "label": "B3",
+      "lineSemantics": {
+        "line": null,
+        "makerOddsAmerican": "-148",
+        "makerSide": "San Francisco Giants",
+        "market": "moneyline"
+      },
+      "makerRiskUSDC": "0.001000",
+      "market": "moneyline",
+      "matchTxHashes": [
+        "0x5adcdec8b8e14f25c156f79a368e68f6805d30c498c73d83d336e6b6b02390f6"
+      ],
+      "seedMaker": "fresh-user",
+      "seedTaker": "flow-a",
+      "selfMatch": false,
+      "speculationId": null,
+      "takerRiskUSDC": "0.000680",
+      "wave": "B"
+    },
+    {
+      "commitmentHash": "0x5ab5b5afe83e1566d71b9139c060d20d3ad80600dcc7256e16162b360df5098b",
+      "contestId": "43",
+      "label": "B3",
+      "lineSemantics": {
+        "line": "-1.5",
+        "makerOddsAmerican": "+140",
+        "makerSide": "San Francisco Giants",
+        "market": "spread"
+      },
+      "makerRiskUSDC": "0.001000",
+      "market": "spread",
+      "matchTxHashes": [
+        "0xc156721032988a8bb4bc5db0e168657ceb9efacc4d75c5f1af7234e14e331f0a"
+      ],
+      "seedMaker": "fresh-user",
+      "seedTaker": "flow-a",
+      "selfMatch": false,
+      "speculationId": null,
+      "takerRiskUSDC": "0.001400",
+      "wave": "B"
+    },
+    {
+      "commitmentHash": "0x04392c83d69bcafbcc0bbf4144b26faa50a2bd8c340a699bb2147c3bdd49138d",
+      "contestId": "43",
+      "label": "B3",
+      "lineSemantics": {
+        "line": "8.5",
+        "makerOddsAmerican": "-100",
+        "makerSide": "over",
+        "market": "total"
+      },
+      "makerRiskUSDC": "0.001000",
+      "market": "total",
+      "matchTxHashes": [
+        "0x58c006d8ab0a781cfc22009c7f4729afdf0f0ea02b2df7a1a5092179dfeb8efe"
+      ],
+      "seedMaker": "fresh-user",
+      "seedTaker": "flow-a",
+      "selfMatch": false,
+      "speculationId": null,
+      "takerRiskUSDC": "0.001000",
+      "wave": "B"
+    }
+  ],
+  "manualSeedOpenCommitmentsZero": true,
+  "ok": true,
+  "receiptCount": 30,
+  "receiptFilesUnder": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/raw",
+  "runDir": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker",
+  "setupSeedExposure": {
+    "controlledCohortNetExternalExposureUSDC": "0",
+    "latentOpenCommitmentRiskUSDC": "0",
+    "makerCollateralUSDC": "0.018000",
+    "note": "Distinct fresh-user/flow-a wallets hold opposite sides; no setup commitment remains matchable. Per-wallet active positions remain and are tracked for postgame.",
+    "takerCollateralUSDC": "0.017670",
+    "totalLockedMicroCollateralUSDC": "0.035670"
+  },
+  "speculations": {
+    "A1": {
+      "moneyline": {
+        "lineTicks": 0,
+        "market": "moneyline",
+        "scorer": null,
+        "speculationId": "102",
+        "status": null
+      },
+      "spread": {
+        "lineTicks": -15,
+        "market": "spread",
+        "scorer": null,
+        "speculationId": "103",
+        "status": null
+      },
+      "total": {
+        "lineTicks": 85,
+        "market": "total",
+        "scorer": null,
+        "speculationId": "104",
+        "status": null
+      }
+    },
+    "A2": {
+      "moneyline": {
+        "lineTicks": 0,
+        "market": "moneyline",
+        "scorer": null,
+        "speculationId": "105",
+        "status": null
+      },
+      "spread": {
+        "lineTicks": 15,
+        "market": "spread",
+        "scorer": null,
+        "speculationId": "106",
+        "status": null
+      },
+      "total": {
+        "lineTicks": 95,
+        "market": "total",
+        "scorer": null,
+        "speculationId": "107",
+        "status": null
+      }
+    },
+    "A3": {
+      "moneyline": {
+        "lineTicks": 0,
+        "market": "moneyline",
+        "scorer": null,
+        "speculationId": "108",
+        "status": null
+      },
+      "spread": {
+        "lineTicks": -15,
+        "market": "spread",
+        "scorer": null,
+        "speculationId": "109",
+        "status": null
+      },
+      "total": {
+        "lineTicks": 80,
+        "market": "total",
+        "scorer": null,
+        "speculationId": "110",
+        "status": null
+      }
+    },
+    "B1": {
+      "moneyline": {
+        "lineTicks": 0,
+        "market": "moneyline",
+        "scorer": null,
+        "speculationId": "111",
+        "status": null
+      },
+      "spread": {
+        "lineTicks": 15,
+        "market": "spread",
+        "scorer": null,
+        "speculationId": "112",
+        "status": null
+      },
+      "total": {
+        "lineTicks": 85,
+        "market": "total",
+        "scorer": null,
+        "speculationId": "113",
+        "status": null
+      }
+    },
+    "B2": {
+      "moneyline": {
+        "lineTicks": 0,
+        "market": "moneyline",
+        "scorer": null,
+        "speculationId": "114",
+        "status": null
+      },
+      "spread": {
+        "lineTicks": 15,
+        "market": "spread",
+        "scorer": null,
+        "speculationId": "115",
+        "status": null
+      },
+      "total": {
+        "lineTicks": 85,
+        "market": "total",
+        "scorer": null,
+        "speculationId": "116",
+        "status": null
+      }
+    },
+    "B3": {
+      "moneyline": {
+        "lineTicks": 0,
+        "market": "moneyline",
+        "scorer": null,
+        "speculationId": "117",
+        "status": null
+      },
+      "spread": {
+        "lineTicks": 15,
+        "market": "spread",
+        "scorer": null,
+        "speculationId": "118",
+        "status": null
+      },
+      "total": {
+        "lineTicks": 85,
+        "market": "total",
+        "scorer": null,
+        "speculationId": "119",
+        "status": null
+      }
+    }
+  },
+  "walletsAfter": {
+    "flow-a": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "allowances": {
+        "positionModule": {
+          "formatted": "1.08233",
+          "isMax": false,
+          "raw": "1082330",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "treasuryModule": {
+          "formatted": "0",
+          "isMax": false,
+          "raw": "0",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      },
+      "balances": {
+        "native": {
+          "decimals": 18,
+          "formatted": "35.589999",
+          "raw": "35589999296216036870",
+          "symbol": "POL"
+        },
+        "usdc": {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "decimals": 6,
+          "formatted": "291.98041",
+          "raw": "291980410"
+        }
+      },
+      "doctorReturnCode": 1,
+      "positions": {
+        "active": [
+          {
+            "awayTeam": "Colorado Rockies",
+            "contestId": "43",
+            "counterpartyRiskWei6": "1000",
+            "homeTeam": "San Francisco Giants",
+            "market": "total",
+            "oddsDecimal": 2,
+            "opponent": "Colorado Rockies",
+            "positionId": "119_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+            "positionType": 1,
+            "profitAmountUSDC": 0.001,
+            "riskAmountUSDC": 0.001,
+            "riskAmountWei6": "1000",
+            "speculationId": "119",
+            "sport": "mlb",
+            "team": "San Francisco Giants",
+            "updatedAtUnixSec": 1783714057
+          },
+          {
+            "awayTeam": "Colorado Rockies",
+            "contestId": "43",
+            "counterpartyRiskWei6": "1000",
+            "homeTeam": "San Francisco Giants",
+            "market": "spread",
+            "oddsDecimal": 1.7142857142857144,
+            "opponent": "San Francisco Giants",
+            "positionId": "118_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+            "positionType": 0,
+            "profitAmountUSDC": 0.001,
+            "riskAmountUSDC": 0.0014,
+            "riskAmountWei6": "1400",
+            "speculationId": "118",
+            "sport": "mlb",
+            "team": "Colorado Rockies",
+            "updatedAtUnixSec": 1783714042
+          },
+          {
+            "awayTeam": "Colorado Rockies",
+            "contestId": "43",
+            "counterpartyRiskWei6": "1000",
+            "homeTeam": "San Francisco Giants",
+            "market": "moneyline",
+            "oddsDecimal": 2.4705882352941178,
+            "opponent": "San Francisco Giants",
+            "positionId": "117_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+            "positionType": 0,
+            "profitAmountUSDC": 0.001,
+            "riskAmountUSDC": 0.00068,
+            "riskAmountWei6": "680",
+            "speculationId": "117",
+            "sport": "mlb",
+            "team": "Colorado Rockies",
+            "updatedAtUnixSec": 1783714026
+          },
+          {
+            "awayTeam": "Arizona Diamondbacks",
+            "contestId": "42",
+            "counterpartyRiskWei6": "1000",
+            "homeTeam": "Los Angeles Dodgers",
+            "market": "total",
+            "oddsDecimal": 2.098901098901099,
+            "opponent": "Arizona Diamondbacks",
+            "positionId": "116_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+            "positionType": 1,
+            "profitAmountUSDC": 0.001,
+            "riskAmountUSDC": 0.00091,
+            "riskAmountWei6": "910",
+            "speculationId": "116",
+            "sport": "mlb",
+            "team": "Los Angeles Dodgers",
+            "updatedAtUnixSec": 1783714010
+          },
+          {
+            "awayTeam": "Arizona Diamondbacks",
+            "contestId": "42",
+            "counterpartyRiskWei6": "1000",
+            "homeTeam": "Los Angeles Dodgers",
+            "market": "spread",
+            "oddsDecimal": 2.234567901234568,
+            "opponent": "Los Angeles Dodgers",
+            "positionId": "115_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+            "positionType": 0,
+            "profitAmountUSDC": 0.001,
+            "riskAmountUSDC": 0.00081,
+            "riskAmountWei6": "810",
+            "speculationId": "115",
+            "sport": "mlb",
+            "team": "Arizona Diamondbacks",
+            "updatedAtUnixSec": 1783713995
+          },
+          {
+            "awayTeam": "Arizona Diamondbacks",
+            "contestId": "42",
+            "counterpartyRiskWei6": "1000",
+            "homeTeam": "Los Angeles Dodgers",
+            "market": "moneyline",
+            "oddsDecimal": 3.6315789473684212,
+            "opponent": "Los Angeles Dodgers",
+            "positionId": "114_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+            "positionType": 0,
+            "profitAmountUSDC": 0.001,
+            "riskAmountUSDC": 0.00038,
+            "riskAmountWei6": "380",
+            "speculationId": "114",
+            "sport": "mlb",
+            "team": "Arizona Diamondbacks",
+            "updatedAtUnixSec": 1783713994
+          },
+          {
+            "awayTeam": "Toronto Blue Jays",
+            "contestId": "41",
+            "counterpartyRiskWei6": "1000",
+            "homeTeam": "San Diego Padres",
+            "market": "total",
+            "oddsDecimal": 2.098901098901099,
+            "opponent": "Toronto Blue Jays",
+            "positionId": "113_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+            "positionType": 1,
+            "profitAmountUSDC": 0.001,
+            "riskAmountUSDC": 0.00091,
+            "riskAmountWei6": "910",
+            "speculationId": "113",
+            "sport": "mlb",
+            "team": "San Diego Padres",
+            "updatedAtUnixSec": 1783713964
+          },
+          {
+            "awayTeam": "Toronto Blue Jays",
+            "contestId": "41",
+            "counterpartyRiskWei6": "1000",
+            "homeTeam": "San Diego Padres",
+            "market": "spread",
+            "oddsDecimal": 1.5882352941176472,
+            "opponent": "San Diego Padres",
+            "positionId": "112_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+            "positionType": 0,
+            "profitAmountUSDC": 0.001,
+            "riskAmountUSDC": 0.0017,
+            "riskAmountWei6": "1700",
+            "speculationId": "112",
+            "sport": "mlb",
+            "team": "Toronto Blue Jays",
+            "updatedAtUnixSec": 1783713963
+          },
+          {
+            "awayTeam": "Toronto Blue Jays",
+            "contestId": "41",
+            "counterpartyRiskWei6": "1000",
+            "homeTeam": "San Diego Padres",
+            "market": "moneyline",
+            "oddsDecimal": 2.2048192771084336,
+            "opponent": "San Diego Padres",
+            "positionId": "111_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+            "positionType": 0,
+            "profitAmountUSDC": 0.001,
+            "riskAmountUSDC": 0.00083,
+            "riskAmountWei6": "830",
+            "speculationId": "111",
+            "sport": "mlb",
+            "team": "Toronto Blue Jays",
+            "updatedAtUnixSec": 1783713948
+          },
+          {
+            "awayTeam": "Atlanta Braves",
+            "contestId": "40",
+            "counterpartyRiskWei6": "1000",
+            "homeTeam": "St. Louis Cardinals",
+            "market": "total",
+            "oddsDecimal": 2.098901098901099,
+            "opponent": "Atlanta Braves",
+            "positionId": "110_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+            "positionType": 1,
+            "profitAmountUSDC": 0.001,
+            "riskAmountUSDC": 0.00091,
+            "riskAmountWei6": "910",
+            "speculationId": "110",
+            "sport": "mlb",
+            "team": "St. Louis Cardinals",
+            "updatedAtUnixSec": 1783713933
+          },
+          {
+            "awayTeam": "Atlanta Braves",
+            "contestId": "40",
+            "counterpartyRiskWei6": "1000",
+            "homeTeam": "St. Louis Cardinals",
+            "market": "spread",
+            "oddsDecimal": 2.25,
+            "opponent": "St. Louis Cardinals",
+            "positionId": "109_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+            "positionType": 0,
+            "profitAmountUSDC": 0.001,
+            "riskAmountUSDC": 0.0008,
+            "riskAmountWei6": "800",
+            "speculationId": "109",
+            "sport": "mlb",
+            "team": "Atlanta Braves",
+            "updatedAtUnixSec": 1783713917
+          },
+          {
+            "awayTeam": "Atlanta Braves",
+            "contestId": "40",
+            "counterpartyRiskWei6": "1000",
+            "homeTeam": "St. Louis Cardinals",
+            "market": "moneyline",
+            "oddsDecimal": 1.7092198581560285,
+            "opponent": "St. Louis Cardinals",
+            "positionId": "108_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+            "positionType": 0,
+            "profitAmountUSDC": 0.001,
+            "riskAmountUSDC": 0.00141,
+            "riskAmountWei6": "1410",
+            "speculationId": "108",
+            "sport": "mlb",
+            "team": "Atlanta Braves",
+            "updatedAtUnixSec": 1783713902
+          },
+          {
+            "awayTeam": "Los Angeles Angels",
+            "contestId": "39",
+            "counterpartyRiskWei6": "1000",
+            "homeTeam": "Minnesota Twins",
+            "market": "total",
+            "oddsDecimal": 2.052631578947368,
+            "opponent": "Los Angeles Angels",
+            "positionId": "107_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+            "positionType": 1,
+            "profitAmountUSDC": 0.001,
+            "riskAmountUSDC": 0.00095,
+            "riskAmountWei6": "950",
+            "speculationId": "107",
+            "sport": "mlb",
+            "team": "Minnesota Twins",
+            "updatedAtUnixSec": 1783713886
+          },
+          {
+            "awayTeam": "Los Angeles Angels",
+            "contestId": "39",
+            "counterpartyRiskWei6": "1000",
+            "homeTeam": "Minnesota Twins",
+            "market": "spread",
+            "oddsDecimal": 1.7142857142857144,
+            "opponent": "Minnesota Twins",
+            "positionId": "106_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+            "positionType": 0,
+            "profitAmountUSDC": 0.001,
+            "riskAmountUSDC": 0.0014,
+            "riskAmountWei6": "1400",
+            "speculationId": "106",
+            "sport": "mlb",
+            "team": "Los Angeles Angels",
+            "updatedAtUnixSec": 1783713886
+          },
+          {
+            "awayTeam": "Los Angeles Angels",
+            "contestId": "39",
+            "counterpartyRiskWei6": "1000",
+            "homeTeam": "Minnesota Twins",
+            "market": "moneyline",
+            "oddsDecimal": 2.449275362318841,
+            "opponent": "Minnesota Twins",
+            "positionId": "105_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+            "positionType": 0,
+            "profitAmountUSDC": 0.001,
+            "riskAmountUSDC": 0.00069,
+            "riskAmountWei6": "690",
+            "speculationId": "105",
+            "sport": "mlb",
+            "team": "Los Angeles Angels",
+            "updatedAtUnixSec": 1783713870
+          },
+          {
+            "awayTeam": "Houston Astros",
+            "contestId": "38",
+            "counterpartyRiskWei6": "1000",
+            "homeTeam": "Texas Rangers",
+            "market": "total",
+            "oddsDecimal": 2.052631578947368,
+            "opponent": "Houston Astros",
+            "positionId": "104_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_1",
+            "positionType": 1,
+            "profitAmountUSDC": 0.001,
+            "riskAmountUSDC": 0.00095,
+            "riskAmountWei6": "950",
+            "speculationId": "104",
+            "sport": "mlb",
+            "team": "Texas Rangers",
+            "updatedAtUnixSec": 1783713855
+          },
+          {
+            "awayTeam": "Houston Astros",
+            "contestId": "38",
+            "counterpartyRiskWei6": "1000",
+            "homeTeam": "Texas Rangers",
+            "market": "spread",
+            "oddsDecimal": 2.408450704225352,
+            "opponent": "Texas Rangers",
+            "positionId": "103_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+            "positionType": 0,
+            "profitAmountUSDC": 0.001,
+            "riskAmountUSDC": 0.00071,
+            "riskAmountWei6": "710",
+            "speculationId": "103",
+            "sport": "mlb",
+            "team": "Houston Astros",
+            "updatedAtUnixSec": 1783713854
+          },
+          {
+            "awayTeam": "Houston Astros",
+            "contestId": "38",
+            "counterpartyRiskWei6": "1000",
+            "homeTeam": "Texas Rangers",
+            "market": "moneyline",
+            "oddsDecimal": 1.8130081300813008,
+            "opponent": "Texas Rangers",
+            "positionId": "102_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+            "positionType": 0,
+            "profitAmountUSDC": 0.001,
+            "riskAmountUSDC": 0.00123,
+            "riskAmountWei6": "1230",
+            "speculationId": "102",
+            "sport": "mlb",
+            "team": "Houston Astros",
+            "updatedAtUnixSec": 1783713839
+          }
+        ],
+        "claimable": [],
+        "pendingSettle": [],
+        "totals": {
+          "activeCount": 18,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettleCount": 0,
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      }
+    },
+    "fresh-user": {
+      "address": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+      "allowances": {
+        "positionModule": {
+          "formatted": "1.082",
+          "isMax": false,
+          "raw": "1082000",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "treasuryModule": {
+          "formatted": "0",
+          "isMax": false,
+          "raw": "0",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      },
+      "balances": {
+        "native": {
+          "decimals": 18,
+          "formatted": "14.662183",
+          "raw": "14662183356849360508",
+          "symbol": "POL"
+        },
+        "usdc": {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "decimals": 6,
+          "formatted": "73.754701",
+          "raw": "73754701"
+        }
+      },
+      "doctorReturnCode": 1,
+      "positions": {
+        "active": [
+          {
+            "awayTeam": "Colorado Rockies",
+            "contestId": "43",
+            "counterpartyRiskWei6": "1000",
+            "homeTeam": "San Francisco Giants",
+            "market": "total",
+            "oddsDecimal": 2,
+            "opponent": "San Francisco Giants",
+            "positionId": "119_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_0",
+            "positionType": 0,
+            "profitAmountUSDC": 0.001,
+            "riskAmountUSDC": 0.001,
+            "riskAmountWei6": "1000",
+            "speculationId": "119",
+            "sport": "mlb",
+            "team": "Colorado Rockies",
+            "updatedAtUnixSec": 1783714057
+          },
+          {
+            "awayTeam": "Colorado Rockies",
+            "contestId": "43",
+            "counterpartyRiskWei6": "1400",
+            "homeTeam": "San Francisco Giants",
+            "market": "spread",
+            "oddsDecimal": 2.4,
+            "opponent": "Colorado Rockies",
+            "positionId": "118_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+            "positionType": 1,
+            "profitAmountUSDC": 0.0014,
+            "riskAmountUSDC": 0.001,
+            "riskAmountWei6": "1000",
+            "speculationId": "118",
+            "sport": "mlb",
+            "team": "San Francisco Giants",
+            "updatedAtUnixSec": 1783714042
+          },
+          {
+            "awayTeam": "Colorado Rockies",
+            "contestId": "43",
+            "counterpartyRiskWei6": "680",
+            "homeTeam": "San Francisco Giants",
+            "market": "moneyline",
+            "oddsDecimal": 1.6800000000000002,
+            "opponent": "Colorado Rockies",
+            "positionId": "117_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+            "positionType": 1,
+            "profitAmountUSDC": 0.00068,
+            "riskAmountUSDC": 0.001,
+            "riskAmountWei6": "1000",
+            "speculationId": "117",
+            "sport": "mlb",
+            "team": "San Francisco Giants",
+            "updatedAtUnixSec": 1783714026
+          },
+          {
+            "awayTeam": "Arizona Diamondbacks",
+            "contestId": "42",
+            "counterpartyRiskWei6": "910",
+            "homeTeam": "Los Angeles Dodgers",
+            "market": "total",
+            "oddsDecimal": 1.9100000000000001,
+            "opponent": "Los Angeles Dodgers",
+            "positionId": "116_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_0",
+            "positionType": 0,
+            "profitAmountUSDC": 0.00091,
+            "riskAmountUSDC": 0.001,
+            "riskAmountWei6": "1000",
+            "speculationId": "116",
+            "sport": "mlb",
+            "team": "Arizona Diamondbacks",
+            "updatedAtUnixSec": 1783714010
+          },
+          {
+            "awayTeam": "Arizona Diamondbacks",
+            "contestId": "42",
+            "counterpartyRiskWei6": "810",
+            "homeTeam": "Los Angeles Dodgers",
+            "market": "spread",
+            "oddsDecimal": 1.81,
+            "opponent": "Arizona Diamondbacks",
+            "positionId": "115_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+            "positionType": 1,
+            "profitAmountUSDC": 0.00081,
+            "riskAmountUSDC": 0.001,
+            "riskAmountWei6": "1000",
+            "speculationId": "115",
+            "sport": "mlb",
+            "team": "Los Angeles Dodgers",
+            "updatedAtUnixSec": 1783713995
+          },
+          {
+            "awayTeam": "Arizona Diamondbacks",
+            "contestId": "42",
+            "counterpartyRiskWei6": "380",
+            "homeTeam": "Los Angeles Dodgers",
+            "market": "moneyline",
+            "oddsDecimal": 1.38,
+            "opponent": "Arizona Diamondbacks",
+            "positionId": "114_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+            "positionType": 1,
+            "profitAmountUSDC": 0.00038,
+            "riskAmountUSDC": 0.001,
+            "riskAmountWei6": "1000",
+            "speculationId": "114",
+            "sport": "mlb",
+            "team": "Los Angeles Dodgers",
+            "updatedAtUnixSec": 1783713994
+          },
+          {
+            "awayTeam": "Toronto Blue Jays",
+            "contestId": "41",
+            "counterpartyRiskWei6": "910",
+            "homeTeam": "San Diego Padres",
+            "market": "total",
+            "oddsDecimal": 1.9100000000000001,
+            "opponent": "San Diego Padres",
+            "positionId": "113_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_0",
+            "positionType": 0,
+            "profitAmountUSDC": 0.00091,
+            "riskAmountUSDC": 0.001,
+            "riskAmountWei6": "1000",
+            "speculationId": "113",
+            "sport": "mlb",
+            "team": "Toronto Blue Jays",
+            "updatedAtUnixSec": 1783713964
+          },
+          {
+            "awayTeam": "Toronto Blue Jays",
+            "contestId": "41",
+            "counterpartyRiskWei6": "1700",
+            "homeTeam": "San Diego Padres",
+            "market": "spread",
+            "oddsDecimal": 2.7,
+            "opponent": "Toronto Blue Jays",
+            "positionId": "112_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+            "positionType": 1,
+            "profitAmountUSDC": 0.0017,
+            "riskAmountUSDC": 0.001,
+            "riskAmountWei6": "1000",
+            "speculationId": "112",
+            "sport": "mlb",
+            "team": "San Diego Padres",
+            "updatedAtUnixSec": 1783713963
+          },
+          {
+            "awayTeam": "Toronto Blue Jays",
+            "contestId": "41",
+            "counterpartyRiskWei6": "830",
+            "homeTeam": "San Diego Padres",
+            "market": "moneyline",
+            "oddsDecimal": 1.83,
+            "opponent": "Toronto Blue Jays",
+            "positionId": "111_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+            "positionType": 1,
+            "profitAmountUSDC": 0.00083,
+            "riskAmountUSDC": 0.001,
+            "riskAmountWei6": "1000",
+            "speculationId": "111",
+            "sport": "mlb",
+            "team": "San Diego Padres",
+            "updatedAtUnixSec": 1783713948
+          },
+          {
+            "awayTeam": "Atlanta Braves",
+            "contestId": "40",
+            "counterpartyRiskWei6": "910",
+            "homeTeam": "St. Louis Cardinals",
+            "market": "total",
+            "oddsDecimal": 1.9100000000000001,
+            "opponent": "St. Louis Cardinals",
+            "positionId": "110_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_0",
+            "positionType": 0,
+            "profitAmountUSDC": 0.00091,
+            "riskAmountUSDC": 0.001,
+            "riskAmountWei6": "1000",
+            "speculationId": "110",
+            "sport": "mlb",
+            "team": "Atlanta Braves",
+            "updatedAtUnixSec": 1783713933
+          },
+          {
+            "awayTeam": "Atlanta Braves",
+            "contestId": "40",
+            "counterpartyRiskWei6": "800",
+            "homeTeam": "St. Louis Cardinals",
+            "market": "spread",
+            "oddsDecimal": 1.8,
+            "opponent": "Atlanta Braves",
+            "positionId": "109_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+            "positionType": 1,
+            "profitAmountUSDC": 0.0008,
+            "riskAmountUSDC": 0.001,
+            "riskAmountWei6": "1000",
+            "speculationId": "109",
+            "sport": "mlb",
+            "team": "St. Louis Cardinals",
+            "updatedAtUnixSec": 1783713917
+          },
+          {
+            "awayTeam": "Atlanta Braves",
+            "contestId": "40",
+            "counterpartyRiskWei6": "1410",
+            "homeTeam": "St. Louis Cardinals",
+            "market": "moneyline",
+            "oddsDecimal": 2.41,
+            "opponent": "Atlanta Braves",
+            "positionId": "108_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+            "positionType": 1,
+            "profitAmountUSDC": 0.00141,
+            "riskAmountUSDC": 0.001,
+            "riskAmountWei6": "1000",
+            "speculationId": "108",
+            "sport": "mlb",
+            "team": "St. Louis Cardinals",
+            "updatedAtUnixSec": 1783713902
+          },
+          {
+            "awayTeam": "Los Angeles Angels",
+            "contestId": "39",
+            "counterpartyRiskWei6": "950",
+            "homeTeam": "Minnesota Twins",
+            "market": "total",
+            "oddsDecimal": 1.95,
+            "opponent": "Minnesota Twins",
+            "positionId": "107_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_0",
+            "positionType": 0,
+            "profitAmountUSDC": 0.00095,
+            "riskAmountUSDC": 0.001,
+            "riskAmountWei6": "1000",
+            "speculationId": "107",
+            "sport": "mlb",
+            "team": "Los Angeles Angels",
+            "updatedAtUnixSec": 1783713886
+          },
+          {
+            "awayTeam": "Los Angeles Angels",
+            "contestId": "39",
+            "counterpartyRiskWei6": "1400",
+            "homeTeam": "Minnesota Twins",
+            "market": "spread",
+            "oddsDecimal": 2.4,
+            "opponent": "Los Angeles Angels",
+            "positionId": "106_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+            "positionType": 1,
+            "profitAmountUSDC": 0.0014,
+            "riskAmountUSDC": 0.001,
+            "riskAmountWei6": "1000",
+            "speculationId": "106",
+            "sport": "mlb",
+            "team": "Minnesota Twins",
+            "updatedAtUnixSec": 1783713886
+          },
+          {
+            "awayTeam": "Los Angeles Angels",
+            "contestId": "39",
+            "counterpartyRiskWei6": "690",
+            "homeTeam": "Minnesota Twins",
+            "market": "moneyline",
+            "oddsDecimal": 1.69,
+            "opponent": "Los Angeles Angels",
+            "positionId": "105_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+            "positionType": 1,
+            "profitAmountUSDC": 0.00069,
+            "riskAmountUSDC": 0.001,
+            "riskAmountWei6": "1000",
+            "speculationId": "105",
+            "sport": "mlb",
+            "team": "Minnesota Twins",
+            "updatedAtUnixSec": 1783713870
+          },
+          {
+            "awayTeam": "Houston Astros",
+            "contestId": "38",
+            "counterpartyRiskWei6": "950",
+            "homeTeam": "Texas Rangers",
+            "market": "total",
+            "oddsDecimal": 1.95,
+            "opponent": "Texas Rangers",
+            "positionId": "104_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_0",
+            "positionType": 0,
+            "profitAmountUSDC": 0.00095,
+            "riskAmountUSDC": 0.001,
+            "riskAmountWei6": "1000",
+            "speculationId": "104",
+            "sport": "mlb",
+            "team": "Houston Astros",
+            "updatedAtUnixSec": 1783713855
+          },
+          {
+            "awayTeam": "Houston Astros",
+            "contestId": "38",
+            "counterpartyRiskWei6": "710",
+            "homeTeam": "Texas Rangers",
+            "market": "spread",
+            "oddsDecimal": 1.71,
+            "opponent": "Houston Astros",
+            "positionId": "103_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+            "positionType": 1,
+            "profitAmountUSDC": 0.00071,
+            "riskAmountUSDC": 0.001,
+            "riskAmountWei6": "1000",
+            "speculationId": "103",
+            "sport": "mlb",
+            "team": "Texas Rangers",
+            "updatedAtUnixSec": 1783713854
+          },
+          {
+            "awayTeam": "Houston Astros",
+            "contestId": "38",
+            "counterpartyRiskWei6": "1230",
+            "homeTeam": "Texas Rangers",
+            "market": "moneyline",
+            "oddsDecimal": 2.23,
+            "opponent": "Houston Astros",
+            "positionId": "102_0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d_1",
+            "positionType": 1,
+            "profitAmountUSDC": 0.00123,
+            "riskAmountUSDC": 0.001,
+            "riskAmountWei6": "1000",
+            "speculationId": "102",
+            "sport": "mlb",
+            "team": "Texas Rangers",
+            "updatedAtUnixSec": 1783713839
+          }
+        ],
+        "claimable": [],
+        "pendingSettle": [],
+        "totals": {
+          "activeCount": 18,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettleCount": 0,
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      }
+    },
+    "stage-maker-a": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "allowances": {
+        "positionModule": {
+          "formatted": "10",
+          "isMax": false,
+          "raw": "10000000",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "treasuryModule": {
+          "formatted": "0",
+          "isMax": false,
+          "raw": "0",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      },
+      "balances": {
+        "native": {
+          "decimals": 18,
+          "formatted": "17.188106",
+          "raw": "17188106881638812262",
+          "symbol": "POL"
+        },
+        "usdc": {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "decimals": 6,
+          "formatted": "300.798415",
+          "raw": "300798415"
+        }
+      },
+      "doctorReturnCode": 1,
+      "positions": {
+        "active": [],
+        "claimable": [],
+        "pendingSettle": [],
+        "totals": {
+          "activeCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettleCount": 0,
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      }
+    },
+    "stage-maker-b": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "allowances": {
+        "positionModule": {
+          "formatted": "10",
+          "isMax": false,
+          "raw": "10000000",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "treasuryModule": {
+          "formatted": "0",
+          "isMax": false,
+          "raw": "0",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      },
+      "balances": {
+        "native": {
+          "decimals": 18,
+          "formatted": "27.700083",
+          "raw": "27700083913750457943",
+          "symbol": "POL"
+        },
+        "usdc": {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "decimals": 6,
+          "formatted": "296.799004",
+          "raw": "296799004"
+        }
+      },
+      "doctorReturnCode": 1,
+      "positions": {
+        "active": [],
+        "claimable": [],
+        "pendingSettle": [],
+        "totals": {
+          "activeCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettleCount": 0,
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      }
+    }
+  },
+  "walletsBefore": {
+    "flow-a": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "allowances": {
+        "positionModule": {
+          "formatted": "1.1",
+          "isMax": false,
+          "raw": "1100000",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "treasuryModule": {
+          "formatted": "4.5",
+          "isMax": false,
+          "raw": "4500000",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      },
+      "balances": {
+        "native": {
+          "decimals": 18,
+          "formatted": "38.849764",
+          "raw": "38849764877715106588",
+          "symbol": "POL"
+        },
+        "usdc": {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "decimals": 6,
+          "formatted": "296.49808",
+          "raw": "296498080"
+        }
+      },
+      "doctorReturnCode": 1,
+      "positions": {
+        "active": [],
+        "claimable": [],
+        "pendingSettle": [],
+        "totals": {
+          "activeCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettleCount": 0,
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      }
+    },
+    "fresh-user": {
+      "address": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+      "allowances": {
+        "positionModule": {
+          "formatted": "1.1",
+          "isMax": false,
+          "raw": "1100000",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "treasuryModule": {
+          "formatted": "10.5",
+          "isMax": false,
+          "raw": "10500000",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      },
+      "balances": {
+        "native": {
+          "decimals": 18,
+          "formatted": "15.483878",
+          "raw": "15483878534961458692",
+          "symbol": "POL"
+        },
+        "usdc": {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "decimals": 6,
+          "formatted": "84.272701",
+          "raw": "84272701"
+        }
+      },
+      "doctorReturnCode": 1,
+      "positions": {
+        "active": [],
+        "claimable": [],
+        "pendingSettle": [],
+        "totals": {
+          "activeCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettleCount": 0,
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      }
+    },
+    "stage-maker-a": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "allowances": {
+        "positionModule": {
+          "formatted": "10",
+          "isMax": false,
+          "raw": "10000000",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "treasuryModule": {
+          "formatted": "0",
+          "isMax": false,
+          "raw": "0",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      },
+      "balances": {
+        "native": {
+          "decimals": 18,
+          "formatted": "17.188106",
+          "raw": "17188106881638812262",
+          "symbol": "POL"
+        },
+        "usdc": {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "decimals": 6,
+          "formatted": "300.798415",
+          "raw": "300798415"
+        }
+      },
+      "doctorReturnCode": 1,
+      "positions": {
+        "active": [],
+        "claimable": [],
+        "pendingSettle": [],
+        "totals": {
+          "activeCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettleCount": 0,
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      }
+    },
+    "stage-maker-b": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "allowances": {
+        "positionModule": {
+          "formatted": "10",
+          "isMax": false,
+          "raw": "10000000",
+          "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+        },
+        "treasuryModule": {
+          "formatted": "0",
+          "isMax": false,
+          "raw": "0",
+          "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+        }
+      },
+      "balances": {
+        "native": {
+          "decimals": 18,
+          "formatted": "27.700083",
+          "raw": "27700083913750457943",
+          "symbol": "POL"
+        },
+        "usdc": {
+          "address": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+          "decimals": 6,
+          "formatted": "296.799004",
+          "raw": "296799004"
+        }
+      },
+      "doctorReturnCode": 1,
+      "positions": {
+        "active": [],
+        "claimable": [],
+        "pendingSettle": [],
+        "totals": {
+          "activeCount": 0,
+          "claimableCount": 0,
+          "estimatedPayoutUSDC": 0,
+          "estimatedPayoutWei6": "0",
+          "pendingSettleCount": 0,
+          "pendingSettlePayoutUSDC": 0,
+          "pendingSettlePayoutWei6": "0"
+        }
+      }
+    }
+  }
+}

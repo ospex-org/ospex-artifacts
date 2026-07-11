@@ -1,0 +1,442 @@
+{
+  "frozenAtUtc": "2026-07-11T00:30:35Z",
+  "inputs": {
+    "dataPolicy": {
+      "privateChainOfThoughtForbidden": true,
+      "referenceOddsWordingOnly": true,
+      "useOnlyThisFrozenBundle": true
+    },
+    "eligibleGamesAndMarkets": [
+      {
+        "awayTeam": "Toronto Blue Jays",
+        "contestId": "41",
+        "gamePk": 823278,
+        "homeTeam": "San Diego Padres",
+        "label": "B1",
+        "matchTimeUtc": "2026-07-11T01:40:00+00:00",
+        "officialStartingLineupsIfPosted": {
+          "away": [
+            "Ernie Clement",
+            "Vladimir Guerrero Jr.",
+            "Kazuma Okamoto",
+            "George Springer",
+            "Alejandro Kirk",
+            "Daulton Varsho",
+            "Luis Ur\u00edas",
+            "Myles Straw",
+            "Jonatan Clase"
+          ],
+          "home": [
+            "Fernando Tatis Jr.",
+            "Jackson Merrill",
+            "Xander Bogaerts",
+            "Manny Machado",
+            "Gavin Sheets",
+            "Ty France",
+            "Miguel Andujar",
+            "Jase Bowen",
+            "Rodolfo Dur\u00e1n"
+          ]
+        },
+        "officialStatus": {
+          "abstractGameState": "Preview",
+          "codedGameState": "P",
+          "detailedState": "Pre-Game"
+        },
+        "openSpeculations": [
+          {
+            "lineTicks": 0,
+            "market": "moneyline",
+            "speculationId": "111",
+            "status": null
+          },
+          {
+            "lineTicks": 15,
+            "market": "spread",
+            "speculationId": "112",
+            "status": null
+          },
+          {
+            "lineTicks": 85,
+            "market": "total",
+            "speculationId": "113",
+            "status": null
+          }
+        ],
+        "probablePitchers": {
+          "away": "Shane Bieber",
+          "home": "JP Sears"
+        },
+        "referenceOdds": {
+          "moneyline": {
+            "awayOddsAmerican": 107,
+            "changedAt": "2026-07-11T00:09:12.16+00:00",
+            "homeOddsAmerican": -119,
+            "pollCapturedAt": "2026-07-11T00:30:12.574+00:00",
+            "upstreamLastUpdated": "2026-07-11T00:27:36+00:00"
+          },
+          "spread": {
+            "awayLine": 1.5,
+            "awayOddsAmerican": -210,
+            "changedAt": "2026-07-10T22:45:10.554+00:00",
+            "homeLine": -1.5,
+            "homeOddsAmerican": 175,
+            "pollCapturedAt": "2026-07-11T00:30:12.645+00:00",
+            "upstreamLastUpdated": "2026-07-11T00:27:36+00:00"
+          },
+          "total": {
+            "changedAt": "2026-07-10T23:20:10.994+00:00",
+            "line": 8.5,
+            "overOddsAmerican": -110,
+            "pollCapturedAt": "2026-07-11T00:30:12.73+00:00",
+            "underOddsAmerican": -110,
+            "upstreamLastUpdated": "2026-07-11T00:27:36+00:00"
+          }
+        },
+        "teamRecords": {
+          "away": {
+            "conferenceGamesBack": "-",
+            "divisionGamesBack": "-",
+            "divisionLeader": false,
+            "gamesPlayed": 93,
+            "leagueGamesBack": "-",
+            "leagueRecord": {
+              "losses": 49,
+              "pct": ".473",
+              "ties": 0,
+              "wins": 44
+            },
+            "losses": 49,
+            "records": {},
+            "sportGamesBack": "-",
+            "springLeagueGamesBack": "-",
+            "wildCardGamesBack": "-",
+            "winningPercentage": ".473",
+            "wins": 44
+          },
+          "home": {
+            "conferenceGamesBack": "-",
+            "divisionGamesBack": "-",
+            "divisionLeader": false,
+            "gamesPlayed": 93,
+            "leagueGamesBack": "-",
+            "leagueRecord": {
+              "losses": 47,
+              "pct": ".495",
+              "ties": 0,
+              "wins": 46
+            },
+            "losses": 47,
+            "records": {},
+            "sportGamesBack": "-",
+            "springLeagueGamesBack": "-",
+            "wildCardGamesBack": "-",
+            "winningPercentage": ".495",
+            "wins": 46
+          }
+        },
+        "venue": {
+          "name": "Petco Park"
+        },
+        "weather": {
+          "condition": "Partly Cloudy",
+          "temperatureF": "70",
+          "wind": "6 mph, Out To RF"
+        }
+      },
+      {
+        "awayTeam": "Arizona Diamondbacks",
+        "contestId": "42",
+        "gamePk": 823927,
+        "homeTeam": "Los Angeles Dodgers",
+        "label": "B2",
+        "matchTimeUtc": "2026-07-11T02:10:00+00:00",
+        "officialStartingLineupsIfPosted": {
+          "away": [
+            "Ketel Marte",
+            "Geraldo Perdomo",
+            "Corbin Carroll",
+            "Gabriel Moreno",
+            "Lourdes Gurriel Jr.",
+            "Ildemaro Vargas",
+            "Nolan Arenado",
+            "Ryan Waldschmidt",
+            "Tim Tawa"
+          ],
+          "home": [
+            "Shohei Ohtani",
+            "Andy Pages",
+            "Freddie Freeman",
+            "Mookie Betts",
+            "Tommy Edman",
+            "Kyle Tucker",
+            "Teoscar Hern\u00e1ndez",
+            "Miguel Rojas",
+            "Dalton Rushing"
+          ]
+        },
+        "officialStatus": {
+          "abstractGameState": "Preview",
+          "codedGameState": "P",
+          "detailedState": "Pre-Game"
+        },
+        "openSpeculations": [
+          {
+            "lineTicks": 0,
+            "market": "moneyline",
+            "speculationId": "114",
+            "status": null
+          },
+          {
+            "lineTicks": 15,
+            "market": "spread",
+            "speculationId": "115",
+            "status": null
+          },
+          {
+            "lineTicks": 85,
+            "market": "total",
+            "speculationId": "116",
+            "status": null
+          }
+        ],
+        "probablePitchers": {
+          "away": "Eduardo Rodriguez",
+          "home": "Kyle Hurt"
+        },
+        "referenceOdds": {
+          "moneyline": {
+            "awayOddsAmerican": 178,
+            "changedAt": "2026-07-10T23:59:12.076+00:00",
+            "homeOddsAmerican": -209,
+            "pollCapturedAt": "2026-07-11T00:30:12.826+00:00",
+            "upstreamLastUpdated": "2026-07-11T00:27:36+00:00"
+          },
+          "spread": {
+            "awayLine": 1.5,
+            "awayOddsAmerican": -114,
+            "changedAt": "2026-07-11T00:29:12.936+00:00",
+            "homeLine": -1.5,
+            "homeOddsAmerican": -106,
+            "pollCapturedAt": "2026-07-11T00:30:12.906+00:00",
+            "upstreamLastUpdated": "2026-07-11T00:27:36+00:00"
+          },
+          "total": {
+            "changedAt": "2026-07-10T20:45:06.31+00:00",
+            "line": 9,
+            "overOddsAmerican": -118,
+            "pollCapturedAt": "2026-07-11T00:30:12.976+00:00",
+            "underOddsAmerican": -102,
+            "upstreamLastUpdated": "2026-07-11T00:27:36+00:00"
+          }
+        },
+        "teamRecords": {
+          "away": {
+            "conferenceGamesBack": "-",
+            "divisionGamesBack": "-",
+            "divisionLeader": false,
+            "gamesPlayed": 93,
+            "leagueGamesBack": "-",
+            "leagueRecord": {
+              "losses": 47,
+              "pct": ".495",
+              "ties": 0,
+              "wins": 46
+            },
+            "losses": 47,
+            "records": {},
+            "sportGamesBack": "-",
+            "springLeagueGamesBack": "-",
+            "wildCardGamesBack": "-",
+            "winningPercentage": ".495",
+            "wins": 46
+          },
+          "home": {
+            "conferenceGamesBack": "-",
+            "divisionGamesBack": "-",
+            "divisionLeader": false,
+            "gamesPlayed": 94,
+            "leagueGamesBack": "-",
+            "leagueRecord": {
+              "losses": 33,
+              "pct": ".649",
+              "ties": 0,
+              "wins": 61
+            },
+            "losses": 33,
+            "records": {},
+            "sportGamesBack": "-",
+            "springLeagueGamesBack": "-",
+            "wildCardGamesBack": "-",
+            "winningPercentage": ".649",
+            "wins": 61
+          }
+        },
+        "venue": {
+          "name": "UNIQLO Field at Dodger Stadium"
+        },
+        "weather": {
+          "condition": "Partly Cloudy",
+          "temperatureF": "80",
+          "wind": "8 mph, Out To CF"
+        }
+      },
+      {
+        "awayTeam": "Colorado Rockies",
+        "contestId": "43",
+        "gamePk": 823200,
+        "homeTeam": "San Francisco Giants",
+        "label": "B3",
+        "matchTimeUtc": "2026-07-11T02:15:00+00:00",
+        "officialStartingLineupsIfPosted": {
+          "away": [
+            "Jake McCarthy",
+            "Kyle Karros",
+            "Cole Carrigg",
+            "Hunter Goodman",
+            "TJ Rumfield",
+            "Tyler Freeman",
+            "Willi Castro",
+            "Mickey Moniak",
+            "Ezequiel Tovar"
+          ],
+          "home": [
+            "Heliot Ramos",
+            "Luis Arraez",
+            "Casey Schmitt",
+            "Rafael Devers",
+            "Willy Adames",
+            "Bryce Eldridge",
+            "Jung Hoo Lee",
+            "Drew Gilbert",
+            "Drew Cavanaugh"
+          ]
+        },
+        "officialStatus": {
+          "abstractGameState": "Preview",
+          "codedGameState": "P",
+          "detailedState": "Pre-Game"
+        },
+        "openSpeculations": [
+          {
+            "lineTicks": 0,
+            "market": "moneyline",
+            "speculationId": "117",
+            "status": null
+          },
+          {
+            "lineTicks": 15,
+            "market": "spread",
+            "speculationId": "118",
+            "status": null
+          },
+          {
+            "lineTicks": 85,
+            "market": "total",
+            "speculationId": "119",
+            "status": null
+          }
+        ],
+        "probablePitchers": {
+          "away": "Tanner Gordon",
+          "home": "Robbie Ray"
+        },
+        "referenceOdds": {
+          "moneyline": {
+            "awayOddsAmerican": 130,
+            "changedAt": "2026-07-10T23:44:11.507+00:00",
+            "homeOddsAmerican": -147,
+            "pollCapturedAt": "2026-07-11T00:30:13.068+00:00",
+            "upstreamLastUpdated": "2026-07-11T00:27:36+00:00"
+          },
+          "spread": {
+            "awayLine": 1.5,
+            "awayOddsAmerican": -159,
+            "changedAt": "2026-07-10T23:40:12.068+00:00",
+            "homeLine": -1.5,
+            "homeOddsAmerican": 137,
+            "pollCapturedAt": "2026-07-11T00:30:13.128+00:00",
+            "upstreamLastUpdated": "2026-07-11T00:27:36+00:00"
+          },
+          "total": {
+            "changedAt": "2026-07-11T00:04:13.327+00:00",
+            "line": 8.5,
+            "overOddsAmerican": 102,
+            "pollCapturedAt": "2026-07-11T00:30:13.214+00:00",
+            "underOddsAmerican": -121,
+            "upstreamLastUpdated": "2026-07-11T00:27:36+00:00"
+          }
+        },
+        "teamRecords": {
+          "away": {
+            "conferenceGamesBack": "-",
+            "divisionGamesBack": "-",
+            "divisionLeader": false,
+            "gamesPlayed": 95,
+            "leagueGamesBack": "-",
+            "leagueRecord": {
+              "losses": 57,
+              "pct": ".400",
+              "ties": 0,
+              "wins": 38
+            },
+            "losses": 57,
+            "records": {},
+            "sportGamesBack": "-",
+            "springLeagueGamesBack": "-",
+            "wildCardGamesBack": "-",
+            "winningPercentage": ".400",
+            "wins": 38
+          },
+          "home": {
+            "conferenceGamesBack": "-",
+            "divisionGamesBack": "-",
+            "divisionLeader": false,
+            "gamesPlayed": 93,
+            "leagueGamesBack": "-",
+            "leagueRecord": {
+              "losses": 54,
+              "pct": ".419",
+              "ties": 0,
+              "wins": 39
+            },
+            "losses": 54,
+            "records": {},
+            "sportGamesBack": "-",
+            "springLeagueGamesBack": "-",
+            "wildCardGamesBack": "-",
+            "winningPercentage": ".419",
+            "wins": 39
+          }
+        },
+        "venue": {
+          "name": "Oracle Park"
+        },
+        "weather": {
+          "condition": "Clear",
+          "temperatureF": "60",
+          "wind": "13 mph, Out To LF"
+        }
+      }
+    ],
+    "limitations": [
+      "Official starting lineups may be empty when not yet posted.",
+      "No separate verified injury feed is included; do not invent injuries.",
+      "Reference spread/total lines may move after this freeze and execution must re-preview current quotes."
+    ],
+    "stakingRule": {
+      "decisionOnly": true,
+      "maximumLiveTakerRiskUSDC": "0.500000",
+      "oneDecisionPerModelThisWave": true,
+      "sizingPerformedLaterByCurrentQuotePreview": true,
+      "targetLiveTakerRiskUSDC": "0.250000"
+    }
+  },
+  "publicSources": [
+    "MLB Stats API official game feed bound by gamePk",
+    "Ospex core API/SDK contest, speculation, and reference-odds reads"
+  ],
+  "runId": "20260710T193208Z-block-k-six-game-two-maker",
+  "schemaVersion": 1,
+  "wave": "B"
+}

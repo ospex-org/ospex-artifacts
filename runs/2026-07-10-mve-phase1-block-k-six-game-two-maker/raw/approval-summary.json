@@ -1,0 +1,283 @@
+{
+  "actions": [
+    {
+      "beforeRaw": "10000000",
+      "role": "stage-maker-a",
+      "skipped": "already-exact",
+      "spender": "PositionModule",
+      "targetRaw": "10000000",
+      "txHashes": []
+    },
+    {
+      "beforeRaw": "4500000",
+      "role": "stage-maker-a",
+      "spender": "StaleTreasuryModule",
+      "spenderAddress": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e",
+      "targetRaw": "0",
+      "txHashes": [
+        "0x1f089a2779a7feb77b5726126492021e5863602ac2772dab0f0b26e32f988f61"
+      ]
+    },
+    {
+      "beforeRaw": "0",
+      "role": "stage-maker-a",
+      "skipped": "already-exact",
+      "spender": "TreasuryModule",
+      "spenderAddress": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C",
+      "targetRaw": "0",
+      "txHashes": []
+    },
+    {
+      "beforeRaw": "10000000",
+      "role": "stage-maker-b",
+      "skipped": "already-exact",
+      "spender": "PositionModule",
+      "targetRaw": "10000000",
+      "txHashes": []
+    },
+    {
+      "beforeRaw": "0",
+      "role": "stage-maker-b",
+      "skipped": "already-zero",
+      "spender": "StaleTreasuryModule",
+      "spenderAddress": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e",
+      "targetRaw": "0",
+      "txHashes": []
+    },
+    {
+      "beforeRaw": "3000000",
+      "role": "stage-maker-b",
+      "spender": "TreasuryModule",
+      "spenderAddress": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C",
+      "targetRaw": "0",
+      "txHashes": [
+        "0xdfbab7a8609e07cbf007698e8014d1ef1722193eb2f0cd8b75f8ddbe503163df"
+      ]
+    },
+    {
+      "beforeRaw": "1100000",
+      "role": "flow-a",
+      "skipped": "already-exact",
+      "spender": "PositionModule",
+      "targetRaw": "1100000",
+      "txHashes": []
+    },
+    {
+      "beforeRaw": "4500000",
+      "role": "flow-a",
+      "spender": "StaleTreasuryModule",
+      "spenderAddress": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e",
+      "targetRaw": "0",
+      "txHashes": [
+        "0x51a5aff3664fb80e7b1a8ededad804f4d616d138a2a157306cd772ddebc0bcd9"
+      ]
+    },
+    {
+      "beforeRaw": "2750000",
+      "role": "flow-a",
+      "spender": "TreasuryModule",
+      "spenderAddress": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C",
+      "targetRaw": "4500000",
+      "txHashes": [
+        "0xf4055be616585566146b8027f2f3e262e9f4d9862fe235955fd68ce027cc4fff"
+      ]
+    },
+    {
+      "beforeRaw": "1100000",
+      "role": "fresh-user",
+      "skipped": "already-exact",
+      "spender": "PositionModule",
+      "targetRaw": "1100000",
+      "txHashes": []
+    },
+    {
+      "beforeRaw": "10500000",
+      "role": "fresh-user",
+      "spender": "StaleTreasuryModule",
+      "spenderAddress": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e",
+      "targetRaw": "0",
+      "txHashes": [
+        "0xba7a5ec8b3301cc541d5391f9f63888ba44d50d9358edf3849ebcd5335f8e3d0"
+      ]
+    },
+    {
+      "beforeRaw": "10750000",
+      "role": "fresh-user",
+      "spender": "TreasuryModule",
+      "spenderAddress": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C",
+      "targetRaw": "10500000",
+      "txHashes": [
+        "0x07bb75799f6be36b349cf6e38d7073bb956c8d62768b09ab58b1727101dd9dbf"
+      ]
+    }
+  ],
+  "after": {
+    "flow-a": {
+      "positionModule": {
+        "formatted": "1.1",
+        "isMax": false,
+        "raw": "1100000",
+        "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+      },
+      "treasuryModule": {
+        "formatted": "4.5",
+        "isMax": false,
+        "raw": "4500000",
+        "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+      }
+    },
+    "fresh-user": {
+      "positionModule": {
+        "formatted": "1.1",
+        "isMax": false,
+        "raw": "1100000",
+        "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+      },
+      "treasuryModule": {
+        "formatted": "10.5",
+        "isMax": false,
+        "raw": "10500000",
+        "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+      }
+    },
+    "stage-maker-a": {
+      "positionModule": {
+        "formatted": "10",
+        "isMax": false,
+        "raw": "10000000",
+        "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+      },
+      "treasuryModule": {
+        "formatted": "0",
+        "isMax": false,
+        "raw": "0",
+        "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+      }
+    },
+    "stage-maker-b": {
+      "positionModule": {
+        "formatted": "10",
+        "isMax": false,
+        "raw": "10000000",
+        "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+      },
+      "treasuryModule": {
+        "formatted": "0",
+        "isMax": false,
+        "raw": "0",
+        "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+      }
+    }
+  },
+  "allExactAndBounded": true,
+  "approvalGasPOL": "0.128641730314805858",
+  "approvalTxCount": 6,
+  "before": {
+    "flow-a": {
+      "positionModule": {
+        "formatted": "1.1",
+        "isMax": false,
+        "raw": "1100000",
+        "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+      },
+      "treasuryModule": {
+        "formatted": "2.75",
+        "isMax": false,
+        "raw": "2750000",
+        "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+      }
+    },
+    "fresh-user": {
+      "positionModule": {
+        "formatted": "1.1",
+        "isMax": false,
+        "raw": "1100000",
+        "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+      },
+      "treasuryModule": {
+        "formatted": "10.75",
+        "isMax": false,
+        "raw": "10750000",
+        "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+      }
+    },
+    "stage-maker-a": {
+      "positionModule": {
+        "formatted": "10",
+        "isMax": false,
+        "raw": "10000000",
+        "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+      },
+      "treasuryModule": {
+        "formatted": "0",
+        "isMax": false,
+        "raw": "0",
+        "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+      }
+    },
+    "stage-maker-b": {
+      "positionModule": {
+        "formatted": "10",
+        "isMax": false,
+        "raw": "10000000",
+        "spender": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56"
+      },
+      "treasuryModule": {
+        "formatted": "3",
+        "isMax": false,
+        "raw": "3000000",
+        "spender": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+      }
+    }
+  },
+  "configuredTreasuryAddress": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e",
+  "configuredTreasuryAddressMismatch": true,
+  "generatedAt": "2026-07-10T19:54:44Z",
+  "liveSdkTreasuryAddress": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C",
+  "ok": true,
+  "plan": {
+    "flow-a": {
+      "accountVar": "OSPEX_FLOW_A",
+      "addressVar": "OSPEX_FLOW_A_ADDRESS",
+      "positionUSDC": "1.100000",
+      "treasuryUSDC": "4.500000"
+    },
+    "fresh-user": {
+      "accountVar": "OSPEX_FRESH_USER",
+      "addressVar": "OSPEX_FRESH_USER_ADDRESS",
+      "positionUSDC": "1.100000",
+      "treasuryUSDC": "10.500000"
+    },
+    "stage-maker-a": {
+      "accountVar": "OSPEX_STAGE_MAKER_A",
+      "addressVar": "OSPEX_STAGE_MAKER_A_ADDRESS",
+      "positionUSDC": "10.000000",
+      "treasuryUSDC": "0.000000"
+    },
+    "stage-maker-b": {
+      "accountVar": "OSPEX_STAGE_MAKER_B",
+      "addressVar": "OSPEX_STAGE_MAKER_B_ADDRESS",
+      "positionUSDC": "10.000000",
+      "treasuryUSDC": "0.000000"
+    }
+  },
+  "receiptFilesUnder": "<local-home>/.ospex/runs/20260710T193208Z-block-k-six-game-two-maker/raw",
+  "staleConfiguredTreasuryAllowancesAfter": {
+    "flow-a": {
+      "raw": "0",
+      "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e"
+    },
+    "fresh-user": {
+      "raw": "0",
+      "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e"
+    },
+    "stage-maker-a": {
+      "raw": "0",
+      "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e"
+    },
+    "stage-maker-b": {
+      "raw": "0",
+      "spender": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e"
+    }
+  }
+}

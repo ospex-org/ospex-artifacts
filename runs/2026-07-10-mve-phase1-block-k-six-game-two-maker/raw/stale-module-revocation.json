@@ -1,0 +1,120 @@
+{
+  "actions": [
+    {
+      "module": "position",
+      "previousRaw": "10639700",
+      "role": "stage-maker-a",
+      "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c",
+      "targetRaw": "0",
+      "txHashes": [
+        "0x7c767dd438be10fb2f598c2fd3bd027d7da0c7b0f607f642ba9513692994cfc1"
+      ]
+    },
+    {
+      "module": "position",
+      "previousRaw": "9600000",
+      "role": "stage-maker-b",
+      "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c",
+      "targetRaw": "0",
+      "txHashes": [
+        "0xae2c0f562f4f30a64d9c9f04c0857fe4fdbd87c752b23639113956ae600ab860"
+      ]
+    },
+    {
+      "module": "position",
+      "previousRaw": "5000000",
+      "role": "flow-a",
+      "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c",
+      "targetRaw": "0",
+      "txHashes": [
+        "0x751954800fde661a474b9e09795b3666d5729b23b4c85c2c0f04a477bf51e81c"
+      ]
+    },
+    {
+      "module": "position",
+      "previousRaw": "1380412",
+      "role": "fresh-user",
+      "spender": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c",
+      "targetRaw": "0",
+      "txHashes": [
+        "0x6e007608e0dd2687547cd19e596042c48f1627ebf167fe23b59822f5e223039a"
+      ]
+    }
+  ],
+  "after": {
+    "flow-a": {
+      "position": "0",
+      "treasury": "0"
+    },
+    "fresh-user": {
+      "position": "0",
+      "treasury": "0"
+    },
+    "stage-maker-a": {
+      "position": "0",
+      "treasury": "0"
+    },
+    "stage-maker-b": {
+      "position": "0",
+      "treasury": "0"
+    }
+  },
+  "before": {
+    "flow-a": {
+      "position": "5000000",
+      "treasury": "0"
+    },
+    "fresh-user": {
+      "position": "1380412",
+      "treasury": "0"
+    },
+    "stage-maker-a": {
+      "position": "10639700",
+      "treasury": "0"
+    },
+    "stage-maker-b": {
+      "position": "9600000",
+      "treasury": "0"
+    }
+  },
+  "gasPOL": "0.081130566034126401",
+  "ok": true,
+  "receipts": [
+    {
+      "effectiveGasPriceWei": "492223545184",
+      "gasUsed": "44421",
+      "module": "position",
+      "role": "stage-maker-a",
+      "status": "0x1",
+      "txHash": "0x7c767dd438be10fb2f598c2fd3bd027d7da0c7b0f607f642ba9513692994cfc1"
+    },
+    {
+      "effectiveGasPriceWei": "461987019751",
+      "gasUsed": "44421",
+      "module": "position",
+      "role": "stage-maker-b",
+      "status": "0x1",
+      "txHash": "0xae2c0f562f4f30a64d9c9f04c0857fe4fdbd87c752b23639113956ae600ab860"
+    },
+    {
+      "effectiveGasPriceWei": "445609210772",
+      "gasUsed": "44421",
+      "module": "position",
+      "role": "flow-a",
+      "status": "0x1",
+      "txHash": "0x751954800fde661a474b9e09795b3666d5729b23b4c85c2c0f04a477bf51e81c"
+    },
+    {
+      "effectiveGasPriceWei": "426581386674",
+      "gasUsed": "44421",
+      "module": "position",
+      "role": "fresh-user",
+      "status": "0x1",
+      "txHash": "0x6e007608e0dd2687547cd19e596042c48f1627ebf167fe23b59822f5e223039a"
+    }
+  ],
+  "staleModuleAddresses": {
+    "position": "0x0DCd42f8609cd7884ddBa3481b03a78dfc88366c",
+    "treasury": "0xCB56CD2c509301e888965DD3A2E5C486Fe03a56e"
+  }
+}
