@@ -1,0 +1,236 @@
+{
+  "bundleSha256": "78200300ee8881f5625aaf81139e8586c0776ed50c5b228f42fe3e8fa6298cd2",
+  "decisionRoundCompletedAtUtc": "2026-07-11T00:30:52Z",
+  "failures": [],
+  "frozenAtUtc": "2026-07-11T00:30:35Z",
+  "modelCount": 4,
+  "ok": true,
+  "onchainAttributionStatus": "eligible-for-live-preview",
+  "promptSha256": "bcefb683ea6e9f6d0d0c80eba486ca1d47be22d71c35663fdab4d8cd2e7a8c93",
+  "results": [
+    {
+      "decision": {
+        "fallback": {
+          "confidence": 0.54,
+          "contestId": "41",
+          "contestLabel": "B1",
+          "line": null,
+          "market": "moneyline",
+          "observedOddsAmerican": "+107",
+          "rationale": "Toronto offers plus-money value in a closely matched contest, with Shane Bieber providing a credible starting-pitching advantage.",
+          "side": "Toronto Blue Jays"
+        },
+        "primary": {
+          "confidence": 0.58,
+          "contestId": "42",
+          "contestLabel": "B2",
+          "line": -1.5,
+          "market": "spread",
+          "observedOddsAmerican": "-106",
+          "rationale": "Los Angeles has the strongest season record in this wave and a deep posted lineup, supporting the run-line position at near-even odds.",
+          "side": "Los Angeles Dodgers"
+        }
+      },
+      "participant": {
+        "modelId": "gpt-5.6-sol",
+        "modelVersion": "gpt-5.6-sol",
+        "participantId": "block-k-model-1",
+        "provider": "openai-codex",
+        "routeProbe": "raw/model-probe-gpt-5.6-sol-usage.json",
+        "selfMatchPolicy": "may take Maker A or Maker B quote; never its own quote",
+        "signerAddress": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+        "signerRole": "fresh-user"
+      },
+      "usage": {
+        "api_calls": 1,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "completed": true,
+        "cost_source": "none",
+        "cost_status": "included",
+        "estimated_cost_usd": 0.0,
+        "failed": false,
+        "input_tokens": 6448,
+        "model": "gpt-5.6-sol",
+        "output_tokens": 219,
+        "provider": "openai-codex",
+        "reasoning_tokens": 70,
+        "total_tokens": 6667
+      },
+      "valid": true,
+      "validation": {
+        "fallback": [],
+        "primary": []
+      }
+    },
+    {
+      "decision": {
+        "fallback": {
+          "confidence": 0.54,
+          "contestId": "43",
+          "contestLabel": "B3",
+          "line": null,
+          "market": "moneyline",
+          "observedOddsAmerican": "-147",
+          "rationale": "San Francisco holds a modest supplied record advantage over Colorado (.419 versus .400), is at home with both lineups posted, and the frozen reference price favors the Giants.",
+          "side": "San Francisco Giants"
+        },
+        "primary": {
+          "confidence": 0.62,
+          "contestId": "42",
+          "contestLabel": "B2",
+          "line": null,
+          "market": "moneyline",
+          "observedOddsAmerican": "-209",
+          "rationale": "Los Angeles has the strongest supplied record (.649) in the wave, a substantial record gap over Arizona (.495), and both starting lineups are posted. The frozen reference price also reflects a clear home-side edge.",
+          "side": "Los Angeles Dodgers"
+        }
+      },
+      "participant": {
+        "modelId": "gpt-5.6-terra",
+        "modelVersion": "gpt-5.6-terra",
+        "participantId": "block-k-model-2",
+        "provider": "openai-codex",
+        "routeProbe": "raw/model-probe-gpt-5.6-terra-usage.json",
+        "selfMatchPolicy": "may take Maker A or Maker B quote; never its own quote",
+        "signerAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "signerRole": "flow-a"
+      },
+      "usage": {
+        "api_calls": 1,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "completed": true,
+        "cost_source": "none",
+        "cost_status": "included",
+        "estimated_cost_usd": 0.0,
+        "failed": false,
+        "input_tokens": 6449,
+        "model": "gpt-5.6-terra",
+        "output_tokens": 393,
+        "provider": "openai-codex",
+        "reasoning_tokens": 217,
+        "total_tokens": 6842
+      },
+      "valid": true,
+      "validation": {
+        "fallback": [],
+        "primary": []
+      }
+    },
+    {
+      "decision": {
+        "fallback": {
+          "confidence": 0.56,
+          "contestId": "41",
+          "contestLabel": "B1",
+          "line": null,
+          "market": "moneyline",
+          "observedOddsAmerican": "-119",
+          "rationale": "San Diego combines the better record, home field, and a modest moneyline price against Toronto, supporting a measured home-team selection.",
+          "side": "San Diego Padres"
+        },
+        "primary": {
+          "confidence": 0.68,
+          "contestId": "42",
+          "contestLabel": "B2",
+          "line": null,
+          "market": "moneyline",
+          "observedOddsAmerican": "-209",
+          "rationale": "The Dodgers have the strongest recorded form in the wave at 61-33, with a substantial home-field and lineup edge over Arizona at 46-47.",
+          "side": "Los Angeles Dodgers"
+        }
+      },
+      "participant": {
+        "modelId": "gpt-5.6-luna",
+        "modelVersion": "gpt-5.6-luna",
+        "participantId": "block-k-model-3",
+        "provider": "openai-codex",
+        "routeProbe": "raw/model-probe-gpt-5.6-luna-usage.json",
+        "selfMatchPolicy": "Maker B quotes only; Maker A quotes are forbidden",
+        "signerAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "signerRole": "stage-maker-a"
+      },
+      "usage": {
+        "api_calls": 1,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "completed": true,
+        "cost_source": "none",
+        "cost_status": "included",
+        "estimated_cost_usd": 0.0,
+        "failed": false,
+        "input_tokens": 6449,
+        "model": "gpt-5.6-luna",
+        "output_tokens": 272,
+        "provider": "openai-codex",
+        "reasoning_tokens": 115,
+        "total_tokens": 6721
+      },
+      "valid": true,
+      "validation": {
+        "fallback": [],
+        "primary": []
+      }
+    },
+    {
+      "decision": {
+        "fallback": {
+          "confidence": 0.54,
+          "contestId": "43",
+          "contestLabel": "B3",
+          "line": null,
+          "market": "moneyline",
+          "observedOddsAmerican": "-147",
+          "rationale": "San Francisco has a slight record edge at home with Robbie Ray listed against Tanner Gordon, while Colorado enters with the weakest record among the eligible teams.",
+          "side": "San Francisco Giants"
+        },
+        "primary": {
+          "confidence": 0.58,
+          "contestId": "42",
+          "contestLabel": "B2",
+          "line": -1.5,
+          "market": "spread",
+          "observedOddsAmerican": "-106",
+          "rationale": "Los Angeles has the strongest record in the wave, a posted top-heavy lineup, and a favorable run-scoring environment with warm weather and wind out to center; the -1.5 price is near even money.",
+          "side": "Los Angeles Dodgers"
+        }
+      },
+      "participant": {
+        "modelId": "gpt-5.5",
+        "modelVersion": "gpt-5.5",
+        "participantId": "block-k-model-4",
+        "provider": "openai-codex",
+        "routeProbe": "raw/model-probe-gpt-5.5-usage.json",
+        "selfMatchPolicy": "Maker A quotes only; Maker B quotes are forbidden",
+        "signerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "signerRole": "stage-maker-b"
+      },
+      "usage": {
+        "api_calls": 1,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "completed": true,
+        "cost_source": "none",
+        "cost_status": "included",
+        "estimated_cost_usd": 0.0,
+        "failed": false,
+        "input_tokens": 6447,
+        "model": "gpt-5.5",
+        "output_tokens": 270,
+        "provider": "openai-codex",
+        "reasoning_tokens": 97,
+        "total_tokens": 6717
+      },
+      "valid": true,
+      "validation": {
+        "fallback": [],
+        "primary": []
+      }
+    }
+  ],
+  "samePromptAndBundleForAllModels": true,
+  "toolPolicy": "safe/no external tools; prompt requires frozen bundle only",
+  "validDecisionCount": 4,
+  "wave": "B"
+}

@@ -1,0 +1,20 @@
+{
+  "completedAtUtc": null,
+  "contestIds": null,
+  "error": null,
+  "harnessResults": null,
+  "healthyLanes": null,
+  "markets": null,
+  "modelResults": null,
+  "ok": null,
+  "postCleanupFillability": null,
+  "processReturnCodes": {},
+  "seriousOwnStateEvents": null,
+  "subrunId": null,
+  "telemetry": {},
+  "twoMakerCompetitionAchieved": null,
+  "verdictSoFar": null,
+  "wave": null,
+  "waveCoverageLabelsSoFar": null,
+  "zeroOpen": null
+}

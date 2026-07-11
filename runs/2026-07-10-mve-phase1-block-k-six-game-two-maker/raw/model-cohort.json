@@ -1,0 +1,75 @@
+{
+  "cohortId": "block-k-20260710-four-model-pilot-v1",
+  "integration": {
+    "fourDistinctModelIdsProbed": true,
+    "fourDistinctSignerMappingsPresent": true,
+    "onchainAttributionAllowedOnlyAfterSignerAndNonSelfQuoteValidation": true,
+    "realFrontendRegistryAdapterClaimed": false
+  },
+  "method": {
+    "maximumDecisionsPerModelPerWave": 1,
+    "maximumTakerRiskUSDCPerDecision": "0.500000",
+    "maximumTotalTakerRiskUSDC": "4.000000",
+    "privateChainOfThoughtRequested": false,
+    "publishableRationaleRequested": true,
+    "rounds": [
+      "wave-a",
+      "wave-b"
+    ],
+    "samePromptPerRound": true,
+    "sameSanitizedInputBundlePerRound": true,
+    "sameToolPolicy": "safe/no external tools during decision inference",
+    "targetTakerRiskUSDCPerDecision": "0.250000"
+  },
+  "network": "polygon-mainnet",
+  "participants": [
+    {
+      "modelId": "gpt-5.6-sol",
+      "modelVersion": "gpt-5.6-sol",
+      "participantId": "block-k-model-1",
+      "provider": "openai-codex",
+      "routeProbe": "raw/model-probe-gpt-5.6-sol-usage.json",
+      "selfMatchPolicy": "may take Maker A or Maker B quote; never its own quote",
+      "signerAddress": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+      "signerRole": "fresh-user"
+    },
+    {
+      "modelId": "gpt-5.6-terra",
+      "modelVersion": "gpt-5.6-terra",
+      "participantId": "block-k-model-2",
+      "provider": "openai-codex",
+      "routeProbe": "raw/model-probe-gpt-5.6-terra-usage.json",
+      "selfMatchPolicy": "may take Maker A or Maker B quote; never its own quote",
+      "signerAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "signerRole": "flow-a"
+    },
+    {
+      "modelId": "gpt-5.6-luna",
+      "modelVersion": "gpt-5.6-luna",
+      "participantId": "block-k-model-3",
+      "provider": "openai-codex",
+      "routeProbe": "raw/model-probe-gpt-5.6-luna-usage.json",
+      "selfMatchPolicy": "Maker B quotes only; Maker A quotes are forbidden",
+      "signerAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "signerRole": "stage-maker-a"
+    },
+    {
+      "modelId": "gpt-5.5",
+      "modelVersion": "gpt-5.5",
+      "participantId": "block-k-model-4",
+      "provider": "openai-codex",
+      "routeProbe": "raw/model-probe-gpt-5.5-usage.json",
+      "selfMatchPolicy": "Maker A quotes only; Maker B quotes are forbidden",
+      "signerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "signerRole": "stage-maker-b"
+    }
+  ],
+  "runId": "20260710T193208Z-block-k-six-game-two-maker",
+  "schemaVersion": 1,
+  "scoringScope": {
+    "historicalWalletPerformanceExcluded": true,
+    "start": "cohort decision timestamp per wave",
+    "transactions": "explicit run tx allowlist only"
+  },
+  "userFacingTerminology": "reference odds"
+}

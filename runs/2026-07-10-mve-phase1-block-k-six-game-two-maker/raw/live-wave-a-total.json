@@ -1,0 +1,316 @@
+{
+  "completedAtUtc": "2026-07-10T23:37:50Z",
+  "contestIds": {
+    "A1": "38",
+    "A2": "39",
+    "A3": "40"
+  },
+  "error": null,
+  "harnessResults": [],
+  "healthyLanes": [
+    "maker-a",
+    "maker-b"
+  ],
+  "markets": [
+    "total"
+  ],
+  "modelResults": [],
+  "ok": true,
+  "postCleanupFillability": {
+    "maker-a": {
+      "checked": true,
+      "commitmentHash": "0xaf07e167c622acaa6499fd6430457194b72d1ffae6c25100492f56655db16c43",
+      "errors": [],
+      "ok": true,
+      "verdict": {
+        "advisory": true,
+        "commitmentHash": "0xaf07e167c622acaa6499fd6430457194b72d1ffae6c25100492f56655db16c43",
+        "fillableNow": false,
+        "outcome": "not-fillable",
+        "reasons": [
+          {
+            "code": "COMMITMENT_REDACTED"
+          }
+        ]
+      }
+    },
+    "maker-b": {
+      "checked": true,
+      "commitmentHash": "0xf9b2b2f1636c760e58a70cca78e385cb2921bb2158cc57dd5496d4e52abb6f6e",
+      "errors": [],
+      "ok": true,
+      "verdict": {
+        "advisory": true,
+        "commitmentHash": "0xf9b2b2f1636c760e58a70cca78e385cb2921bb2158cc57dd5496d4e52abb6f6e",
+        "fillableNow": false,
+        "outcome": "not-fillable",
+        "reasons": [
+          {
+            "code": "COMMITMENT_REDACTED"
+          }
+        ]
+      }
+    }
+  },
+  "processReturnCodes": {
+    "maker-a": 0,
+    "maker-b": 0
+  },
+  "seriousOwnStateEvents": [],
+  "subrunId": "wave-a-total",
+  "telemetry": {
+    "maker-a": {
+      "cancellationEvents": [
+        {
+          "commitmentHash": "0xaf07e167c622acaa6499fd6430457194b72d1ffae6c25100492f56655db16c43",
+          "contestId": "38",
+          "kind": "soft-cancel",
+          "market": "total",
+          "reason": "shutdown",
+          "speculationId": "104",
+          "ts": "2026-07-10T23:37:25.895Z"
+        },
+        {
+          "commitmentHash": "0x4c742a9742a430e855010114379f61b8b6f8508a88c8e79a2d1fffbdf4db87a1",
+          "contestId": "38",
+          "kind": "soft-cancel",
+          "market": "total",
+          "reason": "shutdown",
+          "speculationId": "104",
+          "ts": "2026-07-10T23:37:26.044Z"
+        },
+        {
+          "commitmentHash": "0xfbca169678faaafc790b411c588b482f574bbffcf0cac6ec36e4cc289b41095f",
+          "contestId": "39",
+          "kind": "soft-cancel",
+          "market": "total",
+          "reason": "shutdown",
+          "speculationId": "107",
+          "ts": "2026-07-10T23:37:26.393Z"
+        },
+        {
+          "commitmentHash": "0x82eb2d5a3d17e6c26aeff47abdfe6f482dc81d0738421baf4d849d8fc1569934",
+          "contestId": "39",
+          "kind": "soft-cancel",
+          "market": "total",
+          "reason": "shutdown",
+          "speculationId": "107",
+          "ts": "2026-07-10T23:37:26.708Z"
+        },
+        {
+          "commitmentHash": "0x5e5e9d34565983c912fb8917e7509055c5f551529d7d2f8117f5d2add51d6dbe",
+          "contestId": "40",
+          "kind": "soft-cancel",
+          "market": "total",
+          "reason": "shutdown",
+          "speculationId": "110",
+          "ts": "2026-07-10T23:37:27.046Z"
+        },
+        {
+          "commitmentHash": "0xe093fc466665b554db85f92b31099ee410ddd09ecafe58083ff2a5015a17d2e4",
+          "contestId": "40",
+          "kind": "soft-cancel",
+          "market": "total",
+          "reason": "shutdown",
+          "speculationId": "110",
+          "ts": "2026-07-10T23:37:27.375Z"
+        }
+      ],
+      "commitmentHashes": [
+        "0xaf07e167c622acaa6499fd6430457194b72d1ffae6c25100492f56655db16c43",
+        "0x4c742a9742a430e855010114379f61b8b6f8508a88c8e79a2d1fffbdf4db87a1",
+        "0xfbca169678faaafc790b411c588b482f574bbffcf0cac6ec36e4cc289b41095f",
+        "0x82eb2d5a3d17e6c26aeff47abdfe6f482dc81d0738421baf4d849d8fc1569934",
+        "0x5e5e9d34565983c912fb8917e7509055c5f551529d7d2f8117f5d2add51d6dbe",
+        "0xe093fc466665b554db85f92b31099ee410ddd09ecafe58083ff2a5015a17d2e4"
+      ],
+      "eventCounts": {
+        "candidate": 3,
+        "kill": 1,
+        "nonce-floor-raise": 3,
+        "quote-competitiveness": 6,
+        "quote-intent": 3,
+        "risk-verdict": 3,
+        "soft-cancel": 6,
+        "stream-health-hold": 2,
+        "submit": 6,
+        "tick-start": 2
+      },
+      "seriousEvents": []
+    },
+    "maker-b": {
+      "cancellationEvents": [
+        {
+          "commitmentHash": "0xf9b2b2f1636c760e58a70cca78e385cb2921bb2158cc57dd5496d4e52abb6f6e",
+          "contestId": "38",
+          "kind": "soft-cancel",
+          "market": "total",
+          "reason": "shutdown",
+          "speculationId": "104",
+          "ts": "2026-07-10T23:37:26.082Z"
+        },
+        {
+          "commitmentHash": "0x7014eff8596fe0ce91bb10448000134c9e9b9be3dd2dda0fc6b2987c46e88cde",
+          "contestId": "38",
+          "kind": "soft-cancel",
+          "market": "total",
+          "reason": "shutdown",
+          "speculationId": "104",
+          "ts": "2026-07-10T23:37:26.236Z"
+        },
+        {
+          "commitmentHash": "0xd4c690f16e245a29a03b07f16b743e9879291e6d855a3ac465b2d94d97ae0589",
+          "contestId": "39",
+          "kind": "soft-cancel",
+          "market": "total",
+          "reason": "shutdown",
+          "speculationId": "107",
+          "ts": "2026-07-10T23:37:26.585Z"
+        },
+        {
+          "commitmentHash": "0x3abfbef3116f44a8916256af69461467999e5446361509bfa12800309bc28ce6",
+          "contestId": "39",
+          "kind": "soft-cancel",
+          "market": "total",
+          "reason": "shutdown",
+          "speculationId": "107",
+          "ts": "2026-07-10T23:37:26.932Z"
+        },
+        {
+          "commitmentHash": "0x648612c0444b50ddd381816c51327cb46fb3b83d447bff4c001efc88ed0acc61",
+          "contestId": "40",
+          "kind": "soft-cancel",
+          "market": "total",
+          "reason": "shutdown",
+          "speculationId": "110",
+          "ts": "2026-07-10T23:37:27.295Z"
+        },
+        {
+          "commitmentHash": "0x6a6800ee34a0c584aa919f9f5ad1e0942322fe9466f9f95f968cea1eab816bc8",
+          "contestId": "40",
+          "kind": "soft-cancel",
+          "market": "total",
+          "reason": "shutdown",
+          "speculationId": "110",
+          "ts": "2026-07-10T23:37:27.598Z"
+        },
+        {
+          "commitmentHash": "0xf9b2b2f1636c760e58a70cca78e385cb2921bb2158cc57dd5496d4e52abb6f6e",
+          "contestId": "38",
+          "kind": "onchain-cancel",
+          "speculationId": "104",
+          "ts": "2026-07-10T23:37:31.617Z",
+          "txHash": "0xb3c60146d284835b40a33bc3a221ce0bb115cf30c43fec93550698fb099f8b9e"
+        },
+        {
+          "commitmentHash": "0x7014eff8596fe0ce91bb10448000134c9e9b9be3dd2dda0fc6b2987c46e88cde",
+          "contestId": "38",
+          "kind": "onchain-cancel",
+          "speculationId": "104",
+          "ts": "2026-07-10T23:37:33.295Z",
+          "txHash": "0xf9c62f778cb43d66b807337ba2e92b2aa0fc3428e36a03088061376e3cfcf492"
+        },
+        {
+          "commitmentHash": "0xd4c690f16e245a29a03b07f16b743e9879291e6d855a3ac465b2d94d97ae0589",
+          "contestId": "39",
+          "kind": "onchain-cancel",
+          "speculationId": "107",
+          "ts": "2026-07-10T23:37:36.031Z",
+          "txHash": "0x33593b50bab2e961012126b6bb2e753f88accf3dc3fc01c11ce305e242237c36"
+        },
+        {
+          "commitmentHash": "0x3abfbef3116f44a8916256af69461467999e5446361509bfa12800309bc28ce6",
+          "contestId": "39",
+          "kind": "onchain-cancel",
+          "speculationId": "107",
+          "ts": "2026-07-10T23:37:37.700Z",
+          "txHash": "0xd99ce6ef49da5d8d35db5d9841e98eaf11cefc1bf6dc34cf9575d5e97223ca5e"
+        },
+        {
+          "commitmentHash": "0x648612c0444b50ddd381816c51327cb46fb3b83d447bff4c001efc88ed0acc61",
+          "contestId": "40",
+          "kind": "onchain-cancel",
+          "speculationId": "110",
+          "ts": "2026-07-10T23:37:40.464Z",
+          "txHash": "0x7f1fe8ee13cac02837d50269f47e658be01a8ba56d840de9003354f94f3e14c0"
+        },
+        {
+          "commitmentHash": "0x6a6800ee34a0c584aa919f9f5ad1e0942322fe9466f9f95f968cea1eab816bc8",
+          "contestId": "40",
+          "kind": "onchain-cancel",
+          "speculationId": "110",
+          "ts": "2026-07-10T23:37:42.166Z",
+          "txHash": "0xef8a49bed4fa90f94e21ea5a6de3b65ad6459314af7186b058ed09d0589fad4e"
+        }
+      ],
+      "commitmentHashes": [
+        "0xf9b2b2f1636c760e58a70cca78e385cb2921bb2158cc57dd5496d4e52abb6f6e",
+        "0x7014eff8596fe0ce91bb10448000134c9e9b9be3dd2dda0fc6b2987c46e88cde",
+        "0xd4c690f16e245a29a03b07f16b743e9879291e6d855a3ac465b2d94d97ae0589",
+        "0x3abfbef3116f44a8916256af69461467999e5446361509bfa12800309bc28ce6",
+        "0x648612c0444b50ddd381816c51327cb46fb3b83d447bff4c001efc88ed0acc61",
+        "0x6a6800ee34a0c584aa919f9f5ad1e0942322fe9466f9f95f968cea1eab816bc8"
+      ],
+      "eventCounts": {
+        "candidate": 3,
+        "kill": 1,
+        "onchain-cancel": 6,
+        "quote-competitiveness": 6,
+        "quote-intent": 3,
+        "risk-verdict": 3,
+        "soft-cancel": 6,
+        "stream-health-hold": 2,
+        "submit": 6,
+        "tick-start": 2
+      },
+      "seriousEvents": []
+    }
+  },
+  "twoMakerCompetitionAchieved": true,
+  "verdictSoFar": "LIVE_SUBRUN_GREEN_POSTGAME_PENDING",
+  "wave": "A",
+  "waveCoverageLabelsSoFar": [
+    "A1",
+    "A2",
+    "A3"
+  ],
+  "zeroOpen": {
+    "allPublicZero": true,
+    "checkedAtUtc": "2026-07-10T23:37:49Z",
+    "ok": true,
+    "ownCounts": {
+      "A1": {
+        "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482": 0,
+        "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b": 0
+      },
+      "A2": {
+        "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482": 0,
+        "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b": 0
+      },
+      "A3": {
+        "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482": 0,
+        "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b": 0
+      },
+      "B1": {
+        "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482": 0,
+        "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b": 0
+      },
+      "B2": {
+        "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482": 0,
+        "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b": 0
+      },
+      "B3": {
+        "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482": 0,
+        "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b": 0
+      }
+    },
+    "publicCounts": {
+      "A1": 0,
+      "A2": 0,
+      "A3": 0,
+      "B1": 0,
+      "B2": 0,
+      "B3": 0
+    }
+  }
+}

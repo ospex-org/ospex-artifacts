@@ -1,0 +1,236 @@
+{
+  "bundleSha256": "1250e9e3960cc4a3b27e7e308b511cad578b55523fcbb3a4019972247c3fc826",
+  "decisionRoundCompletedAtUtc": "2026-07-10T22:50:49Z",
+  "failures": [],
+  "frozenAtUtc": "2026-07-10T22:50:32Z",
+  "modelCount": 4,
+  "ok": true,
+  "onchainAttributionStatus": "eligible-for-live-preview",
+  "promptSha256": "81f37b6b13f9f83e962890b1562146b71214e21b302315e4ad31ae16f48b36dd",
+  "results": [
+    {
+      "decision": {
+        "fallback": {
+          "confidence": 0.57,
+          "contestId": "39",
+          "contestLabel": "A2",
+          "line": null,
+          "market": "moneyline",
+          "observedOddsAmerican": "-156",
+          "rationale": "Minnesota holds a substantial season-record advantage at home, supporting the moneyline despite the higher price.",
+          "side": "Minnesota Twins"
+        },
+        "primary": {
+          "confidence": 0.61,
+          "contestId": "40",
+          "contestLabel": "A3",
+          "line": -1.5,
+          "market": "spread",
+          "observedOddsAmerican": "+105",
+          "rationale": "Atlanta combines the wave's best record with the strongest listed pitching matchup, and plus money supports taking the favorite on the run line.",
+          "side": "Atlanta Braves"
+        }
+      },
+      "participant": {
+        "modelId": "gpt-5.6-sol",
+        "modelVersion": "gpt-5.6-sol",
+        "participantId": "block-k-model-1",
+        "provider": "openai-codex",
+        "routeProbe": "raw/model-probe-gpt-5.6-sol-usage.json",
+        "selfMatchPolicy": "may take Maker A or Maker B quote; never its own quote",
+        "signerAddress": "0x4ddfeEB90B53f7616135ce9D2B8f317af3c4066D",
+        "signerRole": "fresh-user"
+      },
+      "usage": {
+        "api_calls": 1,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "completed": true,
+        "cost_source": "none",
+        "cost_status": "included",
+        "estimated_cost_usd": 0.0,
+        "failed": false,
+        "input_tokens": 6455,
+        "model": "gpt-5.6-sol",
+        "output_tokens": 143,
+        "provider": "openai-codex",
+        "reasoning_tokens": 0,
+        "total_tokens": 6598
+      },
+      "valid": true,
+      "validation": {
+        "fallback": [],
+        "primary": []
+      }
+    },
+    {
+      "decision": {
+        "fallback": {
+          "confidence": 0.57,
+          "contestId": "39",
+          "contestLabel": "A2",
+          "line": null,
+          "market": "moneyline",
+          "observedOddsAmerican": "-156",
+          "rationale": "Minnesota holds a meaningful record advantage at 46-48 versus Los Angeles at 37-57 and is at home. The listed lineups and pre-game status support the home moneyline as the fallback.",
+          "side": "Minnesota Twins"
+        },
+        "primary": {
+          "confidence": 0.61,
+          "contestId": "40",
+          "contestLabel": "A3",
+          "line": null,
+          "market": "moneyline",
+          "observedOddsAmerican": "-156",
+          "rationale": "Atlanta enters with the stronger 54-38 record versus St. Louis at 48-44, and the listed starter matchup favors Atlanta. The available lineup and pre-game status support a straightforward moneyline selection.",
+          "side": "Atlanta Braves"
+        }
+      },
+      "participant": {
+        "modelId": "gpt-5.6-terra",
+        "modelVersion": "gpt-5.6-terra",
+        "participantId": "block-k-model-2",
+        "provider": "openai-codex",
+        "routeProbe": "raw/model-probe-gpt-5.6-terra-usage.json",
+        "selfMatchPolicy": "may take Maker A or Maker B quote; never its own quote",
+        "signerAddress": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "signerRole": "flow-a"
+      },
+      "usage": {
+        "api_calls": 1,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "completed": true,
+        "cost_source": "none",
+        "cost_status": "included",
+        "estimated_cost_usd": 0.0,
+        "failed": false,
+        "input_tokens": 6456,
+        "model": "gpt-5.6-terra",
+        "output_tokens": 249,
+        "provider": "openai-codex",
+        "reasoning_tokens": 67,
+        "total_tokens": 6705
+      },
+      "valid": true,
+      "validation": {
+        "fallback": [],
+        "primary": []
+      }
+    },
+    {
+      "decision": {
+        "fallback": {
+          "confidence": 0.6,
+          "contestId": "40",
+          "contestLabel": "A3",
+          "line": null,
+          "market": "moneyline",
+          "observedOddsAmerican": "-156",
+          "rationale": "Atlanta has the stronger record and a starting-pitching edge in the matchup, supporting the moneyline selection.",
+          "side": "Atlanta Braves"
+        },
+        "primary": {
+          "confidence": 0.62,
+          "contestId": "39",
+          "contestLabel": "A2",
+          "line": null,
+          "market": "moneyline",
+          "observedOddsAmerican": "-156",
+          "rationale": "Minnesota has the stronger season record and home-field advantage against Los Angeles, supporting the moneyline selection.",
+          "side": "Minnesota Twins"
+        }
+      },
+      "participant": {
+        "modelId": "gpt-5.6-luna",
+        "modelVersion": "gpt-5.6-luna",
+        "participantId": "block-k-model-3",
+        "provider": "openai-codex",
+        "routeProbe": "raw/model-probe-gpt-5.6-luna-usage.json",
+        "selfMatchPolicy": "Maker B quotes only; Maker A quotes are forbidden",
+        "signerAddress": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+        "signerRole": "stage-maker-a"
+      },
+      "usage": {
+        "api_calls": 1,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "completed": true,
+        "cost_source": "none",
+        "cost_status": "included",
+        "estimated_cost_usd": 0.0,
+        "failed": false,
+        "input_tokens": 6456,
+        "model": "gpt-5.6-luna",
+        "output_tokens": 284,
+        "provider": "openai-codex",
+        "reasoning_tokens": 143,
+        "total_tokens": 6740
+      },
+      "valid": true,
+      "validation": {
+        "fallback": [],
+        "primary": []
+      }
+    },
+    {
+      "decision": {
+        "fallback": {
+          "confidence": 0.55,
+          "contestId": "39",
+          "contestLabel": "A2",
+          "line": null,
+          "market": "moneyline",
+          "observedOddsAmerican": "-156",
+          "rationale": "Minnesota has the better frozen record, confirmed lineup, and is priced as the reference-odds favorite at home against an Angels side with a materially weaker win percentage.",
+          "side": "Minnesota Twins"
+        },
+        "primary": {
+          "confidence": 0.59,
+          "contestId": "40",
+          "contestLabel": "A3",
+          "line": null,
+          "market": "moneyline",
+          "observedOddsAmerican": "-156",
+          "rationale": "Atlanta enters with the stronger record in the frozen bundle, posted lineup confirmation, and a clear reference-odds favorite profile behind Chris Sale in a game with only light wind noted.",
+          "side": "Atlanta Braves"
+        }
+      },
+      "participant": {
+        "modelId": "gpt-5.5",
+        "modelVersion": "gpt-5.5",
+        "participantId": "block-k-model-4",
+        "provider": "openai-codex",
+        "routeProbe": "raw/model-probe-gpt-5.5-usage.json",
+        "selfMatchPolicy": "Maker A quotes only; Maker B quotes are forbidden",
+        "signerAddress": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+        "signerRole": "stage-maker-b"
+      },
+      "usage": {
+        "api_calls": 1,
+        "cache_read_tokens": 0,
+        "cache_write_tokens": 0,
+        "completed": true,
+        "cost_source": "none",
+        "cost_status": "included",
+        "estimated_cost_usd": 0.0,
+        "failed": false,
+        "input_tokens": 6454,
+        "model": "gpt-5.5",
+        "output_tokens": 431,
+        "provider": "openai-codex",
+        "reasoning_tokens": 263,
+        "total_tokens": 6885
+      },
+      "valid": true,
+      "validation": {
+        "fallback": [],
+        "primary": []
+      }
+    }
+  ],
+  "samePromptAndBundleForAllModels": true,
+  "toolPolicy": "safe/no external tools; prompt requires frozen bundle only",
+  "validDecisionCount": 4,
+  "wave": "A"
+}
