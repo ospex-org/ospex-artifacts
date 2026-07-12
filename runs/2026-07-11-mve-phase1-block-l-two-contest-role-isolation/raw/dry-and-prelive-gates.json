@@ -1,0 +1,50 @@
+{
+  "capacityPlan": {
+    "anonymousCap": 13,
+    "anonymousStreams": 12,
+    "fits": true,
+    "ownerStreams": 2,
+    "totalCap": 16
+  },
+  "initialPreliveHalt": {
+    "expectedTargets": 6,
+    "reason": "reference-line-mismatch",
+    "safe": true,
+    "sharedHealthyTargets": 5,
+    "target": "45:total",
+    "transactionsSent": 0
+  },
+  "recoveredDryGate": {
+    "checkedAtUtc": "2026-07-11T22:22:46Z",
+    "coverageByContest": {
+      "44": [
+        "moneyline",
+        "spread",
+        "total"
+      ],
+      "45": [
+        "moneyline",
+        "spread",
+        "total"
+      ]
+    },
+    "durationSeconds": 75,
+    "makerEventCounts": {
+      "maker-a": 46,
+      "maker-b": 46
+    },
+    "makerHealthySetsEqual": true,
+    "malformedLines": {
+      "maker-a": 0,
+      "maker-b": 0
+    },
+    "ok": true,
+    "seriousEventCounts": {
+      "maker-a": 0,
+      "maker-b": 0
+    },
+    "sharedHealthyTargetCount": 6,
+    "transactionsSent": 0
+  },
+  "schemaVersion": 1
+}

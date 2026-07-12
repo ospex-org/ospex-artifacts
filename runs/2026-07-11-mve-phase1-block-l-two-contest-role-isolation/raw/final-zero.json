@@ -1,0 +1,56 @@
+{
+  "allowances": {
+    "flow-a": {
+      "allCurrentAndStaleSpendersZero": true
+    },
+    "fresh-user": {
+      "allCurrentAndStaleSpendersZero": true
+    },
+    "stage-maker-a": {
+      "allCurrentAndStaleSpendersZero": true
+    },
+    "stage-maker-b": {
+      "allCurrentAndStaleSpendersZero": true
+    }
+  },
+  "checkedAtUtc": "2026-07-12T02:27:01Z",
+  "finalOpenCommitments": {
+    "L1": 0,
+    "L2": 0
+  },
+  "finalTargetPositionCounts": {
+    "flow-a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "fresh-user": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "stage-maker-a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "stage-maker-b": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    }
+  },
+  "latentFillability": "No open target commitment remains; all maker books were authoritatively invalidated or expired before postgame.",
+  "locksAfter": [],
+  "ok": true,
+  "processCountAfter": 0,
+  "schemaVersion": 1,
+  "verdict": "AMBER_LIVE_CAVEATS_FINAL_ZERO",
+  "zeroState": {
+    "allowancesZero": true,
+    "commitmentsZero": true,
+    "locksZero": true,
+    "positionsZero": true,
+    "processesZero": true
+  }
+}

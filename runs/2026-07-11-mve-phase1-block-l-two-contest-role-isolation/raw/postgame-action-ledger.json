@@ -1,0 +1,333 @@
+{
+  "allTransactionsSuccessful": true,
+  "claims": {
+    "flow-a": [
+      {
+        "positionType": "lower",
+        "role": "flow-a",
+        "speculationId": "122",
+        "successOrIdempotent": true,
+        "txHashes": [
+          "0x68ea240de48a2adcc13ee7142d1b297593e374eefd00af0d0b764362b86d71d3"
+        ]
+      },
+      {
+        "positionType": "lower",
+        "role": "flow-a",
+        "speculationId": "120",
+        "successOrIdempotent": true,
+        "txHashes": [
+          "0x6c8a2de63922fcf61b9fc08baeb7ef306ebbe7efdcb79096f077ad8e37f53ae3"
+        ]
+      }
+    ],
+    "fresh-user": [
+      {
+        "positionType": "lower",
+        "role": "fresh-user",
+        "speculationId": "121",
+        "successOrIdempotent": true,
+        "txHashes": [
+          "0x69be6791ff341b1a718c066f89f4ed008bd8f2858facd9a6b7c287a5b2782459"
+        ]
+      }
+    ],
+    "stage-maker-a": [
+      {
+        "positionType": "upper",
+        "role": "stage-maker-a",
+        "speculationId": "124",
+        "successOrIdempotent": true,
+        "txHashes": [
+          "0xb08bd3587ee9c58b921ed49f8337c90bb8d7ec9be1a5e571b1bf238e24373efa"
+        ]
+      }
+    ],
+    "stage-maker-b": [
+      {
+        "positionType": "upper",
+        "role": "stage-maker-b",
+        "speculationId": "125",
+        "successOrIdempotent": true,
+        "txHashes": [
+          "0xe0dde0a840a461a00cc92553e6ed080d004d33af7b06755ef7cd5de51e929f4b"
+        ]
+      },
+      {
+        "positionType": "upper",
+        "role": "stage-maker-b",
+        "speculationId": "123",
+        "successOrIdempotent": true,
+        "txHashes": [
+          "0x24b005a3ec2b5f52a03e8ded0c2e501601d20fd28b356171faeb0f13a931982d"
+        ]
+      }
+    ]
+  },
+  "generatedAtUtc": "2026-07-12T05:25:30Z",
+  "officialFinalSource": {
+    "games": [
+      {
+        "abstractGameState": "Final",
+        "awayRuns": 1,
+        "contestId": "44",
+        "detailedState": "Final",
+        "final": true,
+        "gamePk": 824813,
+        "homeRuns": 6,
+        "label": "L1",
+        "sourceUrl": "https://statsapi.mlb.com/api/v1.1/game/824813/feed/live"
+      },
+      {
+        "abstractGameState": "Final",
+        "awayRuns": 9,
+        "contestId": "45",
+        "detailedState": "Final",
+        "final": true,
+        "gamePk": 822875,
+        "homeRuns": 3,
+        "label": "L2",
+        "sourceUrl": "https://statsapi.mlb.com/api/v1.1/game/822875/feed/live"
+      }
+    ],
+    "provider": "MLB Stats API"
+  },
+  "postgameGasCeilingPOL": "1.500000",
+  "postgameGasPOL": "0.511987560639198886",
+  "schemaVersion": 1,
+  "scored": {
+    "L1": {
+      "alreadyScored": false,
+      "awayScore": 1,
+      "contestId": "44",
+      "homeScore": 6,
+      "officialScoresMatch": true,
+      "scoredAfter": true,
+      "txHashes": [
+        "0x2cff7efb2bb45835b41dc14fc41a6a32611b72ef94f287096de884c4319ed08a"
+      ]
+    },
+    "L2": {
+      "alreadyScored": false,
+      "awayScore": 9,
+      "contestId": "45",
+      "homeScore": 3,
+      "officialScoresMatch": true,
+      "scoredAfter": true,
+      "txHashes": [
+        "0x0fa469641f8221f5cfe3dec8c7b3c01fa0e0aaddebf5097e0ef88bc62fa22b9e"
+      ]
+    }
+  },
+  "scoresMatchOfficialFinals": true,
+  "settled": {
+    "120": [
+      {
+        "attempt": 1,
+        "returnCode": 0,
+        "successOrIdempotent": true,
+        "txHashes": [
+          "0x2e1fc9162a8d14674ede607e75e3f3ca5a889b4ba8c3027860d9a7f71fc161f1"
+        ]
+      }
+    ],
+    "121": [
+      {
+        "attempt": 1,
+        "returnCode": 0,
+        "successOrIdempotent": true,
+        "txHashes": [
+          "0x9254f2654347aa6b09adfbc06efdafaaebe16139066c1867aa61fd5732b56d41"
+        ]
+      }
+    ],
+    "122": [
+      {
+        "attempt": 1,
+        "returnCode": 0,
+        "successOrIdempotent": true,
+        "txHashes": [
+          "0x8e7ad4f1bda7cf0b803411da6b6c60ac10ad730c9f7a5da8f7ca723624d30ffe"
+        ]
+      }
+    ],
+    "123": [
+      {
+        "attempt": 1,
+        "returnCode": 0,
+        "successOrIdempotent": true,
+        "txHashes": [
+          "0xf247e05013a2c53ed7e6839d128521374d681a55bfcb0670c2f67b64952e7cd8"
+        ]
+      }
+    ],
+    "124": [
+      {
+        "attempt": 1,
+        "returnCode": 0,
+        "successOrIdempotent": true,
+        "txHashes": [
+          "0xd5d09fb1fc1e44dc6e8cba8edacb185a8660256fb96b9f0112353ca0236b3703"
+        ]
+      }
+    ],
+    "125": [
+      {
+        "attempt": 1,
+        "returnCode": 0,
+        "successOrIdempotent": true,
+        "txHashes": [
+          "0x34652ecd11681b0b1e76c3e384cad2e3236d2c451389a9a265991894ef107d32"
+        ]
+      }
+    ]
+  },
+  "transactionCounts": {
+    "claim": 6,
+    "score": 2,
+    "settle": 6,
+    "total": 14
+  },
+  "transactions": [
+    {
+      "blockNumber": 90078698,
+      "category": "score",
+      "explorerUrl": "https://polygonscan.com/tx/0x2cff7efb2bb45835b41dc14fc41a6a32611b72ef94f287096de884c4319ed08a",
+      "gasPOL": "0.035728354075573089",
+      "operatorControlled": true,
+      "purpose": "score contest L1 against verified official final",
+      "status": "success",
+      "txHash": "0x2cff7efb2bb45835b41dc14fc41a6a32611b72ef94f287096de884c4319ed08a"
+    },
+    {
+      "blockNumber": 90078726,
+      "category": "score",
+      "explorerUrl": "https://polygonscan.com/tx/0x0fa469641f8221f5cfe3dec8c7b3c01fa0e0aaddebf5097e0ef88bc62fa22b9e",
+      "gasPOL": "0.035467937609989248",
+      "operatorControlled": true,
+      "purpose": "score contest L2 against verified official final",
+      "status": "success",
+      "txHash": "0x0fa469641f8221f5cfe3dec8c7b3c01fa0e0aaddebf5097e0ef88bc62fa22b9e"
+    },
+    {
+      "blockNumber": 90078740,
+      "category": "settle",
+      "explorerUrl": "https://polygonscan.com/tx/0x2e1fc9162a8d14674ede607e75e3f3ca5a889b4ba8c3027860d9a7f71fc161f1",
+      "gasPOL": "0.038187058561202376",
+      "operatorControlled": true,
+      "purpose": "settle speculation 120",
+      "status": "success",
+      "txHash": "0x2e1fc9162a8d14674ede607e75e3f3ca5a889b4ba8c3027860d9a7f71fc161f1"
+    },
+    {
+      "blockNumber": 90078743,
+      "category": "settle",
+      "explorerUrl": "https://polygonscan.com/tx/0x9254f2654347aa6b09adfbc06efdafaaebe16139066c1867aa61fd5732b56d41",
+      "gasPOL": "0.0382543824773742",
+      "operatorControlled": true,
+      "purpose": "settle speculation 121",
+      "status": "success",
+      "txHash": "0x9254f2654347aa6b09adfbc06efdafaaebe16139066c1867aa61fd5732b56d41"
+    },
+    {
+      "blockNumber": 90078747,
+      "category": "settle",
+      "explorerUrl": "https://polygonscan.com/tx/0x8e7ad4f1bda7cf0b803411da6b6c60ac10ad730c9f7a5da8f7ca723624d30ffe",
+      "gasPOL": "0.03801694975302084",
+      "operatorControlled": true,
+      "purpose": "settle speculation 122",
+      "status": "success",
+      "txHash": "0x8e7ad4f1bda7cf0b803411da6b6c60ac10ad730c9f7a5da8f7ca723624d30ffe"
+    },
+    {
+      "blockNumber": 90078750,
+      "category": "settle",
+      "explorerUrl": "https://polygonscan.com/tx/0xf247e05013a2c53ed7e6839d128521374d681a55bfcb0670c2f67b64952e7cd8",
+      "gasPOL": "0.038169672656751384",
+      "operatorControlled": true,
+      "purpose": "settle speculation 123",
+      "status": "success",
+      "txHash": "0xf247e05013a2c53ed7e6839d128521374d681a55bfcb0670c2f67b64952e7cd8"
+    },
+    {
+      "blockNumber": 90078753,
+      "category": "settle",
+      "explorerUrl": "https://polygonscan.com/tx/0xd5d09fb1fc1e44dc6e8cba8edacb185a8660256fb96b9f0112353ca0236b3703",
+      "gasPOL": "0.037982106444832512",
+      "operatorControlled": true,
+      "purpose": "settle speculation 124",
+      "status": "success",
+      "txHash": "0xd5d09fb1fc1e44dc6e8cba8edacb185a8660256fb96b9f0112353ca0236b3703"
+    },
+    {
+      "blockNumber": 90078757,
+      "category": "settle",
+      "explorerUrl": "https://polygonscan.com/tx/0x34652ecd11681b0b1e76c3e384cad2e3236d2c451389a9a265991894ef107d32",
+      "gasPOL": "0.03842250294041888",
+      "operatorControlled": true,
+      "purpose": "settle speculation 125",
+      "status": "success",
+      "txHash": "0x34652ecd11681b0b1e76c3e384cad2e3236d2c451389a9a265991894ef107d32"
+    },
+    {
+      "blockNumber": 90078766,
+      "category": "claim",
+      "explorerUrl": "https://polygonscan.com/tx/0x6c8a2de63922fcf61b9fc08baeb7ef306ebbe7efdcb79096f077ad8e37f53ae3",
+      "gasPOL": "0.035579669538007102",
+      "operatorControlled": true,
+      "purpose": "claim winning position for flow-a, speculation 120",
+      "status": "success",
+      "txHash": "0x6c8a2de63922fcf61b9fc08baeb7ef306ebbe7efdcb79096f077ad8e37f53ae3"
+    },
+    {
+      "blockNumber": 90078761,
+      "category": "claim",
+      "explorerUrl": "https://polygonscan.com/tx/0x68ea240de48a2adcc13ee7142d1b297593e374eefd00af0d0b764362b86d71d3",
+      "gasPOL": "0.035467927841326665",
+      "operatorControlled": true,
+      "purpose": "claim winning position for flow-a, speculation 122",
+      "status": "success",
+      "txHash": "0x68ea240de48a2adcc13ee7142d1b297593e374eefd00af0d0b764362b86d71d3"
+    },
+    {
+      "blockNumber": 90078770,
+      "category": "claim",
+      "explorerUrl": "https://polygonscan.com/tx/0x69be6791ff341b1a718c066f89f4ed008bd8f2858facd9a6b7c287a5b2782459",
+      "gasPOL": "0.035192859942073176",
+      "operatorControlled": true,
+      "purpose": "claim winning position for fresh-user, speculation 121",
+      "status": "success",
+      "txHash": "0x69be6791ff341b1a718c066f89f4ed008bd8f2858facd9a6b7c287a5b2782459"
+    },
+    {
+      "blockNumber": 90078785,
+      "category": "claim",
+      "explorerUrl": "https://polygonscan.com/tx/0xb08bd3587ee9c58b921ed49f8337c90bb8d7ec9be1a5e571b1bf238e24373efa",
+      "gasPOL": "0.035903268938311112",
+      "operatorControlled": true,
+      "purpose": "claim winning position for stage-maker-a, speculation 124",
+      "status": "success",
+      "txHash": "0xb08bd3587ee9c58b921ed49f8337c90bb8d7ec9be1a5e571b1bf238e24373efa"
+    },
+    {
+      "blockNumber": 90078793,
+      "category": "claim",
+      "explorerUrl": "https://polygonscan.com/tx/0x24b005a3ec2b5f52a03e8ded0c2e501601d20fd28b356171faeb0f13a931982d",
+      "gasPOL": "0.034213407566545432",
+      "operatorControlled": true,
+      "purpose": "claim winning position for stage-maker-b, speculation 123",
+      "status": "success",
+      "txHash": "0x24b005a3ec2b5f52a03e8ded0c2e501601d20fd28b356171faeb0f13a931982d"
+    },
+    {
+      "blockNumber": 90078789,
+      "category": "claim",
+      "explorerUrl": "https://polygonscan.com/tx/0xe0dde0a840a461a00cc92553e6ed080d004d33af7b06755ef7cd5de51e929f4b",
+      "gasPOL": "0.03540146229377287",
+      "operatorControlled": true,
+      "purpose": "claim winning position for stage-maker-b, speculation 125",
+      "status": "success",
+      "txHash": "0xe0dde0a840a461a00cc92553e6ed080d004d33af7b06755ef7cd5de51e929f4b"
+    }
+  ]
+}

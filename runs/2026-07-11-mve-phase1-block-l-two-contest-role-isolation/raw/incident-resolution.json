@@ -1,0 +1,43 @@
+{
+  "artifactVerdict": "AMBER_LIVE_CAVEATS_FINAL_ZERO",
+  "finalZeroProven": true,
+  "incidents": [
+    {
+      "effect": "A benign reference-line mismatch reduced the exact shared target set from six to five and halted before live writes.",
+      "layer": "operator harness",
+      "resolution": "The telemetry adapter was corrected to classify skipReason; a later clean 75-second dry rerun passed all six pairs.",
+      "stage": "scheduled prelive gate",
+      "transactionWrites": 0
+    },
+    {
+      "controlledFillTransactions": 0,
+      "effect": "The two makers posted 24 live commitments, but a false-negative capacity assertion halted before controlled fills.",
+      "layer": "operator harness",
+      "resolution": "Immutable metrics proved 12 odds streams, two owner streams, and 14 total connections within capacity; the parser was corrected and regression-tested. Cleanup then invalidated all 24 commitments through 18 successful shutdown transactions.",
+      "shutdownTransactions": 18,
+      "stage": "live stream-capacity gate"
+    },
+    {
+      "effect": "A zero requested amount meant skip-not-requested rather than approve-zero.",
+      "layer": "CLI semantics / operator harness",
+      "resolution": "Explicit USDC approve-zero transactions were used and direct current/stale allowances were verified zero for all four roles.",
+      "stage": "allowance cleanup"
+    },
+    {
+      "effect": "A schema-v1 cancel-stale envelope without a top-level ok field was initially classified as failure despite terminal invalidation.",
+      "layer": "operator harness",
+      "resolution": "Structured payload/no-error parsing and terminal readback replaced the top-level-ok assumption.",
+      "stage": "authoritative cleanup classification"
+    }
+  ],
+  "liveFillPathProven": false,
+  "protocolDefectEstablished": false,
+  "quotedNoFillPathProven": true,
+  "repairValidation": {
+    "fullPythonCompilationPassed": true,
+    "lifecycleSelfTestsPassed": true,
+    "publicSecretScanFindingCount": 0,
+    "runLocalTestsPassed": 32
+  },
+  "schemaVersion": 1
+}

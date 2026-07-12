@@ -1,0 +1,240 @@
+{
+  "artifactFiles": {
+    "closing-lines": "raw/closing-lines.json",
+    "dry-and-prelive-gates": "raw/dry-and-prelive-gates.json",
+    "evidence": "evidence.json",
+    "final-zero": "raw/final-zero.json",
+    "incident-resolution": "raw/incident-resolution.json",
+    "live-quoted-no-fill": "raw/live-quoted-no-fill.json",
+    "postgame-action-ledger": "raw/postgame-action-ledger.json",
+    "source-pins": "raw/source-pins.json",
+    "summary": "summary.md",
+    "target-and-setup-summary": "raw/target-and-setup-summary.json",
+    "tx-receipts-summary": "raw/tx-receipts.summary.json"
+  },
+  "artifactId": "2026-07-11-mve-phase1-block-l-two-contest-role-isolation",
+  "artifactType": "run",
+  "chainId": 137,
+  "costs": {
+    "creationFeesUSDC": "5.000000",
+    "hardCeilingUSDC": "12.000000",
+    "lifecycleGasCeilingPOL": "5.000000",
+    "plannedMaximumUSDC": "9.126000",
+    "postgameGasPOL": "0.511987560639198886",
+    "safetyRecoveryAndLiveCleanupGasPOL": "0.599110541401176898",
+    "setupAndInitialApprovalGasPOL": "1.502496654146489385",
+    "totalLifecycleGasPOL": "2.613594756186865169",
+    "withinLifecycleGasCeiling": true
+  },
+  "dataPath": "evidence.json",
+  "date": "2026-07-11",
+  "findings": {
+    "docsFootguns": [
+      {
+        "finding": "On the pinned CLI, requesting zero approval means not requested; it is not an allowance-revocation transaction."
+      }
+    ],
+    "operatorHarness": [
+      {
+        "finding": "A benign reference-line mismatch was initially surfaced as a raw gate exception rather than a bounded target-specific halt."
+      },
+      {
+        "finding": "The live stream-capacity gate read the wrong metrics field and stopped before all six controlled fills."
+      },
+      {
+        "finding": "Cleanup classification assumed a top-level success field absent from the pinned schema-v1 response."
+      }
+    ],
+    "protocolCode": [
+      {
+        "finding": "No protocol defect was established by the live halt; both makers posted two-sided commitments and postgame score/settle/claim completed."
+      }
+    ]
+  },
+  "gates": {
+    "closingSnapshot": {
+      "beforeFirstPitch": true,
+      "evidence": "raw/closing-lines.json",
+      "ok": true
+    },
+    "controlledLiveFills": {
+      "evidence": "raw/live-quoted-no-fill.json",
+      "fillCount": 0,
+      "ok": false
+    },
+    "dry": {
+      "evidence": "raw/dry-and-prelive-gates.json",
+      "ok": true,
+      "sharedHealthyTargetCount": 6
+    },
+    "finalZero": {
+      "evidence": "raw/final-zero.json",
+      "ok": true
+    },
+    "liveCommitmentsPosted": {
+      "evidence": "raw/live-quoted-no-fill.json",
+      "ok": true,
+      "visibleCommitmentCount": 24
+    },
+    "postgame": {
+      "claimCount": 6,
+      "evidence": "raw/postgame-action-ledger.json",
+      "ok": true,
+      "scoreCount": 2,
+      "settleCount": 6
+    },
+    "setup": {
+      "allSelfMatchFalse": true,
+      "evidence": "raw/target-and-setup-summary.json",
+      "ok": true,
+      "seedFillCount": 6
+    }
+  },
+  "network": "polygon",
+  "postgame": {
+    "contestsScored": 2,
+    "evidence": "raw/postgame-action-ledger.json",
+    "officialFinalsVerified": true,
+    "speculationsSettled": 6,
+    "winningPositionsClaimed": 6,
+    "zeroState": {
+      "allowancesZero": true,
+      "commitmentsZero": true,
+      "locksZero": true,
+      "positionsZero": true,
+      "processesZero": true
+    }
+  },
+  "publicSafety": {
+    "localPathsPublished": false,
+    "rawSignaturesPublished": false,
+    "secretsPublished": false,
+    "specificUpstreamOddsProviderNamesPublished": false
+  },
+  "publishedAt": "2026-07-12T05:25:30Z",
+  "rawPath": "raw/",
+  "roles": {
+    "flow-a": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+    "fresh-user": "0x4ddfeeb90b53f7616135ce9d2b8f317af3c4066d",
+    "stage-maker-a": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "stage-maker-b": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+  },
+  "runClass": "mve-phase1-multi-contest-role-isolated-live-regression",
+  "schemaVersion": 1,
+  "scope": {
+    "actualControlledLiveFillCount": 0,
+    "contestCount": 2,
+    "economicRoleCount": 4,
+    "intendedControlledLiveFillCount": 6,
+    "makerCount": 2,
+    "setupSeedFillCount": 6,
+    "speculationCount": 6
+  },
+  "scorecardStatus": "The single-target mm-live-canary scenario/scorecard schema is not adopted for this two-contest/six-speculation aggregate artifact.",
+  "sourcePins": {
+    "chainId": 137,
+    "coreApi": {
+      "commit": "5442bee7ed23ed959cd171c8904105c0b2dca870"
+    },
+    "deployment": {
+      "core": "0x40047BAFcdEd16C938058b7b67186299a2893561",
+      "matchingModule": "0x46Af20B6307Aa0Ec13de10EF58a02c5F1b5C9559"
+    },
+    "marketMaker": {
+      "commit": "14db79b754214ca0e2e99842521337595b0dbfdc"
+    },
+    "network": "polygon",
+    "schemaVersion": 1,
+    "sdk": {
+      "commit": "3fa399a57b8fc8e228e94364b861cb216071f0c1",
+      "version": "0.10.0"
+    }
+  },
+  "speculations": [
+    {
+      "contestId": "44",
+      "label": "L1",
+      "line": null,
+      "lineTicks": 0,
+      "market": "moneyline",
+      "speculationId": "120"
+    },
+    {
+      "contestId": "44",
+      "label": "L1",
+      "line": 1.5,
+      "lineTicks": 15,
+      "market": "spread",
+      "speculationId": "121"
+    },
+    {
+      "contestId": "44",
+      "label": "L1",
+      "line": 9,
+      "lineTicks": 90,
+      "market": "total",
+      "speculationId": "122"
+    },
+    {
+      "contestId": "45",
+      "label": "L2",
+      "line": null,
+      "lineTicks": 0,
+      "market": "moneyline",
+      "speculationId": "123"
+    },
+    {
+      "contestId": "45",
+      "label": "L2",
+      "line": 1.5,
+      "lineTicks": 15,
+      "market": "spread",
+      "speculationId": "124"
+    },
+    {
+      "contestId": "45",
+      "label": "L2",
+      "line": 8.5,
+      "lineTicks": 85,
+      "market": "total",
+      "speculationId": "125"
+    }
+  ],
+  "status": "complete_verified_with_caveats",
+  "summaryPath": "summary.md",
+  "targets": [
+    {
+      "away": "Kansas City Royals",
+      "contestId": "44",
+      "gameId": "1be23a3b-b0f8-4a38-8547-feaa3c655a90",
+      "gamePk": 824813,
+      "home": "Baltimore Orioles",
+      "label": "L1",
+      "matchTime": "2026-07-11T23:05:00+00:00"
+    },
+    {
+      "away": "Houston Astros",
+      "contestId": "45",
+      "gameId": "da239448-1e7c-44b0-9558-64059d3dd9ba",
+      "gamePk": 822875,
+      "home": "Texas Rangers",
+      "label": "L2",
+      "matchTime": "2026-07-11T23:05:00+00:00"
+    }
+  ],
+  "transactions": {
+    "allSuccessful": true,
+    "evidence": "raw/tx-receipts.summary.json",
+    "liveControlledFillTransactionCount": 0,
+    "uniqueTransactionCount": 62
+  },
+  "verdict": {
+    "classification": "quoted_no_fill",
+    "label": "AMBER_LIVE_CAVEATS_FINAL_ZERO",
+    "liveFillPathProven": false,
+    "postgameFinalZeroProven": true,
+    "publicationLabel": "AMBER_QUOTED_NO_FILL",
+    "quotedTwoMakerPathProven": true,
+    "reason": "The makers posted 24 live commitments but the harness halted before any controlled live fill; all postgame and final-zero checks later completed."
+  }
+}
