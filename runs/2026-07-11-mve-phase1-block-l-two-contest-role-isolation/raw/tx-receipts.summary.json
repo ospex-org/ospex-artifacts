@@ -1,0 +1,659 @@
+{
+  "allSuccessful": true,
+  "countsByCategory": {
+    "approve": 20,
+    "cancel-commitment": 12,
+    "claim": 6,
+    "create-contest": 2,
+    "nonce-floor-raise": 6,
+    "other": 2,
+    "score": 2,
+    "seed-match": 6,
+    "settle": 6
+  },
+  "gasPOL": "2.613594756186865169",
+  "generatedAtUtc": "2026-07-12T05:25:30Z",
+  "schemaVersion": 1,
+  "scope": "All on-chain transactions relied on by the Block L lifecycle artifact.",
+  "transactions": [
+    {
+      "blockNumber": 90059195,
+      "category": "approve",
+      "explorerUrl": "https://polygonscan.com/tx/0x49969fc123ef6f4b1be9e68fb99063fba85b095b93cb0abaeed8c9a645b9890e",
+      "gasPOL": "0.018496380165998373",
+      "operatorControlled": true,
+      "purpose": "initial bounded allowance for stage-maker-a",
+      "status": "success",
+      "txHash": "0x49969fc123ef6f4b1be9e68fb99063fba85b095b93cb0abaeed8c9a645b9890e"
+    },
+    {
+      "blockNumber": 90059197,
+      "category": "approve",
+      "explorerUrl": "https://polygonscan.com/tx/0xfb24ea3f4d8f3c83fcaea29bd3421a9f8a2b4ae7df4ffa5dbe344f727719c134",
+      "gasPOL": "0.01840351249546056",
+      "operatorControlled": true,
+      "purpose": "initial bounded allowance for stage-maker-a",
+      "status": "success",
+      "txHash": "0xfb24ea3f4d8f3c83fcaea29bd3421a9f8a2b4ae7df4ffa5dbe344f727719c134"
+    },
+    {
+      "blockNumber": 90059201,
+      "category": "approve",
+      "explorerUrl": "https://polygonscan.com/tx/0x47eaa800dcca7b1f876b7c580c0862a623fce5cafe9e388c8242ffbfa5f57c65",
+      "gasPOL": "0.018473671437161094",
+      "operatorControlled": true,
+      "purpose": "initial bounded allowance for stage-maker-b",
+      "status": "success",
+      "txHash": "0x47eaa800dcca7b1f876b7c580c0862a623fce5cafe9e388c8242ffbfa5f57c65"
+    },
+    {
+      "blockNumber": 90059203,
+      "category": "approve",
+      "explorerUrl": "https://polygonscan.com/tx/0x35ee5a33d1586c515271342940257e040cf3fd8dadd8657031218cdf42d3d61a",
+      "gasPOL": "0.018389042777556153",
+      "operatorControlled": true,
+      "purpose": "initial bounded allowance for stage-maker-b",
+      "status": "success",
+      "txHash": "0x35ee5a33d1586c515271342940257e040cf3fd8dadd8657031218cdf42d3d61a"
+    },
+    {
+      "blockNumber": 90059207,
+      "category": "approve",
+      "explorerUrl": "https://polygonscan.com/tx/0x6d0c95f211b088098cf761c4202bb3157ec517300ea9a8ee9871d7a4b071b7e2",
+      "gasPOL": "0.01868898896487339",
+      "operatorControlled": true,
+      "purpose": "initial bounded allowance for flow-a",
+      "status": "success",
+      "txHash": "0x6d0c95f211b088098cf761c4202bb3157ec517300ea9a8ee9871d7a4b071b7e2"
+    },
+    {
+      "blockNumber": 90059210,
+      "category": "approve",
+      "explorerUrl": "https://polygonscan.com/tx/0x2ea2bc1ddb8db4051aa06b1727f513e71a2dc1a66040999471fcac85a8812be8",
+      "gasPOL": "0.01838967416713179",
+      "operatorControlled": true,
+      "purpose": "initial bounded allowance for flow-a",
+      "status": "success",
+      "txHash": "0x2ea2bc1ddb8db4051aa06b1727f513e71a2dc1a66040999471fcac85a8812be8"
+    },
+    {
+      "blockNumber": 90059213,
+      "category": "approve",
+      "explorerUrl": "https://polygonscan.com/tx/0xcba8d8de688cdeff281dece49751cd8d277f7f67de95d9eb1608cddb7002f889",
+      "gasPOL": "0.01853551009509447",
+      "operatorControlled": true,
+      "purpose": "initial bounded allowance for fresh-user",
+      "status": "success",
+      "txHash": "0xcba8d8de688cdeff281dece49751cd8d277f7f67de95d9eb1608cddb7002f889"
+    },
+    {
+      "blockNumber": 90059215,
+      "category": "approve",
+      "explorerUrl": "https://polygonscan.com/tx/0x8cc92565bc1e405a73dc638b4311b0a63b9f8eb6a75bc2253b9bd4aaa648a960",
+      "gasPOL": "0.018440434902855105",
+      "operatorControlled": true,
+      "purpose": "initial bounded allowance for fresh-user",
+      "status": "success",
+      "txHash": "0x8cc92565bc1e405a73dc638b4311b0a63b9f8eb6a75bc2253b9bd4aaa648a960"
+    },
+    {
+      "blockNumber": 90059341,
+      "category": "create-contest",
+      "explorerUrl": "https://polygonscan.com/tx/0xe0b5cb94b4e75a62aaa7c34f1e4cd36af33f27a0afb67b41e9bbae565a681e15",
+      "gasPOL": "0.1041128835510501",
+      "operatorControlled": true,
+      "purpose": "create contest L1",
+      "status": "success",
+      "txHash": "0xe0b5cb94b4e75a62aaa7c34f1e4cd36af33f27a0afb67b41e9bbae565a681e15"
+    },
+    {
+      "blockNumber": 90059358,
+      "category": "other",
+      "explorerUrl": "https://polygonscan.com/tx/0x0217dc84e01eabdaa64962b2dce146f3420674d18a66a33b2effe4664240336c",
+      "gasPOL": "0.03358262580951804",
+      "operatorControlled": true,
+      "purpose": "publish initial reference market for L1",
+      "status": "success",
+      "txHash": "0x0217dc84e01eabdaa64962b2dce146f3420674d18a66a33b2effe4664240336c"
+    },
+    {
+      "blockNumber": 90059848,
+      "category": "seed-match",
+      "explorerUrl": "https://polygonscan.com/tx/0x700198dd6b68139f7286aa9efd8ed1f1763cf2042672642d58c00905715f72c9",
+      "gasPOL": "0.183763546524192136",
+      "operatorControlled": true,
+      "purpose": "bounded setup seed match L1 moneyline",
+      "status": "success",
+      "txHash": "0x700198dd6b68139f7286aa9efd8ed1f1763cf2042672642d58c00905715f72c9"
+    },
+    {
+      "blockNumber": 90059856,
+      "category": "seed-match",
+      "explorerUrl": "https://polygonscan.com/tx/0x12d61fd841bdc8f2065859cf7f27f90068e60b30fea5fb9a38bc886065c4680c",
+      "gasPOL": "0.179653098854894154",
+      "operatorControlled": true,
+      "purpose": "bounded setup seed match L1 spread",
+      "status": "success",
+      "txHash": "0x12d61fd841bdc8f2065859cf7f27f90068e60b30fea5fb9a38bc886065c4680c"
+    },
+    {
+      "blockNumber": 90059863,
+      "category": "seed-match",
+      "explorerUrl": "https://polygonscan.com/tx/0x388c6cac266da1bfc2e0ebabbf34d404dec72483250c2a826fbcf6f149bb937f",
+      "gasPOL": "0.184302239362005168",
+      "operatorControlled": true,
+      "purpose": "bounded setup seed match L1 total",
+      "status": "success",
+      "txHash": "0x388c6cac266da1bfc2e0ebabbf34d404dec72483250c2a826fbcf6f149bb937f"
+    },
+    {
+      "blockNumber": 90059362,
+      "category": "create-contest",
+      "explorerUrl": "https://polygonscan.com/tx/0x12cc169191c9302cd40952e1e795b0a61f83e61657b71b578834d7e1b99e1564",
+      "gasPOL": "0.10251514434010788",
+      "operatorControlled": true,
+      "purpose": "create contest L2",
+      "status": "success",
+      "txHash": "0x12cc169191c9302cd40952e1e795b0a61f83e61657b71b578834d7e1b99e1564"
+    },
+    {
+      "blockNumber": 90059378,
+      "category": "other",
+      "explorerUrl": "https://polygonscan.com/tx/0x7757a751018f0559dee52c5b0e564b15cf100eebf51ca41dea83e2adce66f2d3",
+      "gasPOL": "0.033599038056572136",
+      "operatorControlled": true,
+      "purpose": "publish initial reference market for L2",
+      "status": "success",
+      "txHash": "0x7757a751018f0559dee52c5b0e564b15cf100eebf51ca41dea83e2adce66f2d3"
+    },
+    {
+      "blockNumber": 90059870,
+      "category": "seed-match",
+      "explorerUrl": "https://polygonscan.com/tx/0xf7d88e266ac284ca293488fa4749529f1e2886cb1f70a96d6d4d03a2a2d3b59e",
+      "gasPOL": "0.17811962303790527",
+      "operatorControlled": true,
+      "purpose": "bounded setup seed match L2 moneyline",
+      "status": "success",
+      "txHash": "0xf7d88e266ac284ca293488fa4749529f1e2886cb1f70a96d6d4d03a2a2d3b59e"
+    },
+    {
+      "blockNumber": 90059878,
+      "category": "seed-match",
+      "explorerUrl": "https://polygonscan.com/tx/0x044071cf63b1f320bc79e9b8b5f75f8dc4ae2a1cd32f647664d1e85193852d04",
+      "gasPOL": "0.17639355637460739",
+      "operatorControlled": true,
+      "purpose": "bounded setup seed match L2 spread",
+      "status": "success",
+      "txHash": "0x044071cf63b1f320bc79e9b8b5f75f8dc4ae2a1cd32f647664d1e85193852d04"
+    },
+    {
+      "blockNumber": 90059885,
+      "category": "seed-match",
+      "explorerUrl": "https://polygonscan.com/tx/0x69df33e7cc4f53f5d269014c50ce02e69328453eba3f901f01abfa4075dd94ca",
+      "gasPOL": "0.178637683229506176",
+      "operatorControlled": true,
+      "purpose": "bounded setup seed match L2 total",
+      "status": "success",
+      "txHash": "0x69df33e7cc4f53f5d269014c50ce02e69328453eba3f901f01abfa4075dd94ca"
+    },
+    {
+      "blockNumber": 90068740,
+      "category": "approve",
+      "explorerUrl": "https://polygonscan.com/tx/0x1eea97cd2b1e99186975aa05908a18db13339b61697e9429ac12e1489bd31387",
+      "gasPOL": "0.029966669345506374",
+      "operatorControlled": true,
+      "purpose": "first safety-cycle allowance revocation for stage-maker-a",
+      "status": "success",
+      "txHash": "0x1eea97cd2b1e99186975aa05908a18db13339b61697e9429ac12e1489bd31387"
+    },
+    {
+      "blockNumber": 90069107,
+      "category": "approve",
+      "explorerUrl": "https://polygonscan.com/tx/0x0694ae4b75f0714d01cbcdf329c33860420e0154e0582f99b4c66ff51b33fd56",
+      "gasPOL": "0.018452093788073619",
+      "operatorControlled": true,
+      "purpose": "bounded live-recovery allowance for stage-maker-a",
+      "status": "success",
+      "txHash": "0x0694ae4b75f0714d01cbcdf329c33860420e0154e0582f99b4c66ff51b33fd56"
+    },
+    {
+      "blockNumber": 90068744,
+      "category": "approve",
+      "explorerUrl": "https://polygonscan.com/tx/0x889fc5d6221a2b1d2c11243ccbe13d0d697ff8da9e04f6c21aac73e2ffad97c7",
+      "gasPOL": "0.031328474811325614",
+      "operatorControlled": true,
+      "purpose": "first safety-cycle allowance revocation for stage-maker-b",
+      "status": "success",
+      "txHash": "0x889fc5d6221a2b1d2c11243ccbe13d0d697ff8da9e04f6c21aac73e2ffad97c7"
+    },
+    {
+      "blockNumber": 90069110,
+      "category": "approve",
+      "explorerUrl": "https://polygonscan.com/tx/0x682f1a2add2ec80302f2f6ccf03fa40536946c4099705f5476492b2423a3012c",
+      "gasPOL": "0.019145856584453841",
+      "operatorControlled": true,
+      "purpose": "bounded live-recovery allowance for stage-maker-b",
+      "status": "success",
+      "txHash": "0x682f1a2add2ec80302f2f6ccf03fa40536946c4099705f5476492b2423a3012c"
+    },
+    {
+      "blockNumber": 90068749,
+      "category": "approve",
+      "explorerUrl": "https://polygonscan.com/tx/0x40388789c14a7241fbe097f25a025a00d5019915987305cffa47d8c720c2131b",
+      "gasPOL": "0.031634645581494345",
+      "operatorControlled": true,
+      "purpose": "first safety-cycle allowance revocation for flow-a",
+      "status": "success",
+      "txHash": "0x40388789c14a7241fbe097f25a025a00d5019915987305cffa47d8c720c2131b"
+    },
+    {
+      "blockNumber": 90069114,
+      "category": "approve",
+      "explorerUrl": "https://polygonscan.com/tx/0x420c39b0a31f49c61c32c2006f0e4ed6b463d2f2e52fd8f4749dfbdae524cf19",
+      "gasPOL": "0.018470017913428935",
+      "operatorControlled": true,
+      "purpose": "bounded live-recovery allowance for flow-a",
+      "status": "success",
+      "txHash": "0x420c39b0a31f49c61c32c2006f0e4ed6b463d2f2e52fd8f4749dfbdae524cf19"
+    },
+    {
+      "blockNumber": 90068806,
+      "category": "approve",
+      "explorerUrl": "https://polygonscan.com/tx/0x7fc4d11c062e5f642d133f04d74a3664d8dd6963e7e9212373092d347b6d641f",
+      "gasPOL": "0.019707073412131287",
+      "operatorControlled": true,
+      "purpose": "first safety-cycle allowance revocation for fresh-user",
+      "status": "success",
+      "txHash": "0x7fc4d11c062e5f642d133f04d74a3664d8dd6963e7e9212373092d347b6d641f"
+    },
+    {
+      "blockNumber": 90069119,
+      "category": "approve",
+      "explorerUrl": "https://polygonscan.com/tx/0x7cca475eac9036405f7af6719db1a5649a893f44e8058ad4418612d756adce1e",
+      "gasPOL": "0.018489085877900625",
+      "operatorControlled": true,
+      "purpose": "bounded live-recovery allowance for fresh-user",
+      "status": "success",
+      "txHash": "0x7cca475eac9036405f7af6719db1a5649a893f44e8058ad4418612d756adce1e"
+    },
+    {
+      "blockNumber": 90069185,
+      "category": "nonce-floor-raise",
+      "explorerUrl": "https://polygonscan.com/tx/0x971b84e643fd47c94db8e09b40af5a4526bfabc51243b6bbfacc2ef0c7419d65",
+      "gasPOL": "0.018120732896699573",
+      "invalidatedCommitmentCount": 2,
+      "operatorControlled": true,
+      "purpose": "maker-a shutdown invalidation for speculation 123",
+      "status": "success",
+      "txHash": "0x971b84e643fd47c94db8e09b40af5a4526bfabc51243b6bbfacc2ef0c7419d65"
+    },
+    {
+      "blockNumber": 90069187,
+      "category": "nonce-floor-raise",
+      "explorerUrl": "https://polygonscan.com/tx/0x1ce49a7d9f42ed4479e6b77fa4752e96eaaf3fe3a75438fdef1c591311ed6bc2",
+      "gasPOL": "0.017794349075338358",
+      "invalidatedCommitmentCount": 2,
+      "operatorControlled": true,
+      "purpose": "maker-a shutdown invalidation for speculation 124",
+      "status": "success",
+      "txHash": "0x1ce49a7d9f42ed4479e6b77fa4752e96eaaf3fe3a75438fdef1c591311ed6bc2"
+    },
+    {
+      "blockNumber": 90069189,
+      "category": "nonce-floor-raise",
+      "explorerUrl": "https://polygonscan.com/tx/0x14d15dcfe9218e020ed8b9e2f48ed9e2e172929cc7f7232b2ea7dd5ef61f3d2e",
+      "gasPOL": "0.018177066619723932",
+      "invalidatedCommitmentCount": 2,
+      "operatorControlled": true,
+      "purpose": "maker-a shutdown invalidation for speculation 125",
+      "status": "success",
+      "txHash": "0x14d15dcfe9218e020ed8b9e2f48ed9e2e172929cc7f7232b2ea7dd5ef61f3d2e"
+    },
+    {
+      "blockNumber": 90069191,
+      "category": "nonce-floor-raise",
+      "explorerUrl": "https://polygonscan.com/tx/0x6673b41ba581259cf9d098b83af950de3a562923d68951c75f25c9a44c88e8d5",
+      "gasPOL": "0.017879819781514964",
+      "invalidatedCommitmentCount": 2,
+      "operatorControlled": true,
+      "purpose": "maker-a shutdown invalidation for speculation 120",
+      "status": "success",
+      "txHash": "0x6673b41ba581259cf9d098b83af950de3a562923d68951c75f25c9a44c88e8d5"
+    },
+    {
+      "blockNumber": 90069193,
+      "category": "nonce-floor-raise",
+      "explorerUrl": "https://polygonscan.com/tx/0xd980510ace8e09e454379b078fb6d8bdb59ac7d921aaa0e86e28462c953c8529",
+      "gasPOL": "0.017819635324100545",
+      "invalidatedCommitmentCount": 2,
+      "operatorControlled": true,
+      "purpose": "maker-a shutdown invalidation for speculation 121",
+      "status": "success",
+      "txHash": "0xd980510ace8e09e454379b078fb6d8bdb59ac7d921aaa0e86e28462c953c8529"
+    },
+    {
+      "blockNumber": 90069195,
+      "category": "nonce-floor-raise",
+      "explorerUrl": "https://polygonscan.com/tx/0xbe622601d4307f00420914844b024b949df45ad30a91ab4a5d76de3006c2879d",
+      "gasPOL": "0.017855272646069481",
+      "invalidatedCommitmentCount": 2,
+      "operatorControlled": true,
+      "purpose": "maker-a shutdown invalidation for speculation 122",
+      "status": "success",
+      "txHash": "0xbe622601d4307f00420914844b024b949df45ad30a91ab4a5d76de3006c2879d"
+    },
+    {
+      "blockNumber": 90069185,
+      "category": "cancel-commitment",
+      "explorerUrl": "https://polygonscan.com/tx/0x29b5565f34f11f587b1c5b127fcf0e944d932c3efc96587fa80a3e75f4040e78",
+      "gasPOL": "0.019258357383487887",
+      "invalidatedCommitmentCount": 1,
+      "operatorControlled": true,
+      "purpose": "maker-b shutdown invalidation for speculation 123",
+      "status": "success",
+      "txHash": "0x29b5565f34f11f587b1c5b127fcf0e944d932c3efc96587fa80a3e75f4040e78"
+    },
+    {
+      "blockNumber": 90069187,
+      "category": "cancel-commitment",
+      "explorerUrl": "https://polygonscan.com/tx/0x7105d697e36e371e4772d4d6f2402c020cb6ee14363f289d537372371b17a788",
+      "gasPOL": "0.018904602152164962",
+      "invalidatedCommitmentCount": 1,
+      "operatorControlled": true,
+      "purpose": "maker-b shutdown invalidation for speculation 123",
+      "status": "success",
+      "txHash": "0x7105d697e36e371e4772d4d6f2402c020cb6ee14363f289d537372371b17a788"
+    },
+    {
+      "blockNumber": 90069190,
+      "category": "cancel-commitment",
+      "explorerUrl": "https://polygonscan.com/tx/0x99b1cdee2a5a0abf75912a9537976bb5cd737cf6afc8735de93c72d1b6f6f2d9",
+      "gasPOL": "0.019152145020412362",
+      "invalidatedCommitmentCount": 1,
+      "operatorControlled": true,
+      "purpose": "maker-b shutdown invalidation for speculation 124",
+      "status": "success",
+      "txHash": "0x99b1cdee2a5a0abf75912a9537976bb5cd737cf6afc8735de93c72d1b6f6f2d9"
+    },
+    {
+      "blockNumber": 90069192,
+      "category": "cancel-commitment",
+      "explorerUrl": "https://polygonscan.com/tx/0x59110805b42037585c82624adbc8b814740138fc912a2db9cb11e65a3628cba3",
+      "gasPOL": "0.019137100788816759",
+      "invalidatedCommitmentCount": 1,
+      "operatorControlled": true,
+      "purpose": "maker-b shutdown invalidation for speculation 124",
+      "status": "success",
+      "txHash": "0x59110805b42037585c82624adbc8b814740138fc912a2db9cb11e65a3628cba3"
+    },
+    {
+      "blockNumber": 90069194,
+      "category": "cancel-commitment",
+      "explorerUrl": "https://polygonscan.com/tx/0xd6e14527b8d45202c9f9a6150afc18647349e0ae7d65587b958130bacaaef1ab",
+      "gasPOL": "0.019116448939621737",
+      "invalidatedCommitmentCount": 1,
+      "operatorControlled": true,
+      "purpose": "maker-b shutdown invalidation for speculation 125",
+      "status": "success",
+      "txHash": "0xd6e14527b8d45202c9f9a6150afc18647349e0ae7d65587b958130bacaaef1ab"
+    },
+    {
+      "blockNumber": 90069197,
+      "category": "cancel-commitment",
+      "explorerUrl": "https://polygonscan.com/tx/0xb10bd706a592b82e6ba7a9650dd8a4092699e762825012fd1670d06da34bee0e",
+      "gasPOL": "0.018966763188529968",
+      "invalidatedCommitmentCount": 1,
+      "operatorControlled": true,
+      "purpose": "maker-b shutdown invalidation for speculation 125",
+      "status": "success",
+      "txHash": "0xb10bd706a592b82e6ba7a9650dd8a4092699e762825012fd1670d06da34bee0e"
+    },
+    {
+      "blockNumber": 90069200,
+      "category": "cancel-commitment",
+      "explorerUrl": "https://polygonscan.com/tx/0x1c2f68dd0d64fd024a469b587a74aa600eee5044ca12e041f4062779f947cae7",
+      "gasPOL": "0.019062036623760627",
+      "invalidatedCommitmentCount": 1,
+      "operatorControlled": true,
+      "purpose": "maker-b shutdown invalidation for speculation 120",
+      "status": "success",
+      "txHash": "0x1c2f68dd0d64fd024a469b587a74aa600eee5044ca12e041f4062779f947cae7"
+    },
+    {
+      "blockNumber": 90069203,
+      "category": "cancel-commitment",
+      "explorerUrl": "https://polygonscan.com/tx/0xbe57fea35123608671b0bd7e52252e46d61d4a751c2e958d10a373c1b8dddd5c",
+      "gasPOL": "0.019173289258780866",
+      "invalidatedCommitmentCount": 1,
+      "operatorControlled": true,
+      "purpose": "maker-b shutdown invalidation for speculation 120",
+      "status": "success",
+      "txHash": "0xbe57fea35123608671b0bd7e52252e46d61d4a751c2e958d10a373c1b8dddd5c"
+    },
+    {
+      "blockNumber": 90069204,
+      "category": "cancel-commitment",
+      "explorerUrl": "https://polygonscan.com/tx/0x280d639248de85d350e18d67e280a5db6515155a800e6013820ab8e6ef7f091e",
+      "gasPOL": "0.018992373995562885",
+      "invalidatedCommitmentCount": 1,
+      "operatorControlled": true,
+      "purpose": "maker-b shutdown invalidation for speculation 121",
+      "status": "success",
+      "txHash": "0x280d639248de85d350e18d67e280a5db6515155a800e6013820ab8e6ef7f091e"
+    },
+    {
+      "blockNumber": 90069206,
+      "category": "cancel-commitment",
+      "explorerUrl": "https://polygonscan.com/tx/0xc47d88f4973241bc071deae137549b01b5ea7f5651bffb2c297489244f8056d1",
+      "gasPOL": "0.018930881436238779",
+      "invalidatedCommitmentCount": 1,
+      "operatorControlled": true,
+      "purpose": "maker-b shutdown invalidation for speculation 121",
+      "status": "success",
+      "txHash": "0xc47d88f4973241bc071deae137549b01b5ea7f5651bffb2c297489244f8056d1"
+    },
+    {
+      "blockNumber": 90069208,
+      "category": "cancel-commitment",
+      "explorerUrl": "https://polygonscan.com/tx/0x1d745412f615de949e140e19c9aef03a0694d3c9f653ebbf4d7c992dbc522f81",
+      "gasPOL": "0.019261017712538244",
+      "invalidatedCommitmentCount": 1,
+      "operatorControlled": true,
+      "purpose": "maker-b shutdown invalidation for speculation 122",
+      "status": "success",
+      "txHash": "0x1d745412f615de949e140e19c9aef03a0694d3c9f653ebbf4d7c992dbc522f81"
+    },
+    {
+      "blockNumber": 90069210,
+      "category": "cancel-commitment",
+      "explorerUrl": "https://polygonscan.com/tx/0x5764c6493b8d8626ca6f5c73b03556b8686d9a485aecb387a3fd133cec8e66b8",
+      "gasPOL": "0.018925316789605359",
+      "invalidatedCommitmentCount": 1,
+      "operatorControlled": true,
+      "purpose": "maker-b shutdown invalidation for speculation 122",
+      "status": "success",
+      "txHash": "0x5764c6493b8d8626ca6f5c73b03556b8686d9a485aecb387a3fd133cec8e66b8"
+    },
+    {
+      "blockNumber": 90069214,
+      "category": "approve",
+      "explorerUrl": "https://polygonscan.com/tx/0xd286889dbcb8301d24e9a7ef8691ec33361b74e846af7a405f83cf610399ae37",
+      "gasPOL": "0.018530860722186501",
+      "operatorControlled": true,
+      "purpose": "final live-attempt allowance revocation for stage-maker-a",
+      "status": "success",
+      "txHash": "0xd286889dbcb8301d24e9a7ef8691ec33361b74e846af7a405f83cf610399ae37"
+    },
+    {
+      "blockNumber": 90069219,
+      "category": "approve",
+      "explorerUrl": "https://polygonscan.com/tx/0xdf8d9b636a78bd4153ad699dfa1360bf49845a06feb0ef23693fe965c9171710",
+      "gasPOL": "0.018237198027592284",
+      "operatorControlled": true,
+      "purpose": "final live-attempt allowance revocation for stage-maker-b",
+      "status": "success",
+      "txHash": "0xdf8d9b636a78bd4153ad699dfa1360bf49845a06feb0ef23693fe965c9171710"
+    },
+    {
+      "blockNumber": 90069227,
+      "category": "approve",
+      "explorerUrl": "https://polygonscan.com/tx/0x55b71ce9d0f416042ca1e8b622c238d1cad935d90ca0b62ea50f149de0c4f8e7",
+      "gasPOL": "0.019265230888939269",
+      "operatorControlled": true,
+      "purpose": "final live-attempt allowance revocation for flow-a",
+      "status": "success",
+      "txHash": "0x55b71ce9d0f416042ca1e8b622c238d1cad935d90ca0b62ea50f149de0c4f8e7"
+    },
+    {
+      "blockNumber": 90069232,
+      "category": "approve",
+      "explorerUrl": "https://polygonscan.com/tx/0x6e33ad70c82635971b655d8422ca11b3673b9574e7a30006ccb1a6de6a969855",
+      "gasPOL": "0.019356124815176916",
+      "operatorControlled": true,
+      "purpose": "final live-attempt allowance revocation for fresh-user",
+      "status": "success",
+      "txHash": "0x6e33ad70c82635971b655d8422ca11b3673b9574e7a30006ccb1a6de6a969855"
+    },
+    {
+      "blockNumber": 90078698,
+      "category": "score",
+      "explorerUrl": "https://polygonscan.com/tx/0x2cff7efb2bb45835b41dc14fc41a6a32611b72ef94f287096de884c4319ed08a",
+      "gasPOL": "0.035728354075573089",
+      "operatorControlled": true,
+      "purpose": "score contest L1 against verified official final",
+      "status": "success",
+      "txHash": "0x2cff7efb2bb45835b41dc14fc41a6a32611b72ef94f287096de884c4319ed08a"
+    },
+    {
+      "blockNumber": 90078726,
+      "category": "score",
+      "explorerUrl": "https://polygonscan.com/tx/0x0fa469641f8221f5cfe3dec8c7b3c01fa0e0aaddebf5097e0ef88bc62fa22b9e",
+      "gasPOL": "0.035467937609989248",
+      "operatorControlled": true,
+      "purpose": "score contest L2 against verified official final",
+      "status": "success",
+      "txHash": "0x0fa469641f8221f5cfe3dec8c7b3c01fa0e0aaddebf5097e0ef88bc62fa22b9e"
+    },
+    {
+      "blockNumber": 90078740,
+      "category": "settle",
+      "explorerUrl": "https://polygonscan.com/tx/0x2e1fc9162a8d14674ede607e75e3f3ca5a889b4ba8c3027860d9a7f71fc161f1",
+      "gasPOL": "0.038187058561202376",
+      "operatorControlled": true,
+      "purpose": "settle speculation 120",
+      "status": "success",
+      "txHash": "0x2e1fc9162a8d14674ede607e75e3f3ca5a889b4ba8c3027860d9a7f71fc161f1"
+    },
+    {
+      "blockNumber": 90078743,
+      "category": "settle",
+      "explorerUrl": "https://polygonscan.com/tx/0x9254f2654347aa6b09adfbc06efdafaaebe16139066c1867aa61fd5732b56d41",
+      "gasPOL": "0.0382543824773742",
+      "operatorControlled": true,
+      "purpose": "settle speculation 121",
+      "status": "success",
+      "txHash": "0x9254f2654347aa6b09adfbc06efdafaaebe16139066c1867aa61fd5732b56d41"
+    },
+    {
+      "blockNumber": 90078747,
+      "category": "settle",
+      "explorerUrl": "https://polygonscan.com/tx/0x8e7ad4f1bda7cf0b803411da6b6c60ac10ad730c9f7a5da8f7ca723624d30ffe",
+      "gasPOL": "0.03801694975302084",
+      "operatorControlled": true,
+      "purpose": "settle speculation 122",
+      "status": "success",
+      "txHash": "0x8e7ad4f1bda7cf0b803411da6b6c60ac10ad730c9f7a5da8f7ca723624d30ffe"
+    },
+    {
+      "blockNumber": 90078750,
+      "category": "settle",
+      "explorerUrl": "https://polygonscan.com/tx/0xf247e05013a2c53ed7e6839d128521374d681a55bfcb0670c2f67b64952e7cd8",
+      "gasPOL": "0.038169672656751384",
+      "operatorControlled": true,
+      "purpose": "settle speculation 123",
+      "status": "success",
+      "txHash": "0xf247e05013a2c53ed7e6839d128521374d681a55bfcb0670c2f67b64952e7cd8"
+    },
+    {
+      "blockNumber": 90078753,
+      "category": "settle",
+      "explorerUrl": "https://polygonscan.com/tx/0xd5d09fb1fc1e44dc6e8cba8edacb185a8660256fb96b9f0112353ca0236b3703",
+      "gasPOL": "0.037982106444832512",
+      "operatorControlled": true,
+      "purpose": "settle speculation 124",
+      "status": "success",
+      "txHash": "0xd5d09fb1fc1e44dc6e8cba8edacb185a8660256fb96b9f0112353ca0236b3703"
+    },
+    {
+      "blockNumber": 90078757,
+      "category": "settle",
+      "explorerUrl": "https://polygonscan.com/tx/0x34652ecd11681b0b1e76c3e384cad2e3236d2c451389a9a265991894ef107d32",
+      "gasPOL": "0.03842250294041888",
+      "operatorControlled": true,
+      "purpose": "settle speculation 125",
+      "status": "success",
+      "txHash": "0x34652ecd11681b0b1e76c3e384cad2e3236d2c451389a9a265991894ef107d32"
+    },
+    {
+      "blockNumber": 90078766,
+      "category": "claim",
+      "explorerUrl": "https://polygonscan.com/tx/0x6c8a2de63922fcf61b9fc08baeb7ef306ebbe7efdcb79096f077ad8e37f53ae3",
+      "gasPOL": "0.035579669538007102",
+      "operatorControlled": true,
+      "purpose": "claim winning position for flow-a, speculation 120",
+      "status": "success",
+      "txHash": "0x6c8a2de63922fcf61b9fc08baeb7ef306ebbe7efdcb79096f077ad8e37f53ae3"
+    },
+    {
+      "blockNumber": 90078761,
+      "category": "claim",
+      "explorerUrl": "https://polygonscan.com/tx/0x68ea240de48a2adcc13ee7142d1b297593e374eefd00af0d0b764362b86d71d3",
+      "gasPOL": "0.035467927841326665",
+      "operatorControlled": true,
+      "purpose": "claim winning position for flow-a, speculation 122",
+      "status": "success",
+      "txHash": "0x68ea240de48a2adcc13ee7142d1b297593e374eefd00af0d0b764362b86d71d3"
+    },
+    {
+      "blockNumber": 90078770,
+      "category": "claim",
+      "explorerUrl": "https://polygonscan.com/tx/0x69be6791ff341b1a718c066f89f4ed008bd8f2858facd9a6b7c287a5b2782459",
+      "gasPOL": "0.035192859942073176",
+      "operatorControlled": true,
+      "purpose": "claim winning position for fresh-user, speculation 121",
+      "status": "success",
+      "txHash": "0x69be6791ff341b1a718c066f89f4ed008bd8f2858facd9a6b7c287a5b2782459"
+    },
+    {
+      "blockNumber": 90078785,
+      "category": "claim",
+      "explorerUrl": "https://polygonscan.com/tx/0xb08bd3587ee9c58b921ed49f8337c90bb8d7ec9be1a5e571b1bf238e24373efa",
+      "gasPOL": "0.035903268938311112",
+      "operatorControlled": true,
+      "purpose": "claim winning position for stage-maker-a, speculation 124",
+      "status": "success",
+      "txHash": "0xb08bd3587ee9c58b921ed49f8337c90bb8d7ec9be1a5e571b1bf238e24373efa"
+    },
+    {
+      "blockNumber": 90078793,
+      "category": "claim",
+      "explorerUrl": "https://polygonscan.com/tx/0x24b005a3ec2b5f52a03e8ded0c2e501601d20fd28b356171faeb0f13a931982d",
+      "gasPOL": "0.034213407566545432",
+      "operatorControlled": true,
+      "purpose": "claim winning position for stage-maker-b, speculation 123",
+      "status": "success",
+      "txHash": "0x24b005a3ec2b5f52a03e8ded0c2e501601d20fd28b356171faeb0f13a931982d"
+    },
+    {
+      "blockNumber": 90078789,
+      "category": "claim",
+      "explorerUrl": "https://polygonscan.com/tx/0xe0dde0a840a461a00cc92553e6ed080d004d33af7b06755ef7cd5de51e929f4b",
+      "gasPOL": "0.03540146229377287",
+      "operatorControlled": true,
+      "purpose": "claim winning position for stage-maker-b, speculation 125",
+      "status": "success",
+      "txHash": "0xe0dde0a840a461a00cc92553e6ed080d004d33af7b06755ef7cd5de51e929f4b"
+    }
+  ],
+  "uniqueTransactionCount": 62
+}

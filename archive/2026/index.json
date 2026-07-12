@@ -1,13 +1,24 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-07-11T07:13:38Z",
+  "generatedAt": "2026-07-12T05:25:41Z",
   "repository": "ospex-org/ospex-artifacts",
   "archive": {
     "scope": "year",
     "year": 2026
   },
   "artifacts": [
+    {
+      "artifactId": "2026-07-11-mve-phase1-block-l-two-contest-role-isolation",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-11-mve-phase1-block-l-two-contest-role-isolation/evidence.json",
+      "date": "2026-07-11",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-11-mve-phase1-block-l-two-contest-role-isolation/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-07-11-mve-phase1-block-l-two-contest-role-isolation/summary.md",
+      "publishedAt": "2026-07-12T05:25:30Z"
+    },
     {
       "artifactId": "2026-07-10-mve-phase1-block-k-six-game-two-maker",
       "artifactType": "run",

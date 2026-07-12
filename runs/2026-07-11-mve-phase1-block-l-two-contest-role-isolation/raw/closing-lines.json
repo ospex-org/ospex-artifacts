@@ -1,0 +1,103 @@
+{
+  "beforeFirstPitch": true,
+  "capturedAtUtc": "2026-07-11T22:55:55Z",
+  "ok": true,
+  "schemaVersion": 1,
+  "targets": [
+    {
+      "awayTeam": "Kansas City Royals",
+      "contestId": "44",
+      "gameId": "1be23a3b-b0f8-4a38-8547-feaa3c655a90",
+      "homeTeam": "Baltimore Orioles",
+      "label": "L1",
+      "markets": [
+        {
+          "capturedAt": "2026-07-11T22:55:14.046+00:00",
+          "designatedLine": null,
+          "exactDesignatedLine": true,
+          "line": null,
+          "marketType": "moneyline",
+          "referenceUpdatedAt": "2026-07-11T22:51:47+00:00",
+          "sideAOddsAmerican": 139,
+          "sideBOddsAmerican": -158,
+          "speculationId": "120",
+          "twoSided": true
+        },
+        {
+          "capturedAt": "2026-07-11T22:55:14.128+00:00",
+          "designatedLine": 1.5,
+          "exactDesignatedLine": true,
+          "line": 1.5,
+          "marketType": "spread",
+          "oppositeLine": -1.5,
+          "referenceUpdatedAt": "2026-07-11T22:51:47+00:00",
+          "sideAOddsAmerican": -156,
+          "sideBOddsAmerican": 135,
+          "speculationId": "121",
+          "twoSided": true
+        },
+        {
+          "capturedAt": "2026-07-11T22:55:14.2+00:00",
+          "designatedLine": 9,
+          "exactDesignatedLine": true,
+          "line": 9,
+          "marketType": "total",
+          "referenceUpdatedAt": "2026-07-11T22:51:47+00:00",
+          "sideAOddsAmerican": -105,
+          "sideBOddsAmerican": -115,
+          "speculationId": "122",
+          "twoSided": true
+        }
+      ],
+      "ok": true
+    },
+    {
+      "awayTeam": "Houston Astros",
+      "contestId": "45",
+      "gameId": "da239448-1e7c-44b0-9558-64059d3dd9ba",
+      "homeTeam": "Texas Rangers",
+      "label": "L2",
+      "markets": [
+        {
+          "capturedAt": "2026-07-11T22:55:14.305+00:00",
+          "designatedLine": null,
+          "exactDesignatedLine": true,
+          "line": null,
+          "marketType": "moneyline",
+          "referenceUpdatedAt": "2026-07-11T22:51:47+00:00",
+          "sideAOddsAmerican": 104,
+          "sideBOddsAmerican": -118,
+          "speculationId": "123",
+          "twoSided": true
+        },
+        {
+          "capturedAt": "2026-07-11T22:55:14.372+00:00",
+          "designatedLine": 1.5,
+          "exactDesignatedLine": true,
+          "line": 1.5,
+          "marketType": "spread",
+          "oppositeLine": -1.5,
+          "referenceUpdatedAt": "2026-07-11T22:51:47+00:00",
+          "sideAOddsAmerican": -195,
+          "sideBOddsAmerican": 165,
+          "speculationId": "124",
+          "twoSided": true
+        },
+        {
+          "capturedAt": "2026-07-11T22:55:14.439+00:00",
+          "designatedLine": 8.5,
+          "exactDesignatedLine": true,
+          "line": 8.5,
+          "marketType": "total",
+          "referenceUpdatedAt": "2026-07-11T22:51:47+00:00",
+          "sideAOddsAmerican": -120,
+          "sideBOddsAmerican": -100,
+          "speculationId": "125",
+          "twoSided": true
+        }
+      ],
+      "ok": true
+    }
+  ],
+  "transactionsSent": 0
+}

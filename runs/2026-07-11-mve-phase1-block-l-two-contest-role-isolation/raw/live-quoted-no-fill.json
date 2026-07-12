@@ -1,0 +1,357 @@
+{
+  "bookRows": [
+    {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "contestId": "44",
+      "count": 2,
+      "label": "L1",
+      "maker": "maker-a",
+      "market": "moneyline",
+      "twoSided": true
+    },
+    {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "contestId": "44",
+      "count": 2,
+      "label": "L1",
+      "maker": "maker-a",
+      "market": "spread",
+      "twoSided": true
+    },
+    {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "contestId": "44",
+      "count": 2,
+      "label": "L1",
+      "maker": "maker-a",
+      "market": "total",
+      "twoSided": true
+    },
+    {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "contestId": "45",
+      "count": 2,
+      "label": "L2",
+      "maker": "maker-a",
+      "market": "moneyline",
+      "twoSided": true
+    },
+    {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "contestId": "45",
+      "count": 2,
+      "label": "L2",
+      "maker": "maker-a",
+      "market": "spread",
+      "twoSided": true
+    },
+    {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "contestId": "45",
+      "count": 2,
+      "label": "L2",
+      "maker": "maker-a",
+      "market": "total",
+      "twoSided": true
+    },
+    {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "contestId": "44",
+      "count": 2,
+      "label": "L1",
+      "maker": "maker-b",
+      "market": "moneyline",
+      "twoSided": true
+    },
+    {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "contestId": "44",
+      "count": 2,
+      "label": "L1",
+      "maker": "maker-b",
+      "market": "spread",
+      "twoSided": true
+    },
+    {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "contestId": "44",
+      "count": 2,
+      "label": "L1",
+      "maker": "maker-b",
+      "market": "total",
+      "twoSided": true
+    },
+    {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "contestId": "45",
+      "count": 2,
+      "label": "L2",
+      "maker": "maker-b",
+      "market": "moneyline",
+      "twoSided": true
+    },
+    {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "contestId": "45",
+      "count": 2,
+      "label": "L2",
+      "maker": "maker-b",
+      "market": "spread",
+      "twoSided": true
+    },
+    {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "contestId": "45",
+      "count": 2,
+      "label": "L2",
+      "maker": "maker-b",
+      "market": "total",
+      "twoSided": true
+    }
+  ],
+  "controlledFillCount": 0,
+  "expectedVisibleCommitments": 24,
+  "haltCause": {
+    "classification": "false-negative runtime-metric gate",
+    "fillsDispatchedBeforeHalt": 0,
+    "layer": "operator harness",
+    "observedDefect": "The gate read stream.subscribers instead of odds.subscribers for anonymous odds-stream capacity.",
+    "protocolDefectEstablished": false
+  },
+  "haltedAtUtc": "2026-07-11T22:27:28Z",
+  "immediateGateGreen": true,
+  "liveFillTransactionCount": 0,
+  "schemaVersion": 1,
+  "shutdownInvalidation": {
+    "commitmentsInvalidated": 24,
+    "makerA": {
+      "commitmentsInvalidated": 12,
+      "strategy": "bulk-nonce-floor",
+      "transactionCount": 6
+    },
+    "makerB": {
+      "commitmentsInvalidated": 12,
+      "strategy": "per-commitment",
+      "transactionCount": 12
+    },
+    "transactionCount": 18,
+    "transactions": [
+      {
+        "blockNumber": 90069185,
+        "category": "nonce-floor-raise",
+        "explorerUrl": "https://polygonscan.com/tx/0x971b84e643fd47c94db8e09b40af5a4526bfabc51243b6bbfacc2ef0c7419d65",
+        "gasPOL": "0.018120732896699573",
+        "invalidatedCommitmentCount": 2,
+        "operatorControlled": true,
+        "purpose": "maker-a shutdown invalidation for speculation 123",
+        "status": "success",
+        "txHash": "0x971b84e643fd47c94db8e09b40af5a4526bfabc51243b6bbfacc2ef0c7419d65"
+      },
+      {
+        "blockNumber": 90069187,
+        "category": "nonce-floor-raise",
+        "explorerUrl": "https://polygonscan.com/tx/0x1ce49a7d9f42ed4479e6b77fa4752e96eaaf3fe3a75438fdef1c591311ed6bc2",
+        "gasPOL": "0.017794349075338358",
+        "invalidatedCommitmentCount": 2,
+        "operatorControlled": true,
+        "purpose": "maker-a shutdown invalidation for speculation 124",
+        "status": "success",
+        "txHash": "0x1ce49a7d9f42ed4479e6b77fa4752e96eaaf3fe3a75438fdef1c591311ed6bc2"
+      },
+      {
+        "blockNumber": 90069189,
+        "category": "nonce-floor-raise",
+        "explorerUrl": "https://polygonscan.com/tx/0x14d15dcfe9218e020ed8b9e2f48ed9e2e172929cc7f7232b2ea7dd5ef61f3d2e",
+        "gasPOL": "0.018177066619723932",
+        "invalidatedCommitmentCount": 2,
+        "operatorControlled": true,
+        "purpose": "maker-a shutdown invalidation for speculation 125",
+        "status": "success",
+        "txHash": "0x14d15dcfe9218e020ed8b9e2f48ed9e2e172929cc7f7232b2ea7dd5ef61f3d2e"
+      },
+      {
+        "blockNumber": 90069191,
+        "category": "nonce-floor-raise",
+        "explorerUrl": "https://polygonscan.com/tx/0x6673b41ba581259cf9d098b83af950de3a562923d68951c75f25c9a44c88e8d5",
+        "gasPOL": "0.017879819781514964",
+        "invalidatedCommitmentCount": 2,
+        "operatorControlled": true,
+        "purpose": "maker-a shutdown invalidation for speculation 120",
+        "status": "success",
+        "txHash": "0x6673b41ba581259cf9d098b83af950de3a562923d68951c75f25c9a44c88e8d5"
+      },
+      {
+        "blockNumber": 90069193,
+        "category": "nonce-floor-raise",
+        "explorerUrl": "https://polygonscan.com/tx/0xd980510ace8e09e454379b078fb6d8bdb59ac7d921aaa0e86e28462c953c8529",
+        "gasPOL": "0.017819635324100545",
+        "invalidatedCommitmentCount": 2,
+        "operatorControlled": true,
+        "purpose": "maker-a shutdown invalidation for speculation 121",
+        "status": "success",
+        "txHash": "0xd980510ace8e09e454379b078fb6d8bdb59ac7d921aaa0e86e28462c953c8529"
+      },
+      {
+        "blockNumber": 90069195,
+        "category": "nonce-floor-raise",
+        "explorerUrl": "https://polygonscan.com/tx/0xbe622601d4307f00420914844b024b949df45ad30a91ab4a5d76de3006c2879d",
+        "gasPOL": "0.017855272646069481",
+        "invalidatedCommitmentCount": 2,
+        "operatorControlled": true,
+        "purpose": "maker-a shutdown invalidation for speculation 122",
+        "status": "success",
+        "txHash": "0xbe622601d4307f00420914844b024b949df45ad30a91ab4a5d76de3006c2879d"
+      },
+      {
+        "blockNumber": 90069185,
+        "category": "cancel-commitment",
+        "explorerUrl": "https://polygonscan.com/tx/0x29b5565f34f11f587b1c5b127fcf0e944d932c3efc96587fa80a3e75f4040e78",
+        "gasPOL": "0.019258357383487887",
+        "invalidatedCommitmentCount": 1,
+        "operatorControlled": true,
+        "purpose": "maker-b shutdown invalidation for speculation 123",
+        "status": "success",
+        "txHash": "0x29b5565f34f11f587b1c5b127fcf0e944d932c3efc96587fa80a3e75f4040e78"
+      },
+      {
+        "blockNumber": 90069187,
+        "category": "cancel-commitment",
+        "explorerUrl": "https://polygonscan.com/tx/0x7105d697e36e371e4772d4d6f2402c020cb6ee14363f289d537372371b17a788",
+        "gasPOL": "0.018904602152164962",
+        "invalidatedCommitmentCount": 1,
+        "operatorControlled": true,
+        "purpose": "maker-b shutdown invalidation for speculation 123",
+        "status": "success",
+        "txHash": "0x7105d697e36e371e4772d4d6f2402c020cb6ee14363f289d537372371b17a788"
+      },
+      {
+        "blockNumber": 90069190,
+        "category": "cancel-commitment",
+        "explorerUrl": "https://polygonscan.com/tx/0x99b1cdee2a5a0abf75912a9537976bb5cd737cf6afc8735de93c72d1b6f6f2d9",
+        "gasPOL": "0.019152145020412362",
+        "invalidatedCommitmentCount": 1,
+        "operatorControlled": true,
+        "purpose": "maker-b shutdown invalidation for speculation 124",
+        "status": "success",
+        "txHash": "0x99b1cdee2a5a0abf75912a9537976bb5cd737cf6afc8735de93c72d1b6f6f2d9"
+      },
+      {
+        "blockNumber": 90069192,
+        "category": "cancel-commitment",
+        "explorerUrl": "https://polygonscan.com/tx/0x59110805b42037585c82624adbc8b814740138fc912a2db9cb11e65a3628cba3",
+        "gasPOL": "0.019137100788816759",
+        "invalidatedCommitmentCount": 1,
+        "operatorControlled": true,
+        "purpose": "maker-b shutdown invalidation for speculation 124",
+        "status": "success",
+        "txHash": "0x59110805b42037585c82624adbc8b814740138fc912a2db9cb11e65a3628cba3"
+      },
+      {
+        "blockNumber": 90069194,
+        "category": "cancel-commitment",
+        "explorerUrl": "https://polygonscan.com/tx/0xd6e14527b8d45202c9f9a6150afc18647349e0ae7d65587b958130bacaaef1ab",
+        "gasPOL": "0.019116448939621737",
+        "invalidatedCommitmentCount": 1,
+        "operatorControlled": true,
+        "purpose": "maker-b shutdown invalidation for speculation 125",
+        "status": "success",
+        "txHash": "0xd6e14527b8d45202c9f9a6150afc18647349e0ae7d65587b958130bacaaef1ab"
+      },
+      {
+        "blockNumber": 90069197,
+        "category": "cancel-commitment",
+        "explorerUrl": "https://polygonscan.com/tx/0xb10bd706a592b82e6ba7a9650dd8a4092699e762825012fd1670d06da34bee0e",
+        "gasPOL": "0.018966763188529968",
+        "invalidatedCommitmentCount": 1,
+        "operatorControlled": true,
+        "purpose": "maker-b shutdown invalidation for speculation 125",
+        "status": "success",
+        "txHash": "0xb10bd706a592b82e6ba7a9650dd8a4092699e762825012fd1670d06da34bee0e"
+      },
+      {
+        "blockNumber": 90069200,
+        "category": "cancel-commitment",
+        "explorerUrl": "https://polygonscan.com/tx/0x1c2f68dd0d64fd024a469b587a74aa600eee5044ca12e041f4062779f947cae7",
+        "gasPOL": "0.019062036623760627",
+        "invalidatedCommitmentCount": 1,
+        "operatorControlled": true,
+        "purpose": "maker-b shutdown invalidation for speculation 120",
+        "status": "success",
+        "txHash": "0x1c2f68dd0d64fd024a469b587a74aa600eee5044ca12e041f4062779f947cae7"
+      },
+      {
+        "blockNumber": 90069203,
+        "category": "cancel-commitment",
+        "explorerUrl": "https://polygonscan.com/tx/0xbe57fea35123608671b0bd7e52252e46d61d4a751c2e958d10a373c1b8dddd5c",
+        "gasPOL": "0.019173289258780866",
+        "invalidatedCommitmentCount": 1,
+        "operatorControlled": true,
+        "purpose": "maker-b shutdown invalidation for speculation 120",
+        "status": "success",
+        "txHash": "0xbe57fea35123608671b0bd7e52252e46d61d4a751c2e958d10a373c1b8dddd5c"
+      },
+      {
+        "blockNumber": 90069204,
+        "category": "cancel-commitment",
+        "explorerUrl": "https://polygonscan.com/tx/0x280d639248de85d350e18d67e280a5db6515155a800e6013820ab8e6ef7f091e",
+        "gasPOL": "0.018992373995562885",
+        "invalidatedCommitmentCount": 1,
+        "operatorControlled": true,
+        "purpose": "maker-b shutdown invalidation for speculation 121",
+        "status": "success",
+        "txHash": "0x280d639248de85d350e18d67e280a5db6515155a800e6013820ab8e6ef7f091e"
+      },
+      {
+        "blockNumber": 90069206,
+        "category": "cancel-commitment",
+        "explorerUrl": "https://polygonscan.com/tx/0xc47d88f4973241bc071deae137549b01b5ea7f5651bffb2c297489244f8056d1",
+        "gasPOL": "0.018930881436238779",
+        "invalidatedCommitmentCount": 1,
+        "operatorControlled": true,
+        "purpose": "maker-b shutdown invalidation for speculation 121",
+        "status": "success",
+        "txHash": "0xc47d88f4973241bc071deae137549b01b5ea7f5651bffb2c297489244f8056d1"
+      },
+      {
+        "blockNumber": 90069208,
+        "category": "cancel-commitment",
+        "explorerUrl": "https://polygonscan.com/tx/0x1d745412f615de949e140e19c9aef03a0694d3c9f653ebbf4d7c992dbc522f81",
+        "gasPOL": "0.019261017712538244",
+        "invalidatedCommitmentCount": 1,
+        "operatorControlled": true,
+        "purpose": "maker-b shutdown invalidation for speculation 122",
+        "status": "success",
+        "txHash": "0x1d745412f615de949e140e19c9aef03a0694d3c9f653ebbf4d7c992dbc522f81"
+      },
+      {
+        "blockNumber": 90069210,
+        "category": "cancel-commitment",
+        "explorerUrl": "https://polygonscan.com/tx/0x5764c6493b8d8626ca6f5c73b03556b8686d9a485aecb387a3fd133cec8e66b8",
+        "gasPOL": "0.018925316789605359",
+        "invalidatedCommitmentCount": 1,
+        "operatorControlled": true,
+        "purpose": "maker-b shutdown invalidation for speculation 122",
+        "status": "success",
+        "txHash": "0x5764c6493b8d8626ca6f5c73b03556b8686d9a485aecb387a3fd133cec8e66b8"
+      }
+    ]
+  },
+  "startedAtUtc": "2026-07-11T22:24:47Z",
+  "streamCapacityObserved": {
+    "anonymousOddsSubscribers": 12,
+    "connectionsTotal": 14,
+    "oddsDegraded": false,
+    "ok": true,
+    "ownerSubscribers": 2,
+    "underPerIpCapacity": true
+  },
+  "terminalState": {
+    "allCurrentAndStaleAllowancesZero": true,
+    "allOpenCommitmentsZero": true,
+    "allPostedQuotesInvalidated": true,
+    "noRelevantWriters": true
+  },
+  "twoSidedAcrossBothMakersAndAllSixPairs": true,
+  "verdict": "AMBER_QUOTED_NO_FILL",
+  "visibleCommitments": 24
+}

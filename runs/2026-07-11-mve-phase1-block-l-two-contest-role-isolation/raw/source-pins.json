@@ -1,0 +1,19 @@
+{
+  "chainId": 137,
+  "coreApi": {
+    "commit": "5442bee7ed23ed959cd171c8904105c0b2dca870"
+  },
+  "deployment": {
+    "core": "0x40047BAFcdEd16C938058b7b67186299a2893561",
+    "matchingModule": "0x46Af20B6307Aa0Ec13de10EF58a02c5F1b5C9559"
+  },
+  "marketMaker": {
+    "commit": "14db79b754214ca0e2e99842521337595b0dbfdc"
+  },
+  "network": "polygon",
+  "schemaVersion": 1,
+  "sdk": {
+    "commit": "3fa399a57b8fc8e228e94364b861cb216071f0c1",
+    "version": "0.10.0"
+  }
+}
