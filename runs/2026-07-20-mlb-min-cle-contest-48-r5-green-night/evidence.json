@@ -8,7 +8,7 @@
   "publishedAt": "2026-07-21T05:59:14Z",
   "network": "polygon",
   "chainId": 137,
-  "status": "complete_verified",
+  "status": "complete_verified_with_caveats",
   "dataPath": "evidence.json",
   "rawPath": "raw/",
   "summaryPath": "summary.md",
