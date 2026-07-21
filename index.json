@@ -1,10 +1,12 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-07-12T05:25:41Z",
+  "generatedAt": "2026-07-21T15:15:34Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
+      "runs/2026-07-20-mlb-nym-mil-contest-49-r5-green-night/evidence.json",
+      "runs/2026-07-20-mlb-min-cle-contest-48-r5-green-night/evidence.json",
       "runs/2026-07-11-mve-phase1-block-l-two-contest-role-isolation/evidence.json",
       "runs/2026-07-10-mve-phase1-block-k-six-game-two-maker/evidence.json",
       "runs/2026-07-08-mve-phase1-block-j-late-two-game-harness-stress/evidence.json",
@@ -12,9 +14,7 @@
       "runs/2026-07-07-mlb-ari-sd-contest-26-v010-mm146-phase1-block-g-west-3game/evidence.json",
       "runs/2026-07-07-mlb-mil-stl-contest-21-v010-mm146-phase1-block-e/evidence.json",
       "runs/2026-07-06-mlb-tor-sf-contest-19-v010-mm146-phase1-block-d/evidence.json",
-      "runs/2026-07-06-mlb-col-lad-contest-20-v010-mm146-phase1-block-d/evidence.json",
-      "runs/2026-07-06-mlb-ari-sd-contest-18-v010-mm146-phase1-block-d/evidence.json",
-      "runs/2026-07-06-mlb-phi-kc-contest-17-v010-mm146-phase1-block-c/evidence.json"
+      "runs/2026-07-06-mlb-col-lad-contest-20-v010-mm146-phase1-block-d/evidence.json"
     ],
     "release-acceptance": [
       "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.json"
@@ -22,6 +22,28 @@
     "daily-digest": []
   },
   "recentArtifacts": [
+    {
+      "artifactId": "2026-07-20-mlb-nym-mil-contest-49-r5-green-night",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-20-mlb-nym-mil-contest-49-r5-green-night/evidence.json",
+      "date": "2026-07-20",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-20-mlb-nym-mil-contest-49-r5-green-night/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-07-20-mlb-nym-mil-contest-49-r5-green-night/summary.md",
+      "publishedAt": "2026-07-21T05:59:14Z"
+    },
+    {
+      "artifactId": "2026-07-20-mlb-min-cle-contest-48-r5-green-night",
+      "artifactType": "run",
+      "dataPath": "runs/2026-07-20-mlb-min-cle-contest-48-r5-green-night/evidence.json",
+      "date": "2026-07-20",
+      "network": "polygon",
+      "rawPath": "runs/2026-07-20-mlb-min-cle-contest-48-r5-green-night/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-07-20-mlb-min-cle-contest-48-r5-green-night/summary.md",
+      "publishedAt": "2026-07-21T05:59:14Z"
+    },
     {
       "artifactId": "2026-07-11-mve-phase1-block-l-two-contest-role-isolation",
       "artifactType": "run",
@@ -608,9 +630,9 @@
       "scope": "year",
       "year": 2026,
       "path": "archive/2026/index.json",
-      "artifactCount": 52,
+      "artifactCount": 54,
       "oldestPublishedAt": "2026-05-20T02:48:35Z",
-      "newestPublishedAt": "2026-07-12T05:25:30Z"
+      "newestPublishedAt": "2026-07-21T05:59:14Z"
     }
   ]
 }

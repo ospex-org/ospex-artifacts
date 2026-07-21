@@ -1,0 +1,25 @@
+{
+  "speculationId": "131",
+  "initialFlowClaimAll": {
+    "settleTx": "0x37a1a93f615ef10e71c5b8032668fed8cc9f0f8e906427aaf5ebcb677bf9747e",
+    "settleConfirmed": true,
+    "claimAttemptPhase": "pre-send estimateGas",
+    "errorCode": "CHAIN_ERROR",
+    "claimTxHash": null
+  },
+  "independentReadback": {
+    "settled": true,
+    "winSide": "over",
+    "positionType": 0,
+    "positionSide": "upper",
+    "claimableUSDC": "1.910000"
+  },
+  "boundedResolution": {
+    "commandClass": "single-position claim",
+    "attempts": 1,
+    "success": true,
+    "txHash": "0x1ec200474198e335f7c136364b0d94912dd05a49c8af4a18783c35afcfb0056e",
+    "payoutUSDC": "1.910000"
+  },
+  "classification": "same-run settle/read sequencing race; no side-mapping defect established"
+}

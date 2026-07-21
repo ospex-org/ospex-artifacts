@@ -1,0 +1,21 @@
+{
+  "observedAtUtc": "2026-07-21T05:55:51.806Z",
+  "endpoint": "https://api.ospex.org/v1/protocol/info",
+  "service": "ospex-core-api",
+  "network": "polygon",
+  "chainId": 137,
+  "build": {
+    "runtimeCommit": "9713b52b3eb0f58ee8c18c4a3318ee939fcaf851",
+    "commitSource": "build",
+    "releaseVersion": "v47",
+    "releasedAt": "2026-07-13T14:16:10Z"
+  },
+  "sourceVerification": {
+    "repository": "ospex-org/ospex-core-api",
+    "visibility": "public",
+    "resolvedSha": "9713b52b3eb0f58ee8c18c4a3318ee939fcaf851",
+    "commitUrl": "https://github.com/ospex-org/ospex-core-api/commit/9713b52b3eb0f58ee8c18c4a3318ee939fcaf851",
+    "resolved": true
+  },
+  "attributionBasis": "The canonical API reported v47 as its active build at final adoption. That release predates the 2026-07-20 run; the pin comes from deployed runtime metadata, not a local checkout."
+}

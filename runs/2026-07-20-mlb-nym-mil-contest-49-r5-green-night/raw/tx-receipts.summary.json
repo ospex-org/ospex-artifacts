@@ -1,0 +1,140 @@
+{
+  "allSuccessfulOnchainTransactions": true,
+  "failedOnchainTransactions": 0,
+  "preSendFailures": 1,
+  "transactions": [
+    {
+      "category": "approve",
+      "txHash": "0x56034bc177cd2a27b9f965a3af555f4235c128965afdf226f913fe039c2fcd6e",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Bounded flow PositionModule approval"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x38e5c56a0150bd27cccdf82e113d84149ca385833d6fc538ae9775d722388c7e",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Bounded flow TreasuryModule approval"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x388a752e53807586e0a97dcafe7e5a6b9f0a74a94928a388b5d09311d5c3396f",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Bounded maker-a PositionModule approval"
+    },
+    {
+      "category": "approve",
+      "txHash": "0xa32da47e3225f6062a58d2b502cf1098962bd1ac36e9327bc39404cd3048056d",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Bounded maker-a TreasuryModule approval"
+    },
+    {
+      "category": "create-contest",
+      "txHash": "0x92182c2260a4e7f60e8831c0ec93d11ad38311b7555f8f961685cb88b2334f40",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Create and verify contest 49"
+    },
+    {
+      "category": "seed-match",
+      "txHash": "0xaeb400f78128b5d0e3eff3791e53027a28a76f9f36e868ae4da8beba446dfaf7",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Full controlled seed match for contest 49 speculation 129"
+    },
+    {
+      "category": "seed-match",
+      "txHash": "0x9e80f8581596969cd170700da743eb09a3f806f9fef0fc3206705a567474ca54",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Full controlled seed match for contest 49 speculation 130"
+    },
+    {
+      "category": "seed-match",
+      "txHash": "0xd9db7cc0c6936e5550dd9ef6b3d58de5c345dd804ce569fa9e5e50945bbf5973",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Full controlled seed match for contest 49 speculation 131"
+    },
+    {
+      "category": "score-request",
+      "txHash": "0x92fca8f1207b146ae8fba22e92d1b90af4e8d6f481d42f17527ed933ae376947",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Request R5 score for contest 49 after official final"
+    },
+    {
+      "category": "settle",
+      "txHash": "0xce02e2527e65d2f01118cbe7362700c95e2454f1dddfc840231d89cfbd468533",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle contest 49 moneyline speculation 129"
+    },
+    {
+      "category": "settle",
+      "txHash": "0x9bbe1d7241537ce94fd53603d6a427cd422cbf6b194286cc6188755553cbe6be",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle contest 49 spread speculation 130"
+    },
+    {
+      "category": "settle",
+      "txHash": "0x37a1a93f615ef10e71c5b8032668fed8cc9f0f8e906427aaf5ebcb677bf9747e",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle contest 49 total speculation 131"
+    },
+    {
+      "category": "claim",
+      "txHash": "0xce83067cf2eb87fc3c1a5b70d26f4dcbc3e172dcd37549f99857e4bf55e74b87",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim winning controlled position for speculation 129"
+    },
+    {
+      "category": "claim",
+      "txHash": "0x03fc0f5d00a325664153e4948d4463c950810efbd28b288d28115892daeaa9ae",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim winning controlled position for speculation 130"
+    },
+    {
+      "category": "claim",
+      "txHash": "0x1ec200474198e335f7c136364b0d94912dd05a49c8af4a18783c35afcfb0056e",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim winning controlled position for speculation 131"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x6544b887129d71490a349d6ccc6038670205a099773f25e1bb0affded0273872",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Flow PositionModule approval revoked to zero"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x150569933e0f654a63c23bf46e000a2d4e271d472930ae9fce8a23ae5ee9660e",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Flow TreasuryModule approval revoked to zero"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x3fd2f59978b9e8701aa41142f4e67d159593b08350532703d3367169221b348c",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Maker-a PositionModule approval revoked to zero"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x0970f3431bcc1c13e11556afbfbc6d00bf6e0aeccac6d64c0d9a8ea219de33ef",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Maker-a TreasuryModule approval revoked to zero"
+    }
+  ]
+}
