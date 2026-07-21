@@ -1,0 +1,25 @@
+{
+  "result": {
+    "txHash": "0x0c8c59534aac759015d2b127500c0c44504ed8df100eed0ede2469da3f7c295a",
+    "contest": {
+      "contestId": "48",
+      "sport": "mlb",
+      "homeTeam": "Cleveland Guardians",
+      "awayTeam": "Minnesota Twins"
+    },
+    "speculation": {
+      "speculationId": "126",
+      "market": "moneyline"
+    },
+    "commitment": {
+      "commitmentHash": "0x5712d8fe21131247762feaabbdb999e69c6dd09492cce4b3bc212eac7321264f",
+      "contestId": "48",
+      "marketType": "moneyline"
+    },
+    "makerRiskUSDC": "1.000000",
+    "takerRiskUSDC": "1.050000",
+    "makerSide": "Cleveland Guardians",
+    "takerSide": "Minnesota Twins",
+    "selfMatch": false
+  }
+}

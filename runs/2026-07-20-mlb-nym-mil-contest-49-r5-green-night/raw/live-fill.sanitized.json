@@ -1,0 +1,25 @@
+{
+  "result": {
+    "txHash": "0xaeb400f78128b5d0e3eff3791e53027a28a76f9f36e868ae4da8beba446dfaf7",
+    "contest": {
+      "contestId": "49",
+      "sport": "mlb",
+      "homeTeam": "Milwaukee Brewers",
+      "awayTeam": "New York Mets"
+    },
+    "speculation": {
+      "speculationId": "129",
+      "market": "moneyline"
+    },
+    "commitment": {
+      "commitmentHash": "0xa2c016fffe51e64c91cb1170d061b96bf98e2f04af1f1c0ce40279e6ff37a8dc",
+      "contestId": "49",
+      "marketType": "moneyline"
+    },
+    "makerRiskUSDC": "1.000000",
+    "takerRiskUSDC": "1.780000",
+    "makerSide": "New York Mets",
+    "takerSide": "Milwaukee Brewers",
+    "selfMatch": false
+  }
+}

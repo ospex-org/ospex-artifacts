@@ -1,0 +1,44 @@
+{
+  "protocolAccounting": {
+    "maker": {
+      "startUSDC": "300.289792",
+      "stakesUSDC": "8.000000",
+      "payoutUSDC": "9.830000",
+      "feesUSDC": "1.500000",
+      "protocolFinalUSDC": "300.619792",
+      "tradingPnLUSDC": "1.830000"
+    },
+    "flow": {
+      "startUSDC": "291.012797",
+      "stakesUSDC": "8.920000",
+      "payoutUSDC": "7.090000",
+      "feesUSDC": "3.500000",
+      "protocolFinalUSDC": "285.682797",
+      "tradingPnLUSDC": "-1.830000"
+    },
+    "combined": {
+      "tradingPnLUSDC": "0.000000",
+      "feesUSDC": "5.000000",
+      "protocolNetDeltaUSDC": "-5.000000"
+    }
+  },
+  "externalInflowsExcludedFromProtocolPnL": [
+    {
+      "role": "flow",
+      "amountUSDC": "0.000191",
+      "txHash": "0xb40a0c5d173bdab5e025f0a69cd019d9f8efb756d539d9eef2387c23c316705f"
+    },
+    {
+      "role": "maker",
+      "amountUSDC": "0.000205",
+      "txHash": "0xde4696a49e2bff78f533e912e15ebdd665ade67b7d7930bb2f31b8e141c1eed1"
+    }
+  ],
+  "gas": {
+    "makerPOL": "0.360267433541908875",
+    "flowPOL": "1.666278965127461001",
+    "capPerWalletPOL": "2",
+    "withinCap": true
+  },
+  "allGreen": true
+}

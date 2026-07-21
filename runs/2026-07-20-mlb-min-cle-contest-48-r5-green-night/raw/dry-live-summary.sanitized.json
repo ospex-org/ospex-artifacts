@@ -1,0 +1,31 @@
+{
+  "dryRun": {
+    "durationMinutes": 15,
+    "targetContestIds": [
+      "48",
+      "49"
+    ],
+    "marketCount": 6,
+    "wouldSubmitCount": 36,
+    "transientFetchErrors": 1,
+    "recovered": true
+  },
+  "liveRun": {
+    "maker": "maker-a",
+    "targetContestIds": [
+      "48",
+      "49"
+    ],
+    "marketCount": 6,
+    "submits": 30,
+    "controlledFills": 1,
+    "softCancels": 29,
+    "errors": 0,
+    "stopReason": "kill-file",
+    "processDown": true
+  },
+  "stateIsolation": {
+    "dryAndLivePathsDistinct": true,
+    "liveFreshState": true
+  }
+}

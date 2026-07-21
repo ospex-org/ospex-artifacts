@@ -1,0 +1,67 @@
+{
+  "officialSource": {
+    "authority": "MLB Stats API",
+    "gamePk": 824410,
+    "status": "Final",
+    "awayRuns": 4,
+    "homeRuns": 13
+  },
+  "contest": {
+    "contestId": "48",
+    "onchainStatus": "scored",
+    "apiStatus": "scored",
+    "scoreMatchesOfficial": true,
+    "scoreRequestTx": "0xd1ea58e24d3d9828873584effa6ddbf4958124a15a8e1ce6290832155065cddc"
+  },
+  "speculations": [
+    {
+      "speculationId": "126",
+      "type": "moneyline",
+      "lineTicks": 0,
+      "winSide": "home",
+      "settled": true,
+      "voided": false,
+      "settleTx": "0x7dbdf1519a844eb17cd49e140a2496824e2f29daf645f8b108d99ed6b3a8fdd6",
+      "winningClaimTx": "0x42c6bae8156b5a93e38086350f2437e874cc81c9752673ec3a129fe4a48106c0"
+    },
+    {
+      "speculationId": "127",
+      "type": "spread",
+      "lineTicks": -15,
+      "line": -1.5,
+      "winSide": "home",
+      "settled": true,
+      "voided": false,
+      "settleTx": "0xe0a50bdf35b561b862f76646ff2e85309f5e954cd208e48e83e8d529c0695bb6",
+      "winningClaimTx": "0x0f4a6f93c085e4225f302ee6f83d233717febc3568377b3c699605f0a7c225e1"
+    },
+    {
+      "speculationId": "128",
+      "type": "total",
+      "lineTicks": 75,
+      "line": 7.5,
+      "winSide": "over",
+      "settled": true,
+      "voided": false,
+      "settleTx": "0xbe90cad66aedae04a386fc28789f0d9aebddb7b91a70e1a57274f67ca3c963c7",
+      "winningClaimTx": "0x9adb7afdafede9fccef8d1b8faf7fb610a7d2675a528a5aa5266a9aad77f634c"
+    }
+  ],
+  "claims": {
+    "successful": 3,
+    "failedTransactions": 0,
+    "preSendEstimateFailures": 0
+  },
+  "finalPositionCounts": {
+    "maker": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    },
+    "flow": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    }
+  }
+}

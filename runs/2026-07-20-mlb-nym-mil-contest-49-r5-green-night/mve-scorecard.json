@@ -1,0 +1,254 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "2026-07-20-mlb-nym-mil-contest-49-r5-green-night",
+  "generatedAt": "2026-07-21T05:59:14Z",
+  "runClass": "mm-live-canary",
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "New York Mets @ Milwaukee Brewers contest 49 completed the bounded R5 lifecycle: three markets seeded and filled, live maker quotes posted, official final verified, all three speculations settled, winning positions claimed, both controlled-wallet allowances revoked, and final commitments/positions/processes were zero."
+  },
+  "capabilities": [
+    {
+      "id": "target-preflight",
+      "capability": "Target preflight and allowlist",
+      "proof": "proven_live",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "notes": "Contest 49 and speculations 129,130,131 passed identity, role, odds, allowlist, and cap gates."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "capability": "Repo/runtime gates",
+      "proof": "proven_live",
+      "evidence": "raw/runtime-and-setup.sanitized.json",
+      "notes": "Harness, SDK/CLI v0.10.0, and market-maker commits were pinned and the live process sourced the approved environment independently."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "capability": "Wallet auth, balances, allowances",
+      "proof": "proven_live",
+      "evidence": "raw/runtime-and-setup.sanitized.json",
+      "notes": "Expected-address signer checks passed for flow and maker-a; maker-b and fresh-user remained idle."
+    },
+    {
+      "id": "bounded-approvals",
+      "capability": "Bounded approvals / no unlimited approvals",
+      "proof": "proven_live",
+      "evidence": "raw/runtime-and-setup.sanitized.json",
+      "notes": "Flow and maker-a used bounded one-time approvals; final PositionModule and TreasuryModule allowances were independently read back as zero."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "capability": "Dry-run quote loop",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/dry-live-summary.sanitized.json",
+      "notes": "A separate isolated dry window covered all six markets before live signing; one transient discovery fetch failure recovered on later ticks."
+    },
+    {
+      "id": "live-commitments-posted",
+      "capability": "Live commitments posted",
+      "proof": "proven_live",
+      "evidence": "raw/dry-live-summary.sanitized.json",
+      "notes": "Maker-a posted bounded live quotes only for contests 48 and 49 with approvals.autoApprove false."
+    },
+    {
+      "id": "live-fill",
+      "capability": "Controlled live fill",
+      "proof": "proven_live",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "The target moneyline seed was fully matched without self-match; tx 0xaeb400f78128b5d0e3eff3791e53027a28a76f9f36e868ae4da8beba446dfaf7."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "capability": "Own-state SSE canonical fill source",
+      "proof": "proven_live",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "Owner-state evidence observed the target fill and post-fill position state; no identity divergence occurred."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "capability": "Exposure drained to zero",
+      "proof": "proven_live",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "Final public commitments, orderbooks, controlled-wallet active/pending/claimable positions, allowances, and orphan processes were zero."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "capability": "Restart/cold-start safety",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/dry-live-summary.sanitized.json",
+      "notes": "Dry and live state/telemetry paths were isolated and the live run used fresh state with no stale replay."
+    },
+    {
+      "id": "postgame-score",
+      "capability": "Postgame score",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Official final New York Mets 3, Milwaukee Brewers 8 matched contest 49 on-chain/API score."
+    },
+    {
+      "id": "postgame-settle",
+      "capability": "Postgame settle",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Speculations 129,130,131 settled to the expected winning sides."
+    },
+    {
+      "id": "postgame-claim",
+      "capability": "Postgame claim/no-op",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "All winning controlled positions were claimed; one pre-send estimate failure after a same-run settle produced no transaction and a later direct claim succeeded. Final active/pending/claimable counts were zero."
+    },
+    {
+      "id": "cost-within-cap",
+      "capability": "Cost within cap",
+      "proof": "proven_live",
+      "evidence": "raw/balance-reconciliation.sanitized.json",
+      "notes": "Combined run risk, protocol fees, and per-wallet gas remained below approved caps; unsolicited micro-USDC inflows were separately attributed and excluded from protocol P&L."
+    }
+  ],
+  "zeroExposure": {
+    "checkedAtUtc": "2026-07-21T03:31:17Z",
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "orphanProcessCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json"
+  },
+  "transactions": [
+    {
+      "category": "approve",
+      "txHash": "0x56034bc177cd2a27b9f965a3af555f4235c128965afdf226f913fe039c2fcd6e",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Bounded flow PositionModule approval"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x38e5c56a0150bd27cccdf82e113d84149ca385833d6fc538ae9775d722388c7e",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Bounded flow TreasuryModule approval"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x388a752e53807586e0a97dcafe7e5a6b9f0a74a94928a388b5d09311d5c3396f",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Bounded maker-a PositionModule approval"
+    },
+    {
+      "category": "approve",
+      "txHash": "0xa32da47e3225f6062a58d2b502cf1098962bd1ac36e9327bc39404cd3048056d",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Bounded maker-a TreasuryModule approval"
+    },
+    {
+      "category": "create-contest",
+      "txHash": "0x92182c2260a4e7f60e8831c0ec93d11ad38311b7555f8f961685cb88b2334f40",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Create and verify contest 49"
+    },
+    {
+      "category": "seed-match",
+      "txHash": "0xaeb400f78128b5d0e3eff3791e53027a28a76f9f36e868ae4da8beba446dfaf7",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Full controlled seed match for contest 49 speculation 129"
+    },
+    {
+      "category": "seed-match",
+      "txHash": "0x9e80f8581596969cd170700da743eb09a3f806f9fef0fc3206705a567474ca54",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Full controlled seed match for contest 49 speculation 130"
+    },
+    {
+      "category": "seed-match",
+      "txHash": "0xd9db7cc0c6936e5550dd9ef6b3d58de5c345dd804ce569fa9e5e50945bbf5973",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Full controlled seed match for contest 49 speculation 131"
+    },
+    {
+      "category": "score-request",
+      "txHash": "0x92fca8f1207b146ae8fba22e92d1b90af4e8d6f481d42f17527ed933ae376947",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Request R5 score for contest 49 after official final"
+    },
+    {
+      "category": "settle",
+      "txHash": "0xce02e2527e65d2f01118cbe7362700c95e2454f1dddfc840231d89cfbd468533",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle contest 49 moneyline speculation 129"
+    },
+    {
+      "category": "settle",
+      "txHash": "0x9bbe1d7241537ce94fd53603d6a427cd422cbf6b194286cc6188755553cbe6be",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle contest 49 spread speculation 130"
+    },
+    {
+      "category": "settle",
+      "txHash": "0x37a1a93f615ef10e71c5b8032668fed8cc9f0f8e906427aaf5ebcb677bf9747e",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle contest 49 total speculation 131"
+    },
+    {
+      "category": "claim",
+      "txHash": "0xce83067cf2eb87fc3c1a5b70d26f4dcbc3e172dcd37549f99857e4bf55e74b87",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim winning controlled position for speculation 129"
+    },
+    {
+      "category": "claim",
+      "txHash": "0x03fc0f5d00a325664153e4948d4463c950810efbd28b288d28115892daeaa9ae",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim winning controlled position for speculation 130"
+    },
+    {
+      "category": "claim",
+      "txHash": "0x1ec200474198e335f7c136364b0d94912dd05a49c8af4a18783c35afcfb0056e",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim winning controlled position for speculation 131"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x6544b887129d71490a349d6ccc6038670205a099773f25e1bb0affded0273872",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Flow PositionModule approval revoked to zero"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x150569933e0f654a63c23bf46e000a2d4e271d472930ae9fce8a23ae5ee9660e",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Flow TreasuryModule approval revoked to zero"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x3fd2f59978b9e8701aa41142f4e67d159593b08350532703d3367169221b348c",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Maker-a PositionModule approval revoked to zero"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x0970f3431bcc1c13e11556afbfbc6d00bf6e0aeccac6d64c0d9a8ea219de33ef",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Maker-a TreasuryModule approval revoked to zero"
+    }
+  ]
+}

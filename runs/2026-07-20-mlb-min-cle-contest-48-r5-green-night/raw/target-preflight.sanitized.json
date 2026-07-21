@@ -1,0 +1,42 @@
+{
+  "apiHealth": "ok",
+  "budgetPolicy": "two contests; <=50 USDC combined new risk; <=3 USDC new-market fees; <=2 POL gas per wallet",
+  "selectedTarget": {
+    "contestId": "48",
+    "sport": "mlb",
+    "homeTeam": "Cleveland Guardians",
+    "awayTeam": "Minnesota Twins",
+    "gameId": "6479b719-354e-4768-87e3-ee4f414749b3",
+    "gamePk": 824410,
+    "matchTime": "2026-07-20T22:40:00Z",
+    "allowlistContestIds": [
+      "48",
+      "49"
+    ],
+    "marketsCovered": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "speculations": [
+      {
+        "speculationId": "126",
+        "type": "moneyline",
+        "lineTicks": 0,
+        "contestId": "48"
+      },
+      {
+        "speculationId": "127",
+        "type": "spread",
+        "lineTicks": -15,
+        "contestId": "48"
+      },
+      {
+        "speculationId": "128",
+        "type": "total",
+        "lineTicks": 75,
+        "contestId": "48"
+      }
+    ]
+  }
+}

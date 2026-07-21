@@ -1,0 +1,11 @@
+{
+  "target": {
+    "contestId": "48",
+    "speculationId": "126",
+    "commitmentHash": "0x5712d8fe21131247762feaabbdb999e69c6dd09492cce4b3bc212eac7321264f"
+  },
+  "fillObserved": true,
+  "positionReadbackObserved": true,
+  "identityDivergenceObserved": false,
+  "finalVisibleCommitmentCount": 0
+}

@@ -1,0 +1,27 @@
+{
+  "checkedAtUtc": "2026-07-21T03:31:17Z",
+  "targetContest": "49",
+  "publicMakerVisibleCommitments": 0,
+  "publicContestSpecVisibleCommitments": 0,
+  "contestOrderbookCount": 0,
+  "orphanProcessCount": 0,
+  "allowances": {
+    "makerPosition": 0,
+    "makerTreasury": 0,
+    "flowPosition": 0,
+    "flowTreasury": 0
+  },
+  "targetPositionCounts": {
+    "maker": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    },
+    "flow": {
+      "active": 0,
+      "pendingSettle": 0,
+      "claimable": 0
+    }
+  },
+  "allSixSpeculationsSettled": true
+}
