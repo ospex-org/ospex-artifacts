@@ -1,0 +1,90 @@
+{
+  "officialSource": {
+    "authority": "MLB Stats API",
+    "gamePk": 823760,
+    "status": "Final",
+    "awayRuns": 4,
+    "homeRuns": 0
+  },
+  "contest": {
+    "contestId": "51",
+    "onchainStatus": "scored",
+    "apiStatus": "scored",
+    "scoreMatchesOfficial": true,
+    "scoreRequestTx": "0x57c075ea0db6a4f98e418f6c1e489ad5ea55ac5b58c6e61daa539c91c6a7db62"
+  },
+  "speculations": [
+    {
+      "speculationId": "135",
+      "type": "moneyline",
+      "lineTicks": 0,
+      "line": null,
+      "winSide": "away",
+      "settled": true,
+      "voided": false,
+      "settleTx": "0xebaecbceca328767ebf3d38f5e874eb84cf4c4b2353098899a732b2d8029874d",
+      "winningClaimTxs": [
+        "0x9873c9631d9b33ea941748b8e209f75629f8f72f4830e7e926bf253441c5fe04"
+      ],
+      "winningClaimRoles": [
+        "maker-b"
+      ]
+    },
+    {
+      "speculationId": "136",
+      "type": "spread",
+      "lineTicks": 15,
+      "line": 1.5,
+      "winSide": "away",
+      "settled": true,
+      "voided": false,
+      "settleTx": "0x65eaffe91a5690599a3e018cf1ad2290f5abf971b507a13f5988f322e25f0fe6",
+      "winningClaimTxs": [
+        "0x7bd75ffd034fccfb29198d771d423a88b85dc82294ce653d86bf3609f1d9b681",
+        "0xa7f3c436c59545e9713a3e1557be6cdca335963b22ba5ec058685d0a4c503ae6"
+      ],
+      "winningClaimRoles": [
+        "maker-b",
+        "flow"
+      ]
+    },
+    {
+      "speculationId": "137",
+      "type": "total",
+      "lineTicks": 90,
+      "line": 9,
+      "winSide": "under",
+      "settled": true,
+      "voided": false,
+      "settleTx": "0xde3b4f7afa054cac99f4b652190da25dc474914ed20cc164525e933d3aa5fddb",
+      "winningClaimTxs": [
+        "0xae8a141fc11206706ebef218ca45d205f17ac19eb91bb1fd9b5073092eedc667"
+      ],
+      "winningClaimRoles": [
+        "flow"
+      ]
+    }
+  ],
+  "claims": {
+    "successful": 4,
+    "failedTransactions": 0,
+    "operatorTransactionRetries": 0
+  },
+  "finalPositionCounts": {
+    "maker-a": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "maker-b": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    },
+    "flow": {
+      "active": 0,
+      "claimable": 0,
+      "pendingSettle": 0
+    }
+  }
+}

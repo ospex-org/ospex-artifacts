@@ -1,0 +1,44 @@
+{
+  "ok": true,
+  "makerRole": "maker-b",
+  "contestAllowList": [
+    "51"
+  ],
+  "dry": {
+    "ok": true,
+    "events": {
+      "candidate": 3,
+      "expire": 14,
+      "kill": 1,
+      "quote-competitiveness": 16,
+      "quote-intent": 12,
+      "risk-verdict": 12,
+      "tick-start": 30,
+      "would-replace": 6,
+      "would-soft-cancel": 8,
+      "would-submit": 10
+    },
+    "actualDurationSeconds": 917.417446,
+    "protocolTransactions": 0
+  },
+  "live": {
+    "totals": {
+      "errors": 0,
+      "expire": 12,
+      "fill": 3,
+      "kill": 6,
+      "softCancel": 39,
+      "submit": 42
+    },
+    "controlledFillCountForContest": 2,
+    "errors": 0
+  },
+  "cleanup": {
+    "ok": true,
+    "visibleOpenControlledCommitments": 0,
+    "activeMmProcesses": 0
+  },
+  "expirySeconds": 300,
+  "staleAfterSeconds": 240,
+  "autoApprove": false
+}

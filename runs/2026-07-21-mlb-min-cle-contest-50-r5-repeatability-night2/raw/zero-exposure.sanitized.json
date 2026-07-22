@@ -1,0 +1,45 @@
+{
+  "ok": true,
+  "checkedAtUtc": "2026-07-22T04:39:20.454960Z",
+  "publicMakerVisibleCommitments": 0,
+  "publicContestSpecVisibleCommitments": 0,
+  "contestOrderbookCount": 0,
+  "orphanProcessCount": 0,
+  "roles": {
+    "flow": {
+      "targetPositionCounts": {
+        "active": 0,
+        "claimable": 0,
+        "pendingSettle": 0
+      },
+      "targetClaimDryRunEntries": 0,
+      "openMakerCommitments": 0,
+      "positionAllowanceRaw": "0",
+      "treasuryAllowanceRaw": "0"
+    },
+    "maker-a": {
+      "targetPositionCounts": {
+        "active": 0,
+        "claimable": 0,
+        "pendingSettle": 0
+      },
+      "targetClaimDryRunEntries": 0,
+      "openMakerCommitments": 0,
+      "positionAllowanceRaw": "0",
+      "treasuryAllowanceRaw": "0"
+    },
+    "maker-b": {
+      "targetPositionCounts": {
+        "active": 0,
+        "claimable": 0,
+        "pendingSettle": 0
+      },
+      "targetClaimDryRunEntries": 0,
+      "openMakerCommitments": 0,
+      "positionAllowanceRaw": "0",
+      "treasuryAllowanceRaw": "0"
+    }
+  },
+  "missingRevocations": [],
+  "completionPassWrites": 0
+}

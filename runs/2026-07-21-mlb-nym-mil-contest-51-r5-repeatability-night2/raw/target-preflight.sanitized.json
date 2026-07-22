@@ -1,0 +1,42 @@
+{
+  "apiHealth": "ok",
+  "budgetPolicy": "two contests; <=50 USDC combined new risk; <=3 USDC new-market fees; <=2 POL gas per wallet",
+  "selectedTarget": {
+    "contestId": "51",
+    "sport": "mlb",
+    "homeTeam": "Milwaukee Brewers",
+    "awayTeam": "New York Mets",
+    "gameId": "4fa849b0-aefe-43b0-ad32-7c4e40865f96",
+    "gamePk": 823760,
+    "matchTime": "2026-07-21T23:40:00Z",
+    "allowlistContestIds": [
+      "50",
+      "51"
+    ],
+    "marketsCovered": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "speculations": [
+      {
+        "speculationId": "135",
+        "type": "moneyline",
+        "lineTicks": 0,
+        "contestId": "51"
+      },
+      {
+        "speculationId": "136",
+        "type": "spread",
+        "lineTicks": 15,
+        "contestId": "51"
+      },
+      {
+        "speculationId": "137",
+        "type": "total",
+        "lineTicks": 90,
+        "contestId": "51"
+      }
+    ]
+  }
+}

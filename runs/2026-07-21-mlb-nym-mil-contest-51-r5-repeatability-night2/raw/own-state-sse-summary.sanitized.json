@@ -1,0 +1,23 @@
+{
+  "ok": true,
+  "streams": {
+    "live2-ownstate-maker-b": {
+      "ok": true,
+      "expectedSpeculationId": "136",
+      "observedSpeculationIds": [
+        "136"
+      ],
+      "fillEvents": 1,
+      "errors": 0
+    },
+    "live3-total-ownstate-maker-b": {
+      "ok": true,
+      "expectedSpeculationId": "137",
+      "observedSpeculationIds": [
+        "137"
+      ],
+      "fillEvents": 1,
+      "errors": 0
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "ok": true,
+  "result": {
+    "contest": {
+      "contestId": "51",
+      "sport": "mlb",
+      "homeTeam": "Milwaukee Brewers",
+      "awayTeam": "New York Mets"
+    },
+    "speculation": {
+      "speculationId": "136",
+      "marketType": "spread"
+    },
+    "commitment": {
+      "contestId": "51",
+      "speculationId": "136",
+      "marketType": "spread"
+    },
+    "fill": {
+      "sequence": 2,
+      "contestId": "51",
+      "speculationId": "136",
+      "market": "spread",
+      "makerRole": "maker-b",
+      "makerFillRiskUSDC": "1.5625",
+      "takerRiskUSDC": "1",
+      "gasCostPOL": "0.117313952303010396",
+      "quoteSecondsLeftAtPreview": 207.242035,
+      "approvalRemediation": false,
+      "protocolTransactionRetries": 0,
+      "matchTxHash": "0x76ad68f28dc247675c3edf38c5859bf43dfe79c429d89129a04e540d36b00213",
+      "readback": {
+        "attempt": 1,
+        "commitmentStatus": "partially_filled",
+        "filledRiskDeltaWei6": "1562500",
+        "flowPositionRiskDeltaUSDC": "1.00",
+        "makerPositionRiskDeltaUSDC": "1.5625"
+      }
+    }
+  },
+  "contestControlledFills": [
+    {
+      "sequence": 2,
+      "contestId": "51",
+      "speculationId": "136",
+      "market": "spread",
+      "makerRole": "maker-b",
+      "makerFillRiskUSDC": "1.5625",
+      "takerRiskUSDC": "1",
+      "gasCostPOL": "0.117313952303010396",
+      "quoteSecondsLeftAtPreview": 207.242035,
+      "approvalRemediation": false,
+      "protocolTransactionRetries": 0,
+      "matchTxHash": "0x76ad68f28dc247675c3edf38c5859bf43dfe79c429d89129a04e540d36b00213",
+      "readback": {
+        "attempt": 1,
+        "commitmentStatus": "partially_filled",
+        "filledRiskDeltaWei6": "1562500",
+        "flowPositionRiskDeltaUSDC": "1.00",
+        "makerPositionRiskDeltaUSDC": "1.5625"
+      }
+    },
+    {
+      "sequence": 3,
+      "contestId": "51",
+      "speculationId": "137",
+      "market": "total",
+      "makerRole": "maker-b",
+      "makerFillRiskUSDC": "0.8928",
+      "takerRiskUSDC": "0.999936",
+      "gasCostPOL": "0.082449810069966048",
+      "quoteSecondsLeftAtPreview": 267.197387,
+      "approvalRemediation": false,
+      "protocolTransactionRetries": 0,
+      "matchTxHash": "0x072b12a0feea9930b6fcd4bf9e9c5c4504516e563ee8c03c6c2a68237381ae70",
+      "readback": {
+        "attempt": 4,
+        "commitmentStatus": "partially_filled",
+        "filledRiskDeltaWei6": "892800",
+        "flowPositionRiskDeltaUSDC": "0.999936",
+        "makerPositionRiskDeltaUSDC": "0.8928"
+      }
+    }
+  ]
+}

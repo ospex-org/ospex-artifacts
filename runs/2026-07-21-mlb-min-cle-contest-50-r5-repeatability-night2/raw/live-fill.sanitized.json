@@ -1,0 +1,64 @@
+{
+  "ok": true,
+  "result": {
+    "contest": {
+      "contestId": "50",
+      "sport": "mlb",
+      "homeTeam": "Cleveland Guardians",
+      "awayTeam": "Minnesota Twins"
+    },
+    "speculation": {
+      "speculationId": "132",
+      "marketType": "moneyline"
+    },
+    "commitment": {
+      "contestId": "50",
+      "speculationId": "132",
+      "marketType": "moneyline"
+    },
+    "fill": {
+      "sequence": 1,
+      "contestId": "50",
+      "speculationId": "132",
+      "market": "moneyline",
+      "makerRole": "maker-a",
+      "makerFillRiskUSDC": "0.7092",
+      "takerRiskUSDC": "0.999972",
+      "gasCostPOL": "0.083131123668085908",
+      "quoteSecondsLeftAtPreview": 246.085691,
+      "approvalRemediation": false,
+      "protocolTransactionRetries": 0,
+      "matchTxHash": "0x1e548cb6a12477f22191e333c735efa9237210ef3fca056a957bfe5be1b9d072",
+      "readback": {
+        "attempt": 3,
+        "commitmentStatus": "partially_filled",
+        "filledRiskDeltaWei6": "709200",
+        "flowPositionRiskDeltaUSDC": "0.999972",
+        "makerPositionRiskDeltaUSDC": "0.7092"
+      }
+    }
+  },
+  "contestControlledFills": [
+    {
+      "sequence": 1,
+      "contestId": "50",
+      "speculationId": "132",
+      "market": "moneyline",
+      "makerRole": "maker-a",
+      "makerFillRiskUSDC": "0.7092",
+      "takerRiskUSDC": "0.999972",
+      "gasCostPOL": "0.083131123668085908",
+      "quoteSecondsLeftAtPreview": 246.085691,
+      "approvalRemediation": false,
+      "protocolTransactionRetries": 0,
+      "matchTxHash": "0x1e548cb6a12477f22191e333c735efa9237210ef3fca056a957bfe5be1b9d072",
+      "readback": {
+        "attempt": 3,
+        "commitmentStatus": "partially_filled",
+        "filledRiskDeltaWei6": "709200",
+        "flowPositionRiskDeltaUSDC": "0.999972",
+        "makerPositionRiskDeltaUSDC": "0.7092"
+      }
+    }
+  ]
+}

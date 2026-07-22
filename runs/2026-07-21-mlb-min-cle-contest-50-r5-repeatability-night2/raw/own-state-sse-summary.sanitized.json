@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "streams": {
+    "live2-ownstate-maker-a": {
+      "ok": true,
+      "expectedSpeculationId": "132",
+      "observedSpeculationIds": [
+        "132"
+      ],
+      "fillEvents": 1,
+      "errors": 0
+    }
+  }
+}

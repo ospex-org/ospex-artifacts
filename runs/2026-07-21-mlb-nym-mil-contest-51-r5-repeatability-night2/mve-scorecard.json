@@ -1,0 +1,413 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json",
+  "schemaVersion": 1,
+  "artifactId": "2026-07-21-mlb-nym-mil-contest-51-r5-repeatability-night2",
+  "generatedAt": "2026-07-22T05:06:17Z",
+  "runClass": "mm-live-canary",
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "New York Mets @ Milwaukee Brewers contest 51 completed the bounded R5 lifecycle: three markets seeded, a controlled live-MM fill landed, the exact official final matched scored state, all target speculations settled, winning positions claimed, allowances revoked, and direct final-zero/accounting readback passed. The composite-doctor readback defect is retained as a run-adapter caveat."
+  },
+  "capabilities": [
+    {
+      "id": "target-preflight",
+      "capability": "Target preflight and allowlist",
+      "proof": "proven_live",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "notes": "New York Mets (away) @ Milwaukee Brewers (home) and all three target markets passed the bounded target gate."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "capability": "Repository and runtime pins",
+      "proof": "proven_live",
+      "evidence": "raw/runtime-and-setup.sanitized.json",
+      "notes": "Harness 1.1.2, SDK/CLI 0.10.1, market-maker, and API runtime pins passed."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "capability": "Wallet identity and balances",
+      "proof": "proven_live",
+      "evidence": "raw/runtime-and-setup.sanitized.json",
+      "notes": "Flow, maker-a, and maker-b identities remained distinct and balances were readable."
+    },
+    {
+      "id": "bounded-approvals",
+      "capability": "Bounded approvals and revocation",
+      "proof": "proven_live",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "All three wallets used bounded allowances and finished with both spender allowances at zero."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "capability": "Dry-run quote loop",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/dry-live-summary.sanitized.json",
+      "notes": "The two 15-minute dry lanes covered moneyline, spread, and total without protocol writes."
+    },
+    {
+      "id": "live-commitments-posted",
+      "capability": "Live commitments posted",
+      "proof": "proven_live",
+      "evidence": "raw/dry-live-summary.sanitized.json",
+      "notes": "The isolated maker lane posted only in its approved contest; bounded loaded-state continuations followed KILL and expiry-plus-grace."
+    },
+    {
+      "id": "live-fill",
+      "capability": "Controlled live fill",
+      "proof": "proven_live",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "A controlled live-MM fill bound to contest 51, speculation 136, and spread completed with receipt/readback evidence."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "capability": "Own-state SSE canonical fill source",
+      "proof": "proven_live",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "Own-state telemetry observed the target controlled fill with zero stream errors."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "capability": "Exposure drained to zero",
+      "proof": "proven_live",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "Direct postgame reads proved zero target positions, claim plans, open commitments, allowances, and maker processes after the composite doctor caveat."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "capability": "Restart and cold-start safety",
+      "proof": "proven_synthetic_only",
+      "evidence": "raw/dry-live-summary.sanitized.json",
+      "notes": "Loaded-state continuations occurred only after prior quote expiry plus grace and remained within approved scope."
+    },
+    {
+      "id": "postgame-score",
+      "capability": "Postgame score",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "The exact official final matched the R5 scored contest."
+    },
+    {
+      "id": "postgame-settle",
+      "capability": "Postgame settlement",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "All three target speculations settled with successful receipts."
+    },
+    {
+      "id": "postgame-claim",
+      "capability": "Winning-position claims and no-op",
+      "proof": "proven_live",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Every winning target position claimed; final direct claim plans were empty."
+    },
+    {
+      "id": "cost-within-cap",
+      "capability": "Cost and accounting within cap",
+      "proof": "proven_live",
+      "evidence": "raw/balance-reconciliation.sanitized.json",
+      "notes": "USDC stakes, payouts, P&L, fees, and POL receipt gas reconciled exactly; each wallet stayed below 2 POL."
+    }
+  ],
+  "zeroExposure": {
+    "checkedAtUtc": "2026-07-22T04:39:20.454960Z",
+    "publicMakerVisibleCommitments": 0,
+    "publicContestSpecVisibleCommitments": 0,
+    "contestOrderbookCount": 0,
+    "orphanProcessCount": 0,
+    "evidence": "raw/zero-exposure.sanitized.json"
+  },
+  "transactions": [
+    {
+      "category": "approve",
+      "txHash": "0x19b3e8fa654102128892d006e5441459ab2756f3c405cb9328008c574ab7abc5",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Bounded maker-a positionModule USDC approval"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x5fa983fce65ccc0de6e568a33989a86d1b1ef2fab38b1b33e3e9e7abb4981478",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Bounded maker-a treasuryModule USDC approval"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x0874b7de0e7397d0814b2e274f258562563e197d7e0ca113e6c8c2a09b106767",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Bounded maker-b positionModule USDC approval"
+    },
+    {
+      "category": "approve",
+      "txHash": "0xf8ea7092bc9aa045baf154ac4441fbfdb328a01dfc84e1405ed53712988f0268",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Bounded maker-b treasuryModule USDC approval"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x34eb957db9ac913f1791b9f71f08cddfcbf1d4217a36b578ecc7c644ee16d33e",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Bounded flow positionModule USDC approval"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x4f0f8816dfbd3e16d8793788951f26b782f2970a8666c3ef7d8efc10ce444fec",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Bounded flow treasuryModule USDC approval"
+    },
+    {
+      "category": "create-contest",
+      "txHash": "0x99be7998bbd6cefe48ffb94db41f89c5ca5c627c7e207466680c6de1588ff843",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Create R5 contest 50",
+      "contestId": "50"
+    },
+    {
+      "category": "create-contest",
+      "txHash": "0xd449f7adbe4e409284f75fdb959cf42a222169bdf205cc5b62c29190f6bb1073",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Create R5 contest 51",
+      "contestId": "51"
+    },
+    {
+      "category": "seed-match",
+      "txHash": "0x4d8d7d218d0c8e1665a32cfe51fe5969724f48c49f53b192b41e4569ca6b6114",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Controlled seed match for contest 50 speculation 132",
+      "contestId": "50"
+    },
+    {
+      "category": "seed-match",
+      "txHash": "0x85244052e6497e41047e9374ec836947b9c8babc17b4f153362a6ecc1dadd794",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Controlled seed match for contest 50 speculation 133 (spread)",
+      "contestId": "50"
+    },
+    {
+      "category": "seed-match",
+      "txHash": "0x823d2ce9ff0744ec56f32b32fac5f677e57a616e4581c8d7a4f2aec8c6df738f",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Controlled seed match for contest 50 speculation 134 (total)",
+      "contestId": "50"
+    },
+    {
+      "category": "seed-match",
+      "txHash": "0xfd0563936c64f7f945cb631f774efe6c57dc9ae35e445f960da41400e66bdadb",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Controlled seed match for contest 51 speculation 135 (moneyline)",
+      "contestId": "51"
+    },
+    {
+      "category": "seed-match",
+      "txHash": "0xef4374387c140709fd35cb7fcc150b1ef9ac5608576c5139ec565b115fad254a",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Controlled seed match for contest 51 speculation 136 (spread)",
+      "contestId": "51"
+    },
+    {
+      "category": "seed-match",
+      "txHash": "0x2949382863c687a76da8f3a9e73ee6f257998652ef18f8d64cc53b3e690fc0e4",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Controlled seed match for contest 51 speculation 137 (total)",
+      "contestId": "51"
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0x1e548cb6a12477f22191e333c735efa9237210ef3fca056a957bfe5be1b9d072",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Controlled live-MM maker-a fill for contest 50 speculation 132 (moneyline)",
+      "contestId": "50"
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0x76ad68f28dc247675c3edf38c5859bf43dfe79c429d89129a04e540d36b00213",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Controlled live-MM maker-b fill for contest 51 speculation 136 (spread)",
+      "contestId": "51"
+    },
+    {
+      "category": "match-commitment",
+      "txHash": "0x072b12a0feea9930b6fcd4bf9e9c5c4504516e563ee8c03c6c2a68237381ae70",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Controlled live-MM maker-b fill for contest 51 speculation 137 (total)",
+      "contestId": "51"
+    },
+    {
+      "category": "score-request",
+      "txHash": "0xed1d882a1d07a15e7813b158cb650194e00557f5b8375d283a78798d47f3910a",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Request R5 score for contest 50 after official final",
+      "contestId": "50"
+    },
+    {
+      "category": "score-request",
+      "txHash": "0x57c075ea0db6a4f98e418f6c1e489ad5ea55ac5b58c6e61daa539c91c6a7db62",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Request R5 score for contest 51 after official final",
+      "contestId": "51"
+    },
+    {
+      "category": "settle",
+      "txHash": "0xea95f2a0efa80e6da7c0e952b758bfc4d7527dfb300e9e78dd1edddca7a90b76",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 134 via maker-a claim-all",
+      "contestId": "50"
+    },
+    {
+      "category": "claim",
+      "txHash": "0x8faf75b659fae892153bd2816c896802b983f603dd78c4aef01db05bf84effc0",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim winning position for speculation 134 via maker-a claim-all",
+      "contestId": "50"
+    },
+    {
+      "category": "settle",
+      "txHash": "0x7f6626c108301d75e5db72fcbdc38ffda902f2ab937a0044be0807b88f36836c",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 133 via maker-a claim-all",
+      "contestId": "50"
+    },
+    {
+      "category": "claim",
+      "txHash": "0x10a5ac44935902b52506211906039bbc79918718331e565fc3306b0ef903e87f",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim winning position for speculation 133 via maker-a claim-all",
+      "contestId": "50"
+    },
+    {
+      "category": "settle",
+      "txHash": "0x65eaffe91a5690599a3e018cf1ad2290f5abf971b507a13f5988f322e25f0fe6",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 136 via maker-b claim-all",
+      "contestId": "51"
+    },
+    {
+      "category": "claim",
+      "txHash": "0x7bd75ffd034fccfb29198d771d423a88b85dc82294ce653d86bf3609f1d9b681",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim winning position for speculation 136 via maker-b claim-all",
+      "contestId": "51"
+    },
+    {
+      "category": "settle",
+      "txHash": "0xebaecbceca328767ebf3d38f5e874eb84cf4c4b2353098899a732b2d8029874d",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 135 via maker-b claim-all",
+      "contestId": "51"
+    },
+    {
+      "category": "claim",
+      "txHash": "0x9873c9631d9b33ea941748b8e209f75629f8f72f4830e7e926bf253441c5fe04",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim winning position for speculation 135 via maker-b claim-all",
+      "contestId": "51"
+    },
+    {
+      "category": "claim",
+      "txHash": "0xa7f3c436c59545e9713a3e1557be6cdca335963b22ba5ec058685d0a4c503ae6",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim winning position for speculation 136 via flow claim-all",
+      "contestId": "51"
+    },
+    {
+      "category": "settle",
+      "txHash": "0xde3b4f7afa054cac99f4b652190da25dc474914ed20cc164525e933d3aa5fddb",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 137 via flow claim-all",
+      "contestId": "51"
+    },
+    {
+      "category": "claim",
+      "txHash": "0xae8a141fc11206706ebef218ca45d205f17ac19eb91bb1fd9b5073092eedc667",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim winning position for speculation 137 via flow claim-all",
+      "contestId": "51"
+    },
+    {
+      "category": "settle",
+      "txHash": "0xbd9f6c10b9f4af009418e4ee660f99986d76fa0569682031fac192105c960af4",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Settle speculation 132 via flow claim-all",
+      "contestId": "50"
+    },
+    {
+      "category": "claim",
+      "txHash": "0x25c87838c20733c2a496eac52c0fa5f5c9ab64261d69c6ee10febc8e0bee9eef",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "Claim winning position for speculation 132 via flow claim-all",
+      "contestId": "50"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x0cadec042e5d9aa28f6fd1b6ee771efb71daf6ba369ad558d684cef2b397a083",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "maker-a PositionModule allowance revoked to zero"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x6c269a840cadd63d7e4c101fa023c8c76382f644a9bada41bcc4720a22861bc8",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "maker-a TreasuryModule allowance revoked to zero"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x67c9301eed01b70e2733f965c3d76795f020b822a6a9478310f66387201da9ba",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "maker-b PositionModule allowance revoked to zero"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x29260c00cc63ea30d7ca521116e761fc593b6c17049d6397b74617d8d2b3914b",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "maker-b TreasuryModule allowance revoked to zero"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x51a4315851d18bdd229d9d3e8c60f1857ab108f1c2dc410f60b9df131bc5b1e0",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "flow PositionModule allowance revoked to zero"
+    },
+    {
+      "category": "approve",
+      "txHash": "0x7c72fc8673bd47f6f94310c4703df22c882911f38a28661572d84ee604c54d14",
+      "status": "success",
+      "operatorControlled": true,
+      "purpose": "flow TreasuryModule allowance revoked to zero"
+    }
+  ]
+}
