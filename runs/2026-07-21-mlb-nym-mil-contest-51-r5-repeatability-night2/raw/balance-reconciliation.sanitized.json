@@ -1,0 +1,134 @@
+{
+  "ok": true,
+  "assetEquations": {
+    "POL": "final = initial - capturedReceiptGasCosts",
+    "USDC": "final = initial + (payout - stake) - protocolFeesAndCreationCosts"
+  },
+  "roles": {
+    "flow": {
+      "POL": {
+        "capturedReceiptGasWei": "1830847031562741224",
+        "componentsWei": {
+          "revocations": "26890487946190752",
+          "scale": "1622030931640652410",
+          "score": "0",
+          "settleAndClaim": "181925611975898062"
+        },
+        "finalWei": "30533997672955416793",
+        "gasSpentPOL": "1.830847031562741224",
+        "gasSpentWei": "1830847031562741224",
+        "initialWei": "32364844704518158017"
+      },
+      "USDC": {
+        "actualFinalUSDC": "282.234988",
+        "actualFinalWei6": "282234988",
+        "expectedFinalWei6": "282234988",
+        "initialUSDC": "285.682988",
+        "initialWei6": "285682988",
+        "netPnLUSDC": "0.052",
+        "netPnLWei6": "52000",
+        "payoutUSDC": "10.421908",
+        "payoutWei6": "10421908",
+        "protocolFeesAndCreationCostsUSDC": "3.5",
+        "protocolFeesAndCreationCostsWei6": "3500000",
+        "stakeUSDC": "10.369908",
+        "stakeWei6": "10369908"
+      },
+      "ok": true
+    },
+    "maker-a": {
+      "POL": {
+        "capturedReceiptGasWei": "214021826067152083",
+        "componentsWei": {
+          "revocations": "30773032068631593",
+          "scale": "35845478334179586",
+          "score": "0",
+          "settleAndClaim": "147403315664340904"
+        },
+        "finalWei": "15796868370175600506",
+        "gasSpentPOL": "0.214021826067152083",
+        "gasSpentWei": "214021826067152083",
+        "initialWei": "16010890196242752589"
+      },
+      "USDC": {
+        "actualFinalUSDC": "300.560797",
+        "actualFinalWei6": "300560797",
+        "expectedFinalWei6": "300560797",
+        "initialUSDC": "300.619997",
+        "initialWei6": "300619997",
+        "netPnLUSDC": "0.6908",
+        "netPnLWei6": "690800",
+        "payoutUSDC": "4.4",
+        "payoutWei6": "4400000",
+        "protocolFeesAndCreationCostsUSDC": "0.75",
+        "protocolFeesAndCreationCostsWei6": "750000",
+        "stakeUSDC": "3.7092",
+        "stakeWei6": "3709200"
+      },
+      "ok": true
+    },
+    "maker-b": {
+      "POL": {
+        "capturedReceiptGasWei": "282534326140653847",
+        "componentsWei": {
+          "revocations": "28654293050349486",
+          "scale": "35811852683951808",
+          "score": "70913281945670325",
+          "settleAndClaim": "147154898460682228"
+        },
+        "finalWei": "24561699407135327888",
+        "gasSpentPOL": "0.282534326140653847",
+        "gasSpentWei": "282534326140653847",
+        "initialWei": "24844233733275981735"
+      },
+      "USDC": {
+        "actualFinalUSDC": "290.807047",
+        "actualFinalWei6": "290807047",
+        "expectedFinalWei6": "290807047",
+        "initialUSDC": "292.299847",
+        "initialWei6": "292299847",
+        "netPnLUSDC": "-0.7428",
+        "netPnLWei6": "-742800",
+        "payoutUSDC": "4.7125",
+        "payoutWei6": "4712500",
+        "protocolFeesAndCreationCostsUSDC": "0.75",
+        "protocolFeesAndCreationCostsWei6": "750000",
+        "stakeUSDC": "5.4553",
+        "stakeWei6": "5455300"
+      },
+      "ok": true
+    }
+  },
+  "combined": {
+    "finalUSDC": "873.602832",
+    "finalUSDCWei6": "873602832",
+    "gasSpentPOL": "2.327403183770547154",
+    "gasSpentWei": "2327403183770547154",
+    "initialUSDC": "878.602832",
+    "initialUSDCWei6": "878602832",
+    "netPnLUSDC": "0",
+    "netPnLUSDCWei6": "0",
+    "payoutUSDC": "19.534408",
+    "payoutUSDCWei6": "19534408",
+    "protocolFeesAndCreationCostsUSDC": "5",
+    "protocolFeesAndCreationCostsUSDCWei6": "5000000",
+    "stakeUSDC": "19.534408",
+    "stakeUSDCWei6": "19534408"
+  },
+  "contest": {
+    "contestId": "51",
+    "stakeUSDC": "11.145236",
+    "payoutUSDC": "11.145236",
+    "tradingPnLUSDC": "0",
+    "protocolFeesAndCreationCostsUSDC": "2.5"
+  },
+  "runCombined": {
+    "stakeUSDC": "19.534408",
+    "payoutUSDC": "19.534408",
+    "tradingPnLUSDC": "0",
+    "protocolFeesAndCreationCostsUSDC": "5",
+    "gasSpentPOL": "2.327403183770547154"
+  },
+  "gasCapPerWalletPOL": "2",
+  "allWalletsWithinCap": true
+}

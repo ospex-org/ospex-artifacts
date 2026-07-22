@@ -1,0 +1,44 @@
+{
+  "status": "complete_verified_with_caveats",
+  "caveats": [
+    {
+      "classification": "operator_command_assembly",
+      "fact": "The first submit execute argv put --yes in the expiry value slot. v0.10.1 rejected it during preview with zero signature, effect, or transaction; one deterministic correction followed.",
+      "phase": "canary"
+    },
+    {
+      "classification": "operator_evidence_parser",
+      "fact": "A local readback helper filtered speculation.marketType while v0.10.1 lists speculation.type. The authoritative first commitment, position, and own-state reads were green; no protocol action was retried.",
+      "phase": "canary"
+    },
+    {
+      "classification": "operator_cli_flag",
+      "fact": "The first controlled-fill helper used unsupported --taker-risk-usdc instead of documented --risk-usdc. Commander rejected it before preview output or transaction.",
+      "phase": "controlled-mm-preflight"
+    },
+    {
+      "classification": "operator_rounding_gate",
+      "fact": "The helper initially required exactly 1,000,000 wei6 after requesting a 1-USDC maximum; valid odds rounding produced 999,972 wei6. The gate was corrected to accept bounded round-down, with no transaction attempted under the failed gate.",
+      "phase": "controlled-mm-preflight"
+    },
+    {
+      "classification": "operator_quote_window",
+      "fact": "The first 300-second quote batch passed the catchable window while pre-send gates were corrected. Both lanes were killed cleanly; every latent quote was allowed through expiry plus grace before loaded-state continuation.",
+      "phase": "first-live-session"
+    },
+    {
+      "classification": "operator_market_scope",
+      "fact": "With three active manual positions, ordered all-market quoting consumed bankroll headroom on earlier markets before total. A bounded maker-b total-only continuation stayed within the approved contest/market scope and produced the third green fill.",
+      "phase": "third-controlled-fill"
+    },
+    {
+      "classification": "postgame_readback_gate",
+      "phase": "final-readback",
+      "fact": "After all postgame writes completed, the run-local composite gate treated intentionally zeroed allowances as not-ready-to-trade, substituted spentPOL=999, and mislabeled the failure as official-final. Direct readback proved final zero and exact accounting; no completion-pass write was required."
+    }
+  ],
+  "sourceCodeFixForwards": 1,
+  "protocolTransactionRetries": 0,
+  "completionPassWrites": 0,
+  "cleanNightActivationBarAutomaticallyClaimed": false
+}

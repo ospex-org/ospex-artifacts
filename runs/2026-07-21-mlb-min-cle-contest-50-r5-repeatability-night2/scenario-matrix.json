@@ -1,0 +1,107 @@
+{
+  "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/scenario-matrix.schema.json",
+  "schemaVersion": 2,
+  "artifactId": "2026-07-21-mlb-min-cle-contest-50-r5-repeatability-night2",
+  "generatedAt": "2026-07-22T05:06:17Z",
+  "runClass": "mm-live-canary",
+  "scenarios": [
+    {
+      "id": "target-preflight",
+      "scenario": "Target preflight and allowlist",
+      "status": "pass",
+      "evidence": "raw/target-preflight.sanitized.json",
+      "notes": "Minnesota Twins (away) @ Cleveland Guardians (home) and all three target markets passed the bounded target gate."
+    },
+    {
+      "id": "repo-runtime-gates",
+      "scenario": "Repository and runtime pins",
+      "status": "pass",
+      "evidence": "raw/runtime-and-setup.sanitized.json",
+      "notes": "Harness 1.1.2, SDK/CLI 0.10.1, market-maker, and API runtime pins passed."
+    },
+    {
+      "id": "wallet-auth-balances",
+      "scenario": "Wallet identity and balances",
+      "status": "pass",
+      "evidence": "raw/runtime-and-setup.sanitized.json",
+      "notes": "Flow, maker-a, and maker-b identities remained distinct and balances were readable."
+    },
+    {
+      "id": "bounded-approvals",
+      "scenario": "Bounded approvals and revocation",
+      "status": "pass",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "All three wallets used bounded allowances and finished with both spender allowances at zero."
+    },
+    {
+      "id": "dry-run-quote-loop",
+      "scenario": "Dry-run quote loop",
+      "status": "pass",
+      "evidence": "raw/dry-live-summary.sanitized.json",
+      "notes": "The two 15-minute dry lanes covered moneyline, spread, and total without protocol writes."
+    },
+    {
+      "id": "live-commitments-posted",
+      "scenario": "Live commitments posted",
+      "status": "pass_with_caveats",
+      "evidence": "raw/dry-live-summary.sanitized.json",
+      "notes": "The isolated maker lane posted only in its approved contest; bounded loaded-state continuations followed KILL and expiry-plus-grace."
+    },
+    {
+      "id": "live-fill",
+      "scenario": "Controlled live fill",
+      "status": "pass",
+      "evidence": "raw/live-fill.sanitized.json",
+      "notes": "A controlled live-MM fill bound to contest 50, speculation 132, and moneyline completed with receipt/readback evidence."
+    },
+    {
+      "id": "own-state-sse-canonical-fill",
+      "scenario": "Own-state SSE canonical fill source",
+      "status": "pass",
+      "evidence": "raw/own-state-sse-summary.sanitized.json",
+      "notes": "Own-state telemetry observed the target controlled fill with zero stream errors."
+    },
+    {
+      "id": "exposure-drain-zero",
+      "scenario": "Exposure drained to zero",
+      "status": "pass_with_caveats",
+      "evidence": "raw/zero-exposure.sanitized.json",
+      "notes": "Direct postgame reads proved zero target positions, claim plans, open commitments, allowances, and maker processes after the composite doctor caveat."
+    },
+    {
+      "id": "restart-cold-start-safety",
+      "scenario": "Restart and cold-start safety",
+      "status": "pass_with_caveats",
+      "evidence": "raw/dry-live-summary.sanitized.json",
+      "notes": "Loaded-state continuations occurred only after prior quote expiry plus grace and remained within approved scope."
+    },
+    {
+      "id": "postgame-score",
+      "scenario": "Postgame score",
+      "status": "pass",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "The exact official final matched the R5 scored contest."
+    },
+    {
+      "id": "postgame-settle",
+      "scenario": "Postgame settlement",
+      "status": "pass",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "All three target speculations settled with successful receipts."
+    },
+    {
+      "id": "postgame-claim",
+      "scenario": "Winning-position claims and no-op",
+      "status": "pass",
+      "evidence": "raw/postgame-lifecycle.sanitized.json",
+      "notes": "Every winning target position claimed; final direct claim plans were empty."
+    },
+    {
+      "id": "cost-within-cap",
+      "scenario": "Cost and accounting within cap",
+      "status": "pass",
+      "evidence": "raw/balance-reconciliation.sanitized.json",
+      "notes": "USDC stakes, payouts, P&L, fees, and POL receipt gas reconciled exactly; each wallet stayed below 2 POL."
+    }
+  ]
+}

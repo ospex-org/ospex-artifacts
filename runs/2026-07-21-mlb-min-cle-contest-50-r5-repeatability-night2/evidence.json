@@ -1,0 +1,281 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-07-21-mlb-min-cle-contest-50-r5-repeatability-night2",
+  "artifactType": "run",
+  "runClass": "mm-live-canary",
+  "date": "2026-07-21",
+  "generatedAt": "2026-07-22T05:06:17Z",
+  "publishedAt": "2026-07-22T05:06:17Z",
+  "network": "polygon",
+  "chainId": 137,
+  "deploymentRound": "R5",
+  "status": "complete_verified_with_caveats",
+  "dataPath": "evidence.json",
+  "rawPath": "raw/",
+  "summaryPath": "summary.md",
+  "artifactFiles": {
+    "evidence": "evidence.json",
+    "summary": "summary.md",
+    "scenarioMatrix": "scenario-matrix.json",
+    "scenarioMatrixMarkdown": "scenario-matrix.md",
+    "mveScorecard": "mve-scorecard.json",
+    "mveScorecardMarkdown": "mve-scorecard.md",
+    "targetPreflight": "raw/target-preflight.sanitized.json",
+    "runtimeAndSetup": "raw/runtime-and-setup.sanitized.json",
+    "coreApiRuntime": "raw/core-api-runtime.sanitized.json",
+    "dryLiveSummary": "raw/dry-live-summary.sanitized.json",
+    "liveFill": "raw/live-fill.sanitized.json",
+    "ownStateSse": "raw/own-state-sse-summary.sanitized.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "zeroExposure": "raw/zero-exposure.sanitized.json",
+    "balanceReconciliation": "raw/balance-reconciliation.sanitized.json",
+    "postgameReadbackDiagnosis": "raw/postgame-readback-diagnosis.sanitized.json",
+    "sourcePins": "raw/source-pins.json",
+    "txReceipts": "raw/tx-receipts.summary.json",
+    "operatorCaveats": "raw/operator-caveats.sanitized.json"
+  },
+  "target": {
+    "market": "moneyline",
+    "sport": "mlb",
+    "contestId": "50",
+    "speculationId": "132",
+    "homeTeam": "Cleveland Guardians",
+    "awayTeam": "Minnesota Twins",
+    "gameId": "c50b4ca4-fdc3-4106-8f2e-1baa3de5fe90",
+    "gamePk": 824409,
+    "startTimeUtc": "2026-07-21T22:40:00Z",
+    "marketsCovered": [
+      "moneyline",
+      "spread",
+      "total"
+    ],
+    "companionSpeculations": {
+      "moneyline": "132",
+      "spread": "133",
+      "total": "134"
+    },
+    "finalScore": {
+      "awayRuns": 2,
+      "homeRuns": 5,
+      "winner": "Cleveland Guardians",
+      "winnerRole": "home",
+      "winnerProtocolSide": "lower"
+    },
+    "teamIdentity": {
+      "home": {
+        "team": "Cleveland Guardians",
+        "role": "home",
+        "positionType": "lower",
+        "marketOddsAmerican": "-128",
+        "identity": "favorite",
+        "abbreviation": "CLE"
+      },
+      "away": {
+        "team": "Minnesota Twins",
+        "role": "away",
+        "positionType": "upper",
+        "marketOddsAmerican": "+128",
+        "identity": "underdog",
+        "abbreviation": "MIN"
+      }
+    }
+  },
+  "verdict": {
+    "label": "FULL_GREEN",
+    "reason": "Minnesota Twins @ Cleveland Guardians contest 50 completed the bounded R5 lifecycle: three markets seeded, a controlled live-MM fill landed, the exact official final matched scored state, all target speculations settled, winning positions claimed, allowances revoked, and direct final-zero/accounting readback passed. The composite-doctor readback defect is retained as a run-adapter caveat."
+  },
+  "sourcePins": {
+    "schemaVersion": 1,
+    "network": "polygon",
+    "chainId": 137,
+    "deployment": {
+      "deploymentRound": "R5",
+      "core": "0x40047BAFcdEd16C938058b7b67186299a2893561",
+      "creOracleReceiver": "0x06e3470012039797119Ae30e1236169304F9220C",
+      "matchingModule": "0x46Af20B6307Aa0Ec13de10EF58a02c5F1b5C9559",
+      "positionModule": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56",
+      "treasuryModule": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C",
+      "usdc": "0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359",
+      "scorers": {
+        "moneyline": "0x59555106d4b5f1a797f3552f60ac418eb6b6f6bd",
+        "spread": "0x8f293da716164d5a32dc087a85e5164d929ae9d4",
+        "total": "0xb4b1e2a2a75c34e9e4c5d3bb8a432aff973dada0"
+      },
+      "contestIdNamespace": "R5; contest ids 50 and 51 are disambiguated from prior deployment rounds by this deployment pin and deploymentRound."
+    },
+    "sdk": {
+      "repository": "ospex-org/ospex-sdk",
+      "visibility": "public",
+      "version": "0.10.1",
+      "commit": "b171a4d3490635413362ae55a90f4f9c853a727c"
+    },
+    "marketMaker": {
+      "repository": "ospex-org/ospex-market-maker",
+      "visibility": "public",
+      "commit": "d7982bca406f0e2d290a9e596bd8cb27bd19c998"
+    },
+    "harness": {
+      "repository": "ospex-org/ospex-harness",
+      "visibility": "private",
+      "version": "1.1.2",
+      "executionCommit": "5f4ea0b89211339e604bf68255e3d9c133caf036",
+      "postgameFixForward": {
+        "pullRequest": "https://github.com/ospex-org/ospex-harness/pull/12",
+        "commit": "2cf9dd48843379dcffcfe26d1ec7319b84b036f4"
+      }
+    },
+    "coreApi": {
+      "repository": "ospex-org/ospex-core-api",
+      "visibility": "public",
+      "runtimeCommit": "9713b52b3eb0f58ee8c18c4a3318ee939fcaf851",
+      "releaseVersion": "v47",
+      "runtimeEvidence": "raw/core-api-runtime.sanitized.json"
+    },
+    "artifactRepository": {
+      "baseCommit": "232878e91c16d7664cf665cbe344893b04c5c446"
+    }
+  },
+  "scope": {
+    "contestCount": 1,
+    "speculationCount": 3,
+    "seedFillCount": 3,
+    "controlledMmFillCount": 1,
+    "targetMarket": "moneyline",
+    "contestCombinedRiskUSDC": "8.389172",
+    "runCombinedNewRiskUSDC": "19.534408",
+    "runCombinedContests": 2,
+    "runCombinedSpeculations": 6
+  },
+  "wallets": {
+    "maker-a": {
+      "role": "maker-a",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b"
+    },
+    "maker-b": {
+      "role": "maker-b",
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+    },
+    "flow": {
+      "role": "flow",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30"
+    }
+  },
+  "postgame": {
+    "officialFinalVerified": true,
+    "score": {
+      "away": 2,
+      "home": 5
+    },
+    "speculationsSettled": 3,
+    "winningPositionsClaimed": 3,
+    "zeroState": {
+      "commitments": true,
+      "positions": true,
+      "claimDryRuns": true,
+      "allowances": true,
+      "processes": true
+    }
+  },
+  "economics": {
+    "contestCombinedRiskUSDC": "8.389172",
+    "contestAndMarketCreationFeesUSDC": "2.5",
+    "runCombinedProtocolFeesUSDC": "5",
+    "runCombinedProtocolTradingPnLUSDC": "0",
+    "runCombinedGasPOL": "2.327403183770547154",
+    "perWalletGasCapPOL": "2",
+    "finalGasPOL": {
+      "flow": "1.830847031562741224",
+      "maker-a": "0.214021826067152083",
+      "maker-b": "0.282534326140653847"
+    }
+  },
+  "findings": {
+    "protocolCode": [
+      {
+        "finding": "No scoring, settlement, claim, revocation, side-mapping, or final-zero protocol defect was established."
+      }
+    ],
+    "sdkCli": [
+      {
+        "finding": "Pinned SDK/CLI 0.10.1 completed the bounded score/settle/claim/revocation lifecycle with successful receipts and direct readback."
+      }
+    ],
+    "runAdapter": [
+      {
+        "finding": "The run-local final composite gate converted allowance-only doctor exits into spentPOL=999 and mislabeled the failing subcheck; direct readback completed without a write."
+      }
+    ],
+    "operatorMethodology": [
+      {
+        "finding": "The first submit execute argv put --yes in the expiry value slot. v0.10.1 rejected it during preview with zero signature, effect, or transaction; one deterministic correction followed."
+      },
+      {
+        "finding": "A local readback helper filtered speculation.marketType while v0.10.1 lists speculation.type. The authoritative first commitment, position, and own-state reads were green; no protocol action was retried."
+      },
+      {
+        "finding": "The first controlled-fill helper used unsupported --taker-risk-usdc instead of documented --risk-usdc. Commander rejected it before preview output or transaction."
+      },
+      {
+        "finding": "The helper initially required exactly 1,000,000 wei6 after requesting a 1-USDC maximum; valid odds rounding produced 999,972 wei6. The gate was corrected to accept bounded round-down, with no transaction attempted under the failed gate."
+      },
+      {
+        "finding": "The first 300-second quote batch passed the catchable window while pre-send gates were corrected. Both lanes were killed cleanly; every latent quote was allowed through expiry plus grace before loaded-state continuation."
+      },
+      {
+        "finding": "With three active manual positions, ordered all-market quoting consumed bankroll headroom on earlier markets before total. A bounded maker-b total-only continuation stayed within the approved contest/market scope and produced the third green fill."
+      },
+      {
+        "finding": "After all postgame writes completed, the run-local composite gate treated intentionally zeroed allowances as not-ready-to-trade, substituted spentPOL=999, and mislabeled the failure as official-final. Direct readback proved final zero and exact accounting; no completion-pass write was required."
+      }
+    ]
+  },
+  "caveats": [
+    {
+      "classification": "operator_command_assembly",
+      "fact": "The first submit execute argv put --yes in the expiry value slot. v0.10.1 rejected it during preview with zero signature, effect, or transaction; one deterministic correction followed.",
+      "phase": "canary"
+    },
+    {
+      "classification": "operator_evidence_parser",
+      "fact": "A local readback helper filtered speculation.marketType while v0.10.1 lists speculation.type. The authoritative first commitment, position, and own-state reads were green; no protocol action was retried.",
+      "phase": "canary"
+    },
+    {
+      "classification": "operator_cli_flag",
+      "fact": "The first controlled-fill helper used unsupported --taker-risk-usdc instead of documented --risk-usdc. Commander rejected it before preview output or transaction.",
+      "phase": "controlled-mm-preflight"
+    },
+    {
+      "classification": "operator_rounding_gate",
+      "fact": "The helper initially required exactly 1,000,000 wei6 after requesting a 1-USDC maximum; valid odds rounding produced 999,972 wei6. The gate was corrected to accept bounded round-down, with no transaction attempted under the failed gate.",
+      "phase": "controlled-mm-preflight"
+    },
+    {
+      "classification": "operator_quote_window",
+      "fact": "The first 300-second quote batch passed the catchable window while pre-send gates were corrected. Both lanes were killed cleanly; every latent quote was allowed through expiry plus grace before loaded-state continuation.",
+      "phase": "first-live-session"
+    },
+    {
+      "classification": "operator_market_scope",
+      "fact": "With three active manual positions, ordered all-market quoting consumed bankroll headroom on earlier markets before total. A bounded maker-b total-only continuation stayed within the approved contest/market scope and produced the third green fill.",
+      "phase": "third-controlled-fill"
+    },
+    {
+      "classification": "postgame_readback_gate",
+      "phase": "final-readback",
+      "fact": "After all postgame writes completed, the run-local composite gate treated intentionally zeroed allowances as not-ready-to-trade, substituted spentPOL=999, and mislabeled the failure as official-final. Direct readback proved final zero and exact accounting; no completion-pass write was required."
+    }
+  ],
+  "repeatabilityDecision": {
+    "protocolLifecycleGreen": true,
+    "cleanNightActivationBarAutomaticallyClaimed": false,
+    "reason": "Protocol lifecycle and direct final-zero proof passed, but operator/run-adapter caveats are retained and the Night 3 ladder fix requires independent review."
+  },
+  "publicSafety": {
+    "secretsPublished": false,
+    "rawSignaturesPublished": false,
+    "localPathsPublished": false,
+    "rpcUrlsPublished": false,
+    "specificUpstreamOddsProviderNamesPublished": false
+  }
+}

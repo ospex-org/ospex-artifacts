@@ -1,0 +1,56 @@
+{
+  "classification": "run-adapter defect",
+  "protocolImpact": "none",
+  "primaryAndRetryDoctor": {
+    "maker-a": {
+      "jsonReadable": true,
+      "stderrEmpty": true,
+      "apiRpcChainSignerBalances": "ok",
+      "failedSubchecks": [
+        "allowances.usdc_position",
+        "allowances.usdc_treasury"
+      ],
+      "classification": "NOT_READY_TO_TRADE_AFTER_REVOCATION",
+      "readFailure": false
+    },
+    "maker-b": {
+      "jsonReadable": true,
+      "stderrEmpty": true,
+      "apiRpcChainSignerBalances": "ok",
+      "failedSubchecks": [
+        "allowances.usdc_position",
+        "allowances.usdc_treasury"
+      ],
+      "classification": "NOT_READY_TO_TRADE_AFTER_REVOCATION",
+      "readFailure": false
+    },
+    "flow": {
+      "jsonReadable": true,
+      "stderrEmpty": true,
+      "apiRpcChainSignerBalances": "ok",
+      "failedSubchecks": [
+        "allowances.usdc_position",
+        "allowances.usdc_treasury"
+      ],
+      "classification": "NOT_READY_TO_TRADE_AFTER_REVOCATION",
+      "readFailure": false
+    }
+  },
+  "legacyGateDefect": {
+    "syntheticSpentPOL": "999",
+    "correctSpentPOLState": "UNKNOWN_NOT_MEASURED_BY_FAILED_COMPOSITE_DOCTOR",
+    "incorrectStopLabel": "official-final",
+    "actualFailingSubcheck": "role trade-readiness after intentional allowance revocation"
+  },
+  "directCompletion": {
+    "ok": true,
+    "doctorInvoked": false,
+    "tradeReadinessRequired": false,
+    "missingRevocations": [],
+    "writesSent": 0
+  },
+  "fixForward": {
+    "pullRequest": "https://github.com/ospex-org/ospex-harness/pull/12",
+    "commit": "2cf9dd48843379dcffcfe26d1ec7319b84b036f4"
+  }
+}
