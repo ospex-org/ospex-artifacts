@@ -60,6 +60,24 @@
       "winner": "New York Mets",
       "winnerRole": "away",
       "winnerProtocolSide": "upper"
+    },
+    "teamIdentity": {
+      "home": {
+        "team": "Milwaukee Brewers",
+        "role": "home",
+        "positionType": "lower",
+        "marketOddsAmerican": "-132",
+        "identity": "favorite",
+        "abbreviation": "MIL"
+      },
+      "away": {
+        "team": "New York Mets",
+        "role": "away",
+        "positionType": "upper",
+        "marketOddsAmerican": "+115",
+        "identity": "underdog",
+        "abbreviation": "NYM"
+      }
     }
   },
   "verdict": {
