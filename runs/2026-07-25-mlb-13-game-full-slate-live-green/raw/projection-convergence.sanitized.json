@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-07-25-mlb-13-game-full-slate-live-green",
+  "generatedAt": "2026-07-26T05:02:16Z",
+  "writes": [
+    {
+      "scope": "all 13 contest scores",
+      "receiptSuccessCount": 13,
+      "expectedProjection": "exact official final score visible for every contest",
+      "observedConvergedCount": 13,
+      "converged": true
+    },
+    {
+      "scope": "speculation settlements 138-176",
+      "receiptSuccessCount": 39,
+      "expectedProjection": "closed speculation with resolved winning side",
+      "observedConvergedCount": 39,
+      "converged": true,
+      "lagObservations": [
+        {
+          "speculationId": "138",
+          "action": "receipt checked before retry; delayed projected read confirmed closed"
+        },
+        {
+          "speculationId": "139",
+          "action": "no replay; direct contract read confirmed closed after projected reads remained stale for about twelve seconds"
+        }
+      ]
+    },
+    {
+      "scope": "winning position claims",
+      "receiptSuccessCount": 39,
+      "expectedProjection": "zero active, pending-settlement, and claimable target positions",
+      "observedConvergedCount": 39,
+      "converged": true
+    },
+    {
+      "scope": "six final USDC allowance pairs",
+      "receiptSuccessCount": 5,
+      "alreadyZeroWithoutWriteCount": 1,
+      "expectedProjection": "all allowance values zero",
+      "observedConvergedCount": 6,
+      "converged": true
+    }
+  ],
+  "terminalConvergence": "pass"
+}

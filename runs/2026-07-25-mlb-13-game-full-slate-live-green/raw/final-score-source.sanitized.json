@@ -1,0 +1,156 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-07-25-mlb-13-game-full-slate-live-green",
+  "capturedAtUtc": "2026-07-26T04:06:25.028963Z",
+  "sourceAuthority": "Official MLB schedule feed",
+  "publicEndpoint": "https://statsapi.mlb.com/api/v1/schedule",
+  "query": {
+    "sportId": 1,
+    "date": "2026-07-25"
+  },
+  "sourceGamesObserved": 15,
+  "selectedCanonicalTargets": 13,
+  "selectedFinalCount": 13,
+  "identityBinding": {
+    "canonicalAuthority": "Ospex core API",
+    "externalScoreCrossCheckFields": [
+      "awayTeam",
+      "homeTeam",
+      "scheduledStartTimeUtc"
+    ],
+    "nonCanonicalGameIdentifierPublished": false,
+    "nonCanonicalGameIdentifierUsedAsContestIdentity": false
+  },
+  "scores": [
+    {
+      "contestId": "53",
+      "awayTeam": "Kansas City Royals",
+      "homeTeam": "Detroit Tigers",
+      "scheduledStartTimeUtc": "2026-07-25T17:10:00Z",
+      "status": "Final",
+      "awayScore": 3,
+      "homeScore": 2,
+      "canonicalOspexIdentityMatched": true
+    },
+    {
+      "contestId": "54",
+      "awayTeam": "Arizona Diamondbacks",
+      "homeTeam": "Washington Nationals",
+      "scheduledStartTimeUtc": "2026-07-25T20:05:00Z",
+      "status": "Final",
+      "awayScore": 3,
+      "homeScore": 5,
+      "canonicalOspexIdentityMatched": true
+    },
+    {
+      "contestId": "55",
+      "awayTeam": "Los Angeles Angels",
+      "homeTeam": "San Francisco Giants",
+      "scheduledStartTimeUtc": "2026-07-25T20:05:00Z",
+      "status": "Final",
+      "awayScore": 2,
+      "homeScore": 9,
+      "canonicalOspexIdentityMatched": true
+    },
+    {
+      "contestId": "56",
+      "awayTeam": "Toronto Blue Jays",
+      "homeTeam": "Boston Red Sox",
+      "scheduledStartTimeUtc": "2026-07-25T20:10:00Z",
+      "status": "Final",
+      "awayScore": 6,
+      "homeScore": 0,
+      "canonicalOspexIdentityMatched": true
+    },
+    {
+      "contestId": "57",
+      "awayTeam": "San Diego Padres",
+      "homeTeam": "Miami Marlins",
+      "scheduledStartTimeUtc": "2026-07-25T20:10:00Z",
+      "status": "Final",
+      "awayScore": 7,
+      "homeScore": 2,
+      "canonicalOspexIdentityMatched": true
+    },
+    {
+      "contestId": "58",
+      "awayTeam": "Cleveland Guardians",
+      "homeTeam": "Tampa Bay Rays",
+      "scheduledStartTimeUtc": "2026-07-25T22:10:00Z",
+      "status": "Final",
+      "awayScore": 0,
+      "homeScore": 3,
+      "canonicalOspexIdentityMatched": true
+    },
+    {
+      "contestId": "59",
+      "awayTeam": "Chicago Cubs",
+      "homeTeam": "Pittsburgh Pirates",
+      "scheduledStartTimeUtc": "2026-07-25T22:40:00Z",
+      "status": "Final",
+      "awayScore": 11,
+      "homeScore": 0,
+      "canonicalOspexIdentityMatched": true
+    },
+    {
+      "contestId": "60",
+      "awayTeam": "Atlanta Braves",
+      "homeTeam": "Baltimore Orioles",
+      "scheduledStartTimeUtc": "2026-07-25T23:05:00Z",
+      "status": "Final",
+      "awayScore": 2,
+      "homeScore": 3,
+      "canonicalOspexIdentityMatched": true
+    },
+    {
+      "contestId": "61",
+      "awayTeam": "Houston Astros",
+      "homeTeam": "Chicago White Sox",
+      "scheduledStartTimeUtc": "2026-07-25T23:10:00Z",
+      "status": "Final",
+      "awayScore": 4,
+      "homeScore": 1,
+      "canonicalOspexIdentityMatched": true
+    },
+    {
+      "contestId": "62",
+      "awayTeam": "Colorado Rockies",
+      "homeTeam": "Milwaukee Brewers",
+      "scheduledStartTimeUtc": "2026-07-25T23:10:00Z",
+      "status": "Final",
+      "awayScore": 5,
+      "homeScore": 8,
+      "canonicalOspexIdentityMatched": true
+    },
+    {
+      "contestId": "63",
+      "awayTeam": "Cincinnati Reds",
+      "homeTeam": "St. Louis Cardinals",
+      "scheduledStartTimeUtc": "2026-07-25T23:15:00Z",
+      "status": "Final",
+      "awayScore": 0,
+      "homeScore": 7,
+      "canonicalOspexIdentityMatched": true
+    },
+    {
+      "contestId": "64",
+      "awayTeam": "Seattle Mariners",
+      "homeTeam": "Texas Rangers",
+      "scheduledStartTimeUtc": "2026-07-25T23:15:00Z",
+      "status": "Final",
+      "awayScore": 1,
+      "homeScore": 7,
+      "canonicalOspexIdentityMatched": true
+    },
+    {
+      "contestId": "65",
+      "awayTeam": "Los Angeles Dodgers",
+      "homeTeam": "New York Mets",
+      "scheduledStartTimeUtc": "2026-07-25T23:15:00Z",
+      "status": "Final",
+      "awayScore": 4,
+      "homeScore": 3,
+      "canonicalOspexIdentityMatched": true
+    }
+  ]
+}

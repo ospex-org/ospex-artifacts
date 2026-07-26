@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-07-25-mlb-13-game-full-slate-live-green",
+  "generatedAt": "2026-07-26T05:02:16Z",
+  "makerRoleCount": 2,
+  "controlledFillCount": 39,
+  "marketTypes": [
+    "moneyline",
+    "spread",
+    "total"
+  ],
+  "quoteRiskTargetUSDC": "1.000000",
+  "effectiveOverroundBpsByContest": [
+    {
+      "contestId": "53",
+      "matchup": "KC@DET",
+      "effectiveOverroundBps": 300,
+      "deviationFromNominal300Bps": 0
+    },
+    {
+      "contestId": "54",
+      "matchup": "ARI@WSH",
+      "effectiveOverroundBps": 300,
+      "deviationFromNominal300Bps": 0
+    },
+    {
+      "contestId": "55",
+      "matchup": "LAA@SF",
+      "effectiveOverroundBps": 294,
+      "deviationFromNominal300Bps": -6
+    },
+    {
+      "contestId": "56",
+      "matchup": "TOR@BOS",
+      "effectiveOverroundBps": 300,
+      "deviationFromNominal300Bps": 0
+    },
+    {
+      "contestId": "57",
+      "matchup": "SD@MIA",
+      "effectiveOverroundBps": 300,
+      "deviationFromNominal300Bps": 0
+    },
+    {
+      "contestId": "58",
+      "matchup": "CLE@TB",
+      "effectiveOverroundBps": 300,
+      "deviationFromNominal300Bps": 0
+    },
+    {
+      "contestId": "59",
+      "matchup": "CHC@PIT",
+      "effectiveOverroundBps": 300,
+      "deviationFromNominal300Bps": 0
+    },
+    {
+      "contestId": "60",
+      "matchup": "ATL@BAL",
+      "effectiveOverroundBps": 300,
+      "deviationFromNominal300Bps": 0
+    },
+    {
+      "contestId": "61",
+      "matchup": "HOU@CWS",
+      "effectiveOverroundBps": 300,
+      "deviationFromNominal300Bps": 0
+    },
+    {
+      "contestId": "62",
+      "matchup": "COL@MIL",
+      "effectiveOverroundBps": 300,
+      "deviationFromNominal300Bps": 0
+    },
+    {
+      "contestId": "63",
+      "matchup": "CIN@STL",
+      "effectiveOverroundBps": 242,
+      "deviationFromNominal300Bps": -58
+    },
+    {
+      "contestId": "64",
+      "matchup": "SEA@TEX",
+      "effectiveOverroundBps": 289,
+      "deviationFromNominal300Bps": -11
+    },
+    {
+      "contestId": "65",
+      "matchup": "LAD@NYM",
+      "effectiveOverroundBps": 300,
+      "deviationFromNominal300Bps": 0
+    }
+  ],
+  "deviations": [
+    {
+      "contestId": "55",
+      "matchup": "LAA@SF",
+      "effectiveOverroundBps": 294
+    },
+    {
+      "contestId": "63",
+      "matchup": "CIN@STL",
+      "effectiveOverroundBps": 242
+    },
+    {
+      "contestId": "64",
+      "matchup": "SEA@TEX",
+      "effectiveOverroundBps": 289
+    }
+  ],
+  "deviationReason": "The reviewed market-maker rejected nominal settings that were incompatible with the observed upstream reference overround. Only per-game configuration was adjusted; source code was unchanged.",
+  "terminalOpenCommitments": 0,
+  "terminalMakerProcesses": 0
+}

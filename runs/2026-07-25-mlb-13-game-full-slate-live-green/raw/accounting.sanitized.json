@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-07-25-mlb-13-game-full-slate-live-green",
+  "generatedAt": "2026-07-26T05:02:16Z",
+  "currencyDecimals": {
+    "USDC": 6,
+    "POL": 18
+  },
+  "matchedPrincipal": {
+    "escrowedAndRecoveredWei6": "68845923",
+    "escrowedAndRecoveredUSDC": "68.845923",
+    "conservationStatus": "exact",
+    "byRole": {
+      "flow-taker": {
+        "wei6": "38307821",
+        "USDC": "38.307821"
+      },
+      "market-maker-a": {
+        "wei6": "16197840",
+        "USDC": "16.197840"
+      },
+      "market-maker-b": {
+        "wei6": "14340262",
+        "USDC": "14.340262"
+      }
+    }
+  },
+  "protocolFees": {
+    "contestCreationWei6": "13000000",
+    "contestCreationUSDC": "13.000000",
+    "speculationCreationWei6": "19500000",
+    "speculationCreationUSDC": "19.500000",
+    "aggregateWei6": "32500000",
+    "aggregateUSDC": "32.500000",
+    "unexplainedUSDCWei6": "0"
+  },
+  "postgameGas": {
+    "aggregateWei": "3319185868792553755",
+    "aggregatePOL": "3.319185868792553755",
+    "byKindWei": {
+      "contest-score": "461954136125995632",
+      "speculation-settle": "1489597414118272800",
+      "position-claim": "1367634318548285323"
+    },
+    "byKindPOL": {
+      "contest-score": "0.461954136125995632",
+      "speculation-settle": "1.4895974141182728",
+      "position-claim": "1.367634318548285323"
+    }
+  },
+  "wholeSessionGas": {
+    "accountBalanceDeltaBasis": true,
+    "aggregateWei": "14516101480305142886",
+    "aggregatePOL": "14.516101480305142886",
+    "byRole": {
+      "flow-taker": {
+        "wei": "10308743621358223704",
+        "POL": "10.308743621358223704"
+      },
+      "market-maker-a": {
+        "wei": "2174511693773436108",
+        "POL": "2.174511693773436108"
+      },
+      "market-maker-b": {
+        "wei": "2032846165173483074",
+        "POL": "2.032846165173483074"
+      }
+    },
+    "scope": "All observed setup attempts, reviewed traversal actions, teardown, scoring, settlement, and claims for the controlled wallets during the session window."
+  },
+  "USDCBalances": {
+    "flow-taker": {
+      "initialWei6": "281234988",
+      "initialUSDC": "281.234988",
+      "finalWei6": "257794886",
+      "finalUSDC": "257.794886"
+    },
+    "market-maker-a": {
+      "initialWei6": "300560797",
+      "initialUSDC": "300.560797",
+      "finalWei6": "296556637",
+      "finalUSDC": "296.556637"
+    },
+    "market-maker-b": {
+      "initialWei6": "290807047",
+      "initialUSDC": "290.807047",
+      "finalWei6": "285751309",
+      "finalUSDC": "285.751309"
+    }
+  }
+}

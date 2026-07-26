@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-07-25-mlb-13-game-full-slate-live-green",
+  "generatedAt": "2026-07-26T05:02:16Z",
+  "artifactStatus": "complete_verified_with_caveats",
+  "caveats": [
+    {
+      "id": "abandoned-custom-runner",
+      "classification": "operator-control-adapter",
+      "chainEffect": "none beyond the already-authorized contest creation/market refresh preserved for contest 53",
+      "observation": "Two safely stopped custom-runner attempts exposed an object/array parsing defect and an incorrect assumption that market refresh creates speculations.",
+      "resolution": "The custom runner was abandoned. The reviewed SDK/CLI and market-maker were used directly for the successful traversal."
+    },
+    {
+      "id": "scheduler-call-blocked-caller",
+      "classification": "control-plane",
+      "chainEffect": "thirteen successful score transactions",
+      "observation": "An immediate manual scheduler invocation occupied its caller for about thirty minutes while the underlying finalizer continued writing durable evidence.",
+      "resolution": "The finalizer stopped at its bounded gas cap after scoring. Receipt-aware continuation completed settlement and claims, and duplicate scheduled continuations were removed."
+    },
+    {
+      "id": "settlement-projection-lag",
+      "classification": "projection-convergence",
+      "chainEffect": "successful receipts; no replay",
+      "observation": "Immediate projected reads for speculations 138 and 139 lagged confirmed settlement receipts. Speculation 139 remained stale for approximately twelve seconds.",
+      "resolution": "The operator did not replay ambiguous writes. Delayed projected reads and direct contract reads confirmed terminal closed state before continuation."
+    },
+    {
+      "id": "allowance-projection-lag",
+      "classification": "projection-convergence",
+      "chainEffect": "successful zero-approval receipt",
+      "observation": "One immediate allowance read remained at 1.500000 USDC after a successful zero-approval receipt.",
+      "resolution": "A read four seconds later returned zero; all six final allowance reads were zero."
+    },
+    {
+      "id": "read-only-cli-adaptations",
+      "classification": "operator-cli-shape",
+      "chainEffect": "none",
+      "observation": "One unsupported read flag and one annotated numeric parser assumption caused local pre-write failures during continuation.",
+      "resolution": "The reviewed command shape was used and the parser was corrected before any affected write."
+    }
+  ],
+  "materialProtocolSafetyFailure": false,
+  "failedOrAmbiguousPostgameTransactionCount": 0
+}
