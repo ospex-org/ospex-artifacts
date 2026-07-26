@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-07-25-mlb-13-game-full-slate-live-green",
+  "generatedAt": "2026-07-26T05:02:16Z",
+  "network": "polygon",
+  "chainId": 137,
+  "contracts": {
+    "core": "0x40047BAFcdEd16C938058b7b67186299a2893561",
+    "r5CreReceiver": "0x06e3470012039797119Ae30e1236169304F9220C",
+    "usdc": "0x3c499c542cEf5E3811e1192ce70d8cC03d5c3359",
+    "positionModule": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56",
+    "treasuryModule": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
+  },
+  "roleWallets": {
+    "flow-taker": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+    "market-maker-a": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+    "market-maker-b": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482"
+  },
+  "reviewedPins": {
+    "sdkCliCommit": "b171a4d3490635413362ae55a90f4f9c853a727c",
+    "marketMakerCommit": "d7982bca406f0e2d290a9e596bd8cb27bd19c998",
+    "harnessCommit": "5a2ce33fe39cf942e69aa2df41625424f4ef8758",
+    "cliArtifactSha256": "8037b56dd1c672506265bce640795f4644e7020a36d59387764822b808eb624e",
+    "sdkVersion": "0.10.1",
+    "cliVersion": "0.10.1",
+    "runnerFreezeSha256": "b2f5640be0c3da5f08c1c5860ae817f20c6a3b09a9a514e3be38f646392bb32b",
+    "canonicalTargetsSnapshotSha256": "15920d9f716ba1910ba991ec67bb96c3afeaeda2fb56851bb88c13afa79e8f4e"
+  },
+  "sourceModification": "none"
+}
