@@ -4,10 +4,13 @@
   "generatedAt": "2026-07-27T03:47:41Z",
   "network": "polygon",
   "chainId": 137,
+  "deploymentRound": "R5",
   "contracts": {
     "core": "0x40047BAFcdEd16C938058b7b67186299a2893561",
     "r5CreReceiver": "0x06e3470012039797119Ae30e1236169304F9220C",
     "usdc": "0x3c499c542cEf5E3811e1192ce70d8cC03d5c3359",
+    "matchingModule": "0x46Af20B6307Aa0Ec13de10EF58a02c5F1b5C9559",
+    "speculationModule": "0xEA21b58E91eDcA41d0c42A8655234F8A64fa31bc",
     "positionModule": "0x3C71fdB8ABF41487a512440e5ce6490158C26e56",
     "treasuryModule": "0x07f357e67cc9B48D029b1E4C9B7F45569a2eB85C"
   },

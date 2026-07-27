@@ -4,6 +4,8 @@
   "generatedAt": "2026-07-27T03:47:41Z",
   "source": "Official MLB schedule feed",
   "sourceURL": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-07-26&hydrate=linescore",
+  "sourceGamesObserved": 15,
+  "selectedCanonicalTargets": 15,
   "joinPolicy": "Exact away team, home team, schedule date, and scheduled UTC start after canonical Ospex identity was frozen.",
   "externalGameIdentifiersIncluded": false,
   "games": [

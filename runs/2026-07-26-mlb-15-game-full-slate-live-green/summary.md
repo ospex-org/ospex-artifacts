@@ -78,7 +78,7 @@ Contract addresses, role wallets, and package versions are in [`raw/runtime-pins
 
 ## Market-maker observations
 
-Both reviewed maker roles quoted the three supported market types with an approximately 5-USDC target per position. Exactly one controlled fill was taken per market. The intended nominal overround was 300 bps; five per-game configurations required lower feasible values against the observed upstream/reference odds overround:
+Both reviewed maker roles quoted the three supported market types against an approximately 5-USDC target for each taker position. Actual taker risk ranged from **4.999717** to **5.000000 USDC** after integer rounding; maker risk ranged from **1.547900** to **4.950400 USDC**. Exactly one controlled fill was taken per market. The intended nominal overround was 300 bps; five per-game configurations required lower feasible values against the observed upstream/reference odds overround:
 
 - Atlanta Braves @ Baltimore Orioles, contest `68`: `242 bps`
 - Toronto Blue Jays @ Boston Red Sox, contest `70`: `282 bps`
@@ -92,14 +92,15 @@ Only per-game configuration changed. Reviewed source code remained unchanged.
 
 1. Early game-one attempts encountered response-envelope and projected-read assumptions. Confirmed chain effects were reconciled before retry; no duplicate contest, speculation, or fill was created.
 2. Six contests needed multiple bounded score requests before authoritative on-chain scored state converged. The run sent 24 successful requests for 15 exact scores; every retry followed a score-status readback.
-3. One total pushed. Both controlled sides were refunded, producing 46 claims for 45 speculations while preserving exact principal conservation.
-4. A copied planning digest was corrected to the actual unchanged reviewed CLI artifact before postgame freeze; there was no binary drift.
-5. Three asynchronous read-only audit delegations timed out without formal summaries. Useful transcript observations were incorporated and reverified, but this artifact does not represent those timeouts as independent approval.
+3. Five per-game configurations used disclosed effective overrounds below the requested 300 bps because the reviewed feasibility guard declined wider configurations against thinner live upstream/reference odds overrounds.
+4. One total pushed. Both controlled sides were refunded, producing 46 claims for 45 speculations while preserving exact principal conservation.
+5. A copied planning digest was corrected to the actual unchanged reviewed CLI artifact before postgame freeze; there was no binary drift.
+6. Three asynchronous read-only audit delegations timed out without formal summaries. Useful transcript observations were incorporated and reverified, but this artifact does not represent those timeouts as independent approval.
 
 Structured caveats and convergence evidence are in [`raw/control-plane-caveats.sanitized.json`](raw/control-plane-caveats.sanitized.json) and [`raw/projection-convergence.sanitized.json`](raw/projection-convergence.sanitized.json).
 
 ## Evidence boundary
 
-This aggregate proves the recorded controlled lifecycle, exact final-state outcomes, receipt set, accounting conservation, and terminal-zero state. It does **not** prove organic demand, independent outside-agent participation, production-scale concurrency, or sports-model predictive performance. A standardized adopting market-maker scorecard is not attached because its contract targets one contest/speculation per run; this artifact intentionally records a 15-contest aggregate.
+This aggregate proves the recorded controlled lifecycle, exact final-state outcomes, receipt set, accounting conservation, and terminal-zero state. It does **not** prove organic demand, independent outside-agent participation, production-scale concurrency, sports-model predictive performance, or adversarial wallet diversity: one controlled flow wallet was the taker on all 45 fills, and three controlled wallets held all 90 positions. A standardized adopting market-maker scorecard is not attached because its contract targets one contest/speculation per run; this artifact intentionally records a 15-contest aggregate.
 
 Machine-readable source of truth: [`evidence.json`](evidence.json).

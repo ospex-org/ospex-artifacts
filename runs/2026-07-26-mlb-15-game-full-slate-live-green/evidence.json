@@ -8,6 +8,7 @@
   "generatedAt": "2026-07-27T03:47:41Z",
   "network": "polygon",
   "chainId": 137,
+  "deploymentRound": "R5",
   "runScope": {
     "kind": "controlled-multi-contest-full-slate-traversal",
     "sport": "mlb",
@@ -85,7 +86,18 @@
     "controlledFillCount": 45,
     "positionCount": 90,
     "controlledWalletCount": 3,
-    "targetRiskUSDCPerPosition": "5.000000",
+    "targetTakerPositionCount": 45,
+    "targetTakerRiskUSDCPerPosition": "5.000000",
+    "actualTakerRiskRangeUSDCPerPosition": {
+      "minimum": "4.999717",
+      "maximum": "5.000000"
+    },
+    "actualMakerRiskRangeUSDCPerPosition": {
+      "minimum": "1.547900",
+      "maximum": "4.950400"
+    },
+    "sourceGamesObserved": 15,
+    "selectedCanonicalTargets": 15,
     "sessionUSDCSpendCap": "1000.000000",
     "scorecardContract": {
       "status": "not_applicable",
@@ -136,6 +148,16 @@
     ],
     "scoreSourceJoin": "exact away/home teams plus exact scheduled UTC start",
     "nonCanonicalGameIdentifierUsed": false
+  },
+  "transactionReceiptReadback": {
+    "checkedAtUtc": "2026-07-27T03:47:41Z",
+    "method": "fresh Polygon JSON-RPC transaction-receipt readback",
+    "queried": 202,
+    "successfulReceipts": 202,
+    "missingReceipts": 0,
+    "failedReceipts": 0,
+    "blockNumberMismatches": 0,
+    "senderRoleMismatches": 0
   },
   "sourcePins": {
     "sdkCliCommit": "b171a4d3490635413362ae55a90f4f9c853a727c",
@@ -2908,5 +2930,5 @@
     "caveats": "raw/control-plane-caveats.sanitized.json",
     "perGameCompletion": "raw/per-game-completion.sanitized.json"
   },
-  "evidenceBoundary": "This controlled aggregate proves the recorded lifecycle and terminal state. It does not prove organic demand, outside-agent participation, production-scale concurrency, or sports-model predictive performance."
+  "evidenceBoundary": "This controlled aggregate proves the recorded lifecycle and terminal state. It does not prove organic demand, outside-agent participation, production-scale concurrency, sports-model predictive performance, or adversarial wallet diversity: one controlled flow wallet was the taker on all 45 fills, and three controlled wallets held all 90 positions."
 }

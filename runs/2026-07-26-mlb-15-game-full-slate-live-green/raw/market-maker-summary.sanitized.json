@@ -7,7 +7,15 @@
     "market-maker-a",
     "market-maker-b"
   ],
-  "targetRiskUSDCPerPosition": "5.000000",
+  "targetTakerRiskUSDCPerPosition": "5.000000",
+  "actualTakerRiskRangeUSDCPerPosition": {
+    "minimum": "4.999717",
+    "maximum": "5.000000"
+  },
+  "actualMakerRiskRangeUSDCPerPosition": {
+    "minimum": "1.547900",
+    "maximum": "4.950400"
+  },
   "requestedOverroundBps": 300,
   "gameCount": 15,
   "marketCount": 45,
