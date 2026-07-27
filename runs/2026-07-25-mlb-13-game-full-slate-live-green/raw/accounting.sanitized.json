@@ -10,6 +10,26 @@
     "escrowedAndRecoveredWei6": "68845923",
     "escrowedAndRecoveredUSDC": "68.845923",
     "conservationStatus": "exact",
+    "byRoleBasis": "escrow-contribution",
+    "byRole": {
+      "flow-taker": {
+        "wei6": "38997923",
+        "USDC": "38.997923"
+      },
+      "market-maker-a": {
+        "wei6": "15202000",
+        "USDC": "15.202000"
+      },
+      "market-maker-b": {
+        "wei6": "14646000",
+        "USDC": "14.646000"
+      }
+    }
+  },
+  "claimPayouts": {
+    "aggregateWei6": "68845923",
+    "aggregateUSDC": "68.845923",
+    "byRoleBasis": "claim-payout-recipient",
     "byRole": {
       "flow-taker": {
         "wei6": "38307821",
@@ -23,7 +43,9 @@
         "wei6": "14340262",
         "USDC": "14.340262"
       }
-    }
+    },
+    "normalWinnerClaims": 39,
+    "pushRefundClaims": 0
   },
   "protocolFees": {
     "contestCreationWei6": "13000000",

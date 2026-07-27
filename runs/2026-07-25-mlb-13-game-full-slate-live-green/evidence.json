@@ -8,8 +8,9 @@
   "generatedAt": "2026-07-26T05:02:16Z",
   "network": "polygon",
   "chainId": 137,
+  "deploymentRound": "R5",
   "runScope": {
-    "kind": "controlled-multi-contest-full-slate-traversal",
+    "kind": "controlled-multi-contest-selected-slate-traversal",
     "sport": "mlb",
     "contestIds": [
       "53",
@@ -77,6 +78,9 @@
     "controlledFillCount": 39,
     "positionCount": 78,
     "controlledWalletCount": 3,
+    "sourceGamesObserved": 15,
+    "selectedCanonicalTargets": 13,
+    "coverageClarification": "The permanent artifactId retains full-slate for historical continuity, but this run selected 13 canonical targets from the 15 official MLB games on 2026-07-25 and does not represent complete official daily-slate coverage.",
     "sessionUSDCSpendCap": "1000.000000",
     "scorecardContract": {
       "status": "not_applicable",
@@ -1596,13 +1600,9 @@
     "Organic counterparty demand or independent outside-agent participation.",
     "Production-scale volume, concurrency, or adversarial wallet diversity.",
     "Predictive performance of any sports model; this run exercised protocol lifecycle behavior.",
+    "Complete official daily-slate coverage; the controlled run selected thirteen of fifteen official MLB games on 2026-07-25.",
     "An exhaustive categorical listing of every setup and nonce-floor transaction performed during safely halted attempts; those costs remain included in whole-session balance deltas."
   ],
-  "sourceEvidenceDigests": {
-    "terminalCheckpointSha256": "80d960b6cbe2dab5a05dbddfbdccb8ded2d6dc1db8fb3ca0ff0122d8b42ba15e",
-    "postgameTransactionLedgerSha256": "3f0b3f1765a903798f4570cb845a814c0a161a8a12856780369c69060c990d05",
-    "targetFreezeDigest": "b2f5640be0c3da5f08c1c5860ae817f20c6a3b09a9a514e3be38f646392bb32b"
-  },
   "caveatIds": [
     "abandoned-custom-runner",
     "scheduler-call-blocked-caller",
@@ -1625,6 +1625,8 @@
   "finalScoreSource": {
     "authority": "Official MLB schedule feed",
     "capturedAtUtc": "2026-07-26T04:06:25.028963Z",
+    "sourceGamesObserved": 15,
+    "selectedCanonicalTargets": 13,
     "selectedFinalCount": 13,
     "identityBinding": "team names and scheduled start matched canonical Ospex contest identity",
     "evidence": "raw/final-score-source.sanitized.json"

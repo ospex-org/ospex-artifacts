@@ -743,6 +743,99 @@ class SignatureSafetyPatternTests(unittest.TestCase):
         self.assertIsNotNone(pattern.search('"data": "0x' + "ab" * 100 + '"'))
         self.assertIsNone(pattern.search('"txHash": "0x' + "ab" * 32 + '"'))
 
+    def test_matches_private_repository_name_and_url(self) -> None:
+        pattern = self.pattern("private repository name")
+        private_name = "ospex" + "-harness"
+        self.assertIsNotNone(pattern.search(private_name))
+        self.assertIsNotNone(pattern.search("https://github.com/ospex-org/" + private_name + "/pull/12"))
+        self.assertIsNone(pattern.search('"harnessCommit": "5a2ce33f"'))
+        self.assertIsNone(pattern.search("private harness fix-forward"))
+
+
+class AggregateEvidenceSemanticTests(unittest.TestCase):
+    def evidence(self, *, kind: str = "controlled-multi-contest-full-slate-traversal") -> dict:
+        return {
+            "deploymentRound": "R5",
+            "runScope": {
+                "kind": kind,
+                "contestCount": 15,
+                "sourceGamesObserved": 15,
+                "selectedCanonicalTargets": 15,
+            },
+        }
+
+    def validate(self, evidence: dict) -> list[str]:
+        errors: list[str] = []
+        path = ROOT / "runs" / "aggregate-fixture" / "evidence.json"
+        validate_artifacts.validate_multi_contest_evidence(path, evidence, errors)
+        return errors
+
+    def test_complete_full_slate_passes(self) -> None:
+        self.assertEqual(self.validate(self.evidence()), [])
+
+    def test_partial_day_mislabeled_full_slate_is_rejected(self) -> None:
+        evidence = self.evidence()
+        evidence["runScope"]["contestCount"] = 13
+        evidence["runScope"]["selectedCanonicalTargets"] = 13
+        errors = self.validate(evidence)
+        self.assertTrue(any("full-slate runScope.kind" in error for error in errors), errors)
+
+    def test_selected_slate_with_explicit_coverage_passes(self) -> None:
+        evidence = self.evidence(kind="controlled-multi-contest-selected-slate-traversal")
+        evidence["runScope"]["contestCount"] = 13
+        evidence["runScope"]["selectedCanonicalTargets"] = 13
+        self.assertEqual(self.validate(evidence), [])
+
+    def test_missing_deployment_round_is_rejected(self) -> None:
+        evidence = self.evidence()
+        evidence.pop("deploymentRound")
+        errors = self.validate(evidence)
+        self.assertTrue(any("requires deploymentRound" in error for error in errors), errors)
+
+
+class AccountingRoleSemanticTests(unittest.TestCase):
+    def validate(self, accounting: dict) -> list[str]:
+        errors: list[str] = []
+        path = ROOT / "runs" / "aggregate-fixture" / "raw" / "accounting.sanitized.json"
+        validate_artifacts.validate_accounting_role_semantics(path, accounting, errors)
+        return errors
+
+    def test_explicit_role_bases_and_conservation_pass(self) -> None:
+        accounting = {
+            "matchedPrincipal": {
+                "escrowedAndRecoveredWei6": "30",
+                "byRoleBasis": validate_artifacts.ESCROW_BY_ROLE_BASIS,
+                "byRole": {"flow": {"wei6": "20"}, "maker": {"wei6": "10"}},
+            },
+            "claimPayouts": {
+                "aggregateWei6": "30",
+                "byRoleBasis": validate_artifacts.CLAIM_PAYOUT_BY_ROLE_BASIS,
+                "byRole": {"flow": {"wei6": "12"}, "maker": {"wei6": "18"}},
+            },
+        }
+        self.assertEqual(self.validate(accounting), [])
+
+    def test_missing_basis_is_rejected_even_when_totals_match(self) -> None:
+        accounting = {
+            "matchedPrincipal": {
+                "escrowedAndRecoveredWei6": "30",
+                "byRole": {"flow": {"wei6": "20"}, "maker": {"wei6": "10"}},
+            }
+        }
+        errors = self.validate(accounting)
+        self.assertTrue(any("matchedPrincipal.byRoleBasis" in error for error in errors), errors)
+
+    def test_role_sum_mismatch_is_rejected(self) -> None:
+        accounting = {
+            "matchedPrincipal": {
+                "escrowedAndRecoveredWei6": "30",
+                "byRoleBasis": validate_artifacts.ESCROW_BY_ROLE_BASIS,
+                "byRole": {"flow": {"wei6": "20"}, "maker": {"wei6": "9"}},
+            }
+        }
+        errors = self.validate(accounting)
+        self.assertTrue(any("does not equal" in error for error in errors), errors)
+
 
 class SchemaPointerPlacementTests(unittest.TestCase):
     def test_misnamed_scorecard_carrier_is_rejected(self) -> None:

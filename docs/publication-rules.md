@@ -31,6 +31,7 @@ Include public and reproducible evidence such as:
 - final-score or other approved external fact sources
 - sanitized indexer/API snapshots
 - package asset names and hashes for release acceptance
+- bare source commit SHAs for private implementation inputs, without private repository names or URLs
 - setup/live/lifecycle gate results
 - post-write projection convergence evidence for live chain writes, including the expected final API/indexer state and observed converged state
 - non-blocking observations and known caveats
@@ -48,6 +49,7 @@ Never publish:
 - raw EIP-712 signatures unless deliberately required for a specific reproducibility reason
 - raw calldata or revert blobs unless intentionally summarized and reviewed
 - local machine paths, scratch workdirs, or Hermes cache paths
+- private repository names, private repository URLs, or private pull-request identifiers; publish only the relevant bare commit SHA
 - unredacted logs, telemetry dumps, SQLite databases, or wallet keystore material
 - internal brainstorming or marketing language
 
@@ -61,7 +63,7 @@ Before committing an artifact:
 4. Check that optional/skipped gates are explicit.
 5. For each in-scope live chain write, confirm the artifact separates tx receipt success from projection convergence. If an immediate API/indexer read was stale, record it as a lag observation and require a later converged read before declaring the gate green.
 6. Check that public wallet labels are role labels or intentionally public identities.
-7. Review any occurrence of words such as `password`, `secret`, `signature`, `token`, `RPC`, `Supabase`, `Postgres`, or `/home/` before publishing.
+7. Review any occurrence of words such as `password`, `secret`, `signature`, `token`, `RPC`, `Supabase`, `Postgres`, `/home/`, or a private repository identifier before publishing.
 8. Verify artifact paths are referenced from `README.md` or `index.json` when they are intended to be discoverable.
 
 Allowed findings include checklist text in this document and sanitized explanatory notes. Actual credentials, paths to secret files, and raw sensitive material are not allowed.

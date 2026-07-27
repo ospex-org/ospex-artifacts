@@ -20,4 +20,4 @@
 
 ## Caveat
 
-The run-local composite doctor correctly found zero allowances after revocation but the ladder converted its non-ready exit into `spentPOL=999` and mislabeled the stop as official-final. The raw failure is preserved privately; the published diagnosis is sanitized under `raw/`. The fix-forward is ospex-harness PR #12.
+The run-local composite doctor correctly found zero allowances after revocation but the ladder converted its non-ready exit into `spentPOL=999` and mislabeled the stop as official-final. The raw failure is preserved privately; the published diagnosis is sanitized under `raw/`. The fix-forward is recorded by bare commit `2cf9dd48843379dcffcfe26d1ec7319b84b036f4`; the private repository name and URL are intentionally omitted.
