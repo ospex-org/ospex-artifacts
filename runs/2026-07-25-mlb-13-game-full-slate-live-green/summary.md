@@ -1,9 +1,11 @@
-# 2026-07-25 MLB 13-game full-slate live lifecycle
+# 2026-07-25 MLB 13-of-15 selected-slate live lifecycle
 
 - **Status:** `complete_verified_with_caveats`
 - **Network:** Polygon (`chainId 137`)
 - **Scope:** contests `53`–`65`; speculations `138`–`176`
 - **Terminal verification:** `2026-07-26T04:27:25.332163Z`
+
+**Coverage clarification:** The permanent artifact ID retains `full-slate` for historical continuity, but this run selected 13 canonical targets from the 15 official MLB games on 2026-07-25; Athletics @ Twins and Yankees @ Phillies were not included, so this is not complete official daily-slate coverage.
 
 ## Result
 

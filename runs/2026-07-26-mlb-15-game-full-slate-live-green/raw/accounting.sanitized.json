@@ -10,6 +10,7 @@
     "escrowedAndRecoveredWei6": "396115944",
     "escrowedAndRecoveredUSDC": "396.115944",
     "conservationStatus": "exact",
+    "byRoleBasis": "escrow-contribution",
     "byRole": {
       "market-maker-a": {
         "wei6": "91706400",
@@ -28,6 +29,7 @@
   "claimPayouts": {
     "aggregateWei6": "396115944",
     "aggregateUSDC": "396.115944",
+    "byRoleBasis": "claim-payout-recipient",
     "byRole": {
       "flow-taker": {
         "wei6": "238255604",
