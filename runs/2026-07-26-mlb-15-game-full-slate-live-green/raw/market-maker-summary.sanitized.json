@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-07-26-mlb-15-game-full-slate-live-green",
+  "generatedAt": "2026-07-27T03:47:41Z",
+  "reviewedMarketMakerCommit": "d7982bca406f0e2d290a9e596bd8cb27bd19c998",
+  "roles": [
+    "market-maker-a",
+    "market-maker-b"
+  ],
+  "targetTakerRiskUSDCPerPosition": "5.000000",
+  "actualTakerRiskRangeUSDCPerPosition": {
+    "minimum": "4.999717",
+    "maximum": "5.000000"
+  },
+  "actualMakerRiskRangeUSDCPerPosition": {
+    "minimum": "1.547900",
+    "maximum": "4.950400"
+  },
+  "requestedOverroundBps": 300,
+  "gameCount": 15,
+  "marketCount": 45,
+  "controlledFillCount": 45,
+  "positionsCreated": 90,
+  "makerAssignments": {
+    "market-maker-a": 8,
+    "market-maker-b": 7
+  },
+  "marketCounts": {
+    "moneyline": 15,
+    "spread": 15,
+    "total": 15
+  },
+  "vigDeviations": [
+    {
+      "order": 3,
+      "contestId": "68",
+      "matchup": "Atlanta Braves @ Baltimore Orioles",
+      "requestedBps": 300,
+      "effectiveBps": 242
+    },
+    {
+      "order": 5,
+      "contestId": "70",
+      "matchup": "Toronto Blue Jays @ Boston Red Sox",
+      "requestedBps": 300,
+      "effectiveBps": 282
+    },
+    {
+      "order": 13,
+      "contestId": "78",
+      "matchup": "Seattle Mariners @ Texas Rangers",
+      "requestedBps": 300,
+      "effectiveBps": 242
+    },
+    {
+      "order": 14,
+      "contestId": "79",
+      "matchup": "Los Angeles Angels @ San Francisco Giants",
+      "requestedBps": 300,
+      "effectiveBps": 287
+    },
+    {
+      "order": 15,
+      "contestId": "80",
+      "matchup": "New York Yankees @ Philadelphia Phillies",
+      "requestedBps": 300,
+      "effectiveBps": 264
+    }
+  ],
+  "terminalOpenCommitments": 0,
+  "terminalReviewedMarketMakerProcesses": 0,
+  "sourceModification": "none; only bounded per-game configuration adapted where the requested overround was infeasible"
+}

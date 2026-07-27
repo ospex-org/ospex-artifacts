@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-07-26-mlb-15-game-full-slate-live-green",
+  "generatedAt": "2026-07-27T03:47:41Z",
+  "authoritativeScoreReadback": "on-chain contests score-status",
+  "scoreRequests": {
+    "contests": 15,
+    "confirmedRequestTransactions": 24,
+    "additionalRequestsBeyondOnePerContest": 9,
+    "contestsWithMultipleRequests": 6,
+    "perContest": [
+      {
+        "order": 1,
+        "contestId": "66",
+        "requestCount": 1,
+        "requestTxHashes": [
+          "0xc98178d9782e7c9aa3d0aa824a291eb82527b02b69f3ea27c81c03f755f897b8"
+        ],
+        "exactScoreConverged": true
+      },
+      {
+        "order": 2,
+        "contestId": "67",
+        "requestCount": 2,
+        "requestTxHashes": [
+          "0x92134321fb36ae32268d17ad2c63aa25e951cbc1aa5b24e162939d06add141c6",
+          "0xbee23a0ade6986f7753972402ec029023192d5dd12d0f7dbf50dea7c55910cec"
+        ],
+        "exactScoreConverged": true
+      },
+      {
+        "order": 3,
+        "contestId": "68",
+        "requestCount": 1,
+        "requestTxHashes": [
+          "0xde6de5edfa02be5ed91ccf4b20f37e071932934b91bd102c5b4e35a9c0971a15"
+        ],
+        "exactScoreConverged": true
+      },
+      {
+        "order": 4,
+        "contestId": "69",
+        "requestCount": 1,
+        "requestTxHashes": [
+          "0x33c38115aeb54369bd2988355f115dda97fdf0c7769409065b91a43941e48c25"
+        ],
+        "exactScoreConverged": true
+      },
+      {
+        "order": 5,
+        "contestId": "70",
+        "requestCount": 1,
+        "requestTxHashes": [
+          "0xd6d31200113aff12375cca55a51bb92921edc89eddb73084bcc1613ca2e45122"
+        ],
+        "exactScoreConverged": true
+      },
+      {
+        "order": 6,
+        "contestId": "71",
+        "requestCount": 1,
+        "requestTxHashes": [
+          "0x34d4c1fa9ff1f7e6ef9a7c5e708dbd95b3d9c2b3dd06f37ff5281555da2200fe"
+        ],
+        "exactScoreConverged": true
+      },
+      {
+        "order": 7,
+        "contestId": "72",
+        "requestCount": 3,
+        "requestTxHashes": [
+          "0x9ec6fa8c73a2abf4d494e42b470e68c1acf31721bb61f231bbafeb0a57dc537d",
+          "0x74ac93daa344a5307349d3d6d4ef29384363c5f2b04edc94cd5d1d0c7f0a8be9",
+          "0xddb981ec1a30f040cab08667cf7c1fd6344beec39960c59ade9b51210ca70303"
+        ],
+        "exactScoreConverged": true
+      },
+      {
+        "order": 8,
+        "contestId": "73",
+        "requestCount": 1,
+        "requestTxHashes": [
+          "0x53021830740e6367e42108830b13a23078a60fcc790ede81b4db9056baa3fc81"
+        ],
+        "exactScoreConverged": true
+      },
+      {
+        "order": 9,
+        "contestId": "74",
+        "requestCount": 2,
+        "requestTxHashes": [
+          "0x745fb74440fa40ac8252f629f3594f280ad13bc37be27d649b8016b5512ec2d6",
+          "0x99c932ffcdbcacd77ab38f3ba1044b0c0e1828e0e9eef514a9c8faaf9e936c4a"
+        ],
+        "exactScoreConverged": true
+      },
+      {
+        "order": 10,
+        "contestId": "75",
+        "requestCount": 1,
+        "requestTxHashes": [
+          "0x0347018cf9b6bf4de5ce6c38d92ed473f46b6d3e852785339b7420797d177fbb"
+        ],
+        "exactScoreConverged": true
+      },
+      {
+        "order": 11,
+        "contestId": "76",
+        "requestCount": 1,
+        "requestTxHashes": [
+          "0x3a6d9756e1fd0da1ff2a59ba6400b28c4c57014a789286341856be6caae61763"
+        ],
+        "exactScoreConverged": true
+      },
+      {
+        "order": 12,
+        "contestId": "77",
+        "requestCount": 3,
+        "requestTxHashes": [
+          "0xa95c07745786a10f355e9d64708effbd0cf22be576fe01940d30a6a2b546b2dc",
+          "0x6a06329fc747e8fca8e18bc16b18d257f24eddd3a3857d6ab1e9dad88c2b0e33",
+          "0x0c013290a6c5ba750f85ca576961577a26c0535d554e98316c5a2a93fd351dd4"
+        ],
+        "exactScoreConverged": true
+      },
+      {
+        "order": 13,
+        "contestId": "78",
+        "requestCount": 3,
+        "requestTxHashes": [
+          "0x21e660b79c84852ff3ef045e4b5a9c3802aba33af2718556d230af07771e51af",
+          "0xed43c68b0f09227d92afabce89ef9ca09c6b9b1e2457974e4970e4bca35217cb",
+          "0xded025b825bc183b8c4540cc3c444b5202019210c5e99f8613af17eb6ee63f02"
+        ],
+        "exactScoreConverged": true
+      },
+      {
+        "order": 14,
+        "contestId": "79",
+        "requestCount": 1,
+        "requestTxHashes": [
+          "0x7e1cb15290fd807a2d104fc8fa3ea8487c8b8e8405acb130c71539f5ae3425c7"
+        ],
+        "exactScoreConverged": true
+      },
+      {
+        "order": 15,
+        "contestId": "80",
+        "requestCount": 2,
+        "requestTxHashes": [
+          "0x5b1f783f71f9eabee5532b5420fb69d4cf685ec5c8b091e497f05938ae6d85b0",
+          "0xb53c62493b532eb186b59cd5954dc5fd5f1f7c023bd7940aaae4146d6227370c"
+        ],
+        "exactScoreConverged": true
+      }
+    ]
+  },
+  "settlementAndClaimReadback": {
+    "closedSpeculations": 45,
+    "actionableTargetPositions": 0,
+    "ambiguousWriteReplays": 0,
+    "perGameTerminalCheckpoints": 15
+  }
+}

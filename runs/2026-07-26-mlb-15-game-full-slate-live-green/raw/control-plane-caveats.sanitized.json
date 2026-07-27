@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-07-26-mlb-15-game-full-slate-live-green",
+  "generatedAt": "2026-07-27T03:47:41Z",
+  "artifactStatus": "complete_verified_with_caveats",
+  "caveats": [
+    {
+      "id": "game-one-control-plane-shape-recovery",
+      "classification": "operator-control-plane",
+      "chainEffect": "The already-authorized contest and confirmed fill were preserved; no duplicate contest, speculation, or fill was created.",
+      "observation": "Early game-one attempts encountered stable CLI envelope-shape and projected-read convergence assumptions.",
+      "resolution": "The wrapper adopted the reviewed response shape, reconciled confirmed receipts before retrying, stopped both market makers, and completed with exactly three fills, six positions, and zero open commitments."
+    },
+    {
+      "id": "score-request-retries",
+      "classification": "oracle-convergence",
+      "chainEffect": "Twenty-four successful score-request transactions for fifteen contests.",
+      "observation": "Six contests needed more than one bounded request before authoritative on-chain scored state converged; games 7, 12, and 13 each needed three.",
+      "resolution": "Each retry was preceded by on-chain score-status readback. All fifteen final scores matched the exact official team/time result before settlement."
+    },
+    {
+      "id": "market-maker-vig-feasibility",
+      "classification": "pricing-feasibility",
+      "chainEffect": "Five per-game configurations used a disclosed overround below the requested 300 bps.",
+      "observation": "The reviewed market-maker feasibility guard declined configurations that would widen beyond thinner live upstream/reference odds overrounds.",
+      "resolution": "Only per-game configuration changed; reviewed source remained unchanged. Effective values were recorded for every contest."
+    },
+    {
+      "id": "total-push-refund",
+      "classification": "protocol-outcome",
+      "chainEffect": "Speculation 194 settled push and both controlled positions were refunded in two successful claims.",
+      "observation": "Kansas City at Detroit finished 5–4 against total 9.0.",
+      "resolution": "Both upper and lower owners claimed their exact refundable risk; aggregate recovered principal still reconciled exactly."
+    },
+    {
+      "id": "cli-hash-transcription-correction",
+      "classification": "administrative-pin-record",
+      "chainEffect": "none",
+      "observation": "One planning record copied an obsolete CLI digest even though the unchanged reviewed binary was used.",
+      "resolution": "The actual binary digest 8037b56d… was recomputed, matched every seeded checkpoint and the reviewed source commit, and was frozen before postgame writes."
+    },
+    {
+      "id": "independent-audit-timeouts",
+      "classification": "review-process",
+      "chainEffect": "none",
+      "observation": "Three asynchronous read-only audit delegations timed out without returning formal summaries.",
+      "resolution": "Useful transcript observations were incorporated, then the finalizer passed live identity, on-chain score-status, wrong-time rejection, role/contract/chain binding, teardown-guard, lint, compile, and hash-freeze checks. This is not represented as independent approval."
+    }
+  ],
+  "materialProtocolSafetyFailure": false,
+  "failedOrAmbiguousTransactionCount": 0,
+  "independentApprovalClaimed": false
+}
