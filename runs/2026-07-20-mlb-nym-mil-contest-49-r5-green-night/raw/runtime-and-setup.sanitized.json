@@ -32,8 +32,6 @@
       "commit": "14db79b754214ca0e2e99842521337595b0dbfdc"
     },
     "harness": {
-      "repository": "ospex-org/ospex-harness",
-      "visibility": "private",
       "commit": "d1844452d63d61ef283e371c60896e7cc8b04050"
     },
     "coreApi": {

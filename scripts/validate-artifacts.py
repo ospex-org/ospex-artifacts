@@ -193,7 +193,14 @@ SAFETY_PATTERNS = [
         "specific upstream odds provider name",
         re.compile(r"\b(draftkings|fan\s?duel|betrivers|betmgm|pinnacle|the[- ]odds[- ]api|sportradar)\b", re.I),
     ),
+    (
+        "private repository name",
+        re.compile(r"\b(?:ospex-org/)?ospex" + r"-harness\b", re.I),
+    ),
 ]
+
+ESCROW_BY_ROLE_BASIS = "escrow-contribution"
+CLAIM_PAYOUT_BY_ROLE_BASIS = "claim-payout-recipient"
 
 
 def rel(path: Path) -> str:
@@ -358,6 +365,58 @@ def validate_schema_files(docs: dict[Path, Any], errors: list[str]) -> None:
             errors.append(f"{rel(path)}: duplicate schema $id also used by {rel(schema_ids[schema_id])}")
         else:
             schema_ids[schema_id] = path
+
+
+def validate_multi_contest_evidence(path: Path, doc: Any, errors: list[str]) -> None:
+    if path.name != "evidence.json" or "runs" not in path.parts or not isinstance(doc, dict):
+        return
+    scope = doc.get("runScope")
+    if not isinstance(scope, dict) or not str(scope.get("kind", "")).startswith("controlled-multi-contest-"):
+        return
+    if not isinstance(doc.get("deploymentRound"), str) or not doc["deploymentRound"].strip():
+        errors.append(f"{rel(path)}: controlled multi-contest evidence requires deploymentRound")
+    observed = scope.get("sourceGamesObserved")
+    selected = scope.get("selectedCanonicalTargets")
+    contest_count = scope.get("contestCount")
+    if type(observed) is not int or type(selected) is not int:
+        errors.append(f"{rel(path)}: controlled multi-contest runScope requires integer sourceGamesObserved and selectedCanonicalTargets")
+        return
+    if observed < 1 or selected < 1 or selected > observed:
+        errors.append(f"{rel(path)}: runScope slate coverage must satisfy 1 <= selectedCanonicalTargets <= sourceGamesObserved")
+    if type(contest_count) is int and selected != contest_count:
+        errors.append(f"{rel(path)}: selectedCanonicalTargets must equal contestCount")
+    if "full-slate" in str(scope.get("kind")) and selected != observed:
+        errors.append(f"{rel(path)}: full-slate runScope.kind requires selectedCanonicalTargets to equal sourceGamesObserved")
+
+
+def validate_accounting_role_semantics(path: Path, doc: Any, errors: list[str]) -> None:
+    if path.name != "accounting.sanitized.json" or "runs" not in path.parts or not isinstance(doc, dict):
+        return
+    blocks = (
+        ("matchedPrincipal", "escrowedAndRecoveredWei6", ESCROW_BY_ROLE_BASIS),
+        ("claimPayouts", "aggregateWei6", CLAIM_PAYOUT_BY_ROLE_BASIS),
+    )
+    for block_name, total_key, expected_basis in blocks:
+        block = doc.get(block_name)
+        if not isinstance(block, dict) or "byRole" not in block:
+            continue
+        if block.get("byRoleBasis") != expected_basis:
+            errors.append(f"{rel(path)}: {block_name}.byRoleBasis must be {expected_basis!r}")
+        rows = block.get("byRole")
+        if not isinstance(rows, dict) or not rows:
+            errors.append(f"{rel(path)}: {block_name}.byRole must be a non-empty object")
+            continue
+        if any(not isinstance(row, dict) for row in rows.values()):
+            errors.append(f"{rel(path)}: {block_name}.byRole values must be objects")
+            continue
+        try:
+            role_total = sum(int(row["wei6"]) for row in rows.values())
+            declared_total = int(block[total_key])
+        except (KeyError, TypeError, ValueError):
+            errors.append(f"{rel(path)}: {block_name} role and aggregate wei6 values must be decimal integers")
+            continue
+        if role_total != declared_total:
+            errors.append(f"{rel(path)}: {block_name}.byRole wei6 sum {role_total} does not equal {total_key} {declared_total}")
 
 
 def validate_artifact_entry(
@@ -1638,6 +1697,8 @@ def main() -> int:
             validate_scenario_matrix(path, doc, errors)
         if path.name == "mve-scorecard.json" and "runs" in path.parts:
             validate_mve_scorecard(path, doc, docs, errors)
+        validate_multi_contest_evidence(path, doc, errors)
+        validate_accounting_role_semantics(path, doc, errors)
         validate_projection_convergence(path, doc, errors)
         validate_raw_file_maps(path, doc, errors)
 

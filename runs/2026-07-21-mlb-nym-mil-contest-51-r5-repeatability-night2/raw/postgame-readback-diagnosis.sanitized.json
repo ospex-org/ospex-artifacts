@@ -50,7 +50,6 @@
     "writesSent": 0
   },
   "fixForward": {
-    "pullRequest": "https://github.com/ospex-org/ospex-harness/pull/12",
     "commit": "2cf9dd48843379dcffcfe26d1ec7319b84b036f4"
   }
 }

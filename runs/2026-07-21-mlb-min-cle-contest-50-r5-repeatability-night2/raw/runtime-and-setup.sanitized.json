@@ -31,12 +31,9 @@
       "commit": "d7982bca406f0e2d290a9e596bd8cb27bd19c998"
     },
     "harness": {
-      "repository": "ospex-org/ospex-harness",
-      "visibility": "private",
       "version": "1.1.2",
       "executionCommit": "5f4ea0b89211339e604bf68255e3d9c133caf036",
       "postgameFixForward": {
-        "pullRequest": "https://github.com/ospex-org/ospex-harness/pull/12",
         "commit": "2cf9dd48843379dcffcfe26d1ec7319b84b036f4"
       }
     },
