@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-07-26-mlb-15-game-full-slate-live-green",
+  "generatedAt": "2026-07-27T03:47:41Z",
+  "perGameCompletion": [
+    {
+      "order": 1,
+      "contestId": "66",
+      "matchup": "Cleveland Guardians @ Tampa Bay Rays",
+      "completedAtUtc": "2026-07-26T19:17:04.429773Z",
+      "settlements": 3,
+      "claimTransactions": 3,
+      "principalRecoveredUSDC": "26.205999",
+      "actionableTargetPositions": 0,
+      "closedSpeculations": 3
+    },
+    {
+      "order": 2,
+      "contestId": "67",
+      "matchup": "Arizona Diamondbacks @ Washington Nationals",
+      "completedAtUtc": "2026-07-26T20:40:43.672708Z",
+      "settlements": 3,
+      "claimTransactions": 3,
+      "principalRecoveredUSDC": "27.410201",
+      "actionableTargetPositions": 0,
+      "closedSpeculations": 3
+    },
+    {
+      "order": 3,
+      "contestId": "68",
+      "matchup": "Atlanta Braves @ Baltimore Orioles",
+      "completedAtUtc": "2026-07-26T21:19:31.161354Z",
+      "settlements": 3,
+      "claimTransactions": 3,
+      "principalRecoveredUSDC": "26.615544",
+      "actionableTargetPositions": 0,
+      "closedSpeculations": 3
+    },
+    {
+      "order": 4,
+      "contestId": "69",
+      "matchup": "Chicago Cubs @ Pittsburgh Pirates",
+      "completedAtUtc": "2026-07-26T20:42:43.113143Z",
+      "settlements": 3,
+      "claimTransactions": 3,
+      "principalRecoveredUSDC": "26.040266",
+      "actionableTargetPositions": 0,
+      "closedSpeculations": 3
+    },
+    {
+      "order": 5,
+      "contestId": "70",
+      "matchup": "Toronto Blue Jays @ Boston Red Sox",
+      "completedAtUtc": "2026-07-26T20:37:07.429869Z",
+      "settlements": 3,
+      "claimTransactions": 3,
+      "principalRecoveredUSDC": "26.101660",
+      "actionableTargetPositions": 0,
+      "closedSpeculations": 3
+    },
+    {
+      "order": 6,
+      "contestId": "71",
+      "matchup": "Kansas City Royals @ Detroit Tigers",
+      "completedAtUtc": "2026-07-26T20:55:26.239069Z",
+      "settlements": 3,
+      "claimTransactions": 4,
+      "principalRecoveredUSDC": "26.630438",
+      "actionableTargetPositions": 0,
+      "closedSpeculations": 3
+    },
+    {
+      "order": 7,
+      "contestId": "72",
+      "matchup": "Los Angeles Dodgers @ New York Mets",
+      "completedAtUtc": "2026-07-26T20:53:25.415802Z",
+      "settlements": 3,
+      "claimTransactions": 3,
+      "principalRecoveredUSDC": "26.743733",
+      "actionableTargetPositions": 0,
+      "closedSpeculations": 3
+    },
+    {
+      "order": 8,
+      "contestId": "73",
+      "matchup": "San Diego Padres @ Miami Marlins",
+      "completedAtUtc": "2026-07-26T20:44:14.475928Z",
+      "settlements": 3,
+      "claimTransactions": 3,
+      "principalRecoveredUSDC": "26.223872",
+      "actionableTargetPositions": 0,
+      "closedSpeculations": 3
+    },
+    {
+      "order": 9,
+      "contestId": "74",
+      "matchup": "Athletics @ Minnesota Twins",
+      "completedAtUtc": "2026-07-26T21:16:12.497672Z",
+      "settlements": 3,
+      "claimTransactions": 3,
+      "principalRecoveredUSDC": "26.194994",
+      "actionableTargetPositions": 0,
+      "closedSpeculations": 3
+    },
+    {
+      "order": 10,
+      "contestId": "75",
+      "matchup": "Colorado Rockies @ Milwaukee Brewers",
+      "completedAtUtc": "2026-07-26T21:17:55.398100Z",
+      "settlements": 3,
+      "claimTransactions": 3,
+      "principalRecoveredUSDC": "24.654511",
+      "actionableTargetPositions": 0,
+      "closedSpeculations": 3
+    },
+    {
+      "order": 11,
+      "contestId": "76",
+      "matchup": "Houston Astros @ Chicago White Sox",
+      "completedAtUtc": "2026-07-26T21:12:06.459240Z",
+      "settlements": 3,
+      "claimTransactions": 3,
+      "principalRecoveredUSDC": "26.998138",
+      "actionableTargetPositions": 0,
+      "closedSpeculations": 3
+    },
+    {
+      "order": 12,
+      "contestId": "77",
+      "matchup": "Cincinnati Reds @ St. Louis Cardinals",
+      "completedAtUtc": "2026-07-26T21:28:32.099008Z",
+      "settlements": 3,
+      "claimTransactions": 3,
+      "principalRecoveredUSDC": "26.469612",
+      "actionableTargetPositions": 0,
+      "closedSpeculations": 3
+    },
+    {
+      "order": 13,
+      "contestId": "78",
+      "matchup": "Seattle Mariners @ Texas Rangers",
+      "completedAtUtc": "2026-07-26T21:50:34.635068Z",
+      "settlements": 3,
+      "claimTransactions": 3,
+      "principalRecoveredUSDC": "26.359730",
+      "actionableTargetPositions": 0,
+      "closedSpeculations": 3
+    },
+    {
+      "order": 14,
+      "contestId": "79",
+      "matchup": "Los Angeles Angels @ San Francisco Giants",
+      "completedAtUtc": "2026-07-26T23:07:08.978550Z",
+      "settlements": 3,
+      "claimTransactions": 3,
+      "principalRecoveredUSDC": "26.982142",
+      "actionableTargetPositions": 0,
+      "closedSpeculations": 3
+    },
+    {
+      "order": 15,
+      "contestId": "80",
+      "matchup": "New York Yankees @ Philadelphia Phillies",
+      "completedAtUtc": "2026-07-27T02:30:34.658250Z",
+      "settlements": 3,
+      "claimTransactions": 3,
+      "principalRecoveredUSDC": "26.485104",
+      "actionableTargetPositions": 0,
+      "closedSpeculations": 3
+    }
+  ],
+  "aggregate": {
+    "games": 15,
+    "closedSpeculations": 45,
+    "claimTransactions": 46,
+    "recoveredPrincipalWei6": "396115944",
+    "recoveredPrincipalUSDC": "396.115944"
+  }
+}

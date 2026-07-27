@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-07-26-mlb-15-game-full-slate-live-green",
+  "generatedAt": "2026-07-27T03:47:41Z",
+  "currencyDecimals": {
+    "USDC": 6,
+    "POL": 18
+  },
+  "matchedPrincipal": {
+    "escrowedAndRecoveredWei6": "396115944",
+    "escrowedAndRecoveredUSDC": "396.115944",
+    "conservationStatus": "exact",
+    "byRole": {
+      "market-maker-a": {
+        "wei6": "91706400",
+        "USDC": "91.706400"
+      },
+      "flow-taker": {
+        "wei6": "224996744",
+        "USDC": "224.996744"
+      },
+      "market-maker-b": {
+        "wei6": "79412800",
+        "USDC": "79.412800"
+      }
+    }
+  },
+  "claimPayouts": {
+    "aggregateWei6": "396115944",
+    "aggregateUSDC": "396.115944",
+    "byRole": {
+      "flow-taker": {
+        "wei6": "238255604",
+        "USDC": "238.255604"
+      },
+      "market-maker-b": {
+        "wei6": "78220197",
+        "USDC": "78.220197"
+      },
+      "market-maker-a": {
+        "wei6": "79640143",
+        "USDC": "79.640143"
+      }
+    },
+    "normalWinnerClaims": 44,
+    "pushRefundClaims": 2
+  },
+  "protocolFees": {
+    "contestCreationWei6": "15000000",
+    "contestCreationUSDC": "15.000000",
+    "speculationCreationWei6": "22500000",
+    "speculationCreationUSDC": "22.500000",
+    "aggregateWei6": "37500000",
+    "aggregateUSDC": "37.500000",
+    "byRole": {
+      "flow-taker": {
+        "wei6": "26250000",
+        "USDC": "26.250000"
+      },
+      "market-maker-a": {
+        "wei6": "6000000",
+        "USDC": "6.000000"
+      },
+      "market-maker-b": {
+        "wei6": "5250000",
+        "USDC": "5.250000"
+      }
+    },
+    "unexplainedUSDCWei6": "0"
+  },
+  "proofTransactionGas": {
+    "aggregateWei": "14537102307484081889",
+    "aggregatePOL": "14.537102307484081889",
+    "byPhaseWei": {
+      "postgame": "4102398177965428058",
+      "setup": "10338778269587824851",
+      "teardown": "95925859930828980"
+    },
+    "byPhasePOL": {
+      "postgame": "4.102398177965428058",
+      "setup": "10.338778269587824851",
+      "teardown": "0.095925859930828980"
+    },
+    "receiptCount": 202
+  },
+  "wholeSessionGas": {
+    "accountBalanceDeltaBasis": true,
+    "aggregateWei": "16716396746003994939",
+    "aggregatePOL": "16.716396746003994939",
+    "byRole": {
+      "flow-taker": {
+        "wei": "12072167644925489109",
+        "POL": "12.072167644925489109"
+      },
+      "market-maker-a": {
+        "wei": "2376965704154558269",
+        "POL": "2.376965704154558269"
+      },
+      "market-maker-b": {
+        "wei": "2267263396923947561",
+        "POL": "2.267263396923947561"
+      }
+    },
+    "outsideCategoricalRegistryWei": "2179294438519913050",
+    "outsideCategoricalRegistryPOL": "2.179294438519913050",
+    "scope": "All controlled-wallet gas during approval, safe setup retries, market-maker lifecycle/nonce housekeeping, traversal, scoring, settlement, claims, and final teardown."
+  },
+  "USDCBalances": {
+    "flow-taker": {
+      "initialWei6": "257794886",
+      "initialUSDC": "257.794886",
+      "finalWei6": "244803746",
+      "finalUSDC": "244.803746",
+      "netDeltaWei6": "-12991140",
+      "netDeltaUSDC": "-12.991140"
+    },
+    "market-maker-a": {
+      "initialWei6": "296556637",
+      "initialUSDC": "296.556637",
+      "finalWei6": "278490380",
+      "finalUSDC": "278.490380",
+      "netDeltaWei6": "-18066257",
+      "netDeltaUSDC": "-18.066257"
+    },
+    "market-maker-b": {
+      "initialWei6": "285751309",
+      "initialUSDC": "285.751309",
+      "finalWei6": "279308706",
+      "finalUSDC": "279.308706",
+      "netDeltaWei6": "-6442603",
+      "netDeltaUSDC": "-6.442603"
+    }
+  }
+}

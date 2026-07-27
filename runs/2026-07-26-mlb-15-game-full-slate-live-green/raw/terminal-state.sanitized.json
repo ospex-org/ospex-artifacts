@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-07-26-mlb-15-game-full-slate-live-green",
+  "checkedAtUtc": "2026-07-27T03:47:41Z",
+  "status": "terminal-zero-verified",
+  "roles": {
+    "flow-taker": {
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "positionAllowanceWei6": "0",
+      "treasuryAllowanceWei6": "0",
+      "openCommitments": 0,
+      "targetPositions": {
+        "active": 0,
+        "pendingSettle": 0,
+        "claimable": 0
+      },
+      "finalUSDCWei6": "244803746",
+      "finalPOLWei": "7923238036396985161"
+    },
+    "market-maker-a": {
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "positionAllowanceWei6": "0",
+      "treasuryAllowanceWei6": "0",
+      "openCommitments": 0,
+      "targetPositions": {
+        "active": 0,
+        "pendingSettle": 0,
+        "claimable": 0
+      },
+      "finalUSDCWei6": "278490380",
+      "finalPOLWei": "11041671626496786761"
+    },
+    "market-maker-b": {
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "positionAllowanceWei6": "0",
+      "treasuryAllowanceWei6": "0",
+      "openCommitments": 0,
+      "targetPositions": {
+        "active": 0,
+        "pendingSettle": 0,
+        "claimable": 0
+      },
+      "finalUSDCWei6": "279308706",
+      "finalPOLWei": "20055921397022109301"
+    }
+  },
+  "checks": {
+    "contestsScoredExactly": 15,
+    "speculationsClosed": 45,
+    "winnerOrRefundClaims": 46,
+    "targetLifecycleRowsRemaining": 0,
+    "openCommitments": 0,
+    "nonzeroAllowances": 0,
+    "marketMakerProcesses": 0,
+    "detachedGameUnits": 0,
+    "slateSchedulerJobsRemaining": 0,
+    "proofTransactionsFreshReceiptVerified": 202,
+    "failedOrAmbiguousTransactions": 0
+  },
+  "schedulerCleanup": {
+    "allPerGameOneShotsConsumed": true,
+    "completionDrainRemoved": true,
+    "rebootCatchupRemoved": true
+  }
+}

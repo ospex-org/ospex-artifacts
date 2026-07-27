@@ -1,0 +1,2726 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-07-26-mlb-15-game-full-slate-live-green",
+  "generatedAt": "2026-07-27T03:47:41Z",
+  "identityAuthority": "canonical Ospex core-api tuple plus exact teams/start",
+  "externalScoreIdentifierUsedForIdentity": false,
+  "contests": [
+    {
+      "targetIndex": 1,
+      "contestId": "66",
+      "sport": "mlb",
+      "awayTeam": "Cleveland Guardians",
+      "homeTeam": "Tampa Bay Rays",
+      "startTimeUtc": "2026-07-26T16:15:00Z",
+      "canonicalGameId": "b11041fd-eb67-4fd8-b0f9-21ab9351de80",
+      "externalIds": {
+        "jsonodds": "b11041fd-eb67-4fd8-b0f9-21ab9351de80",
+        "sportspage": "337561",
+        "rundown": "6dae8f2574cf4ed7bef70965081705ba"
+      },
+      "createContestTxHash": "0x65b3c51295f7b8a4e8b4fb4c4dde325c3200c7a8b8fc166f2e7e96a169eeff3f",
+      "updateMarketsTxHash": "0xb47edbb11c4a3fb4e8e38986e73c1a78e9d7b8bbf86f27262fbce3c1d0a2cd8e",
+      "requestedMarketMakerOverroundBps": 300,
+      "effectiveMarketMakerOverroundBps": 300,
+      "seededAtUtc": "2026-07-26T15:24:45.324696Z",
+      "beforeFirstPitch": true,
+      "final": {
+        "awayScore": 0,
+        "homeScore": 1,
+        "officialFinalMatchedExactly": true,
+        "scheduledStartDeltaSeconds": 0,
+        "onChainScoreMatched": true
+      },
+      "scoreRequestCount": 1,
+      "scoreRequestTxHashes": [
+        "0xc98178d9782e7c9aa3d0aa824a291eb82527b02b69f3ea27c81c03f755f897b8"
+      ],
+      "speculations": [
+        {
+          "contestId": "66",
+          "speculationId": "177",
+          "market": "moneyline",
+          "lineTicks": 0,
+          "line": null,
+          "makerSide": "Cleveland Guardians",
+          "takerSide": "Tampa Bay Rays",
+          "makerPositionType": "upper",
+          "takerPositionType": "lower",
+          "makerOddsDecimal": "2.19",
+          "takerOddsDecimal": "1.84",
+          "makerRiskWei6": "4201600",
+          "makerRiskUSDC": "4.201600",
+          "takerRiskWei6": "4999904",
+          "takerRiskUSDC": "4.999904",
+          "escrowedPrincipalWei6": "9201504",
+          "escrowedPrincipalUSDC": "9.201504",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0xedf6fd9c9f06fb645e461c4035b57edab559d64ac0902b0df422c28b311b90a7",
+          "fillBlockNumber": "90916095",
+          "protocolWinSide": "home",
+          "winningSide": "lower",
+          "settleTxHash": "0x6f6ffb705404e2edfe55c20ae5ee496da6193e70a9beeda425f436d176ac7cb5",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "9201504",
+              "payoutUSDC": "9.201504",
+              "txHash": "0x106eeabf01ebbf54e0c3134b2f515047186e19e8e10133af282f15a7355af6e4"
+            }
+          ],
+          "claimedPayoutWei6": "9201504",
+          "claimedPayoutUSDC": "9.201504",
+          "terminalStatus": "closed-and-claimed",
+          "teamIdentity": {
+            "away": {
+              "team": "Cleveland Guardians",
+              "positionType": "upper",
+              "role": "market-maker-a",
+              "sideOwner": "maker",
+              "identity": "underdog",
+              "marketOddsAmerican": "+119"
+            },
+            "home": {
+              "team": "Tampa Bay Rays",
+              "positionType": "lower",
+              "role": "flow-taker",
+              "sideOwner": "taker",
+              "identity": "favorite",
+              "marketOddsAmerican": "-119"
+            }
+          }
+        },
+        {
+          "contestId": "66",
+          "speculationId": "178",
+          "market": "spread",
+          "lineTicks": 15,
+          "line": 1.5,
+          "makerSide": "Tampa Bay Rays",
+          "takerSide": "Cleveland Guardians",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "3.00",
+          "takerOddsDecimal": "1.50",
+          "makerRiskWei6": "2500000",
+          "makerRiskUSDC": "2.500000",
+          "takerRiskWei6": "5000000",
+          "takerRiskUSDC": "5.000000",
+          "escrowedPrincipalWei6": "7500000",
+          "escrowedPrincipalUSDC": "7.500000",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x7fb992080db648a45d410a0b2bb8a3dcdacaf1db153053ff3d390a06d9298b10",
+          "fillBlockNumber": "90916221",
+          "protocolWinSide": "away",
+          "winningSide": "upper",
+          "settleTxHash": "0xcbfc06ada639f75aca7c27df2e2bc2e05c4dff6dda5f8df613ede8fa77c26928",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "7500000",
+              "payoutUSDC": "7.500000",
+              "txHash": "0x46c14be2835b4d6cbbe3480e449c0325faf7e7872fa32e667a91b45e2b697019"
+            }
+          ],
+          "claimedPayoutWei6": "7500000",
+          "claimedPayoutUSDC": "7.500000",
+          "terminalStatus": "closed-and-claimed",
+          "spreadSemantics": {
+            "awayTeam": "Cleveland Guardians",
+            "homeTeam": "Tampa Bay Rays",
+            "upper": "Cleveland Guardians +1.5",
+            "lower": "Tampa Bay Rays -1.5",
+            "pushRule": "adjusted away score equals home score"
+          }
+        },
+        {
+          "contestId": "66",
+          "speculationId": "179",
+          "market": "total",
+          "lineTicks": 70,
+          "line": 7,
+          "makerSide": "over",
+          "takerSide": "under",
+          "makerPositionType": "upper",
+          "takerPositionType": "lower",
+          "makerOddsDecimal": "2.11",
+          "takerOddsDecimal": "1.90",
+          "makerRiskWei6": "4504500",
+          "makerRiskUSDC": "4.504500",
+          "takerRiskWei6": "4999995",
+          "takerRiskUSDC": "4.999995",
+          "escrowedPrincipalWei6": "9504495",
+          "escrowedPrincipalUSDC": "9.504495",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x3bd8a5f19e1e4d3cf26fb1080810c249cf0618dfb727dda18df352ecc1219771",
+          "fillBlockNumber": "90916237",
+          "protocolWinSide": "under",
+          "winningSide": "lower",
+          "settleTxHash": "0x737628a197ff55a07b0718ffb585e050efc8a7f23442ecda915d0fe5fb6f5b7e",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "9504495",
+              "payoutUSDC": "9.504495",
+              "txHash": "0x5b026b9a4b09ca65cf67e4611e3eaea95fe510bc6cafb4ee24399a1cbda95e78"
+            }
+          ],
+          "claimedPayoutWei6": "9504495",
+          "claimedPayoutUSDC": "9.504495",
+          "terminalStatus": "closed-and-claimed",
+          "totalSemantics": {
+            "upper": "over",
+            "lower": "under",
+            "pushRule": "combined score equals the line"
+          }
+        }
+      ]
+    },
+    {
+      "targetIndex": 2,
+      "contestId": "67",
+      "sport": "mlb",
+      "awayTeam": "Arizona Diamondbacks",
+      "homeTeam": "Washington Nationals",
+      "startTimeUtc": "2026-07-26T17:35:00Z",
+      "canonicalGameId": "2389c8e2-5433-497a-9b16-3983e8af18b9",
+      "externalIds": {
+        "jsonodds": "2389c8e2-5433-497a-9b16-3983e8af18b9",
+        "sportspage": "337565",
+        "rundown": "12e2c95834d13cf455fa6fb444ef1fb1"
+      },
+      "createContestTxHash": "0x0e86231a759f4c7d86f54b56ff2bf714872ca4778c884cb173dbcf591b610c09",
+      "updateMarketsTxHash": "0x0d5dccfb0b4e59feb330aaae8f8548b569bd1ecd364669c776c9d535e0883d3e",
+      "requestedMarketMakerOverroundBps": 300,
+      "effectiveMarketMakerOverroundBps": 300,
+      "seededAtUtc": "2026-07-26T15:28:48.342191Z",
+      "beforeFirstPitch": true,
+      "final": {
+        "awayScore": 7,
+        "homeScore": 10,
+        "officialFinalMatchedExactly": true,
+        "scheduledStartDeltaSeconds": 0,
+        "onChainScoreMatched": true
+      },
+      "scoreRequestCount": 2,
+      "scoreRequestTxHashes": [
+        "0x92134321fb36ae32268d17ad2c63aa25e951cbc1aa5b24e162939d06add141c6",
+        "0xbee23a0ade6986f7753972402ec029023192d5dd12d0f7dbf50dea7c55910cec"
+      ],
+      "speculations": [
+        {
+          "contestId": "67",
+          "speculationId": "180",
+          "market": "moneyline",
+          "lineTicks": 0,
+          "line": null,
+          "makerSide": "Washington Nationals",
+          "takerSide": "Arizona Diamondbacks",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.11",
+          "takerOddsDecimal": "1.90",
+          "makerRiskWei6": "4504500",
+          "makerRiskUSDC": "4.504500",
+          "takerRiskWei6": "4999995",
+          "takerRiskUSDC": "4.999995",
+          "escrowedPrincipalWei6": "9504495",
+          "escrowedPrincipalUSDC": "9.504495",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x4a1b9076de1357012c31a957f0645033324da667aa80489932dd53d3ca631f53",
+          "fillBlockNumber": "90916440",
+          "protocolWinSide": "home",
+          "winningSide": "lower",
+          "settleTxHash": "0xf69f0205fdb0c69b3ac221f8159b6f44a3313bb8e6742c16ecd20b20ae26cd6f",
+          "claims": [
+            {
+              "role": "market-maker-b",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "9504495",
+              "payoutUSDC": "9.504495",
+              "txHash": "0x967476e6bf4e0f4c5dea0d52a4124314ef51780d48f074f1acd47c6d7f9dc049"
+            }
+          ],
+          "claimedPayoutWei6": "9504495",
+          "claimedPayoutUSDC": "9.504495",
+          "terminalStatus": "closed-and-claimed",
+          "teamIdentity": {
+            "away": {
+              "team": "Arizona Diamondbacks",
+              "positionType": "upper",
+              "role": "flow-taker",
+              "sideOwner": "taker",
+              "identity": "favorite",
+              "marketOddsAmerican": "-111"
+            },
+            "home": {
+              "team": "Washington Nationals",
+              "positionType": "lower",
+              "role": "market-maker-b",
+              "sideOwner": "maker",
+              "identity": "underdog",
+              "marketOddsAmerican": "+111"
+            }
+          }
+        },
+        {
+          "contestId": "67",
+          "speculationId": "181",
+          "market": "spread",
+          "lineTicks": -15,
+          "line": -1.5,
+          "makerSide": "Arizona Diamondbacks",
+          "takerSide": "Washington Nationals",
+          "makerPositionType": "upper",
+          "takerPositionType": "lower",
+          "makerOddsDecimal": "2.47",
+          "takerOddsDecimal": "1.68",
+          "makerRiskWei6": "3401300",
+          "makerRiskUSDC": "3.401300",
+          "takerRiskWei6": "4999911",
+          "takerRiskUSDC": "4.999911",
+          "escrowedPrincipalWei6": "8401211",
+          "escrowedPrincipalUSDC": "8.401211",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x512a325e7df62facab25c9e8ffe97b2d050e4a009d98f98ee114fca144c64387",
+          "fillBlockNumber": "90916452",
+          "protocolWinSide": "home",
+          "winningSide": "lower",
+          "settleTxHash": "0x4eb8f2a026173b3e0ce62714c04451a47888e766e81b4a1c8680097be8cecd4b",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "8401211",
+              "payoutUSDC": "8.401211",
+              "txHash": "0xd5771a05e0f470be10fed4c07412003807f33e14dad49ef2c159b826a43021cb"
+            }
+          ],
+          "claimedPayoutWei6": "8401211",
+          "claimedPayoutUSDC": "8.401211",
+          "terminalStatus": "closed-and-claimed",
+          "spreadSemantics": {
+            "awayTeam": "Arizona Diamondbacks",
+            "homeTeam": "Washington Nationals",
+            "upper": "Arizona Diamondbacks -1.5",
+            "lower": "Washington Nationals +1.5",
+            "pushRule": "adjusted away score equals home score"
+          }
+        },
+        {
+          "contestId": "67",
+          "speculationId": "182",
+          "market": "total",
+          "lineTicks": 100,
+          "line": 10,
+          "makerSide": "under",
+          "takerSide": "over",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.11",
+          "takerOddsDecimal": "1.90",
+          "makerRiskWei6": "4504500",
+          "makerRiskUSDC": "4.504500",
+          "takerRiskWei6": "4999995",
+          "takerRiskUSDC": "4.999995",
+          "escrowedPrincipalWei6": "9504495",
+          "escrowedPrincipalUSDC": "9.504495",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x066e52e06b9e5de0de8bc0e384b6ad402272ae646b46870ada6ba9a9d2d0a953",
+          "fillBlockNumber": "90916459",
+          "protocolWinSide": "over",
+          "winningSide": "upper",
+          "settleTxHash": "0x7a67227aff5d36b83925c26ec5fd25be8db8d46f4d332404f32853720fad8c09",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "9504495",
+              "payoutUSDC": "9.504495",
+              "txHash": "0xa2b2a6fe082f1a1b1471cb113b848c38bc61dff49bd1def04d47f46222234d51"
+            }
+          ],
+          "claimedPayoutWei6": "9504495",
+          "claimedPayoutUSDC": "9.504495",
+          "terminalStatus": "closed-and-claimed",
+          "totalSemantics": {
+            "upper": "over",
+            "lower": "under",
+            "pushRule": "combined score equals the line"
+          }
+        }
+      ]
+    },
+    {
+      "targetIndex": 3,
+      "contestId": "68",
+      "sport": "mlb",
+      "awayTeam": "Atlanta Braves",
+      "homeTeam": "Baltimore Orioles",
+      "startTimeUtc": "2026-07-26T17:35:00Z",
+      "canonicalGameId": "dad45d97-d346-46f7-bad5-8b55f507d4bc",
+      "externalIds": {
+        "jsonodds": "dad45d97-d346-46f7-bad5-8b55f507d4bc",
+        "sportspage": "337570",
+        "rundown": "e8a3a3827fa6bf0047405c0f387bd600"
+      },
+      "createContestTxHash": "0x7e2af209755a102a2f1a4e580a4b26468a0ffc3eeb0fe471da4d32c2885dcbd0",
+      "updateMarketsTxHash": "0x2caa241427a183afadd947b2113b09a6a73b95c26418330cd87f59f9c58c3ccf",
+      "requestedMarketMakerOverroundBps": 300,
+      "effectiveMarketMakerOverroundBps": 242,
+      "seededAtUtc": "2026-07-26T15:35:37.994008Z",
+      "beforeFirstPitch": true,
+      "final": {
+        "awayScore": 3,
+        "homeScore": 2,
+        "officialFinalMatchedExactly": true,
+        "scheduledStartDeltaSeconds": 0,
+        "onChainScoreMatched": true
+      },
+      "scoreRequestCount": 1,
+      "scoreRequestTxHashes": [
+        "0xde6de5edfa02be5ed91ccf4b20f37e071932934b91bd102c5b4e35a9c0971a15"
+      ],
+      "speculations": [
+        {
+          "contestId": "68",
+          "speculationId": "183",
+          "market": "moneyline",
+          "lineTicks": 0,
+          "line": null,
+          "makerSide": "Baltimore Orioles",
+          "takerSide": "Atlanta Braves",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.06",
+          "takerOddsDecimal": "1.94",
+          "makerRiskWei6": "4716900",
+          "makerRiskUSDC": "4.716900",
+          "takerRiskWei6": "4999914",
+          "takerRiskUSDC": "4.999914",
+          "escrowedPrincipalWei6": "9716814",
+          "escrowedPrincipalUSDC": "9.716814",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x0c4fbb21d1c33b996f7d299ecac4cf26628f7ce142ecc902c965e67007742052",
+          "fillBlockNumber": "90916672",
+          "protocolWinSide": "away",
+          "winningSide": "upper",
+          "settleTxHash": "0xa4d66fc9fe8a812efa008620c2ed60ed660abfb4140139715f4f65d846ef59b5",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "9716814",
+              "payoutUSDC": "9.716814",
+              "txHash": "0x315a5a633ea3f1e00e830a72a96f8e79b8187e35ab761c180d10f85807748a89"
+            }
+          ],
+          "claimedPayoutWei6": "9716814",
+          "claimedPayoutUSDC": "9.716814",
+          "terminalStatus": "closed-and-claimed",
+          "teamIdentity": {
+            "away": {
+              "team": "Atlanta Braves",
+              "positionType": "upper",
+              "role": "flow-taker",
+              "sideOwner": "taker",
+              "identity": "favorite",
+              "marketOddsAmerican": "-106"
+            },
+            "home": {
+              "team": "Baltimore Orioles",
+              "positionType": "lower",
+              "role": "market-maker-a",
+              "sideOwner": "maker",
+              "identity": "underdog",
+              "marketOddsAmerican": "+106"
+            }
+          }
+        },
+        {
+          "contestId": "68",
+          "speculationId": "184",
+          "market": "spread",
+          "lineTicks": 15,
+          "line": 1.5,
+          "makerSide": "Baltimore Orioles",
+          "takerSide": "Atlanta Braves",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.96",
+          "takerOddsDecimal": "1.51",
+          "makerRiskWei6": "2551000",
+          "makerRiskUSDC": "2.551000",
+          "takerRiskWei6": "4999960",
+          "takerRiskUSDC": "4.999960",
+          "escrowedPrincipalWei6": "7550960",
+          "escrowedPrincipalUSDC": "7.550960",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x7f39328a7266e38bbe31ff641585a118a05f55fcd593a27dac80245be99f9bc2",
+          "fillBlockNumber": "90916682",
+          "protocolWinSide": "away",
+          "winningSide": "upper",
+          "settleTxHash": "0xf696112359f9e76689013d6d88e61e550df3524adcb53cb462b9f3368544364c",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "7550960",
+              "payoutUSDC": "7.550960",
+              "txHash": "0xcf7f5b4000bb30b69fee4765c41aa3a39a8a7ee17a43e5ff8901a08d2380561b"
+            }
+          ],
+          "claimedPayoutWei6": "7550960",
+          "claimedPayoutUSDC": "7.550960",
+          "terminalStatus": "closed-and-claimed",
+          "spreadSemantics": {
+            "awayTeam": "Atlanta Braves",
+            "homeTeam": "Baltimore Orioles",
+            "upper": "Atlanta Braves +1.5",
+            "lower": "Baltimore Orioles -1.5",
+            "pushRule": "adjusted away score equals home score"
+          }
+        },
+        {
+          "contestId": "68",
+          "speculationId": "185",
+          "market": "total",
+          "lineTicks": 90,
+          "line": 9,
+          "makerSide": "over",
+          "takerSide": "under",
+          "makerPositionType": "upper",
+          "takerPositionType": "lower",
+          "makerOddsDecimal": "2.15",
+          "takerOddsDecimal": "1.87",
+          "makerRiskWei6": "4347800",
+          "makerRiskUSDC": "4.347800",
+          "takerRiskWei6": "4999970",
+          "takerRiskUSDC": "4.999970",
+          "escrowedPrincipalWei6": "9347770",
+          "escrowedPrincipalUSDC": "9.347770",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0xc94fbc6e74f79f4ab7ed96e1e21df8aa08796c148b92db478db3535e4f10fcad",
+          "fillBlockNumber": "90916697",
+          "protocolWinSide": "under",
+          "winningSide": "lower",
+          "settleTxHash": "0x4bcaea60511aaa65348351af6475e772ef57434be52e37d994ff752a2fa35370",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "9347770",
+              "payoutUSDC": "9.347770",
+              "txHash": "0xda741e36fdc2a03cbd8c484b5ab10c1b3c38dc508d0ff671ef511e9710fa9518"
+            }
+          ],
+          "claimedPayoutWei6": "9347770",
+          "claimedPayoutUSDC": "9.347770",
+          "terminalStatus": "closed-and-claimed",
+          "totalSemantics": {
+            "upper": "over",
+            "lower": "under",
+            "pushRule": "combined score equals the line"
+          }
+        }
+      ]
+    },
+    {
+      "targetIndex": 4,
+      "contestId": "69",
+      "sport": "mlb",
+      "awayTeam": "Chicago Cubs",
+      "homeTeam": "Pittsburgh Pirates",
+      "startTimeUtc": "2026-07-26T17:35:00Z",
+      "canonicalGameId": "bed927e0-405c-40d3-8d84-8f880bef9438",
+      "externalIds": {
+        "jsonodds": "bed927e0-405c-40d3-8d84-8f880bef9438",
+        "sportspage": "337563",
+        "rundown": "190660313d0c778ac34d68110cfa1614"
+      },
+      "createContestTxHash": "0xd6708cd9e28a4070dad3f4ac38bf42e9fdcfcbaf17039990dbaa39afe0d53273",
+      "updateMarketsTxHash": "0xbe07d49240d2a54fb252f8593c6944d5365e8ce722bcdfec28e4ec5b6a4cb143",
+      "requestedMarketMakerOverroundBps": 300,
+      "effectiveMarketMakerOverroundBps": 300,
+      "seededAtUtc": "2026-07-26T15:40:18.839687Z",
+      "beforeFirstPitch": true,
+      "final": {
+        "awayScore": 7,
+        "homeScore": 8,
+        "officialFinalMatchedExactly": true,
+        "scheduledStartDeltaSeconds": 0,
+        "onChainScoreMatched": true
+      },
+      "scoreRequestCount": 1,
+      "scoreRequestTxHashes": [
+        "0x33c38115aeb54369bd2988355f115dda97fdf0c7769409065b91a43941e48c25"
+      ],
+      "speculations": [
+        {
+          "contestId": "69",
+          "speculationId": "186",
+          "market": "moneyline",
+          "lineTicks": 0,
+          "line": null,
+          "makerSide": "Chicago Cubs",
+          "takerSide": "Pittsburgh Pirates",
+          "makerPositionType": "upper",
+          "takerPositionType": "lower",
+          "makerOddsDecimal": "2.27",
+          "takerOddsDecimal": "1.79",
+          "makerRiskWei6": "3937000",
+          "makerRiskUSDC": "3.937000",
+          "takerRiskWei6": "4999990",
+          "takerRiskUSDC": "4.999990",
+          "escrowedPrincipalWei6": "8936990",
+          "escrowedPrincipalUSDC": "8.936990",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x99ee3dc8eaba02fbe94ecf0d2a97f5c68f4c95eb941ba9000758d3b6c14580fb",
+          "fillBlockNumber": "90916859",
+          "protocolWinSide": "home",
+          "winningSide": "lower",
+          "settleTxHash": "0x9d9a360f211db98ad9355f200eab0af3d2a9ff85b16b5af7c45f8cb6f5230ab3",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "8936990",
+              "payoutUSDC": "8.936990",
+              "txHash": "0x9fb7eabdecf366e2a316bdf8d161727da4bd4f5ad37cde917e53423847880a6e"
+            }
+          ],
+          "claimedPayoutWei6": "8936990",
+          "claimedPayoutUSDC": "8.936990",
+          "terminalStatus": "closed-and-claimed",
+          "teamIdentity": {
+            "away": {
+              "team": "Chicago Cubs",
+              "positionType": "upper",
+              "role": "market-maker-b",
+              "sideOwner": "maker",
+              "identity": "underdog",
+              "marketOddsAmerican": "+127"
+            },
+            "home": {
+              "team": "Pittsburgh Pirates",
+              "positionType": "lower",
+              "role": "flow-taker",
+              "sideOwner": "taker",
+              "identity": "favorite",
+              "marketOddsAmerican": "-127"
+            }
+          }
+        },
+        {
+          "contestId": "69",
+          "speculationId": "187",
+          "market": "spread",
+          "lineTicks": 15,
+          "line": 1.5,
+          "makerSide": "Pittsburgh Pirates",
+          "takerSide": "Chicago Cubs",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.79",
+          "takerOddsDecimal": "1.56",
+          "makerRiskWei6": "2793200",
+          "makerRiskUSDC": "2.793200",
+          "takerRiskWei6": "4999828",
+          "takerRiskUSDC": "4.999828",
+          "escrowedPrincipalWei6": "7793028",
+          "escrowedPrincipalUSDC": "7.793028",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0xd610a77f9fa1f9fbca169259c022b9771a040edb9ed069432eeb8a211bf1cf6b",
+          "fillBlockNumber": "90916878",
+          "protocolWinSide": "away",
+          "winningSide": "upper",
+          "settleTxHash": "0x348b3baaa4b92acb44f3d4eb4f8197d20894f536c119d73c2a8b5bfc14a3bbab",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "7793028",
+              "payoutUSDC": "7.793028",
+              "txHash": "0x0541842d5a5a4626dc363b838fb0c15b0ce354c88b03a22a7c89ae056bb6325e"
+            }
+          ],
+          "claimedPayoutWei6": "7793028",
+          "claimedPayoutUSDC": "7.793028",
+          "terminalStatus": "closed-and-claimed",
+          "spreadSemantics": {
+            "awayTeam": "Chicago Cubs",
+            "homeTeam": "Pittsburgh Pirates",
+            "upper": "Chicago Cubs +1.5",
+            "lower": "Pittsburgh Pirates -1.5",
+            "pushRule": "adjusted away score equals home score"
+          }
+        },
+        {
+          "contestId": "69",
+          "speculationId": "188",
+          "market": "total",
+          "lineTicks": 90,
+          "line": 9,
+          "makerSide": "over",
+          "takerSide": "under",
+          "makerPositionType": "upper",
+          "takerPositionType": "lower",
+          "makerOddsDecimal": "2.16",
+          "takerOddsDecimal": "1.86",
+          "makerRiskWei6": "4310300",
+          "makerRiskUSDC": "4.310300",
+          "takerRiskWei6": "4999948",
+          "takerRiskUSDC": "4.999948",
+          "escrowedPrincipalWei6": "9310248",
+          "escrowedPrincipalUSDC": "9.310248",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0xf08ba1e6378c0c9891155fe817d9389bd7c698fd2ad62bc2b68264ed3fc0032d",
+          "fillBlockNumber": "90916887",
+          "protocolWinSide": "over",
+          "winningSide": "upper",
+          "settleTxHash": "0x3f225af3aa39350b14124bd654d80b90b560aaa2112ef5ee62203a2f861e9927",
+          "claims": [
+            {
+              "role": "market-maker-b",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "9310248",
+              "payoutUSDC": "9.310248",
+              "txHash": "0x9ed0d93092fedeb983bddd69ae1fe2723f32201cf229aeb4094c4a52840f22df"
+            }
+          ],
+          "claimedPayoutWei6": "9310248",
+          "claimedPayoutUSDC": "9.310248",
+          "terminalStatus": "closed-and-claimed",
+          "totalSemantics": {
+            "upper": "over",
+            "lower": "under",
+            "pushRule": "combined score equals the line"
+          }
+        }
+      ]
+    },
+    {
+      "targetIndex": 5,
+      "contestId": "70",
+      "sport": "mlb",
+      "awayTeam": "Toronto Blue Jays",
+      "homeTeam": "Boston Red Sox",
+      "startTimeUtc": "2026-07-26T17:35:00Z",
+      "canonicalGameId": "ba26abc4-5ff4-49da-96d4-652d9b190ec0",
+      "externalIds": {
+        "jsonodds": "ba26abc4-5ff4-49da-96d4-652d9b190ec0",
+        "sportspage": "337557",
+        "rundown": "098b0cbc2daf03e68e7e2ebd01a1d0e3"
+      },
+      "createContestTxHash": "0x44c3653525d6895f0eb359a363985a353f03dd779bcd71577d950fdcb8b58104",
+      "updateMarketsTxHash": "0xbe474d2b166791d3c3f58406b67b9f0a9b1cf0d0bdc7189b4f31d0aed872ed15",
+      "requestedMarketMakerOverroundBps": 300,
+      "effectiveMarketMakerOverroundBps": 282,
+      "seededAtUtc": "2026-07-26T15:48:37.689830Z",
+      "beforeFirstPitch": true,
+      "final": {
+        "awayScore": 1,
+        "homeScore": 6,
+        "officialFinalMatchedExactly": true,
+        "scheduledStartDeltaSeconds": 0,
+        "onChainScoreMatched": true
+      },
+      "scoreRequestCount": 1,
+      "scoreRequestTxHashes": [
+        "0xd6d31200113aff12375cca55a51bb92921edc89eddb73084bcc1613ca2e45122"
+      ],
+      "speculations": [
+        {
+          "contestId": "70",
+          "speculationId": "189",
+          "market": "moneyline",
+          "lineTicks": 0,
+          "line": null,
+          "makerSide": "Toronto Blue Jays",
+          "takerSide": "Boston Red Sox",
+          "makerPositionType": "upper",
+          "takerPositionType": "lower",
+          "makerOddsDecimal": "2.37",
+          "takerOddsDecimal": "1.73",
+          "makerRiskWei6": "3649600",
+          "makerRiskUSDC": "3.649600",
+          "takerRiskWei6": "4999952",
+          "takerRiskUSDC": "4.999952",
+          "escrowedPrincipalWei6": "8649552",
+          "escrowedPrincipalUSDC": "8.649552",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x6e992761bbcdee224de07ae12f736c4b6f3246e6933ea18192bafd6ba70c7f02",
+          "fillBlockNumber": "90917231",
+          "protocolWinSide": "home",
+          "winningSide": "lower",
+          "settleTxHash": "0xa8352574fdd8dafe210408593c9d3c518ba3fc76fab4dc9b443110db9cf0dce6",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "8649552",
+              "payoutUSDC": "8.649552",
+              "txHash": "0x99edeb270c96d234370bf09d929ef6ec5b401e81c3074f9df6369dc211176212"
+            }
+          ],
+          "claimedPayoutWei6": "8649552",
+          "claimedPayoutUSDC": "8.649552",
+          "terminalStatus": "closed-and-claimed",
+          "teamIdentity": {
+            "away": {
+              "team": "Toronto Blue Jays",
+              "positionType": "upper",
+              "role": "market-maker-a",
+              "sideOwner": "maker",
+              "identity": "underdog",
+              "marketOddsAmerican": "+137"
+            },
+            "home": {
+              "team": "Boston Red Sox",
+              "positionType": "lower",
+              "role": "flow-taker",
+              "sideOwner": "taker",
+              "identity": "favorite",
+              "marketOddsAmerican": "-137"
+            }
+          }
+        },
+        {
+          "contestId": "70",
+          "speculationId": "190",
+          "market": "spread",
+          "lineTicks": 15,
+          "line": 1.5,
+          "makerSide": "Boston Red Sox",
+          "takerSide": "Toronto Blue Jays",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.72",
+          "takerOddsDecimal": "1.58",
+          "makerRiskWei6": "2906900",
+          "makerRiskUSDC": "2.906900",
+          "takerRiskWei6": "4999868",
+          "takerRiskUSDC": "4.999868",
+          "escrowedPrincipalWei6": "7906768",
+          "escrowedPrincipalUSDC": "7.906768",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0xbb2257b671e4c7ccbda379da6de99d868d0ad4bc30c5af9145735881af7d8b93",
+          "fillBlockNumber": "90917244",
+          "protocolWinSide": "home",
+          "winningSide": "lower",
+          "settleTxHash": "0x3f58d3a6c323ad6a07ca5ef97a1f32ce44ddf0a9f6ca932e53fe1fa446254a2a",
+          "claims": [
+            {
+              "role": "market-maker-a",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "7906768",
+              "payoutUSDC": "7.906768",
+              "txHash": "0x3b59413be96c66382b01f4c931c12afdc77e8d14502ee3d07b7d231f26f87e2d"
+            }
+          ],
+          "claimedPayoutWei6": "7906768",
+          "claimedPayoutUSDC": "7.906768",
+          "terminalStatus": "closed-and-claimed",
+          "spreadSemantics": {
+            "awayTeam": "Toronto Blue Jays",
+            "homeTeam": "Boston Red Sox",
+            "upper": "Toronto Blue Jays +1.5",
+            "lower": "Boston Red Sox -1.5",
+            "pushRule": "adjusted away score equals home score"
+          }
+        },
+        {
+          "contestId": "70",
+          "speculationId": "191",
+          "market": "total",
+          "lineTicks": 75,
+          "line": 7.5,
+          "makerSide": "under",
+          "takerSide": "over",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.10",
+          "takerOddsDecimal": "1.91",
+          "makerRiskWei6": "4545400",
+          "makerRiskUSDC": "4.545400",
+          "takerRiskWei6": "4999940",
+          "takerRiskUSDC": "4.999940",
+          "escrowedPrincipalWei6": "9545340",
+          "escrowedPrincipalUSDC": "9.545340",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x6066b4e901e61f5565ed1b2e5c64f2de8a40020aa716d2484eae86acc823f412",
+          "fillBlockNumber": "90917252",
+          "protocolWinSide": "under",
+          "winningSide": "lower",
+          "settleTxHash": "0x7cb663ff5124b5ee3485f6cdbe34baf7a96791a2bed806a2828fdf1889a34271",
+          "claims": [
+            {
+              "role": "market-maker-a",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "9545340",
+              "payoutUSDC": "9.545340",
+              "txHash": "0xce3adc02a372a6459ee15238fc7367805c30647871f49deaceb750b067ce5c09"
+            }
+          ],
+          "claimedPayoutWei6": "9545340",
+          "claimedPayoutUSDC": "9.545340",
+          "terminalStatus": "closed-and-claimed",
+          "totalSemantics": {
+            "upper": "over",
+            "lower": "under",
+            "pushRule": "combined score equals the line"
+          }
+        }
+      ]
+    },
+    {
+      "targetIndex": 6,
+      "contestId": "71",
+      "sport": "mlb",
+      "awayTeam": "Kansas City Royals",
+      "homeTeam": "Detroit Tigers",
+      "startTimeUtc": "2026-07-26T17:40:00Z",
+      "canonicalGameId": "f7e788f9-a478-41c6-8d44-451d27c6efc8",
+      "externalIds": {
+        "jsonodds": "f7e788f9-a478-41c6-8d44-451d27c6efc8",
+        "sportspage": "337574",
+        "rundown": "265250a0ec3868945a2e1140077f2ab5"
+      },
+      "createContestTxHash": "0x2503e39fbce7a27582a334016d2c58d86c2ba7843660256565f95fc6f4ced569",
+      "updateMarketsTxHash": "0x9c199c19258582e49a1993197f3624a809a82abca63f22a2dccfd6327949050b",
+      "requestedMarketMakerOverroundBps": 300,
+      "effectiveMarketMakerOverroundBps": 300,
+      "seededAtUtc": "2026-07-26T15:52:15.624404Z",
+      "beforeFirstPitch": true,
+      "final": {
+        "awayScore": 5,
+        "homeScore": 4,
+        "officialFinalMatchedExactly": true,
+        "scheduledStartDeltaSeconds": 0,
+        "onChainScoreMatched": true
+      },
+      "scoreRequestCount": 1,
+      "scoreRequestTxHashes": [
+        "0x34d4c1fa9ff1f7e6ef9a7c5e708dbd95b3d9c2b3dd06f37ff5281555da2200fe"
+      ],
+      "speculations": [
+        {
+          "contestId": "71",
+          "speculationId": "192",
+          "market": "moneyline",
+          "lineTicks": 0,
+          "line": null,
+          "makerSide": "Kansas City Royals",
+          "takerSide": "Detroit Tigers",
+          "makerPositionType": "upper",
+          "takerPositionType": "lower",
+          "makerOddsDecimal": "2.82",
+          "takerOddsDecimal": "1.55",
+          "makerRiskWei6": "2747200",
+          "makerRiskUSDC": "2.747200",
+          "takerRiskWei6": "4999904",
+          "takerRiskUSDC": "4.999904",
+          "escrowedPrincipalWei6": "7747104",
+          "escrowedPrincipalUSDC": "7.747104",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x233d207b16e9d05fbdc08608ba3dc8eaacdc2e7d5e9d6545e481d3c807ca009c",
+          "fillBlockNumber": "90917377",
+          "protocolWinSide": "away",
+          "winningSide": "upper",
+          "settleTxHash": "0x2dd0d9990843be875a57fb9d2fc64ade27b1adb873e82c1eac2ced22bb44295d",
+          "claims": [
+            {
+              "role": "market-maker-b",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "7747104",
+              "payoutUSDC": "7.747104",
+              "txHash": "0xce575bef5f424a6e0f5aaf5a84641b2a107ca1ff927f95e97732fc5f345bf3c8"
+            }
+          ],
+          "claimedPayoutWei6": "7747104",
+          "claimedPayoutUSDC": "7.747104",
+          "terminalStatus": "closed-and-claimed",
+          "teamIdentity": {
+            "away": {
+              "team": "Kansas City Royals",
+              "positionType": "upper",
+              "role": "market-maker-b",
+              "sideOwner": "maker",
+              "identity": "underdog",
+              "marketOddsAmerican": "+182"
+            },
+            "home": {
+              "team": "Detroit Tigers",
+              "positionType": "lower",
+              "role": "flow-taker",
+              "sideOwner": "taker",
+              "identity": "favorite",
+              "marketOddsAmerican": "-182"
+            }
+          }
+        },
+        {
+          "contestId": "71",
+          "speculationId": "193",
+          "market": "spread",
+          "lineTicks": 15,
+          "line": 1.5,
+          "makerSide": "Detroit Tigers",
+          "takerSide": "Kansas City Royals",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.20",
+          "takerOddsDecimal": "1.83",
+          "makerRiskWei6": "4166600",
+          "makerRiskUSDC": "4.166600",
+          "takerRiskWei6": "4999920",
+          "takerRiskUSDC": "4.999920",
+          "escrowedPrincipalWei6": "9166520",
+          "escrowedPrincipalUSDC": "9.166520",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0xbe4cf02ee5c3b71b492b74b41c8cbce920c56fa2e3a889b09bb81949f6ea24ea",
+          "fillBlockNumber": "90917386",
+          "protocolWinSide": "away",
+          "winningSide": "upper",
+          "settleTxHash": "0x4dbcff0da8b5b693901832a8f9953b3b5b23d261527df692d4766a02e78e4526",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "9166520",
+              "payoutUSDC": "9.166520",
+              "txHash": "0xbe36f7e3ee38e705edb01819f925b29fa5a8e74b42661c0ab7ecea68346ce55e"
+            }
+          ],
+          "claimedPayoutWei6": "9166520",
+          "claimedPayoutUSDC": "9.166520",
+          "terminalStatus": "closed-and-claimed",
+          "spreadSemantics": {
+            "awayTeam": "Kansas City Royals",
+            "homeTeam": "Detroit Tigers",
+            "upper": "Kansas City Royals +1.5",
+            "lower": "Detroit Tigers -1.5",
+            "pushRule": "adjusted away score equals home score"
+          }
+        },
+        {
+          "contestId": "71",
+          "speculationId": "194",
+          "market": "total",
+          "lineTicks": 90,
+          "line": 9,
+          "makerSide": "under",
+          "takerSide": "over",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.06",
+          "takerOddsDecimal": "1.94",
+          "makerRiskWei6": "4716900",
+          "makerRiskUSDC": "4.716900",
+          "takerRiskWei6": "4999914",
+          "takerRiskUSDC": "4.999914",
+          "escrowedPrincipalWei6": "9716814",
+          "escrowedPrincipalUSDC": "9.716814",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x115fe62725b1b68d941ac41a122391e78d94c2a474ba3aeb0116b6b9514fb265",
+          "fillBlockNumber": "90917397",
+          "protocolWinSide": "push",
+          "winningSide": "push",
+          "settleTxHash": "0x8602cc76f83307323dbb990dff80cb8a3c7e3bdd8495cbe387fa3cbfa74a6d36",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "upper",
+              "outcome": "refund",
+              "payoutWei6": "4999914",
+              "payoutUSDC": "4.999914",
+              "txHash": "0x72745fb2f510d9c37a33cf9d201c4b412e5d529381f2a250a9585786bdeed3a8"
+            },
+            {
+              "role": "market-maker-b",
+              "positionType": "lower",
+              "outcome": "refund",
+              "payoutWei6": "4716900",
+              "payoutUSDC": "4.716900",
+              "txHash": "0x9fcdd6c098060a54b773a481c88cabbbbeba9b7825f81c4c4e8d3e3e960f8d24"
+            }
+          ],
+          "claimedPayoutWei6": "9716814",
+          "claimedPayoutUSDC": "9.716814",
+          "terminalStatus": "closed-and-refunded",
+          "totalSemantics": {
+            "upper": "over",
+            "lower": "under",
+            "pushRule": "combined score equals the line"
+          }
+        }
+      ]
+    },
+    {
+      "targetIndex": 7,
+      "contestId": "72",
+      "sport": "mlb",
+      "awayTeam": "Los Angeles Dodgers",
+      "homeTeam": "New York Mets",
+      "startTimeUtc": "2026-07-26T17:40:00Z",
+      "canonicalGameId": "2e4bb029-be4d-4591-9fc9-a9d4262e8628",
+      "externalIds": {
+        "jsonodds": "2e4bb029-be4d-4591-9fc9-a9d4262e8628",
+        "sportspage": "337559",
+        "rundown": "bddb999da6151326d4423bb358140e9a"
+      },
+      "createContestTxHash": "0x94bb38c8aea8dd6401617355d22816c5b4c5a380fadda929d23efc8916aa7f1c",
+      "updateMarketsTxHash": "0x99b34a2f177dc7a26a8b0567ded02f1edd0e32db284ff2f05fdab2f80cc1c113",
+      "requestedMarketMakerOverroundBps": 300,
+      "effectiveMarketMakerOverroundBps": 300,
+      "seededAtUtc": "2026-07-26T15:56:05.027923Z",
+      "beforeFirstPitch": true,
+      "final": {
+        "awayScore": 3,
+        "homeScore": 8,
+        "officialFinalMatchedExactly": true,
+        "scheduledStartDeltaSeconds": 0,
+        "onChainScoreMatched": true
+      },
+      "scoreRequestCount": 3,
+      "scoreRequestTxHashes": [
+        "0x9ec6fa8c73a2abf4d494e42b470e68c1acf31721bb61f231bbafeb0a57dc537d",
+        "0x74ac93daa344a5307349d3d6d4ef29384363c5f2b04edc94cd5d1d0c7f0a8be9",
+        "0xddb981ec1a30f040cab08667cf7c1fd6344beec39960c59ade9b51210ca70303"
+      ],
+      "speculations": [
+        {
+          "contestId": "72",
+          "speculationId": "195",
+          "market": "moneyline",
+          "lineTicks": 0,
+          "line": null,
+          "makerSide": "New York Mets",
+          "takerSide": "Los Angeles Dodgers",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.43",
+          "takerOddsDecimal": "1.70",
+          "makerRiskWei6": "3496500",
+          "makerRiskUSDC": "3.496500",
+          "takerRiskWei6": "4999995",
+          "takerRiskUSDC": "4.999995",
+          "escrowedPrincipalWei6": "8496495",
+          "escrowedPrincipalUSDC": "8.496495",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x61ab721005c64da1be832c4784d1ad4327c20aa64a3eaaccf0230f9986f68c96",
+          "fillBlockNumber": "90917530",
+          "protocolWinSide": "home",
+          "winningSide": "lower",
+          "settleTxHash": "0x169b90e955a2b6c2a68128d95f8076934602c6da40d4c4475d40dd151ced2110",
+          "claims": [
+            {
+              "role": "market-maker-a",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "8496495",
+              "payoutUSDC": "8.496495",
+              "txHash": "0xf3bc8071fdc896eca54eb7ea98ea024d4c891f934b6d3d6be7d889add5ea33a9"
+            }
+          ],
+          "claimedPayoutWei6": "8496495",
+          "claimedPayoutUSDC": "8.496495",
+          "terminalStatus": "closed-and-claimed",
+          "teamIdentity": {
+            "away": {
+              "team": "Los Angeles Dodgers",
+              "positionType": "upper",
+              "role": "flow-taker",
+              "sideOwner": "taker",
+              "identity": "favorite",
+              "marketOddsAmerican": "-143"
+            },
+            "home": {
+              "team": "New York Mets",
+              "positionType": "lower",
+              "role": "market-maker-a",
+              "sideOwner": "maker",
+              "identity": "underdog",
+              "marketOddsAmerican": "+143"
+            }
+          }
+        },
+        {
+          "contestId": "72",
+          "speculationId": "196",
+          "market": "spread",
+          "lineTicks": -15,
+          "line": -1.5,
+          "makerSide": "Los Angeles Dodgers",
+          "takerSide": "New York Mets",
+          "makerPositionType": "upper",
+          "takerPositionType": "lower",
+          "makerOddsDecimal": "2.27",
+          "takerOddsDecimal": "1.79",
+          "makerRiskWei6": "3937000",
+          "makerRiskUSDC": "3.937000",
+          "takerRiskWei6": "4999990",
+          "takerRiskUSDC": "4.999990",
+          "escrowedPrincipalWei6": "8936990",
+          "escrowedPrincipalUSDC": "8.936990",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0xf9408b034d437488a9054a76f297da74ba9911388e791d877399cb6f54a8bb56",
+          "fillBlockNumber": "90917540",
+          "protocolWinSide": "home",
+          "winningSide": "lower",
+          "settleTxHash": "0xbe5bd8e1c93176360461f3dc276f29d76953b429bc6a30636caa7b1e798713a8",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "8936990",
+              "payoutUSDC": "8.936990",
+              "txHash": "0x1a0da8dc0c2113b18a6032bb38751baad93366844e533c6fbe88497bf0f03057"
+            }
+          ],
+          "claimedPayoutWei6": "8936990",
+          "claimedPayoutUSDC": "8.936990",
+          "terminalStatus": "closed-and-claimed",
+          "spreadSemantics": {
+            "awayTeam": "Los Angeles Dodgers",
+            "homeTeam": "New York Mets",
+            "upper": "Los Angeles Dodgers -1.5",
+            "lower": "New York Mets +1.5",
+            "pushRule": "adjusted away score equals home score"
+          }
+        },
+        {
+          "contestId": "72",
+          "speculationId": "197",
+          "market": "total",
+          "lineTicks": 85,
+          "line": 8.5,
+          "makerSide": "under",
+          "takerSide": "over",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.16",
+          "takerOddsDecimal": "1.86",
+          "makerRiskWei6": "4310300",
+          "makerRiskUSDC": "4.310300",
+          "takerRiskWei6": "4999948",
+          "takerRiskUSDC": "4.999948",
+          "escrowedPrincipalWei6": "9310248",
+          "escrowedPrincipalUSDC": "9.310248",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x4c3a00649f7730a3009f0044fae3420f6164971351a8cd43d1bd3fcd42d5b8da",
+          "fillBlockNumber": "90917549",
+          "protocolWinSide": "over",
+          "winningSide": "upper",
+          "settleTxHash": "0x13723e0ef25b908d810d54e3deec743462594d2da834fc9df6acb9625b5141f1",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "9310248",
+              "payoutUSDC": "9.310248",
+              "txHash": "0x81ce925ebfe0825c5b8b93bf1a108817664e5aa0fcc93c5743f60b13073173d2"
+            }
+          ],
+          "claimedPayoutWei6": "9310248",
+          "claimedPayoutUSDC": "9.310248",
+          "terminalStatus": "closed-and-claimed",
+          "totalSemantics": {
+            "upper": "over",
+            "lower": "under",
+            "pushRule": "combined score equals the line"
+          }
+        }
+      ]
+    },
+    {
+      "targetIndex": 8,
+      "contestId": "73",
+      "sport": "mlb",
+      "awayTeam": "San Diego Padres",
+      "homeTeam": "Miami Marlins",
+      "startTimeUtc": "2026-07-26T17:40:00Z",
+      "canonicalGameId": "0fee45a5-e040-4321-9046-007a0ab3ccf4",
+      "externalIds": {
+        "jsonodds": "0fee45a5-e040-4321-9046-007a0ab3ccf4",
+        "sportspage": "337572",
+        "rundown": "7ba6debf41ac040f93a4fccf0f1508b9"
+      },
+      "createContestTxHash": "0x1cdb419b7e9be4b55bb5ee618c687764e0cdb49c442ca5830fd6035665f8d83e",
+      "updateMarketsTxHash": "0x19d53ba034eea3ebad0dacd36a8c66b57461e925eff0db3ce48e378008115217",
+      "requestedMarketMakerOverroundBps": 300,
+      "effectiveMarketMakerOverroundBps": 300,
+      "seededAtUtc": "2026-07-26T15:59:38.033614Z",
+      "beforeFirstPitch": true,
+      "final": {
+        "awayScore": 5,
+        "homeScore": 3,
+        "officialFinalMatchedExactly": true,
+        "scheduledStartDeltaSeconds": 0,
+        "onChainScoreMatched": true
+      },
+      "scoreRequestCount": 1,
+      "scoreRequestTxHashes": [
+        "0x53021830740e6367e42108830b13a23078a60fcc790ede81b4db9056baa3fc81"
+      ],
+      "speculations": [
+        {
+          "contestId": "73",
+          "speculationId": "198",
+          "market": "moneyline",
+          "lineTicks": 0,
+          "line": null,
+          "makerSide": "San Diego Padres",
+          "takerSide": "Miami Marlins",
+          "makerPositionType": "upper",
+          "takerPositionType": "lower",
+          "makerOddsDecimal": "2.20",
+          "takerOddsDecimal": "1.83",
+          "makerRiskWei6": "4166600",
+          "makerRiskUSDC": "4.166600",
+          "takerRiskWei6": "4999920",
+          "takerRiskUSDC": "4.999920",
+          "escrowedPrincipalWei6": "9166520",
+          "escrowedPrincipalUSDC": "9.166520",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0xabc09b031c4feaf1dcf0d2708cab645f454b39d38e376c3f55131a80f07174c7",
+          "fillBlockNumber": "90917673",
+          "protocolWinSide": "away",
+          "winningSide": "upper",
+          "settleTxHash": "0xfa9e18645adaa84c6cb93933c8ed0f3d22c411c170a08b1a279251b7d54c9125",
+          "claims": [
+            {
+              "role": "market-maker-b",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "9166520",
+              "payoutUSDC": "9.166520",
+              "txHash": "0x5bee58d05903c65908e4a6318cdb7d3d97919992a935db40ef8cb0eacc012a8f"
+            }
+          ],
+          "claimedPayoutWei6": "9166520",
+          "claimedPayoutUSDC": "9.166520",
+          "terminalStatus": "closed-and-claimed",
+          "teamIdentity": {
+            "away": {
+              "team": "San Diego Padres",
+              "positionType": "upper",
+              "role": "market-maker-b",
+              "sideOwner": "maker",
+              "identity": "underdog",
+              "marketOddsAmerican": "+120"
+            },
+            "home": {
+              "team": "Miami Marlins",
+              "positionType": "lower",
+              "role": "flow-taker",
+              "sideOwner": "taker",
+              "identity": "favorite",
+              "marketOddsAmerican": "-120"
+            }
+          }
+        },
+        {
+          "contestId": "73",
+          "speculationId": "199",
+          "market": "spread",
+          "lineTicks": 15,
+          "line": 1.5,
+          "makerSide": "Miami Marlins",
+          "takerSide": "San Diego Padres",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.82",
+          "takerOddsDecimal": "1.55",
+          "makerRiskWei6": "2747200",
+          "makerRiskUSDC": "2.747200",
+          "takerRiskWei6": "4999904",
+          "takerRiskUSDC": "4.999904",
+          "escrowedPrincipalWei6": "7747104",
+          "escrowedPrincipalUSDC": "7.747104",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0xb0a2dfbd928328433f829231d17a17bad2ba35ad916d63b28747cce707d0b25e",
+          "fillBlockNumber": "90917682",
+          "protocolWinSide": "away",
+          "winningSide": "upper",
+          "settleTxHash": "0x81c905dd14724467b7f646ae7c7b24da8b1901f11df50d5bfecffb4b914ebee4",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "7747104",
+              "payoutUSDC": "7.747104",
+              "txHash": "0x52fe2a05558c1bb07cce8b59776a3735539b66b0e454465f67eb2854c2e2f71a"
+            }
+          ],
+          "claimedPayoutWei6": "7747104",
+          "claimedPayoutUSDC": "7.747104",
+          "terminalStatus": "closed-and-claimed",
+          "spreadSemantics": {
+            "awayTeam": "San Diego Padres",
+            "homeTeam": "Miami Marlins",
+            "upper": "San Diego Padres +1.5",
+            "lower": "Miami Marlins -1.5",
+            "pushRule": "adjusted away score equals home score"
+          }
+        },
+        {
+          "contestId": "73",
+          "speculationId": "200",
+          "market": "total",
+          "lineTicks": 85,
+          "line": 8.5,
+          "makerSide": "under",
+          "takerSide": "over",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.16",
+          "takerOddsDecimal": "1.86",
+          "makerRiskWei6": "4310300",
+          "makerRiskUSDC": "4.310300",
+          "takerRiskWei6": "4999948",
+          "takerRiskUSDC": "4.999948",
+          "escrowedPrincipalWei6": "9310248",
+          "escrowedPrincipalUSDC": "9.310248",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0xf05b2d834ab4eb4ab5d7347d97dd056397f56e396fe09d2431bcd2f2d4d70d51",
+          "fillBlockNumber": "90917695",
+          "protocolWinSide": "under",
+          "winningSide": "lower",
+          "settleTxHash": "0x4388f3ec09fb7ca55edc19bb647ff98d3c2217bcd0ad3ad078c9df363c65cbe1",
+          "claims": [
+            {
+              "role": "market-maker-b",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "9310248",
+              "payoutUSDC": "9.310248",
+              "txHash": "0x3a88705d1504e15dc1042fc629229c4c06602562d3b85cfc01d8127104fedef6"
+            }
+          ],
+          "claimedPayoutWei6": "9310248",
+          "claimedPayoutUSDC": "9.310248",
+          "terminalStatus": "closed-and-claimed",
+          "totalSemantics": {
+            "upper": "over",
+            "lower": "under",
+            "pushRule": "combined score equals the line"
+          }
+        }
+      ]
+    },
+    {
+      "targetIndex": 9,
+      "contestId": "74",
+      "sport": "mlb",
+      "awayTeam": "Athletics",
+      "homeTeam": "Minnesota Twins",
+      "startTimeUtc": "2026-07-26T18:10:00Z",
+      "canonicalGameId": "882892e7-28d0-4010-a114-fe633b509f11",
+      "externalIds": {
+        "jsonodds": "882892e7-28d0-4010-a114-fe633b509f11",
+        "sportspage": "337555",
+        "rundown": "fe24753e9e001aa643307235de12cc81"
+      },
+      "createContestTxHash": "0x44d748c136ffc148ac186d9a6c3232362a02f16f829d510ec72dbe9c132e8997",
+      "updateMarketsTxHash": "0x1300788eaae7102cb410bd320afa6630076dbfd6aa9654fc478f05a93a2e5441",
+      "requestedMarketMakerOverroundBps": 300,
+      "effectiveMarketMakerOverroundBps": 300,
+      "seededAtUtc": "2026-07-26T16:04:31.536255Z",
+      "beforeFirstPitch": true,
+      "final": {
+        "awayScore": 8,
+        "homeScore": 11,
+        "officialFinalMatchedExactly": true,
+        "scheduledStartDeltaSeconds": 0,
+        "onChainScoreMatched": true
+      },
+      "scoreRequestCount": 2,
+      "scoreRequestTxHashes": [
+        "0x745fb74440fa40ac8252f629f3594f280ad13bc37be27d649b8016b5512ec2d6",
+        "0x99c932ffcdbcacd77ab38f3ba1044b0c0e1828e0e9eef514a9c8faaf9e936c4a"
+      ],
+      "speculations": [
+        {
+          "contestId": "74",
+          "speculationId": "201",
+          "market": "moneyline",
+          "lineTicks": 0,
+          "line": null,
+          "makerSide": "Athletics",
+          "takerSide": "Minnesota Twins",
+          "makerPositionType": "upper",
+          "takerPositionType": "lower",
+          "makerOddsDecimal": "2.52",
+          "takerOddsDecimal": "1.66",
+          "makerRiskWei6": "3289400",
+          "makerRiskUSDC": "3.289400",
+          "takerRiskWei6": "4999888",
+          "takerRiskUSDC": "4.999888",
+          "escrowedPrincipalWei6": "8289288",
+          "escrowedPrincipalUSDC": "8.289288",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0xeef423d885014e349095e2c11bb172478017491e0d9bb9ac52c536ac5dfd402b",
+          "fillBlockNumber": "90917867",
+          "protocolWinSide": "home",
+          "winningSide": "lower",
+          "settleTxHash": "0xc1cf56aeabb70d8f3767f127624a524dc88b26bc5fa47cab4545621e843b55aa",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "8289288",
+              "payoutUSDC": "8.289288",
+              "txHash": "0x84ae5048391c89d8bd91e973449b7e0d0704c91a14a2978e63273b44a176be59"
+            }
+          ],
+          "claimedPayoutWei6": "8289288",
+          "claimedPayoutUSDC": "8.289288",
+          "terminalStatus": "closed-and-claimed",
+          "teamIdentity": {
+            "away": {
+              "team": "Athletics",
+              "positionType": "upper",
+              "role": "market-maker-a",
+              "sideOwner": "maker",
+              "identity": "underdog",
+              "marketOddsAmerican": "+152"
+            },
+            "home": {
+              "team": "Minnesota Twins",
+              "positionType": "lower",
+              "role": "flow-taker",
+              "sideOwner": "taker",
+              "identity": "favorite",
+              "marketOddsAmerican": "-152"
+            }
+          }
+        },
+        {
+          "contestId": "74",
+          "speculationId": "202",
+          "market": "spread",
+          "lineTicks": 15,
+          "line": 1.5,
+          "makerSide": "Minnesota Twins",
+          "takerSide": "Athletics",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.47",
+          "takerOddsDecimal": "1.68",
+          "makerRiskWei6": "3401300",
+          "makerRiskUSDC": "3.401300",
+          "takerRiskWei6": "4999911",
+          "takerRiskUSDC": "4.999911",
+          "escrowedPrincipalWei6": "8401211",
+          "escrowedPrincipalUSDC": "8.401211",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x8636d9734bce4e525e4817ad25142036a5baa752fe2b623a1ed2968b964ed2fc",
+          "fillBlockNumber": "90917875",
+          "protocolWinSide": "home",
+          "winningSide": "lower",
+          "settleTxHash": "0x87222d00905260427226c29ed4629c3c79e34bc05737464936d2d680f28d9b69",
+          "claims": [
+            {
+              "role": "market-maker-a",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "8401211",
+              "payoutUSDC": "8.401211",
+              "txHash": "0x5e5407e6a37b787b740688d47539049e17b3cb2d86ec4facf758f485af70a55e"
+            }
+          ],
+          "claimedPayoutWei6": "8401211",
+          "claimedPayoutUSDC": "8.401211",
+          "terminalStatus": "closed-and-claimed",
+          "spreadSemantics": {
+            "awayTeam": "Athletics",
+            "homeTeam": "Minnesota Twins",
+            "upper": "Athletics +1.5",
+            "lower": "Minnesota Twins -1.5",
+            "pushRule": "adjusted away score equals home score"
+          }
+        },
+        {
+          "contestId": "74",
+          "speculationId": "203",
+          "market": "total",
+          "lineTicks": 100,
+          "line": 10,
+          "makerSide": "over",
+          "takerSide": "under",
+          "makerPositionType": "upper",
+          "takerPositionType": "lower",
+          "makerOddsDecimal": "2.11",
+          "takerOddsDecimal": "1.90",
+          "makerRiskWei6": "4504500",
+          "makerRiskUSDC": "4.504500",
+          "takerRiskWei6": "4999995",
+          "takerRiskUSDC": "4.999995",
+          "escrowedPrincipalWei6": "9504495",
+          "escrowedPrincipalUSDC": "9.504495",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0xac9ab4c52fe36efa9dafe979a021acb0da0d8beb0b93d74f74d2781f47244bb0",
+          "fillBlockNumber": "90917887",
+          "protocolWinSide": "over",
+          "winningSide": "upper",
+          "settleTxHash": "0x1724f8317bd188e883ec6b2889d03d250ef02641cccc4c722e15b0ecb0ab2867",
+          "claims": [
+            {
+              "role": "market-maker-a",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "9504495",
+              "payoutUSDC": "9.504495",
+              "txHash": "0xe76c6716f893227717c74c917d5d64eec1ca1cb5eb428bae90f4ba157f575200"
+            }
+          ],
+          "claimedPayoutWei6": "9504495",
+          "claimedPayoutUSDC": "9.504495",
+          "terminalStatus": "closed-and-claimed",
+          "totalSemantics": {
+            "upper": "over",
+            "lower": "under",
+            "pushRule": "combined score equals the line"
+          }
+        }
+      ]
+    },
+    {
+      "targetIndex": 10,
+      "contestId": "75",
+      "sport": "mlb",
+      "awayTeam": "Colorado Rockies",
+      "homeTeam": "Milwaukee Brewers",
+      "startTimeUtc": "2026-07-26T18:10:00Z",
+      "canonicalGameId": "7aa5e12a-62a4-4567-af0e-a0bcf2fd02a2",
+      "externalIds": {
+        "jsonodds": "7aa5e12a-62a4-4567-af0e-a0bcf2fd02a2",
+        "sportspage": "337576",
+        "rundown": "3127a0e334c1b40d3145e6e5c32b8f50"
+      },
+      "createContestTxHash": "0xdd6439603756a3ca294cc6c7b27c100c09000edf315f3557b8bed93a5afa8bc3",
+      "updateMarketsTxHash": "0xa5ae0305277027f78974b9e1b26c1c4b5fa030654aa411798a03ade205acf796",
+      "requestedMarketMakerOverroundBps": 300,
+      "effectiveMarketMakerOverroundBps": 300,
+      "seededAtUtc": "2026-07-26T16:09:01.625219Z",
+      "beforeFirstPitch": true,
+      "final": {
+        "awayScore": 2,
+        "homeScore": 11,
+        "officialFinalMatchedExactly": true,
+        "scheduledStartDeltaSeconds": 0,
+        "onChainScoreMatched": true
+      },
+      "scoreRequestCount": 1,
+      "scoreRequestTxHashes": [
+        "0x0347018cf9b6bf4de5ce6c38d92ed473f46b6d3e852785339b7420797d177fbb"
+      ],
+      "speculations": [
+        {
+          "contestId": "75",
+          "speculationId": "204",
+          "market": "moneyline",
+          "lineTicks": 0,
+          "line": null,
+          "makerSide": "Colorado Rockies",
+          "takerSide": "Milwaukee Brewers",
+          "makerPositionType": "upper",
+          "takerPositionType": "lower",
+          "makerOddsDecimal": "4.23",
+          "takerOddsDecimal": "1.31",
+          "makerRiskWei6": "1547900",
+          "makerRiskUSDC": "1.547900",
+          "takerRiskWei6": "4999717",
+          "takerRiskUSDC": "4.999717",
+          "escrowedPrincipalWei6": "6547617",
+          "escrowedPrincipalUSDC": "6.547617",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0xcb65a78171ddd62069dbc31599d8d6b6da718a951619e39d63a2fbd290394421",
+          "fillBlockNumber": "90918008",
+          "protocolWinSide": "home",
+          "winningSide": "lower",
+          "settleTxHash": "0xbb5f2c7a28527e95abb03617a3cd8e413a4ebe7a0371139bc3e3498c4fb66db9",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "6547617",
+              "payoutUSDC": "6.547617",
+              "txHash": "0x8abe1d52c89b649e0edc781e67fdf90db34fd786aa140670808c62755cc2e39d"
+            }
+          ],
+          "claimedPayoutWei6": "6547617",
+          "claimedPayoutUSDC": "6.547617",
+          "terminalStatus": "closed-and-claimed",
+          "teamIdentity": {
+            "away": {
+              "team": "Colorado Rockies",
+              "positionType": "upper",
+              "role": "market-maker-b",
+              "sideOwner": "maker",
+              "identity": "underdog",
+              "marketOddsAmerican": "+323"
+            },
+            "home": {
+              "team": "Milwaukee Brewers",
+              "positionType": "lower",
+              "role": "flow-taker",
+              "sideOwner": "taker",
+              "identity": "favorite",
+              "marketOddsAmerican": "-323"
+            }
+          }
+        },
+        {
+          "contestId": "75",
+          "speculationId": "205",
+          "market": "spread",
+          "lineTicks": 15,
+          "line": 1.5,
+          "makerSide": "Colorado Rockies",
+          "takerSide": "Milwaukee Brewers",
+          "makerPositionType": "upper",
+          "takerPositionType": "lower",
+          "makerOddsDecimal": "2.56",
+          "takerOddsDecimal": "1.64",
+          "makerRiskWei6": "3205100",
+          "makerRiskUSDC": "3.205100",
+          "takerRiskWei6": "4999956",
+          "takerRiskUSDC": "4.999956",
+          "escrowedPrincipalWei6": "8205056",
+          "escrowedPrincipalUSDC": "8.205056",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x827e1837193c18cb7e11314567d4d8878ebae4e3a23b6e81da8d0b722250f5af",
+          "fillBlockNumber": "90918022",
+          "protocolWinSide": "home",
+          "winningSide": "lower",
+          "settleTxHash": "0x663479fbbbc610f589c955e197718954d61f8563a862a1396a4744d8aacc6fc1",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "8205056",
+              "payoutUSDC": "8.205056",
+              "txHash": "0x76b0ebf799ee9df6872f93201dde8731ed00488a9edb824c02344174c959c551"
+            }
+          ],
+          "claimedPayoutWei6": "8205056",
+          "claimedPayoutUSDC": "8.205056",
+          "terminalStatus": "closed-and-claimed",
+          "spreadSemantics": {
+            "awayTeam": "Colorado Rockies",
+            "homeTeam": "Milwaukee Brewers",
+            "upper": "Colorado Rockies +1.5",
+            "lower": "Milwaukee Brewers -1.5",
+            "pushRule": "adjusted away score equals home score"
+          }
+        },
+        {
+          "contestId": "75",
+          "speculationId": "206",
+          "market": "total",
+          "lineTicks": 80,
+          "line": 8,
+          "makerSide": "under",
+          "takerSide": "over",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.02",
+          "takerOddsDecimal": "1.98",
+          "makerRiskWei6": "4901900",
+          "makerRiskUSDC": "4.901900",
+          "takerRiskWei6": "4999938",
+          "takerRiskUSDC": "4.999938",
+          "escrowedPrincipalWei6": "9901838",
+          "escrowedPrincipalUSDC": "9.901838",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x1f33619abe864cf045e06bebda6603c4e3db836dea0e72e37038a883fde3a319",
+          "fillBlockNumber": "90918038",
+          "protocolWinSide": "over",
+          "winningSide": "upper",
+          "settleTxHash": "0xae17700983fe680446b1c9c9589494959100e8cfbb60b6739879af77629a548d",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "9901838",
+              "payoutUSDC": "9.901838",
+              "txHash": "0x789f24e5d7626cc62af35a347af7b6ce99988eb3e493af7e004c81da9924c15b"
+            }
+          ],
+          "claimedPayoutWei6": "9901838",
+          "claimedPayoutUSDC": "9.901838",
+          "terminalStatus": "closed-and-claimed",
+          "totalSemantics": {
+            "upper": "over",
+            "lower": "under",
+            "pushRule": "combined score equals the line"
+          }
+        }
+      ]
+    },
+    {
+      "targetIndex": 11,
+      "contestId": "76",
+      "sport": "mlb",
+      "awayTeam": "Houston Astros",
+      "homeTeam": "Chicago White Sox",
+      "startTimeUtc": "2026-07-26T18:10:00Z",
+      "canonicalGameId": "62a2a590-0521-4a4a-a098-5f0e1ba23deb",
+      "externalIds": {
+        "jsonodds": "62a2a590-0521-4a4a-a098-5f0e1ba23deb",
+        "sportspage": "337553",
+        "rundown": "e2118a87967cad3eecc77f89a43935a2"
+      },
+      "createContestTxHash": "0x711be590db06846573251143f17e9f2ebf679faa9d4d2d0637afaba33e985edd",
+      "updateMarketsTxHash": "0x6dc31aa118b9d7e4577aaf11f7a54b8b0c9ec2b0fef51f69b817908b12cb9e60",
+      "requestedMarketMakerOverroundBps": 300,
+      "effectiveMarketMakerOverroundBps": 300,
+      "seededAtUtc": "2026-07-26T16:12:40.355935Z",
+      "beforeFirstPitch": true,
+      "final": {
+        "awayScore": 3,
+        "homeScore": 12,
+        "officialFinalMatchedExactly": true,
+        "scheduledStartDeltaSeconds": 0,
+        "onChainScoreMatched": true
+      },
+      "scoreRequestCount": 1,
+      "scoreRequestTxHashes": [
+        "0x3a6d9756e1fd0da1ff2a59ba6400b28c4c57014a789286341856be6caae61763"
+      ],
+      "speculations": [
+        {
+          "contestId": "76",
+          "speculationId": "207",
+          "market": "moneyline",
+          "lineTicks": 0,
+          "line": null,
+          "makerSide": "Chicago White Sox",
+          "takerSide": "Houston Astros",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.02",
+          "takerOddsDecimal": "1.98",
+          "makerRiskWei6": "4901900",
+          "makerRiskUSDC": "4.901900",
+          "takerRiskWei6": "4999938",
+          "takerRiskUSDC": "4.999938",
+          "escrowedPrincipalWei6": "9901838",
+          "escrowedPrincipalUSDC": "9.901838",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x8cb80fc8937281d6e175ee75faa8536afbfc51add022553ab996065dd10966a9",
+          "fillBlockNumber": "90918194",
+          "protocolWinSide": "home",
+          "winningSide": "lower",
+          "settleTxHash": "0xae6137a1db730b3aea28032b2574330da1ef4715edcd4d6c27f9effb8788775e",
+          "claims": [
+            {
+              "role": "market-maker-a",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "9901838",
+              "payoutUSDC": "9.901838",
+              "txHash": "0xba28f21e436907bdb0b536d81f387ec41b938d038b474e3f9651524f6ca1a2bc"
+            }
+          ],
+          "claimedPayoutWei6": "9901838",
+          "claimedPayoutUSDC": "9.901838",
+          "terminalStatus": "closed-and-claimed",
+          "teamIdentity": {
+            "away": {
+              "team": "Houston Astros",
+              "positionType": "upper",
+              "role": "flow-taker",
+              "sideOwner": "taker",
+              "identity": "favorite",
+              "marketOddsAmerican": "-102"
+            },
+            "home": {
+              "team": "Chicago White Sox",
+              "positionType": "lower",
+              "role": "market-maker-a",
+              "sideOwner": "maker",
+              "identity": "underdog",
+              "marketOddsAmerican": "+102"
+            }
+          }
+        },
+        {
+          "contestId": "76",
+          "speculationId": "208",
+          "market": "spread",
+          "lineTicks": 15,
+          "line": 1.5,
+          "makerSide": "Chicago White Sox",
+          "takerSide": "Houston Astros",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.96",
+          "takerOddsDecimal": "1.51",
+          "makerRiskWei6": "2551000",
+          "makerRiskUSDC": "2.551000",
+          "takerRiskWei6": "4999960",
+          "takerRiskUSDC": "4.999960",
+          "escrowedPrincipalWei6": "7550960",
+          "escrowedPrincipalUSDC": "7.550960",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x216f85bfce02838e31d460011156224a20304325208bae2f2ebaa40b39d296c9",
+          "fillBlockNumber": "90918203",
+          "protocolWinSide": "home",
+          "winningSide": "lower",
+          "settleTxHash": "0xcd872a5c2eb64a1fa191c8035a2a6161066c2f88044531ff2ac48fa898ea5d78",
+          "claims": [
+            {
+              "role": "market-maker-a",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "7550960",
+              "payoutUSDC": "7.550960",
+              "txHash": "0x1a83acfc95fd3ce7710b45b6cc26658d79172939193c5006689731b1065a9e8f"
+            }
+          ],
+          "claimedPayoutWei6": "7550960",
+          "claimedPayoutUSDC": "7.550960",
+          "terminalStatus": "closed-and-claimed",
+          "spreadSemantics": {
+            "awayTeam": "Houston Astros",
+            "homeTeam": "Chicago White Sox",
+            "upper": "Houston Astros +1.5",
+            "lower": "Chicago White Sox -1.5",
+            "pushRule": "adjusted away score equals home score"
+          }
+        },
+        {
+          "contestId": "76",
+          "speculationId": "209",
+          "market": "total",
+          "lineTicks": 90,
+          "line": 9,
+          "makerSide": "over",
+          "takerSide": "under",
+          "makerPositionType": "upper",
+          "takerPositionType": "lower",
+          "makerOddsDecimal": "2.10",
+          "takerOddsDecimal": "1.91",
+          "makerRiskWei6": "4545400",
+          "makerRiskUSDC": "4.545400",
+          "takerRiskWei6": "4999940",
+          "takerRiskUSDC": "4.999940",
+          "escrowedPrincipalWei6": "9545340",
+          "escrowedPrincipalUSDC": "9.545340",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x455ffb5bbe1d33aa5acc6f617bcb74c7e3855b8554bd03c2b0386add9d046312",
+          "fillBlockNumber": "90918214",
+          "protocolWinSide": "over",
+          "winningSide": "upper",
+          "settleTxHash": "0x1c66973340e4bfda441386a6c0637a1887d71729a08b43b4c0e43dc0e96c9bbc",
+          "claims": [
+            {
+              "role": "market-maker-a",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "9545340",
+              "payoutUSDC": "9.545340",
+              "txHash": "0xb67fcd764d3b316a18fd7ca9f41027d61dd65a29981795791abb3d537726a73a"
+            }
+          ],
+          "claimedPayoutWei6": "9545340",
+          "claimedPayoutUSDC": "9.545340",
+          "terminalStatus": "closed-and-claimed",
+          "totalSemantics": {
+            "upper": "over",
+            "lower": "under",
+            "pushRule": "combined score equals the line"
+          }
+        }
+      ]
+    },
+    {
+      "targetIndex": 12,
+      "contestId": "77",
+      "sport": "mlb",
+      "awayTeam": "Cincinnati Reds",
+      "homeTeam": "St. Louis Cardinals",
+      "startTimeUtc": "2026-07-26T18:15:00Z",
+      "canonicalGameId": "ed179a8c-a2e2-415d-b12e-3a874cd485ff",
+      "externalIds": {
+        "jsonodds": "ed179a8c-a2e2-415d-b12e-3a874cd485ff",
+        "sportspage": "337578",
+        "rundown": "b62ccb3702683ece09a15c4a9a070950"
+      },
+      "createContestTxHash": "0x35a390ffbdc3d15dd3d817174b0d400339e5f06f98189f7c490331969894e783",
+      "updateMarketsTxHash": "0xa7d29bcb0ac1bfa0755c0dd46c70f60dc7e46f430f64964e8cf656b34515c060",
+      "requestedMarketMakerOverroundBps": 300,
+      "effectiveMarketMakerOverroundBps": 300,
+      "seededAtUtc": "2026-07-26T16:16:15.963382Z",
+      "beforeFirstPitch": true,
+      "final": {
+        "awayScore": 5,
+        "homeScore": 3,
+        "officialFinalMatchedExactly": true,
+        "scheduledStartDeltaSeconds": 0,
+        "onChainScoreMatched": true
+      },
+      "scoreRequestCount": 3,
+      "scoreRequestTxHashes": [
+        "0xa95c07745786a10f355e9d64708effbd0cf22be576fe01940d30a6a2b546b2dc",
+        "0x6a06329fc747e8fca8e18bc16b18d257f24eddd3a3857d6ab1e9dad88c2b0e33",
+        "0x0c013290a6c5ba750f85ca576961577a26c0535d554e98316c5a2a93fd351dd4"
+      ],
+      "speculations": [
+        {
+          "contestId": "77",
+          "speculationId": "210",
+          "market": "moneyline",
+          "lineTicks": 0,
+          "line": null,
+          "makerSide": "Cincinnati Reds",
+          "takerSide": "St. Louis Cardinals",
+          "makerPositionType": "upper",
+          "takerPositionType": "lower",
+          "makerOddsDecimal": "2.30",
+          "takerOddsDecimal": "1.77",
+          "makerRiskWei6": "3846100",
+          "makerRiskUSDC": "3.846100",
+          "takerRiskWei6": "4999930",
+          "takerRiskUSDC": "4.999930",
+          "escrowedPrincipalWei6": "8846030",
+          "escrowedPrincipalUSDC": "8.846030",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0xba67f2434e0bcb50f6c85d95d83b471de6c161b3344d7d8af414184f401748f4",
+          "fillBlockNumber": "90918338",
+          "protocolWinSide": "away",
+          "winningSide": "upper",
+          "settleTxHash": "0x39095f5772d6048cf2905bd069cab91774bb1692e37d37de0cb208d5829bb80c",
+          "claims": [
+            {
+              "role": "market-maker-b",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "8846030",
+              "payoutUSDC": "8.846030",
+              "txHash": "0x7b50eb2b60cd7ad63968e653813f1359c2746ac65ab2e96206db9d510473785a"
+            }
+          ],
+          "claimedPayoutWei6": "8846030",
+          "claimedPayoutUSDC": "8.846030",
+          "terminalStatus": "closed-and-claimed",
+          "teamIdentity": {
+            "away": {
+              "team": "Cincinnati Reds",
+              "positionType": "upper",
+              "role": "market-maker-b",
+              "sideOwner": "maker",
+              "identity": "underdog",
+              "marketOddsAmerican": "+130"
+            },
+            "home": {
+              "team": "St. Louis Cardinals",
+              "positionType": "lower",
+              "role": "flow-taker",
+              "sideOwner": "taker",
+              "identity": "favorite",
+              "marketOddsAmerican": "-130"
+            }
+          }
+        },
+        {
+          "contestId": "77",
+          "speculationId": "211",
+          "market": "spread",
+          "lineTicks": 15,
+          "line": 1.5,
+          "makerSide": "St. Louis Cardinals",
+          "takerSide": "Cincinnati Reds",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.72",
+          "takerOddsDecimal": "1.58",
+          "makerRiskWei6": "2906900",
+          "makerRiskUSDC": "2.906900",
+          "takerRiskWei6": "4999868",
+          "takerRiskUSDC": "4.999868",
+          "escrowedPrincipalWei6": "7906768",
+          "escrowedPrincipalUSDC": "7.906768",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x48ebf8a197995ce6a8bab3cc304c67d6676c94818d9b8dd6ceca1dcfb949d0e7",
+          "fillBlockNumber": "90918346",
+          "protocolWinSide": "away",
+          "winningSide": "upper",
+          "settleTxHash": "0x613ed2d0a3ecdc75307894c6e1e35df3149818024ee434ac30d8a9f721aed213",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "7906768",
+              "payoutUSDC": "7.906768",
+              "txHash": "0x3fdfadfb1fce620cbee00c9911defec40851e762382a1a861517175c595d6489"
+            }
+          ],
+          "claimedPayoutWei6": "7906768",
+          "claimedPayoutUSDC": "7.906768",
+          "terminalStatus": "closed-and-claimed",
+          "spreadSemantics": {
+            "awayTeam": "Cincinnati Reds",
+            "homeTeam": "St. Louis Cardinals",
+            "upper": "Cincinnati Reds +1.5",
+            "lower": "St. Louis Cardinals -1.5",
+            "pushRule": "adjusted away score equals home score"
+          }
+        },
+        {
+          "contestId": "77",
+          "speculationId": "212",
+          "market": "total",
+          "lineTicks": 85,
+          "line": 8.5,
+          "makerSide": "under",
+          "takerSide": "over",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.06",
+          "takerOddsDecimal": "1.94",
+          "makerRiskWei6": "4716900",
+          "makerRiskUSDC": "4.716900",
+          "takerRiskWei6": "4999914",
+          "takerRiskUSDC": "4.999914",
+          "escrowedPrincipalWei6": "9716814",
+          "escrowedPrincipalUSDC": "9.716814",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x1c3feb92dacd3411d8574cc09d4fc0f62cc99dc8d938c5faf3437f8f730fc18e",
+          "fillBlockNumber": "90918357",
+          "protocolWinSide": "under",
+          "winningSide": "lower",
+          "settleTxHash": "0xb6f12d27294df71b6b6a14caec0d014b8a89fb4e72d848e1286ad8f925533f7a",
+          "claims": [
+            {
+              "role": "market-maker-b",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "9716814",
+              "payoutUSDC": "9.716814",
+              "txHash": "0x3f69d261b15002d5195d683c2545877b14033b919521ff7261febb9d4e42aab1"
+            }
+          ],
+          "claimedPayoutWei6": "9716814",
+          "claimedPayoutUSDC": "9.716814",
+          "terminalStatus": "closed-and-claimed",
+          "totalSemantics": {
+            "upper": "over",
+            "lower": "under",
+            "pushRule": "combined score equals the line"
+          }
+        }
+      ]
+    },
+    {
+      "targetIndex": 13,
+      "contestId": "78",
+      "sport": "mlb",
+      "awayTeam": "Seattle Mariners",
+      "homeTeam": "Texas Rangers",
+      "startTimeUtc": "2026-07-26T18:35:00Z",
+      "canonicalGameId": "d5df5dbc-d078-4d15-8806-9c15b7a82bb9",
+      "externalIds": {
+        "jsonodds": "d5df5dbc-d078-4d15-8806-9c15b7a82bb9",
+        "sportspage": "337580",
+        "rundown": "ce8df9513e22b1518143223de0e110e9"
+      },
+      "createContestTxHash": "0x65ffaf8b0ebbdf24a026b9e1b022665e1ea5f209f8a93b3ac8b5b3ee14635b21",
+      "updateMarketsTxHash": "0x271138613a70561c9a3f91b1fae391c662dc4bb1a6ea22a35c9cbd33ce29bc39",
+      "requestedMarketMakerOverroundBps": 300,
+      "effectiveMarketMakerOverroundBps": 242,
+      "seededAtUtc": "2026-07-26T16:23:22.304165Z",
+      "beforeFirstPitch": true,
+      "final": {
+        "awayScore": 6,
+        "homeScore": 4,
+        "officialFinalMatchedExactly": true,
+        "scheduledStartDeltaSeconds": 0,
+        "onChainScoreMatched": true
+      },
+      "scoreRequestCount": 3,
+      "scoreRequestTxHashes": [
+        "0x21e660b79c84852ff3ef045e4b5a9c3802aba33af2718556d230af07771e51af",
+        "0xed43c68b0f09227d92afabce89ef9ca09c6b9b1e2457974e4970e4bca35217cb",
+        "0xded025b825bc183b8c4540cc3c444b5202019210c5e99f8613af17eb6ee63f02"
+      ],
+      "speculations": [
+        {
+          "contestId": "78",
+          "speculationId": "213",
+          "market": "moneyline",
+          "lineTicks": 0,
+          "line": null,
+          "makerSide": "Texas Rangers",
+          "takerSide": "Seattle Mariners",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.03",
+          "takerOddsDecimal": "1.97",
+          "makerRiskWei6": "4854300",
+          "makerRiskUSDC": "4.854300",
+          "takerRiskWei6": "4999929",
+          "takerRiskUSDC": "4.999929",
+          "escrowedPrincipalWei6": "9854229",
+          "escrowedPrincipalUSDC": "9.854229",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0xe4c71f8eaece5afb747e0c539774c425c47536f7725cdaa33a68fa759a7dc90e",
+          "fillBlockNumber": "90918620",
+          "protocolWinSide": "away",
+          "winningSide": "upper",
+          "settleTxHash": "0xf4d854defc9a3efd5c77f62fa386c87cb6135d2dc3573c3ce9d45874cfb2bfa4",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "9854229",
+              "payoutUSDC": "9.854229",
+              "txHash": "0xd16633a11e3981cfc0a63da3539f809df0b6da194a28fba889e8f107e00b2b0d"
+            }
+          ],
+          "claimedPayoutWei6": "9854229",
+          "claimedPayoutUSDC": "9.854229",
+          "terminalStatus": "closed-and-claimed",
+          "teamIdentity": {
+            "away": {
+              "team": "Seattle Mariners",
+              "positionType": "upper",
+              "role": "flow-taker",
+              "sideOwner": "taker",
+              "identity": "favorite",
+              "marketOddsAmerican": "-103"
+            },
+            "home": {
+              "team": "Texas Rangers",
+              "positionType": "lower",
+              "role": "market-maker-a",
+              "sideOwner": "maker",
+              "identity": "underdog",
+              "marketOddsAmerican": "+103"
+            }
+          }
+        },
+        {
+          "contestId": "78",
+          "speculationId": "214",
+          "market": "spread",
+          "lineTicks": 15,
+          "line": 1.5,
+          "makerSide": "Texas Rangers",
+          "takerSide": "Seattle Mariners",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "3.17",
+          "takerOddsDecimal": "1.46",
+          "makerRiskWei6": "2304100",
+          "makerRiskUSDC": "2.304100",
+          "takerRiskWei6": "4999897",
+          "takerRiskUSDC": "4.999897",
+          "escrowedPrincipalWei6": "7303997",
+          "escrowedPrincipalUSDC": "7.303997",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x76841e6f5ec868e4c34f325da958cd6d312dfa731a131d3edd5a43670c656db4",
+          "fillBlockNumber": "90918631",
+          "protocolWinSide": "away",
+          "winningSide": "upper",
+          "settleTxHash": "0x04379a6bfa3af61d09eef763f72e3e752c242a5ef98afb322b43bc6554c15897",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "7303997",
+              "payoutUSDC": "7.303997",
+              "txHash": "0x8d53b209ad7c3688d7b3c145b21dff05677b71377be39ff7d63f40944b29fb5b"
+            }
+          ],
+          "claimedPayoutWei6": "7303997",
+          "claimedPayoutUSDC": "7.303997",
+          "terminalStatus": "closed-and-claimed",
+          "spreadSemantics": {
+            "awayTeam": "Seattle Mariners",
+            "homeTeam": "Texas Rangers",
+            "upper": "Seattle Mariners +1.5",
+            "lower": "Texas Rangers -1.5",
+            "pushRule": "adjusted away score equals home score"
+          }
+        },
+        {
+          "contestId": "78",
+          "speculationId": "215",
+          "market": "total",
+          "lineTicks": 70,
+          "line": 7,
+          "makerSide": "under",
+          "takerSide": "over",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.19",
+          "takerOddsDecimal": "1.84",
+          "makerRiskWei6": "4201600",
+          "makerRiskUSDC": "4.201600",
+          "takerRiskWei6": "4999904",
+          "takerRiskUSDC": "4.999904",
+          "escrowedPrincipalWei6": "9201504",
+          "escrowedPrincipalUSDC": "9.201504",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x577bdc233f988df39a8b34d8157a805b1a5103f54cd79b043cdaa98c65d876c2",
+          "fillBlockNumber": "90918642",
+          "protocolWinSide": "over",
+          "winningSide": "upper",
+          "settleTxHash": "0x31d43ce8ba67b002295fcba4a04c3c5fa2975bde42c1b7f656db772a3b2972c4",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "9201504",
+              "payoutUSDC": "9.201504",
+              "txHash": "0xd5c88412c980e75ddf6a46e5283c54a843b5b95e6fc6221efd99b85a8c2639c4"
+            }
+          ],
+          "claimedPayoutWei6": "9201504",
+          "claimedPayoutUSDC": "9.201504",
+          "terminalStatus": "closed-and-claimed",
+          "totalSemantics": {
+            "upper": "over",
+            "lower": "under",
+            "pushRule": "combined score equals the line"
+          }
+        }
+      ]
+    },
+    {
+      "targetIndex": 14,
+      "contestId": "79",
+      "sport": "mlb",
+      "awayTeam": "Los Angeles Angels",
+      "homeTeam": "San Francisco Giants",
+      "startTimeUtc": "2026-07-26T20:05:00Z",
+      "canonicalGameId": "5d47edb7-73d8-4328-868a-a572f7519bb4",
+      "externalIds": {
+        "jsonodds": "5d47edb7-73d8-4328-868a-a572f7519bb4",
+        "sportspage": "337582",
+        "rundown": "b6e920e275c7aa9f9771c4ccf50ca26e"
+      },
+      "createContestTxHash": "0x48613295f8ca9658174b41591a730596641aa752351109eb422acb7601e62df8",
+      "updateMarketsTxHash": "0x3761a1eea629582d1e72c76aa1ae93acde340d29627e7a8e3a312bc6a82d95d2",
+      "requestedMarketMakerOverroundBps": 300,
+      "effectiveMarketMakerOverroundBps": 287,
+      "seededAtUtc": "2026-07-26T16:29:16.283912Z",
+      "beforeFirstPitch": true,
+      "final": {
+        "awayScore": 4,
+        "homeScore": 3,
+        "officialFinalMatchedExactly": true,
+        "scheduledStartDeltaSeconds": 0,
+        "onChainScoreMatched": true
+      },
+      "scoreRequestCount": 1,
+      "scoreRequestTxHashes": [
+        "0x7e1cb15290fd807a2d104fc8fa3ea8487c8b8e8405acb130c71539f5ae3425c7"
+      ],
+      "speculations": [
+        {
+          "contestId": "79",
+          "speculationId": "216",
+          "market": "moneyline",
+          "lineTicks": 0,
+          "line": null,
+          "makerSide": "Los Angeles Angels",
+          "takerSide": "San Francisco Giants",
+          "makerPositionType": "upper",
+          "takerPositionType": "lower",
+          "makerOddsDecimal": "2.02",
+          "takerOddsDecimal": "1.98",
+          "makerRiskWei6": "4901900",
+          "makerRiskUSDC": "4.901900",
+          "takerRiskWei6": "4999938",
+          "takerRiskUSDC": "4.999938",
+          "escrowedPrincipalWei6": "9901838",
+          "escrowedPrincipalUSDC": "9.901838",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x958d336f31ab7eda0c4cd8ea8c7bb7bcda794a48a29199b65cd631ac8dbc4d7e",
+          "fillBlockNumber": "90918855",
+          "protocolWinSide": "away",
+          "winningSide": "upper",
+          "settleTxHash": "0x007bf19c1f947585320634018016b2fe20f6abd0e16a6aa7048a9490b5e9a30f",
+          "claims": [
+            {
+              "role": "market-maker-b",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "9901838",
+              "payoutUSDC": "9.901838",
+              "txHash": "0xe5460fb3ffde807fc8cf2db0cea3c346cf5054c6ded8417212c5c222c35a96ce"
+            }
+          ],
+          "claimedPayoutWei6": "9901838",
+          "claimedPayoutUSDC": "9.901838",
+          "terminalStatus": "closed-and-claimed",
+          "teamIdentity": {
+            "away": {
+              "team": "Los Angeles Angels",
+              "positionType": "upper",
+              "role": "market-maker-b",
+              "sideOwner": "maker",
+              "identity": "underdog",
+              "marketOddsAmerican": "+102"
+            },
+            "home": {
+              "team": "San Francisco Giants",
+              "positionType": "lower",
+              "role": "flow-taker",
+              "sideOwner": "taker",
+              "identity": "favorite",
+              "marketOddsAmerican": "-102"
+            }
+          }
+        },
+        {
+          "contestId": "79",
+          "speculationId": "217",
+          "market": "spread",
+          "lineTicks": 15,
+          "line": 1.5,
+          "makerSide": "San Francisco Giants",
+          "takerSide": "Los Angeles Angels",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "3.04",
+          "takerOddsDecimal": "1.49",
+          "makerRiskWei6": "2450900",
+          "makerRiskUSDC": "2.450900",
+          "takerRiskWei6": "4999836",
+          "takerRiskUSDC": "4.999836",
+          "escrowedPrincipalWei6": "7450736",
+          "escrowedPrincipalUSDC": "7.450736",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x8b7a0d8dc025f6c6da82444fc023c700d13387a2210219e2863de8f0a46e4a5b",
+          "fillBlockNumber": "90918867",
+          "protocolWinSide": "away",
+          "winningSide": "upper",
+          "settleTxHash": "0xc730faa3afc1967b2beb5454dbc991da29d29bda29f4fcdaf3aa4f1af9ea0984",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "7450736",
+              "payoutUSDC": "7.450736",
+              "txHash": "0x345be98c567ca6d0065cfa4e4cb5f7ad7f7c1ae354a8bac9b35732a1118f95c2"
+            }
+          ],
+          "claimedPayoutWei6": "7450736",
+          "claimedPayoutUSDC": "7.450736",
+          "terminalStatus": "closed-and-claimed",
+          "spreadSemantics": {
+            "awayTeam": "Los Angeles Angels",
+            "homeTeam": "San Francisco Giants",
+            "upper": "Los Angeles Angels +1.5",
+            "lower": "San Francisco Giants -1.5",
+            "pushRule": "adjusted away score equals home score"
+          }
+        },
+        {
+          "contestId": "79",
+          "speculationId": "218",
+          "market": "total",
+          "lineTicks": 85,
+          "line": 8.5,
+          "makerSide": "over",
+          "takerSide": "under",
+          "makerPositionType": "upper",
+          "takerPositionType": "lower",
+          "makerOddsDecimal": "2.08",
+          "takerOddsDecimal": "1.93",
+          "makerRiskWei6": "4629600",
+          "makerRiskUSDC": "4.629600",
+          "takerRiskWei6": "4999968",
+          "takerRiskUSDC": "4.999968",
+          "escrowedPrincipalWei6": "9629568",
+          "escrowedPrincipalUSDC": "9.629568",
+          "makerRole": "market-maker-b",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x3a406f5a5c007f1c855ff14f5c4013c9fcfeb5b2033db2dd93987f8ec432e1d5",
+          "fillBlockNumber": "90918876",
+          "protocolWinSide": "under",
+          "winningSide": "lower",
+          "settleTxHash": "0xe894e8266a5129e080a32dfc93c0a65ff690ae45a1870d6ca18f691dfd89247c",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "9629568",
+              "payoutUSDC": "9.629568",
+              "txHash": "0xc338b63c4fc955bbe5f9ead5619ca33abbfa27dfef16880a64b2e5d4dc162c02"
+            }
+          ],
+          "claimedPayoutWei6": "9629568",
+          "claimedPayoutUSDC": "9.629568",
+          "terminalStatus": "closed-and-claimed",
+          "totalSemantics": {
+            "upper": "over",
+            "lower": "under",
+            "pushRule": "combined score equals the line"
+          }
+        }
+      ]
+    },
+    {
+      "targetIndex": 15,
+      "contestId": "80",
+      "sport": "mlb",
+      "awayTeam": "New York Yankees",
+      "homeTeam": "Philadelphia Phillies",
+      "startTimeUtc": "2026-07-26T23:20:00Z",
+      "canonicalGameId": "0be1bf51-a28e-4d99-90bb-c247fb8948f8",
+      "externalIds": {
+        "jsonodds": "0be1bf51-a28e-4d99-90bb-c247fb8948f8",
+        "sportspage": "337568",
+        "rundown": "6c53dfc768b33648a4a8562bf0b4d0c9"
+      },
+      "createContestTxHash": "0xa7b6890e368791795d3892ea0aa068851124915dd3aaf9922d1ff10c8b954cb6",
+      "updateMarketsTxHash": "0x0b35b8955d32493f78f3fe150e97fd4a6893dac1dfbd60fc4ef5294a31ae5776",
+      "requestedMarketMakerOverroundBps": 300,
+      "effectiveMarketMakerOverroundBps": 264,
+      "seededAtUtc": "2026-07-26T16:36:50.452794Z",
+      "beforeFirstPitch": true,
+      "final": {
+        "awayScore": 4,
+        "homeScore": 11,
+        "officialFinalMatchedExactly": true,
+        "scheduledStartDeltaSeconds": 0,
+        "onChainScoreMatched": true
+      },
+      "scoreRequestCount": 2,
+      "scoreRequestTxHashes": [
+        "0x5b1f783f71f9eabee5532b5420fb69d4cf685ec5c8b091e497f05938ae6d85b0",
+        "0xb53c62493b532eb186b59cd5954dc5fd5f1f7c023bd7940aaae4146d6227370c"
+      ],
+      "speculations": [
+        {
+          "contestId": "80",
+          "speculationId": "219",
+          "market": "moneyline",
+          "lineTicks": 0,
+          "line": null,
+          "makerSide": "New York Yankees",
+          "takerSide": "Philadelphia Phillies",
+          "makerPositionType": "upper",
+          "takerPositionType": "lower",
+          "makerOddsDecimal": "2.82",
+          "takerOddsDecimal": "1.55",
+          "makerRiskWei6": "2747200",
+          "makerRiskUSDC": "2.747200",
+          "takerRiskWei6": "4999904",
+          "takerRiskUSDC": "4.999904",
+          "escrowedPrincipalWei6": "7747104",
+          "escrowedPrincipalUSDC": "7.747104",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x4d0b48d82ee86b7a83a99f65c041e78f199e63447a1cd8d1f69abe0fd4e8d25d",
+          "fillBlockNumber": "90919123",
+          "protocolWinSide": "home",
+          "winningSide": "lower",
+          "settleTxHash": "0x2ffc00a1a69cddcd87d37f777d1f9cec0ead63e3a330c476d4a9b0d3136b49a9",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "7747104",
+              "payoutUSDC": "7.747104",
+              "txHash": "0x2fbc025f214f295aaf861d249a6c975632c92d7a8dc983a1d6ba5f9ab0612a66"
+            }
+          ],
+          "claimedPayoutWei6": "7747104",
+          "claimedPayoutUSDC": "7.747104",
+          "terminalStatus": "closed-and-claimed",
+          "teamIdentity": {
+            "away": {
+              "team": "New York Yankees",
+              "positionType": "upper",
+              "role": "market-maker-a",
+              "sideOwner": "maker",
+              "identity": "underdog",
+              "marketOddsAmerican": "+182"
+            },
+            "home": {
+              "team": "Philadelphia Phillies",
+              "positionType": "lower",
+              "role": "flow-taker",
+              "sideOwner": "taker",
+              "identity": "favorite",
+              "marketOddsAmerican": "-182"
+            }
+          }
+        },
+        {
+          "contestId": "80",
+          "speculationId": "220",
+          "market": "spread",
+          "lineTicks": 15,
+          "line": 1.5,
+          "makerSide": "Philadelphia Phillies",
+          "takerSide": "New York Yankees",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.32",
+          "takerOddsDecimal": "1.76",
+          "makerRiskWei6": "3787800",
+          "makerRiskUSDC": "3.787800",
+          "takerRiskWei6": "4999896",
+          "takerRiskUSDC": "4.999896",
+          "escrowedPrincipalWei6": "8787696",
+          "escrowedPrincipalUSDC": "8.787696",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x83331a3c266e30a1110316b9fab74714b5afbe61c0fc136c1303a5a31624f998",
+          "fillBlockNumber": "90919141",
+          "protocolWinSide": "home",
+          "winningSide": "lower",
+          "settleTxHash": "0x1ea5934eab0c0cce505f0fdb19353347f900e29fa51721529db7dd2c0b0c04f4",
+          "claims": [
+            {
+              "role": "market-maker-a",
+              "positionType": "lower",
+              "outcome": "winner-payout",
+              "payoutWei6": "8787696",
+              "payoutUSDC": "8.787696",
+              "txHash": "0x054aacab182858bcb6e5a80c289c8d2dab75c492221701b2c2ec6cc0dd1d100f"
+            }
+          ],
+          "claimedPayoutWei6": "8787696",
+          "claimedPayoutUSDC": "8.787696",
+          "terminalStatus": "closed-and-claimed",
+          "spreadSemantics": {
+            "awayTeam": "New York Yankees",
+            "homeTeam": "Philadelphia Phillies",
+            "upper": "New York Yankees +1.5",
+            "lower": "Philadelphia Phillies -1.5",
+            "pushRule": "adjusted away score equals home score"
+          }
+        },
+        {
+          "contestId": "80",
+          "speculationId": "221",
+          "market": "total",
+          "lineTicks": 80,
+          "line": 8,
+          "makerSide": "under",
+          "takerSide": "over",
+          "makerPositionType": "lower",
+          "takerPositionType": "upper",
+          "makerOddsDecimal": "2.01",
+          "takerOddsDecimal": "1.99",
+          "makerRiskWei6": "4950400",
+          "makerRiskUSDC": "4.950400",
+          "takerRiskWei6": "4999904",
+          "takerRiskUSDC": "4.999904",
+          "escrowedPrincipalWei6": "9950304",
+          "escrowedPrincipalUSDC": "9.950304",
+          "makerRole": "market-maker-a",
+          "takerRole": "flow-taker",
+          "fillTxHash": "0x74cba63b88c23497c6249342efdfb95f7b799a22473570118e26bb0c8fcb2c6e",
+          "fillBlockNumber": "90919152",
+          "protocolWinSide": "over",
+          "winningSide": "upper",
+          "settleTxHash": "0x7fcbcc401b03b6d4d320d2b065730ebba47009b271ab5274be508ab9f4b01971",
+          "claims": [
+            {
+              "role": "flow-taker",
+              "positionType": "upper",
+              "outcome": "winner-payout",
+              "payoutWei6": "9950304",
+              "payoutUSDC": "9.950304",
+              "txHash": "0xd97353bf1c8712a04c4160c089adf73baad934497e4f49df868af6f2cd3a4d35"
+            }
+          ],
+          "claimedPayoutWei6": "9950304",
+          "claimedPayoutUSDC": "9.950304",
+          "terminalStatus": "closed-and-claimed",
+          "totalSemantics": {
+            "upper": "over",
+            "lower": "under",
+            "pushRule": "combined score equals the line"
+          }
+        }
+      ]
+    }
+  ]
+}
