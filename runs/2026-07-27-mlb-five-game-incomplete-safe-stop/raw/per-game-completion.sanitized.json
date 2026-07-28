@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-28T03:49:30Z",
+  "terminalContestCount": 4,
+  "scoreRequestCountByContest": {
+    "81": 1,
+    "82": 2,
+    "83": 3,
+    "84": 1
+  },
+  "games": [
+    {
+      "contestId": "81",
+      "matchup": "Baltimore Orioles at Detroit Tigers",
+      "final": {
+        "awayScore": 8,
+        "homeScore": 5,
+        "officialFinalMatchedExactly": true,
+        "scheduledStartDeltaSeconds": 0,
+        "onChainScoreMatched": true
+      },
+      "scoreRequestCount": 1,
+      "scoreRequestTxHashes": [
+        "0x12e7618b00779c294cf24baf8ad5d2eb9ab3b1686fca36937b711a7ae3193075"
+      ],
+      "settlements": 3,
+      "claims": 3,
+      "terminal": {
+        "openCommitments": 0,
+        "actionablePositions": 0,
+        "closedSpeculations": 3
+      },
+      "caveats": []
+    },
+    {
+      "contestId": "82",
+      "matchup": "Arizona Diamondbacks at Pittsburgh Pirates",
+      "final": {
+        "awayScore": 2,
+        "homeScore": 3,
+        "officialFinalMatchedExactly": true,
+        "scheduledStartDeltaSeconds": 0,
+        "onChainScoreMatched": true
+      },
+      "scoreRequestCount": 2,
+      "scoreRequestTxHashes": [
+        "0x5836115ad5e832504a5f5eb45cfb093a3a3e57c322305039997de3bf5fa56ec4",
+        "0x269419140167781f5fbc11191c1f68b4418fbce0bb3181ed2c0c3b4251eb7513"
+      ],
+      "settlements": 3,
+      "claims": 3,
+      "terminal": {
+        "openCommitments": 0,
+        "actionablePositions": 0,
+        "closedSpeculations": 3
+      },
+      "caveats": [
+        "score required 2 confirmed request transactions before projection converged"
+      ]
+    },
+    {
+      "contestId": "83",
+      "matchup": "Philadelphia Phillies at Miami Marlins",
+      "final": {
+        "awayScore": 7,
+        "homeScore": 8,
+        "officialFinalMatchedExactly": true,
+        "scheduledStartDeltaSeconds": 0,
+        "onChainScoreMatched": true
+      },
+      "scoreRequestCount": 3,
+      "scoreRequestTxHashes": [
+        "0x2e00861577d5c5a4e4db24f1a889f5e8fa34e93dabee142130a729ceb8ec829b",
+        "0xf1dd9a809e4f22e95152fc412bbf39088fc56473b36be4e7276cb9efb8f0a3ff",
+        "0x6c8a0fe79dcc35a13801c008f1035a6f29bd06ed6a3573d98a9d37890d0256f4"
+      ],
+      "settlements": 3,
+      "claims": 3,
+      "terminal": {
+        "openCommitments": 0,
+        "actionablePositions": 0,
+        "closedSpeculations": 3
+      },
+      "caveats": [
+        "score required 3 confirmed request transactions before projection converged"
+      ]
+    },
+    {
+      "contestId": "84",
+      "matchup": "Toronto Blue Jays at Washington Nationals",
+      "final": {
+        "awayScore": 3,
+        "homeScore": 2,
+        "officialFinalMatchedExactly": true,
+        "scheduledStartDeltaSeconds": 0,
+        "onChainScoreMatched": true
+      },
+      "scoreRequestCount": 1,
+      "scoreRequestTxHashes": [
+        "0xe21f76b9be0d389136590999501947c2904b6216c0344bc181b6a3063e70da2b"
+      ],
+      "settlements": 3,
+      "claims": 3,
+      "terminal": {
+        "openCommitments": 0,
+        "actionablePositions": 0,
+        "closedSpeculations": 3
+      },
+      "caveats": []
+    }
+  ]
+}

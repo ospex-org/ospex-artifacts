@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-28T03:49:30Z",
+  "finalStatus": "incomplete_safe_stop",
+  "contestId": "85",
+  "canonicalGameId": "a431b272-2e35-4f2c-a87c-f5f1c0377e5d",
+  "externalIds": {
+    "jsonodds": "a431b272-2e35-4f2c-a87c-f5f1c0377e5d",
+    "sportspage": "337583",
+    "rundown": "e9a2c88be23ab06aad7ea01998447cfd"
+  },
+  "awayTeam": "Cleveland Guardians",
+  "homeTeam": "Cincinnati Reds",
+  "canonicalStartTimeUtc": "2026-07-27T23:10:00Z",
+  "immutableVerifiedStartTimeUtc": "2026-07-27T23:00:00Z",
+  "exactMinuteDeltaSeconds": 600,
+  "projectionWaitSeconds": 120,
+  "identityFieldsOtherThanExactMinuteMatched": true,
+  "normalizationNote": "Subsequent verifier-source review showed that UTC-hour normalization can explain why 23:00Z and 23:10Z passed oracle agreement. The bounded setup gate still required exact canonical minute equality and correctly quarantined the contest when that projection did not converge.",
+  "financialState": {
+    "speculations": 0,
+    "fills": 0,
+    "positions": 0,
+    "openCommitments": 0
+  },
+  "disposition": "created and verified, then quarantined before market or fill writes",
+  "createContestTxHash": "0x9da3a49753658ed01356fbe3bafd95623be95df415e1ee6837bd34b606118843",
+  "hardStopEvidenceSha256": "8dd885f3b479f9628ff97d664937f49d21fc16a1812a6f3f9c24bcbed894ec29",
+  "containmentEvidenceSha256": "abb22909448ef0f115ddb5f56f4dd49083818427e71cf11d0c4804ecbbb4c685"
+}

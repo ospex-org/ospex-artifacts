@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-28T03:49:30Z",
+  "expectation": "Confirmed writes are followed by bounded projection convergence before lifecycle assertions.",
+  "scoreProjection": [
+    {
+      "contestId": "81",
+      "confirmedScoreRequestTransactions": 1,
+      "converged": true,
+      "finalScoreMatchedOfficialSource": true,
+      "caveats": []
+    },
+    {
+      "contestId": "82",
+      "confirmedScoreRequestTransactions": 2,
+      "converged": true,
+      "finalScoreMatchedOfficialSource": true,
+      "caveats": [
+        "score required 2 confirmed request transactions before projection converged"
+      ]
+    },
+    {
+      "contestId": "83",
+      "confirmedScoreRequestTransactions": 3,
+      "converged": true,
+      "finalScoreMatchedOfficialSource": true,
+      "caveats": [
+        "score required 3 confirmed request transactions before projection converged"
+      ]
+    },
+    {
+      "contestId": "84",
+      "confirmedScoreRequestTransactions": 1,
+      "converged": true,
+      "finalScoreMatchedOfficialSource": true,
+      "caveats": []
+    }
+  ],
+  "identityProjection": {
+    "contestId": "85",
+    "expectedExactStartUtc": "2026-07-27T23:10:00Z",
+    "observedImmutableStartUtc": "2026-07-27T23:00:00Z",
+    "waitSeconds": 120,
+    "converged": false,
+    "result": "quarantined-before-markets-or-fills"
+  }
+}
