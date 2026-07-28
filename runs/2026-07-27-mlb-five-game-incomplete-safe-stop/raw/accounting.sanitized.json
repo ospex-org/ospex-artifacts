@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-28T03:49:30Z",
+  "matchedPrincipal": {
+    "escrowedAndRecoveredWei6": "212309297",
+    "escrowedAndRecoveredUSDC": "212.309297",
+    "byRoleBasis": "escrow-contribution",
+    "byRole": {
+      "flow-taker": {
+        "wei6": "119999197",
+        "USDC": "119.999197"
+      },
+      "market-maker-a": {
+        "wei6": "47245200",
+        "USDC": "47.245200"
+      },
+      "market-maker-b": {
+        "wei6": "45064900",
+        "USDC": "45.064900"
+      }
+    },
+    "reconciled": true
+  },
+  "claimPayouts": {
+    "aggregateWei6": "212309297",
+    "aggregateUSDC": "212.309297",
+    "byRoleBasis": "claim-payout-recipient",
+    "byRole": {
+      "flow-taker": {
+        "wei6": "121655351",
+        "USDC": "121.655351"
+      },
+      "market-maker-a": {
+        "wei6": "53700190",
+        "USDC": "53.700190"
+      },
+      "market-maker-b": {
+        "wei6": "36953756",
+        "USDC": "36.953756"
+      }
+    },
+    "receiptObservationComplete": true
+  },
+  "protocolFees": {
+    "aggregateWei6": "11000000",
+    "aggregateUSDC": "11.000000",
+    "expectedUSDC": "11.000000",
+    "reconciled": true
+  },
+  "roleBalanceReconciliation": {
+    "flow-taker": {
+      "initialUSDCWei6": "244803746",
+      "initialUSDC": "244.803746",
+      "escrowContributionWei6": "119999197",
+      "escrowContributionUSDC": "119.999197",
+      "claimPayoutWei6": "121655351",
+      "claimPayoutUSDC": "121.655351",
+      "protocolFeeWei6": "8000000",
+      "protocolFeeUSDC": "8.000000",
+      "finalUSDCWei6": "238459900",
+      "finalUSDC": "238.459900",
+      "reconciled": true
+    },
+    "market-maker-a": {
+      "initialUSDCWei6": "278490380",
+      "initialUSDC": "278.490380",
+      "escrowContributionWei6": "47245200",
+      "escrowContributionUSDC": "47.245200",
+      "claimPayoutWei6": "53700190",
+      "claimPayoutUSDC": "53.700190",
+      "protocolFeeWei6": "1500000",
+      "protocolFeeUSDC": "1.500000",
+      "finalUSDCWei6": "283445370",
+      "finalUSDC": "283.445370",
+      "reconciled": true
+    },
+    "market-maker-b": {
+      "initialUSDCWei6": "279308706",
+      "initialUSDC": "279.308706",
+      "escrowContributionWei6": "45064900",
+      "escrowContributionUSDC": "45.064900",
+      "claimPayoutWei6": "36953756",
+      "claimPayoutUSDC": "36.953756",
+      "protocolFeeWei6": "1500000",
+      "protocolFeeUSDC": "1.500000",
+      "finalUSDCWei6": "269697562",
+      "finalUSDC": "269.697562",
+      "reconciled": true
+    }
+  },
+  "unexplainedUSDC": "0.000000",
+  "gas": {
+    "plannedSessionCapPOL": "100.000000000000000000",
+    "operatorControlledProofTransactionCount": 66,
+    "operatorControlledProofTransactionGasWei": "4183561557749687312",
+    "operatorControlledProofTransactionGasPOL": "4.183561557749687312",
+    "withinPlannedCap": true,
+    "boundary": "Includes the 66 recorded operator-controlled proof transactions; asynchronous oracle callback gas is not attributed to the operator total."
+  }
+}

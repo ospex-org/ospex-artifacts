@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-28T03:49:30Z",
+  "network": "polygon",
+  "chainId": 137,
+  "deploymentRound": "R5",
+  "sdkCli": {
+    "commit": "b171a4d3490635413362ae55a90f4f9c853a727c",
+    "binarySha256": "8037b56dd1c672506265bce640795f4644e7020a36d59387764822b808eb624e",
+    "version": "0.10.1"
+  },
+  "marketMaker": {
+    "commit": "d7982bca406f0e2d290a9e596bd8cb27bd19c998",
+    "binarySha256": "65bce1067961a31d149bd7e11b264f2fdbca8b9916e7e943d07649b37bd85a0c"
+  },
+  "harnessBaselineCommit": "5a2ce33fe39cf942e69aa2df41625424f4ef8758",
+  "artifactRepositoryBase": {
+    "branch": "main",
+    "sha": "bde753c4f8ceda769009638d612c56e297e18a37"
+  },
+  "canonicalTargetsSnapshotSha256": "7cba68d4cd4ca4bdcdb60bf399f01af68229b378c6eb1a85f93d1ccd56201c80",
+  "finalizerFreezeSha256": "f015573be19fdc7dd6f07c76ff0d0b0183fc55f9fd4e6c0433135a59bdeff0ec"
+}

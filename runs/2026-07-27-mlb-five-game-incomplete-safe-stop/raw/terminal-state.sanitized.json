@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-28T03:49:30Z",
+  "finalStatus": "incomplete_safe_stop",
+  "contests": {
+    "created": 5,
+    "seededAndTerminal": 4,
+    "quarantinedBeforeMarkets": 1
+  },
+  "openCommitments": 0,
+  "actionablePositions": 0,
+  "nonzeroAllowances": 0,
+  "allowances": {
+    "flow-taker": {
+      "PositionModuleWei6": "0",
+      "TreasuryModuleWei6": "0"
+    },
+    "market-maker-a": {
+      "PositionModuleWei6": "0",
+      "TreasuryModuleWei6": "0"
+    },
+    "market-maker-b": {
+      "PositionModuleWei6": "0",
+      "TreasuryModuleWei6": "0"
+    }
+  },
+  "marketMakerProcesses": 0,
+  "finalizerProcesses": 0,
+  "finalizerServiceUnits": 0,
+  "perGameFinalizerJobs": 0,
+  "terminalSupportCronJobsRetainedUntilDurablePrReadback": 2,
+  "terminalSupportCronJobDisposition": "remove only after durable unmerged PR readback, per operator direction",
+  "allMoneyBearingContestLifecyclesTerminal": true
+}
