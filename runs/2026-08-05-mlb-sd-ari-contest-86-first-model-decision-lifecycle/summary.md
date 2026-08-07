@@ -1,4 +1,4 @@
-# August 5 SD@ARI contest 86 — first model-decision lifecycle
+# August 5 SD@ARI contest 86 — first benchmark-sourced, source-pinned model-decision lifecycle
 
 - **Status:** `complete_verified_with_caveats`
 - **Network:** Polygon mainnet (`chainId=137`)
@@ -7,6 +7,8 @@
 A source-pinned `openai-gpt-5.6-sol` moneyline decision selected **San Diego Padres** at `2026-08-05T05:34:15.743Z`. The controlled taker matched `0.999925 USDC` against `0.869500 USDC` of Arizona market-maker risk in speculation `234`.
 
 The official final was **San Diego 4, Arizona 10**. The on-chain score matched exactly, speculation `234` settled to **home / Arizona**, and the market-maker's winning position claimed **1.869425 USDC**. The model position settled as a loser with zero payout.
+
+The run paid **1.500000 USDC** in protocol fees: `1.000000` for contest creation and `0.500000` for speculation creation. Whole-run USDC balances reconcile exactly to market-maker A `+0.749925`, the flow taker `-2.249925`, and market-maker B `0.000000`, with `0.000000 USDC` unexplained.
 
 ## Proof transactions
 
@@ -33,6 +35,6 @@ At `2026-08-06T05:06:51.000Z`:
 
 ## Caveats
 
-This was a bounded smoke/shakedown, not a canonical benchmark cohort. The model record had `wouldAbstain=true` but was explicitly selected for lifecycle execution. San Diego lost, so the claimed winner was the Arizona counterparty position. A separately selected total decision did not fill after a funding-guard bulk-nonce invalidation and is not represented as a successful position. No closing-odds or CLV artifact was captured.
+This was a bounded smoke/shakedown, not a canonical benchmark cohort. The model record had `wouldAbstain=true`; under the pinned `fixed-moneyline-total` policy, `selectedForExecution=true` was structurally required for a valid moneyline forecast and carries no independent execution signal. The “first” claim is limited to the first benchmark-sourced, source-pinned model decision executed end to end: the earlier [`2026-07-10-mve-phase1-block-k-six-game-two-maker`](../2026-07-10-mve-phase1-block-k-six-game-two-maker/) artifact records four in-harness model-pilot executions without this benchmark run-artifact pin. San Diego lost, so the claimed winner was the Arizona counterparty position. A separately selected total decision did not fill after a funding-guard bulk-nonce invalidation and is not represented as a successful position. No closing-odds or CLV artifact was captured.
 
 Machine-readable source of truth: [`evidence.json`](evidence.json).

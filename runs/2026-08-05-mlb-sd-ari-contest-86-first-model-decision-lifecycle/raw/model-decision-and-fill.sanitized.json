@@ -28,6 +28,7 @@
     "confidence": 0.53,
     "wouldAbstain": true,
     "selectedForExecution": true,
+    "executionPolicy": "fixed-moneyline-total",
     "requestAt": "2026-08-05T05:34:02.016Z",
     "responseAt": "2026-08-05T05:34:15.743Z",
     "outcome": "valid"

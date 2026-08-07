@@ -10,7 +10,7 @@
   "chainId": 137,
   "deploymentRound": "R5",
   "runScope": {
-    "kind": "controlled-single-contest-first-model-decision-lifecycle",
+    "kind": "controlled-single-contest-first-benchmark-sourced-source-pinned-model-decision-lifecycle",
     "sport": "mlb",
     "contestId": "86",
     "speculationId": "234",
@@ -52,6 +52,7 @@
     "confidence": 0.53,
     "wouldAbstain": true,
     "selectedForExecution": true,
+    "executionPolicy": "fixed-moneyline-total",
     "requestAt": "2026-08-05T05:34:02.016Z",
     "responseAt": "2026-08-05T05:34:15.743Z",
     "outcome": "valid",
@@ -131,9 +132,18 @@
       "marketMakerExecution": "d7982bca406f0e2d290a9e596bd8cb27bd19c998",
       "marketMakerCurrentMainAtFinalization": "5d55aefe71632d228922223170345aaa612c35ce",
       "sdkCli": "b171a4d3490635413362ae55a90f4f9c853a727c"
-    }
+    },
+    "sourceRepositories": {
+      "benchmark": "ospex-org/ospex-benchmark",
+      "marketMakerExecution": "ospex-org/ospex-market-maker",
+      "marketMakerCurrentMainAtFinalization": "ospex-org/ospex-market-maker",
+      "sdkCli": "ospex-org/ospex-sdk"
+    },
+    "sourceRepositoryVisibility": "public",
+    "localSourceLocationsOmitted": true
   },
   "rawFiles": {
+    "accounting": "raw/accounting.sanitized.json",
     "decisionAndFill": "raw/model-decision-and-fill.sanitized.json",
     "lifecycleTransactions": "raw/lifecycle-transactions.sanitized.json",
     "terminalState": "raw/terminal-state.sanitized.json",
@@ -141,11 +151,12 @@
   },
   "caveats": [
     "The benchmark source labels this smoke run SMOKE_V0_NOT_A_COHORT; this is lifecycle evidence, not canonical-cohort performance evidence.",
-    "The model decision carried wouldAbstain=true but was explicitly selected for this bounded shakedown execution.",
+    "The model decision carried wouldAbstain=true. Under the pinned fixed-moneyline-total policy, selectedForExecution=true was structurally required for a valid moneyline forecast, so that field carries no independent execution signal and is not evidence of a discretionary operator override.",
+    "The ordinal claim is limited to the first benchmark-sourced, source-pinned model decision executed end to end. The earlier 2026-07-10-mve-phase1-block-k-six-game-two-maker artifact records four in-harness model-pilot executions without this benchmark run-artifact pin.",
     "The model-selected San Diego position lost; the winning Arizona market-maker counter-position was the claimed position.",
     "A second selected total-market decision did not fill after a funding-guard bulk-nonce invalidation; it is outside this one-position lifecycle proof.",
     "The 250 bps maker configuration improved the offered taker price relative to the frozen reference; that improvement is not model performance.",
     "No closing-odds or CLV artifact was captured for this run."
   ],
-  "evidenceBoundary": "Proves the source-pinned first model decision, selected moneyline fill and two positions, score/callback, settlement, winning claim, scoped permission revocation, receipt success, and terminal-zero readback. It does not prove model predictive skill, organic demand, outside-agent participation, a canonical benchmark cohort, or CLV."
+  "evidenceBoundary": "Proves the first benchmark-sourced, source-pinned model decision executed end to end: the selected moneyline fill and two positions, score/callback, settlement, winning claim, scoped permission revocation, receipt success, and terminal-zero readback. The ordinal excludes earlier in-harness model-pilot executions recorded by 2026-07-10-mve-phase1-block-k-six-game-two-maker. It does not prove model predictive skill, organic demand, outside-agent participation, a canonical benchmark cohort, or CLV."
 }

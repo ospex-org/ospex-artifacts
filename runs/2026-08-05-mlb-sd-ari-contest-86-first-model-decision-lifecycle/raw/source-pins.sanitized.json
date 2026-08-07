@@ -19,7 +19,14 @@
     "marketMakerCurrentMainAtFinalization": "5d55aefe71632d228922223170345aaa612c35ce",
     "sdkCli": "b171a4d3490635413362ae55a90f4f9c853a727c"
   },
+  "sourceRepositories": {
+    "benchmark": "ospex-org/ospex-benchmark",
+    "marketMakerExecution": "ospex-org/ospex-market-maker",
+    "marketMakerCurrentMainAtFinalization": "ospex-org/ospex-market-maker",
+    "sdkCli": "ospex-org/ospex-sdk"
+  },
+  "sourceRepositoryVisibility": "public",
+  "localSourceLocationsOmitted": true,
   "sdkCliVersion": "0.10.1",
-  "sourceModification": "none",
-  "privateSourceNamesAndLocationsOmitted": true
+  "sourceModification": "none"
 }
