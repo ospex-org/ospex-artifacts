@@ -1,0 +1,151 @@
+{
+  "artifactType": "run",
+  "artifactId": "2026-08-05-mlb-sd-ari-contest-86-first-model-decision-lifecycle",
+  "schemaVersion": 1,
+  "status": "complete_verified_with_caveats",
+  "date": "2026-08-05",
+  "publishedAt": "2026-08-07T15:24:37Z",
+  "generatedAt": "2026-08-07T15:24:37Z",
+  "network": "polygon",
+  "chainId": 137,
+  "deploymentRound": "R5",
+  "runScope": {
+    "kind": "controlled-single-contest-first-model-decision-lifecycle",
+    "sport": "mlb",
+    "contestId": "86",
+    "speculationId": "234",
+    "market": "moneyline",
+    "modelDecisionCount": 1,
+    "controlledFillCount": 1,
+    "positionCount": 2,
+    "controlledWalletCount": 3
+  },
+  "verdict": {
+    "label": "COMPLETE_VERIFIED_WITH_CAVEATS",
+    "reason": "A source-pinned model moneyline decision was matched on chain, scored against the exact official final, settled, the winning counterparty position was claimed, and the scoped three-wallet state reached terminal zero."
+  },
+  "identity": {
+    "gameId": "038769a6-0023-45d9-a6af-0774268a2804",
+    "externalIds": {
+      "jsonodds": "038769a6-0023-45d9-a6af-0774268a2804",
+      "sportspage": "337687",
+      "rundown": "d12d1b169d9a1acfc3beeb508b096eef"
+    },
+    "awayTeam": "San Diego Padres",
+    "homeTeam": "Arizona Diamondbacks",
+    "rawGameDate": "2026-08-05",
+    "startTimeUtc": "2026-08-06T01:40:00Z",
+    "contestId": "86",
+    "speculationId": "234"
+  },
+  "modelDecision": {
+    "market": "moneyline",
+    "selection": "San Diego Padres",
+    "side": "away",
+    "line": null,
+    "observedDecimal": "1.8547",
+    "probabilities": {
+      "win": 0.5213,
+      "push": 0,
+      "loss": 0.4787
+    },
+    "confidence": 0.53,
+    "wouldAbstain": true,
+    "selectedForExecution": true,
+    "requestAt": "2026-08-05T05:34:02.016Z",
+    "responseAt": "2026-08-05T05:34:15.743Z",
+    "outcome": "valid",
+    "participantId": "openai-gpt-5.6-sol",
+    "runId": "smoke-v0-2026-08-05-dc5c82",
+    "sourceDecisionSha256": "c484acc0cd0b903f51f7994b430b535bbb45a9e8d357d05a57f7036e04027b44"
+  },
+  "onchainPosition": {
+    "fillTxHash": "0xbe9236c17953d7c83822d188d9fde69fea9bcbe8889fd42214e5b8878c7c0cea",
+    "fillBlockNumber": "91473035",
+    "fillConfirmedAt": "2026-08-05T07:22:59.000Z",
+    "modelPositionId": "234_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+    "makerPositionId": "234_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_1",
+    "modelRiskUSDC": "0.999925",
+    "makerRiskUSDC": "0.869500",
+    "modelSide": "San Diego Padres",
+    "makerSide": "Arizona Diamondbacks"
+  },
+  "postgame": {
+    "officialFinal": {
+      "awayScore": 4,
+      "homeScore": 10,
+      "officialFinalOutAt": "2026-08-06T04:36:03.969Z",
+      "source": "MLB Stats API",
+      "status": "Final"
+    },
+    "onchainFinal": {
+      "awayScore": 4,
+      "contestStatus": "scored",
+      "contestStatusRaw": 2,
+      "homeScore": 10,
+      "matchedOfficialFinal": true
+    },
+    "scoreRequestTxHash": "0x54e98d703c6a1cea7145ded4ec079a2824fb68018594b1372cdcc98b90596d1d",
+    "scoreCallbackTxHash": "0x057d4bca7bbec41d6c985f13f0273e34113d5d76b8cb00dd49590803ee400bbd",
+    "settleTxHash": "0x91165c580288161a8a8bc904e0a8b6dcbfc12f81a0f1f466a214da30fc24df6f",
+    "winSide": "home",
+    "claimTxHash": "0xd3645d12745b87be67e8057c566c4de4dd44eabe7017eb232c984d51173105c9",
+    "claimedRole": "market-maker",
+    "claimedPayoutUSDC": "1.869425",
+    "modelPayoutUSDC": "0.000000"
+  },
+  "timeline": {
+    "claimedAt": "2026-08-06T05:04:17.000Z",
+    "decisionAt": "2026-08-05T05:34:15.743Z",
+    "fillConfirmedAt": "2026-08-05T07:22:59.000Z",
+    "scoreRequestedAt": "2026-08-06T05:01:29.000Z",
+    "scoredAt": "2026-08-06T05:01:51.000Z",
+    "settledAt": "2026-08-06T05:03:11.000Z",
+    "terminalVerifiedAt": "2026-08-06T05:09:03.000Z",
+    "terminalZeroAt": "2026-08-06T05:06:51.000Z"
+  },
+  "terminalState": {
+    "openCommitments": 0,
+    "actionablePositions": 0,
+    "nonzeroAllowances": 0,
+    "writerProcesses": 0,
+    "terminalZeroAt": "2026-08-06T05:06:51.000Z"
+  },
+  "transactionReceiptReadback": {
+    "queried": 11,
+    "successfulReceipts": 11,
+    "missingReceipts": 0,
+    "failedReceipts": 0,
+    "blockNumberMismatches": 0,
+    "checkedAtUtc": "2026-08-07T15:24:37Z",
+    "method": "fresh Polygon transaction-receipt and block readback"
+  },
+  "sourcePins": {
+    "sha256": "f06ba1448b48e0e2e44fe8c7b78c12a8b3993196c04fd7b33eb00b953698d93e",
+    "bytes": 62351,
+    "lineCount": 17,
+    "finalRecordContentSha256": "047ee586e690fa941d4ab096dd92ce2304099d3bfb2dfe61fda495ee89a56d83",
+    "benchmarkRunArtifactSha256": "1ca200c556355b906795a0076de257b75e38f9674300879a36635e207fe92a8f",
+    "bareSourceCommits": {
+      "benchmark": "ecaf5e05ce47867b67591c3a185829ac3f91741e",
+      "marketMakerExecution": "d7982bca406f0e2d290a9e596bd8cb27bd19c998",
+      "marketMakerCurrentMainAtFinalization": "5d55aefe71632d228922223170345aaa612c35ce",
+      "sdkCli": "b171a4d3490635413362ae55a90f4f9c853a727c"
+    }
+  },
+  "rawFiles": {
+    "decisionAndFill": "raw/model-decision-and-fill.sanitized.json",
+    "lifecycleTransactions": "raw/lifecycle-transactions.sanitized.json",
+    "terminalState": "raw/terminal-state.sanitized.json",
+    "sourcePins": "raw/source-pins.sanitized.json"
+  },
+  "caveats": [
+    "The benchmark source labels this smoke run SMOKE_V0_NOT_A_COHORT; this is lifecycle evidence, not canonical-cohort performance evidence.",
+    "The model decision carried wouldAbstain=true but was explicitly selected for this bounded shakedown execution.",
+    "The model-selected San Diego position lost; the winning Arizona market-maker counter-position was the claimed position.",
+    "A second selected total-market decision did not fill after a funding-guard bulk-nonce invalidation; it is outside this one-position lifecycle proof.",
+    "The 250 bps maker configuration improved the offered taker price relative to the frozen reference; that improvement is not model performance.",
+    "No closing-odds or CLV artifact was captured for this run."
+  ],
+  "evidenceBoundary": "Proves the source-pinned first model decision, selected moneyline fill and two positions, score/callback, settlement, winning claim, scoped permission revocation, receipt success, and terminal-zero readback. It does not prove model predictive skill, organic demand, outside-agent participation, a canonical benchmark cohort, or CLV."
+}

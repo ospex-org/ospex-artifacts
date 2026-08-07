@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-08-05-mlb-sd-ari-contest-86-first-model-decision-lifecycle",
+  "generatedAt": "2026-08-07T15:24:37Z",
+  "sourceLedger": {
+    "sha256": "f06ba1448b48e0e2e44fe8c7b78c12a8b3993196c04fd7b33eb00b953698d93e",
+    "bytes": 62351,
+    "lineCount": 17,
+    "finalRecordContentSha256": "047ee586e690fa941d4ab096dd92ce2304099d3bfb2dfe61fda495ee89a56d83"
+  },
+  "benchmarkRunArtifact": {
+    "sha256": "1ca200c556355b906795a0076de257b75e38f9674300879a36635e207fe92a8f",
+    "lineCount": 376,
+    "runId": "smoke-v0-2026-08-05-dc5c82"
+  },
+  "bareSourceCommits": {
+    "benchmark": "ecaf5e05ce47867b67591c3a185829ac3f91741e",
+    "marketMakerExecution": "d7982bca406f0e2d290a9e596bd8cb27bd19c998",
+    "marketMakerCurrentMainAtFinalization": "5d55aefe71632d228922223170345aaa612c35ce",
+    "sdkCli": "b171a4d3490635413362ae55a90f4f9c853a727c"
+  },
+  "sdkCliVersion": "0.10.1",
+  "sourceModification": "none",
+  "privateSourceNamesAndLocationsOmitted": true
+}
