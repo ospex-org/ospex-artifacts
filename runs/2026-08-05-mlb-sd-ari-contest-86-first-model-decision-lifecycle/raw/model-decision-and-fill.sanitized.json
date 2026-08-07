@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-08-05-mlb-sd-ari-contest-86-first-model-decision-lifecycle",
+  "generatedAt": "2026-08-07T15:24:37Z",
+  "benchmarkEvidence": {
+    "runId": "smoke-v0-2026-08-05-dc5c82",
+    "cohortId": "smoke-v0-2026-08-05",
+    "label": "SMOKE_V0_NOT_A_COHORT",
+    "participantId": "openai-gpt-5.6-sol",
+    "benchmarkResponseAt": "2026-08-05T05:34:15.743Z",
+    "runArtifactSha256": "1ca200c556355b906795a0076de257b75e38f9674300879a36635e207fe92a8f",
+    "decisionRawLineSha256": "c484acc0cd0b903f51f7994b430b535bbb45a9e8d357d05a57f7036e04027b44",
+    "slateSha256": "4f18d0d22ac23afe81faa54b71dfa5900c7ed7b418489599d8305150cb22bcc5",
+    "gameSha256": "960b6ed08ee13bd324ff65716fe419508895d92f1db826a5ebb62fa79d4b2edf",
+    "bundleSha256": "9956824f1594081819f1ee64fcc2f8ab5c2411a9eebbfe1d760c6c4a5d1508a2"
+  },
+  "decision": {
+    "market": "moneyline",
+    "selection": "San Diego Padres",
+    "side": "away",
+    "line": null,
+    "observedDecimal": "1.8547",
+    "probabilities": {
+      "win": 0.5213,
+      "push": 0,
+      "loss": 0.4787
+    },
+    "confidence": 0.53,
+    "wouldAbstain": true,
+    "selectedForExecution": true,
+    "executionPolicy": "fixed-moneyline-total",
+    "requestAt": "2026-08-05T05:34:02.016Z",
+    "responseAt": "2026-08-05T05:34:15.743Z",
+    "outcome": "valid"
+  },
+  "quoteAndFill": {
+    "speculationId": "234",
+    "commitmentHash": "0x038a20a9fa51dce1cf7b28ae9b461eb1ce9d10aaad1981d6b4cf8f9211754856",
+    "makerQuoteAtFillTime": {
+      "commitmentHash": "0x038a20a9fa51dce1cf7b28ae9b461eb1ce9d10aaad1981d6b4cf8f9211754856",
+      "makerSide": "home",
+      "makerOddsTick": 215,
+      "makerDecimal": "2.15",
+      "takerOddsTick": 187,
+      "takerDecimal": "1.87",
+      "makerRiskWei6": "1000000",
+      "createdAtUTC": "2026-08-05T07:20:17.645027Z",
+      "expiryUTC": "2026-08-05T07:25:17Z"
+    },
+    "oppositeQuoteAtFillTime": {
+      "commitmentHash": "0x458c494831cd886cbdb1bfa347e66528e69ae973513b95ed7ebd487a3e19fda3",
+      "makerSide": "away",
+      "makerOddsTick": 195,
+      "makerDecimal": "1.95",
+      "takerOddsTick": 205,
+      "takerDecimal": "2.05",
+      "makerRiskWei6": "1000000",
+      "createdAtUTC": "2026-08-05T07:20:18.048649Z",
+      "expiryUTC": "2026-08-05T07:25:17Z"
+    },
+    "requestedModelRiskUSDC": "1.000000",
+    "actualModelRiskWei6": "999925",
+    "actualModelRiskUSDC": "0.999925",
+    "actualMakerRiskWei6": "869500",
+    "actualMakerRiskUSDC": "0.869500",
+    "fillTxHash": "0xbe9236c17953d7c83822d188d9fde69fea9bcbe8889fd42214e5b8878c7c0cea",
+    "fillBlockNumber": "91473035",
+    "fillConfirmedAt": "2026-08-05T07:22:59.000Z",
+    "modelPositionId": "234_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+    "makerPositionId": "234_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_1",
+    "exactFillOddsCorrection": {
+      "makerOddsTick": 215,
+      "makerDecimal": "2.15",
+      "makerAmerican": "+115",
+      "takerOddsTick": 187,
+      "takerDecimalExactReadback": "1.8695652173913042",
+      "takerDecimalRoundedPreview": "1.87",
+      "takerAmerican": "-115"
+    },
+    "projectionConverged": true
+  },
+  "outcome": {
+    "officialFinal": {
+      "awayScore": 4,
+      "homeScore": 10,
+      "officialFinalOutAt": "2026-08-06T04:36:03.969Z",
+      "source": "MLB Stats API",
+      "status": "Final"
+    },
+    "onchainFinal": {
+      "awayScore": 4,
+      "contestStatus": "scored",
+      "contestStatusRaw": 2,
+      "homeScore": 10,
+      "matchedOfficialFinal": true
+    },
+    "winSide": "home",
+    "modelPosition": {
+      "claimed": false,
+      "disposition": "settled_losing_position_closed_nonclaimable",
+      "payoutUSDC": "0.000000",
+      "payoutWei6": "0",
+      "positionId": "234_0x16dc5d67d080a5521ef2c79680dbfc2abf724d30_0",
+      "positionType": 0,
+      "profitIfWonUSDC": "0.869500",
+      "profitIfWonWei6": "869500",
+      "riskUSDC": "0.999925",
+      "riskWei6": "999925",
+      "side": "away",
+      "team": "San Diego Padres"
+    },
+    "makerPosition": {
+      "claimEventPayoutWei6": "1869425",
+      "claimed": true,
+      "decimalOdds": "2.15",
+      "grossPayoutUSDC": "1.869425",
+      "grossPayoutWei6": "1869425",
+      "positionId": "234_0x5316fa54c170d1927f30d1a497ac9e85e3826a9b_1",
+      "positionType": 1,
+      "profitUSDC": "0.999925",
+      "profitWei6": "999925",
+      "riskUSDC": "0.869500",
+      "riskWei6": "869500",
+      "side": "home",
+      "team": "Arizona Diamondbacks",
+      "usdcBalanceAfterWei6": "284195295",
+      "usdcBalanceBeforeWei6": "282325870",
+      "usdcBalanceDeltaWei6": "1869425"
+    }
+  }
+}

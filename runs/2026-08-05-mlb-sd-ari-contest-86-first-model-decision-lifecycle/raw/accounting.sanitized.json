@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-08-05-mlb-sd-ari-contest-86-first-model-decision-lifecycle",
+  "generatedAt": "2026-08-07T17:02:28Z",
+  "balanceEvidence": {
+    "openingBlockNumber": "91472331",
+    "finalBlockNumber": "91525278",
+    "method": "Polygon USDC balanceOf readback at exact blocks plus receipt-log decoding"
+  },
+  "matchedPrincipal": {
+    "escrowedAndRecoveredWei6": "1869425",
+    "escrowedAndRecoveredUSDC": "1.869425",
+    "byRoleBasis": "escrow-contribution",
+    "byRole": {
+      "flow-taker": {
+        "wei6": "999925",
+        "USDC": "0.999925"
+      },
+      "market-maker-a": {
+        "wei6": "869500",
+        "USDC": "0.869500"
+      },
+      "market-maker-b": {
+        "wei6": "0",
+        "USDC": "0.000000"
+      }
+    },
+    "reconciled": true
+  },
+  "claimPayouts": {
+    "aggregateWei6": "1869425",
+    "aggregateUSDC": "1.869425",
+    "byRoleBasis": "claim-payout-recipient",
+    "byRole": {
+      "flow-taker": {
+        "wei6": "0",
+        "USDC": "0.000000"
+      },
+      "market-maker-a": {
+        "wei6": "1869425",
+        "USDC": "1.869425"
+      },
+      "market-maker-b": {
+        "wei6": "0",
+        "USDC": "0.000000"
+      }
+    },
+    "receiptObservationComplete": true
+  },
+  "protocolFees": {
+    "aggregateWei6": "1500000",
+    "aggregateUSDC": "1.500000",
+    "expectedUSDC": "1.500000",
+    "feeReceiver": "0xdac630ae52b868ff0a180458efb9ac88e7425114",
+    "byRole": {
+      "flow-taker": {
+        "wei6": "1250000",
+        "USDC": "1.250000"
+      },
+      "market-maker-a": {
+        "wei6": "250000",
+        "USDC": "0.250000"
+      },
+      "market-maker-b": {
+        "wei6": "0",
+        "USDC": "0.000000"
+      }
+    },
+    "events": [
+      {
+        "feeType": "ContestCreation",
+        "txHash": "0xf1d5265334bbfb572d6d2f9d82da1d6fb94323a85da1473c001c64ae414f2fd4",
+        "blockNumber": "91472332",
+        "aggregateWei6": "1000000",
+        "aggregateUSDC": "1.000000",
+        "transfers": [
+          {
+            "payerRole": "flow-taker",
+            "wei6": "1000000",
+            "USDC": "1.000000"
+          }
+        ]
+      },
+      {
+        "feeType": "SpeculationCreation",
+        "txHash": "0xbe9236c17953d7c83822d188d9fde69fea9bcbe8889fd42214e5b8878c7c0cea",
+        "blockNumber": "91473035",
+        "aggregateWei6": "500000",
+        "aggregateUSDC": "0.500000",
+        "transfers": [
+          {
+            "payerRole": "flow-taker",
+            "wei6": "250000",
+            "USDC": "0.250000"
+          },
+          {
+            "payerRole": "market-maker-a",
+            "wei6": "250000",
+            "USDC": "0.250000"
+          }
+        ]
+      }
+    ],
+    "reconciled": true
+  },
+  "roleBalanceReconciliation": {
+    "flow-taker": {
+      "initialUSDCWei6": "238459900",
+      "initialUSDC": "238.459900",
+      "escrowContributionWei6": "999925",
+      "escrowContributionUSDC": "0.999925",
+      "claimPayoutWei6": "0",
+      "claimPayoutUSDC": "0.000000",
+      "positionPnlWei6": "-999925",
+      "positionPnlUSDC": "-0.999925",
+      "protocolFeeWei6": "1250000",
+      "protocolFeeUSDC": "1.250000",
+      "finalUSDCWei6": "236209975",
+      "finalUSDC": "236.209975",
+      "wholeRunDeltaWei6": "-2249925",
+      "wholeRunDeltaUSDC": "-2.249925",
+      "reconciled": true
+    },
+    "market-maker-a": {
+      "initialUSDCWei6": "283445370",
+      "initialUSDC": "283.445370",
+      "escrowContributionWei6": "869500",
+      "escrowContributionUSDC": "0.869500",
+      "claimPayoutWei6": "1869425",
+      "claimPayoutUSDC": "1.869425",
+      "positionPnlWei6": "999925",
+      "positionPnlUSDC": "0.999925",
+      "protocolFeeWei6": "250000",
+      "protocolFeeUSDC": "0.250000",
+      "finalUSDCWei6": "284195295",
+      "finalUSDC": "284.195295",
+      "wholeRunDeltaWei6": "749925",
+      "wholeRunDeltaUSDC": "0.749925",
+      "reconciled": true
+    },
+    "market-maker-b": {
+      "initialUSDCWei6": "269697562",
+      "initialUSDC": "269.697562",
+      "escrowContributionWei6": "0",
+      "escrowContributionUSDC": "0.000000",
+      "claimPayoutWei6": "0",
+      "claimPayoutUSDC": "0.000000",
+      "positionPnlWei6": "0",
+      "positionPnlUSDC": "0.000000",
+      "protocolFeeWei6": "0",
+      "protocolFeeUSDC": "0.000000",
+      "finalUSDCWei6": "269697562",
+      "finalUSDC": "269.697562",
+      "wholeRunDeltaWei6": "0",
+      "wholeRunDeltaUSDC": "0.000000",
+      "reconciled": true
+    }
+  },
+  "aggregateRoleBalanceDeltaWei6": "-1500000",
+  "aggregateRoleBalanceDeltaUSDC": "-1.500000",
+  "unexplainedUSDC": "0.000000",
+  "boundary": "The market-maker's 0.999925 USDC position profit is distinct from its 0.749925 USDC whole-run balance gain after its 0.250000 USDC protocol fee."
+}

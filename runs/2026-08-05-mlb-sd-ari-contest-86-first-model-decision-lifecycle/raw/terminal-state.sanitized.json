@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-08-05-mlb-sd-ari-contest-86-first-model-decision-lifecycle",
+  "generatedAt": "2026-08-07T15:24:37Z",
+  "terminalZeroAt": "2026-08-06T05:06:51.000Z",
+  "terminalVerifiedAt": "2026-08-06T05:09:03.000Z",
+  "achievedAtBlock": "91525190",
+  "verifiedAtBlock": "91525278",
+  "openCommitments": 0,
+  "activePositions": 0,
+  "pendingSettle": 0,
+  "claimable": 0,
+  "allSixAllowancesZero": true,
+  "writerProcessCount": 0,
+  "wallets": [
+    {
+      "activePositions": 0,
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "claimable": 0,
+      "claimablePayoutWei6": "0",
+      "nonceLatest": 534,
+      "noncePending": 534,
+      "openCommitments": 0,
+      "pendingPayoutWei6": "0",
+      "pendingSettle": 0,
+      "positionModuleAllowanceWei6": "0",
+      "role": "makerA",
+      "treasuryModuleAllowanceWei6": "0",
+      "usdcBalanceWei6": "284195295"
+    },
+    {
+      "activePositions": 0,
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "claimable": 0,
+      "claimablePayoutWei6": "0",
+      "nonceLatest": 631,
+      "noncePending": 631,
+      "openCommitments": 0,
+      "pendingPayoutWei6": "0",
+      "pendingSettle": 0,
+      "positionModuleAllowanceWei6": "0",
+      "role": "taker",
+      "treasuryModuleAllowanceWei6": "0",
+      "usdcBalanceWei6": "236209975"
+    },
+    {
+      "activePositions": 0,
+      "address": "0x4fa0a5aa3187517efc320aac7d33cd6115cc7482",
+      "claimable": 0,
+      "claimablePayoutWei6": "0",
+      "nonceLatest": 663,
+      "noncePending": 663,
+      "openCommitments": 0,
+      "pendingPayoutWei6": "0",
+      "pendingSettle": 0,
+      "positionModuleAllowanceWei6": "0",
+      "role": "makerB",
+      "treasuryModuleAllowanceWei6": "0",
+      "usdcBalanceWei6": "269697562"
+    }
+  ],
+  "historicalLosingPositionDisposition": "The taker position struct remains historical with claimed=false, but the settled losing side is not active, pending, or claimable."
+}
