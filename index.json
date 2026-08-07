@@ -1,10 +1,11 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-08-07T15:24:55Z",
+  "generatedAt": "2026-08-07T17:15:34Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
+      "runs/2026-08-06-mlb-sd-ari-contest-87-four-model-eight-fill-terminal-zero/evidence.json",
       "runs/2026-08-05-mlb-sd-ari-contest-86-first-model-decision-lifecycle/evidence.json",
       "runs/2026-07-27-mlb-five-game-incomplete-safe-stop/evidence.json",
       "runs/2026-07-26-mlb-15-game-full-slate-live-green/evidence.json",
@@ -13,8 +14,7 @@
       "runs/2026-07-21-mlb-min-cle-contest-50-r5-repeatability-night2/evidence.json",
       "runs/2026-07-20-mlb-nym-mil-contest-49-r5-green-night/evidence.json",
       "runs/2026-07-20-mlb-min-cle-contest-48-r5-green-night/evidence.json",
-      "runs/2026-07-11-mve-phase1-block-l-two-contest-role-isolation/evidence.json",
-      "runs/2026-07-10-mve-phase1-block-k-six-game-two-maker/evidence.json"
+      "runs/2026-07-11-mve-phase1-block-l-two-contest-role-isolation/evidence.json"
     ],
     "release-acceptance": [
       "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.json"
@@ -22,6 +22,17 @@
     "daily-digest": []
   },
   "recentArtifacts": [
+    {
+      "artifactId": "2026-08-06-mlb-sd-ari-contest-87-four-model-eight-fill-terminal-zero",
+      "artifactType": "run",
+      "dataPath": "runs/2026-08-06-mlb-sd-ari-contest-87-four-model-eight-fill-terminal-zero/evidence.json",
+      "date": "2026-08-06",
+      "network": "polygon",
+      "rawPath": "runs/2026-08-06-mlb-sd-ari-contest-87-four-model-eight-fill-terminal-zero/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-08-06-mlb-sd-ari-contest-87-four-model-eight-fill-terminal-zero/summary.md",
+      "publishedAt": "2026-08-07T15:33:04Z"
+    },
     {
       "artifactId": "2026-08-05-mlb-sd-ari-contest-86-first-model-decision-lifecycle",
       "artifactType": "run",
@@ -696,9 +707,9 @@
       "scope": "year",
       "year": 2026,
       "path": "archive/2026/index.json",
-      "artifactCount": 60,
+      "artifactCount": 61,
       "oldestPublishedAt": "2026-05-20T02:48:35Z",
-      "newestPublishedAt": "2026-08-07T15:24:37Z"
+      "newestPublishedAt": "2026-08-07T15:33:04Z"
     }
   ]
 }

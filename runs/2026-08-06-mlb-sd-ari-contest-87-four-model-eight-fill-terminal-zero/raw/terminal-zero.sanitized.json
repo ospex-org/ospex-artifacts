@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-08-06-mlb-sd-ari-contest-87-four-model-eight-fill-terminal-zero",
+  "generatedAt": "2026-08-07T12:05:36.170738Z",
+  "publishedReadbackAtUtc": "2026-08-07T15:33:04Z",
+  "status": "TERMINAL_ZERO",
+  "ok": true,
+  "contestId": "87",
+  "gameId": "6262fc88-a4a1-4434-8343-7af87dd12a1f",
+  "score": {
+    "away": 5,
+    "home": 1,
+    "status": "Scored"
+  },
+  "speculations": {
+    "235": {
+      "status": "1",
+      "winner": "away"
+    },
+    "236": {
+      "status": "1",
+      "winner": "under"
+    }
+  },
+  "durableControlledFillCompletions": 8,
+  "openCommitments": 0,
+  "controllerProcesses": [],
+  "wallets": [
+    {
+      "role": "Anthropic",
+      "address": "0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5",
+      "activePositions": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "positionAllowanceRaw": "998000113",
+      "treasuryAllowanceRaw": "0",
+      "finalUsdcRaw": "99952328"
+    },
+    {
+      "role": "OpenAI",
+      "address": "0xce3f6f70ac9510633e98f424233b6c7bf0d21e98",
+      "activePositions": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "positionAllowanceRaw": "998000187",
+      "treasuryAllowanceRaw": "0",
+      "finalUsdcRaw": "99952402"
+    },
+    {
+      "role": "Gemini",
+      "address": "0x49306d4394c3455d7e52acb4d9caa7d39b8a4c17",
+      "activePositions": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "positionAllowanceRaw": "998000170",
+      "treasuryAllowanceRaw": "0",
+      "finalUsdcRaw": "99952385"
+    },
+    {
+      "role": "xAI",
+      "address": "0x4537253bd1fdc4101a90ccf396b0307d3cacda67",
+      "activePositions": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "positionAllowanceRaw": "998000187",
+      "treasuryAllowanceRaw": "0",
+      "finalUsdcRaw": "99952402"
+    },
+    {
+      "role": "Maker A",
+      "address": "0x5316fa54c170d1927f30d1a497ac9e85e3826a9b",
+      "activePositions": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "positionAllowanceRaw": "0",
+      "treasuryAllowanceRaw": "0",
+      "finalUsdcRaw": "284385778"
+    },
+    {
+      "role": "Flow",
+      "address": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+      "activePositions": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "positionAllowanceRaw": "0",
+      "treasuryAllowanceRaw": "0",
+      "finalUsdcRaw": "234209975"
+    }
+  ],
+  "totals": {
+    "activePositions": 0,
+    "pendingSettle": 0,
+    "claimable": 0,
+    "openCommitments": 0,
+    "controllerProcesses": 0,
+    "datedNonzeroAllowances": 0
+  },
+  "allowanceBoundary": "For this artifact-specific terminal-zero boundary, four reusable model PositionModule allowances are outside run-dated permission cleanup. Flow and Maker A run-dated Position/Treasury allowances and all model Treasury allowances are zero. This is not asserted as a repository-wide policy.",
+  "economicReconciliation": {
+    "models": [
+      {
+        "model": "Anthropic",
+        "finalUSDC": "99.952328",
+        "deltaUSDC": "-0.047672",
+        "record": "one win, one loss"
+      },
+      {
+        "model": "OpenAI",
+        "finalUSDC": "99.952402",
+        "deltaUSDC": "-0.047598",
+        "record": "one win, one loss"
+      },
+      {
+        "model": "Gemini",
+        "finalUSDC": "99.952385",
+        "deltaUSDC": "-0.047615",
+        "record": "one win, one loss"
+      },
+      {
+        "model": "xAI",
+        "finalUSDC": "99.952402",
+        "deltaUSDC": "-0.047598",
+        "record": "one win, one loss"
+      }
+    ],
+    "aggregateModelDeltaUSDC": "-0.190483",
+    "makerDeltaUSDC": "+0.190483",
+    "flowCreationFeePathDeltaUSDC": "-2.000000",
+    "gasAsset": "POL",
+    "gasExcludedFromUsdcReconciliation": true,
+    "flowCreationFeePath": {
+      "contestCreationFeeUSDC": "1.000000",
+      "speculationCreationFeesUSDC": "1.000000",
+      "aggregateProtocolFeesUSDC": "2.000000",
+      "flowSeedPrincipalUSDC": "0.040000",
+      "flowSeedClaimPayoutUSDC": "0.040000",
+      "flowSeedPositionPnlUSDC": "0.000000",
+      "setupTxHashes": [
+        "0x8ac20616fa05472d7ed0d52c64070c135e37ccff40f53b5b6def8f52828ac95b",
+        "0x36331223bac447f361da6f48c0486f78323732072ef1b2c5b96a41164029a68b",
+        "0x8ef838c055a3289a27ab11d7f916106887c974c3c11d44790e34bb766d371e72"
+      ]
+    },
+    "interpretation": "Each model finished one win and one loss. The 0.000074 USDC range across model deltas is economically non-discriminative in this one-contest smoke and is not a model ranking."
+  },
+  "sourceDigests": {
+    "permissionRevocationManifestSha256": "0e26e7df49d75e646a08340d0580a858540377b2046eb4205856a69fcbf38541",
+    "postgameActionsSha256": "b1b65b587ae3a0b0a754a366267df8a59a5be7f9fb8d0f338a29c5216927d3ef",
+    "postgameLatestSha256": "3862d6d645e4ae4dad34a717865d4e4e3e92c91e942d85694ad32dfa594a54c6",
+    "readinessLatestSha256": "34c61e422610b5324c281acd1b2b745882c5749acf036b93fcd6ab091c729e6b"
+  },
+  "allowanceBoundaryDefinition": {
+    "scope": "run-specific-terminal-zero-boundary",
+    "modelPositionAllowances": "Four reusable PositionModule allowances remain nonzero and are explicitly outside run-dated permission cleanup.",
+    "flowAndMakerDatedPositionTreasuryAllowances": "zero",
+    "modelTreasuryAllowances": "zero",
+    "repositoryWidePolicy": false
+  }
+}

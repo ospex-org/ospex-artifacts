@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-08-06-mlb-sd-ari-contest-87-four-model-eight-fill-terminal-zero",
+  "generatedAt": "2026-08-07T15:33:04Z",
+  "gateVerdict": {
+    "b1RoleIsolatedLifecycle": "complete-with-disclosed-defects",
+    "b2SevenDayCanonicalCohort": "not-evidenced-by-this-run"
+  },
+  "items": [
+    {
+      "id": "missed-prestart-maker-report",
+      "impact": "The requested report was not sent before Maker startup and is not represented as completed.",
+      "transactionImpact": "none"
+    },
+    {
+      "id": "four-authorized-late-retries",
+      "impact": "The original pass completed four arms and left four no-fill failures. Two authorized retry passes completed the remaining four arms without rewriting or backdating the original records.",
+      "transactionImpact": "four successful late fill transactions, separately timestamped"
+    },
+    {
+      "id": "readiness-field-mismatch",
+      "impact": "The live hook read obsolete scoreEligibleAtUtc instead of eligibleAtUtc, causing 83 failed ticks and delaying requestScore by 7:08:58.842011. No premature or duplicate score request was sent.",
+      "transactionImpact": "none before the single successful score request"
+    },
+    {
+      "id": "claim-side-required",
+      "impact": "The first claim command omitted the required upper/lower type. It failed before submission; claim-side derivation was repaired and all winning claims completed.",
+      "transactionImpact": "failed command emitted no transaction"
+    },
+    {
+      "id": "late-indexed-flow-claim",
+      "impact": "Flow total support became claimable after an initial empty read. Terminal readback found and claimed it before completion.",
+      "transactionImpact": "one successful late-claim transaction is included"
+    },
+    {
+      "id": "permission-revocation-preview",
+      "impact": "The first revocation preview correctly failed because the setup command cannot lower allowances. Explicit zero approvals then revoked both dated permissions.",
+      "transactionImpact": "failed preview emitted no transaction"
+    },
+    {
+      "id": "uncommitted-control-plane-repairs",
+      "impact": "Run-recovery repairs were local and uncommitted at evidence freeze. The execution-control-plane bare source commit therefore identifies the committed baseline, not the exact repaired runtime.",
+      "transactionImpact": "none"
+    },
+    {
+      "id": "uncommitted-benchmark-game-selection",
+      "impact": "The benchmark smoke used local uncommitted exact-game selection support on top of the pinned committed baseline. The aggregate benchmark source artifact SHA-256 binds the emitted decisions, but the bare commit alone does not reproduce the invocation.",
+      "transactionImpact": "none"
+    },
+    {
+      "id": "closing-odds-absent",
+      "impact": "No closing-odds or CLV artifact exists for this run.",
+      "transactionImpact": "none"
+    }
+  ]
+}

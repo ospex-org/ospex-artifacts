@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-08-06-mlb-sd-ari-contest-87-four-model-eight-fill-terminal-zero",
+  "capturedAtUtc": "2026-08-07T19:13:22Z",
+  "sourceAuthority": "Official MLB schedule feed",
+  "source": "MLB Stats API",
+  "publicEndpoint": "https://statsapi.mlb.com/api/v1/schedule",
+  "query": {
+    "sportId": 1,
+    "date": "2026-08-06",
+    "hydrate": "linescore"
+  },
+  "joinPolicy": "Exact away team, home team, and scheduled UTC start against frozen Ospex canonical identity; the source gamePk is retained as supplemental public evidence.",
+  "games": [
+    {
+      "contestId": "87",
+      "sourceGamePk": 825053,
+      "awayTeam": "San Diego Padres",
+      "homeTeam": "Arizona Diamondbacks",
+      "scheduledStartTimeUtc": "2026-08-07T01:40:00Z",
+      "status": "Final",
+      "awayScore": 5,
+      "homeScore": 1,
+      "officialFinalOutAtUtc": "2026-08-07T04:27:58.497000Z",
+      "finalOutTimestampSource": "MLB live feed last completed play endTime",
+      "matchedExactly": true,
+      "matchedOfficialFinal": true
+    }
+  ]
+}

@@ -1,0 +1,495 @@
+{
+  "schemaVersion": 1,
+  "artifactId": "2026-08-06-mlb-sd-ari-contest-87-four-model-eight-fill-terminal-zero",
+  "generatedAt": "2026-08-07T15:33:04Z",
+  "frozenPlanSha256": "91654424daa58ba05e879db6aa6bb38cc1ba53770fa339daf6a03b572732c488",
+  "runId": "smoke-v0-2026-08-06-d59e01",
+  "cohortId": "smoke-v0-2026-08-06-mve-adapter",
+  "gameId": "6262fc88-a4a1-4434-8343-7af87dd12a1f",
+  "contestId": "87",
+  "marketCount": 2,
+  "modelCount": 4,
+  "plannedArmCount": 8,
+  "durableCompletedArmCount": 8,
+  "requestedAggregateModelRiskUSDC": "8.000000",
+  "actualAggregateModelRiskUSDC": "7.999343",
+  "originalPassCompletedCount": 4,
+  "authorizedLateRetryCompletedCount": 4,
+  "fills": [
+    {
+      "fillId": "45339d320dc1817fb0ffb450",
+      "model": "Anthropic",
+      "benchmarkParticipantId": "anthropic-claude-fable-5",
+      "roleParticipantId": "lab-anthropic",
+      "modelAddress": "0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5",
+      "market": "moneyline",
+      "speculationId": "235",
+      "selection": "Arizona Diamondbacks",
+      "line": null,
+      "referenceQuote": {
+        "line": null,
+        "sides": {
+          "Arizona Diamondbacks": 1.93458,
+          "San Diego Padres": 1.9434
+        }
+      },
+      "requestAt": "2026-08-06T20:11:33.631Z",
+      "benchmarkResponseAt": "2026-08-06T20:11:56.217Z",
+      "requestedTakerRiskRaw": "1000000",
+      "actualTakerRiskRaw": "999972",
+      "actualTakerRiskUSDC": "0.999972",
+      "actualMakerRiskRaw": "925900",
+      "actualMakerRiskUSDC": "0.9259",
+      "commitmentHash": "0x57d932293a9132f882d6510fe7b4889b47c63ff15c0bc05c25a493f36ae2086b",
+      "fillTxHash": "0x27cbde649366071491f7812561dfc68f06e378d7186cc7f03750b293b04ff974",
+      "fillBlockNumber": "91565794",
+      "completedAtUtc": "2026-08-06T22:02:09.998274Z",
+      "positionSignalsConverged": true,
+      "entryTiming": "original-pass-completion",
+      "retryPass": null,
+      "noBackdate": null,
+      "durableCompletionSha256": "c3f55db869cb23d6f10b943eced5e0358f3fcbc3166a6fa1dcf59e2fbac4e2fa",
+      "decisionProvenance": {
+        "executionPolicy": "fixed-moneyline-total",
+        "selectedForExecution": true,
+        "wouldAbstain": true,
+        "confidence": 0.35,
+        "probabilities": {
+          "win": 0.505,
+          "push": 0,
+          "loss": 0.495
+        },
+        "requestAt": "2026-08-06T20:11:33.631Z",
+        "responseAt": "2026-08-06T20:11:56.217Z",
+        "binding": "aggregate-benchmark-source-artifact-sha256",
+        "benchmarkSourceArtifactSha256": "f115c25cab8714d4f445df8dd080ad5e11c6a6ee57699a440942c25b3f469025"
+      }
+    },
+    {
+      "fillId": "ef943e1e4405b6cc7f073eaf",
+      "model": "Gemini",
+      "benchmarkParticipantId": "google-gemini-3.1-pro-preview",
+      "roleParticipantId": "lab-gemini",
+      "modelAddress": "0x49306d4394c3455d7e52acb4d9caa7d39b8a4c17",
+      "market": "moneyline",
+      "speculationId": "235",
+      "selection": "San Diego Padres",
+      "line": null,
+      "referenceQuote": {
+        "line": null,
+        "sides": {
+          "Arizona Diamondbacks": 1.93458,
+          "San Diego Padres": 1.9434
+        }
+      },
+      "requestAt": "2026-08-06T20:11:33.632Z",
+      "benchmarkResponseAt": "2026-08-06T20:11:54.419Z",
+      "requestedTakerRiskRaw": "1000000",
+      "actualTakerRiskRaw": "999915",
+      "actualTakerRiskUSDC": "0.999915",
+      "actualMakerRiskRaw": "952300",
+      "actualMakerRiskUSDC": "0.9523",
+      "commitmentHash": "0xb13afe2bf75382bd2a1875368b2826ba4b46894a3345d4c5e4211ae38cd10bad",
+      "fillTxHash": "0xd6a1022179f21de07ae7d85aa010ecf055d4e858b945b62b6218c9f7110daee1",
+      "fillBlockNumber": "91569112",
+      "completedAtUtc": "2026-08-06T23:25:04.511029Z",
+      "positionSignalsConverged": true,
+      "entryTiming": "authorized-late-retry",
+      "retryPass": 1,
+      "noBackdate": true,
+      "durableCompletionSha256": "4b79cb6de41db476a6a7ed99a15d639ae6d78f8b9bbc84840e9b414c4d32c77d",
+      "decisionProvenance": {
+        "executionPolicy": "fixed-moneyline-total",
+        "selectedForExecution": true,
+        "wouldAbstain": false,
+        "confidence": 0.5,
+        "probabilities": {
+          "win": 0.5,
+          "push": 0,
+          "loss": 0.5
+        },
+        "requestAt": "2026-08-06T20:11:33.632Z",
+        "responseAt": "2026-08-06T20:11:54.419Z",
+        "binding": "aggregate-benchmark-source-artifact-sha256",
+        "benchmarkSourceArtifactSha256": "f115c25cab8714d4f445df8dd080ad5e11c6a6ee57699a440942c25b3f469025"
+      }
+    },
+    {
+      "fillId": "8eaaa4b7ce58793a7c41cf2b",
+      "model": "OpenAI",
+      "benchmarkParticipantId": "openai-gpt-5.6-sol",
+      "roleParticipantId": "lab-openai",
+      "modelAddress": "0xce3f6f70ac9510633e98f424233b6c7bf0d21e98",
+      "market": "moneyline",
+      "speculationId": "235",
+      "selection": "Arizona Diamondbacks",
+      "line": null,
+      "referenceQuote": {
+        "line": null,
+        "sides": {
+          "Arizona Diamondbacks": 1.93458,
+          "San Diego Padres": 1.9434
+        }
+      },
+      "requestAt": "2026-08-06T20:11:33.628Z",
+      "benchmarkResponseAt": "2026-08-06T20:11:49.879Z",
+      "requestedTakerRiskRaw": "1000000",
+      "actualTakerRiskRaw": "999898",
+      "actualTakerRiskUSDC": "0.999898",
+      "actualMakerRiskRaw": "943300",
+      "actualMakerRiskUSDC": "0.9433",
+      "commitmentHash": "0xab74abd1a3d7d5a5bc22f09f7f48a6d89d5d5c052b71d47730bda55dd063b5e7",
+      "fillTxHash": "0x9fda4f46523abc6a35bbd58ce2b08965ecc52738cbda178165633c3fe1befdb0",
+      "fillBlockNumber": "91566792",
+      "completedAtUtc": "2026-08-06T22:33:29.937919Z",
+      "positionSignalsConverged": true,
+      "entryTiming": "original-pass-completion",
+      "retryPass": null,
+      "noBackdate": null,
+      "durableCompletionSha256": "b7da92ae3a922db7cc4c0b11f0b653f7857908e6c59a3e17e22d360b32621752",
+      "decisionProvenance": {
+        "executionPolicy": "fixed-moneyline-total",
+        "selectedForExecution": true,
+        "wouldAbstain": true,
+        "confidence": 0.5,
+        "probabilities": {
+          "win": 0.501,
+          "push": 0,
+          "loss": 0.499
+        },
+        "requestAt": "2026-08-06T20:11:33.628Z",
+        "responseAt": "2026-08-06T20:11:49.879Z",
+        "binding": "aggregate-benchmark-source-artifact-sha256",
+        "benchmarkSourceArtifactSha256": "f115c25cab8714d4f445df8dd080ad5e11c6a6ee57699a440942c25b3f469025"
+      }
+    },
+    {
+      "fillId": "9e646f8acd3a537c1495c5d9",
+      "model": "xAI",
+      "benchmarkParticipantId": "xai-grok-4.5",
+      "roleParticipantId": "lab-xai",
+      "modelAddress": "0x4537253bd1fdc4101a90ccf396b0307d3cacda67",
+      "market": "moneyline",
+      "speculationId": "235",
+      "selection": "Arizona Diamondbacks",
+      "line": null,
+      "referenceQuote": {
+        "line": null,
+        "sides": {
+          "Arizona Diamondbacks": 1.93458,
+          "San Diego Padres": 1.9434
+        }
+      },
+      "requestAt": "2026-08-06T20:11:33.633Z",
+      "benchmarkResponseAt": "2026-08-06T20:12:00.297Z",
+      "requestedTakerRiskRaw": "1000000",
+      "actualTakerRiskRaw": "999898",
+      "actualTakerRiskUSDC": "0.999898",
+      "actualMakerRiskRaw": "943300",
+      "actualMakerRiskUSDC": "0.9433",
+      "commitmentHash": "0x0709aff31cbfcd4bce79f7b83dfc65b09efdc50147545b2e6d4f02dca651e39f",
+      "fillTxHash": "0x94cdff539bf2f2e7376e503228ec88d49cfd8a728ba8decafa826f4d30be8e32",
+      "fillBlockNumber": "91569487",
+      "completedAtUtc": "2026-08-06T23:34:25.042172Z",
+      "positionSignalsConverged": true,
+      "entryTiming": "authorized-late-retry",
+      "retryPass": 2,
+      "noBackdate": true,
+      "durableCompletionSha256": "2778474cebe5b457a4ea3d617639f852085c03511cf32345e9d3bfe016c95736",
+      "decisionProvenance": {
+        "executionPolicy": "fixed-moneyline-total",
+        "selectedForExecution": true,
+        "wouldAbstain": true,
+        "confidence": 0.52,
+        "probabilities": {
+          "win": 0.512,
+          "push": 0,
+          "loss": 0.488
+        },
+        "requestAt": "2026-08-06T20:11:33.633Z",
+        "responseAt": "2026-08-06T20:12:00.297Z",
+        "binding": "aggregate-benchmark-source-artifact-sha256",
+        "benchmarkSourceArtifactSha256": "f115c25cab8714d4f445df8dd080ad5e11c6a6ee57699a440942c25b3f469025"
+      }
+    },
+    {
+      "fillId": "a993e29523911e5a0433905b",
+      "model": "Anthropic",
+      "benchmarkParticipantId": "anthropic-claude-fable-5",
+      "roleParticipantId": "lab-anthropic",
+      "modelAddress": "0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5",
+      "market": "total",
+      "speculationId": "236",
+      "selection": "under",
+      "line": 9,
+      "referenceQuote": {
+        "line": 9,
+        "sides": {
+          "over": 1.90909,
+          "under": 1.90909
+        }
+      },
+      "requestAt": "2026-08-06T20:11:33.631Z",
+      "benchmarkResponseAt": "2026-08-06T20:11:56.217Z",
+      "requestedTakerRiskRaw": "1000000",
+      "actualTakerRiskRaw": "999915",
+      "actualTakerRiskUSDC": "0.999915",
+      "actualMakerRiskRaw": "952300",
+      "actualMakerRiskUSDC": "0.9523",
+      "commitmentHash": "0x4ef153735219c24141f1aa1c23054cc6eaf2441780c56467658a76b37fdc65b8",
+      "fillTxHash": "0x29ec0f98c4c9e34f9316006b847cf941f6c43e82aa8f8520281b2f23b84b4f5f",
+      "fillBlockNumber": "91569135",
+      "completedAtUtc": "2026-08-06T23:25:49.995450Z",
+      "positionSignalsConverged": true,
+      "entryTiming": "authorized-late-retry",
+      "retryPass": 1,
+      "noBackdate": true,
+      "durableCompletionSha256": "7cc4b20236aaf40ad656e06586dc2de05a2ef69565e41f3c55398044870cb2b8",
+      "decisionProvenance": {
+        "executionPolicy": "fixed-moneyline-total",
+        "selectedForExecution": true,
+        "wouldAbstain": true,
+        "confidence": 0.3,
+        "probabilities": {
+          "win": 0.465,
+          "push": 0.08,
+          "loss": 0.455
+        },
+        "requestAt": "2026-08-06T20:11:33.631Z",
+        "responseAt": "2026-08-06T20:11:56.217Z",
+        "binding": "aggregate-benchmark-source-artifact-sha256",
+        "benchmarkSourceArtifactSha256": "f115c25cab8714d4f445df8dd080ad5e11c6a6ee57699a440942c25b3f469025"
+      }
+    },
+    {
+      "fillId": "6fc8e3b51cfd9e4ae1a3b95f",
+      "model": "Gemini",
+      "benchmarkParticipantId": "google-gemini-3.1-pro-preview",
+      "roleParticipantId": "lab-gemini",
+      "modelAddress": "0x49306d4394c3455d7e52acb4d9caa7d39b8a4c17",
+      "market": "total",
+      "speculationId": "236",
+      "selection": "over",
+      "line": 9,
+      "referenceQuote": {
+        "line": 9,
+        "sides": {
+          "over": 1.90909,
+          "under": 1.90909
+        }
+      },
+      "requestAt": "2026-08-06T20:11:33.632Z",
+      "benchmarkResponseAt": "2026-08-06T20:11:54.419Z",
+      "requestedTakerRiskRaw": "1000000",
+      "actualTakerRiskRaw": "999915",
+      "actualTakerRiskUSDC": "0.999915",
+      "actualMakerRiskRaw": "952300",
+      "actualMakerRiskUSDC": "0.9523",
+      "commitmentHash": "0xb4623132f1059ac0a4f030ab7eefa6cac44f7f6e1780f2d1d5264a107aa2d047",
+      "fillTxHash": "0x3cfd307b03cca69f5b0380c4ea4e3b37f4d126fefcc75bde06285c3fa83f57e8",
+      "fillBlockNumber": "91569501",
+      "completedAtUtc": "2026-08-06T23:34:57.931762Z",
+      "positionSignalsConverged": true,
+      "entryTiming": "authorized-late-retry",
+      "retryPass": 2,
+      "noBackdate": true,
+      "durableCompletionSha256": "3ac4b0dcdb263e922a1d864fb98b7a207cd5d082b8ea64b2b74ca04dafe753d6",
+      "decisionProvenance": {
+        "executionPolicy": "fixed-moneyline-total",
+        "selectedForExecution": true,
+        "wouldAbstain": false,
+        "confidence": 0.5,
+        "probabilities": {
+          "win": 0.46,
+          "push": 0.08,
+          "loss": 0.46
+        },
+        "requestAt": "2026-08-06T20:11:33.632Z",
+        "responseAt": "2026-08-06T20:11:54.419Z",
+        "binding": "aggregate-benchmark-source-artifact-sha256",
+        "benchmarkSourceArtifactSha256": "f115c25cab8714d4f445df8dd080ad5e11c6a6ee57699a440942c25b3f469025"
+      }
+    },
+    {
+      "fillId": "550b0bf347926ca9f8987b6d",
+      "model": "OpenAI",
+      "benchmarkParticipantId": "openai-gpt-5.6-sol",
+      "roleParticipantId": "lab-openai",
+      "modelAddress": "0xce3f6f70ac9510633e98f424233b6c7bf0d21e98",
+      "market": "total",
+      "speculationId": "236",
+      "selection": "under",
+      "line": 9,
+      "referenceQuote": {
+        "line": 9,
+        "sides": {
+          "over": 1.90909,
+          "under": 1.90909
+        }
+      },
+      "requestAt": "2026-08-06T20:11:33.628Z",
+      "benchmarkResponseAt": "2026-08-06T20:11:49.879Z",
+      "requestedTakerRiskRaw": "1000000",
+      "actualTakerRiskRaw": "999915",
+      "actualTakerRiskUSDC": "0.999915",
+      "actualMakerRiskRaw": "952300",
+      "actualMakerRiskUSDC": "0.9523",
+      "commitmentHash": "0x44a82730dbd85ecd7e76ae2b96fb32a374dd0a407019544aa455cda7d83db64e",
+      "fillTxHash": "0x68fdeba966b20322e059930a51f9074d0af57b076b8fe82617343fe83886d059",
+      "fillBlockNumber": "91567231",
+      "completedAtUtc": "2026-08-06T22:38:04.180237Z",
+      "positionSignalsConverged": true,
+      "entryTiming": "original-pass-completion",
+      "retryPass": null,
+      "noBackdate": null,
+      "durableCompletionSha256": "f9d6a0984cee593244b47a4c95a64ce4eacd3b007b8e6369ac74839e9cea77da",
+      "decisionProvenance": {
+        "executionPolicy": "fixed-moneyline-total",
+        "selectedForExecution": true,
+        "wouldAbstain": true,
+        "confidence": 0.45,
+        "probabilities": {
+          "win": 0.46,
+          "push": 0.08,
+          "loss": 0.46
+        },
+        "requestAt": "2026-08-06T20:11:33.628Z",
+        "responseAt": "2026-08-06T20:11:49.879Z",
+        "binding": "aggregate-benchmark-source-artifact-sha256",
+        "benchmarkSourceArtifactSha256": "f115c25cab8714d4f445df8dd080ad5e11c6a6ee57699a440942c25b3f469025"
+      }
+    },
+    {
+      "fillId": "ee838fa35759150d9c7f3921",
+      "model": "xAI",
+      "benchmarkParticipantId": "xai-grok-4.5",
+      "roleParticipantId": "lab-xai",
+      "modelAddress": "0x4537253bd1fdc4101a90ccf396b0307d3cacda67",
+      "market": "total",
+      "speculationId": "236",
+      "selection": "under",
+      "line": 9,
+      "referenceQuote": {
+        "line": 9,
+        "sides": {
+          "over": 1.90909,
+          "under": 1.90909
+        }
+      },
+      "requestAt": "2026-08-06T20:11:33.633Z",
+      "benchmarkResponseAt": "2026-08-06T20:12:00.297Z",
+      "requestedTakerRiskRaw": "1000000",
+      "actualTakerRiskRaw": "999915",
+      "actualTakerRiskUSDC": "0.999915",
+      "actualMakerRiskRaw": "952300",
+      "actualMakerRiskUSDC": "0.9523",
+      "commitmentHash": "0x102a2d23023a0ea7b32ff30a01fef60eb85bc631907bec5c30127df7021a9824",
+      "fillTxHash": "0xf602c24ae2008cfad66ab883ac3f974ee9637b407a7813262c104c1ac1bca608",
+      "fillBlockNumber": "91567279",
+      "completedAtUtc": "2026-08-06T22:39:20.940582Z",
+      "positionSignalsConverged": true,
+      "entryTiming": "original-pass-completion",
+      "retryPass": null,
+      "noBackdate": null,
+      "durableCompletionSha256": "0e8b4acf4996fbac5e05821b02d4f7bc2df241d8114f1c3e1fc64e5764969763",
+      "decisionProvenance": {
+        "executionPolicy": "fixed-moneyline-total",
+        "selectedForExecution": true,
+        "wouldAbstain": true,
+        "confidence": 0.5,
+        "probabilities": {
+          "win": 0.47,
+          "push": 0.06,
+          "loss": 0.47
+        },
+        "requestAt": "2026-08-06T20:11:33.633Z",
+        "responseAt": "2026-08-06T20:12:00.297Z",
+        "binding": "aggregate-benchmark-source-artifact-sha256",
+        "benchmarkSourceArtifactSha256": "f115c25cab8714d4f445df8dd080ad5e11c6a6ee57699a440942c25b3f469025"
+      }
+    }
+  ],
+  "historicalAttemptLedger": {
+    "failedRecordCount": 6,
+    "reconciledFalseNegativeCount": 2,
+    "originalNoFillFailureCount": 4,
+    "preservedFailedRecords": [
+      {
+        "fillId": "45339d320dc1817fb0ffb450",
+        "model": "Anthropic",
+        "market": "moneyline",
+        "selection": "Arizona Diamondbacks",
+        "observedAt": "2026-08-06T22:02:10.006613Z",
+        "failureType": "KeyError",
+        "reason": "KeyError: 'blockNumber'; reconciliation KeyError: 'blockNumber'",
+        "disposition": "original-transaction-reconciled-to-durable-completion",
+        "retryPass": null
+      },
+      {
+        "fillId": "ef943e1e4405b6cc7f073eaf",
+        "model": "Gemini",
+        "market": "moneyline",
+        "selection": "San Diego Padres",
+        "observedAt": "2026-08-06T22:02:14.224913Z",
+        "failureType": "ControlledFillFailure",
+        "reason": "ControlledFillFailure: commitment identity does not match the plan",
+        "disposition": "no-fill-original-attempt-preserved-then-authorized-late-retry",
+        "retryPass": 1
+      },
+      {
+        "fillId": "8eaaa4b7ce58793a7c41cf2b",
+        "model": "OpenAI",
+        "market": "moneyline",
+        "selection": "Arizona Diamondbacks",
+        "observedAt": "2026-08-06T22:19:38.838223Z",
+        "failureType": "KeyError",
+        "reason": "KeyError: ('6262fc88-a4a1-4434-8343-7af87dd12a1f', 'moneyline')",
+        "disposition": "original-transaction-reconciled-to-durable-completion",
+        "retryPass": null
+      },
+      {
+        "fillId": "9e646f8acd3a537c1495c5d9",
+        "model": "xAI",
+        "market": "moneyline",
+        "selection": "Arizona Diamondbacks",
+        "observedAt": "2026-08-06T22:19:38.853805Z",
+        "failureType": "KeyError",
+        "reason": "KeyError: ('6262fc88-a4a1-4434-8343-7af87dd12a1f', 'moneyline')",
+        "disposition": "no-fill-original-attempt-preserved-then-authorized-late-retry",
+        "retryPass": 2
+      },
+      {
+        "fillId": "a993e29523911e5a0433905b",
+        "model": "Anthropic",
+        "market": "total",
+        "selection": "under",
+        "observedAt": "2026-08-06T22:19:38.867410Z",
+        "failureType": "KeyError",
+        "reason": "KeyError: ('6262fc88-a4a1-4434-8343-7af87dd12a1f', 'total')",
+        "disposition": "no-fill-original-attempt-preserved-then-authorized-late-retry",
+        "retryPass": 1
+      },
+      {
+        "fillId": "6fc8e3b51cfd9e4ae1a3b95f",
+        "model": "Gemini",
+        "market": "total",
+        "selection": "over",
+        "observedAt": "2026-08-06T22:19:38.879749Z",
+        "failureType": "KeyError",
+        "reason": "KeyError: ('6262fc88-a4a1-4434-8343-7af87dd12a1f', 'total')",
+        "disposition": "no-fill-original-attempt-preserved-then-authorized-late-retry",
+        "retryPass": 2
+      }
+    ]
+  },
+  "decisionProvenanceBoundary": "Per-arm confidence, probabilities, wouldAbstain, and fixed-policy selection are sanitized from the collectively hashed benchmark source artifact. No per-arm decision hash is claimed.",
+  "frozenDecisionReplay": {
+    "uniqueModelResponseTimestamps": 4,
+    "responseWindowStartUtc": "2026-08-06T20:11:49.879Z",
+    "responseWindowEndUtc": "2026-08-06T20:12:00.297Z",
+    "responseWindowSeconds": "10.418",
+    "authorizedLateRetryCount": 4,
+    "lateRetriesReuseOriginalModelResponseTimestamps": true,
+    "newBenchmarkResponsesRepresentedByRetryEvidence": 0
+  }
+}
