@@ -9,7 +9,15 @@
       "awayTeam": "San Diego Padres",
       "awayScore": 5,
       "homeTeam": "Arizona Diamondbacks",
-      "homeScore": 1
+      "homeScore": 1,
+      "source": "MLB Stats API",
+      "status": "Final",
+      "capturedAtUtc": "2026-08-07T19:13:22Z",
+      "sourceGamePk": 825053,
+      "scheduledStartTimeUtc": "2026-08-07T01:40:00Z",
+      "officialFinalOutAtUtc": "2026-08-07T04:27:58.497000Z",
+      "matchedOfficialFinal": true,
+      "evidencePath": "raw/final-score-source.sanitized.json"
     },
     "onchainStatus": "Scored",
     "requestTxHash": "0xb92215ea056326b75ea25c55e72540d633d13142442dc8c8d164205d718d775d",
@@ -531,6 +539,14 @@
         "positionAllowanceAfterRaw": "0",
         "treasuryAllowanceAfterRaw": "0"
       }
+    ],
+    "scopeKind": "selected-post-setup-lifecycle-proof-set",
+    "scopeBoundary": "The selected 22-transaction lifecycle receipt readback begins with the eight model fills and excludes three successful setup transactions: contest creation-verification request 0x8ac20616fa05472d7ed0d52c64070c135e37ccff40f53b5b6def8f52828ac95b, Flow self-seed of speculation 235 0x36331223bac447f361da6f48c0486f78323732072ef1b2c5b96a41164029a68b, and Flow self-seed of speculation 236 0x8ef838c055a3289a27ab11d7f916106887c974c3c11d44790e34bb766d371e72. Flow self-matched 0.010000 USDC per side in each speculation (0.020000 USDC principal and 0.020000 USDC later claim payout per speculation), producing 0.000000 USDC position P&L; those setup transactions also account for the 2.000000 USDC creation-fee path.",
+    "excludedSetupTransactionCount": 3,
+    "excludedSetupTxHashes": [
+      "0x8ac20616fa05472d7ed0d52c64070c135e37ccff40f53b5b6def8f52828ac95b",
+      "0x36331223bac447f361da6f48c0486f78323732072ef1b2c5b96a41164029a68b",
+      "0x8ef838c055a3289a27ab11d7f916106887c974c3c11d44790e34bb766d371e72"
     ]
   }
 }

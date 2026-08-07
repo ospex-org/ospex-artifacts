@@ -27,8 +27,20 @@
   "bareSourceCommits": {
     "executionControlPlane": "f6a572da0a79901913804a814c1f0bc6532c586c",
     "marketMaker": "5d55aefe71632d228922223170345aaa612c35ce",
-    "sdkCli": "877c026df9af0e188a1e786cc715a77de0badbca"
+    "sdkCli": "877c026df9af0e188a1e786cc715a77de0badbca",
+    "benchmark": "ecaf5e05ce47867b67591c3a185829ac3f91741e"
   },
   "privateSourceNamesAndLocationsOmitted": true,
-  "providerResponseIdsOmitted": true
+  "providerResponseIdsOmitted": true,
+  "sourceRepositories": {
+    "benchmark": "ospex-org/ospex-benchmark",
+    "marketMaker": "ospex-org/ospex-market-maker",
+    "sdkCli": "ospex-org/ospex-sdk"
+  },
+  "sourceRepositoryVisibility": "public",
+  "localSourceLocationsOmitted": true,
+  "reproducibilityBoundary": {
+    "benchmark": "The benchmark bare commit identifies the committed baseline. The smoke run also used local uncommitted exact-game selection support; the aggregate benchmark source artifact SHA-256 binds the emitted decisions, and the commit alone does not reproduce that invocation.",
+    "executionControlPlane": "The execution-control-plane bare commit identifies the committed baseline. Run-recovery repairs were local and uncommitted at evidence freeze; see deviation uncommitted-control-plane-repairs."
+  }
 }

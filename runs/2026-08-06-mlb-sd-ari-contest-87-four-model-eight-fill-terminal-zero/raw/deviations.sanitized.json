@@ -4,7 +4,7 @@
   "generatedAt": "2026-08-07T15:33:04Z",
   "gateVerdict": {
     "b1RoleIsolatedLifecycle": "complete-with-disclosed-defects",
-    "b2SevenDayCanonicalCohort": "hold"
+    "b2SevenDayCanonicalCohort": "not-evidenced-by-this-run"
   },
   "items": [
     {
@@ -39,7 +39,12 @@
     },
     {
       "id": "uncommitted-control-plane-repairs",
-      "impact": "Run-recovery repairs were local and uncommitted at evidence freeze.",
+      "impact": "Run-recovery repairs were local and uncommitted at evidence freeze. The execution-control-plane bare source commit therefore identifies the committed baseline, not the exact repaired runtime.",
+      "transactionImpact": "none"
+    },
+    {
+      "id": "uncommitted-benchmark-game-selection",
+      "impact": "The benchmark smoke used local uncommitted exact-game selection support on top of the pinned committed baseline. The aggregate benchmark source artifact SHA-256 binds the emitted decisions, but the bare commit alone does not reproduce the invocation.",
       "transactionImpact": "none"
     },
     {

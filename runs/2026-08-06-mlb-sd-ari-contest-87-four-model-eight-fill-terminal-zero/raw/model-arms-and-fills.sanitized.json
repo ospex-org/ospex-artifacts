@@ -48,7 +48,22 @@
       "entryTiming": "original-pass-completion",
       "retryPass": null,
       "noBackdate": null,
-      "durableCompletionSha256": "c3f55db869cb23d6f10b943eced5e0358f3fcbc3166a6fa1dcf59e2fbac4e2fa"
+      "durableCompletionSha256": "c3f55db869cb23d6f10b943eced5e0358f3fcbc3166a6fa1dcf59e2fbac4e2fa",
+      "decisionProvenance": {
+        "executionPolicy": "fixed-moneyline-total",
+        "selectedForExecution": true,
+        "wouldAbstain": true,
+        "confidence": 0.35,
+        "probabilities": {
+          "win": 0.505,
+          "push": 0,
+          "loss": 0.495
+        },
+        "requestAt": "2026-08-06T20:11:33.631Z",
+        "responseAt": "2026-08-06T20:11:56.217Z",
+        "binding": "aggregate-benchmark-source-artifact-sha256",
+        "benchmarkSourceArtifactSha256": "f115c25cab8714d4f445df8dd080ad5e11c6a6ee57699a440942c25b3f469025"
+      }
     },
     {
       "fillId": "ef943e1e4405b6cc7f073eaf",
@@ -82,7 +97,22 @@
       "entryTiming": "authorized-late-retry",
       "retryPass": 1,
       "noBackdate": true,
-      "durableCompletionSha256": "4b79cb6de41db476a6a7ed99a15d639ae6d78f8b9bbc84840e9b414c4d32c77d"
+      "durableCompletionSha256": "4b79cb6de41db476a6a7ed99a15d639ae6d78f8b9bbc84840e9b414c4d32c77d",
+      "decisionProvenance": {
+        "executionPolicy": "fixed-moneyline-total",
+        "selectedForExecution": true,
+        "wouldAbstain": false,
+        "confidence": 0.5,
+        "probabilities": {
+          "win": 0.5,
+          "push": 0,
+          "loss": 0.5
+        },
+        "requestAt": "2026-08-06T20:11:33.632Z",
+        "responseAt": "2026-08-06T20:11:54.419Z",
+        "binding": "aggregate-benchmark-source-artifact-sha256",
+        "benchmarkSourceArtifactSha256": "f115c25cab8714d4f445df8dd080ad5e11c6a6ee57699a440942c25b3f469025"
+      }
     },
     {
       "fillId": "8eaaa4b7ce58793a7c41cf2b",
@@ -116,7 +146,22 @@
       "entryTiming": "original-pass-completion",
       "retryPass": null,
       "noBackdate": null,
-      "durableCompletionSha256": "b7da92ae3a922db7cc4c0b11f0b653f7857908e6c59a3e17e22d360b32621752"
+      "durableCompletionSha256": "b7da92ae3a922db7cc4c0b11f0b653f7857908e6c59a3e17e22d360b32621752",
+      "decisionProvenance": {
+        "executionPolicy": "fixed-moneyline-total",
+        "selectedForExecution": true,
+        "wouldAbstain": true,
+        "confidence": 0.5,
+        "probabilities": {
+          "win": 0.501,
+          "push": 0,
+          "loss": 0.499
+        },
+        "requestAt": "2026-08-06T20:11:33.628Z",
+        "responseAt": "2026-08-06T20:11:49.879Z",
+        "binding": "aggregate-benchmark-source-artifact-sha256",
+        "benchmarkSourceArtifactSha256": "f115c25cab8714d4f445df8dd080ad5e11c6a6ee57699a440942c25b3f469025"
+      }
     },
     {
       "fillId": "9e646f8acd3a537c1495c5d9",
@@ -150,7 +195,22 @@
       "entryTiming": "authorized-late-retry",
       "retryPass": 2,
       "noBackdate": true,
-      "durableCompletionSha256": "2778474cebe5b457a4ea3d617639f852085c03511cf32345e9d3bfe016c95736"
+      "durableCompletionSha256": "2778474cebe5b457a4ea3d617639f852085c03511cf32345e9d3bfe016c95736",
+      "decisionProvenance": {
+        "executionPolicy": "fixed-moneyline-total",
+        "selectedForExecution": true,
+        "wouldAbstain": true,
+        "confidence": 0.52,
+        "probabilities": {
+          "win": 0.512,
+          "push": 0,
+          "loss": 0.488
+        },
+        "requestAt": "2026-08-06T20:11:33.633Z",
+        "responseAt": "2026-08-06T20:12:00.297Z",
+        "binding": "aggregate-benchmark-source-artifact-sha256",
+        "benchmarkSourceArtifactSha256": "f115c25cab8714d4f445df8dd080ad5e11c6a6ee57699a440942c25b3f469025"
+      }
     },
     {
       "fillId": "a993e29523911e5a0433905b",
@@ -184,7 +244,22 @@
       "entryTiming": "authorized-late-retry",
       "retryPass": 1,
       "noBackdate": true,
-      "durableCompletionSha256": "7cc4b20236aaf40ad656e06586dc2de05a2ef69565e41f3c55398044870cb2b8"
+      "durableCompletionSha256": "7cc4b20236aaf40ad656e06586dc2de05a2ef69565e41f3c55398044870cb2b8",
+      "decisionProvenance": {
+        "executionPolicy": "fixed-moneyline-total",
+        "selectedForExecution": true,
+        "wouldAbstain": true,
+        "confidence": 0.3,
+        "probabilities": {
+          "win": 0.465,
+          "push": 0.08,
+          "loss": 0.455
+        },
+        "requestAt": "2026-08-06T20:11:33.631Z",
+        "responseAt": "2026-08-06T20:11:56.217Z",
+        "binding": "aggregate-benchmark-source-artifact-sha256",
+        "benchmarkSourceArtifactSha256": "f115c25cab8714d4f445df8dd080ad5e11c6a6ee57699a440942c25b3f469025"
+      }
     },
     {
       "fillId": "6fc8e3b51cfd9e4ae1a3b95f",
@@ -218,7 +293,22 @@
       "entryTiming": "authorized-late-retry",
       "retryPass": 2,
       "noBackdate": true,
-      "durableCompletionSha256": "3ac4b0dcdb263e922a1d864fb98b7a207cd5d082b8ea64b2b74ca04dafe753d6"
+      "durableCompletionSha256": "3ac4b0dcdb263e922a1d864fb98b7a207cd5d082b8ea64b2b74ca04dafe753d6",
+      "decisionProvenance": {
+        "executionPolicy": "fixed-moneyline-total",
+        "selectedForExecution": true,
+        "wouldAbstain": false,
+        "confidence": 0.5,
+        "probabilities": {
+          "win": 0.46,
+          "push": 0.08,
+          "loss": 0.46
+        },
+        "requestAt": "2026-08-06T20:11:33.632Z",
+        "responseAt": "2026-08-06T20:11:54.419Z",
+        "binding": "aggregate-benchmark-source-artifact-sha256",
+        "benchmarkSourceArtifactSha256": "f115c25cab8714d4f445df8dd080ad5e11c6a6ee57699a440942c25b3f469025"
+      }
     },
     {
       "fillId": "550b0bf347926ca9f8987b6d",
@@ -252,7 +342,22 @@
       "entryTiming": "original-pass-completion",
       "retryPass": null,
       "noBackdate": null,
-      "durableCompletionSha256": "f9d6a0984cee593244b47a4c95a64ce4eacd3b007b8e6369ac74839e9cea77da"
+      "durableCompletionSha256": "f9d6a0984cee593244b47a4c95a64ce4eacd3b007b8e6369ac74839e9cea77da",
+      "decisionProvenance": {
+        "executionPolicy": "fixed-moneyline-total",
+        "selectedForExecution": true,
+        "wouldAbstain": true,
+        "confidence": 0.45,
+        "probabilities": {
+          "win": 0.46,
+          "push": 0.08,
+          "loss": 0.46
+        },
+        "requestAt": "2026-08-06T20:11:33.628Z",
+        "responseAt": "2026-08-06T20:11:49.879Z",
+        "binding": "aggregate-benchmark-source-artifact-sha256",
+        "benchmarkSourceArtifactSha256": "f115c25cab8714d4f445df8dd080ad5e11c6a6ee57699a440942c25b3f469025"
+      }
     },
     {
       "fillId": "ee838fa35759150d9c7f3921",
@@ -286,7 +391,22 @@
       "entryTiming": "original-pass-completion",
       "retryPass": null,
       "noBackdate": null,
-      "durableCompletionSha256": "0e8b4acf4996fbac5e05821b02d4f7bc2df241d8114f1c3e1fc64e5764969763"
+      "durableCompletionSha256": "0e8b4acf4996fbac5e05821b02d4f7bc2df241d8114f1c3e1fc64e5764969763",
+      "decisionProvenance": {
+        "executionPolicy": "fixed-moneyline-total",
+        "selectedForExecution": true,
+        "wouldAbstain": true,
+        "confidence": 0.5,
+        "probabilities": {
+          "win": 0.47,
+          "push": 0.06,
+          "loss": 0.47
+        },
+        "requestAt": "2026-08-06T20:11:33.633Z",
+        "responseAt": "2026-08-06T20:12:00.297Z",
+        "binding": "aggregate-benchmark-source-artifact-sha256",
+        "benchmarkSourceArtifactSha256": "f115c25cab8714d4f445df8dd080ad5e11c6a6ee57699a440942c25b3f469025"
+      }
     }
   ],
   "historicalAttemptLedger": {
@@ -361,5 +481,15 @@
         "retryPass": 2
       }
     ]
+  },
+  "decisionProvenanceBoundary": "Per-arm confidence, probabilities, wouldAbstain, and fixed-policy selection are sanitized from the collectively hashed benchmark source artifact. No per-arm decision hash is claimed.",
+  "frozenDecisionReplay": {
+    "uniqueModelResponseTimestamps": 4,
+    "responseWindowStartUtc": "2026-08-06T20:11:49.879Z",
+    "responseWindowEndUtc": "2026-08-06T20:12:00.297Z",
+    "responseWindowSeconds": "10.418",
+    "authorizedLateRetryCount": 4,
+    "lateRetriesReuseOriginalModelResponseTimestamps": true,
+    "newBenchmarkResponsesRepresentedByRetryEvidence": 0
   }
 }

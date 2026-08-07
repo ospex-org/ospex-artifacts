@@ -27,8 +27,8 @@
     "controlledWalletCount": 6
   },
   "verdict": {
-    "label": "TERMINAL_ZERO_B1_COMPLETE_WITH_DISCLOSED_DEFECTS",
-    "reason": "All eight frozen model/market arms have durable successful fills, the exact final score landed on chain, both markets settled, eight winning positions were claimed, dated Flow/Maker allowances were revoked, and six-wallet positions, claimables, commitments, and relevant controllers reached zero. B2 remains held."
+    "label": "TERMINAL_ZERO_ROLE_ISOLATED_LIFECYCLE_COMPLETE_WITH_DISCLOSED_DEFECTS",
+    "reason": "All eight frozen model/market arms have durable successful fills, an external official final matches the exact score landed on chain, both markets settled, eight winning positions were claimed, dated Flow/Maker allowances were revoked, and six-wallet positions, claimables, commitments, and relevant controllers reached zero. A separate seven-day canonical-cohort acceptance gate is not evidenced by this run."
   },
   "identity": {
     "gameId": "6262fc88-a4a1-4434-8343-7af87dd12a1f",
@@ -97,14 +97,31 @@
       "0x3cfd307b03cca69f5b0380c4ea4e3b37f4d126fefcc75bde06285c3fa83f57e8",
       "0x68fdeba966b20322e059930a51f9074d0af57b076b8fe82617343fe83886d059",
       "0xf602c24ae2008cfad66ab883ac3f974ee9637b407a7813262c104c1ac1bca608"
-    ]
+    ],
+    "decisionFreeze": {
+      "uniqueModelResponseTimestamps": 4,
+      "responseWindowStartUtc": "2026-08-06T20:11:49.879Z",
+      "responseWindowEndUtc": "2026-08-06T20:12:00.297Z",
+      "responseWindowSeconds": "10.418",
+      "authorizedLateRetryCount": 4,
+      "lateRetriesReuseOriginalModelResponseTimestamps": true,
+      "newBenchmarkResponsesRepresentedByRetryEvidence": 0
+    }
   },
   "postgame": {
     "officialFinal": {
       "awayTeam": "San Diego Padres",
       "awayScore": 5,
       "homeTeam": "Arizona Diamondbacks",
-      "homeScore": 1
+      "homeScore": 1,
+      "source": "MLB Stats API",
+      "status": "Final",
+      "capturedAtUtc": "2026-08-07T19:13:22Z",
+      "sourceGamePk": 825053,
+      "scheduledStartTimeUtc": "2026-08-07T01:40:00Z",
+      "officialFinalOutAtUtc": "2026-08-07T04:27:58.497000Z",
+      "matchedOfficialFinal": true,
+      "evidencePath": "raw/final-score-source.sanitized.json"
     },
     "scoreRequestTxHash": "0xb92215ea056326b75ea25c55e72540d633d13142442dc8c8d164205d718d775d",
     "scoreCallbackTxHash": "0xc0082b2f1f96bb62414719379d60d83ceee4325d4c02ad7a8637df6b4dc92425",
@@ -153,7 +170,14 @@
     },
     "modelReusablePositionAllowancesRetained": 4,
     "allModelTreasuryAllowancesZero": true,
-    "terminalEvidenceGeneratedAt": "2026-08-07T12:05:36.170738Z"
+    "terminalEvidenceGeneratedAt": "2026-08-07T12:05:36.170738Z",
+    "allowanceBoundaryDefinition": {
+      "scope": "run-specific-terminal-zero-boundary",
+      "modelPositionAllowances": "Four reusable PositionModule allowances remain nonzero and are explicitly outside run-dated permission cleanup.",
+      "flowAndMakerDatedPositionTreasuryAllowances": "zero",
+      "modelTreasuryAllowances": "zero",
+      "repositoryWidePolicy": false
+    }
   },
   "transactionReceiptReadback": {
     "checkedAtUtc": "2026-08-07T15:33:04Z",
@@ -169,7 +193,9 @@
       "settlements": 2,
       "claims": 8,
       "permissionRevocations": 2
-    }
+    },
+    "scopeKind": "selected-post-setup-lifecycle-proof-set",
+    "scopeBoundary": "The selected 22-transaction lifecycle receipt readback begins with the eight model fills and excludes three successful setup transactions: contest creation-verification request 0x8ac20616fa05472d7ed0d52c64070c135e37ccff40f53b5b6def8f52828ac95b, Flow self-seed of speculation 235 0x36331223bac447f361da6f48c0486f78323732072ef1b2c5b96a41164029a68b, and Flow self-seed of speculation 236 0x8ef838c055a3289a27ab11d7f916106887c974c3c11d44790e34bb766d371e72. Flow self-matched 0.010000 USDC per side in each speculation (0.020000 USDC principal and 0.020000 USDC later claim payout per speculation), producing 0.000000 USDC position P&L; those setup transactions also account for the 2.000000 USDC creation-fee path."
   },
   "economics": {
     "models": [
@@ -202,12 +228,30 @@
     "makerDeltaUSDC": "+0.190483",
     "flowCreationFeePathDeltaUSDC": "-2.000000",
     "gasAsset": "POL",
-    "gasExcludedFromUsdcReconciliation": true
+    "gasExcludedFromUsdcReconciliation": true,
+    "flowCreationFeePath": {
+      "contestCreationFeeUSDC": "1.000000",
+      "speculationCreationFeesUSDC": "1.000000",
+      "aggregateProtocolFeesUSDC": "2.000000",
+      "flowSeedPrincipalUSDC": "0.040000",
+      "flowSeedClaimPayoutUSDC": "0.040000",
+      "flowSeedPositionPnlUSDC": "0.000000",
+      "setupTxHashes": [
+        "0x8ac20616fa05472d7ed0d52c64070c135e37ccff40f53b5b6def8f52828ac95b",
+        "0x36331223bac447f361da6f48c0486f78323732072ef1b2c5b96a41164029a68b",
+        "0x8ef838c055a3289a27ab11d7f916106887c974c3c11d44790e34bb766d371e72"
+      ]
+    },
+    "interpretation": "Each model finished one win and one loss. The 0.000074 USDC range across model deltas is economically non-discriminative in this one-contest smoke and is not a model ranking."
   },
   "gates": {
     "b1RoleIsolatedLifecycle": "complete-with-disclosed-defects",
-    "b2SevenDayCanonicalCohort": "hold",
-    "closingOddsClv": "absent"
+    "b2SevenDayCanonicalCohort": "not-evidenced-by-this-run",
+    "closingOddsClv": "absent",
+    "definitions": {
+      "B1": "A bounded one-contest role-isolated lifecycle proof through terminal cleanup.",
+      "B2": "A separate seven-day canonical-cohort acceptance gate; this run makes no B2 acceptance claim."
+    }
   },
   "sourcePins": {
     "schemaVersion": 1,
@@ -238,25 +282,97 @@
     "bareSourceCommits": {
       "executionControlPlane": "f6a572da0a79901913804a814c1f0bc6532c586c",
       "marketMaker": "5d55aefe71632d228922223170345aaa612c35ce",
-      "sdkCli": "877c026df9af0e188a1e786cc715a77de0badbca"
+      "sdkCli": "877c026df9af0e188a1e786cc715a77de0badbca",
+      "benchmark": "ecaf5e05ce47867b67591c3a185829ac3f91741e"
     },
     "privateSourceNamesAndLocationsOmitted": true,
-    "providerResponseIdsOmitted": true
+    "providerResponseIdsOmitted": true,
+    "sourceRepositories": {
+      "benchmark": "ospex-org/ospex-benchmark",
+      "marketMaker": "ospex-org/ospex-market-maker",
+      "sdkCli": "ospex-org/ospex-sdk"
+    },
+    "sourceRepositoryVisibility": "public",
+    "localSourceLocationsOmitted": true,
+    "reproducibilityBoundary": {
+      "benchmark": "The benchmark bare commit identifies the committed baseline. The smoke run also used local uncommitted exact-game selection support; the aggregate benchmark source artifact SHA-256 binds the emitted decisions, and the commit alone does not reproduce that invocation.",
+      "executionControlPlane": "The execution-control-plane bare commit identifies the committed baseline. Run-recovery repairs were local and uncommitted at evidence freeze; see deviation uncommitted-control-plane-repairs."
+    }
   },
   "rawFiles": {
     "modelArmsAndFills": "raw/model-arms-and-fills.sanitized.json",
     "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
     "terminalZero": "raw/terminal-zero.sanitized.json",
     "deviations": "raw/deviations.sanitized.json",
-    "sourcePins": "raw/source-pins.sanitized.json"
+    "sourcePins": "raw/source-pins.sanitized.json",
+    "finalScoreSource": "raw/final-score-source.sanitized.json"
   },
   "caveats": [
     "The requested pre-start Maker report was missed and is not represented as sent.",
-    "8/8 means all frozen arms eventually completed: four in the original pass and four in two separately timestamped authorized retry passes.",
+    "8/8 means all frozen arms eventually completed: four in the original pass and four in two separately timestamped authorized retry passes. Each late retry reused its model’s original frozen response timestamp; no new benchmark response is represented in retry evidence.",
     "Manual control-plane repairs were required after a readiness field mismatch delayed requestScore by more than seven hours.",
     "A claim-side CLI defect, a late-indexed Flow claimable position, and an invalid allowance-revocation preview were recovered without duplicate or failed on-chain submissions.",
-    "Four model Position allowances remain under the accepted reusable-standing-allowance exception; terminal zero refers to zero dated Flow/Maker permissions and zero scoped positions, claimables, commitments, and controller processes.",
-    "No closing-odds or CLV artifact exists, and B2 remains held."
+    "Four reusable model Position allowances remain outside this run’s dated-permission cleanup boundary; terminal zero refers to zero dated Flow/Maker permissions and zero scoped positions, claimables, commitments, and controller processes. This is a run-specific boundary, not a repository-wide policy.",
+    "The benchmark and execution-control-plane bare commits identify committed baselines, but local uncommitted benchmark selection support and run-recovery repairs mean those commits alone do not fully reproduce the run. Published source hashes bind the frozen outputs while private/local source locations remain omitted.",
+    "No closing-odds or CLV artifact exists. A separate seven-day canonical-cohort acceptance gate is not evidenced by this run."
   ],
-  "evidenceBoundary": "Proves four role-isolated model decisions across moneyline and total, eight durable successful fills, exact-score CRE callback, two settlements, eight winning claims, dated permission revocation, receipt success, economic reconciliation, and terminal-zero readback. It does not prove clean unattended operation, B2 canonical-cohort readiness, predictive skill, organic demand, outside-agent participation, or CLV."
+  "evidenceBoundary": "Proves four role-isolated fixed-policy model decisions across moneyline and total, eight durable successful fills, an externally matched official final, exact-score CRE callback, two settlements, eight winning claims, disclosed market-setup exclusions, dated permission revocation, receipt success, economic reconciliation, and terminal-zero readback. It does not prove clean unattended operation, seven-day canonical-cohort acceptance, predictive skill, organic demand, outside-agent participation, full commit-only reproducibility, or CLV.",
+  "marketSetupBoundary": {
+    "selectedReceiptReadbackBoundary": "The selected 22-transaction lifecycle receipt readback begins with the eight model fills and excludes three successful setup transactions: contest creation-verification request 0x8ac20616fa05472d7ed0d52c64070c135e37ccff40f53b5b6def8f52828ac95b, Flow self-seed of speculation 235 0x36331223bac447f361da6f48c0486f78323732072ef1b2c5b96a41164029a68b, and Flow self-seed of speculation 236 0x8ef838c055a3289a27ab11d7f916106887c974c3c11d44790e34bb766d371e72. Flow self-matched 0.010000 USDC per side in each speculation (0.020000 USDC principal and 0.020000 USDC later claim payout per speculation), producing 0.000000 USDC position P&L; those setup transactions also account for the 2.000000 USDC creation-fee path.",
+    "excludedFromSelectedReceiptCount": 3,
+    "transactions": [
+      {
+        "category": "request-contest-creation-verification",
+        "txHash": "0x8ac20616fa05472d7ed0d52c64070c135e37ccff40f53b5b6def8f52828ac95b",
+        "blockNumber": "91565451",
+        "blockTimestampUtc": "2026-08-06T21:53:23Z",
+        "status": "success",
+        "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "to": "0x06e3470012039797119ae30e1236169304f9220c",
+        "explorer": "https://polygonscan.com/tx/0x8ac20616fa05472d7ed0d52c64070c135e37ccff40f53b5b6def8f52828ac95b",
+        "flowProtocolFeeUSDC": "1.000000"
+      },
+      {
+        "category": "flow-self-seed",
+        "speculationId": "235",
+        "txHash": "0x36331223bac447f361da6f48c0486f78323732072ef1b2c5b96a41164029a68b",
+        "blockNumber": "91565727",
+        "blockTimestampUtc": "2026-08-06T22:00:17Z",
+        "status": "success",
+        "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "to": "0x46af20b6307aa0ec13de10ef58a02c5f1b5c9559",
+        "explorer": "https://polygonscan.com/tx/0x36331223bac447f361da6f48c0486f78323732072ef1b2c5b96a41164029a68b",
+        "flowRiskPerSideUSDC": "0.010000",
+        "aggregateSeedPrincipalUSDC": "0.020000",
+        "flowClaimPayoutUSDC": "0.020000",
+        "positionPnlUSDC": "0.000000",
+        "flowProtocolFeeUSDC": "0.500000"
+      },
+      {
+        "category": "flow-self-seed",
+        "speculationId": "236",
+        "txHash": "0x8ef838c055a3289a27ab11d7f916106887c974c3c11d44790e34bb766d371e72",
+        "blockNumber": "91565752",
+        "blockTimestampUtc": "2026-08-06T22:00:54Z",
+        "status": "success",
+        "from": "0x16dc5d67d080a5521ef2c79680dbfc2abf724d30",
+        "to": "0x46af20b6307aa0ec13de10ef58a02c5f1b5c9559",
+        "explorer": "https://polygonscan.com/tx/0x8ef838c055a3289a27ab11d7f916106887c974c3c11d44790e34bb766d371e72",
+        "flowRiskPerSideUSDC": "0.010000",
+        "aggregateSeedPrincipalUSDC": "0.020000",
+        "flowClaimPayoutUSDC": "0.020000",
+        "positionPnlUSDC": "0.000000",
+        "flowProtocolFeeUSDC": "0.500000"
+      }
+    ],
+    "reconciliation": {
+      "modelAndMakerMatchedPrincipalUSDC": "15.573343",
+      "publishedClaimPayoutsUSDC": "15.613343",
+      "flowSeedPrincipalUSDC": "0.040000",
+      "flowSeedClaimPayoutUSDC": "0.040000",
+      "flowSeedPositionPnlUSDC": "0.000000",
+      "protocolFeesUSDC": "2.000000",
+      "reconciled": true
+    }
+  }
 }
