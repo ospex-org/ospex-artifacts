@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "artifactRepositoryBaseCommit": "66f454420aeae568df1f4738161b231386f50cc5",
+  "benchmarkSourceCommit": "f970ffea47c2363ef9134c758d4618f9d549d49e",
+  "benchmarkSelectionOverlaySha256": "28522eb1ee159eddfc4a3fb2de711e4e04f30df62131f3845b11d4cb7b7465dd",
+  "harnessSourceCommit": "f6a572da0a79901913804a814c1f0bc6532c586c",
+  "marketMakerSourceCommit": "5d55aefe71632d228922223170345aaa612c35ce",
+  "sdkSourceCommit": "877c026df9af0e188a1e786cc715a77de0badbca",
+  "promptScaffoldSha256": "a37712d74948c5965bb61b12d60258b183e5a2fc86a2ffb968132684571e29f8",
+  "runId": "smoke-v0-2026-08-07-0acb06",
+  "cohortId": "smoke-v0-2026-08-07-mve-evening-v2-search",
+  "runLabel": "SMOKE_V0_NOT_A_COHORT",
+  "publicationSourceAuditSha256": "9683a2bbdb427d5fc6639f274a2d3fc622c928268d490f883d761946fb5392fb",
+  "privateEvidenceSha256": {
+    "activation": "3ae42679679674548a201d9500cd0a86b5725c322f063fdf6e694dac3c2101f6",
+    "benchmark": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+    "executionPlan": "2ff8455c28797d96783da62260992db31082ce76698dde464120dba335f17878",
+    "executionResult": "6a12935fc78d453f6f3c9d400b8472dca91d8bfd0c97b0ea0f54e68ec73c5919",
+    "fills": "e8310469add741e86b5209ff48b9edda6bb9d2bfa8acab5f40da93f0a3aa1458",
+    "flowPermissionGrant": "e591297d095b5088932074852c3d5af0bb07d7393f87fc1c87809768db38135e",
+    "flowPermissionReadback": "4fc0359c6d69ec3ad246a2697c40c3f09076764ef5d12efb145c7016e0effdb7",
+    "flowPermissionRevoke": "514d60cb18e4290d7e40ab8748b8c3591b2043830c22e75bc26191088331767f",
+    "makerPermissionGrant": "cd572c30091e255e2567dc308f8aede62272ea8500cb4e1048e0a4d1c152913a",
+    "makerPermissionReadback": "210f59b8d84e9da71a3b116d91edb78ca8210a912f5d3827cbc62a497d8d9257",
+    "makerPermissionRevoke": "07d99b7393b85810d11f98ef78106cc4aaee81d0b2d371b0f673b00b0eea93ae",
+    "postgameActions": "9efc6c157246d1600c3b31f76c9cd8f0dbf26180b9b53a2fb8ad0d90a4e794f9",
+    "postgameTiming": "d590760da6fb98a3339bc108e66a4c113656be71ec1003ebc7a90b5e8c35a5ff",
+    "scoringReport": "774584572ce15b9921d947be390802f8391fdbb04e0f0699cabf1b455a9244d6",
+    "scoringValidation": "783cf98b08c3efdd8865e402b96caaa6543a333517480824430937644f4b6c1a",
+    "searchAudit": "a208dc25f8d96ca59f88987b1b4be3da76cbc11344a0ab46b8bb44f05fddacae",
+    "setupResult": "2680b9498b0ae849e9e2a41b6918e016fdb47109128d45f44a70a816567d43e1",
+    "terminalZero": "de97234d76eccc407b78051271c87ba4a76a84fa200702260a59b7a0a804f71e",
+    "usageAndSpend": "c5ec939ec0cc9bf8e9b11f9c950e9869f007ffa666a1f82ed59909ff4b7ce918"
+  },
+  "providerEnvelopeRetentionIssue": {
+    "number": 92,
+    "stateAtPublication": "OPEN",
+    "url": "https://github.com/ospex-org/ospex-benchmark/issues/92"
+  },
+  "sourcePathsPublished": false
+}

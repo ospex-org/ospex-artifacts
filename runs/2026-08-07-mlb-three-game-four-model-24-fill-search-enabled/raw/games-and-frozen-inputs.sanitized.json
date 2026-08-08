@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "oddsWording": "referenceDecimalOdds denotes frozen upstream/reference odds without naming a provider",
+  "games": [
+    {
+      "gameId": "210454d3-740f-4c40-a108-35d8baaeb237",
+      "contestId": "88",
+      "awayTeam": "Los Angeles Dodgers",
+      "homeTeam": "Arizona Diamondbacks",
+      "rawGameDate": "2026-08-07",
+      "startTimeUtc": "2026-08-08T01:40:00Z",
+      "speculations": [
+        {
+          "speculationId": "237",
+          "market": "moneyline",
+          "line": null
+        },
+        {
+          "speculationId": "238",
+          "market": "total",
+          "line": 9
+        }
+      ],
+      "frozenReferenceMarkets": [
+        {
+          "market": "moneyline",
+          "line": null,
+          "referenceDecimalOdds": {
+            "Arizona Diamondbacks": 2.54,
+            "Los Angeles Dodgers": 1.57143
+          },
+          "observedAt": "2026-08-07T20:03:49+00:00"
+        },
+        {
+          "market": "total",
+          "line": 9,
+          "referenceDecimalOdds": {
+            "over": 2.0,
+            "under": 1.83333
+          },
+          "observedAt": "2026-08-07T20:03:49+00:00"
+        }
+      ],
+      "completedFillCount": 8,
+      "finalScore": {
+        "away": 3,
+        "home": 4
+      }
+    },
+    {
+      "gameId": "a512537f-e262-4f17-ade4-a8cf7032e284",
+      "contestId": "89",
+      "awayTeam": "Houston Astros",
+      "homeTeam": "San Diego Padres",
+      "rawGameDate": "2026-08-07",
+      "startTimeUtc": "2026-08-08T01:40:00Z",
+      "speculations": [
+        {
+          "speculationId": "239",
+          "market": "moneyline",
+          "line": null
+        },
+        {
+          "speculationId": "240",
+          "market": "total",
+          "line": 8.5
+        }
+      ],
+      "frozenReferenceMarkets": [
+        {
+          "market": "moneyline",
+          "line": null,
+          "referenceDecimalOdds": {
+            "Houston Astros": 1.98039,
+            "San Diego Padres": 1.88496
+          },
+          "observedAt": "2026-08-07T20:03:49+00:00"
+        },
+        {
+          "market": "total",
+          "line": 8.5,
+          "referenceDecimalOdds": {
+            "over": 1.86957,
+            "under": 1.95238
+          },
+          "observedAt": "2026-08-07T20:03:49+00:00"
+        }
+      ],
+      "completedFillCount": 8,
+      "finalScore": {
+        "away": 6,
+        "home": 3
+      }
+    },
+    {
+      "gameId": "9ca09dc2-591d-426f-9236-f5cfb1d6d7b4",
+      "contestId": "90",
+      "awayTeam": "Tampa Bay Rays",
+      "homeTeam": "Seattle Mariners",
+      "rawGameDate": "2026-08-07",
+      "startTimeUtc": "2026-08-08T01:45:00Z",
+      "speculations": [
+        {
+          "speculationId": "241",
+          "market": "moneyline",
+          "line": null
+        },
+        {
+          "speculationId": "242",
+          "market": "total",
+          "line": 7
+        }
+      ],
+      "frozenReferenceMarkets": [
+        {
+          "market": "moneyline",
+          "line": null,
+          "referenceDecimalOdds": {
+            "Seattle Mariners": 1.86957,
+            "Tampa Bay Rays": 2.0
+          },
+          "observedAt": "2026-08-07T20:03:49+00:00"
+        },
+        {
+          "market": "total",
+          "line": 7,
+          "referenceDecimalOdds": {
+            "over": 1.95238,
+            "under": 1.86957
+          },
+          "observedAt": "2026-08-07T20:03:49+00:00"
+        }
+      ],
+      "completedFillCount": 8,
+      "finalScore": {
+        "away": 2,
+        "home": 1
+      }
+    }
+  ]
+}

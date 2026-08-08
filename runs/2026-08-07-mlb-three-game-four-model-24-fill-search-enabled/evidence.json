@@ -1,0 +1,396 @@
+{
+  "artifactType": "run",
+  "artifactId": "2026-08-07-mlb-three-game-four-model-24-fill-search-enabled",
+  "schemaVersion": 1,
+  "status": "complete_verified_with_caveats",
+  "date": "2026-08-07",
+  "publishedAt": "2026-08-08T15:39:05Z",
+  "generatedAt": "2026-08-08T15:39:05Z",
+  "network": "polygon",
+  "chainId": 137,
+  "deploymentRound": "R5",
+  "runScope": {
+    "kind": "controlled-three-contest-four-model-two-market-search-enabled-terminal-zero",
+    "sport": "mlb",
+    "runLabel": "SMOKE_V0_NOT_A_COHORT",
+    "contestIds": [
+      "88",
+      "89",
+      "90"
+    ],
+    "speculationIds": [
+      "237",
+      "238",
+      "239",
+      "240",
+      "241",
+      "242"
+    ],
+    "markets": [
+      "moneyline",
+      "total"
+    ],
+    "modelCount": 4,
+    "plannedArmCount": 24,
+    "completedFillCount": 24,
+    "failedFillCount": 0
+  },
+  "verdict": {
+    "label": "THREE_CONTEST_24_FILL_SEARCH_ENABLED_TERMINAL_ZERO_WITH_AUDIT_CAVEATS",
+    "reason": "All 24 frozen model/market fills and 72 unique setup, fill, score, settlement, claim, callback, permission-grant, and permission-cleanup transactions have successful Polygon receipts; official finals match on-chain scores; contests 88\u201390 reached terminal zero. Search usage is not fully comparable or recoverable because Gemini search evidence is unknown/unproven and complete provider envelopes were not retained."
+  },
+  "identity": {
+    "games": [
+      {
+        "gameId": "210454d3-740f-4c40-a108-35d8baaeb237",
+        "contestId": "88",
+        "awayTeam": "Los Angeles Dodgers",
+        "homeTeam": "Arizona Diamondbacks",
+        "rawGameDate": "2026-08-07",
+        "startTimeUtc": "2026-08-08T01:40:00Z",
+        "speculations": [
+          {
+            "speculationId": "237",
+            "market": "moneyline",
+            "line": null
+          },
+          {
+            "speculationId": "238",
+            "market": "total",
+            "line": 9
+          }
+        ]
+      },
+      {
+        "gameId": "a512537f-e262-4f17-ade4-a8cf7032e284",
+        "contestId": "89",
+        "awayTeam": "Houston Astros",
+        "homeTeam": "San Diego Padres",
+        "rawGameDate": "2026-08-07",
+        "startTimeUtc": "2026-08-08T01:40:00Z",
+        "speculations": [
+          {
+            "speculationId": "239",
+            "market": "moneyline",
+            "line": null
+          },
+          {
+            "speculationId": "240",
+            "market": "total",
+            "line": 8.5
+          }
+        ]
+      },
+      {
+        "gameId": "9ca09dc2-591d-426f-9236-f5cfb1d6d7b4",
+        "contestId": "90",
+        "awayTeam": "Tampa Bay Rays",
+        "homeTeam": "Seattle Mariners",
+        "rawGameDate": "2026-08-07",
+        "startTimeUtc": "2026-08-08T01:45:00Z",
+        "speculations": [
+          {
+            "speculationId": "241",
+            "market": "moneyline",
+            "line": null
+          },
+          {
+            "speculationId": "242",
+            "market": "total",
+            "line": 7
+          }
+        ]
+      }
+    ]
+  },
+  "frozenInputs": {
+    "planSha256": "6c7d5ff910c9cbb4d96c6106ed477ba74cdc9aca74474ccf1a60a9a43cef21c3",
+    "runId": "smoke-v0-2026-08-07-0acb06",
+    "cohortId": "smoke-v0-2026-08-07-mve-evening-v2-search",
+    "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+    "promptScaffoldSha256": "a37712d74948c5965bb61b12d60258b183e5a2fc86a2ffb968132684571e29f8"
+  },
+  "benchmark": {
+    "searchEnabled": true,
+    "providerCalls": 12,
+    "validFirstAttemptResponses": 12,
+    "schemaV2ValidForecasts": 36,
+    "knownBillableSearchCount": 59,
+    "unknownSearchAuditRecords": 3,
+    "conservativeProviderSpendUsd": "5.411942",
+    "geminiSearchClassification": "unknown_unproven",
+    "completeProviderEnvelopesRetained": false,
+    "costPerPickComparableAcrossArms": false,
+    "rawEvidence": "raw/model-arms-search-and-spend.sanitized.json",
+    "executedDecisionProvenanceRows": 24,
+    "unexecutedSpreadForecastsPublished": false,
+    "executionPolicy": "fixed-moneyline-total",
+    "selectedForExecutionMeaning": "schema-required true for supplied moneyline/total forecasts under this policy",
+    "wouldAbstainTrueExecutedRows": 4,
+    "xaiRequestBoundary": {
+      "requestParameter": "max_turns",
+      "parameterValue": 5,
+      "boundsSearchesExactly": false,
+      "observedBillableSearchCountsByCall": [
+        20,
+        17,
+        11
+      ],
+      "handling": "observed_and_priced"
+    }
+  },
+  "operations": {
+    "serializedControlledFillAdapter": true,
+    "makerMaxTrackedMarkets": 6,
+    "makerMaxRealtimeChannels": 6,
+    "setupTransactionCount": 9,
+    "controlledFillTransactionCount": 24,
+    "scoreRequestCount": 3,
+    "scoreCallbackCount": 3,
+    "settlementTransactionCount": 6,
+    "claimTransactionCount": 22,
+    "permissionSetupTransactionCount": 3,
+    "totalUniqueSuccessfulTransactionCount": 72,
+    "executionPolicy": "fixed-moneyline-total",
+    "permissionCleanupTransactionCount": 2,
+    "polygonGasCostPolAll72Transactions": "4.947824872942650954"
+  },
+  "terminal": {
+    "status": "TERMINAL_ZERO",
+    "completedAt": "2026-08-08T04:59:32.586032+00:00",
+    "contestCount": 3,
+    "openCommitments": 0,
+    "pendingSettle": 0,
+    "claimable": 0,
+    "nonterminalPositions": 0,
+    "relevantWriterProcesses": 0,
+    "rawEvidence": "raw/terminal-zero.sanitized.json"
+  },
+  "economics": {
+    "modelPlusMakerNetTradingPnlUsd": "0.000000",
+    "makerNetTradingPnlUsd": "0.095391",
+    "flowNetAfterCreationFeesExcludingGasUsd": "-6.000000",
+    "gasExcluded": true,
+    "providerSpendReportedSeparately": true,
+    "rawEvidence": "raw/economics.sanitized.json",
+    "polygonGasCostPolReportedSeparately": "4.947824872942650954"
+  },
+  "scoringCrossRun": {
+    "contestIds": [
+      "87",
+      "88",
+      "89",
+      "90"
+    ],
+    "picks": 80,
+    "scored": 62,
+    "refused": 18,
+    "refusalReason": "push_capable_line",
+    "closeRowsFreshUsablePreLock": 12,
+    "closeRowsExpected": 12,
+    "scheduleDriftRows": 0,
+    "modelBeatBaselineAwayMoneyline": false,
+    "rankingAllowed": false,
+    "rawEvidence": "raw/scoring-contests-87-90.sanitized.json"
+  },
+  "transactions": {
+    "count": 72,
+    "allReceiptsSuccessful": true,
+    "transactionHashes": [
+      "0x274046583dfa02520551da450fea2e176e4e80d3d06aa2afe2c60a3cfac7c6e9",
+      "0x80d61eadcbf1aa72251cd005debb6d3f67b4dc6275dcd9dfb4c032521dee6554",
+      "0x1abfea5fdfbc4c359e322e214a823b338b85032d9258269de2c80ee9931ca32e",
+      "0xf70b893da0b327c35d67c77b7b157c1607c0ede9095dddadf0a82648505bc002",
+      "0xc9cd4dfee82045293d355a42bcdafd72fd7d2f03366dc2b0c52986ac883c146c",
+      "0x5b03f9b9acc82dc22db6bb9cd1b494fcf042b7254ec8e64522dbb59715688e37",
+      "0xda1f3bfdf5806ec32f1159347af88624856b4bca3d6229ef80f655566d8aa9d0",
+      "0x85c324bab036789dba0411c08100ef2716217a28136464ece7ad23fa0191bde1",
+      "0x5c28552ae00d43cf15d06d64747d65e52c0cc429160adc1bc172f2a7b0bf3fa2",
+      "0x83cfe2a462495d4301bfcdf4cda953e1439f15742b0c76485244f6a06dd6ae7a",
+      "0x0eb301acfb2e12aea66b59bcfe250043e15d8c70766b9788fbfee4f6336e532a",
+      "0xea3ea6efaf822412be56532fc5a4b29f3907e45d99bbf8f06aa00714ee01b21f",
+      "0xe095d853a0a66e5b3b4ac71ff1eba68dfac18e1214015c505df35c61a081a637",
+      "0x2a5884215f82b92a65d2e69fe7e373d3a241a092012fabd63aef0165a48cad19",
+      "0x5b52897013eee547d93ad85983b8bfcce71b0724ed71cc7ae8910f630b656249",
+      "0x4d25942937f8abdb157a51c1353370a60791aa597953058717b9db442f2bab46",
+      "0x72a3bc2da1ee115819e87a80a7ae958a75a71eff86007720df94b21615d52b48",
+      "0x027d4d0c5f249bed3f4cd3d7f29fa6fc575947faad6353d96eaf945c8eee0a46",
+      "0x073db9690cfe436791cdaf0ffb929f1e20ba0580b1cfd98894a3e070d858477f",
+      "0x149a01c2e3c3e6ca2dc0ec1a906d0f21dbc1cb5a66b74a7d8627d84713a5447b",
+      "0x402110ba82675bef845fd25ae5402ff5a438fe1e8fef5793af6e6c29c7922d60",
+      "0x73fc10bf6fe1be499d17ec96f051bf5396c72b8bf5a9fdd025be73e0617d9778",
+      "0x603a84f2e68ee84052fde9ddc900f0454ae15d3d578eb990c89b71f1763cd2d2",
+      "0xcd97ac952b157ab97d5577e33d363e2e64e8ede2815a5f912275828896d98101",
+      "0x06aa61f9500405f4a8bc26ee88bc34196496efd821d6add1a70360b1f6874cef",
+      "0x5da6ffb4b4d63e2bc4a71de0a2cd7b58f86360488d6fab4e6abef6be8ee53ce5",
+      "0xc8ba39f7cd3efb170b979cb3f3d313d0cb26806bab45d548eb53c7a33529a85f",
+      "0x275841c3301d54bcf2bfcfa0ec39c4e768edcda5ed28af33b2b27fc205edf8b0",
+      "0x45a97145e90217730101aeb5bcb6e7aa339b5b2f97e85c7f7dabb824d192f18c",
+      "0xe46abe4d0fa2983c37a6586661d9f75347515a84b3514bef8c3efb09a6643567",
+      "0x8a6fc600885a6a018de49678cd88fc896b2ed8802d16d16bde91e5f7745099b8",
+      "0xe5123a0077461a7fea57ae2bc6a84e9a671a2654275d18086b631fe44f03cb16",
+      "0xb5e1da272154115a5056a97f3457aaf09e0a7cc1a5e36e65af211deefa9b8490",
+      "0x775cd5d0bf139afc7d224339e67e58b959e7f8c0ba120b1519fa2afd2b7a4b35",
+      "0xc311e929049542c5ac21310f8b35271cfc9c4a3432e574ec8e79b814d3397f46",
+      "0x8a9ed8ebc0b9bd425e97b93a112feb6c986e3fa73d577f341789e18c8fc50f78",
+      "0x06565a28b2905955b4534be946782ded1c13abbd41a5e1734ccd349c54a83d46",
+      "0x38b57a6eb68f197ffae5105adb4f0f0fe7ffd450ddd7ee079d8b0a9a95b8e836",
+      "0xae96567323ea31b5350386035df962ec15475d257a92940bf42f792f01adb2ac",
+      "0xcbbc575c21ac5c44054f7f8301718143536c6a1941ad131c5a3c7c5ee977281e",
+      "0x2a981d506f378f3e48dc137cf7d18b7ea885769892d190620e5e4e253c686abb",
+      "0x61948def27bbb9542d36819788f8b2127d21fbb9b47a5469bb8f43aa3db8d288",
+      "0x38c77a06bd4718be286ba8f73055905f15ad5207ce3cb11f9e7e7ff84b3730c6",
+      "0xe689fbbf299d1cf320d2fde94caaa82c13a5a7c5fe0771d76b2653c0d7a31c1c",
+      "0x42c909daa31997abb14bfc54f90af12d8e93405d242eb17e33c8c6fe58109bc5",
+      "0xc1ff351bfee33d69060ef576d436ded465a657d00f22353963167820e811ebe8",
+      "0xea9afe2199e465ddea59f10fb70f0a5248d15dcbc70a0e55a4a7bb9cd238a2fb",
+      "0xf2f1c4da3763cd61ff6df0ce6d60ce4b63e8297f926b1fb53da5152880e37b16",
+      "0xaece7b7a87d75233f158d6dc2f3367b746a71e28e9c39fce046960838d573874",
+      "0x8039385ba255831f4bf4e85eff0cf43396fb0e01f672fe35852b370b3bc26aa6",
+      "0xba160ae81c88891de14d7a5ac3d328d4cb00589c4487609cb6673263042c01b5",
+      "0xb44a9eedf74ec6c166801cdd53abbea3ebf34dac19751e38ca51bbc35f234ba0",
+      "0x2f254a34eb358b77e2ae7352117f2d0df785057b9b8b1e1a4a6323aa4f59129c",
+      "0x0a96d00a827235a2c02dfb9c4bbf76ad0a3ae1f614c09aa5f422c2a30aed2ad9",
+      "0x975ca6a3edabf00ec219e914aa5bdb1d78ec712d0786c198e9896c35dbfffe6d",
+      "0x55f2d6e558932fdea85635d61c1135edf5ea79aaaf90647285dbe8172c48826f",
+      "0xc2ce1942d9ed64430827cd073b17e84181b52f9d9ce3d2dcf972f9bed0fc43da",
+      "0x3d92a0aa61ace034d62259bdfeeb4c384d2919113848507c47593fd3caf42adf",
+      "0xa7740946076599981f46b1db52b8a7072808d369dfc9fd7584df9e62ef6aad05",
+      "0x3a29cf731a30677aecedd9d2869566ea593884bbfe8167d84ee53f7d4e2aa663",
+      "0x96a4a67139036c42a329320c73b6a2467945f1a5d0ab2b78b7ea6d828d47ffe4",
+      "0x79266bbf8e5eec5b5805d0ed7be3e2f39916f3a0d43d96bba88bac16cc345724",
+      "0x0d3a2361d81140b60c67d061cd8d5c076698d4c191d2b6a72730a2b701fdd869",
+      "0xf07e5304c2e57af0787530b857547c0d68f08a80c41cda5a15294316b69ee2e9",
+      "0x9b06dd01c48e49976c5472ddb45504ed7b8a52d34e089011b7c52501685a78ff",
+      "0xd28de7739bc2ed8b3e7f296ddcf0ff989da8b5870137d904671b1cee210cca95",
+      "0x07ba140f9db20e84a5279642ef8a6e7e49ebf89590bfad436f47a57d2a71ce3b",
+      "0x7fbae4548870220093c9efd2c2f8c0dafb096f04caf1dd4636cf2d20ca75b58b",
+      "0x59a263aaa683f6316a78279f5e20e7279aaa867320da5b8acc936d8ec05241fa",
+      "0x682221bda4a510cee14a99a0a4711580867f4747ae0e72d2a2d78d1b86a12b53",
+      "0xf7fe8ac2d8d2456124d343a801abdaab6bb5d3621ca1ba619ba4d56c1ce26fe3",
+      "0xf5358628610ac8bffe864ad3edd4893aa5dc6832c5441886470358362a1fcac6"
+    ],
+    "setupAndFillEvidence": "raw/fills-and-receipts.sanitized.json",
+    "postgameEvidence": "raw/postgame-lifecycle.sanitized.json"
+  },
+  "deviations": [
+    {
+      "id": "smoke-v0-not-a-cohort",
+      "classification": "evidence_scope",
+      "disposition": "accepted",
+      "detail": "The durable run label is SMOKE_V0_NOT_A_COHORT. This artifact is controlled MVE evidence, not a canonical campaign or ranking cohort."
+    },
+    {
+      "id": "gemini-search-unknown-unproven",
+      "classification": "auditability",
+      "disposition": "open",
+      "detail": "All three Gemini calls declared a search tool, but retained no normalized search audit, grounding metadata, or tool-use token evidence. Search use is unknown/unproven, never zero or did-not-search."
+    },
+    {
+      "id": "provider-envelope-unavailable",
+      "classification": "evidence_retention",
+      "disposition": "open",
+      "detail": "Private rawResponse fields retain extracted answer text rather than complete provider envelopes, so the missing Gemini search evidence cannot be replayed or recovered.",
+      "issue": "https://github.com/ospex-org/ospex-benchmark/issues/92"
+    },
+    {
+      "id": "cross-arm-cost-not-comparable",
+      "classification": "analysis",
+      "disposition": "accepted",
+      "detail": "xAI used 470,958 input tokens and 48 evidenced billable searches versus Gemini at 10,544 input tokens with unknown search use. Cost per pick is not comparable across arms."
+    },
+    {
+      "id": "xai-search-bound-source-note-corrected",
+      "classification": "source_provenance",
+      "disposition": "corrected",
+      "detail": "The private activation note mistakenly described 16 as a declared search bound. At pinned benchmark commit f970ffea47c2363ef9134c758d4618f9d549d49e, xAI used max_turns: 5; max_turns caps agentic turns, not billable searches, because one turn can invoke tools in parallel. The observed 20, 17, and 11 billable-search counts therefore did not exceed an enforceable search-count bound; they were observed and priced, and derived actual spend was accepted before fill authorization."
+    },
+    {
+      "id": "fixed-execution-policy-abstention-boundary",
+      "classification": "policy_interpretation",
+      "disposition": "disclosed",
+      "detail": "The run-level executionPolicy was fixed-moneyline-total. Under the pinned schema, selectedForExecution=true was required for every supplied moneyline and total forecast; it is a policy marker, not an independent model signal. wouldAbstain remained independent and was true on 4 of the 24 executed rows (OpenAI three, Anthropic one)."
+    },
+    {
+      "id": "serialized-adapter-six-market-capacity",
+      "classification": "capacity",
+      "disposition": "accepted",
+      "detail": "Controlled fills executed serially. The maker was configured for six tracked markets and six realtime channels, exactly the three-game by two-market requirement; this is not spare-capacity evidence."
+    },
+    {
+      "id": "standing-model-position-allowances",
+      "classification": "permission_boundary",
+      "disposition": "accepted",
+      "detail": "Terminal evidence records the pre-approved model PositionModule ceiling as a standing exception. Model TreasuryModule allowances were zero; later shared-MVE model PositionModule balances are not attributed to Friday."
+    },
+    {
+      "id": "scoring-n4-no-ranking",
+      "classification": "analysis",
+      "disposition": "accepted",
+      "detail": "The referenced scoring run spans contests 87\u201390. Moneyline has n=4 per participant; no model beat baseline-away-ml, and the result is descriptive noise rather than ranking evidence."
+    }
+  ],
+  "provenance": {
+    "schemaVersion": 1,
+    "artifactRepositoryBaseCommit": "66f454420aeae568df1f4738161b231386f50cc5",
+    "benchmarkSourceCommit": "f970ffea47c2363ef9134c758d4618f9d549d49e",
+    "benchmarkSelectionOverlaySha256": "28522eb1ee159eddfc4a3fb2de711e4e04f30df62131f3845b11d4cb7b7465dd",
+    "harnessSourceCommit": "f6a572da0a79901913804a814c1f0bc6532c586c",
+    "marketMakerSourceCommit": "5d55aefe71632d228922223170345aaa612c35ce",
+    "sdkSourceCommit": "877c026df9af0e188a1e786cc715a77de0badbca",
+    "promptScaffoldSha256": "a37712d74948c5965bb61b12d60258b183e5a2fc86a2ffb968132684571e29f8",
+    "runId": "smoke-v0-2026-08-07-0acb06",
+    "cohortId": "smoke-v0-2026-08-07-mve-evening-v2-search",
+    "runLabel": "SMOKE_V0_NOT_A_COHORT",
+    "publicationSourceAuditSha256": "9683a2bbdb427d5fc6639f274a2d3fc622c928268d490f883d761946fb5392fb",
+    "privateEvidenceSha256": {
+      "activation": "3ae42679679674548a201d9500cd0a86b5725c322f063fdf6e694dac3c2101f6",
+      "benchmark": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+      "executionPlan": "2ff8455c28797d96783da62260992db31082ce76698dde464120dba335f17878",
+      "executionResult": "6a12935fc78d453f6f3c9d400b8472dca91d8bfd0c97b0ea0f54e68ec73c5919",
+      "fills": "e8310469add741e86b5209ff48b9edda6bb9d2bfa8acab5f40da93f0a3aa1458",
+      "flowPermissionGrant": "e591297d095b5088932074852c3d5af0bb07d7393f87fc1c87809768db38135e",
+      "flowPermissionReadback": "4fc0359c6d69ec3ad246a2697c40c3f09076764ef5d12efb145c7016e0effdb7",
+      "flowPermissionRevoke": "514d60cb18e4290d7e40ab8748b8c3591b2043830c22e75bc26191088331767f",
+      "makerPermissionGrant": "cd572c30091e255e2567dc308f8aede62272ea8500cb4e1048e0a4d1c152913a",
+      "makerPermissionReadback": "210f59b8d84e9da71a3b116d91edb78ca8210a912f5d3827cbc62a497d8d9257",
+      "makerPermissionRevoke": "07d99b7393b85810d11f98ef78106cc4aaee81d0b2d371b0f673b00b0eea93ae",
+      "postgameActions": "9efc6c157246d1600c3b31f76c9cd8f0dbf26180b9b53a2fb8ad0d90a4e794f9",
+      "postgameTiming": "d590760da6fb98a3339bc108e66a4c113656be71ec1003ebc7a90b5e8c35a5ff",
+      "scoringReport": "774584572ce15b9921d947be390802f8391fdbb04e0f0699cabf1b455a9244d6",
+      "scoringValidation": "783cf98b08c3efdd8865e402b96caaa6543a333517480824430937644f4b6c1a",
+      "searchAudit": "a208dc25f8d96ca59f88987b1b4be3da76cbc11344a0ab46b8bb44f05fddacae",
+      "setupResult": "2680b9498b0ae849e9e2a41b6918e016fdb47109128d45f44a70a816567d43e1",
+      "terminalZero": "de97234d76eccc407b78051271c87ba4a76a84fa200702260a59b7a0a804f71e",
+      "usageAndSpend": "c5ec939ec0cc9bf8e9b11f9c950e9869f007ffa666a1f82ed59909ff4b7ce918"
+    },
+    "providerEnvelopeRetentionIssue": {
+      "number": 92,
+      "stateAtPublication": "OPEN",
+      "url": "https://github.com/ospex-org/ospex-benchmark/issues/92"
+    },
+    "sourcePathsPublished": false
+  },
+  "artifactFiles": {
+    "summary": "summary.md",
+    "sourcePins": "raw/source-pins.sanitized.json",
+    "gamesAndFrozenInputs": "raw/games-and-frozen-inputs.sanitized.json",
+    "modelArmsSearchAndSpend": "raw/model-arms-search-and-spend.sanitized.json",
+    "fillsAndReceipts": "raw/fills-and-receipts.sanitized.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "terminalZero": "raw/terminal-zero.sanitized.json",
+    "economics": "raw/economics.sanitized.json",
+    "scoringContests87To90": "raw/scoring-contests-87-90.sanitized.json",
+    "officialFinalSource": "raw/official-final-source.sanitized.json",
+    "deviations": "raw/deviations.sanitized.json"
+  },
+  "publication": {
+    "privacyReview": "sanitized; no secrets, local paths, provider payloads, captured search queries/results, or named upstream odds providers",
+    "sourcePathDisclosure": false,
+    "sourceOddsRowsPublished": false,
+    "providerResponsesPublished": false,
+    "providerEnvelopeAvailablePrivately": false,
+    "capturedSearchQueriesPublished": false,
+    "capturedSearchResultReferencesPublished": false
+  }
+}

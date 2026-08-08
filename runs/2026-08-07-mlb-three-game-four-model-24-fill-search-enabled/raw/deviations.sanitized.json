@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "status": "complete_verified_with_caveats",
+  "items": [
+    {
+      "id": "smoke-v0-not-a-cohort",
+      "classification": "evidence_scope",
+      "disposition": "accepted",
+      "detail": "The durable run label is SMOKE_V0_NOT_A_COHORT. This artifact is controlled MVE evidence, not a canonical campaign or ranking cohort."
+    },
+    {
+      "id": "gemini-search-unknown-unproven",
+      "classification": "auditability",
+      "disposition": "open",
+      "detail": "All three Gemini calls declared a search tool, but retained no normalized search audit, grounding metadata, or tool-use token evidence. Search use is unknown/unproven, never zero or did-not-search."
+    },
+    {
+      "id": "provider-envelope-unavailable",
+      "classification": "evidence_retention",
+      "disposition": "open",
+      "detail": "Private rawResponse fields retain extracted answer text rather than complete provider envelopes, so the missing Gemini search evidence cannot be replayed or recovered.",
+      "issue": "https://github.com/ospex-org/ospex-benchmark/issues/92"
+    },
+    {
+      "id": "cross-arm-cost-not-comparable",
+      "classification": "analysis",
+      "disposition": "accepted",
+      "detail": "xAI used 470,958 input tokens and 48 evidenced billable searches versus Gemini at 10,544 input tokens with unknown search use. Cost per pick is not comparable across arms."
+    },
+    {
+      "id": "xai-search-bound-source-note-corrected",
+      "classification": "source_provenance",
+      "disposition": "corrected",
+      "detail": "The private activation note mistakenly described 16 as a declared search bound. At pinned benchmark commit f970ffea47c2363ef9134c758d4618f9d549d49e, xAI used max_turns: 5; max_turns caps agentic turns, not billable searches, because one turn can invoke tools in parallel. The observed 20, 17, and 11 billable-search counts therefore did not exceed an enforceable search-count bound; they were observed and priced, and derived actual spend was accepted before fill authorization."
+    },
+    {
+      "id": "fixed-execution-policy-abstention-boundary",
+      "classification": "policy_interpretation",
+      "disposition": "disclosed",
+      "detail": "The run-level executionPolicy was fixed-moneyline-total. Under the pinned schema, selectedForExecution=true was required for every supplied moneyline and total forecast; it is a policy marker, not an independent model signal. wouldAbstain remained independent and was true on 4 of the 24 executed rows (OpenAI three, Anthropic one)."
+    },
+    {
+      "id": "serialized-adapter-six-market-capacity",
+      "classification": "capacity",
+      "disposition": "accepted",
+      "detail": "Controlled fills executed serially. The maker was configured for six tracked markets and six realtime channels, exactly the three-game by two-market requirement; this is not spare-capacity evidence."
+    },
+    {
+      "id": "standing-model-position-allowances",
+      "classification": "permission_boundary",
+      "disposition": "accepted",
+      "detail": "Terminal evidence records the pre-approved model PositionModule ceiling as a standing exception. Model TreasuryModule allowances were zero; later shared-MVE model PositionModule balances are not attributed to Friday."
+    },
+    {
+      "id": "scoring-n4-no-ranking",
+      "classification": "analysis",
+      "disposition": "accepted",
+      "detail": "The referenced scoring run spans contests 87\u201390. Moneyline has n=4 per participant; no model beat baseline-away-ml, and the result is descriptive noise rather than ranking evidence."
+    }
+  ]
+}
