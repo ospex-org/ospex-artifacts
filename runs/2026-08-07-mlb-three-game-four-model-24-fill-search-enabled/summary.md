@@ -29,7 +29,7 @@ The artifact date is the Friday `2026-08-07` slate date; the games began after m
 ## On-chain and lifecycle evidence
 
 - Setup: 3 contest creations + 6 speculation creations.
-- Controlled execution: `24/24` fills, 24 unique fill transaction hashes, zero failed fills.
+- Controlled execution: `24/24` fills, 24 unique fill transaction hashes, zero failed fills; every fill is bound to its structured frozen decision (selection, confidence, probabilities, abstention flag, and timing).
 - Execution adapter: serialized; every fill confirmation preceded the next submission.
 - Maker capacity: six tracked markets and six realtime channels, exactly the three-game × two-market requirement. This is capacity-bound evidence, not spare-capacity evidence.
 - Postgame: 3 score requests, 3 independently recovered `ContestScoresSet` callback transactions, 6 settlements, and 22 claim transactions.
@@ -98,7 +98,7 @@ The terminal source records the model PositionModule approval ceiling as a stand
 
 Published:
 
-- exact game identities, frozen reference odds, decisions, fill amounts, transaction hashes, successful receipt blocks/timestamps, final scores, settlement/claim evidence, terminal readback, derived trading economics, sanitized search/spend aggregates, source commits/hashes, and cross-run scoring aggregates;
+- exact game identities, frozen reference odds, executed structured decisions, fill amounts, transaction hashes, successful receipt blocks/timestamps/gas, final scores, settlement/claim evidence, terminal readback, derived trading economics, sanitized search/spend aggregates, source commits/hashes, and cross-run scoring aggregates;
 - the explicit search-envelope and comparability caveats above.
 
 Not published:

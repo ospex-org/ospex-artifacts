@@ -10,7 +10,9 @@
     "failedFillCount": 0,
     "uniqueFillTransactionCount": 24,
     "allLiveReceiptsSuccessful": true,
-    "fillGasCostPol": "2.352827198997794284"
+    "fillGasCostPol": "2.352827198997794284",
+    "executedDecisionProvenanceRows": 24,
+    "unexecutedSpreadForecastsPublishedHere": false
   },
   "makerRuntimeBoundary": {
     "singleStartSingleTakedown": true,
@@ -214,7 +216,26 @@
       "gasUsed": "418184",
       "effectiveGasPriceWei": "233115840852",
       "gasCostWei": "97485314790852768",
-      "gasCostPol": "0.097485314790852768"
+      "gasCostPol": "0.097485314790852768",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "Los Angeles Dodgers",
+        "line": null,
+        "observedDecimal": 1.57143,
+        "wouldAbstain": true,
+        "confidence": 0.4,
+        "probabilities": {
+          "win": 0.62,
+          "push": 0,
+          "loss": 0.38
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:05:18.879Z",
+        "responseAt": "2026-08-07T20:06:16.461Z",
+        "latencyMs": 57582,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "210454d3-740f-4c40-a108-35d8baaeb237",
@@ -236,7 +257,26 @@
       "gasUsed": "338530",
       "effectiveGasPriceWei": "234270250529",
       "gasCostWei": "79307507911582370",
-      "gasCostPol": "0.07930750791158237"
+      "gasCostPol": "0.07930750791158237",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "Los Angeles Dodgers",
+        "line": null,
+        "observedDecimal": 1.57143,
+        "wouldAbstain": false,
+        "confidence": 0.7,
+        "probabilities": {
+          "win": 0.65,
+          "push": 0,
+          "loss": 0.35
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:05:18.883Z",
+        "responseAt": "2026-08-07T20:05:52.814Z",
+        "latencyMs": 33931,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "210454d3-740f-4c40-a108-35d8baaeb237",
@@ -258,7 +298,26 @@
       "gasUsed": "338530",
       "effectiveGasPriceWei": "245672416888",
       "gasCostWei": "83167483289094640",
-      "gasCostPol": "0.08316748328909464"
+      "gasCostPol": "0.08316748328909464",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "Los Angeles Dodgers",
+        "line": null,
+        "observedDecimal": 1.57143,
+        "wouldAbstain": false,
+        "confidence": 0.58,
+        "probabilities": {
+          "win": 0.64,
+          "push": 0,
+          "loss": 0.36
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:05:18.872Z",
+        "responseAt": "2026-08-07T20:05:57.957Z",
+        "latencyMs": 39085,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "210454d3-740f-4c40-a108-35d8baaeb237",
@@ -280,7 +339,26 @@
       "gasUsed": "418160",
       "effectiveGasPriceWei": "253112452537",
       "gasCostWei": "105841503152871920",
-      "gasCostPol": "0.10584150315287192"
+      "gasCostPol": "0.10584150315287192",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "Arizona Diamondbacks",
+        "line": null,
+        "observedDecimal": 2.54,
+        "wouldAbstain": false,
+        "confidence": 0.58,
+        "probabilities": {
+          "win": 0.42,
+          "push": 0,
+          "loss": 0.58
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:05:18.886Z",
+        "responseAt": "2026-08-07T20:06:35.207Z",
+        "latencyMs": 76321,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "210454d3-740f-4c40-a108-35d8baaeb237",
@@ -302,7 +380,26 @@
       "gasUsed": "418196",
       "effectiveGasPriceWei": "274442193682",
       "gasCostWei": "114770627629037672",
-      "gasCostPol": "0.114770627629037672"
+      "gasCostPol": "0.114770627629037672",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "over",
+        "line": 9,
+        "observedDecimal": 2,
+        "wouldAbstain": false,
+        "confidence": 0.55,
+        "probabilities": {
+          "win": 0.47,
+          "push": 0.09,
+          "loss": 0.44
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:05:18.879Z",
+        "responseAt": "2026-08-07T20:06:16.461Z",
+        "latencyMs": 57582,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "210454d3-740f-4c40-a108-35d8baaeb237",
@@ -324,7 +421,26 @@
       "gasUsed": "418160",
       "effectiveGasPriceWei": "265450040217",
       "gasCostWei": "111000588817140720",
-      "gasCostPol": "0.11100058881714072"
+      "gasCostPol": "0.11100058881714072",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "under",
+        "line": 9,
+        "observedDecimal": 1.83333,
+        "wouldAbstain": false,
+        "confidence": 0.6,
+        "probabilities": {
+          "win": 0.53,
+          "push": 0.08,
+          "loss": 0.39
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:05:18.883Z",
+        "responseAt": "2026-08-07T20:05:52.814Z",
+        "latencyMs": 33931,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "210454d3-740f-4c40-a108-35d8baaeb237",
@@ -346,7 +462,26 @@
       "gasUsed": "338542",
       "effectiveGasPriceWei": "266860128254",
       "gasCostWei": "90343361539365668",
-      "gasCostPol": "0.090343361539365668"
+      "gasCostPol": "0.090343361539365668",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "over",
+        "line": 9,
+        "observedDecimal": 2,
+        "wouldAbstain": true,
+        "confidence": 0.54,
+        "probabilities": {
+          "win": 0.45,
+          "push": 0.09,
+          "loss": 0.46
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:05:18.872Z",
+        "responseAt": "2026-08-07T20:05:57.957Z",
+        "latencyMs": 39085,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "210454d3-740f-4c40-a108-35d8baaeb237",
@@ -368,7 +503,26 @@
       "gasUsed": "338506",
       "effectiveGasPriceWei": "264838267730",
       "gasCostWei": "89649342656211380",
-      "gasCostPol": "0.08964934265621138"
+      "gasCostPol": "0.08964934265621138",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "under",
+        "line": 9,
+        "observedDecimal": 1.83333,
+        "wouldAbstain": false,
+        "confidence": 0.55,
+        "probabilities": {
+          "win": 0.5,
+          "push": 0.04,
+          "loss": 0.46
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:05:18.886Z",
+        "responseAt": "2026-08-07T20:06:35.207Z",
+        "latencyMs": 76321,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "a512537f-e262-4f17-ade4-a8cf7032e284",
@@ -390,7 +544,26 @@
       "gasUsed": "418160",
       "effectiveGasPriceWei": "259564223970",
       "gasCostWei": "108539375895295200",
-      "gasCostPol": "0.1085393758952952"
+      "gasCostPol": "0.1085393758952952",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "San Diego Padres",
+        "line": null,
+        "observedDecimal": 1.88496,
+        "wouldAbstain": false,
+        "confidence": 0.6,
+        "probabilities": {
+          "win": 0.57,
+          "push": 0,
+          "loss": 0.43
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:06:35.220Z",
+        "responseAt": "2026-08-07T20:07:21.483Z",
+        "latencyMs": 46263,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "a512537f-e262-4f17-ade4-a8cf7032e284",
@@ -412,7 +585,26 @@
       "gasUsed": "338506",
       "effectiveGasPriceWei": "257705432284",
       "gasCostWei": "87234835060727704",
-      "gasCostPol": "0.087234835060727704"
+      "gasCostPol": "0.087234835060727704",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "San Diego Padres",
+        "line": null,
+        "observedDecimal": 1.88496,
+        "wouldAbstain": false,
+        "confidence": 0.6,
+        "probabilities": {
+          "win": 0.55,
+          "push": 0,
+          "loss": 0.45
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:06:35.221Z",
+        "responseAt": "2026-08-07T20:07:16.155Z",
+        "latencyMs": 40934,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "a512537f-e262-4f17-ade4-a8cf7032e284",
@@ -434,7 +626,26 @@
       "gasUsed": "338506",
       "effectiveGasPriceWei": "273133332871",
       "gasCostWei": "92457271976830726",
-      "gasCostPol": "0.092457271976830726"
+      "gasCostPol": "0.092457271976830726",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "San Diego Padres",
+        "line": null,
+        "observedDecimal": 1.88496,
+        "wouldAbstain": false,
+        "confidence": 0.61,
+        "probabilities": {
+          "win": 0.53,
+          "push": 0,
+          "loss": 0.47
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:06:35.217Z",
+        "responseAt": "2026-08-07T20:07:20.029Z",
+        "latencyMs": 44812,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "a512537f-e262-4f17-ade4-a8cf7032e284",
@@ -456,7 +667,26 @@
       "gasUsed": "356446",
       "effectiveGasPriceWei": "266268305468",
       "gasCostWei": "94910272410846728",
-      "gasCostPol": "0.094910272410846728"
+      "gasCostPol": "0.094910272410846728",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "San Diego Padres",
+        "line": null,
+        "observedDecimal": 1.88496,
+        "wouldAbstain": false,
+        "confidence": 0.58,
+        "probabilities": {
+          "win": 0.54,
+          "push": 0,
+          "loss": 0.46
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:06:35.224Z",
+        "responseAt": "2026-08-07T20:07:43.980Z",
+        "latencyMs": 68756,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "a512537f-e262-4f17-ade4-a8cf7032e284",
@@ -478,7 +708,26 @@
       "gasUsed": "418191",
       "effectiveGasPriceWei": "264778202717",
       "gasCostWei": "110727861372424947",
-      "gasCostPol": "0.110727861372424947"
+      "gasCostPol": "0.110727861372424947",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "under",
+        "line": 8.5,
+        "observedDecimal": 1.95238,
+        "wouldAbstain": false,
+        "confidence": 0.6,
+        "probabilities": {
+          "win": 0.55,
+          "push": 0,
+          "loss": 0.45
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:06:35.220Z",
+        "responseAt": "2026-08-07T20:07:21.483Z",
+        "latencyMs": 46263,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "a512537f-e262-4f17-ade4-a8cf7032e284",
@@ -500,7 +749,26 @@
       "gasUsed": "338537",
       "effectiveGasPriceWei": "265192467312",
       "gasCostWei": "89777462306402544",
-      "gasCostPol": "0.089777462306402544"
+      "gasCostPol": "0.089777462306402544",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "under",
+        "line": 8.5,
+        "observedDecimal": 1.95238,
+        "wouldAbstain": false,
+        "confidence": 0.6,
+        "probabilities": {
+          "win": 0.52,
+          "push": 0,
+          "loss": 0.48
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:06:35.221Z",
+        "responseAt": "2026-08-07T20:07:16.155Z",
+        "latencyMs": 40934,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "a512537f-e262-4f17-ade4-a8cf7032e284",
@@ -522,7 +790,26 @@
       "gasUsed": "418196",
       "effectiveGasPriceWei": "276241961522",
       "gasCostWei": "115523283340654312",
-      "gasCostPol": "0.115523283340654312"
+      "gasCostPol": "0.115523283340654312",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "over",
+        "line": 8.5,
+        "observedDecimal": 1.86957,
+        "wouldAbstain": true,
+        "confidence": 0.56,
+        "probabilities": {
+          "win": 0.53,
+          "push": 0,
+          "loss": 0.47
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:06:35.217Z",
+        "responseAt": "2026-08-07T20:07:20.029Z",
+        "latencyMs": 44812,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "a512537f-e262-4f17-ade4-a8cf7032e284",
@@ -544,7 +831,26 @@
       "gasUsed": "338537",
       "effectiveGasPriceWei": "269544792449",
       "gasCostWei": "91250885401307113",
-      "gasCostPol": "0.091250885401307113"
+      "gasCostPol": "0.091250885401307113",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "under",
+        "line": 8.5,
+        "observedDecimal": 1.95238,
+        "wouldAbstain": false,
+        "confidence": 0.55,
+        "probabilities": {
+          "win": 0.53,
+          "push": 0,
+          "loss": 0.47
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:06:35.224Z",
+        "responseAt": "2026-08-07T20:07:43.980Z",
+        "latencyMs": 68756,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "9ca09dc2-591d-426f-9236-f5cfb1d6d7b4",
@@ -566,7 +872,26 @@
       "gasUsed": "418184",
       "effectiveGasPriceWei": "255458676907",
       "gasCostWei": "106828731343676888",
-      "gasCostPol": "0.106828731343676888"
+      "gasCostPol": "0.106828731343676888",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "Tampa Bay Rays",
+        "line": null,
+        "observedDecimal": 2,
+        "wouldAbstain": false,
+        "confidence": 0.5,
+        "probabilities": {
+          "win": 0.52,
+          "push": 0,
+          "loss": 0.48
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:07:43.994Z",
+        "responseAt": "2026-08-07T20:08:54.557Z",
+        "latencyMs": 70563,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "9ca09dc2-591d-426f-9236-f5cfb1d6d7b4",
@@ -588,7 +913,26 @@
       "gasUsed": "338530",
       "effectiveGasPriceWei": "280163500578",
       "gasCostWei": "94843749850670340",
-      "gasCostPol": "0.09484374985067034"
+      "gasCostPol": "0.09484374985067034",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "Tampa Bay Rays",
+        "line": null,
+        "observedDecimal": 2,
+        "wouldAbstain": false,
+        "confidence": 0.65,
+        "probabilities": {
+          "win": 0.53,
+          "push": 0,
+          "loss": 0.47
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:07:43.995Z",
+        "responseAt": "2026-08-07T20:08:26.200Z",
+        "latencyMs": 42205,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "9ca09dc2-591d-426f-9236-f5cfb1d6d7b4",
@@ -610,7 +954,26 @@
       "gasUsed": "338530",
       "effectiveGasPriceWei": "275998228388",
       "gasCostWei": "93433680256189640",
-      "gasCostPol": "0.09343368025618964"
+      "gasCostPol": "0.09343368025618964",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "Tampa Bay Rays",
+        "line": null,
+        "observedDecimal": 2,
+        "wouldAbstain": false,
+        "confidence": 0.63,
+        "probabilities": {
+          "win": 0.515,
+          "push": 0,
+          "loss": 0.485
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:07:43.992Z",
+        "responseAt": "2026-08-07T20:08:29.246Z",
+        "latencyMs": 45254,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "9ca09dc2-591d-426f-9236-f5cfb1d6d7b4",
@@ -632,7 +995,26 @@
       "gasUsed": "356470",
       "effectiveGasPriceWei": "278252134370",
       "gasCostWei": "99188538338873900",
-      "gasCostPol": "0.0991885383388739"
+      "gasCostPol": "0.0991885383388739",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "Tampa Bay Rays",
+        "line": null,
+        "observedDecimal": 2,
+        "wouldAbstain": false,
+        "confidence": 0.62,
+        "probabilities": {
+          "win": 0.54,
+          "push": 0,
+          "loss": 0.46
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:07:43.996Z",
+        "responseAt": "2026-08-07T20:08:43.051Z",
+        "latencyMs": 59055,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "9ca09dc2-591d-426f-9236-f5cfb1d6d7b4",
@@ -654,7 +1036,26 @@
       "gasUsed": "418160",
       "effectiveGasPriceWei": "275668828416",
       "gasCostWei": "115273677290434560",
-      "gasCostPol": "0.11527367729043456"
+      "gasCostPol": "0.11527367729043456",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "under",
+        "line": 7,
+        "observedDecimal": 1.86957,
+        "wouldAbstain": false,
+        "confidence": 0.5,
+        "probabilities": {
+          "win": 0.45,
+          "push": 0.13,
+          "loss": 0.42
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:07:43.994Z",
+        "responseAt": "2026-08-07T20:08:54.557Z",
+        "latencyMs": 70563,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "9ca09dc2-591d-426f-9236-f5cfb1d6d7b4",
@@ -676,7 +1077,26 @@
       "gasUsed": "338506",
       "effectiveGasPriceWei": "272816707697",
       "gasCostWei": "92350092455680682",
-      "gasCostPol": "0.092350092455680682"
+      "gasCostPol": "0.092350092455680682",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "under",
+        "line": 7,
+        "observedDecimal": 1.86957,
+        "wouldAbstain": false,
+        "confidence": 0.6,
+        "probabilities": {
+          "win": 0.5,
+          "push": 0.12,
+          "loss": 0.38
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:07:43.995Z",
+        "responseAt": "2026-08-07T20:08:26.200Z",
+        "latencyMs": 42205,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "9ca09dc2-591d-426f-9236-f5cfb1d6d7b4",
@@ -698,7 +1118,26 @@
       "gasUsed": "338506",
       "effectiveGasPriceWei": "278486858251",
       "gasCostWei": "94269472439113006",
-      "gasCostPol": "0.094269472439113006"
+      "gasCostPol": "0.094269472439113006",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "under",
+        "line": 7,
+        "observedDecimal": 1.86957,
+        "wouldAbstain": true,
+        "confidence": 0.59,
+        "probabilities": {
+          "win": 0.47,
+          "push": 0.12,
+          "loss": 0.41
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:07:43.992Z",
+        "responseAt": "2026-08-07T20:08:29.246Z",
+        "latencyMs": 45254,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     },
     {
       "gameId": "9ca09dc2-591d-426f-9236-f5cfb1d6d7b4",
@@ -720,7 +1159,26 @@
       "gasUsed": "338506",
       "effectiveGasPriceWei": "279617730476",
       "gasCostWei": "94652279472508856",
-      "gasCostPol": "0.094652279472508856"
+      "gasCostPol": "0.094652279472508856",
+      "decisionProvenance": {
+        "selectedForExecution": true,
+        "selection": "under",
+        "line": 7,
+        "observedDecimal": 1.86957,
+        "wouldAbstain": false,
+        "confidence": 0.58,
+        "probabilities": {
+          "win": 0.53,
+          "push": 0.04,
+          "loss": 0.43
+        },
+        "reasonCode": null,
+        "requestAt": "2026-08-07T20:07:43.996Z",
+        "responseAt": "2026-08-07T20:08:43.051Z",
+        "latencyMs": 59055,
+        "binding": "private-benchmark-source-sha256",
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+      }
     }
   ],
   "publishedReceiptGasCostPol": "3.589519020112879781"

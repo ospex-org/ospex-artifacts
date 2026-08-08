@@ -89,5 +89,23 @@
   },
   "capturedQueriesPublished": false,
   "capturedResultReferencesPublished": false,
-  "providerBodiesPublished": false
+  "providerBodiesPublished": false,
+  "executedDecisionProvenance": {
+    "rowCount": 24,
+    "path": "raw/fills-and-receipts.sanitized.json",
+    "publishedFields": [
+      "selection",
+      "line",
+      "observedDecimal",
+      "wouldAbstain",
+      "confidence",
+      "probabilities",
+      "reasonCode",
+      "requestAt",
+      "responseAt",
+      "latencyMs"
+    ],
+    "rationalePublished": false,
+    "unexecutedSpreadForecastsPublished": false
+  }
 }

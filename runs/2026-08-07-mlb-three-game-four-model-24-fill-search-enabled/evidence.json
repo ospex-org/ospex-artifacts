@@ -121,7 +121,9 @@
     "geminiSearchClassification": "unknown_unproven",
     "completeProviderEnvelopesRetained": false,
     "costPerPickComparableAcrossArms": false,
-    "rawEvidence": "raw/model-arms-search-and-spend.sanitized.json"
+    "rawEvidence": "raw/model-arms-search-and-spend.sanitized.json",
+    "executedDecisionProvenanceRows": 24,
+    "unexecutedSpreadForecastsPublished": false
   },
   "operations": {
     "serializedControlledFillAdapter": true,
