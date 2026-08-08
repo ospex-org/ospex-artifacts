@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "name": "MLB Stats API schedule",
+    "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-08-07&endDate=2026-08-08&hydrate=linescore",
+    "fetchedAt": "2026-08-08T15:39:05.775105Z",
+    "responseSha256": "d934eed47d58e258a021e5ac3eeea91b2b8e82e7d23253cee29b6686e95e2b6e"
+  },
+  "identityRule": "Exact away team, home team, and scheduled UTC start were matched before comparing scores.",
+  "games": [
+    {
+      "awayScore": 3,
+      "awayTeam": "Los Angeles Dodgers",
+      "contestId": "88",
+      "detailedState": "Final",
+      "gameDate": "2026-08-08T01:40:00Z",
+      "gameId": "210454d3-740f-4c40-a108-35d8baaeb237",
+      "gamePk": 825051,
+      "homeScore": 4,
+      "homeTeam": "Arizona Diamondbacks"
+    },
+    {
+      "awayScore": 6,
+      "awayTeam": "Houston Astros",
+      "contestId": "89",
+      "detailedState": "Final",
+      "gameDate": "2026-08-08T01:40:00Z",
+      "gameId": "a512537f-e262-4f17-ade4-a8cf7032e284",
+      "gamePk": 823266,
+      "homeScore": 3,
+      "homeTeam": "San Diego Padres"
+    },
+    {
+      "awayScore": 2,
+      "awayTeam": "Tampa Bay Rays",
+      "contestId": "90",
+      "detailedState": "Final",
+      "gameDate": "2026-08-08T01:45:00Z",
+      "gameId": "9ca09dc2-591d-426f-9236-f5cfb1d6d7b4",
+      "gamePk": 823103,
+      "homeScore": 1,
+      "homeTeam": "Seattle Mariners"
+    }
+  ],
+  "matchesOnchainScores": true
+}

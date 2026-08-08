@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "status": "complete_verified_with_caveats",
+  "items": [
+    {
+      "id": "smoke-v0-not-a-cohort",
+      "classification": "evidence_scope",
+      "disposition": "accepted",
+      "detail": "The durable run label is SMOKE_V0_NOT_A_COHORT. This artifact is controlled MVE evidence, not a canonical campaign or ranking cohort."
+    },
+    {
+      "id": "gemini-search-unknown-unproven",
+      "classification": "auditability",
+      "disposition": "open",
+      "detail": "All three Gemini calls declared a search tool, but retained no normalized search audit, grounding metadata, or tool-use token evidence. Search use is unknown/unproven, never zero or did-not-search."
+    },
+    {
+      "id": "provider-envelope-unavailable",
+      "classification": "evidence_retention",
+      "disposition": "open",
+      "detail": "Private rawResponse fields retain extracted answer text rather than complete provider envelopes, so the missing Gemini search evidence cannot be replayed or recovered.",
+      "issue": "https://github.com/ospex-org/ospex-benchmark/issues/92"
+    },
+    {
+      "id": "cross-arm-cost-not-comparable",
+      "classification": "analysis",
+      "disposition": "accepted",
+      "detail": "xAI used 470,958 input tokens and 48 evidenced billable searches versus Gemini at 10,544 input tokens with unknown search use. Cost per pick is not comparable across arms."
+    },
+    {
+      "id": "xai-declared-search-bound-exceeded",
+      "classification": "runtime",
+      "disposition": "accepted",
+      "detail": "xAI recorded 20, 17, and 11 billable searches; the first two exceeded the declared 16-search bound. The operator accepted this before authorizing the frozen fills."
+    },
+    {
+      "id": "serialized-adapter-six-market-capacity",
+      "classification": "capacity",
+      "disposition": "accepted",
+      "detail": "Controlled fills executed serially. The maker was configured for six tracked markets and six realtime channels, exactly the three-game by two-market requirement; this is not spare-capacity evidence."
+    },
+    {
+      "id": "standing-model-position-allowances",
+      "classification": "permission_boundary",
+      "disposition": "accepted",
+      "detail": "Terminal evidence records the pre-approved model PositionModule ceiling as a standing exception. Model TreasuryModule allowances were zero; later shared-MVE model PositionModule balances are not attributed to Friday."
+    },
+    {
+      "id": "scoring-n4-no-ranking",
+      "classification": "analysis",
+      "disposition": "accepted",
+      "detail": "The referenced scoring run spans contests 87\u201390. Moneyline has n=4 per participant; no model beat baseline-away-ml, and the result is descriptive noise rather than ranking evidence."
+    }
+  ]
+}

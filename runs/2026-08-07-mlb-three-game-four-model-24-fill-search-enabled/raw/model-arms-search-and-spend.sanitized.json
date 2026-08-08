@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "searchEnabled": true,
+  "firstSearchEnabledControlledMveArtifactInRepository": true,
+  "providerCalls": 12,
+  "knownBillableSearchCount": 59,
+  "unknownBillableSearchCallCount": 3,
+  "totalConservativeProviderSpendUsd": "5.411942",
+  "priceVersion": "prices-v3",
+  "arms": [
+    {
+      "armId": "anthropic-claude-fable-5",
+      "providerCalls": 3,
+      "inputTokens": 90255,
+      "outputTokens": 11844,
+      "reasoningTokens": 5628,
+      "billableOutputTokens": 11844,
+      "searchAuditCallsPresent": 3,
+      "billableSearchCount": 6,
+      "searchEvidenceStatus": "auditable_count_retained",
+      "averageLatencyMs": 58136.0,
+      "conservativeSpendUsd": "1.554750"
+    },
+    {
+      "armId": "google-gemini-3.1-pro-preview",
+      "providerCalls": 3,
+      "inputTokens": 10544,
+      "outputTokens": 3908,
+      "reasoningTokens": 10933,
+      "billableOutputTokens": 14841,
+      "searchAuditCallsPresent": 0,
+      "billableSearchCount": null,
+      "searchEvidenceStatus": "unknown_unproven",
+      "averageLatencyMs": 39023.333,
+      "conservativeSpendUsd": "0.309314"
+    },
+    {
+      "armId": "openai-gpt-5.6-sol",
+      "providerCalls": 3,
+      "inputTokens": 70721,
+      "outputTokens": 6132,
+      "reasoningTokens": 2765,
+      "billableOutputTokens": 6132,
+      "searchAuditCallsPresent": 3,
+      "billableSearchCount": 5,
+      "searchEvidenceStatus": "auditable_count_retained",
+      "averageLatencyMs": 43050.333,
+      "conservativeSpendUsd": "1.301934"
+    },
+    {
+      "armId": "xai-grok-4.5",
+      "providerCalls": 3,
+      "inputTokens": 470958,
+      "outputTokens": 10176,
+      "reasoningTokens": 5929,
+      "billableOutputTokens": 10176,
+      "searchAuditCallsPresent": 3,
+      "billableSearchCount": 48,
+      "searchEvidenceStatus": "auditable_count_retained",
+      "averageLatencyMs": 68044.0,
+      "conservativeSpendUsd": "2.245944"
+    }
+  ],
+  "geminiEvidenceBoundary": {
+    "requestDeclaredSearchTool": true,
+    "calls": 3,
+    "normalizedSearchAuditsRetained": 0,
+    "groundingMetadataRetained": false,
+    "toolUseTokenEvidenceRetained": false,
+    "classification": "unknown_unproven",
+    "notAllowedClassification": "did_not_search"
+  },
+  "providerEnvelopeBoundary": {
+    "extractedAnswerTextRetainedPrivately": true,
+    "completeProviderResponseEnvelopeRetained": false,
+    "offlineSearchAuditReplayPossible": false,
+    "issue": "https://github.com/ospex-org/ospex-benchmark/issues/92"
+  },
+  "comparabilityBoundary": {
+    "xaiInputTokens": 470958,
+    "geminiInputTokens": 10544,
+    "xaiToGeminiInputTokenRatio": 44.665971,
+    "xaiBillableSearchCount": 48,
+    "geminiBillableSearchCount": null,
+    "xaiConservativeSpendUsd": "2.245944",
+    "geminiConservativeSpendUsd": "0.309314",
+    "costPerPickComparableAcrossArms": false,
+    "reason": "Input and search usage differ sharply, while Gemini search usage is unauditable."
+  },
+  "capturedQueriesPublished": false,
+  "capturedResultReferencesPublished": false,
+  "providerBodiesPublished": false
+}

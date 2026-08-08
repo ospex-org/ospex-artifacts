@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "unit": "USDC",
+  "rows": [
+    {
+      "participantId": "flow",
+      "armId": null,
+      "matchedPrincipalUsd": "0.120000",
+      "terminalPayoutUsd": "0.120000",
+      "netTradingPnlUsd": "0.000000",
+      "claimTransactions": 6
+    },
+    {
+      "participantId": "lab-anthropic",
+      "armId": "anthropic-claude-fable-5",
+      "matchedPrincipalUsd": "5.999701",
+      "terminalPayoutUsd": "3.929292",
+      "netTradingPnlUsd": "-2.070409",
+      "claimTransactions": 2
+    },
+    {
+      "participantId": "lab-gemini",
+      "armId": "google-gemini-3.1-pro-preview",
+      "matchedPrincipalUsd": "5.999690",
+      "terminalPayoutUsd": "5.798717",
+      "netTradingPnlUsd": "-0.200973",
+      "claimTransactions": 3
+    },
+    {
+      "participantId": "lab-openai",
+      "armId": "openai-gpt-5.6-sol",
+      "matchedPrincipalUsd": "5.999601",
+      "terminalPayoutUsd": "5.838192",
+      "netTradingPnlUsd": "-0.161409",
+      "claimTransactions": 3
+    },
+    {
+      "participantId": "lab-xai",
+      "armId": "xai-grok-4.5",
+      "matchedPrincipalUsd": "5.999677",
+      "terminalPayoutUsd": "8.337077",
+      "netTradingPnlUsd": "2.337400",
+      "claimTransactions": 4
+    },
+    {
+      "participantId": "maker",
+      "armId": null,
+      "matchedPrincipalUsd": "22.368600",
+      "terminalPayoutUsd": "22.463991",
+      "netTradingPnlUsd": "0.095391",
+      "claimTransactions": 4
+    }
+  ],
+  "reconciliation": {
+    "modelPlusMakerNetTradingPnlUsd": "0.000000",
+    "flowSetupTradingNetUsd": "0.000000",
+    "contestCreationFeesUsd": "3.000000",
+    "speculationCreationFeesUsd": "3.000000",
+    "flowNetAfterCreationFeesExcludingGasUsd": "-6.000000",
+    "polygonGasCostPolAll70Transactions": "4.922692628836311909"
+  },
+  "exclusions": [
+    "Polygon gas is reported separately in POL and excluded from USDC trading PnL",
+    "off-chain provider spend (reported separately)",
+    "capital opportunity cost"
+  ],
+  "note": "Trading PnL is derived from matched principal and terminal claim payouts. Flow self-match trading net is zero; Flow also paid six USDC in contest/speculation creation fees."
+}

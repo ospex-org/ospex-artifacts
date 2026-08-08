@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "status": "TERMINAL_ZERO",
+  "completedAt": "2026-08-08T04:59:32.586032+00:00",
+  "terminalObservationAt": "2026-08-08T04:58:11.584059Z",
+  "contests": [
+    {
+      "gameId": "210454d3-740f-4c40-a108-35d8baaeb237",
+      "contestId": "88",
+      "status": "TERMINAL",
+      "score": {
+        "away": 3,
+        "home": 4,
+        "onchainStatus": "Scored",
+        "observedAt": "2026-08-08T04:53:02.205Z"
+      },
+      "openCommitments": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "nonterminalPositionCount": 0,
+      "relevantWriterProcessCount": 0,
+      "speculationsClosed": true
+    },
+    {
+      "gameId": "a512537f-e262-4f17-ade4-a8cf7032e284",
+      "contestId": "89",
+      "status": "TERMINAL",
+      "score": {
+        "away": 6,
+        "home": 3,
+        "onchainStatus": "Scored",
+        "observedAt": "2026-08-08T04:59:25.965Z"
+      },
+      "openCommitments": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "nonterminalPositionCount": 0,
+      "relevantWriterProcessCount": 0,
+      "speculationsClosed": true
+    },
+    {
+      "gameId": "9ca09dc2-591d-426f-9236-f5cfb1d6d7b4",
+      "contestId": "90",
+      "status": "TERMINAL",
+      "score": {
+        "away": 2,
+        "home": 1,
+        "onchainStatus": "Scored",
+        "observedAt": "2026-08-08T04:46:46.679Z"
+      },
+      "openCommitments": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "nonterminalPositionCount": 0,
+      "relevantWriterProcessCount": 0,
+      "speculationsClosed": true
+    }
+  ],
+  "standingAllowanceBoundaryAtTerminal": {
+    "modelPositionModuleApprovedCeilingRaw": "1000000000",
+    "modelTreasuryModuleRaw": "0",
+    "classification": "standing exception; not terminal-zero state"
+  },
+  "laterReadOnlyPermissionSnapshot": {
+    "observedAt": "2026-08-08T15:39:05.775053Z",
+    "scope": "Later shared-MVE snapshot; confirms Flow and Maker module allowances are zero, but does not establish Friday revocation timing. Model PositionModule balances reflect subsequent shared MVE activity and are therefore omitted.",
+    "rows": [
+      {
+        "participantId": "flow",
+        "spender": "PositionModule",
+        "raw": "0",
+        "status": "zero"
+      },
+      {
+        "participantId": "flow",
+        "spender": "TreasuryModule",
+        "raw": "0",
+        "status": "zero"
+      },
+      {
+        "participantId": "maker",
+        "spender": "PositionModule",
+        "raw": "0",
+        "status": "zero"
+      },
+      {
+        "participantId": "maker",
+        "spender": "TreasuryModule",
+        "raw": "0",
+        "status": "zero"
+      },
+      {
+        "participantId": "lab-anthropic",
+        "spender": "PositionModule",
+        "status": "nonzero_standing_shared_mve_allowance",
+        "exactCurrentRawOmitted": true
+      },
+      {
+        "participantId": "lab-anthropic",
+        "spender": "TreasuryModule",
+        "raw": "0",
+        "status": "zero"
+      },
+      {
+        "participantId": "lab-gemini",
+        "spender": "PositionModule",
+        "status": "nonzero_standing_shared_mve_allowance",
+        "exactCurrentRawOmitted": true
+      },
+      {
+        "participantId": "lab-gemini",
+        "spender": "TreasuryModule",
+        "raw": "0",
+        "status": "zero"
+      },
+      {
+        "participantId": "lab-openai",
+        "spender": "PositionModule",
+        "status": "nonzero_standing_shared_mve_allowance",
+        "exactCurrentRawOmitted": true
+      },
+      {
+        "participantId": "lab-openai",
+        "spender": "TreasuryModule",
+        "raw": "0",
+        "status": "zero"
+      },
+      {
+        "participantId": "lab-xai",
+        "spender": "PositionModule",
+        "status": "nonzero_standing_shared_mve_allowance",
+        "exactCurrentRawOmitted": true
+      },
+      {
+        "participantId": "lab-xai",
+        "spender": "TreasuryModule",
+        "raw": "0",
+        "status": "zero"
+      }
+    ]
+  },
+  "noResend": true
+}
