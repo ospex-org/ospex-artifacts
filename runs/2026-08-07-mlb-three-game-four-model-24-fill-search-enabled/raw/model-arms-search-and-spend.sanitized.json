@@ -106,6 +106,24 @@
       "latencyMs"
     ],
     "rationalePublished": false,
-    "unexecutedSpreadForecastsPublished": false
+    "unexecutedSpreadForecastsPublished": false,
+    "executionPolicy": "fixed-moneyline-total",
+    "selectedForExecutionMeaning": "schema-required true for supplied moneyline/total forecasts under this policy",
+    "wouldAbstainTrueRows": 4
+  },
+  "xaiRequestBoundary": {
+    "requestParameter": "max_turns",
+    "parameterValue": 5,
+    "boundsSearchesExactly": false,
+    "parallelToolCallsWithinOneTurnPossible": true,
+    "observedBillableSearchCountsByCall": [
+      20,
+      17,
+      11
+    ],
+    "handling": "observed_and_priced",
+    "enforceableSearchCountOverage": false,
+    "derivedActualSpendAcceptedBeforeFillAuthorization": true,
+    "sourceNoteCorrection": "The private activation note mistakenly described 16 as a declared search bound. At pinned benchmark commit f970ffea47c2363ef9134c758d4618f9d549d49e, xAI used max_turns: 5; max_turns caps agentic turns, not billable searches, because one turn can invoke tools in parallel. The observed 20, 17, and 11 billable-search counts therefore did not exceed an enforceable search-count bound; they were observed and priced, and derived actual spend was accepted before fill authorization."
   }
 }

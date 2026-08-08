@@ -2,7 +2,6 @@
   "schemaVersion": 1,
   "status": "TERMINAL_ZERO",
   "completedAt": "2026-08-08T04:59:32.586032+00:00",
-  "terminalObservationAt": "2026-08-08T04:58:11.584059Z",
   "contests": [
     {
       "gameId": "210454d3-740f-4c40-a108-35d8baaeb237",
@@ -63,7 +62,7 @@
   },
   "laterReadOnlyPermissionSnapshot": {
     "observedAt": "2026-08-08T15:39:05.775053Z",
-    "scope": "Later shared-MVE snapshot; confirms Flow and Maker module allowances are zero, but does not establish Friday revocation timing. Model PositionModule balances reflect subsequent shared MVE activity and are therefore omitted.",
+    "scope": "Later shared-MVE snapshot confirms Flow and Maker module allowances remained zero. Friday PositionModule revocation timing is established separately by two source-copied transactions and immediate zero readbacks. Model PositionModule balances reflect subsequent shared MVE activity and are therefore omitted.",
     "rows": [
       {
         "participantId": "flow",
@@ -139,5 +138,13 @@
       }
     ]
   },
-  "noResend": true
+  "noResend": true,
+  "terminalSweepStartedAt": "2026-08-08T04:58:11.584059Z",
+  "terminalSweepTimestampMeaning": "source result-level sweep/poll start; per-contest score observedAt values and completedAt carry terminal completion timing",
+  "fridayPermissionCleanup": {
+    "evidence": "raw/fills-and-receipts.sanitized.json",
+    "positionModuleRevocationTransactionCount": 2,
+    "flowAndMakerPositionModuleRawAfter": "0",
+    "flowAndMakerTreasuryModuleRawAfter": "0"
+  }
 }

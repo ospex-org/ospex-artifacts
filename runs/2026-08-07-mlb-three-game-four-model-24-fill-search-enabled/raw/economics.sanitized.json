@@ -57,7 +57,7 @@
     "contestCreationFeesUsd": "3.000000",
     "speculationCreationFeesUsd": "3.000000",
     "flowNetAfterCreationFeesExcludingGasUsd": "-6.000000",
-    "polygonGasCostPolAll70Transactions": "4.922692628836311909"
+    "polygonGasCostPolAll72Transactions": "4.947824872942650954"
   },
   "exclusions": [
     "Polygon gas is reported separately in POL and excluded from USDC trading PnL",

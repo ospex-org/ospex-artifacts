@@ -29,11 +29,12 @@ The artifact date is the Friday `2026-08-07` slate date; the games began after m
 ## On-chain and lifecycle evidence
 
 - Setup: 3 contest creations + 6 speculation creations.
-- Controlled execution: `24/24` fills, 24 unique fill transaction hashes, zero failed fills; every fill is bound to its structured frozen decision (selection, confidence, probabilities, abstention flag, and timing).
+- Controlled execution: `24/24` fills, 24 unique fill transaction hashes, zero failed fills; every fill is bound to its structured frozen decision (selection, confidence, probabilities, abstention flag, policy, and timing).
+- Execution policy: `fixed-moneyline-total`. Under the pinned schema, `selectedForExecution: true` is required for supplied moneyline/total forecasts, so it is not an independent execution signal. `wouldAbstain` remains independent and was true on `4/24` executed rows (OpenAI three; Anthropic one).
 - Execution adapter: serialized; every fill confirmation preceded the next submission.
 - Maker capacity: six tracked markets and six realtime channels, exactly the three-game × two-market requirement. This is capacity-bound evidence, not spare-capacity evidence.
 - Postgame: 3 score requests, 3 independently recovered `ContestScoresSet` callback transactions, 6 settlements, and 22 claim transactions.
-- Receipt reconciliation: **70/70 unique published transaction hashes succeeded** on Polygon; total gas was `4.922692628836311909 POL`, reported separately from USDC PnL.
+- Receipt reconciliation: **72/72 unique published transaction hashes succeeded** on Polygon; total gas was `4.947824872942650954 POL`, reported separately from USDC PnL.
 - Official final reconciliation: exact away team, home team, and scheduled UTC start matched for all three games; all final scores matched the scores landed on chain.
 - Terminal readback: all three contests had zero open commitments, pending settlements, claimables, nonterminal positions, and relevant writer processes.
 
@@ -56,13 +57,13 @@ The private `rawResponse` field retained extracted answer text, not the complete
 
 xAI used `470,958 / 10,544 = 44.665971×` Gemini's input tokens and had 48 evidenced billable searches versus Gemini's unknown count. Its spend was `$2.245944` versus `$0.309314`. **Cost per pick is not comparable across arms.** The starred Gemini spend excludes any unknown search fees.
 
-The xAI calls recorded 20, 17, and 11 billable searches; the first two exceeded the declared 16-search bound. That deviation was disclosed and accepted before fill authorization.
+The xAI calls recorded 20, 17, and 11 billable searches with request-side `max_turns: 5`. That parameter caps agentic turns, not searches, and one turn may invoke tools in parallel, so no enforceable search-count bound was exceeded. Counts were observed and priced; derived actual spend was accepted before fill authorization. The private activation note that called 16 a search bound was incorrect; this artifact follows the pinned benchmark source.
 
 No captured search query, result URL, extracted answer text, or provider response body is published here.
 
 ## Trading economics
 
-Derived from matched principal and terminal claim payouts; `4.922692628836311909 POL` in Polygon gas is reported separately, and both gas and off-chain provider spend are excluded from USDC trading PnL.
+Derived from matched principal and terminal claim payouts; `4.947824872942650954 POL` in Polygon gas is reported separately, and both gas and off-chain provider spend are excluded from USDC trading PnL.
 
 | Participant | Principal | Terminal payout | Net trading PnL | Claim txs |
 |---|---:|---:|---:|---:|
@@ -92,7 +93,7 @@ At `n=4`, that last result is noise—not a ranking, promotion, or model-selecti
 
 ## Permission boundary
 
-The terminal source records the model PositionModule approval ceiling as a standing exception; model TreasuryModule allowances were zero. A later read-only snapshot confirms Flow and Maker PositionModule/TreasuryModule allowances are zero. Exact model PositionModule balances from that later snapshot are omitted because subsequent shared MVE activity makes them non-Friday state.
+The three permission grants are labeled in the raw evidence: Flow PositionModule `1.000000 USDC`, Flow TreasuryModule `6.000000 USDC`, and Maker PositionModule `100.000000 USDC`. After the final fill, source-copied transactions `0x06565a28b2905955b4534be946782ded1c13abbd41a5e1734ccd349c54a83d46` (Flow) and `0x38b57a6eb68f197ffae5105adb4f0f0fe7ffd450ddd7ee079d8b0a9a95b8e836` (Maker) set their PositionModule allowances to zero; immediate readbacks found both PositionModule and TreasuryModule at zero for each role. The terminal source separately records the model PositionModule ceiling as a standing exception; model TreasuryModule allowances were zero. Exact later model PositionModule balances are omitted because subsequent shared MVE activity makes them non-Friday state.
 
 ## Evidence boundary
 

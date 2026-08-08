@@ -12,7 +12,10 @@
     "allLiveReceiptsSuccessful": true,
     "fillGasCostPol": "2.352827198997794284",
     "executedDecisionProvenanceRows": 24,
-    "unexecutedSpreadForecastsPublishedHere": false
+    "unexecutedSpreadForecastsPublishedHere": false,
+    "executionPolicy": "fixed-moneyline-total",
+    "selectedForExecutionPolicyMeaning": "schema-required true for supplied moneyline/total forecasts; not an independent execution signal",
+    "wouldAbstainTrueExecutedRows": 4
   },
   "makerRuntimeBoundary": {
     "singleStartSingleTakedown": true,
@@ -23,6 +26,11 @@
   "permissionSetupTransactions": [
     {
       "txHash": "0x274046583dfa02520551da450fea2e176e4e80d3d06aa2afe2c60a3cfac7c6e9",
+      "participantId": "flow",
+      "spender": "PositionModule",
+      "amountRaw": "1000000",
+      "amountUSDC": "1.000000",
+      "action": "grant_exact",
       "receiptStatus": "success",
       "blockNumber": 91619518,
       "blockTimestamp": "2026-08-07T20:25:04Z",
@@ -33,6 +41,11 @@
     },
     {
       "txHash": "0x80d61eadcbf1aa72251cd005debb6d3f67b4dc6275dcd9dfb4c032521dee6554",
+      "participantId": "flow",
+      "spender": "TreasuryModule",
+      "amountRaw": "6000000",
+      "amountUSDC": "6.000000",
+      "action": "grant_exact",
       "receiptStatus": "success",
       "blockNumber": 91619520,
       "blockTimestamp": "2026-08-07T20:25:07Z",
@@ -43,6 +56,11 @@
     },
     {
       "txHash": "0x1abfea5fdfbc4c359e322e214a823b338b85032d9258269de2c80ee9931ca32e",
+      "participantId": "maker",
+      "spender": "PositionModule",
+      "amountRaw": "100000000",
+      "amountUSDC": "100.000000",
+      "action": "grant_exact",
       "receiptStatus": "success",
       "blockNumber": 91619524,
       "blockTimestamp": "2026-08-07T20:25:13Z",
@@ -234,7 +252,8 @@
         "responseAt": "2026-08-07T20:06:16.461Z",
         "latencyMs": 57582,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -275,7 +294,8 @@
         "responseAt": "2026-08-07T20:05:52.814Z",
         "latencyMs": 33931,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -316,7 +336,8 @@
         "responseAt": "2026-08-07T20:05:57.957Z",
         "latencyMs": 39085,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -357,7 +378,8 @@
         "responseAt": "2026-08-07T20:06:35.207Z",
         "latencyMs": 76321,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -398,7 +420,8 @@
         "responseAt": "2026-08-07T20:06:16.461Z",
         "latencyMs": 57582,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -439,7 +462,8 @@
         "responseAt": "2026-08-07T20:05:52.814Z",
         "latencyMs": 33931,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -480,7 +504,8 @@
         "responseAt": "2026-08-07T20:05:57.957Z",
         "latencyMs": 39085,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -521,7 +546,8 @@
         "responseAt": "2026-08-07T20:06:35.207Z",
         "latencyMs": 76321,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -562,7 +588,8 @@
         "responseAt": "2026-08-07T20:07:21.483Z",
         "latencyMs": 46263,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -603,7 +630,8 @@
         "responseAt": "2026-08-07T20:07:16.155Z",
         "latencyMs": 40934,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -644,7 +672,8 @@
         "responseAt": "2026-08-07T20:07:20.029Z",
         "latencyMs": 44812,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -685,7 +714,8 @@
         "responseAt": "2026-08-07T20:07:43.980Z",
         "latencyMs": 68756,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -726,7 +756,8 @@
         "responseAt": "2026-08-07T20:07:21.483Z",
         "latencyMs": 46263,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -767,7 +798,8 @@
         "responseAt": "2026-08-07T20:07:16.155Z",
         "latencyMs": 40934,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -808,7 +840,8 @@
         "responseAt": "2026-08-07T20:07:20.029Z",
         "latencyMs": 44812,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -849,7 +882,8 @@
         "responseAt": "2026-08-07T20:07:43.980Z",
         "latencyMs": 68756,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -890,7 +924,8 @@
         "responseAt": "2026-08-07T20:08:54.557Z",
         "latencyMs": 70563,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -931,7 +966,8 @@
         "responseAt": "2026-08-07T20:08:26.200Z",
         "latencyMs": 42205,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -972,7 +1008,8 @@
         "responseAt": "2026-08-07T20:08:29.246Z",
         "latencyMs": 45254,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -1013,7 +1050,8 @@
         "responseAt": "2026-08-07T20:08:43.051Z",
         "latencyMs": 59055,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -1054,7 +1092,8 @@
         "responseAt": "2026-08-07T20:08:54.557Z",
         "latencyMs": 70563,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -1095,7 +1134,8 @@
         "responseAt": "2026-08-07T20:08:26.200Z",
         "latencyMs": 42205,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -1136,7 +1176,8 @@
         "responseAt": "2026-08-07T20:08:29.246Z",
         "latencyMs": 45254,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     },
     {
@@ -1177,9 +1218,54 @@
         "responseAt": "2026-08-07T20:08:43.051Z",
         "latencyMs": 59055,
         "binding": "private-benchmark-source-sha256",
-        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3"
+        "benchmarkSourceSha256": "1639cdaa9f43606d3d8f8704fc5a4987cf9e8817d90ba2710f74206e71ffb8a3",
+        "executionPolicy": "fixed-moneyline-total"
       }
     }
   ],
-  "publishedReceiptGasCostPol": "3.589519020112879781"
+  "publishedReceiptGasCostPol": "3.614651264219218826",
+  "permissionCleanupTransactions": [
+    {
+      "txHash": "0x06565a28b2905955b4534be946782ded1c13abbd41a5e1734ccd349c54a83d46",
+      "participantId": "flow",
+      "spender": "PositionModule",
+      "amountRaw": "0",
+      "amountUSDC": "0.000000",
+      "action": "revoke_to_zero",
+      "sourceGeneratedAt": "2026-08-07T21:02:04.372Z",
+      "zeroReadback": {
+        "observedAt": "2026-08-07T21:02:27.639Z",
+        "positionModuleRaw": "0",
+        "treasuryModuleRaw": "0"
+      },
+      "receiptStatus": "success",
+      "blockNumber": 91620998,
+      "blockTimestamp": "2026-08-07T21:02:04Z",
+      "gasUsed": "44421",
+      "effectiveGasPriceWei": "286677641940",
+      "gasCostWei": "12734507532616740",
+      "gasCostPol": "0.01273450753261674"
+    },
+    {
+      "txHash": "0x38b57a6eb68f197ffae5105adb4f0f0fe7ffd450ddd7ee079d8b0a9a95b8e836",
+      "participantId": "maker",
+      "spender": "PositionModule",
+      "amountRaw": "0",
+      "amountUSDC": "0.000000",
+      "action": "revoke_to_zero",
+      "sourceGeneratedAt": "2026-08-07T21:02:09.888Z",
+      "zeroReadback": {
+        "observedAt": "2026-08-07T21:02:28.435Z",
+        "positionModuleRaw": "0",
+        "treasuryModuleRaw": "0"
+      },
+      "receiptStatus": "success",
+      "blockNumber": 91621001,
+      "blockTimestamp": "2026-08-07T21:02:09Z",
+      "gasUsed": "44421",
+      "effectiveGasPriceWei": "279096296205",
+      "gasCostWei": "12397736573722305",
+      "gasCostPol": "0.012397736573722305"
+    }
+  ]
 }

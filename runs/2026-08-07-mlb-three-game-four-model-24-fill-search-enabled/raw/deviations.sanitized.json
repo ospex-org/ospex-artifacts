@@ -28,10 +28,16 @@
       "detail": "xAI used 470,958 input tokens and 48 evidenced billable searches versus Gemini at 10,544 input tokens with unknown search use. Cost per pick is not comparable across arms."
     },
     {
-      "id": "xai-declared-search-bound-exceeded",
-      "classification": "runtime",
-      "disposition": "accepted",
-      "detail": "xAI recorded 20, 17, and 11 billable searches; the first two exceeded the declared 16-search bound. The operator accepted this before authorizing the frozen fills."
+      "id": "xai-search-bound-source-note-corrected",
+      "classification": "source_provenance",
+      "disposition": "corrected",
+      "detail": "The private activation note mistakenly described 16 as a declared search bound. At pinned benchmark commit f970ffea47c2363ef9134c758d4618f9d549d49e, xAI used max_turns: 5; max_turns caps agentic turns, not billable searches, because one turn can invoke tools in parallel. The observed 20, 17, and 11 billable-search counts therefore did not exceed an enforceable search-count bound; they were observed and priced, and derived actual spend was accepted before fill authorization."
+    },
+    {
+      "id": "fixed-execution-policy-abstention-boundary",
+      "classification": "policy_interpretation",
+      "disposition": "disclosed",
+      "detail": "The run-level executionPolicy was fixed-moneyline-total. Under the pinned schema, selectedForExecution=true was required for every supplied moneyline and total forecast; it is a policy marker, not an independent model signal. wouldAbstain remained independent and was true on 4 of the 24 executed rows (OpenAI three, Anthropic one)."
     },
     {
       "id": "serialized-adapter-six-market-capacity",
