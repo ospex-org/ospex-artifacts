@@ -1,0 +1,682 @@
+{
+  "artifactType": "run",
+  "artifactId": "2026-08-08-mlb-nine-game-four-model-72-fill-search-enabled",
+  "schemaVersion": 1,
+  "status": "complete_verified_with_caveats",
+  "date": "2026-08-08",
+  "publishedAt": "2026-08-09T06:45:00Z",
+  "generatedAt": "2026-08-09T06:45:00Z",
+  "network": "polygon",
+  "chainId": 137,
+  "deploymentRound": "R5",
+  "runScope": {
+    "kind": "controlled-nine-contest-four-model-two-market-search-enabled-terminal-zero",
+    "sport": "mlb",
+    "runLabel": "SMOKE_V0_NOT_A_COHORT",
+    "contestIds": [
+      "91",
+      "92",
+      "93",
+      "94",
+      "95",
+      "96",
+      "97",
+      "98",
+      "99"
+    ],
+    "speculationIds": [
+      "243",
+      "244",
+      "245",
+      "246",
+      "247",
+      "248",
+      "249",
+      "250",
+      "251",
+      "252",
+      "253",
+      "254",
+      "255",
+      "256",
+      "257",
+      "258",
+      "259",
+      "260"
+    ],
+    "markets": [
+      "moneyline",
+      "total"
+    ],
+    "modelCount": 4,
+    "plannedArmCount": 72,
+    "completedFillCount": 72,
+    "failedFillCount": 0
+  },
+  "verdict": {
+    "label": "NINE_CONTEST_72_FILL_SEARCH_ENABLED_TERMINAL_ZERO_WITH_AUDIT_CAVEATS",
+    "reason": "All 72 frozen moneyline/total fills and all 211 published permission, setup, fill, score, callback, settlement, claim, and cleanup transactions have successful Polygon receipts. Official finals match on-chain scores, and contests 91\u201399 reached terminal zero. Provider search evidence remains partially unknown/unproven and this artifact contains no CLV ranking result."
+  },
+  "identity": {
+    "games": [
+      {
+        "window": "window-1",
+        "gameId": "7b784d1e-a79d-43ee-8098-1bfa514aaa51",
+        "contestId": "91",
+        "awayTeam": "Minnesota Twins",
+        "homeTeam": "Milwaukee Brewers",
+        "rawGameDate": "2026-08-08",
+        "startTimeUtc": "2026-08-08T23:10:00Z",
+        "speculations": [
+          {
+            "speculationId": "243",
+            "market": "moneyline",
+            "line": null
+          },
+          {
+            "speculationId": "244",
+            "market": "total",
+            "line": 8
+          }
+        ]
+      },
+      {
+        "window": "window-1",
+        "gameId": "fa4e3dda-b667-48a2-aa54-472681d15a59",
+        "contestId": "92",
+        "awayTeam": "Chicago Cubs",
+        "homeTeam": "Kansas City Royals",
+        "rawGameDate": "2026-08-08",
+        "startTimeUtc": "2026-08-08T23:10:00Z",
+        "speculations": [
+          {
+            "speculationId": "245",
+            "market": "moneyline",
+            "line": null
+          },
+          {
+            "speculationId": "246",
+            "market": "total",
+            "line": 9.5
+          }
+        ]
+      },
+      {
+        "window": "window-1",
+        "gameId": "130b2aa3-7b95-49d0-99a4-f31ffca3f767",
+        "contestId": "93",
+        "awayTeam": "Baltimore Orioles",
+        "homeTeam": "Texas Rangers",
+        "rawGameDate": "2026-08-08",
+        "startTimeUtc": "2026-08-08T23:15:00Z",
+        "speculations": [
+          {
+            "speculationId": "247",
+            "market": "moneyline",
+            "line": null
+          },
+          {
+            "speculationId": "248",
+            "market": "total",
+            "line": 7.5
+          }
+        ]
+      },
+      {
+        "window": "window-2",
+        "gameId": "3b53605b-8828-45fb-972a-1eb7a531fdcf",
+        "contestId": "94",
+        "awayTeam": "Cleveland Guardians",
+        "homeTeam": "Chicago White Sox",
+        "rawGameDate": "2026-08-08",
+        "startTimeUtc": "2026-08-08T23:15:00Z",
+        "speculations": [
+          {
+            "speculationId": "249",
+            "market": "moneyline",
+            "line": null
+          },
+          {
+            "speculationId": "250",
+            "market": "total",
+            "line": 8
+          }
+        ]
+      },
+      {
+        "window": "window-2",
+        "gameId": "7bc621b1-5b7a-4241-bd6a-dbd2967e3687",
+        "contestId": "95",
+        "awayTeam": "Colorado Rockies",
+        "homeTeam": "St. Louis Cardinals",
+        "rawGameDate": "2026-08-08",
+        "startTimeUtc": "2026-08-08T23:15:00Z",
+        "speculations": [
+          {
+            "speculationId": "251",
+            "market": "moneyline",
+            "line": null
+          },
+          {
+            "speculationId": "252",
+            "market": "total",
+            "line": 9
+          }
+        ]
+      },
+      {
+        "window": "window-2",
+        "gameId": "83f7432e-d05a-4ddf-b38f-92e0c9f5d320",
+        "contestId": "96",
+        "awayTeam": "Detroit Tigers",
+        "homeTeam": "San Francisco Giants",
+        "rawGameDate": "2026-08-08",
+        "startTimeUtc": "2026-08-08T23:15:00Z",
+        "speculations": [
+          {
+            "speculationId": "253",
+            "market": "moneyline",
+            "line": null
+          },
+          {
+            "speculationId": "254",
+            "market": "total",
+            "line": 7.5
+          }
+        ]
+      },
+      {
+        "window": "window-3",
+        "gameId": "31469cd0-0784-405d-a024-f9d59cbbf220",
+        "contestId": "97",
+        "awayTeam": "Houston Astros",
+        "homeTeam": "San Diego Padres",
+        "rawGameDate": "2026-08-08",
+        "startTimeUtc": "2026-08-08T23:15:00Z",
+        "speculations": [
+          {
+            "speculationId": "255",
+            "market": "moneyline",
+            "line": null
+          },
+          {
+            "speculationId": "256",
+            "market": "total",
+            "line": 7.5
+          }
+        ]
+      },
+      {
+        "window": "window-3",
+        "gameId": "ebc7f032-41d4-4307-bbda-ab0f1e5c0139",
+        "contestId": "98",
+        "awayTeam": "Los Angeles Dodgers",
+        "homeTeam": "Arizona Diamondbacks",
+        "rawGameDate": "2026-08-08",
+        "startTimeUtc": "2026-08-09T00:10:00Z",
+        "speculations": [
+          {
+            "speculationId": "257",
+            "market": "moneyline",
+            "line": null
+          },
+          {
+            "speculationId": "258",
+            "market": "total",
+            "line": 8.5
+          }
+        ]
+      },
+      {
+        "window": "window-3",
+        "gameId": "5416c677-1c1e-44c9-97d8-b8ac2c9118d2",
+        "contestId": "99",
+        "awayTeam": "Tampa Bay Rays",
+        "homeTeam": "Seattle Mariners",
+        "rawGameDate": "2026-08-08",
+        "startTimeUtc": "2026-08-09T01:50:00Z",
+        "speculations": [
+          {
+            "speculationId": "259",
+            "market": "moneyline",
+            "line": null
+          },
+          {
+            "speculationId": "260",
+            "market": "total",
+            "line": 7.5
+          }
+        ]
+      }
+    ]
+  },
+  "benchmark": {
+    "searchEnabled": true,
+    "designatedProviderCalls": 36,
+    "retainedFailedAttemptProviderCalls": 12,
+    "validDesignatedResponses": 36,
+    "schemaValidDesignatedForecasts": 108,
+    "executedDecisionProvenanceRows": 72,
+    "unexecutedSpreadForecastsPublished": false,
+    "executionPolicy": "fixed-moneyline-total",
+    "knownBillableSearchCountDesignated": 183,
+    "unknownSearchAuditRecordsDesignated": 11,
+    "conservativeProviderSpendUsdDesignated": "18.108728",
+    "conservativeProviderSpendUsdIncludingFailedAttempt": "22.689763",
+    "providerSpendStopThresholdUsd": "50.000000",
+    "withinProviderSpendStopThreshold": true,
+    "completeProviderEnvelopesRetained": false,
+    "costPerPickComparableAcrossArms": false,
+    "wouldAbstainTrueExecutedRows": 10,
+    "wouldAbstainTrueExecutedRowsByArm": {
+      "anthropic-claude-fable-5": 0,
+      "google-gemini-3.1-pro-preview": 0,
+      "openai-gpt-5.6-sol": 5,
+      "xai-grok-4.5": 5
+    },
+    "executionPriceContext": {
+      "comparisonFormula": "execution taker decimal = 1 + 100 / (oddsTick - 100); compared with decisionProvenance.observedDecimal",
+      "betterThanFrozenReferenceFillCount": 72,
+      "atOrWorseThanFrozenReferenceFillCount": 0,
+      "meanTakerDecimalImprovement": "0.028285",
+      "additionalMakerRiskVsFrozenReferenceUsd": "2.036369",
+      "interpretation": "execution price improvement; not model performance"
+    },
+    "rawEvidence": "raw/model-arms-search-and-spend.sanitized.json"
+  },
+  "operations": {
+    "serializedControlledFillAdapter": true,
+    "setupTransactionCount": 27,
+    "controlledFillTransactionCount": 72,
+    "scoreRequestCount": 9,
+    "scoreCallbackCount": 9,
+    "settlementTransactionCount": 18,
+    "claimTransactionCount": 71,
+    "permissionSetupTransactionCount": 3,
+    "permissionCleanupTransactionCount": 2,
+    "totalUniqueSuccessfulTransactionCount": 211,
+    "polygonGasCostPolAll211Transactions": "15.885028894302939418",
+    "recoveryFillCount": 26,
+    "duplicateSuccessfulFillIds": 0
+  },
+  "terminal": {
+    "status": "TERMINAL_ZERO",
+    "completedAt": "2026-08-09T05:04:42.156776Z",
+    "contestCount": 9,
+    "openCommitments": 0,
+    "pendingSettle": 0,
+    "claimable": 0,
+    "nonterminalPositions": 0,
+    "relevantWriterProcesses": 0,
+    "rawEvidence": "raw/terminal-zero.sanitized.json"
+  },
+  "economics": {
+    "modelPlusMakerNetTradingPnlUsd": "0.000000",
+    "flowNetAfterCreationFeesExcludingGasUsd": "-18.000000",
+    "gasExcluded": true,
+    "providerSpendReportedSeparately": true,
+    "polygonGasCostPolReportedSeparately": "15.885028894302939418",
+    "rawEvidence": "raw/economics.sanitized.json"
+  },
+  "transactions": {
+    "count": 211,
+    "allReceiptsSuccessful": true,
+    "transactionHashes": [
+      "0xff677cdcf2e450665fd1af0a7a38b0c42cf34cce7c429f6c86aa82ad0e44a0a7",
+      "0x4cecdd17a17b1986ee3798f1b7c851c3cfc9d13da782e494f12d63d9e24638c8",
+      "0x63a2984cb054d9040f130f157e478c288e3fbb825c42a7fa8257d5d8b1ae0223",
+      "0xf9abfd0d7d2ac8900dd13911a5ece2240b2ba8345da4e21b1cf74f711584b910",
+      "0xc7ff67b059be0daef56e0174572ea5879c4854bc18ab0bc7876cf00d5906ca17",
+      "0x9ab7caddc57c14d9557a9f46d23f2aa72b462808375b8246cf529f3eef817262",
+      "0x8de21d4bdb8f6a104635086bfb92a14446bfb8b4e162b7cc3e8f16b2411a1d07",
+      "0x04e7f06a95c3b5921a34e660a122eed6fa18297ef31d146b205c223e79dcece1",
+      "0xd7076c79b047b04be8bd783b954b80a7c5d154d77fabee72978de1f229824358",
+      "0xe4c3df5153ba5be3a271fbb13e5aecd1a45fb481838a68920c33eebe99a80ad2",
+      "0x8a9fab88b0c55394fd20dfc1dcba69ef92726bce3a93a0c5cccb0ab0aa59d716",
+      "0x89475ad1adce02620228f0d39b4a94f3104ff8a9ebd5c80dfec758bc576b9e9e",
+      "0xb6bbec2792d92e61d0ca529ffa105102fd1226e2533cc6909757ef86e276522d",
+      "0x66ffc711b3794f028bca5b018a06eceed50cb6e0b24efa97b2260700a06c9120",
+      "0x528c9759f58ac33a5e729208374d074a149cf86ebec49fa2e542f8ef2986b913",
+      "0x431360b6b9fce6861de486ca9b9619c376da3d9e34ecae8697b084e8878fec42",
+      "0x625a5ab00808566b5f3524eadf59af46e8b85f35e019d3545ab7847bf11c0499",
+      "0xa20e972d621d32b6a69066399504ab70679266b4ee3256afd6a3dc9ccb1a19fa",
+      "0x8c4646b1375ab48154f498a991de9c96a5f85a50d45069c776f8cd26a81dbb50",
+      "0x212406c31f225d9fadfdd640463f7981f6bce193caced110928c3bf9de38cd28",
+      "0x1974816727beedd548e6f265980742d0bf3191a2873955035d5c62a06a089d61",
+      "0x483ad9701fc03724ee8410ba4d961bb30e8be58f96e02dd1c95afca481f967ba",
+      "0xd66757d03267fdcca36749b3a8fe8b6d9a6cca6b93cb5aa1783ebdb49aea19fc",
+      "0x0082deaf67e93ecdf4a6bd231cb62b4c2320fc58260b3de543d77aab14fe9aa9",
+      "0xe2300f34e03e7bea62eec55e3571c14038eb68da5961233a21ebeb88fb01cc32",
+      "0x95c401077ca21389cda5a7551bda7a45e12ce3c214cbe63a1df65ffe594fc517",
+      "0xadd875784e9c51a82cfa008b2c389ec83f26882da531138e313b59a20c1a2f5d",
+      "0x86b93f381e9903b631e215f5f66237a4a846f028a93563fd2b81a61509b83f15",
+      "0xc5cf0e0ed56785661c5e7212ed694b15e50136ea283c7faf5f2355ec8768e4ec",
+      "0x1c2aa191d6e8deb0c89c93a47d55711770266c4aea04ba41d3d562ee1ecea8e4",
+      "0x2bc82f8fb22285995472d4794852110ad84862ccadfe0d0821656ed9ad5b0ef0",
+      "0x223c703719fed1c8cfce0043566cd2588259b41a83bd939457aa2b1927771077",
+      "0xd62a643df60ace4deb39f395a9a13128242b698b593135e4663bd8d72d18fa44",
+      "0xd72024f02409be79afe0d449b2602dde0d76d313236dd279277ea12de86eda1b",
+      "0x05945bbc7f6b73b71afc0138413f04f6c9966f755c3a46b5ee7fdd72c01c7d7c",
+      "0xce6e6becfc1c984ca1f398fe73c53f1398edb52c3a41c84b21ca7e624578cbe4",
+      "0xee3cede6ae1d3d9b8524982a3b32075d9bca72214e42b35c25569a474f528fa9",
+      "0xe110e5316a876d8ef166e22b718e910e06d577e6dead33667b2a442a5e1a4ecc",
+      "0xe5983f30f5b66f096f217142ce0fdb13d34e9af87c930062a8192a69c5f000ec",
+      "0x82ce402641befa2263172cd470cf9efde209cdf6bf04c113442a302b95e9370e",
+      "0x8ec2d046c1c83bcf8b867b3fae8575ee9b81694221b736cbe8e626bbb6d74188",
+      "0x3d3c984d805063b4b5023c519bab19e2bb0ea3c5ebed8036fb87143f3371f81b",
+      "0x9108bbcc74dfb1778b7c817cda153383fd953ceba366479f967b8ff629da81c1",
+      "0x66f35746c75e6f0b9c86b0f7fd74d7278717e9c07d486f2758cf4de2a9b9cd8d",
+      "0x11e8b0e4b1fcf710dc1a6b0d4cc41cee40f5a873d288b0a657f6d1e7e72fd072",
+      "0x0a995782209dcadfd0aa6a3be2f261813e82691af954074f9694b63b27c4b121",
+      "0x38e0714c1ca620d37a0bdca86cccade9d5a5691c0228ed5eea2e9969be0bc03f",
+      "0x9ad257c4ac8cadaad97cb7ef27569f4e185d8ce929c7fb96c46935e5c0af2eaa",
+      "0xc5102b346f41be14a9a1b1eea9a707c052bc9368373ada63d809cdb9afff72bd",
+      "0x0df93f19051365c62e4d790c744d2d5f5c6a427e71fdfa0b54c499ee0e86ce08",
+      "0xb7d05cb43eb720f9c54d0ed70fbb8688ae7dc1d49b8162c501c2419c5a9a3661",
+      "0xf046df51f3d8b2e03cce8b938f0c71823fa526c61cea08d4c72f9b6a845b3bc4",
+      "0x9081f87d2b0fd542d2ee6937b84cc309c31569b0bd7e3b31c2abb9f7b5c9887e",
+      "0xdfca6d9f18f918fe2b093012339250e1c3f02bd4843a8297b52575913d767080",
+      "0x59468d219b69a0800255918dde76ea3857527b1385fbaace628e0acb863ce0c1",
+      "0x9ff3e4b41b39875b5c5925122b3278abf8f1ad455f4be569ddb758419eb8859d",
+      "0x442a9f5ab13cf7113489762af6506363ef1969d510b741fc309d08c3e4461a0f",
+      "0x3b278c97885d118b23e653e6c1c30f9f0e9b24957f36c5642dd298a1d2850ccd",
+      "0xeb7f3162c67b504d1e22157f02f09fcfc392ca3b157d1a6b632bafb63c9d1c0a",
+      "0xfa20eeef4a7f4ece09916cded66617f9bbb720682131da6e8a2584f7b75051e7",
+      "0xba40d2a18ab9730189899f842540decbe6c0a6c4ef2ae488ef6fa2aa0c38f119",
+      "0x35dd161f9afeba9b570c90dc6857dde672acc19717031e7d87dcd75c0204fe82",
+      "0x269cfbb2f81f29ffecdf5f653d38d467454099c1d80c4f30113242c567d0a85a",
+      "0x444ea3230e130c0fd9f04f0ed7d477bbcb729d716beb6aeaeee243a9c5ecb2d2",
+      "0x64357efb5071190486b623385680ac8e7e4e17236ed995ce96dc8fab3607dc1f",
+      "0xd3118c5b6720904523cfad1dc74c60c70ddedf309478163aefef295ca1745529",
+      "0x32b7d7c5c5d3eb671cfdf3f90c20364204a620ed7e514354208fb3cf9d91e689",
+      "0xcfdebf3d81debf1ecec813a1d9c44ddefeb8ab844d5064987435898fdd5f4f90",
+      "0x5ce9ba14b6480384406a98c154d1af9ec8ed58dd6b4bc694cab67de759278606",
+      "0xb9a7200ed8e26cf478c4ba6b29d16dbd8729ae9936774a5aa83b53ae5f68c217",
+      "0x19d61f4aa38633fe14c6fe2a20178c51901cdb32e052856ed5ef63f51e9c8c27",
+      "0x24c9a4a29f23d215a322451039a9137800a633febfc3b6b28388ad81ba532fe0",
+      "0x7237e465d4b623addeb08d0a8d5bcd067057162779733259c9abd4d73547f1e6",
+      "0x932f4f33db49c86e080262a9bcbe61f6b365b45a658624e8d929edce22d61a66",
+      "0xa4ed64e1fd9c74704682d3d58d0d5c97bb58574b9fe8822a42366e27a623849a",
+      "0x1b7a58cdc1a96dd3815f59390fac25b0793f0a5257a935f86f012db248dd9dcf",
+      "0x0ddf2fd141d63e375b04b08059404e40ce27bb4bf33385428a4f67d3250224ad",
+      "0xa4e330b0de55c8459760f555488529a4489f13adb89875c82b7862d7f9a10623",
+      "0x810f71b4aa57541af8cd1aa86bdd8a94051923d9854223844b03ccf233852e96",
+      "0x0902d347b9c88274db83671e72186d9e66665542c2ab36a4159eded87af44732",
+      "0x2ab702d8ec371fb33910f8657b6d2fe5aa9e43e90f184b193492b20e546538ff",
+      "0xfe479f39c6bca29173cf3f13744da99bae0558821068e1778dc252c0dae776f8",
+      "0xd997673b741fbf4845a5d3ca1e42fdbbf7e4aa94042c243e467750cc9fa492db",
+      "0xe74b8790825827bc3f48cfe9f0aef39ddc2a26e6e8b6c2423fc569f93a21c5d0",
+      "0xc1dc5759e603d6c2168ee88558d3dfd7224985d3fb313a87fc5e073a66717cb6",
+      "0xe3432525f3087fcbce9d7b530fcb5722b785a665b01ccab4104bced171c6b377",
+      "0xf816c0149a7682f0a65d59d14f071d6cd329b1c69c7a804bd2333008a2bef3e9",
+      "0x37cdc2ff3db32ab3f50fa663e15156ce2cd1bf950894330d3db48dc27e991192",
+      "0x06d2eaa9b5156bd21091642441552345957a923c689ef84955ef48ca2372dc3c",
+      "0xd310ef76024f467f0db54a0a2f9ac7bb9e8b7f6f1ca13dd586d129fc5082d1f1",
+      "0xd54c1eee5053b38e0b4aa2f3bb9f98d0de8048663e11fe2beae8775e251a9b81",
+      "0x22cbc73b72bccc5eb08a7e02a0855dd0496ffd2bbbe5dcae526a159ffbfd6e2a",
+      "0xdc23f9556b74846caa09d97d31663d93d357a03aea986cf2696462781535e42c",
+      "0x14d4a603e6c0ca665b04c314952cb7d5b044071f5679ed0818e16669f046de0a",
+      "0x09f014504a948829a206dc9ec0d587feddfba4b6b787d054ba1c05eba3f5e566",
+      "0x048d349588e9f30e94f97eee6db70e2086dfcbb1350df3548b63976535e57327",
+      "0x3357fe89660f587d40ffda5a7910fb845727c52fd524c220d5df574a73c385b3",
+      "0xa0b0433fecb169ff712cee35b0e39c395103c4fbb82de8d56c308f0d94f8a2e2",
+      "0xacedfebfe7f51fe2698068d6b25608adfd26eea3b44d57db3076e551f8a5ba7a",
+      "0x9dc9106a52abfc8404ff37da09d6b4421e65b622eb0e070f12a4ca3e1ea2e7a0",
+      "0xfab6d862eae9ff459f57e8db39d88b33a31f86b168ec51e984c955c748f9c98c",
+      "0xb0fea5e0332b176eb4e066089662c66103a598160ed04b8a228a5321d3ba0930",
+      "0x8506836939c6caf360c885ab651cec177b40e91e23dcf2f654ff1eac27dc5d03",
+      "0x09779a941b1d574e66ce6ef3697104d14d66d612fc9074abad34c55f7972e077",
+      "0x49e2d79f7d2cd55b870b61a8c9d7abb3b04643f8fc6a5ab98a671c33129f6a32",
+      "0xcd43e587f729b8c0c9e2bc1a36d4a5414b9a451c488bd0666dcf4f207fc8d170",
+      "0x91bda94fdf0f7114e2df9ecf7280cac0548e5fb4ed51fc308e11d00f8d322408",
+      "0x4336e5a483b9feb95aace379856f9fd8dee78dcec433c88528f7a6f18b9369d9",
+      "0xdfc779160275e7930be929210f3a9f5a6702c91bcbfae90e16f076b3f232fabe",
+      "0x0c61cc5af87066a11d5564924c9244f7ee0830ec37a04c984ee16651b63bcb61",
+      "0x84e9101b032dde96b952f201a8163603ff3d058099b902266f895044c012b938",
+      "0x19117b5130e60c3f68f46159484eb6d0117ff2d43b2b5a13e47bfe3873906d5e",
+      "0xa849698cc71a8b7cbacebc9918a45dc2e9ad0db577494a146dbbff2199652ef2",
+      "0xbf80433d6dba03ccb96ce1b8451bea4ef5fab8308b8a03a317860ab0a09a225c",
+      "0x3a72ab5ddb05874c1dd7bc0d6eea067bdf18e3299939fc9033b47610b7ecbc52",
+      "0xc367446913092e38cf835a61a3eced225ae37221b2869d03ace3a788983418be",
+      "0x213179e17dabe0f6ff33727c128dae6939d28650fac0301758050d678847f1f5",
+      "0x1df1fd3af8766d85834cb272fc0c4c6020235e47d7b54c39d013e6e8d49434ad",
+      "0xe89d90b0ed4d2f9046b164a3e397eff54dfcd4ee6cd0dd444441f675bce4580d",
+      "0x49039dfda6185549dbb36f0629c0486245035ab9f5e13fe57f5814a631f729ec",
+      "0xb69196e0599128cfe5be3b08abd7272bac228f1ee677dc204553c959e59c99ba",
+      "0x04086bff6f47488e2c4999f6ba9117fe3491ff3198260b9cd4923715acc99042",
+      "0xb6a49768d1a1937a6a493e3bb7856459db8cba8caeac9272810e6b253231b56d",
+      "0xd14d2e996d56c25d614b02ef0a5dcb51e0c5c9ad128d7e4ece3040e3f6a8a527",
+      "0x0b3c393133b57c79cb497025277efa5c9490b2c33b13c7c030b9af3e8385b628",
+      "0x6d8518e51ebecc1d15b73d3b7a7110269a371808064a6b911e1175d91ed3e0c9",
+      "0x1c78115d91a2fdd284609dd16e9d8c85019ed03dede66361d31506d80c76813b",
+      "0x76659df4e3d783af4dfae2b3fb07892ed649f8261d69e18a011725dc0f3ec352",
+      "0x7a864a4bedbf86524a73fb5ec1ae3796f9c1727bfe5a5783d55988403bca4d3f",
+      "0xb2b282ac9325b54f0c4aaca5b28ceaf443677f8773b5b66b4a08513a20c89109",
+      "0x32e7999e8771c5061dc8c55c41fbd5b82c49eb9b4575c1d6c6f7a88f87466b23",
+      "0x03734957e944354975b9ec76b228772da466fdabb399bf5cd4a7c3b6759b7a39",
+      "0x183185f2d63507a248cc5cac2370b19d4723334cd7519065cd687b0e12717701",
+      "0xa67a12d474a803ed5885232714bccd84776e9d3111b021d1aeb6b4637ae58e5d",
+      "0x6e1bcbfcbb22103f2b09c157877f546ceaa6d90c381eedd51ef2ecd648915818",
+      "0xd92bd229a3683fe2a9d0444053608e94bccb7809c76e1fb1c678f70255ff38f3",
+      "0x18ff6b0d042010ce899d42c455c215988af54789d134424d1d58a067764b24e9",
+      "0x0143997bebb37b2ae22f43bb4c39e9d226c5300e56bd1b60d52050004ce802f2",
+      "0x9f4d55d7f9590112278d81b65b42f840665c52d559b2c1d64bec38bebcce27f6",
+      "0x28fd5dbbb6428f6adcedea774ffa370bb933128b176881606729557bebac36c1",
+      "0x6395aea3dbd5314be0a64795de6fb9092445fc0d58022e25e87d9bb111908f84",
+      "0x4c8a73b99d2a5287efcc21d84e35e26ec2321bb0f625765fab215140f816590c",
+      "0xbb12b8d1c5cffd9c0fd731521a941ad9371a1dd35dbe6db68fbca3a2997f6826",
+      "0x0ad2f18e690c6cc77988bab7c78329e3153836e20400ec665088c54827058789",
+      "0xa384c29f3e208e5e4dcb266364cb07b39e39f42c5aa893a795a837067a4d7ea6",
+      "0x46938fc4c24474660858915384b0adb1152ed150b91ba4683d673c074a2ccf6a",
+      "0x66556eed18b3226bbc50bbe4b89507d5cfe035583741e7288a38fdb567418cff",
+      "0x7a5493df4ca6e625054bc645173be6949b6fc519664d76bf137299c2ed53e69b",
+      "0xdedbafd0316e0f7fa67ce218668d30da2a063d4a4b811ecd46327e602750ac16",
+      "0x8c9ce04a63927ed434b58d9ea8c6beb57662f2d14d22c12e862e9b61298e9a7b",
+      "0x3dfe7599b87da966d03ffae8a6c5529e6721f936ea7aaaf715d600e4524c8cc2",
+      "0x98a24606228f0d3a29ddeb8ca17d1214ad39b5e0ed5428df9d4adb43b6c1c8dd",
+      "0x43977b5efdaca1919b8254ef648b47daef4be1118477b9b38d985240c7150c77",
+      "0x5f1bc601caad55bf22387f18f3faa0e57d858f8fb15f3fb0877afafbd2707831",
+      "0x156b3c472f86bba3aeb0ead4ab601870121af1faa795c52ac1ccfa894f5d946c",
+      "0x7e41403d97dec6acaf4a99456a6c52e1de218e9515d9f530cd31ab1292c7d64a",
+      "0x27aa706cff2d42e8a70d4c429dcd2b65111b8008e6f3d557be610074978f4d32",
+      "0x7eac0a06f27ee1cde3ba37c5c0745419ab4039cf5cd666a7eb07b65ed3a07144",
+      "0xabf7197bb4d92018658ddcb9ea76d384e93d6f87f87cd9835ebec36d46a533bc",
+      "0x316b7af798a0fd4b867d9f6018cac35c3fcb8890680b7e1cf251a81da212de6b",
+      "0x35dd44d4f7a529ff8ef7d9dac76a2ef5a329696ce734de1c3e8b49440486986f",
+      "0xac97d973de8bf239328f70f20233880373425cdd80aafc8d152d16b816eb58e8",
+      "0x903942968adedfa0a22c6eb9b6985a2c096332c9260c161dd0d79eefd22aa04a",
+      "0x34bf71e88f5f3f01c8bc790b3a16d98e3bae6749d654555291846a9f42cbd477",
+      "0xba6766298359ad49bd67be1aa183b417e018b6f45dd339d3cde3742167b05abf",
+      "0x57b90d8113130a4bc271c3924abcfc4f27be27828a5eea60768e4291628912a2",
+      "0xfdb328711c7ce3e6d60c80ed44490f68b01eed505da6496257c86b063f2fd467",
+      "0x1ea1775e64c5b5bf9b012e2318ac467aa92ba1b56f9b32d99fae715eaad79cb2",
+      "0x69ff2dc922f9b9fba2a491ae3fb942f96efe064be8ccbe79129fc677ea356609",
+      "0xcc04ce238f6b26ef81bd222695f4e06e90e3354cdfe36ea65c3bcfd064feadb8",
+      "0x1284476094b1958f93f38fbdd6de40d6ca41f18312e476a9dc4d381ba27d8487",
+      "0x5b3b077748d201e7f63d3bbd8d7a7a21f2d49d50fc83a87f7b3edc508b469639",
+      "0x63ac78cb0e30fe36e394e09e090100a8858af156a160416118e8946abcf2136d",
+      "0x546e0953a22991eba5bfbccfcd50c35c8b3a67253bd9989f38e1b2b57ae2f5f0",
+      "0xd8d4bb12d25af6a787dbfe80789abf70b68da809296a288d8809c85753063abd",
+      "0x6167e188220a231ab140bc87b00dd74dbbf44e4bd9aba80d2f25c883616fa246",
+      "0x382b5c63c45c85e46b5edca97a379306c03c7b308026a18476299e2170695906",
+      "0xcb5466887af84540769732ac6e9f31570f17fe908106dadb533ea516fadbee39",
+      "0x7e66e97ae6192d28729a6c0981445c7383884729d9986ae82dc7e5d4f9653b7a",
+      "0x85f6d45164c331a225e5ea8d6e7b5e4fe3a8f4b26d808350d1b348c30969c89a",
+      "0x0fd2c4557baf9f1cdca0446542a55d153687a0882a965cd72d0ce83b6b674b68",
+      "0xc732e26e8286bacd7de11f845bcf36b3ab8b804694c74ae07cc39fcbdefd24bf",
+      "0xc0cff426f971e42e16fccd1396c8c49cccddde06899ee11e39a163efc98c5629",
+      "0x6bac6901c2fec88be02a82571fdddf8fbd81884a1423c1d505a66543b18676e8",
+      "0x810e722705bf378027fa14e220c1e0db785d7df994084cca4b828e708a7b25db",
+      "0xca3f2791629b50925d83401bdb87d0ac9d18afa459e981063293367d769e286f",
+      "0xc3de8d87b6c6d0572474ad98cd550f4cfe368d5ed37c618aecedbee19e179182",
+      "0x629dc218d0d94a55298e9bb443ff497c23c12964827f652a1acb2c23132f9f83",
+      "0x78dc20a50191c6a36007a19c618b6f737692763198b1dbbe5e6c2cfb29ec4edd",
+      "0x6c5ce4c86c09350061f33807c01f6a347d563ab4dfc9bf03a816588051b8614e",
+      "0x9dc7134d3e029cd496a759692e991dcf89e6fc09392119111589a07abea59bea",
+      "0xaaeac9cb15cfc443b3620825d3d6ccbf176c686eca225e0d2bf03023fec94a95",
+      "0x88adef6abdde568d081336b1f5029ca4426b34986f16ec68a9e9eeb0ad024f1c",
+      "0xba0b1dbbd96db834ee18b5d72254eb648c7bb52614090b9f9fc481f003456f9e",
+      "0xe29017e4d0bb943c35e4b33a7d52dd911c79e7e674189cf6597544309f9b5b2d",
+      "0xe9c5b6bcc1029fefe064be651ea1bb83fe0a9f0be8dbb0ba98fca1ae95f90d75",
+      "0x0c1a4ab38f762f6b2f6e54203de688c7925033d4ce15be8962d4e2b21fb3ad6f",
+      "0x1f4875a759a5499acb558384eb97bb3dcb8ba806b27470bfe061cfd782299610",
+      "0x248a023d32fe9dd0ee75fa278f7a953b37695f99ffb3b2ecc945beffdff5bbc2",
+      "0x848c36dbc34b73fed83bd8dc496eac4618344bdc3c0f407fd39245b6a8a54b2b",
+      "0x78138eeafa8a1cd7e6688b1cd5aaea2e2aface0303f43fa810af4b44c56172ba",
+      "0x537d5bbbf757bfec4245994d225c911b42f4e078387b9b22697997c0f29c0c57",
+      "0x1c9eb6a15354da29c81d457ef4241d9023226f46f224ac85563e5272d2008b0d",
+      "0x24f7bdfa0bc4f709db9954c9c8cb89ea1d518c1258fa414305b99434c5e73895",
+      "0xeb666469cc3ed227c874710851cda3d7c6db8715366f5ac445da8dabb88012d0",
+      "0xe70b10f558cdebf4d07c360bf916bf1ef90ee9372c919667f6ad95be6ab51240",
+      "0x02a078e7aa9f3577a4d3e6719042b1f5f3cfd68d85ebb54062f710c184d2a911",
+      "0x94b7f075280221885221935c966bac040f0e4301830ef6a64cf3fda34e92382f",
+      "0xb7c11520792bbe606cb0998d2933d734ec7ac8d48e710781b6ee0dc38d9558d4",
+      "0x99407a5e0e361dc0a2b9c649dc599127d99d97b7fad4ef7a0ffebd94be35d4e6",
+      "0xad470ee87efdca85fb106397a5ddde42b8e2305fe937b3458239712da119c4df"
+    ],
+    "setBoundary": {
+      "publishedSetIsAllWalletActivityInRunWindow": false,
+      "publishedLifecycleAndPermissionTransactionCount": 211,
+      "excludedMakerOrderManagementTransactionCount": 65,
+      "excludedMakerOrderManagementByPrimitive": {
+        "raiseMinNonce": 48,
+        "cancelCommitment": 17
+      },
+      "excludedLifecycleTransactionCount": 0,
+      "rationale": "routine maker quote replacement/cancellation is outside permission, setup, fill, scoring, settlement, claim, and cleanup evidence scope"
+    },
+    "setupAndFillEvidence": "raw/fills-and-receipts.sanitized.json",
+    "postgameEvidence": "raw/postgame-lifecycle.sanitized.json"
+  },
+  "deviations": [
+    {
+      "id": "smoke-v0-not-a-cohort",
+      "classification": "evidence_scope",
+      "disposition": "accepted",
+      "detail": "The durable run label is SMOKE_V0_NOT_A_COHORT. This is controlled MVE/lifecycle evidence, not a canonical ranking cohort."
+    },
+    {
+      "id": "retained-window-1-provider-529",
+      "classification": "provider_attempt",
+      "disposition": "recovered",
+      "detail": "The first whole-window attempt was retained after one transient Anthropic HTTP 529. It made no protocol writes; its measured spend is included. A complete replacement was designated before protocol execution."
+    },
+    {
+      "id": "provider-search-evidence-partial",
+      "classification": "auditability",
+      "disposition": "open",
+      "detail": "Designated calls have 11 unknown/unproven search records; the retained failed attempt has 3. Null is never classified as zero or did-not-search."
+    },
+    {
+      "id": "provider-envelope-unavailable",
+      "classification": "evidence_retention",
+      "disposition": "open",
+      "detail": "Complete provider response envelopes were not retained, so missing search evidence cannot be reconstructed offline.",
+      "issue": "https://github.com/ospex-org/ospex-benchmark/issues/92"
+    },
+    {
+      "id": "window-3-speculation-260-checkpoint-interruption",
+      "classification": "setup_recovery",
+      "disposition": "reconciled",
+      "detail": "Speculation 260 mined before an interrupted local result checkpoint. A bounded Flow nonce/block scan recovered the successful transaction, and the durable rerun reconciled the existing speculation without resending it.",
+      "recoveredTxHash": "0x1c2aa191d6e8deb0c89c93a47d55711770266c4aea04ba41d3d562ee1ecea8e4"
+    },
+    {
+      "id": "parent-exit-maker-cascade",
+      "classification": "execution_recovery",
+      "disposition": "recovered",
+      "detail": "Parent runner exits stopped each window maker before all serialized fills completed. Exact ledger diff recovery completed 4, 12, and 10 missing fills for windows 1\u20133 without provider regeneration, duplicate successful fill IDs, or resend of completed fills."
+    },
+    {
+      "id": "window-3-pre-send-quote-cancel-race",
+      "classification": "execution_recovery",
+      "disposition": "recovered",
+      "detail": "One window-3 fill saw a soft-cancel/redaction identity race before send. No original transaction was sent; one recovery transaction was confirmed.",
+      "recoveryTxHash": "0xdc23f9556b74846caa09d97d31663d93d357a03aea986cf2696462781535e42c"
+    },
+    {
+      "id": "fixed-execution-policy-abstention-boundary",
+      "classification": "policy_interpretation",
+      "disposition": "disclosed",
+      "detail": "The execution policy was fixed-moneyline-total. selectedForExecution=true is schema-required for supplied moneyline/total forecasts and is not an independent model signal; wouldAbstain remained independent."
+    },
+    {
+      "id": "standing-model-position-allowances",
+      "classification": "permission_boundary",
+      "disposition": "accepted",
+      "detail": "Flow and Maker PositionModule/TreasuryModule allowances were zero after setup/execution cleanup. Model TreasuryModule allowances were zero; the documented model PositionModule ceiling remained a standing shared-MVE exception."
+    },
+    {
+      "id": "no-clv-scoring-in-publication",
+      "classification": "analysis_scope",
+      "disposition": "disclosed",
+      "detail": "This publication covers frozen decisions, execution, realized trading PnL, lifecycle, and terminal-zero evidence. It does not include CLV scoring and must not be used as a model ranking."
+    }
+  ],
+  "provenance": {
+    "schemaVersion": 1,
+    "artifactRepositoryBaseCommit": "690a497208cf350bbe7bac6b4df0f1123ed1e17d",
+    "benchmarkSourceCommit": "f970ffea47c2363ef9134c758d4618f9d549d49e",
+    "benchmarkSelectionOverlaySha256": "28522eb1ee159eddfc4a3fb2de711e4e04f30df62131f3845b11d4cb7b7465dd",
+    "harnessSourceCommit": "f6a572da0a79901913804a814c1f0bc6532c586c",
+    "marketMakerSourceCommit": "5d55aefe71632d228922223170345aaa612c35ce",
+    "sdkSourceCommit": "877c026df9af0e188a1e786cc715a77de0badbca",
+    "promptScaffoldSha256": "a37712d74948c5965bb61b12d60258b183e5a2fc86a2ffb968132684571e29f8",
+    "publicationSourceAuditSha256": "f87674b6a6003a6ce59e9847d5294e4b3f7d528efccf3c42a620e9dec0671cd8",
+    "privateEvidenceSha256": {
+      "attemptManifest": "ea9816b099e4d54ee0359c11f7db1baa970bbed966549067d0f7ed1c46be0205",
+      "benchmarkValidation": "8043fce03d0612bcd3f8ce0384121e0118f2ab7de09c1c770ef4cf19e1a0f278",
+      "providerAudit": "0f1f11b77d5898f5492d768b9e8238435061b59b62233402145e5b27a806182d",
+      "executionAggregateValidation": "a6478b5d6dba5e0620bf78f1d0e0e2060e80ab27fb1bab80bb7bf97d69cdb9d2",
+      "spendAggregate": "7e26253fc2a7885218967c6eb01f168be49c11c8df562fc15025a6227f9eb541",
+      "permissions": "429a0ac81338c2d9a3de5e1ed1bbe042de6a42ab701bcafc0e423e8214f75790",
+      "supervisorStatus": "ecbf55fb793a825c47d5ee5fddc9b3e41cec656293cf5c3554080d147529c299",
+      "walletSnapshot": "95c0d01c6780660e282f51e13a75b299fecd723ab5b89be1a5a59056ed1081ec",
+      "setupReconciliation": "977899491401ee639dc7bdd56aca90bb15c2d781a5ec20e80b2ed7ab06854526",
+      "flowNonceInterval": "e95025ee7d5f65a796431ba65f53152ca957a9f7ab33eb5753a7c0e08fc45b27",
+      "window3IdentityDiagnosis": "20936954f14a5000dedf62e301dddb37944946e85ea5fe48b92eed157d620853",
+      "window1Benchmark": "e18a1b41b8c519612b7cbbf68c7e23e385096b1baf07b1591bda87fc1e81793b",
+      "window1ExecutionPlan": "172fbc714eecfc88776993cc70072a2df39fc174d04158e96331a64e6512ba17",
+      "window1PostgameActions": "ae895099d2ba9832f6a9760e18b047c936ac91805466ecaa12c4dc57d0aa4cfc",
+      "window1PostgameTiming": "31c1a5a7a3acea264f0a642ef7787b17533699846d6e3ce4a925d58aa9ea30d3",
+      "window1Terminal": "14c14da4824b62ee84b1d85fec6c731852aa5a5a3f8a7716e0e61b66ddbff4d8",
+      "window2Benchmark": "f282aa1a567c7a20cd182b8d061be5f36dfeb118be5b1499c3a019dadec31d8d",
+      "window2ExecutionPlan": "c3b6d690148fb683962be73a2048208651c843c9ac3e2cb6c496f6e16ed91905",
+      "window2PostgameActions": "f4ed2f5c81272a37f37e793398667b1d501241c358df6c3e6e2b4ae286c2f1f4",
+      "window2PostgameTiming": "8094db69179b086fa335c1a2b1d6d944ec11a6af9f03219132b4e11a49f63ef9",
+      "window2Terminal": "9cd0587ace63d041193046abede480d336595ad50f6cdc47156a0d915286301b",
+      "window3Benchmark": "cecf68c65e1bb95e7dbb272c2925ee758793a8932836a1e401e3bd2017fbc5b5",
+      "window3ExecutionPlan": "f0d269d07b9e1b15ecb8218c73ce22967f190407a7fb9d90d374a9732b88a0fd",
+      "window3PostgameActions": "7954287e43761221ba46aacc867792402715bb69f874bf8fa33d3793e7bc31b2",
+      "window3PostgameTiming": "7a570f00ce37589e7e8e84a9cae9d140cd7bb6f36f756d6da39e17bdc4208350",
+      "window3Terminal": "0cf554d6f92d18706c287b0d3f3cafd1ee373ef6ad978f8f79c9801381856fa3",
+      "officialFinalResponse": "cb91ac791c09a456a24dd90c3aaaeb15d2c3d984621c0c6cc23e0e0bf8a8e953"
+    },
+    "providerEnvelopeRetentionIssue": {
+      "number": 92,
+      "url": "https://github.com/ospex-org/ospex-benchmark/issues/92"
+    },
+    "sourcePathsPublished": false
+  },
+  "artifactFiles": {
+    "summary": "summary.md",
+    "sourcePins": "raw/source-pins.sanitized.json",
+    "gamesAndFrozenInputs": "raw/games-and-frozen-inputs.sanitized.json",
+    "modelArmsSearchAndSpend": "raw/model-arms-search-and-spend.sanitized.json",
+    "fillsAndReceipts": "raw/fills-and-receipts.sanitized.json",
+    "postgameLifecycle": "raw/postgame-lifecycle.sanitized.json",
+    "terminalZero": "raw/terminal-zero.sanitized.json",
+    "economics": "raw/economics.sanitized.json",
+    "officialFinalSource": "raw/official-final-source.sanitized.json",
+    "deviations": "raw/deviations.sanitized.json"
+  },
+  "publication": {
+    "privacyReview": "sanitized; no secrets, local paths, wallet addresses, provider payloads, captured search queries/results, private database rows, or named upstream odds providers",
+    "sourcePathDisclosure": false,
+    "sourceOddsRowsPublished": false,
+    "providerResponsesPublished": false,
+    "providerEnvelopeAvailablePrivately": false,
+    "capturedSearchQueriesPublished": false,
+    "capturedSearchResultReferencesPublished": false
+  }
+}

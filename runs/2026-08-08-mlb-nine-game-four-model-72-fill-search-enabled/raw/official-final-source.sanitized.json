@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "source": "MLB Stats API",
+  "url": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&startDate=2026-08-08&endDate=2026-08-09&hydrate=linescore",
+  "fetchedAt": "2026-08-09T06:45:00Z",
+  "responseSha256": "cb91ac791c09a456a24dd90c3aaaeb15d2c3d984621c0c6cc23e0e0bf8a8e953",
+  "identityPolicy": "exact away team, exact home team, exact scheduled UTC start, and raw game date",
+  "games": [
+    {
+      "gameId": "7b784d1e-a79d-43ee-8098-1bfa514aaa51",
+      "contestId": "91",
+      "gamePk": 823752,
+      "awayTeam": "Minnesota Twins",
+      "homeTeam": "Milwaukee Brewers",
+      "gameDate": "2026-08-08T23:10:00Z",
+      "officialDate": "2026-08-08",
+      "detailedState": "Final",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameId": "fa4e3dda-b667-48a2-aa54-472681d15a59",
+      "contestId": "92",
+      "gamePk": 824079,
+      "awayTeam": "Chicago Cubs",
+      "homeTeam": "Kansas City Royals",
+      "gameDate": "2026-08-08T23:10:00Z",
+      "officialDate": "2026-08-08",
+      "detailedState": "Final",
+      "awayScore": 3,
+      "homeScore": 6
+    },
+    {
+      "gameId": "130b2aa3-7b95-49d0-99a4-f31ffca3f767",
+      "contestId": "93",
+      "gamePk": 822864,
+      "awayTeam": "Baltimore Orioles",
+      "homeTeam": "Texas Rangers",
+      "gameDate": "2026-08-08T23:15:00Z",
+      "officialDate": "2026-08-08",
+      "detailedState": "Final",
+      "awayScore": 1,
+      "homeScore": 5
+    },
+    {
+      "gameId": "3b53605b-8828-45fb-972a-1eb7a531fdcf",
+      "contestId": "94",
+      "gamePk": 824565,
+      "awayTeam": "Cleveland Guardians",
+      "homeTeam": "Chicago White Sox",
+      "gameDate": "2026-08-08T23:15:00Z",
+      "officialDate": "2026-08-08",
+      "detailedState": "Final",
+      "awayScore": 3,
+      "homeScore": 6
+    },
+    {
+      "gameId": "7bc621b1-5b7a-4241-bd6a-dbd2967e3687",
+      "contestId": "95",
+      "gamePk": 823021,
+      "awayTeam": "Colorado Rockies",
+      "homeTeam": "St. Louis Cardinals",
+      "gameDate": "2026-08-08T23:15:00Z",
+      "officialDate": "2026-08-08",
+      "detailedState": "Final",
+      "awayScore": 8,
+      "homeScore": 6
+    },
+    {
+      "gameId": "83f7432e-d05a-4ddf-b38f-92e0c9f5d320",
+      "contestId": "96",
+      "gamePk": 823188,
+      "awayTeam": "Detroit Tigers",
+      "homeTeam": "San Francisco Giants",
+      "gameDate": "2026-08-08T23:15:00Z",
+      "officialDate": "2026-08-08",
+      "detailedState": "Final",
+      "awayScore": 8,
+      "homeScore": 0
+    },
+    {
+      "gameId": "31469cd0-0784-405d-a024-f9d59cbbf220",
+      "contestId": "97",
+      "gamePk": 823267,
+      "awayTeam": "Houston Astros",
+      "homeTeam": "San Diego Padres",
+      "gameDate": "2026-08-08T23:15:00Z",
+      "officialDate": "2026-08-08",
+      "detailedState": "Final",
+      "awayScore": 2,
+      "homeScore": 3
+    },
+    {
+      "gameId": "ebc7f032-41d4-4307-bbda-ab0f1e5c0139",
+      "contestId": "98",
+      "gamePk": 825049,
+      "awayTeam": "Los Angeles Dodgers",
+      "homeTeam": "Arizona Diamondbacks",
+      "gameDate": "2026-08-09T00:10:00Z",
+      "officialDate": "2026-08-08",
+      "detailedState": "Final",
+      "awayScore": 2,
+      "homeScore": 1
+    },
+    {
+      "gameId": "5416c677-1c1e-44c9-97d8-b8ac2c9118d2",
+      "contestId": "99",
+      "gamePk": 823102,
+      "awayTeam": "Tampa Bay Rays",
+      "homeTeam": "Seattle Mariners",
+      "gameDate": "2026-08-09T01:50:00Z",
+      "officialDate": "2026-08-08",
+      "detailedState": "Final",
+      "awayScore": 3,
+      "homeScore": 2
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "smoke-v0-not-a-cohort",
+      "classification": "evidence_scope",
+      "disposition": "accepted",
+      "detail": "The durable run label is SMOKE_V0_NOT_A_COHORT. This is controlled MVE/lifecycle evidence, not a canonical ranking cohort."
+    },
+    {
+      "id": "retained-window-1-provider-529",
+      "classification": "provider_attempt",
+      "disposition": "recovered",
+      "detail": "The first whole-window attempt was retained after one transient Anthropic HTTP 529. It made no protocol writes; its measured spend is included. A complete replacement was designated before protocol execution."
+    },
+    {
+      "id": "provider-search-evidence-partial",
+      "classification": "auditability",
+      "disposition": "open",
+      "detail": "Designated calls have 11 unknown/unproven search records; the retained failed attempt has 3. Null is never classified as zero or did-not-search."
+    },
+    {
+      "id": "provider-envelope-unavailable",
+      "classification": "evidence_retention",
+      "disposition": "open",
+      "detail": "Complete provider response envelopes were not retained, so missing search evidence cannot be reconstructed offline.",
+      "issue": "https://github.com/ospex-org/ospex-benchmark/issues/92"
+    },
+    {
+      "id": "window-3-speculation-260-checkpoint-interruption",
+      "classification": "setup_recovery",
+      "disposition": "reconciled",
+      "detail": "Speculation 260 mined before an interrupted local result checkpoint. A bounded Flow nonce/block scan recovered the successful transaction, and the durable rerun reconciled the existing speculation without resending it.",
+      "recoveredTxHash": "0x1c2aa191d6e8deb0c89c93a47d55711770266c4aea04ba41d3d562ee1ecea8e4"
+    },
+    {
+      "id": "parent-exit-maker-cascade",
+      "classification": "execution_recovery",
+      "disposition": "recovered",
+      "detail": "Parent runner exits stopped each window maker before all serialized fills completed. Exact ledger diff recovery completed 4, 12, and 10 missing fills for windows 1\u20133 without provider regeneration, duplicate successful fill IDs, or resend of completed fills."
+    },
+    {
+      "id": "window-3-pre-send-quote-cancel-race",
+      "classification": "execution_recovery",
+      "disposition": "recovered",
+      "detail": "One window-3 fill saw a soft-cancel/redaction identity race before send. No original transaction was sent; one recovery transaction was confirmed.",
+      "recoveryTxHash": "0xdc23f9556b74846caa09d97d31663d93d357a03aea986cf2696462781535e42c"
+    },
+    {
+      "id": "fixed-execution-policy-abstention-boundary",
+      "classification": "policy_interpretation",
+      "disposition": "disclosed",
+      "detail": "The execution policy was fixed-moneyline-total. selectedForExecution=true is schema-required for supplied moneyline/total forecasts and is not an independent model signal; wouldAbstain remained independent."
+    },
+    {
+      "id": "standing-model-position-allowances",
+      "classification": "permission_boundary",
+      "disposition": "accepted",
+      "detail": "Flow and Maker PositionModule/TreasuryModule allowances were zero after setup/execution cleanup. Model TreasuryModule allowances were zero; the documented model PositionModule ceiling remained a standing shared-MVE exception."
+    },
+    {
+      "id": "no-clv-scoring-in-publication",
+      "classification": "analysis_scope",
+      "disposition": "disclosed",
+      "detail": "This publication covers frozen decisions, execution, realized trading PnL, lifecycle, and terminal-zero evidence. It does not include CLV scoring and must not be used as a model ranking."
+    }
+  ]
+}
