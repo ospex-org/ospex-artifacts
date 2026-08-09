@@ -1,0 +1,440 @@
+{
+  "schemaVersion": 1,
+  "oddsLabel": "frozen reference odds",
+  "games": [
+    {
+      "window": "window-1",
+      "gameId": "7b784d1e-a79d-43ee-8098-1bfa514aaa51",
+      "contestId": "91",
+      "awayTeam": "Minnesota Twins",
+      "homeTeam": "Milwaukee Brewers",
+      "rawGameDate": "2026-08-08",
+      "startTimeUtc": "2026-08-08T23:10:00Z",
+      "runId": "smoke-v0-2026-08-08-b6e103",
+      "planSha256": "b5812fbfb3888b7021a6772d74a9a9f4088c6f0d55d03809ab42956c66815cd7",
+      "benchmarkSourceSha256": "e18a1b41b8c519612b7cbbf68c7e23e385096b1baf07b1591bda87fc1e81793b",
+      "gameSha256": "047211a6b7dfaa129924e4415bc6b09b8bdc27f893e32dadea3d9d21cacb8305",
+      "requestSha256": "6afdfcd4e617146aaa4819de932a0f37ab435a3421b5dc8b0f52d94f3961a8fb",
+      "frozenReferenceMarkets": [
+        {
+          "frozenEntryQuote": {
+            "line": null,
+            "sides": {
+              "Milwaukee Brewers": 1.65789,
+              "Minnesota Twins": 2.33
+            }
+          },
+          "market": "moneyline"
+        },
+        {
+          "frozenEntryQuote": {
+            "line": 8,
+            "sides": {
+              "over": 1.90909,
+              "under": 1.90909
+            }
+          },
+          "market": "total"
+        }
+      ],
+      "speculations": [
+        {
+          "speculationId": "243",
+          "market": "moneyline",
+          "line": null
+        },
+        {
+          "speculationId": "244",
+          "market": "total",
+          "line": 8
+        }
+      ]
+    },
+    {
+      "window": "window-1",
+      "gameId": "fa4e3dda-b667-48a2-aa54-472681d15a59",
+      "contestId": "92",
+      "awayTeam": "Chicago Cubs",
+      "homeTeam": "Kansas City Royals",
+      "rawGameDate": "2026-08-08",
+      "startTimeUtc": "2026-08-08T23:10:00Z",
+      "runId": "smoke-v0-2026-08-08-b6e103",
+      "planSha256": "b5812fbfb3888b7021a6772d74a9a9f4088c6f0d55d03809ab42956c66815cd7",
+      "benchmarkSourceSha256": "e18a1b41b8c519612b7cbbf68c7e23e385096b1baf07b1591bda87fc1e81793b",
+      "gameSha256": "b7ef95d4fc42974b22258be1a7f2a67bd4c66881127f752c6088aaa38b5ab2c9",
+      "requestSha256": "72cdc157111a68a18ffe13fda3f1ce429717f4a77bc22b2fc56d24f832af6170",
+      "frozenReferenceMarkets": [
+        {
+          "frozenEntryQuote": {
+            "line": null,
+            "sides": {
+              "Chicago Cubs": 1.60606,
+              "Kansas City Royals": 2.44
+            }
+          },
+          "market": "moneyline"
+        },
+        {
+          "frozenEntryQuote": {
+            "line": 9.5,
+            "sides": {
+              "over": 1.86957,
+              "under": 1.95238
+            }
+          },
+          "market": "total"
+        }
+      ],
+      "speculations": [
+        {
+          "speculationId": "245",
+          "market": "moneyline",
+          "line": null
+        },
+        {
+          "speculationId": "246",
+          "market": "total",
+          "line": 9.5
+        }
+      ]
+    },
+    {
+      "window": "window-1",
+      "gameId": "130b2aa3-7b95-49d0-99a4-f31ffca3f767",
+      "contestId": "93",
+      "awayTeam": "Baltimore Orioles",
+      "homeTeam": "Texas Rangers",
+      "rawGameDate": "2026-08-08",
+      "startTimeUtc": "2026-08-08T23:15:00Z",
+      "runId": "smoke-v0-2026-08-08-b6e103",
+      "planSha256": "b5812fbfb3888b7021a6772d74a9a9f4088c6f0d55d03809ab42956c66815cd7",
+      "benchmarkSourceSha256": "e18a1b41b8c519612b7cbbf68c7e23e385096b1baf07b1591bda87fc1e81793b",
+      "gameSha256": "3969f1b80ffb239bb24b6d12017f216457b04be6778ca4ddc133d4743fa34cca",
+      "requestSha256": "e8a0b96ccfd7b0587de67f9d311878f7c45b4fb283c3969b1a8fb9834f2971e7",
+      "frozenReferenceMarkets": [
+        {
+          "frozenEntryQuote": {
+            "line": null,
+            "sides": {
+              "Baltimore Orioles": 2.26,
+              "Texas Rangers": 1.68966
+            }
+          },
+          "market": "moneyline"
+        },
+        {
+          "frozenEntryQuote": {
+            "line": 7.5,
+            "sides": {
+              "over": 1.86957,
+              "under": 1.95238
+            }
+          },
+          "market": "total"
+        }
+      ],
+      "speculations": [
+        {
+          "speculationId": "247",
+          "market": "moneyline",
+          "line": null
+        },
+        {
+          "speculationId": "248",
+          "market": "total",
+          "line": 7.5
+        }
+      ]
+    },
+    {
+      "window": "window-2",
+      "gameId": "3b53605b-8828-45fb-972a-1eb7a531fdcf",
+      "contestId": "94",
+      "awayTeam": "Cleveland Guardians",
+      "homeTeam": "Chicago White Sox",
+      "rawGameDate": "2026-08-08",
+      "startTimeUtc": "2026-08-08T23:15:00Z",
+      "runId": "smoke-v0-2026-08-08-01fea2",
+      "planSha256": "48a36a0961ae7dcf5374d62c70bd57419a215c354055fc0f900147a3be2a341c",
+      "benchmarkSourceSha256": "f282aa1a567c7a20cd182b8d061be5f36dfeb118be5b1499c3a019dadec31d8d",
+      "gameSha256": "2f771815b2e896114f3075321945390263f5d9e82feed85658a5bad38ec7822f",
+      "requestSha256": "739d74388000976adbbc5b9d4836ea4c9990f8b0d267ad06b6641e51f56a6013",
+      "frozenReferenceMarkets": [
+        {
+          "frozenEntryQuote": {
+            "line": null,
+            "sides": {
+              "Chicago White Sox": 2.1,
+              "Cleveland Guardians": 1.78125
+            }
+          },
+          "market": "moneyline"
+        },
+        {
+          "frozenEntryQuote": {
+            "line": 8,
+            "sides": {
+              "over": 1.90909,
+              "under": 1.90909
+            }
+          },
+          "market": "total"
+        }
+      ],
+      "speculations": [
+        {
+          "speculationId": "249",
+          "market": "moneyline",
+          "line": null
+        },
+        {
+          "speculationId": "250",
+          "market": "total",
+          "line": 8
+        }
+      ]
+    },
+    {
+      "window": "window-2",
+      "gameId": "7bc621b1-5b7a-4241-bd6a-dbd2967e3687",
+      "contestId": "95",
+      "awayTeam": "Colorado Rockies",
+      "homeTeam": "St. Louis Cardinals",
+      "rawGameDate": "2026-08-08",
+      "startTimeUtc": "2026-08-08T23:15:00Z",
+      "runId": "smoke-v0-2026-08-08-01fea2",
+      "planSha256": "48a36a0961ae7dcf5374d62c70bd57419a215c354055fc0f900147a3be2a341c",
+      "benchmarkSourceSha256": "f282aa1a567c7a20cd182b8d061be5f36dfeb118be5b1499c3a019dadec31d8d",
+      "gameSha256": "a532906f83fafb88107c487b84742de9878c7bcd7478a441eb5ce7f2e23cea07",
+      "requestSha256": "6faffa1e96b06f4ec9dea524c2e62ae86e86c8b11235f439fafc517742190a28",
+      "frozenReferenceMarkets": [
+        {
+          "frozenEntryQuote": {
+            "line": null,
+            "sides": {
+              "Colorado Rockies": 2.34,
+              "St. Louis Cardinals": 1.65359
+            }
+          },
+          "market": "moneyline"
+        },
+        {
+          "frozenEntryQuote": {
+            "line": 9,
+            "sides": {
+              "over": 1.95238,
+              "under": 1.86957
+            }
+          },
+          "market": "total"
+        }
+      ],
+      "speculations": [
+        {
+          "speculationId": "251",
+          "market": "moneyline",
+          "line": null
+        },
+        {
+          "speculationId": "252",
+          "market": "total",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "window": "window-2",
+      "gameId": "83f7432e-d05a-4ddf-b38f-92e0c9f5d320",
+      "contestId": "96",
+      "awayTeam": "Detroit Tigers",
+      "homeTeam": "San Francisco Giants",
+      "rawGameDate": "2026-08-08",
+      "startTimeUtc": "2026-08-08T23:15:00Z",
+      "runId": "smoke-v0-2026-08-08-01fea2",
+      "planSha256": "48a36a0961ae7dcf5374d62c70bd57419a215c354055fc0f900147a3be2a341c",
+      "benchmarkSourceSha256": "f282aa1a567c7a20cd182b8d061be5f36dfeb118be5b1499c3a019dadec31d8d",
+      "gameSha256": "1ad85908b71de40ec169c3af074751564c161848c9603f8e1167a0a442465ed0",
+      "requestSha256": "4651a6c60cf2709c322904db8e2dbeee78c2bd3e4fa7b3f2d833a62f282deac0",
+      "frozenReferenceMarkets": [
+        {
+          "frozenEntryQuote": {
+            "line": null,
+            "sides": {
+              "Detroit Tigers": 1.91743,
+              "San Francisco Giants": 1.93458
+            }
+          },
+          "market": "moneyline"
+        },
+        {
+          "frozenEntryQuote": {
+            "line": 7.5,
+            "sides": {
+              "over": 1.8,
+              "under": 2.05
+            }
+          },
+          "market": "total"
+        }
+      ],
+      "speculations": [
+        {
+          "speculationId": "253",
+          "market": "moneyline",
+          "line": null
+        },
+        {
+          "speculationId": "254",
+          "market": "total",
+          "line": 7.5
+        }
+      ]
+    },
+    {
+      "window": "window-3",
+      "gameId": "31469cd0-0784-405d-a024-f9d59cbbf220",
+      "contestId": "97",
+      "awayTeam": "Houston Astros",
+      "homeTeam": "San Diego Padres",
+      "rawGameDate": "2026-08-08",
+      "startTimeUtc": "2026-08-08T23:15:00Z",
+      "runId": "smoke-v0-2026-08-08-d0fe27",
+      "planSha256": "d107e86f3b2d27fc5b050c15fe39d98a6f6be3f33fb5bed5f12e0428b0596c97",
+      "benchmarkSourceSha256": "cecf68c65e1bb95e7dbb272c2925ee758793a8932836a1e401e3bd2017fbc5b5",
+      "gameSha256": "5680eba8b3ab9dfac3e9eb9e2f00d3ccfd2b27ba6cee2a8780beb3b341b5f05f",
+      "requestSha256": "03c1bdfc4d953f68c117534d87fcc76af366725ee91c1502522720ec9ecd507c",
+      "frozenReferenceMarkets": [
+        {
+          "frozenEntryQuote": {
+            "line": null,
+            "sides": {
+              "Houston Astros": 2.02,
+              "San Diego Padres": 1.84034
+            }
+          },
+          "market": "moneyline"
+        },
+        {
+          "frozenEntryQuote": {
+            "line": 7.5,
+            "sides": {
+              "over": 1.8,
+              "under": 2.05
+            }
+          },
+          "market": "total"
+        }
+      ],
+      "speculations": [
+        {
+          "speculationId": "255",
+          "market": "moneyline",
+          "line": null
+        },
+        {
+          "speculationId": "256",
+          "market": "total",
+          "line": 7.5
+        }
+      ]
+    },
+    {
+      "window": "window-3",
+      "gameId": "ebc7f032-41d4-4307-bbda-ab0f1e5c0139",
+      "contestId": "98",
+      "awayTeam": "Los Angeles Dodgers",
+      "homeTeam": "Arizona Diamondbacks",
+      "rawGameDate": "2026-08-08",
+      "startTimeUtc": "2026-08-09T00:10:00Z",
+      "runId": "smoke-v0-2026-08-08-d0fe27",
+      "planSha256": "d107e86f3b2d27fc5b050c15fe39d98a6f6be3f33fb5bed5f12e0428b0596c97",
+      "benchmarkSourceSha256": "cecf68c65e1bb95e7dbb272c2925ee758793a8932836a1e401e3bd2017fbc5b5",
+      "gameSha256": "6e9c78cea654631e371ca05b46ce4b646bcde6a3040bfb05e3a8017794b13fa7",
+      "requestSha256": "1f885b92033980060c1305bb626da114ca333fae38b04020a2857aceaa4f10e1",
+      "frozenReferenceMarkets": [
+        {
+          "frozenEntryQuote": {
+            "line": null,
+            "sides": {
+              "Arizona Diamondbacks": 2.5,
+              "Los Angeles Dodgers": 1.57471
+            }
+          },
+          "market": "moneyline"
+        },
+        {
+          "frozenEntryQuote": {
+            "line": 8.5,
+            "sides": {
+              "over": 1.81967,
+              "under": 2.02
+            }
+          },
+          "market": "total"
+        }
+      ],
+      "speculations": [
+        {
+          "speculationId": "257",
+          "market": "moneyline",
+          "line": null
+        },
+        {
+          "speculationId": "258",
+          "market": "total",
+          "line": 8.5
+        }
+      ]
+    },
+    {
+      "window": "window-3",
+      "gameId": "5416c677-1c1e-44c9-97d8-b8ac2c9118d2",
+      "contestId": "99",
+      "awayTeam": "Tampa Bay Rays",
+      "homeTeam": "Seattle Mariners",
+      "rawGameDate": "2026-08-08",
+      "startTimeUtc": "2026-08-09T01:50:00Z",
+      "runId": "smoke-v0-2026-08-08-d0fe27",
+      "planSha256": "d107e86f3b2d27fc5b050c15fe39d98a6f6be3f33fb5bed5f12e0428b0596c97",
+      "benchmarkSourceSha256": "cecf68c65e1bb95e7dbb272c2925ee758793a8932836a1e401e3bd2017fbc5b5",
+      "gameSha256": "fae6c4961803dd590687f20b3201664211e0d9dd6cc32d20013277e98407e134",
+      "requestSha256": "261f4cef9441ab1f49732bcfa591e754b24c92ab893aa7a5a22e0036b67bb746",
+      "frozenReferenceMarkets": [
+        {
+          "frozenEntryQuote": {
+            "line": null,
+            "sides": {
+              "Seattle Mariners": 1.83333,
+              "Tampa Bay Rays": 2.03
+            }
+          },
+          "market": "moneyline"
+        },
+        {
+          "frozenEntryQuote": {
+            "line": 7.5,
+            "sides": {
+              "over": 2.05,
+              "under": 1.8
+            }
+          },
+          "market": "total"
+        }
+      ],
+      "speculations": [
+        {
+          "speculationId": "259",
+          "market": "moneyline",
+          "line": null
+        },
+        {
+          "speculationId": "260",
+          "market": "total",
+          "line": 7.5
+        }
+      ]
+    }
+  ],
+  "sourceOddsProviderNamesPublished": false,
+  "sourceOddsRowsPublished": false
+}

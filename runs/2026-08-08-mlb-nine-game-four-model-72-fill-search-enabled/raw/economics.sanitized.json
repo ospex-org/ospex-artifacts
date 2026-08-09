@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "unit": "USDC",
+  "rows": [
+    {
+      "participantId": "flow",
+      "armId": null,
+      "matchedPrincipalUsd": "0.360000",
+      "terminalPayoutUsd": "0.360000",
+      "netTradingPnlUsd": "0.000000",
+      "claimTransactions": 18
+    },
+    {
+      "participantId": "lab-anthropic",
+      "armId": "anthropic-claude-fable-5",
+      "matchedPrincipalUsd": "17.998971",
+      "terminalPayoutUsd": "18.904830",
+      "netTradingPnlUsd": "0.905859",
+      "claimTransactions": 10
+    },
+    {
+      "participantId": "lab-gemini",
+      "armId": "google-gemini-3.1-pro-preview",
+      "matchedPrincipalUsd": "17.998993",
+      "terminalPayoutUsd": "21.514884",
+      "netTradingPnlUsd": "3.515891",
+      "claimTransactions": 11
+    },
+    {
+      "participantId": "lab-openai",
+      "armId": "openai-gpt-5.6-sol",
+      "matchedPrincipalUsd": "17.998940",
+      "terminalPayoutUsd": "14.457305",
+      "netTradingPnlUsd": "-3.541635",
+      "claimTransactions": 8
+    },
+    {
+      "participantId": "lab-xai",
+      "armId": "xai-grok-4.5",
+      "matchedPrincipalUsd": "17.998950",
+      "terminalPayoutUsd": "16.011430",
+      "netTradingPnlUsd": "-1.987520",
+      "claimTransactions": 8
+    },
+    {
+      "participantId": "maker",
+      "armId": null,
+      "matchedPrincipalUsd": "66.776500",
+      "terminalPayoutUsd": "67.883905",
+      "netTradingPnlUsd": "1.107405",
+      "claimTransactions": 16
+    }
+  ],
+  "reconciliation": {
+    "modelPlusMakerNetTradingPnlUsd": "0.000000",
+    "flowSetupTradingNetUsd": "0.000000",
+    "contestCreationFeesUsd": "9.000000",
+    "speculationCreationFeesUsd": "9.000000",
+    "flowNetAfterCreationFeesExcludingGasUsd": "-18.000000",
+    "polygonGasCostPolAll211Transactions": "15.885028894302939418"
+  },
+  "exclusions": [
+    "Polygon gas is reported separately in POL",
+    "off-chain provider spend is reported separately",
+    "capital opportunity cost"
+  ]
+}

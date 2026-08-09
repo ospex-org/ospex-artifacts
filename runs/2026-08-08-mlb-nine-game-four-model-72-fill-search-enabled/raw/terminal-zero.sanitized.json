@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "status": "TERMINAL_ZERO",
+  "completedAt": "2026-08-09T05:04:42.156776Z",
+  "supervisorExitCode": 0,
+  "supervisorTicks": 33,
+  "windows": [
+    "window-1",
+    "window-2",
+    "window-3"
+  ],
+  "contests": [
+    {
+      "window": "window-1",
+      "gameId": "7b784d1e-a79d-43ee-8098-1bfa514aaa51",
+      "contestId": "91",
+      "awayScore": 3,
+      "homeScore": 4,
+      "scoreObservedAt": "2026-08-09T02:23:11.864Z",
+      "speculationsClosed": true,
+      "openCommitments": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "nonterminalPositions": 0,
+      "relevantWriterProcesses": 0,
+      "standingAllowanceExceptions": {
+        "modelPositionModuleRaw": "1000000000",
+        "modelTreasuryModuleRaw": "0"
+      }
+    },
+    {
+      "window": "window-1",
+      "gameId": "fa4e3dda-b667-48a2-aa54-472681d15a59",
+      "contestId": "92",
+      "awayScore": 3,
+      "homeScore": 6,
+      "scoreObservedAt": "2026-08-09T02:16:20.687Z",
+      "speculationsClosed": true,
+      "openCommitments": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "nonterminalPositions": 0,
+      "relevantWriterProcesses": 0,
+      "standingAllowanceExceptions": {
+        "modelPositionModuleRaw": "1000000000",
+        "modelTreasuryModuleRaw": "0"
+      }
+    },
+    {
+      "window": "window-1",
+      "gameId": "130b2aa3-7b95-49d0-99a4-f31ffca3f767",
+      "contestId": "93",
+      "awayScore": 1,
+      "homeScore": 5,
+      "scoreObservedAt": "2026-08-09T02:24:42.289Z",
+      "speculationsClosed": true,
+      "openCommitments": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "nonterminalPositions": 0,
+      "relevantWriterProcesses": 0,
+      "standingAllowanceExceptions": {
+        "modelPositionModuleRaw": "1000000000",
+        "modelTreasuryModuleRaw": "0"
+      }
+    },
+    {
+      "window": "window-2",
+      "gameId": "3b53605b-8828-45fb-972a-1eb7a531fdcf",
+      "contestId": "94",
+      "awayScore": 3,
+      "homeScore": 6,
+      "scoreObservedAt": "2026-08-09T02:49:33.279Z",
+      "speculationsClosed": true,
+      "openCommitments": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "nonterminalPositions": 0,
+      "relevantWriterProcesses": 0,
+      "standingAllowanceExceptions": {
+        "modelPositionModuleRaw": "1000000000",
+        "modelTreasuryModuleRaw": "0"
+      }
+    },
+    {
+      "window": "window-2",
+      "gameId": "7bc621b1-5b7a-4241-bd6a-dbd2967e3687",
+      "contestId": "95",
+      "awayScore": 8,
+      "homeScore": 6,
+      "scoreObservedAt": "2026-08-09T02:55:49.457Z",
+      "speculationsClosed": true,
+      "openCommitments": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "nonterminalPositions": 0,
+      "relevantWriterProcesses": 0,
+      "standingAllowanceExceptions": {
+        "modelPositionModuleRaw": "1000000000",
+        "modelTreasuryModuleRaw": "0"
+      }
+    },
+    {
+      "window": "window-2",
+      "gameId": "83f7432e-d05a-4ddf-b38f-92e0c9f5d320",
+      "contestId": "96",
+      "awayScore": 8,
+      "homeScore": 0,
+      "scoreObservedAt": "2026-08-09T02:33:00.230Z",
+      "speculationsClosed": true,
+      "openCommitments": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "nonterminalPositions": 0,
+      "relevantWriterProcesses": 0,
+      "standingAllowanceExceptions": {
+        "modelPositionModuleRaw": "1000000000",
+        "modelTreasuryModuleRaw": "0"
+      }
+    },
+    {
+      "window": "window-3",
+      "gameId": "31469cd0-0784-405d-a024-f9d59cbbf220",
+      "contestId": "97",
+      "awayScore": 2,
+      "homeScore": 3,
+      "scoreObservedAt": "2026-08-09T02:27:48.255Z",
+      "speculationsClosed": true,
+      "openCommitments": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "nonterminalPositions": 0,
+      "relevantWriterProcesses": 0,
+      "standingAllowanceExceptions": {
+        "modelPositionModuleRaw": "1000000000",
+        "modelTreasuryModuleRaw": "0"
+      }
+    },
+    {
+      "window": "window-3",
+      "gameId": "ebc7f032-41d4-4307-bbda-ab0f1e5c0139",
+      "contestId": "98",
+      "awayScore": 2,
+      "homeScore": 1,
+      "scoreObservedAt": "2026-08-09T04:02:46.928Z",
+      "speculationsClosed": true,
+      "openCommitments": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "nonterminalPositions": 0,
+      "relevantWriterProcesses": 0,
+      "standingAllowanceExceptions": {
+        "modelPositionModuleRaw": "1000000000",
+        "modelTreasuryModuleRaw": "0"
+      }
+    },
+    {
+      "window": "window-3",
+      "gameId": "5416c677-1c1e-44c9-97d8-b8ac2c9118d2",
+      "contestId": "99",
+      "awayScore": 3,
+      "homeScore": 2,
+      "scoreObservedAt": "2026-08-09T05:04:35.849Z",
+      "speculationsClosed": true,
+      "openCommitments": 0,
+      "pendingSettle": 0,
+      "claimable": 0,
+      "nonterminalPositions": 0,
+      "relevantWriterProcesses": 0,
+      "standingAllowanceExceptions": {
+        "modelPositionModuleRaw": "1000000000",
+        "modelTreasuryModuleRaw": "0"
+      }
+    }
+  ],
+  "aggregate": {
+    "contestCount": 9,
+    "openCommitments": 0,
+    "pendingSettle": 0,
+    "claimable": 0,
+    "nonterminalPositions": 0,
+    "relevantWriterProcesses": 0
+  },
+  "permissionBoundary": {
+    "flowPositionModuleRawAfterSetupCleanup": "0",
+    "flowTreasuryModuleRawAfterExactFeeSpend": "0",
+    "makerPositionModuleRawAfterExecutionCleanup": "0",
+    "makerTreasuryModuleRaw": "0",
+    "modelTreasuryModuleRaw": "0",
+    "modelPositionModuleStandingException": true
+  }
+}
