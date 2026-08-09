@@ -34,9 +34,10 @@ This is controlled MVE/lifecycle evidence, **not** a canonical cohort or model l
 - One window-3 quote/cancel redaction race failed before send; its single recovery transaction succeeded.
 - Postgame: 9 score requests, 9 independently recovered `ContestScoresSet` callbacks, 18 settlements, and 71 claim transactions. There were 53 explicit no-position/already-claimed observations with no transaction.
 - Receipt reconciliation: **211/211 unique published transaction hashes succeeded**; total gas was `15.885028894302939418 POL`.
+- Transaction-set boundary: the 211 published transactions are scope-exact to permissions, setup, fills, scoring, settlement, claims, and cleanup. They are not all run-window wallet activity: 65 routine maker order-management transactions (`raiseMinNonce`: 48; `cancelCommitment`: 17) are excluded, and no lifecycle transaction is excluded.
 - Permissions: Flow received exact 1 USDC PositionModule and 18 USDC TreasuryModule allowances; Maker received exact 250 USDC PositionModule allowance. Flow PositionModule and Maker PositionModule were revoked to zero. Flow TreasuryModule reached zero through the exact 18 USDC creation-fee spend; both roles had immediate zero readbacks for both modules. Model TreasuryModule allowances were zero; the documented model PositionModule ceiling remained a standing shared-MVE exception.
 
-See [`raw/fills-and-receipts.sanitized.json`](raw/fills-and-receipts.sanitized.json), [`raw/postgame-lifecycle.sanitized.json`](raw/postgame-lifecycle.sanitized.json), and [`raw/terminal-zero.sanitized.json`](raw/terminal-zero.sanitized.json).
+See [`raw/fills-and-receipts.sanitized.json`](raw/fills-and-receipts.sanitized.json), [`raw/postgame-lifecycle.sanitized.json`](raw/postgame-lifecycle.sanitized.json), [`raw/terminal-zero.sanitized.json`](raw/terminal-zero.sanitized.json), and [`raw/deviations.sanitized.json`](raw/deviations.sanitized.json).
 
 ## Search and spend boundary
 
@@ -50,6 +51,8 @@ One retained whole-window attempt stopped before protocol writes after a transie
 | `xai-grok-4.5` | 9 | 142 known / 0 unknown | $6.665700 | $2.125292 |
 
 Designated spend was `$18.108728`; the retained failed attempt added `$4.581035`, for `$22.689763` total under the `$50.000000` stop threshold. Designated calls have `183` known billable searches and `11` unknown/unproven search records. The failed attempt has `56` known searches and `3` unknown records. Unknown never means zero or “did not search.”
+
+Per-arm spend is **not cost-per-pick comparable**: equal call counts do not make provider workloads comparable, and search auditability/token mix differ across arms.
 
 Complete provider envelopes were not retained, so missing search evidence cannot be recovered offline; this remains tracked in [ospex-benchmark issue #92](https://github.com/ospex-org/ospex-benchmark/issues/92). Captured queries, result references, answer text, and provider response bodies are not published.
 
@@ -65,6 +68,10 @@ Gas and off-chain provider spend are excluded from USDC trading PnL and reported
 | `openai-gpt-5.6-sol` | $17.998940 | $14.457305 | **$-3.541635** | 8 |
 | `xai-grok-4.5` | $17.998950 | $16.011430 | **$-1.987520** | 8 |
 | `maker` | $66.776500 | $67.883905 | **$1.107405** | 16 |
+
+The `fixed-moneyline-total` execution policy filled every supplied moneyline/total forecast, including `10/72` rows with `wouldAbstain=true` (`openai-gpt-5.6-sol`: 5; `xai-grok-4.5`: 5; other arms: 0). All 10 fall in the two negative-PnL rows above, so this is policy-conditioned realized PnL, not a model ranking.
+
+All 72 fills executed at taker-facing decimal odds better than the frozen reference (mean improvement `0.028285`), adding `$2.036369` of maker risk versus applying the frozen references to the same taker principal. That is execution price improvement, not model performance.
 
 Model plus maker trading PnL reconciles to zero. Flow setup-position trading net is zero; Flow separately paid 9 USDC in contest-creation fees and 9 USDC in speculation-creation fees, for `-$18.000000` before gas.
 

@@ -7,7 +7,7 @@
   "marketMakerSourceCommit": "5d55aefe71632d228922223170345aaa612c35ce",
   "sdkSourceCommit": "877c026df9af0e188a1e786cc715a77de0badbca",
   "promptScaffoldSha256": "a37712d74948c5965bb61b12d60258b183e5a2fc86a2ffb968132684571e29f8",
-  "publicationSourceAuditSha256": "56f4ff46867688fe5144771d3145485b1ad3ef61d4f07bebe4cb88ddccb56347",
+  "publicationSourceAuditSha256": "f87674b6a6003a6ce59e9847d5294e4b3f7d528efccf3c42a620e9dec0671cd8",
   "privateEvidenceSha256": {
     "attemptManifest": "ea9816b099e4d54ee0359c11f7db1baa970bbed966549067d0f7ed1c46be0205",
     "benchmarkValidation": "8043fce03d0612bcd3f8ce0384121e0118f2ab7de09c1c770ef4cf19e1a0f278",

@@ -263,9 +263,25 @@
     "unknownSearchAuditRecordsDesignated": 11,
     "conservativeProviderSpendUsdDesignated": "18.108728",
     "conservativeProviderSpendUsdIncludingFailedAttempt": "22.689763",
+    "providerSpendStopThresholdUsd": "50.000000",
+    "withinProviderSpendStopThreshold": true,
     "completeProviderEnvelopesRetained": false,
     "costPerPickComparableAcrossArms": false,
     "wouldAbstainTrueExecutedRows": 10,
+    "wouldAbstainTrueExecutedRowsByArm": {
+      "anthropic-claude-fable-5": 0,
+      "google-gemini-3.1-pro-preview": 0,
+      "openai-gpt-5.6-sol": 5,
+      "xai-grok-4.5": 5
+    },
+    "executionPriceContext": {
+      "comparisonFormula": "execution taker decimal = 1 + 100 / (oddsTick - 100); compared with decisionProvenance.observedDecimal",
+      "betterThanFrozenReferenceFillCount": 72,
+      "atOrWorseThanFrozenReferenceFillCount": 0,
+      "meanTakerDecimalImprovement": "0.028285",
+      "additionalMakerRiskVsFrozenReferenceUsd": "2.036369",
+      "interpretation": "execution price improvement; not model performance"
+    },
     "rawEvidence": "raw/model-arms-search-and-spend.sanitized.json"
   },
   "operations": {
@@ -518,6 +534,17 @@
       "0x99407a5e0e361dc0a2b9c649dc599127d99d97b7fad4ef7a0ffebd94be35d4e6",
       "0xad470ee87efdca85fb106397a5ddde42b8e2305fe937b3458239712da119c4df"
     ],
+    "setBoundary": {
+      "publishedSetIsAllWalletActivityInRunWindow": false,
+      "publishedLifecycleAndPermissionTransactionCount": 211,
+      "excludedMakerOrderManagementTransactionCount": 65,
+      "excludedMakerOrderManagementByPrimitive": {
+        "raiseMinNonce": 48,
+        "cancelCommitment": 17
+      },
+      "excludedLifecycleTransactionCount": 0,
+      "rationale": "routine maker quote replacement/cancellation is outside permission, setup, fill, scoring, settlement, claim, and cleanup evidence scope"
+    },
     "setupAndFillEvidence": "raw/fills-and-receipts.sanitized.json",
     "postgameEvidence": "raw/postgame-lifecycle.sanitized.json"
   },
@@ -595,7 +622,7 @@
     "marketMakerSourceCommit": "5d55aefe71632d228922223170345aaa612c35ce",
     "sdkSourceCommit": "877c026df9af0e188a1e786cc715a77de0badbca",
     "promptScaffoldSha256": "a37712d74948c5965bb61b12d60258b183e5a2fc86a2ffb968132684571e29f8",
-    "publicationSourceAuditSha256": "56f4ff46867688fe5144771d3145485b1ad3ef61d4f07bebe4cb88ddccb56347",
+    "publicationSourceAuditSha256": "f87674b6a6003a6ce59e9847d5294e4b3f7d528efccf3c42a620e9dec0671cd8",
     "privateEvidenceSha256": {
       "attemptManifest": "ea9816b099e4d54ee0359c11f7db1baa970bbed966549067d0f7ed1c46be0205",
       "benchmarkValidation": "8043fce03d0612bcd3f8ce0384121e0118f2ab7de09c1c770ef4cf19e1a0f278",

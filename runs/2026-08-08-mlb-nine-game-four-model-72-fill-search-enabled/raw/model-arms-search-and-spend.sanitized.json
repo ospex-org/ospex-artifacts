@@ -3,6 +3,9 @@
   "searchEnabled": true,
   "priceVersion": "prices-v3",
   "totalConservativeProviderSpendUsd": "22.689763",
+  "providerSpendStopThresholdUsd": "50.000000",
+  "withinProviderSpendStopThreshold": true,
+  "costPerPickComparableAcrossArms": false,
   "includesRetainedFailedAttempt": true,
   "designated": {
     "providerAttempts": 36,
@@ -170,6 +173,12 @@
     "unexecutedSpreadForecastsPublished": false,
     "executionPolicy": "fixed-moneyline-total",
     "selectedForExecutionMeaning": "schema-required true for supplied moneyline/total forecasts; not an independent model signal",
-    "wouldAbstainTrueRows": 10
+    "wouldAbstainTrueRows": 10,
+    "wouldAbstainTrueRowsByArm": {
+      "anthropic-claude-fable-5": 0,
+      "google-gemini-3.1-pro-preview": 0,
+      "openai-gpt-5.6-sol": 5,
+      "xai-grok-4.5": 5
+    }
   }
 }

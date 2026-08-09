@@ -15,7 +15,32 @@
       "window-3": 10
     },
     "executionPolicy": "fixed-moneyline-total",
-    "wouldAbstainTrueExecutedRows": 10
+    "wouldAbstainTrueExecutedRows": 10,
+    "wouldAbstainTrueExecutedRowsByArm": {
+      "anthropic-claude-fable-5": 0,
+      "google-gemini-3.1-pro-preview": 0,
+      "openai-gpt-5.6-sol": 5,
+      "xai-grok-4.5": 5
+    },
+    "executionPriceContext": {
+      "comparisonFormula": "execution taker decimal = 1 + 100 / (oddsTick - 100); compared with decisionProvenance.observedDecimal",
+      "betterThanFrozenReferenceFillCount": 72,
+      "atOrWorseThanFrozenReferenceFillCount": 0,
+      "meanTakerDecimalImprovement": "0.028285",
+      "additionalMakerRiskVsFrozenReferenceUsd": "2.036369",
+      "interpretation": "execution price improvement; not model performance"
+    }
+  },
+  "transactionSetBoundary": {
+    "publishedSetIsAllWalletActivityInRunWindow": false,
+    "publishedLifecycleAndPermissionTransactionCount": 211,
+    "excludedMakerOrderManagementTransactionCount": 65,
+    "excludedMakerOrderManagementByPrimitive": {
+      "raiseMinNonce": 48,
+      "cancelCommitment": 17
+    },
+    "excludedLifecycleTransactionCount": 0,
+    "rationale": "routine maker quote replacement/cancellation is outside permission, setup, fill, scoring, settlement, claim, and cleanup evidence scope"
   },
   "permissionSetupTransactions": [
     {
