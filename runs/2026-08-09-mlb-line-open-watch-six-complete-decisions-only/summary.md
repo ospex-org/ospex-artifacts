@@ -7,7 +7,7 @@
 - **Target:** 15 Sunday games
 - **Watcher completion:** `TARGET_LEDGER_COMPLETE` at `2026-08-09T13:39:30.675Z`
 
-The watcher durably handled all 15 targets: **7 paid-fire claims, 6 complete decision artifacts, 1 interrupted fired claim preserved without replay, and 8 late detections that never fired**. The official source now reports all 15 games final.
+The watcher durably handled all 15 targets: **7 paid-fire claims, 6 complete decision artifacts, 1 interrupted fired claim preserved without replay, and 8 late detections that never fired**. The official source fetched at `2026-08-10T02:59:05Z` reports all 15 games final.
 
 This was explicitly **decisions-only**. It created no contests, positions, commitments, fills, or transaction records. Protocol score requests, settlement, claims, allowance cleanup, and terminal-zero lifecycle checks were therefore **not applicable**; no Sunday protocol transaction needed to be sent.
 
@@ -37,15 +37,15 @@ Canonical game UUID, exact teams, and exact scheduled start matched the official
 
 The six complete outputs contain **24/24 valid arm-game responses**, **72 model decision rows**, and **48 baseline rows**. Current-main scorer `scoring-v0.6.0` independently verified source hashes, decision echoes, and response linkage for each run.
 
-`wouldAbstain=true` appears on `30/72` model rows: Anthropic `9/18`, Gemini `4/18`, OpenAI `7/18`, and xAI `10/18`. The fixed line-open schema marks moneyline/total rows `selectedForExecution=true` and spread rows false, but **nothing was executed**; that field is not evidence of a protocol trade.
+`wouldAbstain=true` appears on `30/72` model rows: Anthropic `9/18`, Gemini `4/18`, OpenAI `7/18`, and xAI `10/18`. By market, the concentration is spread `22/24`, total `6/24`, and moneyline `2/24`; all six Anthropic, OpenAI, and xAI spread rows and four of six Gemini spread rows carry `wouldAbstain=true`. The fixed line-open schema marks moneyline/total rows `selectedForExecution=true` and spread rows false, but **nothing was executed**; that field is not evidence of a protocol trade.
 
 See [`raw/model-decisions.sanitized.json`](raw/model-decisions.sanitized.json).
 
 ## Reference-closing CLV
 
-The scorer produced `102/120` primary-scoreable rows: model `60/72`, baseline `42/48`. The remaining 18 rows were explicitly unscored (`line_moved`: 12 model totals; `push_capable_line`: 6 baseline totals). No row was schedule-changed.
+The scorer produced `102/120` primary-scoreable rows: model `60/72`, baseline `42/48`. The remaining 18 rows were explicitly unscored: `line_moved` affected 12 totals rows across two games (8 model, 4 baseline), while `push_capable_line` affected 6 totals rows in one game (4 model, 2 baseline). Both refusal reasons fire per game on every totals participant, so no participant is selectively advantaged. No row was schedule-changed.
 
-| Arm | Market | Scoreable games | Mean economic CLV | Mean margin-adjusted CLV | Beat close |
+| Arm | Market | Scoreable games | Mean economic CLV | Mean margin-adjusted CLV | Primary economic CLV > 0 |
 |---|---|---:|---:|---:|---:|
 | `anthropic-claude-fable-5` | moneyline | 6/6 | -2.2855% | 1.4109% | 3/6 |
 | `anthropic-claude-fable-5` | spread | 6/6 | -1.7910% | 1.9705% | 2/6 |
@@ -60,7 +60,9 @@ The scorer produced `102/120` primary-scoreable rows: model `60/72`, baseline `4
 | `xai-grok-4.5` | spread | 6/6 | -2.5139% | 1.2087% | 1/6 |
 | `xai-grok-4.5` | total | 3/6 | -0.1499% | 4.4767% | 2/3 |
 
-These are per-market, game-level descriptive aggregates. This smoke run is **not a cohort or leaderboard**, and pooled cross-market comparisons are intentionally omitted. Full sanitized scorer rows and denominators are in [`raw/clv-scoring.sanitized.json`](raw/clv-scoring.sanitized.json).
+The final column counts `primaryEconomicClvPct > 0`, not the margin-adjusted variant. The published primary de-vig method is `proportional-v1`; the scorer also declares `shin-v1` as a sensitivity method, but sensitivity values are not pooled into these primary columns. Each machine-readable aggregate now includes its `abstainedRows` count.
+
+These are per-market, game-level descriptive aggregates. This smoke run is **not a cohort or leaderboard**, and pooled cross-market comparisons are intentionally omitted. Full sanitized scorer rows, de-vig provenance, abstention counts, and denominators are in [`raw/clv-scoring.sanitized.json`](raw/clv-scoring.sanitized.json).
 
 ## Search and spend boundary
 

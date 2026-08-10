@@ -18,25 +18,47 @@
   },
   "completion": {
     "reason": "TARGET_LEDGER_COMPLETE",
-    "completedAt": "2026-08-09T13:39:30.675Z",
+    "watcherCompletedAt": "2026-08-09T13:39:30.675Z",
     "officialFinalGames": 15,
+    "officialFinalsFetchedAt": "2026-08-10T02:59:05Z",
     "neverCompletedBoard": 0
   },
   "decisionEvidence": {
     "validArmGameResponses": 24,
     "modelDecisions": 72,
     "baselineDecisions": 48,
-    "wouldAbstainTrueRows": 30
+    "wouldAbstainTrueRows": 30,
+    "wouldAbstainTrueRowsByMarket": {
+      "moneyline": 2,
+      "spread": 22,
+      "total": 6
+    }
   },
   "clvScoring": {
     "policyVersion": "scoring-v0.6.0",
+    "devigMethods": {
+      "primary": "proportional-v1",
+      "sensitivity": [
+        "shin-v1"
+      ]
+    },
     "integrityVerifiedRuns": 6,
     "primaryScoreableRows": 102,
     "allRows": 120,
     "modelPrimaryScoreableRows": 60,
     "modelRows": 72,
     "unscoredLineMovedRows": 12,
-    "unscoredPushCapableRows": 6
+    "unscoredPushCapableRows": 6,
+    "unscoredByReasonAndKind": {
+      "line_moved": {
+        "model": 8,
+        "baseline": 4
+      },
+      "push_capable_line": {
+        "model": 4,
+        "baseline": 2
+      }
+    }
   },
   "providerAccounting": {
     "completedGameSpendUsd": "13.440436",

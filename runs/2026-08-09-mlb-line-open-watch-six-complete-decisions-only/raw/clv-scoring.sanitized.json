@@ -3,6 +3,17 @@
   "label": "SMOKE_V0_NOT_A_COHORT",
   "metric": "reference-closing CLV",
   "scoringPolicyVersion": "scoring-v0.6.0",
+  "devigMethods": {
+    "primary": "proportional-v1",
+    "sensitivity": [
+      "shin-v1"
+    ]
+  },
+  "metricDefinitions": {
+    "primaryEconomicClvPct": "vig-in entry versus proportional-v1 de-vigged close",
+    "marginAdjustedClvPct": "proportional-v1 de-vigged entry versus proportional-v1 de-vigged close",
+    "beatReferenceCloseGames": "count of primary-scoreable rows where primaryEconomicClvPct > 0"
+  },
   "scorerSource": {
     "repository": "ospex-org/ospex-benchmark",
     "commit": "996eb7f13428341523c5d33498471002746c7bed"
@@ -19,6 +30,16 @@
     "line_moved": 12,
     "push_capable_line": 6
   },
+  "unscoredByReasonAndKind": {
+    "line_moved": {
+      "model": 8,
+      "baseline": 4
+    },
+    "push_capable_line": {
+      "model": 4,
+      "baseline": 2
+    }
+  },
   "scheduleChangedRows": 0,
   "comparisonBoundary": "Per-market game-level aggregates are descriptive context only; this smoke run is not a cohort or leaderboard.",
   "modelAggregateByMarket": [
@@ -27,6 +48,7 @@
       "market": "moneyline",
       "games": 6,
       "scoreableGames": 6,
+      "abstainedRows": 0,
       "meanPrimaryEconomicClvPct": -2.2855,
       "meanMarginAdjustedClvPct": 1.4109,
       "beatReferenceCloseGames": 3
@@ -36,6 +58,7 @@
       "market": "spread",
       "games": 6,
       "scoreableGames": 6,
+      "abstainedRows": 6,
       "meanPrimaryEconomicClvPct": -1.791,
       "meanMarginAdjustedClvPct": 1.9705,
       "beatReferenceCloseGames": 2
@@ -45,6 +68,7 @@
       "market": "total",
       "games": 6,
       "scoreableGames": 3,
+      "abstainedRows": 3,
       "meanPrimaryEconomicClvPct": -8.5341,
       "meanMarginAdjustedClvPct": -4.3082,
       "beatReferenceCloseGames": 0
@@ -54,6 +78,7 @@
       "market": "moneyline",
       "games": 6,
       "scoreableGames": 6,
+      "abstainedRows": 0,
       "meanPrimaryEconomicClvPct": -4.9192,
       "meanMarginAdjustedClvPct": -1.314,
       "beatReferenceCloseGames": 1
@@ -63,6 +88,7 @@
       "market": "spread",
       "games": 6,
       "scoreableGames": 6,
+      "abstainedRows": 4,
       "meanPrimaryEconomicClvPct": -1.785,
       "meanMarginAdjustedClvPct": 1.9646,
       "beatReferenceCloseGames": 2
@@ -72,6 +98,7 @@
       "market": "total",
       "games": 6,
       "scoreableGames": 3,
+      "abstainedRows": 0,
       "meanPrimaryEconomicClvPct": -4.2821,
       "meanMarginAdjustedClvPct": 0.1477,
       "beatReferenceCloseGames": 1
@@ -81,6 +108,7 @@
       "market": "moneyline",
       "games": 6,
       "scoreableGames": 6,
+      "abstainedRows": 0,
       "meanPrimaryEconomicClvPct": -7.8014,
       "meanMarginAdjustedClvPct": -4.3275,
       "beatReferenceCloseGames": 0
@@ -90,6 +118,7 @@
       "market": "spread",
       "games": 6,
       "scoreableGames": 6,
+      "abstainedRows": 6,
       "meanPrimaryEconomicClvPct": -4.9387,
       "meanMarginAdjustedClvPct": -1.3076,
       "beatReferenceCloseGames": 2
@@ -99,6 +128,7 @@
       "market": "total",
       "games": 6,
       "scoreableGames": 3,
+      "abstainedRows": 1,
       "meanPrimaryEconomicClvPct": 1.1146,
       "meanMarginAdjustedClvPct": 5.7969,
       "beatReferenceCloseGames": 2
@@ -108,6 +138,7 @@
       "market": "moneyline",
       "games": 6,
       "scoreableGames": 6,
+      "abstainedRows": 2,
       "meanPrimaryEconomicClvPct": -2.4868,
       "meanMarginAdjustedClvPct": 1.1886,
       "beatReferenceCloseGames": 3
@@ -117,6 +148,7 @@
       "market": "spread",
       "games": 6,
       "scoreableGames": 6,
+      "abstainedRows": 6,
       "meanPrimaryEconomicClvPct": -2.5139,
       "meanMarginAdjustedClvPct": 1.2087,
       "beatReferenceCloseGames": 1
@@ -126,6 +158,7 @@
       "market": "total",
       "games": 6,
       "scoreableGames": 3,
+      "abstainedRows": 2,
       "meanPrimaryEconomicClvPct": -0.1499,
       "meanMarginAdjustedClvPct": 4.4767,
       "beatReferenceCloseGames": 2
@@ -143,6 +176,7 @@
       "entryReferenceDecimal": 2.67,
       "entryOppositeReferenceDecimal": 1.4902,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 3.05,
@@ -172,6 +206,7 @@
       "entryReferenceDecimal": 1.4902,
       "entryOppositeReferenceDecimal": 2.67,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 3.05,
@@ -201,6 +236,7 @@
       "entryReferenceDecimal": 2.15,
       "entryOppositeReferenceDecimal": 1.74074,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 2,
@@ -230,6 +266,7 @@
       "entryReferenceDecimal": 1.4902,
       "entryOppositeReferenceDecimal": 2.67,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 3.05,
@@ -259,6 +296,7 @@
       "entryReferenceDecimal": 1.86957,
       "entryOppositeReferenceDecimal": 1.95238,
       "entryLine": 8,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 8.5,
         "awayDecimal": 1.90909,
@@ -288,6 +326,7 @@
       "entryReferenceDecimal": 1.95238,
       "entryOppositeReferenceDecimal": 1.86957,
       "entryLine": 8,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 8.5,
         "awayDecimal": 1.90909,
@@ -317,6 +356,7 @@
       "entryReferenceDecimal": 2.67,
       "entryOppositeReferenceDecimal": 1.4902,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 3.05,
@@ -346,6 +386,7 @@
       "entryReferenceDecimal": 1.74074,
       "entryOppositeReferenceDecimal": 2.15,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 2,
@@ -375,6 +416,7 @@
       "entryReferenceDecimal": 1.4902,
       "entryOppositeReferenceDecimal": 2.67,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 3.05,
@@ -404,6 +446,7 @@
       "entryReferenceDecimal": 2.15,
       "entryOppositeReferenceDecimal": 1.74074,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 2,
@@ -433,6 +476,7 @@
       "entryReferenceDecimal": 1.86957,
       "entryOppositeReferenceDecimal": 1.95238,
       "entryLine": 8,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 8.5,
         "awayDecimal": 1.90909,
@@ -462,6 +506,7 @@
       "entryReferenceDecimal": 1.4902,
       "entryOppositeReferenceDecimal": 2.67,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 3.05,
@@ -491,6 +536,7 @@
       "entryReferenceDecimal": 2.15,
       "entryOppositeReferenceDecimal": 1.74074,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 2,
@@ -520,6 +566,7 @@
       "entryReferenceDecimal": 1.95238,
       "entryOppositeReferenceDecimal": 1.86957,
       "entryLine": 8,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 8.5,
         "awayDecimal": 1.90909,
@@ -549,6 +596,7 @@
       "entryReferenceDecimal": 2.67,
       "entryOppositeReferenceDecimal": 1.4902,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 3.05,
@@ -578,6 +626,7 @@
       "entryReferenceDecimal": 1.74074,
       "entryOppositeReferenceDecimal": 2.15,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 2,
@@ -607,6 +656,7 @@
       "entryReferenceDecimal": 1.86957,
       "entryOppositeReferenceDecimal": 1.95238,
       "entryLine": 8,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 8.5,
         "awayDecimal": 1.90909,
@@ -636,6 +686,7 @@
       "entryReferenceDecimal": 1.4902,
       "entryOppositeReferenceDecimal": 2.67,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 3.05,
@@ -665,6 +716,7 @@
       "entryReferenceDecimal": 2.15,
       "entryOppositeReferenceDecimal": 1.74074,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 2,
@@ -694,6 +746,7 @@
       "entryReferenceDecimal": 1.95238,
       "entryOppositeReferenceDecimal": 1.86957,
       "entryLine": 8,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 8.5,
         "awayDecimal": 1.90909,
@@ -723,6 +776,7 @@
       "entryReferenceDecimal": 3.11,
       "entryOppositeReferenceDecimal": 1.4,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.9,
@@ -752,6 +806,7 @@
       "entryReferenceDecimal": 1.4,
       "entryOppositeReferenceDecimal": 3.11,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.9,
@@ -781,6 +836,7 @@
       "entryReferenceDecimal": 1.8,
       "entryOppositeReferenceDecimal": 2.05,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.93458,
@@ -810,6 +866,7 @@
       "entryReferenceDecimal": 1.4,
       "entryOppositeReferenceDecimal": 3.11,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.9,
@@ -839,6 +896,7 @@
       "entryReferenceDecimal": 1.90909,
       "entryOppositeReferenceDecimal": 1.90909,
       "entryLine": 9.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 9.5,
         "awayDecimal": 2.05,
@@ -868,6 +926,7 @@
       "entryReferenceDecimal": 1.90909,
       "entryOppositeReferenceDecimal": 1.90909,
       "entryLine": 9.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 9.5,
         "awayDecimal": 2.05,
@@ -897,6 +956,7 @@
       "entryReferenceDecimal": 3.11,
       "entryOppositeReferenceDecimal": 1.4,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.9,
@@ -926,6 +986,7 @@
       "entryReferenceDecimal": 2.05,
       "entryOppositeReferenceDecimal": 1.8,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.93458,
@@ -955,6 +1016,7 @@
       "entryReferenceDecimal": 3.11,
       "entryOppositeReferenceDecimal": 1.4,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.9,
@@ -984,6 +1046,7 @@
       "entryReferenceDecimal": 2.05,
       "entryOppositeReferenceDecimal": 1.8,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.93458,
@@ -1013,6 +1076,7 @@
       "entryReferenceDecimal": 1.90909,
       "entryOppositeReferenceDecimal": 1.90909,
       "entryLine": 9.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 9.5,
         "awayDecimal": 2.05,
@@ -1042,6 +1106,7 @@
       "entryReferenceDecimal": 1.4,
       "entryOppositeReferenceDecimal": 3.11,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.9,
@@ -1071,6 +1136,7 @@
       "entryReferenceDecimal": 1.8,
       "entryOppositeReferenceDecimal": 2.05,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.93458,
@@ -1100,6 +1166,7 @@
       "entryReferenceDecimal": 1.90909,
       "entryOppositeReferenceDecimal": 1.90909,
       "entryLine": 9.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 9.5,
         "awayDecimal": 2.05,
@@ -1129,6 +1196,7 @@
       "entryReferenceDecimal": 1.4,
       "entryOppositeReferenceDecimal": 3.11,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.9,
@@ -1158,6 +1226,7 @@
       "entryReferenceDecimal": 2.05,
       "entryOppositeReferenceDecimal": 1.8,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.93458,
@@ -1187,6 +1256,7 @@
       "entryReferenceDecimal": 1.90909,
       "entryOppositeReferenceDecimal": 1.90909,
       "entryLine": 9.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 9.5,
         "awayDecimal": 2.05,
@@ -1216,6 +1286,7 @@
       "entryReferenceDecimal": 1.4,
       "entryOppositeReferenceDecimal": 3.11,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.9,
@@ -1245,6 +1316,7 @@
       "entryReferenceDecimal": 1.8,
       "entryOppositeReferenceDecimal": 2.05,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.93458,
@@ -1274,6 +1346,7 @@
       "entryReferenceDecimal": 1.90909,
       "entryOppositeReferenceDecimal": 1.90909,
       "entryLine": 9.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 9.5,
         "awayDecimal": 2.05,
@@ -1303,6 +1376,7 @@
       "entryReferenceDecimal": 2.32,
       "entryOppositeReferenceDecimal": 1.65789,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.24,
@@ -1332,6 +1406,7 @@
       "entryReferenceDecimal": 1.65789,
       "entryOppositeReferenceDecimal": 2.32,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.24,
@@ -1361,6 +1436,7 @@
       "entryReferenceDecimal": 2.55,
       "entryOppositeReferenceDecimal": 1.55556,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.60241,
@@ -1390,6 +1466,7 @@
       "entryReferenceDecimal": 1.65789,
       "entryOppositeReferenceDecimal": 2.32,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.24,
@@ -1419,6 +1496,7 @@
       "entryReferenceDecimal": 1.98039,
       "entryOppositeReferenceDecimal": 1.8547,
       "entryLine": 8.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 8.5,
         "awayDecimal": 1.93458,
@@ -1448,6 +1526,7 @@
       "entryReferenceDecimal": 1.8547,
       "entryOppositeReferenceDecimal": 1.98039,
       "entryLine": 8.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 8.5,
         "awayDecimal": 1.93458,
@@ -1477,6 +1556,7 @@
       "entryReferenceDecimal": 2.32,
       "entryOppositeReferenceDecimal": 1.65789,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.24,
@@ -1506,6 +1586,7 @@
       "entryReferenceDecimal": 1.55556,
       "entryOppositeReferenceDecimal": 2.55,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.60241,
@@ -1535,6 +1616,7 @@
       "entryReferenceDecimal": 2.32,
       "entryOppositeReferenceDecimal": 1.65789,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.24,
@@ -1564,6 +1646,7 @@
       "entryReferenceDecimal": 1.55556,
       "entryOppositeReferenceDecimal": 2.55,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.60241,
@@ -1593,6 +1676,7 @@
       "entryReferenceDecimal": 1.98039,
       "entryOppositeReferenceDecimal": 1.8547,
       "entryLine": 8.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 8.5,
         "awayDecimal": 1.93458,
@@ -1622,6 +1706,7 @@
       "entryReferenceDecimal": 1.65789,
       "entryOppositeReferenceDecimal": 2.32,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.24,
@@ -1651,6 +1736,7 @@
       "entryReferenceDecimal": 2.55,
       "entryOppositeReferenceDecimal": 1.55556,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.60241,
@@ -1680,6 +1766,7 @@
       "entryReferenceDecimal": 1.8547,
       "entryOppositeReferenceDecimal": 1.98039,
       "entryLine": 8.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 8.5,
         "awayDecimal": 1.93458,
@@ -1709,6 +1796,7 @@
       "entryReferenceDecimal": 1.65789,
       "entryOppositeReferenceDecimal": 2.32,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.24,
@@ -1738,6 +1826,7 @@
       "entryReferenceDecimal": 2.55,
       "entryOppositeReferenceDecimal": 1.55556,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.60241,
@@ -1767,6 +1856,7 @@
       "entryReferenceDecimal": 1.98039,
       "entryOppositeReferenceDecimal": 1.8547,
       "entryLine": 8.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 8.5,
         "awayDecimal": 1.93458,
@@ -1796,6 +1886,7 @@
       "entryReferenceDecimal": 2.32,
       "entryOppositeReferenceDecimal": 1.65789,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.24,
@@ -1825,6 +1916,7 @@
       "entryReferenceDecimal": 1.55556,
       "entryOppositeReferenceDecimal": 2.55,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.60241,
@@ -1854,6 +1946,7 @@
       "entryReferenceDecimal": 1.8547,
       "entryOppositeReferenceDecimal": 1.98039,
       "entryLine": 8.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 8.5,
         "awayDecimal": 1.93458,
@@ -1883,6 +1976,7 @@
       "entryReferenceDecimal": 2.13,
       "entryOppositeReferenceDecimal": 1.8,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.02,
@@ -1912,6 +2006,7 @@
       "entryReferenceDecimal": 1.8,
       "entryOppositeReferenceDecimal": 2.13,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.02,
@@ -1941,6 +2036,7 @@
       "entryReferenceDecimal": 2.61,
       "entryOppositeReferenceDecimal": 1.54054,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.51282,
@@ -1970,6 +2066,7 @@
       "entryReferenceDecimal": 1.8,
       "entryOppositeReferenceDecimal": 2.13,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.02,
@@ -1999,6 +2096,7 @@
       "entryReferenceDecimal": 1.86957,
       "entryOppositeReferenceDecimal": 1.95238,
       "entryLine": 8.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 9,
         "awayDecimal": 1.90909,
@@ -2028,6 +2126,7 @@
       "entryReferenceDecimal": 1.95238,
       "entryOppositeReferenceDecimal": 1.86957,
       "entryLine": 8.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 9,
         "awayDecimal": 1.90909,
@@ -2057,6 +2156,7 @@
       "entryReferenceDecimal": 2.13,
       "entryOppositeReferenceDecimal": 1.8,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.02,
@@ -2086,6 +2186,7 @@
       "entryReferenceDecimal": 1.54054,
       "entryOppositeReferenceDecimal": 2.61,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.51282,
@@ -2115,6 +2216,7 @@
       "entryReferenceDecimal": 1.8,
       "entryOppositeReferenceDecimal": 2.13,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.02,
@@ -2144,6 +2246,7 @@
       "entryReferenceDecimal": 2.61,
       "entryOppositeReferenceDecimal": 1.54054,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.51282,
@@ -2173,6 +2276,7 @@
       "entryReferenceDecimal": 1.86957,
       "entryOppositeReferenceDecimal": 1.95238,
       "entryLine": 8.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 9,
         "awayDecimal": 1.90909,
@@ -2202,6 +2306,7 @@
       "entryReferenceDecimal": 1.8,
       "entryOppositeReferenceDecimal": 2.13,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.02,
@@ -2231,6 +2336,7 @@
       "entryReferenceDecimal": 2.61,
       "entryOppositeReferenceDecimal": 1.54054,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.51282,
@@ -2260,6 +2366,7 @@
       "entryReferenceDecimal": 1.86957,
       "entryOppositeReferenceDecimal": 1.95238,
       "entryLine": 8.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 9,
         "awayDecimal": 1.90909,
@@ -2289,6 +2396,7 @@
       "entryReferenceDecimal": 1.8,
       "entryOppositeReferenceDecimal": 2.13,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.02,
@@ -2318,6 +2426,7 @@
       "entryReferenceDecimal": 2.61,
       "entryOppositeReferenceDecimal": 1.54054,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.51282,
@@ -2347,6 +2456,7 @@
       "entryReferenceDecimal": 1.86957,
       "entryOppositeReferenceDecimal": 1.95238,
       "entryLine": 8.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 9,
         "awayDecimal": 1.90909,
@@ -2376,6 +2486,7 @@
       "entryReferenceDecimal": 2.13,
       "entryOppositeReferenceDecimal": 1.8,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.02,
@@ -2405,6 +2516,7 @@
       "entryReferenceDecimal": 1.54054,
       "entryOppositeReferenceDecimal": 2.61,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.51282,
@@ -2434,6 +2546,7 @@
       "entryReferenceDecimal": 1.95238,
       "entryOppositeReferenceDecimal": 1.86957,
       "entryLine": 8.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 9,
         "awayDecimal": 1.90909,
@@ -2463,6 +2576,7 @@
       "entryReferenceDecimal": 1.91743,
       "entryOppositeReferenceDecimal": 1.93458,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.04,
@@ -2492,6 +2606,7 @@
       "entryReferenceDecimal": 1.91743,
       "entryOppositeReferenceDecimal": 1.93458,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.04,
@@ -2521,6 +2636,7 @@
       "entryReferenceDecimal": 2.48,
       "entryOppositeReferenceDecimal": 1.57143,
       "entryLine": 1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 1.5,
         "awayDecimal": 2.58,
@@ -2550,6 +2666,7 @@
       "entryReferenceDecimal": 1.93458,
       "entryOppositeReferenceDecimal": 1.91743,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.04,
@@ -2579,6 +2696,7 @@
       "entryReferenceDecimal": 1.86957,
       "entryOppositeReferenceDecimal": 1.95238,
       "entryLine": 9,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 9,
         "awayDecimal": 1.86957,
@@ -2608,6 +2726,7 @@
       "entryReferenceDecimal": 1.95238,
       "entryOppositeReferenceDecimal": 1.86957,
       "entryLine": 9,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 9,
         "awayDecimal": 1.86957,
@@ -2637,6 +2756,7 @@
       "entryReferenceDecimal": 1.93458,
       "entryOppositeReferenceDecimal": 1.91743,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.04,
@@ -2666,6 +2786,7 @@
       "entryReferenceDecimal": 1.57143,
       "entryOppositeReferenceDecimal": 2.48,
       "entryLine": 1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 1.5,
         "awayDecimal": 2.58,
@@ -2695,6 +2816,7 @@
       "entryReferenceDecimal": 1.91743,
       "entryOppositeReferenceDecimal": 1.93458,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.04,
@@ -2724,6 +2846,7 @@
       "entryReferenceDecimal": 2.48,
       "entryOppositeReferenceDecimal": 1.57143,
       "entryLine": 1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 1.5,
         "awayDecimal": 2.58,
@@ -2753,6 +2876,7 @@
       "entryReferenceDecimal": 1.86957,
       "entryOppositeReferenceDecimal": 1.95238,
       "entryLine": 9,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 9,
         "awayDecimal": 1.86957,
@@ -2782,6 +2906,7 @@
       "entryReferenceDecimal": 1.91743,
       "entryOppositeReferenceDecimal": 1.93458,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.04,
@@ -2811,6 +2936,7 @@
       "entryReferenceDecimal": 2.48,
       "entryOppositeReferenceDecimal": 1.57143,
       "entryLine": 1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 1.5,
         "awayDecimal": 2.58,
@@ -2840,6 +2966,7 @@
       "entryReferenceDecimal": 1.86957,
       "entryOppositeReferenceDecimal": 1.95238,
       "entryLine": 9,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 9,
         "awayDecimal": 1.86957,
@@ -2869,6 +2996,7 @@
       "entryReferenceDecimal": 1.91743,
       "entryOppositeReferenceDecimal": 1.93458,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.04,
@@ -2898,6 +3026,7 @@
       "entryReferenceDecimal": 2.48,
       "entryOppositeReferenceDecimal": 1.57143,
       "entryLine": 1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 1.5,
         "awayDecimal": 2.58,
@@ -2927,6 +3056,7 @@
       "entryReferenceDecimal": 1.86957,
       "entryOppositeReferenceDecimal": 1.95238,
       "entryLine": 9,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 9,
         "awayDecimal": 1.86957,
@@ -2956,6 +3086,7 @@
       "entryReferenceDecimal": 1.91743,
       "entryOppositeReferenceDecimal": 1.93458,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 2.04,
@@ -2985,6 +3116,7 @@
       "entryReferenceDecimal": 2.48,
       "entryOppositeReferenceDecimal": 1.57143,
       "entryLine": 1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 1.5,
         "awayDecimal": 2.58,
@@ -3014,6 +3146,7 @@
       "entryReferenceDecimal": 1.86957,
       "entryOppositeReferenceDecimal": 1.95238,
       "entryLine": 9,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 9,
         "awayDecimal": 1.86957,
@@ -3043,6 +3176,7 @@
       "entryReferenceDecimal": 1.92593,
       "entryOppositeReferenceDecimal": 1.89286,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 1.9434,
@@ -3072,6 +3206,7 @@
       "entryReferenceDecimal": 1.89286,
       "entryOppositeReferenceDecimal": 1.92593,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 1.9434,
@@ -3101,6 +3236,7 @@
       "entryReferenceDecimal": 2.81,
       "entryOppositeReferenceDecimal": 1.46296,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.44643,
@@ -3130,6 +3266,7 @@
       "entryReferenceDecimal": 1.89286,
       "entryOppositeReferenceDecimal": 1.92593,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 1.9434,
@@ -3159,6 +3296,7 @@
       "entryReferenceDecimal": 1.86957,
       "entryOppositeReferenceDecimal": 1.95238,
       "entryLine": 7.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 7.5,
         "awayDecimal": 2.05,
@@ -3188,6 +3326,7 @@
       "entryReferenceDecimal": 1.95238,
       "entryOppositeReferenceDecimal": 1.86957,
       "entryLine": 7.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 7.5,
         "awayDecimal": 2.05,
@@ -3217,6 +3356,7 @@
       "entryReferenceDecimal": 1.92593,
       "entryOppositeReferenceDecimal": 1.89286,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 1.9434,
@@ -3246,6 +3386,7 @@
       "entryReferenceDecimal": 1.46296,
       "entryOppositeReferenceDecimal": 2.81,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.44643,
@@ -3275,6 +3416,7 @@
       "entryReferenceDecimal": 1.89286,
       "entryOppositeReferenceDecimal": 1.92593,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 1.9434,
@@ -3304,6 +3446,7 @@
       "entryReferenceDecimal": 2.81,
       "entryOppositeReferenceDecimal": 1.46296,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.44643,
@@ -3333,6 +3476,7 @@
       "entryReferenceDecimal": 1.86957,
       "entryOppositeReferenceDecimal": 1.95238,
       "entryLine": 7.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 7.5,
         "awayDecimal": 2.05,
@@ -3362,6 +3506,7 @@
       "entryReferenceDecimal": 1.92593,
       "entryOppositeReferenceDecimal": 1.89286,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 1.9434,
@@ -3391,6 +3536,7 @@
       "entryReferenceDecimal": 1.46296,
       "entryOppositeReferenceDecimal": 2.81,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.44643,
@@ -3420,6 +3566,7 @@
       "entryReferenceDecimal": 1.95238,
       "entryOppositeReferenceDecimal": 1.86957,
       "entryLine": 7.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 7.5,
         "awayDecimal": 2.05,
@@ -3449,6 +3596,7 @@
       "entryReferenceDecimal": 1.92593,
       "entryOppositeReferenceDecimal": 1.89286,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 1.9434,
@@ -3478,6 +3626,7 @@
       "entryReferenceDecimal": 1.46296,
       "entryOppositeReferenceDecimal": 2.81,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.44643,
@@ -3507,6 +3656,7 @@
       "entryReferenceDecimal": 1.95238,
       "entryOppositeReferenceDecimal": 1.86957,
       "entryLine": 7.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 7.5,
         "awayDecimal": 2.05,
@@ -3536,6 +3686,7 @@
       "entryReferenceDecimal": 1.92593,
       "entryOppositeReferenceDecimal": 1.89286,
       "entryLine": null,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": null,
         "awayDecimal": 1.9434,
@@ -3565,6 +3716,7 @@
       "entryReferenceDecimal": 1.46296,
       "entryOppositeReferenceDecimal": 2.81,
       "entryLine": -1.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": -1.5,
         "awayDecimal": 1.44643,
@@ -3594,6 +3746,7 @@
       "entryReferenceDecimal": 1.95238,
       "entryOppositeReferenceDecimal": 1.86957,
       "entryLine": 7.5,
+      "devigMethod": "proportional-v1",
       "closingReference": {
         "line": 7.5,
         "awayDecimal": 2.05,
