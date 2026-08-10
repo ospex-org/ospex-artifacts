@@ -1,10 +1,11 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-index.schema.json",
   "schemaVersion": 2,
-  "generatedAt": "2026-08-09T06:38:24Z",
+  "generatedAt": "2026-08-10T03:10:48Z",
   "repository": "ospex-org/ospex-artifacts",
   "latestByArtifactType": {
     "run": [
+      "runs/2026-08-09-mlb-line-open-watch-six-complete-decisions-only/evidence.json",
       "runs/2026-08-08-mlb-nine-game-four-model-72-fill-search-enabled/evidence.json",
       "runs/2026-08-07-mlb-three-game-four-model-24-fill-search-enabled/evidence.json",
       "runs/2026-08-06-mlb-sd-ari-contest-87-four-model-eight-fill-terminal-zero/evidence.json",
@@ -13,8 +14,7 @@
       "runs/2026-07-26-mlb-15-game-full-slate-live-green/evidence.json",
       "runs/2026-07-25-mlb-13-game-full-slate-live-green/evidence.json",
       "runs/2026-07-21-mlb-nym-mil-contest-51-r5-repeatability-night2/evidence.json",
-      "runs/2026-07-21-mlb-min-cle-contest-50-r5-repeatability-night2/evidence.json",
-      "runs/2026-07-20-mlb-nym-mil-contest-49-r5-green-night/evidence.json"
+      "runs/2026-07-21-mlb-min-cle-contest-50-r5-repeatability-night2/evidence.json"
     ],
     "release-acceptance": [
       "releases/v0.3.0/2026-05-22-mlb-hou-chc-release-acceptance/acceptance.json"
@@ -22,6 +22,16 @@
     "daily-digest": []
   },
   "recentArtifacts": [
+    {
+      "artifactId": "2026-08-09-mlb-line-open-watch-six-complete-decisions-only",
+      "artifactType": "run",
+      "dataPath": "runs/2026-08-09-mlb-line-open-watch-six-complete-decisions-only/evidence.json",
+      "date": "2026-08-09",
+      "rawPath": "runs/2026-08-09-mlb-line-open-watch-six-complete-decisions-only/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-08-09-mlb-line-open-watch-six-complete-decisions-only/summary.md",
+      "publishedAt": "2026-08-10T03:01:20Z"
+    },
     {
       "artifactId": "2026-08-08-mlb-nine-game-four-model-72-fill-search-enabled",
       "artifactType": "run",
@@ -729,9 +739,9 @@
       "scope": "year",
       "year": 2026,
       "path": "archive/2026/index.json",
-      "artifactCount": 63,
+      "artifactCount": 64,
       "oldestPublishedAt": "2026-05-20T02:48:35Z",
-      "newestPublishedAt": "2026-08-09T06:45:00Z"
+      "newestPublishedAt": "2026-08-10T03:01:20Z"
     }
   ]
 }
