@@ -1,0 +1,95 @@
+{
+  "artifactId": "2026-08-09-mlb-line-open-watch-six-complete-decisions-only",
+  "artifactType": "run",
+  "schemaVersion": 1,
+  "date": "2026-08-09",
+  "publishedAt": "2026-08-10T03:01:20Z",
+  "status": "complete_verified_with_caveats",
+  "label": "SMOKE_V0_NOT_A_COHORT",
+  "runScope": {
+    "kind": "decisions-only-line-open-watch",
+    "targetGames": 15,
+    "durablePaidFireClaims": 7,
+    "completeDecisionArtifacts": 6,
+    "interruptedFireClaims": 1,
+    "lateDetectionsNeverFired": 8,
+    "onChainWritesAuthorized": false,
+    "protocolExecutionOccurred": false
+  },
+  "completion": {
+    "reason": "TARGET_LEDGER_COMPLETE",
+    "watcherCompletedAt": "2026-08-09T13:39:30.675Z",
+    "officialFinalGames": 15,
+    "officialFinalsFetchedAt": "2026-08-10T02:59:05Z",
+    "neverCompletedBoard": 0
+  },
+  "decisionEvidence": {
+    "validArmGameResponses": 24,
+    "modelDecisions": 72,
+    "baselineDecisions": 48,
+    "wouldAbstainTrueRows": 30,
+    "wouldAbstainTrueRowsByMarket": {
+      "moneyline": 2,
+      "spread": 22,
+      "total": 6
+    }
+  },
+  "clvScoring": {
+    "policyVersion": "scoring-v0.6.0",
+    "devigMethods": {
+      "primary": "proportional-v1",
+      "sensitivity": [
+        "shin-v1"
+      ]
+    },
+    "integrityVerifiedRuns": 6,
+    "primaryScoreableRows": 102,
+    "allRows": 120,
+    "modelPrimaryScoreableRows": 60,
+    "modelRows": 72,
+    "unscoredLineMovedRows": 12,
+    "unscoredPushCapableRows": 6,
+    "unscoredByReasonAndKind": {
+      "line_moved": {
+        "model": 8,
+        "baseline": 4
+      },
+      "push_capable_line": {
+        "model": 4,
+        "baseline": 2
+      }
+    }
+  },
+  "providerAccounting": {
+    "completedGameSpendUsd": "13.440436",
+    "capAccountedTotalUsd": "19.440436",
+    "hardCeilingUsd": "60.000000",
+    "unknownAccountingFaults": 0
+  },
+  "protocolLifecycle": {
+    "applicable": false,
+    "protocolTransactions": 0,
+    "scoreRequests": 0,
+    "settlements": 0,
+    "claims": 0
+  },
+  "caveats": [
+    "This is a pipeline smoke run, not a canonical cohort or model leaderboard.",
+    "Only six of fifteen target games produced complete paid decision artifacts: one durable fired claim was interrupted and was not replayed; eight games were late detections and never fired.",
+    "The selectedForExecution field is a schema policy flag only; this decisions-only run executed no protocol positions.",
+    "Five completed provider calls have unknown/unproven search counts; unknown never means zero.",
+    "Per-arm provider costs are not directly comparable.",
+    "No on-chain state was created, so protocol scoring, settlement, claims, and terminal-zero lifecycle checks are not applicable."
+  ],
+  "artifactFiles": {
+    "summary": "summary.md",
+    "watcherCompletion": "raw/watcher-completion.sanitized.json",
+    "slateReconciliation": "raw/slate-reconciliation.sanitized.json",
+    "modelDecisions": "raw/model-decisions.sanitized.json",
+    "clvScoring": "raw/clv-scoring.sanitized.json",
+    "providerAccounting": "raw/provider-accounting.sanitized.json",
+    "protocolLifecycle": "raw/protocol-lifecycle.sanitized.json",
+    "officialFinalSource": "raw/official-final-source.sanitized.json",
+    "sourcePins": "raw/source-pins.sanitized.json"
+  }
+}

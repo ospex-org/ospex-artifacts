@@ -1,13 +1,23 @@
 {
   "$schema": "https://github.com/ospex-org/ospex-artifacts/schemas/artifact-archive.schema.json",
   "schemaVersion": 1,
-  "generatedAt": "2026-08-09T06:38:24Z",
+  "generatedAt": "2026-08-10T03:10:48Z",
   "repository": "ospex-org/ospex-artifacts",
   "archive": {
     "scope": "year",
     "year": 2026
   },
   "artifacts": [
+    {
+      "artifactId": "2026-08-09-mlb-line-open-watch-six-complete-decisions-only",
+      "artifactType": "run",
+      "dataPath": "runs/2026-08-09-mlb-line-open-watch-six-complete-decisions-only/evidence.json",
+      "date": "2026-08-09",
+      "rawPath": "runs/2026-08-09-mlb-line-open-watch-six-complete-decisions-only/raw/",
+      "status": "complete_verified_with_caveats",
+      "summaryPath": "runs/2026-08-09-mlb-line-open-watch-six-complete-decisions-only/summary.md",
+      "publishedAt": "2026-08-10T03:01:20Z"
+    },
     {
       "artifactId": "2026-08-08-mlb-nine-game-four-model-72-fill-search-enabled",
       "artifactType": "run",

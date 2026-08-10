@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "watchSource": {
+    "repository": "ospex-org/ospex-benchmark",
+    "commit": "f970ffea47c2363ef9134c758d4618f9d549d49e"
+  },
+  "scorerSource": {
+    "repository": "ospex-org/ospex-benchmark",
+    "commit": "996eb7f13428341523c5d33498471002746c7bed",
+    "scoringPolicyVersion": "scoring-v0.6.0"
+  },
+  "artifactRepositoryBase": "e36cfa4bc83ca65a1cedc169c968c706948a67a0",
+  "sourceRunFiles": [
+    {
+      "file": "watch-v0-2026-08-09-0bc0e5.ndjson",
+      "sha256": "ebe710d803ec930e41cac7470df419ec3e3daebed6fc6ebf0bdd4d9ce5cdcb9e",
+      "records": 26
+    },
+    {
+      "file": "watch-v0-2026-08-09-0e75ab.ndjson",
+      "sha256": "ebb7521737037fdbf2c95e7c7d8902fc43e451ecdd091784acfd1467a8ec8097",
+      "records": 26
+    },
+    {
+      "file": "watch-v0-2026-08-09-17dc29.ndjson",
+      "sha256": "b4bccd85abf3b2da7251ab78e6d8c1b8c5fa346242ee014364ad733cca20c261",
+      "records": 26
+    },
+    {
+      "file": "watch-v0-2026-08-09-2b55f6.ndjson",
+      "sha256": "f55b71438210d888dc0a6924f273583138721c28acc7a4d49bb775ea978d1c12",
+      "records": 26
+    },
+    {
+      "file": "watch-v0-2026-08-09-52f29b.ndjson",
+      "sha256": "febd7c0378203a129f419b53bc7fddaafcd8ec32f33fad6fad3aadbbe01210d5",
+      "records": 26
+    },
+    {
+      "file": "watch-v0-2026-08-09-aa3ff2.ndjson",
+      "sha256": "fa2987934c3617dfb67df41e91843cbd9ee05e939edb2791c3c6886f5000ea9c",
+      "records": 26
+    }
+  ],
+  "scoredRunFiles": [
+    {
+      "file": "watch-v0-2026-08-09-0bc0e5-scored.ndjson",
+      "sha256": "107707d0cc46ede66d27882bf406a7dc5e94aede6ac6cf6fd9d85eabbcb77f8a",
+      "records": 33
+    },
+    {
+      "file": "watch-v0-2026-08-09-0e75ab-scored.ndjson",
+      "sha256": "d5cfc6ff6407306f703e4c8d453e4b4f59abcc1d2ec5b72ef56c1a66995c8eb9",
+      "records": 33
+    },
+    {
+      "file": "watch-v0-2026-08-09-17dc29-scored.ndjson",
+      "sha256": "f517cbc58681e0f3ff36c6b8c25d881dbf1547958caa626778ebb91077e87e15",
+      "records": 33
+    },
+    {
+      "file": "watch-v0-2026-08-09-2b55f6-scored.ndjson",
+      "sha256": "a4efb7949854485fa6c6cc655bbeb7cd8318b954e0674bf884240951233f5eed",
+      "records": 33
+    },
+    {
+      "file": "watch-v0-2026-08-09-52f29b-scored.ndjson",
+      "sha256": "798ad8a51870bc03729b9c50f9704d248c2196e000dc055e7936636ce373341b",
+      "records": 33
+    },
+    {
+      "file": "watch-v0-2026-08-09-aa3ff2-scored.ndjson",
+      "sha256": "432c8bff86b373499eed33978e945c0eb6ad18a8caa7663ee34b2205b58abc46",
+      "records": 33
+    }
+  ],
+  "officialResponseSha256": "2e7ceae3d068bae89eb0d0ec6d368957bb9405fe445dcf10c98b3959a26d5e20",
+  "privatePathsPublished": false
+}

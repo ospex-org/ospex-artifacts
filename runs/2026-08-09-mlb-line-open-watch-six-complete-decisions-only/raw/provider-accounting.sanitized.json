@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "searchEnabled": true,
+  "priceVersion": "prices-v3",
+  "costPerPickComparableAcrossArms": false,
+  "completedArtifacts": {
+    "games": 6,
+    "providerAttempts": 24,
+    "validResponses": 24,
+    "providerErrors": 0,
+    "knownBillableSearchCount": 127,
+    "unknownSearchCallCount": 5,
+    "conservativeSpendUsd": "13.440436",
+    "arms": [
+      {
+        "armId": "anthropic-claude-fable-5",
+        "providerAttempts": 6,
+        "validResponses": 6,
+        "providerErrors": 0,
+        "inputTokens": 401896,
+        "outputTokens": 27363,
+        "reasoningTokens": 14417,
+        "billableOutputTokens": 27363,
+        "searchAuditCallsPresent": 6,
+        "unknownSearchCalls": 0,
+        "knownBillableSearchCount": 20,
+        "averageLatencyMs": 70304.167,
+        "conservativeSpendUsd": "5.587110"
+      },
+      {
+        "armId": "google-gemini-3.1-pro-preview",
+        "providerAttempts": 6,
+        "validResponses": 6,
+        "providerErrors": 0,
+        "inputTokens": 22067,
+        "outputTokens": 7706,
+        "reasoningTokens": 17045,
+        "billableOutputTokens": 24751,
+        "searchAuditCallsPresent": 1,
+        "unknownSearchCalls": 5,
+        "knownBillableSearchCount": 3,
+        "averageLatencyMs": 35985.833,
+        "conservativeSpendUsd": "0.575786"
+      },
+      {
+        "armId": "openai-gpt-5.6-sol",
+        "providerAttempts": 6,
+        "validResponses": 6,
+        "providerErrors": 0,
+        "inputTokens": 142677,
+        "outputTokens": 13127,
+        "reasoningTokens": 7198,
+        "billableOutputTokens": 13127,
+        "searchAuditCallsPresent": 6,
+        "unknownSearchCalls": 0,
+        "knownBillableSearchCount": 9,
+        "averageLatencyMs": 43079,
+        "conservativeSpendUsd": "2.661084"
+      },
+      {
+        "armId": "xai-grok-4.5",
+        "providerAttempts": 6,
+        "validResponses": 6,
+        "providerErrors": 0,
+        "inputTokens": 970312,
+        "outputTokens": 21684,
+        "reasoningTokens": 13485,
+        "billableOutputTokens": 21684,
+        "searchAuditCallsPresent": 6,
+        "unknownSearchCalls": 0,
+        "knownBillableSearchCount": 95,
+        "averageLatencyMs": 78965.833,
+        "conservativeSpendUsd": "4.616456"
+      }
+    ]
+  },
+  "interruptedFire": {
+    "gameId": "787ce1d4-7d5a-4645-a39f-9487a0b92381",
+    "providerBillingKnown": false,
+    "replayed": false,
+    "conservativeReservationUsd": "5.000000"
+  },
+  "capAccounting": {
+    "completedGameSpendUsd": "13.440436",
+    "interruptedFireReservationUsd": "5.000000",
+    "preflightReservationUsd": "1.000000",
+    "capAccountedTotalUsd": "19.440436",
+    "hardCeilingUsd": "60.000000",
+    "withinHardCeiling": true,
+    "preflightReservationIsProviderSpend": false
+  },
+  "searchEvidenceBoundary": {
+    "nullClassification": "unknown_unproven",
+    "capturedQueriesPublished": false,
+    "capturedResultReferencesPublished": false
+  },
+  "providerEnvelopeBoundary": {
+    "completeProviderResponseEnvelopeRetained": false,
+    "offlineSearchAuditReplayPossible": false,
+    "issue": "https://github.com/ospex-org/ospex-benchmark/issues/92"
+  }
+}

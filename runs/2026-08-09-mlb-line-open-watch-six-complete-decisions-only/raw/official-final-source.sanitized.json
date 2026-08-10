@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "source": "MLB StatsAPI schedule",
+  "sourceUrl": "https://statsapi.mlb.com/api/v1/schedule?sportId=1&date=2026-08-09",
+  "fetchedAt": "2026-08-10T02:59:05Z",
+  "sourceResponseSha256": "2e7ceae3d068bae89eb0d0ec6d368957bb9405fe445dcf10c98b3959a26d5e20",
+  "targetDate": "2026-08-09",
+  "totalGames": 15,
+  "finalGames": 15,
+  "games": [
+    {
+      "gameId": "7ceb99d7-474b-4d0d-bf75-ee45d2616cf1",
+      "awayTeam": "Cincinnati Reds",
+      "homeTeam": "Washington Nationals",
+      "scheduledStartUtc": "2026-08-09T16:15:00+00:00",
+      "status": "Final",
+      "officialDate": "2026-08-09",
+      "awayScore": 1,
+      "homeScore": 7
+    },
+    {
+      "gameId": "32721567-71ea-4c37-b0dc-8489f79d0672",
+      "awayTeam": "Athletics",
+      "homeTeam": "Boston Red Sox",
+      "scheduledStartUtc": "2026-08-09T17:35:00+00:00",
+      "status": "Final",
+      "officialDate": "2026-08-09",
+      "awayScore": 4,
+      "homeScore": 3
+    },
+    {
+      "gameId": "63830812-1183-4f2a-99f2-97d58070f33d",
+      "awayTeam": "Atlanta Braves",
+      "homeTeam": "New York Yankees",
+      "scheduledStartUtc": "2026-08-09T17:35:00+00:00",
+      "status": "Final",
+      "officialDate": "2026-08-09",
+      "awayScore": 2,
+      "homeScore": 1
+    },
+    {
+      "gameId": "787ce1d4-7d5a-4645-a39f-9487a0b92381",
+      "awayTeam": "New York Mets",
+      "homeTeam": "Pittsburgh Pirates",
+      "scheduledStartUtc": "2026-08-09T17:35:00+00:00",
+      "status": "Final",
+      "officialDate": "2026-08-09",
+      "awayScore": 11,
+      "homeScore": 1
+    },
+    {
+      "gameId": "28e305a9-7ae1-4803-818b-5837e2c1c1f9",
+      "awayTeam": "Toronto Blue Jays",
+      "homeTeam": "Philadelphia Phillies",
+      "scheduledStartUtc": "2026-08-09T17:35:00+00:00",
+      "status": "Final",
+      "officialDate": "2026-08-09",
+      "awayScore": 6,
+      "homeScore": 7
+    },
+    {
+      "gameId": "5729096d-51b7-4022-b500-b5631d47c99d",
+      "awayTeam": "Los Angeles Angels",
+      "homeTeam": "Miami Marlins",
+      "scheduledStartUtc": "2026-08-09T17:40:00+00:00",
+      "status": "Final",
+      "officialDate": "2026-08-09",
+      "awayScore": 3,
+      "homeScore": 12
+    },
+    {
+      "gameId": "0790672c-d957-4f8d-8c91-c25e7a5424b6",
+      "awayTeam": "Chicago Cubs",
+      "homeTeam": "Kansas City Royals",
+      "scheduledStartUtc": "2026-08-09T18:10:00+00:00",
+      "status": "Final",
+      "officialDate": "2026-08-09",
+      "awayScore": 10,
+      "homeScore": 2
+    },
+    {
+      "gameId": "824721f0-4edc-4ff9-9bf0-cd997291baf3",
+      "awayTeam": "Cleveland Guardians",
+      "homeTeam": "Chicago White Sox",
+      "scheduledStartUtc": "2026-08-09T18:10:00+00:00",
+      "status": "Final",
+      "officialDate": "2026-08-09",
+      "awayScore": 3,
+      "homeScore": 5
+    },
+    {
+      "gameId": "777b56f3-4b2b-4afa-a984-61c51f84c1b8",
+      "awayTeam": "Minnesota Twins",
+      "homeTeam": "Milwaukee Brewers",
+      "scheduledStartUtc": "2026-08-09T18:10:00+00:00",
+      "status": "Final",
+      "officialDate": "2026-08-09",
+      "awayScore": 3,
+      "homeScore": 4
+    },
+    {
+      "gameId": "7d7e0084-83ee-4e29-b9f5-6beda7189fb3",
+      "awayTeam": "Colorado Rockies",
+      "homeTeam": "St. Louis Cardinals",
+      "scheduledStartUtc": "2026-08-09T18:15:00+00:00",
+      "status": "Final",
+      "officialDate": "2026-08-09",
+      "awayScore": 4,
+      "homeScore": 7
+    },
+    {
+      "gameId": "7ff0342e-1f05-4731-84fb-adfbc029d040",
+      "awayTeam": "Baltimore Orioles",
+      "homeTeam": "Texas Rangers",
+      "scheduledStartUtc": "2026-08-09T18:35:00+00:00",
+      "status": "Final",
+      "officialDate": "2026-08-09",
+      "awayScore": 10,
+      "homeScore": 5
+    },
+    {
+      "gameId": "d94f061a-cedd-4c18-95ea-77f13ac2232f",
+      "awayTeam": "Detroit Tigers",
+      "homeTeam": "San Francisco Giants",
+      "scheduledStartUtc": "2026-08-09T20:05:00+00:00",
+      "status": "Final",
+      "officialDate": "2026-08-09",
+      "awayScore": 3,
+      "homeScore": 1
+    },
+    {
+      "gameId": "91607d06-333f-497f-bd27-80526e4257ca",
+      "awayTeam": "Los Angeles Dodgers",
+      "homeTeam": "Arizona Diamondbacks",
+      "scheduledStartUtc": "2026-08-09T20:10:00+00:00",
+      "status": "Final",
+      "officialDate": "2026-08-09",
+      "awayScore": 2,
+      "homeScore": 4
+    },
+    {
+      "gameId": "955078cb-b8a6-4d8c-bf61-931939b084a2",
+      "awayTeam": "Tampa Bay Rays",
+      "homeTeam": "Seattle Mariners",
+      "scheduledStartUtc": "2026-08-09T20:10:00+00:00",
+      "status": "Final",
+      "officialDate": "2026-08-09",
+      "awayScore": 4,
+      "homeScore": 1
+    },
+    {
+      "gameId": "725f23ce-973a-47fe-a038-0221f1ea3a41",
+      "awayTeam": "Houston Astros",
+      "homeTeam": "San Diego Padres",
+      "scheduledStartUtc": "2026-08-10T00:20:00+00:00",
+      "status": "Final",
+      "officialDate": "2026-08-09",
+      "awayScore": 2,
+      "homeScore": 7
+    }
+  ]
+}

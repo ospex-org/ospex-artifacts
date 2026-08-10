@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "applicable": false,
+  "reason": "This run was explicitly authorized for decisions-only line-open observation and created no contests, positions, commitments, fills, or transaction records.",
+  "manifestAuthorization": {
+    "onchainWritesAuthorized": false,
+    "contestCreationAuthorized": false,
+    "makerOrFillExecutionAuthorized": false
+  },
+  "protocolTransactions": 0,
+  "scoreRequests": 0,
+  "settlements": 0,
+  "claims": 0,
+  "terminalZeroClaimed": false,
+  "notApplicableMeaning": "Protocol scoring, settlement, claiming, allowance cleanup, and terminal-zero lifecycle checks require on-chain state created by the run; none existed here."
+}
