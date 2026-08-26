@@ -119,3 +119,5 @@ daily/YYYY-MM-DD/
 ```
 
 Each artifact should be reproducible from public chain data plus the recorded sanitized inputs, or should explicitly state which gate or input was not available.
+
+> **Automated benchmark evidence (from 2026-08-25).** Daily publication has resumed in a new form: raw, machine-written files only — the scored watch run artifacts and execution ledger records for each completed day, with a SHA-256 manifest. No narrative, no rankings. Each day's directory under `benchmark/` is a byte-identical copy of the operator files that Supabase's `benchmark_scoring_runs.source_sha256` values cite, so database claims resolve to public files and, through the ledgers, to on-chain transactions. Model writeups remain unpublished pending an operator decision. The narrative artifacts through PR #61 are the phase-1 corpus and remain unchanged.
