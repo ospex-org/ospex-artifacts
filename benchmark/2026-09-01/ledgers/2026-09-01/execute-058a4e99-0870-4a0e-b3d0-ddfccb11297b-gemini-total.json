@@ -1,0 +1,17 @@
+{
+  "arm": "gemini",
+  "cliSha256": "fa6f51915b356e437a64365d39ad89ea3a6742a3257d2f98b45e0f3675f09f7d",
+  "commandFormat": "public-v1",
+  "cutoffAt": "2026-09-01T23:40:00+00:00",
+  "firstPitch": "2026-09-01T23:40:00+00:00",
+  "gameId": "058a4e99-0870-4a0e-b3d0-ddfccb11297b",
+  "kind": "terminal-skip",
+  "market": "total",
+  "recordedAt": "2026-09-01T23:32:34.157193+00:00",
+  "runId": "watch-v0-2026-09-01-297c26",
+  "schemaVersion": 1,
+  "sdkCommit": "d922b5014dbf8c01795c6d9f36ad1a85f71c1c1a",
+  "selection": "under",
+  "status": "skipped:too_late",
+  "wouldAbstain": false
+}

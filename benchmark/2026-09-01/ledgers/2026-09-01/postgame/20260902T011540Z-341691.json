@@ -1,0 +1,34 @@
+{
+  "cliSha256": "fa6f51915b356e437a64365d39ad89ea3a6742a3257d2f98b45e0f3675f09f7d",
+  "command": "postgame",
+  "commandFormat": "public-v1",
+  "date": "2026-09-01",
+  "finishedAt": "2026-09-02T01:16:20.850033+00:00",
+  "invocations": [
+    {
+      "command": "ospex-cli contests score 256 --account ospex-flow-a --expected-address 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json",
+      "contestId": "256",
+      "exitCode": 0,
+      "finishedAt": "2026-09-02T01:15:51.152572+00:00",
+      "kind": "score",
+      "startedAt": "2026-09-02T01:15:46.862286+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"contests.score\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-02T01:15:50.220Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": null,\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"score-contest\",\n      \"ok\": true,\n      \"txHash\": \"0x997cf5741b0a1b616341c9e6f627ae00e50e99c5ac46bff78f105eb9b12221b7\",\n      \"blockNumber\": \"93071145\",\n      \"status\": \"confirmed\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-contest\",\n      \"description\": \"Verify the contest detail (status, speculations, orderbook).\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex contests show 256 --json\",\n      \"argv\": [\n        \"contests\",\n        \"show\",\n        \"256\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"contestId\": \"256\",\n    \"txHash\": \"0x997cf5741b0a1b616341c9e6f627ae00e50e99c5ac46bff78f105eb9b12221b7\",\n    \"status\": \"success\",\n    \"scoring\": null\n  }\n}\n"
+    }
+  ],
+  "schemaVersion": 1,
+  "sdkCommit": "d922b5014dbf8c01795c6d9f36ad1a85f71c1c1a",
+  "startedAt": "2026-09-02T01:15:40.534554+00:00",
+  "summary": {
+    "already_scored": 5,
+    "claimed": 0,
+    "failures": 0,
+    "gas_skips": 0,
+    "not_final_yet": 8,
+    "planned_writes": 0,
+    "scored": 1,
+    "settled": 0,
+    "voided": 0
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "cliSha256": "fa6f51915b356e437a64365d39ad89ea3a6742a3257d2f98b45e0f3675f09f7d",
+  "command": "postgame",
+  "commandFormat": "public-v1",
+  "date": "2026-09-01",
+  "finishedAt": "2026-09-02T02:46:54.545759+00:00",
+  "invocations": [
+    {
+      "command": "ospex-cli contests score 257 --account ospex-flow-a --expected-address 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json",
+      "contestId": "257",
+      "exitCode": 0,
+      "finishedAt": "2026-09-02T02:45:50.969082+00:00",
+      "kind": "score",
+      "startedAt": "2026-09-02T02:45:47.655506+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"contests.score\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-02T02:45:50.018Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": null,\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"score-contest\",\n      \"ok\": true,\n      \"txHash\": \"0x90abf6efcc5cedfea300d18b3f798e45384bdcd9c93607afa6f3f0d64d57e0aa\",\n      \"blockNumber\": \"93074745\",\n      \"status\": \"confirmed\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-contest\",\n      \"description\": \"Verify the contest detail (status, speculations, orderbook).\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex contests show 257 --json\",\n      \"argv\": [\n        \"contests\",\n        \"show\",\n        \"257\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"contestId\": \"257\",\n    \"txHash\": \"0x90abf6efcc5cedfea300d18b3f798e45384bdcd9c93607afa6f3f0d64d57e0aa\",\n    \"status\": \"success\",\n    \"scoring\": null\n  }\n}\n"
+    },
+    {
+      "command": "ospex-cli contests score 260 --account ospex-flow-a --expected-address 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json",
+      "contestId": "260",
+      "exitCode": 0,
+      "finishedAt": "2026-09-02T02:46:15.580105+00:00",
+      "kind": "score",
+      "startedAt": "2026-09-02T02:46:11.277847+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"contests.score\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-02T02:46:14.639Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": null,\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"score-contest\",\n      \"ok\": true,\n      \"txHash\": \"0x480a594ebb4e600004679909bed734aab6aede2a7381139652ff90bd2a91e78d\",\n      \"blockNumber\": \"93074761\",\n      \"status\": \"confirmed\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-contest\",\n      \"description\": \"Verify the contest detail (status, speculations, orderbook).\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex contests show 260 --json\",\n      \"argv\": [\n        \"contests\",\n        \"show\",\n        \"260\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"contestId\": \"260\",\n    \"txHash\": \"0x480a594ebb4e600004679909bed734aab6aede2a7381139652ff90bd2a91e78d\",\n    \"status\": \"success\",\n    \"scoring\": null\n  }\n}\n"
+    },
+    {
+      "command": "ospex-cli settle 551 --account ospex-flow-a --expected-address 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-02T02:46:40.476819+00:00",
+      "kind": "settle",
+      "speculationId": "551",
+      "startedAt": "2026-09-02T02:46:37.143976+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"settle\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-02T02:46:40.131Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": null,\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"settle-speculation\",\n      \"ok\": true,\n      \"txHash\": \"0xcde9b6297b664b04a621ed55ea14bfd816a9cf91b8f90c4ad7f7cf017907fa82\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93074778\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"settled\",\n    \"txHash\": \"0xcde9b6297b664b04a621ed55ea14bfd816a9cf91b8f90c4ad7f7cf017907fa82\",\n    \"blockNumber\": \"93074778\",\n    \"revertedTxHash\": null,\n    \"winSide\": \"home\",\n    \"winSideContext\": {\n      \"side\": \"home\",\n      \"marketType\": \"moneyline\",\n      \"team\": {\n        \"name\": \"Pittsburgh Pirates\",\n        \"alignment\": \"home\"\n      },\n      \"role\": \"favorite\",\n      \"display\": \"home (Pittsburgh Pirates, favorite)\",\n      \"status\": \"complete\",\n      \"source\": {\n        \"team\": \"speculation-detail\",\n        \"role\": \"moneyline-odds\"\n      }\n    },\n    \"speculationId\": \"551\"\n  }\n}\n"
+    },
+    {
+      "arm": "anthropic",
+      "command": "ospex-cli claim 551 --type lower --account ospex-benchmark-anthropic --expected-address 0x8ff8FC180a1d4AA352bc23e73Bf24D98CF94FAd5 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-02T02:46:46.006095+00:00",
+      "kind": "claim",
+      "positionType": 1,
+      "speculationId": "551",
+      "startedAt": "2026-09-02T02:46:41.322089+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"claim\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-02T02:46:45.986Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": {\n    \"profit\": {\n      \"wei6\": \"1763223\",\n      \"usdc\": \"1.763223\"\n    },\n    \"totalReturn\": {\n      \"wei6\": \"1763223\",\n      \"usdc\": \"1.763223\"\n    }\n  },\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"claim-position\",\n      \"ok\": true,\n      \"txHash\": \"0xc88988d2d63efc877aaa2cbab00913c69924e05eded60e28b47d8a8fa39f9f15\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93074781\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"claimed\",\n    \"txHash\": \"0xc88988d2d63efc877aaa2cbab00913c69924e05eded60e28b47d8a8fa39f9f15\",\n    \"blockNumber\": \"93074781\",\n    \"revertedTxHash\": null,\n    \"payoutWei6\": \"1763223\",\n    \"payoutUSDC\": 1.763223,\n    \"speculationId\": \"551\",\n    \"positionType\": 1,\n    \"positionSideContext\": {\n      \"side\": \"home\",\n      \"marketType\": \"moneyline\",\n      \"team\": {\n        \"name\": \"Pittsburgh Pirates\",\n        \"alignment\": \"home\"\n      },\n      \"role\": \"favorite\",\n      \"display\": \"home (Pittsburgh Pirates, favorite)\",\n      \"status\": \"complete\",\n      \"source\": {\n        \"team\": \"speculation-detail\",\n        \"role\": \"moneyline-odds\"\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "arm": "openai",
+      "command": "ospex-cli claim 551 --type lower --account ospex-benchmark-openai --expected-address 0xcE3f6F70Ac9510633E98f424233B6C7BF0D21e98 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-02T02:46:49.113473+00:00",
+      "kind": "claim",
+      "positionType": 1,
+      "speculationId": "551",
+      "startedAt": "2026-09-02T02:46:46.938080+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"claim\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-02T02:46:48.974Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0xce3f6f70ac9510633e98f424233b6c7bf0d21e98\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0xce3f6f70ac9510633e98f424233b6c7bf0d21e98\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": {\n    \"profit\": {\n      \"wei6\": \"1763223\",\n      \"usdc\": \"1.763223\"\n    },\n    \"totalReturn\": {\n      \"wei6\": \"1763223\",\n      \"usdc\": \"1.763223\"\n    }\n  },\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"claim-position\",\n      \"ok\": true,\n      \"txHash\": \"0xfcf27bd5684e51f08a94814f6881eda21c37e6ddfb8aae351ddc295ecda31833\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93074784\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0xce3f6f70ac9510633e98f424233b6c7bf0d21e98 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0xce3f6f70ac9510633e98f424233b6c7bf0d21e98\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"claimed\",\n    \"txHash\": \"0xfcf27bd5684e51f08a94814f6881eda21c37e6ddfb8aae351ddc295ecda31833\",\n    \"blockNumber\": \"93074784\",\n    \"revertedTxHash\": null,\n    \"payoutWei6\": \"1763223\",\n    \"payoutUSDC\": 1.763223,\n    \"speculationId\": \"551\",\n    \"positionType\": 1,\n    \"positionSideContext\": {\n      \"side\": \"home\",\n      \"marketType\": \"moneyline\",\n      \"team\": {\n        \"name\": \"Pittsburgh Pirates\",\n        \"alignment\": \"home\"\n      },\n      \"role\": \"favorite\",\n      \"display\": \"home (Pittsburgh Pirates, favorite)\",\n      \"status\": \"complete\",\n      \"source\": {\n        \"team\": \"speculation-detail\",\n        \"role\": \"moneyline-odds\"\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "arm": "xai",
+      "command": "ospex-cli claim 551 --type lower --account ospex-benchmark-xai --expected-address 0x4537253Bd1fdc4101A90Ccf396b0307D3CaCDa67 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-02T02:46:54.543097+00:00",
+      "kind": "claim",
+      "positionType": 1,
+      "speculationId": "551",
+      "startedAt": "2026-09-02T02:46:50.104500+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"claim\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-02T02:46:54.231Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x4537253bd1fdc4101a90ccf396b0307d3cacda67\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x4537253bd1fdc4101a90ccf396b0307d3cacda67\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": {\n    \"profit\": {\n      \"wei6\": \"1763223\",\n      \"usdc\": \"1.763223\"\n    },\n    \"totalReturn\": {\n      \"wei6\": \"1763223\",\n      \"usdc\": \"1.763223\"\n    }\n  },\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"claim-position\",\n      \"ok\": true,\n      \"txHash\": \"0x8fe04aef0e5d0e763ee2a7715e608f32d35ad1bf2a1541f951af5dc652a45d0a\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93074787\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0x4537253bd1fdc4101a90ccf396b0307d3cacda67 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0x4537253bd1fdc4101a90ccf396b0307d3cacda67\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"claimed\",\n    \"txHash\": \"0x8fe04aef0e5d0e763ee2a7715e608f32d35ad1bf2a1541f951af5dc652a45d0a\",\n    \"blockNumber\": \"93074787\",\n    \"revertedTxHash\": null,\n    \"payoutWei6\": \"1763223\",\n    \"payoutUSDC\": 1.763223,\n    \"speculationId\": \"551\",\n    \"positionType\": 1,\n    \"positionSideContext\": {\n      \"side\": \"home\",\n      \"marketType\": \"moneyline\",\n      \"team\": {\n        \"name\": \"Pittsburgh Pirates\",\n        \"alignment\": \"home\"\n      },\n      \"role\": \"favorite\",\n      \"display\": \"home (Pittsburgh Pirates, favorite)\",\n      \"status\": \"complete\",\n      \"source\": {\n        \"team\": \"speculation-detail\",\n        \"role\": \"moneyline-odds\"\n      }\n    }\n  }\n}\n"
+    }
+  ],
+  "schemaVersion": 1,
+  "sdkCommit": "d922b5014dbf8c01795c6d9f36ad1a85f71c1c1a",
+  "startedAt": "2026-09-02T02:45:40.528234+00:00",
+  "summary": {
+    "already_scored": 11,
+    "claimed": 3,
+    "failures": 0,
+    "gas_skips": 0,
+    "not_final_yet": 1,
+    "planned_writes": 0,
+    "scored": 2,
+    "settled": 1,
+    "voided": 0
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "cliSha256": "fa6f51915b356e437a64365d39ad89ea3a6742a3257d2f98b45e0f3675f09f7d",
+  "command": "postgame",
+  "commandFormat": "public-v1",
+  "date": "2026-09-01",
+  "finishedAt": "2026-09-02T02:31:03.873835+00:00",
+  "invocations": [
+    {
+      "command": "ospex-cli settle 555 --account ospex-flow-a --expected-address 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-02T02:30:57.235005+00:00",
+      "kind": "settle",
+      "speculationId": "555",
+      "startedAt": "2026-09-02T02:30:53.815410+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"settle\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-02T02:30:57.002Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": null,\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"settle-speculation\",\n      \"ok\": true,\n      \"txHash\": \"0x93cd2af7968ff71669197e373565ab016ed572f5da8b03bb2c36bc4ca873dfb3\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93074149\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"settled\",\n    \"txHash\": \"0x93cd2af7968ff71669197e373565ab016ed572f5da8b03bb2c36bc4ca873dfb3\",\n    \"blockNumber\": \"93074149\",\n    \"revertedTxHash\": null,\n    \"winSide\": \"away\",\n    \"winSideContext\": {\n      \"side\": \"away\",\n      \"marketType\": \"moneyline\",\n      \"team\": {\n        \"name\": \"Miami Marlins\",\n        \"alignment\": \"away\"\n      },\n      \"role\": \"favorite\",\n      \"display\": \"away (Miami Marlins, favorite)\",\n      \"status\": \"complete\",\n      \"source\": {\n        \"team\": \"speculation-detail\",\n        \"role\": \"moneyline-odds\"\n      }\n    },\n    \"speculationId\": \"555\"\n  }\n}\n"
+    },
+    {
+      "arm": "anthropic",
+      "command": "ospex-cli claim 555 --type upper --account ospex-benchmark-anthropic --expected-address 0x8ff8FC180a1d4AA352bc23e73Bf24D98CF94FAd5 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-02T02:31:03.871215+00:00",
+      "kind": "claim",
+      "positionType": 0,
+      "speculationId": "555",
+      "startedAt": "2026-09-02T02:30:58.334676+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"claim\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-02T02:31:03.687Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": {\n    \"profit\": {\n      \"wei6\": \"2075136\",\n      \"usdc\": \"2.075136\"\n    },\n    \"totalReturn\": {\n      \"wei6\": \"2075136\",\n      \"usdc\": \"2.075136\"\n    }\n  },\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"claim-position\",\n      \"ok\": true,\n      \"txHash\": \"0xb8fc875dfeaa263684a2ae06617489f07b9c177551eb3d97f225f232b36d23fb\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93074153\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"claimed\",\n    \"txHash\": \"0xb8fc875dfeaa263684a2ae06617489f07b9c177551eb3d97f225f232b36d23fb\",\n    \"blockNumber\": \"93074153\",\n    \"revertedTxHash\": null,\n    \"payoutWei6\": \"2075136\",\n    \"payoutUSDC\": 2.075136,\n    \"speculationId\": \"555\",\n    \"positionType\": 0,\n    \"positionSideContext\": {\n      \"side\": \"away\",\n      \"marketType\": \"moneyline\",\n      \"team\": {\n        \"name\": \"Miami Marlins\",\n        \"alignment\": \"away\"\n      },\n      \"role\": \"favorite\",\n      \"display\": \"away (Miami Marlins, favorite)\",\n      \"status\": \"complete\",\n      \"source\": {\n        \"team\": \"speculation-detail\",\n        \"role\": \"moneyline-odds\"\n      }\n    }\n  }\n}\n"
+    }
+  ],
+  "schemaVersion": 1,
+  "sdkCommit": "d922b5014dbf8c01795c6d9f36ad1a85f71c1c1a",
+  "startedAt": "2026-09-02T02:30:40.578331+00:00",
+  "summary": {
+    "already_scored": 11,
+    "claimed": 1,
+    "failures": 0,
+    "gas_skips": 0,
+    "not_final_yet": 3,
+    "planned_writes": 0,
+    "scored": 0,
+    "settled": 1,
+    "voided": 0
+  }
+}
