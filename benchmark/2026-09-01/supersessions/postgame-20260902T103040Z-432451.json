@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "kind": "artifact-supersession",
+  "reason": "nonterminal-receipt-published-before-final-install",
+  "supersedes": {
+    "path": "benchmark/2026-09-01/ledgers/2026-09-01/postgame/20260902T103040Z-432451.json",
+    "sha256": "7e6933424f3837f0ca9d3ecfee7263829799545b22d6a71453011a2a6155bce4",
+    "terminal": false
+  },
+  "canonical": {
+    "path": "benchmark/2026-09-01/ledgers/2026-09-01/postgame/20260902T103040Z-432451.final-0596dc9c.json",
+    "sha256": "0596dc9ce3bdb50f7cff20a044ed29519df90ccdc8ec7664f00074ba2596cbc3",
+    "terminal": true
+  },
+  "historyRewritten": false
+}
