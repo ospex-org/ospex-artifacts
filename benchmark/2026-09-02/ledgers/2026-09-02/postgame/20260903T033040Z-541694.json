@@ -1,0 +1,73 @@
+{
+  "cliSha256": "fa6f51915b356e437a64365d39ad89ea3a6742a3257d2f98b45e0f3675f09f7d",
+  "command": "postgame",
+  "commandFormat": "public-v1",
+  "date": "2026-09-02",
+  "finishedAt": "2026-09-03T03:31:14.235862+00:00",
+  "invocations": [
+    {
+      "command": "ospex-cli settle 598 --account ospex-flow-a --expected-address 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json",
+      "exitCode": 1,
+      "finishedAt": "2026-09-03T03:30:58.865881+00:00",
+      "kind": "settle",
+      "speculationId": "598",
+      "startedAt": "2026-09-03T03:30:57.365968+00:00",
+      "status": "failure",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": false,\n  \"action\": \"settle\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-03T03:30:58.856Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"requiresSignature\": true,\n  \"requiresTransaction\": true,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": null,\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [\n    {\n      \"code\": \"CHAIN_ERROR\",\n      \"message\": \"Transaction broadcast or inclusion failed.\",\n      \"details\": {\n        \"causeChain\": [\n          {\n            \"name\": \"InvalidInputRpcError\",\n            \"message\": \"Missing or invalid parameters.\\nDouble check you have provided the correct parameters.\\n\\nURL: https://polygon-mainnet.g.alchemy.com/v2/[redacted]\\nRequest body: {\\\"method\\\":\\\"eth_sendRawTransaction\\\",\\\"params\\\":[\\\"0x02f894818982068e8505d21dba00854b39e2744f8302512694ea21b58e91edca41d0c42a8655234f8a64fa31bc80a4887109f70000000000000000000000000000000000000000000000000000000000000256c001a06734e394609581024c9c0474518665e0d2a8dac9968140fd108c969dd542d0c7a0370a0209caa14921f7068ff55eedeca87812d976a3eb5a8a9caadf1e129ab5b6\\\"]}\\n\\nDetails: replacement transaction underpriced\\nVersion: viem@2.55.10\",\n            \"shortMessage\": \"Missing or invalid parameters.\\nDouble check you have provided the correct parameters.\",\n            \"metaMessages\": [\n              \"URL: https://polygon-mainnet.g.alchemy.com/v2/[redacted]\",\n              \"Request body: {\\\"method\\\":\\\"eth_sendRawTransaction\\\",\\\"params\\\":[\\\"0x02f894818982068e8505d21dba00854b39e2744f8302512694ea21b58e91edca41d0c42a8655234f8a64fa31bc80a4887109f70000000000000000000000000000000000000000000000000000000000000256c001a06734e394609581024c9c0474518665e0d2a8dac9968140fd108c969dd542d0c7a0370a0209caa14921f7068ff55eedeca87812d976a3eb5a8a9caadf1e129ab5b6\\\"]}\"\n            ]\n          },\n          {\n            \"name\": \"RpcRequestError\",\n            \"message\": \"RPC Request failed.\\n\\nURL: https://polygon-mainnet.g.alchemy.com/v2/[redacted]\\nRequest body: {\\\"method\\\":\\\"eth_sendRawTransaction\\\",\\\"params\\\":[\\\"0x02f894818982068e8505d21dba00854b39e2744f8302512694ea21b58e91edca41d0c42a8655234f8a64fa31bc80a4887109f70000000000000000000000000000000000000000000000000000000000000256c001a06734e394609581024c9c0474518665e0d2a8dac9968140fd108c969dd542d0c7a0370a0209caa14921f7068ff55eedeca87812d976a3eb5a8a9caadf1e129ab5b6\\\"]}\\n\\nDetails: replacement transaction underpriced\\nVersion: viem@2.55.10\",\n            \"shortMessage\": \"RPC Request failed.\",\n            \"metaMessages\": [\n              \"URL: https://polygon-mainnet.g.alchemy.com/v2/[redacted]\",\n              \"Request body: {\\\"method\\\":\\\"eth_sendRawTransaction\\\",\\\"params\\\":[\\\"0x02f894818982068e8505d21dba00854b39e2744f8302512694ea21b58e91edca41d0c42a8655234f8a64fa31bc80a4887109f70000000000000000000000000000000000000000000000000000000000000256c001a06734e394609581024c9c0474518665e0d2a8dac9968140fd108c969dd542d0c7a0370a0209caa14921f7068ff55eedeca87812d976a3eb5a8a9caadf1e129ab5b6\\\"]}\"\n            ]\n          },\n          {\n            \"message\": \"replacement transaction underpriced\"\n          }\n        ]\n      }\n    }\n  ],\n  \"effects\": [],\n  \"nextCommands\": [],\n  \"payload\": null\n}\n"
+    },
+    {
+      "arm": "anthropic",
+      "command": "ospex-cli claim 593 --type upper --account ospex-benchmark-anthropic --expected-address 0x8ff8FC180a1d4AA352bc23e73Bf24D98CF94FAd5 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-03T03:31:03.173862+00:00",
+      "kind": "claim",
+      "positionType": 0,
+      "speculationId": "593",
+      "startedAt": "2026-09-03T03:30:59.818564+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"claim\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-03T03:31:02.926Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": {\n    \"profit\": {\n      \"wei6\": \"1735072\",\n      \"usdc\": \"1.735072\"\n    },\n    \"totalReturn\": {\n      \"wei6\": \"1735072\",\n      \"usdc\": \"1.735072\"\n    }\n  },\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"claim-position\",\n      \"ok\": true,\n      \"txHash\": \"0xa4317fa761063ed8ca53250604a351d769531ba216e93074a1831fcb2d18aa1f\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93134153\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"claimed\",\n    \"txHash\": \"0xa4317fa761063ed8ca53250604a351d769531ba216e93074a1831fcb2d18aa1f\",\n    \"blockNumber\": \"93134153\",\n    \"revertedTxHash\": null,\n    \"payoutWei6\": \"1735072\",\n    \"payoutUSDC\": 1.735072,\n    \"speculationId\": \"593\",\n    \"positionType\": 0,\n    \"positionSideContext\": {\n      \"side\": \"away\",\n      \"marketType\": \"moneyline\",\n      \"team\": {\n        \"name\": \"Milwaukee Brewers\",\n        \"alignment\": \"away\"\n      },\n      \"role\": \"favorite\",\n      \"display\": \"away (Milwaukee Brewers, favorite)\",\n      \"status\": \"complete\",\n      \"source\": {\n        \"team\": \"speculation-detail\",\n        \"role\": \"moneyline-odds\"\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "arm": "gemini",
+      "command": "ospex-cli claim 593 --type upper --account ospex-benchmark-gemini --expected-address 0x49306d4394C3455d7E52ACB4D9caA7d39B8a4c17 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-03T03:31:07.563847+00:00",
+      "kind": "claim",
+      "positionType": 0,
+      "speculationId": "593",
+      "startedAt": "2026-09-03T03:31:04.175627+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"claim\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-03T03:31:07.296Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x49306d4394c3455d7e52acb4d9caa7d39b8a4c17\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x49306d4394c3455d7e52acb4d9caa7d39b8a4c17\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": {\n    \"profit\": {\n      \"wei6\": \"1735072\",\n      \"usdc\": \"1.735072\"\n    },\n    \"totalReturn\": {\n      \"wei6\": \"1735072\",\n      \"usdc\": \"1.735072\"\n    }\n  },\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"claim-position\",\n      \"ok\": true,\n      \"txHash\": \"0x71f6f48c19617bed9385e2fa7222ac119570a61a4005b78109c253c1d2834f20\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93134156\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0x49306d4394c3455d7e52acb4d9caa7d39b8a4c17 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0x49306d4394c3455d7e52acb4d9caa7d39b8a4c17\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"claimed\",\n    \"txHash\": \"0x71f6f48c19617bed9385e2fa7222ac119570a61a4005b78109c253c1d2834f20\",\n    \"blockNumber\": \"93134156\",\n    \"revertedTxHash\": null,\n    \"payoutWei6\": \"1735072\",\n    \"payoutUSDC\": 1.735072,\n    \"speculationId\": \"593\",\n    \"positionType\": 0,\n    \"positionSideContext\": {\n      \"side\": \"away\",\n      \"marketType\": \"moneyline\",\n      \"team\": {\n        \"name\": \"Milwaukee Brewers\",\n        \"alignment\": \"away\"\n      },\n      \"role\": \"favorite\",\n      \"display\": \"away (Milwaukee Brewers, favorite)\",\n      \"status\": \"complete\",\n      \"source\": {\n        \"team\": \"speculation-detail\",\n        \"role\": \"moneyline-odds\"\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "arm": "openai",
+      "command": "ospex-cli claim 593 --type upper --account ospex-benchmark-openai --expected-address 0xcE3f6F70Ac9510633E98f424233B6C7BF0D21e98 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-03T03:31:14.231988+00:00",
+      "kind": "claim",
+      "positionType": 0,
+      "speculationId": "593",
+      "startedAt": "2026-09-03T03:31:08.611738+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"claim\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-03T03:31:14.085Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0xce3f6f70ac9510633e98f424233b6c7bf0d21e98\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0xce3f6f70ac9510633e98f424233b6c7bf0d21e98\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": {\n    \"profit\": {\n      \"wei6\": \"1735072\",\n      \"usdc\": \"1.735072\"\n    },\n    \"totalReturn\": {\n      \"wei6\": \"1735072\",\n      \"usdc\": \"1.735072\"\n    }\n  },\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"claim-position\",\n      \"ok\": true,\n      \"txHash\": \"0x8d8007cc5b6419627cfa1a61166b9030e40b439701811f4d18ea8fba8caea019\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93134160\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0xce3f6f70ac9510633e98f424233b6c7bf0d21e98 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0xce3f6f70ac9510633e98f424233b6c7bf0d21e98\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"claimed\",\n    \"txHash\": \"0x8d8007cc5b6419627cfa1a61166b9030e40b439701811f4d18ea8fba8caea019\",\n    \"blockNumber\": \"93134160\",\n    \"revertedTxHash\": null,\n    \"payoutWei6\": \"1735072\",\n    \"payoutUSDC\": 1.735072,\n    \"speculationId\": \"593\",\n    \"positionType\": 0,\n    \"positionSideContext\": {\n      \"side\": \"away\",\n      \"marketType\": \"moneyline\",\n      \"team\": {\n        \"name\": \"Milwaukee Brewers\",\n        \"alignment\": \"away\"\n      },\n      \"role\": \"favorite\",\n      \"display\": \"away (Milwaukee Brewers, favorite)\",\n      \"status\": \"complete\",\n      \"source\": {\n        \"team\": \"speculation-detail\",\n        \"role\": \"moneyline-odds\"\n      }\n    }\n  }\n}\n"
+    }
+  ],
+  "schemaVersion": 1,
+  "sdkCommit": "d922b5014dbf8c01795c6d9f36ad1a85f71c1c1a",
+  "startedAt": "2026-09-03T03:30:40.570274+00:00",
+  "summary": {
+    "already_scored": 17,
+    "claimed": 3,
+    "failures": 1,
+    "gas_skips": 0,
+    "not_final_yet": 1,
+    "planned_writes": 0,
+    "scored": 0,
+    "settled": 0,
+    "voided": 0
+  }
+}
