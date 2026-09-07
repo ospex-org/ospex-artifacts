@@ -1,0 +1,59 @@
+{
+  "completeDayPublication": false,
+  "kind": "exact-historical-receipt-redaction",
+  "public": {
+    "path": "benchmark/2026-09-02/ledgers/2026-09-02/postgame/20260903T033040Z-541694.json",
+    "sha256": "cee5aea9bb6a62800b20ac8d1c064f2c57807ef81cf71bb94e14a7165f061229"
+  },
+  "rationale": "Remove signed transaction bytes and the RPC endpoint from a historical error receipt; retain the private original and bind public evidence to both digests. Nonce consumption is not publication permission or proof this transaction was mined.",
+  "scannerExemption": false,
+  "schemaVersion": 1,
+  "scope": "One exact path and digest pair only. Every other receipt remains byte-identical. A second affected file is STOP pending a separately reviewed general mechanism.",
+  "source": {
+    "relativePath": "2026-09-02/postgame/20260903T033040Z-541694.json",
+    "retainedPrivate": true,
+    "sha256": "34331ddaa79d71ff51e68d02642faaca714d58f484bb2e218fb2ce407d3f03b6",
+    "unchanged": true
+  },
+  "transaction": {
+    "byteLength": 151,
+    "digest": "0x97e87cb035d97cd27eeab9af5a483d4656f8907482cafddc07830ea45b45950e",
+    "digestAlgorithm": "KECCAK-256"
+  },
+  "transform": {
+    "allOtherBytesUnchanged": true,
+    "commit": "0717b2d9faa7819b0e5a789c15f8d64c0df1c99b",
+    "function": "redact_signed_transactions",
+    "input": "original UTF-8 file text, without JSON reserialization",
+    "occurrenceCount": 4,
+    "occurrencePaths": [
+      "$.invocations[0].stdout::<json>.errors[0].details.causeChain[0].message::<json_fragment@158>.params[0]",
+      "$.invocations[0].stdout::<json>.errors[0].details.causeChain[0].metaMessages[1]::<json_fragment@14>.params[0]",
+      "$.invocations[0].stdout::<json>.errors[0].details.causeChain[1].message::<json_fragment@92>.params[0]",
+      "$.invocations[0].stdout::<json>.errors[0].details.causeChain[1].metaMessages[1]::<json_fragment@14>.params[0]"
+    ],
+    "occurrencePathsReferTo": "private source before endpoint replacement",
+    "path": "receipt_redaction.py",
+    "postimageOccurrencePaths": [
+      "$.invocations[0].stdout::<json>.errors[0].details.causeChain[0].message::<json_fragment@128>.params[0]",
+      "$.invocations[0].stdout::<json>.errors[0].details.causeChain[0].metaMessages[1]::<json_fragment@14>.params[0]",
+      "$.invocations[0].stdout::<json>.errors[0].details.causeChain[1].message::<json_fragment@62>.params[0]",
+      "$.invocations[0].stdout::<json>.errors[0].details.causeChain[1].metaMessages[1]::<json_fragment@14>.params[0]"
+    ],
+    "replacement": "redacted:signed-transaction keccak256=0x97e87cb035d97cd27eeab9af5a483d4656f8907482cafddc07830ea45b45950e byteLength=151",
+    "rpcEndpointRedaction": {
+      "algorithm": "exact-byte replacement after signed-transaction redaction",
+      "occurrenceCount": 4,
+      "occurrencePaths": [
+        "$.invocations[0].stdout::<json>.errors[0].details.causeChain[0].message",
+        "$.invocations[0].stdout::<json>.errors[0].details.causeChain[0].metaMessages[0]",
+        "$.invocations[0].stdout::<json>.errors[0].details.causeChain[1].message",
+        "$.invocations[0].stdout::<json>.errors[0].details.causeChain[1].metaMessages[0]"
+      ],
+      "replacement": "redacted:rpc-endpoint",
+      "sourceByteLength": 51,
+      "sourceSha256": "656f4092b9d506e4e15cd489aea06174b85deaa530db44ac808f87014567d37f"
+    },
+    "sha256": "9727de858df243592e17082b2c46312efde03f89ecbad31dd31d0a914fa77812"
+  }
+}
