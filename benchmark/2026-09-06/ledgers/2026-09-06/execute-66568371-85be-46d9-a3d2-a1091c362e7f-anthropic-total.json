@@ -1,0 +1,17 @@
+{
+  "arm": "anthropic",
+  "cliSha256": "fa6f51915b356e437a64365d39ad89ea3a6742a3257d2f98b45e0f3675f09f7d",
+  "commandFormat": "public-v1",
+  "cutoffAt": "2026-09-06T16:10:00+00:00",
+  "firstPitch": "2026-09-06T16:10:00+00:00",
+  "gameId": "66568371-85be-46d9-a3d2-a1091c362e7f",
+  "kind": "terminal-skip",
+  "market": "total",
+  "recordedAt": "2026-09-06T16:03:37.140369+00:00",
+  "runId": "watch-v0-2026-09-06-2f6899",
+  "schemaVersion": 1,
+  "sdkCommit": "d922b5014dbf8c01795c6d9f36ad1a85f71c1c1a",
+  "selection": "over",
+  "status": "skipped:too_late",
+  "wouldAbstain": false
+}
