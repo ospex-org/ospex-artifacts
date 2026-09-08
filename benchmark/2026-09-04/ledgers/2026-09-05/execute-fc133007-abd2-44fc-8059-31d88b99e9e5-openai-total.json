@@ -1,0 +1,17 @@
+{
+  "arm": "openai",
+  "cliSha256": "fa6f51915b356e437a64365d39ad89ea3a6742a3257d2f98b45e0f3675f09f7d",
+  "commandFormat": "public-v1",
+  "cutoffAt": "2026-09-04T22:40:00+00:00",
+  "firstPitch": "2026-09-04T22:40:00+00:00",
+  "gameId": "fc133007-abd2-44fc-8059-31d88b99e9e5",
+  "kind": "terminal-skip",
+  "market": "total",
+  "recordedAt": "2026-09-05T06:23:01.491495+00:00",
+  "runId": "watch-v0-2026-09-04-cb58ab",
+  "schemaVersion": 1,
+  "sdkCommit": "d922b5014dbf8c01795c6d9f36ad1a85f71c1c1a",
+  "selection": "over",
+  "status": "skipped:too_late",
+  "wouldAbstain": false
+}
