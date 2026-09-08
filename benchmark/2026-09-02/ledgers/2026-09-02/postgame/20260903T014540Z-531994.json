@@ -1,0 +1,108 @@
+{
+  "cliSha256": "fa6f51915b356e437a64365d39ad89ea3a6742a3257d2f98b45e0f3675f09f7d",
+  "command": "postgame",
+  "commandFormat": "public-v1",
+  "date": "2026-09-02",
+  "finishedAt": "2026-09-03T01:47:26.357294+00:00",
+  "invocations": [
+    {
+      "command": "ospex-cli contests score 274 --account ospex-flow-a --expected-address 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json",
+      "contestId": "274",
+      "exitCode": 0,
+      "finishedAt": "2026-09-03T01:45:54.711571+00:00",
+      "kind": "score",
+      "startedAt": "2026-09-03T01:45:50.414723+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"contests.score\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-03T01:45:53.777Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": null,\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"score-contest\",\n      \"ok\": true,\n      \"txHash\": \"0x7f53f9c962ca064ebd6fcf2e8c4703ac4b5f4bdcad6ce9283d5dfe7baf16cb6d\",\n      \"blockNumber\": \"93129947\",\n      \"status\": \"confirmed\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-contest\",\n      \"description\": \"Verify the contest detail (status, speculations, orderbook).\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex contests show 274 --json\",\n      \"argv\": [\n        \"contests\",\n        \"show\",\n        \"274\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"contestId\": \"274\",\n    \"txHash\": \"0x7f53f9c962ca064ebd6fcf2e8c4703ac4b5f4bdcad6ce9283d5dfe7baf16cb6d\",\n    \"status\": \"success\",\n    \"scoring\": null\n  }\n}\n"
+    },
+    {
+      "command": "ospex-cli contests score 281 --account ospex-flow-a --expected-address 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json",
+      "contestId": "281",
+      "exitCode": 0,
+      "finishedAt": "2026-09-03T01:46:24.159369+00:00",
+      "kind": "score",
+      "startedAt": "2026-09-03T01:46:19.932762+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"contests.score\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-03T01:46:23.204Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": null,\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"score-contest\",\n      \"ok\": true,\n      \"txHash\": \"0x346147ccf8bd44c3852e5877f3263ed8a1602cb7defbe024d9852e4221981071\",\n      \"blockNumber\": \"93129967\",\n      \"status\": \"confirmed\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-contest\",\n      \"description\": \"Verify the contest detail (status, speculations, orderbook).\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex contests show 281 --json\",\n      \"argv\": [\n        \"contests\",\n        \"show\",\n        \"281\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"contestId\": \"281\",\n    \"txHash\": \"0x346147ccf8bd44c3852e5877f3263ed8a1602cb7defbe024d9852e4221981071\",\n    \"status\": \"success\",\n    \"scoring\": null\n  }\n}\n"
+    },
+    {
+      "command": "ospex-cli settle 585 --account ospex-flow-a --expected-address 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-03T01:47:07.730388+00:00",
+      "kind": "settle",
+      "speculationId": "585",
+      "startedAt": "2026-09-03T01:47:04.342644+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"settle\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-03T01:47:07.525Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": null,\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"settle-speculation\",\n      \"ok\": true,\n      \"txHash\": \"0xf5fc9fca13b6b96cd28d82fcc45c15e88f9d5ddd6c6d9c73d49f8dcf0c40e61d\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93129996\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"settled\",\n    \"txHash\": \"0xf5fc9fca13b6b96cd28d82fcc45c15e88f9d5ddd6c6d9c73d49f8dcf0c40e61d\",\n    \"blockNumber\": \"93129996\",\n    \"revertedTxHash\": null,\n    \"winSide\": \"away\",\n    \"winSideContext\": {\n      \"side\": \"away\",\n      \"marketType\": \"moneyline\",\n      \"team\": {\n        \"name\": \"Toronto Blue Jays\",\n        \"alignment\": \"away\"\n      },\n      \"role\": \"favorite\",\n      \"display\": \"away (Toronto Blue Jays, favorite)\",\n      \"status\": \"complete\",\n      \"source\": {\n        \"team\": \"speculation-detail\",\n        \"role\": \"moneyline-odds\"\n      }\n    },\n    \"speculationId\": \"585\"\n  }\n}\n"
+    },
+    {
+      "arm": "anthropic",
+      "command": "ospex-cli claim 585 --type upper --account ospex-benchmark-anthropic --expected-address 0x8ff8FC180a1d4AA352bc23e73Bf24D98CF94FAd5 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-03T01:47:12.238420+00:00",
+      "kind": "claim",
+      "positionType": 0,
+      "speculationId": "585",
+      "startedAt": "2026-09-03T01:47:08.847323+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"claim\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-03T01:47:12.053Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": {\n    \"profit\": {\n      \"wei6\": \"1934415\",\n      \"usdc\": \"1.934415\"\n    },\n    \"totalReturn\": {\n      \"wei6\": \"1934415\",\n      \"usdc\": \"1.934415\"\n    }\n  },\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"claim-position\",\n      \"ok\": true,\n      \"txHash\": \"0xf6bf8c6bb982b0d9c8ce1503830d0cb1a104d0537615582c01d4bcca15512108\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93129999\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"claimed\",\n    \"txHash\": \"0xf6bf8c6bb982b0d9c8ce1503830d0cb1a104d0537615582c01d4bcca15512108\",\n    \"blockNumber\": \"93129999\",\n    \"revertedTxHash\": null,\n    \"payoutWei6\": \"1934415\",\n    \"payoutUSDC\": 1.934415,\n    \"speculationId\": \"585\",\n    \"positionType\": 0,\n    \"positionSideContext\": {\n      \"side\": \"away\",\n      \"marketType\": \"moneyline\",\n      \"team\": {\n        \"name\": \"Toronto Blue Jays\",\n        \"alignment\": \"away\"\n      },\n      \"role\": \"favorite\",\n      \"display\": \"away (Toronto Blue Jays, favorite)\",\n      \"status\": \"complete\",\n      \"source\": {\n        \"team\": \"speculation-detail\",\n        \"role\": \"moneyline-odds\"\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "arm": "gemini",
+      "command": "ospex-cli claim 585 --type upper --account ospex-benchmark-gemini --expected-address 0x49306d4394C3455d7E52ACB4D9caA7d39B8a4c17 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-03T01:47:16.706182+00:00",
+      "kind": "claim",
+      "positionType": 0,
+      "speculationId": "585",
+      "startedAt": "2026-09-03T01:47:13.317553+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"claim\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-03T01:47:16.505Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x49306d4394c3455d7e52acb4d9caa7d39b8a4c17\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x49306d4394c3455d7e52acb4d9caa7d39b8a4c17\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": {\n    \"profit\": {\n      \"wei6\": \"1934415\",\n      \"usdc\": \"1.934415\"\n    },\n    \"totalReturn\": {\n      \"wei6\": \"1934415\",\n      \"usdc\": \"1.934415\"\n    }\n  },\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"claim-position\",\n      \"ok\": true,\n      \"txHash\": \"0xf8705bf1ce8fef18528b419ac75af32054cbf29379407b05795ae90edbbfebe4\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93130002\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0x49306d4394c3455d7e52acb4d9caa7d39b8a4c17 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0x49306d4394c3455d7e52acb4d9caa7d39b8a4c17\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"claimed\",\n    \"txHash\": \"0xf8705bf1ce8fef18528b419ac75af32054cbf29379407b05795ae90edbbfebe4\",\n    \"blockNumber\": \"93130002\",\n    \"revertedTxHash\": null,\n    \"payoutWei6\": \"1934415\",\n    \"payoutUSDC\": 1.934415,\n    \"speculationId\": \"585\",\n    \"positionType\": 0,\n    \"positionSideContext\": {\n      \"side\": \"away\",\n      \"marketType\": \"moneyline\",\n      \"team\": {\n        \"name\": \"Toronto Blue Jays\",\n        \"alignment\": \"away\"\n      },\n      \"role\": \"favorite\",\n      \"display\": \"away (Toronto Blue Jays, favorite)\",\n      \"status\": \"complete\",\n      \"source\": {\n        \"team\": \"speculation-detail\",\n        \"role\": \"moneyline-odds\"\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "arm": "openai",
+      "command": "ospex-cli claim 585 --type upper --account ospex-benchmark-openai --expected-address 0xcE3f6F70Ac9510633E98f424233B6C7BF0D21e98 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-03T01:47:20.962428+00:00",
+      "kind": "claim",
+      "positionType": 0,
+      "speculationId": "585",
+      "startedAt": "2026-09-03T01:47:17.666770+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"claim\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-03T01:47:20.732Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0xce3f6f70ac9510633e98f424233b6c7bf0d21e98\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0xce3f6f70ac9510633e98f424233b6c7bf0d21e98\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": {\n    \"profit\": {\n      \"wei6\": \"1934415\",\n      \"usdc\": \"1.934415\"\n    },\n    \"totalReturn\": {\n      \"wei6\": \"1934415\",\n      \"usdc\": \"1.934415\"\n    }\n  },\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"claim-position\",\n      \"ok\": true,\n      \"txHash\": \"0x0664bdb320864eb375565ee02c53fc98c191a7705f756ae00a9e04a4251c52ff\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93130005\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0xce3f6f70ac9510633e98f424233b6c7bf0d21e98 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0xce3f6f70ac9510633e98f424233b6c7bf0d21e98\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"claimed\",\n    \"txHash\": \"0x0664bdb320864eb375565ee02c53fc98c191a7705f756ae00a9e04a4251c52ff\",\n    \"blockNumber\": \"93130005\",\n    \"revertedTxHash\": null,\n    \"payoutWei6\": \"1934415\",\n    \"payoutUSDC\": 1.934415,\n    \"speculationId\": \"585\",\n    \"positionType\": 0,\n    \"positionSideContext\": {\n      \"side\": \"away\",\n      \"marketType\": \"moneyline\",\n      \"team\": {\n        \"name\": \"Toronto Blue Jays\",\n        \"alignment\": \"away\"\n      },\n      \"role\": \"favorite\",\n      \"display\": \"away (Toronto Blue Jays, favorite)\",\n      \"status\": \"complete\",\n      \"source\": {\n        \"team\": \"speculation-detail\",\n        \"role\": \"moneyline-odds\"\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "arm": "xai",
+      "command": "ospex-cli claim 585 --type upper --account ospex-benchmark-xai --expected-address 0x4537253Bd1fdc4101A90Ccf396b0307D3CaCDa67 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-03T01:47:26.355051+00:00",
+      "kind": "claim",
+      "positionType": 0,
+      "speculationId": "585",
+      "startedAt": "2026-09-03T01:47:22.018738+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"claim\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-03T01:47:26.116Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x4537253bd1fdc4101a90ccf396b0307d3cacda67\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x4537253bd1fdc4101a90ccf396b0307d3cacda67\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": {\n    \"profit\": {\n      \"wei6\": \"1934415\",\n      \"usdc\": \"1.934415\"\n    },\n    \"totalReturn\": {\n      \"wei6\": \"1934415\",\n      \"usdc\": \"1.934415\"\n    }\n  },\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"claim-position\",\n      \"ok\": true,\n      \"txHash\": \"0x58b69eb6bba7ae041cb1a4d7cffa6f5dd4e6fbb3f56f162e8cb0bfe911c748c2\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93130008\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0x4537253bd1fdc4101a90ccf396b0307d3cacda67 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0x4537253bd1fdc4101a90ccf396b0307d3cacda67\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"claimed\",\n    \"txHash\": \"0x58b69eb6bba7ae041cb1a4d7cffa6f5dd4e6fbb3f56f162e8cb0bfe911c748c2\",\n    \"blockNumber\": \"93130008\",\n    \"revertedTxHash\": null,\n    \"payoutWei6\": \"1934415\",\n    \"payoutUSDC\": 1.934415,\n    \"speculationId\": \"585\",\n    \"positionType\": 0,\n    \"positionSideContext\": {\n      \"side\": \"away\",\n      \"marketType\": \"moneyline\",\n      \"team\": {\n        \"name\": \"Toronto Blue Jays\",\n        \"alignment\": \"away\"\n      },\n      \"role\": \"favorite\",\n      \"display\": \"away (Toronto Blue Jays, favorite)\",\n      \"status\": \"complete\",\n      \"source\": {\n        \"team\": \"speculation-detail\",\n        \"role\": \"moneyline-odds\"\n      }\n    }\n  }\n}\n"
+    }
+  ],
+  "schemaVersion": 1,
+  "sdkCommit": "d922b5014dbf8c01795c6d9f36ad1a85f71c1c1a",
+  "startedAt": "2026-09-03T01:45:40.524881+00:00",
+  "summary": {
+    "already_scored": 12,
+    "claimed": 4,
+    "failures": 0,
+    "gas_skips": 0,
+    "not_final_yet": 4,
+    "planned_writes": 0,
+    "scored": 2,
+    "settled": 1,
+    "voided": 0
+  }
+}
