@@ -1,0 +1,81 @@
+{
+  "cliSha256": "fa6f51915b356e437a64365d39ad89ea3a6742a3257d2f98b45e0f3675f09f7d",
+  "command": "postgame",
+  "commandFormat": "public-v1",
+  "date": "2026-09-03",
+  "finishedAt": "2026-09-07T03:17:51.949246+00:00",
+  "invocations": [
+    {
+      "command": "ospex-cli settle 597 --account ospex-flow-a --expected-address 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-07T03:17:20.745306+00:00",
+      "kind": "settle",
+      "speculationId": "597",
+      "startedAt": "2026-09-07T03:17:15.038171+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"settle\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-07T03:17:20.726Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": null,\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"settle-speculation\",\n      \"ok\": true,\n      \"txHash\": \"0xd9a9b469dfe959cb6307555883901e1100daf7f43b0fdc730603010b74cac24d\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93364003\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"settled\",\n    \"txHash\": \"0xd9a9b469dfe959cb6307555883901e1100daf7f43b0fdc730603010b74cac24d\",\n    \"blockNumber\": \"93364003\",\n    \"revertedTxHash\": null,\n    \"winSide\": \"over\",\n    \"winSideContext\": {\n      \"side\": \"over\",\n      \"marketType\": \"total\",\n      \"team\": null,\n      \"role\": \"not_applicable\",\n      \"display\": \"over 7 (total; no team)\",\n      \"status\": \"not_applicable\",\n      \"source\": {\n        \"team\": \"not_applicable\",\n        \"role\": \"not_applicable\"\n      }\n    },\n    \"speculationId\": \"597\"\n  }\n}\n"
+    },
+    {
+      "command": "ospex-cli settle 603 --account ospex-flow-a --expected-address 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-07T03:17:26.565770+00:00",
+      "kind": "settle",
+      "speculationId": "603",
+      "startedAt": "2026-09-07T03:17:21.754022+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"settle\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-07T03:17:26.542Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": null,\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"settle-speculation\",\n      \"ok\": true,\n      \"txHash\": \"0xc21384b3dde0c78163c8b31ecf5283ba9af701b20bf72aee4d435134b1c952f1\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93364008\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"settled\",\n    \"txHash\": \"0xc21384b3dde0c78163c8b31ecf5283ba9af701b20bf72aee4d435134b1c952f1\",\n    \"blockNumber\": \"93364008\",\n    \"revertedTxHash\": null,\n    \"winSide\": \"away\",\n    \"winSideContext\": {\n      \"side\": \"away\",\n      \"marketType\": \"moneyline\",\n      \"team\": {\n        \"name\": \"St. Louis Cardinals\",\n        \"alignment\": \"away\"\n      },\n      \"role\": \"underdog\",\n      \"display\": \"away (St. Louis Cardinals, underdog)\",\n      \"status\": \"complete\",\n      \"source\": {\n        \"team\": \"speculation-detail\",\n        \"role\": \"moneyline-odds\"\n      }\n    },\n    \"speculationId\": \"603\"\n  }\n}\n"
+    },
+    {
+      "command": "ospex-cli settle 608 --account ospex-flow-a --expected-address 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-07T03:17:31.093840+00:00",
+      "kind": "settle",
+      "speculationId": "608",
+      "startedAt": "2026-09-07T03:17:28.604252+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"settle\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-07T03:17:31.075Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": null,\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"settle-speculation\",\n      \"ok\": true,\n      \"txHash\": \"0x6933d4e698e5755d416fe96ead329c54e57c8dcb6ccf5955be6fe59a9d690fd1\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93364012\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"settled\",\n    \"txHash\": \"0x6933d4e698e5755d416fe96ead329c54e57c8dcb6ccf5955be6fe59a9d690fd1\",\n    \"blockNumber\": \"93364012\",\n    \"revertedTxHash\": null,\n    \"winSide\": \"under\",\n    \"winSideContext\": {\n      \"side\": \"under\",\n      \"marketType\": \"total\",\n      \"team\": null,\n      \"role\": \"not_applicable\",\n      \"display\": \"under 8.5 (total; no team)\",\n      \"status\": \"not_applicable\",\n      \"source\": {\n        \"team\": \"not_applicable\",\n        \"role\": \"not_applicable\"\n      }\n    },\n    \"speculationId\": \"608\"\n  }\n}\n"
+    },
+    {
+      "command": "ospex-cli settle 612 --account ospex-flow-a --expected-address 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-07T03:17:38.023023+00:00",
+      "kind": "settle",
+      "speculationId": "612",
+      "startedAt": "2026-09-07T03:17:32.242291+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"settle\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-07T03:17:37.459Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": null,\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"settle-speculation\",\n      \"ok\": true,\n      \"txHash\": \"0x850a107433a43e8476ae8aa96770eda7bf5bb058d394acd91f997944fbc88c09\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93364015\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"settled\",\n    \"txHash\": \"0x850a107433a43e8476ae8aa96770eda7bf5bb058d394acd91f997944fbc88c09\",\n    \"blockNumber\": \"93364015\",\n    \"revertedTxHash\": null,\n    \"winSide\": \"over\",\n    \"winSideContext\": {\n      \"side\": \"over\",\n      \"marketType\": \"total\",\n      \"team\": null,\n      \"role\": \"not_applicable\",\n      \"display\": \"over 8 (total; no team)\",\n      \"status\": \"not_applicable\",\n      \"source\": {\n        \"team\": \"not_applicable\",\n        \"role\": \"not_applicable\"\n      }\n    },\n    \"speculationId\": \"612\"\n  }\n}\n"
+    },
+    {
+      "command": "ospex-cli settle 622 --account ospex-flow-a --expected-address 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-07T03:17:41.828146+00:00",
+      "kind": "settle",
+      "speculationId": "622",
+      "startedAt": "2026-09-07T03:17:38.952716+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"settle\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-07T03:17:41.620Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": null,\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"settle-speculation\",\n      \"ok\": true,\n      \"txHash\": \"0x079d5f46942c3a4016e4308379af19fa39da1e078b2644b8e21ab44799dfd233\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93364019\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0x16dc5d67d080a5521ef2c79680dbfc2abf724d30 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0x16dc5d67d080a5521ef2c79680dbfc2abf724d30\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"settled\",\n    \"txHash\": \"0x079d5f46942c3a4016e4308379af19fa39da1e078b2644b8e21ab44799dfd233\",\n    \"blockNumber\": \"93364019\",\n    \"revertedTxHash\": null,\n    \"winSide\": \"over\",\n    \"winSideContext\": {\n      \"side\": \"over\",\n      \"marketType\": \"total\",\n      \"team\": null,\n      \"role\": \"not_applicable\",\n      \"display\": \"over 8.5 (total; no team)\",\n      \"status\": \"not_applicable\",\n      \"source\": {\n        \"team\": \"not_applicable\",\n        \"role\": \"not_applicable\"\n      }\n    },\n    \"speculationId\": \"622\"\n  }\n}\n"
+    }
+  ],
+  "schemaVersion": 1,
+  "sdkCommit": "d922b5014dbf8c01795c6d9f36ad1a85f71c1c1a",
+  "startedAt": "2026-09-07T03:17:04.004270+00:00",
+  "summary": {
+    "attempted_writes": 5,
+    "backlogEnd": "2026-09-03",
+    "backlogStart": "2026-09-03",
+    "claimed": 0,
+    "complete": false,
+    "deferred": 23,
+    "diagnostic": "remaining work after fresh readback: attempted=5 deferred=23 failures=0 gas-skips=0; check write budget, gas, receipts and projection lag before retry",
+    "failures": 0,
+    "gas_skips": 0,
+    "planned_writes": 0,
+    "remaining": 24,
+    "settled": 5
+  }
+}
