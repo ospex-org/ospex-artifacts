@@ -1,0 +1,14 @@
+{
+  "cliSha256": "fa6f51915b356e437a64365d39ad89ea3a6742a3257d2f98b45e0f3675f09f7d",
+  "command": "postgame",
+  "commandFormat": "public-v1",
+  "date": "2026-09-04",
+  "finishedAt": "2026-09-04T13:30:41.747158+00:00",
+  "invocations": [],
+  "schemaVersion": 1,
+  "sdkCommit": "d922b5014dbf8c01795c6d9f36ad1a85f71c1c1a",
+  "startedAt": "2026-09-04T13:30:41.251573+00:00",
+  "summary": {
+    "fatal": "CLI contests.list emitted invalid JSON: error (API_ERROR): Network error: fetch failed"
+  }
+}
