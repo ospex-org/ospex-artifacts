@@ -1,0 +1,90 @@
+{
+  "cliSha256": "fa6f51915b356e437a64365d39ad89ea3a6742a3257d2f98b45e0f3675f09f7d",
+  "command": "postgame",
+  "commandFormat": "public-v1",
+  "date": "2026-09-07",
+  "finishedAt": "2026-09-08T00:16:16.197330+00:00",
+  "invocations": [
+    {
+      "arm": "anthropic",
+      "command": "ospex-cli claim 729 --type lower --account ospex-benchmark-anthropic --expected-address 0x8ff8FC180a1d4AA352bc23e73Bf24D98CF94FAd5 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-08T00:15:58.617403+00:00",
+      "kind": "claim",
+      "positionType": 1,
+      "speculationId": "729",
+      "startedAt": "2026-09-08T00:15:55.157538+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"claim\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-08T00:15:58.433Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": {\n    \"profit\": {\n      \"wei6\": \"1591673\",\n      \"usdc\": \"1.591673\"\n    },\n    \"totalReturn\": {\n      \"wei6\": \"1591673\",\n      \"usdc\": \"1.591673\"\n    }\n  },\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"claim-position\",\n      \"ok\": true,\n      \"txHash\": \"0x204cd47578528479bfb27c8844a963ab5e52b8233e47cb6d0e973c0052c87ff6\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93414350\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0x8ff8fc180a1d4aa352bc23e73bf24d98cf94fad5\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"claimed\",\n    \"txHash\": \"0x204cd47578528479bfb27c8844a963ab5e52b8233e47cb6d0e973c0052c87ff6\",\n    \"blockNumber\": \"93414350\",\n    \"revertedTxHash\": null,\n    \"payoutWei6\": \"1591673\",\n    \"payoutUSDC\": 1.591673,\n    \"speculationId\": \"729\",\n    \"positionType\": 1,\n    \"positionSideContext\": {\n      \"side\": \"home\",\n      \"marketType\": \"moneyline\",\n      \"team\": {\n        \"name\": \"San Diego Padres\",\n        \"alignment\": \"home\"\n      },\n      \"role\": \"favorite\",\n      \"display\": \"home (San Diego Padres, favorite)\",\n      \"status\": \"complete\",\n      \"source\": {\n        \"team\": \"speculation-detail\",\n        \"role\": \"moneyline-odds\"\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "arm": "gemini",
+      "command": "ospex-cli claim 729 --type lower --account ospex-benchmark-gemini --expected-address 0x49306d4394C3455d7E52ACB4D9caA7d39B8a4c17 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-08T00:16:02.955898+00:00",
+      "kind": "claim",
+      "positionType": 1,
+      "speculationId": "729",
+      "startedAt": "2026-09-08T00:15:59.673433+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"claim\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-08T00:16:02.708Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x49306d4394c3455d7e52acb4d9caa7d39b8a4c17\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x49306d4394c3455d7e52acb4d9caa7d39b8a4c17\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": {\n    \"profit\": {\n      \"wei6\": \"1591673\",\n      \"usdc\": \"1.591673\"\n    },\n    \"totalReturn\": {\n      \"wei6\": \"1591673\",\n      \"usdc\": \"1.591673\"\n    }\n  },\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"claim-position\",\n      \"ok\": true,\n      \"txHash\": \"0x9e14795b724d9b9c3bae7f7ee0aa8c6eb8bc5d4a6e3c053a4a174d69fb950d82\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93414353\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0x49306d4394c3455d7e52acb4d9caa7d39b8a4c17 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0x49306d4394c3455d7e52acb4d9caa7d39b8a4c17\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"claimed\",\n    \"txHash\": \"0x9e14795b724d9b9c3bae7f7ee0aa8c6eb8bc5d4a6e3c053a4a174d69fb950d82\",\n    \"blockNumber\": \"93414353\",\n    \"revertedTxHash\": null,\n    \"payoutWei6\": \"1591673\",\n    \"payoutUSDC\": 1.591673,\n    \"speculationId\": \"729\",\n    \"positionType\": 1,\n    \"positionSideContext\": {\n      \"side\": \"home\",\n      \"marketType\": \"moneyline\",\n      \"team\": {\n        \"name\": \"San Diego Padres\",\n        \"alignment\": \"home\"\n      },\n      \"role\": \"favorite\",\n      \"display\": \"home (San Diego Padres, favorite)\",\n      \"status\": \"complete\",\n      \"source\": {\n        \"team\": \"speculation-detail\",\n        \"role\": \"moneyline-odds\"\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "arm": "openai",
+      "command": "ospex-cli claim 729 --type lower --account ospex-benchmark-openai --expected-address 0xcE3f6F70Ac9510633E98f424233B6C7BF0D21e98 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-08T00:16:08.383063+00:00",
+      "kind": "claim",
+      "positionType": 1,
+      "speculationId": "729",
+      "startedAt": "2026-09-08T00:16:03.932768+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"claim\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-08T00:16:08.220Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0xce3f6f70ac9510633e98f424233b6c7bf0d21e98\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0xce3f6f70ac9510633e98f424233b6c7bf0d21e98\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": {\n    \"profit\": {\n      \"wei6\": \"1591673\",\n      \"usdc\": \"1.591673\"\n    },\n    \"totalReturn\": {\n      \"wei6\": \"1591673\",\n      \"usdc\": \"1.591673\"\n    }\n  },\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"claim-position\",\n      \"ok\": true,\n      \"txHash\": \"0xa615036c30ab1ceed4342b5dfd32bd8a8d4051651f6d5e78420f78b3a343fd57\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93414356\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0xce3f6f70ac9510633e98f424233b6c7bf0d21e98 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0xce3f6f70ac9510633e98f424233b6c7bf0d21e98\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"claimed\",\n    \"txHash\": \"0xa615036c30ab1ceed4342b5dfd32bd8a8d4051651f6d5e78420f78b3a343fd57\",\n    \"blockNumber\": \"93414356\",\n    \"revertedTxHash\": null,\n    \"payoutWei6\": \"1591673\",\n    \"payoutUSDC\": 1.591673,\n    \"speculationId\": \"729\",\n    \"positionType\": 1,\n    \"positionSideContext\": {\n      \"side\": \"home\",\n      \"marketType\": \"moneyline\",\n      \"team\": {\n        \"name\": \"San Diego Padres\",\n        \"alignment\": \"home\"\n      },\n      \"role\": \"favorite\",\n      \"display\": \"home (San Diego Padres, favorite)\",\n      \"status\": \"complete\",\n      \"source\": {\n        \"team\": \"speculation-detail\",\n        \"role\": \"moneyline-odds\"\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "arm": "xai",
+      "command": "ospex-cli claim 729 --type lower --account ospex-benchmark-xai --expected-address 0x4537253Bd1fdc4101A90Ccf396b0307D3CaCDa67 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-08T00:16:11.612566+00:00",
+      "kind": "claim",
+      "positionType": 1,
+      "speculationId": "729",
+      "startedAt": "2026-09-08T00:16:09.287211+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"claim\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-08T00:16:11.531Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x4537253bd1fdc4101a90ccf396b0307d3cacda67\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x4537253bd1fdc4101a90ccf396b0307d3cacda67\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": {\n    \"profit\": {\n      \"wei6\": \"1591673\",\n      \"usdc\": \"1.591673\"\n    },\n    \"totalReturn\": {\n      \"wei6\": \"1591673\",\n      \"usdc\": \"1.591673\"\n    }\n  },\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"claim-position\",\n      \"ok\": true,\n      \"txHash\": \"0xb7da15adbd2c34f86c08402b0228ca2bc1218b266e1f3c1c59dfe0361e1a075e\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93414359\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0x4537253bd1fdc4101a90ccf396b0307d3cacda67 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0x4537253bd1fdc4101a90ccf396b0307d3cacda67\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"claimed\",\n    \"txHash\": \"0xb7da15adbd2c34f86c08402b0228ca2bc1218b266e1f3c1c59dfe0361e1a075e\",\n    \"blockNumber\": \"93414359\",\n    \"revertedTxHash\": null,\n    \"payoutWei6\": \"1591673\",\n    \"payoutUSDC\": 1.591673,\n    \"speculationId\": \"729\",\n    \"positionType\": 1,\n    \"positionSideContext\": {\n      \"side\": \"home\",\n      \"marketType\": \"moneyline\",\n      \"team\": {\n        \"name\": \"San Diego Padres\",\n        \"alignment\": \"home\"\n      },\n      \"role\": \"favorite\",\n      \"display\": \"home (San Diego Padres, favorite)\",\n      \"status\": \"complete\",\n      \"source\": {\n        \"team\": \"speculation-detail\",\n        \"role\": \"moneyline-odds\"\n      }\n    }\n  }\n}\n"
+    },
+    {
+      "arm": "xai",
+      "command": "ospex-cli claim 730 --type lower --account ospex-benchmark-xai --expected-address 0x4537253Bd1fdc4101A90Ccf396b0307D3CaCDa67 --json",
+      "exitCode": 0,
+      "finishedAt": "2026-09-08T00:16:16.192516+00:00",
+      "kind": "claim",
+      "positionType": 1,
+      "speculationId": "730",
+      "startedAt": "2026-09-08T00:16:12.765399+00:00",
+      "status": "success",
+      "stderr": "",
+      "stdout": "{\n  \"schemaVersion\": 2,\n  \"ok\": true,\n  \"action\": \"claim\",\n  \"stage\": \"execute\",\n  \"network\": \"polygon\",\n  \"chainId\": 137,\n  \"generatedAt\": \"2026-09-08T00:16:15.945Z\",\n  \"cliVersion\": \"0.14.0\",\n  \"sdkVersion\": \"0.14.0\",\n  \"wallet\": \"0x4537253bd1fdc4101a90ccf396b0307d3cacda67\",\n  \"walletRole\": \"signer\",\n  \"signer\": \"0x4537253bd1fdc4101a90ccf396b0307d3cacda67\",\n  \"requiresSignature\": false,\n  \"requiresTransaction\": false,\n  \"approvalRequirements\": [],\n  \"estimatedCosts\": null,\n  \"risk\": null,\n  \"payout\": {\n    \"profit\": {\n      \"wei6\": \"2098899\",\n      \"usdc\": \"2.098899\"\n    },\n    \"totalReturn\": {\n      \"wei6\": \"2098899\",\n      \"usdc\": \"2.098899\"\n    }\n  },\n  \"contest\": null,\n  \"speculation\": null,\n  \"commitment\": null,\n  \"sideSummary\": null,\n  \"warnings\": [],\n  \"errors\": [],\n  \"effects\": [\n    {\n      \"type\": \"transaction\",\n      \"purpose\": \"claim-position\",\n      \"ok\": true,\n      \"txHash\": \"0x561a6f0695c7450cea522879273c09958b424d2dbb1674644d0fcd13cf9a8932\",\n      \"status\": \"confirmed\",\n      \"blockNumber\": \"93414362\"\n    }\n  ],\n  \"nextCommands\": [\n    {\n      \"id\": \"verify-position-status\",\n      \"description\": \"Verify position status after the claim / settle.\",\n      \"suggestedFor\": \"verify\",\n      \"command\": \"ospex positions status 0x4537253bd1fdc4101a90ccf396b0307d3cacda67 --json\",\n      \"argv\": [\n        \"positions\",\n        \"status\",\n        \"0x4537253bd1fdc4101a90ccf396b0307d3cacda67\",\n        \"--json\"\n      ],\n      \"safeToAutoRun\": true\n    }\n  ],\n  \"payload\": {\n    \"outcome\": \"claimed\",\n    \"txHash\": \"0x561a6f0695c7450cea522879273c09958b424d2dbb1674644d0fcd13cf9a8932\",\n    \"blockNumber\": \"93414362\",\n    \"revertedTxHash\": null,\n    \"payoutWei6\": \"2098899\",\n    \"payoutUSDC\": 2.098899,\n    \"speculationId\": \"730\",\n    \"positionType\": 1,\n    \"positionSideContext\": {\n      \"side\": \"under\",\n      \"marketType\": \"total\",\n      \"team\": null,\n      \"role\": \"not_applicable\",\n      \"display\": \"under 8 (total; no team)\",\n      \"status\": \"not_applicable\",\n      \"source\": {\n        \"team\": \"not_applicable\",\n        \"role\": \"not_applicable\"\n      }\n    }\n  }\n}\n"
+    }
+  ],
+  "schemaVersion": 1,
+  "sdkCommit": "d922b5014dbf8c01795c6d9f36ad1a85f71c1c1a",
+  "startedAt": "2026-09-08T00:15:41.666608+00:00",
+  "summary": {
+    "already_scored": 9,
+    "attempted_writes": 5,
+    "claimed": 5,
+    "deferred": 0,
+    "failures": 0,
+    "gas_skips": 0,
+    "not_final_yet": 0,
+    "planned_writes": 0,
+    "scored": 0,
+    "settled": 0,
+    "voided": 0
+  }
+}
