@@ -1,0 +1,24 @@
+{
+  "cliSha256": "1058a3c41343717710b91731f2db64fc63909d787d2415e263eb3d7eae1e0ee2",
+  "command": "postgame",
+  "commandFormat": "public-v1",
+  "date": "2026-09-08",
+  "finishedAt": "2026-09-09T15:24:12.396361+00:00",
+  "invocations": [],
+  "schemaVersion": 1,
+  "sdkCommit": "4ffec564a63b4f0e337eda00d0bb3c5c557a9ce2",
+  "startedAt": "2026-09-09T15:24:00.057885+00:00",
+  "summary": {
+    "already_scored": 13,
+    "attempted_writes": 0,
+    "claimed": 0,
+    "deferred": 0,
+    "failures": 0,
+    "gas_skips": 0,
+    "not_final_yet": 0,
+    "planned_writes": 0,
+    "scored": 0,
+    "settled": 0,
+    "voided": 0
+  }
+}
