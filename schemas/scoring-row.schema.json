@@ -160,6 +160,7 @@
         "unverified",
         "unscored",
         "scored",
+        "mismatch",
         "void",
         "released"
       ]
@@ -167,7 +168,7 @@
     "end_kind": {
       "enum": [
         "",
-        "all_scorers_retired_release",
+        "all_reporters_retired_release",
         "day_30_release",
         "day_7_result",
         "hour_24_void",

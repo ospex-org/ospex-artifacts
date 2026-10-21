@@ -32,6 +32,8 @@
   "rows": 483,
   "run_index_rows": 141,
   "scored_matches": 475,
+  "scored_mismatches": 0,
+  "scored_total": 475,
   "shared_number_ids": [
     12,
     13,

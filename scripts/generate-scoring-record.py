@@ -12,8 +12,8 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 SNAPSHOT_SCHEMA = 'https://github.com/ospex-org/ospex-artifacts/schemas/scoring-snapshot.schema.json'
-END_KINDS = {'', 'score', 'legacy_void', 'hour_24_void', 'day_7_result', 'day_30_release', 'all_scorers_retired_release'}
-END_RESULTS = {'': {''}, 'score': {'score'}, 'legacy_void': {'void'}, 'hour_24_void': {'void'}, 'day_7_result': {'score', 'void'}, 'day_30_release': {'release'}, 'all_scorers_retired_release': {'release'}}
+END_KINDS = {'', 'score', 'legacy_void', 'hour_24_void', 'day_7_result', 'day_30_release', 'all_reporters_retired_release'}
+END_RESULTS = {'': {''}, 'score': {'score'}, 'legacy_void': {'void'}, 'hour_24_void': {'void'}, 'day_7_result': {'score', 'void'}, 'day_30_release': {'release'}, 'all_reporters_retired_release': {'release'}}
 EVENT_TYPES = {
     'score': ('ContestScoresSet(uint256,uint32,uint32)', '0xc903c4e9c23026031ddc91220dc647e66e2fa4c0b78cf06a66049b36967579d0'),
     'legacy_void': ('ContestVoided(uint256)', '0x186f23694976df7d5f78e12ed49edc71b37a77bc7bde5cc4393a4b7f1e24c79d'),
@@ -45,7 +45,8 @@ def validate_row(row):
     allowed = {'', 'score', 'legacy_void'} if version == 'v2' else END_KINDS - {'legacy_void'}
     require(version in {'v2', 'v3'} and kind in allowed, 'row end kind')
     require(result in END_RESULTS[kind], 'row end result')
-    require(status in ({'unverified', 'unscored'} if result == '' else {dict(score='scored', void='void', release='released')[result]}), 'row end result/status')
+    statuses = {'': {'unverified', 'unscored'}, 'score': {'scored', 'mismatch'}, 'void': {'void'}, 'release': {'released'}}
+    require(status in statuses[result], 'row end result/status')
     for name in ['deployment_address', 'contest_module_address']:
         require(ADDRESS.fullmatch(row[name]), 'row deployment address')
     require(row['contest_key'] == f"{row['chain_id']}:{row['deployment_address']}:{row['contest_number']}", 'row contest key')
@@ -61,6 +62,7 @@ def validate_row(row):
         require(all(type(row[k]) is int and row[k] >= 0 for k in ['ospex_away_score', 'ospex_home_score']), 'row score values')
         require(row['score_transaction_hash'] == row['terminal_transaction_hash'] and row['scored_at_utc'] == row['terminal_at_utc'], 'row score receipt')
         require(row['comparison'] in {'match', 'mismatch'}, 'row score comparison')
+        require(status == ('mismatch' if row['comparison'] == 'mismatch' else 'scored'), 'row score comparison/status')
     else:
         require(all(row[k] == '' for k in ['ospex_away_score', 'ospex_home_score', 'score_transaction_hash', 'scored_at_utc']), 'non-score row has score')
         require(row['comparison'] == 'not_scored', 'row non-score comparison')
@@ -120,9 +122,9 @@ def validate(data):
         require(identity['awayTeam'] == actual['awayTeam'] and identity['homeTeam'] == actual['homeTeam'], 'actual result mismatch: teams ' + str(number))
         delta = int((utc(actual['sourceEventTimeUtc']) - utc(identity['gameMatchTime'])).total_seconds())
         require(delta == actual['sourceTimeDeltaSeconds'] and abs(delta) < 43200, 'actual result mismatch: event time ' + str(number))
-        require(actual['sourceUrl'].startswith(('https://statsapi.mlb.com/', 'https://site.api.espn.com/')), 'unsupported actual-result source')
+        require(actual['sourceUrl'].startswith(('https://statsapi.mlb.com/', 'https://raw.githubusercontent.com/nflverse/nfldata/')), 'unsupported actual-result source')
         if contest['contestStatus'] == 2:
-            require(actual['final'] and [actual['awayScore'], actual['homeScore']] == [contest['awayScore'], contest['homeScore']], 'actual result mismatch: score ' + str(number))
+            require(actual['final'] and all(type(actual[k]) is int and actual[k] >= 0 for k in ['awayScore', 'homeScore']), 'actual result mismatch: missing final score ' + str(number))
     return chains, events, api, results
 
 
@@ -143,14 +145,20 @@ def make_rows(data):
         event = events.get(('R5', number), {})
         status = STATUS[contest['contestStatus']]
         scored = status == 'scored'
-        reason = 'Protocol score recorded; agrees with captured independent final.' if scored else 'Verified contest; no terminal event at the snapshot.'
+        comparison = 'not_scored'
+        reason = 'Verified contest; no terminal event at the snapshot.'
+        if scored:
+            agrees = [contest['awayScore'], contest['homeScore']] == [actual['awayScore'], actual['homeScore']]
+            comparison = 'match' if agrees else 'mismatch'
+            status = 'scored' if agrees else 'mismatch'
+            reason = 'Protocol score recorded; ' + ('agrees with' if agrees else 'differs from') + ' captured independent final.'
         if status == 'unverified':
             reason = 'Contest never verified; no terminal event at the snapshot.'
         elif status == 'void':
             reason = 'v2 cooldown void; on-chain reason not encoded; independent game status: ' + actual['status'] + '.'
-        elif number in [46, 47, 52]:
+        elif not scored and number in [46, 47, 52]:
             reason = 'Historical result unavailable to the scoring feeds; remains verified and unscored. Independent final shown separately.'
-        elif actual['status'] == 'Postponed':
+        elif not scored and actual['status'] == 'Postponed':
             reason = 'Independent game status is postponed; verified but neither scored nor voided at the snapshot.'
         cfg = data['deployments']['R5']
         rows.append(dict(zip(FIELDS, [
@@ -158,7 +166,7 @@ def make_rows(data):
             identity['leagueId'], identity['awayTeam'], identity['homeTeam'], identity['gameMatchTime'], iso(contest['startTime']) if contest['startTime'] else '',
             actual['status'], actual['awayScore'] if actual['final'] else '', actual['homeScore'] if actual['final'] else '',
             actual['provider'], actual['sourceUrl'], actual['eventId'], actual['sourceEventTimeUtc'], actual['matchMethod'], actual['sourceTimeDeltaSeconds'],
-            contest['awayScore'] if scored else '', contest['homeScore'] if scored else '', 'match' if scored else 'not_scored', status,
+            contest['awayScore'] if scored else '', contest['homeScore'] if scored else '', comparison, status,
             event.get('kind', ''), 'score' if scored else 'void' if status == 'void' else '', reason,
             event.get('transactionHash', '') if scored else '', event.get('timestampUtc', '') if scored else '',
             event.get('transactionHash', ''), event.get('timestampUtc', ''), event.get('blockNumber', ''),
@@ -214,7 +222,7 @@ def verify_bundles(root, data):
         for proof in binding['deploymentProof']:
             if 'transactionHash' in proof:
                 require(proof['receiptStatus'] == 1 and bool({cfg['core'].lower(), cfg['contestModule'].lower()} & {a.lower() for a in proof['emitters']}), 'deployment proof mismatch')
-                require(proof['transactionHash'] in (root / proof['file']).read_text(), 'deployment proof absent from bundle')
+                require(proof['transactionHash'] in (root / proof['file']).read_text(encoding='utf-8'), 'deployment proof absent from bundle')
             else:
                 contest = chains[dep][proof['contestId']]
                 require(all(contest[k] == v for k, v in proof['fields'].items()), 'deployment identity proof mismatch')
@@ -222,7 +230,7 @@ def verify_bundles(root, data):
     def original(claim):
         path = claim['file']
         if path not in documents:
-            documents[path] = json.loads((root / path).read_text())
+            documents[path] = json.loads((root / path).read_text(encoding='utf-8'))
         return pointer(documents[path], claim['path'])
     for claim in data['bundleClaims']['identities']:
         source = original(claim)
@@ -252,33 +260,36 @@ def render(rows, summary):
         '# Public scoring record', '',
         '[Download the complete CSV](record.csv) · [Deployment-qualified legacy/run index](run-contests.csv) · [Rebuild and source documentation](../docs/scoring-record.md)', '',
         'Every R5 contest from deployment through Polygon block **' + str(cfg['snapshot_block_number']) + '** (' + cfg['snapshot_at_utc'] + '). This is a frozen snapshot, not a live service.', '',
-        '**' + str(summary['rows']) + ' contests: ' + str(summary['status_counts']['scored']) + ' scored, ' + str(summary['status_counts']['void']) + ' void, ' + str(summary['status_counts']['unscored']) + ' verified/unscored, ' + str(summary['status_counts']['unverified']) + ' unverified.** All scored rows agree with their captured independent final; pending and void rows are not counted as accurate scores.', '',
-        'All scores below are **away–home**. The timestamp is the successful terminal transaction’s block time, never API ingestion time. A dash means absent, not zero. The CSV carries full addresses, source IDs, original game times, matching notes and transaction hashes.', '',
+        '**' + str(summary['rows']) + ' contests: ' + str(summary['scored_total']) + ' scored (' + str(summary['scored_matches']) + ' match, ' + str(summary['scored_mismatches']) + ' mismatch), ' + str(summary['status_counts'].get('void', 0)) + ' void, ' + str(summary['status_counts'].get('unscored', 0)) + ' verified/unscored, ' + str(summary['status_counts'].get('unverified', 0)) + ' unverified.** Match and mismatch compare the score Ospex wrote with the captured independent final. Both stay in the record; pending and void rows are not counted as accurate scores.', '',
+        'All scores below are **away–home**. **Chain start (UTC)** is the start time written when Ospex confirmed the game, not its actual first pitch or kickoff. **Written UTC** is when the successful score or void transaction was included in a block, never API ingestion time. A dash means absent, not zero. The CSV keeps the API schedule, chain start and independent source time separately; [the time-field explanation](../docs/scoring-record.md#game-time-fields) accounts for their differences.', '',
+        '**R5 is the fifth deployment of the contracts**, live on Polygon since 2026-06-28. R4 is the one before it. Both run protocol v2; this record has no v3 rows.', '',
         '**R5 deployment:** [`' + cfg['deployment_address'] + '`](https://polygonscan.com/address/' + cfg['deployment_address'] + '). Join on `(chain_id, deployment_address, contest_number)`, never the number alone.', '',
-        '**The five sweep residuals:** #46, #47 and #52 are historical verified games whose scoring feeds no longer supplied a final; #119 and #123 are unverified registry entries for the same real game. All five belong here. The complete counter also retains #85 (postponed, still unscored) and #479 (unverified); none is silently omitted.', '',
-        '**Voids:** R5 #451 is a cooldown void for a game reported postponed. The event does not encode a reason; the independent status is shown rather than invented as an on-chain reason. The older R4 #38 void is in the deployment-qualified run index, not misattributed to R5 #38.', '',
-        '**Repeated numbers:** all original run bundles remain byte-for-byte unchanged. The run index labels every reference with R4 or R5 and its core address, including ' + str(len(summary['shared_number_ids'])) + ' numbers shared across full bundle contents (' + str(len(summary['canonical_shared_number_ids'])) + ' in canonical `evidence.json` files). It covers the previously reported doubled numbers without dropping references to force a historical count.', '',
+        '**The seven contests that were never scored:** #46, #47 and #52 were confirmed games whose scoring feeds no longer supplied a final; #85 was postponed and remains unscored. #119 and #123 are unverified entries for the same real game; #479 is also unverified. No bets were ever placed on these seven contests, so no money is held on them. On R5, an unscored confirmed game is voided only when someone settles a market (called a speculation in the contracts) after seven days. With no markets to settle, nothing triggers that void, so the four July games stay unscored on chain. Time passing alone does not void them.', '',
+        '**Status words:** **Unverified** means the oracle never confirmed the game, so betting never opened. **Unscored** (shown as verified/unscored in the count) means the game was confirmed, but no score was written. **Mismatch** means Ospex wrote a score that differs from the captured real result; both scores remain visible. A **cooldown void** is a void triggered by settlement after the seven-day waiting period. `legacy_void` is the machine-readable name for a v2 void, not a score or a v3 release.', '',
+        '**Voids:** R5 #451 had two markets and was voided through that settlement path. The independent source reports postponement; the on-chain event does not encode a reason. The older R4 #38 void is in the run index, separate from R5 #38.', '',
+        '**Repeated numbers:** ' + str(len(summary['canonical_shared_number_ids'])) + ' contest numbers were used by both R4 and R5 in the main run evidence files; the run index labels each use by deployment and core address. Counting every mention in supporting bundle files gives ' + str(len(summary['shared_number_ids'])) + '. All original run bundles remain byte-for-byte unchanged.', '',
+        '**Sources and rebuild:** the 478 MLB results were captured once from MLB’s official Stats API and committed; a rebuild never re-pulls them. The five NFL results are attributed to [nflverse](https://github.com/nflverse/nfldata), using a pinned capture. Rebuild on **Linux with Python 3.11 or newer** (standard library only); byte-for-byte reproduction is verified there, not promised for a Windows checkout. See the [source and rebuild documentation](../docs/scoring-record.md).', '',
         '## Every R5 contest', '',
-        '| R5 contest | Game (away @ home) | Game date UTC | Actual | Ospex | Status / end | Written UTC | Transaction | Actual source |',
+        '| R5 contest | Game (away @ home) | Chain start (UTC) | Actual | Ospex | Status / end | Written UTC | Transaction | Actual source |',
         '| --- | --- | --- | --- | --- | --- | --- | --- | --- |'
     ]
     for row in rows:
         actual = str(row['actual_away_score']) + '–' + str(row['actual_home_score']) if row['actual_away_score'] != '' else row['actual_status']
         score = str(row['ospex_away_score']) + '–' + str(row['ospex_home_score']) if row['ospex_away_score'] != '' else '—'
         tx = '[receipt](' + row['terminal_explorer_url'] + ')' if row['terminal_explorer_url'] else '—'
-        text.append('| ' + ' | '.join([str(row['contest_number']), row['away_team'] + ' @ ' + row['home_team'], row['game_date_utc'], actual, score, row['status'] + (' / ' + row['end_kind'] if row['end_kind'] else ''), row['terminal_at_utc'] or '—', tx, '[' + row['actual_source'] + '](' + row['actual_source_url'] + ')']) + ' |')
+        text.append('| ' + ' | '.join([str(row['contest_number']), row['away_team'] + ' @ ' + row['home_team'], iso(int(utc(row['chain_start_utc']).timestamp())) if row['chain_start_utc'] else '—', actual, score, row['status'] + (' / ' + row['end_kind'] if row['end_kind'] else ''), row['terminal_at_utc'] or '—', tx, '[' + row['actual_source'] + '](' + row['actual_source_url'] + ')']) + ' |')
     return '\n'.join(text) + '\n'
 
 
 def build(root, data=None):
     root = Path(root)
     if data is None:
-        data = json.loads((root / 'scoring/snapshot.json').read_text())
+        data = json.loads((root / 'scoring/snapshot.json').read_text(encoding='utf-8'))
     bundle_stats = verify_bundles(root, data)
     rows, run_rows = make_rows(data), make_run_rows(data)
     sets = {dep: {r['contest_number'] for r in run_rows if r['deployment'] == dep} for dep in ['R4', 'R5']}
     canonical = {dep: {r['contest_number'] for r in run_rows if r['deployment'] == dep and r['reference_kind'] == 'canonical_evidence'} for dep in ['R4', 'R5']}
-    summary = {'snapshot_block': data['snapshotBlock'], 'rows': len(rows), 'status_counts': dict(Counter(r['status'] for r in rows)), 'scored_matches': sum(r['comparison'] == 'match' for r in rows), 'run_index_rows': len(run_rows), 'bundle_reconciliation': bundle_stats, 'shared_number_ids': sorted(sets['R4'] & sets['R5']), 'canonical_shared_number_ids': sorted(canonical['R4'] & canonical['R5']), 'v3_rows': 0}
+    summary = {'snapshot_block': data['snapshotBlock'], 'rows': len(rows), 'status_counts': dict(Counter(r['status'] for r in rows)), 'scored_total': sum(r['end_result'] == 'score' for r in rows), 'scored_matches': sum(r['comparison'] == 'match' for r in rows), 'scored_mismatches': sum(r['comparison'] == 'mismatch' for r in rows), 'run_index_rows': len(run_rows), 'bundle_reconciliation': bundle_stats, 'shared_number_ids': sorted(sets['R4'] & sets['R5']), 'canonical_shared_number_ids': sorted(canonical['R4'] & canonical['R5']), 'v3_rows': 0}
     return {'scoring/record.csv': csv_text(rows, FIELDS), 'scoring/run-contests.csv': csv_text(run_rows, RUN_FIELDS), 'scoring/summary.json': json.dumps(summary, indent=2, sort_keys=True) + '\n', 'scoring/README.md': render(rows, summary)}
 
 
@@ -290,9 +301,9 @@ def main():
     for name, text in outputs.items():
         path = ROOT / name
         if args.check:
-            require(path.exists() and path.read_text() == text, 'generated scoring record differs: ' + name)
+            require(path.exists() and path.read_bytes() == text.encode('utf-8'), 'generated scoring record differs: ' + name)
         else:
-            path.write_text(text)
+            path.write_text(text, encoding='utf-8', newline='\n')
     print(('Checked' if args.check else 'Generated') + ' scoring record: ' + ', '.join(outputs))
 
 

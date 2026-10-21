@@ -67,12 +67,85 @@ class ScoringRecordTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'identity mismatch'):
             scoring.make_rows(data)
 
-    def test_actual_score_or_teams_mismatch_is_rejected(self):
-        for field in ['awayScore', 'awayTeam']:
+    def test_planted_score_mismatch_is_published_and_build_continues(self):
+        data = copy.deepcopy(self.data)
+        actual = data['actualResults'][0]
+        contest = next(c for c in data['contests']['R5'] if c['contestId'] == actual['contestId'])
+        # Change only the independent final in memory, never chain/bundle evidence.
+        actual['awayScore'] = contest['awayScore'] + 1
+        outputs = scoring.build(ROOT, data)
+        rows = list(csv.DictReader(io.StringIO(outputs['scoring/record.csv'])))
+        self.assertEqual(len(rows), 483)
+        row = next(r for r in rows if int(r['contest_number']) == actual['contestId'])
+        self.assertEqual(row['status'], 'mismatch')
+        self.assertEqual(row['comparison'], 'mismatch')
+        self.assertEqual(row['end_result'], 'score')
+        self.assertEqual(int(row['ospex_away_score']), contest['awayScore'])
+        self.assertEqual(int(row['ospex_home_score']), contest['homeScore'])
+        self.assertEqual(int(row['actual_away_score']), actual['awayScore'])
+        self.assertEqual(int(row['actual_home_score']), actual['homeScore'])
+        self.assertTrue(row['score_transaction_hash'] and row['scored_at_utc'])
+        self.assertIn('differs from captured independent final', row['reason'])
+        self.assertEqual(rows[-1]['contest_number'], '483')
+        self.assertEqual(rows[-1]['status'], 'scored')
+        summary = json.loads(outputs['scoring/summary.json'])
+        self.assertEqual(summary['scored_total'], 475)
+        self.assertEqual(summary['scored_matches'], 474)
+        self.assertEqual(summary['scored_mismatches'], 1)
+        self.assertEqual(summary['status_counts']['mismatch'], 1)
+        page = outputs['scoring/README.md']
+        self.assertIn('475 scored (474 match, 1 mismatch)', page)
+        self.assertIn('| mismatch / score |', page)
+        self.assertIn(f"| {actual['awayScore']}–{actual['homeScore']} | {contest['awayScore']}–{contest['homeScore']} | mismatch", page)
+        self.assertNotIn('All scored rows agree', page)
+        schema = json.loads((ROOT / 'schemas/scoring-row.schema.json').read_text())
+        self.assertIn('mismatch', schema['properties']['status']['enum'])
+
+    def test_actual_capture_errors_are_still_rejected(self):
+        for field, value in [('awayTeam', 'Different team'), ('final', False),
+                             ('awayScore', None), ('sourceTimeDeltaSeconds', 1)]:
             data = copy.deepcopy(self.data)
-            data['actualResults'][0][field] = 999 if field == 'awayScore' else 'Different team'
+            data['actualResults'][0][field] = value
             with self.subTest(field=field), self.assertRaisesRegex(ValueError, 'actual result mismatch'):
                 scoring.make_rows(data)
+
+    def test_nfl_results_are_attributed_to_nflverse(self):
+        rows = [r for r in scoring.make_rows(self.data) if r['league'] == 'nfl']
+        self.assertEqual({r['contest_number'] for r in rows}, {478, 480, 481, 482, 483})
+        expected = {
+            478: ('2026_04_IND_WAS', 30, 13), 480: ('2026_05_TB_DAL', 24, 16),
+            481: ('2026_05_BAL_ATL', 30, 23), 482: ('2026_06_SEA_DEN', 14, 17),
+            483: ('2026_06_DAL_GB', 13, 23),
+        }
+        for row in rows:
+            self.assertEqual(row['actual_source'], 'nflverse')
+            self.assertTrue(row['actual_source_url'].startswith('https://raw.githubusercontent.com/nflverse/nfldata/'))
+            self.assertEqual((row['actual_event_id'], row['actual_away_score'], row['actual_home_score']), expected[row['contest_number']])
+
+    def test_game_time_displays_chain_start_and_preserves_source_times(self):
+        outputs = scoring.build(ROOT, self.data)
+        page = outputs['scoring/README.md']
+        self.assertIn('| Chain start (UTC) |', page)
+        moved = [r for r in scoring.make_rows(self.data) if r['source_time_delta_seconds']]
+        self.assertEqual(len(moved), 25)
+        self.assertEqual(max(abs(r['source_time_delta_seconds']) for r in moved), 13800)
+        row = next(r for r in moved if r['contest_number'] == 436)
+        self.assertEqual(scoring.utc(row['game_date_utc']), scoring.utc('2026-09-20T22:00:00Z'))
+        self.assertEqual(scoring.utc(row['chain_start_utc']), scoring.utc(row['source_event_time_utc']))
+        self.assertEqual(row['source_time_delta_seconds'], -13800)
+        self.assertIn('| 436 | Detroit Tigers @ Chicago White Sox | 2026-09-20T18:10:00Z |', page)
+        self.assertEqual(sum(scoring.utc(r['chain_start_utc']) == scoring.utc(r['source_event_time_utc'])
+                             for r in moved if r['chain_start_utc']), 21)
+        self.assertIn('| 119 | Texas Rangers @ Athletics | — |', page)
+
+    def test_public_page_explains_pending_money_voids_and_sources(self):
+        page = scoring.build(ROOT, self.data)['scoring/README.md']
+        for explanation in ['R5 is the fifth deployment', 'No bets were ever placed on these seven contests',
+                            'no money is held on them', 'seven days', 'settles a market',
+                            'Unverified', 'Unscored', 'legacy_void', '22 contest numbers',
+                            'nflverse', '478 MLB', 'rebuild never re-pulls', 'Python 3.11', 'Linux']:
+            with self.subTest(explanation=explanation):
+                self.assertIn(explanation, page)
 
     def test_missing_terminal_event_is_rejected(self):
         data = copy.deepcopy(self.data)
@@ -122,7 +195,7 @@ class ScoringRecordTests(unittest.TestCase):
         self.assertTrue(all(r['status'] == 'void' and r['terminal_transaction_hash'] for r in legacy_void))
 
     def test_future_end_kinds_without_any_v3_rows(self):
-        self.assertTrue({'score', 'hour_24_void', 'day_7_result', 'day_30_release', 'all_scorers_retired_release'} <= scoring.END_KINDS)
+        self.assertTrue({'score', 'hour_24_void', 'day_7_result', 'day_30_release', 'all_reporters_retired_release'} <= scoring.END_KINDS)
         self.assertEqual({r['protocol_version'] for r in scoring.make_rows(self.data)}, {'v2'})
         schema = json.loads((ROOT / 'schemas/scoring-row.schema.json').read_text())
         self.assertEqual(set(schema['properties']['end_kind']['enum']), scoring.END_KINDS)
@@ -146,7 +219,7 @@ class ScoringRecordTests(unittest.TestCase):
         row = scoring.make_rows(self.data)[0]
         for kind, result in [('score', 'score'), ('hour_24_void', 'void'),
                              ('day_7_result', 'score'), ('day_7_result', 'void'),
-                             ('day_30_release', 'release'), ('all_scorers_retired_release', 'release')]:
+                             ('day_30_release', 'release'), ('all_reporters_retired_release', 'release')]:
             future = dict(row, protocol_version='v3', end_kind=kind, end_result=result,
                           status={'score': 'scored', 'void': 'void', 'release': 'released'}[result])
             if result != 'score':
@@ -183,7 +256,7 @@ class ScoringRecordTests(unittest.TestCase):
     def test_csv_rebuild_is_byte_identical_and_complete(self):
         outputs = scoring.build(ROOT, self.data)
         for name, text in outputs.items():
-            self.assertEqual((ROOT / name).read_text(), text, name)
+            self.assertEqual((ROOT / name).read_bytes(), text.encode('utf-8'), name)
         rows = list(csv.DictReader(io.StringIO(outputs['scoring/record.csv'])))
         self.assertEqual(len(rows), 483)
         self.assertEqual(len({r['contest_key'] for r in rows}), 483)
