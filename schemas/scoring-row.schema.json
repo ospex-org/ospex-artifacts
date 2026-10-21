@@ -1,0 +1,227 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ospex-org/ospex-artifacts/schemas/scoring-row.schema.json",
+  "title": "Deployment-qualified scoring record row",
+  "type": "object",
+  "required": [
+    "contest_key",
+    "chain_id",
+    "deployment",
+    "protocol_version",
+    "deployment_address",
+    "contest_module_address",
+    "contest_number",
+    "league",
+    "away_team",
+    "home_team",
+    "game_date_utc",
+    "chain_start_utc",
+    "actual_status",
+    "actual_away_score",
+    "actual_home_score",
+    "actual_source",
+    "actual_source_url",
+    "actual_event_id",
+    "source_event_time_utc",
+    "identity_match_method",
+    "source_time_delta_seconds",
+    "ospex_away_score",
+    "ospex_home_score",
+    "comparison",
+    "status",
+    "end_kind",
+    "end_result",
+    "reason",
+    "score_transaction_hash",
+    "scored_at_utc",
+    "terminal_transaction_hash",
+    "terminal_at_utc",
+    "terminal_block_number",
+    "terminal_explorer_url",
+    "snapshot_block_number",
+    "snapshot_at_utc",
+    "run_bundles"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "contest_key": {
+      "type": "string"
+    },
+    "chain_id": {
+      "type": "integer"
+    },
+    "deployment": {
+      "type": "string"
+    },
+    "protocol_version": {
+      "enum": [
+        "v2",
+        "v3"
+      ]
+    },
+    "deployment_address": {
+      "type": "string"
+    },
+    "contest_module_address": {
+      "type": "string"
+    },
+    "contest_number": {
+      "type": "integer"
+    },
+    "league": {
+      "type": "string"
+    },
+    "away_team": {
+      "type": "string"
+    },
+    "home_team": {
+      "type": "string"
+    },
+    "game_date_utc": {
+      "type": "string"
+    },
+    "chain_start_utc": {
+      "type": "string"
+    },
+    "actual_status": {
+      "type": "string"
+    },
+    "actual_away_score": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "minimum": 0
+        },
+        {
+          "const": ""
+        }
+      ]
+    },
+    "actual_home_score": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "minimum": 0
+        },
+        {
+          "const": ""
+        }
+      ]
+    },
+    "actual_source": {
+      "type": "string"
+    },
+    "actual_source_url": {
+      "type": "string"
+    },
+    "actual_event_id": {
+      "type": "string"
+    },
+    "source_event_time_utc": {
+      "type": "string"
+    },
+    "identity_match_method": {
+      "type": "string"
+    },
+    "source_time_delta_seconds": {
+      "type": "integer"
+    },
+    "ospex_away_score": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "minimum": 0
+        },
+        {
+          "const": ""
+        }
+      ]
+    },
+    "ospex_home_score": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "minimum": 0
+        },
+        {
+          "const": ""
+        }
+      ]
+    },
+    "comparison": {
+      "enum": [
+        "match",
+        "mismatch",
+        "not_scored"
+      ]
+    },
+    "status": {
+      "enum": [
+        "unverified",
+        "unscored",
+        "scored",
+        "mismatch",
+        "void",
+        "released"
+      ]
+    },
+    "end_kind": {
+      "enum": [
+        "",
+        "all_reporters_retired_release",
+        "day_30_release",
+        "day_7_result",
+        "hour_24_void",
+        "legacy_void",
+        "score"
+      ]
+    },
+    "end_result": {
+      "enum": [
+        "",
+        "score",
+        "void",
+        "release"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    },
+    "score_transaction_hash": {
+      "type": "string"
+    },
+    "scored_at_utc": {
+      "type": "string"
+    },
+    "terminal_transaction_hash": {
+      "type": "string"
+    },
+    "terminal_at_utc": {
+      "type": "string"
+    },
+    "terminal_block_number": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "minimum": 0
+        },
+        {
+          "const": ""
+        }
+      ]
+    },
+    "terminal_explorer_url": {
+      "type": "string"
+    },
+    "snapshot_block_number": {
+      "type": "integer"
+    },
+    "snapshot_at_utc": {
+      "type": "string"
+    },
+    "run_bundles": {
+      "type": "string"
+    }
+  },
+  "description": "CSV uses these field names; integers are decimal and absent scores/times are empty. Reserved v3 end kinds define data shape only; this capture has no v3 rows."
+}

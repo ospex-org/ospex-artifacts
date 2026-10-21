@@ -26,6 +26,12 @@ Dashboards and agents may switch on artifact-level `status`, so it is intentiona
 
 These are artifact-level statuses only. Individual check/gate fields can use their own local values, for example `pass`, `fail`, `not_run`, or a version string when the gate records an observed value.
 
+## `scoring/` — public scoring record
+
+`scoring/snapshot.json` is a frozen, schema-backed capture of deployment-qualified chain state, successful score/void receipt summaries, independent actual results, and immutable run-bundle bindings. The [source and rebuild contract](scoring-record.md) defines coverage, source matching, pending/void meanings, and the reserved v3 end kinds.
+
+`record.csv`, `run-contests.csv`, `summary.json` and `README.md` are deterministic derived views. Row status (`unverified`, `unscored`, `scored`, `void`, or reserved `released`) is protocol state, not an artifact-level lifecycle verdict. The snapshot is linked from the repository README rather than inserted into the existing run/release/daily index vocabulary. `scripts/validate-artifacts.py` checks the canonical snapshot location, reruns the offline generator in check mode, and scans its JSON/CSV/Markdown for public-safety violations. Existing `runs/` files are hashed and read, never renamed or rewritten.
+
 ## `runs/` — lifecycle evidence
 
 `runs/` artifacts record a completed protocol or market-maker lifecycle for one or more contests. (Runs adopting the MVE scorecard cover exactly one contest/speculation each — see `docs/mm-live-canary-evidence.md`.)

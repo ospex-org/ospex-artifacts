@@ -2,6 +2,10 @@
 
 Ospex Artifacts is a public repository of sanitized protocol evidence and derived activity records.
 
+**[Public scoring record](scoring/README.md)** — every R5 contest, actual result versus Ospex, score/void transaction and time; [CSV](scoring/record.csv) and [deployment-qualified run index](scoring/run-contests.csv). Frozen snapshot; [sources and rebuild](docs/scoring-record.md).
+
+R5 is the fifth deployment of the contracts, live on Polygon since 2026-06-28; R4 is the one before it. The scoring record's 478 MLB results were captured once from MLB's official Stats API and committed, so a rebuild never re-pulls them. Its five NFL results are attributed to nflverse. Rebuild on **Linux with Python 3.11 or newer** for verified byte-identical output; Windows checkout line-ending conversion is not supported for that guarantee.
+
 Artifacts are generated from public chain data, approved external facts, and sanitized indexer/API snapshots. JSON files are the machine-readable source for agents, dashboards, and other consumers. Markdown files are evidence-grade renderings of the same facts.
 
 This repository intentionally avoids internal planning notes, brainstorming text, private operator material, and promotional language. It should read like an evidence/data product: boring, durable, precise.
@@ -9,6 +13,7 @@ This repository intentionally avoids internal planning notes, brainstorming text
 ## Artifact classes
 
 - `runs/` — per-contest, per-market, or multi-contest lifecycle evidence bundles.
+- `scoring/` — frozen public chain/results inputs and the reproducible, deployment-qualified scoring record; existing run bundles are unchanged.
 - `releases/` — release acceptance evidence for SDK/CLI or service versions, including fresh-install gates and bounded live gates where applicable.
 - `daily/` — daily protocol activity digests. This class is reserved for future rollups generated from run/release evidence, chain data, and sanitized snapshots. Track every UTC calendar day, including zero-activity days.
 - `index.json` — a lightweight artifact index for agents, dashboards, and humans that need a stable entry point.
@@ -24,7 +29,7 @@ For each artifact, the canonical facts live in JSON:
 - `acceptance.json` for `releases/`
 - `digest.json` for future `daily/` artifacts
 
-Schema-backed JSON files include a top-level `$schema` pointer into `schemas/`. After adding, removing, or editing an artifact, run `python3 scripts/generate-indexes.py` to refresh `index.json` and `archive/YYYY/index.json` shards, then run `python3 scripts/validate-artifacts.py` locally before publishing. GitHub Actions runs the same JSON-parse, schema/status, path-existence, generated-index, archive, and public-safety checks on every PR and `main` push.
+Schema-backed JSON files include a top-level `$schema` pointer into `schemas/`. After adding, removing, or editing an artifact, run `python3 scripts/generate-indexes.py` to refresh `index.json` and `archive/YYYY/index.json` shards, then run `python3 scripts/validate-artifacts.py` locally before publishing. The full repository validator requires **Python 3.11 or newer**, standard library only. GitHub Actions runs the same JSON-parse, schema/status, path-existence, generated-index, archive, and public-safety checks on every PR and `main` push.
 
 Markdown summaries are presentation files only in the sense that they render canonical JSON facts. They should stay evidence-grade: complete, technical, and faithful to JSON/raw sanitized inputs. Friendly headlines, audience-specific framing, and scrollable gloss belong in the frontend/dashboard translation layer, not in the artifact itself.
 
