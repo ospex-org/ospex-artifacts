@@ -24,6 +24,7 @@ ARCHIVE_SCHEMA_ID = "https://github.com/ospex-org/ospex-artifacts/schemas/artifa
 RELEASE_ACCEPTANCE_SCHEMA_ID = "https://github.com/ospex-org/ospex-artifacts/schemas/release-acceptance.schema.json"
 SCENARIO_MATRIX_SCHEMA_ID = "https://github.com/ospex-org/ospex-artifacts/schemas/scenario-matrix.schema.json"
 MVE_SCORECARD_SCHEMA_ID = "https://github.com/ospex-org/ospex-artifacts/schemas/mve-scorecard.schema.json"
+SCORING_SNAPSHOT_SCHEMA_ID = "https://github.com/ospex-org/ospex-artifacts/schemas/scoring-snapshot.schema.json"
 
 RECENT_ARTIFACT_LIMIT = 100
 ARTIFACT_TYPES = ("run", "release-acceptance", "daily-digest")
@@ -39,7 +40,7 @@ STATUS_BY_ARTIFACT_TYPE = {
     "daily-digest": {"complete", "complete_with_caveats", "partial", "superseded"},
 }
 
-TEXT_SUFFIXES = {".json", ".md", ".ndjson", ".txt", ".yml", ".yaml"}
+TEXT_SUFFIXES = {".json", ".md", ".ndjson", ".txt", ".yml", ".yaml", ".csv"}
 SHA256_RE = re.compile(r"^[a-fA-F0-9]{64}$")
 TX_HASH_RE = re.compile(r"^0x[a-fA-F0-9]{64}$")
 RAW_SIGNATURE_RE = re.compile(r"0[xX][a-fA-F0-9]{130}\b")
@@ -1587,6 +1588,7 @@ def validate_schema_pointers(docs: dict[Path, Any], errors: list[str]) -> None:
         RELEASE_ACCEPTANCE_SCHEMA_ID,
         SCENARIO_MATRIX_SCHEMA_ID,
         MVE_SCORECARD_SCHEMA_ID,
+        SCORING_SNAPSHOT_SCHEMA_ID,
     }
     for path, doc in docs.items():
         if not isinstance(doc, dict):
@@ -1606,6 +1608,13 @@ def validate_schema_pointers(docs: dict[Path, Any], errors: list[str]) -> None:
                 errors.append(f"{rel(path)}: missing or incorrect $schema pointer")
             continue
         schema_pointer = doc.get("$schema")
+        if path == ROOT / "scoring/snapshot.json":
+            if schema_pointer != SCORING_SNAPSHOT_SCHEMA_ID:
+                errors.append(f"{rel(path)}: missing or incorrect $schema pointer")
+            continue
+        if schema_pointer == SCORING_SNAPSHOT_SCHEMA_ID:
+            errors.append(f"{rel(path)}: scoring snapshot must be at scoring/snapshot.json")
+            continue
         if schema_pointer is not None and schema_pointer not in known_schema_ids:
             errors.append(f"{rel(path)}: unknown $schema pointer {schema_pointer!r}")
             continue
@@ -1647,6 +1656,19 @@ def validate_generated_indexes(errors: list[str]) -> None:
             errors.append("generated indexes: scripts/generate-indexes.py --check failed without output")
 
 
+def validate_generated_scoring(errors: list[str]) -> None:
+    script = ROOT / "scripts/generate-scoring-record.py"
+    if not script.is_file():
+        errors.append("scripts/generate-scoring-record.py: missing scoring generator")
+        return
+    result = subprocess.run(
+        [sys.executable, str(script), "--check"], cwd=ROOT, text=True,
+        stdout=subprocess.PIPE, stderr=subprocess.STDOUT, check=False,
+    )
+    if result.returncode != 0:
+        errors.append("generated scoring: " + (result.stdout.strip() or "check failed without output"))
+
+
 def safety_scan(files: list[Path], errors: list[str]) -> int:
     scanned = 0
     for path in sorted(files):
@@ -1655,7 +1677,7 @@ def safety_scan(files: list[Path], errors: list[str]) -> int:
         if path.suffix not in TEXT_SUFFIXES:
             # Artifact directories may only contain scannable text files; anything the
             # safety scan cannot read must not be published.
-            if top_level in {"runs", "releases", "daily"}:
+            if top_level in {"runs", "releases", "daily", "scoring"}:
                 allowed = ", ".join(sorted(TEXT_SUFFIXES))
                 errors.append(f"{relative}: unexpected file type {path.suffix!r}; artifact files must be one of: {allowed}")
             continue
@@ -1704,6 +1726,7 @@ def main() -> int:
 
     validate_adoption_pairing(docs, errors)
     validate_generated_indexes(errors)
+    validate_generated_scoring(errors)
     scanned_text_files = safety_scan(files, errors)
 
     if errors:

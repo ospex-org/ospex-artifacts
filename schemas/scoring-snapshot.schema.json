@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ospex-org/ospex-artifacts/schemas/scoring-snapshot.schema.json",
+  "title": "Frozen public scoring inputs",
+  "type": "object",
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "sourceCommit",
+    "chainId",
+    "snapshotBlock",
+    "deployments",
+    "contests",
+    "terminalEvents",
+    "identities",
+    "actualResults",
+    "runBindings",
+    "bundleClaims",
+    "bundleFileSha256"
+  ],
+  "properties": {
+    "$schema": {
+      "const": "https://github.com/ospex-org/ospex-artifacts/schemas/scoring-snapshot.schema.json"
+    },
+    "schemaVersion": {
+      "const": 1
+    },
+    "chainId": {
+      "const": 137
+    },
+    "snapshotBlock": {
+      "type": "object"
+    },
+    "deployments": {
+      "type": "object"
+    },
+    "contests": {
+      "type": "object"
+    },
+    "terminalEvents": {
+      "type": "array"
+    },
+    "identities": {
+      "type": "array"
+    },
+    "actualResults": {
+      "type": "array"
+    },
+    "runBindings": {
+      "type": "array"
+    },
+    "bundleClaims": {
+      "type": "object"
+    },
+    "bundleFileSha256": {
+      "type": "object"
+    }
+  },
+  "description": "Cross-source coverage, deployment, score, receipt and immutable-bundle invariants are enforced by scripts/generate-scoring-record.py."
+}

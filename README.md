@@ -2,6 +2,8 @@
 
 Ospex Artifacts is a public repository of sanitized protocol evidence and derived activity records.
 
+**[Public scoring record](scoring/README.md)** — every R5 contest, actual result versus Ospex, score/void transaction and time; [CSV](scoring/record.csv) and [deployment-qualified run index](scoring/run-contests.csv). Frozen snapshot; [sources and rebuild](docs/scoring-record.md).
+
 Artifacts are generated from public chain data, approved external facts, and sanitized indexer/API snapshots. JSON files are the machine-readable source for agents, dashboards, and other consumers. Markdown files are evidence-grade renderings of the same facts.
 
 This repository intentionally avoids internal planning notes, brainstorming text, private operator material, and promotional language. It should read like an evidence/data product: boring, durable, precise.
@@ -9,6 +11,7 @@ This repository intentionally avoids internal planning notes, brainstorming text
 ## Artifact classes
 
 - `runs/` — per-contest, per-market, or multi-contest lifecycle evidence bundles.
+- `scoring/` — frozen public chain/results inputs and the reproducible, deployment-qualified scoring record; existing run bundles are unchanged.
 - `releases/` — release acceptance evidence for SDK/CLI or service versions, including fresh-install gates and bounded live gates where applicable.
 - `daily/` — daily protocol activity digests. This class is reserved for future rollups generated from run/release evidence, chain data, and sanitized snapshots. Track every UTC calendar day, including zero-activity days.
 - `index.json` — a lightweight artifact index for agents, dashboards, and humans that need a stable entry point.
